@@ -1,0 +1,1281 @@
+#mainBody {
+	width:958px;
+	margin:0;
+	padding:0;
+	background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/contentBG_fill.gif');
+	background-repeat:repeat-y;
+}
+
+#mainContents {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/contentBG_top.gif');
+	background-repeat:no-repeat;
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-right:5px;
+}
+
+#rightContents {
+	float:right;
+	width:254px;
+	margin:0;
+	padding:0;
+	padding-left:10px;
+	padding-top:16px;
+}
+
+#mainContents h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+}
+
+#mainContents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.greyHR {
+	background-color:#4d4d4e;
+	width:669px;
+	height:1px;
+	margin:0;
+	padding:0;
+}
+
+.mainSectionHeader {
+	height:17px;
+	width:669px;		
+	font-size:11px;
+	border-top:1px solid #4d4d4e;
+	padding:0;
+	margin:0;
+	padding-top:2px;
+	margin-bottom:4px;
+}
+
+#OnlineStatus{
+	margin:0;
+	padding:0;
+	padding-left:0px;		
+	font-size:11px;
+	font-weight:bold;
+	height: 77px;
+}
+
+#statusOfflineText {		
+	font-size:11px;
+	font-weight:bold;
+	color:#898989;
+	margin:0;
+	padding:0;
+	padding-bottom:2px;
+}
+
+#statusInGameText, #statusInGameText a {
+	color:#8bc53f;		
+	font-size:11px;
+	margin:0;
+	padding:0;
+	padding-bottom:8px;
+}
+
+#statusOnlineText {
+	margin-bottom:-10px;
+}
+	
+#profileBlock,#primaryGroupBlock {
+	float: left;
+	width:647px;
+	margin:0;
+	padding:0;
+	padding-right:0px;
+}
+
+#currentlyPlayingIcon {
+	float:left;
+	width:40px;
+	height:40px;
+	margin:0;
+	padding:0;
+	padding-right:6px;
+}
+
+#profileAvatar,#primaryGroupAvatar {
+	float:left;
+	width:192px;
+	margin:0;
+	padding:0;
+	padding-right:12px;
+	padding-bottom:8px;
+}
+
+
+#profileBlock h1,#primaryGroupBlock h1 {
+	font-size:15px;
+	font-weight:bold;
+	color:#929292;
+	margin:0;
+	padding:0;
+	margin-bottom:8px;
+}
+
+#profileBlock h2,#primaryGroupBlock h2 {
+	font-size: 11px;
+	color: #939393;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+
+#primaryGroupBlock h2 {
+	padding-top:2px;
+}
+
+#primaryGroupBlock h1 {
+	padding-top:24px;
+}
+
+#primaryGroupBlock p.sectionText a {
+	text-decoration: underline;
+	color: #828282;
+}
+
+#primaryGroupBlock p.sectionText a:hover {
+	color: #ffffff;
+}
+
+#membersBlock {
+	width:367px;
+	margin:0;
+	padding:0;
+	padding-left:152px;
+	padding-bottom:8px;
+	padding-right:22px;
+}
+
+.membersBlockMember {
+	width:40px;
+	height:40px;
+	float:left;
+	margin:0;
+	padding:0;
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-right:12px;
+}
+
+p.sectionText {
+	color: #939393;
+	font-size: 11px;
+	padding:0;
+	margin: 12px 0 12px 8px;
+	word-wrap: break-word;
+}
+
+.hiliteTextGreen {
+	color:#8bc53f;
+}
+
+.hiliteTextRed {
+	color:#f26c4f;
+}
+
+.rightSectionHeader {
+	font-size: 12px;
+	font-weight:bold;
+	margin:0;
+	color:#000000;
+	width:246px;
+	height:18px;
+	padding:5px 0px 0px 8px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightColHeadRibbon.gif');
+}
+
+.rightSectionHolder {
+	width:249px;
+	border-left:solid #4a4a4a 1px;
+	padding-left:4px;
+	padding-top:4px;
+}
+
+.rightSectionFooter {
+	width:254px;
+	height:2px;
+	margin:0;
+	margin-bottom:16px;
+	padding:0;
+}
+
+#rightStatsBlockHeader {
+	width:254px;
+	height:8px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockHeader.gif');
+}
+#rightStatsBlockFooter {
+	width:254px;
+	height:8px;
+	margin:0;
+	margin-bottom:24px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockFooter.gif');
+}
+.rightStatsBlock {
+	width:253px;
+	border-left:solid #4a4a4a 1px;
+	margin:0;
+	padding:4px 0px 4px 0px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockBG.gif');
+	background-repeat:repeat-y;
+	line-height: 14px;
+}
+
+#rightActionBlockHeader {
+	width:254px;
+	height:9px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockHeader.gif');
+}
+#rightActionBlockFooter {
+	width:254px;
+	height:9px;
+	margin:0;
+	margin-bottom:16px;
+	margin-top:-4px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockFooter.gif');
+}
+#rightActionBlock {
+	width:254px;
+	margin:0;
+	padding:8px 0px 0px 0px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockBG.gif');
+	background-repeat:repeat-y;
+}
+
+#groupType {
+	width:245px;
+	margin:0;
+	padding:0;
+	padding-left:9px;
+}
+
+#groupTypeIcon {
+	float:left;
+	width:16px;
+	height:16px;
+	margin:0;
+	padding:0;
+	padding-right:4px;
+}
+
+#groupType p {
+	margin:0;
+	padding:0;
+	color:#e1e1e1;
+	font-size:11px;
+	font-weight:bold;
+	padding-top:5px;
+}
+
+.groupBlock {
+	padding-left:120px;
+	height: 72px;
+	margin-bottom: 12px;
+}
+
+.groupBlockIcon {
+	float:left;
+	width:40px;
+	height:40px;
+	margin:0;
+	padding:0;
+	margin-right:8px;
+}
+
+.groupBlockMedium {
+	float:left;
+	width:72px;
+	height:72px;
+	margin:0;
+	padding:0;
+	margin-right:8px;
+}
+
+.groupSmallText {
+	font-size:11px;
+	color:#898989;
+}
+
+.underscoreColor {
+	color:#707070
+}
+
+.actionItem {
+	width:254px;
+	height:22px;
+	margin:0;
+	padding:0;
+	font-size: 11px;
+	color: #62a7e3;
+}
+
+.actionItemIcon {
+	width:16px;
+	height:16px;
+	border:none;
+	padding:0;
+	margin:0;
+	padding-left:10px;
+	padding-right:6px;
+	float:left;
+}
+
+.actionItemNoIcon {
+	width:254px;
+	height:22px;
+	margin:0;
+	padding:0;
+	padding-left:10px;
+	font-size: 11px;
+	color: #62a7e3;
+}
+
+.actionItem .disabledLink {
+	color: #646464;
+}
+
+.profileActionRule {
+	color: #595959;
+	margin: 4px 12px 6px 10px;
+	border-top: 1px solid #595959;
+}
+
+#limitedUserModal {
+	display:none;
+	position:absolute;
+	width:524px;
+	padding:12px;
+	z-index:1000;
+	background-color:#3a3a3a;
+	text-align:left;
+}
+
+#limitedUserModalClose {
+	position:absolute;
+	width:11px;
+	height:11px;
+	right:12px;
+	top:12px;
+}
+
+#limitedUserModalContents {
+	margin-bottom: 14px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.limitedUserModalRule {
+	border-top: 1px solid #595959;
+	margin-bottom: 8px;
+}
+
+.statsItem {
+	width:253px;
+	margin:0;
+	padding:0;
+	margin-bottom:0px;
+	font-size: 11px;
+	color: #939393;
+	font-weight:normal;
+	line-height:12px;
+	clear:left;
+}
+
+.statsItemName {
+	padding:0;
+	margin:0;
+	float:left;
+	font-size: 11px;
+	color: #545454;
+	line-height: 12px;
+	width:95px;
+	padding-left:8px;
+	font-weight:normal;
+}
+
+.rightGreyHR {
+	margin:0;
+	padding:0;
+	width:253px;
+	height:1px;
+	background-color:#363636;
+	margin-top:4px;
+	margin-bottom:4px;
+	clear:left;
+}
+
+.mostPlayedBlock {
+	width:241px;
+	height:40px;
+	margin:0;
+	padding:0;
+	padding-left:8px;
+	font-size: 11px;
+	color: #939393;
+	font-weight:normal;
+	padding-right: 4px;
+	white-space: nowrap;
+}
+
+.mostPlayedBlockIcon {
+	float:left;
+	width:40px;
+	margin:0;
+	padding:0;
+	margin-right:6px;
+}
+
+.mostPlayedSmallText {
+	font-size: 11px;
+	color: #939393;
+	font-weight:normal;
+}
+
+p.rightText {
+	margin:0;
+	padding:0;
+	padding-top:2px;
+	padding-bottom:4px;
+}
+
+#groupInviteListPopup {
+	position:absolute;
+	padding:7px;
+	background-color:#202020;
+	border:solid #6e6e6e 1px;
+	font-size:15px;
+	text-align:left;
+	box-shadow:0 0 4px #000;
+}
+
+.groupInviteLink, .groupInviteLink:hover, .groupInviteLink:visited {
+	display:block;
+	padding:2px 5px 2px 5px;
+	text-decoration:none;
+	color:#e1e1e1;
+}
+
+.groupInviteLink:hover {
+	color:#e1e1e1;
+	text-decoration:underline;
+}
+
+#moreGroups {
+	display:none;
+}
+
+.indentText {
+	margin:0;
+	padding:0;
+	padding-left:152px;
+	padding-bottom:5px;
+}
+
+#lessGroupsLink {
+	display:none;
+}
+
+#primaryMemberText {
+	font-size:10px;
+	margin:0;
+	padding:0;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+#moreGames	{
+	display:none;
+}
+
+#moreGamesLink	{
+	padding-left:10px;
+	padding-top:0px;
+}
+
+#moreGamesLink p {
+	margin:0;
+	padding:0;
+	padding-top:4px;
+}
+
+#wishlistLink	{
+	padding-left:10px;
+	padding-top:0px;
+}
+
+#wishlistLink p {
+	margin:0;
+	padding:0;
+	padding-top:4px;
+}
+
+
+#lessGamesLink	{
+	padding-left:10px;
+	padding-top:3px;
+	display:none;
+}
+
+.linkTooltip {
+	color:#000000;
+	background-color:#a8a8a8;
+	border:solid black 2px;
+	margin:0;
+	padding:3px;
+	font-size:11px;
+	line-height:18px;
+	text-align:left;
+}
+
+.ignoreInfo {
+	padding-left:10px;
+	color:#f26c4f;
+	font-size:11px;
+	font-weight:bold;
+	width:230px;
+	padding-bottom:6px;
+}
+
+#ignoreLink {
+	font-size: 11px;
+	color: #6f9fc8;
+	font-weight:normal;
+}
+
+#inCommon {
+	font-size: 11px;
+	color:#8b8b8b;
+	font-weight:normal;
+}
+
+.groupBlockOGGLogo {
+	float:left;
+	width:192px;
+	height:78px;
+	margin:0;
+	padding:0;
+	margin-right:11px;
+	padding-bottom:10px;
+}
+
+.listOGGTag {
+	padding-top:7px;
+	font-size:11px;
+}
+
+.groupBlockOGG>p {
+	margin:0;
+	padding:0;
+	padding-top:5px;
+}
+
+.groupBlockOGG {
+	clear:left;
+	padding-bottom:6px;
+}
+
+.vacText {
+	color:#f16c4f;
+}
+
+.commentBlock {
+	width:669px;
+	clear:left;
+}
+
+.commentContentBlock {
+	width:467px;
+	padding-bottom:15px;
+	float:left;
+}
+
+.commentByline {
+	color:#666666;
+	font-size:11px;
+	margin-bottom:5px;
+}
+
+.commentContent {
+	width:459px;
+	padding-right: 8px;
+	color:#939393;
+	font-size:11px;
+	word-wrap: break-word;
+}
+
+.commentBreaker {
+	margin-top:10px;
+}
+
+.commentAuthorAvatar {
+	float:left;
+	width:40px;
+	margin-right:10px;
+}
+
+.commentBlockControl {
+	float:left;
+	width:142px;
+	padding-top:10px;
+	padding-right:10px;
+	text-align:right;
+	visibility: hidden;
+}
+
+.commentBlock:hover .commentBlockControl {
+	visibility: visible;
+}
+
+
+.commentNotes {
+	padding-left:202px;
+	color:#959595;
+	font-size:11px;
+	width: 467px;
+}
+
+#commentInput {
+	background-color:#000000;
+	color:#666666;
+	font-size:11px;
+	overflow:auto;
+	border:solid #666666 1px;
+	height:auto;
+	width: 400px;
+	/* disable webkit resize grip */
+	resize: none;
+}
+
+#commentSave {
+	display:none;
+}
+
+#profileScreenshotSlideshowCtn {
+	width: 230px;
+	height: 172px;
+	margin-bottom: 8px;
+	margin-left: 6px;
+	margin-top: 4px;
+}
+
+#profileScreenshotSlideshow {
+	position: relative;
+	width: 230px;
+	height: 172px;
+	overflow: hidden;
+}
+
+#profileScreenshotSlideshow .slideshowSlideItem {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+
+
+
+/* recommendations */
+
+
+.recommendationRow {
+	padding-left: 208px;
+	min-height: 77px;
+	margin-bottom: 32px;
+	position: relative;
+}
+
+.recommendationRowContent {
+	
+}
+
+a.recommendation_btn, a.recommendation_imgbtn
+{
+	display: inline-block;
+	line-height: 22px;
+	height: 22px;
+	color: #82807c;
+	font-size: 11px;
+	background-color: #1a1a1a;
+	
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+a.recommendation_btn.lighter
+{
+	background-color: #262626;
+	color: #b0aeac;
+}
+
+a.recommendation_btn
+{
+	padding: 0px 6px;
+}
+
+a.recommendation_btn:hover, a.recommendation_imgbtn:hover
+{
+	text-decoration: none;
+	background-color: #97c0e3;
+	color: #3c3d3e;
+}
+
+.profileRecommendation
+{
+	position: relative;
+	padding-left: 202px;
+	min-height: 78px;
+	margin-bottom: 16px;
+}
+
+.profileRecentlyPlayedInfo
+{
+	padding-top: 23px;
+}
+
+.profileRecommendation .profileRecommendationLogo
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 192px;
+	height: 78px;
+}
+
+
+.quote_serif
+{
+	font-family: Georgia, serif;
+}
+
+p.profileRecommendedInstructions {
+	color: #666666;
+}
+
+.profileRecommendation p.quote_profile
+{
+	font-size: 12px;
+	color: #939393;
+	line-height: 17px;
+	margin-bottom: 8px;
+	font-style: italic;
+	max-height: 450px;
+	overflow: auto;
+	overflow-x: hidden;
+	padding: 2px;
+}
+
+.profileRecommendation .profileRecommendationFooter {
+	color: #626467;
+	font-size: 11px;
+}
+
+.profileRecommendationViewLink {
+	border-top: 1px solid #4D4D4E;
+	padding-top: 8px;
+}
+
+.profileRecentlyPlayedRecommend {
+	padding-top: 28px;
+}
+
+
+.pullup_item {
+	float:left;
+	display: block;
+	background-color:#1a1a1a;
+	padding:3px 8px 3px 0px;
+	margin-right:6px;
+	cursor: pointer;
+}
+
+a.pullup_item {
+	color: #939393;
+}
+
+a.pullup_item:hover {
+	text-decoration: none;
+	color: #939393;
+	
+}
+
+.menu_ico {
+	float:left;
+	padding:0px 7px 0px 6px;
+}
+.namehistory_item {
+    padding: 5px 12px;
+    color: #b0aeac;
+    font-size: 10px;
+    font-weight: normal;
+    z-index:999;
+}
+.namehistory_bottom_border {
+	border-bottom: 1px solid #82807c;
+}
+.namehistory_aka_title {
+
+}
+a.popup_menu_item:hover h4 {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.smallBannerText {
+	position:absolute;
+	font-size:12px;
+	font-family:arial;
+	color:#dbdbe1;
+	top:5px;
+	left:40px
+}
+
+.smallBannerText:hover {
+	color:#ffffff;
+}
+
+.linkActionMinor {
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.linkActionSubtle, .linkActionSubtle:visited {
+	color: #939393;
+	font-size: 12px;
+}
+
+.linkActionProfileInGame {
+	color: #8BC53F;
+}
+
+#rightActionBlock > hr {
+	height: 0px;
+	border: 1px;
+	border-style: solid none solid none;
+	border-color: #2e2e2e #000 #4b4b4b #000;
+	margin: 3px 0 8px 1px;
+}
+
+#NamePopup {
+	position:absolute;
+	padding:7px;
+	background-color:#202020;
+	border:solid #6e6e6e 1px;
+	text-align:left;
+	box-shadow:0 0 4px #000;
+	z-index:1;
+	padding:7px 12px 7px 12px;
+	font-size:12px;
+	color:#939393;
+}
+
+#NamePopupAliases p {
+	margin:0px;
+	padding:4px 5px 0px 13px;
+}
+
+#NotificationArea {
+	border-left: solid #4A4A4A 1px;
+	color:#000;
+	box-shadow:inset 0 0 4px #000;
+	-webkit-box-shadow:inset 0 0 4px #000;
+	-moz-box-shadow:inset 0 0 4px #000;
+	margin: -8px 0 0px 0;
+}
+
+#NotificationArea a {
+	color:#000;
+	text-decoration:underline;
+}
+
+#NotificationArea a:hover {
+	text-decoration:none;
+}
+
+#NotificationArea p {
+	font-size:14px;
+	padding:5px 10px 5px 10px;
+	margin:0;
+}
+
+#NotificationArea span.note {
+	font-size:11px;
+	display:block;
+}
+
+.notificationPositive {
+	background-color:#759826;
+}
+
+.notificationNegative {
+	background-color:#a94847;
+}
+
+.notificationSpacer {
+	min-height:22px;
+	padding-top:8px;
+	margin-top:-8px;
+}
+
+#statusInGameHeader {
+	font-size:14px;
+	font-weight:bold;
+	color:#8BC53F;
+	margin:0;
+}
+
+#statusOnlineHeader {
+	font-size:14px;
+	font-weight:bold;
+	color:#62A7E3;
+	margin:0;
+}
+
+.YouAreFriends {
+	color:#EBEBEB;
+	margin-top:3px;
+	clear:both;
+}
+
+.joinGameButton {
+	width:234px;
+	height:40px;
+	padding:4px 0 4px 4px;
+	background-color:#2d2d2c;
+	font-size:11px;
+	line-height:13px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:1px #3c3c3c solid;
+}
+
+.joinGameButton:hover {
+	background-color: #444444;
+	cursor: pointer;
+}
+
+#InCommonText {
+	margin:3px 0 0 0;
+	padding:0;
+}
+
+
+.header_nickname {
+	color: #939393;
+	font-size: 20px;
+}
+
+.namehistory_link {
+	display: inline-block;
+	background: #202020;
+	border-radius: 2px;
+	padding: 6px 4px 6px 4px;
+	margin-top: 2px;
+	vertical-align: middle;
+}
+
+#NicknameModal {
+	display:none;
+	position:absolute;
+	width:524px;
+	padding:12px;
+	z-index:1000;
+	background-color:#3a3a3a;
+	text-align:left;
+	border-radius: 3px;
+}
+
+#NicknameModal .close {
+	position:absolute;
+	width:11px;
+	height:11px;
+	right:12px;
+	top:12px;
+}
+
+#NicknameModal .name {
+	display: inline-block;
+	padding: 0 0 0 5px;
+	vertical-align: 70%;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#NicknameModal > h1 {
+	padding: 0;
+	margin: 0 0 2px 0;
+}
+
+#NicknameModal > p {
+	margin: 3px 0 3px 0;
+}
+
+#NicknameModal input {
+	width: 100%;
+}
+
+#NicknameModal .IconHolder {
+	display: inline-block;
+}
+
+#NicknameModal .button {
+	display: block;
+	float: right;
+	margin-left: 10px;
+	color: #fff;
+	padding: 3px 8px 3px 8px;
+	border: 1px solid #706d69;
+	border-radius: 2px;
+	cursor: pointer;
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/btn_header_installsteam_gray.png );
+	background-position: 0 -21px;
+}
+
+#NicknameModal .button.positive {
+	color: #8ac240;
+	border-color: #8ac240;
+}
+#NicknameModal .button.positive:hover {
+	color: #b3e077;
+	border-color: #b3e077;
+}
+
+.commentthread_header, .commentthread_footer {
+	border-bottom: none;
+	border-top: none;
+	background-color: #1e1e1f;
+	color: #626467;
+
+	padding: 0px 4px;
+	margin-bottom: 3px;
+
+	border-radius: 3px;
+
+	font-size: 12px;
+}
+
+.commentthread_paging .pagebtn {
+	line-height: 16px;
+}
+
+.commentthread_header .commentthread_count a{
+	color: #626467;
+	text-decoration: underline;
+}
+
+
+.commentthread_comment_author a, .commentthread_comment_text {
+	font-size: 12px;
+}
+
+/* used for profile sub-pages */
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+}
+/* subpages use the same "#mainContents" id, so override it here based on the use of BG_bottom */
+#BG_bottom #mainContents {
+	width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:10px;
+	background: none;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:17px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:17px;
+}
+
+.profile_badges {
+	padding: 6px;
+}
+
+.profile_badges .profile_badge {
+	float: left;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.profile_badges .profile_badge_icon {
+	height: 54px;
+	width: 54px;
+}
+
+.badge_list {
+	background-color: #212122;
+	width: 878px;
+	width: 851px;
+	padding: 12px 14px;
+}
+
+.badge_list .badge {
+	position: relative;
+	background-color: #262627;
+	border: 1px solid #454545;
+	border-radius: 3px;
+	height: 80px;
+	padding: 8px 11px 8px 88px;
+
+	z-index: 2;
+}
+.badge_list .badge_entry {
+
+	margin-bottom: 9px;
+
+}
+
+.badge_logo {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	height: 80px;
+	width: 80px;
+}
+.badge_unlocked {
+}
+.badge_content {
+	padding-top: 20px;
+	padding-left: 14px;
+}
+.badge_name {
+	color: #e1e1e1;
+	font-weight: bold;
+	font-size: 14px;
+}
+.badge_description {
+}
+
+.badge_xp_value {
+	float: right;
+}
+
+.badge_quest_separator {
+	position: absolute;
+	top: -4px;
+	left: -1px;
+	background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/badge_quest_transition.png' );
+	width: 851px;
+	height: 19px;
+}
+.badge_quests {
+	position: relative;
+	z-index: 1;
+	padding: 18px 0px 18px 44px;
+	border-left: 1px solid #454545;
+	border-bottom: 1px solid #454545;
+	border-right: 1px solid #454545;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.badge_quests .quest {
+	width: 388px;
+	height: 48px;
+	float: left;
+	margin-bottom: 10px;
+}
+.badge_quests_title {
+	color: #CCCCCC;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	margin-right: 8px;
+}
+.badge_quests_desc {
+	color: #888888;
+	font-size: 10px;
+	font-weight: normal;
+	padding-right: 12px;
+}
+.badge_quests .quest .quest_icon {
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+	margin-right: 8px;
+	float: left;
+}
+
+.player_level_circle {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	color: white;
+	padding-left: 8px;
+	padding-top: 3px;
+	font-size: 12px;
+
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #494949, #494989);
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #494949, #494989);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #494949, #494989);
+}
+
+.player_level_circle_large {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	color: white;
+	padding-left: 13px;
+	padding-top: 13px;
+	font-size: 32px;
+	margin-right: 30px;
+	margin-top: 20px;
+
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #494949, #494989);
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #494949, #494989);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #494949, #494989);
+}
