@@ -1,0 +1,2 @@
+http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css
+
