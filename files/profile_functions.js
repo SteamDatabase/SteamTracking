@@ -48,7 +48,7 @@ function ajaxFriendResponse(transport)
 	$('AddFriendItem').hide();
 	if( !transport.responseJSON )
 	{
-		showNotification( 'notificationNegative', 'Houve um erro ao adicionar amigo. Por favor, tente novamente.');
+		showNotification( 'notificationNegative', 'Error adding friend. Please try again.');
 		$('AddFriendItem').show();
 		return;
 	}
@@ -56,7 +56,7 @@ function ajaxFriendResponse(transport)
 	$H( transport.responseJSON['invited'] ).each( function( pair ) {
 		if( pair.value == invitee )
 		{
-			showNotification('notificationPositive', 'Convite de amizade enviado.');
+			showNotification('notificationPositive', 'Friend invite sent.');
 			bFound = true;
 		}
 	});
@@ -68,17 +68,17 @@ function ajaxFriendResponse(transport)
 	{
 
 		case 25:
-			showNotification( 'notificationNegative', 'A sua lista de amigos está cheia.', 'Você não poderá enviar mais convites até que dê espaço para esses novos amigos.' );
+			showNotification( 'notificationNegative', 'Your friends list is full.', 'New invites cannot be sent until you make room for those new friends.' );
 			break;
 
 		case 15:
-			showNotification( 'notificationNegative', 'A lista de amigos desse usuário está cheia.','Não é possível enviar convites no momento.' );
+			showNotification( 'notificationNegative', 'This user\'s friends list is full.','New invites cannot be sent at this time.' );
 			break;
 
 		case 40:
 		case 41:
 		default:
-			showNotification( 'notificationNegative','Houve um erro ao adicionar amigo. Por favor, tente novamente.' );
+			showNotification( 'notificationNegative','Error adding friend. Please try again.' );
 			$('AddFriendItem').show();
 			$('AddFriendItem').setStyle( {visibility: 'visible'} );
 	}
@@ -117,7 +117,7 @@ function ajaxAliasResponse(transport)
 	aliasContainer.update('');
 
 	if( !Aliases || Aliases.length == 0 )
-		Aliases.push( {newname: "Esse usuário não tem apelidos conhecidos"} );
+		Aliases.push( {newname: "This user has no known aliases"} );
 
 	for( x=0; x<Aliases.length; x++ )
 	{
@@ -202,7 +202,7 @@ function selectInviteGroup(transport)
 	if(!invitableGroups || invitableGroups.length == 0)
 	{
 		curA = document.createElement('span');
-		curATN = document.createTextNode("Esse usuário já entrou ou foi convidado a todos os seus grupos.");
+		curATN = document.createTextNode("This user has already joined or been invited to all of your groups.");
 		curA.appendChild(curATN);
 		pickEl.appendChild(curA);
 	}
@@ -292,7 +292,7 @@ function receiveGroupInvite()
 					a2c = document.getElementById('groupInviteListPopup');
 					a2c.parentNode.removeChild(a2c);
 				}
-				alert( "Convite enviado!" );
+				alert( "Invitation Sent!" );
 			}
 			else
 			{
