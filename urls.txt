@@ -1,7 +1,18 @@
 http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css
 http://cdn.steamcommunity.com/public/css/skin_1/profile.css
 http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css
+http://cdn.steamcommunity.com/public/css/skin_1/forums.css
+http://cdn.steamcommunity.com/public/css/skin_1/economy.css
+http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css
+http://cdn.steamcommunity.com/public/css/globalv2.css
 
+http://cdn.steamcommunity.com/public/javascript/group.js
+http://cdn.steamcommunity.com/public/javascript/market.js
+http://cdn.steamcommunity.com/public/javascript/forums.js
+http://cdn.steamcommunity.com/public/javascript/economy.js
+http://cdn.steamcommunity.com/public/javascript/discussions.js
 http://cdn.steamcommunity.com/public/javascript/profile_functions.js
 http://cdn.steamcommunity.com/public/javascript/comment_functions.js
+http://cdn.steamcommunity.com/public/javascript/blotter_functions.js
+http://cdn.steamcommunity.com/public/javascript/workshop_functions.js
 

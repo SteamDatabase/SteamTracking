@@ -1,0 +1,996 @@
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+	margin: 0;
+}
+
+#BG_top {
+	position:relative;
+	width:949px;
+	height:109px;
+	text-align: left;
+	margin: 0 auto;
+	padding-top: 18px;
+}
+
+#BG_top > img {
+	border: none;
+}
+
+#BG_top > .betaicon {
+	position: absolute;
+
+	height: 30px;
+	width: 86px;
+
+	left: 422px;
+	top: 59px;
+}
+
+#BG_top > .user_info {
+	position: absolute;
+	height: 51px;
+	padding: 13px 13px 0 13px;
+
+	background-color: #1B1B1B;
+	border: 1px solid #39393A;
+	border-right: 1px solid #0F0F0F;
+	border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+
+	min-width: 290px;
+	max-width: 400px;
+
+	right: 0;
+	top: 29px;
+}
+
+.market_header_hidden {
+	/* allow these to still be read by screen readers */
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.user_info_text {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 7px;
+
+	font-size: 14px;
+	color: #E1E1E1;
+
+	max-width: 350px;
+}
+
+.user_info_text a:hover {
+	text-decoration: underline;
+}
+
+#marketReservedFunds {
+	color: #878787;
+	font-size: 11px;
+}
+
+#BG_bottom {
+	background: #1F1F1F;
+	width:949px;
+	text-align:left;
+	margin: 0 auto;
+}
+
+#mainContents {
+	padding: 0;
+	text-align:left;
+}
+
+.market_content_block {
+	padding: 10px 15px 0;
+}
+
+#myMarketTabs {
+	position: relative; /* position:absolute children need to be relative to this */
+	border: 1px solid black;
+	border-top: none;
+	border-right-color: #111111;
+	border-left-color: #1E1E1E;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	-webkit-box-shadow: -2px 2px 8px #292929 inset;
+	-moz-box-shadow: -2px 2px 8px #292929 inset;
+	box-shadow: -2px 2px 8px #292929 inset;
+	background-image: linear-gradient(to bottom, #404040, #343434);
+	background-image: -moz-linear-gradient(top, #404040, #343434);
+	background-image: -webkit-linear-gradient(top, #404040, #343434);
+}
+
+#myListings {
+	border: 1px solid #282828;
+	border-left: none;
+	border-right: none;
+}
+
+.my_listing_section {
+	margin-bottom: 2em;
+}
+
+.my_market_header {
+	font-size: 16px;
+	color: #C2C2C2;
+}
+
+.my_market_header_active {
+	color: white;
+}
+
+.my_market_header_count {
+	font-size: 75%;
+	color: #BCBCBC;
+}
+
+.pick_and_sell_button {
+	line-height: 0;
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	bottom: 8px;
+}
+
+.pick_and_sell_button .item_market_action_button_contents {
+	min-width: 112px;
+}
+
+.market_listing_table_header, .market_listing_table_message {
+	background-color: #292929;
+	border: 1px solid #333333;
+	margin: 8px 0 10px;
+	height: 2.25em;
+	vertical-align: middle;
+	line-height: 2.25em;
+}
+
+.market_listing_table_message {
+	height: auto;
+	min-height: 1em;
+	padding: 15px 11px;
+	line-height: normal;
+}
+
+.market_listing_row {
+	clear: left;
+	background-color: #333333;
+	border: 1px solid #414141;
+	margin-top: 10px;
+	height: 74px;
+	white-space: nowrap;
+}
+
+.my_listing_section .market_listing_row {
+	margin-top: 6px;
+	height: 50px;
+}
+a.market_listing_row_link, a.market_listing_row_link:hover, a.market_listing_row_link:active, a.market_listing_row_link:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.market_listing_row_link:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.market_listing_row_link:hover .market_listing_row {
+	border: 1px solid #ADADAD;
+}
+
+.market_listing_item_img {
+	float: left;
+	width: 62px;
+	height: 62px;
+	margin: 5px;
+	border: 1px solid #3A3A3A;
+}
+
+.market_listing_purchase_message {
+	color: #EBEBEB;
+	margin: 30px 5px 0;
+	line-height: 16px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.market_listing_purchase_message a {
+	text-decoration: underline;
+}
+
+.my_listing_section .market_listing_item_img {
+	width: 38px;
+	height: 38px;
+}
+
+.market_listing_item_name_block {
+	vertical-align: top;
+	margin-top: 21px;
+	line-height: 16px;
+	padding-left: 7px;
+	min-width: 189px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.my_listing_section .market_listing_item_name_block {
+	margin-top: 7px;
+	padding-left: 0;
+}
+
+.market_listing_item_name {
+	font-weight: bold;
+}
+
+.market_listing_item_name_link {
+	color: inherit;
+}
+
+a.market_listing_item_name_link:hover {
+	text-decoration: underline;
+}
+
+.market_listing_game_name {
+	font-size: 85.7%;
+}
+
+.market_listing_owner_avatar {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 17px;
+	line-height: 0;
+}
+
+.my_listing_section .market_listing_row .market_listing_owner_avatar {
+	margin-top: 5px;}
+
+.playerAvatar {
+	display: block;
+}
+
+.market_listing_owner_name {
+	float: right;
+	vertical-align: top;
+	margin-top: 29px;
+	line-height: 16px;
+	margin-left: 6px;
+	width: 85px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.market_listing_price_block {
+	float: right;
+	vertical-align: top;
+	margin-top: 10px;
+	width: 99px;
+
+	border: 2px solid #5B5B5B;
+	border-radius: 2px;
+}
+
+.market_listing_whoactedwith .market_listing_owner_avatar {
+	float: left;
+}
+
+.market_listing_table_header {
+	font-size: 85.7%;
+}
+
+.market_listing_header_namespacer {
+	width: 5px;
+	display: inline-block;
+}
+
+.market_listing_table_header, .market_listing_table_header .market_listing_left_cell, .market_listing_table_header .market_listing_right_cell {
+	color: #AFAFAF;
+}
+
+.market_listing_left_cell {
+	float: left;
+}
+
+.market_listing_right_cell {
+	float: right;
+}
+
+.market_home_main_listing_table .market_listing_left_cell, .market_home_main_listing_table .market_listing_right_cell {
+	line-height: 74px;
+}
+
+.my_listing_section .market_listing_left_cell, .my_listing_section .market_listing_right_cell {
+	line-height: 50px;
+}
+
+.market_home_listing_table .market_listing_left_cell, .market_home_listing_table .market_listing_right_cell {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.market_home_listing_table .market_listing_right_cell {
+		border-left: 1px solid transparent;
+}
+
+.market_listing_table_header .market_listing_left_cell, .market_listing_table_header .market_listing_right_cell {
+	margin: 0.25em 0;
+	height: 1.75em;     /* height + margin = 2.25em, the height of .market_listing_table_header */
+	line-height: 1.75em;
+}
+
+.market_listing_table_header .market_listing_right_cell {
+	border-left: 1px solid #404040;
+}
+
+.market_listing_price {
+	color: white;
+	text-align: center;
+}
+
+.market_listing_price_without_fee {
+	display: none;
+}
+
+#market_buynow_dialog_contents .market_listing_price_without_fee {
+	display: inline;
+}
+
+#market_buynow_dialog_contents .market_listing_price_with_fee {
+	display: none;
+}
+
+.market_listing_my_price {
+	width: 115px;
+}
+
+.market_listing_their_price {
+	width: 90px;
+}
+
+.market_listing_their_price > span, .market_listing_my_price > span, .market_listing_num_listings > span {
+	font-size: 85.7%;
+	line-height: 1.25em;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+
+		margin: 10px 0;
+}
+
+.market_listing_num_listings {
+	width: 110px;
+}
+
+.market_listing_num_listings_qty {
+	color: white;
+	font-size: 14px;
+}
+
+.market_listing_listed_date {
+	float: right;
+	width: 133px;
+	color: #AFAFAF;
+}
+
+.market_listing_seller {
+	float: right;
+	width: 89px;
+}
+
+.market_listing_whoactedwith {
+	float: right;
+	width: 156px;
+	padding: 0 12px;
+}
+
+.market_listing_gainorloss {
+	float: left;
+	width: 32px;
+	color: white;
+
+	font-size: 16px;
+	font-weight: bold;
+	height: auto !important;}
+
+.market_listing_row .market_listing_whoactedwith {
+	text-align: left;
+}
+
+.market_listing_whoactedwith_name_block {
+	margin-top: 9px;
+	line-height: 16px;
+	padding-left: 7px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.market_listing_edit_buttons {
+	float: right;
+	height: 50px;
+	width: 280px;
+	text-align: center;
+
+		border-left: 1px solid transparent;
+}
+
+.market_listing_cancel_button, .market_listing_edit_button {
+	margin: 9px 4px 0;
+	height: 41px;
+}
+
+.market_listing_action_buttons {
+	float: right;
+	height: 74px;
+	width: 100px;
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
+
+		border-left: 1px solid transparent;
+}
+
+.market_listing_buy_button {
+	line-height: 0;
+	margin-top: 25px;
+}
+
+.market_listing_buy_button .item_market_action_button_contents {
+	width: 86px;
+}
+
+a.item_market_action_button:hover .item_market_action_button_contents {
+	color: white;
+}
+
+.market_page_left {
+	padding-top: 2em;
+	width: 639px;
+}
+
+.market_page_fullwidth {
+	padding-top: 2em;
+	width: 949px;
+}
+
+.market_large_tab_well_sep {
+	background-color: black;
+	height: 1px;
+	border-right: 1px solid #303030;
+}
+
+.market_large_tab_well, .market_section_header {
+	height: 87px;
+	width: 605px; /* 639px minus the padding minus the 4px cap */
+	padding: 15px 15px 0;
+
+	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab.png');
+	position: relative;
+}
+
+.market_page_fullwidth .market_large_tab_well, .market_page_fullwidth .market_section_header {
+	width: 919px;
+}
+
+.market_large_tab_well_gradient {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 102px;
+	width: 474px;
+	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab_gradient.png');
+	z-index: 1;
+}
+
+.market_large_tab_well .market_section_header_cap, .market_section_header .market_section_header_cap {
+	position: absolute;
+	top: 0;
+	right: -4px;
+	height: 102px;
+	width: 4px;
+	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab_right.png');
+}
+.market_page_fullwidth .market_large_tab_well .market_section_header_cap, .market_page_fullwidth .market_section_header .market_section_header_cap {
+	display: none;
+}
+
+.market_section_title {
+	color: white;
+	font-size: 28px;
+}
+
+.market_large_tab_well > .market_section_title, .market_section_header > .market_section_title {
+	position: absolute;
+	z-index: 2;
+}
+
+.market_section_header > .market_section_title {
+	bottom: 16px;
+}
+
+#searchResults .market_section_title {
+	max-width: 605px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.market_tab_well_tab {
+	display: inline-block;
+	height: 50px;
+}
+
+.market_tab_well_tab_left {
+	float: left;
+	width: 9px;
+	height: 50px;
+
+	background-position: left top;
+}
+
+.market_tab_well_tabs{
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	height: 50px;
+	font-size: 5px;}
+
+.market_tab_well_tab_contents {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 4px;
+	min-width: 195px;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+
+	font-size: 16px;
+}
+
+#sellListings .market_tab_well_tab_contents {
+	min-width: 139px;
+}
+
+a.market_tab_well_tab {
+	text-decoration: none;
+}
+
+a.market_tab_well_tab {
+	cursor: default;
+}
+
+a.market_tab_well_tab_inactive:hover {
+	cursor: pointer;
+}
+
+.market_tab_well_tab_right {
+	float: left;
+	width: 9px;
+	height: 50px;
+
+	background-position: left center;
+}
+
+.market_tab_well_tab_active > span {
+	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_active.png');
+}
+
+.market_tab_well_tab_inactive > span {
+	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_inactive.png');
+}
+
+.market_tab_well_tab_inactive:hover > span, .market_tab_well_tab .market_tab_well_tab_preload {
+	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_inactive_hover.png');
+}
+
+.market_listing_table {
+	border: 1px solid #303030;
+	border-left: none;
+	padding-bottom: 2em;
+}
+
+#searchResultsTable, #sellListingsTable, #soldListingTable {
+	padding-bottom: 0;	background-color: #171717;
+}
+
+.market_listing_table_showmore {
+	line-height: 3em;
+	min-height: 2em;	text-align: right;
+}
+
+.market_listing_table_showmore a {
+	color: #939393;
+}
+
+#sideBar {
+	float: right;
+}
+
+#sideBar > div {
+	margin-top: 2em;
+	width: 295px;
+
+	border: 1px solid #333;
+	border-right: none;
+	border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+}
+
+#moreInfo a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+#findItems hr {
+	border-bottom: 1px solid #333;
+	border-top: 1px solid black;
+	border-right: none;
+	border-left: none;
+	margin: 0;
+}
+
+.market_search_sidebar_contents {
+	width: 265px;
+	padding: 15px;
+}
+
+#findItems .market_section_title {
+	margin-bottom: 16px;
+}
+
+.marker_search_sidebar_section_tip {
+	margin-bottom: 5px;
+	font-size: 14px;
+	color: #828282;
+}
+
+.market_search_game_button_group {
+	padding-left: 12px;
+}
+
+.market_search_box_container {
+	position: relative;
+}
+
+.market_search_sidebar_search_box {
+	width: 241px;
+	padding-right: 20px;
+}
+
+.market_search_filter_search_box {
+	width: 250px;
+	padding-right: 20px;
+}
+
+input.filter_search_box:focus {
+	border-color: #4D4D4D;
+}
+
+.market_search_submit_button {
+	position: absolute;
+
+	border: none;
+	color: transparent;
+	background: url('http://cdn.steamcommunity.com/public/images/economy/search_icon.gif') no-repeat center;
+
+	width: 21px;
+	height: 25px;
+	right: 14px;
+	top: 0;
+
+	cursor: pointer;
+}
+
+.market_listing_filter .market_search_submit_button {
+	right: 0;
+}
+
+.market_paging {
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+
+	padding: 0 6px;
+	margin: 8px 0;
+}
+
+.market_paging_controls {
+	position: absolute;
+	top: 0;
+	right: 6px;
+}
+
+.market_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.market_paging_pagelink, .market_paging_controls .commentthread_pagelink {
+	color: #ffffff;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.market_paging_pagelink:hover, .market_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.market_paging_pagelink.active, .market_paging_controls .commentthread_pagelink.active {
+	color: #747474;
+	cursor: default;
+}
+
+.market_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+.market_listing_nav_container {
+	padding: 0 16px;
+}
+
+.market_listing_nav {
+	padding-top: 24px;
+}
+
+.market_listing_iteminfo {
+	background-color: #171717;
+	background: -moz-linear-gradient(-45deg, #1f1f1f 0%, #171717 33%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1f1f1f), color-stop(33%,#171717)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #1f1f1f 0%,#171717 33%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #1f1f1f 0%,#171717 33%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #1f1f1f 0%,#171717 33%); /* IE10+ */
+	background: linear-gradient(135deg, #1f1f1f 0%,#171717 33%); /* W3C */
+
+	border: 1px solid #303030;
+	border-left: none;
+	padding: 15px;
+	margin-right: 15px;
+}
+
+.market_listing_largeimage {
+	background: #111111;
+
+	-webkit-box-shadow: 0 0 14px #030303 inset;
+	-moz-box-shadow: 0 0 14px #030303 inset;
+	box-shadow: 0 0 14px #030303 inset;
+
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+
+	width: 440px;
+	height: 360px;
+	margin-right: 15px;
+	float: left;
+	text-align: center;
+}
+
+#largeiteminfo {
+	display: inline-block;
+	max-width: 444px;
+}
+
+#largeiteminfo_clienthover {
+	border: none;
+}
+
+#largeiteminfo_content {
+	padding-top: 0;
+	background: none;
+}
+
+#largeiteminfo_content > .item_desc_icon {
+	display: none;
+}
+
+#largeiteminfo_warning {
+	color: #767676;
+	font-size: 85%;
+}
+
+.market_listing_filter {
+	border: 1px solid #39393A;
+	margin: 15px;
+}
+
+.market_listing_filter_active {
+	color: white;
+	border: 1px solid #6C9831;
+	background-color: #4C682D;
+	padding: 4px;
+}
+
+.market_listing_filter_active input.filter_search_box {
+	color: white;
+	border: 1px solid #6C9831;
+}
+
+.market_listing_filter_contents {
+	position: relative;
+	background-color: #1B1B1B;
+	padding: 15px;
+}
+
+.market_listing_filter_active .market_listing_filter_contents {
+	border: 1px solid #6C9831;
+}
+
+.market_listing_filter_active .market_listing_filter_searchhint {
+	display: inline-block;
+	max-width: 350px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.market_listing_filter_clear_button_container {
+	float: right;
+}
+
+.market_page_fullwidth.market_listing_firstsection {
+	padding-top: 1em;
+}
+
+.market_dialog_totals, .market_dialog_totals_cost, .market_dialog_totals_label_spacing, .market_dialog_totals_label {
+	float: right;
+}
+
+.market_dialog_totals_label {
+	text-align: right;
+	font-size: 85.7%;
+}
+
+.market_dialog_totals_cost {
+	text-align: right;
+	font-size: 85.7%;
+
+	border-right: 1px solid transparent;	width: 157px;	color: white;
+	padding-right: 24px;
+}
+
+.market_buynow_dialog_totals_fee_collector {
+	font-size: 64.3%;
+}
+
+.market_dialog_totals_separator {
+	height: 1px;
+	background-color: #626262;
+	margin: 12px 0;
+}
+
+#market_buynow_dialog .market_listing_action_buttons {
+	display: none;
+}
+
+#market_buynow_dialog_paymentinfo {
+	position: relative;
+	padding: 18px;
+}
+
+#market_buynow_dialog_paymentinfo_option_labels {
+	float: left;
+	margin-right: 32px;
+	color: #B0AEAC;
+}
+
+#market_buynow_dialog_paymentmethod {
+	color: #66CC00;}
+
+#market_buynow_dialog_walletbalance {
+	color: #939393;
+}
+
+#market_buynow_dialog_myaccountname {
+	color: white;
+}
+
+#market_buynow_dialog_accept_ssa_container, #market_buynow_dialog_eu_ssa {
+	max-width: 540px;
+}
+
+#market_buynow_dialog_accept_ssa {
+	margin-left: 0;
+}
+
+#market_buynow_dialog_accept_ssa_label {
+	font-size: 85.7%;
+	color: #B0AEAC;
+}
+
+#market_buynow_dialog_purchase, #market_buynow_dialog_addfunds, #market_buynow_dialog_purchase_throbber {
+	position: absolute;
+	bottom: 18px;
+	right: 18px;
+}
+
+#market_buynow_dialog_purchase_throbber {
+	text-align: center;
+}
+
+#market_removelisting_dialog_confirmation {
+	position: relative;
+}
+
+#market_removelisting_dialog_buttons {
+	height: 32px;
+}
+
+#market_removelisting_dialog_accept {
+	float: right;
+}
+
+#market_removelisting_dialog_accept_throbber {
+	position: absolute;
+	bottom: 18px;
+	right: 18px;
+	text-align: center;
+}
+
+.market_hover_tip {
+	background-color: #3F3F3F;
+	color: #D6D6D6;
+	position: absolute;
+	z-index: 100;
+	border: 1px solid #747474;
+
+	width: 288px;
+	padding: 12px;
+
+	box-shadow: 4px 4px 3px black;
+	-moz-box-shadow: 4px 4px 3px black;
+	-webkit-box-shadow: 4px 4px 5px black;
+}
+
+.jqplot-highlighter-tooltip {
+	background: #393938;
+	color: white;
+	border: 1px solid #797272;
+	padding: 5px;
+}
+
+.jqplot-yaxis {
+	left: 0 !important;
+	width: 45px !important;
+}
+
+.jqplot-xaxis {
+	overflow: hidden;
+}
+
+.priceHistoryTime {
+	display: none;
+}
+
+.jqplot-highlighter-tooltip .priceHistoryTime {
+	display: inline;
+}
+
+.zoom_controls .zoomopt {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+#pricehistory_zoom_controls {
+	float: right;
+	margin-right: 45px;
+}
