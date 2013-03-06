@@ -60,22 +60,22 @@ function RenderGameForumList( listType, page, bLoggedIn )
 	switch ( listType )
 	{
 		case 'popular':
-			text = "最热（本周）";
+			text = "Most Popular (this week)";
 			break;
 		case 'recent':
-			text = "您最近玩过的游戏";
+			text = "Your Recently Played Games";
 			break;
 		case 'allowned':
-			text = "我的游戏";
+			text = "My Games";
 			break;
 		case 'wishlist':
-			text = "愿望单";
+			text = "Wishlist";
 			break;
 		case 'recommended':
-			text = "推荐";
+			text = "Recommended";
 			break;
 		case 'visited':
-			text = "您最近查看过的中心";
+			text = "Your Recently Viewed Hubs";
 			break;
 	}
 
