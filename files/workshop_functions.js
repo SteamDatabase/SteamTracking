@@ -892,10 +892,8 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 
 function EditPublishedFileChangeLog( publishedFileID, changeLog )
 {
-	var textArea = new Element( 'textarea', { 'class' : 'change_log_textarea'} );
-	var autoSizingTextArea = new CAutoSizingTextArea( textArea, 200 );
 	$J( "#EditChangeLogDialog" ).show();
-	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ] );
+	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
 
 	dialog.done( function( data ) {
 		changeLog['change_description'] = data;

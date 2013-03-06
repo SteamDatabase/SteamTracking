@@ -790,7 +790,15 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 	height: 23px;
 }
 
-.gray_bevel.for_textarea {
+.gray_bevel input {
+	line-height: 21px;
+	height: 21px;
+}
+
+.newmodal_prompt_textarea {
+}
+
+.newmodal_prompt_textarea.for_textarea {
 	display: inline-block;
 	padding-top: 1px;
 	padding-bottom: 1px;
@@ -798,13 +806,7 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 	width: 500px;
 }
 
-.gray_bevel input {
-	line-height: 21px;
-	height: 21px;
-}
-
-.gray_bevel textarea
-{
+.newmodal_prompt_textarea textarea {
 	height: 396px;
 }
 

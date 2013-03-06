@@ -114,6 +114,31 @@ div.profile_page {
 	padding: 8px;
 }
 
+.favorite_badge {
+	position: relative;
+	padding: 8px 8px;
+}
+
+.favorite_badge_icon {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+.favorite_badge_description {
+	padding-left: 64px;
+	padding-top: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	font-size: 12px;
+}
+
+.favorite_badge_description .name {
+	color: #ffffff;
+}
+
 
 .btn_profile_action {
 	border-radius: 2px;
@@ -186,31 +211,125 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	padding: 0;
 	font-weight: normal;
 
-	line-height: 30px;
+	line-height: 26px;
 	font-size: 20px;
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 }
 
-.profile_customization_header {
-	color: #406f9d;
-	font-size: 24px;
-}
+.profile_customization {
+	background-image: url('http://cdn.steamcommunity.com/public/images/profile/showcase_bg.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-color: #141414;
 
-.profile_customization_block {
-	border: solid 1px #4f8dc8;
 	border-radius: 3px;
-	height: 130px;
-	padding: 6px;
+	padding: 0 11px 11px 11px;
+
+	margin-bottom: 12px;
 }
 
-.profile_customization_block_outer {
-	border: solid 2px #40638d;
+.profile_customization_header {
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	color: #5491cf;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.showcase_content_bg {
+	background-color: #000000;
+	background-color: rgba( 0, 0, 0, 0.3 );
+	padding: 8px;
+	border-radius: 3px;
+
+	margin-bottom: 9px;
+}
+
+.showcase_content_bg:last-child {
+	margin-bottom: 0;
+}
+
+.showcase_stats_row .showcase_stat {
+	float: left;
+	margin-left: 42px;
+}
+
+.showcase_stats_row .showcase_stat:first-child {
+	margin-left: 0;
+}
+
+.showcase_stat .value {
+	font-size: 34px;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	color: #ffffff;
+}
+.showcase_stat .label {
+	font-size: 17px;
+	color: #9b9b9b;
+}
+
+.showcase_achievement {
+	width: 64px;
+	height: 64px;
+	float: left;
+
+	margin-left: 25px;
+}
+
+.showcase_achievement img {
+	width: 64px;
+	height: 64px;
+}
+
+.showcase_achievement.first {
+	margin-left: 0px;
+}
+
+.showcase_badges_icons {
+	margin-bottom: 9px;
+}
+
+.showcase_badges_icons .showcase_badge {
+	float: left;
+	position: relative;
+
+	margin-left: 26px;
+}
+
+
+.showcase_badges_icons .showcase_badge, .showcase_badges_icons .showcase_badge img {
+	width: 80px;
+	height: 80px;
+}
+
+.showcase_badges_icons .showcase_badge:first-child {
+	margin-left: 0;
+}
+
+.showcase_gamecollector_game {
+	display: block;
+	float: left;
+	position: relative;
+	width: 148px;
+	height: 56px;
+	margin-left: 7px;
+}
+
+.showcase_gamecollector_games .showcase_gamecollector_game:first-child {
+	margin-left: 0;
+}
+
+.showcase_gamecollector_game img.game_capsule {
+	width: 148px;
+	height: 56px;
+}
+
+.showcase_gamecollector_game.openslot {
+	border: 2px dashed #5491CF;
 	border-radius: 5px;
-	margin-bottom: 10px;
-}
-
-.game_info_achievement.showcase {
-	margin-bottom: 8px;
+	width: 144px;
+	height: 52px;
+	text-align: center;
+	line-height: 52px;
 }
 
 .profile_recentgame_header {
@@ -219,13 +338,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 .recentgame_quicklinks {
 	float: right;
-	height: 20px;
-	line-height: 20px;
 }
 
-.profile_recentgame_header .recentgame_quicklinks  {
-	padding-top: 10px;
-}
 
 .recent_game {
 	background-color: #141414;
@@ -345,7 +459,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	height: 32px;
 }
 
-.game_info_achievement.plus_more {
+.game_info_achievement.plus_more, .showcase_achievement.plus_more {
 	height: 30px;
 	width: 30px;
 	border: 1px solid #212121;
@@ -358,6 +472,14 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	box-shadow: 1px 1px 1px #353535;
 
 	cursor: pointer;
+}
+
+.showcase_achievement.plus_more {
+	height: 62px;
+	width: 62px;
+
+	line-height: 62px;
+
 }
 
 .game_info_stats_publishedfilecounts .published_file_count_ctn {
@@ -702,6 +824,18 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	line-height: 26px;
 	border: solid 1px;
 	border-color: #293043 #7a8895 #7a8895 #293043;
+}
+
+.badge_actions {
+	float: right;
+}
+
+.badge_action_controls {
+	visibility: hidden;
+}
+
+.badge:hover .badge_action_controls {
+	visibility: visible;
 }
 
 .profile_small_header_bg {
@@ -1131,7 +1265,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	text-overflow: ellipsis;
 }
 
-.profile_comment_area .commentthread_header {
+.profile_comment_area .commentthread_header, .profile_leftcol_header {
 	border-bottom: none;
 	padding: 6px 10px;
 	height: 26px;

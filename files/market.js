@@ -495,6 +495,7 @@ var CSearchResults = Class.create( {
 	m_bLoading: false,
 
 	m_fnResponseHandler: null,
+	m_fnPageChangedHandler: null,
 
 	initialize: function( rgSearchData, url )
 	{
@@ -524,6 +525,11 @@ var CSearchResults = Class.create( {
 	SetResponseHandler: function( fnHandler )
 	{
 		this.m_fnResponseHandler = fnHandler;
+	},
+
+	SetPageChangedHandler: function ( fnHandler )
+	{
+		this.m_fnPageChangedHandler = fnHandler;
 	},
 
 	SetStaticParameters: function ( rgParams )
@@ -658,6 +664,9 @@ var CSearchResults = Class.create( {
 				elPageLinks.insert( ' ... ' );
 			this.AddPageLink( elPageLinks, this.m_cMaxPages - 1 );
 		}
+
+		if ( this.m_fnPageChangedHandler != null )
+			this.m_fnPageChangedHandler( this.m_iCurrentPage );
 	},
 
 	AddPageLink: function( elPageLinks, iPage )
