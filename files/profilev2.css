@@ -1377,3 +1377,21 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	border-color: #2d2d2d black black #2d2d2d;
 	margin-bottom: 16px;
 	background: -moz-linear-gradient(top, #242424 5%, #141414 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#242424), color-stop(95%,#141414));background: -webkit-linear-gradient(top, #242424 5%,#141414 95%);background: -o-linear-gradient(top, #242424 5%,#141414 95%);background: -ms-linear-gradient(top, #242424 5%,#141414 95%);background: linear-gradient(to bottom, #242424 5%,#141414 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
+
+#profile_background_image {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#profile_background_image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
