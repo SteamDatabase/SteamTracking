@@ -892,7 +892,6 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 
 function EditPublishedFileChangeLog( publishedFileID, changeLog )
 {
-	$J( "#EditChangeLogDialog" ).show();
 	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
 
 	dialog.done( function( data ) {
