@@ -6849,4 +6849,2196 @@
 						"value": 8.000000
 					},
 					{
-						"name": "crit mod di
+						"name": "crit mod disabled",
+						"class": "mult_crit_chance",
+						"value": 0.000000
+					},
+					{
+						"name": "sniper charge per sec",
+						"class": "mult_sniper_charge_per_sec",
+						"value": 1.250000
+					}
+				]
+				
+			},
+			{
+				"name": "Darwin's Danger Shield",
+				"defindex": 231,
+				"item_class": "tf_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Darwin's Danger Shield",
+				"proper_name": false,
+				"item_slot": "secondary",
+				"model_player": "models\/player\/items\/sniper\/croc_shield.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/sniper\/croc_shield",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/croc_shield.032e9314be3aaf0034531da59890eb00a6f92a7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/croc_shield_large.31b66e389dfd7895f0ba17c4d6f10bf971156c39.png",
+				"item_set": "polycount_sniper",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "max health additive bonus",
+						"class": "add_maxhealth",
+						"value": 25.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Bushwacka",
+				"defindex": 232,
+				"item_class": "tf_weapon_club",
+				"item_type_name": "Kukri",
+				"item_name": "Bushwacka",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_croc_knife\/c_croc_knife.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_croc_knife\/c_croc_knife",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_croc_knife.ae304e977e7127b3ea5ddc862614b627604489a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_croc_knife_large.eab581d1e6374a29d9836492fca3a376b4df0854.png",
+				"item_set": "polycount_sniper",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "minicrits become crits",
+						"class": "minicrits_become_crits",
+						"value": 1.000000
+					},
+					{
+						"name": "dmg taken from fire increased",
+						"class": "mult_dmgtaken_from_fire",
+						"value": 1.200000
+					}
+				]
+				
+			},
+			{
+				"name": "Gift - 1 Player",
+				"defindex": 233,
+				"item_class": "tf_wearable",
+				"item_type_name": "Gift",
+				"item_name": "Secret Saxton",
+				"item_description": "When used, this Action Item gives a random gift\nto a random person on the server!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/gift_single",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_single.224407c5bfff829bb61f22562323b9607e7ac888.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_single_large.d8e8e80188563725cedbd0fb00aa226436bc8678.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Gift - 24 Players",
+				"defindex": 234,
+				"item_class": "tf_wearable",
+				"item_type_name": "Gift",
+				"item_name": "Pile o' Gifts",
+				"item_description": "When used, this Action Item gives a random gift\nto up to 23 other people on the server!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/gift_multiple",
+				"min_ilevel": 23,
+				"max_ilevel": 23,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_multiple.143035edf27aafbe5950dc91bd35662b69be2f62.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_multiple_large.a3d0ba48705ac8f48c64892c14a70f63b429b8b0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Rocket Jumper",
+				"defindex": 237,
+				"item_class": "tf_weapon_rocketlauncher",
+				"item_type_name": "Rocket Launcher",
+				"item_name": "Rocket Jumper",
+				"item_description": "A special no-damage rocket launcher for learning\nrocket jump tricks and patterns.",
+				"proper_name": true,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/c_models\/c_rocketjumper\/c_rocketjumper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_rocketjumper\/c_rocketjumper",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_rocketjumper.87211448aa3d1f6165ccc444d07b0117ee0a7da7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_rocketjumper_large.89566eea7b7a2c06c1de533bd104b1c3380aa76c.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "damage penalty",
+						"class": "mult_dmg",
+						"value": 0.000000
+					},
+					{
+						"name": "crit mod disabled",
+						"class": "mult_crit_chance",
+						"value": 0.000000
+					},
+					{
+						"name": "no self blast dmg",
+						"class": "no_self_blast_dmg",
+						"value": 2.000000
+					},
+					{
+						"name": "maxammo primary increased",
+						"class": "mult_maxammo_primary",
+						"value": 3.000000
+					},
+					{
+						"name": "cannot pick up intelligence",
+						"class": "cannot_pick_up_intelligence",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gloves of Running Urgently",
+				"defindex": 239,
+				"item_class": "tf_weapon_fists",
+				"item_type_name": "Boxing Gloves",
+				"item_name": "Gloves of Running Urgently",
+				"proper_name": false,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_boxing_gloves\/c_boxing_gloves.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_boxing_gloves_urgency\/c_boxing_gloves_urgency",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_boxing_gloves_urgency.1bf8411d11eda1618e9f8f25f3ea6711dfb42c03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_boxing_gloves_urgency_large.8982873d8d54bbf8ee126604eb30236874b11bc1.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "move speed bonus",
+						"class": "mult_player_movespeed",
+						"value": 1.300000
+					},
+					{
+						"name": "damage penalty",
+						"class": "mult_dmg",
+						"value": 0.750000
+					},
+					{
+						"name": "provide on active",
+						"class": "provide_on_active",
+						"value": 1.000000
+					},
+					{
+						"name": "lunchbox adds minicrits",
+						"class": "set_weapon_mode",
+						"value": 2.000000
+					},
+					{
+						"name": "self mark for death",
+						"class": "self_mark_for_death",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Worms Gear",
+				"defindex": 240,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Lumbricus Lid",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/worms_gear.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/worms_gear",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/worms_gear.9999ba0d655345188c2e694e37d5cd272056efef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/worms_gear_large.c2fc101bfe99c574623eb38005ef572c2e95b16d.png",
+				"drop_type": "none",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "Duel MiniGame",
+				"defindex": 241,
+				"item_class": "tf_wearable",
+				"item_type_name": "Usable Item",
+				"item_name": "Dueling Mini-Game",
+				"item_description": "Is an enemy player questioning your skills, personal hygiene, and\/or ancestry?\nUse these stylish firearms to challenge them to a duel!\nSee the Mann Co. Catalog for full details.",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/icon_dueling",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/icon_dueling.04be500d28b0eb9113cb38035472df07d9aab216.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/icon_dueling_large.14fd9f2da0f24b2dfaac37d1600c821ddb6d3456.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "duel_minigame"
+				},
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Duel Medal Bronze",
+				"defindex": 242,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Bronze Dueling Badge",
+				"item_description": "This badge tracks your duel statistics.\nIncrease its level by winning duels!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/dueling_medal.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/dueling_medal_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_bronze.e83c677344b318ee6a6dc3c63ec1a4d7eae44efd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_bronze_large.46baf0e9723321747f0348e4af6547312cf37453.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Duel Medal Silver",
+				"defindex": 243,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Silver Dueling Badge",
+				"item_description": "Earned at level 25.\nThis badge tracks your duel statistics.\nIncrease its level by winning duels!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/dueling_medal.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/dueling_medal_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_silver.6eff08164437b275c5e4b1e965c04315e8902338.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_silver_large.22ca86bc7b3288afc06cc92ff2951a8c36cab2d3.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Duel Medal Gold",
+				"defindex": 244,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Gold Dueling Badge",
+				"item_description": "Earned at level 50.\nThis badge tracks your duel statistics.\nIncrease its level by winning duels!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/dueling_medal.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/dueling_medal_gold",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_gold.0f0ba35229fbc609c71062f72e58ec467461d6ac.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_gold_large.c7659f97906f8a395d6a983a72c1a4737e41e38b.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Duel Medal Plat",
+				"defindex": 245,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Platinum Dueling Badge",
+				"item_description": "Earned at level 75.\nThis badge tracks your duel statistics.\nIncrease its level by winning duels!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/dueling_medal.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/dueling_medal_platinum",
+				"min_ilevel": 75,
+				"max_ilevel": 75,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_platinum.02e362c5dd2ec282cbc7a6f9f1ec3fa514105107.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueling_medal_platinum_large.bed99738ab507b6bec853ec29f5d6157e5b22773.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Pugilist's Protector",
+				"defindex": 246,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pugilist's Protector",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/heavy\/pugilist_protector.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/pugilist_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pugilist_protector.fc32caa3a6eddf2762133b497443b36f9f66019c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pugilist_protector_large.609a24b3160cde055595ef9ef8d2bf3e8d232fe0.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "Old Guadalajara",
+				"defindex": 247,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Old Guadalajara",
+				"item_description": "This hat adds spice to any occasion.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/pyro\/fiesta_sombrero.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/fiesta_sombrero",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fiesta_sombrero.3a84e2e9c103c115ed97c02f76e0b4f126f08210.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fiesta_sombrero_large.4ce0228d48bb326057b1dee0b1267769c406fcb9.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Napper's Respite",
+				"defindex": 248,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Napper's Respite",
+				"item_description": "After a long day of burning scouts.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/pyro\/pyro_beanie.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/pyro_beanie",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_beanie.015bccf3650e7278bdafd24520c88a5bd09f29d6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_beanie_large.f7fe13563b1abef93349e7ae69a6dcd289b34164.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Bombing Run",
+				"defindex": 249,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bombing Run",
+				"item_description": "Death from above!",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/scout\/pilot_protector.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/scout\/pilot_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pilot_protector.11f1fd2e1cc487c711125903d7eb6669fc84ba7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pilot_protector_large.e03e47a4c82253962a5720b88d3f2087cec5ddde.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "Chieftain's Challenge",
+				"defindex": 250,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Chieftain's Challenge",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/chief_rocketeer.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/chief_rocketeer",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chief_rocketeer.b9fe011f29ac010811e6f11057c37f141082602b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chief_rocketeer_large.e7417e85fe5ed4f05e8744a7128af9017d28e41e.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "Stout Shako",
+				"defindex": 251,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Stout Shako",
+				"item_description": "The grand achievement of\nVictorian military fashion.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/soldier_shako.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/soldier_shako",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_shako.3633cb29db5fdeae3e26a04aeacdd0cfa6bb03ce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_shako_large.1032bc82b35dbf4ad5c809cd95d3a1ff65e0c61f.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "Dr's Dapper Topper",
+				"defindex": 252,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Dr's Dapper Topper",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/dappertopper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/dappertopper",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dappertopper.62f724984f64517d0a29ce0a4d83549bd071ebbd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dappertopper_large.4f77e87e003dcfda535a16cbfcc39b7be38b8fbb.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "Handyman's Handle",
+				"defindex": 253,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Handyman's Handle",
+				"item_description": "Clears all sorts of blockage.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/pyro\/pyro_plunger.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/pyro_plunger",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_plunger.ee90d9d370b5fbd6271d6195b622af58980f2aa3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_plunger_large.d2a12f8ed993843780db98800445f577451721e4.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Hard Counter",
+				"defindex": 254,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hard Counter",
+				"item_description": "You can never be too careful\nwith Jarate around.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/heavy\/heavy_umbrella.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/heavy_umbrella",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_umbrella.7acee2a070b8843bb9bd30857b6eaf82073c3c7e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_umbrella_large.d1d6de642ef8a25cf8c5d0b8a52b5b994da8c8b2.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "Sober Stuntman",
+				"defindex": 255,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Sober Stuntman",
+				"item_description": "A sticky-jumper's best friend.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/demo\/stunt_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/demo\/stunt_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stunt_helmet.bf22b346852ff68cad55708286efe0b783323ca5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stunt_helmet_large.c1a5a6da54d1abd8e3d21cc48c59afb2eca320c2.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Carouser's Capotain",
+				"defindex": 259,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Carouser's Capotain",
+				"item_description": "Suffer not a sentry to live.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/demo\/inquisitor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/demo\/inquisitor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/inquisitor.e8f81153499c291ad24275159b164b86742243b2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/inquisitor_large.400aeb9bba0aaa74ae228bf577b73f19dad56e2a.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Wiki Cap",
+				"defindex": 260,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Wiki Cap",
+				"item_description": "Given to valuable contributors to the official TF2 wiki\nhttp:\/\/wiki.teamfortress.com\/",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/wikicap_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/wikicap",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/wikicap.cd511140da7a50a2a9cf9f83bd58a12e4652d5ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/wikicap_large.0aaf0120e516d1bb8310139edbd8ef220c0faac6.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Mann Co. Cap",
+				"defindex": 261,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Mann Co. Cap",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/scout\/scout_cap.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_manncap",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_manncap.2db7a10e8396779a06f011458372b12a34a93044.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_manncap_large.65f64c122abf975d8008626b2c5642eebe784d12.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Polycount Pin",
+				"defindex": 262,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Polycount Pin",
+				"item_description": "Awarded to participants of the Polycount contest.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/polypack_badge.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/polypack_badge",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/polypack_badge.14f1a22dbe74bb315eb382d644d07e65eb835a98.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/polypack_badge_large.8afc76a406d7f069a74f2e3dc3bd90a9f0995641.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Ellis Hat",
+				"defindex": 263,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ellis' Cap",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/scout\/scout_ellis.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_ellis",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_ellis.1b709f7e73b0a4d101703ad9bdc584e791619ef1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_ellis_large.b5142c34b1ede4704788df62493792c7c0d5d757.png",
+				"drop_type": "drop",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Frying Pan",
+				"defindex": 264,
+				"item_class": "saxxy",
+				"item_type_name": "Frying Pan",
+				"item_name": "Frying Pan",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_frying_pan\/c_frying_pan.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_pan",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_pan.e09e9bd9bcbe5c4951bb039b633bf11c0185da64.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_pan_large.771f86d5eb0503c4a4645dda5d3975951857fdcb.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout",
+					"Sniper",
+					"Soldier",
+					"Demoman",
+					"Medic",
+					"Heavy",
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Stickybomb Jumper",
+				"defindex": 265,
+				"item_class": "tf_weapon_pipebomblauncher",
+				"item_type_name": "Stickybomb Launcher",
+				"item_name": "Sticky Jumper",
+				"item_description": "A special no-damage stickybomb launcher for learning stickybomb jump tricks and patterns.",
+				"proper_name": true,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/c_models\/c_sticky_jumper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_sticky_jumper",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_sticky_jumper.dfd77e310837c8b41ded7c9fb9491a045a0c1798.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_sticky_jumper_large.94f6bc074b063cb4cd8f9df7afb1a26b2a3be0a6.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "damage penalty",
+						"class": "mult_dmg",
+						"value": 0.000000
+					},
+					{
+						"name": "crit mod disabled",
+						"class": "mult_crit_chance",
+						"value": 0.000000
+					},
+					{
+						"name": "no self blast dmg",
+						"class": "no_self_blast_dmg",
+						"value": 1.000000
+					},
+					{
+						"name": "maxammo secondary increased",
+						"class": "mult_maxammo_secondary",
+						"value": 3.000000
+					},
+					{
+						"name": "override projectile type",
+						"class": "override_projectile_type",
+						"value": 14.000000
+					},
+					{
+						"name": "cannot pick up intelligence",
+						"class": "cannot_pick_up_intelligence",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Horseless Headless Horseman's Headtaker",
+				"defindex": 266,
+				"item_class": "tf_weapon_sword",
+				"item_type_name": "Axe",
+				"item_name": "Horseless Headless Horsemann's Headtaker",
+				"item_description": "Cursed by dark spirits similar to\nthose that dwell within the Eyelander.",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_headtaker\/c_headtaker.mdl",
+				"item_quality": 5,
+				"image_inventory": "backpack\/weapons\/c_models\/c_headtaker\/c_headtaker",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_headtaker.0bc713e0dc8ab90199c86c9c58697c1c3ca42af0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_headtaker_large.1be5482934b57336909ebe3e19c50a5cd30eed87.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "crit mod disabled",
+						"class": "mult_crit_chance",
+						"value": 0.000000
+					},
+					{
+						"name": "max health additive penalty",
+						"class": "add_maxhealth",
+						"value": -25.000000
+					},
+					{
+						"name": "decapitate type",
+						"class": "decapitate_type",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Haunted Metal Scrap",
+				"defindex": 267,
+				"item_class": "craft_item",
+				"item_type_name": "Craft Item",
+				"item_name": "Haunted Metal Scrap",
+				"item_description": "This is metal scrap taken from the Horseless Headless Horsemann. It whispers faintly...'heads'...",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 5,
+				"image_inventory": "backpack\/crafting\/haunted_metal",
+				"min_ilevel": 4,
+				"max_ilevel": 4,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/haunted_metal.cadba5ab06528dda6d0db5bab0f6cc4274fe5dde.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/haunted_metal_large.4e54fe6e0c2dd1fe671cd6e97c501592f0b24490.png",
+				"craft_class": "craft_bar",
+				"craft_material_type": "craft_bar",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Halloween Mask - Scout",
+				"defindex": 268,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Scout Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_scout_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_scout",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_scout.6288df8b3f01298bed8c042985bb71788568397a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_scout_large.35fb082ffe37b2e109139d24bd0ff2ace1aa835a.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Sniper",
+				"defindex": 269,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Sniper Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_sniper_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_sniper",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_sniper.0a82171bd73a54c1fa389ba0c4e71c0d843ca784.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_sniper_large.9e351501498671fdb1a0774d19cdb7cb795e44a5.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Soldier",
+				"defindex": 270,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Soldier Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_soldier_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_soldier",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_soldier.443aeb47ccab56e54d032e57ac7689e326b27bf0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_soldier_large.34536c74ed545967312022587b7050a4f4737644.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Demoman",
+				"defindex": 271,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Demoman Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_demo_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_demo",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_demo.969d92b94c559ab30a054592fb1e2bc5f44d3b1c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_demo_large.ad66fb44193293d67fd482341cbeea147e5a567e.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Medic",
+				"defindex": 272,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Medic Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_medic_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_medic",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_medic.08fca109d42aa7aff505aa2b23bb1d4b60cb1a52.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_medic_large.985e8655f9523c5f86328cca12d38f41c7956378.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Heavy",
+				"defindex": 273,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Heavy Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_heavy_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_heavy",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_heavy.0b033f099a510785f6e4413285e6d0941c098fcc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_heavy_large.2c140dfbe6d4b830c182bd43ae208948128390dd.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Spy",
+				"defindex": 274,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Spy Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_spy_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_spy",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_spy.6de591f787e5da270489b78a1c7de9149aef057e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_spy_large.1eb5b4ef50fca381a086243b1d202397c00e454a.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Engineer",
+				"defindex": 275,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Engineer Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_engineer_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_engineer",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_engineer.9b81f9b8d3c8375f9587bb3e4796d62df0bf51d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_engineer_large.4fcebaad99e71f26a526ba25ebba1bee74e16afd.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Pyro",
+				"defindex": 276,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pyro Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_pyro_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_pyro",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_pyro.977dc436c0aadf8154bd840ea34aed102c075090.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_pyro_large.9f9e688980e69d31662d72289951b18a7b9bc090.png",
+				"drop_type": "drop",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Halloween Mask - Saxton Hale",
+				"defindex": 277,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Saxton Hale Mask",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/halloween_bag_saxton_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/halloween_bag_saxton",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_saxton.c18ad7dfcbb0bef2d4da536070d1671b2c09212b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_bag_saxton_large.02f387ad69caf3d8c3acad8c4fcdeee67a8c9b0d.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Horseless Headless Horseman's Head",
+				"defindex": 278,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Horseless Headless Horsemann's Head",
+				"item_description": "He had one all along...",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/pumpkin_hat_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/pumkin_hat",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pumkin_hat.c4cc2f0e935711af71b2829bcfc7ee9a4a1cf948.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pumkin_hat_large.929107ff3e349db81a65513a6b594b329b62e039.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Ghastly Gibus 2010",
+				"defindex": 279,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ghastlier Gibus",
+				"item_description": "Even more ghastly.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/all_domination_2009_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_domination_2009",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_domination_2009.f2b28e8bf1fa5fc5529c3dcb8e1578198d71cc69.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_domination_2009_large.889bc4d496a1b3a7d011c5b22359e01fcab50f4b.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Ghastlier"
+					},
+					{
+						"name": "Ghastly"
+					},
+					{
+						"name": "Ghostly"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "halloween item",
+						"class": "halloween_item",
+						"value": 2010.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Black Cat",
+				"defindex": 280,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Black Cat",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_cat",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_cat.8bc7fa684215be048d0d909fc99ed2406e73fe3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_cat_large.50f27aa55fedf4b2d1d32b3f7f49531803996d6a.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Gremlin",
+				"defindex": 281,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Gremlin",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_gremlin",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_gremlin.4820fbeced5ea6fd2593192719cca1ff90e5e4f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_gremlin_large.1ee870c98167eba6a77c7d44819cdea76e4bd9b2.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Werewolf",
+				"defindex": 282,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Werewolf",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_wolf",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_wolf.6ea16c80cb78c7aafbed16b11e8d5d880b185682.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_wolf_large.59e5bbd4efd75e540199d4001a961a5c596bfa7d.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Witch",
+				"defindex": 283,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Witch",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_witch",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_witch.b31db478471556fc09539f992ca161d603b1c9d7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_witch_large.930d75b5d01af6effe6aab068cd4cf0f8509602e.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Banshee",
+				"defindex": 284,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Banshee",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_banshee",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_banshee.f90678fc353fa7707196c78a9fb35dd16e0a3bff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_banshee_large.334222fdc3f55cfda396cccfd19e80f4187a6045.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Crazy Laugh",
+				"defindex": 286,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Crazy Laugh",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_laugh",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_laugh.ad2da99932fd78832dfcc5c36612043e9d24e9a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_laugh_large.2647d74ae3b4f62112f68c761d359c37b42b6290.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Spine-Chilling Skull",
+				"defindex": 287,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Spine-Chilling Skull",
+				"item_description": "Express your undying hatred for the living.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/skull_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/skull",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/skull.77a16933985d9ab3946b230f8e24dcdcd5ca0dcb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/skull_large.3acf164cbd8cb53aa13d17acd6595a6ffc6ccf2c.png",
+				"drop_type": "drop",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "halloween item",
+						"class": "halloween_item",
+						"value": 2010.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Noise Maker - Stabby",
+				"defindex": 288,
+				"item_class": "tf_wearable",
+				"item_type_name": "Party Favor",
+				"item_name": "Noise Maker - Stabby",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/noisemaker_stabby",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_stabby.bc76cd2282df054772950b43f230646fcc255b19.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/noisemaker_stabby_large.8a7a09113d386901c825fd723b4627b339e5877d.png",
+				"capabilities": {
+					"usable": true,
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "noise_maker"
+				},
+				"attributes": [
+					{
+						"name": "noise maker",
+						"class": "enable_misc2_noisemaker",
+						"value": 1.000000
+					},
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Voodoo Juju",
+				"defindex": 289,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Voodoo Juju",
+				"item_description": "Only the finest leather hats come with tattoos and piercings.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/voodoojuju_hat_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/voodoojuju_hat",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/voodoojuju_hat.c3f8c6ed8359a4cb983a2f1a2da21d9fe686ed62.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/voodoojuju_hat_large.d1b07abacbd2e29e19e4f78ebee58f1ae771ca66.png",
+				"drop_type": "drop",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "halloween item",
+						"class": "halloween_item",
+						"value": 2010.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Cadaver's Cranium",
+				"defindex": 290,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Cadaver's Cranium",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/heavy\/cadavers_cranium.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/cadavers_cranium",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cadavers_cranium.977c181dc09e4bb090b9e7fa0b07b2d062cffc87.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cadavers_cranium_large.86f4f0c513326beac0309dc1a0a380ba995ab34c.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "Horrific Headsplitter",
+				"defindex": 291,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Horrific Headsplitter",
+				"item_description": "When wearing such a piece of headgear it is best to keep an open mind.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/headsplitter_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/headsplitter",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/headsplitter.f6a798753ef62e2bff073a5159339c4a9c061449.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/headsplitter_large.f27ce882e5934e301ed45169e22d0d2caa170910.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Poker Visor",
+				"defindex": 292,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Dealer's Visor",
+				"item_description": "Do not try to bluff Sasha.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/heavy\/ttg_visor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/ttg_visor",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_visor.8f15be97277922acec8efd0506ef9f6cc88da5f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_visor_large.486bff85001b24f805c15df137522cb8106e0601.png",
+				"drop_type": "none",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "TTG Max Pistol - Poker Night",
+				"defindex": 294,
+				"item_class": "tf_weapon_pistol",
+				"item_type_name": "Pistol",
+				"item_name": "Lugermorph",
+				"item_description": "The ultimate in semi-concealed weaponry.\nThere's no question you need this gun,\nthe only question is: where will you keep it?",
+				"proper_name": true,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/c_models\/c_ttg_max_gun\/c_ttg_max_gun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_ttg_max_gun\/c_ttg_max_gun",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ttg_max_gun.ec679aa6f742399c7217019c92ce008136e7e80a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ttg_max_gun_large.e4a77b0a7a52a01b4ebfa2dbd1c2c0359b38f78f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout",
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "TTG Glasses",
+				"defindex": 295,
+				"item_class": "tf_wearable",
+				"item_type_name": "Glasses",
+				"item_name": "Dangeresque, Too?",
+				"item_description": "Splash the pot with all you got.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/demo\/ttg_glasses.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/demo\/ttg_glasses",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_glasses.ac2911939760bd4212bfd7a0ece866eac4f3b59e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_glasses_large.06647f7ded2c2c00b6d92aeabc09b966d9b4994c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "TTG Badge",
+				"defindex": 296,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "License to Maim",
+				"item_description": "And kill, and break, and smash, and bite. Mainly maim, though.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ttg_badge.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ttg_badge",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_badge.5ba68d265e183525a40312ef9a23847e2d234a48.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_badge_large.4713f4d48ace9e4ecd24bd30dd373b98782d829b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "TTG Watch",
+				"defindex": 297,
+				"item_class": "tf_weapon_invis",
+				"item_type_name": "Invis Watch",
+				"item_name": "Enthusiast's Timepiece",
+				"proper_name": true,
+				"item_slot": "pda2",
+				"model_player": "models\/weapons\/v_models\/v_ttg_watch_spy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_ttg_watch\/c_ttg_watch",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ttg_watch.791ae6984823f2c010d6d5f1decf9e103930a85f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ttg_watch_large.73fc7234175c40ea9ba96c05b0c8ff34abbc07a0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Iron Curtain",
+				"defindex": 298,
+				"item_class": "tf_weapon_minigun",
+				"item_type_name": "Minigun",
+				"item_name": "Iron Curtain",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/c_models\/c_iron_curtain\/c_iron_curtain.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_iron_curtain\/c_iron_curtain",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_iron_curtain.02fc82edc980125eed0ff8c4c2728e7bb37db472.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_iron_curtain_large.dfcd1db84580fa4fb51c9809581326ee348a0229.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Portal 2 Pin",
+				"defindex": 299,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Companion Cube Pin",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/p2_pin.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/p2_pin",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/p2_pin.a3c3f5532aec39b5ad9f55b1ff1c1774fa39cd13.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/p2_pin_large.b2b80523265e126daddc23bdc0d93483f03a2f27.png",
+				"drop_type": "none",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Camera Helm",
+				"defindex": 302,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Frontline Field Recorder",
+				"item_description": "I'm the writer, the director, and the star.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/replay_hat_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/replay_hat",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/replay_hat.718315e19e9aa2aed8cae4e15d11d17ffa31d7b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/replay_hat_l
