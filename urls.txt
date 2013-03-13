@@ -30,5 +30,3 @@ scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/sear
 
 # API
 api/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
-api/TF2Items.json|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?language=en&key=*APIKEY*
-api/Dota2Items.json|http://api.steampowered.com/IEconItems_570/GetSchema/v1/?language=en&key=*APIKEY*
