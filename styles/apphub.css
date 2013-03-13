@@ -1,0 +1,1217 @@
+
+
+/* header */
+.apphub_HeaderTop
+{
+	width: 948px;
+	height: 78px;
+	position: relative;
+	margin: 0px auto;
+	text-align: left;
+	padding-top: 12px;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_hub_header.png');
+	background-repeat: no-repeat;
+	margin-top: 10px;
+}
+
+.apphub_HeaderTop.workshop
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_workshop_header.png');
+}
+
+.apphub_HeaderStandardTop
+{
+	position: relative;
+	margin: 0px auto;
+	text-align: left;
+	padding-top: 7px;
+	height: 46px;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_header.png');
+	background-repeat: repeat-x;
+}
+
+.apphub_AppIcon
+{
+	position: relative;
+	margin-left: 12px;
+	height: 32px;
+	width: 32px;
+	float: left;
+}
+
+.apphub_AppIcon .overlay
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 32px;
+	height: 32px;
+	background: url( http://store.steampowered.com/public/shared/images/game_ico_overlay.png );
+	background-repeat: no-repeat;
+}
+
+.apphub_AppName
+{
+	color: white;
+	font-size: 26px;
+	padding-left: 12px;
+	float: left;
+	max-width: 790px;
+}
+
+.apphub_CommunitySubSectionArrows
+{
+	color: #939393;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.apphub_CommunitySubSection
+{
+	color: #d1cfcd;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+.apphub_OtherSiteInfo
+{
+	position: relative;
+	float: right;
+	right: 11px;
+}
+
+.apphub_WorkshopPistonHolder
+{
+	width: 1px;
+	height: 0px;
+	float: left;
+}
+
+.apphub_WorkshopPiston
+{
+	position: relative;
+	top: -12px;
+	left: -119px;
+	width: 216px;
+	height: 84px;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_workshop_piston.png');
+	background-repeat: no-repeat;
+}
+
+.apphub_SwitchSitesBtn
+{
+	display: inline-block;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	height: 28px;
+	line-height: 28px;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+	-moz-box-shadow: 0px 0px 7px #20324b;
+	-webkit-box-shadow: 0px 0px 7px #20324b;
+	box-shadow: 0px 0px 7px #20324b;
+	font-size: 12px;
+}
+
+.apphub_SwitchSitesBtn .leftcap, .apphub_SwitchSitesBtn .rightcap
+{
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/btn_blue.png' );
+	position: absolute;
+	top: 0px;
+	width: 3px;
+	height: 28px;
+}
+
+.apphub_SwitchSitesBtn .leftcap
+{
+	background-position: left center;
+	left: 0px;
+}
+
+.apphub_SwitchSitesBtn .rightcap
+{
+	background-position: left top;
+	right: 0px;
+}
+
+.apphub_SwitchSitesBtn .middle
+{
+	text-decoration: none;
+	min-width: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 3px;
+	margin-right: 3px;
+	background-position: left bottom;
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/btn_blue.png' );
+	background-repeat: repeat-x;
+}
+
+.apphub_SwitchSitesBtn:hover
+{
+}
+
+.apphub_HeaderBottomBG
+{
+	position: absolute;
+	left: -52px;
+	width: 1051px;
+	height: 239px;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_filter_blue.png');
+	z-index: -1;
+}
+
+.apphub_Header_NoBG .apphub_HeaderBottomBG
+{
+	display: none;
+	background: none;
+}
+
+.apphub_HeaderBottom
+{
+	position: relative;
+	height: 68px;
+	background-color: #1b1b1b;
+	margin-top: 1px;
+}
+
+.apphub_HeaderBottomText
+{
+	text-align: left;
+	padding-left: 15px;
+	line-height: 68px;
+	color: #EBEBEB;
+}
+
+.apphub_HeaderBottomText span a
+{
+	text-decoration: underline;
+}
+
+.apphub_GroupJoinOrLeaveButton
+{
+	text-align: center;
+	display: inline-block;
+	color: white;
+	background-color: #363636;
+	line-height: 22px;
+	min-width: 22px;
+	height: 22px;
+	padding: 2px 10px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	margin-left: 14px;
+	margin-top: 18px;
+	text-decoration: none;
+}
+
+.apphub_GroupJoinOrLeaveButton:hover
+{
+	text-decoration: none;
+	background-color: #545454;
+}
+
+/* stats */
+
+.apphub_Stats
+{
+	line-height: 68px;
+	float: right;
+	font-size: 12px;
+	color: #434344;
+	padding-right: 13px;
+}
+
+.apphub_NumInApp
+{
+	color: #7cc53f;
+	padding-right: 5px;
+}
+
+.apphub_Chat
+{
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.apphub_Chat a
+{
+	text-decoration: underline;
+}
+
+.apphub_sectionTabs
+{
+	position: relative;
+	padding-top: 16px;
+	margin-left: 10px;
+	font-size: 14px;
+	z-index: 10;
+}
+
+.apphub_sectionTabsHR
+{
+	background-color:#364963;
+	height: 5px;
+	width: 948px;
+	margin: 0px auto;
+}
+
+.apphub_sectionTab, a.apphub_sectionTab
+{
+	display: block;
+	float: left;
+	color: #dadada;
+	/*background-color: #3A3A3A;*/
+	height: 30px;
+	line-height: 31px;
+	padding: 0px 12px;
+	margin-right: 5px;
+	text-decoration: none;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius: 2px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+}
+
+.apphub_sectionTab.active
+{
+	padding: 1px;
+	text-decoration: none;
+	border: none;
+
+	background: #57749e; /* Old browsers */
+	background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+
+.apphub_sectionTab.active > span
+{
+
+	padding: 0 19px;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	display: block;
+	background: #445b7c; /* Old browsers */
+	background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );}
+
+
+
+.apphub_sectionTab:hover
+{
+	background: #57749e; /* Old browsers */
+	background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+
+/* friends who played recently */
+
+.apphub_friends_who_played_recently_title
+{
+	text-align: center;
+	float: left;
+	display: block;
+	color: white;
+	background-color: #363636;
+	line-height: 22px;
+	min-width: 22px;
+	height: 22px;
+	padding: 2px 10px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	margin-left: 14px;
+	margin-top: 18px;
+}
+
+.apphub_friends_who_played_recently_title:hover
+{
+	text-decoration: none;
+	background-color: #545454;
+}
+
+.appHubIconHolder
+{
+	position: absolute;
+	padding: 2px;
+	width: 22px;
+	height: 22px;
+	border:0;
+	margin:0;
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_default_26.jpg');
+}
+.appHubIconHolder.offline
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline_26.jpg');
+}
+.appHubIconHolder.ignored
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline_26.jpg');
+}
+.appHubIconHolder.online
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_online_26.jpg');
+}
+.appHubIconHolder.in-game
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_ingame_26.jpg');
+}
+
+.appHubIconHolder.greyOverlay
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	width: 22px;
+	height: 22px;
+	overflow: hidden;
+	background-repeat: repeat;
+}
+
+.appHubIconHolder.large
+{
+	position: absolute;
+	padding: 4px;
+	width: 32px;
+	height: 32px;
+	border:0;
+	margin:0;
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_default.jpg');
+}
+.appHubIconHolder.large.offline
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline.jpg');
+}
+.appHubIconHolder.large.ignored
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline.jpg');
+}
+.appHubIconHolder.large.online
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_online.jpg');
+}
+.appHubIconHolder.large.in-game
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_ingame.jpg');
+}
+
+.appHubIconHolder.large.greyOverlay
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+	background-repeat: repeat;
+}
+
+.apphub_Card.interactable:hover .appHubIconHolder.greyOverlay
+{
+	visibility: hidden;
+}
+
+.apphub_Card.interactable:hover .appHubIconHolder.large.greyOverlay
+{
+	visibility: hidden;
+}
+
+.appHubIconHolder img
+{
+	width: 22px;
+	height: 22px;
+}
+
+.appHubIconHolder.large img
+{
+	width: 32px;
+	height: 32px;
+}
+
+.appHubNewsIconHolder
+{
+	position: absolute;
+	width: 70px;
+	height: 26px;
+	border:0;
+	margin:0;
+}
+
+.apphub_Card.pinned .appHubNewsIconHolder.greyOverlay
+{
+	display: none;
+}
+
+.appHubNewsIconHolder img
+{
+	width: 70px;
+	height: 26px;
+}
+
+.appHubNewsIconHolder.eurogamer
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_eurogamer.gif');
+}
+
+.appHubNewsIconHolder.kotaku
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_kotaku.gif');
+}
+
+.appHubNewsIconHolder.pcgamer
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_pcgamer.gif');
+}
+
+.appHubNewsIconHolder.kotaku
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_kotaku.gif');
+}
+
+.appHubNewsIconHolder.rps
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_rockpapershotgun.gif');
+}
+
+.appHubNewsIconHolder.shacknews
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_shacknews.gif');
+}
+
+.appHubNewsIconHolder.steam_release
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_updates
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_announce
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_client
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_press
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.tf2_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_tf2.jpg');
+}
+
+.appHubNewsIconHolder.l4d_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_l4d2.jpg');
+}
+
+.appHubNewsIconHolder.dota_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_dota2.jpg');
+}
+
+.appHubNewsIconHolder.dota_beta_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_dota2.jpg');
+}
+
+.appHubNewsIconHolder.portal2_blog
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/news/img_portal2.jpg');
+}
+
+.appHubNewsIconHolder.greyOverlay
+{
+	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	width: 70px;
+	height: 26px;
+	overflow: hidden;
+	background-repeat: repeat;
+}
+
+.apphub_Card.interactable:hover .appHubNewsIconHolder.greyOverlay
+{
+	visibility: hidden;
+}
+
+.apphub_friend_block_row
+{
+	padding-left: 8px;
+	padding-top: 18px;
+	float: left;
+}
+
+.apphub_friend_block_container
+{
+	float: left;
+	margin-right: 7px;
+	height: 26px;
+	min-width: 26px;
+	max-width: 240px;
+}
+
+.apphub_friend_block
+{
+	position: relative;
+}
+
+.apphub_friend_block_row .appHubIconHolder
+{
+	cursor: pointer;
+}
+
+a.apphub_more_friends_who_play
+{
+	text-align: center;
+	float: left;
+	display: block;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: bold;
+	color: #898989;
+	background-color: #545454;
+	line-height: 22px;
+	min-width: 22px;
+	height: 22px;
+	padding: 2px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+a.apphub_more_friends_who_play:hover
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* cards */
+
+.apphub_CardRow
+{
+}
+
+.apphub_Content
+{
+	position: relative;
+	width:960px;
+	margin: 0px auto;
+	text-align: left;
+}
+
+.apphub_Discussion_Content
+{
+	position: relative;
+	width:948px;
+	margin: 16px auto 0px auto;
+	text-align: left;
+}
+
+.apphub_Content.modal
+{
+	padding-top: 20px;
+}
+
+.apphub_Card
+{
+	position: relative;
+	float: left;
+	background-color: #1b1b1b;
+	border: 1px solid #343434;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	padding: 0px;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.apphub_Card.interactable
+{
+	cursor: pointer;
+}
+
+.apphub_Card.interactable:hover
+{
+	border: 1px solid #97c0e3;
+}
+
+.apphub_Card.pinned
+{
+	border: 1px solid #494949;
+}
+
+.apphub_CardPinnedIcon
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 24px;
+	width: 24px;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/icons/icon_pin.png');
+}
+
+.apphub_CardContentTypeContainer
+{
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+.apphub_CardContentType
+{
+	visibility: hidden;
+	width: auto;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 5px;
+	z-index: 2;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/item_type_hover.png');
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentType
+{
+	visibility: visible;
+}
+
+.apphub_CardContentType.guide
+{
+	margin: 0px;
+	visibility: visible;
+	background: none;
+}
+
+.apphub_CardMetaData
+{
+	position: absolute;
+	bottom: 47px;
+	left: 0px;
+	right: 0px;
+	height: 40px;
+	padding-top: 5px;
+}
+
+.apphub_CardRating
+{
+	margin-left: 5px;
+    min-width: 81px;
+    height: 13px;
+	padding-left: 85px;
+	background-repeat: no-repeat;
+	font-size: 11px;
+	color: #424242;
+}
+
+.apphub_CardRating.notRated
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/not-yet.png' );
+}
+
+.apphub_CardRating.zeroStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/0-star.png' );
+}
+
+.apphub_CardRating.oneStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/1-star.png' );
+}
+
+.apphub_CardRating.twoStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/2-star.png' );
+}
+
+.apphub_CardRating.threeStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/3-star.png' );
+}
+
+.apphub_CardRating.fourStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/4-star.png' );
+}
+
+.apphub_CardRating.fiveStar
+{
+    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/5-star.png' );
+}
+
+.apphub_CardRating.rateUp
+{
+	padding-left: 18px;
+	font-size: 11px;
+	color: #7cc5fb;
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/icons/icon_rate.png' );
+}
+
+.apphub_CardRating.rateUpHide
+{
+	background: transparent;
+}
+
+.apphub_CardTitle
+{
+	color: white;
+	font-size: 18px;
+	padding-top: 9px;
+	padding-left: 13px;
+}
+
+.apphub_CardContentClickable
+ {
+	 overflow: hidden;
+ }
+
+.apphub_CardContentMain
+{
+	position: relative;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.apphub_CardContentTitle
+{
+	color: white;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.apphub_CardContentTitle a
+{
+	text-decoration: none;
+}
+
+.apphub_CardContentPreviewImageBorder
+{
+	padding: 5px;
+}
+
+.apphub_CardContentPreviewImage
+{
+	position: relative;
+	width: auto;
+	height: auto;
+}
+
+.apphub_CardContentPreviewImageBorder
+{
+}
+
+.apphub_CardContentSpoiler
+{
+	position: absolute;
+	background-color: black;
+	cursor: pointer;
+	width: 100%;
+	top: 10%;
+	bottom: 10%;
+	z-index: 1;
+}
+
+.apphub_CardContentSpoilerText
+{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 45%;
+}
+
+.apphub_CardContentPlayVideoIcon
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -27px;
+	margin-left: -40px;
+	z-index: 2;
+}
+
+.apphub_CardContentAuthorBlock
+{
+	height: 19px;
+	padding: 4px;
+	background-color: #3e3d3d;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorBlock
+{
+	background-color: #494949;
+}
+
+.apphub_Card.pinned .apphub_CardContentAuthorBlock
+{
+	background-color: #494949;
+}
+
+.apphub_CardContentAuthorBlock.tall
+{
+	height: 32px;
+	padding-top: 6px;
+	padding-left: 7px;
+}
+
+.apphub_CardContentAuthorBlock .appHubIconHolder
+{
+	cursor: pointer;
+}
+
+.apphub_CardContentAppName, .apphub_CardContentAppName a
+{
+	padding-top: 7px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #555454;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAppName
+{
+	color:#898989;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAppName a
+{
+	color:#898989;
+}
+
+.apphub_CardContentAuthorName
+{
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 32px;
+	color: #555454;
+}
+
+.apphub_Card.pinned .apphub_CardContentAuthorName
+{
+	color: #898989;
+}
+
+.apphub_CardContentAuthorName.discussion
+{
+	padding-top: 5px;
+	padding-left: 47px;
+}
+
+.apphub_CardContentAuthorName a
+{
+	color: #555454;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName
+{
+	color:#898989;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName a
+{
+	color:#898989;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName.online a
+{
+	color:#6fbdff;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName.offline a
+{
+	color:#898989;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName.in-game a
+{
+	color:#898989;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorName.ignored a
+{
+	color:#f26c4f;
+}
+
+.apphub_CardContentAuthorName.noIcon
+{
+	padding-top: 6px;
+	padding-left: 2px;
+	max-width: 360px;
+}
+
+.apphub_CardContentAuthorName.newsIcon
+{
+	padding-top: 6px;
+	padding-left: 76px;
+	max-width: 175px;
+}
+
+.apphub_CardContentMoreLink
+{
+	font-size: 10px;
+	padding-left: 32px;
+}
+
+.apphub_CardContentMoreLink a
+{
+	color: #555454;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentMoreLink a
+{
+	color: #898989;
+}
+
+.apphub_CardCommentCount
+{
+	background-image: url( 'http://store.steampowered.com/public/shared/images/comment_quoteicon.png' );
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 24px;
+	padding-right: 14px;
+	float: right;
+}
+
+.apphub_CardCommentCount.alignIcon
+{
+	position: absolute;
+	bottom: 15px;
+	right: 0px;
+}
+
+.apphub_CardCommentCount.alignDiscussion
+{
+	position: relative;
+	float: right;
+	clear: right;
+	margin-top: 30px;
+}
+
+/* workshop */
+.apphub_CardBG
+{
+	width: 305px;
+	height: 126px;
+	position: absolute;
+	bottom: 42px;
+	right: 0px;
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_workshopitem.png' );
+	background-repeat: no-repeat;
+}
+
+.apphub_CardBG.workshop
+{
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_workshopitem.png' );
+}
+
+.apphub_CardBG.guide
+{
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_guide.jpg' );
+}
+
+/* discussion */
+
+.apphub_CardContentMain.discussion
+{
+	overflow: visible;
+}
+
+.apphub_CardContentDiscussionTitle
+{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	max-width: 450px;
+	padding-top: 20px;
+	padding-bottom: 14px;
+	padding-left: 15px;
+	padding-right: 15px;
+	word-wrap:break-word;
+}
+
+.apphub_CardContentDiscussionText
+{
+	border: 1px solid #3b3c3d;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 12px 9px 12px 9px;
+	min-height: 100px;
+	max-height: 150px;
+	overflow: hidden;
+}
+
+.apphub_CardContentDiscussionAuthorBlock
+{
+	height: 32px;
+	padding: 4px;
+	padding-top: 6px;
+	padding-left: 15px;
+	left: 0px;
+	right: 0px;
+}
+
+.apphub_CardContentSpeechCorner
+{
+	position: relative;
+	width: 20px;
+	height: 18px;
+	top: -1px;
+	margin-left: 42px;
+	z-index: 2;
+	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/speech_corner.png');
+	background-repeat: no-repeat;
+}
+
+.apphub_CardContentDiscussionDate
+{
+	color: #5c5b5b;
+	padding-top: 4px;
+	padding-left: 47px;
+}
+
+.apphub_CardContentDiscussionType
+{
+	height: 19px;
+	padding: 4px;
+	height: 32px;
+	line-height: 32px;
+	padding-top: 6px;
+	padding-left: 7px;
+	background-color: #3e3d3d;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #555454;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentDiscussionType
+{
+	background-color: #494949;
+	color: #898989;
+}
+
+/* official announcements/news and rss news feeds */
+
+.apphub_CardAnnouncementBG
+{
+	width: 305px;
+	height: 101px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_announcement.png?v=1' );
+	background-repeat: no-repeat;
+}
+
+.apphub_CardContentNewsTitle
+{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	max-width: 450px;
+	padding-top: 20px;
+	padding-bottom: 14px;
+	padding-left: 15px;
+	padding-right: 15px;
+	word-wrap:break-word;
+}
+
+.apphub_CardContentNewsDate
+{
+	color: #737271;
+	font-size: 11px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+}
+
+.apphub_CardContentNewsDesc
+{
+	color: #8c8b8a;
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.apphub_CardContentNewsDesc img
+{
+	float: left;
+	width: auto;
+	height: auto;
+	max-width: 280px;
+	margin-right: 10px;
+	border: 1px solid #3A3A3A;
+	margin-top: 4px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+.apphub_CardContentNewsDesc p
+{
+	margin: 0px;
+}
+
+.apphub_CardContentNewsFade
+{
+	position: relative;
+	top: -18px;
+	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/text_fade.png' );
+	height: 18px;
+	width: 100%;
+}
+
+.apphub_CardContentNewsDesc.shacknews p
+{
+	margin-bottom: 10px;
+}
+
+/* guides */
+.apphub_CardContentGuideImage
+{
+	float: left;
+	width: 64px;
+	height: 64px;
+	padding-right: 10px;
+}
+
+.apphub_CardContentGuideTitle
+{
+	border: 1px solid #3b3c3d;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 12px 9px 12px 9px;
+	margin: 0px 9px;
+	overflow: hidden;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.apphub_CardContentGuideDesc
+{
+	padding: 12px 9px;
+}
+
+.apphub_CardContentGuideForApp
+{
+	color: #737271;
+	font-size: 11px;
+	padding-bottom: 5px;
+}

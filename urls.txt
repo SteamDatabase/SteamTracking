@@ -1,27 +1,34 @@
-http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css
-http://cdn.steamcommunity.com/public/css/skin_1/profile.css
-http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css
-http://cdn.steamcommunity.com/public/css/skin_1/forums.css
-http://cdn.steamcommunity.com/public/css/skin_1/economy.css
-http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css
-http://cdn.steamcommunity.com/public/css/globalv2.css
-http://cdn.store.steampowered.com/public/css/styles_storev5.css
-http://cdn.store.steampowered.com/public/css/styles_gamev5.css
-http://cdn.store.steampowered.com/public/css/styles_video.css
-http://cdn.store.steampowered.com/public/css/styles_recommended.css
-http://cdn.store.steampowered.com/public/shared/css/apphub.css
-http://cdn.store.steampowered.com/public/shared/css/buttons.css
+# CSS
+styles/globalv2.css|http://cdn.steamcommunity.com/public/css/globalv2.css
+styles/economy.css|http://cdn.steamcommunity.com/public/css/skin_1/economy.css
+styles/economy_market.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css
+styles/forums.css|http://cdn.steamcommunity.com/public/css/skin_1/forums.css
+styles/profile.css|http://cdn.steamcommunity.com/public/css/skin_1/profile.css
+styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css
+styles/profilev2.css|http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css
 
-http://cdn.store.steampowered.com/public/javascript/main.js
-http://cdn.store.steampowered.com/public/javascript/search.js
-http://cdn.steamcommunity.com/public/javascript/chat.js
-http://cdn.steamcommunity.com/public/javascript/group.js
-http://cdn.steamcommunity.com/public/javascript/market.js
-http://cdn.steamcommunity.com/public/javascript/forums.js
-http://cdn.steamcommunity.com/public/javascript/economy.js
-http://cdn.steamcommunity.com/public/javascript/discussions.js
-http://cdn.steamcommunity.com/public/javascript/profile_functions.js
-http://cdn.steamcommunity.com/public/javascript/comment_functions.js
-http://cdn.steamcommunity.com/public/javascript/blotter_functions.js
-http://cdn.steamcommunity.com/public/javascript/workshop_functions.js
+styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gamev5.css
+styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css
+styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css
+styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css
+styles/apphub.css|http://cdn.store.steampowered.com/public/shared/css/apphub.css
+styles/buttons.css|http://cdn.store.steampowered.com/public/shared/css/buttons.css
 
+# JS
+scripts/blotter_functions.js|http://cdn.steamcommunity.com/public/javascript/blotter_functions.js
+scripts/chat.js|http://cdn.steamcommunity.com/public/javascript/chat.js
+scripts/comment_functions.js|http://cdn.steamcommunity.com/public/javascript/comment_functions.js
+scripts/discussions.js|http://cdn.steamcommunity.com/public/javascript/discussions.js
+scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js
+scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js
+scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js
+scripts/market.js|http://cdn.steamcommunity.com/public/javascript/market.js
+scripts/profile_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_functions.js
+scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js
+scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js
+scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js
+
+# API
+api/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
+api/TF2Items.json|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?language=en&key=*APIKEY*
+api/Dota2Items.json|http://api.steampowered.com/IEconItems_570/GetSchema/v1/?language=en&key=*APIKEY*

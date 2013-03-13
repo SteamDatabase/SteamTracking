@@ -1,0 +1,2803 @@
+{
+	"apilist": {
+		"interfaces": [
+			{
+				"name": "IDOTA2Match_205790",
+				"methods": [
+					{
+						"name": "GetLeagueListing",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetLiveLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetMatchDetails",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "match_id",
+								"type": "string",
+								"optional": false,
+								"description": "Match id"
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistory",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "hero_id",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "game_mode",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "skill",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "min_players",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "start_at_match_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "tournament_games_only",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistoryBySequenceNum",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_match_seq_num",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetTeamInfoByTeamID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_team_id",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "teams_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IDOTA2Match_570",
+				"methods": [
+					{
+						"name": "GetLeagueListing",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetLiveLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetMatchDetails",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "match_id",
+								"type": "string",
+								"optional": false,
+								"description": "Match id"
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistory",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "hero_id",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "game_mode",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "skill",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "min_players",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "start_at_match_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "tournament_games_only",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistoryBySequenceNum",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_match_seq_num",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetTeamInfoByTeamID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_team_id",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "teams_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IDOTA2Match_816",
+				"methods": [
+					{
+						"name": "GetLeagueListing",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetLiveLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetMatchDetails",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "match_id",
+								"type": "string",
+								"optional": false,
+								"description": "Match id"
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistory",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "hero_id",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "game_mode",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "skill",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "min_players",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "start_at_match_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "tournament_games_only",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistoryBySequenceNum",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_match_seq_num",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetTeamInfoByTeamID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_team_id",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "teams_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconDOTA2_205790",
+				"methods": [
+					{
+						"name": "GetHeroes",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
+							},
+							{
+								"name": "itemizedonly",
+								"type": "bool",
+								"optional": true,
+								"description": "Return a list of itemized heroes only."
+							}
+						]
+						
+					},
+					{
+						"name": "GetRarities",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide rarity names in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetTicketSaleStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconDOTA2_570",
+				"methods": [
+					{
+						"name": "GetHeroes",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
+							},
+							{
+								"name": "itemizedonly",
+								"type": "bool",
+								"optional": true,
+								"description": "Return a list of itemized heroes only."
+							}
+						]
+						
+					},
+					{
+						"name": "GetRarities",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide rarity names in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetTicketSaleStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconDOTA2_816",
+				"methods": [
+					{
+						"name": "GetHeroes",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
+							},
+							{
+								"name": "itemizedonly",
+								"type": "bool",
+								"optional": true,
+								"description": "Return a list of itemized heroes only."
+							}
+						]
+						
+					},
+					{
+						"name": "GetRarities",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide rarity names in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetTicketSaleStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_205790",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_260",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_440",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_520",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_570",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_620",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_710",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_730",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_816",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconItems_841",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_205790",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetClusterVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_440",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_520",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_570",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetClusterVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_730",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetClusterVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_816",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetClusterVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IPortal2Leaderboards_620",
+				"methods": [
+					{
+						"name": "GetBucketizedData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "leaderboardName",
+								"type": "string",
+								"optional": false,
+								"description": "The leaderboard name to fetch data for."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IPortal2Leaderboards_841",
+				"methods": [
+					{
+						"name": "GetBucketizedData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "leaderboardName",
+								"type": "string",
+								"optional": false,
+								"description": "The leaderboard name to fetch data for."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamApps",
+				"methods": [
+					{
+						"name": "GetAppList",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetAppList",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServersAtAddress",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "addr",
+								"type": "string",
+								"optional": false,
+								"description": "IP or IP:queryport to list"
+							}
+						]
+						
+					},
+					{
+						"name": "UpToDateCheck",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID of game"
+							},
+							{
+								"name": "version",
+								"type": "uint32",
+								"optional": false,
+								"description": "The installed version of the game"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamEconomy",
+				"methods": [
+					{
+						"name": "GetAssetClassInfo",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "Must be a steam economy app."
+							},
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The user's local language"
+							},
+							{
+								"name": "class_count",
+								"type": "uint32",
+								"optional": false,
+								"description": "Number of classes requested. Must be at least one."
+							},
+							{
+								"name": "classid0",
+								"type": "uint64",
+								"optional": false,
+								"description": "Class ID of the nth class."
+							},
+							{
+								"name": "instanceid0",
+								"type": "uint64",
+								"optional": true,
+								"description": "Instance ID of the nth class."
+							}
+						]
+						
+					},
+					{
+						"name": "GetAssetPrices",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "Must be a steam economy app."
+							},
+							{
+								"name": "currency",
+								"type": "string",
+								"optional": true,
+								"description": "The currency to filter for"
+							},
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The user's local language"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamGameServerAccount",
+				"methods": [
+					{
+						"name": "GetAccountPublicInfoBySteamID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamID",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of the game server whose info is being requested"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamNews",
+				"methods": [
+					{
+						"name": "GetNewsForApp",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID to retrieve news for"
+							},
+							{
+								"name": "maxlength",
+								"type": "uint32",
+								"optional": true,
+								"description": "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."
+							},
+							{
+								"name": "enddate",
+								"type": "uint32",
+								"optional": true,
+								"description": "Retrieve posts earlier than this date (unix epoch timestamp)"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": true,
+								"description": "# of posts to retrieve (default 20)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetNewsForApp",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID to retrieve news for"
+							},
+							{
+								"name": "maxlength",
+								"type": "uint32",
+								"optional": true,
+								"description": "Maximum length for the content to return, if this is 0 the full content is returned, if it's less then a blurb is generated to fit."
+							},
+							{
+								"name": "enddate",
+								"type": "uint32",
+								"optional": true,
+								"description": "Retrieve posts earlier than this date (unix epoch timestamp)"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": true,
+								"description": "# of posts to retrieve (default 20)"
+							},
+							{
+								"name": "feeds",
+								"type": "string",
+								"optional": true,
+								"description": "Comma-seperated list of feed names to return news for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamOAuth2",
+				"methods": [
+					{
+						"name": "GetCaptchaGID",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "client_id",
+								"type": "string",
+								"optional": false,
+								"description": "Pre-registerd OAuth 2 client ID"
+							},
+							{
+								"name": "bRequireCaptcha",
+								"type": "int32",
+								"optional": true,
+								"description": "Flag to request captcha even if login can proceed without it"
+							}
+						]
+						
+					},
+					{
+						"name": "GetTokenWithCredentials",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "client_id",
+								"type": "string",
+								"optional": false,
+								"description": "Pre-registerd OAuth 2 client ID"
+							},
+							{
+								"name": "grant_type",
+								"type": "string",
+								"optional": false,
+								"description": "MUST be set to password"
+							},
+							{
+								"name": "username",
+								"type": "string",
+								"optional": false,
+								"description": "UTF-8 encoded Steam username"
+							},
+							{
+								"name": "password",
+								"type": "string",
+								"optional": false,
+								"description": "UTF-8 encoded Steam password"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamRemoteStorage",
+				"methods": [
+					{
+						"name": "GetCollectionDetails",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "collectioncount",
+								"type": "uint32",
+								"optional": false,
+								"description": "Number of collection being requested"
+							},
+							{
+								"name": "publishedfileids[0]",
+								"type": "uint64",
+								"optional": false,
+								"description": "collection ids to get the details for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPublishedFileDetails",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "itemcount",
+								"type": "uint32",
+								"optional": false,
+								"description": "Number of items being requested"
+							},
+							{
+								"name": "publishedfileids[0]",
+								"type": "uint64",
+								"optional": false,
+								"description": "published file id to look up"
+							}
+						]
+						
+					},
+					{
+						"name": "GetUGCFileDetails",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": true,
+								"description": "If specified, only returns details if the file is owned by the SteamID specified"
+							},
+							{
+								"name": "ugcid",
+								"type": "uint64",
+								"optional": false,
+								"description": "ID of UGC file to get info for"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appID of product"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamUser",
+				"methods": [
+					{
+						"name": "GetFriendList",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of user"
+							},
+							{
+								"name": "relationship",
+								"type": "string",
+								"optional": true,
+								"description": "relationship type (ex: friend)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPlayerBans",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamids",
+								"type": "string",
+								"optional": false,
+								"description": "Comma-delimited list of SteamIDs"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPlayerSummaries",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamids",
+								"type": "string",
+								"optional": false,
+								"description": "Comma-delimited list of SteamIDs"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPlayerSummaries",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamids",
+								"type": "string",
+								"optional": false,
+								"description": "Comma-delimited list of SteamIDs (max: 100)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetUserGroupList",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of user"
+							}
+						]
+						
+					},
+					{
+						"name": "ResolveVanityURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "vanityurl",
+								"type": "string",
+								"optional": false,
+								"description": "The vanity URL to get a SteamID for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamUserAuth",
+				"methods": [
+					{
+						"name": "AuthenticateUser",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "Should be the users steamid, unencrypted."
+							},
+							{
+								"name": "sessionkey",
+								"type": "rawbinary",
+								"optional": false,
+								"description": "Should be a 32 byte random blob of data, which is then encrypted with RSA using the Steam system's public key.  Randomness is important here for security."
+							},
+							{
+								"name": "encrypted_loginkey",
+								"type": "rawbinary",
+								"optional": false,
+								"description": "Should be the users hashed loginkey, AES encrypted with the sessionkey."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamUserStats",
+				"methods": [
+					{
+						"name": "GetGlobalAchievementPercentagesForApp",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "gameid",
+								"type": "uint64",
+								"optional": false,
+								"description": "GameID to retrieve the achievement percentages for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetGlobalAchievementPercentagesForApp",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "gameid",
+								"type": "uint64",
+								"optional": false,
+								"description": "GameID to retrieve the achievement percentages for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetGlobalStatsForGame",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID that we're getting global stats for"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": false,
+								"description": "Number of stats get data for"
+							},
+							{
+								"name": "name[0]",
+								"type": "string",
+								"optional": false,
+								"description": "Names of stat to get data for"
+							},
+							{
+								"name": "startdate",
+								"type": "uint32",
+								"optional": true,
+								"description": "Start date for daily totals (unix epoch timestamp)"
+							},
+							{
+								"name": "enddate",
+								"type": "uint32",
+								"optional": true,
+								"description": "End date for daily totals (unix epoch timestamp)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetNumberOfCurrentPlayers",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID that we're getting user count for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPlayerAchievements",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of user"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "AppID to get achievements for"
+							},
+							{
+								"name": "l",
+								"type": "string",
+								"optional": true,
+								"description": "Language to return strings for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaForGame",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appid of game"
+							},
+							{
+								"name": "l",
+								"type": "string",
+								"optional": true,
+								"description": "localized langauge to return (english, french, etc.)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaForGame",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appid of game"
+							},
+							{
+								"name": "l",
+								"type": "string",
+								"optional": true,
+								"description": "localized language to return (english, french, etc.)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetUserStatsForGame",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of user"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appid of game"
+							}
+						]
+						
+					},
+					{
+						"name": "GetUserStatsForGame",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "SteamID of user"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appid of game"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamWebAPIUtil",
+				"methods": [
+					{
+						"name": "GetServerInfo",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetSupportedAPIList",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": true,
+								"description": "access key"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ISteamWebUserPresenceOAuth",
+				"methods": [
+					{
+						"name": "PollStatus",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "string",
+								"optional": false,
+								"description": "Steam ID of the user"
+							},
+							{
+								"name": "umqid",
+								"type": "uint64",
+								"optional": false,
+								"description": "UMQ ID"
+							},
+							{
+								"name": "message",
+								"type": "uint32",
+								"optional": false,
+								"description": "Message that was last known to the user"
+							},
+							{
+								"name": "pollid",
+								"type": "uint32",
+								"optional": true,
+								"description": "Caller-specific poll id"
+							},
+							{
+								"name": "sectimeout",
+								"type": "uint32",
+								"optional": true,
+								"description": "Long-poll timeout in seconds"
+							},
+							{
+								"name": "secidletime",
+								"type": "uint32",
+								"optional": true,
+								"description": "How many seconds is client considering itself idle, e.g. screen is off"
+							},
+							{
+								"name": "use_accountids",
+								"type": "uint32",
+								"optional": true,
+								"description": "Boolean, 0 (default): return steamid_from in output, 1: return accountid_from"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFItems_440",
+				"methods": [
+					{
+						"name": "GetGoldenWrenches",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFItems_520",
+				"methods": [
+					{
+						"name": "GetGoldenWrenches",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_205790",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_260",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_440",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_520",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_570",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_620",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_710",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_730",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_816",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_841",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IPlayerService",
+				"methods": [
+					{
+						"name": "GetRecentlyPlayedGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "Access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": true,
+								"description": "The player we're asking about"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": true,
+								"description": "The number of games to return (0/unset: all)"
+							}
+						]
+						
+					},
+					{
+						"name": "GetOwnedGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "Access key"
+							},
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": true,
+								"description": "The player we're asking about"
+							},
+							{
+								"name": "include_appinfo",
+								"type": "bool",
+								"optional": true,
+								"description": "true if we want additional details (name, icon) about each game"
+							},
+							{
+								"name": "include_played_free_games",
+								"type": "bool",
+								"optional": true,
+								"description": "Free games are excluded by default.  If this is set, free games the user has played will be returned."
+							},
+							{
+								"name": "appids_filter",
+								"type": "uint32",
+								"optional": true,
+								"description": "if set, restricts result set to the passed in apps"
+							}
+						]
+						
+					}
+				]
+				
+			}
+		]
+		
+	}
+}

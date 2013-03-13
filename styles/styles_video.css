@@ -1,0 +1,191 @@
+
+/* CSS Document */
+#video_player_ctn {
+	padding-top: 16px;
+	margin-bottom: 30px;
+}
+
+.video_player_overflow {
+	overflow: hidden;
+}
+
+#video_player_area {
+	width: 940px;
+	height: 578px;
+	background-color: #000000;
+	overflow: hidden;
+	position: relative;
+}
+
+#video_player_area .highlight_player_item {
+	width: 940px;
+	height: 578px;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#video_player_area .highlight_player_item .flash_ctn {
+	width: 940px;
+	height: 529px;
+}
+
+.video_info_bar {
+	height: 49px;
+	background-color: #262626;
+	line-height: 35px;
+	padding: 7px 15px;
+	position: relative;
+}
+
+.video_info_bar.three_lines {
+	padding: 3px 15px;
+}
+
+.video_info_bar .video_info_with_languages {
+	line-height: 17px;
+}
+
+.video_info_bar.three_lines .video_info_with_languages {
+	line-height: 15px;
+}
+
+.video_available_languages {
+	color: #626366;
+}
+
+.video_available_languages .selected_language {
+	color: #FFFFFF;
+}
+
+.video_available_languages a {
+	color: #b0aeac;
+	text-decoration: underline;
+}
+
+.video_info_bar .title {
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.video_download_options a.download_btn {
+	float: right;
+	margin-left: 10px;
+}
+
+.video_download_options .video_download_label {
+	display: block;
+	float: right;
+	color: #b0aeac;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+a.download_btn {
+	display: block;
+	height: 37px;
+	line-height: 37px;
+	position: relative;
+	
+	background-image: url( http://cdn2.store.steampowered.com/public/images/v5/btn_download_repeat.png );
+	background-repeat: repeat-x;
+	
+	padding-left: 40px;
+	padding-right: 17px;
+	
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+a.download_btn .download_btn_left, a.download_btn .download_btn_right {
+	position: absolute;
+	height: 37px;
+	top: 0px;
+	
+	background-image: url( http://cdn2.store.steampowered.com/public/images/v5/btn_download_corners.png );
+	background-repeat: no-repeat;
+}
+
+a.download_btn .download_btn_left {
+	left: 0px;
+	width: 32px;
+	background-position: left;
+}
+
+a.download_btn .download_btn_right {
+	right: 0px;
+	width: 4px;
+	background-position: right;
+}
+
+
+
+.video_info_bar .video_download_options {
+	 float: right;
+}
+
+.video_info_bar.three_lines .video_download_options {
+	padding: 4px 0px;
+}
+
+#video_strip {
+	margin-top: 4px;
+	position: relative;
+	height: 69px;
+	margin-bottom: 4px;
+	width: 940px;
+	z-index: 40;
+}
+
+#video_strip_scroll {
+	position: absolute;
+	z-index: 40;
+}
+
+.video_strip_item {
+	float: left;
+	height: 65px;
+	width: 116px;
+	cursor: pointer;
+	text-align: center;
+	
+	margin: 2px;
+	
+	background-color: #000000;
+	
+	position: relative;
+}
+
+.video_strip_item img.movie_thumb {
+	width: 116px;
+	height: 65px;
+}
+
+.video_strip_item.focus {
+	margin: 0px;
+	border: 2px solid #d6d7d8;
+}
+
+.video_strip_item img {
+}
+
+.video_about_game_capsule {
+	float: left;
+	
+}
+
+.video_about_game_text {
+	padding-left: 200px;
+	line-height: 18px;
+}
+
+.video_about_game_text .applink {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.video_about_game_text .release_details {
+	color: #626366;
+}
