@@ -31520,4 +31520,1536 @@
 				"image_inventory": "backpack\/player\/items\/spy\/hwn_spy_priest",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_spy_priest.d56691a774
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_spy_priest.d56691a774a31ff06b052029f20b02ecad94ac88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_spy_priest_large.faf66ac6c31c9451516bf658f24fa8b31044795d.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "The Wraith Wrap",
+				"defindex": 937,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Wraith Wrap",
+				"item_description": "The perfect accessory for maintaining anonymity while stealing rings from midgets.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/pyro\/hwn_pyro_spookyhood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/hwn_pyro_spookyhood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_pyro_spookyhood.a66f51c4cf3ea37ac4f86a2a92cb32938e83a95f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_pyro_spookyhood_large.28409bcaf09c69f3ba65761630010d928e074370.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Coffin Kit",
+				"defindex": 938,
+				"item_class": "tf_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "Coffin Kit",
+				"item_description": "Unlike other survival packs, this handy last-aid kit rightly assumes that the moment you're in a survival situation, you are going to die. Just pull the ripcord to inflate the minature coffin into a standard corpse-sized one that you can die right into.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/pyro\/hwn_pyro_coffinpack.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/hwn_pyro_coffinpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_pyro_coffinpack.94200426ff8c69a1fd1c9d173e232235c03e49d6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hwn_pyro_coffinpack_large.95689606f4548ae249afe4927d6c0d47663c8558.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Bat Outta Hell",
+				"defindex": 939,
+				"item_class": "saxxy",
+				"item_type_name": "TF_Weapon_Skullbat",
+				"item_name": "Bat Outta Hell",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_skullbat\/c_skullbat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_skullbat\/c_skullbat",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_skullbat.6c0934b8f63364506ff0cd142c6cf38962eabcae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_skullbat_large.f9d342eaefec6cacada225eab98e8225e49fea9e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Universal"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Soldier"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Scout",
+					"Sniper",
+					"Soldier",
+					"Demoman",
+					"Medic",
+					"Heavy",
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Ghostly Gibus",
+				"defindex": 940,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ghostly Gibus",
+				"item_description": "Dominate a player wearing any Gibus hat, collect the Ghostly Gibus, and take your rightful place on the Halloween-update-related-hat-throne.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/ghostly_gibus_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ghostly_gibus_demo",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ghostly_gibus_demo.edcf3a97442fe23ebec9559df8388cb27ad17084.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ghostly_gibus_demo_large.8ad991f3508316565497b7db83f6151be0ee3933.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Skull Island Topper",
+				"defindex": 941,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Skull Island Topper",
+				"item_description": "This terrifying (innocuous) witching cap was found by the all-powerful (mediocre) wizard Merasmus in the depths of the Hades Spiral (right near the entrance of the Hades Spiral).",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/merasmus_skull_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/merasmus_skull",
+				"min_ilevel": 31,
+				"max_ilevel": 31,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/merasmus_skull.13619009044fe0d0de542804733f025bc9d2491e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/merasmus_skull_large.e459125659a248204659b0689fd29d1755ba7df5.png",
+				"drop_type": "drop",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "The Cockfighter",
+				"defindex": 942,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Cockfighter",
+				"item_description": "Let all those chickens on the battlefield know you're one bad clucker with this paintable all-class rooster helmet.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/all_scrib_m_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_scrib_m_demo",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_scrib_m_demo.bd12c91422aa42f4bd000f897fa45efd61fb14b9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_scrib_m_demo_large.b40fa38691dcf48dcce5474779c64c440832e765.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Max"
+					},
+					{
+						"name": "Lilly"
+					}
+				]
+				
+			},
+			{
+				"name": "The Hitt Mann Badge",
+				"defindex": 943,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Hitt Mann Badge",
+				"item_description": "The Hitt Mann lets the world know that you're the highest class of professional assassin. Now comes with a handy barcode for faster supermarket checkouts when shopping for assassins in a hurry.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/hm_badge.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/hm_badge",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_badge.fd1f23d62f30a055a9a660cdd4d065cab5e4a4e9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_badge_large.33699d82691ca1c693170b7f0604e86ec8e51441.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "That '70s Chapeau",
+				"defindex": 944,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "That '70s Chapeau",
+				"item_description": "Go incognito with this sunglasses and leather cap combo, the perfect disguise for infiltrating Huggy Bear lookalike conventions.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/hm_disguisehat_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/hm_disguisehat_demo",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_disguisehat_demo.11c3fb3e6430fafd41cd77b92894284213427ff1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_disguisehat_demo_large.075641174d4fd9f4008b505391dcb9c3f4d318f9.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "The Chief Constable",
+				"defindex": 945,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Chief Constable",
+				"item_description": "The best product to let you pretend to be a British police officer since SpyTech's \"Scotland Yard\" backyard disguise kit.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/hm_cap.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/hm_cap",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_cap.560752ff608a3267d1348435b8613c674935389e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_cap_large.34f9cea8b2b329cdb18e8f33c569a11837eb77fc.png",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "The Siberian Sophisticate",
+				"defindex": 946,
+				"item_class": "tf_wearable",
+				"item_type_name": "Shirt",
+				"item_name": "Siberian Sophisticate",
+				"item_description": "The shirt and tie let enemies know you're all business. But the short-sleeved vest tells them you're the kind of businessman who can't find a suit jacket that covers your huge guns.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/heavy\/hm_shirt.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/hm_shirt",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_shirt.9fd1eb89f22b3405165eaaae7d99ec035fc79428.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_shirt_large.c73110d794cdbb9ec7359790f75ecd44baa09f35.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Quackenbirdt",
+				"defindex": 947,
+				"item_class": "tf_weapon_invis",
+				"item_type_name": "Invis Watch",
+				"item_name": "Quäckenbirdt",
+				"item_description": "A marvel of German engineering, the Quäckenbirdt is a classically handsome two-tone Australium and tungsten spywatch for the European assassin who likes to be reminded how rich he is every time he turns invisible.",
+				"proper_name": true,
+				"item_slot": "pda2",
+				"model_player": "models\/weapons\/v_models\/v_hm_watch\/v_hm_watch.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/v_models\/v_hm_watch",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/v_hm_watch.f858ca6c1368b93570d630d2a9b39bed37584f1e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/v_hm_watch_large.dbe6e6d49439c29915965f08dc076f4ce0f5c16e.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "The Deadliest Duckling",
+				"defindex": 948,
+				"item_class": "tf_wearable",
+				"item_type_name": "Duck",
+				"item_name": "Deadliest Duckling",
+				"item_description": "Every time you fed a duck a breadcrumb, you were financing the Duck Mob. You're implicated. There's no going back now. Take this duck, go to the corner of 43rd, and enter the black Cadillac. When you meet the Don, don't make any jokes about horse heads. He hates that.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/hm_duck_sniper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/hm_duck_demo",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_duck_demo.ede45573b1cd7ddea2f71b59f54ada463f497f38.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hm_duck_demo_large.dd82c348fddc3d4adac3d4b723c9398cf4972dda.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Capone"
+					},
+					{
+						"name": "Luciano"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Sniper",
+					"Soldier",
+					"Demoman",
+					"Pyro",
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The DethKapp",
+				"defindex": 949,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "DethKapp",
+				"item_description": "For centuries, mankind has struggled in vain to answer the question of who built this city on rock and roll. This hat\/hair combo finally answers that age-old mystery: It was you!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/pyro\/pyro_rocks_hat_hair.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/pyro_rocks_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_hat.bf5d027a2b3bda273abc40c43f8ed9d4bdf9245a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_hat_large.4f4e52621cb1d74b67be82d5a5cdc3f7bd8d74e6.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Grim"
+					},
+					{
+						"name": "Stark Raving Mad"
+					},
+					{
+						"name": "Stern"
+					},
+					{
+						"name": "Slightly Off"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Nose Candy",
+				"defindex": 950,
+				"item_class": "tf_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Nose Candy",
+				"item_description": "Dress up your respirator to trick people into thinking you're a delusional maniac living in a fantasy world!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/pyro\/pyro_rocks_mask.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/pyro_rocks_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_mask.30eef2c649be0f8dc1ecc3bf18ea59dadc53bdc8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_mask_large.5edc6565738478741732368184358c438b1f13db.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Horrific",
+						"additional_hidden_bodygroups": {
+							"hat": 1,
+							"head": 1
+						}
+					},
+					{
+						"name": "Happy"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Rail Spikes",
+				"defindex": 951,
+				"item_class": "tf_wearable",
+				"item_type_name": "Spikes",
+				"item_name": "Rail Spikes",
+				"item_description": "There we were, assembling some collars, when we thought, \"Yes, they're cool. But what's missing?\" That's when we realized: lots of sharp bits welded onto the round bits.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/pyro\/pyro_rocks_spikes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/pyro_rocks_spikes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_spikes.807d92ffebb7a4d26cc91a6a0ee795c3f146c75a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_rocks_spikes_large.042dd108f2e5bd2d9b25ae5d882299e57fe695df.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Brock's Locks",
+				"defindex": 952,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Brock's Locks",
+				"item_description": "The first time the sun glints off of this manly mane of teased, tousled trusses, you'll wonder why you didn't get hair implants from your lower back and buttocks years ago.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/heavy\/heavy_hockeyhair.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/heavy_hockeyhair",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_hockeyhair.abcf6f92554193f82d504d6846243a04152d6641.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_hockeyhair_large.4ce77a466e7485e8213f22b524899b982332297f.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Saxxy Clapper Badge",
+				"defindex": 953,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Saxxy Clapper Badge",
+				"item_description": "Harness the seductive black magic of Hollywood with this commemorative clapper board—the same used by actual movie directors. Now YOU can tell Ryan Reynolds what to do!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/all_clacker_badge.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_clacker_badge",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_clacker_badge.112c60b7afb47762a51fee6c28f19880a55e64ad.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_clacker_badge_large.6e3f88bbf064dec20f0fead407542d6994a8064d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Memory Maker",
+				"defindex": 954,
+				"item_class": "saxxy",
+				"item_type_name": "Camera",
+				"item_name": "Memory Maker",
+				"item_description": "The memories you made as a Saxxy finalist will live on forever in film. Other memories—like that time you fractured some jerk Engineer's skull with an 8mm camera—will live on forever in your heart.",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_8mm_camera\/c_8mm_camera.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_8mm_camera\/c_8mm_camera",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_8mm_camera.15d0fb192748425723a6f6a0df1a98a54cf18ab5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_8mm_camera_large.01786eaafc1b9cfa961eb861f00cb7274656fd37.png",
+				"craft_class": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout",
+					"Sniper",
+					"Soldier",
+					"Demoman",
+					"Medic",
+					"Heavy",
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Tuxxy",
+				"defindex": 955,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tuxedo",
+				"item_name": "Tuxxy",
+				"item_description": "The carpets will run red with enemy blood thanks to this dapper Second Annual Saxxy Awards ensemble.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/tuxxy_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/tuxxy_demo",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tuxxy_demo.28d634e98552c8ff25f40e551d4edf30cae59c2c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tuxxy_demo_large.4eae775ea31cdfb094cd5a163bb686bd763cc9b5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Faerie Solitaire Pin",
+				"defindex": 956,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pin",
+				"item_name": "Faerie Solitaire Pin",
+				"item_description": "Made with exacting attention to detail, this imitation faerie wing pin is indistinguishable from the real thing. Finally get rid of all those actual decomposing faerie wings stapled to your clothes, while still letting people know you have some strong opinions about mythical beings.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/all_fs_badge.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_fs_badge",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_fs_badge.711e6afe10a3257de8794b598cf10be1c003c764.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_fs_badge_large.740640bca853692f50062fe541cf0784f319e3e9.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Silver Botkiller Sniper Rifle Mk.II",
+				"defindex": 957,
+				"item_class": "tf_weapon_sniperrifle",
+				"item_type_name": "Sniper Rifle",
+				"item_name": "Silver Botkiller Sniper Rifle Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_sniperrifle.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/sniper\/fob_e_sniperrifle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_sniperrifle.c477df5b0cdd9d55e83a23367bf3233cf3ed822d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_sniperrifle_large.189b881bef141773536e873721b72a625f0aef30.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Minigun Mk.II",
+				"defindex": 958,
+				"item_class": "tf_weapon_minigun",
+				"item_type_name": "Minigun",
+				"item_name": "Silver Botkiller Minigun Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_minigun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/heavy\/fob_e_minigun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_minigun.f63eebf1262f43735451d8faf457434b075fdbc2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_minigun_large.fad5eb4f4a3780be8dae5ebb03904f16b06e574b.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Knife Mk.II",
+				"defindex": 959,
+				"item_class": "tf_weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Silver Botkiller Knife Mk.II",
+				"proper_name": false,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/w_models\/w_knife.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/spy\/fob_e_knife",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_knife.43b18001505f20d0b442cfe0d1cb2b4c8f7f825e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_knife_large.e10a6cc42aa2b98097e32523845e0a2ac3f88982.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Wrench Mk.II",
+				"defindex": 960,
+				"item_class": "tf_weapon_wrench",
+				"item_type_name": "Wrench",
+				"item_name": "Silver Botkiller Wrench Mk.II",
+				"proper_name": false,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/w_models\/w_wrench.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/engineer\/fob_e_wrench",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_wrench.e22a29179256ba2ceb92ac8327ce6e883c60452b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_wrench_large.d013ee04d0742428257703e453895ea64da9a2c0.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 3.000000
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Medi Gun Mk.II",
+				"defindex": 961,
+				"item_class": "tf_weapon_medigun",
+				"item_type_name": "Medi Gun",
+				"item_name": "Silver Botkiller Medi Gun Mk.II",
+				"proper_name": false,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/w_models\/w_medigun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/medic\/fob_e_medigun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_medigun.4ef1f02048f81e7d0e06e2a575977634432314aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_medigun_large.70645d4c0751ddc8837c1973dcd8586b43111512.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 1.000000
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 2.000000
+					},
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Stickybomb Launcher Mk.II",
+				"defindex": 962,
+				"item_class": "tf_weapon_pipebomblauncher",
+				"item_type_name": "Stickybomb Launcher",
+				"item_name": "Silver Botkiller Stickybomb Launcher Mk.II",
+				"proper_name": false,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/w_models\/w_stickybomb_launcher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/demo\/fob_e_stickybomb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_stickybomb.5728c4467cd8c952cdf5e9b0ce6b287bcb7e10a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_stickybomb_large.9c718b112d44a2badfd5c8250858ada8c503907d.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Flame Thrower Mk.II",
+				"defindex": 963,
+				"item_class": "tf_weapon_flamethrower",
+				"item_type_name": "Flame Thrower",
+				"item_name": "Silver Botkiller Flame Thrower Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/c_models\/c_flamethrower\/c_flamethrower.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/pyro\/fob_e_flamethrower",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_flamethrower.5faa9a6f07337176e896e72823b050ea8eb69032.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_flamethrower_large.3eeebccb202fa6ad83263aec5ef31138df69ee16.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Scattergun Mk.II",
+				"defindex": 964,
+				"item_class": "tf_weapon_scattergun",
+				"item_type_name": "Scattergun",
+				"item_name": "Silver Botkiller Scattergun Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_scattergun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/scout\/fob_e_scattergun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_scattergun.31cba7e9f260d1ca05d128c50cf8e1b9949fe14e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_scattergun_large.36cd67b5ff15a243da83cf70349e79c7f61708c6.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Silver Botkiller Rocket Launcher Mk.II",
+				"defindex": 965,
+				"item_class": "tf_weapon_rocketlauncher",
+				"item_type_name": "Rocket Launcher",
+				"item_name": "Silver Botkiller Rocket Launcher Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_rocketlauncher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/soldier\/fob_e_rocketlauncher",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_rocketlauncher.18e99027116a023607367f23fd01045ec8e9cfc2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_rocketlauncher_large.3e76056a0f7392165dbfd4332e4e64b18a10dd1e.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Sniper Rifle Mk.II",
+				"defindex": 966,
+				"item_class": "tf_weapon_sniperrifle",
+				"item_type_name": "Sniper Rifle",
+				"item_name": "Gold Botkiller Sniper Rifle Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_sniperrifle.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/sniper\/fob_e_sniperrifle_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_sniperrifle_gold.b384acaa681188fd31c069ce645933914c8fee3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_sniperrifle_gold_large.e877b7b900c6c54e5403c1f3ffacf2baf2c92ecd.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Minigun Mk.II",
+				"defindex": 967,
+				"item_class": "tf_weapon_minigun",
+				"item_type_name": "Minigun",
+				"item_name": "Gold Botkiller Minigun Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_minigun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/heavy\/fob_e_minigun_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_minigun_gold.146137e0ec137257db7f7ca79573c11eda287deb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_minigun_gold_large.ae13a06732d943dda8bc7a5f9fe2767cebf69aea.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Knife Mk.II",
+				"defindex": 968,
+				"item_class": "tf_weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Gold Botkiller Knife Mk.II",
+				"proper_name": false,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/w_models\/w_knife.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/spy\/fob_e_knife_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_knife_gold.b235996aca9db216cf8bbfd2af5c75c65298eb6a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_knife_gold_large.4dfa02aa3c65d2df9b63a703b220744e82d0542f.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Wrench Mk.II",
+				"defindex": 969,
+				"item_class": "tf_weapon_wrench",
+				"item_type_name": "Wrench",
+				"item_name": "Gold Botkiller Wrench Mk.II",
+				"proper_name": false,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/w_models\/w_wrench.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/engineer\/fob_e_wrench_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_wrench_gold.dfb5ebf0127b4ac4240530500ceb205e04a5f855.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_wrench_gold_large.5759fcd06a91ed95d9d6e0339bbc4bd62b843ddc.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 3.000000
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Medi Gun Mk.II",
+				"defindex": 970,
+				"item_class": "tf_weapon_medigun",
+				"item_type_name": "Medi Gun",
+				"item_name": "Gold Botkiller Medi Gun Mk.II",
+				"proper_name": false,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/w_models\/w_medigun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/medic\/fob_e_medigun_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_medigun_gold.8963617849800a594b3f4be02441a8b07ed8a8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_medigun_gold_large.3598bdb33599cc1d8157ea8a06ec06de11703d4e.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 1.000000
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 2.000000
+					},
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Stickybomb Launcher Mk.II",
+				"defindex": 971,
+				"item_class": "tf_weapon_pipebomblauncher",
+				"item_type_name": "Stickybomb Launcher",
+				"item_name": "Gold Botkiller Stickybomb Launcher Mk.II",
+				"proper_name": false,
+				"item_slot": "secondary",
+				"model_player": "models\/weapons\/w_models\/w_stickybomb_launcher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/demo\/fob_e_stickybomb_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_stickybomb_gold.82c3ca9490c961f7eb9809f44298d0a0e143ea50.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_stickybomb_gold_large.5a676fdf813b6075d5ce23553b6d1b5a32f7f449.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Flame Thrower Mk.II",
+				"defindex": 972,
+				"item_class": "tf_weapon_flamethrower",
+				"item_type_name": "Flame Thrower",
+				"item_name": "Gold Botkiller Flame Thrower Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/c_models\/c_flamethrower\/c_flamethrower.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/pyro\/fob_e_flamethrower_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_flamethrower_gold.47e0484e027ace66e0a7b6f0e7895ae0f926e9df.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_flamethrower_gold_large.decd65e845a2eea52f7b4550f17871cf68ae6c72.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Scattergun Mk.II",
+				"defindex": 973,
+				"item_class": "tf_weapon_scattergun",
+				"item_type_name": "Scattergun",
+				"item_name": "Gold Botkiller Scattergun Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_scattergun.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/scout\/fob_e_scattergun_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_scattergun_gold.baa2d0d14293ba39e577e9dd2919b4f677d56977.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_scattergun_gold_large.8f6f21715ee2969044d44ea4f816e80764a1928c.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gold Botkiller Rocket Launcher Mk.II",
+				"defindex": 974,
+				"item_class": "tf_weapon_rocketlauncher",
+				"item_type_name": "Rocket Launcher",
+				"item_name": "Gold Botkiller Rocket Launcher Mk.II",
+				"proper_name": false,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/w_models\/w_rocketlauncher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/soldier\/fob_e_rocketlauncher_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_rocketlauncher_gold.817d3fbdcd32f802de672db8968ed53585974ee7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fob_e_rocketlauncher_gold_large.6be097cec72159ce52ea7d00d89c78e3cbe68fa1.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Tour of Duty Badge Advanced 2",
+				"defindex": 975,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Operation Mecha Engine Badge",
+				"item_description": "Your Mann Up progress through Operation Mecha Engine is saved on this badge.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/mvm_loot\/all_class\/mvm_badge_engy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/all_class\/mvm_badge_engy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_badge_engy.7af57f667c3f4af50dc62f4d91583fbe7cda7b4f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_badge_engy_large.9e377235350f466f4d2f9e877e54885cd9299981.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Winter Wonderland Wrap",
+				"defindex": 976,
+				"item_class": "tf_wearable",
+				"item_type_name": "Mask",
+				"item

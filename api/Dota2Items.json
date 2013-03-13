@@ -23547,4 +23547,3346 @@
 			},
 			{
 				"name": "Wings of the Inauspicious Abyss",
-				"definde
+				"defindex": 4587,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Wings of the Inauspicious Abyss",
+				"item_description": "As the threat from the outer dark mounts, the Harbinger intimidates these implacable forces with wings of strange power.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/obsidian_destroyer\/back_baconator_d\/back_baconator_d",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/back_baconator_d\/back_baconator_d.fbcc2149d296ec930fb340c3ceaf6ad8b926ed2f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/back_baconator_d\/back_baconator_d_large.a04ea41b88b641696722a9e16aa1b756c12a9deb.png",
+				"item_set": "inauspicious_abyss",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shredder of the Vandal",
+				"defindex": 4588,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Shredder of the Vandal",
+				"item_description": "If you run out of arrows, you can always stab your enemies with this.  It has more points than Leshrac has horns.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/wep\/wep",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/wep\/wep.f5c8eab9a37782a932f0495ec8b9798fccb9b6ce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/wep\/wep_large.1581703c33746a9acbc045ac58dc29c933e1391e.png",
+				"item_set": "clinkz_vandal",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "JeremyKlein_DoomBringer_Shoulders_01",
+				"defindex": 4589,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Torn Guard of the Vandal",
+				"defindex": 4590,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Torn Guard of the Vandal",
+				"item_description": "Tired of your clavicle being exposed to the world?  Here is an enchanted armor designed to shield old bones from plight of combat.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/guard\/guard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/guard\/guard.34a5d91ef195ea8b835065bc937a6c9e0ec74cfd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/guard\/guard_large.1e4c0c437742bd26f78102d480246f6991b05b84.png",
+				"item_set": "clinkz_vandal",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Dark Quiver of the Vandal",
+				"defindex": 4591,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Dark Quiver of the Vandal",
+				"item_description": "Endless arrows shall be pulled from the pouch over your shoulder.  Enemies will quiver at the sight.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/justpicsnothingmnew\/justpicsnothingmnew",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/justpicsnothingmnew\/justpicsnothingmnew.541a43f880262b227cab132ac2c8bdbf8c8f27e1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/justpicsnothingmnew\/justpicsnothingmnew_large.2a0badb618f222637cb7d2aa05470f3c195aceb6.png",
+				"item_set": "clinkz_vandal",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "JeremyKlein_DoomBringer_Belt_01",
+				"defindex": 4592,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "JeremyKlein_DoomBringer_Weapon_01",
+				"defindex": 4593,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "DoomBriger_Helm_Jeremy_Klein",
+				"defindex": 4594,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Great Grey Owl Bow",
+				"defindex": 4595,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Great Grey Owl Bow",
+				"item_description": "She dreamed in the night that the divine owl spirit called her name. When she woke, this bow lay beside her in a bed of leaves...grey feathers still drifting from the branch above.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/ggobow\/ggobow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/ggobow\/ggobow.002a9a9c696908e656d3185b4078dd02c93597bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/ggobow\/ggobow_large.0a4b3191d60ad7755335b203c675f5f6381c78b3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Belt of Claszureme",
+				"defindex": 4596,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Belt",
+				"item_name": "Belt of Claszureme",
+				"item_description": "Upon the dial at its center lie markings which map the way to the realms beyond time.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/claz_belt\/claz_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_belt\/claz_belt.68a292aec80ed5d24f672c30235acf4049d42437.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_belt\/claz_belt_large.30905b56e61e607ec14b6a36c8936d2a9bc5d166.png",
+				"item_set": "faceless_clas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracers of Claszureme",
+				"defindex": 4597,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Claszureme",
+				"item_description": "The spikes on the wrist are said to sample the flow of time, while the runes report the findings to the wearer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/claz_bracer\/claz_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_bracer\/claz_bracer.217a076c0a79feca17de2454fd9bb4b9f38942ee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_bracer\/claz_bracer_large.47dfc8be9a65d67fccd303cb53eaede35f3ea62b.png",
+				"item_set": "faceless_clas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sparrowhawk Bow",
+				"defindex": 4598,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Sparrowhawk Bow",
+				"item_description": "Strong, but light as a feather, this bow of the sparrowhawk will fly your arrows true to their targets.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/wr_sparrow_bowab\/wr_sparrow_bowab",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/wr_sparrow_bowab\/wr_sparrow_bowab.a870db246608406443d0d338f45271e9c2ab8295.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/wr_sparrow_bowab\/wr_sparrow_bowab_large.1568e5674f379bab4592c9dd88aaab9644d00d8a.png",
+				"item_set": "windrunner_sparrowhawk",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "custom powershot",
+						"class": "custom_powershot",
+						"value": 1.000000
+					},
+					{
+						"name": "item set anim",
+						"class": "item_set_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Shoulders of Claszureme",
+				"defindex": 4599,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Shoulders of Claszureme",
+				"item_description": "For a traveler from Claszureme, one's place in the flow of time is uncertain.  These runes help ground the wearer within time's march.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/claz_shoulder\/claz_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_shoulder\/claz_shoulder.f7a5d4dd782fdf70b7ca4e2dc9f5d34027afe64b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/claz_shoulder\/claz_shoulder_large.5e67972a2b527ba3010faef89968c3b893e58f59.png",
+				"item_set": "faceless_clas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Demon Spine Recurve Bow",
+				"defindex": 4600,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Demon Spine Recurve Bow",
+				"item_description": "Made from the vertebrae of the fallen damned, this bow is crooked as the spine of any demon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/demonspinerecurve_lod1\/demonspinerecurve_lod1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/demonspinerecurve_lod1\/demonspinerecurve_lod1.8945bbbca56041ad5a77dc97ade9bf0777407ff9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/demonspinerecurve_lod1\/demonspinerecurve_lod1_large.4551bef5a204a6df81fbb5bda946786804c57e7f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sparrowhawk Cape",
+				"defindex": 4601,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Sparrowhawk Cape",
+				"item_description": "In addition to being stylish, this cape of the sparrowhawk manages the trick of also being camouflaging, provided that you're standing next to a flock of sparrowhawks.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/sparrowhawk_cape\/sparrowhawk_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_cape\/sparrowhawk_cape.9e12e57382f14f860784bd3883853c6cd230053d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_cape\/sparrowhawk_cape_large.8dfa5e1d3d29a0c18f46bf448a29ba0a4b7756f1.png",
+				"item_set": "windrunner_sparrowhawk",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "item set anim",
+						"class": "item_set_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Maw of the Devourer",
+				"defindex": 4602,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Maw of the Devourer",
+				"item_description": "From the World at the Rim, this staff is a weighty reminder of the howling void that waits for us all.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/obsidian_destroyer\/devourers_maw\/devourers_maw",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/devourers_maw\/devourers_maw.75ca23878245b1d454a84f8dc28fcaba19a99127.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/devourers_maw\/devourers_maw_large.a39bb8fe52cd5fed3b4c8860cce7ecdfc3ddaf56.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sparrowhawk Hood",
+				"defindex": 4603,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Sparrowhawk Hood",
+				"item_description": "It takes a spectacular hood to tame your fiery red hair.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/sparrowhawk_hood2\/sparrowhawk_hood2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_hood2\/sparrowhawk_hood2.3644d2220c8e8b0a412d99bca3e69be49e400115.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_hood2\/sparrowhawk_hood2_large.49e5b0ca30a44a92c052f0144d85f4412d3546b0.png",
+				"item_set": "windrunner_sparrowhawk",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "item set anim",
+						"class": "item_set_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Jeweled Longbow",
+				"defindex": 4604,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Jeweled Longbow",
+				"item_description": "Simple and elegant, set off perfectly by gems of uncommon brilliance. On examination, the workmanship is that of a race long thought extinct. How then is this bow brand new?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drowbow\/drowbow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drowbow\/drowbow.8d21e6cc95f2db851e92efdee2944ed7c69982ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drowbow\/drowbow_large.7e53b516e72d55b010b885c7111808cad6e0c115.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Demon Guise of the Vandal",
+				"defindex": 4605,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Demon Guise of the Vandal",
+				"item_description": "For a hundred years, a blind smeevil hammered and honed his masterpiece, until the great work was done.  None shall see your face behind the iron mask of the Demon Guise.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/clinkzhead\/clinkzhead",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/clinkzhead\/clinkzhead.042b0d33243040004bfb47a34942833564fcf8c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/clinkzhead\/clinkzhead_large.09bc49e3f1da3fb4267f09661c47c7d96d8d8007.png",
+				"item_set": "clinkz_vandal",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancient Slithereen Basher",
+				"defindex": 4606,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Two-Handed Mace",
+				"item_name": "Ancient Slithereen Basher",
+				"item_description": "Few are the weapons that have outlasted the wars beneath the waves.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/ancient_slithereen_basher\/ancient_slithereen_basher",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/ancient_slithereen_basher\/ancient_slithereen_basher.369b9bb75ca84baf2ae5afcb55e1e0d1b86a793b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/ancient_slithereen_basher\/ancient_slithereen_basher_large.eafcb5f3740b5b24c03e60e3c38667328dfcb718.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sparrowhawk Wings",
+				"defindex": 4607,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder",
+				"item_name": "Sparrowhawk Wings",
+				"item_description": "Tired of your shoulders being devoid of sparrowhawk feathers?  Then this item is for you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/sparrowhawk_shoulder\/sparrowhawk_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_shoulder\/sparrowhawk_shoulder.ffbc32fb9a8ac25f4a7d37ee2ef3ee30862428ab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_shoulder\/sparrowhawk_shoulder_large.a983be8efad254a5918d101ebd8299a2233bf086.png",
+				"item_set": "windrunner_sparrowhawk",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "item set anim",
+						"class": "item_set_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Chained Snatcher",
+				"defindex": 4608,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "Chained Snatcher",
+				"item_description": "Never give a meal the chance to be late for dinner.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/chained_snatcher\/chained_snatcher",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/chained_snatcher\/chained_snatcher.dee79590dd2a110b239e96b1e8cf0c11dcb7be48.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/chained_snatcher\/chained_snatcher_large.db6c35a9bc5a6595d0b05ab528f50a853027186e.png",
+				"item_set": "chained_slayers",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Chained Chopper",
+				"defindex": 4609,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cleaver",
+				"item_name": "Chained Chopper",
+				"item_description": "Tangled in the links of Pudge's chains, a reminder of the shackles that bind us to life--and how easily Pudge may break them.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/chained_chopper\/chained_chopper",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/chained_chopper\/chained_chopper.39c1651abfe6f524782c336be8b88ed3b66f17f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/chained_chopper\/chained_chopper_large.862578b366ff7fa90050bde05205928ef1a0579b.png",
+				"item_set": "chained_slayers",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Crimson Wyvern Bracers",
+				"defindex": 4610,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Crimson Wyvern Bracers",
+				"item_description": "Made from the interlocking scales that sit above the wyvern's spine, this crimson bracer is a perfect fit for knight's forearm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dragon_knight\/wyvern_bracers\/wyvern_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyvern_bracers\/wyvern_bracers.249dd1d275226b71730fc154db9aa61d8e77038f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyvern_bracers\/wyvern_bracers_large.ee3e026211d49d866c037c5f468039a63c79a66a.png",
+				"item_set": "dragon_knight_crimson_wyvern",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Crimson Riptide",
+				"defindex": 4611,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Crimson Riptide",
+				"item_description": "Let this blade drink deep of your foe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/offhand_cwave\/offhand_cwave",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/offhand_cwave\/offhand_cwave.dda786fa1f459ad10fe0a4cf54df71a1ed11aacd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/offhand_cwave\/offhand_cwave_large.55ac56228ca56171af32962f9f3e0b9c9b5313d1.png",
+				"item_set": "riptide_blades",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Crimson Wyvern Sword",
+				"defindex": 4612,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Crimson Wyvern Sword ",
+				"item_description": "A sword made from the talons of a fallen wyvern.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dragon_knight\/wyvern_sword3\/wyvern_sword3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyvern_sword3\/wyvern_sword3.bc0c75c0425dddfc54889463011a2f2416b680a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyvern_sword3\/wyvern_sword3_large.534f72a3fe68c70e969c0067e904fc0786bb1977.png",
+				"item_set": "dragon_knight_crimson_wyvern",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sylvan Guard's Boots",
+				"defindex": 4613,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Sylvan Guard's Boots",
+				"item_description": "The guardians of the forest paths walk in perfect silence, betrayed not by their cunning footwear.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_legs\/royalguard_legs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_legs\/royalguard_legs.f574612180cfec0ba954a50b554053e44f2febb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_legs\/royalguard_legs_large.0f1b67213654ca70252dd4bf17ed9bd6aeef4198.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mallet of Magnificence",
+				"defindex": 4614,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hammer",
+				"item_name": "Mallet of Magnificence",
+				"item_description": "The go-to mallet for when your enemies absolutely, positively must be smited.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/omniknight\/magmallet\/magmallet",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/magmallet\/magmallet.f22945b5246b8008d9ec104ad34f5ebdbab7ad37.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/magmallet\/magmallet_large.18724d2713e4411e0449d4bd39603372cab6d6ea.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Golden Riptide",
+				"defindex": 4615,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Golden Riptide",
+				"item_description": "Let this blade guard you from harm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/weapon_wave\/weapon_wave",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/weapon_wave\/weapon_wave.db5918fc3a5cb3ac748ece4a60004bb9fe2c411b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/weapon_wave\/weapon_wave_large.e0426638e63fdef3651457eec791735899c19100.png",
+				"item_set": "riptide_blades",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Fishing Halberd",
+				"defindex": 4616,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Halberd",
+				"item_name": "Fishing Halberd",
+				"item_description": "Off the coast near the village of Pole are fish large enough to eat a man in a single bite.  Against such a beast, a spear simply will not do.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/fishlance\/fishlance",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/fishlance\/fishlance.b463a66f7d837fb254b8f3fb0bf63bef6ec174ef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/fishlance\/fishlance_large.875f472792e1ebbbd9a5a152bf0b9c12861c9119.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Finblade",
+				"defindex": 4617,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Finblade",
+				"item_description": "Kunkka's ship cleaves the waves as easily as Finblade cleaves his enemies. Kunkka revels in the iridiscent play of light given off by dashing spray and liberated souls alike.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/weapon_finblade\/weapon_finblade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/weapon_finblade\/weapon_finblade.3e888cbe7b1ab019dd700d4cbc8c9cfa8366b0ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/weapon_finblade\/weapon_finblade_large.6b071ae1d359c1c09656a244ef7abf2983b182db.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bow of the Searing Soul",
+				"defindex": 4618,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Bow of the Searing Soul",
+				"item_description": "A bow brought back from hell itself.   With this weapon, enemies will feel the searing burn of your anger.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/clinkz\/searing_bow\/searing_bow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/searing_bow\/searing_bow.8ebd9ab3f2f9ad2db7a8c4efd71684146d89fff7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/searing_bow\/searing_bow_large.213f1031c8d4aacca676d3b2a10f0037da87c898.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sparrowhawk Quiver",
+				"defindex": 4619,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Sparrowhawk Quiver",
+				"item_description": "Proving that every part of the sparrowhawk can be turned into a stylish item for Windrunner to wear, this quiver speaks to the utility of sparrowhawks as a species.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/sparrowhawk_quiver\/sparrowhawk_quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_quiver\/sparrowhawk_quiver.e46b00211b33aa4565ca050dbc0c63a5a8c7b5a8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/sparrowhawk_quiver\/sparrowhawk_quiver_large.cc24b4f4d5f36b0c4dfd23aae12082111856b739.png",
+				"item_set": "windrunner_sparrowhawk",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "item set anim",
+						"class": "item_set_anim",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Tail of the Eleven Curses",
+				"defindex": 4620,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Tail of the Eleven Curses",
+				"item_description": "The third curse, curse of the prehensile, lain upon his tail.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__tail\/eleven_curses__tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__tail\/eleven_curses__tail.bbe5bfdde103f55acc2524d4c298c7bd2d0a76a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__tail\/eleven_curses__tail_large.186c159873af9f2091b9b8df9b9186e40bf09f2c.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ward Test",
+				"defindex": 4621,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ability Modifier",
+				"item_name": "Ward Test",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Hammer of Light Inexorable",
+				"defindex": 4622,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hammer",
+				"item_name": "Hammer of Light Inexorable",
+				"item_description": "This strange, rune-scrawled hammer will ensure that all your enemies see the light.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/omniknight\/directlight\/directlight",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/directlight\/directlight.caa2ccd463742c8352fdf3c1c4c3a6f91b945bbc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/directlight\/directlight_large.4971095872040f998aa70c1c3858c4560e0a7656.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Sword of the Eleven Curses",
+				"defindex": 4623,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Sword of the Eleven Curses",
+				"item_description": "The first curse, the curse of flame, lain upon his sword.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__sword\/eleven_curses__sword",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__sword\/eleven_curses__sword.f78ac4615b54cf8ed54994474053ef6f4f839c85.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__sword\/eleven_curses__sword_large.569ffb26fc554414cf33d1701071d1a89c1b16f8.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Horns of the Eleven Curses",
+				"defindex": 4624,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horns",
+				"item_name": "Horns of the Eleven Curses",
+				"item_description": "The eleventh and final curse, the curse of wisdom, lain upon his horns.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__head\/eleven_curses__head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__head\/eleven_curses__head.9dd92b09148ebe0413f44bb9f6f8cf175d4c659f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__head\/eleven_curses__head_large.f7cd1b08d05952ca7234bc8c827d6fb6e3f1d842.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sylvan Guard's Bow",
+				"defindex": 4625,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Sylvan Guard's Bow",
+				"item_description": "Drow has nothing to learn from the Sylvan Guard, but from time to time she relieves one of them of their bow, that she might test its quality. Even by her standards, this one is adjudged very fine.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_bow\/royalguard_bow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_bow\/royalguard_bow.39b24b79709df68dee43f8dd363e301f6f0fd182.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_bow\/royalguard_bow_large.c519f3d7fdeddda953df23d86b9b6f179608f1cc.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Sylvan Guard's Cape",
+				"defindex": 4626,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Sylvan Guard's Cape",
+				"item_description": "Stealth is of utmost importance to those who number themselves among the Sylvan Guard. Even Drow finds this an acceptable cape for moving unseen through the wooded ways.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_cape\/royalguard_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_cape\/royalguard_cape.812ec51de0d63f644f2ef8ff0d1406117878daa7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_cape\/royalguard_cape_large.38bee46950172e6a9c95d7839c67cbe40479908f.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Bracer of the Eleven Curses",
+				"defindex": 4627,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Bracer of the Eleven Curses",
+				"item_description": "The sixth curse, the curse of fortitude, lain upon his wrists.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__bracer\/eleven_curses__bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__bracer\/eleven_curses__bracer.127ae3e770501c3d03a8a80d1404ac24ffc97a7c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__bracer\/eleven_curses__bracer_large.3eaef8de5f480fc4d1936df2ea71c13ed6fed5dc.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sylvan Guard's Hair",
+				"defindex": 4628,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Sylvan Guard's Hair",
+				"item_description": "While not a member of the Sylvan Guard, Drow spies upon them in their marches, and occasionally admires their passing fashions.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_head\/royalguard_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_head\/royalguard_head.bcbca25dd12cb0cf022c400bde12041560a26965.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_head\/royalguard_head_large.b372ec02234d80e710789c426393edfe0f55e17c.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Sylvan Guard's Quiver",
+				"defindex": 4629,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Sylvan Guard's Quiver",
+				"item_description": "The archers of the Sylvan Guard shoot only arrows crafted specifically for their use. When Drow uses their gear, such arrows are de rigeur.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_misc\/royalguard_misc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_misc\/royalguard_misc.08aad450965bbb28c1c43b46a2c818fa4c2f95f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_misc\/royalguard_misc_large.30121a41882e2466512b61839a19a28902710bda.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sylvan Guard's Cuffs",
+				"defindex": 4630,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Sylvan Guard's Cuffs",
+				"item_description": "In her youth, Drow was tempted once or twice to throw over her lonely ways and join the Sylvan Guard. These cuffs were a large part of the attraction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_bracers\/royalguard_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_bracers\/royalguard_bracers.3e35c3dd2ae69f5b1e18dc7fd98209f6860282ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_bracers\/royalguard_bracers_large.2f4edd679e3a25d10733599d9dbd7a84d3fa0290.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Wings of the Eleven Curses",
+				"defindex": 4631,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Wings of the Eleven Curses",
+				"item_description": "The second curse, the curse of the fallen, is lain upon his wings.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__wings\/eleven_curses__wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__wings\/eleven_curses__wings.d95df84f6427e2749becee4d329894123b0b0c1c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__wings\/eleven_curses__wings_large.c52022a3670e2d4ed1e83cdc0f2c866a315cd4aa.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sylvan Guard's Dress Armor",
+				"defindex": 4632,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armor",
+				"item_name": "Sylvan Guard's Dress Armor",
+				"item_description": "It must be admitted: Drow admires the Sylvan Guard. When from time to time she puts on their gear, and pretends to adopt their ways, she can hardly suppress her joy in having an excuse to don this stylish armor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder.3267b94426a9496b409e66214d5baf88abe5ffef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder_large.faa93d988ff8872d6d87a4fd26c25156b82eb386.png",
+				"item_set": "drow_sylvan_guard",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Half Measure",
+				"defindex": 4633,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "The Half Measure",
+				"item_description": "The other blade was just for show.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/halfmeasure\/halfmeasure",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/halfmeasure\/halfmeasure.5113ffd50bff4ce596c1e4baae5b8523d6a7a5e8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/halfmeasure\/halfmeasure_large.ce266a4889ce7da435c55cc7d60fdb5c538e8603.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Belt of the Eleven Curses",
+				"defindex": 4634,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Belt of the Eleven Curses",
+				"item_description": "A belt of cursed power.  Would that the navel of the world were so protected.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__belt\/eleven_curses__belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__belt\/eleven_curses__belt.dfb7d60742178d57c7e1f4f1630369edca53bffb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__belt\/eleven_curses__belt_large.d196de07247265715f30d29e86f6726136faff09.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Orichalcum Ancient Axe",
+				"defindex": 4635,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Orichalcum Ancient Axe",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Belt of Timeless Ritual",
+				"defindex": 4636,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Belt",
+				"item_name": "Belt of Timeless Ritual",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/ritualbelt\/ritualbelt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shoulders of Timeless Ritual",
+				"defindex": 4637,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Shoulders of Timeless Ritual",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/ritualshoulders\/ritualshoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Holy Spear of Images",
+				"defindex": 4638,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Holy Spear of Images",
+				"item_description": "In each blade is reflected an army.  In each strike is reflected an ideal.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/sa\/sa",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/sa\/sa.1ac9bd2a5415bdd20ea7797d9ba4a2811149409e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/sa\/sa_large.749ccefbd50c91afabdf02efb7aab08238ea1327.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shoulder of the Eleven Curses",
+				"defindex": 4639,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Shoulder of the Eleven Curses",
+				"item_description": "The tenth curse, the curse of strength, is lain upon his shoulders, like all the weight of the world.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/eleven_curses__shoulder\/eleven_curses__shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__shoulder\/eleven_curses__shoulder.f4b77f1a104cfe92eadb6a65026c4342ba700091.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__shoulder\/eleven_curses__shoulder_large.ed203a3adbc70db1d2f58e4fab57f604f83d0824.png",
+				"item_set": "eleven_curses",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ishul-Shog the Watcher",
+				"defindex": 4640,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demon",
+				"item_name": "Ishul-Shog the Watcher",
+				"item_description": "Demnok studied for years to construct the true name of the Watcher, hoping to bind a creature powerful enough to know and reveal the Ozkavosh tongue.  Unfortunately, the Watcher lacks a tongue.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/archivist_golem\/archivist_golem_npc_dota_warlock_golem_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/archivist_golem\/archivist_golem_npc_dota_warlock_golem_1.3dfdfc52704b980d24e3722a84a48f14bdfbe91c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/archivist_golem\/archivist_golem_npc_dota_warlock_golem_1_large.2b0aeb6e9740ffdb8df56f20d017199d51a9de6b.png",
+				"item_set": "warlock_archivist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Auspex of the Inauspicious Abyss",
+				"defindex": 4641,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Head",
+				"item_name": "Auspex of the Inauspicious Abyss",
+				"item_description": "A helm whose very symmetry foreshadows the dark power that Harbinger may summon to protect the inmost shells of creation from cold destructive forces beyond knowing.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/obsidian_destroyer\/head_arcanef\/head_arcanef",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/head_arcanef\/head_arcanef.5994910b471b936dd91f1de299b19bcaf8bbcb4f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/head_arcanef\/head_arcanef_large.c4a895323c2bba191740a112e5dd949475df8720.png",
+				"item_set": "inauspicious_abyss",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Thyrsus of the Inauspicious Abyss",
+				"defindex": 4642,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Thyrsus of the Inauspicious Abyss",
+				"item_description": "On the world at the rim grow a species of crystalline tree in whose branches visions of the future are tangled. From such a tree, Outworld Devourer fashioned this staff.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/obsidian_destroyer\/weapon_arcane_obliva\/weapon_arcane_obliva",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/weapon_arcane_obliva\/weapon_arcane_obliva.6fd83862d1ec76221ede93ffd8d051d28cf7de95.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/obsidian_destroyer\/weapon_arcane_obliva\/weapon_arcane_obliva_large.ce97eb6ecfb2d149619a99e6683e2bc7388d9716.png",
+				"item_set": "inauspicious_abyss",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Loner's Vanity",
+				"defindex": 4643,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Loner's Vanity",
+				"item_description": "\"And why shouldn't I?\" Drow has been heard to say, to absolutely no one.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/loners_vanity\/loners_vanity",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/loners_vanity\/loners_vanity.680f20269f2bc7201f163a5cb147567f6ff7019e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/loners_vanity\/loners_vanity_large.c429efc7f3469b619f95aae9c867ffdb57af22ed.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Hair of the Dark Magic",
+				"defindex": 4644,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sexy Hair",
+				"item_name": "Hair of the Dark Magic",
+				"item_description": "Style and sorcery are said to go hand in hand.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/darkmagic_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_hair.5471a0786e6cfa5e24c067e02855823b2803931e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_hair_large.ee3d769e289d8b1dcc217bba541e656d3a9a0e03.png",
+				"item_set": "invoker_dark_magic",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Nightsilver Bracers",
+				"defindex": 4645,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Nightsilver Bracers",
+				"item_description": "The moon's lustre fills these bracers, and fills Mirana with midnight power.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_arms\/mirana_nightsilver_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_arms\/mirana_nightsilver_arms.0b929b636acc45da6e5670164e325b8123944ad8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_arms\/mirana_nightsilver_arms_large.d1181be826b61eee54ef1e2715922f4db81cd770.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Lone Druid's Hood",
+				"defindex": 4646,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Lone Druid's Hood",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Cape of the Dark Magic",
+				"defindex": 4647,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Cape of the Dark Magic",
+				"item_description": "To the Invoker, those without the gifts of magic are insects to be ignored or destroyed.  For at time, his ferocity was such that the magical arts were treated with superstition and fear by all.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/darkmagic_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_cape.c27be5141eee282c141fb6685874b6ca61729dfc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_cape_large.bc52613dc6d11c65cbd0932ed62ed70479c43dbf.png",
+				"item_set": "invoker_dark_magic",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Talon Hood",
+				"defindex": 4648,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Red Talon Hood",
+				"item_description": "Red of hood and red of claw, this headpiece shields the Beastmaster from the elements.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/red_talon_head\/red_talon_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_head\/red_talon_head.94ea9803b7791bdc7614e6ef254191882086a65a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_head\/red_talon_head_large.3ff26f088ac363f1a874b1c912a14c71bc654dc9.png",
+				"item_set": "red_talon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracers of the Dark Magic",
+				"defindex": 4649,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Bracers of the Dark Magic",
+				"item_description": "Those who practiced the magical arts are often feared for their power.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/darkmagic_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_bracer.6aabe695205e0a943e418e5a23d77da484548277.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_bracer_large.0b52bd27b02033132277d631021826ad6e8be0b6.png",
+				"item_set": "invoker_dark_magic",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Shoulders of the Dark Magic",
+				"defindex": 4650,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Crest",
+				"item_name": "Shoulders of the Dark Magic",
+				"item_description": "In an age when fear surrounded sorcery, tales told of an oppressive wizard capable of limitless destruction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/darkmagic_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_shoulder.503093e55bc7a87dad5cd8a31fa4317614886f0b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/darkmagic_shoulder_large.0122723872d1cbbfbdf7bcbb2bc272dcf5c2b5b2.png",
+				"item_set": "invoker_dark_magic",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Collar of the Mage Slayer",
+				"defindex": 4651,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Collar",
+				"item_name": "Collar of the Mage Slayer",
+				"item_description": "Those whom the Anti-Mage hunts may be as skilled with a sword as they are with a spell, and so this collar was crafted to turn their blades aside.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/antimage_slasher_neck",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_neck.36b3c34393594ec465dc53d9ed7e9184abde106a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_neck_large.ac7006c8db98323d00f4d946e00fc0a6e8130528.png",
+				"item_set": "antimage_mage_slayer",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracer of the Mage Slayer",
+				"defindex": 4652,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Bracer of the Mage Slayer",
+				"item_description": "These bracers are made to defend against both swords and sorcery.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/antimage_slasher_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_bracer.c3d537442919463fff646eb9596e43dd90018272.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_bracer_large.f51b84b1de2df46f9f45746ef4fcc9219fdbe1b3.png",
+				"item_set": "antimage_mage_slayer",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Skirt of the Mage Slayer",
+				"defindex": 4653,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Skirt",
+				"item_name": "Skirt of the Mage Slayer",
+				"item_description": "Time and practice would persuade the Anti-Mage against such a heavy garment, yet its use in combat has not diminished.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/antimage_slasher_skirt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_skirt.5bbe19eb878e5b812e75e10f692a4c4900b6d190.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_skirt_large.51a6f6e803fa84a130d6ef7a33383a9c535ac3d1.png",
+				"item_set": "antimage_mage_slayer",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Glaive of the Mage Slayer",
+				"defindex": 4654,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Glaive",
+				"item_name": "Glaive of the Mage Slayer",
+				"item_description": "Brutality defined many of the early weapons used by the Anti-Mage.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/antimage_slasher_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_weapon.00cc61be8af91c28df7c4d104eb87bc9120d57aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_weapon_large.d4d44b7f03ea941cae4e41d4f367989bd160e2ca.png",
+				"item_set": "antimage_mage_slayer",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mask of the Mage Slayer",
+				"defindex": 4655,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Mask of the Mage Slayer",
+				"item_description": "The elements used in this mask's construction are able to deflect most spells, just as its shape may divert a blade.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/antimage_slasher_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_helmet.748d5ef779b81e0c220ee0858453826ad168605e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/antimage_slasher_helmet_large.604ab95be652a20c48d6392017e35c5d9a14d5b8.png",
+				"item_set": "antimage_mage_slayer",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Red Talon Guard",
+				"defindex": 4656,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Guard",
+				"item_name": "Red Talon Guard",
+				"item_description": "Heavy is the burden shouldered by the Beastmaster, and strong is the mantle that supports him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/red_talon_shoulder\/red_talon_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_shoulder\/red_talon_shoulder.fe8fa57a1a2fd8bc1281375b4333556ef54ca9bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_shoulder\/red_talon_shoulder_large.4cb2a96d08fd125dfb5b24759a6fa4f6953ed080.png",
+				"item_set": "red_talon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Red Talon Axes",
+				"defindex": 4657,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axes",
+				"item_name": "Red Talon Axes",
+				"item_description": "The last person to call these weapons primitive ended up wearing one in his skull.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/red_talon_weapon\/red_talon_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_weapon\/red_talon_weapon.8c66ceccfa67cc82a67b8f8c6701ebc57d0f0e16.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_weapon\/red_talon_weapon_large.fbf89653e04b267616beedd60bce32ddab05e5fa.png",
+				"item_set": "red_talon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Red Talon Bracers",
+				"defindex": 4658,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Red Talon Bracers",
+				"item_description": "A powerful bracer of leather, bone and fur.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/red_talon_arms\/red_talon_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_arms\/red_talon_arms.3e85f7ee55a715c3ca211e50219980069bee45cb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_arms\/red_talon_arms_large.d4819cc8cf08871eb8982a29fc0bee243fc765be.png",
+				"item_set": "red_talon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Red Talon Belt",
+				"defindex": 4659,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Belt",
+				"item_name": "Red Talon Belt",
+				"item_description": "A belt of leather and feather, bound in bone.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/red_talon_belt\/red_talon_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_belt\/red_talon_belt.fd9326829de213289bee8bca98fdc00202f78412.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/red_talon_belt\/red_talon_belt_large.299232062316daa437753d34db2e44c1e1e32874.png",
+				"item_set": "red_talon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Claw of the Haruspex",
+				"defindex": 4660,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Claw",
+				"item_name": "Claw of the Haruspex",
+				"item_description": "Serpent Clan long held to the traditions of the haruspex, and so foresaw the ruin and war that would visit the ancient clans.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lone_druid\/viciouskraitarms\/viciouskraitarms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitarms\/viciouskraitarms.7d6af77118c29a9f130882558a3af5a734af593b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitarms\/viciouskraitarms_large.89f41700922d11499cdb2160601662ba86fd2e66.png",
+				"item_set": "vicious_krait",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Cloak of the Haruspex",
+				"defindex": 4661,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Cloak of the Haruspex",
+				"item_description": "As Serpent Clan spread word of their coming doom, they granted their honored vestments to Sylla that he may remember their words.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lone_druid\/viciouskraitback\/viciouskraitback",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitback\/viciouskraitback.54816dafe1f8468bbc113550a49ee58e2b327eb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitback\/viciouskraitback_large.ed26767783be4fc7882e850600fac52cd700e535.png",
+				"item_set": "vicious_krait",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gilded Mark of the Haruspex",
+				"defindex": 4662,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Gilded Mark of the Haruspex",
+				"item_description": "Upon the shoulder sits a coiled snake, wrought in gold. The seers of Serpent Clan often read the future in the entrails of their lowly kin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lone_druid\/viciuskraitshoulder\/viciuskraitshoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciuskraitshoulder\/viciuskraitshoulder.09f203abaf4cef11135c8c9dee7670cabe35de76.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciuskraitshoulder\/viciuskraitshoulder_large.01eeeb181fd4192d3d438fdf640e137cc92f26fc.png",
+				"item_set": "vicious_krait",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacrificial Blade of the Haruspex",
+				"defindex": 4663,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Sacrificial Blade of the Haruspex",
+				"item_description": "The blade has seen the belly of many a beast so that knowledge may pour forth and forewarn those in need.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lone_druid\/viciouskraitweapon\/viciouskraitweapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitweapon\/viciouskraitweapon.9152a8edb90e59235e6adbeada77196ae3c56b3f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/viciouskraitweapon\/viciouskraitweapon_large.2d6aff7f0523c62ee666e6bea6761749d9a454e6.png",
+				"item_set": "vicious_krait",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Demon Hair of the Secret Queen",
+				"defindex": 4664,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Demon Hair of the Secret Queen",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/queenofpainhair\/queenofpainhair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/queenofpainhair\/queenofpainhair.bc356da950eb1607b4447bb7df1d67ecf0170173.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/queenofpainhair\/queenofpainhair_large.3302f4a99b94f9b9208ae4c023b1436226594061.png",
+				"item_set": "secret_queen",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Chains of the Ecclesiast-King",
+				"defindex": 4665,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Chains",
+				"item_name": "Chains of the Ecclesiast-King",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/queenchains\/queenchains",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/queenchains\/queenchains.424dfd7f087dfc2ed77f02ccbcf4673747f53695.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/queenchains\/queenchains_large.5452b2cbed09c89755ee3fffeead86c2bb30852e.png",
+				"item_set": "secret_queen",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Crown of the Secret Queen",
+				"defindex": 4666,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Crown",
+				"item_name": "Crown of the Secret Queen",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/secretqueencrown\/secretqueencrown",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/secretqueencrown\/secretqueencrown.0bc2a9f11316f9ecb82d6bd72ebb8a94168bb9f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/secretqueencrown\/secretqueencrown_large.025e94057cfa55c4853942f96aaf5e19d1e403ae.png",
+				"item_set": "secret_queen",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Dagger of Intimate Tortures",
+				"defindex": 4667,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Dagger of Intimate Tortures",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/snakedagger\/snakedagger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/snakedagger\/snakedagger.b63d82f05c832db55a5e53bb58a2e0561ea65750.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/snakedagger\/snakedagger_large.2ceffb2d1e148616199d9d604df83027ac5494fe.png",
+				"item_set": "secret_queen",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Scarf of the Deadly Nightshade",
+				"defindex": 4668,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scarf",
+				"item_name": "Scarf of the Deadly Nightshade",
+				"item_description": "Whosoever wears this mantle, the spirit Tyrian ensures they shall shrug off any burden, while their identity and their purpose remain concealed.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/ta_ns_shoulder\/ta_ns_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_shoulder\/ta_ns_shoulder.7ba2a8fd19100547df676e7df61e6308e91019b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_shoulder\/ta_ns_shoulder_large.1fc28d4d3ec41f72a70c278cd2dc383f676e04cc.png",
+				"item_set": "deadly_nightshade",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Garb of the Deadly Nightshade",
+				"defindex": 4669,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armor",
+				"item_name": "Garb of the Deadly Nightshade",
+				"item_description": "The spirit of Atropos inflicts dread and delirium on any who spy the wearer of this garb. Best not to see Lanaya at all, or even wonder at her whereabouts.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/ta_ns_armor\/ta_ns_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_armor\/ta_ns_armor.f192b53a68b1398546b47c1aa83fedb6d995784c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_armor\/ta_ns_armor_large.d2cecfb6420af9911ceacafbd7cdbeebb8e33413.png",
+				"item_set": "deadly_nightshade",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Headpiece of the Deadly Nightshade",
+				"defindex": 4670,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair and Circlet",
+				"item_name": "Headpiece of the Deadly Nightshade",
+				"item_description": "Although barely visible beneath the rim of this headpiece, Belladonna grants the wearer the enormous dilated eyes that so befit a seeker of mysterious truths.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/ta_ns_head\/ta_ns_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_head\/ta_ns_head.9690ec77e50d67b23ff3b8e39631a51aa1af47ab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/ta_ns_head\/ta_ns_head_large.de9df8fcb1ce3b3d50d8da9ffe3ede4b44b3d7c7.png",
+				"item_set": "deadly_nightshade",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Anuxi_uni_weapon",
+				"defindex": 4671,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Anuxi_uni_weapon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Anuxi_uni_sleeve",
+				"defindex": 4672,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Anuxi_uni_sleeve",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Anuxi_uni_head",
+				"defindex": 4673,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Anuxi_uni_head",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Anuxi_uni_neck",
+				"defindex": 4674,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Anuxi_uni_neck",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Anuxi_uni_dress",
+				"defindex": 4675,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Anuxi_uni_dress",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bangles of the Wildwing's Blessing",
+				"defindex": 4676,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bangles",
+				"item_name": "Bangles of the Wildwing's Blessing",
+				"item_description": "The Wildwings treasure their lost feathers, saving them to line the nests where they raise their young. It speaks of their deep respect for Enchantress that they gifted her these feathers for her bangles.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_wildkin_arm\/anuxi_wildkin_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_wildkin_arm\/anuxi_wildkin_arm.69c988367f0537186ef5c4f0aca4b5adf84c1b30.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_wildkin_arm\/anuxi_wildkin_arm_large.e8143b15f36bb094cd928c61dcac619966980350.png",
+				"item_set": "wildkin_blessing",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Councilor's Staff",
+				"defindex": 4677,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Councilor's Staff",
+				"item_description": "Any suitably imbued staff will serve for most sorcerers.  However, being an aspiring councilor requires that certain concessions be made to form.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/rubick_staff_updated_textures\/rubick_staff_updated_textures",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/rubick_staff_updated_textures\/rubick_staff_updated_textures.59d63358484511b2d36a45b1e17e2aa8f0d26c3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/rubick_staff_updated_textures\/rubick_staff_updated_textures_large.d495fd366382a7d77117887cbc981921d1b9c66f.png",
+				"item_set": "enigmatic_vestment",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Necklace of the Wildwing's Blessing",
+				"defindex": 4678,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Necklace",
+				"item_name": "Necklace of the Wildwing's Blessing",
+				"item_description": "The Wildwing are fierce and territorial, but they more than tolerate Enchantress in their realms: They welcome her.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_wildkin_neck\/anuxi_wildkin_neck",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_wildkin_neck\/anuxi_wildkin_neck.bd75498d76341c4fccda45eeef1c24fa643a0fde.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_wildkin_neck\/anuxi_wildkin_neck_large.a2f59e6499f6916a804967d096db5aa915f8a3c6.png",
+				"item_set": "wildkin_blessing",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Councilor's Shawl",
+				"defindex": 4679,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Councilor's Shawl",
+				"item_description": "Few sorcerers can claim to own a shawl that appears as prestigious as it is fire resistant.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/rubick_shoulders_mask_update\/rubick_shoulders_mask_update",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/rubick_shoulders_mask_update\/rubick_shoulders_mask_update.0c3e10d031d935e317a78ff8c58e2db1a40861ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/rubick_shoulders_mask_update\/rubick_shoulders_mask_update_large.97e495ee7447d24511684d755a2c8a77da2b176b.png",
+				"item_set": "enigmatic_vestment",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Councilor's Robe",
+				"defindex": 4680,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Robe",
+				"item_name": "Councilor's Robe",
+				"item_description": "To be at once a Magus, a duelist, and an aspiring politician requires a robe that is both stately and blast proof.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/robe_rubick_new_masksss\/robe_rubick_new_masksss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/robe_rubick_new_masksss\/robe_rubick_new_masksss.0d7713e15c12d7e9df644b529ba9a9fa6b4a29f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/robe_rubick_new_masksss\/robe_rubick_new_masksss_large.0451ef0de70a2ea80f127199163fddf9abcfd456.png",
+				"item_set": "enigmatic_vestment",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Headdress",
+				"defindex": 4681,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Headdress",
+				"item_name": "Ancestral Headdress",
+				"item_description": "Worn by an elder shadow priest during the very founding of the Dezun Order, this skull headdress has been handed down for generations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzleset_misc\/dazzleset_misc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_misc\/dazzleset_misc.bfbab1520c6784ae82e632a529152237cdf89b83.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_misc\/dazzleset_misc_large.736a9609d2a39292e95c12bc089c797d15cb4ade.png",
+				"item_set": "ancestral_trappings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Cloak",
+				"defindex": 4682,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Ancestral Cloak",
+				"item_description": "The elders grant this cloak only to the most skilled of the Dezun Order.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzleset_back\/dazzleset_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_back\/dazzleset_back.0a61747780cac6b80f5969749f0582c929e36b2d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_back\/dazzleset_back_large.e12631c337c873dd46ae8af2a1a2c3b6beac926a.png",
+				"item_set": "ancestral_trappings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Arm Wrap",
+				"defindex": 4683,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wrap",
+				"item_name": "Ancestral Arm Wrap",
+				"item_description": "To raise an arm wrapped in such a holy garment is to channel the most ancient knowledge of the Nothl Realm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzleset_arm\/dazzleset_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_arm\/dazzleset_arm.aa3c2ff4563b9d0a0149504511f1bd5ee89b68f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_arm\/dazzleset_arm_large.c3cd4b5a5c89f94db77f0feca9da2a5820a5d690.png",
+				"item_set": "ancestral_trappings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Dress",
+				"defindex": 4684,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dress",
+				"item_name": "Ancestral Dress",
+				"item_description": "Bound with rope and made of simple fabrics, this dress burns with Nothl strength.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzleset_legs\/dazzleset_legs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_legs\/dazzleset_legs.faf6f5307e112a39fca15432e36e90a0451ebc97.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_legs\/dazzleset_legs_large.ab9e5a2e34b5361b5fc51ffc6b871d80e33d8704.png",
+				"item_set": "ancestral_trappings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Medicine Stick",
+				"defindex": 4685,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Ancestral Medicine Stick",
+				"item_description": "The pattern at its center is said to focus and channel the Nothl's power.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon.707f742d9760bb41f275759a7314f2eddd4f193f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon_large.74da6f6f6ab95bd7363192c9feca7d65a53e09eb.png",
+				"item_set": "ancestral_trappings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Scythe of Twin Deaths",
+				"defindex": 4686,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scythe",
+				"item_name": "Scythe of Twin Deaths",
+				"item_description": "Heavy with the gifts granted by the plagued nobility, Rotund'jere had this frightening tool fashioned to remind those in his care of the ever-present likelihood of their demise.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/death_protest_weapon\/death_protest_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_weapon\/death_protest_weapon.6db2681bc56b011f0557b0c415a6bec98b95480e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_weapon\/death_protest_weapon_large.3bc66a94aa665800b0f4635e8a59dc2ceb295d49.png",
+				"item_set": "death_protest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "custom scythe",
+						"class": "custom_scythe",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Reliquary of Rotting Doom",
+				"defindex": 4687,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Reliquary",
+				"item_name": "Reliquary of Rotting Doom",
+				"item_description": "Behind the sacred vestments of this dark cardinal lies little else but rot and ruin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/death_protest_shoulder\/death_protest_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_shoulder\/death_protest_shoulder.435b8d185149eae480678442a4acef7bea93e63e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_shoulder\/death_protest_shoulder_large.e761a3aaee1fd90f3d6f50b5fbe3483ee39a03c1.png",
+				"item_set": "death_protest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Pretiosa of Putrescense",
+				"defindex": 4688,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pretiosa of Putrescense",
+				"item_description": "At the height of his corrupted influence, Rotund'jere had quite an assortment of fashionable hats.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/death_protest_hat\/death_protest_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_hat\/death_protest_hat.0df093273ca97a32addf143629c71c2509aa6cf8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_hat\/death_protest_hat_large.f39daec4c9c89263745d33626797c9a238904066.png",
+				"item_set": "death_protest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Beard of Weeping Scorn",
+				"defindex": 4689,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Beard",
+				"item_name": "Beard of Weeping Scorn",
+				"item_description": "Bands made from woven silk and gold tie this tainted hair together.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/death_protest_beard\/death_protest_beard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_beard\/death_protest_beard.292e94abfed06f7a3b5dd4a40c6de18c5ffbc79a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/death_protest_beard\/death_protest_beard_large.ef107319e9b73dc112ab0bc3459f4b208f8ec0ae.png",
+				"item_set": "death_protest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nightsilver Quiver",
+				"defindex": 4690,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Misc",
+				"item_name": "Nightsilver Quiver",
+				"item_description": "Even in the dark of a moonless night, Mirana shall not fumble for an arrow when she carries the Nightsilver Quiver.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_quiver\/mirana_nightsilver_quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_quiver\/mirana_nightsilver_quiver.e30f4036a0586943e7f34f69b0291703920be9a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_quiver\/mirana_nightsilver_quiver_large.a54e7e15da639e682c79cec93a326e1cc0f0e59f.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nightsilver Raiments",
+				"defindex": 4691,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Back",
+				"item_name": "Nightsilver Raiments",
+				"item_description": "Draped in the dark magic of a fabric as sheer as the new moon's faintest rays, Mirana glides silently through the dark.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_cape\/mirana_nightsilver_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_cape\/mirana_nightsilver_cape.e498f0b40f939fe1430ee4bae4958b35cf7c45a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_cape\/mirana_nightsilver_cape_large.27375e0618969f5ae418b6737ae40aed03b8acc3.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nightsilver Regalia",
+				"defindex": 4692,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Nightsilver Regalia",
+				"item_description": "Bearing a gem that reflects the brightness of the Demon Star between the moon's horns, Mirana knows no fear.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_shoulders\/mirana_nightsilver_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_shoulders\/mirana_nightsilver_shoulders.38d072ff07055bc8ceab7a9460a689ea14357997.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_shoulders\/mirana_nightsilver_shoulders_large.44894d2077ce0752d65954aac071e560d2770cb5.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nightsilver Locks",
+				"defindex": 4693,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Head",
+				"item_name": "Nightsilver Locks",
+				"item_description": "Just as the moon appears to greatest advantage in the darkest skies, Mirana's tresses shine most softly in the Nightsilver Woods.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_hair\/mirana_nightsilver_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_hair\/mirana_nightsilver_hair.6aeae3c270fdc02d914d51e47f230005e89e83bb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_hair\/mirana_nightsilver_hair_large.dc415d63deb018b83554b39ff4b799e122179454.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nightsilver Bow",
+				"defindex": 4694,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Head",
+				"item_name": "Nightsilver Bow",
+				"item_description": "The defense of the Nightsilver Woods relies not only on the most skilled archer, but on the blessed bow she carries.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/mirana_nightsilver_weapon\/mirana_nightsilver_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_weapon\/mirana_nightsilver_weapon.c7ee28c66640dfc4cc2c2138ab3d24e07d87f618.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_weapon\/mirana_nightsilver_weapon_large.6f15022e9067289efc5d44b9d0684e613c8e000a.png",
+				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sash of the Third Insight",
+				"defindex": 4695,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sash",
+				"item_name": "Sash of the Third Insight",
+				"item_description": "In the eyes beyond, all that is found must then be appraised.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/thiefscholar_girdle\/thiefscholar_girdle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_girdle\/thiefscholar_girdle.906e1822b7e67ac7c3f87281f6c873cb6145cde7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_girdle\/thiefscholar_girdle_large.91aaa6ffda3334191e7f44bb9e30e8c996a1780b.png",
+				"item_set": "third_insight",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Brooch of the Third Insight",
+				"defindex": 4696,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Brooch of the Third Insight",
+				"item_description": "There is little a mind cannot assess provided it is properly equipped.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/thiefscholar_coiffure\/thiefscholar_coiffure",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_coiffure\/thiefscholar_coiffure.701edf6014e412249aa97f6a84d6420389a06cb3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_coiffure\/thiefscholar_coiffure_large.8e4eba1e71ad87796afbcc2f4396b8ec3b4637e4.png",
+				"item_set": "third_insight",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mask of the Third Insight",
+				"defindex": 4697,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Mask of the Third Insight",
+				"item_description": "Just as what is known must be learned, what is spoken must be thought.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/thiefscholar_shoulder\/thiefscholar_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_shoulder\/thiefscholar_shoulder.8c51d8f71a12f3a4c451dbd2c22bfc6e0c604808.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/thiefscholar_shoulder\/thiefscholar_shoulder_large.2ba84d6a6cf7c9343b3e0a68e36d22eab582566a.png",
+				"item_set": "third_insight",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Sharpshooter's Stache",
+				"defindex": 4698,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "The Sharpshooter's Stache",
+				"item_description": "The Keen Folk are, for the most part, a finely mustachioed people, and Sniper is no exception.  It took him nearly three days to grow out this stache.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/sharpshooter_stache\/sharpshooter_stache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_stache\/sharpshooter_stache.98c6e95ffd20f8e404f63283df4c0082a55226ab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_stache\/sharpshooter_stache_large.1cd6cc5d4a3f624cec9be970dc6cde9fb1d67659.png",
+				"item_set": "sniper_sharpshooter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Killstealer",
+				"defindex": 4699,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Rifle",
+				"item_name": "The Killstealer",
+				"item_description": "Among the Keen Folk, weapons are passed down from father to son, and the Killstealer was originally cast in Sniper's grandfather's day.  They just don't make 'em like they used to.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/killstealer\/killstealer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/killstealer\/killstealer.0d4cbb301f939dc5a758d4095a6cdfc14e1f11fa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/killstealer\/killstealer_large.786496e125d19f83abb1cce884154fdc2c64ace9.png",
+				"item_set": "sniper_sharpshooter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Sharpshooter's Pauldrons",
+				"defindex": 4700,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "The Sharpshooter's Pauldrons",
+				"item_description": "These shoulder pads provide protection against both the enemy, and the occasional bruised shoulder of the long-distance shootist.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/sharpshooter_shoulder\/sharpshooter_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_shoulder\/sharpshooter_shoulder.dc91046d183b2c3102b6769913a6e876d9cc99ec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_shoulder\/sharpshooter_shoulder_large.50431474e487b85e3f2b71cab6e64ffe06e0562d.png",
+				"item_set": "sniper_sharpshooter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Sharpshooter's Cloak",
+				"defindex": 4701,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "The Sharpshooter's Cloak",
+				"item_description": "A cloak is every traveler's friend.  A warm covering for the cold, and it confuses the silhouette, making the wearer a more difficult target at long range. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/sharpshooter_cloak\/sharpshooter_cloak",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_cloak\/sharpshooter_cloak.e9922e3388370f4ee79c8e1e535c2ba7f1f5516d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/sharpshooter_cloak\/sharpshooter_cloak_large.9a720d6fa8795659a38d71ff3b8dcd5866b5e2b1.png",
+				"item_set": "sniper_sharpshooter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Slim Blade of the Tahlin Watch",
+				"defindex": 4702,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail and Dagger",
+				"item_name": "Slim Blade of the Tahlin Watch",
+				"item_description": "When death is the price, one can never swing too many blades.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/masquerade_tail\/masquerade_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_tail\/masquerade_tail.f323d73d476f594daf23a6ae7d0f78eefd8207aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_tail\/masquerade_tail_large.e29a81b632149cb9794c3274ea05603bff50fec3.png",
+				"item_set": "tahlin_assassin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mask of the Tahlin Watch",
+				"defindex": 4703,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Mask of the Tahlin Watch",
+				"item_description": "The crest of the Tahlin Watch sits upon the brow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/masquerade_mask\/masquerade_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_mask\/masquerade_mask.06750bf6912fb10ee6b79a9869aa3c9a5fb57808.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_mask\/masquerade_mask_large.56f7dff7c25d03cdc4f9537cd41d2aa7ca86ee27.png",
+				"item_set": "tahlin_assassin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Reaper_Hood",
+				"defindex": 4704,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Reaper_Hood",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Reapers_Scythe",
+				"defindex": 4705,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Reapers_Scythe",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Reaper_Shoulder",
+				"defindex": 4706,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Reaper_Shoulder",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Egg of the Stormcrow",
+				"defindex": 4707,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Egg",
+				"item_name": "Egg of the Stormcrow",
+				"item_description": "The sacred egg of the stormcrow.  A powerful source of magic, once certain rituals have been performed.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/witchdoctor\/stormcrowbag\/stormcrowbag",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowbag\/stormcrowbag.b9fa6522c4556a041cf0c2ec7772832c6e0d342c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowbag\/stormcrowbag_large.86b7210def0382c459854292b9b9db6e377822e4.png",
+				"item_set": "stormcrow_spirit",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Beak of the Stormcrow",
+				"defindex": 4708,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Beak of the Stormcrow",
+				"item_description": "A mask crafted from the beak of the stormcrow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/witchdoctor\/stormcrowmask\/stormcrowmask",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowmask\/stormcrowmask.64d3fb0ababded2b1df78489ccc47ec1db08d4d2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowmask\/stormcrowmask_large.e6e4f7b2c18180a43f20169498ae6a02a7fd83a5.png",
+				"item_set": "stormcrow_spirit",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Cloak of the Stormcrow",
+				"defindex": 4709,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Cloak of the Stormcrow",
+				"item_description": "A cloak crafted from the feathers and talons of the stormcrow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/witchdoctor\/stormcrowcloak\/stormcrowcloak",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowcloak\/stormcrowcloak.b4d951a39806fb40b0a0c3d467664367bdfce9e5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrowcloak\/stormcrowcloak_large.3cdbe9bfcd5cacd17f63f700c3c2197228f7bf6a.png",
+				"item_set": "stormcrow_spirit",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Tail of the Stormcrow",
+				"defindex": 4710,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Belt",
+				"item_name": "Tail of the Stormcrow",
+				"item_description": "A belt crafted from the tail feathers of the stormcrow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/witchdoctor\/stormcrow_belt\/stormcrow_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrow_belt\/stormcrow_belt.ca2ba09d8be42f234281a201319e66ba12f657e9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrow_belt\/stormcrow_belt_large.c3bc26377282fce65e5a24bea4f26b9155cb6d8a.png",
+				"item_set": "stormcrow_spirit",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Sigil of the Stormcrow",
+				"defindex": 4711,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Sigil of the Stormcrow",
+				"item_description": "A staff bearing the sigil of the stormcrow, crafted from its sacred bones.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/witchdoctor\/stormcrow_staff\/stormcrow_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrow_staff\/stormcrow_staff.62d807b80cabfce97e2a4b346000e4752b174e4c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/witchdoctor\/stormcrow_staff\/stormcrow_staff_large.9c1a8b57254b63816d9557ea9965f066e80bdc63.png",
+				"item_set": "stormcrow_spirit",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "polycount tag",
+						"class": "polycount_tag",
+						"value": 2012.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Ceremonial Claws of Qaldin",
+				"defindex": 4712,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Claws",
+				"item_name": "Ceremonial Claws of Qaldin",
+				"item_description": "Incised with the luminous runes of Qezh, the upraised claws of the Scintillant Supplicant summon the full attention of the Djinn of Qaldin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/deserts_deathly_embrace_arms\/deserts_deathly_embrace_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/deserts_deathly_embrace_arms\/deserts_deathly_embrace_arms.696e51d3a9664755400d6c8bf6f94d105b22ed24.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/deserts_deathly_embrace_arms\/deserts_deathly_embrace_arms_large.b7e6cead02e51af54337561c00b892ce1c994c92.png",
+				"item_set": "ceremonial_carapace",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ceremonial Stinger of Qaldin",
+				"defindex": 4713,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Ceremonial Stinger of Qaldin",
+				"item_description": "At the height of the ceremony of Qaz'hallaq, seven virtuous acolytes are stung to death with one swipe of this malevolent armored appendage.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/deserts_deathly_embrace_tail\/deserts_deathly_embrace_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/deserts_deathly_embrace_tail\/deserts_deathly_embrace_tail.be688f721cf4164c25c9ee63bae0c6e3074b521a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/deserts_deathly_embrace_tail\/deserts_deathly_embrace_tail_large.7fb2ea050fa2d812cdc1ca2bc1635146ec421904.png",
+				"item_set": "ceremonial_carapace",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sigil of the Tahlin Watch",
+				"defindex": 4714,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pad",
+				"item_name": "Sigil of the Tahlin Watch",
+				"item_description": "Very few display the talent necessary to join the Tahlin Watch.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/masquerade_shoulder\/masquerade_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_shoulder\/masquerade_shoulder.a7b4e035d6ec9e53477ab6c8f268a0613ee05e8e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_shoulder\/masquerade_shoulder_large.c000ff2bb61720141f61966810c58cc4d467ad80.png",
+				"item_set": "tahlin_assassin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracer of the Tahlin Watch",
+				"defindex": 4715,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Bracer of the Tahlin Watch",
+				"item_description": "As he fled his family's slaughter, Riki disguised himself with the armor of his royal watch in order to escape undetected.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/masquerade_bracers\/masquerade_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_bracers\/masquerade_bracers.f7b673c521793af021901429fb820df5fda424b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_bracers\/masquerade_bracers_large.4b3c9955f14665180d00dd4d1268ccdffc8a7544.png",
+				"item_set": "tahlin_assassin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "nightshade_helm",
+				"defindex": 4716,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "nightshade_helm",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Belt of the Bramble Lord",
+				"defindex": 4717,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Belt",
+				"item_name": "Belt of the Bramble Lord",
+				"item_description": "None now remember the reign of the Bramble Lord, and fewer still are the relics of that dark era.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/ancient_gods_belt\/ancient_gods_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_belt\/ancient_gods_belt.3807bdf5ebe1b07b7b50c67d56de34560182fea9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_belt\/ancient_gods_belt_large.80a50459f3bb6047b3a09a63dac9d7bd7cb300e2.png",
+				"item_set": "ancient_gods",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Buckler of the Bramble Lord",
+				"defindex": 4718,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Buckler of the Bramble Lord",
+				"item_description": "The grim visage of the Bramble Lord adorns the deflector.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/ancient_gods_arms\/ancient_gods_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_arms\/ancient_gods_arms.b069401a929de571b1298311aafbeaaf32adc67f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_arms\/ancient_gods_arms_large.0f70a61aff2cf127d8cfb3c4612171a8dd37b5b7.png",
+				"item_set": "ancient_gods",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Lance of the Bramble Lord",
+				"defindex": 4719,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Lance",
+				"item_name": "Lance of the Bramble Lord",
+				"item_description": "The Bramble Lord insisted that all arms made in his honor be just as adept at piercing as they were at tearing.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/ancient_gods_lance\/ancient_gods_lance",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_lance\/ancient_gods_lance.b2666b452db5360d6a74412d9fa48b7d773e0ca1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_lance\/ancient_gods_lance_large.be258054363b80544fb93dcfc01743fd285a69e6.png",
+				"item_set": "ancient_gods",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Spaulder of the Bramble Lord",
+				"defindex": 4720,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Guard",
+				"item_name": "Spaulder of the Bramble Lord",
+				"item_description": "All who dared stand against the Bramble Lord well knew how easily his powers could catch and pierce their lives.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/ancient_gods_shoulder\/ancient_gods_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_shoulder\/ancient_gods_shoulder.194b3d5b2604a84545ac653d4011525301d7366f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/ancient_gods_shoulder\/ancient_gods_shoulder_large.b85cbd9ca3232f41ac11dd15afc23f18184381f6.png",
+				"item_set": "ancient_gods",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Blade of the Slithereen Exile - Off-Hand",
+				"defindex": 4721,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Heavy Blade",
+				"item_name": "Blade of the Slithereen Exile - Off-Hand",
+				"item_description": "These blades were taken from the corpses of slain leviathans following the battle of Crey.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/exile_offhand_weapon\/exile_offhand_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/exile_offhand_weapon\/exile_offhand_weapon.d87764094a200caac752d85ab56e4bd2215a990a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/siren\/exile_offhand_weapon\/exile_offhand_weapon_large.656bbef262690ff65b46d0b35ac2ed64e2e7cda8.png",
+				"item_set": "slithereen_exile",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Steel Wings of Apocalyptic Fire",
+				"defindex": 4722,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Steel Wings of Apocalyptic Fire",
+				"item_description": "Six and sixty times his wings were branded, but now they are seated within a chrysalis of finest armor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/abysswings\/abysswings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/abysswings\/abysswings.81c9e934e7852473c3109c03f3fbfa80847fb689.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/abysswings\/abysswings_large.003e25876c693ebb369c848b11ee8e460e270330.png",
+				"item_set": "apocalyptic_doom",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Runed Bracers of Apocalyptic Fire",
+				"defindex": 4723,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Runed Bracers of Apocalyptic Fire",
+				"item_description": "He that burns now wears bracers is forged in the cauldron of deepest hell.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/abyssarms\/abyssarms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/abyssarms\/abyssarms.952abc041c5deeb11109baa3497af17ad7c86853.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/abyssarms\/abyssarms_large.4b439e886d14f7aadf8830ebaf01fca939412455.png",
+				"item_set": "apocalyptic_doom",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Assistant's Cutter",
+				"defindex": 4724,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Assistant's Cutter",
+				"item_description": "Most observers of Alchemy fail to realize the importance of personal defense against most observers of Alchemy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/precisioncutter\/precisioncutter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/alchemist\/precisioncutter\/precisioncutter.c76c46f858b216220ea9c39fdbd0e307f08a8534.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/alchemist\/precisioncutter\/precisioncutter_large.e98f66b12ac3211358c72a0fcdd533322a5e632d.png",
+				"item_set": "alchemy_essentials",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Hunter's Helm",
+				"defindex": 4725,
+				"item_class": "dota_item_wearable",
+				"item_typ
