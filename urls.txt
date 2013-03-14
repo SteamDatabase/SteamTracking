@@ -30,3 +30,16 @@ scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/sear
 
 # API
 api/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
+
+# Game Schemas
+api/CounterStrike.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=10
+api/TeamFortressClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=20
+api/DayOfDefeat.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=30
+api/DeathmatchClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=40
+api/Ricochet.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=60
+api/HalfLife.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=70
+api/CounterStrikeConditionZero.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=80
+api/HalfLife2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=220
+api/CounterStrikeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
+api/HalfLifeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=280
+
