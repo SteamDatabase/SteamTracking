@@ -1,0 +1,2097 @@
+{
+	"game": {
+		"gameName": "ValveTestApp260",
+		"gameVersion": "181",
+		"availableGameStats": {
+			"stats": [
+				{
+					"name": "i_Number_Of_Kills",
+					"defaultvalue": 0,
+					"displayName": "Enemy players killed"
+				},
+				{
+					"name": "i_Number_Of_Deaths",
+					"defaultvalue": 0,
+					"displayName": "Player Deaths"
+				},
+				{
+					"name": "i_Time_Played",
+					"defaultvalue": 0,
+					"displayName": "Time Played"
+				},
+				{
+					"name": "i_Number_Of_PlantedBombs",
+					"defaultvalue": 0,
+					"displayName": "Bombs Planted"
+				},
+				{
+					"name": "i_Number_Of_DefusedBombs",
+					"defaultvalue": 0,
+					"displayName": "Bombs Defused"
+				},
+				{
+					"name": "total_wins",
+					"defaultvalue": 0,
+					"displayName": "Rounds Won"
+				},
+				{
+					"name": "i_Damage_Done",
+					"defaultvalue": 0,
+					"displayName": "Damage Done to Enemies"
+				},
+				{
+					"name": "i_Money_Earned",
+					"defaultvalue": 0,
+					"displayName": "Money Earned"
+				},
+				{
+					"name": "i_Number_Of_RescuedHostages",
+					"defaultvalue": 0,
+					"displayName": "Hostages Rescued"
+				},
+				{
+					"name": "total_kills_knife",
+					"defaultvalue": 0,
+					"displayName": "Knife Kills"
+				},
+				{
+					"name": "total_kills_hegrenade",
+					"defaultvalue": 0,
+					"displayName": "HE Grenade Kills"
+				},
+				{
+					"name": "total_kills_glock",
+					"defaultvalue": 0,
+					"displayName": "9x19 Sidearm Kills"
+				},
+				{
+					"name": "total_kills_usp",
+					"defaultvalue": 0,
+					"displayName": "KM Tactical .45 Kills"
+				},
+				{
+					"name": "total_kills_p228",
+					"defaultvalue": 0,
+					"displayName": "228 Compact Kills"
+				},
+				{
+					"name": "total_kills_deagle",
+					"defaultvalue": 0,
+					"displayName": "Night Hawk .50c Kills"
+				},
+				{
+					"name": "total_kills_elite",
+					"defaultvalue": 0,
+					"displayName": ".40 Dual Elites Kills"
+				},
+				{
+					"name": "total_kills_fiveseven",
+					"defaultvalue": 0,
+					"displayName": "ES Five-Seven Kills"
+				},
+				{
+					"name": "total_kills_m3",
+					"defaultvalue": 0,
+					"displayName": "M3 Super 90 Kills"
+				},
+				{
+					"name": "total_kills_xm1014",
+					"defaultvalue": 0,
+					"displayName": "XM1014 Kills"
+				},
+				{
+					"name": "total_kills_mac10",
+					"defaultvalue": 0,
+					"displayName": "Ingram Mac-10 Kills"
+				},
+				{
+					"name": "total_kills_tmp",
+					"defaultvalue": 0,
+					"displayName": "Schmidt Machine Pistol Kills"
+				},
+				{
+					"name": "total_kills_mp5navy",
+					"defaultvalue": 0,
+					"displayName": "KM Sub-Machine Gun Kills"
+				},
+				{
+					"name": "total_kills_ump45",
+					"defaultvalue": 0,
+					"displayName": "KM UMP45 Kills"
+				},
+				{
+					"name": "total_kills_p90",
+					"defaultvalue": 0,
+					"displayName": "ES C90 Kills"
+				},
+				{
+					"name": "total_kills_awp",
+					"defaultvalue": 0,
+					"displayName": "Magnum Sniper Rifle Kills"
+				},
+				{
+					"name": "total_kills_ak47",
+					"defaultvalue": 0,
+					"displayName": "CV-47 Kills"
+				},
+				{
+					"name": "total_kills_m4a1",
+					"defaultvalue": 0,
+					"displayName": "Maverick M4A1 Kills"
+				},
+				{
+					"name": "total_kills_aug",
+					"defaultvalue": 0,
+					"displayName": "Bullpup Kills"
+				},
+				{
+					"name": "total_kills_sg552",
+					"defaultvalue": 0,
+					"displayName": "Krieg 552 Kills"
+				},
+				{
+					"name": "total_kills_sg550",
+					"defaultvalue": 0,
+					"displayName": "Krieg 550 Commando Kills"
+				},
+				{
+					"name": "total_kills_galil",
+					"defaultvalue": 0,
+					"displayName": "IDF Defender Kills"
+				},
+				{
+					"name": "total_kills_famas",
+					"defaultvalue": 0,
+					"displayName": "Clarion 5.56 Kills"
+				},
+				{
+					"name": "total_kills_scout",
+					"defaultvalue": 0,
+					"displayName": "Schmidt Scout Kills"
+				},
+				{
+					"name": "total_kills_g3sg1",
+					"defaultvalue": 0,
+					"displayName": "D3/AU-1 Kills"
+				},
+				{
+					"name": "total_kills_m249",
+					"defaultvalue": 0,
+					"displayName": "M249 Kills"
+				},
+				{
+					"name": "total_kills_headshot",
+					"defaultvalue": 0,
+					"displayName": "Headshots"
+				},
+				{
+					"name": "total_kills_enemy_weapon",
+					"defaultvalue": 0,
+					"displayName": "Kills with enemy weapons"
+				},
+				{
+					"name": "total_wins_pistolround",
+					"defaultvalue": 0,
+					"displayName": "Pistol Rounds Won"
+				},
+				{
+					"name": "total_decal_sprays",
+					"defaultvalue": 0,
+					"displayName": "Decal Sprays"
+				},
+				{
+					"name": "total_wins_map_cs_assault",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_assault"
+				},
+				{
+					"name": "total_wins_map_cs_compound",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_compound"
+				},
+				{
+					"name": "total_wins_map_cs_havana",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_havana"
+				},
+				{
+					"name": "total_wins_map_cs_italy",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_italy"
+				},
+				{
+					"name": "total_wins_map_cs_militia",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_militia"
+				},
+				{
+					"name": "total_wins_map_cs_office",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_cs_office"
+				},
+				{
+					"name": "total_wins_map_de_aztec",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_aztec"
+				},
+				{
+					"name": "total_wins_map_de_cbble",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_cbble"
+				},
+				{
+					"name": "total_wins_map_de_chateau",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_chateau"
+				},
+				{
+					"name": "total_wins_map_de_dust2",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_dust2"
+				},
+				{
+					"name": "total_wins_map_de_dust",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_dust"
+				},
+				{
+					"name": "total_wins_map_de_inferno",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_inferno"
+				},
+				{
+					"name": "total_wins_map_de_nuke",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_nuke"
+				},
+				{
+					"name": "total_wins_map_de_piranesi",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_piranesi"
+				},
+				{
+					"name": "total_wins_map_de_port",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_port"
+				},
+				{
+					"name": "total_wins_map_de_prodigy",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_prodigy"
+				},
+				{
+					"name": "total_wins_map_de_tides",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_tides"
+				},
+				{
+					"name": "total_wins_map_de_train",
+					"defaultvalue": 0,
+					"displayName": "total_wins_map_de_train"
+				},
+				{
+					"name": "total_weapons_donated",
+					"defaultvalue": 0,
+					"displayName": "Weapons Donated"
+				},
+				{
+					"name": "i_Number_Of_BrokenWindows",
+					"defaultvalue": 0,
+					"displayName": "Windows Broken"
+				},
+				{
+					"name": "total_kills_enemy_blinded",
+					"defaultvalue": 0,
+					"displayName": "Blind Ememies Killed"
+				},
+				{
+					"name": "total_kills_knife_fight",
+					"defaultvalue": 0,
+					"displayName": "Knife Fights Won"
+				},
+				{
+					"name": "total_kills_against_zoomed_sniper",
+					"defaultvalue": 0,
+					"displayName": "Zoomed Snipers Killed"
+				},
+				{
+					"name": "total_nightvision_damage",
+					"defaultvalue": 0,
+					"displayName": "Damage During Nightvision"
+				},
+				{
+					"name": "total_dominations",
+					"defaultvalue": 0,
+					"displayName": "Dominations"
+				},
+				{
+					"name": "total_domination_overkills",
+					"defaultvalue": 0,
+					"displayName": "Domination Overkills"
+				},
+				{
+					"name": "total_revenges",
+					"defaultvalue": 0,
+					"displayName": "Revenges"
+				},
+				{
+					"name": "i_NumShotsHit",
+					"defaultvalue": 0,
+					"displayName": "Shots Hit"
+				},
+				{
+					"name": "i_NumShotsFired",
+					"defaultvalue": 0,
+					"displayName": "Shots Fired"
+				},
+				{
+					"name": "i_Total_Rounds",
+					"defaultvalue": 0,
+					"displayName": "Rounds Played"
+				},
+				{
+					"name": "total_shots_deagle",
+					"defaultvalue": 0,
+					"displayName": "total_shots_deagle"
+				},
+				{
+					"name": "total_shots_usp",
+					"defaultvalue": 0,
+					"displayName": "total_shots_usp"
+				},
+				{
+					"name": "total_shots_glock",
+					"defaultvalue": 0,
+					"displayName": "total_shots_glock"
+				},
+				{
+					"name": "total_shots_p228",
+					"defaultvalue": 0,
+					"displayName": "total_shots_p228"
+				},
+				{
+					"name": "total_shots_elite",
+					"defaultvalue": 0,
+					"displayName": "total_shots_elite"
+				},
+				{
+					"name": "total_shots_fiveseven",
+					"defaultvalue": 0,
+					"displayName": "total_shots_fiveseven"
+				},
+				{
+					"name": "total_shots_awp",
+					"defaultvalue": 0,
+					"displayName": "total_shots_awp"
+				},
+				{
+					"name": "total_shots_ak47",
+					"defaultvalue": 0,
+					"displayName": "total_shots_ak47"
+				},
+				{
+					"name": "total_shots_m4a1",
+					"defaultvalue": 0,
+					"displayName": "total_shots_m4a1"
+				},
+				{
+					"name": "total_shots_aug",
+					"defaultvalue": 0,
+					"displayName": "total_shots_aug"
+				},
+				{
+					"name": "total_shots_sg552",
+					"defaultvalue": 0,
+					"displayName": "total_shots_sg552"
+				},
+				{
+					"name": "total_shots_sg550",
+					"defaultvalue": 0,
+					"displayName": "total_shots_sg550"
+				},
+				{
+					"name": "total_shots_galil",
+					"defaultvalue": 0,
+					"displayName": "total_shots_galil"
+				},
+				{
+					"name": "total_shots_famas",
+					"defaultvalue": 0,
+					"displayName": "total_shots_famas"
+				},
+				{
+					"name": "total_shots_scout",
+					"defaultvalue": 0,
+					"displayName": "total_shots_scout"
+				},
+				{
+					"name": "total_shots_g3sg1",
+					"defaultvalue": 0,
+					"displayName": "total_shots_g3sg1"
+				},
+				{
+					"name": "total_shots_p90",
+					"defaultvalue": 0,
+					"displayName": "total_shots_p90"
+				},
+				{
+					"name": "total_shots_mp5navy",
+					"defaultvalue": 0,
+					"displayName": "total_shots_mp5navy"
+				},
+				{
+					"name": "total_shots_tmp",
+					"defaultvalue": 0,
+					"displayName": "total_shots_tmp"
+				},
+				{
+					"name": "total_shots_mac10",
+					"defaultvalue": 0,
+					"displayName": "total_shots_mac10"
+				},
+				{
+					"name": "total_shots_ump45",
+					"defaultvalue": 0,
+					"displayName": "total_shots_ump45"
+				},
+				{
+					"name": "total_shots_m3",
+					"defaultvalue": 0,
+					"displayName": "total_shots_m3"
+				},
+				{
+					"name": "total_shots_xm1014",
+					"defaultvalue": 0,
+					"displayName": "total_shots_xm1014"
+				},
+				{
+					"name": "total_shots_m249",
+					"defaultvalue": 0,
+					"displayName": "total_shots_m249"
+				},
+				{
+					"name": "total_hits_deagle",
+					"defaultvalue": 0,
+					"displayName": "total_hits_deagle"
+				},
+				{
+					"name": "total_hits_usp",
+					"defaultvalue": 0,
+					"displayName": "total_hits_usp"
+				},
+				{
+					"name": "total_hits_glock",
+					"defaultvalue": 0,
+					"displayName": "total_hits_glock"
+				},
+				{
+					"name": "total_hits_p228",
+					"defaultvalue": 0,
+					"displayName": "total_hits_p228"
+				},
+				{
+					"name": "total_hits_elite",
+					"defaultvalue": 0,
+					"displayName": "total_hits_elite"
+				},
+				{
+					"name": "total_hits_fiveseven",
+					"defaultvalue": 0,
+					"displayName": "total_hits_fiveseven"
+				},
+				{
+					"name": "total_hits_awp",
+					"defaultvalue": 0,
+					"displayName": "total_hits_awp"
+				},
+				{
+					"name": "total_hits_ak47",
+					"defaultvalue": 0,
+					"displayName": "total_hits_ak47"
+				},
+				{
+					"name": "total_hits_m4a1",
+					"defaultvalue": 0,
+					"displayName": "total_hits_m4a1"
+				},
+				{
+					"name": "total_hits_aug",
+					"defaultvalue": 0,
+					"displayName": "total_hits_aug"
+				},
+				{
+					"name": "total_hits_sg552",
+					"defaultvalue": 0,
+					"displayName": "total_hits_sg552"
+				},
+				{
+					"name": "total_hits_sg550",
+					"defaultvalue": 0,
+					"displayName": "total_hits_sg550"
+				},
+				{
+					"name": "total_hits_galil",
+					"defaultvalue": 0,
+					"displayName": "total_hits_galil"
+				},
+				{
+					"name": "total_hits_famas",
+					"defaultvalue": 0,
+					"displayName": "total_hits_famas"
+				},
+				{
+					"name": "total_hits_scout",
+					"defaultvalue": 0,
+					"displayName": "total_hits_scout"
+				},
+				{
+					"name": "total_hits_g3sg1",
+					"defaultvalue": 0,
+					"displayName": "total_hits_g3sg1"
+				},
+				{
+					"name": "total_hits_p90",
+					"defaultvalue": 0,
+					"displayName": "total_hits_p90"
+				},
+				{
+					"name": "total_hits_mp5navy",
+					"defaultvalue": 0,
+					"displayName": "total_hits_mp5navy"
+				},
+				{
+					"name": "total_hits_tmp",
+					"defaultvalue": 0,
+					"displayName": "total_hits_tmp"
+				},
+				{
+					"name": "total_hits_mac10",
+					"defaultvalue": 0,
+					"displayName": "total_hits_mac10"
+				},
+				{
+					"name": "total_hits_ump45",
+					"defaultvalue": 0,
+					"displayName": "total_hits_ump45"
+				},
+				{
+					"name": "total_hits_m3",
+					"defaultvalue": 0,
+					"displayName": "total_hits_m3"
+				},
+				{
+					"name": "total_hits_xm1014",
+					"defaultvalue": 0,
+					"displayName": "total_hits_xm1014"
+				},
+				{
+					"name": "total_hits_m249",
+					"defaultvalue": 0,
+					"displayName": "total_hits_m249"
+				},
+				{
+					"name": "total_rounds_map_cs_assault",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_assault"
+				},
+				{
+					"name": "total_rounds_map_cs_compound",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_compound"
+				},
+				{
+					"name": "total_rounds_map_cs_havana",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_havana"
+				},
+				{
+					"name": "total_rounds_map_cs_italy",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_italy"
+				},
+				{
+					"name": "total_rounds_map_cs_militia",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_militia"
+				},
+				{
+					"name": "total_rounds_map_cs_office",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_cs_office"
+				},
+				{
+					"name": "total_rounds_map_de_aztec",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_aztec"
+				},
+				{
+					"name": "total_rounds_map_de_cbble",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_cbble"
+				},
+				{
+					"name": "total_rounds_map_de_chateau",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_chateau"
+				},
+				{
+					"name": "total_rounds_map_de_dust2",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_dust2"
+				},
+				{
+					"name": "total_rounds_map_de_dust",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_dust"
+				},
+				{
+					"name": "total_rounds_map_de_inferno",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_inferno"
+				},
+				{
+					"name": "total_rounds_map_de_nuke",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_nuke"
+				},
+				{
+					"name": "total_rounds_map_de_piranesi",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_piranesi"
+				},
+				{
+					"name": "total_rounds_map_de_port",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_port"
+				},
+				{
+					"name": "total_rounds_map_de_prodigy",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_prodigy"
+				},
+				{
+					"name": "total_rounds_map_de_tides",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_tides"
+				},
+				{
+					"name": "total_rounds_map_de_train",
+					"defaultvalue": 0,
+					"displayName": "total_rounds_map_de_train"
+				},
+				{
+					"name": "last_match_t_wins",
+					"defaultvalue": 0,
+					"displayName": "last_match_t_wins"
+				},
+				{
+					"name": "last_match_ct_wins",
+					"defaultvalue": 0,
+					"displayName": "last_match_ct_wins"
+				},
+				{
+					"name": "last_match_wins",
+					"defaultvalue": 0,
+					"displayName": "last_match_wins"
+				},
+				{
+					"name": "last_match_max_players",
+					"defaultvalue": 0,
+					"displayName": "last_match_max_players"
+				},
+				{
+					"name": "last_match_kills",
+					"defaultvalue": 0,
+					"displayName": "last_match_kills"
+				},
+				{
+					"name": "last_match_deaths",
+					"defaultvalue": 0,
+					"displayName": "last_match_deaths"
+				},
+				{
+					"name": "last_match_mvps",
+					"defaultvalue": 0,
+					"displayName": "last_match_mvps"
+				},
+				{
+					"name": "last_match_favweapon_id",
+					"defaultvalue": 4294967295,
+					"displayName": "last_match_favweapon_id"
+				},
+				{
+					"name": "last_match_favweapon_shots",
+					"defaultvalue": 0,
+					"displayName": "last_match_favweapon_shots"
+				},
+				{
+					"name": "last_match_favweapon_hits",
+					"defaultvalue": 0,
+					"displayName": "last_match_favweapon_hits"
+				},
+				{
+					"name": "last_match_favweapon_kills",
+					"defaultvalue": 0,
+					"displayName": "last_match_favweapon_kills"
+				},
+				{
+					"name": "last_match_damage",
+					"defaultvalue": 0,
+					"displayName": "last_match_damage"
+				},
+				{
+					"name": "last_match_money_spent",
+					"defaultvalue": 0,
+					"displayName": "last_match_money_spent"
+				},
+				{
+					"name": "last_match_dominations",
+					"defaultvalue": 0,
+					"displayName": "last_match_dominations"
+				},
+				{
+					"name": "last_match_revenges",
+					"defaultvalue": 0,
+					"displayName": "last_match_revenges"
+				},
+				{
+					"name": "total_mvps",
+					"defaultvalue": 0,
+					"displayName": "total_mvps"
+				},
+				{
+					"name": "COLLECT_GIFTS_STAT",
+					"defaultvalue": 0,
+					"displayName": "COLLECT_GIFTS_STAT"
+				}
+			]
+			,
+			"achievements": [
+				{
+					"name": "WIN_BOMB_PLANT",
+					"defaultvalue": 0,
+					"displayName": "Someone Set Up Us The Bomb",
+					"hidden": 0,
+					"description": "Win a round by planting a bomb",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/4711014791e4ae29408e8bc2fcae1ab61ca7c189.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/94f7819e75fcf01107e65531a54b1820c8613191.jpg"
+				},
+				{
+					"name": "BOMB_PLANT_LOW",
+					"defaultvalue": 0,
+					"displayName": "Boomala Boomala",
+					"hidden": 0,
+					"description": "Plant 100 bombs",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5f689c20656716f2a8bf67bd26f3f7846786bca5.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/bae62d2ff31fc415e5973a50ec836afec949d6a7.jpg"
+				},
+				{
+					"name": "BOMB_DEFUSE_LOW",
+					"defaultvalue": 0,
+					"displayName": "The Hurt Blocker",
+					"hidden": 0,
+					"description": "Defuse 100 bombs",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6eda73149b29c897330a15e502eaee4ac8242c02.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d8a4931cbd688b9c44167b59536f5a21cedd312b.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_LOW",
+					"defaultvalue": 0,
+					"displayName": "Body Bagger",
+					"hidden": 0,
+					"description": "Kill 25 enemies",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7bbd09bac4ebe17b84e8fb0eb5d9e3351fcb4bc0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/bf782686b655c49914c975e08c5f10fa887ae3df.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_MED",
+					"defaultvalue": 0,
+					"displayName": "Corpseman",
+					"hidden": 0,
+					"description": "Kill 500 enemies",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/058b56fcc898b9bf893a6237ad233f677f8d48dd.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9405532bf85010d8fdd61877ae915d103a2f30f3.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_HIGH",
+					"defaultvalue": 0,
+					"displayName": "God of War",
+					"hidden": 0,
+					"description": "Kill 10,000 enemies",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/908a8d1cdb376c401653e843fef8b4fe85156212.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0be60ac95bc82f5637390c12e69942403bbd7d92.jpg"
+				},
+				{
+					"name": "BOMB_DEFUSE_CLOSE_CALL",
+					"defaultvalue": 0,
+					"displayName": "Second to None",
+					"hidden": 0,
+					"description": "Successfully defuse a bomb with less than one second remaining",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/110782d2a043351f48c2e2bffac52db775ec573d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7625385f689887107e215ca0cabe661eb379dc71.jpg"
+				},
+				{
+					"name": "BOMB_DEFUSE_NEEDED_KIT",
+					"defaultvalue": 0,
+					"displayName": "Combat Ready",
+					"hidden": 0,
+					"description": "Defuse a bomb with a kit when it would have failed without one",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/892d00fc07c5dfa2f243d77722c6b9a176ac56c6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c0ff0663501b4ea206b88a8086f7650450f1e26f.jpg"
+				},
+				{
+					"name": "KILL_BOMB_DEFUSER",
+					"defaultvalue": 0,
+					"displayName": "Counter-Counter-Terrorist",
+					"hidden": 0,
+					"description": "Kill a CT while he is defusing the bomb",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/10a0839b2f9bd60d8bb3a85b5a194573018fe24b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b568fd0fcaed2aab563ce466d3051ded78990ca9.jpg"
+				},
+				{
+					"name": "WIN_BOMB_DEFUSE",
+					"defaultvalue": 0,
+					"displayName": "Rite of First Defusal",
+					"hidden": 0,
+					"description": "Win a round by defusing a bomb",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d156614d7d84bfdde80bdfb67b1f46cc9fb7d23e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/dbfc1db1f61b7d805e6e731e5e63bbe40179c964.jpg"
+				},
+				{
+					"name": "BOMB_PLANT_IN_25_SECONDS",
+					"defaultvalue": 0,
+					"displayName": "Short Fuse",
+					"hidden": 0,
+					"description": "Plant a bomb within 25 seconds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3a9f3060c6f0c5f49e3841f3661cde48c078f36e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/57446aaae6407272d76215b18be286b451ea5440.jpg"
+				},
+				{
+					"name": "WIN_ROUNDS_LOW",
+					"defaultvalue": 0,
+					"displayName": "Newb World Order",
+					"hidden": 0,
+					"description": "Win 10 rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/08890ac29bfbfefcc43a3188a8127d141d1d5153.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d4587d03bc84d83088f5eb2887b2967d7d7096f8.jpg"
+				},
+				{
+					"name": "WIN_ROUNDS_MED",
+					"defaultvalue": 0,
+					"displayName": "Pro-moted",
+					"hidden": 0,
+					"description": "Win 200 rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c5e9b4ae4f52c542045c20cdfc8b7f05cef78bce.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5da3a6d369793d0fcbe6b44726d87f699a01a4cc.jpg"
+				},
+				{
+					"name": "WIN_ROUNDS_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Leet-er of Men",
+					"hidden": 0,
+					"description": "Win 5000 rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/cfa8f71312275fe26db7158ababbdd8b83fa6979.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9348d2d72e9f5bb28d3a1247c067ffef6bf48c4d.jpg"
+				},
+				{
+					"name": "GIVE_DAMAGE_LOW",
+					"defaultvalue": 0,
+					"displayName": "Points in Your Favor",
+					"hidden": 0,
+					"description": "Inflict 2,500 total points of damage to enemy players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a646cdeba4eb3590fb1b16241949daec306df333.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/07f8e3174f03886807f91f97621ccceb1aa89d60.jpg"
+				},
+				{
+					"name": "GIVE_DAMAGE_MED",
+					"defaultvalue": 0,
+					"displayName": "You've Made Your Points",
+					"hidden": 0,
+					"description": "Inflict 50,000 total points of damage to enemy players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6b517619bbaaa916dc5be3350cd6be26fdbf335b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3ee6b682ca7895d6947a93b360bb61c24b58702e.jpg"
+				},
+				{
+					"name": "GIVE_DAMAGE_HIGH",
+					"defaultvalue": 0,
+					"displayName": "A Million Points of Blight",
+					"hidden": 0,
+					"description": "Inflict 1,000,000 total points of damage to enemy players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2930b087cb3a622a09e299772f7d2e9fc4ea3082.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/20e03308ca9383c05a0dc0f79916ff383d2f3200.jpg"
+				},
+				{
+					"name": "KILLING_SPREE",
+					"defaultvalue": 0,
+					"displayName": "Ballistic",
+					"hidden": 0,
+					"description": "Kill 5 enemy players within 15 seconds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0335247125175126a8ad5cb89a55f79e81773e41.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ee9381e30ad090c431ca343f2b996c376393a8dc.jpg"
+				},
+				{
+					"name": "KILL_WITH_OWN_GUN",
+					"defaultvalue": 0,
+					"displayName": "Lost and F0wnd",
+					"hidden": 0,
+					"description": "KIll an enemy player with a gun they dropped that round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/958796f76ce6c0781687144d2b8a7c9ed3a029fe.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2afdd075f0324732a3b2f49aec8c086ea95928fb.jpg"
+				},
+				{
+					"name": "RESCUE_HOSTAGES_LOW",
+					"defaultvalue": 0,
+					"displayName": "Cowboy Diplomacy",
+					"hidden": 0,
+					"description": "Rescue 100 hostages",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b9729279ef483bfbad3fd9666236fec68ab9380f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7037232d0ead0cae2c41181f95e2d16d93d72b54.jpg"
+				},
+				{
+					"name": "RESCUE_HOSTAGES_MED",
+					"defaultvalue": 0,
+					"displayName": "SAR Czar",
+					"hidden": 0,
+					"description": "Rescue 500 hostages",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/83628680b7c21781689bc01e36312528b9bcc61a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ab9431e63e4d5295c8c6169baa9c95e5bf965c48.jpg"
+				},
+				{
+					"name": "RESCUE_ALL_HOSTAGES",
+					"defaultvalue": 0,
+					"displayName": "Good Shepherd",
+					"hidden": 0,
+					"description": "Rescue all hostages in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/cd6c8567cbe7f143f0f2f9d5b76aa9839140e49c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/48cb324c5eace57bf56e1b87d199b4911a3f29a3.jpg"
+				},
+				{
+					"name": "FAST_HOSTAGE_RESCUE",
+					"defaultvalue": 0,
+					"displayName": "Freed With Speed",
+					"hidden": 0,
+					"description": "Rescue all hostages within 90 seconds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1f85755ee5cb772162042c75d9dc2a9e661ca519.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/600ab7c5d2fe282581660f4d5e359a2e1b88e621.jpg"
+				},
+				{
+					"name": "KILL_TWO_WITH_ONE_SHOT",
+					"defaultvalue": 0,
+					"displayName": "Ammo Conservation",
+					"hidden": 0,
+					"description": "Kill two enemy players with a single bullet",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b9f034fe25d79fbfe755363a6d06455c587a37f9.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7ab8bcc1f9c24a430821b93c22d15ef900132315.jpg"
+				},
+				{
+					"name": "EARN_MONEY_LOW",
+					"defaultvalue": 0,
+					"displayName": "War Bonds",
+					"hidden": 0,
+					"description": "Earn $125,000 total cash",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a73d6bdd5cccfaf9a14ca4951d896eae6fa061ff.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d008372fe508e7c02a39665825195082f48c33b0.jpg"
+				},
+				{
+					"name": "EARN_MONEY_MED",
+					"defaultvalue": 0,
+					"displayName": "Spoils of War",
+					"hidden": 0,
+					"description": "Earn $2,500,000 total cash",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/fc5d299ac57b075c651983b1492534064d305305.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e01e6af5decf611f86cbece4191213c1fda93b5f.jpg"
+				},
+				{
+					"name": "EARN_MONEY_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Blood Money",
+					"hidden": 0,
+					"description": "Earn $50,000,000 total cash",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/eb5746d81a7b33e30d4e8888c858ec6da31fbe63.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/38064df95182fb0c744d8f15be4d17723b2b524c.jpg"
+				},
+				{
+					"name": "DEAD_GRENADE_KILL",
+					"defaultvalue": 0,
+					"displayName": "Premature Burial",
+					"hidden": 0,
+					"description": "Kill an enemy with a grenade after you've died",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e4b044ea898e17a52db0cdd4ecf2f67139104a21.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/862a26cbd251d3ade38c04a2a746f07af49d1c83.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_DEAGLE",
+					"defaultvalue": 0,
+					"displayName": "Night Hawk .50c Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the Night Hawk .50c",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d599997f174b8185e3f7f4e6642ab364cd8224eb.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/246aec5cf665ee534fadc59e1d2dbb3b73d194fb.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_USP",
+					"defaultvalue": 0,
+					"displayName": "KM Tactical .45 Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the KM Tactical .45",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/130698886f13c85777a0267b07e7e74ef3c23518.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/05d10dfe4f7d32f850cec1edc21a44a06c662615.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_GLOCK",
+					"defaultvalue": 0,
+					"displayName": "9x19 Sidearm Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the 9x19 Sidearm",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/358cb5a24e8ecd721e34d828a0bf38a37e50498a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/26aef00127561e289b7fc9a3b9230b13540dbfa9.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_P228",
+					"defaultvalue": 0,
+					"displayName": "228 Compact Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the 228 Compact",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7414a87ca8d5113fcaff9de60140c1d3ae7240a9.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/cc83a8f9818bee4cc16b20445afe45a7b8951291.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_ELITE",
+					"defaultvalue": 0,
+					"displayName": ".40 Dual Elites Expert",
+					"hidden": 0,
+					"description": "Kill 100 enemy players with the .40 Dual Elites",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3bbbe364a200794c0c40f0dea4c76e536dcc0e10.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/820764553c24688868f89ac1462d369ef8ba8889.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_FIVESEVEN",
+					"defaultvalue": 0,
+					"displayName": "ES Five-Seven Expert",
+					"hidden": 0,
+					"description": "Kill 100 enemy players with the ES Five-Seven",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/062f3ad079e7df53b2a8d49aa2d7983cea985e95.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8a410121e7ee5b18dd8f7ef3a04fc21a8a8e5024.jpg"
+				},
+				{
+					"name": "META_PISTOL",
+					"defaultvalue": 0,
+					"displayName": "Pistol Master",
+					"hidden": 0,
+					"description": "Unlock all 6 Pistol kill achievements",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/4cb4663fd6df1a3b7ccb5a987f1660b28b5071f6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/93f05d9e2892fd1111234e1c3712d00a91f461c9.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_AWP",
+					"defaultvalue": 0,
+					"displayName": "Magnum Sniper Rifle Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the Magnum Sniper Rifle",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/baaec1b4ba2a388c29eb10f932f0a029ccf41473.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/df428641a3ec6ed90ef71f6430b77380ef853fab.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_AK47",
+					"defaultvalue": 0,
+					"displayName": "CV-47 Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the CV-47",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b0945b589b715e043dd791df7280b872e39f69ea.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2d49b161558e207d676cf26724fbcc5e5a0defee.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_M4A1",
+					"defaultvalue": 0,
+					"displayName": "Maverick M4A1 Carbine Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the Maverick M4A1 Carbine",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5f57d1613e7cf965c3e8a88af4880c7202ede46c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/13967b1b1df30c265a193e26826047a858f6b65f.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_AUG",
+					"defaultvalue": 0,
+					"displayName": "Bullpup Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Bullpup",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5059d63a0669ce9825ecaea63015bac8d2627f50.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1c5e93dc407d858348d980c16b26370423ff72e8.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_SG552",
+					"defaultvalue": 0,
+					"displayName": "Krieg 552 Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Krieg 552",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ea6b7ff2887dbea64ba06f55777d0bc8b5ba84bf.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/584d8ed62def39fadf58cd2a5a8713801352fc4b.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_SG550",
+					"defaultvalue": 0,
+					"displayName": "Krieg 550 Commando Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Krieg 550 Commando",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2180aa5121e2066b86b8e0a002640a83d38d3dd1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c3807a7a9aa5c8a0b5167e9a1af2065359a76ef6.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_GALIL",
+					"defaultvalue": 0,
+					"displayName": "IDF Defender Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the IDF Defender",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/95437097875b1388f9158e7ebe47b2eb1ab86f99.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0f67d0f9514b7ed579cb83d83eba8b65202ff49c.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_FAMAS",
+					"defaultvalue": 0,
+					"displayName": "Clarion 5.56 Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Clarion 5.56",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/559690251fa20a45469917edbd6eaadad3402175.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/625c6c26c33cd7be528785b96820e2133c098306.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_SCOUT",
+					"defaultvalue": 0,
+					"displayName": "Schmidt Scout Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the Schmidt Scout",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c7d5f568f036be6832028e3d679650743ea4cceb.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d8ec3830d8eba4cd0a260a49ff07ade7c3875429.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_G3SG1",
+					"defaultvalue": 0,
+					"displayName": "D3/AU-1 Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the D3/AU-1",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9ce3c3d509c891689bae0212bf26096afe1818c3.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/97231f3456e67e4b8e913eae70ad39ad99bfdf6b.jpg"
+				},
+				{
+					"name": "META_RIFLE",
+					"defaultvalue": 0,
+					"displayName": "Rifle Master",
+					"hidden": 0,
+					"description": "Unlock all 10 rifle kill achievements",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/75603c6cfe455453b335f7ef33327a18584fda87.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a11c64561ce145561f8dc14a80fad31f2d25ed24.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_P90",
+					"defaultvalue": 0,
+					"displayName": "ES C90 Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the ES C90",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c28b855319e0313ed5d72e3814be3877fe6d8701.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/dd02ec8e5b90acd1d5094a67bf5860df3390d5c1.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_MP5NAVY",
+					"defaultvalue": 0,
+					"displayName": "KM Sub-Machine Gun Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the KM Sub-Machine Gun",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/670f7c75793615eaffc2bfbd804aea338a0c0c58.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f094b78d66d0c1f0e2ad3aa61e489f1cc9984b64.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_TMP",
+					"defaultvalue": 0,
+					"displayName": "Schmidt Machine Pistol Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Schmidt Machine Pistol",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/62475b771c19ab516ad096755317aef44230035e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d5970614302f30f5a20bef5b27dfef14bfbb0a61.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_MAC10",
+					"defaultvalue": 0,
+					"displayName": "Ingram Mac-10 Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the Ingram Mac-10",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2d6b9c05b9cbfe6c5c778e6a862f2ff320b8a467.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ce0d80806fddfb1607f1592523dcfe2651cc821c.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_UMP45",
+					"defaultvalue": 0,
+					"displayName": "KM UMP45 Expert",
+					"hidden": 0,
+					"description": "Kill 1,000 enemy players with the KM UMP45",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5126af466fd7cd2a5b52864fa061ea8cb371b693.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c29b99f0ef8aea4bd1d32fad1327f8751b8dc2c2.jpg"
+				},
+				{
+					"name": "META_SMG",
+					"defaultvalue": 0,
+					"displayName": "Sub-Machine Gun Master",
+					"hidden": 0,
+					"description": "Unlock all 5 sub-machine gun kill achievements",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d607975ef3bf7c92ff5df3be378ddfdbc6a297e8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ba6d8e4db2ef4e8c22fee388dcbc11e2a1722e78.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_M3",
+					"defaultvalue": 0,
+					"displayName": "Leone 12 Gauge Super Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the Leone 12 Gauge Super",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8e0b707a47986499cb2b9ed8b969f530eda8f789.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/02c3a3b6fcc77a28064aa362d0a53bac50802cc3.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_XM1014",
+					"defaultvalue": 0,
+					"displayName": "Leone YG1265 Auto Shotgun Expert",
+					"hidden": 0,
+					"description": "Kill 200 enemy players with the Leone YG1265 Auto Shotgun",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/cb59a2b025fe1588963a94be93c0cb3716ea04dd.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f7cee0ffd12e382104a7316b4af670e926ab9e87.jpg"
+				},
+				{
+					"name": "META_SHOTGUN",
+					"defaultvalue": 0,
+					"displayName": "Shotgun Master",
+					"hidden": 0,
+					"description": "Unlock both shotgun kill achievements",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c6ee36ad70b44df073edb262b58d2b53f023d362.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/91eac45cf9abd44b5ad3a126e15a1cc9a273401c.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_HEGRENADE",
+					"defaultvalue": 0,
+					"displayName": "HE Grenade Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the HE grenade",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/39ae2bf957bbb26394f2b8054eb3bb9f525afaca.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ed7e7609eed89a5820b362ae8c2f02af0d121f13.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_KNIFE",
+					"defaultvalue": 0,
+					"displayName": "Knife Expert",
+					"hidden": 0,
+					"description": "Kill 100 enemy players with the knife",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5e40c25485619a489e20f3134780658365c1f0b8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/74abd08d8f84234fd65d9538c4606ecbe9ee10e1.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_M249",
+					"defaultvalue": 0,
+					"displayName": "M249 Expert",
+					"hidden": 0,
+					"description": "Kill 500 enemy players with the M249",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d699ac67ad64a2aa06faf46e3c26f55406c31992.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/12c44fe21bff737633ad03393a581ef2839e2793.jpg"
+				},
+				{
+					"name": "META_WEAPONMASTER",
+					"defaultvalue": 0,
+					"displayName": "Master At Arms",
+					"hidden": 0,
+					"description": "Unlock every weapon kill achievement",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c88426aed4ffc3a2bda95ad5c5943648717a71f1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5bc16320b03ee5202cac2f8a0b84a24e0d65d88e.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_TEAM",
+					"defaultvalue": 0,
+					"displayName": "The Cleaner",
+					"hidden": 0,
+					"description": "Kill the entire enemy team (with at least 5 players) in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9aa4672fd410cdb9482042025949e853bad970b2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9f556bbab6502d32e800ab543863981d70a02675.jpg"
+				},
+				{
+					"name": "KILLS_WITH_MULTIPLE_GUNS",
+					"defaultvalue": 0,
+					"displayName": "Variety Hour",
+					"hidden": 0,
+					"description": "Get kills with 5 different guns in a round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/45d3bab688dae22c45c4e8f723be789ab9ac9f13.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/caa5c72e9677fd51a4115e2f342917e82ffd0db2.jpg"
+				},
+				{
+					"name": "KILL_HOSTAGE_RESCUER",
+					"defaultvalue": 0,
+					"displayName": "Dead Shepherd",
+					"hidden": 0,
+					"description": "Kill an enemy player who is leading the hostages without injuring any hostages",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/51bfb690e29188f49aeb4072f34a9094b2db2214.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/861579599e1403caa3961c6ed411530c3d9068d7.jpg"
+				},
+				{
+					"name": "LAST_PLAYER_ALIVE",
+					"defaultvalue": 0,
+					"displayName": "War of Attrition",
+					"hidden": 0,
+					"description": "Be the last player alive in a round (with at least 5 players on your team)",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c01f85fc8120729d365c788d65328ae1566f39cf.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5f6ceb19f91d0d393af0d227cf1f123240724f33.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_LAST_BULLET",
+					"defaultvalue": 0,
+					"displayName": "Magic Bullet",
+					"hidden": 0,
+					"description": "Kill an enemy with the last bullet in your magazine (excluding sniper rifles)",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6ba07e0329d501cfce59049c9fd93722dc7868d5.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/34f4668be5097032a17a74031f73293346927e75.jpg"
+				},
+				{
+					"name": "KILLING_SPREE_ENDER",
+					"defaultvalue": 0,
+					"displayName": "Kill One, Get One Spree",
+					"hidden": 0,
+					"description": "Kill an enemy player who is on a killing spree",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/62ed103e86b3fb24779693d8ed48d2a777559d66.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f21b12e05650e6fea75f21e0656a8cfce4103b4a.jpg"
+				},
+				{
+					"name": "BREAK_WINDOWS",
+					"defaultvalue": 0,
+					"displayName": "A World of Pane",
+					"hidden": 0,
+					"description": "Shoot out 14 windows in a single round on cs_office",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e6a9c693f47f2f0333da279d6b180d57cfd1c2fe.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5126f587ffa5f8c264dec78e528d3fd2d1d577cb.jpg"
+				},
+				{
+					"name": "HEADSHOTS",
+					"defaultvalue": 0,
+					"displayName": "Battle Sight Zero",
+					"hidden": 0,
+					"description": "Kill 250 enemy players with headshots",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3ef408527a82676ab7a1cb61d8d6555a822b7eb6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/57e1923b1e191448b130a74ea340daa286dd89ff.jpg"
+				},
+				{
+					"name": "DAMAGE_NO_KILL",
+					"defaultvalue": 0,
+					"displayName": "Primer",
+					"hidden": 0,
+					"description": "Do at least 95% damage to an enemy who is then killed by a another player",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e2b66dd3525b05d41952b798cb49f2d3c7d890c9.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e0b3e0cc52998b520ea19efe60e19414668f032a.jpg"
+				},
+				{
+					"name": "KILL_LOW_DAMAGE",
+					"defaultvalue": 0,
+					"displayName": "Finishing Schooled",
+					"hidden": 0,
+					"description": "Kill an enemy player who has been reduced to less than 5% health by other players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/539173c8900678ffdf0a58046f74715afa172771.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0cf8d8c7b38b2b98efd094c83752dca3fbdf9a35.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_RELOADING",
+					"defaultvalue": 0,
+					"displayName": "Shot With Their Pants Down",
+					"hidden": 0,
+					"description": "Kill an enemy player while they are reloading",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/4de15811ad0ae97501b0e6e210d2debf3a5151d0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/fe5786bbedf3f02ead3600b838f8727c4d22617e.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_BLINDED",
+					"defaultvalue": 0,
+					"displayName": "Blind Ambition",
+					"hidden": 0,
+					"description": "Kill a total of 25 enemy players blinded by flashbangs",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ef8338a54a56db7b6d3be6b1dd973197f1707cdc.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9b69dc5e5fe04065bfd7ab07e28c445a7179deeb.jpg"
+				},
+				{
+					"name": "KILL_ENEMIES_WHILE_BLIND",
+					"defaultvalue": 0,
+					"displayName": "Blind Fury",
+					"hidden": 0,
+					"description": "Kill an enemy player while you are blinded from a flashbang",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8c2838cc63458e2d8d7927813184f64d9061c809.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/49cb07ed836eed71c23dac29181d869a201937c8.jpg"
+				},
+				{
+					"name": "KILLS_ENEMY_WEAPON",
+					"defaultvalue": 0,
+					"displayName": "Friendly Firearms",
+					"hidden": 0,
+					"description": "Kill 100 enemy players with enemy weapons",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9cc500765c2545f27705dc7547e6daf2a4b28218.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/51ae619386c1fd0ddc4b69ee06c5053e8573517b.jpg"
+				},
+				{
+					"name": "KILL_WITH_EVERY_WEAPON",
+					"defaultvalue": 0,
+					"displayName": "Expert Marksman",
+					"hidden": 0,
+					"description": "Get a kill with every weapon",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b8a68c6dd61a9068fa9b1160b5676c926bd63d57.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/004f238ef0a5da50ea4a5af246c41f3068415ad7.jpg"
+				},
+				{
+					"name": "SURVIVE_GRENADE",
+					"defaultvalue": 0,
+					"displayName": "Shrapnelproof",
+					"hidden": 0,
+					"description": "Take 80 points of damage from enemy grenades and still survive the round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2294b872f224385a449abaab2d43bc4c04178ac0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/cb6c4e663908c63b0f2acd134ab8e2751f300833.jpg"
+				},
+				{
+					"name": "WIN_KNIFE_FIGHTS_LOW",
+					"defaultvalue": 0,
+					"displayName": "Make the Cut",
+					"hidden": 0,
+					"description": "Win a knife fight",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0a98a35608855a7a3ef7bb87fbe83d351c3f7319.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/859fa9b3d74b110a7b0e3e3bc307fcec41204f37.jpg"
+				},
+				{
+					"name": "WIN_KNIFE_FIGHTS_HIGH",
+					"defaultvalue": 0,
+					"displayName": "The Bleeding Edge",
+					"hidden": 0,
+					"description": "Win 100 knife fights",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9ff5f14a76456fb827785e5ac37997fb6dc11b14.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/62ad26989b8e97fc598d32b402236b802e41783d.jpg"
+				},
+				{
+					"name": "KILLED_DEFUSER_WITH_GRENADE",
+					"defaultvalue": 0,
+					"displayName": "Defuse This!",
+					"hidden": 0,
+					"description": "Kill the defuser with an HE grenade",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ed308d86e18431a3bc586205c1721e8baabe1600.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c23d6723fef89248636d0a130ffa2455197b3332.jpg"
+				},
+				{
+					"name": "SURVIVED_HEADSHOT_DUE_TO_HELMET",
+					"defaultvalue": 0,
+					"displayName": "Safety First",
+					"hidden": 0,
+					"description": "Survive a shot to the head because you had the good sense to wear a helmet",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/df1f8451b8a7bf7522c044df2baa77ce72d4f3d0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/63c073aa15025c3bacc70cc39426e2bcae2ddc02.jpg"
+				},
+				{
+					"name": "HIP_SHOT",
+					"defaultvalue": 0,
+					"displayName": "Hip Shot",
+					"hidden": 0,
+					"description": "Kill an enemy with an un-zoomed sniper rifle",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f148bcf3a60845f4dcc43cf076727fa9e1f7a824.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/82ab24f79f92f8fda43ccd46229bc62f4160217d.jpg"
+				},
+				{
+					"name": "KILL_SNIPER_WITH_SNIPER",
+					"defaultvalue": 0,
+					"displayName": "Eye to Eye",
+					"hidden": 0,
+					"description": "Kill a zoomed-in enemy sniper with a sniper rifle of your own",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/37b5159e9721c3b0934292bf879e6088438e1e09.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/108b4a67427a034dba48d06edc8c65050f3a4e51.jpg"
+				},
+				{
+					"name": "KILL_SNIPER_WITH_KNIFE",
+					"defaultvalue": 0,
+					"displayName": "Sknifed",
+					"hidden": 0,
+					"description": "Kill a zoomed-in enemy sniper with a knife",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e721cddc55903779f2d609c1ee6bf3f380df1b67.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f99aa8a03c4d7db8fd672e2a5a0999bcfc66191a.jpg"
+				},
+				{
+					"name": "KILL_SNIPERS",
+					"defaultvalue": 0,
+					"displayName": "Snipe Hunter",
+					"hidden": 0,
+					"description": "Kill 100 zoomed-in enemy snipers",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6029cdd0f943ade69f68181e6c9ddcbbe468aef8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/50910661ff66d81e93e99faab3849dd9429ff61c.jpg"
+				},
+				{
+					"name": "KILL_WHEN_AT_LOW_HEALTH",
+					"defaultvalue": 0,
+					"displayName": "Dead Man Stalking",
+					"hidden": 0,
+					"description": "Kill an enemy while at 1 health",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/24190f805c63645bbb5d821a46b41b8a6fd68991.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/80719abe703511e31168714dd81e5b2b3e915df2.jpg"
+				},
+				{
+					"name": "GRENADE_MULTIKILL",
+					"defaultvalue": 0,
+					"displayName": "Three the Hard Way",
+					"hidden": 0,
+					"description": "Kill 3 enemy players with a single HE grenade",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6115986d15eedbb343047693b2026cfdd35fe774.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/4c5d08cc6beec4fb12247a98666b86507ca668c0.jpg"
+				},
+				{
+					"name": "PISTOL_ROUND_KNIFE_KILL",
+					"defaultvalue": 0,
+					"displayName": "Street Fighter",
+					"hidden": 0,
+					"description": "Kill an enemy player with a knife during the pistol round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b76e0bcfd7f17f803d6d9d00d690a0400af705f4.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/171265031b4f77885934c82d9b5a2482635f6228.jpg"
+				},
+				{
+					"name": "FAST_ROUND_WIN",
+					"defaultvalue": 0,
+					"displayName": "Blitzkrieg",
+					"hidden": 0,
+					"description": "Win a round in less than 30 seconds (against at least 5 enemy players)",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/813933a17dbc8b103170a0c3d05b9440557302a0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c7565725d1fd08b256e2eaf0df4e74b85159c675.jpg"
+				},
+				{
+					"name": "WIN_PISTOLROUNDS_LOW",
+					"defaultvalue": 0,
+					"displayName": "Piece Initiative",
+					"hidden": 0,
+					"description": "Win 5 Pistol Rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d0327c158beff0515a08b91879093540dafec54d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/632320abeddf72b39265cd40e8260ae6760226f0.jpg"
+				},
+				{
+					"name": "WIN_PISTOLROUNDS_MED",
+					"defaultvalue": 0,
+					"displayName": "Give Piece a Chance",
+					"hidden": 0,
+					"description": "Win 25 Pistol Rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/569903b97da046a9e39f3aa6cab2f0ab3a791208.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5ceca7f87e027fe37c0b22d70f7e3ad828f57f6e.jpg"
+				},
+				{
+					"name": "WIN_PISTOLROUNDS_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Piece Treaty",
+					"hidden": 0,
+					"description": "Win 250 Pistol Rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e4e75041504be04ee50b793e3ddb965e2b50ea16.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8d07c9de193787c74e136c3d4f22cd84715b5744.jpg"
+				},
+				{
+					"name": "BOMB_MULTIKILL",
+					"defaultvalue": 0,
+					"displayName": "Clusterstruck",
+					"hidden": 0,
+					"description": "Kill 5 players in a C4 blast",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2ab8a4c58effdc47b6859139108428c2cec7776c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/84e1115a7b13b8e9da1cc3fc9120219c2287458b.jpg"
+				},
+				{
+					"name": "GOOSE_CHASE",
+					"defaultvalue": 0,
+					"displayName": "Wild Gooseman Chase",
+					"hidden": 0,
+					"description": "As the last living terrorist, distract a defuser long enough for the bomb to explode",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0cf3535ea0fb1eb2301bbc1ea556735fc7427168.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/edcf3f017ee4fe0cdb8f45a4d09ef63d18d624f3.jpg"
+				},
+				{
+					"name": "WIN_BOMB_PLANT_AFTER_RECOVERY",
+					"defaultvalue": 0,
+					"displayName": "Blast Will and Testament",
+					"hidden": 0,
+					"description": "Win a round by picking up the bomb from a fallen comrade and successfully planting it",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6cf434bbd0898441178457c02a3e103c402e6251.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e89f47ff11d27028151713816b564213858c692f.jpg"
+				},
+				{
+					"name": "SURVIVE_MANY_ATTACKS",
+					"defaultvalue": 0,
+					"displayName": "Target-Hardened",
+					"hidden": 0,
+					"description": "Survive damage from 5 different players within a round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/555cd9fc445ff777c6fc49c3550650efccbfb2cf.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7d920b6786f682fcb1d91f9c75ebec4c2089c518.jpg"
+				},
+				{
+					"name": "LOSSLESS_EXTERMINATION",
+					"defaultvalue": 0,
+					"displayName": "Mercy Rule",
+					"hidden": 0,
+					"description": "Kill the entire opposing team without any members of your team dying",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d0fccbc1cc2876855540328e7294586266636ce6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/756159a664238b13d2a8b7d26a3f10fec14e75c1.jpg"
+				},
+				{
+					"name": "FLAWLESS_VICTORY",
+					"defaultvalue": 0,
+					"displayName": "Clean Sweep",
+					"hidden": 0,
+					"description": "Kill the entire opposing team without any members of your team taking any damage",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/012b420dc3df74fe5612e911585ed36f6e09cc59.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/25b09fc5020ed0e1219a9894045a68dde52623d6.jpg"
+				},
+				{
+					"name": "BREAK_PROPS",
+					"defaultvalue": 0,
+					"displayName": "Mad Props",
+					"hidden": 0,
+					"description": "Break 15 props in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d474faa598724ad9820bb4c2aeb6dc6bea9cecd5.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/db7bbdc8adaf545fe8904555cb623be4ad2e0858.jpg"
+				},
+				{
+					"name": "WIN_DUAL_DUEL",
+					"defaultvalue": 0,
+					"displayName": "Akimbo King",
+					"hidden": 0,
+					"description": "Use Dual Elites to kill an enemy player that also has Dual Elites equipped",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/496164516a675df5cd6e74a5b960118344748a18.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/acd2ca2586e177de05e7cef420a11fc7b2cee179.jpg"
+				},
+				{
+					"name": "DECAL_SPRAYS",
+					"defaultvalue": 0,
+					"displayName": "The Art of War",
+					"hidden": 0,
+					"description": "Spray 100 decals",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1de18090c15dfed29448cfcd9a5b26809edeed80.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c1d25e912cfe9fba9b5554be71c2cf2ca837bb44.jpg"
+				},
+				{
+					"name": "NIGHTVISION_DAMAGE",
+					"defaultvalue": 0,
+					"displayName": "Dead of Night",
+					"hidden": 0,
+					"description": "Do 5,000 damage with nightvision active",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/020ddd446b95872a95c895b267cf11a77991030b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/915e6dd8d0a607d4c8b77cbc95bdc82a12af2d93.jpg"
+				},
+				{
+					"name": "UNSTOPPABLE_FORCE",
+					"defaultvalue": 0,
+					"displayName": "The Unstoppable Force",
+					"hidden": 0,
+					"description": "Kill 10 enemy players in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6875185372aa29caadef5b25d0455df883da9b93.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/95f599d0fb67cc5d775a5d7f10cab700ad450ae9.jpg"
+				},
+				{
+					"name": "IMMOVABLE_OBJECT",
+					"defaultvalue": 0,
+					"displayName": "The Immovable Object",
+					"hidden": 0,
+					"description": "Kill an enemy player who has just killed 10 of your teammates in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d4318c37cbbafe9b66d76d2caa6527aa653aba29.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8e99fe1b10e9dcb00cd4f2a5dd849a74da592c78.jpg"
+				},
+				{
+					"name": "HEADSHOTS_IN_ROUND",
+					"defaultvalue": 0,
+					"displayName": "Head Shred Redemption",
+					"hidden": 0,
+					"description": "Kill 5 enemy players with headshots in a single round",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/24b273ead1fc4bd4b26e9bbeebc9b97c43ae569d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d459feb76fd95f666738a5b333dfae7d645cfebd.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_ASSAULT",
+					"defaultvalue": 0,
+					"displayName": "Assault Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Assault map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/530e1c44b7c1b2d8c9ab7d49f3595e36e5a90303.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d82f8dbd3e4eeb6e4d0fba359349e7493ab872c2.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_COMPOUND",
+					"defaultvalue": 0,
+					"displayName": "Compound Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Compound map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/44699261fce17aaf69db20557629e417439aa902.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/77fd39cb007e0a18c756c0e49a800ce9f9271bc7.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_HAVANA",
+					"defaultvalue": 0,
+					"displayName": "Havana Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Havana map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9ca4e0bc7c700a9cc12fe2529b085923e9acbce2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f8cb78cbf0cece659552ed56687c9cbbab83a197.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_ITALY",
+					"defaultvalue": 0,
+					"displayName": "Italy Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Italy map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/286875088867edfbfa72b5280248b5d561057ab0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8d64249713d2f704aca75b0bad7b01c2d90f7d35.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_MILITIA",
+					"defaultvalue": 0,
+					"displayName": "Militia Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Militia map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e1f96fb777a1ca845e124a533dcad6bc4f650868.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/293d32b26b33e3bd3eb1bfe9e48e70129f702806.jpg"
+				},
+				{
+					"name": "WIN_MAP_CS_OFFICE",
+					"defaultvalue": 0,
+					"displayName": "Office Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the CS_Office map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/36ad4e09cd89895567feaa369fc6bbd9bbcadf89.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1a0d104f2601dfa3e8c0a55292bf886f1b5ac54f.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_AZTEC",
+					"defaultvalue": 0,
+					"displayName": "Aztec Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Aztec map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/31e1a68b8fdb7ffab0ca0c499863b4b16118ad23.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3b2757996f82301adadc6240c55a8a8f294e844f.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_CBBLE",
+					"defaultvalue": 0,
+					"displayName": "Cobblestone Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Cbble map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a14115f06eb65f7d622b09b974f59aeaa26c442a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/db634d87e842f86fa2d934c8482384b6d7a63311.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_CHATEAU",
+					"defaultvalue": 0,
+					"displayName": "Chateau Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Chateau map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/87ca7d0e41c1ada0c30c9fdee9cbd5c19bd13d0e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/171bb36d4b240bd2862ca80c94d0ad5b6fda2fa3.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_DUST",
+					"defaultvalue": 0,
+					"displayName": "Dust Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Dust map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d8aeb5571151a3c0b4a66bd091bc39957666eedb.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ebcf3ad9153b6dc47ace5c10de102af49bc65f4c.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_DUST2",
+					"defaultvalue": 0,
+					"displayName": "Dust2 Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Dust2 map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/75ee0f2b514081ba9f38c3e0cf4f02794b78ca70.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/439b9244d58963deeb53a9f5e6aae43aa19f2802.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_INFERNO",
+					"defaultvalue": 0,
+					"displayName": "Inferno Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Inferno map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8cd4ee2228548722db7013931dc191ac30bb3c4d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8ffa513a6294c4681a234d1fa7d60e1f561bea6d.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_NUKE",
+					"defaultvalue": 0,
+					"displayName": "Nuke Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Nuke map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/650cb1f7f8fb14cbf2dab9b79d8521314086b5bd.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c4ac507be4437083065fe6d11e9ff2dedace3e49.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_PIRANESI",
+					"defaultvalue": 0,
+					"displayName": "Piranesi Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Piranesi map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/bc56ee83cb4dbb03784017cee7b19c6fc2d37a23.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1ac249410b8a8f2e15ffda0316d421d1359369c1.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_PORT",
+					"defaultvalue": 0,
+					"displayName": "Port Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Port map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9af72780d889df0836717a7d67b5dca5e29881aa.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/b23d5799481debfe02df80a1acd19729c493745e.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_PRODIGY",
+					"defaultvalue": 0,
+					"displayName": "Prodigy Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Prodigy map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7d35455b2b31e4d9416269a73217dfb5f1cb4242.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f537c8650f65607dc217cdb93ebfd449a7b04ff3.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_TIDES",
+					"defaultvalue": 0,
+					"displayName": "Tides Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Tides map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/99386feb215e4d334eb77de0f7e2757997134f4e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a59d60daed47fef8d699fc917ae941a746fcd8e0.jpg"
+				},
+				{
+					"name": "WIN_MAP_DE_TRAIN",
+					"defaultvalue": 0,
+					"displayName": "Train Map Veteran",
+					"hidden": 0,
+					"description": "Win 100 rounds on the DE_Train map",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/7f87fa1a2db26b2e7d3495147d671610c832c9e5.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e662a64de44543b4cea87cf501680a6dd74e0e22.jpg"
+				},
+				{
+					"name": "KILL_WHILE_IN_AIR",
+					"defaultvalue": 0,
+					"displayName": "Death From Above",
+					"hidden": 0,
+					"description": "Kill an enemy player while you are airborne",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c3f931fafe076c8ccc2a038b2a83b09b68c77f72.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/679131f27945028a5b9484a54b98cc2e7d7118e8.jpg"
+				},
+				{
+					"name": "KILL_ENEMY_IN_AIR",
+					"defaultvalue": 0,
+					"displayName": "Bunny Hunt",
+					"hidden": 0,
+					"description": "Kill an airborne enemy",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/5ef95972df256a08fd0627928f08fc89152c2e22.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3482350926a2342794b4559f5572df8012249c20.jpg"
+				},
+				{
+					"name": "KILLER_AND_ENEMY_IN_AIR",
+					"defaultvalue": 0,
+					"displayName": "Aerial Necrobatics",
+					"hidden": 0,
+					"description": "Kill an airborne enemy while you are also airborne",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2265e65c4fdd7de892a1eae38323e2770101956b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/767b3d214f1021c4763304ce551703c0a61d35b2.jpg"
+				},
+				{
+					"name": "SILENT_WIN",
+					"defaultvalue": 0,
+					"displayName": "Black Bag Operation",
+					"hidden": 0,
+					"description": "Win a round while making no footstep noise and killing at least one enemy",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/25e66c00fa29ca84a542176a5347fc78b38ad287.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/a2da13fe1a603d9b7acdc3948ed1f0fb877d1cb0.jpg"
+				},
+				{
+					"name": "BLOODLESS_VICTORY",
+					"defaultvalue": 0,
+					"displayName": "Cold War",
+					"hidden": 0,
+					"description": "Win a round without your team killing any enemy players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/77b5d9f4fa1758022de4a66c745339d5498d814f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3569536e9a90f0bbbd21fc9f524f6334409558a3.jpg"
+				},
+				{
+					"name": "DONATE_WEAPONS",
+					"defaultvalue": 0,
+					"displayName": "Killanthropist",
+					"hidden": 0,
+					"description": "Donate 100 weapons to your teammates",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/427427e5d35f8834f082632b748086c4f4283912.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d3e3990185cb961bff1687616590448167c51812.jpg"
+				},
+				{
+					"name": "WIN_ROUNDS_WITHOUT_BUYING",
+					"defaultvalue": 0,
+					"displayName": "The Frugal Beret",
+					"hidden": 0,
+					"description": "Win 10 rounds without dying and not spending any cash",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/242bc3339d9adc98f3b1d70f22160c61ed3c5546.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/da2e0158cd2e7be6034fbdcff61dfd1e5dc2d41c.jpg"
+				},
+				{
+					"name": "DEFUSE_DEFENSE",
+					"defaultvalue": 0,
+					"displayName": "Defusus Interruptus",
+					"hidden": 0,
+					"description": "Stop defusing to kill a terrorist and then successfully finish defusing the bomb",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ae36a93477e626e74d8d08f356b7ad5b3b20a2a1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/122894bbc9c9f02c6ca8c45a456d92c6331e2665.jpg"
+				},
+				{
+					"name": "KILL_BOMB_PICKUP",
+					"defaultvalue": 0,
+					"displayName": "Participation Award",
+					"hidden": 0,
+					"description": "Kill an enemy player within 3 seconds of them recovering a dropped bomb",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2a37ebf08dac31510ea73fafa5622a449330f1ca.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/92c2ee419e7930f7af629e63fe38918d6932d9c3.jpg"
+				},
+				{
+					"name": "DOMINATIONS_LOW",
+					"defaultvalue": 0,
+					"displayName": "Repeat Offender",
+					"hidden": 0,
+					"description": "Dominate an enemy player",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/012e70c5765ea2d3fce32a98f559805d63e3f58a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/f5b6399ae407827b28200158a8d54db27d86306b.jpg"
+				},
+				{
+					"name": "DOMINATIONS_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Decimator",
+					"hidden": 0,
+					"description": "Dominate a total of 10 enemy players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/3931746cd739b6b21b3ec30cd278bddf82adc9e0.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/af86968cb4dd0119df7ef8f2c70078c8354f8e40.jpg"
+				},
+				{
+					"name": "DOMINATION_OVERKILLS_LOW",
+					"defaultvalue": 0,
+					"displayName": "Overkill",
+					"hidden": 0,
+					"description": "Kill an opponent you are already dominating",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/586947c911d7139729a1687544563111f98621df.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/050149f18fd9aea6ec8063eb580bfa833c242bb0.jpg"
+				},
+				{
+					"name": "DOMINATION_OVERKILLS_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Command and Control",
+					"hidden": 0,
+					"description": "Get a total of 100 kills on enemy players you are dominating",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/9cd2f5544fb0233db51c28d8be693e1ee7c8b40c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c6425346ca0b8629a2a429c26120a91c3a445193.jpg"
+				},
+				{
+					"name": "REVENGES_LOW",
+					"defaultvalue": 0,
+					"displayName": "Insurgent",
+					"hidden": 0,
+					"description": "Kill an enemy player that is dominating you",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/99be21adcaf1215a0823ba647fb5f4de95d4b16f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/22819a1826fb437cdaa1ee905a04075fd3b3c1cd.jpg"
+				},
+				{
+					"name": "REVENGES_HIGH",
+					"defaultvalue": 0,
+					"displayName": "Can't Keep a Good Man Down",
+					"hidden": 0,
+					"description": "Kill a total of 20 enemy players that are dominating you",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0ff527791add48f34c4f15366344febfddc89034.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/78a30c19ff00c821b353b931b111948c3d3bf3a9.jpg"
+				},
+				{
+					"name": "SAME_UNIFORM",
+					"defaultvalue": 0,
+					"displayName": "Dressed to Kill",
+					"hidden": 0,
+					"description": "Start a round with all players on your team wearing the same uniform (at least 5 players)",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/6147d635271ddcf8596563e2e3af54fe4c18005d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/62bd809dcad309dfe19a01738c32a79eff4a6803.jpg"
+				},
+				{
+					"name": "CONCURRENT_DOMINATIONS",
+					"defaultvalue": 0,
+					"displayName": "Hat Trick",
+					"hidden": 0,
+					"description": "Dominate three enemy players simultaneously",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0d4c6d404e62ffb239b51689d3a5ef7c388bc84c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/d4ac8af26ecd25d33e2ce303650753c71828bd1f.jpg"
+				},
+				{
+					"name": "DOMINATION_OVERKILLS_MATCH",
+					"defaultvalue": 0,
+					"displayName": "Ten Angry Men",
+					"hidden": 0,
+					"description": "Get 10 kills on enemy players you are already dominating during a single match",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/1e284d86932bd8a911ca55f8c8998104e42c4c89.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/4930cb8ca65be6d5d090e78769f926615a38109d.jpg"
+				},
+				{
+					"name": "EXTENDED_DOMINATION",
+					"defaultvalue": 0,
+					"displayName": "Excessive Brutality",
+					"hidden": 0,
+					"description": "Kill an enemy player 4 additional times while you are dominating them",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/e05f6f7d85d91f44dc0415b93bd039f0ccaabe67.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2fdbc478820c09be0953d35e3500ebec0f5aaf92.jpg"
+				},
+				{
+					"name": "KILL_ENEMIES_WHILE_BLIND_HARD",
+					"defaultvalue": 0,
+					"displayName": "Spray and Pray",
+					"hidden": 0,
+					"description": "Kill two enemy players while you are blinded from a flashbang",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/60674d2cb2d4d3a548dadf243192403af40f7615.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/04e22e8251eeb8d54fed5768d2f435f0843dc68a.jpg"
+				},
+				{
+					"name": "FRIENDS_SAME_UNIFORM",
+					"defaultvalue": 0,
+					"displayName": "Friendly Attire",
+					"hidden": 0,
+					"description": "Start a round on the same team as 4 of your friends, with all of you wearing the same outfit",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c8938e9b9f235dc3592338616ac8d0e9187ab888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/04a630a64e7e7c5235f0aa61eed775af334b5da2.jpg"
+				},
+				{
+					"name": "CAUSE_FRIENDLY_FIRE_WITH_FLASHBANG",
+					"defaultvalue": 0,
+					"displayName": "The Road to Hell",
+					"hidden": 0,
+					"description": "Blind an enemy player who then kills a teammate",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/75317e308e6ba1504cfb4801a0f1def30c6a4622.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/eff064ada9716f88c8d24a5bac179119e99dde8f.jpg"
+				},
+				{
+					"name": "AVENGE_FRIEND",
+					"defaultvalue": 0,
+					"displayName": "Avenging Angel",
+					"hidden": 0,
+					"description": "Kill an enemy player in the same round as they kill a player on your friends list",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/ca7d2c7a2925990a83388d9689c9c066a5e083af.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/da401c1b1b4186dfd8f506d1ea7715d52d1aa3a4.jpg"
+				},
+				{
+					"name": "WIN_CLAN_MATCH",
+					"defaultvalue": 0,
+					"displayName": "Clan Warfare",
+					"hidden": 0,
+					"description": "Win a match of at least 10 players where the entirety of each team is composed of a single clan.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/0554987641f214e4c60ab80ed51d092403e1b81d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/85dce6fe1760934cf7a46fd09131362eadeea48b.jpg"
+				},
+				{
+					"name": "SNIPE_TWO_FROM_SAME_SPOT",
+					"defaultvalue": 0,
+					"displayName": "Happy Camper",
+					"hidden": 0,
+					"description": "Get two kills standing in the same spot with a zoomed sniper rifle.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/2f25f8ed9a89c9d330f62aea1a8b6b8beee6110f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/786ccf323b6410d4b9f1784417d784c0e1912ead.jpg"
+				},
+				{
+					"name": "COLLECT_GIFTS",
+					"defaultvalue": 0,
+					"displayName": "Valve Gift Grab 2011 – CS:S",
+					"hidden": 0,
+					"description": "Collect three gifts dropped by opponents.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/240/c0992d80af9dafe5d432561aca59e9867d3a77f3.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/240/8c223b20e13d4fc85e8f70d1acb303ba7e292a4d.jpg"
+				}
+			]
+			
+		}
+	}
+}
