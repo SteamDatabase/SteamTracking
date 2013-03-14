@@ -1,0 +1,128 @@
+{
+	"game": {
+		"gameName": "Half-Life 2: Episode One",
+		"gameVersion": "10",
+		"availableGameStats": {
+			"achievements": [
+				{
+					"name": "EP1_BEAT_MAINELEVATOR",
+					"defaultvalue": 0,
+					"displayName": "Watch Your Head!",
+					"hidden": 0,
+					"description": "Make it to the bottom of the Citadel's main elevator shaft in one piece.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_mainelevator.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_mainelevator_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_CITADELCORE",
+					"defaultvalue": 0,
+					"displayName": "Containment",
+					"hidden": 0,
+					"description": "Contain the Citadel core.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citadelcore.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citadelcore_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_CITADELCORE_NOSTALKERKILLS",
+					"defaultvalue": 0,
+					"displayName": "Pacifist",
+					"hidden": 0,
+					"description": "Contain the Citadel core without killing any stalkers.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citadelcore_nostalkerkills.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citadelcore_nostalkerkills_bw.jpg"
+				},
+				{
+					"name": "EP1_KILL_ANTLIONS_WITHCARS",
+					"defaultvalue": 0,
+					"displayName": "Car Crusher",
+					"hidden": 0,
+					"description": "Use the cars to squash 15 antlions in Episode One.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_kill_antlions_withcars.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_kill_antlions_withcars_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_GARAGEELEVATORSTANDOFF",
+					"defaultvalue": 0,
+					"displayName": "Elevator Action",
+					"hidden": 0,
+					"description": "Survive long enough to get on the parking garage elevator.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_garageelevatorstandoff.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_garageelevatorstandoff_bw.jpg"
+				},
+				{
+					"name": "EP1_KILL_ENEMIES_WITHSNIPERALYX",
+					"defaultvalue": 0,
+					"displayName": "Live Bait",
+					"hidden": 0,
+					"description": "Help Alyx snipe 30 enemies in Episode One.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_kill_enemies_withsniperalyx.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_kill_enemies_withsniperalyx_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_HOSPITALATTICGUNSHIP",
+					"defaultvalue": 0,
+					"displayName": "Attica!",
+					"hidden": 0,
+					"description": "Destroy the gunship in the hospital attic.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_hospitalatticgunship.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_hospitalatticgunship_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_CITIZENESCORT_NOCITIZENDEATHS",
+					"defaultvalue": 0,
+					"displayName": "Citizen Escort",
+					"hidden": 0,
+					"description": "Don't let any citizens die when escorting them to the escape train.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citizenescort_nocitizendeaths.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_citizenescort_nocitizendeaths_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_GAME",
+					"defaultvalue": 0,
+					"displayName": "Escape From City 17",
+					"hidden": 0,
+					"description": "Escape City 17 with Alyx.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_game.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_game_bw.jpg"
+				},
+				{
+					"name": "EP1_BEAT_GAME_ONEBULLET",
+					"defaultvalue": 0,
+					"displayName": "The One Free Bullet",
+					"hidden": 0,
+					"description": "Finish the game firing exactly one bullet. Grenade, crowbar, rocket, and Gravity Gun kills are okay!",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_game_onebullet.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/ep1_beat_game_onebullet_bw.jpg"
+				},
+				{
+					"name": "HLX_KILL_ENEMIES_WITHONEENERGYBALL",
+					"defaultvalue": 0,
+					"displayName": "Conservationist",
+					"hidden": 0,
+					"description": "Kill five enemies with the same energy ball.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/hlx_kill_enemies_withoneenergyball.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/hlx_kill_enemies_withoneenergyball_bw.jpg"
+				},
+				{
+					"name": "HLX_KILL_ELITESOLDIER_WITHHISENERGYBALL",
+					"defaultvalue": 0,
+					"displayName": "Think Fast!",
+					"hidden": 0,
+					"description": "Kill an Elite Soldier with his own energy ball.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/hlx_kill_elitesoldier_withhisenergyball.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/hlx_kill_elitesoldier_withhisenergyball_bw.jpg"
+				},
+				{
+					"name": "EPX_KILL_ZOMBIES_WITHFLARES",
+					"defaultvalue": 0,
+					"displayName": "Zombie-que",
+					"hidden": 0,
+					"description": "Use flares to light 15 zombies on fire.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/380/epx_kill_zombies_withflares.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/380/epx_kill_zombies_withflares_bw.jpg"
+				}
+			]
+			
+		}
+	}
+}

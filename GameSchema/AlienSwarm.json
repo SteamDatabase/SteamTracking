@@ -1,0 +1,3168 @@
+{
+	"game": {
+		"gameName": "[MAIN] Alien Swarm: Infested",
+		"gameVersion": "58",
+		"availableGameStats": {
+			"stats": [
+				{
+					"name": "experience",
+					"defaultvalue": 0,
+					"displayName": "Experience"
+				},
+				{
+					"name": "iTotalKills",
+					"defaultvalue": 0,
+					"displayName": "Total Kills"
+				},
+				{
+					"name": "fAccuracy",
+					"defaultvalue": 0,
+					"displayName": "Accuracy"
+				},
+				{
+					"name": "iFriendlyFire",
+					"defaultvalue": 0,
+					"displayName": "Friendly Fire"
+				},
+				{
+					"name": "iDamage",
+					"defaultvalue": 0,
+					"displayName": "Damage"
+				},
+				{
+					"name": "iShotsFired",
+					"defaultvalue": 0,
+					"displayName": "Shots Fired"
+				},
+				{
+					"name": "iAliensBurned",
+					"defaultvalue": 0,
+					"displayName": "Aliens Burned"
+				},
+				{
+					"name": "iHealing",
+					"defaultvalue": 0,
+					"displayName": "Healing"
+				},
+				{
+					"name": "iFastHacks",
+					"defaultvalue": 0,
+					"displayName": "Fast Hacks"
+				},
+				{
+					"name": "easy.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Easy Missions"
+				},
+				{
+					"name": "normal.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Normal Missions"
+				},
+				{
+					"name": "hard.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Hard Missions"
+				},
+				{
+					"name": "insane.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Insane Missions"
+				},
+				{
+					"name": "easy.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Easy Missions"
+				},
+				{
+					"name": "normal.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Normal Missions"
+				},
+				{
+					"name": "hard.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Hard Missions"
+				},
+				{
+					"name": "insane.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Insane Missions"
+				},
+				{
+					"name": "easy.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Easy Missions (Percent)"
+				},
+				{
+					"name": "normal.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Normal Missions (Percent)"
+				},
+				{
+					"name": "hard.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Hard Missions (Percent)"
+				},
+				{
+					"name": "insane.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Insane Missions (Percent)"
+				},
+				{
+					"name": "easy.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Easy)"
+				},
+				{
+					"name": "normal.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Normal)"
+				},
+				{
+					"name": "hard.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Hard)"
+				},
+				{
+					"name": "insane.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Insane)"
+				},
+				{
+					"name": "easy.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Easy)"
+				},
+				{
+					"name": "normal.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Normal)"
+				},
+				{
+					"name": "hard.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Hard)"
+				},
+				{
+					"name": "insane.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Insane)"
+				},
+				{
+					"name": "easy.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Easy)"
+				},
+				{
+					"name": "normal.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Normal)"
+				},
+				{
+					"name": "hard.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Hard)"
+				},
+				{
+					"name": "insane.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Insane)"
+				},
+				{
+					"name": "easy.accuracy.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Accuracy (Easy)"
+				},
+				{
+					"name": "normal.accuracy.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Accuracy (Normal)"
+				},
+				{
+					"name": "hard.accuracy.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Accuracy (Hard)"
+				},
+				{
+					"name": "insane.accuracy.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Accuracy (Insane)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Landing Bay 01 Missions"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Landing Bay 02 Missions"
+				},
+				{
+					"name": "asi-jac2-deima.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Deima Missions"
+				},
+				{
+					"name": "asi-jac3-rydberg.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Rydberg Missions"
+				},
+				{
+					"name": "asi-jac4-residential.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Residential Missions"
+				},
+				{
+					"name": "asi-jac5-bioresearch.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Bio Research Missions"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Sewer Junction Missions"
+				},
+				{
+					"name": "asi-jac7-timorstation.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Timor Station Missions"
+				},
+				{
+					"name": "asi-jac8-lastrites.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Last Rites Missions"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Landingbay01 Missions"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Landingbay02 Missions"
+				},
+				{
+					"name": "asi-jac2-deima.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Deima Missions"
+				},
+				{
+					"name": "asi-jac3-rydberg.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Rydberg Missions"
+				},
+				{
+					"name": "asi-jac4-residential.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Residential Missions"
+				},
+				{
+					"name": "asi-jac5-bioresearch.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Bio Research Missions"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Sewer Junction Missions"
+				},
+				{
+					"name": "asi-jac7-timorstation.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Timor Station Missions"
+				},
+				{
+					"name": "asi-jac8-lastrites.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Last Rites Missions"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Landingbay01 Missions (Percent)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Landingbay02 Missions (Percent)"
+				},
+				{
+					"name": "asi-jac2-deima.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Deima Missions (Percent)"
+				},
+				{
+					"name": "asi-jac3-rydberg.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Rydberg Missions (Percent)"
+				},
+				{
+					"name": "asi-jac4-residential.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Residential Missions (Percent)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Bio Research Missions (Percent)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Sewer Junction Missions (Percent)"
+				},
+				{
+					"name": "asi-jac7-timorstation.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Timor Station Missions (Percent)"
+				},
+				{
+					"name": "asi-jac8-lastrites.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Last Rites Missions (Percent)"
+				},
+				{
+					"name": "iShotsHit",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit"
+				},
+				{
+					"name": "iGamesTotal",
+					"defaultvalue": 0,
+					"displayName": "Total Missions"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Last Rites)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Last Rites)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Last Rites)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.kills.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Kills (Last Rites)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.damage.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Damage (Last Rites)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Landingbay01)"
+				},
+				{
+					"name": "asi-jac1-landingbay_02.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Landingbay02)"
+				},
+				{
+					"name": "asi-jac2-deima.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Deima)"
+				},
+				{
+					"name": "asi-jac3-rydberg.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Rydberg)"
+				},
+				{
+					"name": "asi-jac4-residential.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Residential)"
+				},
+				{
+					"name": "asi-jac5-bioresearch.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Bio Research)"
+				},
+				{
+					"name": "asi-jac6-sewerjunction.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Sewer Junction)"
+				},
+				{
+					"name": "asi-jac7-timorstation.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Timor Station)"
+				},
+				{
+					"name": "asi-jac8-lastrites.ff.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Friendly Fire (Last Rites)"
+				},
+				{
+					"name": "iGamesSuccess",
+					"defaultvalue": 0,
+					"displayName": "Total Successful Missions"
+				},
+				{
+					"name": "fGamesSuccessPercent",
+					"defaultvalue": 0,
+					"displayName": "Total Successful Missions (Percent)"
+				},
+				{
+					"name": "easy.shotsfired.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Fired (Easy)"
+				},
+				{
+					"name": "normal.shotsfired.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Fired (Normal)"
+				},
+				{
+					"name": "hard.shotsfired.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Fired (Hard)"
+				},
+				{
+					"name": "insane.shotsfired.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Fired (Insane)"
+				},
+				{
+					"name": "easy.shotshit.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit (Easy)"
+				},
+				{
+					"name": "normal.shotshit.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit (Normal)"
+				},
+				{
+					"name": "hard.shotshit.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit (Hard)"
+				},
+				{
+					"name": "insane.shotshit.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit (Insane)"
+				},
+				{
+					"name": "easy.healing.total",
+					"defaultvalue": 0,
+					"displayName": "Total Healing (Easy)"
+				},
+				{
+					"name": "normal.healing.total",
+					"defaultvalue": 0,
+					"displayName": "Total Healing (Normal)"
+				},
+				{
+					"name": "hard.healing.total",
+					"defaultvalue": 0,
+					"displayName": "Total Healing (Hard)"
+				},
+				{
+					"name": "insane.healing.total",
+					"defaultvalue": 0,
+					"displayName": "Total Healing (Insane)"
+				},
+				{
+					"name": "ASW_GRUB_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Total Grubs Killed"
+				},
+				{
+					"name": "ASW_KILL_GRIND_1_STAT",
+					"defaultvalue": 0,
+					"displayName": "Total Aliens Killed"
+				},
+				{
+					"name": "ASW_KILL_GRIND_2_STAT",
+					"defaultvalue": 0,
+					"displayName": "Total Aliens Killed"
+				},
+				{
+					"name": "ASW_KILL_GRIND_3_STAT",
+					"defaultvalue": 0,
+					"displayName": "Total Aliens Killed"
+				},
+				{
+					"name": "ASW_KILL_GRIND_4_STAT",
+					"defaultvalue": 0,
+					"displayName": "Total Aliens Killed"
+				},
+				{
+					"name": "ASW_SENTRY_GUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed By Sentry"
+				},
+				{
+					"name": "ASW_RIFLE_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed By Rifle"
+				},
+				{
+					"name": "ASW_PRIFLE_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed By Prototype Rifle"
+				},
+				{
+					"name": "ASW_AUTOGUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed By Autogun"
+				},
+				{
+					"name": "ASW_SHOTGUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed By Shotgun"
+				},
+				{
+					"name": "ASW_VINDICATOR_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Vindicator"
+				},
+				{
+					"name": "ASW_PISTOL_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Twin Pistols"
+				},
+				{
+					"name": "ASW_PDW_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With PDW"
+				},
+				{
+					"name": "ASW_TESLA_GUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Tesla Cannon"
+				},
+				{
+					"name": "ASW_RAILGUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Rail Rifle"
+				},
+				{
+					"name": "ASW_FLAMER_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Flamethrower"
+				},
+				{
+					"name": "ASW_CHAINSAW_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens KIlled With Chainsaw"
+				},
+				{
+					"name": "ASW_MINIGUN_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Minigun"
+				},
+				{
+					"name": "ASW_SNIPER_RIFLE_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Marksman Rifle"
+				},
+				{
+					"name": "ASW_GRENADE_LAUNCHER_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Grenade Launcher"
+				},
+				{
+					"name": "ASW_HORNET_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Hornet Barrage"
+				},
+				{
+					"name": "ASW_LASER_MINE_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Laser Mine"
+				},
+				{
+					"name": "ASW_MINE_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "Aliens Killed With Incendiary Mines"
+				},
+				{
+					"name": "equips.asw_weapon_rifle.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Rifle)"
+				},
+				{
+					"name": "equips.asw_weapon_prifle.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (P-Rifle)"
+				},
+				{
+					"name": "equips.asw_weapon_autogun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Autogun)"
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Shotgun)"
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Vindicator)"
+				},
+				{
+					"name": "equips.asw_weapon_sentry.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Sentry)"
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Heal Grenade)"
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Ammo Satchel)"
+				},
+				{
+					"name": "equips.asw_weapon_pistol.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Pistol)"
+				},
+				{
+					"name": "equips.asw_weapon_pdw.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (PDW)"
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Freeze Sentry)"
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Tesla Gun)"
+				},
+				{
+					"name": "equips.asw_weapon_railgun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Railgun)"
+				},
+				{
+					"name": "equips.asw_weapon_flamer.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Flamer)"
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Healgun)"
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Flamer Sentry)"
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Chainsaw)"
+				},
+				{
+					"name": "equips.asw_weapon_minigun.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Minigun)"
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Sniper Rifle)"
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Cannon Sentry)"
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Grenade Launcher)"
+				},
+				{
+					"name": "equips.asw_weapon_medkit.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Medkit)"
+				},
+				{
+					"name": "equips.asw_weapon_welder.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Welder)"
+				},
+				{
+					"name": "equips.asw_weapon_flares.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Flares)"
+				},
+				{
+					"name": "equips.asw_weapon_normal_armor.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Armor)"
+				},
+				{
+					"name": "equips.asw_weapon_buff_grenade.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Damage Amp)"
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Hornet Barrage)"
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Laser Mines)"
+				},
+				{
+					"name": "equips.asw_weapon_stim.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Stims)"
+				},
+				{
+					"name": "equips.asw_weapon_tesla_trap.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Tesla Trap)"
+				},
+				{
+					"name": "equips.asw_weapon_freeze_grenades.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Freeze Greanades)"
+				},
+				{
+					"name": "equips.asw_weapon_electrified_armor.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Electric Armor)"
+				},
+				{
+					"name": "equips.asw_weapon_grenades.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Grenades)"
+				},
+				{
+					"name": "equips.asw_weapon_bait.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Swarm Bait)"
+				},
+				{
+					"name": "equips.asw_weapon_flashlight.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Flashlight)"
+				},
+				{
+					"name": "equips.asw_weapon_night_vision.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Night Vision)"
+				},
+				{
+					"name": "equips.asw_weapon_mines.total",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Mines)"
+				},
+				{
+					"name": "equips.asw_weapon_fire_extinguisher.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Fire Extinguisher)"
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (Mining Laser)"
+				},
+				{
+					"name": "equips.asw_weapon_t75.primary",
+					"defaultvalue": 0,
+					"displayName": "Starting Equip Total (T75)"
+				},
+				{
+					"name": "equips.primary.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Starting Primary Equip"
+				},
+				{
+					"name": "equips.secondary.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Starting Secondary Equip"
+				},
+				{
+					"name": "equips.extra.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Starting Extra Equip"
+				},
+				{
+					"name": "marines.0.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Sarge"
+				},
+				{
+					"name": "marines.1.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Jaeger"
+				},
+				{
+					"name": "marines.2.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Wildcat"
+				},
+				{
+					"name": "marines.3.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Wolfe"
+				},
+				{
+					"name": "marines.4.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Faith"
+				},
+				{
+					"name": "marines.5.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Bastille"
+				},
+				{
+					"name": "marines.6.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Crash"
+				},
+				{
+					"name": "marines.7.total",
+					"defaultvalue": 0,
+					"displayName": "Total Missions as Vegas"
+				},
+				{
+					"name": "marines.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Marine"
+				},
+				{
+					"name": "marines.class.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Marine Class"
+				},
+				{
+					"name": "marines.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Marine (Percent)"
+				},
+				{
+					"name": "marines.class.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Class (Percent)"
+				},
+				{
+					"name": "equips.primary.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Primary Equip (Percent)"
+				},
+				{
+					"name": "equips.secondary.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Secondary Equip (Percent)"
+				},
+				{
+					"name": "equips.extra.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Extra Equip (Percent)"
+				},
+				{
+					"name": "difficulty.fav",
+					"defaultvalue": 0,
+					"displayName": "Favorite Difficulty"
+				},
+				{
+					"name": "difficulty.fav.pct",
+					"defaultvalue": 0,
+					"displayName": "Favorite Difficulty (Percent)"
+				},
+				{
+					"name": "equips.asw_weapon_rifle.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_fire_extinguisher.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_t75.secondary",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "playtime.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "level",
+					"defaultvalue": 1,
+					"displayName": ""
+				},
+				{
+					"name": "level.xprequired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "games.campaign.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_blink.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_jump_jet.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_fist.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_NORMAL_CAMPAIGN_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_EASY_CAMPAIGN_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_HARD_CAMPAIGN_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_INSANE_CAMPAIGN_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_NORMAL_CAMPAIGN_COMP",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_EASY_CAMPAIGN_COMP",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_HARD_CAMPAIGN_COMP",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_INSANE_CAMPAIGN_COMP",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_rifle.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_rifle.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_rifle.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_rifle.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_rifle.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_prifle.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_autogun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_shotgun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_vindicator.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_grenade.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_ammo_satchel.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pistol.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_pdw.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_freeze.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_tesla_gun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_railgun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_flamer.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_heal_gun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_flamer.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_chainsaw.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_minigun.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sniper_rifle.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_sentry_cannon.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenade_launcher.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mining_laser.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_hornet_barrage.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_laser_mines.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenades.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenades.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenades.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenades.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_grenades.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mines.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mines.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mines.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mines.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_mines.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_weapon_smart_bomb.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_AMMO_RESUPPLY_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_FAST_WIRE_HACKS_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_FAST_COMPUTER_HACKS_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ammo_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "sentryguns_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "sentry_flamers_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "sentry_freeze_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "sentry_cannon_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "medkits_used",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "flares_used",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "adrenaline_used",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "tesla_traps_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "freeze_grenades_thrown",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "electric_armor_used",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "healgun_heals",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "healgun_heals_self",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "healbeacon_heals",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "healbeacon_heals_self",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "damage_amps_used",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "healbeacons_deployed",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_rifle_grenade.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_rifle_grenade.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_rifle_grenade.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_rifle_grenade.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_rifle_grenade.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_vindicator_grenade.damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_vindicator_grenade.ff_damage",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_vindicator_grenade.shots_fired",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_vindicator_grenade.shots_hit",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "equips.asw_vindicator_grenade.kills",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "promotion",
+					"defaultvalue": 0,
+					"displayName": "Promotion"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac5-bioresearch.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac8-lastrites.time.total",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac5-bioresearch.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac8-lastrites.time.avg",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.difficulty.best",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_PARA_HAT_STAT",
+					"defaultvalue": 0,
+					"displayName": "Online Missions Completed"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac5-bioresearch.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac8-lastrites.time.best",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.difficulty",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.easy",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.normal",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.hard",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.insane",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "imba.games.total",
+					"defaultvalue": 0,
+					"displayName": "Total Brutal Missions"
+				},
+				{
+					"name": "imba.games.success",
+					"defaultvalue": 0,
+					"displayName": "Successful Brutal Missions"
+				},
+				{
+					"name": "imba.games.success.percent",
+					"defaultvalue": 0,
+					"displayName": "Successful Brutal Missions"
+				},
+				{
+					"name": "imba.kills.total",
+					"defaultvalue": 0,
+					"displayName": "Total Kills (Brutal)"
+				},
+				{
+					"name": "imba.damage.total",
+					"defaultvalue": 0,
+					"displayName": "Total Damage (Brutal)"
+				},
+				{
+					"name": "imba.ff.total",
+					"defaultvalue": 0,
+					"displayName": "Total Friendly Fire (Brutal)"
+				},
+				{
+					"name": "imba.accuracy.avg",
+					"defaultvalue": 0,
+					"displayName": "Avg. Accuracy (Brutal)"
+				},
+				{
+					"name": "imba.shotsfired.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Fired (Brutal)"
+				},
+				{
+					"name": "imba.shotshit.total",
+					"defaultvalue": 0,
+					"displayName": "Total Shots Hit (Brutal)"
+				},
+				{
+					"name": "imba.healing.total",
+					"defaultvalue": 0,
+					"displayName": "Total Healing (Brutal)"
+				},
+				{
+					"name": "asi-jac1-landingbay_01.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac1-landingbay_02.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac2-deima.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac3-rydberg.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac4-residential.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac6-sewerjunction.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "asi-jac7-timorstation.time.best.imba",
+					"defaultvalue": 4294967295,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_IMBA_CAMPAIGN_STAT",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "ASW_IMBA_CAMPAIGN_COMP",
+					"defaultvalue": 0,
+					"displayName": ""
+				}
+			]
+			,
+			"achievements": [
+				{
+					"name": "ASW_KILL_WITHOUT_FRIENDLY_FIRE",
+					"defaultvalue": 0,
+					"displayName": "Clear Firing",
+					"hidden": 0,
+					"description": "Kill 25 drones without friendly fire.  Four marines must be present in the mission.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/22f33e17defbc7b1a4e0900c06fe0797d150f8a2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/30b6b176d6423ac4451a813c5a8af7385be25562.jpg"
+				},
+				{
+					"name": "ASW_NO_FRIENDLY_FIRE",
+					"defaultvalue": 0,
+					"displayName": "Short Controlled Bursts",
+					"hidden": 0,
+					"description": "Complete a mission with no friendly fire incidents.  Four marines must be present in the mission.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/738a8b83d0e74d663ce967f34ef574944b400208.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/46672de01a9cb9534df30bf5906427f5e87a1224.jpg"
+				},
+				{
+					"name": "ASW_SHIELDBUG",
+					"defaultvalue": 0,
+					"displayName": "Shield Down",
+					"hidden": 0,
+					"description": "Deliver the finishing blow to a Swarm Shieldbug.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c66097a3e41734f1419feeaaf34003ea800b474f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/0c900fd5fdbcf78ee06f0a763dbd971b2fd110b3.jpg"
+				},
+				{
+					"name": "ASW_GRENADE_MULTI_KILL",
+					"defaultvalue": 0,
+					"displayName": "Blast Radius",
+					"hidden": 0,
+					"description": "Kill 6 Swarm with a single Grenade.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/e2f5c0c1c1a5a9311e3c9adcc6b3dcd5cdb6d2a1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/83142f09dcfb4364d0797e6ba3195bfdf1976b58.jpg"
+				},
+				{
+					"name": "ASW_ACCURACY",
+					"defaultvalue": 0,
+					"displayName": "Sharpshooter",
+					"hidden": 0,
+					"description": "Complete a mission with better than 90% accuracy.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/0015e3565adff102f8161565cc8661599e5f783a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1e7278476e02646d204e782d579926f0b26f44eb.jpg"
+				},
+				{
+					"name": "ASW_NO_DAMAGE_TAKEN",
+					"defaultvalue": 0,
+					"displayName": "Perfect",
+					"hidden": 0,
+					"description": "Complete a mission on Normal difficulty or harder without receiving any damage.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/93188f7e6dab3147258a2bea64b391af7f1ffe44.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1c1468f2ec7376c4e8d9c20698669c892aedc054.jpg"
+				},
+				{
+					"name": "ASW_EGGS_BEFORE_HATCH",
+					"defaultvalue": 0,
+					"displayName": "Scrambled Eggs",
+					"hidden": 0,
+					"description": "Destroy all Swarm Eggs in a mission without allowing any to hatch.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/665df2a610200ab675bd9c6f2190a39bd3943ff6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/16b97c1ca2f11a66d279ac2324c9c40439c3402a.jpg"
+				},
+				{
+					"name": "ASW_GRUB_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Bug Stomper",
+					"hidden": 0,
+					"description": "Kill 100 Swarm Grubs.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/7e9e62e99994a2b0233f771ce1370bede407f899.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/3d5a6408eee70172568ebf30ffd725c755533e0f.jpg"
+				},
+				{
+					"name": "ASW_MELEE_PARASITE",
+					"defaultvalue": 0,
+					"displayName": "Parasite Puncher",
+					"hidden": 0,
+					"description": "Kill a Swarm Parasite with a melee attack.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/37787beb7d6b811539143cb20671b47e22010a95.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/8f80cbbc27e13d908949768c5df4bd3fc11d6171.jpg"
+				},
+				{
+					"name": "ASW_MELEE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Close Encounters",
+					"hidden": 0,
+					"description": "Kill 20 Swarm with melee attacks in a single mission.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c30dc68448e219d61bf2b1b0d9ee98f9f0cce191.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/522acc962b9629d07c658e105234e1e7c898f773.jpg"
+				},
+				{
+					"name": "ASW_BARREL_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Smoking Barrels",
+					"hidden": 0,
+					"description": "Kill 5 Swarm with explosive barrels in a single mission.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/4e5ea9a8448ed83cca332259b0d1dd69a95e5844.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/6da0dae8aa4a4cbe88385348ac9267c9bb272409.jpg"
+				},
+				{
+					"name": "ASW_INFESTATION_CURING",
+					"defaultvalue": 0,
+					"displayName": "Infestation Savior",
+					"hidden": 0,
+					"description": "Cure an Infested marine.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f1e0e104e281ebfd2b0bf8d95c91be7d52e732ce.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b6b1989c8f87348ab9ff11440d4a217d06ae8198.jpg"
+				},
+				{
+					"name": "ASW_FAST_WIRE_HACKS",
+					"defaultvalue": 0,
+					"displayName": "Circuit Breaker",
+					"hidden": 0,
+					"description": "Complete 10 wire hacks without access being logged.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c996b2fa2e2518940929675bfcaea8287f5f7689.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/660a7ab83bcac308afbbc99513e0734a65a1e99a.jpg"
+				},
+				{
+					"name": "ASW_FAST_COMPUTER_HACKS",
+					"defaultvalue": 0,
+					"displayName": "Security Expert",
+					"hidden": 0,
+					"description": "Complete 10 computer hacks without access being logged.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/2fb7b593890737a4645a593ffc6d3c3f48a94554.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/82d93c5f1428979ff81abf80392f2be0472d1f34.jpg"
+				},
+				{
+					"name": "ASW_GROUP_HEAL",
+					"defaultvalue": 0,
+					"displayName": "Group Heal",
+					"hidden": 0,
+					"description": "Heal all 4 marines with a single Heal Beacon.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/8cc45e924ffa343a4b057d8bbf41e4e61d977160.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/4bd1ae937b37a0d92b35b6350e30e46eef0115c6.jpg"
+				},
+				{
+					"name": "ASW_GROUP_DAMAGE_AMP",
+					"defaultvalue": 0,
+					"displayName": "Damage Amped",
+					"hidden": 0,
+					"description": "Kill 15 Swarm with all four marines under the effects of a Damage Amp in a single mission.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/92fe0ab5b9951b94ef00d7e12e939aef5507400e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/08d275fe12554bd04b82777afe1fdbc2aa5d9dd9.jpg"
+				},
+				{
+					"name": "ASW_FAST_RELOADS_IN_A_ROW",
+					"defaultvalue": 0,
+					"displayName": "Gunslinger",
+					"hidden": 0,
+					"description": "Successfully perform 5 fast reloads in a row.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/6559e35634807cbfdab07b3f9900f3e9c6b18bd3.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/aeb54fbd92b02ab4cf493f9b6140a2e18d4df5f9.jpg"
+				},
+				{
+					"name": "ASW_FAST_RELOAD",
+					"defaultvalue": 0,
+					"displayName": "Quick Load",
+					"hidden": 0,
+					"description": "Successfully perform a fast reload.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/ba3b07338523ffc5031c87a1728e6be1ecacbce8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f645a9bd254128815ccda6efb6151d3e750b57e1.jpg"
+				},
+				{
+					"name": "ASW_ALL_HEALING",
+					"defaultvalue": 0,
+					"displayName": "Peace Medic",
+					"hidden": 0,
+					"description": "Heal 300 points of damage in a single mission without dealing any non-melee damage to the Swarm.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/7638a9c6e42cb75409025c224f00c6566ddc3400.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/2546caa9280b9a62b447478e4bd78b25467b9667.jpg"
+				},
+				{
+					"name": "ASW_PROTECT_TECH",
+					"defaultvalue": 0,
+					"displayName": "Protect the Tech",
+					"hidden": 0,
+					"description": "Guard the squad's tech so that he takes no damage during the hack.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fdd96673701a0b0b38757f7b650150232e8181ce.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b81bc02857306a717c85de36911d429a8694f469.jpg"
+				},
+				{
+					"name": "ASW_TECH_SURVIVES",
+					"defaultvalue": 0,
+					"displayName": "Technician Secured",
+					"hidden": 0,
+					"description": "Finish a mission without the tech getting killed.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/bff52f55e3be8f5413e31bb96e698c81e1bad9a7.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/4abc855486f0dd872eae6adce65af4df4006f19a.jpg"
+				},
+				{
+					"name": "ASW_STUN_GRENADE",
+					"defaultvalue": 0,
+					"displayName": "Electro-Stunned",
+					"hidden": 0,
+					"description": "Stun 6 Swarm with a single Stun Grenade.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/3f6d13732dd3a4a71ec7687b89ebfe38b1eed2ab.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1e3b79603bfe20ada3561437eb87f2d9cc776b28.jpg"
+				},
+				{
+					"name": "ASW_WELD_DOOR",
+					"defaultvalue": 0,
+					"displayName": "Seal of Quality",
+					"hidden": 0,
+					"description": "Seal a door with the welder.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/34af7d846681287bd425f2e22a65599f90fb9807.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/7ffeda831cc7b3556d8b65afdd83147952dabf45.jpg"
+				},
+				{
+					"name": "ASW_DODGE_RANGER_SHOT",
+					"defaultvalue": 0,
+					"displayName": "Under the Gun",
+					"hidden": 0,
+					"description": "Roll under a Swarm Ranger projectile.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/754c4166a65a6800444d2e0e40ed945ed0ded6a5.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c6ce0a4c2d270c3a5473ace31d52f08c6022ac37.jpg"
+				},
+				{
+					"name": "ASW_BOOMER_KILL_EARLY",
+					"defaultvalue": 0,
+					"displayName": "Quick and Dead",
+					"hidden": 0,
+					"description": "Kill a Swarm Boomer before it inflates.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b77713646a7528f4ead550665df526f5e0bd7c4a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/2466fed557cd8b266e16ab4ce845f781f1ee28ab.jpg"
+				},
+				{
+					"name": "ASW_FREEZE_GRENADE",
+					"defaultvalue": 0,
+					"displayName": "Stay Frosty",
+					"hidden": 0,
+					"description": "Freeze 6 Swarm with a single Freeze Grenade.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/afa82de2c44e0a62afc3bd6314238c624dd67721.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f25031ed6d8c5b5e52d2f165c6448c17121f112d.jpg"
+				},
+				{
+					"name": "ASW_AMMO_RESUPPLY",
+					"defaultvalue": 0,
+					"displayName": "Ammo Technician",
+					"hidden": 0,
+					"description": "Deploy 10 ammo stashes that are used by other marines.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/93ee525e6b6c3a23aecdd8dbd6adbad48685fc5a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/a09fbbcf57366d68a438ae33ec9f580b1d60dbdc.jpg"
+				},
+				{
+					"name": "ASW_SENTRY_GUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Static Defender",
+					"hidden": 0,
+					"description": "Kill 500 Swarm with deployable Sentry Guns.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1f8da8efdcecd0e5b396350f5815c82146d327d2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/636aadf972a165699e909a0d54a65404c6f413a0.jpg"
+				},
+				{
+					"name": "ASW_RIFLE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Assault Specialist",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with the Assault Rifle.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/bd99bb22399ceb54bd21aec3e125b20b81a261a1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/68dee1fa90ea5be48c3993b04a21cfda89d264ea.jpg"
+				},
+				{
+					"name": "ASW_PRIFLE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Prototype Professional",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Prototype Rifle.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/9dcd5716eb3430e72acf07ad5b9edee75832e2ae.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b0d6ac7ef82945c668704d6fa9d6b638eb19dcd9.jpg"
+				},
+				{
+					"name": "ASW_AUTOGUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Autogun Expert",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with an Autogun.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/865e6a9e70090f4d4c5d8b4162d0f5969d5c0a2b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1e4571db25e51e32facc22a8d467216ed7cffc92.jpg"
+				},
+				{
+					"name": "ASW_SHOTGUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Shotgun Specialist",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Shotgun.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/34e62ee2774cd01de07ec29906a1eecae246e3a1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f082d580eb3766c73cdf95c292aecbb34df0505a.jpg"
+				},
+				{
+					"name": "ASW_VINDICATOR_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Vindicator Veteran",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Vindicator.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f7ca2630c3fc2de5cde1f2bd4eefc1afec60b616.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/a6025e413d2ff8fa5f5233fe7374bc4cd660cf44.jpg"
+				},
+				{
+					"name": "ASW_PISTOL_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Pistols Expert",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with Twin Pistols.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f4ea3bc863ada515b0d853e8b635063cfeafa60d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/4877cfa9f657c5efb5280e63ae3e1c4e45b88525.jpg"
+				},
+				{
+					"name": "ASW_PDW_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Small Arms Specialist",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with PDWs.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/5e9d9bc0c087abe8374c282d976ca4c5e5f0129d.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/03b5d9d3cf990b44e8a128ee6c0ae6f975603df3.jpg"
+				},
+				{
+					"name": "ASW_TESLA_GUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "High Voltage Expert",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Tesla Cannon.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/e4017fcc52a1383acaec50097014d15162018816.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/a149dd25a259e8149da155368593b1f984679073.jpg"
+				},
+				{
+					"name": "ASW_RAILGUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Railgun Specialist",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Rail Rifle.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/be878d0742c2a3825db2c6d6b02e4decd600d2b8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f4322a1def24a7d17101585fcf350bfbc1c35f64.jpg"
+				},
+				{
+					"name": "ASW_FLAMER_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Pyrotechnician",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Flamethrower.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f09d0b979dc46dff0a37d20b4b4e56ef5eb1b342.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/14c9e8e181e2fc85b27cbd14417e029cdd3e4a8a.jpg"
+				},
+				{
+					"name": "ASW_CHAINSAW_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Slaughter Soldier",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Chainsaw.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c4d608b88acea0f61d8d13225b5a66675c1abb03.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f34ac5ac3d47be1ae66bb5d24f1cc6436e57b333.jpg"
+				},
+				{
+					"name": "ASW_MINIGUN_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Minigun Master",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Minigun.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/18167f13d5064a9d514a72f0620e69a7a7567bdc.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fef8dd85fb37b467c279548d27338f55c6aeff02.jpg"
+				},
+				{
+					"name": "ASW_SNIPER_RIFLE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Professional Marksman",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Marksman Rifle.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/a66e3f1b8ff652bb8bf098631c7c210779bb7143.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1c5e5851931a015f6d693dde005d983be19b66e1.jpg"
+				},
+				{
+					"name": "ASW_GRENADE_LAUNCHER_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Grenadier Expert",
+					"hidden": 0,
+					"description": "Kill 250 Swarm with a Grenade Launcher.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/1d0dc4b0373dddceacc86ac2a7e2b74270892c95.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/3af0af16dbd2fa5208ed6f34fbf4bca4c4e83789.jpg"
+				},
+				{
+					"name": "ASW_HORNET_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Hornet Barrage Expert",
+					"hidden": 0,
+					"description": "Kill 100 Swarm with Hornet Barrages.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/43cc40cc46702b48ef9de8102101e7cd47267012.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/54d54109007345158c79a3c2c8e35e2c5b27803a.jpg"
+				},
+				{
+					"name": "ASW_LASER_MINE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Tactical Explosives Expert",
+					"hidden": 0,
+					"description": "Kill 100 Swarm with Laser Tripmines.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b49be5ad1ed0c57e86a813c0db5351da659cd386.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/753028045cea6558d891d7740846e2de78d2f222.jpg"
+				},
+				{
+					"name": "ASW_MINE_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Firewall Specialist",
+					"hidden": 0,
+					"description": "Kill 100 Swarm with Incendiary Mines.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/549d0eacffdb5a6b4b7c24510b9a4196c4082117.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/2b88bf294f29000dc1fec9c772cff46f00ddbb77.jpg"
+				},
+				{
+					"name": "ASW_UNLOCK_ALL_WEAPONS",
+					"defaultvalue": 0,
+					"displayName": "Armory Access",
+					"hidden": 0,
+					"description": "Unlock all the available weapons.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/176c3f422ff7bfc8d02a4656d9d22226753a3478.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/694cb0afc8422c03e81a24f12512fbcc7275f849.jpg"
+				},
+				{
+					"name": "ASW_EASY_CAMPAIGN",
+					"defaultvalue": 0,
+					"displayName": "Easy Campaign",
+					"hidden": 0,
+					"description": "Complete the Jacob's Rest campaign on Easy difficulty or harder.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/0c0725ef2f863d3dba3135979f1354a667e17b6f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/aab454013f5898372e9db9e20c3b305cdbefe12f.jpg"
+				},
+				{
+					"name": "ASW_NORMAL_CAMPAIGN",
+					"defaultvalue": 0,
+					"displayName": "Normal Campaign",
+					"hidden": 0,
+					"description": "Complete the Jacob's Rest campaign on Normal difficulty or harder.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/8017987f0e6bc9ec47f16403733706a0416d5f60.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/480fafde6799722459add1916877a474c202e8c3.jpg"
+				},
+				{
+					"name": "ASW_HARD_CAMPAIGN",
+					"defaultvalue": 0,
+					"displayName": "Hard Campaign",
+					"hidden": 0,
+					"description": "Complete the Jacob's Rest campaign on Hard difficulty or harder.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/172064f28da2136c844279fb8e298555738bfbc3.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/9782b95823600bf44bd2341ab7625c573a4956e3.jpg"
+				},
+				{
+					"name": "ASW_INSANE_CAMPAIGN",
+					"defaultvalue": 0,
+					"displayName": "Insane Campaign",
+					"hidden": 0,
+					"description": "Awarded for finishing the Jacob campaign on Insane difficulty.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/cecb5f1d9aa16f6acbe4da48309b37d0cc172e5e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/41e3eee9e9ef7249544ad7d8f01c7d03f84ca63d.jpg"
+				},
+				{
+					"name": "ASW_KILL_GRIND_1",
+					"defaultvalue": 0,
+					"displayName": "On the Ready Line",
+					"hidden": 0,
+					"description": "Kill 1,000 Swarm.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/2744786e5fe56981cde6c7fa50ace8fc1fa5afbc.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/ae1cc99a8485f2a6964edd44107d5daccfe916e9.jpg"
+				},
+				{
+					"name": "ASW_KILL_GRIND_2",
+					"defaultvalue": 0,
+					"displayName": "Another Bughunt",
+					"hidden": 0,
+					"description": "Kill 5,000 Swarm.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/6c873fd04e9cc1bffcd5ddf11ae1015e34e41d8c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c74d44afd7a2800c3139c4e02b0e8836cf645545.jpg"
+				},
+				{
+					"name": "ASW_KILL_GRIND_3",
+					"defaultvalue": 0,
+					"displayName": "Kill Them All",
+					"hidden": 0,
+					"description": "Kill 25,000 Swarm.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fcf31bb722d5eb237a212524bcf6fc41a9baaa7c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/41dc076adb55e389342e53f6dda273e6e1b29617.jpg"
+				},
+				{
+					"name": "ASW_KILL_GRIND_4",
+					"defaultvalue": 0,
+					"displayName": "Nuke From Orbit",
+					"hidden": 0,
+					"description": "Kill 100,000 Swarm.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b1be8ed0fd3954cf72c77e00202d371260debaa8.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/8033fbd9504fd046a610167bf8b6a0d782678de4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_LANDING_BAY",
+					"defaultvalue": 0,
+					"displayName": "Landing Bay Speed Run",
+					"hidden": 0,
+					"description": "Complete Landing Bay within 1:25 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_DESCENT",
+					"defaultvalue": 0,
+					"displayName": "Cargo Elevator Speed Run",
+					"hidden": 0,
+					"description": "Complete Cargo Elevator within 2:50 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_DEIMA",
+					"defaultvalue": 0,
+					"displayName": "Deima Surface Bridge Speed Run",
+					"hidden": 0,
+					"description": "Complete Deima Surface Bridge within 2:30 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_RYDBERG",
+					"defaultvalue": 0,
+					"displayName": "Rydberg Reactor Speed Run",
+					"hidden": 0,
+					"description": "Complete Rydberg Reactor within 3:10 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_RESIDENTIAL",
+					"defaultvalue": 0,
+					"displayName": "SynTek Residential Speed Run",
+					"hidden": 0,
+					"description": "Complete SynTek Residential within 2:30 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_SEWER",
+					"defaultvalue": 0,
+					"displayName": "Sewer Junction Speed Run",
+					"hidden": 0,
+					"description": "Complete Sewer Junction within 1:30 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_SPEEDRUN_TIMOR",
+					"defaultvalue": 0,
+					"displayName": "Timor Station Speed Run",
+					"hidden": 0,
+					"description": "Complete Timor Station within 4:25 on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/b2832cdbeadf7252c7155b5bcad4a4dca1be0888.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/fe008c404ba7b832ebc69ca2642add9e67159cc4.jpg"
+				},
+				{
+					"name": "ASW_CAMPAIGN_NO_DEATHS",
+					"defaultvalue": 0,
+					"displayName": "Outstanding Execution",
+					"hidden": 0,
+					"description": "Complete a campaign on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/add45c33ced6569114864fee3b3b12d7a5a996f3.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c08d4c8b77d2d5eab94046a0f3bf5c47aade0879.jpg"
+				},
+				{
+					"name": "ASW_MISSION_NO_DEATHS",
+					"defaultvalue": 0,
+					"displayName": "Zero Mortality",
+					"hidden": 0,
+					"description": "Complete a mission on Normal difficulty or harder without any marines dying.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/0bc4732ae13452e69511ee8c6ac2768dc195b951.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/6e92b131f20867170024b2fcd3315568b66e1c95.jpg"
+				},
+				{
+					"name": "ASW_PARA_HAT",
+					"defaultvalue": 0,
+					"displayName": "Hat Trick",
+					"hidden": 0,
+					"description": "Complete 2 co-op missions online. Earns a Team Fortress 2 parasite hat.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/72cbd03c5d2acea4d2531ace6370ad9ae927b9d2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f78a538d260837deeed50089933f8a9ff494f754.jpg"
+				},
+				{
+					"name": "ASW_IMBA_CAMPAIGN",
+					"defaultvalue": 0,
+					"displayName": "Brutal Campaign",
+					"hidden": 0,
+					"description": "Awarded for finishing the Jacob campaign on Brutal difficulty.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/c9e886e45fd7ea7f1953843592b28738e3cc4bbe.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/9492a08f444177cf6c9719dc6c9f572d22612f4c.jpg"
+				},
+				{
+					"name": "ASW_HARDCORE",
+					"defaultvalue": 0,
+					"displayName": "Hardcore",
+					"hidden": 0,
+					"description": "Complete any mission on Brutal difficulty with Onslaught and Hardcore Friendly Fire enabled.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/630/a195a3454291269fc13bd1c6f38fa47f9c90d1ff.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/630/f1696e8c903740aa411aca027dbbf36003b43a08.jpg"
+				}
+			]
+			
+		}
+	}
+}

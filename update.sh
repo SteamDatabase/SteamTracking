@@ -2,6 +2,5 @@
 
 php update.php
 
-git commit -m "Something updated"
+git commit -a -m "Something updated"
 git push
-
