@@ -9,14 +9,14 @@
 	margin: 0px auto;
 	text-align: left;
 	padding-top: 12px;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_hub_header.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/bg_hub_header.png');
 	background-repeat: no-repeat;
 	margin-top: 10px;
 }
 
 .apphub_HeaderTop.workshop
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_workshop_header.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/bg_workshop_header.png');
 }
 
 .apphub_HeaderStandardTop
@@ -26,7 +26,7 @@
 	text-align: left;
 	padding-top: 7px;
 	height: 46px;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_header.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/bg_header.png');
 	background-repeat: repeat-x;
 }
 
@@ -46,7 +46,7 @@
 	top: 0px;
 	width: 32px;
 	height: 32px;
-	background: url( http://store.steampowered.com/public/shared/images/game_ico_overlay.png );
+	background: url( http://steamcommunity.com/public/shared/images/game_ico_overlay.png );
 	background-repeat: no-repeat;
 }
 
@@ -94,7 +94,7 @@
 	left: -119px;
 	width: 216px;
 	height: 84px;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_workshop_piston.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/bg_workshop_piston.png');
 	background-repeat: no-repeat;
 }
 
@@ -118,7 +118,7 @@
 
 .apphub_SwitchSitesBtn .leftcap, .apphub_SwitchSitesBtn .rightcap
 {
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/btn_blue.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/btn_blue.png' );
 	position: absolute;
 	top: 0px;
 	width: 3px;
@@ -146,7 +146,7 @@
 	margin-left: 3px;
 	margin-right: 3px;
 	background-position: left bottom;
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/btn_blue.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/btn_blue.png' );
 	background-repeat: repeat-x;
 }
 
@@ -160,7 +160,7 @@
 	left: -52px;
 	width: 1051px;
 	height: 239px;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/bg_filter_blue.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/bg_filter_blue.png');
 	z-index: -1;
 }
 
@@ -300,7 +300,11 @@
 	background: #445b7c; /* Old browsers */
 	background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );}
 
-
+.apphub_sectionTab.admin
+{
+	float: right;
+	margin-right: 20px;
+}
 
 .apphub_sectionTab:hover
 {
@@ -340,28 +344,28 @@
 	height: 22px;
 	border:0;
 	margin:0;
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_default_26.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_default_26.jpg');
 }
 .appHubIconHolder.offline
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline_26.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_offline_26.jpg');
 }
 .appHubIconHolder.ignored
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline_26.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_offline_26.jpg');
 }
 .appHubIconHolder.online
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_online_26.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_online_26.jpg');
 }
 .appHubIconHolder.in-game
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_ingame_26.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_ingame_26.jpg');
 }
 
 .appHubIconHolder.greyOverlay
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_inactive.png');
 	width: 22px;
 	height: 22px;
 	overflow: hidden;
@@ -376,28 +380,28 @@
 	height: 32px;
 	border:0;
 	margin:0;
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_default.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_default.jpg');
 }
 .appHubIconHolder.large.offline
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_offline.jpg');
 }
 .appHubIconHolder.large.ignored
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_offline.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_offline.jpg');
 }
 .appHubIconHolder.large.online
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_online.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_online.jpg');
 }
 .appHubIconHolder.large.in-game
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_ingame.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_ingame.jpg');
 }
 
 .appHubIconHolder.large.greyOverlay
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_inactive.png');
 	width: 32px;
 	height: 32px;
 	overflow: hidden;
@@ -448,92 +452,92 @@
 
 .appHubNewsIconHolder.eurogamer
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_eurogamer.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_eurogamer.gif');
 }
 
 .appHubNewsIconHolder.kotaku
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_kotaku.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_kotaku.gif');
 }
 
 .appHubNewsIconHolder.pcgamer
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_pcgamer.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_pcgamer.gif');
 }
 
 .appHubNewsIconHolder.kotaku
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_kotaku.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_kotaku.gif');
 }
 
 .appHubNewsIconHolder.rps
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_rockpapershotgun.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_rockpapershotgun.gif');
 }
 
 .appHubNewsIconHolder.shacknews
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_shacknews.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_shacknews.gif');
 }
 
 .appHubNewsIconHolder.steam_release
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.steam_updates
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.steam_announce
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.steam_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.steam_client
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.steam_press
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_steam.gif');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_steam.gif');
 }
 
 .appHubNewsIconHolder.tf2_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_tf2.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_tf2.jpg');
 }
 
 .appHubNewsIconHolder.l4d_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_l4d2.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_l4d2.jpg');
 }
 
 .appHubNewsIconHolder.dota_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_dota2.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_dota2.jpg');
 }
 
 .appHubNewsIconHolder.dota_beta_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_dota2.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_dota2.jpg');
 }
 
 .appHubNewsIconHolder.portal2_blog
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/news/img_portal2.jpg');
+	background-image:url('http://steamcommunity.com/public/shared/images/news/img_portal2.jpg');
 }
 
 .appHubNewsIconHolder.greyOverlay
 {
-	background-image:url('http://store.steampowered.com/public/shared/images/iconholder_inactive.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/iconholder_inactive.png');
 	width: 70px;
 	height: 26px;
 	overflow: hidden;
@@ -659,7 +663,7 @@ a.apphub_more_friends_who_play:hover
 	right: 5px;
 	height: 24px;
 	width: 24px;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/icons/icon_pin.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/icons/icon_pin.png');
 }
 
 .apphub_CardContentTypeContainer
@@ -679,7 +683,7 @@ a.apphub_more_friends_who_play:hover
 	padding: 10px;
 	margin: 5px;
 	z-index: 2;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/item_type_hover.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/item_type_hover.png');
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentType
@@ -717,37 +721,37 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating.notRated
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/not-yet.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/not-yet.png' );
 }
 
 .apphub_CardRating.zeroStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/0-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/0-star.png' );
 }
 
 .apphub_CardRating.oneStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/1-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/1-star.png' );
 }
 
 .apphub_CardRating.twoStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/2-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/2-star.png' );
 }
 
 .apphub_CardRating.threeStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/3-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/3-star.png' );
 }
 
 .apphub_CardRating.fourStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/4-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/4-star.png' );
 }
 
 .apphub_CardRating.fiveStar
 {
-    background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/5-star.png' );
+    background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/5-star.png' );
 }
 
 .apphub_CardRating.rateUp
@@ -755,7 +759,7 @@ a.apphub_more_friends_who_play:hover
 	padding-left: 18px;
 	font-size: 11px;
 	color: #7cc5fb;
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/icons/icon_rate.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/icons/icon_rate.png' );
 }
 
 .apphub_CardRating.rateUpHide
@@ -977,7 +981,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardCommentCount
 {
-	background-image: url( 'http://store.steampowered.com/public/shared/images/comment_quoteicon.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/comment_quoteicon.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 24px;
@@ -1008,18 +1012,18 @@ a.apphub_more_friends_who_play:hover
 	position: absolute;
 	bottom: 42px;
 	right: 0px;
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_workshopitem.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/bg_workshopitem.png' );
 	background-repeat: no-repeat;
 }
 
 .apphub_CardBG.workshop
 {
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_workshopitem.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/bg_workshopitem.png' );
 }
 
 .apphub_CardBG.guide
 {
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_guide.jpg' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/bg_guide.jpg' );
 }
 
 /* discussion */
@@ -1071,7 +1075,7 @@ a.apphub_more_friends_who_play:hover
 	top: -1px;
 	margin-left: 42px;
 	z-index: 2;
-	background-image:url('http://store.steampowered.com/public/shared/images/apphubs/speech_corner.png');
+	background-image:url('http://steamcommunity.com/public/shared/images/apphubs/speech_corner.png');
 	background-repeat: no-repeat;
 }
 
@@ -1115,7 +1119,7 @@ a.apphub_more_friends_who_play:hover
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/bg_announcement.png?v=1' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/bg_announcement.png?v=1' );
 	background-repeat: no-repeat;
 }
 
@@ -1172,7 +1176,7 @@ a.apphub_more_friends_who_play:hover
 {
 	position: relative;
 	top: -18px;
-	background-image: url( 'http://store.steampowered.com/public/shared/images/apphubs/text_fade.png' );
+	background-image: url( 'http://steamcommunity.com/public/shared/images/apphubs/text_fade.png' );
 	height: 18px;
 	width: 100%;
 }

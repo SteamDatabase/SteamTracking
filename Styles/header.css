@@ -1,0 +1,1030 @@
+
+
+.a:focus {
+	outline: 0 none;
+}
+
+#headerBar {
+	text-align:left;
+	margin:0;
+	padding:0;
+	background-color:#111111;
+	width:100%;
+	color:#545454;
+	font-size:10px;
+	margin-bottom:0;
+}
+
+a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
+	text-decoration:none;
+	color:#959595;
+}
+
+#headerRight {
+	float:right;
+	padding:0;
+	margin:0;
+	padding-right:27px;
+}
+
+#headerLinks>p {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+#headerRight .personaName {
+	color:#cfcfcf;
+}
+
+.headerLinkActive {
+	color:#cfcfcf;
+	font-weight:bold;
+}
+
+#steamLogo {
+	float:left;
+	margin:0;
+	padding:0;
+	width:105px;
+	height:54px;
+}
+
+#steamText {
+	margin:0;
+	padding:0;
+	height:35px;
+}
+
+#headerLinks {
+	margin:0;
+	padding:0;
+	height:19px;
+}
+
+#headerLinks>p {
+	padding-left:6px;
+}
+
+#subHeader {
+	position:relative;
+	margin:0;
+	padding:0;
+	height:36px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/header/lowerBarBG.gif');
+	background-repeat:repeat-x;
+	padding-left:111px;
+	color:#344c5f;
+	margin-top:1px;
+}
+
+.subHeaderMargin {
+	padding-top:8px;
+}
+
+a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:active {
+	color:#6f9fc8;
+	text-decoration:none;
+}
+
+.subHeaderLinkActive {
+	color:#8ecbff;
+	font-weight:bold;
+}
+
+#searchBox {
+	float:right;
+	position:relative;
+	margin:0;
+	padding:0;
+	padding-right:27px;
+	padding-top:7px;
+}
+
+#searchInputBox {
+	margin-top:-6px;
+	width:170px;
+	color:#909090;
+}
+
+#searchText {
+	font-style:italic;
+	color:#6f9fc8;
+}
+
+#betaTag {
+	text-align:center;
+	position:absolute;
+	top:4px;
+	left:45px;
+	border:none;
+	z-index:99;
+}
+
+#betaText {
+	position:absolute;
+	top:34px;
+	left:115px;
+	border:none;
+	z-index:99;
+}
+
+#reportAbuse {
+	position:absolute;
+	display:block;
+	visibility:visible;
+	width:auto;
+	height:auto;
+	top:32px;
+	left:0;
+	margin:0;
+	padding:0;
+	color:#ffffff;
+	z-index:150;
+}
+
+#reportAbuseNew {
+	position:absolute;
+	display:block;
+	visibility:visible;
+	width:auto;
+	height:auto;
+	top:36px;
+	z-index:150;
+}
+
+#rAText {
+	float:left;
+	display:block;
+	visibility:visible;
+	background-color:#3f3f3f;
+	background-image:url('http://cdn.steamcommunity.com/public/images/header/reportAbuseBG.gif');
+	background-repeat:repeat-x;
+	width:auto;
+	margin:0;
+	padding:0;
+	height:20px;
+	line-height:18px;
+	padding-left:6px;
+	padding-right:6px;
+}
+
+#abuseReportLink {
+	color:#bebebe;
+	text-decoration:none;
+}
+
+#rALeft,#rARight {
+	float:left;
+	width:3px;
+	height:20px;
+	margin:0;
+	padding:0;
+}
+
+#rALeft {
+	background-image:url('http://cdn.steamcommunity.com/public/images/header/reportAbuseLeft.gif');
+}
+
+#rARight {
+	background-image:url('http://cdn.steamcommunity.com/public/images/header/reportAbuseRight.gif');
+}
+
+#reporter {
+	position:absolute;
+	display:none;
+	visibility:visible;
+	border:solid #595959 1px;
+	background-color:#3f3f3f;
+	margin:0;
+	width:200px;
+	left:-86px;
+	top:20px;
+	padding:6px;
+	color:#898989;
+	font-size:11px;
+	line-height:14px;
+	z-index:180;
+}
+
+#reporter>a,#reporter>a:hover,#reporter>a:visited,#reporter>a:active {
+	display:inline;
+	visibility:visible;
+	color:#e1e1e1;
+	text-decoration:none;
+	font-size:11px;
+}
+
+#reporter.profile {
+	left: 0;
+	top: 10px;
+}
+
+#abuseForm {
+	margin:0;
+	padding:0;
+}
+
+.abuseRadio {
+	border:none;
+	background-color:#3f3f3f;
+}
+
+#abuseDescriptionLabel {
+	display:block;
+	margin-top:4px;
+	color:#777777;
+	font-style:italic;
+}
+
+
+/*
+ * HEADER
+ */
+
+/* apply 16px padding to the sides of all the page-wide divs to prevent content 
+	from touching the sides on small resolutions */
+img {
+	border: none;
+}
+div#global_header {
+	padding-left: 16px;
+	padding-right: 16px;
+	text-align: left;
+}
+
+
+div#global_header {
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/globalheader_bg.jpg);
+	background-color: #000000;
+	border-bottom: 1px solid #4D4B48;
+	background-position: center top;
+}
+
+/**/
+div#global_header .content {
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/globalheader_bg.jpg);
+	background-position: center top;
+	position: relative;
+	width: 940px;
+	height: 104px;
+	margin: 0 auto;
+	
+	z-index: 42;
+}
+
+
+div#global_actions {
+	position: absolute;
+	right: 0;
+	top: 6px;
+
+	height: 21px;
+	line-height: 21px;
+
+	color: #b8b6b4;
+	font-size: 11px;
+
+	z-index: 41;
+}
+
+
+div#global_actions a.global_action_link {
+	padding: 0 4px;
+	color: #b8b6b4;
+}
+
+div#global_actions .global_action_link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+div#global_actions #global_action_menu {
+	float: right;
+}
+
+div#global_actions .user_avatar {
+	float: right;
+	margin-left: 3px;
+	margin-right: 2px;
+}
+
+div#global_header div.logo {
+	float: left;
+	padding-top: 30px;
+	margin-right: 40px;
+	width: 176px;
+	height: 44px;
+}
+
+div#global_header .menuitem {
+	display: block;
+	position: relative;
+	
+	padding-top: 40px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	line-height: 16px;
+	
+	float: left;
+	font-size: 14px;
+	color: #b8b6b4;
+	text-transform: uppercase;
+}
+
+div#global_header .menuitem.active, div#global_header .menuitem:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+div#global_header .menuitem_new
+{
+	position: absolute;
+	top: 27px;
+	font-size: 11px;
+	color: #85b0df
+}
+
+div#global_header .submenuitem
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #b8b6b4;
+	padding-right: 10px;
+}
+
+div#global_header .submenuitem.active, div#global_header .submenuitem:hover
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+div#global_header .submenuitem.moderator
+{
+	color: #b80000;
+}
+
+div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.moderator:hover
+{
+	color: #ff0000;
+}
+
+.community_sub_nav
+{
+	position: absolute;
+	left: 7px;
+	top: 65px;
+	width: 650px;
+	font-size: 14px;
+}
+
+#language_pulldown {
+	margin: 1px;
+}
+
+#language_pulldown.focus {
+	margin: 0;
+	border: 1px solid #b0aeac;
+}
+
+
+
+#language_pulldown, #account_pulldown {
+	display: inline-block;
+	margin: 1px;
+	padding-left: 4px;
+	line-height: 19px;
+}
+
+#language_pulldown.focus, #account_pulldown.focus {
+	margin: 0;
+	border: 1px solid #82807C;
+	color: #ffffff;
+}
+
+#account_dropdown > .popup_body {
+	width: 150px;
+}
+
+.header_installsteam_btn {
+	float: left;
+	position: relative;
+	height: 21px;
+	margin-right: 3px;
+}
+
+.header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/btn_header_installsteam_green.png );
+}
+
+.header_installsteam_btn_gray .header_installsteam_btn_leftcap, .header_installsteam_btn_gray .header_installsteam_btn_rightcap, .header_installsteam_btn_gray .header_installsteam_btn_content {
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/btn_header_installsteam_gray.png );
+}
+
+.header_installsteam_btn_leftcap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 24px;
+	height: 21px;
+	background-position: 0 0;
+}
+
+.header_installsteam_btn_rightcap {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 21px;
+	background-position: right top;
+}
+
+.header_installsteam_btn_content {
+	display: inline-block;
+	padding-left: 27px;
+	padding-right: 7px;
+	height: 21px;
+	line-height: 21px;
+	background-position: 0 -21px;
+	background-repeat: repeat-x;
+
+	text-decoration: none;
+	color: #e5e4dc;
+	font-weight: normal;
+}
+
+.header_installsteam_btn_content:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#language_dropdown
+{
+	width: 224px;
+	z-index: 40;
+}
+
+#language_dropdown img.iepopupfix_img {
+	width: 224px;
+}
+
+
+/*
+ * GENERIC POPUP
+ */
+
+
+.pulldown {
+	padding-left: 5px;
+	padding-right: 18px;
+	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
+	background-position: right center;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.popup_block {
+	z-index: 200;
+	position: absolute;
+}
+
+.popup_block .popup_body {
+	border: 1px solid #82807c;
+	position: relative;
+
+	background-color: #3b3938;
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABCCAIAAAAZuyscAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNp0jsENACEIBDdUaXzYfw189lCDQDwfZNYhIBi9iaoKACFZaQXLztvNN4MPR8uw7PxzmzFb3Pnb9+Z7qltMs/n+3Yt9yX0CDAAt4VMy+xZJfQAAAABJRU5ErkJggg==' );
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.popup_block .header {
+	padding: 4px 16px;
+	height: 18px;
+
+	font-size: 12px;
+	font-weight: bold;
+	color: #d6d7d8;
+
+	background-image: url(http://cdn.steamcommunity.com/public/images/header/maincol_bg_gray.png);
+	background-repeat: no-repeat;
+	background-color: #303030;
+}
+
+.popup_block .popup_body.popup_menu {
+}
+
+.popup_menu .popup_menu_item, .popup_menu a.popup_menu_item {
+	display: block;
+	padding: 5px 12px;
+	color: #e5e4dc;
+
+	text-transform: none;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.popup_menu span.popup_menu_item {
+	cursor: default;
+}
+
+.popup_menu .popup_menu_item:hover, .popup_menu .popup_menu_item.focus {
+	text-decoration: none;
+	background-color: #212d3d;
+}
+
+.popup_menu_separator {
+	margin: 8px 12px;
+	height: 1px;
+	background-color: #898989;
+}
+
+.iepopupfix {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+img.iepopupfix_img {
+	width: 200px;
+	height: 500px;
+}
+
+/*
+ * User controls popup
+ */
+
+div#userControls {
+	width:929px;
+	padding:18px 6px 20px 13px;
+	text-align:left;
+	position:relative;
+	margin: 0px auto;
+}
+
+div#userControls a.userControlsLink {
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+/**
+ * Community Navigation
+ */
+#CommunityNavigation
+{
+	position: relative;
+	text-align: left;
+	width: 947px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 12px;
+	height: 15px;
+}
+
+#CommunityNavigation .link
+{
+	text-transform: uppercase;
+	padding-top: 24px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 10px;
+}
+
+#CommunityNavigation .link.active
+{
+	background-color: #191919;
+	background: -moz-linear-gradient(top,  rgba(25,25,25,0) 0%, rgba(25,25,25,1) 65%, rgba(25,25,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(25,25,25,0)), color-stop(65%,rgba(25,25,25,1)), color-stop(100%,rgba(25,25,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(25,25,25,0) 0%,rgba(25,25,25,1) 65%,rgba(25,25,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(25,25,25,0) 0%,rgba(25,25,25,1) 65%,rgba(25,25,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(25,25,25,0) 0%,rgba(25,25,25,1) 65%,rgba(25,25,25,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(25,25,25,0) 0%,rgba(25,25,25,1) 65%,rgba(25,25,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00191919', endColorstr='#191919',GradientType=0 ); /* IE6-9 */
+}
+
+div#headerSearch {
+	float:right;
+	position:relative;
+	width:280px;
+	height:27px;
+	background-image: url(http://cdn.steamcommunity.com/public/images/community/searchbox_friendactivity_bg.gif);
+	background-repeat:no-repeat;
+	padding:0;
+	margin:0;
+	margin-top:-5px;
+}
+
+#searchInputBoxNew {
+	padding:0;
+	margin:0;
+	border:none;
+	outline:none;
+	position:absolute;
+	top:6px;
+	left:6px;
+	width:212px;
+	background-color:#3a3a3a;
+}
+
+#searchSubmitImg {
+	position:absolute;
+	top:5px;
+	right:4px;
+	width:23px;
+	height:18px;
+	padding:0;
+	margin:0;
+	border:none;
+}
+
+#headerSearchForm {
+	padding:0;
+	margin:0;
+}
+
+/*
+ * DROP SHADOWS
+ */
+
+.shadow_content {
+	margin: 12px;
+}
+
+.shadow_ul, .shadow_ur, .shadow_bl, .shadow_br {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_corners.png );
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVRJREFUeNq0VlGyAiEMo8Dq/a+rCzj66E7IS/FLZjqgQtq0oWjpb1hah4k17xk08/rz2TbgOPs6z7kD4Ng4TFWAMzCb/zbIFLvFQQSYaXaATvNQ6aoBOIKyeYrcjJwtTAocQkBflxmE2zG/Y0ZcP2diRUTuVsHBAVYEuIk6hDXIAHIQA99/TvMzz3nGozesgWJQKC0HOEuCxSDZuhNZZOXgBvN7PAh8QJE7YI1K2s6ChUd/Bwcs17c1OOtqsgo3lBkgi9u0O+ncgdvc3win5fTjoe6BumyYljZr8JjqeYKqGl3CD32UVaecnoFaGJyBL1XVQAlNNDhsBecm+qUvlaA9q6vv1gQ4s7j2F9GGo+s/KHVoXTBIzCCJlCTRnhtEjNbVG1EEMDNR9WFgfhuWdm0bGXOPYZX1IPKLgW1StHsyQ8BvNYgYMJseAP979O3Xf1teAgwAvqvFROfF+RQAAAAASUVORK5CYII= );
+}
+
+.shadow_ul {
+	top: 0;
+	left: 0;
+	background-position: top left;
+}
+
+.shadow_ur {
+	top: 0;
+	right: 0;
+	background-position: top right;
+}
+
+.shadow_bl {
+	bottom: 0;
+	left: 0;
+	background-position: bottom left;
+}
+
+.shadow_br {
+	bottom: 0;
+	right: 0;
+	background-position: bottom right;
+}
+
+.shadow_top, .shadow_bottom {
+	position: absolute;
+	margin: 0 12px;
+	height: 12px;
+	left: 0;
+	right: 0;
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_topbottom.png );
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNo0zFEKQFAQAMB9u0hSEvc/IUk5gEb5mc+JiGj5kyh0GDBiwowFKzbsCBw4ceHGUwL0KCQa4uMVYAAMZQVwOy2LWAAAAABJRU5ErkJggg== );
+	background-repeat: repeat-x; 
+}
+.shadow_top {
+	background-position: top;
+	top: 0;
+}
+.shadow_bottom {
+	background-position: bottom;
+	bottom: 0;
+}
+.shadow_left, .shadow_right {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: 12px 0;
+	width: 12px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_leftright.png );
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAABCAYAAADAW76WAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNosyssKQFAUAMBzkSQl8f9fKFIsyGuUxewmRUT6ZeQUlFTUNLR09Aw8jEzMLKxs7BycXNzffwUYAFWiDQPUjcVGAAAAAElFTkSuQmCC );
+	background-repeat: repeat-y;
+}
+.shadow_left {
+	background-position: left;
+	left: 0;
+}
+.shadow_right {
+	background-position: right;
+	right: 0;
+}
+
+.suppress_shadow .shadow_ul,.suppress_shadow .shadow_ur, .suppress_shadow .shadow_bl, .suppress_shadow .shadow_br,
+.suppress_shadow .shadow_top, .suppress_shadow .shadow_bottom, 
+.suppress_shadow .shadow_left, .suppress_shadow .shadow_right {
+	background-image: none;
+}
+
+#reportAbuseModal {
+	position:absolute;
+	width:516px;
+	padding:16px;
+	z-index:1000;
+	background-color:#3a3a3a;
+	text-align:left;
+}
+
+#reportAbuseModalClose {
+	position:absolute;
+	width:11px;
+	height:11px;
+	right:12px;
+	top:12px;
+}
+
+#reportAbuseModalContents {
+	font-size: 14px;
+	color: #B0B0B0;
+}
+
+.reportAbuseModalRule {
+	border-top: 1px solid #595959;
+	margin-bottom: 8px;
+	margin-top: 4px;
+}
+
+#reportAbuseModalContents .halfBox
+{
+	width: 250px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#reportAbuseModal h1 {
+	color: #fff;
+	font-size: 20px
+}
+
+#abuseDescriptionArea {
+	width: 100%;
+	resize: none;
+	font-size: 14px;
+	color:#fff;
+	background-color: #565658;
+	border: none;
+}
+
+.abuseDescriptionCtn {
+	margin-bottom: 10px;
+	padding: 4px 6px;
+	background-color: #565658;
+}
+
+.reportAbuseButtons {
+	text-align: right;
+}
+
+/* notification box */
+#header_notification_area {
+	float: left;
+	margin-right: 3px;
+	margin-top: -6px;
+	margin-left: 8px;
+}
+
+.header_notification_btn {
+	position: relative;
+	height: 29px;
+
+	cursor: pointer;
+}
+
+.header_notification_empty {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/btn_notification_grey.png' );
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 29px;
+}
+
+.header_notification_empty:hover, .header_notification_empty.focus {
+	background-position: center bottom;
+}
+
+.header_notification_green {
+	padding: 0px 28px 0px 10px;
+
+	background-repeat: repeat-x;
+	background-position: 0px -29px;
+
+	line-height: 29px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.header_notification_green, .header_notification_green .leftcap, .header_notification_green .rightcap {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/btn_notification_green.png' );
+}
+
+.header_notification_green:hover, .header_notification_green.focus {
+	background-position: 0px -87px;
+}
+
+.header_notification_green:hover .leftcap, .header_notification_green.focus .leftcap {
+	background-position: 0px -58px;
+}
+.header_notification_green:hover .rightcap, .header_notification_green.focus .rightcap {
+	background-position: right -58px;
+}
+
+.header_notification_green .leftcap {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 5px;
+	height: 29px;
+	background-position: left top;
+}
+
+.header_notification_green .rightcap {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 20px;
+	height: 29px;
+	background-position: right top;
+}
+
+#header_notification_dropdown .popup_menu_item {
+	line-height: 30px;
+	padding: 0px 12px 0px 12px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #bfbfbf;
+}
+
+#header_notification_dropdown .popup_menu_item.active_inbox_item {
+	color: #70ba24;
+}
+
+.header_notification_dropdown_seperator {
+	margin: 0px 7px;
+	height: 1px;
+	background-color: #6b6865;
+}
+
+.notification_icon {
+	display: block;
+	float: left;
+	width: 16px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 16px;
+}
+
+/* these are in css so they do not load until the drop down is shown */
+.header_notification_comments .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/inbox_comment.png' );
+}
+
+.header_notification_items .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/inbox_item.png' );
+}
+
+.header_notification_invites .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/inbox_invite.png' );
+}
+
+.header_notification_gifts .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/inbox_gift.png' );
+}
+
+.header_notification_offlinemessages .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/header/inbox_offlinemessages.png' );
+}
+
+.community_ban_notice {
+	background-color: #a94847;
+	color: #ffffff;
+	font-size: 12px;
+
+	padding: 6px;
+	margin-bottom: 16px;
+}
+
+.community_ban_notice h3 {
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+.community_ban_notice a {
+	text-decoration: underline;
+}
+
+/* temporary */
+.community_content_update_open_beta_wrapper
+{
+	position: relative;
+	min-width: 958px;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.community_content_update_open_beta
+{
+	position: relative;
+	width: 958px;
+	height: 177px;
+}
+.community_content_update_open_beta_bg
+{
+	position: absolute;
+	left: -108px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/updates/communitycontent/community_banner.png' );
+	width: 1200px;
+	height: 177px;
+}
+
+.community_content_update_text
+{
+	text-align: left;
+	padding-top: 40px;
+	padding-left: 126px;
+}
+
+.community_content_update_coming_soon
+{
+	font-size: 22px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.community_content_update_get_it_now
+{
+	font-size: 16px;
+	color: #a6bfe3;
+}
+
+.community_content_update_links
+{
+	font-size: 14px;
+	color: #ffffff;
+	padding-top: 30px;
+}
+
+.community_content_opt_in
+{
+	position: absolute;
+	width: 348px;
+	right: 171px;
+	top: 60px;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.community_content_opt_in_button
+{
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.menuitem.username {
+	max-width: 250px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.supernav_content {
+	width: 132px;
+	background: #000 url(http://cdn.steamcommunity.com/public/shared/images/dd_web.jpg) top left no-repeat;
+	padding: 5px 0 15px 15px;
+	box-shadow: 3px 3px 5px -3px #000;
+	text-align: left;
+}
+
+	.supernav_content > a {
+		display: block;
+		padding: 6px 0;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+
+		.supernav_content > a:hover {
+			color: #4897cf;
+			text-decoration: none;
+		}
+
+/* end temporary */
