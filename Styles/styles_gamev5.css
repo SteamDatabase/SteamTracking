@@ -1550,6 +1550,7 @@ div.early_access_announcements {
 	div.early_access_announcements .post {
 		display: inline-block;
 		width: 293px;
+		overflow: hidden;
 	}
 
 		div.early_access_announcements .post.wide {
@@ -1559,6 +1560,10 @@ div.early_access_announcements {
 		div.early_access_announcements .post h1 {
 			color: #529cde;
 			font-size: 24px;
+		}
+
+		div.early_access_announcements .post a {
+			color: inherit;
 		}
 
 		div.early_access_announcements .post h2 {
@@ -1578,6 +1583,10 @@ div.early_access_announcements {
 			line-height: 21px;
 			overflow: hidden;
 			text-overflow: ellipsis;
+		}
+
+		div.early_access_announcements .post img {
+			max-width: 293px;
 		}
 
 		div.early_access_announcements .post p a {
