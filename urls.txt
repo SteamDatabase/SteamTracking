@@ -59,4 +59,3 @@ GameSchema/Spacewar.json|http://api.steampowered.com/ISteamUserStats/GetSchemaFo
 GameSchema/TeamFortress2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=440
 GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=520
 GameSchema/TeamFortressClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=20
-GameSchema/RiseOfNations.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=13900
