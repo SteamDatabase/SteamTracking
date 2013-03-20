@@ -362,6 +362,17 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
 }
 
+function HideMenu( elemLink, elemPopup )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+
+	HideWithFade( elemPopup );
+	elemLink.removeClassName( 'focus' );
+	if ( elemLink.dismissHandler )
+		elemLink.dismissHandler.unregister();
+}
+
 function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
 	Event.observe( elemLink, 'mouseover', function(event) { FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder ); } );
@@ -390,7 +401,7 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 	var elemLink = $(elemLink);
 	var elemPopup = $(elemPopup);
 	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( !reltarget || ( $(reltarget).up( '#' + elemLink.id ) || $(reltarget).up( '#' + elemPopup.id )  ) )
+	if ( !reltarget || ( $(reltarget).up( '#' + elemLink.id ) || $(reltarget).up( '#' + elemPopup.id )  ) || elemLink.id == reltarget.id )
 		return;
 
 	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
@@ -487,7 +498,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 function GameHover( elem, event, divHover, rgHoverData )
 {
 	if (!event) var event = window.event;
-    elem = $(elem);
+	elem = $(elem);
 	
 	var hover = $(divHover);
 	
@@ -652,17 +663,17 @@ function ShowGameHover( elem, divHover, targetContent, params )
 		ShowWithFade( hover );
 }
 
-function AddToWishlist( appid, steamworksappid, divToHide, divToShowSuccess, divToShowError, navref )
+function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
 {
-	var url = 'http://store.steampowered.com/friends/addtowishlist';
+	var url = 'http://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
 	new Ajax.Request( url, {
 		method: 'post',
-		parameters: {appid: appid, steamworksappid: steamworksappid},
+		parameters: {appid: appid},
 		onSuccess: function( transport ) {
 			$(divToHide).hide();
-			if ( transport.responseJSON )
+			if ( transport.responseJSON && transport.responseJSON.success )
 				$(divToShowSuccess).show();
 			else
 				$(divToShowError).show();
@@ -682,7 +693,7 @@ function RecommendGame( appid, steamworksappid, comment, divBtn, onSuccessFunc, 
 		method: 'post',
 		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment},
 		onSuccess: function( transport ) {
-			if ( transport.responseJSON )
+			if ( transport.responseJSON.success )
 			{
 				$(divToShowError).hide();
 				onSuccessFunc();
@@ -690,7 +701,16 @@ function RecommendGame( appid, steamworksappid, comment, divBtn, onSuccessFunc, 
 			else
 			{
 				$(divBtn).show();
-				$(divToShowError).show();
+				var elError = $(divToShowError);
+				if ( transport.responseJSON.strError )
+				{
+					if ( !elError.strOrigMessage )
+						elError.strOrigMessage = elError.innerHTML;
+					elError.update( transport.responseJSON.strError );
+				}
+				else if ( elError.strOrigMessage )
+					elError.update( elError.strOrigMessage )
+				elError.show();
 			}
 		}
 	});
@@ -846,6 +866,19 @@ function NextSpotlight( cMaxSpotlights )
 		return;
 	AnimateSpotlightTransition( g_iActiveSpotlight, ++g_iActiveSpotlight );
 	UpdateSpotlightControls( cMaxSpotlights );
+}
+
+function expandTXItem( item )
+{
+	var blurb = $( item ).down( '.tx_record_row_blurb' );
+
+	if ( !blurb )
+		return;
+
+	if ( blurb.visible() )
+		Effect.BlindUp( blurb, { duration: 0.25 } )
+	else
+		Effect.BlindDown( blurb, { duration: 0.25 } )
 }
 
 function PrevSpotlight( cMaxSpotlights )
@@ -1022,5 +1055,75 @@ var GraphicalCountdown = Class.create( Countdown, {
 		}
 	}
 });
+
+var CScrollOffsetWatcher = Class.create( {
+	offsetTop: null,
+	fnOnHit: null,
+	nBufferHeight: 32,
+
+	fnBoundEventListener: null,
+
+	initialize: function( el, fnCallback )
+	{
+		this.offsetTop = $(el).cumulativeOffset().top;
+		this.fnOnHit = fnCallback;
+
+		this.fnBoundEventListener = this.OnScroll.bind(this);
+		Event.observe( window, 'scroll', this.fnBoundEventListener );
+		Event.observe( window, 'resize', this.fnBoundEventListener );
+
+		this.OnScroll();
+	},
+
+	OnScroll: function()
+	{
+		var nScrollY = $(document).viewport.getScrollOffsets()[1];
+		if ( nScrollY + document.viewport.getHeight() > this.offsetTop - this.nBufferHeight )
+		{
+			this.fnOnHit();
+			this.Deactivate();
+		}
+	},
+
+	Deactivate: function()
+	{
+		Event.stopObserving( window, 'scroll', this.fnBoundEventListener );
+		Event.stopObserving( window, 'resize', this.fnBoundEventListener );
+	}
+
+} );
+
+function LoadImageGroupOnScroll( elTarget, strGroup )
+{
+	new CScrollOffsetWatcher( $(elTarget), LoadDelayedImages.bind( null, strGroup ) );
+}
+
+function LoadDelayedImages( group )
+{
+	if ( typeof g_rgDelayedLoadImages != 'undefined' && g_rgDelayedLoadImages[group] )
+	{
+		var rgURLs = g_rgDelayedLoadImages[group];
+		for ( var i=0; i < rgURLs.length; i++ )
+		{
+			var el = $('delayedimage_' + group + '_' + i);
+			if ( el )
+				el.src = rgURLs[i];
+		}
+
+		g_rgDelayedLoadImages[group] = false;
+	}
+}
+
+
+function LaunchWebChat()
+{
+	if ( $('webchat_launch_iframe') )
+		$('webchat_launch_iframe').remove();
+
+	var iframe = new Element( 'iframe', {id: 'webchat_launch_iframe' } );
+	iframe.hide();
+	iframe.src='http://steamcommunity.com/chat/launch/'
+	$(document.body).appendChild( iframe );
+}
 
 

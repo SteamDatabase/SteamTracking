@@ -796,18 +796,14 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 }
 
 .newmodal_prompt_textarea {
+	height: 396px;
 }
 
-.newmodal_prompt_textarea.for_textarea {
+.newmodal_prompt_with_textarea {
 	display: inline-block;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	height: 400px;
 	width: 500px;
-}
-
-.newmodal_prompt_textarea textarea {
-	height: 396px;
 }
 
 .gray_bevel input, .gray_bevel textarea {
@@ -1004,6 +1000,14 @@ img.dynamiclink_preview {
 
 	font-size: 13px;
 	color: #939393;
+}
+
+.newmodal_content_innerbg {
+	background-color: #323233;
+	border: 1px solid #4d4b49;
+	padding: 8px;
+
+	color: #8f8f8f;
 }
 
 .newmodal_buttons {

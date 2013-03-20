@@ -11,6 +11,8 @@ function StartLoadingBlotter( url )
 		insertion: Insertion.Bottom,
 		method: 'get',
 		onSuccess: function(transport) {
+			RecordAJAXPageView( transport.request.url );
+
 			// load more data
 			var response = transport.responseJSON;
 			if ( response && response.success == true && response.blotter_html )
@@ -19,7 +21,6 @@ function StartLoadingBlotter( url )
 				var newDiv = new Element ( 'div' );
 				newDiv.update( response.blotter_html );
 				newDiv.setOpacity(0);
-				$('blotter_throbber').hide();
 				$('blotter_content').appendChild( newDiv );
 				new Effect.Appear( newDiv, { duration: .75 }  );
 
@@ -31,6 +32,8 @@ function StartLoadingBlotter( url )
 				// print out any error for now
 				$('blotter_content').insert( { bottom: transport.responseText } );
 			}
+
+			$('blotter_throbber').hide();
 		}
 	});
 }
@@ -62,9 +65,11 @@ function Blotter_InfiniteScrollingCheckForMoreContent()
 g_BlotterGalleries = {};
 
 // switched between different screenshots in the gallery
-function Blotter_SelectScreenshot( galleryid, screenshotid )
+function Blotter_SelectScreenshot( galleryid, screenshotid, spoiler )
 {
 	var gallery = g_BlotterGalleries[galleryid];
+
+	$('ratingcontrols_ss_' + gallery.m_screenshotActive).hide();
 
 	$('commentthread_ss_' + gallery.m_screenshotActive).hide();
 	var effect = new Effect.Appear('ssfs_overlay_' + galleryid, {duration: 0.5});
@@ -75,7 +80,7 @@ function Blotter_SelectScreenshot( galleryid, screenshotid )
 
 	// update the big image
 	var ssid = 'ss_' + galleryid;
-	$(ssid).setAttribute( 'src', ss.m_img );
+	$(ssid).setAttribute( 'src', ss.m_img ? ss.m_img : ss.m_src );
 	$(ssid).onload = (function(galleryid, effect){
 		return function() {
 			effect.cancel();
@@ -87,6 +92,8 @@ function Blotter_SelectScreenshot( galleryid, screenshotid )
 	$('title_' + galleryid).innerHTML = ss.m_caption;
 
 	// switch in the new comments
+	$('ratingcontrols_ss_' + gallery.m_screenshotActive).show();
+
 	$('commentthread_ss_' + screenshotid).show();
 
 	// hide/show the lots of comments link
@@ -95,45 +102,32 @@ function Blotter_SelectScreenshot( galleryid, screenshotid )
 	else
 		$('comment_showall_' + screenshotid).hide();
 
-/*
-	// hide the old comments
-	HideWithFade( $('commentthread_' + galleryid) );
 
-	// update comments
-	var sCommentURL = 'http://steamcommunity.com' + '/comment/Screenshot/rendercontrol/' + gallery.m_steamidowner + '/' + screenshotid + '/?count=3&quoteboxheight=20';
-	//new Ajax.Updater( 'commentthread_' + galleryid, sCommentURL );
-	new Ajax.Request( sCommentURL, {
-		method: 'get',
-		onSuccess: function(transport) {
-			var commentDiv = $('commentthread_' + galleryid);
-			commentDiv.update( transport.responseText );
-			commentDiv.hide();
-			ShowWithFade( commentDiv );
-		}
-	} );
-
-	//$('title_' + galleryid).innerHTML = sCommentURL;
-*/
+	gallery.m_bSpoilerSelected = spoiler;
+	if ( gallery.m_bSpoilerSelected )
+		ShowSpoilerCover( galleryid );
+	else
+		HideSpoilerCover( galleryid )
 
 	//!! turn on the loading image
 
 	// turn off the border in all the other images
 	for( var ss in gallery.shots )
 	{
-		ssid = 'ss_' + gallery.shots[ss].m_id;
+		ssid = 'ss_' + galleryid + '_' + gallery.shots[ss].m_id;
 		$(ssid).setAttribute( 'class', 'blotter_screenshot_gallery_image' );
 	}
 
 	// turn on the border for the selected image
-	ssid = 'ss_' + screenshotid;
+	ssid = 'ss_' + galleryid + '_' + screenshotid;
 	$(ssid).setAttribute( 'class', 'blotter_screenshot_gallery_image_selected' );
 }
 
-function Blotter_ShowLargeScreenshot( galleryid )
+function Blotter_ShowLargeScreenshot( galleryid, showComments )
 {
 	var gallery = g_BlotterGalleries[galleryid];
 	var ss = gallery.shots[gallery.m_screenshotActive];
-	ShowModalContent( ss.m_modalContentLink + '&insideModal=1', ss.m_modalContentLink, ss.m_modalContentLink, true );
+	ShowModalContent( ss.m_modalContentLink + '&insideModal=1&showComments=' + showComments, ss.m_modalContentLinkText, ss.m_modalContentLink, true );
 }
 
 function Blotter_ScreenshotLoaded( galleryid )
@@ -250,12 +244,12 @@ function Blotter_PreloadNextScreenshot( galleryid )
 }
 
 
-function Blotter_PostStatus( textbox, posturl )
+function Blotter_PostStatus( textboxid, appboxid, posturl )
 {
 	new Ajax.Request( posturl, {
 		insertion: Insertion.Bottom,
 		method: 'post',
-		parameters: { sessionid: g_sessionID, status_text: $(textbox).value, appid: 0 },
+		parameters: { sessionid: g_sessionID, status_text: $(textboxid).value, appid: $(appboxid).value },
 		onSuccess: function(transport) {
 			// load more data
 			var response = transport.responseJSON;
@@ -287,7 +281,9 @@ function Blotter_PostStatus( textbox, posturl )
 	});
 
 	// clear the input box
-	$(textbox).value = '';
+	$(textboxid).value = '';
+	$(appboxid).value = 0;
+	$('blotter_appselect_app_activeoption').update( 'TAG WITH GAME' );
 }
 
 function Blotter_DeletePostedStatus( postid, statusid, posturl )
@@ -319,6 +315,82 @@ function Blotter_DeletePostedStatus( postid, statusid, posturl )
 	});
 }
 
+function Blotter_SelectGame( gameid, gamename )
+{
+	// hide the menu that popped this up
+	HideMenu( $('blotter_appselect_app'), $('blotter_appselect_app_options') );
+
+	// remember the gameid
+	$('blotter_poststatus_appid').value = gameid;
+
+	var text = gamename;
+	$('blotter_appselect_app_activeoption').innerHTML = text;
+}
+
+g_GameSuggestion = [];
+function Blotter_GameSelector_Update()
+{
+	// build a new one
+	var text = $('blotter_appselect_app_filter').value;
+	if ( text.length == 0 )
+	{
+		// clear any existing
+		$('blotter_appselect_suggestions').update('');
+
+		for( var i=0, len=g_GameSuggestion.length; i < len; i++ )
+		{
+			var game = g_GameSuggestion[i];
+			var el = new Element('div', { id: 'blotter_appselect_app_option_' + game.appid, 'class': 'option ellipsis' }).update( game.name );
+			el.observe( 'click', Blotter_SelectGame.bind( null, game.appid, game.name ) );
+			$('blotter_appselect_suggestions').appendChild( el );
+		}
+	}
+	else
+	{
+		// get the list
+		new Ajax.Request( 'http://steamcommunity.com/actions/SearchApps/' + encodeURIComponent( text ), {
+			method: 'get',
+			onSuccess: function(transport) {
+						// update the list, if the text entered is still what we requested
+						if ( text == $('blotter_appselect_app_filter').value )
+						{
+							$('blotter_appselect_suggestions').update('');
+							var json = transport.responseJSON;
+							if ( json && json.length )
+							{
+								for ( var i=0; i < json.length; i++ )
+								{
+									var elSuggestion = new Element( 'div', {'class': 'game_suggestion popup_menu_item' } );
+									var el = new Element('div', { id: 'blotter_appselect_app_option_' + json[i].appid, 'class': 'option ellipsis' }).update( json[i].name );
+									el.observe( 'click', Blotter_SelectGame.bind( null, json[i].appid, json[i].name ) );
+									$('blotter_appselect_suggestions').appendChild( el );
+								}
+							}
+						}
+					}
+		} );
+	}
+}
+
+function Blotter_GiveFocus( id )
+{
+	window.setTimeout(function() {
+		$(id).focus();
+	   }, 50);
+}
+
+function Blotter_GameSelector_Hide()
+{
+	HideMenu( $('blotter_appselect_app'), $('blotter_appselect_app_options') );
+}
+
+function Blotter_GameSelector_Init()
+{
+	Blotter_GameSelector_Update();
+	$('blotter_appselect_app_filter').observe( 'keyup', function( event ) { Blotter_GameSelector_Update() } );
+}
+
+
 function VoteUp(item_id)
 {
 	if ( !$('vote_up_' + item_id).hasClassName( 'active' ) )
@@ -329,11 +401,6 @@ function VoteUp(item_id)
 			onComplete: (function(item_id){
 				return function(transport)
 				{
-					var votesUpCount = $('blotter_vote_count_' + item_id);
-					if ( votesUpCount )
-					{
-						votesUpCount.innerHTML = parseInt( votesUpCount.innerHTML ) + 1;
-					}
 					$('vote_up_' + item_id).addClassName('active');
 					$('vote_down_' + item_id).removeClassName('active');
 				}
@@ -355,11 +422,6 @@ function VoteDown(item_id)
 		onComplete: (function(item_id){
 			return function(transport)
 			{
-				var votesUpCount = $('blotter_vote_count_' + item_id);
-				if ( votesUpCount && $('vote_up_' + item_id).hasClassName( 'active' ) )
-				{
-					votesUpCount.innerHTML = parseInt( votesUpCount.innerHTML ) - 1;
-				}
 				$('vote_up_' + item_id).removeClassName('active');
 				$('vote_down_' + item_id).addClassName('active');
 			}
@@ -372,5 +434,24 @@ function VoteDown(item_id)
 
 	return false;
 }
+
+function HideSpoilerCover(galleryid, screenshotid)
+{
+	if ( $('ss_spoiler_cover_' + galleryid) )
+		HideWithFade($('ss_spoiler_cover_' + galleryid));
+
+	if ( $('ss_thumb_spoiler_cover_' + screenshotid) )
+		HideWithFade($('ss_thumb_spoiler_cover_' + screenshotid));
+}
+
+function ShowSpoilerCover(galleryid, screenshotid)
+{
+	if ( $('ss_spoiler_cover_' + galleryid) )
+		ShowWithFade($('ss_spoiler_cover_' + galleryid));
+
+	if ( $('ss_thumb_spoiler_cover_' + screenshotid) )
+		ShowWithFade($('ss_thumb_spoiler_cover_' + screenshotid));
+}
+
 
 

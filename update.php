@@ -61,7 +61,7 @@
 			
 			$URL = Array_Shift( $URLs );
 			
-			$Options[ CURLOPT_URL ] = Str_Replace( '*APIKEY*', $APIKey, $URL[ 'URL' ] );
+			$Options[ CURLOPT_URL ] = GenerateURL( $URL[ 'URL' ], $APIKey );
 			
 			cURL_SetOpt_Array( $Slave, $Options );
 			
@@ -114,7 +114,7 @@
 					
 					$URL = Array_Shift( $URLs );
 					
-					$Options[ CURLOPT_URL ] = Str_Replace( '*APIKEY*', $APIKey, $URL[ 'URL' ] );
+					$Options[ CURLOPT_URL ] = GenerateURL( $URL[ 'URL' ], $APIKey );
 					
 					cURL_SetOpt_Array( $SlaveNew, $Options );
 					
@@ -142,4 +142,11 @@
 		
 		cURL_Multi_Close( $Master );
 	}
-
+	
+	function GenerateURL( $URL, $APIKey )
+	{
+		$URL = Str_Replace( '*APIKEY*', $APIKey, $URL );
+		$URL = Str_Replace( '*TIMENOW*', Time( ), $URL );
+		
+		return $URL;
+	}

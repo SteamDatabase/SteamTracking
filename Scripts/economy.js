@@ -3,6 +3,7 @@ var INVENTORY_PAGE_WIDTH = 416;
 var g_bIsTrading = false;
 var g_bIsInventoryPage = false;
 var g_bWalletTradeUnavailable = false;
+var g_bSellItemOnInventoryLoad = false;
 var ITEM_HOVER_DELAY = 500;
 
 /*
@@ -247,6 +248,22 @@ var kStandardTag_Untradable =
 	category_name: 'Misc'
 };
 
+var kStandardTag_Marketable =
+{
+	name: 'Marketable',
+	internal_name: "marketable",
+	category: "misc",
+	category_name: 'Misc'
+};
+
+var kStandardTag_Unmarketable =
+{
+	name: 'Not Marketable',
+	internal_name: "unmarketable",
+	category: "misc",
+	category_name: 'Misc'
+};
+
 var CInventory = Class.create( {
 	owner: null,
 	appid: 0,
@@ -328,6 +345,11 @@ var CInventory = Class.create( {
 						rgItem.tags.push( kStandardTag_Untradable );
 				}
 
+								if( rgItem.marketable )
+					rgItem.tags.push( kStandardTag_Marketable );
+				else
+					rgItem.tags.push( kStandardTag_Unmarketable );
+				
 				for( var tagid in rgItem.tags )
 				{
 					var rgTag = rgItem.tags[ tagid ];
@@ -376,6 +398,11 @@ var CInventory = Class.create( {
 						rgCurrency.tags.push( kStandardTag_Untradable );
 				}
 
+								if( rgCurrency.marketable )
+					rgCurrency.tags.push( kStandardTag_Marketable );
+				else
+					rgCurrency.tags.push( kStandardTag_Unmarketable );
+				
 				for( var tagid in rgCurrency.tags )
 				{
 					var rgTag = rgCurrency.tags[ tagid ];
@@ -658,7 +685,7 @@ var CInventory = Class.create( {
 
 	BuildItemElement: function( rgItem )
 	{
-		var elItem = new Element( 'div', { id: 'item' + this.appid + '_' + this.contextid + '_' + rgItem.id, 'class': 'item app' + this.appid + ' context' + this.contextid } );
+		var elItem = new Element( 'div', { title: rgItem.name, id: 'item' + this.appid + '_' + this.contextid + '_' + rgItem.id, 'class': 'item app' + this.appid + ' context' + this.contextid } );
 		if ( rgItem.name_color )
 			elItem.style.borderColor = '#' + rgItem.name_color;
 		if ( rgItem.background_color )
@@ -945,6 +972,10 @@ var CInventory = Class.create( {
 			elOldInfo.builtFor.element.removeClassName('activeInfo');
 		$(rgItem.element).addClassName('activeInfo');
 		this.selectedItem = rgItem;
+
+		// the user has the appwide context selected, so update the active item there.
+		if ( g_ActiveInventory && g_ActiveInventory != this && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
+			g_ActiveInventory.selectedItem = rgItem;
 
 		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'http://cdn.steamcommunity.com/public/images/trans.gif'; }, 200 );
 
@@ -1441,13 +1472,20 @@ CUserYou = Class.create( CUser, {
 	BAllowedToTradeItems: function( appid, contextid )
 	{
 		var permissions = this.GetTradePermissions( appid, contextid );
-		return permissions == 'FULL';
+		return ( permissions == 'FULL' ) || ( permissions == 'SENDONLY' ) || ( permissions == 'SENDONLY_FULLINVENTORY' );
 	},
 
 	BAllowedToRecieveItems: function( appid, contextid )
 	{
 		var permissions = this.GetTradePermissions( appid, contextid );
 		return ( permissions == 'FULL' ) || ( permissions == 'RECEIVEONLY' );
+	},
+
+
+	BInventoryIsFull: function( appid, contextid )
+	{
+		var permissions = this.GetTradePermissions( appid, contextid );
+		return permissions == 'SENDONLY_FULLINVENTORY';
 	},
 
 	ReloadInventory: function( appid, contextid )
@@ -1485,6 +1523,9 @@ CUserYou = Class.create( CUser, {
 		if ( g_bIsTrading )
 			params.trading = 1;
 
+				if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
+			params.market = 1;
+		
 		new Ajax.Request( g_strInventoryLoadURL + appid + '/' + contextid + '/', {
 			method: 'get',
 			parameters: params,
@@ -1538,7 +1579,7 @@ CUserYou = Class.create( CUser, {
 				if ( !elFailedInventory )
 				{
 					// if we don't have the "Failed" div, then just do a an alert
-					alert( 'Your inventory is not available at this time.  Please try again later.' );
+					alert( 'This inventory is not available at this time.  Please try again later.' );
 				}
 			}
 
@@ -1630,13 +1671,19 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 
 	var inventory = UserYou.getInventory( appid, contextid );
 	var bAlreadyInitialized = inventory.initialized;
+	var bSellNow = false;
 
 	if ( bLoadCompleted && g_deferredAsset )
 	{
 		// use the asset we wanted to show before we dynamically loaded inventory
 		assetid = g_deferredAsset;
 		g_deferredAsset = null;
-	}
+					if ( g_bSellItemOnInventoryLoad )
+			{
+				g_bSellItemOnInventoryLoad = false;
+				bSellNow = true;
+			}
+			}
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
 	var lastContextID = g_ActiveInventory ? g_ActiveInventory.contextid : null;
 	if ( lastAppId != appid || contextid != lastContextID )
@@ -1782,11 +1829,13 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	if ( !rgItem )
 	{
 		// ... or the last selected item ...
+		bSellNow = false;
 		rgItem = g_ActiveInventory.selectedItem;
 	}
 	if ( !rgItem || rgItem.element.parentNode.filtered )
 	{
 		// ... or the first (non-filtered) item listed
+		bSellNow = false;
 		for ( var iPage = 0; iPage < g_ActiveInventory.pageList.length; iPage++ )
 		{
 			var rgItemHolders = g_ActiveInventory.pageList[iPage].childElements();
@@ -1808,7 +1857,12 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	{
 		g_ActiveInventory.SelectItem( null, rgItem.element, rgItem );
 		g_ActiveInventory.EnsurePageActiveForItem( rgItem.element );
-	}
+
+					if ( bSellNow )
+			{
+				SellCurrentSelection();
+			}
+			}
 }
 
 function SelectInventory( appid, contextid, bForceSelect )
@@ -1925,22 +1979,9 @@ var iActiveSelectView = 0;
 
 
 var HoverCurrencyFromTemplate = new Template( '<span style="#{currencystyle}">#{amount}</span> from #{contextname}');
-function BuildHover( prefix, item, owner )
+
+function GetNameForItem( item )
 {
-	var imageName = item.icon_url_large ? item.icon_url_large : item.icon_url;
-	var url = '';
-	if ( g_bIsTrading )
-		url = ImageURL( imageName, 192, 192 );
-	else
-		url = ImageURL( imageName, 330, 192 );
-
-	var strHoverClass = 'item_desc_content';
-	if ( item.appid )
-		strHoverClass = strHoverClass + ' app' + item.appid + ' context' + item.contextid;
-	$(prefix+'_content').className = strHoverClass;
-
-	$(prefix+'_item_icon').src = url;
-
 	var strName = item.name;
 	if ( CurrencyIsWalletFunds( item ) )
 		strName = v_currencyformat( item.amount, item.name ) + ' <span class="hover_item_name_small">' + strName + '</span>';
@@ -1948,7 +1989,7 @@ function BuildHover( prefix, item, owner )
 		strName = v_numberformat( item.amount ) + ' ' + strName;
 
 	// Show the other user's currency in the name field.
-	if ( CurrencyIsWalletFunds( item ) && typeof(g_rgWalletInfo) != 'undefined' &&
+	if ( CurrencyIsWalletFunds( item ) && typeof(g_rgWalletInfo) != 'undefined' && typeof(g_rgWalletInfo['wallet_other_currency']) != 'undefined' &&
 			g_rgWalletInfo['wallet_currency'] != g_rgWalletInfo['wallet_other_currency'] )
 	{
 		var bThisIsOurCurrency = ( g_rgWalletInfo['wallet_currency'] == ( item.id % 1000 ) );
@@ -1970,8 +2011,28 @@ function BuildHover( prefix, item, owner )
 		}
 	}
 
-	$(prefix+'_item_name').update( strName );
+	return strName;
+}
 
+function BuildHover( prefix, item, owner )
+{
+	var imageName = item.icon_url_large ? item.icon_url_large : item.icon_url;
+	var url = '';
+	if ( g_bIsTrading )
+		url = ImageURL( imageName, 192, 192 );
+	else
+		url = ImageURL( imageName, 330, 192 );
+
+	var strHoverClass = 'item_desc_content';
+	if ( item.appid )
+		strHoverClass = strHoverClass + ' app' + item.appid + ' context' + item.contextid;
+	$(prefix+'_content').className = strHoverClass;
+
+	$(prefix+'_item_icon').src = url;
+	$(prefix+'_item_icon').alt = item.name;
+
+	var strName = GetNameForItem( item );
+	$(prefix+'_item_name').update( strName );
 
 	var elArrowLeft = $(prefix+'_arrow_left');
 	var elArrowRight = $(prefix+'_arrow_right');
@@ -2024,6 +2085,7 @@ function BuildHover( prefix, item, owner )
 	{
 		var rgAppData = g_rgAppContextData[item.appid];
 		$(prefix+'_game_icon').src = rgAppData.icon;
+		$(prefix+'_game_icon').alt = rgAppData.name;
 		$(prefix+'_game_name').update( rgAppData.name );
 		$(prefix+'_item_type').update( item.type );
 		$(prefix+'_game_info').show();
@@ -2077,6 +2139,11 @@ function BuildHover( prefix, item, owner )
 		PopulateTags( elTags, elTagsContent, item.tags );
 	}
 
+	var elMarketActions = $(prefix+'_item_market_actions');
+	if ( elMarketActions )
+	{
+		PopulateMarketActions( elMarketActions, item );
+	}
 
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
@@ -2173,6 +2240,507 @@ function PopulateTags( elTags, elTagsContent, rgTags )
 	else
 	{
 		elTags.hide();
+	}
+}
+
+function CreateMarketActionButton( color, href, text )
+{
+	var elButton = new Element( 'a', {'class': 'item_market_action_button item_market_action_button_' + color, 'href': href } );
+	var elButtonLeft = new Element( 'span', {'class' : 'item_market_action_button_edge item_market_action_button_left' } );
+	var elButtonContents = new Element( 'span', {'class' : 'item_market_action_button_contents' } );
+	var elButtonRight = new Element( 'span', {'class' : 'item_market_action_button_edge item_market_action_button_right' } );
+	var elButtonPreload = new Element( 'span', {'class' : 'item_market_action_button_preload' } );
+
+	elButtonContents.update( text );
+
+	elButton.appendChild( elButtonLeft );
+	elButton.appendChild( elButtonContents );
+	elButton.appendChild( elButtonRight );
+	elButton.appendChild( elButtonPreload );
+
+	return elButton;
+}
+
+function PopulateMarketActions( elActions, item )
+{
+	elActions.update('');
+	if ( !item.marketable || ( item.is_currency && CurrencyIsWalletFunds( item ) ) )
+	{
+		elActions.hide();
+		return;
+	}
+
+	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
+	{
+		elActions.appendChild( CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' ) );
+	}
+		else
+	{
+		elActions.hide();
+		return;
+	}
+	
+		
+	elActions.show();
+}
+
+function SellCurrentSelection()
+{
+	if ( g_rgWalletInfo['wallet_currency'] == 0 )
+	{
+		MessageDialog.Show(
+			'You cannot sell items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+			'Cannot sell item'
+		);
+	}
+	else
+	{
+		SellItemDialog.Show( g_ActiveInventory.selectedItem );
+	}
+}
+
+MessageDialog = {
+	m_bInitialized: false,
+
+	Initialize: function() {
+		$('market_message_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
+		$('market_message_dialog_close').observe( 'click', this.OnAccept.bindAsEventListener(this) );
+
+		this.m_bInitialized = true;
+	},
+
+	Show: function ( strMessage, strTitle ) {
+
+		if ( !this.m_bInitialized )
+			this.Initialize();
+
+		$('market_message_dialog_title').innerHTML = strTitle;
+		$('market_message_dialog_message').innerHTML = strMessage;
+		showModal( 'market_message_dialog', true );
+	},
+
+	Dismiss: function() {
+		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
+		hideModal( 'market_message_dialog' );
+	},
+
+	OnAccept: function( event ) {
+		event.stop();
+		this.Dismiss(); 
+	}
+}
+
+SellItemDialog = {
+	m_bInitialized: false,
+	m_bWaitingForUserToConfirm: false,
+	m_nConfirmedPrice: 0,
+	m_nConfirmedQuantity: 0,
+	m_item: null,
+	m_strName: '',
+	m_fnDocumentKeyHandler: null,
+
+	Initialize: function() {
+		$('market_sell_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
+		$('market_sell_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
+		$('market_sell_dialog_ok').observe( 'click', this.OnConfirmationAccept.bindAsEventListener(this) );
+		$('market_sell_dialog_back').observe( 'click', this.OnConfirmationBack.bindAsEventListener(this) );
+		$('market_sell_quantity_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
+		$('market_sell_quantity_input').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
+		$('market_sell_currency_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
+		$('market_sell_currency_input').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
+		$('market_sell_buyercurrency_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
+		$('market_sell_buyercurrency_input').observe( 'keyup', this.OnBuyerPriceInputKeyUp.bindAsEventListener(this) );
+
+		$('market_sell_dialog').style.visibility = 'hidden';
+		$('market_sell_dialog').show();
+		// TODO: Slider
+		$('market_sell_dialog').hide();
+		$('market_sell_dialog').style.visibility = '';
+
+		this.m_bInitialized = true;
+	},
+
+	Show: function ( item ) {
+
+		if ( !this.m_bInitialized )
+			this.Initialize();
+
+		this.m_bWaitingForUserToConfirm = false;
+
+		$('market_sell_quantity_input').style.borderColor = '';
+		$('market_sell_currency_input').style.borderColor = '';
+		$('market_sell_buyercurrency_input').style.borderColor = '';
+		$('market_sell_dialog_error').hide();
+
+		$('market_sell_dialog_title').update( 'Put an item up for sale' );
+		$('market_sell_dialog_background').show();
+		$('market_sell_dialog_item_availability_hint').hide();
+		$('market_sell_dialog_confirm_buttons').hide();
+
+		$('market_sell_dialog_accept').style.cursor = '';
+		$('market_sell_dialog_accept').style.opacity = 1;
+
+		$('market_sell_quantity_input').style.borderColor = '';
+		$('market_sell_quantity_input').style.backgroundColor = '';
+		$('market_sell_currency_input').style.borderColor = '';
+		$('market_sell_currency_input').style.backgroundColor = '';
+		$('market_sell_buyercurrency_input').style.borderColor = '';
+		$('market_sell_buyercurrency_input').style.backgroundColor = '';
+
+		$('market_sell_quantity_input').enable();
+		$('market_sell_currency_input').enable();
+		$('market_sell_buyercurrency_input').enable();
+		$('market_sell_dialog_accept_ssa').enable();
+
+		this.m_item = item;
+
+		var elItem = $('market_sell_dialog_item');
+		if ( item.name_color )
+			elItem.style.borderColor = '#' + item.name_color;
+		if ( item.background_color )
+			elItem.style.backgroundColor = '#' + item.background_color;
+
+		var elItemImage = $('market_sell_dialog_item_img');
+		if ( item.is_stackable )
+			elItemImage.src = ImageURL( item.icon_url, '96f', '58f' );
+		else
+			elItemImage.src = ImageURL( item.icon_url, '96f', '96f' );
+
+		this.m_strName = GetNameForItem( item );
+		$('market_sell_dialog_item_name').update( this.m_strName );
+		$('market_sell_quantity_available_amt').update( item.amount );
+
+		if ( item.name_color )
+		{
+			$('market_sell_dialog_item_name').style.color = '#' + item.name_color;
+		}
+		else
+		{
+			$('market_sell_dialog_item_name').style.color = '';
+		}
+
+		if ( item.appid && g_rgAppContextData[item.appid] )
+		{
+			var rgAppData = g_rgAppContextData[item.appid];
+			$('market_sell_dialog_game_icon').src = rgAppData.icon;
+			$('market_sell_dialog_game_icon').alt = rgAppData.name;
+			$('market_sell_dialog_game_name').update( rgAppData.name );
+			$('market_sell_dialog_item_type').update( item.type );
+			$('market_sell_dialog_game_info').show();
+		}
+		else
+		{
+			$('market_sell_dialog_game_info').hide();
+		}
+
+		if ( item.amount == 1 )
+		{
+			$('market_sell_quantity_input').disable();
+
+			$('market_sell_quantity_label').hide();
+			$('market_sell_quantity_input').hide();
+			$('market_sell_quantity_available').hide();
+		}
+		else
+		{
+			$('market_sell_quantity_label').show();
+			$('market_sell_quantity_input').show();
+			$('market_sell_quantity_available').show();
+		}
+
+		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
+		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
+
+		var currencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
+		$('market_sell_quantity_input').value = 1;
+		$('market_sell_currency_input').value = GetCurrencySymbol( currencyCode );
+		$('market_sell_buyercurrency_input').value = GetCurrencySymbol( currencyCode );
+
+		showModal( 'market_sell_dialog', true );
+		$('market_sell_currency_input').focus();
+
+		// move the caret to the correct spot
+		var oPriceInput = $('market_sell_currency_input');
+		if ( oPriceInput.setSelectionRange )
+		{
+			if ( IsCurrencySymbolBeforeValue( currencyCode ) )
+			{
+				// move the caret to the end
+				var length = oPriceInput.value.length;
+				oPriceInput.setSelectionRange( length, length );
+			}
+			else
+			{
+				// caret to the beginning
+				oPriceInput.setSelectionRange( 0, 0 );
+			}
+		}
+		else
+		{
+			var oldval = oPriceInput.value;
+			oPriceInput.value = '';
+			oPriceInput.value = oldval;
+		}
+	},
+
+	DisplayError: function( error ) {
+		$('market_sell_dialog_error').show();
+		$('market_sell_dialog_error').update( error );
+		$('market_sell_dialog_error').style.color = '#ffffff';
+		new Effect.Morph( $('market_sell_dialog_error'), { style: {color: '#ff0000'}, duration: 0.25 } );
+	},
+
+	Dismiss: function() {
+		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
+		hideModal( 'market_sell_dialog' );
+	},
+
+	GetPriceValueAsInt: function( strAmount ) {
+		var nAmount;
+		if ( !strAmount )
+		{
+			return 0;
+		}
+
+		// strip the currency symbol, set commas to periods, set .-- to .00
+		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
+
+		var flAmount = parseFloat( strAmount ) * 100;
+		nAmount = Math.round( isNaN(flAmount) ? 0 : flAmount );
+
+		nAmount = Math.max( nAmount, 0 );
+		return nAmount;
+	},
+
+
+	GetPriceAsInt: function() {
+		return this.GetPriceValueAsInt( $('market_sell_currency_input').value );
+	},
+
+	GetBuyerPriceAsInt: function() {
+		return this.GetPriceValueAsInt( $('market_sell_buyercurrency_input').value );
+	},
+
+	GetQuantityAsInt: function() {
+		var nAmount;
+		var strAmount = $('market_sell_quantity_input').value;
+
+		if ( !strAmount )
+		{
+			return 0;
+		}
+
+		nAmount = parseInt( strAmount.replace( /[,.]/g, '' ) );
+		nAmount = Math.max( nAmount, 1 );
+		return nAmount;
+	},
+
+	OnAccept: function( event ) {
+		event.stop();
+
+		// If already accepted, ignore
+		if ( this.m_bWaitingForUserToConfirm )
+		{
+			return;
+		}
+
+				if ( !$('market_sell_dialog_accept_ssa') || !$('market_sell_dialog_accept_ssa').checked )
+		{
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to sell this item.' );
+			return;
+		}
+
+		var price = this.GetPriceAsInt();
+		var quantity = this.GetQuantityAsInt();
+
+		if ( quantity > this.m_item.amount )
+		{
+			$('market_sell_quantity_input').style.borderColor = 'red';
+			return;
+		}
+
+		// If the price entered exceeds the maximum allowed, prevent the sale.
+		if ( price > g_rgWalletInfo['wallet_max_balance'] )
+		{
+			$('market_sell_currency_input').style.borderColor = 'red';
+
+			var strError = ' The price entered exceeds the maximum price of %1$s.'
+					.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+			this.DisplayError( strError );
+			return;
+		}
+
+		if ( price <= 0 )
+		{
+			$('market_sell_currency_input').style.borderColor = 'red';
+			this.DisplayError( 'You must enter a valid price.' );
+			return;
+		}
+
+		// validation succeeded
+		this.m_bWaitingForUserToConfirm = true;
+		
+		$('market_sell_currency_input').value = v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) )
+		this.OnInputKeyUp( null );
+
+		$('market_sell_quantity_input').style.borderColor = '';
+		$('market_sell_currency_input').style.borderColor = '';
+		$('market_sell_buyercurrency_input').style.borderColor = '';
+		$('market_sell_dialog_error').hide();
+
+		$('market_sell_dialog_title').update( 'Confirm sell price' );
+		$('market_sell_dialog_background').fade({ duration: 0.25 });
+		new Effect.BlindDown( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
+		new Effect.BlindDown( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
+
+		// Hide the button
+		$('market_sell_dialog_accept').style.cursor = 'default';
+		new Effect.Morph( 'market_sell_dialog_accept', { style: 'opacity:0', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_quantity_input', { style: 'border-color: #262626; background-color: #262626', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_currency_input', { style: 'border-color: #262626; background-color: #262626', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_buyercurrency_input', { style: 'border-color: #262626; background-color: #262626', duration: 0.25 } );
+
+		$('market_sell_quantity_input').disable();
+		$('market_sell_currency_input').disable();
+		$('market_sell_buyercurrency_input').disable();
+		$('market_sell_dialog_accept_ssa').disable();
+
+		this.m_nConfirmedPrice = price;
+		this.m_nConfirmedQuantity = quantity;
+	},
+
+	OnCancel: function( event ) {
+		this.Dismiss();
+		event.stop();
+	},
+
+	OnConfirmationAccept: function( event ) {
+		new Ajax.Request( 'http://steamcommunity.com/market/sellitem/', {
+				method: 'post',
+				parameters: {
+					sessionid: g_sessionID,
+					appid: this.m_item.appid,
+					contextid: this.m_item.contextid,
+					assetid: this.m_item.id,
+					amount: this.m_nConfirmedQuantity,
+					price: this.m_nConfirmedPrice
+				},
+				onSuccess: function( transport ) { SellItemDialog.OnSuccess( transport ); },
+				onFailure: function( transport ) { SellItemDialog.OnFailure( transport ); }
+		} );
+
+		event.stop();
+	},
+
+	OnConfirmationBack: function( event ) {
+		this.m_bWaitingForUserToConfirm = false;
+		
+		// reverse the effects
+		$('market_sell_dialog_title').update( 'Put an item up for sale' );
+
+		var item = this.m_item;
+
+		$('market_sell_dialog_background').fade({ duration: 0.25, from: 0, to: 1 });
+		new Effect.BlindUp( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
+		new Effect.BlindUp( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
+		new Effect.Morph( 'market_sell_dialog_accept', { style: 'opacity:1', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_quantity_input', { style: 'border-color: #707070; background-color: #1A1A1A', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_currency_input', { style: 'border-color: #707070; background-color: #1A1A1A', duration: 0.25 } );
+		new Effect.Morph( 'market_sell_buyercurrency_input', { style: 'border-color: #707070; background-color: #1A1A1A', duration: 0.25 } );
+
+		$('market_sell_dialog_accept').style.cursor = '';
+
+		$('market_sell_dialog_accept_ssa').enable();
+		$('market_sell_currency_input').enable();
+		$('market_sell_buyercurrency_input').enable();
+		if ( item.amount != 1 )
+		{
+			$('market_sell_quantity_input').enable();
+		}
+
+		event.stop();
+	},
+
+	OnSuccess: function( transport ) {
+		this.m_bWaitingForUserToConfirm = false;
+
+		if ( transport.responseJSON )
+		{
+			this.Dismiss();
+			$('market_headertip_itemsold_itemname').update( this.m_strName );
+			if ( this.m_item.name_color )
+			{
+				$('market_headertip_itemsold_itemname').style.color = '#' + this.m_item.name_color;
+			}
+			else
+			{
+				$('market_headertip_itemsold_itemname').style.color = '';
+			}
+
+			new Effect.BlindDown( 'market_headertip_itemsold', { duration: 0.25 } );
+			UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid );
+		}
+		else
+		{
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
+		}
+	},
+
+	OnFailure: function( transport ) {
+		this.m_bWaitingForUserToConfirm = false;
+
+		if ( transport.responseJSON && transport.responseJSON.message )
+		{
+			this.DisplayError( transport.responseJSON.message );
+		}
+		else
+		{
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
+		}
+	},
+
+	OnDocumentKeyPress: function( event ) {
+		if ( event.keyCode == Event.KEY_ESC )
+		{
+			this.Dismiss();
+			event.stop();
+		}
+	},
+
+	OnInputKeyPress: function( event ) {
+		if ( event.keyCode == Event.KEY_RETURN )
+		{
+			if ( this.m_bWaitingForUserToConfirm )
+			{
+				this.OnConfirmationAccept( event );
+			}
+			else
+			{
+				this.OnAccept( event );
+			}
+		}
+	},
+
+	OnInputKeyUp: function( event ) {
+		var inputValue = this.GetPriceAsInt();
+		var nAmount = inputValue;
+		
+		if ( inputValue > 0 )
+		{
+			nAmount = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
+			$('market_sell_buyercurrency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+		}
+	},
+
+	OnBuyerPriceInputKeyUp: function( event ) {
+		var inputValue = this.GetBuyerPriceAsInt();
+		var nAmount = inputValue;
+
+		if ( inputValue > 0 )
+		{
+			nAmount = nAmount - CalculateFeeAmount( nAmount );
+			$('market_sell_currency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+		}
 	}
 }
 
@@ -2841,5 +3409,50 @@ function ConvertToOurCurrencyForDisplay( amount )
 		var nAmount = Math.floor( isNaN(flAmount) ? 0 : flAmount );
 
 	return Math.max( nAmount, 0 );
+}
+
+function CalculateFeeAmount( amount )
+{
+	if ( !g_rgWalletInfo['wallet_fee'] )
+		return 0;
+
+	var nFeeAmount = g_rgWalletInfo['wallet_fee_base'] + ( g_rgWalletInfo['wallet_fee_percent'] * amount );
+	if ( nFeeAmount < g_rgWalletInfo['wallet_fee_minimum'] )
+		nFeeAmount = g_rgWalletInfo['wallet_fee_minimum'];
+
+	return Math.floor(nFeeAmount);
+}
+
+function CalculateAmountToSendForDesiredReceivedAmount( receivedAmount )
+{
+	if ( !g_rgWalletInfo['wallet_fee'] )
+	{
+		return receivedAmount;
+	}
+
+	// ReceivedAmount = SentAmount - FeeBase - SentAmount*FeePercent
+	// thus:
+	// SentAmount = (-FeeBase - ReceivedAmount) / (FeePercent-1)
+	var nAmountToSend = Math.ceil( ( -g_rgWalletInfo['wallet_fee_base'] - receivedAmount ) / ( g_rgWalletInfo['wallet_fee_percent'] - 1 ) );
+
+	// Since CalculateFeeAmount has a Math.floor, we could be off a cent. Let's check:
+	var iterations = 0; // shouldn't be needed, but included to be sure nothing unforseen causes us to get stuck
+	var actualReceivedAmount = nAmountToSend - CalculateFeeAmount( nAmountToSend );
+	while ( receivedAmount != actualReceivedAmount && iterations < 10 )
+	{
+		if ( actualReceivedAmount > receivedAmount )
+		{
+			nAmountToSend--;
+		}
+		else
+		{
+			nAmountToSend++;
+		}
+
+		actualReceivedAmount = nAmountToSend - CalculateFeeAmount( nAmountToSend );
+		iterations++;
+	}
+
+	return nAmountToSend;
 }
 

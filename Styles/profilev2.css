@@ -5,7 +5,13 @@ div.profile_page {
 	background-color: #262627;
 }
 
+div.profile_page.has_profile_background {
+	background-image: none;
+	background-color: #000000;
+}
+
 .profile_header_bg {
+	position: relative;
 	max-width: 1018px;
 	height: 240px;
 	margin: 0 auto;
@@ -185,6 +191,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 }
 
 .profile_content {
+	position: relative;
+
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg.png' );
 	background-position: center;
 	background-repeat: repeat-y;
@@ -217,6 +225,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 }
 
 .profile_customization {
+	position: relative;
+
 	background-image: url('http://cdn.steamcommunity.com/public/images/profile/showcase_bg.png');
 	background-position: top left;
 	background-repeat: no-repeat;
@@ -233,6 +243,21 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	color: #5491cf;
 	font-size: 20px;
 	line-height: 30px;
+}
+
+.profile_customization_editlink {
+	float: right;
+	visibility: hidden;
+
+	line-height: 30px;
+}
+
+.profile_customization:hover .profile_customization_editlink {
+	visibility: visible;
+}
+
+.profile_customization_editlink:hover .profile_customization_editlink_text {
+	text-decoration: underline;
 }
 
 .showcase_content_bg {
@@ -265,6 +290,12 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .showcase_stat .label {
 	font-size: 17px;
 	color: #9b9b9b;
+}
+
+.showcase_bodylabel {
+	font-size: 13px;
+	margin-bottom: 8px;
+	color: #898989;
 }
 
 .showcase_achievement {
@@ -1378,20 +1409,53 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin-bottom: 16px;
 	background: -moz-linear-gradient(top, #242424 5%, #141414 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#242424), color-stop(95%,#141414));background: -webkit-linear-gradient(top, #242424 5%,#141414 95%);background: -o-linear-gradient(top, #242424 5%,#141414 95%);background: -ms-linear-gradient(top, #242424 5%,#141414 95%);background: linear-gradient(to bottom, #242424 5%,#141414 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
 
-#profile_background_image {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+.profile_background_holder {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 104px;
+	overflow: hidden;
+	z-index: 0;
+	min-width: 972px;
 }
-#profile_background_image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
+
+.profile_background_holder.no_header {
+	top: 0;
+}
+
+.profile_background_image {
+	text-align: center;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 1600px;
+	min-width: 972px;
+}
+
+.profile_customization.customization_edit {
+}
+
+.profile_customization.customization_edit.none_selected {
+
+	background: #383838;
+	border: 1px dashed #5491CF;
+}
+.profile_customization_area .profile_customization.customization_edit.none_selected {
+	cursor: pointer;
+}
+.profile_customization_area .profile_customization.customization_edit.none_selected:hover {
+	border-color: #ffffff;
+}
+
+.newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover {
+	text-decoration: underline;
+}
+
+.profile_customization_edit_icon {
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url( 'data:image/png;base64,' );
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 16px;
+	height: 16px;
 }
