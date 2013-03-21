@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "ValveTestApp260",
-		"gameVersion": "232",
+		"gameVersion": "233",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -1401,6 +1401,16 @@
 				},
 				{
 					"name": "GI.lesson.serverside_hint",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "total_wins_map_cs_militia",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "total_rounds_map_cs_militia",
 					"defaultvalue": 0,
 					"displayName": ""
 				}
