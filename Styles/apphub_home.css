@@ -586,6 +586,32 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	float: left;
 }
 
+.apphub_EarlyAccess
+{
+	background: no-repeat url( 'http://cdn.steamcommunity.com/public/images/apphubs/early_access_banner.jpg' );
+	width: 948px;
+	height: 38px;
+	line-height: 38px;
+}
+
+.apphub_EarlyAccess_Title
+{
+	padding-left: 15px;
+	float: left;
+	font-family: 'Motiva Sans', Arial, Tahoma;
+	font-size: 18px;
+	color: white;
+}
+
+.apphub_EarlyAccess_Desc
+{
+	padding-left: 10px;
+	padding-top: 1px;
+	float: left;
+	font-size: 14px;
+	color: #a1b8cc;
+}
+
 /* discussions */
 .leftcol
 {
