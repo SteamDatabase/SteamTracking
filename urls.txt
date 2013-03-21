@@ -12,10 +12,10 @@ Styles/profile.css|http://cdn.steamcommunity.com/public/css/skin_1/profile.css?_
 Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css?_=*TIMENOW*
 Styles/profilev2.css|http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css?_=*TIMENOW*
 Styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gamev5.css?_=*TIMENOW*
+Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_genrev5.css?_=*TIMENOW*
 Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
 Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
-Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_genrev5.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
@@ -36,15 +36,23 @@ Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/wo
 # API
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 
+# Item Schemas
+GetItemSchema/CounterStrikeGlobalOffensive.vdf|http://api.steampowered.com/IEconItems_730/GetSchemaURL/v0001/?key=*APIKEY*
+GetItemSchema/Dota2.vdf|http://api.steampowered.com/IEconItems_570/GetSchemaURL/v0001/?key=*APIKEY*
+GetItemSchema/Dota2Test.vdf|http://api.steampowered.com/IEconItems_205790/GetSchemaURL/v0001/?key=*APIKEY*
+GetItemSchema/TeamFortress2.vdf|http://api.steampowered.com/IEconItems_440/GetSchemaURL/v0001/?key=*APIKEY*
+GetItemSchema/TeamFortress2Beta.vdf|http://api.steampowered.com/IEconItems_520/GetSchemaURL/v0001/?key=*APIKEY*
+
 # Game Schemas
 GameSchema/AlienSwarm.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=630
 GameSchema/CounterStrike.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=10
 GameSchema/CounterStrikeConditionZero.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=80
-GameSchema/CounterStrikeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
 GameSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=730
+GameSchema/CounterStrikeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
 GameSchema/DayOfDefeat.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=30
 GameSchema/DayofDefeatSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=300
 GameSchema/DeathmatchClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=40
+GameSchema/Dota2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=570
 GameSchema/HalfLife.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=70
 GameSchema/HalfLife2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=220
 GameSchema/HalfLife2Deathmatch.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=320
