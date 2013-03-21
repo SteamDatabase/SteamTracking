@@ -11,10 +11,10 @@ Styles/header.css|http://cdn.steamcommunity.com/public/css/skin_1/header.css?_=*
 Styles/profile.css|http://cdn.steamcommunity.com/public/css/skin_1/profile.css?_=*TIMENOW*
 Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css?_=*TIMENOW*
 Styles/profilev2.css|http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css?_=*TIMENOW*
-Styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gamev5.css?_=*TIMENOW*
-Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
-Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
-Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
+Styles/styles_gamev5.css|http://cdn3.store.steampowered.com/public/css/styles_gamev5.css?_=*TIMENOW*
+Styles/styles_recommended.css|http://cdn3.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
+Styles/styles_storev5.css|http://cdn3.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
+Styles/styles_video.css|http://cdn3.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
