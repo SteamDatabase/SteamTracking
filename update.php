@@ -25,6 +25,9 @@
 	
 	function HandleData( $File, $Data )
 	{
+		// Stupid store CDN keeps switching subdomains between resources
+		$Data = Str_Replace( Array( 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
+		
 		File_Put_Contents( __DIR__ . '/' . $File, $Data );
 	}
 	
@@ -145,8 +148,5 @@
 	
 	function GenerateURL( $URL, $APIKey )
 	{
-		$URL = Str_Replace( '*APIKEY*', $APIKey, $URL );
-		$URL = Str_Replace( '*TIMENOW*', Time( ), $URL );
-		
-		return $URL;
+		return Str_Replace( Array( '*APIKEY*', '*TIMENOW*' ), Array( $APIKey, Time( ) ), $URL );
 	}
