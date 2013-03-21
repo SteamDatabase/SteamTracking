@@ -37,7 +37,7 @@
 	top: 0px;
 	width: 32px;
 	height: 32px;
-	background: url( http://cdn3.store.steampowered.com/public/images/v5/game_ico_overlay.png );
+	background: url( http://cdn.store.steampowered.com/public/images/v5/game_ico_overlay.png );
 	background-repeat: no-repeat;
 }
 
@@ -70,7 +70,7 @@
 	margin-bottom: 1px;
 	height: 466px;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/game_highlight_bg.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_highlight_bg.png );
 	background-repeat: repeat-x;
 	background-position: top;
 }
@@ -164,7 +164,7 @@
 	width: 32px;
 	height: 32px;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/ico_game_highlight_video.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/ico_game_highlight_video.png );
 	
 }
 /*
@@ -194,7 +194,7 @@
 
 .highlight_selector {
 	position: absolute;
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/game_highlight_activethumb.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_highlight_activethumb.png );
 	width: 116px;
 	height: 77px;
 	z-index: 50;
@@ -252,20 +252,20 @@ img.game_header_image {
 }
 
 .game_area_comingsoon {
-	background: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_comingsoon.png );
+	background: url( http://cdn.store.steampowered.com/public/images/v5/game_area_comingsoon.png );
 	
 	color: #8bc53f;
 	
 }
 
 .game_area_dlc_bubble {
-	background: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_dlc.png );
+	background: url( http://cdn.store.steampowered.com/public/images/v5/game_area_dlc.png );
 	
 	color: #c3c1c0;
 }
 
 .game_area_mod_bubble {
-	background: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_mod.png );
+	background: url( http://cdn.store.steampowered.com/public/images/v5/game_area_mod.png );
 	color: #c3c1c0;
 }
 
@@ -287,7 +287,7 @@ img.game_header_image {
 .notice_box_top, .notice_box_bottom {
 	height: 11px;
 	width: 616px;
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/border_notice.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/border_notice.png );
 	background-repeat: no-repeat;
 }
 
@@ -415,19 +415,19 @@ img.game_header_image {
 	height: 34px;
 	top: 0px;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
 }
 
 
@@ -452,22 +452,22 @@ img.game_header_image {
 	padding: 0px 11px;
 	line-height: 34px;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
 	background-repeat: repeat-x;
 	
 	text-transform: uppercase;
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -546,7 +546,7 @@ img.game_header_image {
 	
 	color: #FFFFFF;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
 	background-repeat: no-repeat;
 	background-position: bottom left;
 	
@@ -567,7 +567,7 @@ img.game_header_image {
 	
 	color: #d6d7d8;
 	
-	background-image: url(http://cdn3.store.steampowered.com/public/images/v5/maincol_bg_gray.png);
+	background-image: url(http://cdn.store.steampowered.com/public/images/v5/maincol_bg_gray.png);
 	background-repeat: no-repeat;
 	background-color: #303030;
 	
@@ -746,7 +746,7 @@ img.game_header_image {
 }
 
 #game_area_metascore {
-	background-image: url(http://cdn3.store.steampowered.com/public/images/metacritic_bg.gif);
+	background-image: url(http://cdn.store.steampowered.com/public/images/metacritic_bg.gif);
 	height: 35px;
 	width: 180px;
 	font-family: "Trebuchet MS", "Arial Narrow", HelveticaNeue-Thin, Helvetica-Light, sans-serif;
@@ -940,14 +940,14 @@ a.friend_block_holder:hover {
 	border:solid #82807c 1px;
 	padding:2px 8px 2px 8px;
 	height:24px;
-	background-image:url(http://cdn3.store.steampowered.com/public/images/save_button_bg.gif);
+	background-image:url(http://cdn.store.steampowered.com/public/images/save_button_bg.gif);
 	background-color:#4f6f23;
 	background-repeat:repeat-x;
 	color:#ffffff;
 }
 
 #top_band {
-	background-image:url( 'http://cdn3.store.steampowered.com/public/images/got_steam_top.jpg' );
+	background-image:url( 'http://cdn.store.steampowered.com/public/images/got_steam_top.jpg' );
 	background-repeat:no-repeat;
 	width:508px;
 	height:25px;
@@ -1050,7 +1050,7 @@ a.friend_block_holder:hover {
 }
 
 .game_area_demo_btn {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_game_download_demo.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_game_download_demo.gif );
 }
 
 #demo_block a.game_area_demo_btn, #demo_block a.game_area_wishlist_btn {
@@ -1063,11 +1063,11 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 .game_area_wishlist_btn {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_game_add_to_wishlist.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_game_add_to_wishlist.gif );
 }
 
 .game_area_wishlist_btn.disabled {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/btn_game_add_to_wishlist_disabled.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_game_add_to_wishlist_disabled.gif );
 	cursor: default;
 	color: #626567;
 }
@@ -1170,7 +1170,7 @@ img.package_header {
 	font-size: 12px;
 	line-height: 18px;
 	padding-top: 15px;
-	background: #1a1a1a url( http://cdn3.store.steampowered.com/public/images/v5/maincol_gradient_rule_flip.png ) top right no-repeat;
+	background: #1a1a1a url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule_flip.png ) top right no-repeat;
 }
 
 .package_totals_row {
@@ -1209,7 +1209,7 @@ img.package_header {
 	padding: 0px 15px;
 	position: relative;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
 	background-repeat: repeat-x;
 	background-position: top;
 	
@@ -1233,7 +1233,7 @@ img.package_header {
 
 .game_area_already_owned_btn .leftcap, .game_area_already_owned_btn .rightcap, .game_area_already_owned_btn .content
 {
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_alreadyowned_btns.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_area_alreadyowned_btns.png );
 }
 
 .game_area_already_owned_btn .leftcap {
@@ -1277,7 +1277,7 @@ img.package_header {
 	padding-left: 46px;
 	position: relative;
 	
-	background-image: url( http://cdn3.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
 	background-repeat: repeat-x;
 	background-position: bottom;
 	
@@ -1420,7 +1420,7 @@ div.early_access_banner {
 
 	div.early_access_banner > .img {
 		position: absolute;
-		background-image: url(http://cdn3.store.steampowered.com/public/images/v5/earlyaccess_bug.png);
+		background-image: url(http://cdn.store.steampowered.com/public/images/v5/earlyaccess_bug.png);
 		width: 63px;
 		height: 61px;
 		left: 0px;
@@ -1440,7 +1440,7 @@ div.early_access_header {
 
 	div.early_access_header .heading {
 		height: 83px;
-		background-image: url(http://cdn3.store.steampowered.com/public/images/v5/earlyaccess_banner.png);
+		background-image: url(http://cdn.store.steampowered.com/public/images/v5/earlyaccess_banner.png);
 		padding: 10px 10px;
 		color: #a1b7cc;
 		font-size: 12px;
