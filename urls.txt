@@ -40,6 +40,7 @@ GameSchema/AlienSwarm.json|http://api.steampowered.com/ISteamUserStats/GetSchema
 GameSchema/CounterStrike.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=10
 GameSchema/CounterStrikeConditionZero.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=80
 GameSchema/CounterStrikeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
+GameSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=730
 GameSchema/DayOfDefeat.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=30
 GameSchema/DayofDefeatSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=300
 GameSchema/DeathmatchClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=40
