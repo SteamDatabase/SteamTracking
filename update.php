@@ -48,6 +48,8 @@
 				
 				$this->URLsToFetch = Array( );
 				
+				echo Count( $URLs ) . ' urls to be fetched...' . PHP_EOL;
+				
 				$this->Fetch( $URLs );
 			}
 			while( !Empty( $this->URLsToFetch ) );
@@ -161,9 +163,24 @@
 					}
 					else
 					{
-						$this->HandleResponse( $Request, $Data );
+						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
+						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 						
-						echo 'Fetched - ' . $URL . PHP_EOL;
+						if( $LengthExpected !== $LengthDownload )
+						{
+							echo 'Wrong Length (' . $LengthDownload . ' != ' . $LengthExpected . ') - ' . $URL . PHP_EOL;
+							
+							$this->URLsToFetch[ ] = Array(
+								'URL'  => $URL,
+								'File' => $Request
+							);
+						}
+						else
+						{
+							$this->HandleResponse( $Request, $Data );
+							
+							echo 'Fetched - ' . $URL . PHP_EOL;
+						}
 					}
 					
 					if( Count( $URLs ) )
