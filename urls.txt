@@ -16,6 +16,8 @@ Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_ge
 Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
 Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
+Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
+Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
@@ -29,6 +31,7 @@ Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*T
 Scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js?_=*TIMENOW*&l=english
 Scripts/market.js|http://cdn.steamcommunity.com/public/javascript/market.js?_=*TIMENOW*&l=english
 Scripts/profile_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_functions.js?_=*TIMENOW*&l=english
+Scripts/screenshot_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/screenshot_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
