@@ -89,7 +89,14 @@
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
 			
-			File_Put_Contents( __DIR__ . '/' . $File, $Data );
+			$File = __DIR__ . '/' . $File;
+			
+			if( File_Exists( $File ) && File_Get_Contents( $File ) === $Data )
+			{
+				return;
+			}
+			
+			File_Put_Contents( $File, $Data );
 		}
 		
 		private function Fetch( $URLs )
