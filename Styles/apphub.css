@@ -767,6 +767,13 @@ a.apphub_more_friends_who_play:hover
 	background: transparent;
 }
 
+.apphub_CardRating.news
+{
+	float: right;
+	min-width: 0px;
+	margin-right: 10px;
+}
+
 .apphub_CardTitle
 {
 	color: white;
@@ -1004,6 +1011,12 @@ a.apphub_more_friends_who_play:hover
 	margin-top: 30px;
 }
 
+.apphub_CardCommentCount.alignNews
+{
+	position: relative;
+	float: right;
+}
+
 /* workshop */
 .apphub_CardBG
 {
@@ -1184,6 +1197,13 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentNewsDesc.shacknews p
 {
 	margin-bottom: 10px;
+}
+
+.apphub_NewsCardStats
+{
+	position: absolute;
+	bottom: 15px;
+	right: 0px;
 }
 
 /* guides */

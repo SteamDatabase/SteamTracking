@@ -1,5 +1,7 @@
 
 div.profile_page {
+	position: relative;
+
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_bg.jpg' );
 	background-repeat: repeat-x;
 	background-color: #262627;
@@ -33,7 +35,7 @@ div.profile_page.has_profile_background {
 
 .profile_header {
 	width: 926px;
-	margin: 0px auto;
+	margin: 0 auto;
 
 	padding-top: 24px;
 	height: 200px;
@@ -204,6 +206,20 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	font-size: 13px;
 }
 
+.profile_content.has_profile_background
+{
+	background: none;
+
+	/*todo: change profile header to not have the center column baked in*/
+	margin-top: -14px;
+	overflow: hidden;
+	padding-top: 14px;
+}
+
+.profile_content_inner {
+	position: relative;
+}
+
 .profile_leftcol {
 	width: 636px;
 	float: left;
@@ -233,7 +249,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	background-color: #141414;
 
 	border-radius: 3px;
-	padding: 0 11px 11px 11px;
+	padding: 0 10px 11px 10px;
 
 	margin-bottom: 12px;
 }
@@ -261,7 +277,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 }
 
 .showcase_content_bg {
-	background-color: #000000;
+	background-color: #101214;
 	background-color: rgba( 0, 0, 0, 0.3 );
 	padding: 8px;
 	border-radius: 3px;
@@ -336,13 +352,17 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin-left: 0;
 }
 
-.showcase_gamecollector_game {
+.showcase_slot {
 	display: block;
 	float: left;
 	position: relative;
+}
+
+.showcase_gamecollector_game {
 	width: 148px;
 	height: 56px;
 	margin-left: 7px;
+	line-height: 56px;
 }
 
 .showcase_gamecollector_games .showcase_gamecollector_game:first-child {
@@ -355,12 +375,164 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 }
 
 .showcase_gamecollector_game.openslot {
-	border: 2px dashed #5491CF;
-	border-radius: 5px;
 	width: 144px;
 	height: 52px;
-	text-align: center;
 	line-height: 52px;
+}
+
+.item_showcase .item_count_stat {
+	float: left;
+	margin-left: 12px;
+	padding-top: 14px;
+}
+
+
+.item_showcase_item {
+	width: 96px;
+	height: 96px;
+	line-height: 96px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+}
+
+.trade_showcase_items {
+	margin-bottom: 10px;
+}
+
+.tradable_item {
+	margin-left: 5px;
+	margin-bottom: 2px;
+	border: 1px solid #3a3a3a;
+	background-color: #292929;
+}
+
+.item_showcase_item:first-child {
+	margin-left: 0;
+}
+
+.item_showcase_item img.item_image {
+	width: 96px;
+	height: 96px;
+}
+
+.item_showcase_item.openslot {
+	width: 92px;
+	height: 92px;
+	line-height: 92px;
+}
+
+.item_showcase_item.tradable_item.openslot {
+	width: 94px;
+	height: 94px;
+	line-height: 94px;
+}
+
+.showcase_stats_trading {
+	margin-bottom: 12px;
+}
+
+.favoritegame_showcase_game {
+	position: relative;
+	height: 69px;
+	padding-left: 200px;
+
+	margin-bottom: 22px;
+}
+
+.favoritegame_showcase_game.showcase_slot {
+	float: none;
+}
+
+.favoritegame_showcase_game .favorite_game_cap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 184px;
+	height: 69px;
+}
+
+.favoritegame_showcase_game .favorite_game_name {
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	font-size: 24px;
+	padding-top: 10px;
+	color: #ffffff;
+}
+
+.favoritegame_showcase_game .showcase_openslot_placeholder {
+	line-height: 69px;
+}
+
+.favoritegroup_showcase_group {
+	position: relative;
+	height: 157px;
+	padding-left: 166px;
+
+	margin-bottom: 22px;
+}
+
+.favoritegroup_showcase_group.showcase_slot {
+	float: none;
+}
+
+.favoritegroup_showcase_group .favoritegroup_avatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 157px;
+	height: 157px;
+}
+
+.favoritegroup_showcase_group .favoritegroup_avatar img {
+	width: 157px;
+	height: 157px;
+}
+
+.favoritegroup_showcase_group .favoritegroup_content {
+	position: relative;
+	height: 157px;
+}
+
+.favoritegroup_showcase_group .showcase_openslot_placeholder {
+	line-height: 157px;
+}
+
+.favoritegroup_showcase_group .favoritegroup_namerow {
+	font-size: 16px;
+	color: #828282;
+	vertical-align: bottom;
+	line-height: 32px;
+}
+
+.favoritegroup_showcase_group .favoritegroup_namerow .favoritegroup_name {
+	font-size: 24px;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+}
+
+.showcase_stats_row.favoritegroup_stats .showcase_stat {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.showcase_stat.favoritegroup_ingame .value {
+	color: #8bc53f;
+}
+
+.showcase_stat.favoritegroup_online .value {
+	color: #62a7e3;
+}
+
+.showcase_stat.favoritegroup_inchat {
+	background-color: #192b3b;
+	border-radius: 3px;
+
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.favoritegroup_stats.showcase_stats_row {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .profile_recentgame_header {
@@ -429,7 +601,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	font-size: 14px;
 }
 
-.recent_game .game_info_stats {
+.recent_game .game_info_stats, .favoritegame_showcase .game_info_stats {
 	padding: 9px 11px 10px;
 	background-color: #282828;
 	border-radius: 3px;
@@ -734,8 +906,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .badges_tab_active {
 	background-color: #364860;
 	float: left;
-	padding: 11px;
-	font-size: 18px;
+	padding: 11px 11px 11px 15px;
+	font-size: 17px;
 	color: white;
 	border-top: solid 1px #7b8795;
 	border-left: solid 1px #3b4a5d;
@@ -747,12 +919,13 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 .badges_tab_inactive {
 	background-color: transparent;
-	padding: 10px;
+	padding: 10px 10px 10px 15px;
 	float: left;
-	font-size: 18px;
+	font-size: 17px;
 	color: #6f6f6f;
 	text-decoration: none;
 	min-width: 180px;
+	margin-top: 2px;
 }
 
 .badges_tab_inactive a:hover {
@@ -763,23 +936,28 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .badges_tab_content {
 	width: 946px;
 	min-height: 200px;
-	border-top: solid 1px #364660;
-	background: -moz-linear-gradient(top, #364860 5%, #262626 80px);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#364860), color-stop(80px,#262626));background: -webkit-linear-gradient(top, #364860 5%,#262626 80px);background: -o-linear-gradient(top, #364860 5%,#262626 80px);background: -ms-linear-gradient(top, #364860 5%,#262626 80px);background: linear-gradient(to bottom, #364860 5%,#262626 80px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#364860', endColorstr='#262626',GradientType=0 );}
+	padding-top: 16px;
+	margin-top: 1px;
+	background-image:url( 'http://cdn.steamcommunity.com/public/images/profile/badgepg_bg.png' );
+	background-repeat: no-repeat;
+
+}
 
 .badge_list .badge {
 	position: relative;
 	height: 64px;
 	background-color: #181818;
+	border-radius: 4px;
 	border-top: solid 1px #343434;
 	border-bottom: solid 1px #000000;
 	padding: 18px 18px 18px 100px;
 	z-index: 2;
-	border-radius: 4px;
 	background: -moz-linear-gradient(top, #242424 0%, #141414 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242424), color-stop(100%,#141414));background: -webkit-linear-gradient(top, #242424 0%,#141414 100%);background: -o-linear-gradient(top, #242424 0%,#141414 100%);background: -ms-linear-gradient(top, #242424 0%,#141414 100%);background: linear-gradient(to bottom, #242424 0%,#141414 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
 
 .badge_list .badge_entry {
 	margin-bottom: 9px;
 }
+
 
 .badge_logo {
 	position: absolute;
@@ -859,6 +1037,10 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 .badge_actions {
 	float: right;
+}
+
+.badge_progress.hasdetails:hover {
+	border: solid 1px #6CA1D5;
 }
 
 .badge_action_controls {
@@ -1411,25 +1593,74 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 .profile_background_holder {
 	position: absolute;
-	width: 100%;
+	top: 0;
 	left: 0;
-	top: 104px;
+	bottom: 0;
+	right: 0;
 	overflow: hidden;
 	z-index: 0;
 	min-width: 972px;
 }
 
-.profile_background_holder.no_header {
-	top: 0;
-}
-
 .profile_background_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	text-align: center;
 	background-position: center top;
 	background-repeat: no-repeat;
-	height: 1600px;
-	min-width: 972px;
 }
+
+.profile_background_holder_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #000000;
+	z-index: 0;
+}
+
+.profile_background_image_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-position: center -240px;
+	background-repeat: no-repeat;
+	z-index: 0;
+
+	filter: blur(3px);	/* theoretical future browsers */
+	-moz-filter: blur(3px);
+	-webkit-filter: blur(3px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='3')";
+}
+
+.profile_background_image_content.in_client {
+	/* client perf killer */
+	filter: none;
+	-webkit-filter: none;
+}
+
+.profile_background_overlay_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+
+	background-color: #171717;
+
+	opacity: .85;
+	filter: alpha(opacity=85);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+
 
 .profile_customization.customization_edit {
 }
@@ -1446,14 +1677,19 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	border-color: #ffffff;
 }
 
-.newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover {
+.showcase_notes {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover {
 	text-decoration: underline;
 }
 
 .profile_customization_edit_icon {
 	display: inline-block;
 	vertical-align: middle;
-	background-image: url( 'data:image/png;base64,' );
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJFQ0Q1M0UyOTAwODExRTJCOEQxQjI4RTMyMTI3NEIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJFQ0Q1M0UzOTAwODExRTJCOEQxQjI4RTMyMTI3NEIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkVDRDUzRTA5MDA4MTFFMkI4RDFCMjhFMzIxMjc0QjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkVDRDUzRTE5MDA4MTFFMkI4RDFCMjhFMzIxMjc0QjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6u3ykzAAAAvUlEQVR42oxTCxHDIAwNDpAwCUiYhEpAQutgDiqhEiqhczAJnYNKSJNb2AENJe/ucXySd+EFADpARE/c8IeDGLMzAIPAjCUOswAFDMQncckVTAKSnMoeZc3zuStAB0GCc6y8X8U1TdvxChb0FoENdQQltut4QmxctVjERvJyY/StaYxPp83/iWbaXpumCtDwkBbVjgfDKy1a9+qZ1qpgFfe9eDGAESzgss8xEb/WZOfcO1UwKlewgP8GnAIMACuKvjkRumvoAAAAAElFTkSuQmCC' );
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 16px;
