@@ -1517,6 +1517,11 @@ h2 span.note {
 	font-size: 12px;
 }
 
+h2 span.note a, h2 span.note a:hover, h2 span.note a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
 h2 .note em {
 	color: #5e5e61;
 	font-weight: normal;
@@ -1560,6 +1565,7 @@ div.early_access_announcements {
 		div.early_access_announcements .post h1 {
 			color: #529cde;
 			font-size: 24px;
+			line-height: 29px;
 		}
 
 		div.early_access_announcements .post a {
@@ -1574,6 +1580,7 @@ div.early_access_announcements {
 			height: auto;
 			margin: 5px 0;
 			background: transparent;
+			line-height: 14px;
 		}
 
 		div.early_access_announcements .post p {
@@ -1585,7 +1592,7 @@ div.early_access_announcements {
 		}
 
 		div.early_access_announcements .post .container {
-			height: 125px;
+			height: 197px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
