@@ -3456,3 +3456,16 @@ function CalculateAmountToSendForDesiredReceivedAmount( receivedAmount )
 	return nAmountToSend;
 }
 
+function SelectItemDialogOnSelect()
+{
+	var item = g_ActiveInventory.selectedItem;
+	if ( item && window.parent && window.parent.OnItemSelected )
+	{
+		window.parent.OnItemSelected( item );
+	}
+	else
+	{
+		alert( 'There was a problem saving your selection, please try again later.' );
+	}
+}
+

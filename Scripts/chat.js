@@ -276,7 +276,7 @@ CChatFriend.prototype.IncrementUnreadMessageCount = function()
 var g_notification;
 CChatFriend.prototype.DisplayUnreadMessageTitleNag = function()
 {
-	CTitleManager.AddMessage( 'unread_' + this.m_unAccountID, '%s sent a message'.replace( /%s/, this.m_strName ) );
+	CTitleManager.AddMessage( 'unread_' + this.m_unAccountID, '#WebChat_NewChatMessage_Title'.replace( /%s/, this.m_strName ) );
 
 };
 
@@ -351,26 +351,26 @@ CChatFriend.prototype.GetStatusDescription = function()
 {
 	if ( this.m_ePersonaState != 0 && this.m_nInGameAppID )
 	{
-		return 'In-Game<br>' + this.m_strInGameName;
+		return '#Profile_InGame<br>' + this.m_strInGameName;
 	}
 	else
 	{
 		switch ( this.m_ePersonaState )
 		{
 			case 0:
-				return 'Offline';
+				return '#Profile_Offline';
 			case 1:
-				return 'Online';
+				return '#Profile_Online';
 			case 4:
-				return 'Snooze';
+				return '#Profile_Snooze';
 			case 3:
-				return 'Away';
+				return '#Profile_Away';
 			case 2:
-				return 'Busy';
+				return '#Profile_Busy';
 			case 5:
-				return 'Looking to Trade';
+				return '#Profile_LookingToTrade';
 			case 6:
-				return 'Looking to Play';
+				return '#Profile_LookingToPlay';
 			default:
 				return 'offline';
 		}
@@ -641,12 +641,12 @@ CFriendsList.prototype.UpdateOnlineFriendCountDisplay = function()
 
 		if ( this.m_cInGameFriends )
 		{
-			strText += '%s IN GAME'.replace( /%s/, this.m_cInGameFriends );
+			strText += '#WebChat_NumberOfFriendsInGameLabel'.replace( /%s/, this.m_cInGameFriends );
 			strText += ', ';
 		}
 		if ( this.m_cOnlineFriends > 0 )
 		{
-			strText += '%s ONLINE'.replace( /%s/, this.m_cOnlineFriends );
+			strText += '#WebChat_NumberOfFriendsOnlineLabel'.replace( /%s/, this.m_cOnlineFriends );
 		}
 
 		// update
@@ -765,7 +765,7 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	this.m_rgFriendLists = [];
 
 	// create a special group to hold friends you've recently chatted with
-	this.m_RecentChatsList = new CFriendsList( 'RECENT CHATS', rgRecentChatFriends, CFriendsList.k_EFriendsListType_OnlineAndOffline );
+	this.m_RecentChatsList = new CFriendsList( '#WebChat_FriendGroup_RecentChats', rgRecentChatFriends, CFriendsList.k_EFriendsListType_OnlineAndOffline );
 	this.m_rgFriendLists.push( this.m_RecentChatsList );
 
 	rgFriendGroupData.sort( function( a, b ) { return a.name.toLowerCase() > b.name.toLowerCase(); } );
@@ -792,8 +792,8 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 			continue;
 		rgUngroupedFriendsGroupMembers.push( rgUngroupedFriends[unAccountID] );
 	}
-	this.m_rgFriendLists.push( new CFriendsList( 'FRIENDS', rgUngroupedFriendsGroupMembers ) );
-	this.m_rgFriendLists.push( new CFriendsList( 'OFFLINE', rgAllFriends, CFriendsList.k_EFriendsListType_OfflineOnly, true /* start hidden */ ) );
+	this.m_rgFriendLists.push( new CFriendsList( '#WebChat_FriendGroup_Friends', rgUngroupedFriendsGroupMembers ) );
+	this.m_rgFriendLists.push( new CFriendsList( '#WebChat_FriendGroup_Offline', rgAllFriends, CFriendsList.k_EFriendsListType_OfflineOnly, true /* start hidden */ ) );
 
 	this.m_User = new CChatFriend( rgCurrentUser );
 	this.m_User.m_bChatHistoryLoaded = true;	//no history to load for self
@@ -828,7 +828,7 @@ CWebChat.prototype.Initialize = function()
 	// ask if we can show toasts
 	if ( window.webkitNotifications && window.webkitNotifications.checkPermission() == 1 )
 	{
-		$J('#toast_enable').html( 'Enable desktop notifications' );
+		$J('#toast_enable').html( '#WebChat_EnableToasts' );
 		$J('#toast_enable').click( function() {
 			window.webkitNotifications.requestPermission();
 			return false;
@@ -1051,7 +1051,7 @@ CWebChat.prototype.PollComplete = function( pollid, data )
 
 							if ( window.webkitNotifications && window.webkitNotifications.checkPermission() == 0 )
 							{
-								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '%s sent a message'.replace( /%s/, Friend.m_strName ), message.text );
+								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '#WebChat_NewChatMessage_Title'.replace( /%s/, Friend.m_strName ), message.text );
 								var fnOnClick = Friend.m_fnOnClick;
 								notification.onclick = function() { fnOnClick(); window.focus(); };
 								notification.show();
@@ -1190,7 +1190,7 @@ CWebChat.prototype.OnChatHistoryLoaded = function ( Friend, ChatDialog, data )
 	ChatDialog.m_elContent.html('');	//clear the throbber
 
 	var elPhishingWarning = $J( '<div/>', {'class': 'chat_message chat_message_system' } );
-	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( 'Never tell your password to anyone.' ) );
+	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( '#WebChat_NeverTellYourPassword' ) );
 	ChatDialog.m_elContent.append( elPhishingWarning );
 
 	for ( var i = 0; i < Friend.m_rgChatLog.length; i++ )
@@ -1276,13 +1276,13 @@ CWebChat.prototype.ToggleSound = function()
 	if ( this.m_bSoundEnabled )
 	{
 		this.m_bSoundEnabled = false;
-		$J('#sound_enable').text( 'Disabled' );
+		$J('#sound_enable').text( '#WebChat_Sound_Disabled' );
 		SetValueLocalStorage( 'webchat_soundmuted' );
 	}
 	else
 	{
 		this.m_bSoundEnabled = true;
-		$J('#sound_enable').text( 'Enabled' );
+		$J('#sound_enable').text( '#WebChat_Sound_Enabled' );
 		UnsetValueLocalStorage( 'webchat_soundmuted' );
 	}
 }
@@ -1325,7 +1325,7 @@ function OnWebchatLaunchURL( params )
 }
 
 var CTitleManager = {
-	m_rgCurrentMessages: [ {key: 'base', message: 'Steam Community :: Chat' } ],
+	m_rgCurrentMessages: [ {key: 'base', message: '#Community_SteamCommunity :: #WebChat_Title' } ],
 	m_nTimer: -1,
 	m_iCurrentMessage: 0,
 	m_bWindowHasFocus: true,
