@@ -209,13 +209,13 @@ function OnIsCompanyChange()
 		$('lastnameblock').style.display = 'none';
 		$('uscitizenblock').style.display = 'none';
 		$('uscitizen').checked = false;
-		$('firstnamelabel').innerHTML = '#Workshop_PaymentInfo_CompanyName';
+		$('firstnamelabel').innerHTML = 'Company Name';
 	}
 	else
 	{
 		$('lastnameblock').style.display = 'block';
 		$('uscitizenblock').style.display = 'block';
-		$('firstnamelabel').innerHTML = '#Workshop_PaymentInfo_FirstName';
+		$('firstnamelabel').innerHTML = 'First Name';
 	}
 }
 
@@ -270,7 +270,7 @@ function UpdateBankInfo()
 		{
 			$('bankstate_select').style.display = 'block';
 			$('bankroutingnumberrow').style.display = 'block';
-			$('bankroutingnumberlabel').innerHTML = '#Workshop_PaymentInfo_BankRoutingNumber';
+			$('bankroutingnumberlabel').innerHTML = 'Routing Number';
 		}
 		else
 		{
@@ -279,7 +279,7 @@ function UpdateBankInfo()
 			if ( $('bankcountry').value == 'CA' )
 			{
 				$('bankroutingnumberrow').style.display = 'block';
-				$('bankroutingnumberlabel').innerHTML = '#Workshop_PaymentInfo_BankCanadaTransitNumber';
+				$('bankroutingnumberlabel').innerHTML = 'Canadian Transit Number';
 			}
 			else if ( IsIBANCountry( $('bankcountry').value ) )
 			{
@@ -334,7 +334,7 @@ function validateFields()
 		{
 			if ( $( 'firstname' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_companyname<br/>';
+				errorString += 'Please enter a company name.<br/>';
 			}
 		 	$( 'lastname' ).value = '';
 		}
@@ -342,67 +342,67 @@ function validateFields()
 		{
 			if ( $( 'firstname' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_firstname<br/>';
+				errorString += 'Please enter a first name.<br/>';
 			}
 			if ( $( 'lastname' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_lastname<br/>';
+				errorString += 'Please enter a last name.<br/>';
 			}
 		}
 		if ( $( 'email' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_email<br/>';
+			errorString += 'Please enter your email address.<br/>';
 		}
 
 				if ( $( 'address1' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_address<br/>';
+			errorString += 'Please enter your address.<br/>';
 		}
 		if ( $( 'city' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_city<br/>';
+			errorString += 'Please enter your city.<br/>';
 		}
 		if ( $('country').value == 'US' )
 		{
 			if ( $( 'zip' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_postal<br/>';
+				errorString += 'Please enter your zip or postal code.<br/>';
 			}
 		}
 
 		if ( $( 'phone' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_phone<br/>';
+			errorString += 'Please enter your phone number, including area code.<br/>';
 		}
 
 				if ( $( 'bankname' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_bankname<br/>';
+			errorString += 'Please enter your bank\'s name.<br/>';
 		}
 		if ( $( 'bankaccountholdername' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_bankaccountholdername<br/>';
+			errorString += 'Please enter your bank account holder name (must match bank records).<br/>';
 		}
 
 				if ( $( 'bankaddress1' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_bankaddress<br/>';
+			errorString += 'Please enter your bank\'s address.<br/>';
 		}
 		if ( $( 'bankcity' ).value.length < 1 )
 		{
-			errorString += '#Workshop_error_bad_bankcity<br/>';
+			errorString += 'Please enter your bank\'s city.<br/>';
 		}
 		if ( $('bankcountry').value == 'US' )
 		{
 			if ( $( 'bankzip' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_bankpostal<br/>';
+				errorString += 'Please enter your bank\'s zip or postal code.<br/>';
 			}
 		}
 
 				if ( $( 'bankaccountnumber' ).value.length < 1 && !IsIBANCountry( $('bankcountry').value ) )
 		{
-			errorString += '#Workshop_error_bad_bankaccountnumber<br/>';
+			errorString += 'Please enter your bank account number.<br/>';
 		}
 		if ( $( 'bankcountry' ).value == 'US' )
 		{
@@ -410,7 +410,7 @@ function validateFields()
 			$('swiftcode').value = '';
 			if ( $( 'bankaccountroutingnumber' ).value.length != 9 && $( 'bankaccountroutingnumber' ).value != $( 'storedroutingnumber' ).value)
 			{
-				errorString += '#Workshop_error_bad_bankroutingnumber<br/>';
+				errorString += 'Please enter your bank\'s routing number (9 digits).<br/>';
 			}
 		}
 		else if ( $( 'bankcountry' ).value == 'CA' )
@@ -419,18 +419,18 @@ function validateFields()
 			$('swiftcode').value = '';
 			if ( $( 'bankaccountroutingnumber' ).value.length != 9 && $( 'bankaccountroutingnumber' ).value != $( 'storedroutingnumber' ).value)
 			{
-				errorString += '#Workshop_error_bad_canadatransitnumber<br/>';
+				errorString += 'Please enter the Canadian Transit Number (9 digits with a leading 0).<br/>';
 			}
 		}
 		else if ( IsIBANCountry( $('bankcountry').value ) )
 		{
 			if ( $( 'bankiban' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_bankiban<br/>';
+				errorString += 'Please enter your bank\'s IBAN.<br/>';
 			}
 			if ( $( 'swiftcode' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_bankswift<br/>';
+				errorString += 'Please enter your bank\'s SWIFT code.<br/>';
 			}
 		}
 		else
@@ -438,7 +438,7 @@ function validateFields()
 			$('bankiban').value = '';
 			if ( $( 'swiftcode' ).value.length < 1 )
 			{
-				errorString += '#Workshop_error_bad_bankswift<br/>';
+				errorString += 'Please enter your bank\'s SWIFT code.<br/>';
 			}
 		}
 	}
@@ -783,7 +783,7 @@ function AcceptSplit( publishedfileid )
 
 function FinalizeContributors( publishedfileid )
 {
-	if ( confirm( '#SharedFiles_OwnerControl_FinalizeContributorsPrompt' ) != true )
+	if ( confirm( 'Are you sure you want to finalize the contributors? You will be unable to add or remove them after this step.' ) != true )
 	{
 		return;
 	}
@@ -892,7 +892,7 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 
 function EditPublishedFileChangeLog( publishedFileID, changeLog )
 {
-	var dialog = ShowPromptWithTextAreaDialog( '#SharedFiles_ChangeLog_Edit_Dialog', changeLog['change_description' ], null, null, 8000 );
+	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
 
 	dialog.done( function( data ) {
 		changeLog['change_description'] = data;

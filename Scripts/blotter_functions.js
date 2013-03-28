@@ -276,7 +276,7 @@ function Blotter_PostStatus( textboxid, appboxid, posturl )
 			if ( response && response.message )
 				$('blotter_statuspost_entry_error').update( response.message );
 			else
-				$('blotter_statuspost_entry_error').update( '#Blotter_PostingUnavailable' );
+				$('blotter_statuspost_entry_error').update( 'Posting status updates is unavailable right now' );
 		}
 	});
 
@@ -288,7 +288,7 @@ function Blotter_PostStatus( textboxid, appboxid, posturl )
 
 function Blotter_DeletePostedStatus( postid, statusid, posturl )
 {
-	if ( !confirm( '#Blotter_DeletePostInfo' ) )
+	if ( !confirm( 'Delete this status update?' ) )
 		return;
 
 	new Ajax.Request( posturl, {

@@ -1,5 +1,5 @@
 
-var postCommentText = "#Comments_Post_Comment_Here";
+var postCommentText = "Post a comment here...";
 
 function checkCommentInput()
 {
@@ -53,7 +53,7 @@ function checkCommentLength()
 	tbox = document.getElementById( 'commentInput' );
 	if ( tbox.value.length > 1000 || tbox.value.length < 1 )
 	{
-		alert( '#Error_CommentLength' );
+		alert( 'Comments must be between 1 and 1000 characters in length.' );
 		return false;
 	}
 	return true;
