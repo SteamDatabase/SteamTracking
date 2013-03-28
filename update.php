@@ -69,21 +69,19 @@
 			// Handle item schemas differently
 			if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
 			{
-				$Data = JSON_Decode( $Data, true );
+				$DataJSON = JSON_Decode( $Data, true );
 				
-				if( !isset( $Data[ 'result' ][ 'items_game_url' ] ) )
-				{
-					echo 'Failed to fetch SchemaURL - ' . $File . PHP_EOL;
-				}
-				else
+				$File = SubStr( $File, 3 );
+				
+				if( isset( $DataJSON[ 'result' ][ 'items_game_url' ] ) )
 				{
 					$this->URLsToFetch[ ] = Array(
-						'URL'  => $Data[ 'result' ][ 'items_game_url' ],
-						'File' => SubStr( $File, 3 ) // GetItemSchema -> ItemSchema
+						'URL'  => $DataJSON[ 'result' ][ 'items_game_url' ],
+						'File' => Str_Replace( 'ItemSchema/', 'ItemSchema/API/', $File )
 					);
 				}
 				
-				return;
+				unset( $DataJSON );
 			}
 			
 			// Stupid store CDN keeps switching subdomains between resources

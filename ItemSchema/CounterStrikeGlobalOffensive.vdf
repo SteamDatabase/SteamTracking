@@ -1,389 +1,438 @@
-"items_game"
 {
-	"game_info"
-	{
-		"first_valid_class"		"1"
-		"last_valid_class"		"1000"
-		"first_valid_item_slot"		"0"
-		"last_valid_item_slot"		"10"
-		"num_item_presets"		"4"
-	}
-	"rarities"
-	{
-		"common"
-		{
-			"value"		"1"
-			"loc_key"		"Rarity_Common"
-			"color"		"desc_common"
-			"next_rarity"		"uncommon"
-		}
-		"uncommon"
-		{
-			"value"		"2"
-			"loc_key"		"Rarity_Uncommon"
-			"color"		"desc_uncommon"
-			"next_rarity"		"rare"
-		}
-		"rare"
-		{
-			"value"		"3"
-			"loc_key"		"Rarity_Rare"
-			"color"		"desc_rare"
-			"next_rarity"		"mythical"
-		}
-		"mythical"
-		{
-			"value"		"4"
-			"loc_key"		"Rarity_Mythical"
-			"color"		"desc_mythical"
-		}
-		"legendary"
-		{
-			"value"		"5"
-			"loc_key"		"Rarity_Legendary"
-			"color"		"desc_legendary"
-		}
-		"ancient"
-		{
-			"value"		"6"
-			"loc_key"		"Rarity_Ancient"
-			"color"		"desc_ancient"
-		}
-		"immortal"
-		{
-			"value"		"7"
-			"loc_key"		"Rarity_Immortal"
-			"color"		"desc_immortal"
-		}
-	}
-	"qualities"
-	{
-		"normal"
-		{
-			"value"		"0"
-			"hexColor"		"#B2B2B2"
-		}
-		"genuine"
-		{
-			"value"		"1"
-			"hexColor"		"#4D7455"
-		}
-		"vintage"
-		{
-			"value"		"2"
-			"hexColor"		"#476291"
-		}
-		"unusual"
-		{
-			"value"		"3"
-			"hexColor"		"#8650AC"
-		}
-		"unique"
-		{
-			"value"		"4"
-			"hexColor"		"#D2D2D2"
-		}
-		"community"
-		{
-			"value"		"5"
-			"hexColor"		"#70B04A"
-		}
-		"developer"
-		{
-			"value"		"6"
-			"hexColor"		"#A50F79"
-		}
-		"selfmade"
-		{
-			"value"		"7"
-			"hexColor"		"#70B04A"
-		}
-		"customized"
-		{
-			"value"		"8"
-			"hexColor"		"#00FF00"
-		}
-		"strange"
-		{
-			"value"		"9"
-			"hexColor"		"#CF6A32"
-		}
-		"completed"
-		{
-			"value"		"10"
-			"hexColor"		"#8650AC"
-		}
-		"haunted"
-		{
-			"value"		"11"
-			"hexColor"		"#8650AC"
-		}
-		"tournament"
-		{
-			"value"		"12"
-			"hexColor"		"#8650AC"
-		}
-	}
-	"colors"
-	{
-		"desc_level"
-		{
-			"color_name"		"ItemAttribLevel"
-			"hex_color"		"#756b5e"
-		}
-		"desc_attrib_neutral"
-		{
-			"color_name"		"ItemAttribNeutral"
-			"hex_color"		"#6c7075"
-		}
-		"desc_attrib_positive"
-		{
-			"color_name"		"ItemAttribPositive"
-			"hex_color"		"#99ccff"
-		}
-		"desc_attrib_negative"
-		{
-			"color_name"		"ItemAttribNegative"
-			"hex_color"		"#ff4040"
-		}
-		"desc_itemset_name"
-		{
-			"color_name"		"ItemSetName"
-			"hex_color"		"#9da1a9"
-		}
-		"desc_itemset_equipped"
-		{
-			"color_name"		"ItemSetItemEquipped"
-			"hex_color"		"#9da1a9"
-		}
-		"desc_itemset_missing"
-		{
-			"color_name"		"ItemSetItemMissing"
-			"hex_color"		"#6c7075"
-		}
-		"desc_bundle"
-		{
-			"color_name"		"ItemBundleItem"
-			"hex_color"		"#95af0c"
-		}
-		"desc_limited_use"
-		{
-			"color_name"		"ItemLimitedUse"
-			"hex_color"		"#00a000"
-		}
-		"desc_flags"
-		{
-			"color_name"		"ItemFlags"
-			"hex_color"		"#756b5e"
-		}
-		"desc_common"
-		{
-			"color_name"		"ItemRarityCommon"
-			"hex_color"		"#b0c3d9"
-		}
-		"desc_uncommon"
-		{
-			"color_name"		"ItemRarityUncommon"
-			"hex_color"		"#5e98d9"
-		}
-		"desc_rare"
-		{
-			"color_name"		"ItemRarityRare"
-			"hex_color"		"#4b69ff"
-		}
-		"desc_mythical"
-		{
-			"color_name"		"ItemRarityMythical"
-			"hex_color"		"#8847ff"
-		}
-		"desc_legendary"
-		{
-			"color_name"		"ItemRarityLegendary"
-			"hex_color"		"#d32ce6"
-		}
-		"desc_ancient"
-		{
-			"color_name"		"ItemRarityAncient"
-			"hex_color"		"#eb4b4b"
-		}
-		"desc_immortal"
-		{
-			"color_name"		"ItemRarityImmortal"
-			"hex_color"		"#e4ae39"
-		}
-		"desc_strange"
-		{
-			"color_name"		"Strange"
-			"hex_color"		"#CF6A32"
-		}
-	}
-	"player_loadout_slots"
-	{
-		"0"		"slot0"
-		"1"		"slot1"
-		"2"		"slot2"
-		"3"		"slot3"
-		"4"		"slot4"
-		"5"		"slot5"
-		"6"		"slot6"
-	}
-	"prefabs"
-	{
-		"csgo_league"
-		{
-			"item_class"		"tool"
-			"item_type_name"		"#CSGO_ItemType_League_Pass"
-			"item_name"		"#CSGO_ItemType_League_Pass"
-			"item_quality"		"unique"
-			"item_rarity"		"common"
-			"item_slot"		"none"
-			"min_ilevel"		"1"
-			"max_ilevel"		"1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
-			"tool"
+	"result": {
+		"status": 1,
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.f299480c3b46ce1d8e1950129c8d730876d73fb5.txt",
+		"qualities": {
+			"normal": 0,
+			"genuine": 1,
+			"vintage": 2,
+			"unusual": 3,
+			"unique": 4,
+			"community": 5,
+			"developer": 6,
+			"selfmade": 7,
+			"customized": 8,
+			"strange": 9,
+			"completed": 10,
+			"haunted": 11,
+			"tournament": 12
+		},
+		"qualityNames": {
+			"normal": "normal",
+			"genuine": "genuine",
+			"vintage": "vintage",
+			"unusual": "unusual",
+			"unique": "unique",
+			"community": "community",
+			"developer": "developer",
+			"selfmade": "selfmade",
+			"customized": "customized",
+			"strange": "strange",
+			"completed": "completed",
+			"haunted": "haunted",
+			"tournament": "tournament"
+		},
+		"originNames": [
 			{
-				"type"		"league_play_pass"
-				"use_string"		"#ConsumeItem"
+				"origin": 0,
+				"name": "Timed Drop"
+			},
+			{
+				"origin": 1,
+				"name": "Achievement"
+			},
+			{
+				"origin": 2,
+				"name": "Purchased"
+			},
+			{
+				"origin": 3,
+				"name": "Traded"
+			},
+			{
+				"origin": 4,
+				"name": "Crafted"
+			},
+			{
+				"origin": 5,
+				"name": "Store Promotion"
+			},
+			{
+				"origin": 6,
+				"name": "Gifted"
+			},
+			{
+				"origin": 7,
+				"name": "Support Granted"
+			},
+			{
+				"origin": 8,
+				"name": "Found in Crate"
+			},
+			{
+				"origin": 9,
+				"name": "Earned"
+			},
+			{
+				"origin": 10,
+				"name": "Third-Party Promotion"
+			},
+			{
+				"origin": 11,
+				"name": "Wrapped Gift"
+			},
+			{
+				"origin": 12,
+				"name": "Halloween Drop"
+			},
+			{
+				"origin": 13,
+				"name": "Steam Purchase"
+			},
+			{
+				"origin": 14,
+				"name": "Foreign Item"
+			},
+			{
+				"origin": 15,
+				"name": "CD Key"
+			},
+			{
+				"origin": 16,
+				"name": "Collection Reward"
+			},
+			{
+				"origin": 17,
+				"name": "Preview Item"
+			},
+			{
+				"origin": 18,
+				"name": "Steam Workshop Contribution"
+			},
+			{
+				"origin": 19,
+				"name": "Periodic Score Reward"
+			},
+			{
+				"origin": 20,
+				"name": "Recycling"
+			},
+			{
+				"origin": 21,
+				"name": "Tournament Drop"
 			}
-			"capabilities"
+		]
+		,
+		"items": [
 			{
-				"usable_gc"		"1"
-				"usable_out_of_game"		"1"
-			}
-			"attributes"
-			{
-				"disallow recycling"
-				{
-					"attribute_class"		"disallow_recycling"
-					"value"		"1"
+				"name": "Community Season One Spring 2013",
+				"defindex": 1000,
+				"item_class": "craft_item",
+				"item_type_name": "CSGO_Type_Ticket",
+				"item_name": "CSGO_Ticket_CommunitySeasonOneSpring2013",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 255,
+				"image_inventory": "backpack\/crafting\/community_support_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass.daebdb6a6aa394adb3e87e6a4038d8114176a490.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_large.3bc2d963e3c144b2035cf029ec8ff661ad4b0147.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_play_pass",
+					"use_string": "ConsumeItem"
 				}
 			}
-		}
-		"csgo_bundle"
-		{
-			"item_class"		"bundle"
-			"item_type_name"		"#CSGO_ItemType_Bundle"
-			"item_name"		"#CSGO_ItemType_Bundle"
-			"item_quality"		"unique"
-			"item_rarity"		"common"
-			"item_slot"		"none"
-			"min_ilevel"		"1"
-			"max_ilevel"		"1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
-			"capabilities"
+		]
+		,
+		"attributes": [
 			{
-				"nameable"		"1"
-				"usable_gc"		"1"
-				"usable_out_of_game"		"1"
-			}
-			"tool"
+				"name": "tradable after date",
+				"defindex": 0,
+				"attribute_class": "tradable_after_date",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
+			},
 			{
-				"type"		"item_pack"
-				"use_string"		"#OpenBundle"
-			}
-		}
-	}
-	"items"
-	{
-		"15014"
-		{
-			"name"		"Community Season One Spring 2013"
-			"prefab"		"csgo_league"
-			"tool"
+				"name": "always tradable",
+				"defindex": 1,
+				"attribute_class": "always_tradable",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": false
+			},
 			{
-				"type"		"league_play_pass"
-				"use_string"		"#ConsumeItem"
-				"usage"
-				{
-					"league_id"		"1"
-					"order"		"1"
-				}
+				"name": "cannot trade",
+				"defindex": 2,
+				"attribute_class": "cannot_trade",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "referenced item id low",
+				"defindex": 3,
+				"attribute_class": "referenced_item_id_low",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "referenced item id high",
+				"defindex": 4,
+				"attribute_class": "referenced_item_id_high",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "referenced item def",
+				"defindex": 5,
+				"attribute_class": "referenced_item_def",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "attach particle effect",
+				"defindex": 11,
+				"attribute_class": "set_attached_particle",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"description_string": "Attrib_AttachedParticle",
+				"description_format": "value_is_particle_index",
+				"effect_type": "neutral",
+				"hidden": false,
+				"stored_as_integer": false
 			}
-			"item_type_name"		"#CSGO_ItemType_League_Pass"
-			"item_name"		"#CSGO_ItemName_CommunitySeasonOneSpring2013"
-			"item_description"		"#CSGO_ItemDesc_CommunitySeasonOneSpring2013"
-			"image_inventory"		"econ/leagues/subscriptions_community_season_one"
-			"image_banner"		"econ\leagues\subscriptions_community_season_one_ingame"
-			"tournament_url"		"http://blog.counter-strike.net/"
-		}
-	}
-	"attributes"
-	{
-		"1"
-		{
-			"name"		"attach particle effect"
-			"attribute_class"		"set_attached_particle"
-			"attribute_name"		"Attach Custom Particle"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_AttachedParticle"
-			"description_format"		"value_is_particle_index"
-			"hidden"		"0"
-			"effect_type"		"neutral"
-			"stored_as_integer"		"0"
-		}
-		"153"
-		{
-			"name"		"cannot trade"
-			"attribute_class"		"cannot_trade"
-			"attribute_name"		"cannot trade"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_CannotTrade"
-			"description_format"		"value_is_additive"
-			"hidden"		"1"
-			"effect_type"		"neutral"
-			"stored_as_integer"		"0"
-		}
-		"195"
-		{
-			"name"		"always tradable"
-			"attribute_class"		"always_tradable"
-			"attribute_name"		"always tradable"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_DamageDone_Negative"
-			"description_format"		"value_is_additive"
-			"hidden"		"1"
-			"effect_type"		"negative"
-			"stored_as_integer"		"0"
-		}
-		"211"
-		{
-			"name"		"tradable after date"
-			"attribute_class"		"tradable_after_date"
-			"attribute_name"		"tradable_after_date"
-			"min_value"		"0.950000"
-			"max_value"		"0.850000"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_TradableAfterDate"
-			"description_format"		"value_is_date"
-			"hidden"		"1"
-			"effect_type"		"negative"
-			"stored_as_integer"		"1"
-		}
-		"295"
-		{
-			"name"		"disallow recycling"
-			"attribute_class"		"disallow_recycling"
-			"attribute_name"		"disallow recycling"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_DamageDone_Negative"
-			"description_format"		"value_is_additive"
-			"hidden"		"1"
-			"effect_type"		"negative"
-			"stored_as_integer"		"0"
-		}
+		]
+		,
+		"item_sets": [
+
+		]
+		,
+		"attribute_controlled_attached_particles": [
+
+		]
+		,
+		"item_levels": [
+			{
+				"name": "KillEaterRank",
+				"levels": [
+					{
+						"level": 0,
+						"required_score": 10,
+						"name": "KillEaterRank0"
+					},
+					{
+						"level": 1,
+						"required_score": 25,
+						"name": "KillEaterRank1"
+					},
+					{
+						"level": 2,
+						"required_score": 50,
+						"name": "KillEaterRank2"
+					},
+					{
+						"level": 3,
+						"required_score": 75,
+						"name": "KillEaterRank3"
+					},
+					{
+						"level": 4,
+						"required_score": 100,
+						"name": "KillEaterRank4"
+					},
+					{
+						"level": 5,
+						"required_score": 150,
+						"name": "KillEaterRank5"
+					},
+					{
+						"level": 6,
+						"required_score": 200,
+						"name": "KillEaterRank6"
+					},
+					{
+						"level": 7,
+						"required_score": 250,
+						"name": "KillEaterRank7"
+					},
+					{
+						"level": 8,
+						"required_score": 300,
+						"name": "KillEaterRank8"
+					},
+					{
+						"level": 9,
+						"required_score": 350,
+						"name": "KillEaterRank9"
+					},
+					{
+						"level": 10,
+						"required_score": 400,
+						"name": "KillEaterRank10"
+					},
+					{
+						"level": 11,
+						"required_score": 450,
+						"name": "KillEaterRank11"
+					},
+					{
+						"level": 12,
+						"required_score": 500,
+						"name": "KillEaterRank12"
+					},
+					{
+						"level": 13,
+						"required_score": 600,
+						"name": "KillEaterRank13"
+					},
+					{
+						"level": 14,
+						"required_score": 700,
+						"name": "KillEaterRank14"
+					},
+					{
+						"level": 15,
+						"required_score": 800,
+						"name": "KillEaterRank15"
+					},
+					{
+						"level": 16,
+						"required_score": 900,
+						"name": "KillEaterRank16"
+					},
+					{
+						"level": 17,
+						"required_score": 1000,
+						"name": "KillEaterRank17"
+					}
+				]
+				
+			}
+		]
+		,
+		"kill_eater_ranks": [
+			{
+				"level": 0,
+				"required_score": 10,
+				"name": "KillEaterRank0"
+			},
+			{
+				"level": 1,
+				"required_score": 25,
+				"name": "KillEaterRank1"
+			},
+			{
+				"level": 2,
+				"required_score": 50,
+				"name": "KillEaterRank2"
+			},
+			{
+				"level": 3,
+				"required_score": 75,
+				"name": "KillEaterRank3"
+			},
+			{
+				"level": 4,
+				"required_score": 100,
+				"name": "KillEaterRank4"
+			},
+			{
+				"level": 5,
+				"required_score": 150,
+				"name": "KillEaterRank5"
+			},
+			{
+				"level": 6,
+				"required_score": 200,
+				"name": "KillEaterRank6"
+			},
+			{
+				"level": 7,
+				"required_score": 250,
+				"name": "KillEaterRank7"
+			},
+			{
+				"level": 8,
+				"required_score": 300,
+				"name": "KillEaterRank8"
+			},
+			{
+				"level": 9,
+				"required_score": 350,
+				"name": "KillEaterRank9"
+			},
+			{
+				"level": 10,
+				"required_score": 400,
+				"name": "KillEaterRank10"
+			},
+			{
+				"level": 11,
+				"required_score": 450,
+				"name": "KillEaterRank11"
+			},
+			{
+				"level": 12,
+				"required_score": 500,
+				"name": "KillEaterRank12"
+			},
+			{
+				"level": 13,
+				"required_score": 600,
+				"name": "KillEaterRank13"
+			},
+			{
+				"level": 14,
+				"required_score": 700,
+				"name": "KillEaterRank14"
+			},
+			{
+				"level": 15,
+				"required_score": 800,
+				"name": "KillEaterRank15"
+			},
+			{
+				"level": 16,
+				"required_score": 900,
+				"name": "KillEaterRank16"
+			},
+			{
+				"level": 17,
+				"required_score": 1000,
+				"name": "KillEaterRank17"
+			}
+		]
+		,
+		"kill_eater_score_types": [
+			{
+				"type": 0,
+				"type_name": "KillEaterEventType_Kills"
+			}
+		]
+		
 	}
 }
