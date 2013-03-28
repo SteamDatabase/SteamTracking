@@ -41,12 +41,12 @@ Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/wo
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 
 # Item Schemas
-GetItemSchema/CounterStrikeGlobalOffensive.vdf|http://api.steampowered.com/IEconItems_730/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/Dota2.vdf|http://api.steampowered.com/IEconItems_570/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/Dota2Test.vdf|http://api.steampowered.com/IEconItems_205790/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/TeamFortress2.vdf|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/TeamFortress2Beta.vdf|http://api.steampowered.com/IEconItems_520/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/Portal2.vdf|http://api.steampowered.com/IEconItems_620/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/IEconItems_730/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/Dota2.json|http://api.steampowered.com/IEconItems_570/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/Dota2Test.json|http://api.steampowered.com/IEconItems_205790/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/TeamFortress2.json|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/TeamFortress2Beta.json|http://api.steampowered.com/IEconItems_520/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/Portal2.json|http://api.steampowered.com/IEconItems_620/GetSchema/v1/?key=*APIKEY*&language=english
 
 # Game Schemas
 GameSchema/AlienSwarm.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=630

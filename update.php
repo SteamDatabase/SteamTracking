@@ -77,7 +77,7 @@
 				{
 					$this->URLsToFetch[ ] = Array(
 						'URL'  => $DataJSON[ 'result' ][ 'items_game_url' ],
-						'File' => Str_Replace( 'ItemSchema/', 'ItemSchema/API/', $File )
+						'File' => Str_Replace( Array( 'ItemSchema/', '.json' ), Array( 'ItemSchema/API/', '.vdf' ), $File )
 					);
 				}
 				
