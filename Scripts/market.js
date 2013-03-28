@@ -109,7 +109,7 @@ RemoveListingDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
+			this.DisplayError( '#Economy_Market_RemoveListingDialog_Error_ServerGeneric' );
 		}
 	},
 
@@ -127,7 +127,7 @@ RemoveListingDialog = {
 	
 	OnFailure: function( transport ) {
 		this.OnFailureEffects();
-		this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
+		this.DisplayError( '#Economy_Market_RemoveListingDialog_Error_ServerGeneric' );
 	},
 
 	OnDocumentKeyPress: function( event ) {
@@ -333,7 +333,7 @@ BuyItemDialog = {
 
 				if ( !$('market_buynow_dialog_accept_ssa') || !$('market_buynow_dialog_accept_ssa').checked )
 		{
-			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
+			this.DisplayError( '#Economy_Market_BuyDialog_SSA_Fail' );
 			return;
 		}
 
@@ -382,7 +382,7 @@ BuyItemDialog = {
 		var elMessage = new Element( 'div', {'class': 'market_listing_purchase_message' } );
 		var sItemNameSpanId = this.m_sElementPrefix + '_purchased_' + this.m_ulListingId;
 		elMessage.update(
-				'You purchased this <%1$s></%2$s>. View it in your <%3$s>inventory</%4$s>.'
+				'#Economy_Market_YouHaveJustPurchasedThisItem'
 					.replace( '%1$s', 'span id="' + sItemNameSpanId + '"' )
 					.replace( '%2$s', 'span' )
 					.replace( '%3$s', 'a href="http://steamcommunity.com/my/inventory/"' )
@@ -411,7 +411,7 @@ BuyItemDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
+			this.DisplayError( '#Economy_Market_BuyDialog_Error_ServerGeneric' );
 		}
 	},
 
@@ -435,7 +435,7 @@ BuyItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
+			this.DisplayError( '#Economy_Market_BuyDialog_Error_ServerGeneric' );
 		}
 	},
 
