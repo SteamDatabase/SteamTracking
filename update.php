@@ -48,6 +48,11 @@
 				
 				$this->URLsToFetch = Array( );
 				
+				USort( $URLs, function( $a, $b )
+				{
+					return strcasecmp( $a[ 'URL' ], $b[ 'URL' ] );
+				} );
+				
 				echo Count( $URLs ) . ' urls to be fetched...' . PHP_EOL;
 				
 				$this->Fetch( $URLs );
