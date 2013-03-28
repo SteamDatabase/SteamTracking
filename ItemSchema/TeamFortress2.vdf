@@ -37791,7 +37791,7 @@
 		{
 			"name"	"Croft's Crest"
 			"first_sale_date"	"2013/03/04"
-			"prefab"	"promo cosmetic"
+			"prefab"	"cosmetic"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -37819,7 +37819,7 @@
 		{
 			"name"	"The Fortune Hunter"
 			"first_sale_date"	"2013/03/04"
-			"prefab"	"promo cosmetic"
+			"prefab"	"cosmetic"
 			"capabilities"
 			{
 				"paintable"	"1"
@@ -37860,7 +37860,7 @@
 		{
 			"name"	"The Tomb Wrapper"
 			"first_sale_date"	"2013/03/04"
-			"prefab"	"promo cosmetic"
+			"prefab"	"cosmetic"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -38088,6 +38088,18 @@
 				"spy"		"models/player/items/all_class/all_class_oculus_spy.mdl"
 				"engineer"	"models/player/items/all_class/all_class_oculus_engineer.mdl"
 				"pyro"		"models/player/items/all_class/all_class_oculus_pyro.mdl"
+			}
+			"model_player_per_class_alt"	
+			{
+				"scout"		"models/player/items/all_class/all_class_oculus_scout_on.mdl"
+				"sniper"	"models/player/items/all_class/all_class_oculus_sniper_on.mdl"
+				"soldier"	"models/player/items/all_class/all_class_oculus_soldier_on.mdl"
+				"demoman"	"models/player/items/all_class/all_class_oculus_demo_on.mdl"
+				"medic"		"models/player/items/all_class/all_class_oculus_medic_on.mdl"
+				"heavy"		"models/player/items/all_class/all_class_oculus_heavy_on.mdl"
+				"spy"		"models/player/items/all_class/all_class_oculus_spy_on.mdl"
+				"engineer"	"models/player/items/all_class/all_class_oculus_engineer_on.mdl"
+				"pyro"		"models/player/items/all_class/all_class_oculus_pyro_on.mdl"
 			}
 			"used_by_classes"
 			{
@@ -39537,7 +39549,7 @@
 			"name"				"Ready Steady Pan Participant Season 1"
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Participant"
-			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Participant_Season1"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Season1"
 			"image_inventory"	"backpack/player/items/all_class/all_class_badge_pan"
 			"model_player"	"models/player/items/all_class/all_class_badge_pan.mdl"
 		}
@@ -41306,6 +41318,51 @@
 			{
 				"skin"	"0"
 			}
+		}
+		"8243"
+		{		
+			"name"				"Ready Steady Pan First Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_First_Place"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Season2"
+			"image_inventory"	"backpack/player/items/all_class/rsp_s02"
+			"model_player"		"models/player/items/all_class/rsp_s02.mdl"
+		}
+		"8244"
+		{		
+			"name"				"Ready Steady Pan Second Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Season2"
+			"image_inventory"	"backpack/player/items/all_class/rsp_s02"
+			"model_player"		"models/player/items/all_class/rsp_s02.mdl"
+		}
+		"8245"
+		{		
+			"name"				"Ready Steady Pan Third Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Season2"
+			"image_inventory"	"backpack/player/items/all_class/rsp_s02"
+			"model_player"		"models/player/items/all_class/rsp_s02.mdl"
+		}
+		"8246"
+		{		
+			"name"				"Ready Steady Pan Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Participant"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Season2"
+			"image_inventory"	"backpack/player/items/all_class/rsp_s02"
+			"model_player"		"models/player/items/all_class/rsp_s02.mdl"
+		}
+		"8247"
+		{		
+			"name"				"Ready Steady Pan Helper Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Helper"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Helper_Season2"
+			"image_inventory"	"backpack/player/items/all_class/rsp_s02"
+			"model_player"		"models/player/items/all_class/rsp_s02.mdl"
 		}
 
 
