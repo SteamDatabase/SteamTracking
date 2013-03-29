@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.eac939ebeedcc08a072c9c5f8a3bafcab0d2a639.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8c40759915238143f435317932572f800508c615.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -9330,6 +9330,153 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
 				"item_name": "bristelback_necklace",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Hair",
+				"defindex": 441,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Hair",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Weapon",
+				"defindex": 442,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Weapon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Wings",
+				"defindex": 443,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Wings",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Bracers",
+				"defindex": 444,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Bracers",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Shoulders",
+				"defindex": 445,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Shoulders",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Skirt",
+				"defindex": 446,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Skirt",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vengeful Leg Armor",
+				"defindex": 447,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Vengeful Leg Armor",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -19213,7 +19360,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Noble Beast",
 				"item_name": "Buttercup",
-				"item_description": "",
+				"item_description": "The dead of battle can breed many an odd fungus.  That suits Buttercup just fine.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/chen\/buttercup",
@@ -19235,7 +19382,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Barding",
 				"item_name": "Buttercup's Barding",
-				"item_description": "",
+				"item_description": "It is a strange thing that such a calm and gentle creature as Buttercup be made to seem so fierce.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/chen\/buttercup_armor",
@@ -19281,6 +19428,29 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Wraps of a Thousand Faces",
+				"defindex": 4395,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Arm Wraps",
+				"item_name": "Wraps of a Thousand Faces",
+				"item_description": "Hands are a warrior's greatest treasure. He must guard them well.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/thousand_faces_wraps\/thousand_faces_wraps",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_wraps\/thousand_faces_wraps.05cfeacae0ccecbe5d595fc8803e4e2d770940b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_wraps\/thousand_faces_wraps_large.71a03e4246e59258156757a4ff621a671d3ef398.png",
+				"item_set": "thousand_faces",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
 			},
 			{
 				"name": "Sash of Death's Bride",
@@ -19384,6 +19554,29 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/mysterious_comb2\/mysterious_comb2.06538d59b8c80eed3b45ea4b9917f54b223a446e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/mysterious_comb2\/mysterious_comb2_large.a5aed6031ac3d0848a6fba808728d0b31650ecfe.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Hakama of a Thousand Faces",
+				"defindex": 4401,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Traditional Hakama",
+				"item_name": "Hakama of a Thousand Faces",
+				"item_description": "A traditional hakama from Isle of Masks. It was given to Yurnero by his late swordmaster, long before his exile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/thousand_faces_hakama\/thousand_faces_hakama",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_hakama\/thousand_faces_hakama.a1aa6eadb067f01e29dc6d85ee39d63117fb80b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_hakama\/thousand_faces_hakama_large.69b69fd81054af098a517fce0201312303b2fe68.png",
+				"item_set": "thousand_faces",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -19598,6 +19791,29 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/shoulder_general\/shoulder_general.77e93d2a1c346eca314920b01f0fa778204a41ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/shoulder_general\/shoulder_general_large.1e74cf8888a27c6fc2efcef6be1749fb82f516e1.png",
 				"item_set": "morphling_polymorphia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Kataginu of a Thousand Faces",
+				"defindex": 4411,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Vest",
+				"item_name": "Kataginu of a Thousand Faces",
+				"item_description": "A traditional sleeveless jacket worn by the great warriors of Isle of Masks. It carries the banner of Yurnero.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/thousand_faces_vest\/thousand_faces_vest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_vest\/thousand_faces_vest.6f5de0717ca8e4ccc88dcb62268026739fc90a1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_vest\/thousand_faces_vest_large.e8b417b7090f6e8d5d84f3cf2ddf3e255b47be07.png",
+				"item_set": "thousand_faces",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -19916,6 +20132,29 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/eldershield\/eldershield.0bfbca383fa6dbb91cc3ea791779cd502f405a6f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/eldershield\/eldershield_large.c4ae467e217280c424db56af3bcc87228323dc75.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mask of a Thousand Faces",
+				"defindex": 4425,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Mask of a Thousand Faces",
+				"item_description": "A ceremonial mask worn on special occasions. This must be a special occasion.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/thousand_faces_mask\/thousand_faces_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_mask\/thousand_faces_mask.14bb8bc89f9c15c8c03fbe6993b2925030bdf422.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_mask\/thousand_faces_mask_large.af5e3bfdb0844218587b7c6c37e710b50abc8cb2.png",
+				"item_set": "thousand_faces",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20556,6 +20795,28 @@
 				}
 			},
 			{
+				"name": "Crystalline Sickles",
+				"defindex": 4453,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horns",
+				"item_name": "Crystalline Sickles",
+				"item_description": "A rack of sickle curved horns for Leshrac.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/leshrac\/anuxi_crystilline_sickles\/anuxi_crystilline_sickles",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/leshrac\/anuxi_crystilline_sickles\/anuxi_crystilline_sickles.620ee9df5ab556020a183e19f3e1633e746eb826.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/leshrac\/anuxi_crystilline_sickles\/anuxi_crystilline_sickles_large.2f4b14e94b469be24b6a26aff600e72090f55afc.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Lyralei's Breeze",
 				"defindex": 4454,
 				"item_class": "dota_item_wearable",
@@ -21152,6 +21413,50 @@
 				}
 			},
 			{
+				"name": "Ring of the Storm",
+				"defindex": 4479,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ring of the Storm",
+				"item_description": "A faded alloy ring attracts static electricity.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/storm_spirit\/anuxi_ring_of_storm\/anuxi_ring_of_storm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/storm_spirit\/anuxi_ring_of_storm\/anuxi_ring_of_storm.9cb996952ff7bf824ac4fb670b7e02166c4e2b35.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/storm_spirit\/anuxi_ring_of_storm\/anuxi_ring_of_storm_large.c183237786549d5d27718d6c579d4b27773768df.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Wings of the Ruby Web",
+				"defindex": 4480,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Wings of the Ruby Web",
+				"item_description": "Wings woven with the silk of the Deep Ruby Spider. Adorned at the tips with the gems hewn from the spider's body.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/anuxi_ruby_web_wings\/anuxi_ruby_web_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/anuxi_ruby_web_wings\/anuxi_ruby_web_wings.7a93235235d489f55115f1baee942265458e1eda.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/anuxi_ruby_web_wings\/anuxi_ruby_web_wings_large.b17d64d68fa10f3c5ef0e56bbc407b0c47e8ac45.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Birot's Bracers of Dignity",
 				"defindex": 4481,
 				"item_class": "dota_item_wearable",
@@ -21651,6 +21956,28 @@
 				}
 			},
 			{
+				"name": "Cercus of Whirling Death",
+				"defindex": 4501,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Cercus of Whirling Death",
+				"item_description": "Sandking uses these pincers as another set of hands, grappling onto prey as they scuttle above his sandy hideaway.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/anuxi_cerci_tail\/anuxi_cerci_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/anuxi_cerci_tail\/anuxi_cerci_tail.81a812d955ee2a2620d7e1013fa183c8dc12ba5a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/anuxi_cerci_tail\/anuxi_cerci_tail_large.8e37b3c88c6cfe6fae6c0246799d5c153d82a06b.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Feathered Naginata",
 				"defindex": 4502,
 				"item_class": "dota_item_wearable",
@@ -22138,6 +22465,28 @@
 				}
 			},
 			{
+				"name": "Molten Fracture",
+				"defindex": 4523,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Molten Fracture",
+				"item_description": "Doom's power has shattered this blade.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/anuxi_molten_fractur\/anuxi_molten_fractur",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/anuxi_molten_fractur\/anuxi_molten_fractur.a6490b34818b6627440c61f9374a565e73542670.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/anuxi_molten_fractur\/anuxi_molten_fractur_large.22fbbb566bee96a8e3a561c7eb0ba9a227ff0bd5.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Anuxi_knight_head",
 				"defindex": 4524,
 				"item_class": "dota_item_wearable",
@@ -22293,6 +22642,72 @@
 				}
 			},
 			{
+				"name": "Ring Spear of Soul Diffusion",
+				"defindex": 4531,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Ring Spear of Soul Diffusion",
+				"item_description": "A spear forged from magical alloys that hone the mind and diffuse the soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/anuxi_ring_spear\/anuxi_ring_spear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/anuxi_ring_spear\/anuxi_ring_spear.7ffe87be28bab684cb9cb533e935c5f24d83473f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/anuxi_ring_spear\/anuxi_ring_spear_large.4bbc59b111a33375114f78b1c0631b3b23883ce0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Encore",
+				"defindex": 4532,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Slithereen Dagger",
+				"item_name": "Encore",
+				"item_description": "He only wanted to hear her song one more time. The dagger was gifed to him, and he keeps it with him to silcene those who wish to silence her song.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/anuxi_encore_dagger\/anuxi_encore_dagger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/anuxi_encore_dagger\/anuxi_encore_dagger.f8f51b9f8bbd603078326682457da4f4a99d2d24.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/anuxi_encore_dagger\/anuxi_encore_dagger_large.00dde567bb5309f9bc8ddd42ec6c42ba45b50c7e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Whirling Mind Slicer",
+				"defindex": 4533,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Glaive",
+				"item_name": "Whirling Mind Slicer",
+				"item_description": "Blades so sharp, they might cut the very fabric of one's mind.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/silencer\/anuxi_mind_slicer\/anuxi_mind_slicer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/anuxi_mind_slicer\/anuxi_mind_slicer.8b8fe740739bc5d728409558dcd510cc776d69f1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/anuxi_mind_slicer\/anuxi_mind_slicer_large.d35d9f151192ef460233e10940c981f565e7b31d.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Birot's Crests of Dignity",
 				"defindex": 4534,
 				"item_class": "dota_item_wearable",
@@ -22322,6 +22737,28 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Horned Mother",
+				"defindex": 4535,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Heavy Axe",
+				"item_name": "The Horned Mother",
+				"item_description": "Wielding this immense weapon, Bradwarden slashes and crushes all those in his wake.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/anuxi_horned_mother\/anuxi_horned_mother",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/centaur\/anuxi_horned_mother\/anuxi_horned_mother.edd077b10d577bedb1d2f3b04bbf49870d57c6c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/centaur\/anuxi_horned_mother\/anuxi_horned_mother_large.a7fac1696b3517dfbb6d51fa915f35d4da7f93f4.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
 			},
 			{
 				"name": "Birot's Helm of Dignity",
@@ -22757,6 +23194,72 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/falconcloak\/falconcloak.118c0d5d1ccae3e677cac8c312c6ab17322f7e8c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/falconcloak\/falconcloak_large.3e3856e5804cdc2967aea397af2aeceb58de3081.png",
 				"item_set": "gilded_falcon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancient Crasher",
+				"defindex": 4555,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Ancient Crasher",
+				"item_description": "These dusty old blades find use once more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/anuxi_ancient_crasher\/anuxi_ancient_crasher",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/anuxi_ancient_crasher\/anuxi_ancient_crasher.7c7c26180b229448a8e94de940463546b9977b7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/anuxi_ancient_crasher\/anuxi_ancient_crasher_large.fe9d04a2e49f9dfaa51d0941d4781066ab07bade.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancient Crescent",
+				"defindex": 4556,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Ancient Crescent",
+				"item_description": "These dusty old blades find use once more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/anuxi_ancient_crescent\/anuxi_ancient_crescent",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/anuxi_ancient_crescent\/anuxi_ancient_crescent.9ec305b66ade11ff547900437b8c0eddcada6a30.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/anuxi_ancient_crescent\/anuxi_ancient_crescent_large.51a0081ae016bf6dd240fce811b0e32501200941.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Feral the Werebat",
+				"defindex": 4557,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mount",
+				"item_name": "Feral the Werebat",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/batrider\/anuxi_feral_mount1\/anuxi_feral_mount1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/batrider\/anuxi_feral_mount1\/anuxi_feral_mount1.e5bc29ec92b3a18122c6b7e8019bf9c33fd1b1d8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/batrider\/anuxi_feral_mount1\/anuxi_feral_mount1_large.cb0887acc3be0358fdc8cef610ba2ad1e85773f4.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23474,6 +23977,28 @@
 				}
 			},
 			{
+				"name": "Wraps of the Seasoned Veteran",
+				"defindex": 4589,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wrap",
+				"item_name": "Wraps of the Seasoned Veteran",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/seasoned_wraps\/seasoned_wraps",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/seasoned_wraps\/seasoned_wraps.32e8e787447fdd610cbb5fa45fe55d38152c58dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/seasoned_wraps\/seasoned_wraps_large.fb6e36259bb17072203cea104fdd65a9e554e7cd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Torn Guard of the Vandal",
 				"defindex": 4590,
 				"item_class": "dota_item_wearable",
@@ -23511,6 +24036,72 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/justpicsnothingmnew\/justpicsnothingmnew.541a43f880262b227cab132ac2c8bdbf8c8f27e1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/justpicsnothingmnew\/justpicsnothingmnew_large.2a0badb618f222637cb7d2aa05470f3c195aceb6.png",
 				"item_set": "clinkz_vandal",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ambinderath's Jaw",
+				"defindex": 4592,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Ambinderath's Jaw",
+				"item_description": "The severed jaw of the undead dragon Ambinderath. The dragon once opposed the Skeleton King's eastern expansion.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skeleton_king\/sk_dragon_jaw\/sk_dragon_jaw",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/sk_dragon_jaw\/sk_dragon_jaw.84b1ba9b11c90bc931a5f5e8f7f14722f843b2a6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/sk_dragon_jaw\/sk_dragon_jaw_large.3d6ac406d09da4c69f446dde0c2dcc4da8350908.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bessy the Batmeleon",
+				"defindex": 4593,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mount",
+				"item_name": "Bessy the Batmeleon",
+				"item_description": "The Rider found this exotic creature trying to blend in with a colony of morde-bats before he tamed it for his own. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/batrider\/batmeleon_mount\/batmeleon_mount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/batrider\/batmeleon_mount\/batmeleon_mount.50ba511d63fefde0ef541925d1defe8f5524f76b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/batrider\/batmeleon_mount\/batmeleon_mount_large.32329d9c21ca214c1df6a366bbdcdc7ed0cf0c68.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Instagib OSP",
+				"defindex": 4594,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Rifle",
+				"item_name": "The Instagib OSP",
+				"item_description": "The Instagib 'Optimal Shooting Platform' is a highly tuned, perfectly balanced brain liquification device.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/weapon_noscope\/weapon_noscope",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/weapon_noscope\/weapon_noscope.a0b5b54d8e82356c636d1092fb2f4f972ef1463d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/weapon_noscope\/weapon_noscope_large.e96545234428f6f0cb48840c23c6e1a412455ca4.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -24768,6 +25359,28 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_arms\/mirana_nightsilver_arms.0b929b636acc45da6e5670164e325b8123944ad8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/mirana_nightsilver_arms\/mirana_nightsilver_arms_large.d1181be826b61eee54ef1e2715922f4db81cd770.png",
 				"item_set": "nightsilver_mirana",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Radiant Crystal Haul",
+				"defindex": 4646,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "Radiant Crystal Haul",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/meepo\/meepo_cratepack\/meepo_cratepack",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_cratepack\/meepo_cratepack.d7306335892d3a5d47e9c59a857c92b86e12d537.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_cratepack\/meepo_cratepack_large.60688fc78bfee9efa504d1d186b91edd8545ce4f.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -29926,8 +30539,8 @@
 				"image_inventory": "econ\/items\/keeper_of_the_light\/horse_roehringods\/horse_roehringods",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/keeper_of_the_light\/horse_roehringods\/horse_roehringods.2b1ab3f9b5898ea92b97a63415df9f61970083f0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/keeper_of_the_light\/horse_roehringods\/horse_roehringods_large.47b8bc7e82f3e281efefc92ff6838fa1a92dfcac.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/keeper_of_the_light\/horse_roehringods\/horse_roehringods.6cd1e7596c0f66d61e464dabc457a40ea55decaf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/keeper_of_the_light\/horse_roehringods\/horse_roehringods_large.0d2728e0971befa5a0149138a0cd3ccb729c6f68.png",
 				"item_set": "empowered_gods",
 				"capabilities": {
 					"nameable": true,
@@ -30058,7 +30671,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Axe",
 				"item_name": "The Vindicator",
-				"item_description": "A sharply bladed axe, terrible and wicked.",
+				"item_description": "To wrong Axe is dangerous.  To suffer his vindication is deadly.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/axe\/vindicator",
@@ -30075,19 +30688,20 @@
 				}
 			},
 			{
-				"name": "Shinobi Grandfathers Blade",
+				"name": "Blade of the Subtle Demon",
 				"defindex": 4874,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Grandfathers Blade",
-				"item_description": "Shinobi Grandfathers Blade",
+				"item_type_name": "Blade Weapon",
+				"item_name": "Blade of the Subtle Demon",
+				"item_description": "One must use care in the handling of such a blade, for it will cut the wielder as well as surely as the rival.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main.9b6ed2bede0cbf766727f21b32f21de5692f5d1d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main_large.248e314c3a81e3a018dfd6d23298c0a0ef2bd5c3.png",
+				"item_set": "shinobi",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -30097,19 +30711,20 @@
 				}
 			},
 			{
-				"name": "Shinobi Grandfathers Blade Offhand",
+				"name": "Blade of the Subtle Demon - Off-Hand",
 				"defindex": 4875,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Grandfathers Blade Offhand",
-				"item_description": "Shinobi Grandfathers Blade Offhand",
+				"item_type_name": "Blade Weapon",
+				"item_name": "Blade of the Subtle Demon - Off-Hand",
+				"item_description": "One must use care in the handling of such a blade, for it will cut the wielder as well as surely as the rival.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_grandfathers_blades_offhand\/riki_grandfathers_blades_offhand",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grandfathers_blades_offhand\/riki_grandfathers_blades_offhand.f61b62dd9fea0cd073191741f59fdf063ff0d2dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grandfathers_blades_offhand\/riki_grandfathers_blades_offhand_large.7c3dc9eee462ab75a1ff818f311a1d66e46e7f07.png",
+				"item_set": "shinobi",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -30119,19 +30734,20 @@
 				}
 			},
 			{
-				"name": "Shinobi Mask",
+				"name": "Veil of the Subtle Demon",
 				"defindex": 4876,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Mask",
-				"item_description": "Shinobi Mask",
+				"item_type_name": "Mask",
+				"item_name": "Veil of the Subtle Demon",
+				"item_description": "Never reveal one's face to a foe.  Keep them ever in doubt of one's identity.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_mask_of_the_last_shinobi\/riki_mask_of_the_last_shinobi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_mask_of_the_last_shinobi\/riki_mask_of_the_last_shinobi.469e746e10ac0626a4243d616ceeb50514cf3e65.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_mask_of_the_last_shinobi\/riki_mask_of_the_last_shinobi_large.0b653a09dd014cd8361d0643e7eedbfa7e336b62.png",
+				"item_set": "shinobi",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -30141,19 +30757,20 @@
 				}
 			},
 			{
-				"name": "Shinobi Shadow Wraps",
+				"name": "Wraps of the Subtle Demon",
 				"defindex": 4877,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Shadow Wraps",
-				"item_description": "Shinobi Shadow Wraps",
+				"item_type_name": "Arm Wraps",
+				"item_name": "Wraps of the Subtle Demon",
+				"item_description": "Be ever in the shadows, and wrap one's self in silence.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_shadow_wraps_of_the_last_shinobi\/riki_shadow_wraps_of_the_last_shinobi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_shadow_wraps_of_the_last_shinobi\/riki_shadow_wraps_of_the_last_shinobi.46761f09ecd2ed71f3f43a60f0e12c813ef391fc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_shadow_wraps_of_the_last_shinobi\/riki_shadow_wraps_of_the_last_shinobi_large.305dabcbe9dc3cd3de58bcfc615f5b1d1a224f3e.png",
+				"item_set": "shinobi",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -30163,19 +30780,20 @@
 				}
 			},
 			{
-				"name": "Shinobi Spiked Tail",
+				"name": "Whip of the Subtle Demon",
 				"defindex": 4878,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Spiked Tail",
-				"item_description": "Shinobi Spiked Tail",
+				"item_type_name": "Bladed Tail",
+				"item_name": "Whip of the Subtle Demon",
+				"item_description": "To ensure an advantage, one must be capable of fighting from any angle.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_spiked_tail_of_the_last_shinobi\/riki_spiked_tail_of_the_last_shinobi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_spiked_tail_of_the_last_shinobi\/riki_spiked_tail_of_the_last_shinobi.175567c66ae9dff49000d439368f2d239db15715.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_spiked_tail_of_the_last_shinobi\/riki_spiked_tail_of_the_last_shinobi_large.589eecfe5de9f3ecf30b6ff015c871e97e871794.png",
+				"item_set": "shinobi",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -30185,19 +30803,590 @@
 				}
 			},
 			{
-				"name": "Shinobi Tengu Pauldron Shoulder",
+				"name": "Mark of the Subtle Demon",
 				"defindex": 4879,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Shinobi Tengu Pauldron Shoulder",
-				"item_description": "Shinobi Tengu Pauldron Shoulder",
+				"item_type_name": "Shoulder Pad",
+				"item_name": "Mark of the Subtle Demon",
+				"item_description": "One must not balk at death.  One must learn to face all trials.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/rikimaru\/riki_tengu_pauldron_of_the_last_shinobi\/riki_tengu_pauldron_of_the_last_shinobi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_tengu_pauldron_of_the_last_shinobi\/riki_tengu_pauldron_of_the_last_shinobi.4cc74e07a289688e040085c1ec884dac11ec1e13.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_tengu_pauldron_of_the_last_shinobi\/riki_tengu_pauldron_of_the_last_shinobi_large.91f4dbabe6425f7408fda0ddfd613b8f6e6340ac.png",
+				"item_set": "shinobi",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ormr the Lunar Dragon",
+				"defindex": 4880,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mount",
+				"item_name": "Ormr the Lunar Dragon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/lunardragon_mount\/lunardragon_mount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/lunardragon_mount\/lunardragon_mount.a4e67370a110cc6b14d8c8d6c97531bd941cbbbd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/mirana\/lunardragon_mount\/lunardragon_mount_large.d1e3cb930beccc4ba2296bf183f2fd06ad942ea0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Spottin' Goggles",
+				"defindex": 4881,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Goggles",
+				"item_name": "Spottin' Goggles",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/globulargoggles\/globulargoggles",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/globulargoggles\/globulargoggles.a2b6652a22480421e67df800143134ae7663da93.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/globulargoggles\/globulargoggles_large.f358360ea72ba29ff81f964afa89f538e25ad0f8.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Fishy Frillhawk",
+				"defindex": 4882,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Fins",
+				"item_name": "Fishy Frillhawk",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/fishy_frillhawk\/fishy_frillhawk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/fishy_frillhawk\/fishy_frillhawk.2736131daeafae4919f003c0e81c7686975fe18e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/fishy_frillhawk\/fishy_frillhawk_large.682593346b8619bff6221552b629cfc1c940fd92.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Scepter of the Grand Magus",
+				"defindex": 4883,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scepter",
+				"item_name": "Scepter of the Grand Magus",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/weapon_agh\/weapon_agh",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/weapon_agh\/weapon_agh.a1cfd1998affc39ebb1c3b6d31970e1bbb7785a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/weapon_agh\/weapon_agh_large.f1a299b4f95e4143a7d231369a18fd5b8102f2d5.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Battle Banner of the Masked",
+				"defindex": 4884,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Banner",
+				"item_name": "Battle Banner of the Masked",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/jugg_flag\/jugg_flag",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/jugg_flag\/jugg_flag.3bfd82ec89a3544a760fb02c5beb9824636edeaa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/jugg_flag\/jugg_flag_large.935b1202d423a052ce1d90ef34df228860ce8faa.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Bracers of Karroch",
+				"defindex": 4885,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Ancestral Bracers of Karroch",
+				"item_description": "Worn in remembrance of his time in the stocks.  These bracers are both a symbol of his bondage, and a promise that he will never again serve nobility.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/korosh_peaks_arms\/korosh_peaks_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_arms\/korosh_peaks_arms.daf9949604e68436bf319e1013250a9c63139e29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_arms\/korosh_peaks_arms_large.26b795e85642c343c4c37c5f98cfa2420811e990.png",
+				"item_set": "custom_karroch",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Axes of Karroch",
+				"defindex": 4886,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axes",
+				"item_name": "Ancestral Axes of Karroch",
+				"item_description": "Even his axes are trained.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/korosh_peaks_weapon\/korosh_peaks_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_weapon\/korosh_peaks_weapon.50b4b9c3e8e8c93af54b20aa9690bba39c0c70ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_weapon\/korosh_peaks_weapon_large.d5ef6802f4d0800ad3b862be1ca733b437ed09c7.png",
+				"item_set": "custom_karroch",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Belt of Karroch",
+				"defindex": 4887,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Ancestral Belt of Karroch",
+				"item_description": "Woven from the pelt of a fallen pantheran, this belt is s symbol of the Beastmaster's strength.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/korosh_peaks_belt\/korosh_peaks_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_belt\/korosh_peaks_belt.1fcb649230cd98634db85375f018ae64b2cbd0a2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_belt\/korosh_peaks_belt_large.295f8f60a73dadadcf7a49889a6e443733903542.png",
+				"item_set": "custom_karroch",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Hair of Karroch",
+				"defindex": 4888,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Ancestral Hair of Karroch",
+				"item_description": "With his head shaved to better commune with the minds of his animal brothers, Beastmaster is prepared for any battle.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/korosh_peaks_head\/korosh_peaks_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_head\/korosh_peaks_head.689ad71ccf99aedf146ffd078b54ba667ce8b0ab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_head\/korosh_peaks_head_large.e2e246286156eda941da2825613524f78edc263c.png",
+				"item_set": "custom_karroch",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ancestral Vest of Karroch",
+				"defindex": 4889,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Vest",
+				"item_name": "Ancestral Vest of Karroch",
+				"item_description": "A thick, protective vest of finest pantheran hide.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/beastmaster\/korosh_peaks_shoulder\/korosh_peaks_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_shoulder\/korosh_peaks_shoulder.f83fc3043230910e8a6cce9e8f8e56ad658ee588.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/beastmaster\/korosh_peaks_shoulder\/korosh_peaks_shoulder_large.8e7bd5af37d446a1b049a0486eb0cf2305802cb8.png",
+				"item_set": "custom_karroch",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Battlejug of the the Drunken Warlord",
+				"defindex": 4890,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wine Jug",
+				"item_name": "Battlejug of the the Drunken Warlord",
+				"item_description": "Drink from this jug and you will experience enlightenment.  Or forget why you were striving for it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/brewmaster\/gear_brewmaster_sake_01\/gear_brewmaster_sake_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_sake_01\/gear_brewmaster_sake_01.b7248d18799f04a7a3ff30923a769df91fe7dfd8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_sake_01\/gear_brewmaster_sake_01_large.f2431d801622d907f7704ee9a3a683b653a39f87.png",
+				"item_set": "drunken_warlord",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Wraps of the Drunken Warlord",
+				"defindex": 4891,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wraps",
+				"item_name": "Wraps of the Drunken Warlord",
+				"item_description": "The ancient order of the Oyo binds the sword arm of each young apprentice as a symbol of commitment to their forebears.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/brewmaster\/gear_brewmaster_gloves_01\/gear_brewmaster_gloves_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_gloves_01\/gear_brewmaster_gloves_01.a3164ecb2ee75f09f0f8637c77c622415cd037ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_gloves_01\/gear_brewmaster_gloves_01_large.68a4f3fa44c6ee367d89d9020226329d4649a48d.png",
+				"item_set": "drunken_warlord",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Guard of the Drunken Warlord",
+				"defindex": 4892,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Guard",
+				"item_name": "Guard of the Drunken Warlord",
+				"item_description": "Designed from the cast-off remnants of ancient brew casks, these bits of aged wood have been infused with the essence of the ancient order of the Oyo.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/brewmaster\/gear_brewmaster_shoulder_01\/gear_brewmaster_shoulder_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_shoulder_01\/gear_brewmaster_shoulder_01.7559556cd058cffe46c8c3020c8d79555927db23.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_shoulder_01\/gear_brewmaster_shoulder_01_large.d90b57ab399a6a7e8591cee00209acd5085a59e6.png",
+				"item_set": "drunken_warlord",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mailed Skirt of the Drunken Warlord",
+				"defindex": 4893,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Skirt",
+				"item_name": "Mailed Skirt of the Drunken Warlord",
+				"item_description": "When you're in your cups, this mailed skirt has your back.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/brewmaster\/gear_brewmaster_back_01\/gear_brewmaster_back_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_back_01\/gear_brewmaster_back_01.7a7f902392696faedc0c0d7fc8e0e20cc9ed92f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/gear_brewmaster_back_01\/gear_brewmaster_back_01_large.331db7f00f94c56a6811524a31b3b3f4c76edd53.png",
+				"item_set": "drunken_warlord",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Words of the Drunken Warlord",
+				"defindex": 4894,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Words of the Drunken Warlord",
+				"item_description": "Did I say word?  I meant sword.  Sword of the Drunken Warlord.  There are words on it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/brewmaster\/wep_brewmaster_cleaver_01\/wep_brewmaster_cleaver_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/wep_brewmaster_cleaver_01\/wep_brewmaster_cleaver_01.47bcde1e619f45b3e9c47eac08a44d6a533e8516.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/wep_brewmaster_cleaver_01\/wep_brewmaster_cleaver_01_large.e41a384a84901425ef4521bed9c84fede49ada5f.png",
+				"item_set": "drunken_warlord",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bindings of Eldritch Ice",
+				"defindex": 4895,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bindings",
+				"item_name": "Bindings of Eldritch Ice",
+				"item_description": "They sank Ethrain into the Black Pool with a weighted belt; but gravity has no pull on the Lich in his resurrected form. He wears the belt now as a mockery. And they say that all the warmth of his former heart resides in that pulsing flask, where he can keep a cold eye on it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lich\/rags\/rags",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/rags\/rags.83a3fb8ea3ba97a4cf3266f2a4b13c49dd3a1515.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/rags\/rags_large.c368b48c603b1c58f89d8b91d76028fd6ad0d234.png",
+				"item_set": "eldritch_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Glacier of Eldritch Ice",
+				"defindex": 4896,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ice",
+				"item_name": "Glacier of Eldritch Ice",
+				"item_description": "Drowned but not dead, deep in the Black Pool, the cold hatred in Lich's heart froze the water around him. These ice-shards, formed of evil, hold a hatred that will never melt.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lich\/glacier\/glacier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/glacier\/glacier.fc41eebbcfbdf396a10f71e3c267191be16684c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/glacier\/glacier_large.f5f9b9b0aea14c38b4f39390002ee1df21846dff.png",
+				"item_set": "eldritch_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Mantle of Eldritch Ice",
+				"defindex": 4897,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Mantle of Eldritch Ice",
+				"item_description": "The ice mage's robes became the Lich's tattered shroud. Superstitious subjects hammered spikes of sacred metal as a warning into the dead mage's skull, none suspecting that upon his resurrection he would wear the device as a cursed crown of domination. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lich\/ice_mantle\/ice_mantle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/ice_mantle\/ice_mantle.c96141db178aa14c4544d4f0adbd79bdf08f3035.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/ice_mantle\/ice_mantle_large.207ca472ed6f2fff5d990dc0353c79e2655a41b8.png",
+				"item_set": "eldritch_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracers of Eldritch Ice",
+				"defindex": 4898,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Eldritch Ice",
+				"item_description": "The charmed ropes that once bound him should have rotted away, but Lich has preserved them as reminder to all that no power in creation can hope to hold him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lich\/ice_frostbite\/ice_frostbite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/ice_frostbite\/ice_frostbite.a390b2016e7eaf7885e8bc09c21c14c3770932a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lich\/ice_frostbite\/ice_frostbite_large.b8fa208d966ae895726d81c4f0d566f520660e05.png",
+				"item_set": "eldritch_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Blade of the Ephemeral Haunt",
+				"defindex": 4899,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Blade of the Ephemeral Haunt",
+				"item_description": "A weapon shimmering with the violent energy from Spectre's home plane of existence.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/tr_weapon\/tr_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_weapon\/tr_weapon.6dd11c8287bee41dbbe152697d4f2c69898e7b03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_weapon\/tr_weapon_large.a393f91dcafd08dc20d310a5fff144a8567a8fcb.png",
+				"item_set": "ephemeral_haunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Wings of the Ephemeral Haunt",
+				"defindex": 4900,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Wings of the Ephemeral Haunt",
+				"item_description": "Energy from Spectre's home plane of existence pulses through her wings, nearly overtaking her physical form.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/tr_shoulder\/tr_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_shoulder\/tr_shoulder.6983c041e423b8ec160e051d9a39c04c8d78942c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_shoulder\/tr_shoulder_large.e81eda4cd2e7304d8b98efe73878e64a22ea6747.png",
+				"item_set": "ephemeral_haunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sleeves of the Ephemeral Haunt",
+				"defindex": 4901,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeves",
+				"item_name": "Sleeves of the Ephemeral Haunt",
+				"item_description": "A billowing sleeve for Spectre, charged with the excess energy that overflows from Spectre's present form.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/tr_misc\/tr_misc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_misc\/tr_misc.3158061ac1760221229ae472601eb86364dbc141.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_misc\/tr_misc_large.c0e1d24b8f1e110b7317aea23afdd1e00a3e3fbf.png",
+				"item_set": "ephemeral_haunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Horns of the Ephemeral Haunt",
+				"defindex": 4902,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horns",
+				"item_name": "Horns of the Ephemeral Haunt",
+				"item_description": "Chaotic emanations from a plane of violent power are conducted through these focal-horns and imbue Spectre with energy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/tr_head\/tr_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_head\/tr_head.1a0ba754e48370ceb45eaff6ddab03c9c8338500.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_head\/tr_head_large.b2783fb65a6193f79fb4e3ab5b5ee6b83f862051.png",
+				"item_set": "ephemeral_haunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Dress of the Ephemeral Haunt",
+				"defindex": 4903,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dress",
+				"item_name": "Dress of the Ephemeral Haunt",
+				"item_description": "A dress, slightly tattered by the constant flux of spectral energy. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/tr_belt\/tr_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_belt\/tr_belt.c9097c03dca2ee9f209abd8bf868cf11deaf0158.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/tr_belt\/tr_belt_large.bc4fbfd64723a752b6847e6819966bd19c95f796.png",
+				"item_set": "ephemeral_haunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Akakiryu of a Thousand Faces",
+				"defindex": 4904,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Akakiryu of a Thousand Faces",
+				"item_description": "Named after a legendary dragon, this sword was given to the Juggernaut on the day he became a swordmaster.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana.b1d344d8eab78d3f5832f4609d2bf3142c4cba20.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana_large.dc87d24a4082a135102c313b80c249ef2c252520.png",
+				"item_set": "thousand_faces",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -34559,7 +35748,8 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "supply_crate"
+					"type": "supply_crate",
+					"restriction": "community_pack_2"
 				},
 				"attributes": [
 					{
@@ -34753,7 +35943,7 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "community_3"
+					"restriction": "community_pack_3"
 				},
 				"attributes": [
 					{
@@ -34819,7 +36009,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Servant of Selemene",
 				"item_name": "Snowl",
-				"item_description": "",
+				"item_description": "The Goddess of the Moon presses many forest creatures into her service.  Always crafty, ever vigilant, little Snowl would give his all to aid the guardians of the Nightsilver.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/courier\/snowl\/snowl",
@@ -34858,7 +36048,7 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "community_4"
+					"restriction": "community_pack_4"
 				},
 				"attributes": [
 					{
@@ -34908,6 +36098,134 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 29.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Captain Bamboo",
+				"defindex": 10167,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Captain Bamboo",
+				"item_description": "Not just a Panda, He's a Captain!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/captain_bamboo\/captain_bamboo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/captain_bamboo\/captain_bamboo.4ac7af76673bfa0868c253827c75d631a8ec334c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/captain_bamboo\/captain_bamboo_large.5da9a15d894f2a46878f83a34826a5ca1ced8914.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Treasure of the Shaper Divine",
+				"defindex": 10168,
+				"item_class": "supply_crate",
+				"item_type_name": "Treasure",
+				"item_name": "Treasure of the Shaper Divine",
+				"item_description": "A chest of magical items created by the community contributor Anuxi.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/anuxi_crate",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/anuxi_crate.f3375fda0694e5787de6e355689c8d32c0af06f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/anuxi_crate_large.d72a2551d645d9100de2303723a429c0bf84650d.png",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "anuxi_pack_1"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 30.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Snelfret the Snail",
+				"defindex": 10169,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Snelfret the Snail",
+				"item_description": "The original rebel snail, Snelfret refused to conform to a social order that enforced lethargy, a world that told him he must not move too fast. So he loaded up his shell and headed for more dynamic climes, determined to redefine the meaning of snail's pace.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/snail\/courier_snail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/snail\/courier_snail.57d4c21fd88b47349ed171f54057a1f2f297114d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/snail\/courier_snail_large.cd1ab82fe758ba167a72dbe32aa02f9eb3752a5e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Inky the Hexapus",
+				"defindex": 10170,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Inky the Hexapus",
+				"item_description": "Inky the hexapus was fished from the waters of the Horn of Despair and pressed into service by a fleet of marauding pirates, carrying messages to and fro between ships.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/g1_courier\/g1_courier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/g1_courier\/g1_courier.1b2fa3262dc5e150203367fa74a8604c01396f9f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/g1_courier\/g1_courier_large.d99fc5d504472a054d3ba325a814d552deda6b7e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "g-1 league tag",
+						"class": "g-1 league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 34.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
 					}
 				]
 				
@@ -39306,7 +40624,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "Dark Treasure Key",
-				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure of Dark Implements<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/communitypack1_key",
@@ -39322,6 +40640,7 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
+					"restriction": "community_pack_1",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -39481,7 +40800,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "Treasure Key of the Forbidden Lotus",
-				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure of the Forbidden Lotus<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/treasure_lotus_chest_key",
@@ -39497,6 +40816,7 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
+					"restriction": "community_pack_2",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -39742,7 +41062,7 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "community_3",
+					"restriction": "community_pack_3",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -40048,8 +41368,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_g-1_season5",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5.c50da8e14081d5ceb654394fdb2fbd0a028443fc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.99fa096d5c18676619211c056aa17b507b4d4bd5.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5.a8402aa93cf846d46fd2806521ebf9aaf573fe8f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.98924659a5c31bc04d9d6f34a80e7afab31a5a4a.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -40083,8 +41403,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_g-1_season5",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5.c50da8e14081d5ceb654394fdb2fbd0a028443fc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.99fa096d5c18676619211c056aa17b507b4d4bd5.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5.a8402aa93cf846d46fd2806521ebf9aaf573fe8f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.98924659a5c31bc04d9d6f34a80e7afab31a5a4a.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -40142,6 +41462,78 @@
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure Key of the Cursed Wood",
+				"defindex": 15145,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Treasure Key of the Cursed Wood",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests of the Cursed Wood<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/cursed_tree_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/cursed_tree_key.0135ad31d95bfc1c2768bb62d8f7322c23f4a1d9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/cursed_tree_key_large.e826f7610591b5e355fe91c31ec0bb5b611528f7.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_pack_4",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure Key of the Shaper Divine",
+				"defindex": 15146,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Treasure Key of the Shaper Divine",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests of the Shaper Divine<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/anuxi_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/anuxi_key.be628a3dc26aa6f2a2dced317ef2deb508b4232f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/anuxi_key_large.e7e6eee573712672f564b5a083a5dd2f778275b4.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "anuxi_pack_1",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
 						"value": 1.000000
 					}
 				]
@@ -44392,6 +45784,202 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Thousand Faces Set",
+				"defindex": 20151,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Thousand Faces Set",
+				"item_description": "Includes all of the items in the \"Thousand Faces\" set for Juggernaut:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Thousand_Faces_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_thousand_faces_set.188f4f39385a9cb62c44b017c4b56956006e8734.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_thousand_faces_set_large.ac02900cfd505f45e91c955356d9baa285f000e7.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Subtle Demon Set",
+				"defindex": 20152,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Subtle Demon Set",
+				"item_description": "Includes all of the items in the \"Subtle Demon\" set for Riki:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Shinobi_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_shinobi_set.1cf0964175d8f5f80a52c5b246776b532c610ed4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_shinobi_set_large.328cde205a39e18cb44038ee6340edc7a6ce67bb.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Custom of Karroch Set",
+				"defindex": 20153,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Custom of Karroch Set",
+				"item_description": "This bundle includes all of the items in the 'Custom of Karroch' set for Beastmaster:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Custom_of_Karroch_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_custom_of_karroch_set.6f6662760f62ce6841fbfbe47bfb4ca3530f12f6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_custom_of_karroch_set_large.489f5f893edd739e8487766cd46cee97a5ee4146.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Ephemeral Haunt Set",
+				"defindex": 20154,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Ephemeral Haunt Set",
+				"item_description": "This bundle contains all of the items in the 'Ephemeral Haunt' set for Spectre:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Ephemeral_Haunt_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_ephemeral_haunt_set.81c5a5f8aeeb0f6383aa3d7d7a11d0c3c86f4427.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_ephemeral_haunt_set_large.b10be993670806dd63235bd6aec1202e4e54fc11.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Eldritch Ice Set",
+				"defindex": 20155,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Eldritch Ice Set",
+				"item_description": "This bundle contains all of the items in the 'Eldritch Ice' set for Lich:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Eldritch_Ice_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_eldritch_ice_set.e6421e6835fb4720a5bcdc0ca95dd4171477e7bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_eldritch_ice_set_large.609af985945fe9da4409e0c3bd3e71648a0a3c4c.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Subtle Demon's Blades",
+				"defindex": 20156,
+				"item_class": "bundle",
+				"item_type_name": "Paired Weapons",
+				"item_name": "The Subtle Demon's Blades",
+				"item_description": "This bundle contains both of the Subtle Demon's Blades for Riki",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main.9b6ed2bede0cbf766727f21b32f21de5692f5d1d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/riki_grand_fathers_blade_shinobi_main\/riki_grand_fathers_blade_shinobi_main_large.248e314c3a81e3a018dfd6d23298c0a0ef2bd5c3.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Drunken Warlord Set",
+				"defindex": 20157,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Drunken Warlord Set",
+				"item_description": "This item set was sanctioned by the Ancient Order of the Oyo.  Contains all of the items in the 'Drunken Warlord' set for Brewmaster:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Drunken_Warlord_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_drunken_warlord_set.ffb9eded8155033d729c92b67e1b635d6c943d37.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_drunken_warlord_set_large.6164bc31438e9bd7539b87952aba297e5dd9d7d7.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -45305,6 +46893,18 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "g-1 league tag",
+				"defindex": 392,
+				"attribute_class": "g-1 league tag",
+				"min_value": 0.950000,
+				"max_value": 0.850000,
+				"description_string": "G-1 League Season %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -45661,6 +47261,19 @@
 				
 			},
 			{
+				"item_set": "custom_karroch",
+				"name": "The Custom of Karroch",
+				"store_bundle": "Custom of Karroch Set",
+				"items": [
+					"Ancestral Axes of Karroch",
+					"Ancestral Belt of Karroch",
+					"Ancestral Bracers of Karroch",
+					"Ancestral Hair of Karroch",
+					"Ancestral Vest of Karroch"
+				]
+				
+			},
+			{
 				"item_set": "dead_winter",
 				"name": "Dead Winter",
 				"store_bundle": "Dead Winter Set",
@@ -45824,6 +47437,31 @@
 				
 			},
 			{
+				"item_set": "drunken_warlord",
+				"name": "The Drunken Warlord",
+				"store_bundle": "The Drunken Warlord Set",
+				"items": [
+					"Guard of the Drunken Warlord",
+					"Mailed Skirt of the Drunken Warlord",
+					"Wraps of the Drunken Warlord",
+					"Words of the Drunken Warlord",
+					"Battlejug of the the Drunken Warlord"
+				]
+				
+			},
+			{
+				"item_set": "eldritch_ice",
+				"name": "Eldritch Ice",
+				"store_bundle": "Eldritch Ice Set",
+				"items": [
+					"Bindings of Eldritch Ice",
+					"Bracers of Eldritch Ice",
+					"Glacier of Eldritch Ice",
+					"Mantle of Eldritch Ice"
+				]
+				
+			},
+			{
 				"item_set": "eleven_curses",
 				"name": "The Burden of Eleven Curses",
 				"store_bundle": "The Burden of Eleven Curses Set",
@@ -45872,6 +47510,19 @@
 					"Councilor's Staff",
 					"Councilor's Robe",
 					"Councilor's Mask"
+				]
+				
+			},
+			{
+				"item_set": "ephemeral_haunt",
+				"name": "The Ephemeral Haunt",
+				"store_bundle": "The Ephemeral Haunt Set",
+				"items": [
+					"Dress of the Ephemeral Haunt",
+					"Horns of the Ephemeral Haunt",
+					"Sleeves of the Ephemeral Haunt",
+					"Wings of the Ephemeral Haunt",
+					"Blade of the Ephemeral Haunt"
 				]
 				
 			},
@@ -46516,6 +48167,20 @@
 				
 			},
 			{
+				"item_set": "shinobi",
+				"name": "The Subtle Demon",
+				"store_bundle": "The Subtle Demon Set",
+				"items": [
+					"Blade of the Subtle Demon",
+					"Veil of the Subtle Demon",
+					"Wraps of the Subtle Demon",
+					"Whip of the Subtle Demon",
+					"Mark of the Subtle Demon",
+					"Blade of the Subtle Demon - Off-Hand"
+				]
+				
+			},
+			{
 				"item_set": "slithereen_exile",
 				"name": "The Slithereen Exile",
 				"store_bundle": "The Slithereen Exile Set",
@@ -46673,6 +48338,19 @@
 					"Sash of the Third Insight",
 					"Brooch of the Third Insight",
 					"Mask of the Third Insight"
+				]
+				
+			},
+			{
+				"item_set": "thousand_faces",
+				"name": "Thousand Faces",
+				"store_bundle": "Thousand Faces Set",
+				"items": [
+					"Mask of a Thousand Faces",
+					"Kataginu of a Thousand Faces",
+					"Hakama of a Thousand Faces",
+					"Akakiryu of a Thousand Faces",
+					"Wraps of a Thousand Faces"
 				]
 				
 			},
@@ -47330,6 +49008,36 @@
 				"id": 69,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle69"
+			},
+			{
+				"system": "skywrath_mage_staff_ambient",
+				"id": 70,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle70"
+			},
+			{
+				"system": "courier_snail_trail",
+				"id": 71,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle71"
+			},
+			{
+				"system": "courier_snail_ambient_flying",
+				"id": 72,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle72"
+			},
+			{
+				"system": "courier_cursed_ambient",
+				"id": 73,
+				"attach_to_rootbone": false,
+				"name": "Cursed Essence"
+			},
+			{
+				"system": "courier_divine_ambient",
+				"id": 74,
+				"attach_to_rootbone": false,
+				"name": "Divine Essence"
 			}
 		]
 		,
