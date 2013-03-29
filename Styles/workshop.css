@@ -171,6 +171,17 @@
 	color: black;
 }
 
+.CustomTextDescLight
+{
+	position: relative;
+	color: #dddddd;
+}
+
+.CustomTextDescLight a
+{
+	color: #e5e5e5;
+}
+
 .customBrowseText a
 {
 	text-decoration: underline;
