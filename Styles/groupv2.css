@@ -1,0 +1,1117 @@
+
+
+.grouppage_header {
+	position: relative;
+	height: 242px;
+
+	border-bottom: 5px solid #364862;
+}
+
+.grouppage_member_tiles {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 230px;
+	width: 936px;
+	overflow: hidden;
+
+	padding-top: 12px;
+	padding-left: 14px;
+}
+
+.grouppage_membertiles_overlay {
+	position: absolute;
+	top: 12px;
+	left: 14px;
+	width: 936px;
+	height: 230px;
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA6gAAADmCAYAAADY+6ipAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc3MEEzNzgzQTZDMjExRTFBRjIyOUVERDFGNzVBQzFBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc3MEEzNzg0QTZDMjExRTFBRjIyOUVERDFGNzVBQzFBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzcwQTM3ODFBNkMyMTFFMUFGMjI5RUREMUY3NUFDMUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzcwQTM3ODJBNkMyMTFFMUFGMjI5RUREMUY3NUFDMUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4HaHU0AAAQNUlEQVR42uzdW64cxbIA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' );
+	background-repeat: no-repeat;
+}
+
+body.nodatauri .grouppage_membertiles_overlay {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_membertile_overlay.png' );
+}
+
+
+.grouppage_logo {
+	width: 184px;
+	height: 184px;
+	padding: 4px;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_avatar_holder.png' );
+}
+
+.grouppage_header_label {
+	position: absolute;
+	left: 188px;
+	top: 52px;
+
+	padding: 0 11px;
+	height: 23px;
+	line-height: 23px;
+
+	background-color: #262627;
+
+	color: #949491;
+	font-size: 11px;
+}
+
+.grouppage_header_name {
+	position: absolute;
+	left: 188px;
+	top: 75px;
+
+	text-align: left;
+
+	padding: 0 11px;
+	line-height: 42px;
+
+	background-color: #171717;
+
+	color: #ffffff;
+	font-size: 34px;
+	max-width: 480px;
+
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.grouppage_header_abbrev {
+	color: #acacac;
+	font-size: 24px;
+}
+
+.grouppage_join_area {
+	position: absolute;
+	top: 75px;
+	right: -6px;
+
+	padding: 6px;
+	background-color: #000000;
+	height: 32px;
+	line-height: 30px;
+
+	color: #9d9d9d;
+	font-size: 13px;
+}
+
+.grouppage_join_area .btn_medium {
+	margin-bottom: 1px;
+}
+
+.grouppage_join_area.pending_invite {
+	top: 35px;
+	max-width: 182px;
+	text-align: center;
+	height: auto;
+}
+
+.grouppage_join_area.pending_invite .grouppage_pending_invite_description {
+	font-size: 11px;
+	line-height: 15px;
+	margin-bottom: 6px;
+}
+
+.grouppage_join_area img {
+	vertical-align: text-top;
+}
+
+.grouppage_friendsingroup {
+	position: absolute;
+	top: 133px;
+	right: -6px;
+
+	padding: 6px;
+	background-color: #000000;
+	height: 42px;
+
+	/* hack for Ie7 */
+	max-width: 680px;
+}
+
+.grouppage_friendsingroup .friendavatar {
+	width: 42px;
+	height: 42px;
+	float: right;
+}
+
+.grouppage_friendsingroup_title {
+	font-size: 12px;
+	color: #828282;
+	padding: 0 9px;
+	float: right;
+	white-space: nowrap;
+	text-align: right;
+
+	padding-top: 4px;
+	line-height: 16px;
+}
+
+.grouppage_friendsingroup_title .friendsingroup_count {
+	color: #e5e5e5;
+}
+
+img.member_tile {
+	width: 85px;
+	height: 85px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.group_tabs {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.group_tab {
+	float: left;
+	margin-right: 3px;
+	background-color: #444444;
+	color: #dadada;
+	font-size: 14px;
+	line-height: 26px;
+	padding: 0 12px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	cursor: pointer;
+
+	margin-top: 9px;
+}
+
+a.group_tab:hover {
+	text-decoration: none;
+}
+
+.group_tab.active {
+	line-height: 34px;
+	color: #ffffff;
+
+	padding: 0 14px;
+	margin-top: 0;
+
+	border: 1px solid #57739d;
+	border-bottom: none;
+	background-color: #364862;
+	background: top center repeat-x url( 'http://cdn.steamcommunity.com/public/images/groups/tab_blue_active.png' );
+}
+
+.grouppage_content_area {
+
+	padding-top: 18px;
+}
+
+.grouppage_content_area.blue_background {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_content_background.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+
+}
+
+.leftcol {
+	float: left;
+	width: 640px;
+}
+
+.leftcol.hasContentBoxes {
+	position: relative;
+	left: -4px;
+	width: 645px;
+}
+
+.group_content {
+
+	padding-left: 5px;
+
+	background: url( 'http://cdn.steamcommunity.com/public/images/groups/content_footer_fade.png') bottom left no-repeat, url( 'http://cdn.steamcommunity.com/public/images/groups/group_content_topbackground.png' ) top left no-repeat;
+
+	padding-bottom: 24px;
+	padding-right: 9px;
+
+	margin-bottom: 22px;
+}
+
+/* group summary does not have the top background */
+.group_content.group_summary {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/content_footer_fade.png');
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+.formatted_group_summary a {
+	text-decoration: underline;
+	color: #828282;
+}
+
+.formatted_group_summary a:hover {
+	color: #ffffff;
+}
+
+/* for text on the page in a column with group content boxes */
+.group_content_bodytext {
+	padding-left: 5px;
+	padding-right: 9px;
+}
+
+/* members does not have the bottom background */
+.group_content.bottomless {
+	background: url( 'http://cdn.steamcommunity.com/public/images/groups/group_content_topbackground.png' ) top left no-repeat;
+
+	min-height: 228px;
+}
+
+.group_content_rule {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/content_header_rule.png');
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	width: 645px;
+	height: 8px;
+}
+
+/* for making right column content line up with a left column that starts with a rule */
+.rightcol_rule_align {
+	height: 7px;
+}
+
+.group_content_header {
+	color: #6d6d6b;
+	font-size: 11px;
+	padding-top: 4px;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.group_content_header a {
+	color: #529cde;
+}
+
+.group_content_header a:hover {
+	text-decoration: underline;
+}
+
+a.readmore_link {
+	color: #529cde;
+	font-size: 11px;
+	padding-top: 4px;
+}
+
+.group_content_header .group_content_header_viewmore {
+	float: right;
+}
+
+.group_nodiscussions_create_area {
+	text-align: center;
+	padding-top: 22px;
+	padding-bottom: 62px;
+}
+
+.group_overview_announcement {
+	float: left;
+	width: 302px;
+}
+
+.group_overview_announcement.first {
+	border-right: 1px solid #000000;
+	padding-right: 12px;
+	margin-right: 14px;
+}
+
+.group_overview_announcement_footer {
+	color: #57595b;
+	font-size: 12px;
+}
+
+.group_overview_announcement_content {
+	position: relative;
+	height: 156px;
+	overflow: hidden;
+
+	margin-bottom: 8px;
+}
+
+.group_overview_announcement_readmore {
+
+	border-top: 1px solid #35465e;
+}
+
+.group_overview_announcement_fade {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 36px;
+	/*background: url( 'http://cdn.steamcommunity.com/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
+	background: url( 'http://cdn.steamcommunity.com/public/images/groups/overview_announcement_fade_wide.png' ) bottom right repeat-x;
+}
+
+.group_overview_announcement.first .group_overview_announcement_fade {
+	background-position: bottom left;
+}
+
+.grouppage_content_area h1 {
+	color: #b0b0b0;
+	font-size: 24px;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+.grouppage_content_area h2, a.large_title {
+	color: #529cde;
+	font-size: 24px;
+	font-weight:normal;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+a.large_title:hover {
+	text-decoration: underline;
+}
+
+.group_content.group_comments {
+	padding-bottom: 4px;
+	padding-right: 6px;
+}
+
+.group_comments .commentthread_header, .group_comments .commentthread_footer {
+	border: none;
+}
+
+.group_comments .commentthread_header .commentthread_count {
+	opacity: 0.4;
+}
+
+.group_comments .commentthread_entry {
+	background: none;
+}
+
+.group_comments .commentthread_entry_quotebox_quote {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA1RDQzOENFQzE2NTExRTE5M0JFRUM2NjYyQTg2QTY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA1RDQzOENGQzE2NTExRTE5M0JFRUM2NjYyQTg2QTY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDVENDM4Q0NDMTY1MTFFMTkzQkVFQzY2NjJBODZBNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDVENDM4Q0RDMTY1MTFFMTkzQkVFQzY2NjJBODZBNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Iy85wAAABgklEQVR42pyTzVLCMBSF01KB0jb8ozsW+iQC4yOgM+58A2d8AheufAP34saV41Ifg4WDVhj+piIq0NI0JeZmwXRUpOVMF5mk+XLuzYnEGENBHR8dorCaTKdPKVXdVdCGAoCh63utFxPJmwDex+MrAHS6XTSdzaJDAJDLZk96/QEff4i5SBDrbVQHAGy2RqPlvBwNkLkGAJQRVCjI0LLKACCeJ/UGg1/rchhABuMmAOAmfN+PDgGAoiiq2W7/CVgLgSwAABwQ4q38T14XJrPdQc58/q9bOUyYVikWiyHecKSECVNQ8fgWShsYpTFeaFpKmJCCD/CgVqsXC/nGzyyoySRsQhgbYswbzGzHeXYJuS3kcmdLCAC4tcbn10QAdE0Tm+BUOJ1f8cK27Ral9K6Qz58GzDEBqVUrZU40oUaA6FpK1Dt3XcK/JiHkgju8WdEaJlUr+2VsGCbYBLmu68xs54F45HKnVHoMEWimQJgo9fu8ofcepefbxeJrIpGI9LK/BRgAbmnYOUIQqUgAAAAASUVORK5CYII= );
+}
+
+.group_comments .commentthread_entry_quotebox, .group_comments .commentthread_entry textarea {
+	background-color: #2c2c2c;
+}
+
+.membergrid .playerAvatar {
+	margin-right: 12px;
+	margin-bottom: 12px;
+	float: left;
+}
+
+.member_sectionheader {
+	clear: left;
+	font-size: 11px;
+	line-height: 15px;
+	margin: 9px 0;;
+}
+
+.member_sectionheader img {
+	vertical-align: middle;
+}
+
+
+
+
+.rightcol {
+	float: right;
+	width: 295px;
+}
+
+.rightbox_header, .rightbox_footer {
+	background: no-repeat url( 'http://cdn.steamcommunity.com/public/images/groups/rightcol_box_topbtm.png' );
+	width: 295px;
+	height: 4px;
+}
+.rightbox_header {
+	background-position: top;
+}
+.rightbox_footer {
+	background-position: bottom;
+	height: 5px;
+
+	margin-bottom: 18px;
+}
+.rightbox {
+	background: repeat-y url( 'http://cdn.steamcommunity.com/public/images/groups/rightcol_box_repeat.png' );
+}
+.rightbox .content {
+	padding: 16px 14px;
+}
+.rightbox .rule {
+	height: 1px;
+	background-color: #333333;
+	border-top: 1px solid #000000;
+}
+.membercounts {
+	margin-bottom: 18px;
+}
+
+.membercounts .membercount {
+	float: left;
+	text-align: center;
+}
+.membercount.members {
+	color: #9a9a9a;
+	width: 107px;
+}
+.membercount.members a {
+	color: #9a9a9a;
+}
+.membercount.ingame {
+	color: #8bc53f;
+	width: 80px;
+}
+.membercount.online {
+	color: #62a7e3;
+	width: 80px;
+}
+
+.membercount.members a:hover {
+	text-decoration: none;
+}
+.membercount.members a:hover .label {
+	text-decoration: underline;
+}
+.membercount .count {
+	font-size: 30px;
+	line-height: 30px;
+}
+.membercount .count.oversized {
+	font-size: 22px;
+}
+.membercount .label {
+	font-size: 12px;
+}
+
+.joinchat_bg {
+	position: relative;
+	width: 265px;
+	height: 50px;
+	background: no-repeat url( 'http://cdn.steamcommunity.com/public/images/groups/btn_joinchat.png' );
+
+	cursor: pointer;
+}
+
+.joinchat_bg .joinchat_membercount {
+	position: absolute;
+	left: 8px;
+	top: 9px;
+	width: 115px;
+	height: 32px;
+
+	text-align: center;
+	color: #595959;
+	font-size: 11px;
+	line-height: 32px;
+
+}
+
+.joinchat_bg .joinchat_membercount .count {
+	font-size: 24px;
+	vertical-align: middle
+}
+
+.joinchat_bg .joinchat_membercount .joinchat_label {
+
+}
+
+.joinchat_bg .joinchat_button {
+	position: absolute;
+	left: 128px;
+	top: 9px;
+
+	width: 127px;
+	height: 32px;
+	line-height: 32px;
+
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.groupstat {
+	position: relative;
+	margin: 8px 0;
+	padding-left: 70px;
+
+	color: #686865;
+	font-size: 12px;
+}
+.groupstat .label {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.weblink {
+	line-height: 24px;
+}
+
+.weblink a {
+	color: #e1e1e1;
+}
+
+.weblink a:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.weblink img {
+	vertical-align: middle;
+}
+
+.admin_option_icon {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+a.subtle {
+	color: #828282;
+	text-decoration: underline;
+}
+
+a.subtle:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.announcement {
+	margin-bottom: 14px;
+}
+
+.announcement_byline {
+	font-size: 10px;
+	margin-top: 5px;
+	margin-bottom: 9px;
+	text-transform: uppercase;
+	color: #555555;
+}
+
+.announcement_body {
+	line-height: 20px;
+	margin-bottom: 14px;
+}
+
+.group_body_links a {
+	color: #828282;
+	text-decoration: underline;
+}
+
+.group_body_links a:hover {
+	color: #ffffff;
+}
+
+.grouppage_content_rule {
+	background-color: #000000;
+	height: 1px;
+	border-bottom: 1px solid #383839;
+
+
+	margin-bottom: 32px;
+}
+
+.group_overview_discussions .forum_topic {
+	background-color: transparent;
+}
+
+.group_overview_discussions .forum_topic:hover {
+	background-color: #3c3c3d;
+}
+
+.group_overview_discussions .forum_topic.unread .forum_topic_name a  {
+	color: #529cde;
+}
+.group_overview_discussions .forum_topic .forum_topic_name a {
+	color: #427eb3;
+}
+
+/* older crap */
+
+.announcementsPaging
+{
+	background-color:#161616;
+	color:#8c8c8c;
+	font-size:11px;
+	margin:0;
+	margin-left:0;
+	padding:4px;
+	height:12px;
+}
+
+.announcementsPaging .announcementsPagingLeft
+{
+	float: left;
+	width: 175px;
+}
+
+.announcementsPaging .announcementsPagingRight
+{
+	font-weight:bold;
+	color:#939393;
+	float: right;
+	width: 225px;
+	text-align: right;
+	height: 12px;
+	margin:0;
+	padding:0;
+}
+
+textarea {
+	width:296px;
+	background-color:#1d1d1d;
+	border:solid 1px #777777;
+	color:#e1e1e1;
+	font-size:13px;
+	padding-left: 4px;
+
+}
+
+fieldset.editRow_text,fieldset.editRow_textID,fieldset.editRow_textarea,fieldset.editRow_select {
+	display:block;
+	width:900px;
+	margin-top:6px;
+	padding:0;
+	border:0;
+}
+
+fieldset.editRow_textarea {
+	margin-top:8px;
+}
+
+fieldset.editRow_textarea input {
+	margin-left:117px;
+	margin-bottom:6px;
+}
+
+fieldset.editRow_text label,fieldset.editRow_textID label,fieldset.editRow_textarea label,fieldset.editRow_select label {
+	float:left;
+	display:block;
+	text-align:right;
+	width:107px;
+	padding:0;
+	margin:0;
+	padding-right:10px;
+	padding-top:9px;
+	color: #8c8c8c;
+}
+
+fieldset.editRow_text label,fieldset.editRow_textID label {
+	padding-top:7px;
+}
+
+fieldset.editRow_select label,fieldset.editRow_selectCountry label,fieldset.editRow_selectState label  {
+	padding-top:3px;
+}
+
+fieldset.editRow_textarea label {
+	padding-top:3px;
+}
+
+
+.rightbox_list_header, .rightbox_content_header {
+	color: #676765;
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+.rightbox_content_header {
+	padding: 11px 14px;
+	margin-bottom: 0px;
+}
+
+.rightbox_list_option {
+	position: relative;
+	line-height: 37px;
+	height: 37px;
+	color: #c9c9c9;
+}
+
+.rightbox_list_option a:hover {
+	text-decoration: underline;
+}
+
+.rightbox_list_option.selected a:hover {
+	text-decoration: none;
+}
+
+.rightbox_list_option_content {
+	position: relative;
+}
+
+.rightbox_list_option.selected .rightbox_list_selection_background {
+	display: block;
+}
+
+.rightbox_list_selection_background {
+	position: absolute;
+	display: none;
+	left: -27px;
+	top: 0px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/rightcol_option_selected.png' );
+	width: 306px;
+	height: 37px;
+}
+
+.forum_list_unread {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.forum_list .rightbox_list_option.selected {
+	color: #ffffff;
+}
+
+.forum_list_postcount {
+	float: right;
+	padding-right: 6px;
+}
+
+.forum_list_name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;;
+}
+
+.rightbox .content .forum_button {
+	margin: 0px;
+}
+
+.group_breadcrumbs, .group_breadcrumbs a {
+	color: #9b9b9b;
+	text-decoration: none;
+	margin-bottom: 12px;
+}
+
+.group_breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* events cruft */
+
+
+.eventDateHeaderText {
+	font-size:15px;
+	font-weight:bold;
+	margin:0;
+	padding:0px 0px 4px 10px;
+}
+
+.eventLeftBlock {
+	margin:0;
+	padding:0;
+	width:122px;
+	height:36px;
+	float:left;
+	padding-top:12px;
+	padding-left:36px;
+	font-size: 10px;
+}
+
+.eventDateBlock {
+	margin:0;
+	padding:0;
+	width:120px;
+	float:left;
+	font-size:15px;
+	font-weight:bold;
+	color:#878787;
+	line-height:18px;
+}
+
+.eventDateTime {
+	font-size:11px;
+	font-weight:normal;
+}
+
+.eventBlockTitle {
+	line-height:16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.eventBlock {
+	margin:0;
+	padding:0;
+	padding-bottom:8px;
+}
+
+.eventBlock p {
+	margin:0;
+	padding:0;
+	padding-top:2px;
+	line-height:16px;
+}
+
+p.sectionText {
+	color: #8c8c8c;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	margin-top:12px;
+	margin-left:8px;
+	margin-bottom:12px;
+}
+
+.eventBlockIcon {
+	float:left;
+	width:40px;
+	height:40px;
+	margin:0;
+	padding:0;
+	margin-right:8px;
+}
+
+.eventSmallText {
+	font-size:10px;
+	color:#959595;
+}
+
+.fullEventBlock {
+	position:relative;
+	padding-top: 12px;
+}
+
+.eventLogo {
+	position:absolute;
+	top: 17px;
+	left:6px;
+}
+
+.eventContent {
+	padding-left:210px;
+	padding-bottom:10px;
+	min-height:80px;
+
+	word-wrap: break-word;
+}
+
+.eventContent .headline {
+	margin:0;
+	padding:0;
+	margin-bottom:4px;
+	padding-top:6px;
+}
+
+.eventContent {
+	color:#959595;
+	font-size:12px;
+}
+
+.eventContent p {
+	margin:0;
+	padding:0;
+	padding-bottom:6px;
+}
+
+a.eventLink {
+	font-size: 13px;
+	color: #e1e1e1;
+	font-weight:normal;
+}
+
+
+/* older global styles still in use */
+
+
+a.headlineLink,a.headlineLink:hover,a.headlineLink:active,a.headlineLink:visited,.headlineLink {
+	color:#ebebeb;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none;
+}
+
+a.headlineLink:hover {
+	color:#ffffff;
+	text-decoration:underline;
+}
+
+
+/* member lists */
+
+.member_block {
+	background-color: #3a3a3a;
+	border-radius: 3px;
+	position: relative;
+
+	width: 309px;
+	height: 48px;
+
+	margin-bottom: 4px;
+	margin-right: 9px;
+
+	float: left;
+
+
+	color: #ebebeb;
+	font-size: 11px;
+}
+.member_block_content {
+	padding-left: 52px;
+	padding-top: 2px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.member_block_content.offline, .member_block_content.offline a {
+	color:#898989;
+}
+
+.member_block_content.online, .member_block_content.online a {
+	color:#62a7e3;
+}
+
+.member_block_content.in-game, .member_block_content.in-game a {
+	color:#8bc53f;
+}
+
+.member_block .linkFriend  {
+	font-weight: bold;
+}
+
+.member_block .rank_icon {
+	float: right;
+	height: 48px;
+	background-color: #434343;
+	line-height: 48px;
+	text-align: center;
+
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+
+	padding: 0px 5px;
+}
+.member_block .friend_icon {
+	float: right;
+	height: 48px;
+	line-height: 48px;
+	padding: 0px 7px;
+}
+.member_block .friend_icon img {
+	vertical-align: middle;
+}
+.rank_icon img {
+	vertical-align: middle;
+}
+
+.member_block.last {
+	margin-right: 0px;
+}
+.member_block .playerAvatar {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+.group_paging {
+	background-color: #1c1c1d;
+	border-radius: 3px;
+	color: #747474;
+	font-size: 12px;
+
+	height: 25px;
+	line-height: 25px;
+
+	padding: 0px 5px;
+
+	margin: 9px 0px;
+}
+
+.group_paging .pageLinks {
+	float: right;
+}
+
+.group_paging .pagebtn {
+	height: 15px;
+	line-height: 15px;
+}
+
+.search_controls {
+	margin-bottom: 9px;
+}
+
+.search_controls .btn_medium {
+	margin-left: 4px;
+}
+
+.grouppage_content_area .forum_paging_header {
+	margin-top: 0px;
+}
+
+
+.searchedForTerm
+{
+	position: relative;
+	float: left;
+	display: block;
+	cursor: pointer;
+
+	min-height: 20px;
+	line-height: 20px;
+	padding: 4px;
+	background-color: #68932f;
+	border: 2px solid #68932f;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	color: #d2ff96;
+	font-size: 14px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.searchedForTerm .removeIcon {
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.searchedForTerm:hover
+{
+	background-color: #8ac33e;
+	border: 2px solid #8ac33e;
+}
+
+
+.group_associated_game {
+	background-color: #2b2b2c;
+	height: 36px;
+	line-height: 36px;
+	margin-bottom: 12px;
+
+	color: #dddddd;
+	font-size: 14px;
+}
+
+.group_associated_game_icon {
+	float: left;
+
+	height: 32px;
+	width: 32px;
+	padding: 1px;
+	margin: 1px;
+
+	margin-right: 8px;
+
+	background-color: #6f7072;
+}
+
+.support_disabledgroup_warning {
+	color: red;
+	font-size: 20px;
+	margin: 12px 0px;
+}
