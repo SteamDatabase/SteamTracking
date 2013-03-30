@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8c40759915238143f435317932572f800508c615.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.0fa7fdcc2d39b393941a1d12e8e57d0c878d3a69.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -36193,7 +36193,7 @@
 				"item_name": "Inky the Hexapus",
 				"item_description": "Inky the hexapus was fished from the waters of the Horn of Despair and pressed into service by a fleet of marauding pirates, carrying messages to and fro between ships.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/items\/courier\/g1_courier\/g1_courier",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
@@ -41529,6 +41529,76 @@
 					"usage_capabilities": {
 						"decodable": true
 					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 2nd edition - ADMIN",
+				"defindex": 15147,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 2nd edition - ADMIN",
+				"item_description": "16 teams, 8 from direct invitation and 8 from qualifiers, will compete for $4000. The tournament will feature teams like Orange, Zenith, Vici Gaming and MUFC. Commentary will be provided in English, Spanish and Portuguese.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.b51e5d775087630abfbdd750809676b858e5f087.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.1f52f4cd67914e8a007c28cf86d5991324054bfa.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 2nd edition",
+				"defindex": 15148,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 2nd edition",
+				"item_description": "16 teams, 8 from direct invitation and 8 from qualifiers, will compete for $4000. The tournament will feature teams like Orange, Zenith, Vici Gaming and MUFC. Commentary will be provided in English, Spanish and Portuguese.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.b51e5d775087630abfbdd750809676b858e5f087.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.1f52f4cd67914e8a007c28cf86d5991324054bfa.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -49038,6 +49108,12 @@
 				"id": 74,
 				"attach_to_rootbone": false,
 				"name": "Divine Essence"
+			},
+			{
+				"system": "courier_inky_ambient",
+				"id": 75,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle75"
 			}
 		]
 		,

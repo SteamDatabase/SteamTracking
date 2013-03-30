@@ -60142,6 +60142,9 @@
 		{
 			"name"		"Inky the Hexapus"
 			"prefab"		"courier"
+			"item_quality"		"genuine"
+			"item_rarity"		"mythical"
+			"forced_item_quality"		"genuine"
 			"portraits"
 			{
 				"preview"
@@ -60266,6 +60269,10 @@
 					"asset"		"models/items/courier/g1_courier/g1_courier_flying.mdl"
 					"modifier"		"dire"
 				}
+				"attached_particlesystem0"
+				{
+					"system"		"courier_inky_ambient"
+				}
 			}
 			"attributes"
 			{
@@ -60290,6 +60297,7 @@
 					"value"		"33"
 				}
 			}
+			"particle_file"		"particles/econ/courier/courier_g1_octopus/courier_g1_octopus.pcf"
 		}
 		"15000"
 		{
@@ -64040,6 +64048,51 @@
 				}
 			}
 			"creation_date"		"2013-03-26"
+		}
+		"15147"
+		{
+			"name"		"Netolic Pro League 2nd edition - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"36"
+					"order"		"14"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Netolic_Pro_League_2nd_edition__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Netolic_Pro_League_2nd_edition"
+			"image_inventory"		"econ/leagues/subscriptions_neolitic_2"
+			"creation_date"		"2013-03-29"
+			"image_banner"		"econ/leagues/subscriptions_neolitic_2_ingame"
+			"tournament_url"		"http://www.netolic.tv/"
+		}
+		"15148"
+		{
+			"name"		"Netolic Pro League 2nd edition"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"36"
+					"order"		"14"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Netolic_Pro_League_2nd_edition"
+			"item_description"		"#DOTA_Item_Desc_Netolic_Pro_League_2nd_edition"
+			"image_inventory"		"econ/leagues/subscriptions_neolitic_2"
+			"creation_date"		"2013-03-29"
+			"image_banner"		"econ/leagues/subscriptions_neolitic_2_ingame"
+			"tournament_url"		"http://www.netolic.tv/"
 		}
 		"20000"
 		{
@@ -74283,6 +74336,21 @@
 			"resource"		"particles/econ/courier/courier_trail_divine.pcf"
 			"attach_type"		"renderorigin_follow"
 			"attach_entity"		"self"
+		}
+		"75"
+		{
+			"system"		"courier_inky_ambient"
+			"attach_type"		"customorigin"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_shell_high"
+				}
+			}
 		}
 	}
 	"upgradeable_base_items"
