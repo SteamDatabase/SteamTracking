@@ -886,6 +886,10 @@ select.gray_bevel {
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/bg_shared_item_guide.jpg' );
 }
 
+.dynamiclink_box.newspost .dynamiclink_description {
+	padding-top: 10px;
+}
+
 .dynamiclink_box:hover {
 	border-color: #97C0E3;
 }
@@ -1111,5 +1115,5 @@ img.dynamiclink_preview {
 #ShareOnSteamDialog
 {
 	min-height: 290px;
-	width: 600px;
+	width: 560px;
 }
