@@ -1346,20 +1346,33 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	position: relative;
 	border: 1px solid black;
 	background-color: black;
-	margin-bottom: 10px;
 }
 
-.mediaTop .workshopItemControls
-{
-	background-color: transparent;
-	width: 640px;
-	margin-left: 8px;
-}
+	.mediaTop.modal {
+		margin-right: 324px;
+	}
 
-.mediaTop .workshopItemControls .vertical_divider_container
-{
-	visibility: hidden;
-}
+	.mediaTop .mediaSidebar {
+		position: absolute;
+		right: -324px;
+		top: 0px;
+		width: 324px;
+		background-color: #262627;
+		height: 100%;
+		padding: 0 0 0 5px;
+	}
+
+	.mediaTop .workshopItemControls
+	{
+		background-color: transparent;
+		width: 640px;
+		margin-left: 8px;
+	}
+
+		.mediaTop .workshopItemControls .vertical_divider_container
+		{
+			visibility: hidden;
+		}
 
 .mediaBody
 {
@@ -2176,6 +2189,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background: #1A1A1A url('http://cdn.steamcommunity.com/public/images/sharedfiles/ico_settings_tiled.png') 7px 2px no-repeat;
 	background-repeat: no-repeat;
 	width: 15px;
+	height: 20px;
 }
 
 .general_btn.settings:hover, .general_btn.settings.toggled
@@ -2965,4 +2979,147 @@ h2.stats {
 .report_dialog_text_area
 {
 	height: 100px;
+}
+
+.tinyscroll {}
+.tinyscroll .viewport { width: 305px; height: 100%; overflow: hidden; position: relative; }
+.tinyscroll .overview { width: 300px; padding: 0px 0 0px 5px; list-style: none; position: absolute; left: 0; top: 0; min-height: 100% }
+.tinyscroll .thumb .end,
+.tinyscroll .thumb { background-color: #3c3c3c; width: 6px; }
+.tinyscroll .scrollbar { position: relative; float: right; width: 15px; }
+.tinyscroll .track { background-color: #262627; height: 100%; width:6px; position: relative; padding: 0 5px; }
+.tinyscroll .thumb { border-radius: 3px; height: 20px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+.tinyscroll .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+.tinyscroll .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
+.mediaSidebar .mediaTitle {
+	font-size: 16px;
+}
+
+.mediaSidebar .commentthread_header, .mediaSidebar .commentthread_entry_quotebox_quote, .mediaSidebar .commentthread_paging {
+	display: none;
+}
+
+.mediaSidebar .commentthread_entry, .mediaSidebar .commentthread_textarea {
+	background: transparent;
+	padding-right: 0px;
+}
+
+.mediaSidebar .commentthread_area {
+	margin: 10px 0 0 0;
+}
+
+.mediaSidebar .creatorsBlock2 > div {
+	width: auto;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+
+.mediaSidebar .commentthread_entry, .mediaSidebar .commentthread_comment   {
+	margin-left: -5px;
+	padding-left: 59px;
+}
+
+.mediaSidebar .commentthread_comment   {
+	margin-left: -4px;
+	padding-left: 59px;
+}
+
+.modalFullItemLink, .modalFullItemLink:hover, .modalFullItemLink:visited  {
+	display: block;
+	background-color: #1a1a1a;
+	color: #7cc5fb;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 3px;
+	padding: 5px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.tinyGreyArrow {
+	position: relative;
+	background: #727477;
+}
+.tinyGreyArrow:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tinyGreyArrow:after {
+	border-color: rgba(114, 116, 119, 0);
+	border-top-color: #727477;
+	border-width: 5px;
+	left: 50%;
+	margin-left: -5px;
+}
+
+.mediaSidebar #settings_btn {
+	width: 27px;
+	margin-right: 0px;
+}
+
+.settings_controls .tinyGreyArrow {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+}
+
+.creatorsBlock2 .tinyGreyArrow {
+	display: inline-block;
+	vertical-align: text-top;
+	top: 6px;
+	left: 7px;
+
+}
+
+
+.tooltipPopupMenu {
+	background-color: #3b3938;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABCCAIAAAAZuyscAAAAGXRF…NN4MPR8uw7PxzmzFb3Pnb9+Z7qltMs/n+3Yt9yX0CDAAt4VMy+xZJfQAAAABJRU5ErkJggg==');
+	background-repeat: repeat-x;
+	background-position: top;
+	border: 1px solid #82807c;
+	box-shadow: 0 2px 6px #000;
+	text-align: left;
+}
+
+	.tooltipPopupMenu > a {
+		display: block;
+		padding: 5px 12px;
+		color: #e5e4dc;
+		text-transform: none;
+		font-size: 11px;
+		font-weight: bold;
+		line-height: normal;
+		text-decoration: none;
+	}
+
+		.tooltipPopupMenu > a:hover {
+			background-color: #212d3d;
+		}
+
+
+.modalTags {
+	position: absolute;
+	bottom: 0px;
+}
+
+	.modalTags > p {
+		margin: 5px 0;
+	}
+
+.rightcol_widget_kickstarter {
+	margin: 0px 0 0 25px;
+}
+
+.rightcol_widget_indiegogo {
+	margin: 0px 0 0 24px;
 }
