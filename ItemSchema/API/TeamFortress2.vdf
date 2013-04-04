@@ -34863,27 +34863,29 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"model_player"	"models/weapons/c_models/c_skullbat/c_skullbat.mdl"
 						"name"		"#TF_BatOuttaHell_Style0"
 					}
 					"1"
 					{
-						"skin_red"	"1"
-						"skin_blu"	"0"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"model_player"	"models/weapons/c_models/c_skullbat/c_skullbat_s1.mdl"
 						"name"		"#TF_BatOuttaHell_Style1"
 					}
 					"2"
 					{
-						"skin_red"	"1"
-						"skin_blu"	"0"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"model_player"	"models/weapons/c_models/c_skullbat/c_skullbat_s2.mdl"
 						"name"		"#TF_BatOuttaHell_Style2"
 					}
 					"3"
 					{
-						"skin_red"	"1"
-						"skin_blu"	"0"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"model_player"	"models/weapons/c_models/c_skullbat/c_skullbat_s3.mdl"
 						"name"		"#TF_BatOuttaHell_Style3"
 					}
@@ -37629,7 +37631,7 @@
 		{
 			"name"	"Vox Diabolus"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -37647,7 +37649,7 @@
 		{
 			"name"	"The Pounding Father"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -37666,7 +37668,7 @@
 		{
 			"name"	"Blind Justice"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo cosmetic"
+			"prefab"	"cosmetic"
 			"equip_region"	"demo_mustache_eyepatch"
 			"capabilities"
 			{
@@ -37686,7 +37688,7 @@
 		{
 			"name"	"The Person in the Iron Mask"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"equip_region"	"pyro_head_replacement"
 			"capabilities"
 			{
@@ -37707,7 +37709,7 @@
 		{
 			"name"	"The Doe-Boy"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -37742,7 +37744,7 @@
 		{
 			"name"	"The Sydney Straw Boat"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"paintable"	"1"
@@ -37762,7 +37764,7 @@
 		{
 			"name"	"The Steel Songbird"
 			"first_sale_date"	"2013/02/21"
-			"prefab"	"promo cosmetic"
+			"prefab"	"cosmetic"
 			"equip_region"	"left_shoulder"
 			"capabilities"
 			{
@@ -38131,8 +38133,222 @@
 			"mouse_pressed_sound" 	"ui/item_default_pickup.wav"
 			"drop_sound" 		"ui/item_default_drop.wav"
 		}
-
-
+		"1034"
+		{
+			"name"	"The Conspiracy Cap"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	""		
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_ConspiracyCap"
+			"item_description"	"#TF_ConspiracyCap_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/all_class/all_class_reddit_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"	
+			{
+				"scout"		"models/player/items/all_class/all_class_reddit_scout_hat.mdl"
+				"sniper"	"models/player/items/all_class/all_class_reddit_sniper_hat.mdl"
+				"soldier"	"models/player/items/all_class/all_class_reddit_soldier_hat.mdl"
+				"demoman"	"models/player/items/all_class/all_class_reddit_demo.mdl"
+				"medic"		"models/player/items/all_class/all_class_reddit_medic.mdl"
+				"heavy"		"models/player/items/all_class/all_class_reddit_heavy.mdl"
+				"spy"		"models/player/items/all_class/all_class_reddit_spy.mdl"
+				"engineer"	"models/player/items/all_class/all_class_reddit_engineer_hat.mdl"
+				"pyro"		"models/player/items/all_class/all_class_reddit_pyro.mdl"
+			}
+			"drop_type"	"none"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"	
+						{
+							"scout"		"models/player/items/all_class/all_class_reddit_scout_hat.mdl"
+							"sniper"	"models/player/items/all_class/all_class_reddit_sniper_hat.mdl"
+							"soldier"	"models/player/items/all_class/all_class_reddit_soldier_hat.mdl"
+							"demoman"	"models/player/items/all_class/all_class_reddit_demo.mdl"
+							"medic"		"models/player/items/all_class/all_class_reddit_medic.mdl"
+							"heavy"		"models/player/items/all_class/all_class_reddit_heavy.mdl"
+							"spy"		"models/player/items/all_class/all_class_reddit_spy.mdl"
+							"engineer"	"models/player/items/all_class/all_class_reddit_engineer_hat.mdl"
+							"pyro"		"models/player/items/all_class/all_class_reddit_pyro.mdl"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_ConspiracyCap_Style0"
+					}
+					"1"
+					{
+						"model_player_per_class"	
+						{
+							"scout"		"models/player/items/all_class/all_class_reddit_scout.mdl"
+							"sniper"	"models/player/items/all_class/all_class_reddit_sniper.mdl"
+							"soldier"	"models/player/items/all_class/all_class_reddit_soldier.mdl"
+							"demoman"	"models/player/items/all_class/all_class_reddit_demo.mdl"
+							"medic"		"models/player/items/all_class/all_class_reddit_medic.mdl"
+							"heavy"		"models/player/items/all_class/all_class_reddit_heavy.mdl"
+							"spy"		"models/player/items/all_class/all_class_reddit_spy.mdl"
+							"engineer"	"models/player/items/all_class/all_class_reddit_engineer.mdl"
+							"pyro"		"models/player/items/all_class/all_class_reddit_pyro.mdl"
+						}
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_ConspiracyCap_Style1"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
+		"1035"
+		{
+			"name"	"The Public Accessor"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	""		
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"paintable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_PublicAccessor"
+			"item_description"	"#TF_PublicAccessor_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/all_class/all_class_reddit_alt_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"	
+			{
+				"scout"		"models/player/items/all_class/all_class_reddit_alt_scout_hat.mdl"
+				"sniper"	"models/player/items/all_class/all_class_reddit_alt_sniper_hat.mdl"
+				"soldier"	"models/player/items/all_class/all_class_reddit_alt_soldier_hat.mdl"
+				"demoman"	"models/player/items/all_class/all_class_reddit_alt_demo.mdl"
+				"medic"		"models/player/items/all_class/all_class_reddit_alt_medic.mdl"
+				"heavy"		"models/player/items/all_class/all_class_reddit_alt_heavy.mdl"
+				"spy"		"models/player/items/all_class/all_class_reddit_alt_spy.mdl"
+				"engineer"	"models/player/items/all_class/all_class_reddit_alt_engineer_hat.mdl"
+				"pyro"		"models/player/items/all_class/all_class_reddit_alt_pyro.mdl"
+			}
+			"drop_type"	"none"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class"	
+						{
+							"scout"		"models/player/items/all_class/all_class_reddit_alt_scout_hat.mdl"
+							"sniper"	"models/player/items/all_class/all_class_reddit_alt_sniper_hat.mdl"
+							"soldier"	"models/player/items/all_class/all_class_reddit_alt_soldier_hat.mdl"
+							"demoman"	"models/player/items/all_class/all_class_reddit_alt_demo.mdl"
+							"medic"		"models/player/items/all_class/all_class_reddit_alt_medic.mdl"
+							"heavy"		"models/player/items/all_class/all_class_reddit_alt_heavy.mdl"
+							"spy"		"models/player/items/all_class/all_class_reddit_alt_spy.mdl"
+							"engineer"	"models/player/items/all_class/all_class_reddit_alt_engineer_hat.mdl"
+							"pyro"		"models/player/items/all_class/all_class_reddit_alt_pyro.mdl"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_PublicAccessor_Style0"
+					}
+					"1"
+					{
+						"model_player_per_class"	
+						{
+							"scout"		"models/player/items/all_class/all_class_reddit_alt_scout.mdl"
+							"sniper"	"models/player/items/all_class/all_class_reddit_alt_sniper.mdl"
+							"soldier"	"models/player/items/all_class/all_class_reddit_alt_soldier.mdl"
+							"demoman"	"models/player/items/all_class/all_class_reddit_alt_demo.mdl"
+							"medic"		"models/player/items/all_class/all_class_reddit_alt_medic.mdl"
+							"heavy"		"models/player/items/all_class/all_class_reddit_alt_heavy.mdl"
+							"spy"		"models/player/items/all_class/all_class_reddit_alt_spy.mdl"
+							"engineer"	"models/player/items/all_class/all_class_reddit_alt_engineer.mdl"
+							"pyro"		"models/player/items/all_class/all_class_reddit_alt_pyro.mdl"
+						}
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+						}
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"name"	"#TF_PublicAccessor_Style1"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
+		}
 
 
 

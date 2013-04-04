@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.bb550ae8698bd269ef7684b3e363d2f4c365e694.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.591fd9abd1710bd044f7c823c01a87783d56c20e.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -34818,11 +34818,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_voxhood.9b4a222aa4f8cfc8eaea9aa9389f0569980e682d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_voxhood_large.d44431ec4ab0a0d95b5e52f92a0d3931c05b1fdf.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34832,14 +34833,6 @@
 				},
 				"used_by_classes": [
 					"Engineer"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -34860,11 +34853,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_heavy_wig.58e1c6eef8d64a23732d40dca5459bc2d53010ed.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_heavy_wig_large.4480fe3466e8831475f1520ac0565b9b15433720.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34874,14 +34868,6 @@
 				},
 				"used_by_classes": [
 					"Heavy"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -34902,11 +34888,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_demo_patch.712dda3b18dce2cdcd3295664aaea408abf73f18.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_demo_patch_large.e612a8d7058822fa1560537b39f6e242f064a83d.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34916,14 +34903,6 @@
 				},
 				"used_by_classes": [
 					"Demoman"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -34944,12 +34923,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_fireman.b48f2d17555721b381d9f865001dc056bbebdbdd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_fireman_large.8d306af340e0a2381e06540ec1d6e0e2aecab4ed.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34959,14 +34939,6 @@
 				},
 				"used_by_classes": [
 					"Pyro"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -34987,11 +34959,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_soldier_founders.32aeec2d224ed72aa2c1bf00e1c53da500ad4393.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_soldier_founders_large.5d8a42a3c689bc11a5e49552ea6aa995c005f787.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -35010,14 +34983,6 @@
 				,
 				"used_by_classes": [
 					"Soldier"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35038,12 +35003,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_boater.668d584edd098259c240cdb0d2e885760c0c1f34.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_boater_large.0cc06e6b6c1578b0e1aefd1e7efda76b2da8bc0b.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -35053,14 +35019,6 @@
 				},
 				"used_by_classes": [
 					"Sniper"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35081,11 +35039,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_songbird.67509c844f080361d417c002e06eeab3005ffb59.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_songbird_large.bd725e336dbd3416514e91f3847b1d67b3c15a4c.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -35098,11 +35057,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
 					{
 						"name": "counts as assister is some kind of pet this update is going to be awesome",
 						"class": "counts_as_assister",
@@ -35484,6 +35438,104 @@
 					"can_card_upgrade": true,
 					"can_strangify": true
 				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Conspiracy Cap",
+				"defindex": 1034,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Conspiracy Cap",
+				"item_description": "Don't shield your head from government secrets with a tinfoil hat like a know-nothing chump. Listen in on the private chat lines of our shape-shifting Reptiloid overlords. Find out who wins next year's World Series! Learn what's really in Area 51! Eavesdrop on Bigfoot's late-night drunken calls to the President!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/all_class_reddit_scout_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_class_reddit_demo",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_demo.9f66e4d4fa2043d14b9aff628694d7802e6f6fd0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_demo_large.562b7a09878a2f7a9458af6d4ad950bba3196555.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Hat"
+					},
+					{
+						"name": "No Hat",
+						"additional_hidden_bodygroups": {
+							"hat": 1
+						}
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Public Accessor",
+				"defindex": 1035,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Public Accessor",
+				"item_description": "This broken antenna cap is the perfect receiver for any local radio stations broadcasting up to twenty feet away from you. Tune in to all the hits from local-area ham radio operators, walkie-talkie enthusiasts, and small children with soup cans connected by old wire.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/all_class_reddit_alt_scout_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/all_class_reddit_alt_demo",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_alt_demo.bd5092c97f840b45fcead58402c6fedd1cd68ed9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_alt_demo_large.c9ead3c4cba0fb1a2a34fefb930dad473f0f26b9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "Hat"
+					},
+					{
+						"name": "No Hat",
+						"additional_hidden_bodygroups": {
+							"hat": 1
+						}
+					}
+				]
+				,
 				"attributes": [
 					{
 						"name": "cannot trade",
