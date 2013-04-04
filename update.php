@@ -50,7 +50,14 @@
 				
 				USort( $URLs, function( $a, $b )
 				{
-					return strcasecmp( $a[ 'URL' ], $b[ 'URL' ] );
+					$Test = strcasecmp( $a[ 'URL' ], $b[ 'URL' ] );
+					
+					if( $Test == 0 )
+					{
+						return 0;
+					}
+					
+					return $Test > 0 ? -1 : 1;
 				} );
 				
 				echo Count( $URLs ) . ' urls to be fetched...' . PHP_EOL;
@@ -175,6 +182,12 @@
 					{
 						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
+						
+						// Workarounds... It's not sending Content-Length
+						if( $LengthExpected == -1 && SubStr( $Request, 0, 6 ) === 'Repos/' )
+						{
+							$LengthExpected = $LengthDownload;
+						}
 						
 						if( $LengthExpected !== $LengthDownload )
 						{

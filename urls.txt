@@ -81,4 +81,4 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 GameSchema/TeamFortressClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=20
 
 # Repos
-#Repos/index.html|http://repo.steampowered.com/
+Repos/index.html|http://repo.steampowered.com/
