@@ -2119,8 +2119,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 {
 	background-color: #68932f;
 	color: #d2ff96;
-	padding-right: 2px;
-	padding-left: 2px;
 	background-color: #68932f;
 	color: #d2ff96;
 }
@@ -2468,6 +2466,39 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .creatorsBlock .linkAuthor
 {
 	margin-top: 4px;
+}
+
+/* v2 */
+.creatorsBlock2 .friendBlock_offline, .creatorsBlock2 .friendBlock_online, .creatorsBlock2 .friendBlock_in-game, .creatorsBlock2 .friendBlock_ignored
+{
+	background-image: none;
+	width: 264px;
+	height: 40px;
+	padding: 0;
+	margin: 0;
+	margin-top: 4px;
+	margin-right: 12px;
+	padding-left: 4px;
+	padding-top: 6px;
+	padding-bottom: 4px;
+	background-color: #1a1a1a;
+	font-size: 12px;
+	line-height: 13px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.creatorsBloc2k .friendBlock_offline:hover, .creatorsBlock2 .friendBlock_online:hover, .creatorsBlock2 .friendBlock_in-game:hover, .creatorsBlock2 .friendBlock_ignored:hover
+{
+	cursor: pointer;
+}
+
+.creatorsBlock2 .linkAuthor
+{
+	margin-top: 14px;
 }
 
 .rightGreyHRNOTUSED {

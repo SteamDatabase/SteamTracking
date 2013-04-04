@@ -813,9 +813,31 @@ function KVPrompt( title, description, key, value )
 	showModal('PromptModal');
 }
 
-function HighlightSearchText( text, element )
+function HighlightSearchText( text, elem )
 {
-	element.innerHTML = element.innerHTML.replace( new RegExp('(' + text + ')', 'gi' ), '<span class="searchedForText">$1</span>');
+	if (!(elem instanceof Node) || elem.nodeType !== Node.ELEMENT_NODE)
+		return;
+
+	var children = elem.childNodes;
+
+	for (var i=0; children[i]; ++i)
+	{
+		node = children[i];
+
+		if (node.nodeType == Node.TEXT_NODE )
+		{
+			strReplace = node.nodeValue.replace( new RegExp('(' + text.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")  + ')', 'gi' ), '<span class="searchedForText">$1</span>');
+			eleReplace = document.createElement('div');
+			eleReplace.innerHTML = strReplace;
+
+			while( eleReplace.firstChild )
+				node.parentNode.insertBefore( eleReplace.firstChild, node );
+
+			node.parentNode.removeChild( node );
+		}
+		else ( node.nodeType == Node.ELEMENT_NODE )
+			HighlightSearchText(text, node);
+	}
 }
 
 function ShowExternalTagSelectorDialog_OnLoad()
