@@ -600,6 +600,10 @@ a.subtle:hover {
 	margin-bottom: 14px;
 }
 
+.announcement_share {
+	float: right;
+}
+
 .group_body_links a {
 	color: #828282;
 	text-decoration: underline;

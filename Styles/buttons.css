@@ -166,7 +166,7 @@ a.btn_grey_grey_outer_bevel:hover
 	background-color: #1a1a1a;
 }
 
-a.btn_grey_grey_outer_bevel:hover, a.btn_grey_grey:hover, a.btn_grey_black:hover {
+.btn_grey_grey_outer_bevel:hover, .btn_grey_grey:hover, .btn_grey_black:hover {
 	background-color: #97C0E3;
 	color: #000;
 	text-decoration: none;
