@@ -38,6 +38,14 @@ Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.j
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
 
+# Client Manifest
+ClientManifest/steam_client_win32.manifest|http://media.steampowered.com/client/steam_client_win32
+ClientManifest/steam_client_osx.manifest|http://media.steampowered.com/client/steam_client_osx
+
+# This will probably 404 if there is no beta going
+ClientManifest/steam_client_publicbeta_win32.manifest|http://media.steampowered.com/client/steam_client_publicbeta_win32
+
+
 # API
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 
@@ -82,3 +90,4 @@ GameSchema/TeamFortressClassic.json|http://api.steampowered.com/ISteamUserStats/
 
 # Repos
 Repos/index.html|http://repo.steampowered.com/
+
