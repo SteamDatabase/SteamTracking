@@ -1,0 +1,901 @@
+
+
+body {
+	font-size:0.75em;
+	background-color:#2d2d2b;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg.gif');
+	background-position:0px 0px;
+	background-repeat: repeat-x;
+	color:#939393;
+	text-align:center;
+	margin:0;
+	padding:0;
+
+	scrollbar-track-color:#2c2c2c;
+}
+
+body, textarea {
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+}
+
+body.flat_page {
+	background-image: none;
+	background-color: #000000;
+
+	text-align: left;
+
+	color: #828282;
+	font-size: 14px;
+}
+
+body.flat_page .pagecontent {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_page_background.png' );
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-color: #262627;
+
+	padding-bottom: 128px;
+}
+
+body.flat_page .maincontent {
+	width: 948px;
+	margin: 0 auto;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* --[ same as a.linkStandard ]------------------- */
+a,a:hover,a:active,a:visited {
+	/*font-size: 11px;*/
+	color: #ebebeb;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	margin:0px 0px 0px 0px;
+}
+
+h1 {	font-size:2.5em;	}
+h2	{	font-size:1.5em;	}
+h3	{	font-size:1.0em;	}
+
+h1.huge {
+	font-size:72px;
+	letter-spacing:-0.03em;
+}
+select.language_select {
+	margin-top: 3px;
+	background-color:#9C9EA0;
+	border:1px solid #000000;
+	color:#000000;
+	font-size:10px;
+	margin:0px;
+	padding:2px;
+	text-align:left;
+	text-decoration:none;
+	width:200px;
+}
+
+#mainBG {
+	/* background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/contentBG.gif'); */
+	background-color:#292829;
+	background-repeat:no-repeat;
+	background-position:0px 7px;
+	background-attachment:scroll;
+	width:800px;
+	padding:0;
+	padding-bottom:15px;
+	margin:0;
+}
+
+#contentBG {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/contentBG.gif');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	background-attachment:scroll;
+	min-height:7px;
+	height:auto;
+	width:770px;
+	margin:0;
+	padding:0px 15px 0px 15px;
+	text-align:left;
+}
+
+a#topNameLink,a#topNameLink:hover,a#topNameLink:visited,a#topNameLink:active {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	text-decoration:none;
+}
+
+a#topNameLink:hover {
+	text-decoration:underline;
+}
+
+#topGroupAvatar,#topProfileAvatar {
+	float:left;
+	padding-right:16px;
+	margin-top:-10px;
+}
+
+#topOGGAvatar {
+	float:right;
+	padding-right:8px;
+	padding-left:16px;
+	margin-top:-14px;
+}
+
+.font10px,.font10px:hover,.font10px:active,.font10px:visited {
+	font-size:10px;
+}
+.font11px,.font11px:hover,.font11px:active,.font11px:visited {
+	font-size:11px;
+}
+.font12px,.font12px:hover,.font12px:active,.font12px:visited {
+	font-size:12px;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+
+input {
+	background-color:#1a1a1a;
+	color:#909090;
+	border:solid 1px #707070;
+	position:relative;
+	top:3px;
+}
+
+body.flat_page input {
+	position: static;
+	top: 0px;
+}
+
+input[type='checkbox'] {
+	background-color:#1a1a1a;
+	color:#909090;
+	border:solid 1px #707070;
+}
+
+select {
+	font-size:11px;
+	background-color:#1a1a1a;
+	color:#B4DA45;
+}
+
+.hrBreak {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/breaker.gif');
+	background-repeat:repeat-x;
+	background-attachment:scroll;
+	height:5px;
+	padding:0;
+	line-height:0;
+	font-size:0px;
+	min-height:5px;
+	min-width:480px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+#footerLanguageSelect {
+	float:left;
+	padding-right:6px;
+	padding-top:6px;
+}
+
+body.flat_page #footer {
+	background-color: #000000;
+	padding-top: 32px;
+	width: auto;
+	height: 78px;
+
+	margin: 0px;
+	background-image: none;
+
+	font-size: 11px;
+}
+
+body.flat_page #footer a {
+	color:#777777;
+	text-decoration: underline;
+}
+
+body.flat_page #footer .footer_content {
+	position: relative;
+	width: 958px;
+	margin: 0px auto;
+	height: 78px;
+}
+
+#fullAvatarPop {
+	position:absolute;
+	width:216px;
+	height:145px;
+	background-color:#000000;
+	padding:5px;
+	border:solid #b4da45 1px;
+}
+
+#fullGamePop {
+	position:absolute;
+	width:280px;
+	height:105px;
+	background-color:#000000;
+	padding:5px;
+	border:solid #b4da45 1px;
+}
+
+.gameLogoHolder_default {
+	position:relative;
+	width:192px;
+	height:77px;
+	border:0;
+	padding:0;
+	margin:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/gamelogoholder_default.jpg');
+}
+
+.gameLogo {
+	position:absolute;
+	width:184px;
+	height:69px;
+	border:0;
+	padding:0;
+	margin:0;
+	top:4px;
+	left:4px;
+}
+
+.gameLogo img {
+	border:0;
+	padding:0;
+	margin:0;
+	width:184px;
+	height:69px;
+}
+
+.avatarHolder_default {
+	position:relative;
+	width:192px;
+	height:192px;
+	border:0;
+	padding:0;
+	margin:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/avatarholder_default.jpg');
+}
+
+.avatarFull {
+	position:absolute;
+	width:184px;
+	height:184px;
+	border:0;
+	padding:0;
+	margin:0;
+	top:4px;
+	left:4px;
+}
+
+.avatarFull img {
+	border:0;
+	padding:0;
+	margin:0;
+	width:184px;
+	height:184px;
+}
+
+.iconHolder_default,.iconHolder_online,.iconHolder_in-game,.iconHolder_offline,.iconHolder_ignored {
+	position:relative;
+	width:40px;
+	height:40px;
+	border:0;
+	padding:0;
+	margin:0;
+}
+.iconHolder_default {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_default.jpg');
+}
+.iconHolder_offline {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_offline.jpg');
+}
+.iconHolder_ignored {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_offline.jpg');
+}
+.iconHolder_online {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_online.jpg');
+}
+.iconHolder_in-game {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_ingame.jpg');
+}
+
+
+.iconHolder_48_default,.iconHolder_48_online,.iconHolder_48_in-game,.iconHolder_48_offline,.iconHolder_48_ignored {
+	position:relative;
+	width:56px;
+	height:56px;
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+.iconHolder_48_default {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_48_offline.png');
+}
+.iconHolder_48_offline {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_48_offline.png');
+}
+.iconHolder_48_ignored {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_48_offline.png');
+}
+
+.iconHolder_48_online {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_48_online.png');
+}
+.iconHolder_48_in-game {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/iconholder_48_ingame.png');
+}
+
+.mediumHolder_default
+{
+	position:relative;
+	width:72px;
+	height:72px;
+	border:0;
+	padding:0;
+	margin:0;
+	background-image:url( 'http://cdn.steamcommunity.com/public/images/skin_1/mediumholder_default.gif' );
+}
+
+.avatarMedium {
+	position:absolute;
+	width:64px;
+	height:64px;
+	border:0;
+	padding:0;
+	margin:0;
+	top:4px;
+	left:4px;
+}
+
+.avatarMedium img {
+	border:0;
+	padding:0;
+	margin:0;
+	width:64px;
+	height:64px;
+}
+
+.avatarIcon_48 {
+	position:absolute;
+	width:48px;
+	height:48px;
+	border:0;
+	padding:0;
+	margin:0;
+	top:4px;
+	left:4px;
+}
+
+.avatarIcon_48 img {
+	border:0;
+	padding:0;
+	margin:0;
+	width:48px;
+	height:48px;
+}
+
+.avatarIcon {
+	position:absolute;
+	width:32px;
+	height:32px;
+	border:0;
+	padding:0;
+	margin:0;
+	top:4px;
+	left:4px;
+}
+.avatarIcon img {
+	border:0;
+	padding:0;
+	margin:0;
+	width:32px;
+	height:32px;
+}
+
+.hiliteTextGreen {
+	color:#8bc53f;
+}
+
+.hiliteTextRed {
+	color:#f26c4f;
+}
+
+.hiliteTextBlue {
+	color:#6f9fc8;
+}
+
+
+/* --[ global infoblock layout settings ]------------------- */
+
+.infoBreak {
+	color:#545454;
+	font-size:11px;
+}
+
+.infoBreak2 {
+	color:#2c4b66;
+	font-size:11px;
+	font-weight:normal;
+}
+
+.memberRow {
+	font-size:11px;
+	padding-top:5px;
+	color:#939393;
+}
+
+.eventTitle {
+	padding-top:4px;
+	padding-bottom:1px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+/* --[ links ]------------------- */
+a.linkStandard,a.linkStandard:hover,a.linkStandard:active,a.linkStandard:visited {
+	font-size: 11px;
+	color: #ebebeb;
+	text-decoration:none;
+}
+
+a.linkStandard:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+/* like link standard but doesn't mess with font size */
+a.whiteLink:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a.linkTitle,a.linkTitle:hover,a.linkTitle:active,a.linkTitle:visited {
+	font-weight:bold;
+	font-size: 15px;
+	color: #ebebeb;
+	text-decoration:none;
+}
+
+a.linkTitle:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+a.linkAction,a.linkAction:hover,a.linkAction:active,a.linkAction:visited {
+	font-weight:bold;
+	font-size: 11px;
+	color: #62a7e3;
+	text-decoration:none;
+}
+
+a.linkAction:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+a.linkActionInGame,a.linkActionInGame:hover,a.linkActionInGame:active,a.linkActionInGame:visited {
+	font-weight:bold;
+	font-size: 11px;
+	color: #8bc53f;
+	text-decoration:none;
+}
+
+a.linkActionInGame:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+a.linkInGame,a.linkInGame:hover,a.linkInGame:active,a.linkInGame:visited {
+	font-size: 11px;
+	color: #8bc53f;
+	text-decoration:none;
+}
+
+span.membersInGame {
+	font-size: 11px;
+	color: #8bc53f;
+	text-decoration:none;
+}
+
+a.linkInGame:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+a.linkOnline,a.linkOnline:hover,a.linkOnline:active,a.linkOnline:visited {
+	font-size: 11px;
+	color: #62a7e3;
+	text-decoration:none;
+}
+
+span.membersOnline {
+	font-size: 11px;
+	color: #62a7e3;
+	text-decoration:none;
+}
+
+a.linkOnline:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+
+
+
+
+/* --[ OLD links ]------------------- */
+
+
+a.linkBlue,a.linkBlue:hover,a.linkBlue:active,a.linkBlue:visited {
+	font-size: 11px;
+	color: #6f9fc8;
+}
+
+a.linkGreen,a.linkGreen:hover,a.linkGreen:active,a.linkGreen:visited {
+	color: #8bc53f;
+}
+
+a.linkGrey,a.linkGrey:hover,a.linkGrey:active,a.linkGrey:visited {
+	font-size: 15px;
+	color: #e1e1e1;
+}
+
+a.linkRed,a.linkRed:hover,a.linkRed:active,a.linkRed:visited {
+	font-size: 13px;
+	color: #f26c4f;
+}
+
+/* --[ /links ]------------------- */
+
+/* --[ friend blocks ]------------------- */
+.friendBlock_offline,.friendBlock_online,.friendBlock_in-game,.friendBlock_ignored {
+	width:245px;
+	height:40px;
+	padding:0;
+	margin:0;
+	padding-left:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-bottom:4px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/friendBlockBG2.gif');
+	font-size:11px;
+	line-height:13px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover,.friendBlock_ignored  {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/friendBlockOverBG2.gif');
+	cursor:pointer;
+}
+
+.friendHighlight {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/friendBlockOverBG2.gif');
+	cursor:pointer;
+}
+
+.friendBlock_offline {
+	color:#898989;
+}
+
+.friendBlock_online {
+	color:#62a7e3;
+}
+
+.friendBlock_in-game {
+	color:#8bc53f;
+}
+
+.friendBlock_ignored {
+	color:#f26c4f;
+}
+
+.friendName {
+	color: #898989;
+	font-weight: bold;
+}
+.friendName.online {
+	color:#62a7e3;
+}
+.friendName.in-game {
+	color:#8bc53f;
+}
+.friendName.ignored {
+	color:#f26c4f;
+}
+
+.friendBlock_offline p,.friendBlock_online p,.friendBlock_in-game p,.friendBlock_ignored p {
+	margin:0;
+	padding:0;
+	padding-top:0px;
+}
+
+.friendBlockIcon {
+	float:left;
+	width:40px;
+	height:40px;
+	margin:0;
+	padding:0;
+	margin-right:7px;
+}
+
+a.linkFriend_online,a.linkFriend_online:hover,a.linkFriend_online:active,a.linkFriend_online:visited {
+	color:#6fbdff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.linkFriend_offline,a.linkFriend_offline:hover,a.linkFriend_offline:active,a.linkFriend_offline:visited {
+	color:#898989;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.linkFriend_in-game,a.linkFriend_in-game:hover,a.linkFriend_in-game:active,a.linkFriend_in-game:visited,.linkFriend_in-game a,.linkFriend_in-game a:hover,.linkFriend_in-game a:active,.linkFriend_in-game a:visited {
+	color:#b1fb50;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.linkFriend_ignored,a.linkFriend_ignored:hover,a.linkFriend_ignored:active,a.linkFriend_ignored:visited,.linkFriend_ignored a,.linkFriend_ignored a:hover,.linkFriend_ignored a:active,.linkFriend_ignored a:visited {
+	color:#f26c4f;
+	font-weight:bold;
+	text-decoration:none;
+}
+/* --[ /friend blocks ]------------------- */
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Hide from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+.overlayDisabled {
+	color:#9a9a9a;
+	font-style:italic;
+	font-size:10px;
+}
+.overlayDisabled11 {
+	color:#9a9a9a;
+	font-style:italic;
+	font-size:11px;
+}
+
+.steamTooltip {
+	border:solid #595959 2px;
+	margin:0;
+	padding:0;
+}
+
+p.errorPrivate {
+	color:#f26c4f;
+	font-weight:bold;
+	margin-left:6px;
+}
+
+.pubGroup {
+	color:#d05f29;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.mainSectionHeader,#mainSectionHeaderTop,.rightSectionHeader {
+	color: #929292;
+}
+
+a.headlineLink,a.headlineLink:hover,a.headlineLink:active,a.headlineLink:visited,.headlineLink {
+	color:#ebebeb;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none;
+}
+
+a.headlineLink:hover {
+	color:#ffffff;
+	text-decoration:underline;
+}
+
+.perf_timing_link {
+	display: block;
+	text-align: center;
+	margin-bottom: 14px;
+}
+
+.perf_timing_data {
+	background-color: #000000;
+	margin: 0px auto 48px auto;
+	padding: 8px;
+	text-align: left;
+	width: 936px;
+	font-size: 14px;
+}
+.nowrap {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+/* --------------- button crap -------------- */
+.fl_left {
+	float:left;
+}
+.fl_right {
+	float:right;
+}
+.btn_inactive, .btn_inactive_d, .btn_grey, .btn_dgrey, .btn_green {
+	display:block;
+	position:relative;
+	height:23px;
+	padding:0px 15px;
+	font-size:11px;
+	background-repeat:repeat-x;
+	text-align:center;
+	line-height:22px;
+	margin:0px 2px;
+}
+
+/* sides */
+.btn_left, .btn_right {
+	position:absolute;
+	top:0px;
+	height:23px;
+	width:2px;
+}
+.btn_left {
+	background-position:bottom left;
+	left:-2px;
+}
+.btn_right {
+	background-position:bottom right;
+	right:-2px;
+}
+
+/* inactive, no rollover */
+.btn_inactive {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_inactive_bg.png');
+}
+a.btn_inactive, a.btn_inactive:hover, a.btn_inactive:visited {
+	text-decoration:none;
+	color:#85817d;
+	cursor:default;
+}
+.btn_inactive_d {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_inactive_d_bg.png');
+}
+a.btn_inactive_d, a.btn_inactive_d:hover, a.btn_inactive_d:visited {
+	text-decoration:none;
+	color:#787878;
+	cursor:default;
+}
+.btn_inactive .btn_left, .btn_inactive .btn_right {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_inactive_sides.png');
+}
+.btn_inactive_d .btn_left, .btn_inactive_d .btn_right {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_inactive_d_sides.png');
+}
+
+/* grey & green, with rollover */
+.btn_grey, .btn_dgrey, .btn_green {
+	background-position:bottom;
+}
+.btn_grey {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_grey_ro_bg.png');
+}
+.btn_dgrey {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_dgrey_ro_bg.png');
+}
+.btn_green {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_green_ro_bg.png');
+}
+a.btn_grey, a.btn_grey:hover, a.btn_grey:visited {
+	text-decoration:none;
+	color:#c9c9c9;
+}
+a.btn_grey:hover {
+	color:#ffffff;
+}
+a.btn_dgrey, a.btn_dgrey:hover, a.btn_dgrey:visited {
+	text-decoration:none;
+	color:#c9c9c9;
+}
+a.btn_dgrey:hover {
+	color:#ffffff;
+}
+a.btn_green, a.btn_green:hover, a.btn_green:visited {
+	text-decoration:none;
+	color:#8bc53f;
+}
+.btn_grey .btn_left, .btn_grey .btn_right {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_grey_ro_sides.png');
+}
+.btn_dgrey .btn_left, .btn_dgrey .btn_right {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_dgrey_ro_sides.png');
+}
+.btn_green .btn_left, .btn_green .btn_right {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/btn_green_ro_sides.png');
+}
+
+/* rollover state */
+.btn_grey:hover, .btn_dgrey:hover, .btn_green:hover {
+	background-position:top;
+}
+.btn_grey:hover .btn_left, .btn_dgrey:hover .btn_left, .btn_green:hover .btn_left {
+	background-position:top left;
+}
+.btn_grey:hover .btn_right, .btn_dgrey:hover .btn_right, .btn_green:hover .btn_right {
+	background-position:top right;
+}
+/*
+.btn_ro {
+	background-position:top;
+}
+.btn_ro .btn_left {
+	background-position:top left;
+}
+.btn_ro .btn_right {
+	background-position:top right;
+}
+*/
+
+
+
+.btn_post {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAIAAADDbMD2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpijgwNZmJkZETCTEDAiCYGEccUY4SqhcsBBBgAXvcBa6BpU4MAAAAASUVORK5CYII= );
+	background-repeat: repeat-x;
+	background-color: #6e6a69;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 3px;
+	color: #D6D7D8;
+	text-transform: uppercase;
+	padding: 0px 25px;
+	font-size: 11px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* --------------- end button crap -------------- */
+
+/* --------------- aliases -------------- */
+.namehistory_link {
+	position:relative;
+}
+
+.namehistory_list {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:900;
+	border:#6d6d6d;
+}
+

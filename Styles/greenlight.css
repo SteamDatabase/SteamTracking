@@ -1,0 +1,66 @@
+
+.greenlit_items
+{
+	color: #7e8f42;
+}
+
+.browseOption
+{
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-left: 10px;
+}
+
+.browseOption.notSelected:hover
+{
+	background-color: #3c3d3f;
+	cursor: pointer;
+}
+
+.browseOption.notSelected a:hover
+{
+	text-decoration: none;
+}
+
+.browseOption.pending, .browseOption.accepted, .browseOption.rated, .browseOption.votelater, .browseOption.myfollowedfiles, .browseOption.myfavorites, .browseOption.favoritedbyfriends
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_greenlit.png');
+	background-repeat:no-repeat;
+	background-position: 10px 8px;
+	padding-left: 35px;
+}
+
+.browseOption.pending
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_greenlit.png');
+}
+
+.browseOption.accepted
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_available.png');
+}
+
+.browseOption.rated
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_vote_yes.png');
+}
+
+.browseOption.votelater
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_remind_later.png');
+}
+
+.browseOption.myfollowedfiles
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_following.png');
+}
+
+.browseOption.myfavorites
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_favorites.png');
+}
+
+.browseOption.favoritedbyfriends
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/nav_friendfav.png');
+}

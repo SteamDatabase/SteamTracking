@@ -3,10 +3,14 @@ Styles/apphub.css|http://cdn.steamcommunity.com/public/shared/css/apphub.css?_=*
 Styles/apphub_home.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_home.css?_=*TIMENOW*
 Styles/buttons.css|http://cdn.steamcommunity.com/public/shared/css/buttons.css?_=*TIMENOW*
 Styles/communityhome.css|http://cdn.steamcommunity.com/public/css/skin_1/communityhome.css?_=*TIMENOW*
+Styles/discussions.css|http://cdn.steamcommunity.com/public/css/skin_1/discussions.css?_=*TIMENOW*
 Styles/economy.css|http://cdn.steamcommunity.com/public/css/skin_1/economy.css?_=*TIMENOW*
 Styles/economy_market.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css?_=*TIMENOW*
 Styles/forums.css|http://cdn.steamcommunity.com/public/css/skin_1/forums.css?_=*TIMENOW*
+Styles/global.css|http://cdn.steamcommunity.com/public/css/skin_1/global.css?_=*TIMENOW*
 Styles/globalv2.css|http://cdn.steamcommunity.com/public/css/globalv2.css?_=*TIMENOW*
+Styles/greenlight.css|http://cdn.steamcommunity.com/public/css/skin_1/greenlight.css?_=*TIMENOW*
+Styles/groupv2.css|http://cdn.steamcommunity.com/public/css/skin_1/groupv2.css?_=*TIMENOW*
 Styles/header.css|http://cdn.steamcommunity.com/public/css/skin_1/header.css?_=*TIMENOW*
 Styles/profile.css|http://cdn.steamcommunity.com/public/css/skin_1/profile.css?_=*TIMENOW*
 Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css?_=*TIMENOW*
@@ -19,7 +23,6 @@ Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_vide
 Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
 Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
-Styles/groupv2.css|http://cdn.steamcommunity.com/public/css/skin_1/groupv2.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english

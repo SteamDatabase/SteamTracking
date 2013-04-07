@@ -1,0 +1,518 @@
+
+.discussions_page {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_content_background.png');
+	background-position: center 105px;
+	background-color: #262627;
+	background-repeat: no-repeat;
+}
+
+.discussions_page.in_client {
+	background-position: center top;
+}
+
+.discussions_header {
+	position: relative;
+	border-bottom: 5px solid #364862;
+}
+
+.steam_discussions_intro {
+	color: #989898;
+}
+
+.steam_discussions_intro b {
+	color: #d0d0d0;
+	font-weight: normal;
+}
+
+.steam_discussions_moderationdisclaimer {
+	color: #989898;
+	font-size: 12px;
+}
+
+.discussions_forumlist_header {
+	font-size: 11px;
+	color: #a6a4a1;
+	margin-bottom: 8px;
+}
+
+.discussions_forumlist_topiccount, .discussions_forumlist_lastpost {
+	float: right;
+	text-align: right;
+}
+
+.discussions_forumlist_topiccount {
+	width: 140px;
+	padding-right: 16px;
+	overflow: hidden;
+}
+
+.discussions_forumlist_lastpost {
+}
+
+.discussions_forum_row {
+	position: relative;
+	height: 67px;
+	background-color: #2f2f30;
+	margin-bottom: 2px;
+	color: #858381;
+}
+
+.discussions_forum_row:hover {
+	background-color: #3c3c3d;
+}
+
+.discussions_forum_row .discussions_forumlist_topiccount, .discussions_forum_row .discussions_forumlist_lastpost {
+	line-height: 67px;
+}
+
+.discussions_forum_row.unread .discussions_forumlist_topiccount, .discussions_forum_row.unread .discussions_forumlist_lastpost {
+	color: #e1e1e1;
+}
+
+.discussions_forumlist_icon {
+	float: left;
+	width: 44px;
+	line-height: 67px;
+
+	text-align: center;
+}
+
+.discussions_forumlist_icon img {
+	vertical-align: middle;
+}
+
+.discussions_forumlist_forumname {
+	color: #e1e1e1;
+}
+
+.discussions_forum_row.unread .discussions_forumlist_forumname {
+	font-weight: bold;
+}
+
+.discussions_forumlist_forumname.no_description {
+	line-height: 67px;
+}
+
+.discussions_forumlist_linkoverlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.discussions_forumlist_linkoverlay img {
+	width: 100%;
+	height: 67px;
+}
+
+.discussions_frame_header {
+	padding-top: 18px;
+}
+
+.discussions_frame_header h1 {
+	color: #fffffa;
+	font-weight: normal;
+	font-size: 26px;
+	margin: 0;
+}
+
+.discussions_breadcrumbs {
+	margin-bottom: 0px;
+}
+
+.discussions_tab_message {
+	float: left;
+	margin-top: 9px;
+	padding-left: 14px;
+	line-height: 26px;
+}
+
+.discussions_links .weblink {
+	margin-bottom: 8px;
+}
+
+.discussions_link_icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	display: inline-block;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/discussions_links_icons.png' );
+	background-repeat: no-repeat;
+
+	vertical-align: middle;
+}
+
+.discussions_link_icon.guidelines {
+	background-position: 0 0;
+}
+
+.discussions_link_icon.faq {
+	background-position: 0 -16px;
+}
+
+.discussions_link_icon.moderators {
+	background-position: 0 -32px;
+}
+
+.discussions_game_ctn {
+	margin-bottom: 32px;
+}
+
+.discussions_game_header {
+	height: 45px;
+	line-height: 45px;
+	padding: 11px 9px;
+	background-color: #2f2f30;
+	margin-bottom: 2px;
+}
+
+.discussions_game_header .discussions_game_logo {
+	float: left;
+	margin-right: 13px;
+}
+
+
+.discussions_game_header .discussions_game_logo, .discussions_game_header .discussions_game_logo img {
+	width: 120px;
+	height: 45px;
+}
+
+.discussions_game_header .discussions_game_discussioncount {
+	float: right;
+	line-height: 16px;
+	font-size: 12px;
+	color: #8e8e8e;
+	padding-top: 6px;
+
+	text-align: right;
+}
+.discussions_game_discussioncount .discussions_total_count {
+	color: #e1e1e1;
+	font-size: 14px;
+}
+
+.discussions_game_footer {
+	height: 28px;
+	line-height: 28px;
+	background-color: #2f2f30;
+	padding: 0px 10px;
+	font-size: 11px;
+	color: #e1e1e1;
+
+	text-align: right;
+}
+
+.discussiontab_loading {
+	text-align: center;
+	padding-top: 64px;
+}
+
+.rightbox .content.discussions_recentlyplayedbox {
+	padding-top: 0px;
+}
+
+.discussions_recentlyplayed {
+	line-height: 38px;
+	color: #bcbcbc;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.discussions_recentlyplayed.unread {
+	font-weight: bold;
+	color: #fefefe;
+}
+.discussions_game_controls {
+	padding-bottom: 32px;
+}
+
+.discussions_game_browseoption {
+	background-color: #303031;
+	border-radius: 3px;
+	line-height: 32px;
+	padding-left: 12px;
+	float: left;
+	height: 39px;
+	padding-top: 7px;
+	padding-right: 7px;
+}
+
+.discussions_game_searchoption {
+	margin-left: 16px;
+	float: left;
+}
+
+div.quicklistselect
+{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	width: 269px;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	font-size: 12px;
+	border-radius: 3px;
+	background-color: #424242;
+	border: 1px solid #535455;
+	text-align: left;
+	text-transform: uppercase;
+
+	margin-left: 12px;
+}
+
+div.quicklistselect_options {
+	text-align: left;
+	width: 269px;
+	line-height: 26px;
+	color: white;
+	font-size: 12px;
+	background-color: #424242;
+	border: 1px solid #535455;
+	cursor: pointer;
+	text-transform: uppercase;
+	z-index: 3;
+}
+
+div.quicklistselect #quicklistselect_arrow {
+	position: absolute;
+	right: 4px;
+	top: 5px;
+	width: 17px;
+	height: 20px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+div.quicklistselect.focus #quicklistselect_arrow{
+	background-position: bottom;
+}
+
+div.quicklistselect #quicklistselect_active
+{
+	cursor: pointer;
+}
+
+div.quicklistselect div.option, div.quicklistselect_options div.option {
+	padding-left: 7px;
+	height: 30px;
+	line-height: 30px;
+	cursor: default;
+	border-bottom: none;
+}
+
+div.quicklistselect #quicklistselect_activestats
+{
+	background-color: #719F33;
+	color: #ffffff;
+	border-bottom: 1px solid #707070;
+}
+
+div.quicklistselect_options div.option{
+	border-bottom: none;
+	cursor: pointer;
+}
+
+div.quicklistselect_options div.option:hover {
+	background-color: #333333;
+}
+
+div.quicklistselect div.option img, div.quicklistselect_options div.option img {
+	vertical-align: middle;
+}
+
+.report_secondary_links {
+	font-size: 12px;
+}
+
+.report_secondary_links a {
+	color: #999999;
+}
+
+.report_secondary_links a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.report_row {
+	padding: 3px 2px;
+	margin-bottom: 2px;
+}
+
+.report_row.checked {
+	background-color: #3C3C3D;
+}
+
+.report_row .report_icons {
+	float: left;
+	padding: 8px 8px;
+	font-size: 16px;
+	line-height: 20px;
+}
+.report_row .report_icons img {
+	vertical-align: middle;
+}
+
+.report_row .report_author {
+	float: left;
+	width: 160px;
+	margin-right: 8px;
+}
+.report_row .report_content {
+}
+
+.report_row .report_reporter {
+	float: right;
+	width: 160px;
+}
+
+.report_reporter .report_content_line1 {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.report_content_line1, .report_content_line2 {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.report_content_line1 {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+.report_content_line2 {
+	font-size: 12px;
+}
+
+/** wordfilter admin **/
+.wordfilter_status {
+	font-size: 16px;
+	margin: 12px;
+	color: #ffffff;
+}
+
+.wordfilter_status.wordfilter_status_error {
+	color: #ff0000;
+}
+
+table.wordfilter_table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr.wordfilter_row:hover {
+	background-color: #3C3C3D;
+}
+
+td.wordfilter_word {
+	color: #ffffff;
+}
+
+td.wordfilter_action {
+	visibility: hidden;
+}
+tr.wordfilter_row:hover td.wordfilter_action {
+	visibility: visible;
+}
+
+td.wordfilter_action a {
+	color: #828282;
+	text-decoration: underline;
+}
+td.wordfilter_action a:hover {
+	color: #ffffff;
+}
+
+.discussion_tab_content_area h2 {
+	font-size: 18px;
+	margin-bottom: 18px;
+}
+
+.discussion_tab_content_area h2.discussion_primary_header {
+	font-size: 24px;
+	margin-bottom: 22px;
+}
+
+.discussion_tab_content_rule {
+	border-top: 1px solid #34455d;
+	margin-bottom: 12px;
+	margin-top: 20px;
+}
+
+
+
+.global_discussion_search_ctn {
+	float: right;
+	margin-top: -6px;
+}
+
+.discussions_view_more_link {
+	float: right;
+}
+
+.discussions_view_more_link a {
+	color: #529CDE;
+	font-size: 11px;
+}
+
+.discussions_view_more_link a:hover {
+	color: #529CDE;
+	text-decoration: underline;
+}
+
+a.recent_game_discussion {
+	display: inline-block;
+	position: relative;
+	width: 296px;
+	height: 40px;
+	border-radius: 3px;
+	border-top: 1px solid #424242;
+
+	padding: 3px;
+
+	margin-right: 16px;
+	margin-bottom: 16px;
+
+	background-color: #3f3f40;
+	background: -moz-linear-gradient(top, #39393a 5%, #454546 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#39393a), color-stop(95%,#454546));background: -webkit-linear-gradient(top, #39393a 5%,#454546 95%);background: -o-linear-gradient(top, #39393a 5%,#454546 95%);background: -ms-linear-gradient(top, #39393a 5%,#454546 95%);background: linear-gradient(to bottom, #39393a 5%,#454546 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39393a', endColorstr='#454546',GradientType=0 );}
+
+a.recent_game_discussion:hover {
+	background: -moz-linear-gradient(top, #454546 5%, #545454 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#454546), color-stop(95%,#545454));background: -webkit-linear-gradient(top, #454546 5%,#545454 95%);background: -o-linear-gradient(top, #454546 5%,#545454 95%);background: -ms-linear-gradient(top, #454546 5%,#545454 95%);background: linear-gradient(to bottom, #454546 5%,#545454 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454546', endColorstr='#545454',GradientType=0 );}
+
+a.recent_game_discussion.last
+{
+	margin-right: 0px;
+}
+
+.recent_game_discussion .playerAvatar {
+	float: left;
+	margin-right: 8px;
+}
+
+.recent_game_discussion .recent_game_discussions_unread_indicator {
+	float: right;
+	margin-left: 8px;
+
+	height: 40px;
+	line-height: 40px;
+
+	padding: 0px 8px;
+}
+
+
+.recent_game_discussion_name {
+	color: #e1e1e1;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.recent_game_discussion_count {
+	color: #939393;
+}
