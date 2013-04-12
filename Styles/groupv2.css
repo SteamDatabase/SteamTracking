@@ -1119,3 +1119,22 @@ a.headlineLink:hover {
 	font-size: 20px;
 	margin: 12px 0px;
 }
+
+.upcoming_event {
+	margin-bottom: 8px;
+}
+
+.upcoming_event:last-child {
+	margin-bottom: 0;
+}
+
+.upcoming_event_timestamp {
+	color: #898989;
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.upcoming_event_icon {
+	float: left;
+	margin-right: 8px;
+}
