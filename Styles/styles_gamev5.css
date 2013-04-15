@@ -574,6 +574,21 @@ img.game_header_image {
 	margin-bottom: 1px;
 }
 
+.game_description_column h2.package_group {
+	height: 30px;
+	
+	padding: 3px 16px 2px 2px;
+	font-size: 21px;
+	font-weight: normal;
+	line-height: 1em;
+	
+	color: rgb(108, 152, 187);
+	
+	background: transparent;
+	
+	margin-bottom: 1px;
+}
+
 .game_description_column {
 	font-size: 14px;
 	color: #b0aeac;
