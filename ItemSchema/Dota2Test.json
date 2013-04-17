@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.0b2367c77ab4de90b0045195d35d81956503e3a9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.36a17646c80789b064e499f45af93270e2e87a51.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -23252,7 +23252,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mount",
 				"item_name": "Feral the Werebat",
-				"item_description": "This new item has no description.",
+				"item_description": "Werebat? There bat!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/batrider\/anuxi_feral_mount1\/anuxi_feral_mount1",
@@ -23982,7 +23982,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Wrap",
 				"item_name": "Wraps of the Seasoned Veteran",
-				"item_description": "This new item has no description.",
+				"item_description": "Spending time on the trail is bound to take its toll sooner or later.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/bounty_hunter\/seasoned_wraps\/seasoned_wraps",
@@ -25373,7 +25373,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Backpack",
 				"item_name": "Radiant Crystal Haul",
-				"item_description": "This new item has no description.",
+				"item_description": "Gotta dig deep if you want to find the best!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/meepo\/meepo_cratepack\/meepo_cratepack",
@@ -30831,7 +30831,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mount",
 				"item_name": "Ormr the Lunar Dragon",
-				"item_description": "This new item has no description.",
+				"item_description": "From a race of dragons that normally patrols the dark side of the moon, Ormr wanted to see the world.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/mirana\/lunardragon_mount\/lunardragon_mount",
@@ -30853,7 +30853,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Goggles",
 				"item_name": "Spottin' Goggles",
-				"item_description": "This new item has no description.",
+				"item_description": "Able to see a tic on a mouse's back at a thousand paces, Sniper's Spottin' Goggles are a marvel to behold.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/sniper\/globulargoggles\/globulargoggles",
@@ -30875,7 +30875,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Fins",
 				"item_name": "Fishy Frillhawk",
-				"item_description": "This new item has no description.",
+				"item_description": "In Dark Reef Prison, Slark kept too low a profile to ever be called a trendsetter. He figured nobody noticed his radical look. But as soon as he had broken out, the remaining inmates began to imitate this finny style. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/slark\/fishy_frillhawk\/fishy_frillhawk",
@@ -30897,7 +30897,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Scepter",
 				"item_name": "Scepter of the Grand Magus",
-				"item_description": "This new item has no description.",
+				"item_description": "Few know that Rubick's talents for mimicry extend to arcane assembly.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/rubick\/weapon_agh\/weapon_agh",
@@ -30919,7 +30919,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Banner",
 				"item_name": "Battle Banner of the Masked",
-				"item_description": "This new item has no description.",
+				"item_description": "What good is a battle without a banner to celebrate it?  No good at all, or so says the Juggernaut.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/juggernaut\/jugg_flag\/jugg_flag",
@@ -31387,6 +31387,138 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana.b1d344d8eab78d3f5832f4609d2bf3142c4cba20.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana_large.dc87d24a4082a135102c313b80c249ef2c252520.png",
 				"item_set": "thousand_faces",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "weapon_eyeoffetitzu",
+				"defindex": 4905,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "weapon_eyeoffetitzu",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Offhand Weapon",
+				"defindex": 4906,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade Weapon",
+				"item_name": "Sacred Bones Offhand Weapon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Shoulder",
+				"defindex": 4907,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder Pad",
+				"item_name": "Sacred Bones Shoulder",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Bracers",
+				"defindex": 4908,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Sacred Bones Bracers",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Helmet",
+				"defindex": 4909,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helmet",
+				"item_name": "Sacred Bones Helmet",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Spear",
+				"defindex": 4910,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Sacred Bones Spear",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36136,8 +36268,8 @@
 				"image_inventory": "econ\/tools\/anuxi_crate",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/anuxi_crate.f3375fda0694e5787de6e355689c8d32c0af06f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/anuxi_crate_large.d72a2551d645d9100de2303723a429c0bf84650d.png",
 				"capabilities": {
 					"decodable": true,
 					"can_craft_mark": true,
@@ -36169,7 +36301,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Courier",
 				"item_name": "Snelfret the Snail",
-				"item_description": "This new item has no description.",
+				"item_description": "The original rebel snail, Snelfret refused to conform to a social order that enforced lethargy, a world that told him he must not move too fast. So he loaded up his shell and headed for more dynamic climes, determined to redefine the meaning of snail's pace.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/courier\/snail\/courier_snail",
@@ -36184,6 +36316,51 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Inky the Hexapus",
+				"defindex": 10170,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Inky the Hexapus",
+				"item_description": "Inky the hexapus was fished from the waters of the Horn of Despair and pressed into service by a fleet of marauding pirates, carrying messages to and fro between ships.",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ\/items\/courier\/g1_courier\/g1_courier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/courier\/g1_courier\/g1_courier.1b2fa3262dc5e150203367fa74a8604c01396f9f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/courier\/g1_courier\/g1_courier_large.d99fc5d504472a054d3ba325a814d552deda6b7e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "g-1 league tag",
+						"class": "g-1 league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 34.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Name Tag",
@@ -41323,8 +41500,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_g-1_season5",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5.c50da8e14081d5ceb654394fdb2fbd0a028443fc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.99fa096d5c18676619211c056aa17b507b4d4bd5.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5.a8402aa93cf846d46fd2806521ebf9aaf573fe8f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.98924659a5c31bc04d9d6f34a80e7afab31a5a4a.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41358,8 +41535,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_g-1_season5",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5.c50da8e14081d5ceb654394fdb2fbd0a028443fc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.99fa096d5c18676619211c056aa17b507b4d4bd5.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5.a8402aa93cf846d46fd2806521ebf9aaf573fe8f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_g-1_season5_large.98924659a5c31bc04d9d6f34a80e7afab31a5a4a.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41484,6 +41661,146 @@
 					"usage_capabilities": {
 						"decodable": true
 					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 2nd edition - ADMIN",
+				"defindex": 15147,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 2nd edition - ADMIN",
+				"item_description": "16 teams, 8 from direct invitation and 8 from qualifiers, will compete for $4000. The tournament will feature teams like Orange, Zenith, Vici Gaming and MUFC. Commentary will be provided in English, Spanish and Portuguese.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_neolitic_2.92d7f59f9f4a11ee95c65c7fe41ad5ba6a533136.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.9d30ae9073ca32f1939c124e83580b16bd817050.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 2nd edition",
+				"defindex": 15148,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 2nd edition",
+				"item_description": "16 teams, 8 from direct invitation and 8 from qualifiers, will compete for $4000. The tournament will feature teams like Orange, Zenith, Vici Gaming and MUFC. Commentary will be provided in English, Spanish and Portuguese.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_neolitic_2.92d7f59f9f4a11ee95c65c7fe41ad5ba6a533136.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.9d30ae9073ca32f1939c124e83580b16bd817050.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AtoD 3",
+				"defindex": 15149,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AtoD 3",
+				"item_description": "ATOD3 is the third edition of the uniquely popular Reverse-Captain's Mode tournament presented by Peter \"HamSandwich\" Congdon. 12 teams from Europe and the Americas battle for a part of the $1,500 prizepool. Watch unconventional strategies as teams battle with less frequently played heroes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_atod3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AtoD 3 -ADMIN",
+				"defindex": 15150,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AtoD 3 -ADMIN",
+				"item_description": "ATOD3 is the third edition of the uniquely popular Reverse-Captain's Mode tournament presented by Peter \"HamSandwich\" Congdon. 12 teams from Europe and the Americas battle for a part of the $1,500 prizepool. Watch unconventional strategies as teams battle with less frequently played heroes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_atod3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -46848,6 +47165,18 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "g-1 league tag",
+				"defindex": 392,
+				"attribute_class": "g-1 league tag",
+				"min_value": 0.950000,
+				"max_value": 0.850000,
+				"description_string": "G-1 League Season %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -48957,6 +49286,36 @@
 				"id": 70,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle70"
+			},
+			{
+				"system": "courier_snail_trail",
+				"id": 71,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle71"
+			},
+			{
+				"system": "courier_snail_ambient_flying",
+				"id": 72,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle72"
+			},
+			{
+				"system": "courier_cursed_ambient",
+				"id": 73,
+				"attach_to_rootbone": false,
+				"name": "Cursed Essence"
+			},
+			{
+				"system": "courier_divine_ambient",
+				"id": 74,
+				"attach_to_rootbone": false,
+				"name": "Divine Essence"
+			},
+			{
+				"system": "courier_inky_ambient",
+				"id": 75,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle75"
 			}
 		]
 		,
