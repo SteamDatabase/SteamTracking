@@ -317,11 +317,14 @@ textarea.forumtopic_reply_textarea {
 	font-weight: bold;
 }
 
-.forum_op_author, .forumtopic_comments .commentthread_author_link {
-	padding-right: 16px;
+.forum_op_author .forum_author_action_pulldown, .forumtopic_comments .commentthread_author_link .forum_author_action_pulldown {
+	display: inline-block;
 	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
 	background-position: right center;
 	background-repeat: no-repeat;
+	height: 16px;
+	width: 17px;
+	vertical-align: middle;
 }
 
 .forumtopic_comments .commentthread_deleted_comment .commentthread_author_link {
