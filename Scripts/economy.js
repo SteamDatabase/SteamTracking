@@ -4,17 +4,19 @@ var g_bIsTrading = false;
 var g_bIsInventoryPage = false;
 var g_bWalletTradeUnavailable = false;
 var g_bSellItemOnInventoryLoad = false;
+var g_bShowTradableItemsOnly = false;
 var ITEM_HOVER_DELAY = 500;
 
 /*
  *		Initialization
  */
 
-function InitInventoryPage( bHasPendingGifts, showAppId )
+function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly )
 {
 	INVENTORY_PAGE_ITEMS = 25;	//5 x 5 grid
 	INVENTORY_PAGE_WIDTH = 104 * 5;
 	g_bIsInventoryPage = true;
+	g_bShowTradableItemsOnly = bShowTradableItemsOnly;
 
 	// set up the filter control
 	Filter.InitFilter( $('filter_control') );
@@ -337,7 +339,7 @@ var CInventory = Class.create( {
 				if( !rgItem.tags )
 					rgItem.tags = [];
 
-				if ( !g_bIsTrading )
+				if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 				{
 					if( rgItem.tradable )
 						rgItem.tags.push( kStandardTag_Tradable );
@@ -390,7 +392,7 @@ var CInventory = Class.create( {
 				if( !rgCurrency.tags )
 					rgCurrency.tags = [];
 
-				if ( !g_bIsTrading )
+				if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 				{
 					if( rgCurrency.tradable )
 						rgCurrency.tags.push( kStandardTag_Tradable );
@@ -1520,7 +1522,7 @@ CUserYou = Class.create( CUser, {
 		var thisClosure = this;
 
 		var params = {};
-		if ( g_bIsTrading )
+		if ( g_bIsTrading || g_bShowTradableItemsOnly )
 			params.trading = 1;
 
 				if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )

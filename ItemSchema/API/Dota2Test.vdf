@@ -64252,6 +64252,184 @@
 			"image_banner"		"econ/leagues/subscriptions_neolitic_2_ingame"
 			"tournament_url"		"http://www.netolic.tv/"
 		}
+		"15149"
+		{
+			"name"		"AtoD 3"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"37"
+					"order"		"15"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AtoD_3"
+			"item_description"		"#DOTA_Item_Desc_AtoD3"
+			"image_inventory"		"econ/leagues/subscriptions_atod3"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_atod3_ingame"
+		}
+		"15150"
+		{
+			"name"		"AtoD 3 -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"37"
+					"order"		"15"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AtoD_3_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_AtoD3"
+			"image_inventory"		"econ/leagues/subscriptions_atod3"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_atod3_ingame"
+		}
+		"15151"
+		{
+			"name"		"E2Max L33T Championship"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"38"
+					"order"		"16"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_E2Max_L33T_Championship"
+			"item_description"		"#DOTA_Item_Desc_E2Max_L33T_Championship"
+			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.rapturegaming.net/ELC"
+			"image_banner"		"econ/leagues/subscriptions_e2max_leet_ingame"
+		}
+		"15152"
+		{
+			"name"		"E2Max L33T Championship -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"38"
+					"order"		"16"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_E2Max_L33T_Championship_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_E2Max_L33T_Championship"
+			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.rapturegaming.net/ELC"
+			"image_banner"		"econ/leagues/subscriptions_e2max_leet_ingame"
+		}
+		"15153"
+		{
+			"name"		"GEST Dota 2 - April and May"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"39"
+					"order"		"17"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May"
+			"item_description"		"#DOTA_Item_Desc_GEST_Dota_2__April_and_May"
+			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_gest_april_may_ingame"
+			"tournament_url"		"http://www.dotatalk.com/gest-main-coverage-page"
+		}
+		"15154"
+		{
+			"name"		"GEST Dota 2 - April and May -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"39"
+					"order"		"17"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_GEST_Dota_2__April_and_May"
+			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_gest_april_may_ingame"
+			"tournament_url"		"http://www.dotatalk.com/gest-main-coverage-page"
+		}
+		"15155"
+		{
+			"name"		"AMD Dota2 Premier League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"40"
+					"order"		"18"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League"
+			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League"
+			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.dotatalk.com/tournament/amd-dota-2-premier-league"
+			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
+		}
+		"15156"
+		{
+			"name"		"AMD Dota2 Premier League -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"40"
+					"order"		"18"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League_ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.dotatalk.com/tournament/amd-dota-2-premier-league"
+			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
+		}
 		"20000"
 		{
 			"name"		"Of Ebony and Ivory Set"

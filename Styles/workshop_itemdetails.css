@@ -3123,3 +3123,58 @@ h2.stats {
 .rightcol_widget_indiegogo {
 	margin: 0px 0 0 24px;
 }
+
+#GreenlightItemReleasedDialog
+{
+	width: 558px;
+}
+
+.greenlight_accepted_dialog_description
+{
+	font-size: 1.125em;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+.greenlight_accepted_dialog_continue
+{
+	text-align: left;
+}
+
+.greenlight_accepted_dialog_hr
+{
+	background: #3b3b3b;
+	margin: 20px 0 20px 0;
+	height: 1px;
+}
+
+.greenlight_accepted_dialog_preview_image
+{
+	float: left;
+	width: 75px;
+	height: 75px;
+	margin-right: 10px;
+}
+
+#GreenlightItemReleasedDialog a.site_option
+{
+	width: 270px;
+}
+
+#GreenlightItemReleasedDialog a.site_option > span
+{
+	font-size: 18px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+#GreenlightItemReleasedDialog br
+{
+	line-height: 0px;
+}
+
+#GreenlightItemReleasedDialog .site_option_subtext
+{
+	font-size: 12px;
+	line-height: 12px;
+}

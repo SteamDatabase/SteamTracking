@@ -330,6 +330,136 @@ img.game_header_image {
 	z-index: 1;
 }
 
+.game_area_purchase_game_dropdown_subscription
+{
+	border-color: rgb(71,107,34);
+	background-image: url('http://cdn.store.steampowered.com/public/images//v5/subscription_package_bg.png');
+	background-repeat: repeat-x;	
+}
+
+.game_area_purchase_game_dropdown_left_panel
+{
+	height: 40px;
+	position: absolute;
+	bottom: -17px;
+	left: 16px;
+}
+
+.game_area_purchase_game_dropdown_left_panel div.discount_pct
+{
+	float: left;
+	position: relative;
+	height: 34px;
+	min-width: 69px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 18px;
+	margin-left: 3px;
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+
+.game_area_purchase_game_dropdown_right_panel
+{
+	height: 40px;
+	position: absolute;
+	bottom: -17px;
+	right: 16px;	
+}
+
+.game_area_purchase_game_dropdown_panel
+{
+	float: left;
+	margin-left: 3px;
+}
+
+.game_area_purchase_game_dropdown_selection
+{
+	min-width: 200px;
+	cursor: pointer;
+	float: left;
+	position: relative;
+	height: 34px;
+	text-align: left;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.game_area_purchase_game_dropdown_menu_container
+{
+	z-index: 100;
+	top: 0px;
+	position: absolute;
+	background-color: rgb(60, 61, 62);
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-top: 13px;
+	margin-left: 10px;
+	padding: 3px;
+}
+
+.game_area_purchase_game_dropdown_menu_items_container
+{
+	background-position: right;
+	background-repeat: repeat-y;
+	background-image: url('http://cdn.store.steampowered.com/public/images//v5/subscription_savings_bg.png');
+	min-width: 315px;
+}
+
+.game_area_purchase_game_dropdown_menu_items_container tr
+{
+	cursor: pointer;
+	height: 35px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: #ffffff;
+}
+
+.game_area_purchase_game_dropdown_menu_items_container tr:hover
+{
+	background-color: rgb(70,102,140);
+}
+
+.game_area_purchase_game_dropdown_menu_item_text
+{
+	border-top: 1px solid rgb(38,38,38);
+	border-bottom: 1px solid rgb(38,38,38);
+	border-left: 2px solid rgb(38,38,38);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+.game_area_purchase_game_dropdown_menu_items_container tr:first-child td
+{
+	border-top: 2px solid rgb(38,38,38) !important;
+}
+
+.game_area_purchase_game_dropdown_menu_items_container tr:last-child td
+{
+	border-bottom: 2px solid rgb(38,38,38) !important;
+}
+
+.game_area_purchase_game_dropdown_menu_item_savings
+{
+	border-top: 1px solid rgb(38,38,38);
+	border-bottom: 1px solid rgb(38,38,38);
+	border-right: 2px solid rgb(38,38,38);
+	min-width: 50px;
+}
+
+.game_area_purchase_game_dropdown_right_panel .btn_addtocart
+{
+	float: right;
+}
+
 /* if the wrapper is used instead, let the wrapper set margin-bottom instead of the game_area_purchase_game */
 .game_area_purchase_game_wrapper {
 	margin-bottom: 28px;

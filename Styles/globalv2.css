@@ -102,6 +102,10 @@ input[type=text], input[type=password], select {
 	text-decoration: underline;
 }
 
+#footer a:hover {
+	color: #ffffff;
+}
+
 #footerText {
 	display: inline-block;
 	vertical-align: top;
@@ -112,76 +116,6 @@ input[type=text], input[type=password], select {
 	display: inline-block;
 	margin: 12px 5px 0 16px;
 	padding: 0;
-}
-
-/* Avatars */
-
-.playerAvatar {
-	padding: 3px;
-	border-radius: 3px;
-	background-color: #545454;
-}
-.playerAvatar.offline {
-
-	background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#706c6b), color-stop(95%,#4e4d4d));background: -webkit-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -o-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -ms-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: linear-gradient(to bottom, #706c6b 5%,#4e4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d',GradientType=0 );}
-.playerAvatar.ignored {
-}
-/* #8dccff to 6da1d0 */
-.playerAvatar.online {
-	background-color: #8ecafc;
-
-	background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7bafd6), color-stop(95%,#506d92));background: -webkit-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -o-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -ms-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: linear-gradient(to bottom, #7bafd6 5%,#506d92 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92',GradientType=0 );}
-.playerAvatar.online img {
-	border-color: #4d5761;
-}
-/* gradient from #b3fc55 to #8cc82c */
-.playerAvatar.in-game {
-	background-color: #9de641;
-
-	background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9bc861), color-stop(95%,#789e4c));background: -webkit-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -o-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -ms-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: linear-gradient(to bottom, #9bc861 5%,#789e4c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );
-}
-.playerAvatar.in-game img {
-	border-color: #525a4f;
-}
-.playerAvatar {
-	width: 34px;
-	height: 34px;
-}
-.playerAvatar img {
-	width: 32px;
-	height: 32px;
-	border: 1px solid #545454;
-	border-radius: 3px;
-}
-
-.playerAvatar.medium {
-	width: 66px;
-	height: 66px;
-}
-.playerAvatar.medium img {
-	width: 64px;
-	height: 64px;
-}
-
-.playerAvatar.full {
-	width: 186px;
-	height: 186px;
-}
-.playerAvatar.full img {
-	width: 184px;
-	height: 184px;
-}
-
-.persona, a.persona, .persona a {
-	color:#898989;
-}
-
-.persona.online, a.persona.online, .persona.online a {
-	color:#86b5d9;
-}
-
-.persona.in-game, a.persona.in-game, .persona.in-game a {
-	color:#8bc53f;
 }
 
 
@@ -454,6 +388,7 @@ a.commentthread_allcommentslink:hover {
 	word-wrap: break-word;
 	overflow-y: auto;
 	max-height: 400px;
+	line-height: 18px;
 }
 
 .commentthread_comment_text a {
@@ -942,12 +877,10 @@ img.dynamiclink_preview {
 	color: #bfbfbf;
 }
 
-.newmmodal {
+.newmodal {
 	position: absolute;
 
-
-	max-height: 75%;
-	max-width: 60%;
+	max-width: 900px;	/* our page width */
 	min-width: 500px;
 }
 
@@ -997,7 +930,7 @@ img.dynamiclink_preview {
 .newmodal_content {
 	background: -moz-linear-gradient(top, #252b33 5%, #1d1d1d 25%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#252b33), color-stop(25%,#1d1d1d));background: -webkit-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -o-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -ms-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: linear-gradient(to bottom, #252b33 5%,#1d1d1d 25%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252b33', endColorstr='#1d1d1d',GradientType=0 );	background-color: #1d1d1d;
 
-	overflow-y: auto;
+	overflow: auto;
 	word-wrap: break-word;
 
 	padding: 15px 21px;
@@ -1116,4 +1049,8 @@ img.dynamiclink_preview {
 {
 	min-height: 290px;
 	width: 560px;
+}
+
+.emoticon {
+	vertical-align: middle;
 }

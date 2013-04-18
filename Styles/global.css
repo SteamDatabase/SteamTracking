@@ -899,3 +899,8 @@ a.btn_green, a.btn_green:hover, a.btn_green:visited {
 	border:#6d6d6d;
 }
 
+/* override the body text-align for our newer elements on old pages */
+.miniprofile_hover, .newmodal {
+	text-align: left;
+}
+

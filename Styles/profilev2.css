@@ -133,6 +133,11 @@ div.profile_page.has_profile_background {
 	left: 8px;
 }
 
+.favorite_badge_icon img {
+	width: 54px;
+	height: 54px;
+}
+
 .favorite_badge_description {
 	padding-left: 64px;
 	padding-top: 12px;
@@ -252,6 +257,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	padding: 0 10px 11px 10px;
 
 	margin-bottom: 12px;
+
+	font-size: 13px;
 }
 
 .profile_customization_header {
@@ -292,6 +299,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .showcase_stats_row .showcase_stat {
 	float: left;
 	margin-left: 42px;
+	display: block;
 }
 
 .showcase_stats_row .showcase_stat:first-child {
@@ -306,6 +314,10 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .showcase_stat .label {
 	font-size: 17px;
 	color: #9b9b9b;
+}
+
+a.showcase_stat:hover .label {
+	color: #ffffff;
 }
 
 .showcase_bodylabel {
@@ -595,6 +607,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	position: absolute;
 	right: 0;
 	bottom: 0;
+	text-align: right;
 }
 .recent_game .game_info .game_name {
 	padding-top: 10px;
@@ -618,10 +631,28 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin: 10px 0;
 }
 
-.game_info_achievements {
+.game_info_achievements_only_ctn {
 	line-height: 32px;
 	height: 32px;
 	position: relative;
+}
+
+.game_info_achievements_badge .game_info_achievements {
+	width: 286px;
+	float: right;
+}
+.game_info_achievements_badge .game_info_achievement_summary {
+	display: block;
+	text-align: right;
+	margin-bottom: 8px;
+}
+.game_info_achievements_badge .game_info_achievement_summary a.whiteLink {
+	float: left;
+}
+.game_info_achievements_badge .achievement_progress_bar_ctn {
+	width: auto;
+	display: block;
+	margin-bottom: 8px;
 }
 
 .achievement_progress_bar_ctn {
@@ -642,7 +673,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	height: 8px;
 	border-radius: 4px;
 	background: -moz-linear-gradient(top, #516179 5%, #2a3547 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#516179), color-stop(95%,#2a3547));background: -webkit-linear-gradient(top, #516179 5%,#2a3547 95%);background: -o-linear-gradient(top, #516179 5%,#2a3547 95%);background: -ms-linear-gradient(top, #516179 5%,#2a3547 95%);background: linear-gradient(to bottom, #516179 5%,#2a3547 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#516179', endColorstr='#2a3547',GradientType=0 );}
-.game_info_achievements .achievement_icons {
+.game_info_achievements_only_ctn .achievement_icons {
 	position: absolute;
 	left: 366px;
 	top: 0;
@@ -653,7 +684,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin-left: 6px;
 }
 
-.game_info_achievement.first {
+.game_info_achievement:first-child {
 	margin-left: 0;
 }
 
@@ -675,6 +706,54 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	box-shadow: 1px 1px 1px #353535;
 
 	cursor: pointer;
+}
+
+.game_info_badge_only_ctn {
+
+}
+
+.game_info_badge_border {
+	border: 1px solid #212121;
+	border-radius: 3px;
+	background-color: #222223;
+
+	width: 282px;
+	height: 48px;
+
+	box-shadow: 1px 1px 0 #343944;
+}
+
+
+
+.game_info_badge {
+	position: relative;
+	padding: 7px;
+}
+
+.game_info_badge_icon {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+}
+
+.game_info_badge_icon img {
+	width: 36px;
+	height: 36px;
+}
+
+.game_info_badge_description {
+	padding-left: 52px;
+	padding-top: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	font-size: 12px;
+}
+
+.game_info_badge_description .name {
+	color: #ffffff;
+	font-size: 13px;
 }
 
 .showcase_achievement.plus_more {
@@ -1070,8 +1149,12 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	position: absolute;
 	left: 120px;
 	top: 40px;
-	font-size: 26px;
 	color: white;
+	font-size: 14px;
+}
+
+.profile_small_header_name {
+	font-size: 26px;
 }
 
 .profile_small_header_avatar {
@@ -1093,10 +1176,6 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 .profile_small_header_arrow {
 	font-size: 12px;
-}
-
-.profile_small_header_location {
-	font-size: 14px;
 }
 
 .profile_topfriends .friendBlock {
@@ -1382,63 +1461,6 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 
 }
 
-#badge_craft_overlay {
-	visibility: hidden;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	text-align:center;
-	z-index: 1000;
-	background-color: #444;
-}
-
-.badge_craft_container {
-	width: 800px;
-	height: 600px;
-	margin: 100px auto;
-	background-color: #000;
-	border: 48px solid #FFF;
-	border-radius: 15px;
-	padding: 15px;
-	text-align: center;
-}
-
-#card_image_set img {
-	width: 240px;
-	height: auto;
-	margin: 2px;
-	margin-top: 100px;
-}
-
-#badge_completed img {
-	width: 480px;
-	height: auto;
-	margin-top: 100px;
-}
-
-.badge_craft_center {
-}
-
-.badge_completed_name {
-	color: white;
-	font-size: 32px;
-	text-align: center;
-	margin: 20px;
-}
-
-.badge_completed_close {
-	color: lightgray;
-	font-size: 18px;
-	text-align: center;
-	border: solid 1px grey;
-	border-radius: 4px;
-	margin: 20px;
-	width: 200px;
-	float: right;
-}
-
 #group_invite_modal_list {
 	max-height: 400px;
 	overflow-y: auto;
@@ -1694,4 +1716,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	background-position: center;
 	width: 16px;
 	height: 16px;
+}
+
+body.migrated_profile_page #BG_bottom {
+	background: none;
 }

@@ -817,3 +817,14 @@ a.game_button {
 	font-weight: bold;
 }
 
+body.migrated_profile_page #pending_gift_link {
+	position: static;
+	top: 0;
+	right: 0;
+	float: right;
+}
+
+body.migrated_profile_page .inventory_links {
+	line-height: 56px;
+}
+
