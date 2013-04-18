@@ -38139,7 +38139,7 @@
 			"hidden"	"0"
 			"item_class"	"tf_wearable"
 			"craft_class"	""		
-			"craft_material_type"	"hat"
+			"craft_material_type"	""	
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -38247,7 +38247,7 @@
 			"hidden"	"0"
 			"item_class"	"tf_wearable"
 			"craft_class"	""		
-			"craft_material_type"	"hat"
+			"craft_material_type"	""	
 			"capabilities"
 			{
 				"nameable"		"1"

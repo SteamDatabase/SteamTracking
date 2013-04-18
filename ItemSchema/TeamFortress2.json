@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.591fd9abd1710bd044f7c823c01a87783d56c20e.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.32cbc2250efb0ee33a940821dc1e2148735ea170.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -35465,7 +35465,7 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_demo_large.562b7a09878a2f7a9458af6d4ad950bba3196555.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
@@ -35514,7 +35514,7 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_reddit_alt_demo_large.c9ead3c4cba0fb1a2a34fefb930dad473f0f26b9.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
