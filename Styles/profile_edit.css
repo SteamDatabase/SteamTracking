@@ -1,0 +1,354 @@
+#mainBody {
+	width:958px;
+	margin:0;
+	padding:0;
+	background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/contentBG_fill.gif');
+	background-repeat:repeat-y;
+}
+
+#mainContents {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/controlPanelTop.gif');
+	background-repeat:no-repeat;
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-right:5px;
+	padding-top:21px;
+	position:relative;
+}
+
+#rightContents {
+	float:right;
+	width:254px;
+	margin:0;
+	padding:0;
+	padding-left:10px;
+	padding-top:55px;
+}
+
+#mainContents h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+}
+
+#mainContents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+}
+
+/* -----[ form element stuff ] ----------- */
+
+.smallForm {
+	margin:0;
+	padding:0;
+}
+
+.formRow {
+	width:936px;
+	margin-bottom:10px;
+}
+
+.formRowDesc {
+	float:right;
+	width:244px;
+	padding-right:10px;
+	padding-left:10px;
+	font-size:10px;
+	color:#707070;
+}
+
+descArrow {
+	font-size:11px;
+	color:#545454;
+}
+
+.formRowTitle,.formRowTitleNoPad {
+	width:106px;
+	text-align:right;
+	padding-right:4px;
+	font-size:12px;
+	color:#707070;
+	padding-top:5px;
+}
+
+.formRowTitleNoPad	{
+	padding-top:0px;
+}
+
+.comingSoon	{
+	font-style:italic;
+}
+
+.titleSubtext {
+	color:#525252;
+	font-size:10px;
+}
+
+.formRowFields, .formRowFieldsAccountLink {
+	float:right;
+	width:559px;
+	text-align:left;
+}
+
+.formRowFieldsAccountLink 
+{
+	margin-top:10px;
+}
+
+input, select {
+	background-color:#1d1d1d;
+	color:#e1e1e1;
+	font-size:13px;
+	border: 1px #777777 solid;
+}
+
+input {
+	width:360px;
+}
+
+select {
+	width:366px;
+} 
+
+textarea {
+	width:546px;
+	background-color:#1d1d1d;
+	border:solid 1px #777777;
+	color:#e1e1e1;
+	font-size:13px;
+}
+
+.disabled {
+	color:#707070;
+}
+
+.inputRadio {
+	width:auto;
+	border:none;
+	background-color:transparent;
+}
+
+.autoWidth {
+	width:auto;
+}
+
+.inputDate {
+	width:100px;
+}
+
+.dynSave {
+	width:auto;
+}
+
+.whiteText {
+	color:#b0b0b0;
+}
+
+#customURL {
+	width:115px;
+}
+
+.noPadding {
+	padding:0;
+	margin:0;
+}
+
+.disabled {
+	color:#707070;
+}
+
+.dynSaveDisabled {
+	width:auto;
+	color:#707070;
+}
+
+.changed {
+	color:#89ADBA;
+}
+
+/* -----[ /form element stuff ] ----------- */
+
+div.websiteTitle {
+	margin-bottom:-10px;
+}
+
+div.websiteLink {
+	margin-bottom:18px;
+}
+
+p#errorText {
+	color:#ff3333;
+	font-weight:bold;
+	margin-left:6px;
+}
+
+p#noGroupText {
+	font-weight:bold;
+	margin-left:6px;
+}
+
+#editLinks	{
+	color:#395871;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	margin-bottom:20px;
+	margin-top:3px;
+	margin-left:6px;
+}
+
+.greyHR,.greyHR2 {
+	background-color:#4d4d4e;
+	width:669px;
+	height:1px;
+	margin:0;
+	padding:0;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.greyHR2	{
+	margin-bottom:8px;
+	margin-top:-8px;
+}
+
+#avatarEdit {
+	width:669px;
+	margin:0;
+	padding:0;
+}
+
+#avatarBlockFull,#avatarBlockMedium,#avatarBlockIcon {
+	float:left;
+	padding-right:6px;
+}
+
+#avatarBlockFull p,#avatarBlockMedium p,#avatarBlockIcon p {
+	margin:0;
+	padding:0;
+	font-size:10px;
+	color:#898989;
+}
+
+#avatarBlockMedium {
+	padding-top:120px;
+}
+
+#avatarBlockIcon {
+	padding-top:152px;
+}
+
+#stateContainer,#cityContainer {
+	padding-top:8px;
+}
+
+.mainSectionHeader {
+	height:17px;
+	width:661px;
+	background-color:#161616;
+	font-size:11px;
+	font-weight:bold;
+	border-top:1px solid #4d4d4e;
+	padding:0;
+	margin:0;
+	padding-top:2px;
+	padding-left:8px;
+}
+
+.hiliteTextGreen {
+	color:#8bc53f;
+}
+
+.hiliteTextRed {
+	color:#f26c4f;
+}
+
+
+a.linkBlue,a.linkBlue:hover,a.linkBlue:active,a.linkBlue:visited {
+	font-size: 12px;
+	color: #6f9fc8;
+}
+
+a.editLink,a.editLink:hover,a.editLink:active,a.editLink:visited {
+	color:#6395c1;
+	text-decoration:none;
+}
+
+.blueBold	{
+	color:#83c5ff;
+	font-weight:bolder;
+}
+
+a.linkBlue:hover {
+}
+
+#primaryGroupAvatar {
+	width:192px;
+	margin:0;
+	padding:0;
+	padding-bottom:6px;
+}
+
+.darkGrey, .darkGrey2 {
+	line-height: 25px;
+	color:#707070;
+	
+}
+
+.lightGrey {
+	color:#b0b1b0;
+}
+
+#tabs {
+	margin:0;
+	position:absolute;
+	top:108px;
+	left:25px;
+}
+.tab {
+	float:left;
+}
+.tab a,.tab a:hover,.tab a:visited,.tab a:active {
+	font-size:11px;
+	color: #ffffff;
+	text-decoration:none;
+	font-weight:bold;
+}
+.tabOff,.tabOn {
+	float:left;
+	padding:8px 16px 6px 16px;
+	height:15px;
+	font-size:11px;
+	color: #ffffff;
+	background-color:#4f4f4e;
+	font-weight:bold;
+}
+.tabOff {
+	background-color:#3a3a3a;
+}
+.tabOnL,.tabOnR,.tabOffL,.tabOffR {
+	float:left;
+	width:2px;
+	background-color:#4f4f4e;
+	height:29px;
+}
+.tabOffL,.tabOffR {
+	background-color:#3a3a3a;
+}
+.tabOnR,.tabOffR {
+	margin-right:6px;
+}
+.vbreak {
+	height:71px;
+}

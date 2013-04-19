@@ -1,0 +1,328 @@
+
+.apphub_ContentGuides
+{
+	width: 638px;
+	margin: 0;
+	float: left;
+	padding-bottom: 7px;
+	text-align: left;
+}
+
+.apphub_Guides .subtitle
+{
+	font-size: 14px;
+	color: #959595;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+
+.apphub_Guides .subtitle a
+{
+	color: #959595;
+	text-decoration:underline;
+}
+
+.apphub_Guides .subtitle a:hover
+{
+	color: #e5e5e5;
+}
+
+#ig_bottom
+{
+	text-align: left;
+	width: 948px;
+}
+
+#ig_bottom .searchTextContainer
+{
+	top: 0px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.apphub_ContentNoGuides
+{
+	background-color: #1f1f1f;
+	text-align: center;
+	min-height: 600px;
+	line-height: 20px;
+}
+
+.apphub_ContentNoGuidesTitle
+{
+	padding-top: 50px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+.apphub_ContentGuides .workshopItemCollectionContainer
+{
+	border: 1px solid #222222;
+	margin-bottom: 4px;
+}
+
+.apphub_ContentGuides .workshopItemCollection
+{
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top, #363636 5%, #464646 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));background: -webkit-linear-gradient(top, #363636 5%,#464646 95%);background: -o-linear-gradient(top, #363636 5%,#464646 95%);background: -ms-linear-gradient(top, #363636 5%,#464646 95%);background: linear-gradient(to bottom, #363636 5%,#464646 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );	border: 1px solid #454545;
+	margin-bottom: 0px;
+}
+
+.apphub_ContentGuides .workshopItemCollection:hover
+{
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top, #484848 5%, #5a5a5a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));background: -webkit-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -o-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -ms-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: linear-gradient(to bottom, #484848 5%,#5a5a5a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );	border: 1px solid #5a5a5a;
+}
+
+.apphub_ContentGuides .workshopItemCollection .workshopItem
+{
+	height: 74px;
+	width: 74px;
+	min-height: 74px;
+}
+
+.apphub_ContentGuides .workshopItemCollection .workshopItemPreviewHolder, .apphub_ContentGuides .workshopItemCollection .workshopItemPreviewImage
+{
+	height: 74px;
+	width: 74px;
+}
+
+.apphub_ContentGuides .workshopItemCollection .workshopItemDetails
+{
+	margin-left: 84px;
+	margin-top: 3px;
+}
+
+.apphub_ContentGuides .workshopItemCollection .workshopItemTitle
+{
+	font-size: 17px;
+	font-weight: bold;
+	border-bottom: 1px #666666 dotted;
+}
+
+.apphub_ContentGuides .workshopBrowsePagingWithBG
+{
+	margin-bottom: 6px;
+}
+
+.apphub_ContentGuides .workshopItemPreviewHolder:hover
+{
+	border-color: #3A3A3A;
+}
+
+.guides_browse_box
+{
+	padding-top: 12px;
+}
+
+.guides_browse_box .title
+{
+	font-size: 17px;
+	color: #529CDE;
+	margin: 0px 0px 12px 0px;
+}
+
+.guides_home_section_title
+{
+	color: #529CDE;
+	font-size: 17px;
+	padding-bottom: 7px;
+	padding-top: 4px;
+}
+
+.guides_home_section_desc
+{
+	color: #b2b2b2;
+	font-size: 12px;
+}
+
+.guides_home_section_title img
+{
+	float: left;
+	padding-right: 5px;
+}
+
+.guides_home_view_all_link, .guides_home_view_all_link a, .guides_home_view_all_link a:visited
+{
+	float: right;
+	color: #e5e5e5;
+	text-transform: uppercase;
+	font-size: 11px;
+	padding-top: 2px;
+}
+
+.guides_home_integrated_box
+{
+	padding: 5px;
+	background-color: #141414;
+}
+
+.integrated_guide
+{
+	width: 149px;
+	margin-left: 6px;
+	float: left;
+}
+
+.integrated_guide.left
+{
+	margin-left: 0px;
+}
+
+.integrated_guide_preview_image_holder
+{
+	overflow: hidden;
+	width: 149px;
+	height: 84px;
+	border: 1px solid #000000;
+}
+
+.integrated_guide_preview_image_holder:hover
+{
+	border-color: #97c0e3;
+}
+
+.integrated_guide_preview_image
+{
+	position: relative;
+	width: 149px;
+	top: -33px;
+}
+
+.integrated_guide .workshopItemTitle
+{
+	font-size:14px;
+	font-weight: bold;
+	width: 149px;
+}
+
+.guide_category_tags
+{
+	position: relative;
+	top: -14px;
+	z-index: -1;
+}
+
+.guide_category_tags.collapsed
+{
+	overflow: hidden;
+	height: 15px;
+}
+
+.guide_category_tags.collapsed .rightSectionDivider
+{
+	display: none;
+}
+
+.guide_category_tags .rightSectionBrowseBarArrow
+{
+	background-position: 0px 0px;
+	margin-top: -2px;
+	width: 17px;
+	height: 18px;
+	background-image: url('http://cdn.steamcommunity.com/public/images//sharedfiles/workshop_section_arrow.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	margin-right: 0px;
+}
+
+.guide_category_tags.collapsed .rightSectionBrowseBarArrow
+{
+	background-position: 0px 0px;
+	margin-top: -2px;
+	background-image: url('http://cdn.steamcommunity.com/public/images//sharedfiles/workshop_dateselect_arrow.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-right: 0px;
+}
+
+.guide_category_tags_title
+{
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 12px;
+	color: #bebebe;
+}
+
+.guide_categories.collapsed
+{
+	height: 125px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.guide_home_category_selection
+{
+	height: 56px;
+	width: 202px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	float: left;
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top, #363636 5%, #464646 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));background: -webkit-linear-gradient(top, #363636 5%,#464646 95%);background: -o-linear-gradient(top, #363636 5%,#464646 95%);background: -ms-linear-gradient(top, #363636 5%,#464646 95%);background: linear-gradient(to bottom, #363636 5%,#464646 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );	border: 1px solid #1C1D1D;
+	cursor: pointer;;
+}
+
+.guide_home_category_selection:hover
+{
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top, #484848 5%, #5a5a5a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));background: -webkit-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -o-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -ms-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: linear-gradient(to bottom, #484848 5%,#5a5a5a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );	border: 1px solid #5a5a5a;
+}
+
+.guide_home_category_selection .guide_category_icon
+{
+	float: left;
+	height: 56px;
+	width: 56px;
+	margin-right: 4px;
+}
+
+.guide_home_category_selection:hover .guide_category_icon
+{
+	display:none;
+}
+
+.guide_category_icon.highlightState
+{
+	display: none;
+}
+
+.guide_home_category_selection:hover .guide_category_icon.highlightState
+{
+	display: inline;
+}
+
+.guide_home_category_name
+{
+	color: white;
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+.guide_home_category_count
+{
+	padding-top: 0px;
+}
+
+.guideInfo
+{
+	margin-top: 12px;
+	margin-left: -2px;
+	left: -5px;
+	width: 275px;
+	height: 112px;
+	background-repeat:no-repeat;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Guides_moreinfo.png');
+	cursor: pointer;
+}
+
+.guideInfoTitle
+{
+	font-family: 'Motiva Sans', Arial, Tahoma;
+	font-size: 17px;
+	color: white;
+	padding-top: 28px;
+	padding-left: 12px;
+}
+
+

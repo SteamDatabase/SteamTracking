@@ -1,6 +1,7 @@
 # CSS
 Styles/apphub.css|http://cdn.steamcommunity.com/public/shared/css/apphub.css?_=*TIMENOW*
 Styles/apphub_admin.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_admin.css?_=*TIMENOW*
+Styles/apphub_guides.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_guides.css?_=*TIMENOW*
 Styles/apphub_home.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_home.css?_=*TIMENOW*
 Styles/buttons.css|http://cdn.steamcommunity.com/public/shared/css/buttons.css?_=*TIMENOW*
 Styles/chat.css|http://cdn.steamcommunity.com/public/css/skin_1/chat.css?_=*TIMENOW*
@@ -16,8 +17,12 @@ Styles/greenlight.css|http://cdn.steamcommunity.com/public/css/skin_1/greenlight
 Styles/groupv2.css|http://cdn.steamcommunity.com/public/css/skin_1/groupv2.css?_=*TIMENOW*
 Styles/header.css|http://cdn.steamcommunity.com/public/css/skin_1/header.css?_=*TIMENOW*
 Styles/profile.css|http://cdn.steamcommunity.com/public/css/skin_1/profile.css?_=*TIMENOW*
+Styles/profile_edit.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_edit.css?_=*TIMENOW*
+Styles/profile_editv2.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_editv2.css?_=*TIMENOW*
 Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css?_=*TIMENOW*
 Styles/profilev2.css|http://cdn.steamcommunity.com/public/css/skin_1/profilev2.css?_=*TIMENOW*
+Styles/shared_global.css|http://cdn.steamcommunity.com/public/shared/css/shared_global.css?_=*TIMENOW*
+Styles/sharedfiles_guide.css|http://cdn.steamcommunity.com/public/css/skin_1/sharedfiles_guide.css?_=*TIMENOW*
 Styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gamev5.css?_=*TIMENOW*
 Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_genrev5.css?_=*TIMENOW*
 Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
@@ -29,6 +34,7 @@ Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/sk
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
+Scripts/apphub_home.js|http://cdn.steamcommunity.com/public/javascript/apphub_home.js?_=*TIMENOW*&l=english
 Scripts/badges.js|http://cdn.steamcommunity.com/public/javascript/badges.js?_=*TIMENOW*&l=english
 Scripts/blotter_functions.js|http://cdn.steamcommunity.com/public/javascript/blotter_functions.js?_=*TIMENOW*&l=english
 Scripts/chat.js|http://cdn.steamcommunity.com/public/javascript/chat.js?_=*TIMENOW*&l=english
@@ -40,9 +46,11 @@ Scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js?_=
 Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*TIMENOW*&l=english
 Scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js?_=*TIMENOW*&l=english
 Scripts/market.js|http://cdn.steamcommunity.com/public/javascript/market.js?_=*TIMENOW*&l=english
+Scripts/profile_edit_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_edit_functions.js?_=*TIMENOW*&l=english
 Scripts/profile_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_functions.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/screenshot_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/shared_global.js|http://cdn.steamcommunity.com/public/shared/javascript/shared_global.js?_=*TIMENOW*&l=english
+Scripts/sharedfiles_functions_logged_in.js|http://cdn.steamcommunity.com/public/javascript/sharedfiles_functions_logged_in.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english

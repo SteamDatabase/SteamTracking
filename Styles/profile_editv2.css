@@ -1,0 +1,167 @@
+
+
+.formRow.PrivacySettingsTitle {
+	padding-left: 0;
+	min-height: 0;
+}
+.formRow.PrivacySettings {
+	padding-left: 16px;
+	margin-bottom: 32px;
+}
+
+.privacy_setting_name {
+	color: #ffffff;
+}
+
+.PrivacySetting_Additional {
+	margin-top: 16px;
+}
+
+	/* to match the width of the profile page left column */
+.profile_showcase_selector {
+	width: 636px;
+}
+
+.customization_edit_area {
+	margin-bottom: 48px;
+}
+
+.customization_controls {
+	line-height: 27px;
+	padding-top: 10px;
+}
+
+.customization_controls .btn_grey_black.btn_medium > span {
+	font-size: 13px;
+	line-height: 27px;
+	padding: 0 12px;
+}
+
+.customization_controls select {
+	width: 250px;
+}
+
+.showcase_slot.openslot {
+	border: 2px dashed #5491CF;
+	border-radius: 5px;
+}
+
+.showcase_slot.openslot:hover {
+	border-color: #ffffff;
+}
+
+.showcase_openslot_placeholder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+	text-align: center;
+
+	cursor: pointer;
+
+	background-color: rgba( 0, 0, 0, 0.6 );
+}
+
+.showcase_slot:hover .showcase_openslot_placeholder, .showcase_slot.openslot .showcase_openslot_placeholder {
+	display: block;
+}
+
+.featured_game_dialog_header {
+	font-size: 15px;
+	margin-bottom: 16px;
+}
+
+.customtext_showcase_editheader {
+	padding-top: 6px;
+}
+
+.profile_customization_edit_icon.bluebox {
+	background-color: #5491cf;
+	border-radius: 3px;
+	width: 31px;
+	height: 31px;
+}
+
+.profile_background_select_option {
+	float: left;
+	width: 252px;
+	margin-left: 24px;
+
+	color: #6d6d6b;
+	font-size: 13px;
+	padding: 3px;
+	border-radius: 3px;
+
+	cursor: pointer;
+}
+
+.profile_background_select_option:hover {
+/*	padding: 2px;
+	border: 1px solid #5491CF;*/
+	background-color: #33425A;
+}
+
+.profile_background_select_row .profile_background_select_option:first-child {
+	margin-left: 0;
+}
+
+.profile_background_select_row {
+	margin-bottom: 33px;
+}
+
+.profile_background_select_row:last-child {
+	margin-bottom: 0;
+}
+
+.profile_background_current {
+	line-height: normal;
+	background-color: #222223;
+	padding: 10px 8px;
+	color: #6d6d6b;
+	margin-bottom: 13px;
+
+	border: 1px solid #212121;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0 #333334;
+}
+
+.profile_background_current_image_ctn {
+	position: relative;
+	float: left;
+	width: 140px;
+	margin-right: 11px;
+}
+
+.profile_background_current_image_ctn.primary_group {
+	width: 64px;
+	height: 64px;
+}
+
+.profile_background_current_image_ctn .showcase_openslot_placeholder {
+	line-height: 80px;
+}
+
+.profile_background_current_image_ctn.primary_group .showcase_openslot_placeholder {
+	line-height: 64px;
+}
+
+.profile_background_current_image_ctn:hover .showcase_openslot_placeholder {
+	display: block;
+}
+
+
+.profile_background_current_description {
+	padding-top: 11px;
+}
+
+.saved_changes_msg {
+	border: 1px solid #549cd7;
+	color: #549cd7;
+	line-height: 39px;
+	padding: 0 16px;
+	margin-bottom: 18px;
+}
