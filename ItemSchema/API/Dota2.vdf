@@ -228,6 +228,125 @@
 			"hex_color"		"#CF6A32"
 		}
 	}
+	"sound_materials"
+	{
+		"common"
+		{
+			"value"		"0"
+			"start_drag_sound"		"ui.inv_pickup"
+			"end_drag_sound"		"ui.inv_drop"
+			"equip_sound"		"ui.inv_equip"
+		}
+		"chest"
+		{
+			"value"		"1"
+			"start_drag_sound"		"ui.inv_pickup_chest"
+			"end_drag_sound"		"ui.inv_drop_chest"
+		}
+		"pennant"
+		{
+			"value"		"2"
+			"start_drag_sound"		"ui.inv_pickup_pennant"
+			"end_drag_sound"		"ui.inv_drop_pennant"
+		}
+		"key"
+		{
+			"value"		"3"
+			"start_drag_sound"		"ui.inv_pickup_key"
+			"end_drag_sound"		"ui.inv_drop_key"
+		}
+		"metal_small"
+		{
+			"value"		"4"
+			"start_drag_sound"		"ui.inv_pickup_metalsmall"
+			"end_drag_sound"		"ui.inv_drop_metalsmall"
+			"equip_sound"		"ui.inv_equip_metalsmall"
+		}
+		"metal_armor"
+		{
+			"value"		"5"
+			"start_drag_sound"		"ui.inv_pickup_metalarmour"
+			"end_drag_sound"		"ui.inv_drop_metalarmour"
+			"equip_sound"		"ui.inv_equip_metalarmour"
+		}
+		"metal_blade"
+		{
+			"value"		"6"
+			"start_drag_sound"		"ui.inv_pickup_metalblade"
+			"end_drag_sound"		"ui.inv_drop_metalbalde"
+			"equip_sound"		"ui.inv_equip_metalblade"
+		}
+		"metal_heavy"
+		{
+			"value"		"7"
+			"start_drag_sound"		"ui.inv_pickup_metalheavy"
+			"end_drag_sound"		"ui.inv_drop_metalheavy"
+			"equip_sound"		"ui.inv_equip_metalheavy"
+		}
+		"staff_or_blunt"
+		{
+			"value"		"8"
+			"start_drag_sound"		"ui.inv_pickup_staff"
+			"end_drag_sound"		"ui.inv_drop_staff"
+			"equip_sound"		"ui.inv_equip_staff"
+		}
+		"robes"
+		{
+			"value"		"9"
+			"start_drag_sound"		"ui.inv_pickup_robes"
+			"end_drag_sound"		"ui.inv_drop_robes"
+			"equip_sound"		"ui.inv_equip_robes"
+		}
+		"leather"
+		{
+			"value"		"10"
+			"start_drag_sound"		"ui.inv_pickup_leather"
+			"end_drag_sound"		"ui.inv_drop_leather"
+			"equip_sound"		"ui.inv_equip_leather"
+		}
+		"quiver"
+		{
+			"value"		"11"
+			"start_drag_sound"		"ui.inv_pickup_quiver"
+			"end_drag_sound"		"ui.inv_drop_quiver"
+			"equip_sound"		"ui.inv_equip_quiver"
+		}
+		"stone"
+		{
+			"value"		"12"
+			"start_drag_sound"		"ui.inv_pickup_stone"
+			"end_drag_sound"		"ui.inv_drop_stone"
+			"equip_sound"		"ui.inv_equip_stone"
+		}
+		"wood"
+		{
+			"value"		"13"
+			"start_drag_sound"		"ui.inv_pickup_wood"
+			"end_drag_sound"		"ui.inv_drop_wood"
+			"equip_sound"		"ui.inv_equip_wood"
+		}
+		"bone"
+		{
+			"value"		"14"
+			"start_drag_sound"		"ui.inv_pickup_bone"
+			"end_drag_sound"		"ui.inv_drop_bone"
+			"equip_sound"		"ui.inv_equip_bone"
+		}
+		"jug"
+		{
+			"value"		"15"
+			"start_drag_sound"		"ui.inv_pickup_jug"
+			"end_drag_sound"		"ui.inv_drop_jug"
+			"equip_sound"		"ui.inv_equip_jug"
+		}
+		"gun"
+		{
+			"value"		"16"
+			"start_drag_sound"		"ui.inv_pickup_gun"
+			"end_drag_sound"		"ui.inv_drop_gun"
+			"equip_sound"		"ui.inv_equip_gun"
+		}
+	}
 	"player_loadout_slots"
 	{
 		"0"		"action_item"
@@ -7518,7 +7637,7 @@
 			"prefab"		"wearable"
 			"item_type_name"		"#DOTA_WearableType_Necklace"
 			"item_name"		"#DOTA_Wearable_Dazzle_TrolltoothNecklace"
-			"item_slot"		"neck"
+			"item_slot"		"misc"
 			"item_description"		"#DOTA_Wearable_Dazzle_TrolltoothNecklace_Desc"
 			"image_inventory"		"econ/items/dazzle/dazzle_bonenecklace"
 			"model_player"		"models/items/dazzle/dazzle_bonenecklace.mdl"
@@ -13078,6 +13197,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
+			"sound_material"		"1"
 		}
 		"4130"
 		{
@@ -13136,6 +13256,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
+			"sound_material"		"1"
 		}
 		"4131"
 		{
@@ -34624,7 +34745,7 @@
 			"item_name"		"#DOTA_Item_Feral_the_Werebat"
 			"item_slot"		"mount"
 			"item_rarity"		"mythical"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Feral_the_Werebat"
 			"image_inventory"		"econ/items/batrider/anuxi_feral_mount1/anuxi_feral_mount1"
 			"used_by_heroes"
 			{
@@ -36122,7 +36243,7 @@
 			"item_name"		"#DOTA_Item_Wraps_of_the_Seasoned_Veteran"
 			"item_slot"		"head"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Wraps_of_the_Seasoned_Veteran"
 			"image_inventory"		"econ/items/bounty_hunter/seasoned_wraps/seasoned_wraps"
 			"used_by_heroes"
 			{
@@ -38949,7 +39070,7 @@
 			"item_name"		"#DOTA_Item_Radiant_Crystal_Haul"
 			"item_slot"		"back"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Radiant_Crystal_Haul"
 			"image_inventory"		"econ/items/meepo/meepo_cratepack/meepo_cratepack"
 			"used_by_heroes"
 			{
@@ -50032,7 +50153,7 @@
 			"item_name"		"#DOTA_Item_Ormr_the_Lunar_Dragon"
 			"item_slot"		"mount"
 			"item_rarity"		"mythical"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Ormr_the_Lunar_Dragon"
 			"image_inventory"		"econ/items/mirana/lunardragon_mount/lunardragon_mount"
 			"used_by_heroes"
 			{
@@ -50049,7 +50170,7 @@
 			"item_name"		"#DOTA_Item_Spottin_Goggles"
 			"item_slot"		"head"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Spottin_Goggles"
 			"image_inventory"		"econ/items/sniper/globulargoggles/globulargoggles"
 			"used_by_heroes"
 			{
@@ -50066,7 +50187,7 @@
 			"item_name"		"#DOTA_Item_Fishy_Frillhawk"
 			"item_slot"		"head"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Fishy_Frillhawk"
 			"image_inventory"		"econ/items/slark/fishy_frillhawk/fishy_frillhawk"
 			"used_by_heroes"
 			{
@@ -50082,7 +50203,7 @@
 			"item_type_name"		"#DOTA_WearableType_Scepter"
 			"item_name"		"#DOTA_Item_Scepter_of_the_Grand_Magus"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Scepter_of_the_Grand_Magus"
 			"image_inventory"		"econ/items/rubick/weapon_agh/weapon_agh"
 			"used_by_heroes"
 			{
@@ -50099,7 +50220,7 @@
 			"item_name"		"#DOTA_Item_Battle_Banner_of_the_Masked"
 			"item_slot"		"back"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Battle_Banner_of_the_Masked"
 			"image_inventory"		"econ/items/juggernaut/jugg_flag/jugg_flag"
 			"used_by_heroes"
 			{
@@ -52961,81 +53082,8 @@
 		{
 			"name"		"Braze the Zonkey"
 			"prefab"		"courier"
-			"item_type_name"		"#DOTA_WearableType_Custom_Courier"
-			"item_name"		"#DOTA_Item_Braze_the_Zonkey"
-			"item_quality"		"genuine"
-			"item_rarity"		"mythical"
-			"forced_item_quality"		"genuine"
-			"item_description"		"#DOTA_Item_Desc_Braze_the_Zonkey"
-			"image_inventory"		"econ/props_gameplay/donkey1"
-			"attributes"
-			{
-				"disallow recycling"
-				{
-					"attribute_class"		"disallow_recycling"
-					"value"		"1"
-				}
-			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"courier"
-					"asset"		"models/props_gameplay/donkey.mdl"
-					"modifier"		"radiant"
-				}
-				"asset_modifier1"
-				{
-					"type"		"courier"
-					"asset"		"models/props_gameplay/donkey.mdl"
-					"modifier"		"dire"
-				}
-				"asset_modifier2"
-				{
-					"type"		"courier_flying"
-					"asset"		"models/props_gameplay/donkey_wings.mdl"
-					"modifier"		"radiant"
-				}
-				"asset_modifier3"
-				{
-					"type"		"courier_flying"
-					"asset"		"models/props_gameplay/donkey_wings.mdl"
-					"modifier"		"dire"
-				}
-				"skin"		"1"
-			}
 			"portraits"
 			{
-				"icon"
-				{
-					"PortraitPosition"		"145.896057 -129.746078 141.303528"
-					"PortraitLookAt"		"23.186646 133.264160 0.000000"
-					"PortraitFOV"		"59.000000"
-					"PortraitFar"		"990.000000"
-					"PortraitLightPosition"		"47.249065 -148.833130 212.088074"
-					"PortraitLightLookAt"		"49.889999 111.050003 0.000000"
-					"PortraitLightFOV"		"90.000000"
-					"PortraitLightDistance"		"133.000000"
-					"PortraitLightColor"		"0.270000 0.270000 0.270000"
-					"PortraitShadowColor"		"0.020000 0.010000 0.000000"
-					"PortraitShadowScale"		"1.000000"
-					"PortraitGroundShadowScale"		"0.300000"
-					"PortraitAmbientOrigin"		"15.180000 -33.369999 28.139999"
-					"PortraitAmbientColor"		"0.010000 0.020000 0.050000"
-					"PortraitAmbientScale"		"1.000000"
-					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
-					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
-					"PortraitSpecularPower"		"16.000000"
-					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
-					"PortraitAnimationActivity"		"0"
-					"PortraitAnimationCycle"		"0.000000"
-					"PortraitAnimationRate"		"0.000000"
-					"PortraitHideHero"		"0"
-				}
 				"preview"
 				{
 					"PortraitPosition"		"600.000000 -48.000000 98.000000"
@@ -53097,7 +53145,81 @@
 					"PortraitAnimationRate"		"1.000000"
 					"PortraitHideHero"		"0"
 				}
+				"icon"
+				{
+					"PortraitPosition"		"145.896057 -129.746078 141.303528"
+					"PortraitLookAt"		"23.186646 133.264160 0.000000"
+					"PortraitFOV"		"59.000000"
+					"PortraitFar"		"990.000000"
+					"PortraitLightPosition"		"47.249065 -148.833130 212.088074"
+					"PortraitLightLookAt"		"49.889999 111.050003 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"133.000000"
+					"PortraitLightColor"		"0.270000 0.270000 0.270000"
+					"PortraitShadowColor"		"0.020000 0.010000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"15.180000 -33.369999 28.139999"
+					"PortraitAmbientColor"		"0.010000 0.020000 0.050000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
 			}
+			"item_type_name"		"#DOTA_WearableType_Custom_Courier"
+			"item_name"		"#DOTA_Item_Braze_the_Zonkey"
+			"item_quality"		"genuine"
+			"item_rarity"		"mythical"
+			"forced_item_quality"		"genuine"
+			"item_description"		"#DOTA_Item_Desc_Braze_the_Zonkey"
+			"image_inventory"		"econ/props_gameplay/donkey1"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"courier"
+					"asset"		"models/props_gameplay/donkey.mdl"
+					"modifier"		"radiant"
+				}
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/props_gameplay/donkey.mdl"
+					"modifier"		"dire"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/props_gameplay/donkey_wings.mdl"
+					"modifier"		"radiant"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/props_gameplay/donkey_wings.mdl"
+					"modifier"		"dire"
+				}
+				"skin"		"1"
+			}
+			"sound_material"		"3"
 		}
 		"10020"
 		{
@@ -53129,6 +53251,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_juggernaut"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10021"
 		{
@@ -53160,6 +53283,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_natures_prophet"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10022"
 		{
@@ -53191,6 +53315,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_axe"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10023"
 		{
@@ -53220,6 +53345,7 @@
 			"item_description"		"#DOTA_TreasureChest_Desc"
 			"image_inventory"		"econ/tools/treasure_chest"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10024"
 		{
@@ -54075,6 +54201,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_bounty_hunter"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10033"
 		{
@@ -54239,6 +54366,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_witchdoctor"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10035"
 		{
@@ -54270,6 +54398,7 @@
 			{
 				"npc_dota_hero_tidehunter"		"1"
 			}
+			"sound_material"		"1"
 		}
 		"10036"
 		{
@@ -54332,6 +54461,7 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Defense_2_Chest"
 			"image_inventory"		"econ/tools/tournament_crate_defense"
+			"sound_material"		"1"
 		}
 		"10038"
 		{
@@ -54419,6 +54549,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_invoker"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10040"
 		{
@@ -54810,6 +54941,7 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest_International_2012"
 			"image_inventory"		"econ/tools/treasure_chest_international_a"
+			"sound_material"		"1"
 		}
 		"10047"
 		{
@@ -54842,6 +54974,7 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest_International_2012"
 			"image_inventory"		"econ/tools/treasure_chest_international_b"
+			"sound_material"		"1"
 		}
 		"10048"
 		{
@@ -55765,6 +55898,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_sven"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10064"
 		{
@@ -55796,6 +55930,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_faceless_void"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10065"
 		{
@@ -55827,6 +55962,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_ursa"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10066"
 		{
@@ -56639,6 +56775,7 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest_Diretide_2012"
 			"image_inventory"		"econ/tools/treasure_chest_diretide"
+			"sound_material"		"1"
 		}
 		"10096"
 		{
@@ -58037,6 +58174,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_dragon_knight"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10136"
 		{
@@ -58068,6 +58206,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_drow"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10137"
 		{
@@ -58121,6 +58260,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_bloodseeker"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10139"
 		{
@@ -58490,6 +58630,7 @@
 			"associated_item"		"15121"
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_Dark_Implements"
 			"image_inventory"		"econ/tools/communitypack_1"
+			"sound_material"		"1"
 		}
 		"10146"
 		{
@@ -58875,6 +59016,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_Chest"
 			"image_inventory"		"econ/tools/treasure_chest_omniknight"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10153"
 		{
@@ -58907,6 +59049,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_the_Restless_Seas"
 			"image_inventory"		"econ/tools/treasure_chest_kunkka"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10154"
 		{
@@ -58939,6 +59082,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_Tidal_Power"
 			"image_inventory"		"econ/tools/treasure_chest_morphling"
 			"associated_item"		"15003"
+			"sound_material"		"1"
 		}
 		"10155"
 		{
@@ -58969,6 +59113,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_the_Forbidden_Lotus"
 			"image_inventory"		"econ/tools/treasure_chest_lotus"
 			"associated_item"		"15126"
+			"sound_material"		"1"
 		}
 		"10156"
 		{
@@ -59515,6 +59660,7 @@
 			"associated_item"		"15133"
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_Crystalline_Chaos"
 			"image_inventory"		"econ/tools/treasure_chest_crystal"
+			"sound_material"		"1"
 		}
 		"10164"
 		{
@@ -59731,7 +59877,6 @@
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"item_name"		"#DOTA_Item_Treasure_of_the_Cursed_Wood"
-			"item_rarity"		"common"
 			"tool"
 			{
 				"type"		"supply_crate"
@@ -59740,6 +59885,7 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_the_Cursed_Wood"
 			"image_inventory"		"econ/tools/treasure_chest_cursed_tree"
 			"associated_item"		"15145"
+			"sound_material"		"1"
 		}
 		"10166"
 		{
@@ -59768,6 +59914,7 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_Rarities"
 			"image_inventory"		"econ/tools/treasure_chest"
+			"sound_material"		"1"
 		}
 		"10167"
 		{
@@ -59993,6 +60140,7 @@
 			"image_inventory"		"econ/tools/anuxi_crate"
 			"creation_date"		"2013-03-25"
 			"associated_item"		"15146"
+			"sound_material"		"1"
 		}
 		"10169"
 		{
@@ -60395,7 +60543,6 @@
 			"name"		"Treasure Key"
 			"prefab"		"key"
 			"item_name"		"#DOTA_Item_Treasure_Key"
-			"item_rarity"		"common"
 			"tool"
 			{
 				"type"		"decoder_ring"
@@ -60415,6 +60562,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15004"
 		{
@@ -61688,6 +61836,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15046"
 		{
@@ -61719,6 +61868,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15047"
 		{
@@ -62212,6 +62362,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15075"
 		{
@@ -62879,6 +63030,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15099"
 		{
@@ -63290,6 +63442,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15116"
 		{
@@ -63463,6 +63616,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15122"
 		{
@@ -63578,6 +63732,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15127"
 		{
@@ -63734,6 +63889,7 @@
 					"value"		"1"
 				}
 			}
+			"sound_material"		"3"
 		}
 		"15134"
 		{
@@ -64020,6 +64176,7 @@
 				}
 			}
 			"creation_date"		"2013-03-26"
+			"sound_material"		"3"
 		}
 		"15146"
 		{
@@ -64048,6 +64205,7 @@
 				}
 			}
 			"creation_date"		"2013-03-26"
+			"sound_material"		"3"
 		}
 		"15147"
 		{
@@ -64093,6 +64251,184 @@
 			"creation_date"		"2013-03-29"
 			"image_banner"		"econ/leagues/subscriptions_neolitic_2_ingame"
 			"tournament_url"		"http://www.netolic.tv/"
+		}
+		"15149"
+		{
+			"name"		"AtoD 3"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"37"
+					"order"		"15"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AtoD_3"
+			"item_description"		"#DOTA_Item_Desc_AtoD3"
+			"image_inventory"		"econ/leagues/subscriptions_atod3"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_atod3_ingame"
+		}
+		"15150"
+		{
+			"name"		"AtoD 3 -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"37"
+					"order"		"15"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AtoD_3_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_AtoD3"
+			"image_inventory"		"econ/leagues/subscriptions_atod3"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_atod3_ingame"
+		}
+		"15151"
+		{
+			"name"		"E2Max L33T Championship"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"38"
+					"order"		"16"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_E2Max_L33T_Championship"
+			"item_description"		"#DOTA_Item_Desc_E2Max_L33T_Championship"
+			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.rapturegaming.net/ELC"
+			"image_banner"		"econ/leagues/subscriptions_e2max_leet_ingame"
+		}
+		"15152"
+		{
+			"name"		"E2Max L33T Championship -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"38"
+					"order"		"16"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_E2Max_L33T_Championship_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_E2Max_L33T_Championship"
+			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.rapturegaming.net/ELC"
+			"image_banner"		"econ/leagues/subscriptions_e2max_leet_ingame"
+		}
+		"15153"
+		{
+			"name"		"GEST Dota 2 - April and May"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"39"
+					"order"		"17"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May"
+			"item_description"		"#DOTA_Item_Desc_GEST_Dota_2__April_and_May"
+			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_gest_april_may_ingame"
+			"tournament_url"		"http://www.dotatalk.com/gest-main-coverage-page"
+		}
+		"15154"
+		{
+			"name"		"GEST Dota 2 - April and May -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"39"
+					"order"		"17"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_GEST_Dota_2__April_and_May"
+			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
+			"creation_date"		"2013-04-17"
+			"image_banner"		"econ/leagues/subscriptions_gest_april_may_ingame"
+			"tournament_url"		"http://www.dotatalk.com/gest-main-coverage-page"
+		}
+		"15155"
+		{
+			"name"		"AMD Dota2 Premier League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"40"
+					"order"		"18"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League"
+			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League"
+			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.dotatalk.com/tournament/amd-dota-2-premier-league"
+			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
+		}
+		"15156"
+		{
+			"name"		"AMD Dota2 Premier League -ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"40"
+					"order"		"18"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League_ADMIN"
+			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League_ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
+			"creation_date"		"2013-04-17"
+			"tournament_url"		"http://www.dotatalk.com/tournament/amd-dota-2-premier-league"
+			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
 		}
 		"20000"
 		{

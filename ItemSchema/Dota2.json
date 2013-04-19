@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.0fa7fdcc2d39b393941a1d12e8e57d0c878d3a69.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.96debd1af4196e0ac66867dec308f42f2bc4e555.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -23252,7 +23252,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mount",
 				"item_name": "Feral the Werebat",
-				"item_description": "This new item has no description.",
+				"item_description": "Werebat? There bat!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/batrider\/anuxi_feral_mount1\/anuxi_feral_mount1",
@@ -23982,7 +23982,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Wrap",
 				"item_name": "Wraps of the Seasoned Veteran",
-				"item_description": "This new item has no description.",
+				"item_description": "Spending time on the trail is bound to take its toll sooner or later.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/bounty_hunter\/seasoned_wraps\/seasoned_wraps",
@@ -25373,7 +25373,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Backpack",
 				"item_name": "Radiant Crystal Haul",
-				"item_description": "This new item has no description.",
+				"item_description": "Gotta dig deep if you want to find the best!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/meepo\/meepo_cratepack\/meepo_cratepack",
@@ -30831,7 +30831,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mount",
 				"item_name": "Ormr the Lunar Dragon",
-				"item_description": "This new item has no description.",
+				"item_description": "From a race of dragons that normally patrols the dark side of the moon, Ormr wanted to see the world.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/mirana\/lunardragon_mount\/lunardragon_mount",
@@ -30853,7 +30853,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Goggles",
 				"item_name": "Spottin' Goggles",
-				"item_description": "This new item has no description.",
+				"item_description": "Able to see a tic on a mouse's back at a thousand paces, Sniper's Spottin' Goggles are a marvel to behold.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/sniper\/globulargoggles\/globulargoggles",
@@ -30875,7 +30875,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Fins",
 				"item_name": "Fishy Frillhawk",
-				"item_description": "This new item has no description.",
+				"item_description": "In Dark Reef Prison, Slark kept too low a profile to ever be called a trendsetter. He figured nobody noticed his radical look. But as soon as he had broken out, the remaining inmates began to imitate this finny style. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/slark\/fishy_frillhawk\/fishy_frillhawk",
@@ -30897,7 +30897,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Scepter",
 				"item_name": "Scepter of the Grand Magus",
-				"item_description": "This new item has no description.",
+				"item_description": "Few know that Rubick's talents for mimicry extend to arcane assembly.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/rubick\/weapon_agh\/weapon_agh",
@@ -30919,7 +30919,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Banner",
 				"item_name": "Battle Banner of the Masked",
-				"item_description": "This new item has no description.",
+				"item_description": "What good is a battle without a banner to celebrate it?  No good at all, or so says the Juggernaut.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/juggernaut\/jugg_flag\/jugg_flag",
@@ -31387,6 +31387,138 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana.b1d344d8eab78d3f5832f4609d2bf3142c4cba20.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/thousand_faces_katana\/thousand_faces_katana_large.dc87d24a4082a135102c313b80c249ef2c252520.png",
 				"item_set": "thousand_faces",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "weapon_eyeoffetitzu",
+				"defindex": 4905,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "weapon_eyeoffetitzu",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Offhand Weapon",
+				"defindex": 4906,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade Weapon",
+				"item_name": "Sacred Bones Offhand Weapon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Shoulder",
+				"defindex": 4907,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder Pad",
+				"item_name": "Sacred Bones Shoulder",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Bracers",
+				"defindex": 4908,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Sacred Bones Bracers",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Helmet",
+				"defindex": 4909,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helmet",
+				"item_name": "Sacred Bones Helmet",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Spear",
+				"defindex": 4910,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Sacred Bones Spear",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -41588,6 +41720,286 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.b51e5d775087630abfbdd750809676b858e5f087.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.1f52f4cd67914e8a007c28cf86d5991324054bfa.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AtoD 3",
+				"defindex": 15149,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AtoD 3",
+				"item_description": "ATOD3 is the third edition of the uniquely popular Reverse-Captain's Mode tournament presented by Peter \"HamSandwich\" Congdon. 12 teams from Europe and the Americas battle for a part of the $1,500 prizepool. Watch unconventional strategies as teams battle with less frequently played heroes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_atod3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_atod3.884637b09d826b8a3512e0afcf0eac9b86ac65b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_atod3_large.06c791981ac22bd33e718b62ff81f47b811adffd.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AtoD 3 -ADMIN",
+				"defindex": 15150,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AtoD 3 -ADMIN",
+				"item_description": "ATOD3 is the third edition of the uniquely popular Reverse-Captain's Mode tournament presented by Peter \"HamSandwich\" Congdon. 12 teams from Europe and the Americas battle for a part of the $1,500 prizepool. Watch unconventional strategies as teams battle with less frequently played heroes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_atod3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_atod3.884637b09d826b8a3512e0afcf0eac9b86ac65b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_atod3_large.06c791981ac22bd33e718b62ff81f47b811adffd.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "E2Max L33T Championship",
+				"defindex": 15151,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "E2Max L33T Championship",
+				"item_description": "The inaugural E2Max L33T Championship (ELC) will feature a prize pool of SGD13,000 cash. online and LAN qualifiers from May to July, with the Grand Finals on 7th July at E2Max, Cineleisure, Singapore! ELC is presented by Cathay, hosted by Rapture Gaming Network, supported by e-Club and CM Storm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_e2max_l33t",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_e2max_l33t.95aab472e90375d0b98e7634d5c1e28e83c21d4f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_e2max_l33t_large.c3be71111d9a6df7170a9fb975333f9d3512a125.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "E2Max L33T Championship -ADMIN",
+				"defindex": 15152,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "E2Max L33T Championship -ADMIN",
+				"item_description": "The inaugural E2Max L33T Championship (ELC) will feature a prize pool of SGD13,000 cash. online and LAN qualifiers from May to July, with the Grand Finals on 7th July at E2Max, Cineleisure, Singapore! ELC is presented by Cathay, hosted by Rapture Gaming Network, supported by e-Club and CM Storm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_e2max_l33t",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_e2max_l33t.95aab472e90375d0b98e7634d5c1e28e83c21d4f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_e2max_l33t_large.c3be71111d9a6df7170a9fb975333f9d3512a125.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "GEST Dota 2 - April and May",
+				"defindex": 15153,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "GEST Dota 2 - April and May",
+				"item_description": "The Gigabyte E-sports tournament is sponsored by Gigabyte and hosted by DotaTalk. The winneres of 8 GMPGL Qualifiers from South-East Asia will compete against one another for another cash prize of $1500. The winners will then compete against the Top Chinese Teams for another $1500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gest_april_may",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_april_may.d7924357b73df87b2d811e127f01d2b16be9c404.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_april_may_large.34dce551622836551c62a49ab1b5f17c7da454d0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "GEST Dota 2 - April and May -ADMIN",
+				"defindex": 15154,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "GEST Dota 2 - April and May -ADMIN",
+				"item_description": "The Gigabyte E-sports tournament is sponsored by Gigabyte and hosted by DotaTalk. The winneres of 8 GMPGL Qualifiers from South-East Asia will compete against one another for another cash prize of $1500. The winners will then compete against the Top Chinese Teams for another $1500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gest_april_may",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_april_may.d7924357b73df87b2d811e127f01d2b16be9c404.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_april_may_large.34dce551622836551c62a49ab1b5f17c7da454d0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota2 Premier League",
+				"defindex": 15155,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AMD Dota2 Premier League",
+				"item_description": "AMD, in partnership with DotaTalk, proudly brings you the AMD Premier League. The tournament features SEA'ÃÂs finest teams as they compete for a total prize pool of $5,000. Two months of intense action will be commentated by GoDz, LD, Luminous and Blaze on BeyondthesummitTV.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amd_premier_league.d6fedca51416ef953a5c2ea0bc63422ed00d85c3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amd_premier_league_large.e0d7ea63903720d41c5442fcc85e31c77ab22d0f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota2 Premier League -ADMIN",
+				"defindex": 15156,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "AMD Dota2 Premier League -ADMIN",
+				"item_description": "AMD, in partnership with DotaTalk, proudly brings you the AMD Premier League. The tournament features SEA'ÃÂs finest teams as they compete for a total prize pool of $5,000. Two months of intense action will be commentated by GoDz, LD, Luminous and Blaze on BeyondthesummitTV.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amd_premier_league.d6fedca51416ef953a5c2ea0bc63422ed00d85c3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amd_premier_league_large.e0d7ea63903720d41c5442fcc85e31c77ab22d0f.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
