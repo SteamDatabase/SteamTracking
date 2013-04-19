@@ -330,6 +330,11 @@ img.game_header_image {
 	z-index: 1;
 }
 
+.game_area_purchase_game_dropdown_description
+{
+	padding-top: 5px;
+}
+
 .game_area_purchase_game_dropdown_subscription
 {
 	border-color: rgb(71,107,34);
@@ -405,10 +410,14 @@ img.game_header_image {
 
 .game_area_purchase_game_dropdown_menu_items_container
 {
+	min-width: 315px;
+}
+
+.game_area_purchase_game_dropdown_menu_items_container_background
+{
 	background-position: right;
 	background-repeat: repeat-y;
 	background-image: url('http://cdn.store.steampowered.com/public/images//v5/subscription_savings_bg.png');
-	min-width: 315px;
 }
 
 .game_area_purchase_game_dropdown_menu_items_container tr
@@ -586,6 +595,7 @@ img.game_header_image {
 	background-repeat: repeat-x;
 	
 	text-transform: uppercase;
+	min-width: 80px;
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content {
