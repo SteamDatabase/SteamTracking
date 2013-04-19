@@ -1,0 +1,1037 @@
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+	margin: 0 auto;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+	margin: 0 auto;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:17px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:17px;
+}
+#mainContents {
+	width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:10px;
+}
+
+.gameListLogo {
+	float:left;
+	margin-right:16px;
+}
+
+h4 {
+	padding:0;
+	margin:0;
+	padding-top:10px;
+	padding-bottom:2px;
+	color:#bebebe;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+h5 {
+	padding:0;
+	margin:0;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#898989;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+h6 {
+	color:#898989;
+	font-weight:normal;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	padding-bottom:15px;
+}
+
+.statsLink {
+	font-weight:normal;
+	font-size: 10px;
+}
+
+.returnLink {
+	margin:0;
+	padding:0;
+	margin-bottom:20px;
+	margin-left:3px;
+	font-size: 11px;
+}
+
+.games_list_tabs {
+	height: 25px;
+}
+
+.games_list_tab, a.games_list_tab {
+	display: block;
+	float: left;
+	color: #ffffff;
+	background-color: #3a3a3a;
+	line-height: 25px;
+	padding: 0px 12px;
+	margin-left: 9px;
+	
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+}
+
+a.games_list_tab:hover {
+	text-decoration: none;
+}
+
+.games_list_tab_content {
+	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/gameList_tab_fade.png );
+	background-position: top;
+	background-repeat: no-repeat;
+	width: 924px;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-left: -6px;
+	padding-top: 47px;
+}
+
+.gameListRow {
+	padding-left: 208px;
+	height: 77px;
+	margin-bottom: 15px;
+}
+
+.gameListRowLogo {
+	position: absolute;
+	left: 0px;
+}
+
+.gameListRowItem {
+	height: 60px;
+	border: 1px solid #454545;	
+	padding:8px;
+	font-size: 11px;
+	color: #939393;
+	position: relative;
+}
+
+.gameListItemActive {
+    background-image: url( http://cdn.steamcommunity.com/public/images/remote/Desk_ActiveBG.png );
+}
+
+.gameListItemInstalled {
+    background-image: url( http://cdn.steamcommunity.com/public/images/remote/Desk_InstalledBG.png );
+}
+
+.recentAchievements
+{
+	float:right;
+}
+
+.recentAchievementsImg {
+	padding-left:3px;
+	padding-top:3px;
+}
+
+.gameListRowItemName {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px;
+    margin: 0;
+}
+
+.games_list_tab.active {
+	background-color: #4e4e4d;
+}
+
+#gameslist_controls {
+	margin-top: -16px;
+	line-height: 24px;
+}
+
+#gameslist_sort_options {
+	float: right;
+}
+
+#wishlist_sort_options {
+	text-align: right;
+	margin-top: -16px;
+}
+
+.sort_options {
+	color: #939393;
+	margin-bottom: 8px;
+}
+
+.sort_options .selected_sort {
+	color: #B0AEAC;
+}
+
+.sort_options a {
+	text-decoration: underline;
+	color: #B0AEAC;
+}
+
+.sort_options a:hover {
+	color: #EBEBEB;
+}
+
+
+/*
+ * DISCOUNTS & PRICES
+ */
+
+
+.price, .match_price {
+	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
+	font-size: 11px;
+	color: #b0aeac;
+}
+
+.discount_block {
+	position: relative;
+	background-color: #000000;
+}
+
+.discount_pct {
+	background-color: #4c6b22;
+	color: #ffffff;
+}
+
+.discount_original_price {
+	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
+	color: #626366;
+	text-decoration: line-through;
+}
+
+.discount_final_price {
+	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
+	color: #d6d7d8;
+}
+
+.discount_block_large {
+	width: 157px;
+	height: 41px;
+}
+
+.discount_block_large .discount_pct {
+	position: absolute;
+	left: 0px;
+	width: 94px;
+	height: 41px;
+	font-size: 38px;
+	text-align: center;
+}
+
+.discount_block_large .discount_original_price {
+	position: absolute;
+	left: 102px;
+	top: 4px;
+	font-size: 12px;
+}
+
+.discount_block_large .discount_final_price {
+	position: absolute;
+	left: 102px;
+	top: 18px;
+	font-size: 16px;
+}
+
+.discount_block_inline {
+	display: inline;
+	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
+	padding: 1px 0px;
+}
+
+.discount_block_inline div {
+	display: inline;
+	padding: 1px 2px;
+}
+
+
+/* cart button */
+
+.storepage_btn_ctn {
+	margin-top: 10px;
+}
+
+.btn_storepage {
+	float: right;
+	position: relative;
+	height: 34px;
+}
+
+.btn_storepage .btn_storepage_left, .btn_storepage .btn_storepage_right {
+	position: absolute;
+	width: 2px;
+	height: 34px;
+	top: 0px;
+	
+	background-image: url( http://cdn.steamcommunity.com/public/images/storeImages/btn_storepage_corners.png );
+}
+
+.btn_storepage .btn_storepage_left {
+	background-position: left;
+	left: 0px;
+}
+
+.btn_storepage .btn_storepage_right {
+	background-position: right;
+	right: 0px;
+}
+
+.btn_storepage a.btn_storepage_content {
+	display: inline-block;
+	height: 34px;
+	
+	font-size: 11px;
+	color: #ffffff;
+	text-align: center;
+	
+	padding: 0px 11px;
+	line-height: 34px;
+	
+	background-image: url( http://cdn.steamcommunity.com/public/images/storeImages/btn_storepage_repeat.png );
+	background-repeat: repeat-x;
+	
+	text-transform: uppercase;
+}
+
+
+.btn_storepage a.btn_storepage_content:hover {
+	text-decoration: none;
+}
+
+div.hover {
+	position: absolute;
+	z-index: 400;
+	top: 40px;
+	left: 400px;
+	text-align:left;
+}
+
+.hover_box {
+	border: 1px solid #82807c;
+	background-color: #3b3938;
+	width: 256px;
+	
+	color: #b0aeac;
+	font-size: 12px;
+}
+
+.hover_box .content {
+	padding: 16px;
+}
+
+.hover_box h4 {
+	color: #FFFFFF;
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.hover_box p, .hover_box .hover_body_block {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.hover_box .rule {
+	border-bottom: 1px solid #82807c;
+}
+
+.hover_arrow {
+	width: 26px;
+	height: 13px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/hover_arrow_up.gif );
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 1px;
+	left: 16px;
+	z-index:500;
+}
+
+#global_hover_content h1 {
+	color:#cccccc;
+	font-weight:bold;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	margin-bottom:5px;
+}
+
+/* link, stats, recommend popups */
+/* duped and modified from header language dropdown */
+
+.menuico {
+	float:left;
+}
+
+.menutxt {
+	margin-top:-5px;
+}
+
+.menuarrow {
+	padding-left:8px;
+}
+
+.popup_block2 {
+	z-index: 900;
+	position: absolute;
+	text-align:left;
+}
+
+.popup_block2 .popup_body2 {
+	background-color: #3b3938;
+	background-image:url(http://cdn.steamcommunity.com/public/images/skin_1/gamelist_popup_bg.gif);
+	background-repeat:repeat-x;
+	border: 1px solid #82807c;
+	position: relative;
+	z-index:900;
+}
+
+.popup_menu2 a.popup_menu_item2 {
+	display: block;
+	padding: 5px 12px;
+	color: #ffffff;
+	z-index:990;
+	white-space: nowrap;
+}
+
+.popup_menu2 a.bottom {
+	border-bottom: 1px solid #82807c;
+}	
+
+.popup_menu2 a.popup_menu_item2:hover {
+	color: #ffffff;
+	background-color:#222d3d;
+	text-decoration: none;
+}
+
+.popup_body2 h5 {
+	font-size: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	z-index:999;
+	white-space: nowrap;
+}
+
+a.popup_menu_item2:hover h5 {
+	color: #ffffff;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.pullup_item {
+	float:left;
+	display: block;
+	background-color:#1a1a1a;
+	padding:3px 8px 3px 0px;
+	margin-right:6px;
+	cursor: pointer;
+}
+
+a.pullup_item {
+	color: #939393;
+}
+
+a.pullup_item:hover {
+	text-decoration: none;
+	color: #939393;
+	
+}
+
+.menu_ico {
+	float:left;
+	padding:0px 7px 0px 6px;
+}
+
+.bottom_controls {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+}
+
+/* recommendations */
+
+
+.recommendationRow {
+	padding-left: 208px;
+	min-height: 77px;
+	margin-bottom: 32px;
+	position: relative;
+}
+
+.recommendationRowContent {
+	
+}
+
+a.recommendation_btn, a.recommendation_imgbtn
+{
+	display: inline-block;
+	line-height: 22px;
+	height: 22px;
+	color: #82807c;
+	font-size: 11px;
+	background-color: #1a1a1a;
+	
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+a.recommendation_btn.lighter
+{
+	background-color: #262626;
+	color: #b0aeac;
+}
+
+a.recommendation_btn
+{
+	padding: 0px 6px;
+}
+
+a.recommendation_btn:hover, a.recommendation_imgbtn:hover
+{
+	text-decoration: none;
+	background-color: #97c0e3;
+	color: #3c3d3e;
+}
+
+.quote_serif
+{
+	font-family: Georgia, serif;
+}
+
+.quote
+{
+	padding: 11px 11px;
+	border: 1px solid #3c3d3e;
+	color: #d6d7d8;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 19px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 5px;
+	max-height: 450px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.recommendationButtons {
+	float: right;
+}
+
+.recommendationDate {
+	color: #626467;
+	font-size: 11px;
+	padding-bottom: 10px;
+}
+.recommendationDate a {
+	color: #b0aeac;
+}
+
+.wishlistRow.sortableRow {
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+}
+
+.wishlistRow.sortableRow.inDrag {
+	cursor: move;
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+}
+
+.wishlistRow {
+	position: relative;
+	padding-left: 248px;
+	height: 85px;
+	margin-bottom: 15px;
+	border: 1px solid #454545;	
+	font-size: 11px;
+	color: #939393;
+	background-color: #262627;
+}
+
+.wishlistRow .bottom_controls {
+	left: 0px;
+}
+
+.wishlistRankCtn {
+	position: absolute;
+	left: 202px;
+	top: 10px;
+}
+
+div.wishlist_rank_ro, input.wishlist_rank {
+	
+	line-height: 24px;
+	font-weight: bold;
+	text-align: right;
+	font-size: 16px;
+	
+	color: #ffffff;
+	padding-right: 9px;
+	width: 29px;
+	height: 24px;
+	padding-top: 4px;
+}
+
+input.wishlist_rank {
+	border: none;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/gameList_wishlist_rank.png');
+	padding-top: 0px;
+}
+
+
+.wishlistRowLogo {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+}
+
+.wishlistRowItem {
+	height: 85px;
+}
+
+.wishlistRow h4 {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #ffffff;
+	padding-top: 16px;
+}
+
+.wishlist_rank.userEdited {
+}
+
+
+
+.gameListPriceData {
+	position: absolute;
+	text-align: right;
+	
+	right: 16px;
+	top: 19px;
+}
+
+a.btn_visit_store
+{
+	display: inline-block;
+	line-height: 26px;
+	height: 26px;
+	color: #cccccc;
+	font-size: 11px;
+	background-color: #2c2c2d;
+	border: 1px solid #404040;
+	padding: 0px 12px;
+	
+	text-transform: uppercase;
+	
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+a.btn_visit_store:hover
+{
+	text-decoration: none;
+}
+
+
+.btn_save
+{
+	display: inline-block;
+	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/btn_gradient.png );
+	background-repeat: repeat-x;
+	background-align: top;
+	background-color: #262626;
+	
+	border: 1px solid #8bc53f;
+	color: #8bc53f;
+	
+	width: 78px;
+	height: 18px;
+	
+	line-height: 18px;
+	font-size: 11px;
+	text-align: center;
+	
+	cursor: pointer;
+}
+
+.btn_save.disabled
+{
+	border-color: #707070;
+	color: #707070;
+	cursor: default;
+}
+
+.save_actions_enabled, .save_actions_disabled {
+	margin-bottom: 13px;
+}
+
+.save_actions_enabled .btn_save {
+	float: left;
+	margin-right: 9px;
+}
+
+#BG_bottom {
+	position: relative;
+}
+
+#wishlist_comic {
+	position: absolute;
+	right: 8px;
+	top: -92px;
+}
+
+body.migrated_profile_page #wishlist_comic {
+	top: -126px;
+}
+
+.wishlist_empty_notice {
+	padding: 0px 12px;
+}
+
+.wishlist_empty_notice p a {
+	font-size: 1em;
+}
+
+.scroll_bar {
+	color: #85837C;
+	position: relative;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	background-color: #313131;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-bottom: 3px;
+}
+
+.scroll_bar > .button {
+	position: absolute;
+	height: 26px;
+	width: 100px;
+	top: 0px;
+	color: #B0AEAC;
+	cursor: pointer;
+}
+
+.scroll_bar > .button a {
+	color: #B0AEAC;
+}
+
+.scroll_bar > .button a:hover {
+	text-decoration: none;
+}
+
+.scroll_bar > .button.right {
+	right: 0px;
+	border-left: 1px solid black;
+}
+
+.scroll_bar > .button.left {
+	left: 0px;
+	border-right: 1px solid black;
+}
+
+.scroll_bar > .info {
+	margin: 0 auto 0 auto;
+	color: #626366;
+}
+
+#games_list_row_container {
+	overflow: hidden;
+	position: relative;
+}
+
+.page_size_link {
+	cursor: pointer;
+	color: #fff
+}
+
+.page_size_link.active {
+	color: #939393;
+	cursor: default;
+}
+
+/*
+ * Client connection
+ */
+
+#clientConnBlock {
+}
+
+#clientConnGameBlocks {
+    overflow: hidden;
+    margin: 8px;
+}
+
+.clientConnArea {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #D0D0D0;
+    z-index: 2;
+    margin-top: -32px;
+    margin-bottom: 32px;
+}
+
+.clientConnArea #fullstretch {
+    width: 100%;
+    height: 100%;
+}
+
+.clientConnAdIcon {
+    float: left;
+    vertical-align: middle;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.clientConnAdIcon img {
+    width: 32px;
+    height: 32px;
+}
+
+.clientConnAdTextBlock {
+    vertical-align: middle;
+    margin: 8px;
+    margin-left: 4px;
+    margin-top: 16px;
+    white-space: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.clientConnLeftBlock {
+    display: inline-block;
+    width: 5%;
+    margin: 0;
+}
+
+.clientConnMiddleBlock {
+    display: inline-block;
+    width: 70%;
+}
+
+.clientConnRightBlock {
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+}
+
+.clientConnHeaderText {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+    margin-right: 16px;
+    color: #A0A0A0;
+}
+
+.clientConnMachineText {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 16px;
+    margin-top: 4px;
+}
+
+.clientConnMachineBar {
+    font-size: 13px;
+    font-weight: bold;
+    color: #A0A0A0;
+    vertical-align: top;
+}
+
+.clientConnChangingText {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 4px;
+}
+
+.changingProgressBar {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.clientConnStatusBlock {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.clientConnStatusIcon {
+    vertical-align: middle;
+}
+
+.clientConnStatusText {
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.clientConnSpace {
+    margin: 0;
+    font-size: 8px;
+}
+
+.clientConnItemBlock {
+    float: right;
+}
+
+.clientConnItemTextBlock {
+    float: right;
+    margin-top: 12px;
+    margin-right: 56px;
+}
+
+.clientConnItemText {
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.clientConnItemIcon {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+}
+
+#uninstallConfirm {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.uninstallConfirmButton {
+    display: inline-block;
+    width: 40%;
+    background-color: #606060;
+    color: #FFFFFF;
+    margin: 12px;
+    margin-top: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.color_uninstalled {
+    color: #A0A0A0;
+}
+
+.color_disabled {
+    color: #898989;
+}
+
+.thinBlackBorder {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    overflow: hidden;
+}
+
+#clientConnDropdownIcon {
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+}
+
+.changingGameListRowLogo {
+    position: absolute;
+    left: 10px;
+}
+
+.changingGameLogoHolder {
+    position: relative;
+    width: 144px;
+    height: 58px;
+    background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/gamelogoholder_default.jpg');
+}
+
+.changingGameLogo {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.changingGameLogo img {
+    width: 136px;
+    height: 50px;
+}
+
+.changingGameListRow {
+    padding-left: 160px;
+    height: 62px;
+}
+
+.changingGameListRowItem {
+    height: 48px;
+    border: 1px solid #454545;
+    padding: 4px;
+    font-size: 11px;
+    color: #939393;
+    position: relative;
+}
+
+.changingGameListRowItem h4 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px;
+}

@@ -1,0 +1,353 @@
+  
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+}
+
+#mainContents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:21px;
+}
+
+h2 {
+	color:#89ADBA;
+	font-size:11px;
+	font-weight:bolder;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+#memberList {
+	margin:0;
+	padding:0;
+	margin-left:26px;
+}
+
+#bottomLinks {
+	position:relative;
+	width:766px;
+	margin:0;
+	padding:0;
+	margin-bottom:6px;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.listOptions {
+	width:886px;
+	margin-left:27px;
+	font-size:11px;
+	color:#898989;
+	margin-bottom:4px;
+}
+
+.listOptionsRight {
+	float:right;
+}
+
+.listOptionsRightInviteUpper {
+	margin-top:-12px;
+	position: relative;
+	right: 0px;
+	float: right;
+}
+
+.listOptionsRightInvite {
+	margin-top:-12px;
+	float: right;
+}
+
+.blockedText {
+	color:#f26c4f;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.friendHolder {
+	float:left;
+	position:relative;
+	width:290px;
+	height:48px;
+	padding:0;
+	margin:0;
+	margin-bottom:4px;
+	margin-right:8px;
+}
+	
+.friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/memberManageBlock1opt.gif');
+	width:286px;
+	height:40px;
+	padding:0;
+	margin:0;
+	padding-left:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	font-size:10px;
+}
+
+.friendCheckboxLabel {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 2px;
+	left: 261px;
+	width: 27px;
+	height: 44px;
+
+}
+
+.friendCheckbox {
+	position:absolute;
+	border:0;
+	padding:0;
+	background-color:auto;
+	left:266px;
+	top:16px;
+}
+
+.friendCheckbox2 {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	background-color: auto;
+	left: 8px;
+	top: 15px;
+}
+
+input {
+	border:0;
+	padding:0;
+	background-color:auto;
+}
+
+.coplayGroup {
+	border-bottom: 1px solid;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    width: 909px;
+}
+.gameListRow {
+    height: 77px;
+    margin-bottom: 15px;
+    padding-left: 208px;
+    position: relative;
+    }
+
+.gameListRowItem {
+
+    color: #939393;
+    font-size: 11px;
+    height: 66px;
+    padding: 9px;
+    position: relative;
+    }
+
+.gameListRowLogo {
+    left: 0;
+    position: absolute;
+}
+
+.friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/memberManageBlock1opt_over.gif');
+	cursor:pointer;
+}
+
+.smallForm {
+	margin:0;
+	padding:0;
+}
+
+#game_logo {
+	position:absolute;
+	width:192px;
+	left:748px;
+	top:7px;
+}
+
+
+.friendBlockText {
+	color: #898989;
+}
+
+.friendListSectionHeader {
+	margin-bottom: 8px;
+	height:17px;
+	width:669px;
+	font-size:11px;
+	padding-top:2px;
+}
+
+#groupInviteListPopup {
+	position:absolute;
+	padding:15px;
+	background-color:#000000;
+	border:solid #6a97be 1px;
+}
+
+.groupInviteLink, .groupInviteLink:hover, .groupInviteLink:visited {
+	display:block;
+	padding:0px 10px 0px 10px;
+	text-decoration:none;
+	color:#6a97be;
+}
+
+.groupInviteLink:hover {
+	color:#000000;
+	background-color:#6a97be;
+}
+
+.friends_list_tabs {
+	margin-left:10px;
+}
+
+.friends_list_tab, a.friends_list_tab {
+	display: block;
+	float: left;
+	color: #ffffff;
+	background-color: #3a3a3a;
+	line-height: 25px;
+	padding: 0px 12px;
+	margin-left: 9px;
+}
+
+a.friends_list_tab:hover {
+	text-decoration: none;
+}
+
+#friends_list_tab_fade {
+	margin-left:10px;
+}
+
+.friends_list_tab.active {
+	background-color: #4e4e4d;
+}
+
+#blockConfirmBlock {
+	margin:30px 0px 20px 30px;
+}
+
+#confirmP {
+	padding-top:6px;
+	font-size:12px;
+	line-height:18px;
+}
+
+#confirmP a,#confirmP a:hover,#confirmP a:visited,#confirmP a:active {
+	font-size:12px;
+	color:#ffffff;
+}
+
+#tabs {
+    left: 25px;
+    margin: 0;
+    position: absolute;
+    top: 108px;
+}
+.tab {
+    float: left;
+}
+.tab a, .tab a:hover, .tab a:visited, .tab a:active {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.tabOff, .tabOn {
+    background-color: #4F4F4E;
+    color: #FFFFFF;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+    padding: 8px 16px 6px;
+}
+.tabOff {
+    background-color: #3A3A3A;
+}
+.tabOnL, .tabOnR, .tabOffL, .tabOffR {
+    background-color: #4F4F4E;
+    float: left;
+    height: 29px;
+    width: 2px;
+}
+.tabOffL, .tabOffR {
+    background-color: #3A3A3A;
+}
+.tabOnR, .tabOffR {
+    margin-right: 6px;
+}
+
+.infoBar {
+	position:relative;
+	width:894px;
+	height:17px;
+	background-color:#000000;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.infoBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}

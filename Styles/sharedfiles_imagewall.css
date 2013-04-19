@@ -1,0 +1,276 @@
+
+
+.imageWallRow {
+	width: 958px;
+	min-width: 958px;
+	margin: 0px 0 6px 0;
+	padding: 0;
+}
+
+.imageWall4Floaters {
+	margin: 0;
+}
+.imageWall4Floaters .floatHelp {
+	width: 25%;
+	float: left;
+}
+.imageWall4Floaters .imgWallItem {
+	float: right;
+	margin-top: -2px;
+}
+
+.imgWallHover {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+}
+
+.imgWallItem {
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.imgWallItem.loadError {
+
+}
+
+.imgWallItem.banned {
+	border: 1px solid #ff0000;
+}
+
+.imgWallItem:hover {
+	border: 1px solid #97c0e3;
+}
+
+.imgWallItemChecked  {
+	border: 1px solid #97c0e3;
+}
+
+
+.imgWallHoverBottom {
+	opacity: 0.75;
+	filter:alpha(opacity=75);
+}
+
+.imgWallHoverDescription {
+	font-size: 13px;
+	font-style: italic;
+	height: 30px;
+	padding-left: 2px;
+	background-color: black;
+	color: #7cc5fb;
+}
+
+.imgWallHoverDescriptionLarge {
+	font-size: 20px;
+}
+
+.imgWallHoverDescription q, .imgWallHoverDescription span {
+	padding-top: 5px;
+	display: block;
+}
+
+.imgWallHoverCommentCount
+{
+	background-color: black;
+	height: 30px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/comment_quoteicon.png' );
+	background-repeat: no-repeat;
+	background-position: 5px 7px;
+	padding-left: 24px;
+	padding-right: 4px;
+	float: right;
+}
+
+	/* infinite scrolling controls */
+
+.imgWall_GetMoreContent
+{
+	width: 948px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0px auto;
+	border:  1px solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #262625;
+}
+
+.imgWall_GetMoreContentWait
+{
+	position: relative;
+	width: 948px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0px auto;
+	border:  1px solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #1c1c1c;
+}
+
+.imgWall_GetMoreContentWait img
+{
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.imgWall_ProgressBarBG
+{
+	position: absolute;
+	top: 200px;
+	left: 179px;
+	width: 600px;
+	height: 25px;
+	background-color: #000000;
+	border: 2px solid #cccccc;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.imgWall_ProgressBar
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 25px;
+	background-color: #cccccc;
+}
+
+.imgWallLoadingPageModal
+{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	height: 75px;
+	overflow: hidden;
+}
+
+#action_wait.first_wait
+{
+	top: 20px;
+}
+
+.imgWallLoadingPageModal a
+{
+	text-decoration: underline;
+}
+
+.imgWallLoadingPageModal img
+{
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.imgWall_BackToTop
+{
+	position: fixed;
+	margin-left: -480px;
+	left: 50%;
+	bottom: 0px;
+	height: 53px;
+	width: 960px;
+	z-index: 800;
+}
+
+.imgWall_BackTopTopShadow
+{
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/btn_back_top_shadow.png' );
+	margin-left: 5px;
+	width: 949px;
+	height: 20px;
+}
+
+.imgWall_BackToTopButton
+{
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/btn_back_top_active.png' );
+	width: 3px;
+	height: 33px;
+	line-height: 33px;
+	float: left;
+	display: inline-block;
+}
+
+.imgWall_BackToTop:hover .imgWall_BackToTopButton
+{
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/btn_back_top_hover.png' );
+}
+
+.imgWall_BackToTopButton.middle
+{
+	left: 3px;
+	width: 954px;
+	background-position: 0px -33px;
+	background-repeat: repeat-x;
+	text-align: center;
+}
+
+.imgWall_BackToTopButton.leftcap
+{
+	left: 0px;
+	background-position: 0px 0px;
+}
+
+.imgWall_BackToTopButton.rightcap
+{
+	right: 0px;
+	background-position: 0px -66px;
+}
+
+.imgWall_BackToTopBody a
+{
+	color: #b7b7b7;
+}
+
+.image_grid_dates
+{
+	width:958px;
+	height:11px;
+	position:relative;
+	margin-bottom:12px;
+}
+
+.image_grid_title
+{
+	float: left;
+	padding-right:6px;
+}
+
+.image_grid_rule
+{
+	overflow: hidden;
+	padding-top: 7px;
+	border-bottom: 1px solid #4d4d4d;
+}
+
+.image_wall_spoiler_cover
+{
+	position: absolute;
+	width: 100%;
+	top: 10%;
+	bottom: 10%;
+	cursor: pointer;
+	background-color: black;
+	z-index: 2;
+}
+
+.image_wall_spoiler_text
+{
+	position: absolute;
+	top:40%;
+	width: 100%;
+	text-align: center;
+}

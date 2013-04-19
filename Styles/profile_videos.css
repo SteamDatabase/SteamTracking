@@ -1,0 +1,601 @@
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+	position:relative;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:17px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:17px;
+}
+#mainContents {
+	width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:10px;
+}
+
+#profileBlock,#primaryGroupBlock {
+	float: left;
+	width:647px;
+	margin:0;
+	padding:0;
+	padding-right:0px;
+}
+
+.returnLink {
+	margin:0;
+	padding:0;
+	margin-bottom:20px;
+	margin-left:3px;
+}
+
+.returnLink>a {
+	font-size:11px;
+}
+
+.errorMsg {
+	font-weight:bold;
+	color:#dd0000;
+}
+
+.vid_thumb {
+	position:relative;
+	width:120px;
+	height:90px;
+}
+
+.list_vid_thumb {
+	float:left;
+	position:relative;
+	margin-right:15px;
+	width:96px;
+	height:72px;
+}
+
+.list_vid_thumb_add {
+	float:left;
+	position:relative;
+	margin-right:15px;
+}	
+
+.vid_thumb_duration {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	background:rgb(0,0,0);
+	background:rgba(0,0,0,0.6);
+	padding:0px 4px;
+	color:#eeeeee;
+	font-size:11px;
+}
+
+.semitrans {
+	background:transparent;
+	filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+#link_main {
+	margin-left:114px;
+}
+#link_error_box {
+	margin-top:10px;
+	width:460px;
+	color:#c53f3f;
+	font-size:14px;
+}
+
+#link_main h1 {
+	color:#d4d4d4;
+	font-weight:normal;
+	font-size:36px;
+	margin:0;
+	padding:0;
+	margin-bottom:3px;
+}
+#link_main h2 {
+	color:#d4d4d4;
+	font-weight:normal;
+	font-size:18px;
+	margin:5px 0px;
+	padding:0;
+}
+#link_subtext {
+	width:710px;
+	color:#838383;
+	font-size:18px;
+	margin:0;
+	padding:0;
+	margin-bottom:13px;
+}
+#link_chars {
+	float:right;
+	padding-right:49px;
+	padding-top:27px;
+}
+#link_actionblock {
+	margin-top:31px;
+}
+#link_ytp {
+	float:left;
+	margin-right:14px;
+	margin-top:4px;
+}
+#ytusername {
+	width:325px;
+	padding:3px;
+	font-size:14px;
+}
+#ytusername.inactive {
+	color: #838383;
+}
+#link_to_yt_btn {
+	margin-top:8px;
+}
+#link_add_btn {
+	margin-left:16px;
+}
+#ytlinkform {
+	margin:0;
+	padding:0;
+}
+#link_unlink_text {
+	margin:0;
+	padding:0;
+	line-height:16px;
+	margin-bottom:6px;
+}
+#add_left_col {
+	float:left;
+	width:436px;
+	padding-left:16px;
+}
+
+#add_right_col1, #add_right_col2, #add_right_col3 {
+	float:left;
+	width:478px;
+}
+#add_right_col2, #add_right_col3 {
+	margin-top:50px;
+}
+#add_right_col3 {
+	line-height:16px;
+	width:400px;
+}
+
+#add_left_col h1, #add_right_col1 h1, #add_right_col2 h1 {
+	margin:0;
+	padding:0;
+	color:#cacaca;
+	font-size:24px;
+	font-weight:normal;
+}
+
+#results_box, #error_box,.error_box {
+	color:#8bc53f;
+	font-size:24px;
+	margin:0px 32px 16px 16px;
+	padding:6px;
+}
+#error_box,.error_box {
+	color:#c53f3f;
+	font-size:14px;
+}
+.error_desc {
+	margin:0px 32px 16px 16px;
+	padding:6px;
+	line-height:18px;
+}	
+#video_top_links {
+	margin-left:16px;
+	margin-bottom:8px;
+}
+#video_top_links2 {
+	margin-left:4px;
+	margin-bottom:16px;
+}
+.video_top_link,.video_top_link:hover,.video_top_link:active,.video_top_link:visited {
+}
+
+.link_12px,.link_12px:hover,.link_12px:active,.link_12px:visited {
+	font-size:12px;
+}
+
+#add_vid_list {
+	height:512px;
+	overflow:scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color:#1b1b1b;
+	border:solid #6f6f6f 1px;
+	margin:10px 20px 0px 0px;
+	padding-top:5px;
+}
+
+.add_vid_list_entry {
+	padding:5px 15px;
+}
+.add_vid_list_entry:hover {
+	background-color:#2b2b2b;
+}
+
+
+.add_vid_cb {
+	float:left;
+	margin:30px 20px 0px 0px;
+}
+
+.vid_cb {
+	background-color:#1b1b1b;
+	color:#6f6f6f;
+}
+.vid_list_title_add {
+	color:#cacaca;
+	margin-bottom:4px;
+	width:184px;
+	overflow:hidden;
+}
+.vid_list_date {
+	font-size:11px;
+	color:#666666;
+}
+
+#add_vid_assoc {
+	margin-top:10px;
+}
+#app_assoc_select,#other_assoc,#filterSelect {
+	border:solid #6f6f6f 1px;
+	color:#6f6f6f;
+	background-color:#1b1b1b;
+}
+#other_assoc_label {
+	padding-top:8px;
+	padding-right:8px;
+	display:block;
+	float:left;
+}
+#add_video_button,#link_acct_button {
+	margin-right:16px
+}
+
+
+/* --- */
+.detail_right_col {
+	position: relative;
+	float:right;
+}
+#rc_more_videos {
+	float:right;
+	width:244px;
+	height:512px;
+	padding-top:5px;
+	padding-right:10px;
+}
+.detail_more_list_entry {
+	overflow:hidden;
+	width:244px;
+	margin-bottom:6px;
+}
+.vid_list_title {
+	float:left;
+	width:133px;
+	overflow:hidden;
+}
+.vid_list_title_link,.vid_list_title_link:hover,.vid_list_title_link:visited,.vid_list_title_link:active {
+	font-size:11px;
+}
+
+
+#rightActionBlockHeader {
+	float:right;
+	width:254px;
+	height:9px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockHeader.gif');
+	clear:right;
+}
+#rightActionBlockFooter {
+	float:right;
+	width:254px;
+	height:9px;
+	margin:0;
+	margin-bottom:16px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockFooter.gif');
+	clear:right;
+}
+#rightActionBlock {
+	float:right;
+	width:246px;
+	margin:0;
+	padding:0px 0px 0px 8px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockBG.gif');
+	background-repeat:repeat-y;
+	clear:right;
+}
+.rightActionBlockHR {
+	margin-left:-8px;
+	width:254px;
+	height:2px;
+	padding:4px 0px 6px 0px;
+}
+
+.detail_rc_row {
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+.action_link, .action_link:hover, .action_link:active, .action_link:visited {
+	font-size:14px;
+	clear:left;
+}
+.action_link_img {
+	display:block;
+	float:left;
+	margin-right:8px;
+	clear:left;
+}
+.video_list_entry {
+	float:left;
+	width:289px;
+	padding-right:16px;
+	margin-bottom:12px;
+}
+
+.video_list_entry_big {
+	float:left;
+	width:33%;
+	margin-bottom:12px;
+	text-align: center;
+}
+.video_suggestions_section {
+	margin: 20px;
+	margin-bottom: 3px;
+	margin-top: 5px;
+	padding: 20px;
+	border: solid #4d4d4e 1px;
+}
+.video_suggestions_section h1 {
+	font-size: 24px;
+	color: #CBCBCB;
+}
+.video_suggestions_section img {
+	padding-right: 16px;
+	margin-right: 12px;
+	padding: 10px;
+	padding-left: 2px;
+	border-right: solid #4d4d4e 1px;
+}
+.video_suggestions_extra {
+	margin-top: 4px;
+	margin-left: 22px;
+}
+.videos_suggestions_title {
+	margin-left: 22px;
+	margin-top: 40px;
+}
+#video_list_container {
+	margin-left:4px;
+}
+.vid_title_link,.vid_title_link:hover,.vid_title_link:active,.vid_title_link:visited {
+	font-size:12px;
+}
+.vid_list_entry_views {
+	color:#666666;
+	margin-top:2px;
+}
+#rc_details {
+	line-height:22px;
+	font-size:14px;
+	overflow:hidden;
+}
+.rc_label {
+	color:#666666;
+}
+.rc_val {
+	color:#ababab;
+}
+.filter_link,.filter_link:hover,.filter_link:active,.filter_link:visited {
+	font-size:14px;
+}
+#detail_vid_name {
+	clear:left;
+	margin:10px 0px 20px 0px;
+	font-size:22px;
+	font-style:italic;
+	width:670px;
+}
+#video_list_top_actions {
+	text-align:right;
+}
+#filterdropdown {
+	float:left;
+}
+#match_search {
+	line-height:22px;
+	margin:0px 6px 12px 0px;
+}
+
+/* ---[ comments ] --- */
+.commentBlock {
+	width:669px;
+	clear:left;
+}
+
+.commentContentBlock {
+	width:559px;
+	padding-bottom:15px;
+	float:left;
+}
+
+.commentByline {
+	color:#666666;
+	font-size:11px;
+	margin-bottom:5px;
+}
+
+.commentContent {
+	width:551px;
+	padding-right: 8px;
+	color:#939393;
+	font-size:11px;
+	word-wrap: break-word;
+}
+
+.commentBreaker {
+	margin-top:10px;
+}
+
+.commentAuthorAvatar {
+	float:left;
+	width:40px;
+	margin-right:10px;
+}
+
+.commentBlockControl {
+	float:left;
+	width:50px;
+	padding-top:10px;
+	padding-right:10px;
+	text-align:right;
+	visibility: hidden;
+}
+
+.commentBlock:hover .commentBlockControl {
+	visibility: visible;
+}
+
+.commentNotes {
+	color:#959595;
+	font-size:11px;
+}
+
+#commentInput {
+	background-color:#000000;
+	color:#666666;
+	font-size:11px;
+	overflow:auto;
+	border:solid #666666 1px;
+	height:auto;
+	width:668px;
+	/* disable webkit resize grip */
+	resize: none;
+}
+
+#commentSave {
+	display:none;
+}
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visited,.pageLinks>a:active {
+	font-size:10px;
+}
+
+.infoBar, .infoBar2 {
+	position:relative;
+	width:662px;
+	height:17px;
+	padding:0;
+	margin:8px 0px 10px 12px;
+}
+
+.infoBar {
+	padding-bottom:2px;
+	border-bottom:solid #4d4d4e 1px;
+}
+
+.infoBar2 {
+	padding-top:2px;
+	border-top:solid #4d4d4e 1px;
+}
+
+.infoBar p, .infoBar2 p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+/* --------------[ pagination block ] ----------------- */
+.pagingBar {
+	position:relative;
+	height:17px;
+	padding:0;
+	margin:8px 26px 10px 4px;
+	font-size:12px;
+	color:#c9c9c9;
+}
+
+.pagingBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:12px;
+	color:#959595;
+}	
+
+.pagingPageLinks {
+	float:right;
+	margin-right:0px;
+	padding-top:2px;
+	font-size:12px;
+	color:#959595;
+}
+
+.pagingCurrentPage {
+	padding:0px 3px;
+	background-color:#c9c9c9;
+	color:#262627;
+}
+
+.pagingArrowImg {
+	padding:0px 5px 1px 5px;
+}
+
+a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLink:active {
+	font-size:12px;
+	text-decoration:none;
+	color:#c9c9c9;
+	padding:0px 3px;
+}
+
+/* --------------[ /pagination block ] ----------------- */
+
+/* ---[ /comments ]--- */

@@ -1,0 +1,807 @@
+
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+	margin: 0px auto;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+	margin: 0px auto;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:17px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:17px;
+}
+
+#tabcontent_inventory {
+	border: 1px solid #303030;
+	background-color: #1F1F1F;
+}
+
+#mainContents {
+	width:926px;
+	padding:0;
+	text-align:left;
+	padding-top:10px;
+	margin: 0px auto;
+}
+
+.inventory_rightnav {
+	float: right;
+	margin-right: 16px;
+}
+
+.games_list_tabs {
+	border: 1px solid #535353;
+	border-bottom-color: #303030;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+
+	background-color: #3A3A3A;
+	padding-top: 1px;
+}
+
+.games_list_tab, a.games_list_tab {
+	display: block;
+	float: left;
+	color: #ffffff;
+	background-color: #3a3a3a;
+	line-height: 54px;
+	padding: 0px 12px;
+	outline: none;
+	font-size: 11px;
+
+	border-top: 1px solid #565656;
+	width: 205px;
+}
+
+.games_list_tab.first_tab, a.games_list_tab.first_tab {
+	border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+}
+
+.games_list_tab.fourth_tab, a.games_list_tab.fourth_tab {
+	border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+}
+
+.games_list_tab_icon {
+	width: 32px;
+	line-height: 54px;
+	padding-right: 8px;
+	
+	float: left;
+	display: block;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.games_list_tab_icon img {
+	vertical-align: middle;
+}
+
+.games_list_tab_name {
+	max-width: 125px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	display: block;
+	float: left;
+}
+
+.games_list_tab_number {
+	max-width: 36px;
+	padding-left: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+
+	display: block;
+}
+
+.games_list_tab_separator {
+	display: block;
+	float: left;
+	width: 2px;
+	height: 54px;
+
+	background-image:url('http://cdn.steamcommunity.com/public/images/economy/game_button_separator.png');
+	background-repeat:no-repeat;
+}
+
+.games_list_tab_row_separator {
+	clear: left;
+	float: left;
+	width: 100%;
+	height: 1px;
+
+	border-top: 1px solid #252525;
+	background-color: #3A3A3A;
+}
+
+a.games_list_tab:hover {
+	text-decoration: none;
+}
+
+
+
+.view_inventory_page .inventory_ctn {
+	position: relative;
+	width: 520px;
+	height: 520px;
+}
+
+.view_inventory_page .inventory_ctn .inventory_page {
+	float: left;
+	width: 520px;
+	height: 520px;
+}
+
+.view_inventory_page #inventories {
+	width: 520px;
+	height: 520px;
+	margin-bottom: 8px;
+}
+
+.view_inventory_logo {
+	width: 904px;
+	height: 69px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-left: -6px;
+	padding-top: 32px;
+	margin-bottom: 20px;
+}
+
+.games_list_tab.active {
+	background-color: #1F1F1F;
+	border-top: 1px solid transparent;
+	-webkit-box-shadow: 2px -2px 4px black inset;
+	-moz-box-shadow: 2px -2px 4px black inset;
+	box-shadow: 2px -2px 4px black inset;
+}
+
+
+
+.view_inventory_page {
+	position: relative;
+	background-color: #1f1f1f;
+	padding: 11px;
+	width: 884px;
+	margin-left: 6px;
+}
+
+.view_inventory_page .inventory_page_left {
+	width: 528px;
+}
+
+.view_inventory_page .inventory_page_right {
+	float: right;
+	width: 350px;
+	position: relative;
+	margin-top: 7px;
+}
+
+.view_inventory_page.inventory_msg_ctn {
+	height: 560px;
+
+	font-size: 24px;
+	text-align: center;
+}
+
+.inventory_msg_content {
+	padding-top: 200px;
+}
+
+#iteminfo0, #iteminfo1 {
+	width: 346px;
+	top: 0px;
+	left: 0px;
+}
+
+#iteminfo0 .item_desc_content, #iteminfo1 .item_desc_content {
+	min-height: 207px; /* this + computed height of .item_market_actions should equal 261 */
+}
+
+.view_inventory_page .item.activeInfo, .view_inventory_page .item:hover {
+	background-position: -1px -197px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/trade_itemholder.png' );
+	background-repeat: no-repeat;
+}
+
+.view_inventory_page .item {
+	cursor: pointer;
+	position: relative;
+}
+
+.returnLink {
+	margin:0;
+	padding:0;
+	margin-bottom:20px;
+	margin-left:3px;
+}
+
+.returnLink>a {
+	font-size:11px;
+}
+
+
+/* filter control */
+.filter_ctn {
+	margin-bottom: 8px;
+	margin-left: 12px;
+}
+.filter_label, .filter_control_ctn {
+	float: left;
+	margin-right: 10px;
+	line-height: 32px;
+	height: 32px;
+}
+#filter_control {
+	width: 366px;
+}
+
+.econ_tag_filter_category {
+	float: left;
+	margin-right: 18px;
+}
+
+.econ_tag_filter_category_label {
+	font-size: 14px;
+}
+
+.econ_tag_count {
+	font-size: 10px;
+}
+
+#context_selector {
+	margin-left: 12px;
+	margin-bottom: 12px;
+}
+
+#contextselect {
+	background-color: #000000;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/context_arrow.png' );
+	background-repeat: no-repeat;
+	background-position: right top;
+	border: 1px solid #676767;
+	cursor: pointer;
+}
+
+#contextselect.focus {
+	background-position: right bottom;
+}
+
+#contextselect, #contextselect_options_contexts {
+	width: 430px;
+}
+
+#contextselect_options_contexts {
+	border-bottom: none;
+}
+
+#contexts {
+	border-bottom: 1px solid #707070;
+}
+
+#contextselect_options {
+	padding-left: 1px;
+}
+
+.context_name {
+	position: relative;
+	font-size: 26px;
+	line-height: 35px;
+	height: 35px;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 12px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#contextselect_options .context_name {
+	color: #cac9c9;
+	border-bottom: 1px solid #6c6c6c;
+	cursor: default;
+}
+
+#contextselect_options .context_name:hover {
+	background-color: #212d3d;
+	color: #ffffff;
+}
+
+
+
+body.clienthoverpage {
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	font-size:0.75em;
+	background-color:#000000;
+	color:#939393;
+	margin:0;
+	padding:0;
+	background-image: none;
+	text-align: left;
+
+}
+
+
+/* --[ same as a.linkStandard ]------------------- */
+body.clienthoverpage a, body.clienthoverpage a:hover, body.clienthoverpage a:active, body.clienthoverpage a:visited {
+	font-size: 12px;
+	color: #ebebeb;
+	text-decoration:none;
+}
+
+body.clienthoverpage 	a:hover {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+.item_hover_owner {
+	margin-top: 4px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	padding-left: 48px;
+}
+
+.item_hover_owner .playerAvatar {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+body.clienthoverpage .clienthoverpage_content {
+	width: 350px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+}
+
+/* PENDING GIFTS */
+#pending_gift_link {
+	text-decoration: none;
+	position: absolute;
+	right: 5px;
+	top: 19px;
+
+	display: block;
+	float: left;
+	color: #ffffff;
+	background-color: #1B1B1B;
+	line-height: 54px;
+	padding: 0px 12px;
+	outline: none;
+	font-size: 11px;
+
+	border: 1px solid #39393A;
+	border-right: 1px solid #0F0F0F;
+	border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+
+	width: 218px;
+}
+
+#pending_gift_link.active {
+	border: 1px solid #565656;
+	border-right: 1px solid #0F0F0F;
+
+	-webkit-box-shadow: 2px -2px 4px black inset;
+	-moz-box-shadow: 2px -2px 4px black inset;
+	box-shadow: 2px -2px 4px black inset;
+}
+
+
+
+a.recommendation_btn, a.recommendation_imgbtn
+{
+	display: inline-block;
+	line-height: 22px;
+	height: 22px;
+	color: #82807c;
+	font-size: 11px;
+	background-color: #1a1a1a;
+
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+a.recommendation_btn.lighter
+{
+	background-color: #262626;
+	color: #b0aeac;
+}
+
+a.recommendation_btn
+{
+	padding: 0px 6px;
+}
+
+a.recommendation_btn:hover, a.recommendation_imgbtn:hover
+{
+	text-decoration: none;
+	background-color: #97c0e3;
+	color: #3c3d3e;
+}
+
+#tabcontent_pendinggifts.no_pending_gifts {
+	border: 1px solid #303030;
+	background-color: #1F1F1F;
+}
+
+#tabcontent_pendinggifts .view_inventory_page {
+	background: none;
+}
+
+.pending_gifts_header {
+	font-size: 14px;
+	color: #b8b8b8;
+	margin-bottom: 12px;
+	margin-top: 12px;
+
+	/* a single gray pixel to be our rule */
+	background-image: url( 'data:image/gif;base64,R0lGODlhAQACAIAAAJGRkSUlJSH5BAAAAAAALAAAAAABAAIAAAICDAoAOw==' );
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.pending_gifts_header span {
+	background-color: #252525;
+	padding-right: 6px;
+}
+
+.pending_gift {
+	border: 1px solid #4d4d4e;
+	border-radius: 2px;
+	background-color: #373634;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/pendinggift_bg.jpg' );
+	background-repeat: no-repeat;
+	background-position: bottom right;
+
+	padding: 8px;
+	margin-bottom: 32px;
+}
+
+.pending_gift_leftcol {
+	float: left;
+	width: 350px;
+	margin-right: 10px;
+}
+
+.pending_gift_rightcol {
+	float: left;
+	width: 526px;
+}
+
+.pending_gift .content {
+	background-color: #292929;
+	padding: 18px 25px;
+	
+	box-shadow: inset 2px 2px 8px #202020;
+	-webkit-box-shadow: inset 0 0 16px #1A1A1A;
+}
+
+.pending_gift .content b {
+	font-size: 14px;
+}
+
+.pending_gift .gift_message {
+	color: #d7d7d7;
+	font-size: 16px;
+	font-weight: bold;
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAChCAIAAACJa0IwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpiMDI0ZGJgYCAL/ydW7f//1DOPgFmUmEGu3v+khBuS/v/khDtU/38y44xqZmAxk0zzAAIMABL1Grxx35GEAAAAAElFTkSuQmCC' );
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.pending_gift .content p {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.gift_message .signature_line {
+	line-height: 40px;
+}
+
+.gift_message .signature_line .playerAvatar {
+	float: left;
+	margin-right: 8px;
+}
+
+.content.gift_controls {
+	width: 434px;
+	margin: 70px auto 0px;
+	text-align: center;
+	color: #b4b4b4;
+	padding: 25px 25px;
+}
+
+.gift_controls .gift_status {
+	color: #767676;
+}
+
+.gift_controls_buttons {
+	margin-top: 24px;
+	font-size: 14px;
+}
+
+.accepted_gift_info {
+	color: #b4b4b4;
+	font-size: 14px;
+}
+
+.accepted_gift_info a.underlined {
+	color: #b4b4b4;
+	text-decoration: underline;
+}
+
+.accepted_gift_info a.underlined:hover {
+	color: #ffffff;
+}
+
+.giftpopup_header {
+	color: #D7D7D7;
+	padding-left: 48px;
+	padding-top: 24px;
+}
+
+.giftpopup_header h2 {
+	color: #D7D7D7;
+}
+
+.giftpopup .pending_gift {
+	margin: 24px;
+}
+
+.giftpopup_window_controls {
+	text-align: center;
+	margin-bottom: 64px;
+	margin-top: 64px;
+}
+
+.sent_gift {
+	border: 1px solid #4d4d4e;
+	margin-bottom: 15px;
+}
+
+.sent_gift .gift_item {
+	padding: 12px 15px;
+	height: 98px;
+	background-color: #1f1f1f;
+	border-bottom: 1px solid #4d4d4e;
+}
+
+.sent_gift .gift_item .sent_gift_actions {
+	float: right;
+	padding-top: 36px;
+}
+
+.redeemed_gift_status {
+	font-weight: bold;
+}
+
+.sent_gift .gift_item .item_icon {
+	float: left;
+	margin-right: 10px;
+	width: 96px;
+	height: 96px;
+	background-color: #292929;
+	border: 1px solid #3A3A3A;
+}
+
+.sent_gift .gift_item .gift_item_details {
+	padding-top: 33px;
+	font-size: 12px;
+}
+
+.sent_gift .gift_status_area {
+	padding: 0px 6px;
+	line-height: 23px;
+	font-size: 12px;
+	color: #b4b4b4;
+	background-color: #2b2a2a;
+}
+
+p.pending_gifts_none {
+	margin: 8px 0px 0px 0px;
+	font-size: 18px;
+}
+
+#gift_modal p {
+	margin-top: 0px;
+}
+
+.gift_modal_text {
+	margin-top: 42px;
+	margin-bottom: 24px;
+	color: #a6a6a6;
+}
+
+.gift_modal_text ul {
+	margin: 2px 0px 12px;
+}
+
+#gift_modal h2.gift_error_message {
+	font-size: 18px;
+}
+
+#newitems {
+	margin-left: -6px;
+	width: 936px;
+}
+
+.alertbox {
+	margin-bottom: 40px;
+}
+
+.alertbox_header, .alertbox_header .leftcap, .alertbox_header .rightcap {
+	background-image: url( http://cdn.steamcommunity.com/public/images/economy/alertbox_header.png );
+}
+
+.alertbox_header {
+	position: relative;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	height: 26px;
+	line-height: 26px;
+	padding: 0px 8px;
+
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.alertbox_header .leftcap, .alertbox_header .rightcap {
+	position: absolute;
+	top: 0px;
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 26px;
+}
+
+.alertbox_header .leftcap {
+	background-position: left top;
+	left: 0px;
+}
+
+.alertbox_header .rightcap {
+	background-position: right top;
+	right: 0px;
+}
+
+.alertbox_header .welcome_dismiss {
+	top: 6px;
+}
+
+.alertbox_content {
+	position: relative;
+	height: 99px;
+	border: 1px solid #5c7e10;
+	border-top: none;
+	background-color: #333333;
+
+
+	box-shadow: inset 0 0 5px #151515;
+	-webkit-box-shadow: inset 0 0 5px #1A1A1A;
+
+	border-bottom_right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.alertbox_scrollcontrol {
+	position: absolute;
+	top: 0px;
+	height: 97px;
+	width: 22px;
+
+	z-index: 2;
+	cursor: pointer;
+
+	text-align: center;
+	color: #b4b4b4;
+
+	background-image: url( http://cdn.steamcommunity.com/public/images/economy/alertbox_scrollcontrol_shadow.png );
+	background-repeat: repeat-y;
+}
+
+.alertbox_scrollcontrol .scrollcontrol_button {
+	height: 97px;
+	line-height: 97px;
+	width: 22px;
+	background-color: #424242;
+	border-top: 1px solid #373737;
+	border-bottom: 1px solid #3b3b3b;
+}
+
+.alertbox_scrollcontrol .scrollcontrol_button:hover {
+	background-color: #555555;
+}
+
+.alertbox_scrollcontrol.right {
+	right: 0px;
+	padding-left: 5px;
+	background-position: left;
+	border-right: 1px solid #343434;
+}
+
+.alertbox_scrollcontrol.left {
+	left: 0px;
+	padding-right: 5px;
+	background-position: right;
+	border-left: 1px solid #343434;
+}
+
+.alertbox_scroll_ctn {
+	padding: 7px;
+	position: relative;
+	overflow: hidden;
+	height: 85px;
+	z-index: 1;
+}
+
+.alertbox_scroll {
+	position: relative;
+	width: 20000px;
+}
+
+a.newitem {
+	display: block;
+	background-color: #313131;
+	border: 1px solid #3f3f3f;
+	padding: 16px 8px;
+	margin-right: 10px;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+
+	color: #b4b4b4;
+	font-size: 12px;
+	font-weight: bold;
+	max-width: 260px;
+}
+
+.newitem img {
+	vertical-align: middle;
+}
+
+a.newitem:hover {
+	text-decoration: none;
+	background-color: #404040;
+	border: 1px solid #4f4e4e;
+}
+
+.item_market_actions {
+	padding: 11px;
+	min-height: 32px;
+}
+.item_market_action_button {
+	margin-right: 10px;
+}

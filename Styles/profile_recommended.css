@@ -1,0 +1,172 @@
+
+#BG_top {
+	margin: 0px auto;
+}
+
+#BG_bottom {
+	margin: 0px auto;
+}
+
+#mainContents {
+	background-image: none;
+}
+
+.rightSectionTopTitle {
+	line-height: 18px;
+	margin-bottom: 4px;
+}
+
+.friend_block_avatar_92 {
+	width: 92px;
+	height: 92px;
+	background-repeat: no-repeat;
+	padding: 4px;
+	margin-right: 2px;
+}
+
+.friend_status_offline .friend_block_avatar_92 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/iconholder_92_offline.gif' );
+}
+
+.friend_status_online .friend_block_avatar_92 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/iconholder_92_online.gif' );
+}
+
+.friend_status_in-game .friend_block_avatar_92 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/iconholder_92_ingame.gif' );
+}
+
+.friend_block_avatar_92 img {
+	width: 92px;
+	height: 92px;
+}
+
+
+.recommendation_detail {
+	min-height: 124px;
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #262626;
+
+	margin-right: 16px;
+}
+
+.recommendation_detail .quote {
+	max-height: 450px;
+	overflow: auto;
+	overflow-x: hidden;
+	word-wrap: break-word;
+}
+
+.recommendation_area_ctn.game_recommendation {
+	margin-bottom: 32px;
+}
+
+.recommendation_area
+{
+	position: relative;
+}
+
+.recommendation_area .recommendation_author
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.quote_serif
+{
+	font-family: Georgia, serif;
+}
+
+.recommendation_detail .recommendation_area_content
+{
+	padding-left: 116px;
+	width: 596px;
+}
+
+.recommendation_detail .recommendation_date
+{
+	padding-left: 13px;
+	color: #626467;
+	font-size: 11px;
+}
+
+.recommendation_detail .recommendation_date a
+{
+	color: #626467;
+	text-decoration: underline;
+}
+
+.game_recommendation .recommendation_area_content
+{
+	padding-left: 56px;
+}
+
+.quote
+{
+	padding: 13px 13px;
+	border: 1px solid #3c3d3e;
+	color: #d6d7d8;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 19px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.quote_arrow
+{
+	position: absolute;
+	width: 17px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/quotearrow_graybg.png' );
+}
+
+.recommendation_detail .quote_arrow
+{
+	left: 100px;
+	top: 13px;
+}
+
+
+.recommendation_area .gameLogoHolder_default {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.app_actions
+{
+	position: absolute;
+	width: 187px;
+	right: 0px;
+	top: 84px;
+	text-align: right;
+}
+
+.actiontext
+{
+	color: #82807c;
+	font-size: 11px;
+	line-height: 22px;
+}
+
+.actiontext a
+{
+	color: #82807c;
+	text-decoration: underline;
+}
+
+.actiontext a:hover
+{
+	text-decoration: underline;
+	color: #d6d7d8;
+}
+
+
+#profileBlock.recommendationProfileBlock {
+	padding-top: 13px;
+}

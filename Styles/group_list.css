@@ -1,0 +1,285 @@
+  
+
+#BG_top, #GCL_top {
+	position:relative;
+	z-index:10;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom, #GCL_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:29px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:5px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 24px;
+	line-height:1em;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:5px;
+	padding-bottom:13px;
+	padding-left:5px;
+}
+#GCL_top h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+	padding-left:5px;
+}
+#GCL_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+	padding-left:5px;
+}
+#mainContents {
+	width:808px;
+	min-width:808px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:24px;
+}
+#GCLmainContents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:21px;
+}
+
+#sortform {
+	margin-left:136px;
+	color:#959595;
+	font-size:12px;
+	margin-bottom:8px;
+}
+
+.resultItem,.resultItemOGG {
+	position:relative;
+	margin-left:100px;
+	width:606px;
+	background-color:#2e2e2e;
+	color:#959595;
+	font-size:11px;
+	padding:5px 0px 5px 130px;
+	height:72px;
+	margin-bottom:1px;
+	line-height:16px;
+}
+
+.resultItemOGG {
+	height:77px;
+	width:727px;
+	padding-left:9px;
+}
+
+.resultItem>p,.resultItemOGG>p {
+	margin:0;
+	padding:0;
+	padding-top:6px;
+}
+
+.groupBlockMedium {
+	float:left;
+	width:72px;
+	height:72px;
+	margin:0;
+	padding:0;
+	margin-right:11px;
+}
+
+.groupBlockOGG {
+	float:left;
+	width:192px;
+	height:78px;
+	margin:0;
+	padding:0;
+	margin-right:11px;
+}
+
+.resultItem>a,.resultItem>a:hover,.resultItem>a:visited,.resultItem>a:active {
+	color:#e1e1e1;
+	font-size:12px;
+	text-decoration:underline;
+}
+
+.resultSubtext {
+	font-size:10px;
+	font-weight:bold;
+}
+
+.darkBG {
+	background-color:#2c2c2c;
+}
+
+.resultIcon {
+	position:absolute;
+	top:8px;
+	left:8px;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+#bottomLinks {
+	position:relative;
+	width:894px;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+#bottomRightLinks {
+	float:right;
+}
+
+
+.infoBar {
+	position:relative;
+	width:732px;
+	height:32px;
+	line-height: 28px;
+	background-color:#000000;
+	margin:0;
+	padding:0;
+	margin-left:96px;
+	border:solid #252525 4px;
+	padding-left:4px;
+}
+
+.infoBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
+	color: #6f9fc8;
+	font-size:11px;
+}
+
+.listOGGTag {
+	padding-top:4px;
+}
+
+#noMatches {
+	padding-left:40px;
+	padding-top:20px;
+	color:#939393;
+	font-weight:bold;
+}
+
+.sectionDesc {
+	color: #8c8c8c;
+	font-size: 11px;
+	margin:0;
+	padding:0;
+	margin-top:-2px;
+	margin-bottom:12px;
+}
+
+.left17 {
+	margin-left:25px;
+}
+
+.groupBlock,.groupBlockHi {
+	width:769px;
+	height:72px;
+	margin:0;
+	padding:0;
+	margin-bottom:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+.groupBlockHi {
+	background-color:#3a3a3a;
+}
+
+.groupBlock p,.groupBlockHi p {
+	margin:0;
+	padding:0;
+	padding-top:2px;
+	line-height:16px;
+}
+
+.groupLeftBlock {
+	margin:0;
+	padding:0;
+	width:136px;
+	height:36px;
+	float:left;
+	padding-top:12px;
+	padding-left:16px;
+	font-size: 11px;
+}
+
+.groupLeftBlockDouble {
+	margin:0;
+	padding:0;
+	width:136px;
+	height:36px;
+	float:left;
+	padding-top:6px;
+	padding-left:16px;
+	font-size: 11px;
+	line-height:20px;
+}
+
+#primaryGroupBreak {
+	margin:0;
+	padding:0;
+	padding-top:8px;
+	padding-bottom:8px
+}
+
+.mainSectionHeader {
+	height:17px;
+	width:661px;
+	background-color:#161616;
+	font-size:11px;
+	font-weight:bold;
+	padding:0;
+	margin:0;
+	padding-top:2px;
+	padding-left:8px;
+}
+
