@@ -1,11 +1,11 @@
 "win32"
 {
-	"version"		"1366237498"
+	"version"		"1366338775"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.a2f0a496d4217482079aa6798efa726311e9e04c"
-		"checksum"		"a2f0a496d4217482079aa6798efa726311e9e04c"
-		"size"		"4977144"
+		"file"		"strings_all.zip.039f20af03325d88bf0e36525ef5785c6f1a635d"
+		"checksum"		"039f20af03325d88bf0e36525ef5785c6f1a635d"
+		"size"		"4977240"
 	}
 	"resources_all"
 	{
@@ -45,15 +45,15 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.a61e1581168fe690e645833272ba77ea6ded6159"
-		"checksum"		"a61e1581168fe690e645833272ba77ea6ded6159"
-		"size"		"1181819"
+		"file"		"public_all.zip.5281a22558c77a31e1595fcacc35c24a359bdcfd"
+		"checksum"		"5281a22558c77a31e1595fcacc35c24a359bdcfd"
+		"size"		"1182379"
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.779ed96c75006d355b35cd7b876042af620e8b3d"
-		"checksum"		"779ed96c75006d355b35cd7b876042af620e8b3d"
-		"size"		"20045520"
+		"file"		"bins_win32.zip.5c20db4fb799bcd74a22a25e5f7c16cd640999cc"
+		"checksum"		"5c20db4fb799bcd74a22a25e5f7c16cd640999cc"
+		"size"		"20051025"
 	}
 	"webkit_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.d5a3f4249b633e051dbae66e1c02cfa5652f9157"
-		"checksum"		"d5a3f4249b633e051dbae66e1c02cfa5652f9157"
-		"size"		"747382"
+		"file"		"steam_win32.zip.51dabac941d359bb085dea8d76ba9e9fceb29b3f"
+		"checksum"		"51dabac941d359bb085dea8d76ba9e9fceb29b3f"
+		"size"		"747519"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"3437ff709842f5015d9d9fdc50bd3979af2d31094cd380f3847cac9e08e4a2ab5bd09f2b53c30d1448ea785819c897ba27c3362ce0a82d0b3c83c3ad747890315ffef9892694b8f12ac21d2d7177234da25b4492f12ce6b47a72a291955dd94bc75a46b7a9c0263db6a305f20d2aa566e4f87a4ccb023d2fd3214d30ab2f4f0c"
+	"win32"		"95c0cfbd9c2f73a30d12d8d2470e10a61096fd3128e83778dc95af459b805a4ccc9efa18289fe885f08103cf48e457c085777aac32c3498832be78707279c83a2ef44a2a736e7f4e89bed0d522f673c786310f4b99224d9e4ba1fc2752578ca17a4d2d5523feebf979a7bf7b70acf9d79e1c7fc5d61ac37bf25ff1dee253a884"
 }
