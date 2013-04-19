@@ -1,0 +1,121 @@
+
+	/* override the background for now */
+body
+{
+	background: #262627 url('http://cdn.steamcommunity.com/public/images/skin_1/community_2_background_gradient.png') top repeat-x;
+	background-position: 0 105px;
+}
+
+.maincontent
+{
+	padding-top: 20px;
+}
+
+.leftcol
+{
+	float: left;
+	width: 640px;
+	padding-bottom: 50px;
+	text-align: left;
+}
+
+.rightcol
+{
+	position: relative;
+	float: right;
+	width: 295px;
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	z-index: 90;
+	font-size: 14px;
+	text-align: left;
+}
+
+.rightbox_list_option
+{
+	line-height: 30px;
+}
+
+.admin_option_icon
+{
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.rightcol .panel
+{
+	background: #1b1b1b;
+	background: rgba(27,27,27,.36);
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	margin: 0 0 10px 0;
+	border: 1px solid #1f1f20;
+	box-shadow: 1px 1px 0 0 #39393a;
+}
+
+.panel .title
+{
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 3px 0 10px 0;
+	color: #676765;
+}
+
+.panel .divider
+{
+	position: relative;
+	background: #000;
+	border-bottom: 1px solid #333333;
+	height: 1px;
+	left: -11px;
+	width: 294px;
+	margin: 5px 0 5px 0;
+}
+
+/* main page */
+
+.welcome_admin
+{
+	color: white;
+	font-size: 1.25em;
+	background-color: #2f2f30;
+	line-height: 64px;
+}
+
+.welcome_admin_iconHolder
+{
+	position: relative;
+	width: 64px;
+	height: 64px;
+	border: 0;
+	margin: 0;
+	float: left;
+	margin-right: 10px;
+}
+
+.welcome_admin_iconHolder img
+{
+	width: 64px;
+	height: 64px;
+}
+
+.faq_block
+{
+	padding: 15px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	background-color: #333333
+}
+
+.faq_title
+{
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+.faq_sub_title
+{
+	color: #529CDE;
+	padding-bottom: 5px;
+}
