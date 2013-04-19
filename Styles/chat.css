@@ -1,0 +1,309 @@
+
+body.chat_body {
+	background-color: #262627;
+	min-width: 0;
+}
+
+.chat_page {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/group_content_background.png');
+	background-position: center 105px;
+	background-color: #262627;
+	background-repeat: no-repeat;
+	min-width: 599px;	/* .maincontent min-width + .maincontent margins */
+	padding: 0 12px;
+}
+
+.perf_timing_link {
+	display: none;
+}
+
+.maincontent {
+	max-width: 948px;
+	min-width: 575px;
+	width: auto;
+}
+
+.chat_page_header {
+	padding-top: 18px;
+	margin-bottom: 22px;
+}
+
+.chat_page_header_user .playerAvatar {
+	float: left;
+	margin-right: 8px;
+}
+
+.chat_page_header_user .friendslist_entry_content {
+	padding-top: 9px;
+	font-size: 13px;
+	line-height: normal;
+}
+
+.chat_page_header h1 {
+	color: #fffffa;
+	font-weight: normal;
+	font-size: 26px;
+	margin: 0;
+}
+
+.chat_page_header_logo_area {
+	position: relative;
+	float: right;
+	width: 200px;
+	padding-left: 244px;
+	padding-top: 4px;
+}
+
+.chat_page_steam_logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 177px;
+	height: 45px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/steam_logo.png');
+}
+
+.chat_page_beta_logo {
+	position: absolute;
+	left: 190px;
+	top: 4px;
+
+	width: 47px;
+	height: 27px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/beta_tag.png');
+}
+
+.chat_page_beta_description {
+	font-size: 11px;
+}
+
+#chat_container {
+	position: relative;
+	height: 600px;
+}
+
+#chat_msg_area {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 288px;
+
+	border: 1px solid #000000;
+	background-color: #383635;
+	box-shadow: 1px 1px 0 0 #373b42;
+}
+
+.chat_msg_area_highlight {
+	background-color: #413f3f;
+	height: 1px;
+}
+
+.nickname_name {
+	color: #828282;
+}
+
+.chat_dialog {
+	padding: 10px 9px;
+}
+
+.chat_dialog h2 .nickname_name {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.chat_message_text {
+	white-space: pre-wrap;
+	color: #d1cfcd;
+}
+
+.chat_message.chat_message_self .chat_message_text {
+	color: #a1a2a2;
+}
+
+.chat_message.chat_message_historical .chat_message_text, .chat_message_historical .persona {
+	color: #7c7c7c;
+}
+
+#chat_friendslist_area {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 271px;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	background-color: #171614;
+	background: -moz-linear-gradient(top, #383635 0%, #171614 21%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#383635), color-stop(21%,#171614));background: -webkit-linear-gradient(top, #383635 0%,#171614 21%);background: -o-linear-gradient(top, #383635 0%,#171614 21%);background: -ms-linear-gradient(top, #383635 0%,#171614 21%);background: linear-gradient(to bottom, #383635 0%,#171614 21%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383635', endColorstr='#171614',GradientType=0 );	border: 1px solid #000000;
+	box-shadow: 1px 1px 0px 0px #373b42;
+}
+#chat_friendslist {
+	padding: 5px 3px;
+}
+
+.friendslist_group_handle {
+	height: 20px;
+	line-height: 20px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/friendgroup_bg.png' );
+	background-repeat: repeat-y;
+	background-position: left;
+
+	padding-left: 6px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	font-size: 11px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	margin-bottom: 2px;
+
+	cursor: default;
+}
+
+.friendslist_group_handle_toggle {
+	color: #a9a7a7;
+	font-weight: bold;
+	font-size: 13px;
+	margin-right: 6px;
+}
+
+.friendslist_group_handle:hover .friendslist_group_handle_toggle {
+	color: #ffffff;
+}
+
+.friendlist_group_onlinesummary {
+	color: #a9a7a7;
+}
+
+.friendslist_group_friends {
+	margin-bottom: 6px;
+	padding-left: 14px;
+}
+
+.friendslist_entry {
+	height: 40px;
+
+	padding: 3px;
+	margin-bottom: 3px;
+
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+	cursor: default;
+}
+
+.friendslist_entry:hover {
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAAABCAYAAAAYe9jZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYxQzY2QjJBM0E4MTExRTI4RjI2RjY2NTkwQ0U3OTZBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjYxQzY2QjJCM0E4MTExRTI4RjI2RjY2NTkwQ0U3OTZBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjFDNjZCMjgzQTgxMTFFMjhGMjZGNjY1OTBDRTc5NkEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjFDNjZCMjkzQTgxMTFFMjhGMjZGNjY1OTBDRTc5NkEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5IZNqdAAABCElEQVR42oRT0Y1DMQgD6ea6SbrOrY0bsCH03kcrNSGJwca0P7+vP9iXzwHAucLcOspF+7lCQ+t5xWdBQs6WJ881v66XASte7ydDxBAjq3it6PySxXeQi7uVrgqbZzDmYrTG3FhSFVdOYOKFx6pn8Vm/erCoJiOuFukTR7AzTB51BHMjzxk77/Lw0Afe7zOJyF0WmjzA4KQxFj4dzOuQpdMHa+H6rXMPRD6FylYuPaN+F2M24WA/JcVtdApxa9G/wklX9WkzoOg5Kz9mHjG6ykHY7f8xH6y89mvvXm2sWW8d4/f67cxl+2527/9hh9PuDCR8/7a8BsW/ArZWem1b76KUfpJl/BZgAETPCDsbTFWuAAAAAElFTkSuQmCC' );
+	background-repeat: repeat-y;
+	background-position: left;
+
+}
+
+.friendslist_entry .playerAvatar {
+	float: left;
+	margin-right: 9px;
+}
+
+.friendslist_entry_content {
+	font-size: 11px;
+	line-height: 13px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.friendslist_entry .unread_message_count {
+	float: right;
+	position: relative;
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFENzNEQkNENTNBQjExRTI5MENERjVDRTc3QTBGMjQzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFENzNEQkNFNTNBQjExRTI5MENERjVDRTc3QTBGMjQzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QUQ3M0RCQ0I1M0FCMTFFMjkwQ0RGNUNFNzdBMEYyNDMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ3M0RCQ0M1M0FCMTFFMjkwQ0RGNUNFNzdBMEYyNDMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4HxqYOAAAE0klEQVR42rSWXWhcRRTH/3v33s3uZjfppvlOk1qMBI1FU6kUtEYrIS9CW1JREH0pKIJP1oL4oFAfzEtf/EIL8cGCCIJfpBpLwJS0WC02VFBCmjQ02STN12432b27ez9mPWfu3s0m7SatHwN/Zpg7M79zzsycuZ6hXBeKSoC0k/QAqYkUJCkkD+6s5EiCtEqaIo2SoqSMO0AtGlxBemLoq4UTl3662ZGYz8HjUaGqSmGA4i3NFXZO1pYlIISJhlYVHU9VDj92sOYEdV8kJYuBIVJX/6kbn106k6qo21GN5r1BBEM+qJpXghTFsynUMoWEGlkL+qqB2EIKA33x/fqK+LzrxbqjNOQcSVfz0Id+/nL5/ZGz2Yq2hxtRuyOMcKUfPr9XgjaDMkSInKwt05ZghlY3hFARCeDi94sN4Uj85L5nIi/Q8CsMi0THsi/9MZRuvLe9Fs2tEYQqyxyIhCl3AVQkkOf4ylSU+VX57fJg4v779oR6tjdq1xjYNHvVPOwRZdIqN4zuJAn0KQRTSobTgQpYhpL3kIzzCgQJVt9SgdHfU4iOmUcIeJqBdfoKarZVB1Ee9uU9cmAcUtc77pPeKbdC2QvLLO7nZS1awyvXDG3zw9A9u6izmr8ECAF/kCB+VQJcz2QYSTxR8SrwlgipTUA2xJGg77bjsekY7g9qdNpVHw0vY6ASCGkyBMUQDqMbWoZpJTyUEAKa3Gaw8DhSlEK0eEygXOPhHnkt2DNhZzcspBROqJafVHIPCcTeC6X09XGApswidFA0/N+lLKAVdjfnD/hkzN1s4VgtZFYTtpCWb1bcfRRi7Yq4kgmB+gLlagGYDVdphQ9c8wXm2HPbLRq8JWGmaa+bu1bbBUeCYZ9Nww0GLjW3hJLUGTIyVh60BuO94MV4UUUotwGKgrE834UZWQec1i25Rn1lcHYZiDEwSkdmsG1P1aH5qZQ8QPLy0mT3Pgk7f1pF7rYJm1OZZaxBGebUFmLzKezrboSBzBkaeoNNXopj5tNnj+zKrMQzSMTS6ydl1iY77SJRX0Y317eLYPHFNL04wJOP1y+uYuELYiUYaJB+ncP08bfe3UsW6ZieiCOZyOQXKIZZBRVAJG5ndKePX4oEGT49fhO2bePYm4+Ys5h4nRM3h8tT9ADXeOE/1IgHe8fnl6rO90eRTlq82YhUB2S2KL70HD53cdcId9+r6oM40NOChlDlzCyuHKfjNEDdcXnzN7z4laTd5WjpCaO2mxJcK6G0r38cIY9NmdjdMh9dxfaGAJ4/2IFy3IMEPfA55HI2zKQB49oq5n7QMfsdDf0r/wdwy4vPJUH6JYWpP0kfU7s9gt0f6kmzKRHLyOzDx3xmMoH2R2tx4Om25asYfg8Yvs6PKymVr2N8NviV70SffQ5HUQrIxc67z7JUhBbpaDe5+3Z9LIbDr7SjdWfTxBwuvEZjznfim+T63xqzaKn0usXVLTISbZrXo+WTwOToMt7o3c/J8PI8Lhyjxm+d+FZ3IHdWlK2BHm+WvIvSyT3Z2823sn8JF17lH6NODOh3m1PVrS3ypReiSXxy6jmMY/SjNGY/oO7JTpw1nD/C/xaYVhEeeeftl2smMXiaYH2cmQhm/9NXY+O12Fj8pEZSOd+E/MkT/+aZ+luAAQAil73LwoWsAQAAAABJRU5ErkJggg==' );
+	width: 28px;
+	height: 17px;
+	line-height: 17px;
+	padding: 1px 0 8px 0;
+
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000000;
+
+	text-shadow: #9da58e 1px 1px 0;
+}
+
+.friendslist_entry .unread_message_count .message_count_flash {
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI3RDU3OUIyNTNBQzExRTI4N0NGQUMwMDU1NjM3M0VGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI3RDU3OUIzNTNBQzExRTI4N0NGQUMwMDU1NjM3M0VGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjdENTc5QjA1M0FDMTFFMjg3Q0ZBQzAwNTU2MzczRUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjdENTc5QjE1M0FDMTFFMjg3Q0ZBQzAwNTU2MzczRUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6kgJhgAAAA9klEQVR42mL8//8/AxKQAeLHDNQFCkD8EMZhQpIwoIFlIPAAiPVgHEaoDzWB+BoDbYEGEN8E+ZAPiOcz0B5MAmIOkA//M9ARMDHQGYxaOGrhqIUj1EJRIH5DB7v2ADEvrLYwAeLTNLZQF4ivwIL0DBA70dAyY5BlYBbIh0hYD4iP/KceWAHEqsh2MGKpndih3gf5uJMEXzwH4tvQ5sQJID4ExLeA+BeKKjQfouNMAj54gO4DQphQtmDDIwfyhT3UVzTPhyuBOAi5NUYsYCHDsnIgngvEb8lxKSELn6Hx46C++0Vu/mAk0IaSAuKnaCn4FyUZEiDAAM0n9XvZcrK/AAAAAElFTkSuQmCC' );
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+
+
+.chatdialog_header .playerAvatar {
+	float: left;
+	margin-right: 8px;
+}
+
+.chat_dialog_content {
+	position: absolute;
+	left: 9px;
+	right: 9px;
+	top: 92px;
+	bottom: 114px;
+
+
+	border-radius: 3px;
+	/*box-shadow: 0px 0px 0px 1px #4d4b48;*/
+	border: 1px solid #4d4d48;
+	border-top: none;
+	background-color: #1c1b19;
+	background: -moz-linear-gradient(top, #383635 5%, #1c1b19 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#383635), color-stop(95%,#1c1b19));background: -webkit-linear-gradient(top, #383635 5%,#1c1b19 95%);background: -o-linear-gradient(top, #383635 5%,#1c1b19 95%);background: -ms-linear-gradient(top, #383635 5%,#1c1b19 95%);background: linear-gradient(to bottom, #383635 5%,#1c1b19 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383635', endColorstr='#1c1b19',GradientType=0 );}
+
+.chat_dialog_scroll {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+
+	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNCRjdDRUQxM0E3RTExRTJCRUNBQUM1MDg0ODYyMzEyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNCRjdDRUQyM0E3RTExRTJCRUNBQUM1MDg0ODYyMzEyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0JGN0NFQ0YzQTdFMTFFMkJFQ0FBQzUwODQ4NjIzMTIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0JGN0NFRDAzQTdFMTFFMkJFQ0FBQzUwODQ4NjIzMTIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5FqRfaAAAALElEQVR42mKQl5cvZmJgYPgHIv6isv6gssDEb1wsbNzfeLX9wWIRxHKAAAMAdZsdmnuJRSUAAAAASUVORK5CYII=' );
+	background-repeat: repeat-x;
+	background-position: center top;
+
+	overflow: auto;
+}
+
+.chat_dialog_content_inner {
+
+	padding: 9px;
+}
+
+#chatform {
+	position: absolute;
+	height: 107px;
+
+	left: 9px;
+	right: 9px;
+	bottom: 0px;
+}
+
+.chatform_footer button {
+	float: right;
+	border: 1px solid #212121;
+}
+
+.chatform_textarea {
+	border: 1px solid #212121;
+	box-shadow: 2px 2px 4px 1px #3D3D3D  inset;
+}
+
+.chatform_textarea textarea {
+	background-color: transparent;
+}

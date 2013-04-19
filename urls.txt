@@ -3,8 +3,10 @@ Styles/apphub.css|http://cdn.steamcommunity.com/public/shared/css/apphub.css?_=*
 Styles/apphub_admin.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_admin.css?_=*TIMENOW*
 Styles/apphub_home.css|http://cdn.steamcommunity.com/public/css/skin_1/apphub_home.css?_=*TIMENOW*
 Styles/buttons.css|http://cdn.steamcommunity.com/public/shared/css/buttons.css?_=*TIMENOW*
+Styles/chat.css|http://cdn.steamcommunity.com/public/css/skin_1/chat.css?_=*TIMENOW*
 Styles/communityhome.css|http://cdn.steamcommunity.com/public/css/skin_1/communityhome.css?_=*TIMENOW*
 Styles/discussions.css|http://cdn.steamcommunity.com/public/css/skin_1/discussions.css?_=*TIMENOW*
+Styles/dmca.css|http://cdn.steamcommunity.com/public/css/skin_1/dmca.css?_=*TIMENOW*
 Styles/economy.css|http://cdn.steamcommunity.com/public/css/skin_1/economy.css?_=*TIMENOW*
 Styles/economy_market.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css?_=*TIMENOW*
 Styles/forums.css|http://cdn.steamcommunity.com/public/css/skin_1/forums.css?_=*TIMENOW*
@@ -27,17 +29,20 @@ Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/sk
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
+Scripts/badges.js|http://cdn.steamcommunity.com/public/javascript/badges.js?_=*TIMENOW*&l=english
 Scripts/blotter_functions.js|http://cdn.steamcommunity.com/public/javascript/blotter_functions.js?_=*TIMENOW*&l=english
 Scripts/chat.js|http://cdn.steamcommunity.com/public/javascript/chat.js?_=*TIMENOW*&l=english
 Scripts/comment_functions.js|http://cdn.steamcommunity.com/public/javascript/comment_functions.js?_=*TIMENOW*&l=english
 Scripts/communityhome.js|http://cdn.steamcommunity.com/public/javascript/communityhome.js?_=*TIMENOW*&l=english
 Scripts/discussions.js|http://cdn.steamcommunity.com/public/javascript/discussions.js?_=*TIMENOW*&l=english
+Scripts/dmca.js|http://cdn.steamcommunity.com/public/javascript/dmca.js?_=*TIMENOW*&l=english
 Scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js?_=*TIMENOW*&l=english
 Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*TIMENOW*&l=english
 Scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js?_=*TIMENOW*&l=english
 Scripts/market.js|http://cdn.steamcommunity.com/public/javascript/market.js?_=*TIMENOW*&l=english
 Scripts/profile_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_functions.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/screenshot_functions_v2.js?_=*TIMENOW*&l=english
+Scripts/shared_global.js|http://cdn.steamcommunity.com/public/shared/javascript/shared_global.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
