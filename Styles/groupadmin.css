@@ -1,0 +1,513 @@
+
+.group_admin_header {
+	position: relative;
+	border-bottom: 3px solid #364862;
+	height: 86px;
+	padding-bottom: 10px;
+
+	padding-left: 76px;
+}
+
+.group_admin_header .admin_avatar_dropshadow {
+	position: absolute;
+	left: -4px;
+	top: 6px;
+	width: 64px;
+	height: 64px;
+	padding: 4px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/admin_avatar_dropshadow.png' );
+}
+
+.group_admin_header .admin_avatar_dropshadow img {
+	width: 64px;
+	height: 64px;
+}
+
+.group_admin_header.ogg {
+	padding-left: 202px;
+}
+
+.group_admin_header.ogg .admin_avatar_dropshadow, .group_admin_header.ogg .admin_avatar_dropshadow img {
+	width: 184px;
+	height: 69px;
+}
+
+.group_admin_header.ogg .admin_avatar_dropshadow {
+	left: 0px;
+	padding: 4px;
+	background: url( 'http://cdn.steamcommunity.com/public/images/skin_1/gamelogoholder_default.jpg' );
+}
+
+.groupadmin_header_content {
+	padding-top: 20px;
+}
+
+.groupadmin_header_label {
+	height: 15px;
+	line-height: 15px;
+
+	color: #949491;
+	font-size: 11px;
+}
+
+.group_admin_header .groupadmin_header_name {
+	text-align: left;
+
+	line-height: 32px;
+
+	color: #ffffff;
+	font-size: 26px;
+}
+
+.groupadmin_header_chevron {
+	color: #939393;
+	font-size: 18px;
+}
+
+.groupadmin_header_location {
+	color: #e1e1e1;
+	font-size: 18px;
+}
+
+.form_save_status_message {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+#errorText {
+	color: #ff0000;
+}
+
+#successText {
+	color: #529CDE;
+}
+
+.groupadmin_content .group_content {
+	padding-bottom: 6px;
+	padding-right: 13px;
+}
+
+.formRow {
+	position: relative;
+	min-height: 34px;
+	margin-bottom: 7px;
+	/* padding-left: 120px; */
+	padding-left: 146px;
+}
+
+.formRow .formRowTitle {
+	position: absolute;
+	display: block;
+	text-align: right;
+	/* width: 110px; */
+	width: 156px;
+	height: 34px;
+	line-height: 34px;
+	left: -20px;
+	top: 0px;
+
+	font-size: 14px;
+	color: #6d6d6b;
+
+	overflow: hidden;
+}
+
+.formRow .formRowHint {
+	color: #529cde;
+	cursor: default;
+}
+
+.formRowDesc {
+	display: none;
+}
+
+.formRow .formRowFields {
+	line-height: 28px;
+	padding-top: 3px;
+}
+
+.formRow .formRowFields .gray_bevel.for_text_input {
+	line-height: 19px;
+}
+
+.formRowFields .gray_bevel {
+	vertical-align: middle;
+}
+
+.formRowFields .avatar_edit_block {
+	float: left;
+	font-size: 9px;
+	line-height: 11px;
+	margin-right: 12px;
+}
+
+.avatar_edit_block.medium {
+	padding-top: 120px;
+}
+
+.avatar_edit_block.icon {
+	padding-top: 152px;
+}
+
+.formRow.websiteLink {
+	margin-bottom: 19px;
+}
+
+
+/* Group history styles */
+
+
+.historyItem,.historyItemb {
+	font-size:11px;
+	color:#959595;
+	height:20px;
+	margin:0;
+	padding:0;
+	padding-top:7px;
+}
+.historyItem {
+	background-color:#2a2a2a;
+}
+.historyShort {
+	font-size:11px;
+	color:#c1c1c1;
+	font-weight:bold;
+}
+.historyIcon {
+	float:left;
+	text-align:center;
+	width:35px;
+}
+.historyDate {
+}
+
+.linkBlue {
+	font-size:10px;
+}
+.historyDash {
+	color:#545454;
+}
+
+#bottomLinks {
+	position:relative;
+	width:894px;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	margin-bottom:6px;
+	border:solid #252525 4px;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+.infoBar {
+	position:relative;
+	height:17px;
+	background-color:#000000;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.infoBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.blotterBlock,.blotterBlock1 {
+	margin:0;
+	padding:0;
+	padding-top:8px;
+	clear:left;
+}
+
+.blotterBlock1 {
+	padding-top:0px;
+}
+
+.blotterDate {
+	color:#8c8c8c;
+	font-size:11px;
+	font-weight:bold;
+	text-align:right;
+	width:142px;
+	float:left;
+	margin-top:4px;
+	padding-right:10px;
+
+}
+
+.blotterIcon {
+	width:24px;
+	float:left;
+	padding-right:10px;
+}
+
+.blotterDesc {
+	color:#939393;
+	font-size:11px;
+	padding-top:2px;
+	line-height:16px;
+	width:483px;
+	float:left;
+
+}
+
+.blotterItem,.blotterItemb {
+	font-size:10px;
+	color:#959595;
+	height:20px;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	margin-left:26px;
+}
+
+
+#datePick {
+	position:absolute;
+}
+
+.groupadmin_forumlist_header {
+	color: #8c8c8c;
+	font-size: 11px;
+
+	padding: 14px 9px 0px 9px;
+	margin-bottom: 6px;
+}
+
+.groupadmin_subarea, .modify_forumlist {
+	padding: 8px;
+	background-color: #222223;
+	border: 1px solid #38383a;
+}
+
+.groupadmin_forumlist_body {
+
+	padding: 2px 8px 7px 8px;
+
+	margin-bottom: 9px;
+}
+
+.groupadmin_forumlist_body.modify_forumlist {
+
+	background-color: #222223;
+}
+
+.forumlist_col_permission {
+	width: 148px;
+	float: right;
+	margin-left: 13px;
+}
+
+.forumlist_col_name {
+	width: 264px;
+}
+
+.forumlist_col_name input {
+	width: 100%;
+}
+
+.forumlist_col_permission select {
+	width: 100%;
+
+	border: 1px solid #707070;
+	color: #8c8c8c;
+	font-size: 14px;
+}
+
+.groupadmin_forumlist_body .forumlist_row {
+	padding-bottom: 7px;
+}
+
+.forum_manage_actions {
+	float: right;
+}
+
+.forum_manage_actions .btn_medium {
+	margin-left: 12px;
+}
+
+.forum_manage_create_area {
+	background-color: #2e2e2f;
+	border: 1px solid #38383a;
+	padding-bottom: 15px;
+}
+
+.forum_manage_create_area .forum_manage_actions {
+	padding-right: 8px;
+}
+
+.forum_manage_create_area .groupadmin_forumlist_body {
+	padding-top: 2px;
+}
+
+.forum_manage_title_area {
+	margin-bottom: 12px;
+}
+
+.forum_manage_header_area {
+	margin-bottom: 21px;
+}
+
+.forum_dragdrop {
+	border: 1px solid #38383a;
+	margin-bottom: 6px;
+}
+
+.forum_dragdrop_titlebar {
+	background-color: #38383a;
+	height: 27px;
+	line-height: 27px;
+	border-bottom: 1px solid #2f2f31;
+
+	padding: 0px 6px;
+}
+
+.forum_dragdrop_titlebar .forum_delete_link {
+	float: right;
+	height: 27px;
+	line-height: 27px;
+	padding: 0px 10px;
+	background-color: #38383a;
+
+	font-size: 11px;
+}
+
+.forum_delete_link a {
+	color: #cccccc;
+}
+
+.forum_dragdrop_titlebar .forum_grabber {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/groups/forum_manage_grabber.png');
+	background-repeat: repeat-x;
+	background-position: center;
+	height: 27px;
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+}
+
+.forum_dragdrop_body {
+	padding: 16px 8px;
+	background-color: #222223;
+}
+
+/* group permissions page */
+
+#permissionsBlock {
+	padding-top: 5px;
+}
+
+.permissionRow {
+	margin: 7px 0px;
+}
+
+.permissionRow .permissionCol {
+	float: right;
+	width: 58px;
+	margin-left: 10px;
+
+	text-align: center;
+}
+
+.permissionRow .permissionText {
+	padding-left: 108px;
+	font-size: 13px;
+}
+
+.permissionRow.permissionHeaderRow .permissionCol {
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.permissionRow.permissionHeaderRow .permissionText {
+	font-size: 16px;
+	font-weight: bold;
+	color: #969696;
+}
+
+.sectionHeader {
+	border-bottom: 1px solid #313431;
+	color: #525252;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#memberManageList .member_block_content, #memberManageList .member_block_content a {
+	color: #E1E1E1;
+}
+
+#memberManageList .member_block_content a.profilelink {
+	text-decoration: underline;
+}
+
+.manageMemberAction {
+	cursor: pointer;
+}
+
+#memberChatBanList .member_block {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.member_block.chat_banned_member {
+	color:#898989;
+}
+
+a.chat_ban_admin {
+}
+
+#group_associated_games_edit .group_associated_game {
+	float: left;
+	padding-right: 8px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-right: 8px;
+
+	background-color: #434343
+}
+
+.group_associated_game_remove {
+	vertical-align: middle;
+	margin-left: 8px;
+
+	cursor: pointer;
+}
+
+#game_select_suggestions_ctn {
+	position: absolute;
+
+	margin-left: -5px;
+}
+
+#game_select_suggestions {
+
+	width: 296px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.forum_modal_text#forum_bandetails_text {
+	margin-top: 0px;
+}
+
+.forum_bandetails .forum_banuser_data {
+	line-height: 24px;
+}
