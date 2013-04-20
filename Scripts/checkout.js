@@ -1254,14 +1254,7 @@ function OnGetFinalPriceSuccess( result )
 			
 				if ( g_bIsUpdateBillingInfoForm )
 		{
-			if ( $('is_external_finalize_transaction').value == 1 )
-			{
-								ReportCheckoutJSError( 'Update payment page is not implemented for this payment method ' + $('payment_method').value );
-			}
-			else
-			{
-				FinalizeTransaction();
-			}
+			$('purchase_button_bottom').click();
 		}
 		else
 		{
