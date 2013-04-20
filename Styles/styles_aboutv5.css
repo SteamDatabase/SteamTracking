@@ -1,0 +1,370 @@
+/* CSS Document */
+
+div#main.quiltbg {
+	background-image: url(http://cdn.store.steampowered.com/public/images/about/background.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+
+#main_content {
+	position: relative;
+}
+
+#about_header_area {
+	height: 350px;
+    background-image: url(http://cdn.store.steampowered.com/public/images/about/header.png);
+    background-repeat: repeat-x;
+    margin-bottom: -8px;
+}
+
+#about_monitor_ctn {
+    float: right;
+    margin-top: 12px;
+}
+
+#about_greeting_ctn {
+    float: left;
+    margin-top: 24px;
+}
+
+#about_header_ctn {
+    width: 940px;
+    margin: 0px auto;
+    min-height: 100%;
+    height: 100%;
+    padding-top: 16px;
+
+    width: 940px;
+}
+
+#about_monitor_right {
+	padding-top: 38px;
+	position: relative;
+}
+
+#about_monitor_right .block_content {
+	color: #626366;
+	line-height: 21px;
+}
+
+#about_install_steam_block {
+	margin-bottom: 18px;
+}
+
+#about_install_steam {
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/about/btn_download.png );
+	width: 276px;
+	height: 68px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#about_install_steam a#about_install_steam_link {
+	display: block;
+	line-height: 42px;
+	
+	margin: 2px auto;
+	padding-left: 42px;
+	
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: #547726 -1px -1px 0px;
+}
+
+a#about_install_steam_link:hover {
+	text-decoration: none;
+}
+
+#about_install_steam_desc {
+	line-height: 25px;
+	padding: 0px 9px;
+	color: #B0AEAC;
+}
+
+#about_monitor_right #sys_reqs {
+	color: #b0aeac;
+}
+
+
+.about_features h4 {
+	margin-top: 24px;
+}
+
+.about_features h3 {
+	margin-top: 32px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.about_features p {
+	margin-top: 8px;
+	color: #898A8C;
+	line-height: 23px;
+	font-size: 14px;
+}
+
+.about_features p.actionline {
+	font-size: 12px;
+}
+
+.about_rule {
+	height: 1px;
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-align: top left;
+	background-repeat: no-repeat;
+	margin: 16px 0px;
+}
+
+img.about_features_img_left {
+	float: left;
+	margin-right: 18px;
+}
+
+img.about_features_img_right {
+	float: right;
+	margin-left: 18px;
+}
+
+
+/* mac beta welcome page */
+
+
+#mac_banner {
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/about/HiMacBanner.png );
+	width: 940px;
+	height: 195px;
+}
+
+#mac_banner_content {
+	padding-top: 57px;
+	padding-left: 18px;
+	color: #000000;	
+}
+
+#mac_banner_content h1 {
+	margin-bottom: 8px;
+}
+
+#mac_banner_content p {
+	line-height: 18px;
+	color: #3C3D3E;
+	font-size: 14px;
+}
+
+#mac_store_info p {
+	margin-top: 12px;
+}
+
+#mac_portal_callout {
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/about/MacBeta_Portal.jpg );
+	width: 276px;
+	height: 209px;
+}
+
+#mac_portal_callout_content {
+	padding-top: 112px;
+	color: #FFFFFF;
+	width: 247px;
+	margin: 0px auto;
+}
+
+a.mac_portal_btn {
+	display: block;
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/about/MacBeta_PortalBtn.png );
+	margin: 0px auto;
+	width: 247px;
+	height: 41px;
+	margin-bottom: 8px;
+}
+
+.about_box_wide {
+	border: 1px solid #343434;
+	background-color: #262626;
+	box-shadow: 0 0 5px #222e3e;
+	border-radius: 5px;
+	padding-left: 6px;
+	position: relative;
+	margin: 5px 5px 15px 5px;
+}
+
+	.about_box_wide.linux {
+		height: 270px;
+	}
+
+	.about_box_wide.linux a {
+		color: #6BB3F2;
+	}
+
+	.about_box_wide img.tux {
+		position: absolute;
+		left: 320px;
+		top: -80px;
+		z-index: 5;
+	}
+
+	.about_box_wide img.linux {
+		position: absolute;
+		right: 35px;
+		top: 93px;
+		z-index: 10;
+	}
+
+	.about_box_wide div.linux_left {
+		width: 400px;
+	}
+
+	.about_box_wide div.linux_right {
+		position: absolute;
+		top: -15px;
+		left: 476px;
+		width: 300px;
+		height: auto;
+	}
+
+	.about_box_wide div.install_linux {
+		position: absolute;
+		top: 140px;
+		right: 20px;
+		width: 250px;
+	}
+
+	.about_boxes_box_text_ctn .subhead {
+		color: #999;
+	}
+
+#tuxRight
+{
+	position: absolute;
+	right: -55px;
+	top: 10px;
+}
+
+#ubuntu_logo {
+	margin-top: 5px;
+}
+
+.about_boxes_spacer {
+    height: 70px;
+    height: 48px;
+}
+
+.installerlist {
+	margin-top: 10px;
+}
+
+.installerlist a {
+	text-decoration: underline;
+}
+
+.about_boxes_box_ctn {
+    width: 50%;
+    height: 281px;
+    float: left;
+    margin-bottom: 18px;
+}
+
+.about_boxes_box_top {
+    width: 470px;
+    height: 13px;
+    background: url(http://cdn.store.steampowered.com/public/images//about/contentbg_top.png) -2px 0px;
+}
+
+.about_boxes_box_mid {
+    width: 470px;
+    background: url(http://cdn.store.steampowered.com/public/images//about/contentbg_middle.png) -3px 0px;
+}
+
+.about_boxes_box_mid_ws {
+    height: 259px;
+}
+
+.about_boxes_box_content_ctn {
+    padding-left: 1em;
+}
+
+.about_boxes_box_header_ctn {
+    margin-left: -1em;
+}
+
+.about_boxes_box_header_bg {
+    width: 425px;
+    height: 49px;
+    background: url(http://cdn.store.steampowered.com/public/images//about/banner.png);
+    margin-left: 23px;
+    position: relative;
+    top: 16px;
+}
+
+.about_boxes_link {
+    position: relative;
+    bottom: 32px;
+    height: 0px;
+    padding-left: 2em;
+    font-size: 130%;
+
+}
+
+.about_boxes_link.upper {
+	bottom: 55px;
+}
+
+.about_boxes_link>a {
+    color: #6bb3f2;
+}
+
+.about_boxes_box_header_bg>h2 {
+    padding: 0.5em 1em
+}
+
+.about_boxes_box_text_ctn {
+    width:100%;
+    height: 188px;
+    padding-left: 1.2em;
+    padding-top: 2em;
+    font-size: 120%;
+    line-height: 160%;
+}
+
+.about_boxes_box_bottom {
+    width: 470px;
+    height: 13px;
+    background: url(http://cdn.store.steampowered.com/public/images//about/contentbg_bottom.png) -2px 0px;
+}
+
+.about_boxes_box_ws_top {
+    margin-bottom: -4px;
+}
+
+#about_boxes_last_call_to_action {
+    float: left;
+    width: 640px;
+}
+
+#about_boxes_last_call_to_action>h1 {
+    font-size: 180%;
+    font-weight: bold;
+}
+
+#about_boxes_last_call_to_action img {
+    margin-top: 2em;
+}
+
+#about_boxes_sys_reqs {
+    width: 300px;
+    float: right;
+}
+
+#about_boxes_community_gamers_online
+{
+    color: #5d9ed6;
+    font-size: 150%;
+}
+
+#about_boxes_community_gamers_in_game
+{
+    color: #8cc540;
+    font-size: 150%;
+}

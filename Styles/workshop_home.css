@@ -1,0 +1,302 @@
+
+.mainContentsBG
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/bg_highlight_blue.jpg');
+}
+
+
+.title
+{
+	font-size: 30px;
+	color: #ffffff;
+	padding-top: 10px;
+}
+
+.subtitle
+{
+	font-size: 14px;
+	color: #737373;
+	line-height: 20px;
+}
+
+.subtitle a
+{
+	text-decoration: underline;
+	color: #737373;
+}
+
+.mainSectionHeader
+{
+	text-shadow: 1px 1px 0px #000000;
+}
+
+.browseHighlightedApps
+{
+	position: relative;
+	height: 180px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	margin: 22px 0 30px 0;
+
+	border: 1px solid #1f1f20;
+	box-shadow: 1px 1px 0 0 #39393a;
+
+	background: #1b1b1b;
+	background: rgba(27,27,27,.36);
+
+	border-radius: 4px;
+}
+
+.browseHighlightedApps.topRow
+{
+	margin-bottom: 0px;
+}
+
+.browseHighlightedApps.overflow
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.app
+{
+	position: relative;
+	float: left;
+	width: 175px;
+	height: 172px;
+	margin: 0 5px 0 5px;
+	cursor: pointer;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Workshop_FeatureStack.png');
+	background-repeat: no-repeat;
+}
+
+.appCover
+{
+	position: absolute;
+	width: 175px;
+	height: 172px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Workshop_FeatureCover.png');
+	background-repeat: no-repeat;
+	left: 0px;
+	bottom: -9px;
+}
+
+.appCoverHover
+{
+	position: absolute;
+	width: 175px;
+	height: 172px;
+	visibility: hidden;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Workshop_FeatureCover_Hover.png');
+	background-repeat: no-repeat;
+	left: 0px;
+	bottom: -9px
+}
+
+.app:hover .appCover
+{
+	visibility: hidden;
+}
+
+.app:hover .appCoverHover
+{
+	visibility: visible;
+}
+
+.appItem
+{
+	position: absolute;
+	left: 9px;
+	bottom: 8px;
+}
+
+.appNew
+{
+	position: absolute;
+	top: 6px;
+	left: 9px;
+}
+
+.itemPreviewHolder
+{
+	display: table-cell;
+	vertical-align: middle;
+	width:149px;
+	height: 149px;
+	background-color: #000000;
+}
+
+.itemPreviewImage
+{
+	width:149px;
+	max-height:149px;
+	vertical-align: middle;
+}
+
+.appInfo
+{
+	position: absolute;
+	top: 100px;
+	margin-left: 50%;
+	left: -60px;
+	width: 120px;
+	text-align: center;
+}
+
+.app:hover .appInfo
+{
+	top: 79px;
+}
+
+.appLogo
+{
+	padding-top: 5px;
+	width: 120px;
+}
+
+.appTitle
+{
+	font-size: 16px;
+	color: #b8b8b8;
+	font-weight: bold;
+	text-shadow: -1px -1px 1px #000000;
+	padding-top: 16px;
+}
+
+.appNumItems
+{
+	padding-top: 5px;
+}
+
+.moreTitles
+{
+	float: left;
+	text-align: center;
+	line-height: 149px;
+	vertical-align: middle;
+	font-size: 24px;
+	font-weight: bold;
+	color: #393939;
+	margin-left: 20px;
+	text-shadow: -1px 0px 1px #181821;
+}
+
+.browseMoreContainer
+{
+	position: relative;
+	float: right;
+	height: 180px;
+}
+
+.browseMore
+{
+	position: absolute;
+	top: 50px;
+	right: 18px;
+	background-color: #6b9730;
+	width: 165px;
+	height: 65px;
+	cursor: pointer;
+	font-size: 15.69px;
+	color: #f4f9ff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.browseMore:hover
+{
+	background: #79ab37;
+}
+
+.browseMoreText
+{
+	padding-top: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.joinGroup
+{
+	left: -5px;
+	width: 275px;
+	height: 85px;
+	background-repeat: no-repeat;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Workshop_JoinGroup.png');
+	cursor: pointer;
+}
+
+.joinGroup.greenlight
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Greenlight_JoinGroup.png');
+}
+
+.joinGroupTitle
+{
+	color: #ffffff;
+	padding-top: 16px;
+	margin-left: 56px;
+}
+
+.joinGroupSubtitle
+{
+	color: #b8b8b4;
+	margin-top: 8px;
+	margin-left: 15px;
+}
+
+.subscribeRSS
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.subscribeRSS img
+{
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+.announcement
+{
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+.headline a
+{
+	font-size: 24px;
+	font-weight: bold;
+	color: #529cde;
+	margin-bottom: 10px;
+}
+
+.byline
+{
+	font-size: 14px;
+	color: #6b6b6b;
+}
+
+.bodytext
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	padding-right: 16px;
+}
+
+.commentsLink
+{
+	float: left;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.quoteIcon
+{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+
