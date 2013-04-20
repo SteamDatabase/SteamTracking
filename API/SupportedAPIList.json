@@ -605,40 +605,6 @@
 				
 			},
 			{
-				"name": "IEconItems_204700.henryg",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					},
-					{
-						"name": "GetSchema",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to return the names in. Defaults to returning string keys."
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "IEconItems_205790",
 				"methods": [
 					{
@@ -1129,30 +1095,6 @@
 								"optional": true,
 								"description": "The language to return the names in. Defaults to returning string keys."
 							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IGCVersion_204700.henryg",
-				"methods": [
-					{
-						"name": "GetClientVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
-					{
-						"name": "GetServerVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
 						]
 						
 					}
