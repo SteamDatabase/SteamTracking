@@ -205,9 +205,14 @@ var CForum = Class.create( {
 			this.GoToPage( this.m_iCurrentPage - 1 );
 	},
 
-	GoToPage: function( iPage )
+	ReloadCurrentPage: function()
 	{
-		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || iPage == this.m_iCurrentPage )
+		this.GoToPage( this.m_iCurrentPage, true /* force */ );
+	},
+
+	GoToPage: function( iPage, bForce )
+	{
+		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && !bForce ) )
 			return;
 
 		var params = {
@@ -1248,4 +1253,123 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 	}
 
 });
+
+function InitializeForumBulkActions( strName )
+{
+	var $ForumArea = $J('#forum_' + strName + '_area' );
+	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
+
+	if ( !$ForumActions.length )
+		return;
+
+	var fnShowControlsIfCheckboxChecked = function ()
+	{
+		var $CheckedBoxes = $ForumArea.find( '.forum_topic_checkbox_input:checked' );
+		if ( $CheckedBoxes.length > 0 )
+			$ForumActions.slideDown( 'fast' );
+		else
+			$ForumActions.slideUp( 'fast' );
+	}
+
+	var fnAddCheckboxes = function() {
+		var $ForumTopics = $ForumArea.find( '.forum_topic' );
+
+		$ForumTopics.each( function() {
+			var $ForumTopic = $J(this);
+			if ( !$ForumTopic.children( '.forum_topic_checkbox' ).length )
+			{
+				var gidForumTopic = this.getAttribute( 'data-gidforumtopic' );
+				var $Checkbox = $J('<input/>', {'type': 'checkbox', 'class': 'forum_topic_checkbox_input' } );
+				$Checkbox.data( 'gidForumTopic', gidForumTopic );
+
+				$Checkbox.click( fnShowControlsIfCheckboxChecked );
+
+				var $Wrapper = $J('<div/>', {'class': 'forum_topic_checkbox' } );
+				$Wrapper.html( '&nbsp;' );
+				$Wrapper.prepend( $Checkbox );
+				// prevent misclicks from going to the topic page
+				$Wrapper.click( function( event ) { event.stopPropagation(); } );
+
+				$ForumTopic.prepend( $Wrapper );
+			}
+		});
+
+		fnShowControlsIfCheckboxChecked();
+	};
+
+	fnAddCheckboxes();
+
+	//prototype AJAX
+	Ajax.Responders.register( { onComplete: fnAddCheckboxes } );
+}
+
+function GatherForumTopicGIDs( $ForumArea )
+{
+	var rgForumTopicGIDs = [];
+	$ForumArea.find( '.forum_topic_checkbox_input:checked').each( function() {
+		rgForumTopicGIDs.push( $J(this).data('gidForumTopic' ) );
+	});
+
+	return rgForumTopicGIDs;
+}
+
+function ForumBulkDelete( strName, bUndelete )
+{
+	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
+
+	BulkModerate( strName, 'deleted', !bUndelete)
+		.done( function( data ) {
+			if ( bUndelete )
+				ShowAlertDialog( 'Undelete Threads', 'The selected threads have been restored.' );
+			else
+				ShowAlertDialog( 'Delete Threads', 'The selected threads have been deleted.' );
+		});
+}
+
+function ForumBulkLock( strName, bUnlock )
+{
+	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
+
+	BulkModerate( strName, 'locked', !bUnlock)
+		.done( function( data ) {
+			if ( bUnlock )
+				ShowAlertDialog( 'Unlock Threads', 'The selected threads have been unlocked.' );
+			else
+				ShowAlertDialog( 'Lock Threads', 'The selected threads have been locked.' );
+		});
+}
+
+
+function BulkModerate( strName, flag, value )
+{
+	var Forum = g_rgForums[strName];
+	var $ForumArea = $J('#forum_' + strName + '_area' );
+
+	var rgForumTopicGIDs = GatherForumTopicGIDs( $ForumArea );
+	if ( rgForumTopicGIDs.length == 0 )
+	{
+		ShowAlertDialog( 'Error', 'No topics selected.' );
+		return $J.Deferred();
+	}
+	var bResolveReports = $J('#forum_' + strName + '_bulk_resolve_reports').prop('checked');
+
+	var strURL = Forum.GetActionURL( 'moderatetopic' );
+	var rgParams = {
+		sessionid: g_sessionID,
+		action: 'setflag',
+		flag: flag,
+		value: value,
+		gidforumtopic_list: V_ToJSON( rgForumTopicGIDs ),
+		resolve_reports: (bResolveReports ? '1' : '')
+	}
+
+	return $J.ajax(	strURL, {
+			data: rgParams,
+			type: 'POST'
+	}).fail( function() {
+		ShowAlertDialog( 'Error', 'There was an error while proccessing part of your request.  Please verify that you got the expected results.' );
+	}).always( function() {
+		Forum.ReloadCurrentPage();
+	});
+}
 

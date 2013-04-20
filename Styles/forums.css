@@ -976,3 +976,38 @@ table.forum_auditlog tr.audit_row_secondary {
 	font-size: 17px;
 	margin-bottom: 5px;
 }
+
+
+.forum_topic_checkbox {
+	float: left;
+	line-height: 48px;
+	cursor: default;
+}
+
+.forum_topic_checkbox input {
+	vertical-align: middle;
+}
+
+
+.manage_actions_ctn {
+	border: 1px solid #529cde;
+	background-color: #3a3a3a;
+	margin-bottom: 17px;
+	padding: 18px 12px;
+
+	color: #8e8e8e;
+	font-size: 12px;
+}
+
+.manage_actions_instructions {
+	color: #ffffff;
+	margin-right: 15px;
+}
+
+.manage_actions_buttons {
+	padding-top: 12px;
+}
+
+.manage_actions_buttons .btn_medium {
+	margin-right: 10px;
+}
