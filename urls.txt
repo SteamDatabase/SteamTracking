@@ -81,7 +81,6 @@ ClientManifest/steam_client_ubuntu12.manifest|http://media.steampowered.com/clie
 # This will probably 404 if there is no beta going
 ClientManifest/steam_client_publicbeta_win32.manifest|http://media.steampowered.com/client/steam_client_publicbeta_win32
 
-
 # API
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 
@@ -95,34 +94,22 @@ GetItemSchema/Portal2.json|http://api.steampowered.com/IEconItems_620/GetSchema/
 
 # Game Schemas
 GameSchema/AlienSwarm.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=630
-GameSchema/CounterStrike.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=10
-GameSchema/CounterStrikeConditionZero.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=80
 GameSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=730
 GameSchema/CounterStrikeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
-GameSchema/DayOfDefeat.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=30
 GameSchema/DayofDefeatSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=300
-GameSchema/DeathmatchClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=40
 GameSchema/Dota2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=570
-GameSchema/HalfLife.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=70
 GameSchema/HalfLife2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=220
 GameSchema/HalfLife2Deathmatch.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=320
 GameSchema/HalfLife2EpisodeOne.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=380
 GameSchema/HalfLife2EpisodeTwo.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=420
 GameSchema/HalfLife2LostCoast.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=340
-GameSchema/HalfLifeDeathmatchSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=360
-GameSchema/HalfLifeSource.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=280
 GameSchema/Left4Dead.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=500
 GameSchema/Left4Dead2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=550
-GameSchema/Left4Dead2Demo.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=590
-GameSchema/Left4DeadDemo.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=530
 GameSchema/Portal.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=400
 GameSchema/Portal2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=620
-GameSchema/PortalFirstSlice.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=410
-GameSchema/Ricochet.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=60
 GameSchema/Spacewar.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=480
 GameSchema/TeamFortress2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=440
 GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=520
-GameSchema/TeamFortressClassic.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=20
 
 # Repos
 Repos/index.html|http://repo.steampowered.com/
