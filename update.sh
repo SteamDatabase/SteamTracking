@@ -2,5 +2,6 @@
 
 php update.php
 
-git commit -a -m "`git status --porcelain`"
+# TODO: Remove trailing comma
+git commit -a -m "`git status --porcelain -z | tr '\0' ', '`"
 git push
