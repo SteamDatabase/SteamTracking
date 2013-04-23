@@ -33662,9 +33662,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}
 			"attributes"
 			{
@@ -33690,9 +33694,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}
 			"attributes"
 			{
@@ -33718,9 +33726,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}
 		}
 		"902"
@@ -33738,9 +33750,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond_v.mdl" 
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}
 		}
 		"903"
@@ -33758,9 +33774,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}			
 			"attributes"
 			{
@@ -33786,9 +33806,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}		
 			"attributes"
 			{
@@ -33814,9 +33838,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}	
 			"attributes"
 			{
@@ -33842,9 +33870,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}	
 			"attributes"
 			{
@@ -33870,9 +33902,13 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond_black"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond_v.mdl"
-			"visuals"
+			"visuals_red"
+			{			
+				"skin"	"2"
+			}
+			"visuals_blu"
 			{
-				"skin"	"1"
+				"skin"	"3"
 			}
 			"attributes"
 			{
@@ -33898,10 +33934,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/sniper/fob_h_sniperrifle_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -33926,10 +33958,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/heavy/fob_h_minigun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/heavy/fob_h_minigun_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -33954,10 +33982,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 		}
 		"911"
 		{
@@ -33974,10 +33998,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 		}
 		"912"
 		{
@@ -33994,10 +34014,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/medic/fob_h_medigun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/medic/fob_h_medigun_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -34022,10 +34038,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/demo/fob_h_stickybomb_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/demo/fob_h_stickybomb_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -34050,10 +34062,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/pyro/fob_h_flamethrower_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -34078,10 +34086,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/scout/fob_h_scattergun_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/scout/fob_h_scattergun_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -34106,10 +34110,6 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/soldier/fob_h_rocketlauncher_diamond_v.mdl"
-			"visuals"
-			{
-				"skin"	"0"
-			}
 			"attributes"
 			{
 				"disable fancy class select anim"
@@ -34654,6 +34654,12 @@
 		"933"
 		{
 			"name"	"The Ap-Sap"
+			"first_sale_date"	"2013/04/23"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+			}
 			"item_class"	"tf_weapon_sapper"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"

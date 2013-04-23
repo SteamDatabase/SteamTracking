@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.32cbc2250efb0ee33a940821dc1e2148735ea170.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.5113a9d098fea7ba57f39b595d09b76da6ce5901.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -31406,6 +31406,8 @@
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -40817,7 +40819,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Festive Winter Crate",
-				"item_description": "This crate is unusually festive.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere'll probably be a way to open it later.",
+				"item_description": "This crate is unusually festive.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -41585,7 +41587,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Refreshing Summer Cooler",
-				"item_description": "This cooler's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere'll probably be a way to open it later.",
+				"item_description": "This cooler's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
