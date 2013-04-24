@@ -203,7 +203,7 @@ function VoteLater(item_id)
 
 function ReportItem()
 {
-	if ( $('ReportItemBtn').hasClassName( "toggled" ) )
+	if ( $('ReportItemBtn') && $('ReportItemBtn').hasClassName( "toggled" ) )
 		return;
 
 	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
