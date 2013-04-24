@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.5113a9d098fea7ba57f39b595d09b76da6ce5901.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.657690c85d29d9e936535087b51368c0c09fb860.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -34893,6 +34893,7 @@
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
+					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,

@@ -37678,6 +37678,7 @@
 			"equip_region"	"demo_mustache_eyepatch"
 			"capabilities"
 			{
+				"paintable"	"1"
 				"can_craft_count"	"1"
 			}
 			"item_type_name"	"#TF_Wearable_FacialHair"
