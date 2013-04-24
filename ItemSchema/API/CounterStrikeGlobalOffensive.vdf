@@ -3,9 +3,9 @@
 	"game_info"
 	{
 		"first_valid_class"		"1"
-		"last_valid_class"		"1000"
+		"last_valid_class"		"1"
 		"first_valid_item_slot"		"0"
-		"last_valid_item_slot"		"10"
+		"last_valid_item_slot"		"0"
 		"num_item_presets"		"4"
 	}
 	"rarities"
@@ -219,117 +219,281 @@
 	}
 	"player_loadout_slots"
 	{
-		"0"		"slot0"
-		"1"		"slot1"
-		"2"		"slot2"
-		"3"		"slot3"
-		"4"		"slot4"
-		"5"		"slot5"
-		"6"		"slot6"
+		"0"		"LOADOUT_POSITION_MELEE"
+		"1"		"LOADOUT_POSITION_SECONDARY00"
 	}
 	"prefabs"
 	{
-		"csgo_league"
+		"csgo_tool"
 		{
 			"item_class"		"tool"
-			"item_type_name"		"#CSGO_ItemType_League_Pass"
-			"item_name"		"#CSGO_ItemType_League_Pass"
+			"craft_class"		"tool"
+			"craft_material_type"		"tool"
+			"item_type_name"		"#CSGO_Type_Tool"
 			"item_quality"		"unique"
-			"item_rarity"		"common"
-			"item_slot"		"none"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
-			"tool"
-			{
-				"type"		"league_play_pass"
-				"use_string"		"#ConsumeItem"
-			}
+			"mouse_pressed_sound"		"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"collectible"
+		{
+			"item_class"		"collectible_item"
+			"craft_class"		"tool"
+			"craft_material_type"		"tool"
+			"item_type_name"		"#CSGO_Type_Collectible"
+			"item_quality"		"unique"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"season1_coin"
+		{
+			"prefab"		"collectible"
 			"capabilities"
 			{
-				"usable_gc"		"1"
-				"usable_out_of_game"		"1"
+				"can_gift_wrap"		"0"
 			}
 			"attributes"
 			{
-				"disallow recycling"
+				"cannot trade"
 				{
-					"attribute_class"		"disallow_recycling"
+					"attribute_class"		"cannot_trade"
 					"value"		"1"
+				}
+				"season access"
+				{
+					"attribute_class"		"season_access"
+					"value"		"0"
 				}
 			}
 		}
-		"csgo_bundle"
+		"map_token"
 		{
-			"item_class"		"bundle"
-			"item_type_name"		"#CSGO_ItemType_Bundle"
-			"item_name"		"#CSGO_ItemType_Bundle"
-			"item_quality"		"unique"
-			"item_rarity"		"common"
-			"item_slot"		"none"
-			"min_ilevel"		"1"
-			"max_ilevel"		"1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable_gc"		"1"
-				"usable_out_of_game"		"1"
-			}
-			"tool"
-			{
-				"type"		"item_pack"
-				"use_string"		"#OpenBundle"
-			}
+			"prefab"		"collectible"
+			"item_class"		"map_token"
+			"item_type_name"		"#CSGO_Type_MapToken"
+			"show_in_armory"		"1"
+			"armory_desc"		"maptoken"
 		}
 	}
 	"items"
 	{
-		"15014"
+		"default"
+		{
+			"name"		"default"
+			"item_class"		"weapon_knife"
+			"hidden"		"1"
+			"item_name"		"#SFUI_WPNHUD_Knife"
+			"item_slot"		"melee"
+			"item_quality"		"unique"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+		}
+		"1000"
 		{
 			"name"		"Community Season One Spring 2013"
-			"prefab"		"csgo_league"
+			"prefab"		"csgo_tool"
+			"item_type_name"		"#CSGO_Type_Ticket"
+			"item_name"		"#CSGO_Ticket_CommunitySeasonOneSpring2013"
+			"item_description"		"#CSGO_Ticket_CommunitySeasonOneSpring2013_Desc"
+			"image_inventory"		"backpack/crafting/community_support_pass"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
 			"tool"
 			{
-				"type"		"league_play_pass"
+				"type"		"season_pass"
 				"use_string"		"#ConsumeItem"
-				"usage"
+			}
+			"attributes"
+			{
+				"season access"
 				{
-					"league_id"		"1"
-					"order"		"1"
+					"attribute_class"		"season_access"
+					"value"		"0"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1001"
 				}
 			}
-			"item_type_name"		"#CSGO_ItemType_League_Pass"
-			"item_name"		"#CSGO_ItemName_CommunitySeasonOneSpring2013"
-			"item_description"		"#CSGO_ItemDesc_CommunitySeasonOneSpring2013"
-			"image_inventory"		"econ/leagues/subscriptions_community_season_one"
-			"image_banner"		"econ\leagues\subscriptions_community_season_one_ingame"
-			"tournament_url"		"http://blog.counter-strike.net/"
+		}
+		"1001"
+		{
+			"name"		"Community Season One Spring 2013 Coin 1"
+			"prefab"		"season1_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin1"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin1_Desc"
+			"image_inventory"		"backpack/crafting/community_support_pass_coin1"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"30"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1002"
+				}
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"1002"
+		{
+			"name"		"Community Season One Spring 2013 Coin 2"
+			"prefab"		"season1_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin2"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin2_Desc"
+			"image_inventory"		"backpack/crafting/community_support_pass_coin2"
+			"min_ilevel"		"2"
+			"max_ilevel"		"2"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"60"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1003"
+				}
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"1003"
+		{
+			"name"		"Community Season One Spring 2013 Coin 3"
+			"prefab"		"season1_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin3"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonOneSpring2013_Coin3_Desc"
+			"image_inventory"		"backpack/crafting/community_support_pass_coin3"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"1004"
+		{
+			"name"		"Map Token Museum"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenMuseum"
+			"item_description"		"#CSGO_Collectible_MapTokenMuseum_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_museum"
+			"map_name"		"#SFUI_Map_cs_museum"
+		}
+		"1005"
+		{
+			"name"		"Map Token Downtown"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenDowntown"
+			"item_description"		"#CSGO_Collectible_MapTokenDowntown_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_downtown"
+			"map_name"		"#SFUI_Map_cs_downtown"
+		}
+		"1006"
+		{
+			"name"		"Map Token Thunder"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenThunder"
+			"item_description"		"#CSGO_Collectible_MapTokenThunder_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_thunder"
+			"map_name"		"#SFUI_Map_cs_thunder_go"
+		}
+		"1007"
+		{
+			"name"		"Map Token Favela"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenFavela"
+			"item_description"		"#CSGO_Collectible_MapTokenFavela_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_favela"
+			"map_name"		"#SFUI_Map_de_favela"
+		}
+		"1008"
+		{
+			"name"		"Map Token Motel"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenMotel"
+			"item_description"		"#CSGO_Collectible_MapTokenMotel_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_motel"
+			"map_name"		"#SFUI_Map_cs_motel"
+		}
+		"1009"
+		{
+			"name"		"Map Token Seaside"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenSeaside"
+			"item_description"		"#CSGO_Collectible_MapTokenSeaside_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_seaside"
+			"map_name"		"#SFUI_Map_de_seaside"
+		}
+		"1010"
+		{
+			"name"		"Map Token Library"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenLibrary"
+			"item_description"		"#CSGO_Collectible_MapTokenLibrary_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_library"
+			"map_name"		"#SFUI_Map_de_library"
+		}
+		"1011"
+		{
+			"name"		"Map Token Pool Day"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenPoolDay"
+			"item_description"		"#CSGO_Collectible_MapTokenPoolDay_Desc"
+			"image_inventory"		"backpack/crafting/maptoken_pool_day"
+			"map_name"		"#SFUI_Map_fy_pool_day"
 		}
 	}
 	"attributes"
 	{
 		"1"
 		{
-			"name"		"attach particle effect"
-			"attribute_class"		"set_attached_particle"
-			"attribute_name"		"Attach Custom Particle"
+			"name"		"always tradable"
+			"attribute_class"		"always_tradable"
+			"attribute_name"		"always tradable"
 			"min_value"		"0"
 			"max_value"		"0"
 			"group"		"only_on_unique"
-			"description_string"		"#Attrib_AttachedParticle"
-			"description_format"		"value_is_particle_index"
-			"hidden"		"0"
-			"effect_type"		"neutral"
+			"description_string"		"#Attrib_AlwaysTradable"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"negative"
 			"stored_as_integer"		"0"
 		}
-		"153"
+		"2"
 		{
 			"name"		"cannot trade"
 			"attribute_class"		"cannot_trade"
@@ -340,30 +504,139 @@
 			"description_string"		"#Attrib_CannotTrade"
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
-			"effect_type"		"neutral"
-			"stored_as_integer"		"0"
-		}
-		"195"
-		{
-			"name"		"always tradable"
-			"attribute_class"		"always_tradable"
-			"attribute_name"		"always tradable"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_DamageDone_Negative"
-			"description_format"		"value_is_additive"
-			"hidden"		"1"
 			"effect_type"		"negative"
 			"stored_as_integer"		"0"
 		}
-		"211"
+		"3"
+		{
+			"name"		"referenced item id low"
+			"attribute_class"		"referenced_item_id_low"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"negative"
+			"stored_as_integer"		"1"
+		}
+		"4"
+		{
+			"name"		"referenced item id high"
+			"attribute_class"		"referenced_item_id_high"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"negative"
+			"stored_as_integer"		"1"
+		}
+		"5"
+		{
+			"name"		"referenced item def"
+			"attribute_class"		"referenced_item_def"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"negative"
+			"armory_desc"		"on_wearer"
+			"stored_as_integer"		"1"
+		}
+		"11"
+		{
+			"name"		"attach particle effect"
+			"attribute_class"		"set_attached_particle"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_AttachedParticle"
+			"description_format"		"value_is_particle_index"
+			"hidden"		"0"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"0"
+		}
+		"69"
+		{
+			"name"		"minutes played"
+			"attribute_class"		"minutes_played"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_MinutesPlayed"
+			"description_format"		"value_is_additive"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"70"
+		{
+			"name"		"alternate icon"
+			"attribute_class"		"alternate_icon"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"71"
+		{
+			"name"		"season access"
+			"attribute_class"		"season_access"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"72"
+		{
+			"name"		"disallow recycling"
+			"attribute_class"		"disallow_recycling"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"73"
+		{
+			"name"		"upgrade threshold"
+			"attribute_class"		"upgrade_threshold"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"74"
+		{
+			"name"		"upgrade definition index"
+			"attribute_class"		"upgrade_definition_index"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"75"
 		{
 			"name"		"tradable after date"
 			"attribute_class"		"tradable_after_date"
 			"attribute_name"		"tradable_after_date"
-			"min_value"		"0.950000"
-			"max_value"		"0.850000"
+			"min_value"		"0"
+			"max_value"		"0"
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_TradableAfterDate"
 			"description_format"		"value_is_date"
@@ -371,19 +644,90 @@
 			"effect_type"		"negative"
 			"stored_as_integer"		"1"
 		}
-		"295"
+	}
+	"item_levels"
+	{
+		"KillEaterRank"
 		{
-			"name"		"disallow recycling"
-			"attribute_class"		"disallow_recycling"
-			"attribute_name"		"disallow recycling"
-			"min_value"		"0"
-			"max_value"		"0"
-			"group"		"only_on_unique"
-			"description_string"		"#Attrib_DamageDone_Negative"
-			"description_format"		"value_is_additive"
-			"hidden"		"1"
-			"effect_type"		"negative"
-			"stored_as_integer"		"0"
+			"0"
+			{
+				"score"		"10"
+			}
+			"1"
+			{
+				"score"		"25"
+			}
+			"2"
+			{
+				"score"		"50"
+			}
+			"3"
+			{
+				"score"		"75"
+			}
+			"4"
+			{
+				"score"		"100"
+			}
+			"5"
+			{
+				"score"		"150"
+			}
+			"6"
+			{
+				"score"		"200"
+			}
+			"7"
+			{
+				"score"		"250"
+			}
+			"8"
+			{
+				"score"		"300"
+			}
+			"9"
+			{
+				"score"		"350"
+			}
+			"10"
+			{
+				"score"		"400"
+			}
+			"11"
+			{
+				"score"		"450"
+			}
+			"12"
+			{
+				"score"		"500"
+			}
+			"13"
+			{
+				"score"		"600"
+			}
+			"14"
+			{
+				"score"		"700"
+			}
+			"15"
+			{
+				"score"		"800"
+			}
+			"16"
+			{
+				"score"		"900"
+			}
+			"17"
+			{
+				"score"		"1000"
+			}
+		}
+	}
+	"kill_eater_score_types"
+	{
+		"0"
+		{
+			"type_name"		"KillEaterEventType_Kills"
 		}
 	}
 }

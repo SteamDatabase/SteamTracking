@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.f299480c3b46ce1d8e1950129c8d730876d73fb5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.f5570b1f3d2604c500383775780426fbbd90baea.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -127,42 +127,375 @@
 			{
 				"name": "Community Season One Spring 2013",
 				"defindex": 1000,
-				"item_class": "craft_item",
-				"item_type_name": "CSGO_Type_Ticket",
-				"item_name": "CSGO_Ticket_CommunitySeasonOneSpring2013",
-				"item_description": "",
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Payback Pass",
+				"item_description": "Grants access to Operation Payback's featured community maps on Offical Servers. Proceeds are divided among the featured map creators!",
 				"proper_name": false,
-				"item_quality": 255,
+				"item_quality": 4,
 				"image_inventory": "backpack\/crafting\/community_support_pass",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass.daebdb6a6aa394adb3e87e6a4038d8114176a490.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_large.3bc2d963e3c144b2035cf029ec8ff661ad4b0147.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass.5c75b38fc8336735a42e0289dbbdf38642248857.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_large.d1cfbac8be9e92127893ff2054647b73c76c35b3.png",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
 				"capabilities": {
-					"can_gift_wrap": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "league_play_pass",
+					"type": "season_pass",
 					"use_string": "ConsumeItem"
+				},
+				"attributes": [
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 0.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1001.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season One Spring 2013 Coin 1",
+				"defindex": 1001,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Payback Challenge Coin",
+				"item_description": "Participated in Operation Payback to support community map makers.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/community_support_pass_coin1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin1.ec8c6b5d5cea68ad61c8b2b74e123ab05691b989.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin1_large.bff9cd331dd659a64080d98e7705b76c024db56b.png",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 0.000000
+					},
+					{
+						"name": "upgrade threshold",
+						"class": "upgrade_threshold",
+						"value": 30.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1002.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season One Spring 2013 Coin 2",
+				"defindex": 1002,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Payback Challenge Coin",
+				"item_description": "Participated in Operation Payback for 10 hours to support community map makers.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/community_support_pass_coin2",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin2.777431ad7e7cefdf01041e3b2484a8cbb7d324af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin2_large.bc786108abf26dbe30a13fc81d15719f495b0560.png",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 0.000000
+					},
+					{
+						"name": "upgrade threshold",
+						"class": "upgrade_threshold",
+						"value": 60.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1003.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season One Spring 2013 Coin 3",
+				"defindex": 1003,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Payback Challenge Coin",
+				"item_description": "Participated in Operation Payback for 50 hours to support community map makers.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/community_support_pass_coin3",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin3.e07cafbd6f299b7ef58abfd23c48381b1aa6d1b4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/community_support_pass_coin3_large.c3afe0cfbd929f85fca1a63ec1815e8336dcfe7d.png",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 0.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Map Token Museum",
+				"defindex": 1004,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenMuseum",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_museum",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Downtown",
+				"defindex": 1005,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenDowntown",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_downtown",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Thunder",
+				"defindex": 1006,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenThunder",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_thunder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Favela",
+				"defindex": 1007,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenFavela",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_favela",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Motel",
+				"defindex": 1008,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenMotel",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_motel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Seaside",
+				"defindex": 1009,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenSeaside",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_seaside",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Library",
+				"defindex": 1010,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenLibrary",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_library",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Pool Day",
+				"defindex": 1011,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "CSGO_Collectible_MapTokenPoolDay",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack\/crafting\/maptoken_pool_day",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
 				}
 			}
 		]
 		,
 		"attributes": [
-			{
-				"name": "tradable after date",
-				"defindex": 0,
-				"attribute_class": "tradable_after_date",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "negative",
-				"hidden": true,
-				"stored_as_integer": true
-			},
 			{
 				"name": "always tradable",
 				"defindex": 1,
@@ -224,6 +557,78 @@
 				"effect_type": "neutral",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "minutes played",
+				"defindex": 69,
+				"attribute_class": "minutes_played",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"description_string": "Time Logged: %s1 minutes",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "alternate icon",
+				"defindex": 70,
+				"attribute_class": "alternate_icon",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "season access",
+				"defindex": 71,
+				"attribute_class": "season_access",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "disallow recycling",
+				"defindex": 72,
+				"attribute_class": "disallow_recycling",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "upgrade threshold",
+				"defindex": 73,
+				"attribute_class": "upgrade_threshold",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "upgrade definition index",
+				"defindex": 74,
+				"attribute_class": "upgrade_definition_index",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "tradable after date",
+				"defindex": 75,
+				"attribute_class": "tradable_after_date",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
