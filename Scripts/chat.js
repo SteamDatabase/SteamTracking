@@ -158,12 +158,12 @@ CChatFriend.prototype.Render = function( target, bCurrentUser )
 	// put it together
 	if ( !bCurrentUser )
 	{
-		elFriend = $J('<div/>', {'class': 'friendslist_entry'}).append( elUnreadCount, elAvatar, elMemberBlock );
+		elFriend = $J('<div/>', {'class': 'friendslist_entry', 'data-miniprofile': this.m_unAccountID }).append( elUnreadCount, elAvatar, elMemberBlock );
 		elFriend.click( this.m_fnOnClick );
 	}
 	else
 	{
-		elFriend = $J('<div/>', {'class': ''}).append( elAvatar, elMemberBlock );
+		elFriend = $J('<div/>', {'class': '' }).append( elAvatar, elMemberBlock );
 	}
 
 	this.RegisterPersonaElement( elFriend, 'PersonaNameElements', elName );
@@ -179,6 +179,9 @@ CChatFriend.prototype.Render = function( target, bCurrentUser )
 
 	if ( target )
 		target.append( elFriend );
+
+	if ( typeof window.BindSingleMiniprofileHover != 'undefined' )
+		window.BindSingleMiniprofileHover( elFriend );
 
 	return elFriend;
 };
@@ -218,7 +221,7 @@ CChatFriend.prototype.UnregisterPersonaElements = function( elFriend )
 
 CChatFriend.prototype.RenderChatDialog = function()
 {
-	var elHeader = $J('<div/>', {'class': 'chatdialog_header'} );
+	var elHeader = $J('<div/>', {'class': 'chatdialog_header', 'data-miniprofile': this.m_unAccountID } );
 
 	// create an avatar element
 	var elChatDialogAvatar = $J('<div/>').append( '<a href="http://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"><img src="' + this.GetAvatarURL( 'medium' ) + '"></a>' );
@@ -233,6 +236,9 @@ CChatFriend.prototype.RenderChatDialog = function()
 	elHeader.append( elChatDialogAvatar, $J('<h2/>').append( elChatDialogName ), '<div style="clear: left;"></div>' );
 
 	this.UpdateDisplayForPersonaState();	//set the right styles on avatar and name
+
+	if ( typeof window.BindSingleMiniprofileHover != 'undefined' )
+		window.BindSingleMiniprofileHover( elHeader );
 
 	return elHeader;
 };
@@ -654,8 +660,9 @@ CFriendsList.prototype.UpdateOnlineFriendCountDisplay = function()
 	}
 };
 
-function CWebChatDialog( elDialog, elContent )
+function CWebChatDialog( Chat, elDialog, elContent )
 {
+	this.m_Chat = Chat;
 	this.m_elDialog = elDialog;
 	this.m_elContent = elContent;
 	this.m_dateLastMessage = null;
@@ -706,7 +713,12 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 
 	var elMessage = $J( '<div/>', {'class': strMessageClass } );
 
-	elMessage.append( '[' + timestamp.toLocaleTimeString() + '] ' );
+	var elTimestamp = $J('<span/>', {'class': 'chat_timestamp' }).text( '[' + timestamp.toLocaleTimeString() + '] ' );
+
+	if ( eMessageType != CWebChat.CHATMESSAGE_TYPE_HISTORICAL && !this.m_Chat.GetPref( 'timestamps' ) )
+		elTimestamp.hide();
+
+	elMessage.append( elTimestamp );
 
 	if ( Sender )
 	{
@@ -737,7 +749,6 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	this.m_cConsecutivePollFailures = 0;
 	this.m_nUserIdleTime = 0;
 	this.m_bWindowHasFocus = true;
-	this.m_bSoundEnabled = false;
 
 	this.m_rgPlayerCache = {};
 
@@ -806,6 +817,11 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 
 	this.m_ActiveFriend = null;
 
+	this.m_rgPrefs = {};
+	this.m_bBrowserSupportsNotifications = false;
+	this.m_bBrowserSupportsAudio = false;
+	this.m_bShowTimestamps = true;
+
 	var _this = this;
 	$J(window).focus( function() { _this.OnWindowFocus() } );
 	$J(window).blur( function() { _this.OnWindowBlur() } );
@@ -825,32 +841,17 @@ CWebChat.prototype.Initialize = function()
 
 	var _chat = this;
 
-	// ask if we can show toasts
-	if ( window.webkitNotifications && window.webkitNotifications.checkPermission() == 1 )
-	{
-		$J('#toast_enable').html( 'Enable desktop notifications' );
-		$J('#toast_enable').click( function() {
-			window.webkitNotifications.requestPermission();
-			return false;
-		} );
-	}
-
-	// enable sound if necessary
+	// detect if browser supports audio (most do) and desktop notifications (webkit only)
 	var elAudio = document.getElementById( 'message_received_audio' );
 	if ( elAudio && typeof elAudio.play == 'function' )
 	{
-		//html5 audio supported
-		$J('#sound_enable').click( function() { _chat.ToggleSound() } );
-
-		// if it hasn't been disabled...
-		if ( !GetValueLocalStorage( 'webchat_soundmuted' ) )
-			this.ToggleSound();
+		this.m_bBrowserSupportsAudio = true;
 	}
-	else
+
+	if ( window.webkitNotifications )
 	{
-		$J('#sound_toggle').hide();
+		this.m_bBrowserSupportsNotifications = true;
 	}
-
 
 	for( var i=0; i < this.m_rgFriendLists.length; i++ )
 	{
@@ -892,6 +893,29 @@ CWebChat.prototype.Initialize = function()
 	}
 };
 
+// generic webchat prefs, stored in local storage.  All default to false
+CWebChat.prototype.GetPref = function( strPrefName )
+{
+	if ( typeof this.m_rgPrefs[strPrefName] == 'undefined' )
+	{
+		var persistedPref = GetValueLocalStorage( 'webchat_' + strPrefName );
+
+		this.m_rgPrefs[strPrefName] = ( persistedPref ? persistedPref : false );
+	}
+
+	return this.m_rgPrefs[strPrefName];
+}
+
+CWebChat.prototype.SetPref = function( strPrefName, value )
+{
+	this.m_rgPrefs[strPrefName] = value;
+
+	if ( value )
+		SetValueLocalStorage( 'webchat_' + strPrefName, value );
+	else
+		UnsetValueLocalStorage( 'webchat_' + strPrefName );
+}
+
 CWebChat.prototype.SetOnline = function( bOnline )
 {
 	this.m_bOnline = bOnline;
@@ -922,7 +946,7 @@ CWebChat.prototype.AttemptReconnect = function()
 
 CWebChat.prototype.LogOn = function()
 {
-	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Logon', {}, true, null, 15 /* timeout */ )
+	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Logon', { ui_mode: 'web' }, true, null, 15 /* timeout */ )
 		.done( $J.proxy( this.OnConnect, this ) )
 		.fail( $J.proxy( this.OnConnectFail, this ) );
 }
@@ -966,9 +990,6 @@ CWebChat.prototype.OnConnectFail = function()
 
 CWebChat.prototype.Poll = function()
 {
-	if ( !this.m_bOnline )
-		return;
-
 	this.m_pollid++;
 
 	var rgParams = {
@@ -1046,10 +1067,10 @@ CWebChat.prototype.PollComplete = function( pollid, data )
 						if ( Friend != this.m_ActiveFriend || !this.m_bWindowHasFocus)
 						{
 							Friend.IncrementUnreadMessageCount();
-							if ( this.m_bSoundEnabled )
+							if ( this.m_bBrowserSupportsAudio && !this.GetPref( 'soundmuted' ) )
 								$J('#message_received_audio')[0].play();
 
-							if ( window.webkitNotifications && window.webkitNotifications.checkPermission() == 0 )
+							if ( this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && window.webkitNotifications.checkPermission() == 0 )
 							{
 								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '%s sent a message'.replace( /%s/, Friend.m_strName ), message.text );
 								var fnOnClick = Friend.m_fnOnClick;
@@ -1163,7 +1184,7 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 		elContent.html('<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif">');
 
 		elDialog.append( elHeader, elContentWrapper.append( elScrollWrapper.append( elContent ) ) );
-		this.m_rgChatDialogs[ Friend.m_unAccountID ] = new CWebChatDialog( elDialog, elContent );
+		this.m_rgChatDialogs[ Friend.m_unAccountID ] = new CWebChatDialog( this, elDialog, elContent );
 
 		this.LoadChatHistory( Friend, this.m_rgChatDialogs[ Friend.m_unAccountID ] );
 	}
@@ -1271,20 +1292,140 @@ CWebChat.prototype.OnWindowBlur = function()
 	this.m_bWindowHasFocus = false;
 }
 
-CWebChat.prototype.ToggleSound = function()
+CWebChat.prototype.SettingsDialog = function()
 {
-	if ( this.m_bSoundEnabled )
+	var _chat = this;
+
+	var $Dialog = $J('<div/>', {'class': 'webchat_settings_dialog'});
+
+	$Dialog.append( $J('<div/>', {'class': 'webchat_settings_dialog_heading' }).text( 'When I receive a message:' ) );
+
+
+	// notifications checkbox
+	var $NotificationsCheckbox = this.SettingsNotificationCheckbox();
+	$Dialog.append( $NotificationsCheckbox );
+
+
+	// sound checkbox
+	var bSoundChecked = this.m_bBrowserSupportsAudio && !this.GetPref( 'soundmuted' );
+	var bSoundEnabled = this.m_bBrowserSupportsAudio;
+	var strNotes = null;
+	if ( !this.m_bBrowserSupportsAudio )
 	{
-		this.m_bSoundEnabled = false;
-		$J('#sound_enable').text( 'Disabled' );
-		SetValueLocalStorage( 'webchat_soundmuted' );
+		strNotes = 'HTML5 audio support was not detected on your browser.  Please update your browser to enable this feature.';
 	}
-	else
+	var fnSoundChange = function( bEnabled ) {
+		if ( !_chat.m_bBrowserSupportsAudio )
+			return false;
+
+		_chat.SetPref( 'soundmuted', !bEnabled );
+		return true;
+	}
+	var $SoundCheckbox = this.SettingsCheckbox( 'settings_sound', 'Play a sound', bSoundChecked, fnSoundChange, !bSoundEnabled, strNotes );
+	$Dialog.append( $SoundCheckbox );
+
+	// sound checkbox
+	var bTimestampChecked = this.GetPref( 'timestamps' );
+	var fnTimestampChange = function( bEnabled ) {
+		_chat.SetPref( 'timestamps', bEnabled );
+
+		if ( bEnabled )
+			$J('.chat_timestamp').show();
+		else
+			$J('.chat_timestamp').hide();
+
+		return true;
+	}
+	var $TimestampCheckbox = this.SettingsCheckbox( 'settings_timestamps', 'Display timestamps in chat log', bTimestampChecked, fnTimestampChange );
+	$Dialog.append( $TimestampCheckbox );
+
+
+	var Modal = ShowAlertDialog( 'Web Chat Settings', $Dialog );
+
+	// notifications are supported but not enabled in the browser, so we set an interval to watch for the browser permissions to change
+	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() != 0 )
 	{
-		this.m_bSoundEnabled = true;
-		$J('#sound_enable').text( 'Enabled' );
-		UnsetValueLocalStorage( 'webchat_soundmuted' );
+		var webkitNotificationsValue = window.webkitNotifications.checkPermission();
+		var nNotificationCheckInterval = -1;
+		nNotificationCheckInterval = window.setInterval( function() {
+			if ( window.webkitNotifications.checkPermission() != webkitNotificationsValue )
+			{
+				// update the display of the notifications checkbox to reflect the new value
+				webkitNotificationsValue = window.webkitNotifications.checkPermission();
+				var $NotificationsCheckboxNew = _chat.SettingsNotificationCheckbox();
+				$NotificationsCheckbox.replaceWith( $NotificationsCheckboxNew );
+				$NotificationsCheckbox = $NotificationsCheckboxNew;
+				Modal.AdjustSizing();
+			}
+		}, 500 );
+
+		// stop watching when the modal gets dismissed
+		Modal.always( function() { window.clearInterval( nNotificationCheckInterval ) } );
 	}
+}
+
+CWebChat.prototype.SettingsNotificationCheckbox = function()
+{
+
+	var bNotificationsChecked = this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && window.webkitNotifications.checkPermission() == 0;
+	var bNotificationsEnabled = this.m_bBrowserSupportsNotifications && ( window.webkitNotifications.checkPermission() == 0 || window.webkitNotifications.checkPermission() == 1 );
+	var strNotes = null;
+	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 2 )
+	{
+		strNotes = 'You have opted to disable desktop notifications from Steam. You can enable them from your browser’s settings panel.';
+	}
+	else if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 1 )
+	{
+		strNotes = 'Enabling this setting may display a prompt in your web browser to grant Steam permission to show notifications.';
+	}
+	else if ( !this.m_bBrowserSupportsNotifications )
+	{
+		strNotes = 'Desktop notifications are only available in Chrome and Safari at this time.';
+	}
+
+	var _chat = this;
+	var fnNotificationsChange = function( bEnabled ) {
+		if ( !_chat.m_bBrowserSupportsNotifications )
+			return false;
+
+		_chat.SetPref( 'notifications', bEnabled );
+		if ( window.webkitNotifications.checkPermission() == 1 )
+		{
+			window.webkitNotifications.requestPermission();
+		}
+		return true;
+	}
+
+	return this.SettingsCheckbox( 'settings_notifications', 'Display a desktop notification', bNotificationsChecked, fnNotificationsChange, !bNotificationsEnabled, strNotes );
+}
+
+CWebChat.prototype.SettingsCheckbox = function( strId, strLabel, bChecked, fnOnChange, bDisabled, strNotes )
+{
+	var $Row = $J('<div/>', {'class': 'webchat_settings_row' } );
+	var $Checkbox = $J('<input/>', {type: 'checkbox', id: strId } );
+	$Checkbox.prop( 'checked', bChecked );
+	var $Label = $J('<label/>', {'for': strId }).text( strLabel );
+	$Row.append( $Checkbox, $Label );
+
+	if ( strNotes )
+	{
+		$Row.append( $J('<div/>', {'class': 'webchat_settings_notes' }).text( strNotes ) );
+	}
+
+	if ( bDisabled )
+	{
+		$Checkbox.prop( 'disabled', true );
+		$Row.addClass( 'disabled' );
+	}
+
+	$Checkbox.change( function( event ) {
+		var bOK = fnOnChange( this.checked );
+
+		if ( !bOK )
+			event.preventDefault();
+	});
+
+	return $Row;
 }
 
 function InitializeChat()

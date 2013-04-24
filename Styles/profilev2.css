@@ -1721,3 +1721,178 @@ a.showcase_stat:hover .label {
 body.migrated_profile_page #BG_bottom {
 	background: none;
 }
+
+
+.saved_changes_msg {
+	border: 1px solid #549cd7;
+	color: #549cd7;
+	line-height: 39px;
+	padding: 0 16px;
+	margin-bottom: 18px;
+}
+
+.graytab_ctn {
+	padding-top: 4px;
+	padding-left: 9px;
+	overflow: hidden;
+}
+
+.graytab {
+	display: inline-block;
+	line-height: 26px;
+	padding: 0 11px;
+	margin-right: 8px;
+	background-color: #3a3a3a;
+
+	font-size: 13px;
+	color: #ffffff;
+
+	border-top: 1px solid #3a3a3a;
+	border-left: 1px solid #3a3a3a;
+	border-right: 1px solid #3a3a3a;
+
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	box-shadow: 0 0 4px #2a2a2a;
+}
+
+.graytab.active {
+	background-color: #6a6a6a;
+	cursor: default;
+	background: -moz-linear-gradient(top, #7d7d7d 5%, #4d4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7d7d7d), color-stop(95%,#4d4d4d));background: -webkit-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: -o-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: -ms-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: linear-gradient(to bottom, #7d7d7d 5%,#4d4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7d7d', endColorstr='#4d4d4d',GradientType=0 );}
+
+a.graytab:hover {
+	text-decoration: none;
+}
+
+.graytab_body_wrapper {
+	width: 934px;
+	margin: 0 auto;
+	padding: 1px 1px 0 1px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	background-color: #272728;
+	background: -moz-linear-gradient(top, #4e4e4d 19px, #252526 45px);background: -webkit-gradient(linear, left top, left bottom, color-stop(19px,#4e4e4d), color-stop(45px,#252526));background: -webkit-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: -o-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: -ms-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: linear-gradient(to bottom, #4e4e4d 19px,#252526 45px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4d', endColorstr='#252526',GradientType=0 );	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.graytab_body {
+	background-color: #252526;
+	background: -moz-linear-gradient(top, #4f4f4e 0, #252526 42px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#4f4f4e), color-stop(42px,#252526));background: -webkit-linear-gradient(top, #4f4f4e 0,#252526 42px);background: -o-linear-gradient(top, #4f4f4e 0,#252526 42px);background: -ms-linear-gradient(top, #4f4f4e 0,#252526 42px);background: linear-gradient(to bottom, #4f4f4e 0,#252526 42px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4e', endColorstr='#252526',GradientType=0 );	background-repeat: repeat-x;
+	background-position: top;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	padding: 24px 13px;
+
+}
+
+.profile_manage_friends {
+	padding: 0 5px;
+}
+
+.manage_friends_btn_ctn {
+	float: right;
+
+}
+
+.friends_limit_details {
+	line-height: 20px;
+	font-size: 17px;
+	color: #6b6b6c;
+}
+
+.friends_limit_details strong {
+	font-weight: normal;
+	color: #529cde;
+}
+
+.friends_limit_details_maxed_out {
+	color: orange;
+	max-width: 600px;
+}
+
+.friends_current_count {
+	font-size: 18px;
+}
+
+.friends_limit_invites_maxed_out {
+	color: orange;
+	max-width: 600px;
+	margin: 0 6px 0 8px;
+	font-size: 14px;
+}
+
+.manage_friends_header {
+	margin-bottom: 14px;
+}
+
+.manage_actions_ctn {
+	border: 1px solid #529cde;
+	background-color: #3a3a3a;
+	margin-bottom: 17px;
+	padding: 18px 12px;
+
+	color: #8e8e8e;
+	font-size: 12px;
+}
+
+.manage_actions_instructions {
+	color: #ffffff;
+	margin-right: 15px;
+}
+
+.manage_actions_buttons {
+	padding-top: 12px;
+}
+
+.manage_actions_buttons .btn_medium {
+	margin-right: 10px;
+}
+
+.manage_friend_checkbox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+	height: 48px;
+	line-height: 48px;
+	background-color: #434343;
+	text-align: center;
+}
+
+.manage_friend_checkbox input {
+	vertical-align: middle;
+}
+
+a.manage_friend_link {
+	display: block;
+}
+
+.profile_friends .friendBlock {
+	position: relative;
+	float: left;
+	width: 290px;
+	margin-right: 8px;
+
+	cursor: default;
+}
+
+.profile_friends .friendBlock:nth-child(3n) {
+	margin-right: 0;
+}
+
+.btn_manage_friends {
+	color: #ffffff;
+}
+
+.friendPlayerLevel {
+	float: right;
+	margin: 6px 6px 0px 2px;
+	font-size: 16px;
+	border-radius: 50%;
+	padding: 4px;
+	border: solid grey 2px;
+}

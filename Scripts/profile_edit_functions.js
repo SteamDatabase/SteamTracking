@@ -260,7 +260,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 		$ListElement.html( html );
 		Modal.AdjustSizing();
 		$ListElement.children( '.group_list_results' ).children().each( function () {
-			var groupid = this.getAttribute( '_groupid' );
+			var groupid = this.getAttribute( 'data-groupid' );
 			var strAvatarHash = this.getAttribute( '_groupavatarhash' );
 			var strGroupName = $J(this).children('.group_list_groupname').text();
 			if ( groupid )
@@ -289,7 +289,7 @@ function PresentPrimaryClanDialog()
 		$ListElement.html( html );
 		Modal.AdjustSizing();
 		$ListElement.children( '.group_list_results' ).children().each( function () {
-			var groupid = this.getAttribute( '_groupid' );
+			var groupid = this.getAttribute( 'data-groupid' );
 			var strAvatarHash = this.getAttribute( '_groupavatarhash' );
 			var strGroupName = $J(this).children('.group_list_groupname').text();
 			if ( groupid )

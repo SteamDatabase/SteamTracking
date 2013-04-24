@@ -1512,64 +1512,6 @@
 				
 			},
 			{
-				"name": "ISteamOAuth2",
-				"methods": [
-					{
-						"name": "GetCaptchaGID",
-						"version": 1,
-						"httpmethod": "POST",
-						"parameters": [
-							{
-								"name": "client_id",
-								"type": "string",
-								"optional": false,
-								"description": "Pre-registerd OAuth 2 client ID"
-							},
-							{
-								"name": "bRequireCaptcha",
-								"type": "int32",
-								"optional": true,
-								"description": "Flag to request captcha even if login can proceed without it"
-							}
-						]
-						
-					},
-					{
-						"name": "GetTokenWithCredentials",
-						"version": 1,
-						"httpmethod": "POST",
-						"parameters": [
-							{
-								"name": "client_id",
-								"type": "string",
-								"optional": false,
-								"description": "Pre-registerd OAuth 2 client ID"
-							},
-							{
-								"name": "grant_type",
-								"type": "string",
-								"optional": false,
-								"description": "MUST be set to password"
-							},
-							{
-								"name": "username",
-								"type": "string",
-								"optional": false,
-								"description": "UTF-8 encoded Steam username"
-							},
-							{
-								"name": "password",
-								"type": "string",
-								"optional": false,
-								"description": "UTF-8 encoded Steam password"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "ISteamRemoteStorage",
 				"methods": [
 					{

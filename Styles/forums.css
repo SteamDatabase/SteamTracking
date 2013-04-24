@@ -485,6 +485,8 @@ a.commentthread_author_officer {
 
 .forum_comment_actions {
 	float: right;
+
+	visibility: hidden;
 }
 
 a.forum_comment_action {
@@ -500,12 +502,10 @@ a.forum_comment_action {
 	border-radius: 3px;
 
 	margin-left: 2px;
-
-	visibility: hidden;
 }
 
 
-.commentthread_comment:hover .forum_comment_actions a.forum_comment_action, .forum_op:hover .forum_comment_actions a.forum_comment_action {
+.commentthread_comment:hover .forum_comment_actions, .forum_op:hover .forum_comment_actions {
 	visibility: visible;
 }
 

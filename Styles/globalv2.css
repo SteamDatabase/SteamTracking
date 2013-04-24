@@ -107,14 +107,12 @@ input[type=text], input[type=password], select {
 }
 
 #footerText {
-	display: inline-block;
-	vertical-align: top;
 	padding: 8px 0 0;
 }
 
 #footerLogo {
-	display: inline-block;
-	margin: 12px 5px 0 16px;
+	float: left;
+	margin: 4px 5px 0 16px;
 	padding: 0;
 }
 
@@ -134,6 +132,9 @@ input[type=text], input[type=password], select {
 	height:40px;
 	background-color: #3a3a3a;
 }
+a.friendBlock {
+	display: block;
+}
 
 .friendBlock:hover {
 	cursor:pointer;
@@ -145,12 +146,17 @@ input[type=text], input[type=password], select {
 	margin-right: 7px;
 }
 
-.friendBlock a.friend_join_game_link {
+.friendBlock .friend_join_game_link {
 	text-decoration: underline;
 }
 
-.friendBlock a.friend_join_game_link:hover {
+.friendBlock .friend_join_game_link:hover {
 	color: white;
+}
+
+.friendBlock .blockedText {
+	color: red;
+	font-weight: bold;
 }
 
 
@@ -699,7 +705,7 @@ input.gray_bevel:-moz-placeholder, textarea.gray_bevel:-moz-placeholder, .gray_b
 	color: #7c7c7c;
 }
 
-input.gray_bevel::-webkit-input-placeholder, textarea.gray_bevel::-webkit-input-placeholder, .gray_bevel textarea:-webkit-input-placeholder, .gray_bevel input:-webkit-input-placeholder {
+input.gray_bevel::-webkit-input-placeholder, textarea.gray_bevel::-webkit-input-placeholder, .gray_bevel textarea::-webkit-input-placeholder, .gray_bevel input::-webkit-input-placeholder {
 	font-style: italic;
 	color: #7c7c7c;
 }

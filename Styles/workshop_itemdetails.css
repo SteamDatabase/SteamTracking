@@ -46,6 +46,28 @@
 	background-repeat: no-repeat;
 }
 
+.workshopLegalAgreementNotification
+{
+	font-size: 1.125em;
+	color: #ffffff;
+	text-align: left;
+	padding: 15px;
+	margin-top: 10px;
+	background-color: #CA7900;
+	border: 1px solid #ff9900;
+}
+
+.workshopLegalAgreementNotification a
+{
+	text-decoration: underline;
+}
+
+.notificationActionRequired
+{
+	font-size: 1.75em;
+	padding-bottom: 5px;
+}
+
 .workshopLink
 {
 	height: 33px;
@@ -1351,6 +1373,13 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	.mediaTop.modal {
 		margin-right: 324px;
 	}
+
+		.mediaTop.modal > .img {
+			display: block;
+			min-height: 350px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 
 	.mediaTop .mediaSidebar {
 		position: absolute;
@@ -3177,4 +3206,14 @@ h2.stats {
 {
 	font-size: 12px;
 	line-height: 12px;
+}
+
+.tabCount {
+	margin-left: 5px;
+	background: #888888;
+	border-radius: 3px;
+	color: #383838;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 1px 6px;
 }

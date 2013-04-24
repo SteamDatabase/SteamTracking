@@ -183,9 +183,9 @@ function Profile_LevelUp( profileUrl )
 			var json = transport.responseJSON;
 			if ( json.message )
 			{
-				ShowAlertDialog( 'Level up', json.message).done(
+				ShowAlertDialog( 'Level up', json.message).done( function() {
 					window.location.reload();
-				)
+				} );
 			}
 			else if ( json.success == 1 )
 			{

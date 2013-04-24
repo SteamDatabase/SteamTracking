@@ -25,7 +25,8 @@ body.chat_body {
 
 .chat_page_header {
 	padding-top: 18px;
-	margin-bottom: 22px;
+	padding-bottom: 22px;
+	position: relative;
 }
 
 .chat_page_header_user .playerAvatar {
@@ -73,8 +74,10 @@ body.chat_body {
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/beta_tag.png');
 }
 
-.chat_page_beta_description {
-	font-size: 11px;
+.chat_page_settings_area {
+	position: absolute;
+	right: 0;
+	bottom: 3px;
 }
 
 #chat_container {
@@ -283,6 +286,7 @@ body.chat_body {
 .chat_dialog_content_inner {
 
 	padding: 9px;
+	word-wrap: break-word;
 }
 
 #chatform {
@@ -306,4 +310,51 @@ body.chat_body {
 
 .chatform_textarea textarea {
 	background-color: transparent;
+}
+
+.btn_chat_settings {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+
+	cursor: pointer;
+
+	padding: 5px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/icon_settings.png' );
+	background-repeat: no-repeat;
+	background-position: center;
+
+	border-radius: 3px;
+	border: 1px solid #000000;
+	background-color: #383635;
+	box-shadow: 1px 1px 0 0 #373b42;
+}
+
+.btn_chat_settings:hover {
+	background-color: #565658;
+}
+
+.webchat_settings_dialog_heading {
+	margin-bottom: 11px;
+}
+
+.webchat_settings_row {
+	line-height: 24px;
+	padding-left: 12px;
+}
+.webchat_settings_row input[type=checkbox] {
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+
+	margin-right: 8px;
+}
+
+.webchat_settings_row.disabled input[type=checkbox] {
+	opacity: 0.5;
+}
+.webchat_settings_notes {
+	padding-left: 21px;
+	color: #5491cf;
 }

@@ -820,10 +820,6 @@ h3 {
 	font-size:11px;
 }
 
-#termsofservice {
-	margin-right: 17px;
-}
-
 .greyHR,.greyHR2 {
 	background-color:#4d4d4e;
 	height:1px;
@@ -2142,6 +2138,17 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	color: #6d6d6b;
 	margin: 3px 0 16px 0;
 }
+	.workshopItemDescriptionTitle > .detail {
+		display: inline-block;
+		float: right;
+		text-transform: none;
+		margin-right: 10px;
+		font-size: 11px;
+	}
+
+		.workshopItemDescriptionTitle > .detail a {
+			color: #529cde;
+		}
 
 .workshopItemDescriptionHR {
 	position: relative;

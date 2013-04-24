@@ -86,7 +86,7 @@ function InitMiniprofileHovers()
 	var $HoverArrowRight = $J('<div/>', {'class': 'miniprofile_arrow_right'} )
 	$HoverArrowRight.append( '<div class="miniprofile_arrow_inner"></div>' );
 
-	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepopupfix"><img class="iepopupfix_img" src="http://steamcommunity.com/public/shared/images/blank.gif" alt =""></div>'), $HoverContent, $HoverArrowLeft, $HoverArrowRight );
+	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>'), $HoverContent, $HoverArrowLeft, $HoverArrowRight );
 
 	$Hover.hide();
 	$J(document.body).append( $Hover );
@@ -167,17 +167,18 @@ function InitMiniprofileHovers()
 		}
 	}
 
+	var fnBindSingleMiniprofileHover = function( target ) {
+		var $Target = $J(target);
+		var accountid = parseInt( $Target.attr( 'data-miniprofile' ) );
+		if ( accountid && !$Target.data('miniprofile_bound' ) )
+		{
+			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, accountid ) );
+			$Target.mouseleave( fnCancelHover );
+			$Target.data( 'miniprofile_bound', true );
+		}
+	};
 	var fnBindAllAccountIDElements = function() {
-		$J('[data-miniprofile]').each( function() {
-			var $Target = $J(this);
-			var accountid = parseInt( $Target.attr( 'data-miniprofile' ) );
-			if ( accountid && !$Target.data('miniprofile_bound' ) )
-			{
-				$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, accountid ) );
-				$Target.mouseleave( fnCancelHover );
-				$Target.data( 'miniprofile_bound', true );
-			}
-		} );
+		$J('[data-miniprofile]').each( function() { fnBindSingleMiniprofileHover( this ); } );
 	}
 
 	fnBindAllAccountIDElements();
@@ -197,6 +198,7 @@ function InitMiniprofileHovers()
 	}
 
 	window.BindMiniprofileHovers = fnBindAllAccountIDElements;
+	window.BindSingleMiniprofileHover = fnBindSingleMiniprofileHover;
 }
 
 function PositionMiniprofileHover( $Hover, $Target )
