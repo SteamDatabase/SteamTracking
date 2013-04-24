@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.f5570b1f3d2604c500383775780426fbbd90baea.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.211c74cb0a3a2b53af119d86fd9230c25313aadc.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -202,7 +202,7 @@
 					{
 						"name": "upgrade threshold",
 						"class": "upgrade_threshold",
-						"value": 30.000000
+						"value": 600.000000
 					},
 					{
 						"name": "upgrade definition index",
@@ -253,7 +253,7 @@
 					{
 						"name": "upgrade threshold",
 						"class": "upgrade_threshold",
-						"value": 60.000000
+						"value": 3000.000000
 					},
 					{
 						"name": "upgrade definition index",

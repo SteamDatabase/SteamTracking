@@ -341,7 +341,7 @@
 				"upgrade threshold"
 				{
 					"attribute_class"		"upgrade_threshold"
-					"value"		"30"
+					"value"		"600"
 				}
 				"upgrade definition index"
 				{
@@ -370,7 +370,7 @@
 				"upgrade threshold"
 				{
 					"attribute_class"		"upgrade_threshold"
-					"value"		"60"
+					"value"		"3000"
 				}
 				"upgrade definition index"
 				{
