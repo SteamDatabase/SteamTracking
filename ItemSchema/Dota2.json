@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.96debd1af4196e0ac66867dec308f42f2bc4e555.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8cc050adcc7524aa99d5ee216002b9f62859ff7f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -31418,19 +31418,20 @@
 				}
 			},
 			{
-				"name": "Sacred Bones Offhand Weapon",
+				"name": "Sacred Bones Chopper",
 				"defindex": 4906,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Blade Weapon",
-				"item_name": "Sacred Bones Offhand Weapon",
-				"item_description": "This new item has no description.",
+				"item_name": "Sacred Bones Chopper",
+				"item_description": "The bones of the earth that make the blade of this dagger are no less sacred than the warrior who once held it.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/huskar\/sacred_bones_offhand_weapon\/sacred_bones_offhand_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_offhand_weapon\/sacred_bones_offhand_weapon.d660bc275c8119d419cb7c4de29e824c3665bb15.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_offhand_weapon\/sacred_bones_offhand_weapon_large.2f2dbf847bcac99bc964321ae1a8fb8177f86813.png",
+				"item_set": "sacred_bones",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -31445,14 +31446,15 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Shoulder Pad",
 				"item_name": "Sacred Bones Shoulder",
-				"item_description": "This new item has no description.",
+				"item_description": "The bones of those who came before are brought to the field of battle once more.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/huskar\/sacred_bones_shoulder\/sacred_bones_shoulder",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_shoulder\/sacred_bones_shoulder.2a359ec5479879a5dd2f0aee70e7172599decec9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_shoulder\/sacred_bones_shoulder_large.ed2380173b73a26ab3ce27f03344ee41d3a7e999.png",
+				"item_set": "sacred_bones",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -31467,14 +31469,15 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bracers",
 				"item_name": "Sacred Bones Bracers",
-				"item_description": "This new item has no description.",
+				"item_description": "The runes upon the cuffs confer strength and courage upon the wearer.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/huskar\/sacred_bones_arms\/sacred_bones_arms",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_arms\/sacred_bones_arms.a424ab3c9955520ffa07aad24f9e5bddae72b4db.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_arms\/sacred_bones_arms_large.3b740d461ef20a53d34744a7b4daf1ac7b62a41b.png",
+				"item_set": "sacred_bones",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -31489,6 +31492,144 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Helmet",
 				"item_name": "Sacred Bones Helmet",
+				"item_description": "The warriors of the Dezun Order hold dear the bones of those whose sacrifice has come before.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/huskar\/sacred_bones_helmet\/sacred_bones_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_helmet\/sacred_bones_helmet.6a671f53098d082ab473e8c5d5fc2d403578a4ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_helmet\/sacred_bones_helmet_large.8cd2b871a9591b2660ab8e9eb171f87f386ea6d1.png",
+				"item_set": "sacred_bones",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sacred Bones Spear",
+				"defindex": 4910,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Sacred Bones Spear",
+				"item_description": "The spear of a warrior remembers the chaos of many battles, and the taste of many lives.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/huskar\/sacred_bones_spear\/sacred_bones_spear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_spear\/sacred_bones_spear.04f787f7a3d14ea8298137c9a03d89f467dec192.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/huskar\/sacred_bones_spear\/sacred_bones_spear_large.d1d46fa59c421a9746a588c8f89dfea5262078a4.png",
+				"item_set": "sacred_bones",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bandanna of the Bone Ruin Bandits",
+				"defindex": 4911,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bandana",
+				"item_name": "Bandanna of the Bone Ruin Bandits",
+				"item_description": "Once in a while you find bandits living in the ruins.  Once in a while they forget things while they're being evicted.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/meepo\/meepo_skeletonkey_bandana\/meepo_skeletonkey_bandana",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_skeletonkey_bandana\/meepo_skeletonkey_bandana.b77cc5992aa49e907b6485387aad979813c4e9ef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_skeletonkey_bandana\/meepo_skeletonkey_bandana_large.fd197f9c5965b2bd5a89e2056afe25ad24995aa8.png",
+				"item_set": "bone_ruins",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Key to the Bone Ruins",
+				"defindex": 4912,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Key to the Bone Ruins",
+				"item_description": "It used to open some ancient triumphal arch, but the structure was damaged during excavation.  Using explosives probably didn't help.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/meepo\/meepo_skeletonkey_sword\/meepo_skeletonkey_sword",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_skeletonkey_sword\/meepo_skeletonkey_sword.1d2b79e682e43be4d7eb1f90d7bef594c518fefe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meepo_skeletonkey_sword\/meepo_skeletonkey_sword_large.980f1f7ec4af25f82ab44a4ac5b00f54fbf1c4dd.png",
+				"item_set": "bone_ruins",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bone Ruin Excavator Pack",
+				"defindex": 4913,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Bone Ruin Excavator Pack",
+				"item_description": "A backpack, a cloak, the finest blanket you can steal, and a little souvenir for a discerning ruffian.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/meepo\/meeposkback\/meeposkback",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meeposkback\/meeposkback.2d0e5324462bcb90c3b0baa33d3863bc6cd39135.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meeposkback\/meeposkback_large.e1b43878e9ec995a318fc0a0892bf40df43d91b1.png",
+				"item_set": "bone_ruins",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Skull of the Bone Ruins",
+				"defindex": 4914,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Charm",
+				"item_name": "Skull of the Bone Ruins",
+				"item_description": "Even skulls get lonely up in the ruins.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/meepo\/meeposksh\/meeposksh",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meeposksh\/meeposksh.b4d82bf15c14f2fb3a01d75dcf2261e0d0d698b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/meepo\/meeposksh\/meeposksh_large.af7cfb3ff7eb71a1ab0c565706d262fe05757460.png",
+				"item_set": "bone_ruins",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Widowmaker",
+				"defindex": 4915,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "The Widowmaker",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -31506,19 +31647,89 @@
 				}
 			},
 			{
-				"name": "Sacred Bones Spear",
-				"defindex": 4910,
+				"name": "Sea Dragon's Basher",
+				"defindex": 4921,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "weapon",
-				"item_name": "Sacred Bones Spear",
-				"item_description": "This new item has no description.",
+				"item_type_name": "Club",
+				"item_name": "Sea Dragon's Basher",
+				"item_description": "For sport, the Slithereen hunt the great Sea Dragons of the ocean abyss. This basher is fashioned from the spoils of one such hunt.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/slardar\/sea_dragon_weapon\/sea_dragon_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_weapon\/sea_dragon_weapon.b693b6c57832a82b859ebce37b027553560348db.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_weapon\/sea_dragon_weapon_large.88d3a32c603af695cd1201994009fa0b141215b8.png",
+				"item_set": "sea_dragon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sea Dragon's Crown",
+				"defindex": 4922,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Crown",
+				"item_name": "Sea Dragon's Crown",
+				"item_description": "Only those who prove themselves in hunt against the great Sea Dragon dare wear such a crown.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/sea_dragon_helmet\/sea_dragon_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_helmet\/sea_dragon_helmet.c4ad99e6b3ffd8884020a1975f2f5b6c22c900af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_helmet\/sea_dragon_helmet_large.5886b94c3d22cee8ec55a6ba680c9ea7910bf99c.png",
+				"item_set": "sea_dragon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sea Dragon's Armlet",
+				"defindex": 4923,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armlet",
+				"item_name": "Sea Dragon's Armlet",
+				"item_description": "The scaly hide of the Sea Dragon is one of the few substances tougher than Slardar's own integument.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/sea_dragon_arm\/sea_dragon_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_arm\/sea_dragon_arm.a155e18651bc6261a73a1d40959e62fa0d470a79.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_arm\/sea_dragon_arm_large.eef2a5405d0f33511313b4e2c0a373b4109d99c5.png",
+				"item_set": "sea_dragon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sea Dragon's Fins",
+				"defindex": 4924,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Fins",
+				"item_name": "Sea Dragon's Fins",
+				"item_description": "What appear as fins on Slardar are but the edge of the mighty Sea Dragon's tiniest gill-guards.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/sea_dragon_back\/sea_dragon_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_back\/sea_dragon_back.caa6d316b5ae5d70e615a51271c5ccd7052d727e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/sea_dragon_back\/sea_dragon_back_large.39648c2a9f26cf669c5911b896b1ff46cb26b223.png",
+				"item_set": "sea_dragon",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36097,14 +36308,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Transdimensional Delivery Boy",
 				"item_name": "Nimble Ben",
-				"item_description": "Text here.",
+				"item_description": "Nimble Ben here! And there! And everywhere! Send me where you want me and I'm already there!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/courier\/jilling_ben_courier\/jilling_ben_courier",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/jilling_ben_courier\/jilling_ben_courier.9d3ed72b7698c0e7d6d96e7d69f0b3148488e199.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/jilling_ben_courier\/jilling_ben_courier_large.a7a4d67c7af8f43990cbf398508869f269f1b291.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36114,19 +36325,19 @@
 				}
 			},
 			{
-				"name": "Princess Penelope the Porcine",
+				"name": "Porcine Princess Penelope",
 				"defindex": 10163,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Courier",
-				"item_name": "Princess Penelope the Porcine",
-				"item_description": "This new item has no description.",
+				"item_name": "Porcine Princess Penelope",
+				"item_description": "Attention, Your Pink and Portly Highness, your loyal bearer has arrived! Treat him well, for he is very attached to you. In fact, there's really no way to shake him.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/courier\/gnomepig\/gnomepig",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/gnomepig\/gnomepig.a678c5a859c4da58f1e60a758b68c784f2e73976.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/gnomepig\/gnomepig_large.52dea6674a4de4ddb2e96fa7d59378b9b7cd1f3f.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36361,6 +36572,50 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Llama Llama",
+				"defindex": 10171,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "The Llama Llama",
+				"item_description": "The Llama Llama courier... with a courier THIS good, you name him TWICE!   \"Fleet of Foots\" and \"Service with a Smile!\" ... What more can you ask for?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/livery_llama_courier\/livery_llama_courier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/livery_llama_courier\/livery_llama_courier.5de7060c44794337b9a4307498531ce4a65bd267.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/livery_llama_courier\/livery_llama_courier_large.fe7fdab51e012c7443d556c78d3d97a513e3794e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Kupu the Metamorpher",
+				"defindex": 10172,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Kupu Courier",
+				"item_name": "Kupu the Metamorpher",
+				"item_description": "All hail Kupu the Metamorpher!  Honest and forthright, Kupu with delivery your items in a most timely fashion.  Steadfast!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/kupu_courier\/kupu_courier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/kupu_courier\/kupu_courier.cc96888c1c62cfdc73f1859a00955a06392c2fb1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/kupu_courier\/kupu_courier_large.03258248101fc741c5ea8265178e2964e2a1b9f3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
 			},
 			{
 				"name": "Name Tag",
@@ -46462,6 +46717,90 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Sacred Bones Set",
+				"defindex": 20158,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Sacred Bones Set",
+				"item_description": "Includes all of the items in the \"Sacred Bones\" set for Huskar.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Sacred_Bones_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sacred_bones_set.c2032f3c1854422443fe6a2195bb241ecc75cf7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sacred_bones_set_large.ced0e855991abc75094f35a4a65d588f36321978.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Sea Dragon's Set",
+				"defindex": 20159,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Sea Dragon's Set",
+				"item_description": "This bundle contains all of the items in the 'Sea Dragon' set for Slardar:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Sea_Dragons_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_sea_dragons_set.cf110cb3d717a04498f3aa315b3e85c4303eda83.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_sea_dragons_set_large.63f48c3dcd4cee4c663a5b44f8ac5592d94fe0ba.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Spoils of the Bone Ruins Set",
+				"defindex": 20160,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Spoils of the Bone Ruins Set",
+				"item_description": "Contains all of the items in the 'Spoils of the Bone Ruins' for Meepo:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Skeleton_Key_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_skeleton_key_set.3109d4b0717f6ce01590a164e4f867b13a583224.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_skeleton_key_set_large.5386a1606eb4bc9546126ffa4d0d99fe10d0bfc8.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -47597,6 +47936,18 @@
 				
 			},
 			{
+				"item_set": "bone_ruins",
+				"name": "Spoils of the Bone Ruins",
+				"store_bundle": "Spoils of the Bone Ruins Set",
+				"items": [
+					"Bandanna of the Bone Ruin Bandits",
+					"Bone Ruin Excavator Pack",
+					"Key to the Bone Ruins",
+					"Skull of the Bone Ruins"
+				]
+				
+			},
+			{
 				"item_set": "bone_scryer",
 				"name": "The Bone Scryer",
 				"store_bundle": "The Bone Scryer Set",
@@ -48624,6 +48975,19 @@
 				
 			},
 			{
+				"item_set": "sacred_bones",
+				"name": "The Sacred Bones",
+				"store_bundle": "Sacred Bones Set",
+				"items": [
+					"Sacred Bones Bracers",
+					"Sacred Bones Helmet",
+					"Sacred Bones Shoulder",
+					"Sacred Bones Spear",
+					"Sacred Bones Chopper"
+				]
+				
+			},
+			{
 				"item_set": "sanguine_moon",
 				"name": "Armor of the Sanguine Moon",
 				"store_bundle": "Armor of the Sanguine Moon Set",
@@ -48633,6 +48997,18 @@
 					"Sanguine Moon Shoulder",
 					"Sanguine Moon Weapons",
 					"Sanguine Moon Patch"
+				]
+				
+			},
+			{
+				"item_set": "sea_dragon",
+				"name": "The Sea Dragon",
+				"store_bundle": "The Sea Dragon's Set",
+				"items": [
+					"Sea Dragon's Armlet",
+					"Sea Dragon's Crown",
+					"Sea Dragon's Basher",
+					"Sea Dragon's Fins"
 				]
 				
 			},
