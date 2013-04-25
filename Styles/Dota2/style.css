@@ -1124,6 +1124,13 @@ code {
 	margin:6px 0px 6px 19px;
 	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_international_button.jpg');
 }
+#rightColInternational2013Button {
+	display:block;
+	width:256px;
+	height:107px;
+	margin:6px 0px 6px 19px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_international_2013_button.jpg');
+}
 #rightColInternational2011Button {
 	display:block;
 	width:256px;
