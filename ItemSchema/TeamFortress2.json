@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.803f02fe4bc3c7257b9b6acddc1d7511ddc4399b.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.bee4d82f7949c1d06cc616a8ad89ad2cfaf084b7.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -43439,6 +43439,7 @@
 				"craft_class": "supply_crate",
 				"craft_material_type": "supply_crate",
 				"capabilities": {
+					"decodable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,

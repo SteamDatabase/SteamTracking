@@ -175,10 +175,23 @@
 					if( isset( $Done[ 'error' ] ) )
 					{
 						echo 'cURL Error: ' . $Done[ 'error' ] . ' - ' . $URL . PHP_EOL;
+						
+						$this->URLsToFetch[ ] = Array(
+							'URL'  => $URL,
+							'File' => $Request
+						);
 					}
 					else if( $Code !== 200 )
 					{
 						echo 'HTTP Error ' . $Code . ' - ' . $URL . PHP_EOL;
+						
+						if( $Code !== 404 )
+						{
+							$this->URLsToFetch[ ] = Array(
+								'URL'  => $URL,
+								'File' => $Request
+							);
+						}
 					}
 					else
 					{

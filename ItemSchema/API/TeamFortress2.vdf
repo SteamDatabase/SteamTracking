@@ -48367,7 +48367,7 @@
 			}
 			"capabilities"
 			{
-				"decodable"		"0"						
+				"decodable"		"1"
 			}
 			"show_in_armory" "1"
 			"item_type_name"	"#TF_LockedCrate"
