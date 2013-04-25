@@ -37936,11 +37936,9 @@
 		{
 			"name"	"The Samson Skewer"
 			"first_sale_date"	"2013/03/11"
-			"prefab"	"promo cosmetic"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
+			"prefab"	"cosmetic"
+			"craft_class"	""				
+			"craft_material_type"	""	
 			"item_type_name"	"#TF_Wearable_Knife"
 			"item_name"	"#TF_SamsonSkewer"
 			"item_description"	"#TF_SamsonSkewer_Desc"
@@ -37973,11 +37971,9 @@
 		{
 			"name"	"The Bloodhound"
 			"first_sale_date"	"2013/03/11"
-			"prefab"	"promo hat"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
+			"prefab"	"hat"
+			"craft_class"	""				
+			"craft_material_type"	""	
 			"item_name"	"#TF_Bloodhound"
 			"item_description"	"#TF_Bloodhound_Desc"
 			"propername"	"1"
@@ -37997,11 +37993,9 @@
 		{
 			"name"	"The Dapper Disguise"
 			"first_sale_date"	"2013/03/11"
-			"prefab"	"promo cosmetic"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
+			"prefab"	"cosmetic"
+			"craft_class"	""				
+			"craft_material_type"	""	
 			"item_type_name"	"#TF_Wearable_Mask"
 			"item_name"	"#TF_DapperDisguise"
 			"item_description"	"#TF_DapperDisguise_Desc"
@@ -38018,11 +38012,9 @@
 		{
 			"name"	"The Necronomicrown"
 			"first_sale_date"	"2013/03/11"
-			"prefab"	"promo hat"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
+			"prefab"	"hat"
+			"craft_class"	""				
+			"craft_material_type"	""	
 			"item_name"	"#TF_Necronomicrown"
 			"item_description"	"#TF_Necronomicrown_Desc"
 			"propername"	"1"
@@ -38037,11 +38029,9 @@
 		{
 			"name"	"The Long Fall Loafers"
 			"first_sale_date"	"2013/03/11"
-			"prefab"	"promo cosmetic"
-			"capabilities"
-			{
-				"can_craft_count"	"1"
-			}
+			"prefab"	"cosmetic"
+			"craft_class"	""				
+			"craft_material_type"	""	
 			"item_type_name"	"#TF_Wearable_Boots"
 			"item_name"	"#TF_LongFallLoafers"
 			"item_description"	"#TF_LongFallLoafers_Desc"

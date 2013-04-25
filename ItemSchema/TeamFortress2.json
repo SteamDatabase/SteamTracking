@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.657690c85d29d9e936535087b51368c0c09fb860.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.baad673c47e3dd500a58957f1fab0ff9b91d3c16.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -35213,11 +35213,11 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_knife_lunchbox_large.6be06c0112df75dfb8c7f264ce908ec957245c54.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"can_craft_count": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -35235,14 +35235,6 @@
 				,
 				"used_by_classes": [
 					"Heavy"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35264,11 +35256,11 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_samhat_spy_large.7662fecfcd90ebf6d6fc18f74b7455d67484ef37.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"can_craft_count": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -35278,14 +35270,6 @@
 				"used_by_classes": [
 					"Sniper",
 					"Spy"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35307,11 +35291,11 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_mask_large.4c403b6a97338f5034a528f830ce10993f3dcbca.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"can_craft_count": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -35320,14 +35304,6 @@
 				},
 				"used_by_classes": [
 					"Spy"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35349,11 +35325,11 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_evilash_large.366f560cfbff2fab674527a721306e94b4e4d7c8.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"can_craft_count": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -35362,14 +35338,6 @@
 				},
 				"used_by_classes": [
 					"Pyro"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -35391,11 +35359,11 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_longfall_large.89454e19fa4ad8e9f2696590f7c8050ea84c4f30.png",
 				"drop_type": "none",
 				"craft_class": "",
-				"craft_material_type": "hat",
+				"craft_material_type": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"can_craft_count": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -35404,14 +35372,6 @@
 				},
 				"used_by_classes": [
 					"Scout"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
