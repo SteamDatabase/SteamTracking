@@ -48351,6 +48351,41 @@
 			"image_inventory"	"backpack/crafting/strange_bacon_grease"
 		}
 		
+		"5635"
+		{
+			"name"	"Robo Crate 2013"					
+			"item_class"	"supply_crate"
+			"craft_class"	"supply_crate"
+			"craft_material_type"	"supply_crate"
+			"tool"
+			{
+				"type"	""
+				"usage"
+				{
+				}
+				"restriction"	"robo2013"
+			}
+			"capabilities"
+			{
+				"decodable"		"0"						
+			}
+			"show_in_armory" "1"
+			"item_type_name"	"#TF_LockedCrate"
+			"item_name"		"#TF_RoboCrate"
+			"item_description"	"#TF_RoboCrate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/robo_crate"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"	"unique"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
+			"attributes"
+			{
+			}
+			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
+			"drop_sound"		"ui/item_crate_drop.wav"
+		}
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"

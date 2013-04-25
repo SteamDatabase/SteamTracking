@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.baad673c47e3dd500a58957f1fab0ff9b91d3c16.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.803f02fe4bc3c7257b9b6acddc1d7511ddc4399b.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -43418,6 +43418,47 @@
 				},
 				"used_by_classes": [
 
+				]
+				
+			},
+			{
+				"name": "Robo Crate 2013",
+				"defindex": 5635,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "RoboCrate",
+				"item_description": "This crate is special.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/robo_crate",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_crate.2813f8a94d1773dea9f3cf091eca301748ba11a3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_crate_large.eee4a49ff0cc034d3a9bdd5cb3412656803e2895.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "robo2013"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 58.000000
+					}
 				]
 				
 			},
