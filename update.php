@@ -42,6 +42,8 @@
 			
 			unset( $Data, $Line );
 			
+			$Tries = 20;
+			
 			do
 			{
 				$URLs = $this->URLsToFetch;
@@ -64,7 +66,7 @@
 				
 				$this->Fetch( $URLs );
 			}
-			while( !Empty( $this->URLsToFetch ) );
+			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 		}
 		
 		private function GenerateURL( $URL )

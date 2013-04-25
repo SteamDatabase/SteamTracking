@@ -78,6 +78,12 @@ Scripts/video_functions.js|http://cdn.steamcommunity.com/public/javascript/video
 Scripts/video_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/video_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
 
+# Blogs
+Styles/TF2/header.css|http://www.teamfortress.com/header.css?_=*TIMENOW*
+Styles/TF2/blog.css|http://www.teamfortress.com/blog.css?_=*TIMENOW*
+Styles/Portal/main.css|http://www.thinkwithportals.com/css/main.css?_=*TIMENOW*
+Styles/Dota2/style.css|http://blog.dota2.com/wp-content/themes/dota2/style.css?_=*TIMENOW*
+
 # Client Manifest
 ClientManifest/steam_client_win32.manifest|http://media.steampowered.com/client/steam_client_win32
 ClientManifest/steam_client_osx.manifest|http://media.steampowered.com/client/steam_client_osx
