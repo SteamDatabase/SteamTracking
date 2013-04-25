@@ -1,0 +1,90 @@
+
+.sale_page_purchase_item {
+	border-bottom: 1px solid #000000;
+	padding: 15px;
+	position: relative;
+	height: 136px;
+}
+
+.sale_page_purchase_item.even {
+	background-color: #1f1f1f;
+}
+
+.sale_page_purchase_item.odd {
+	background-color: #1a1a1a;
+}
+
+.sale_page_purchase_header {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+.sale_page_purchase_text_container {
+	padding-left: 309px;
+	padding-right: 256px;
+}
+
+.sale_page_purchase_package .game_header_image {
+	width: 415px;
+}
+
+.sale_page_purchase_package .sale_page_purchase_text_container {
+	padding-left: 431px;
+}
+
+.sale_page_purchase_price {
+	position: absolute;
+	right: 15px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.sale_page_purchase_area {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+
+.sale_page_sticker_area {
+	position: absolute;
+	right: 153px;
+	top: 13px;
+}
+
+.sale_page_name_link {
+	font-size: 14px;
+}
+
+.sale_page_release_date {
+	color: #626366;
+}
+
+.sale_page_package_contents .tab_row {
+	width: auto;
+}
+
+#sale_page_purchase_all_area {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	height: 71px;
+}
+
+#sale_page_purchase_all_area .btn_addtocart {
+	float: none;
+} 
+
+#sale_page_purchase_all_area .game_purchase_price {
+	float: none;
+	margin-top: 3px;
+	text-align: center;
+}
+
+#sale_page_purchase_all_area .btn_addtocart .btn_addtocart_content {
+	padding: 0px 32px;
+}
+
+#sale_large_cluster {
+  margin-bottom: 18px;
+}
