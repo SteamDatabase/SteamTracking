@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.211c74cb0a3a2b53af119d86fd9230c25313aadc.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.90d38a20822c523ac4a25df2bf7e61a7e2cc9124.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -457,29 +457,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "backpack\/crafting\/maptoken_library",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"craft_class": "tool",
-				"craft_material_type": "tool",
-				"capabilities": {
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Map Token Pool Day",
-				"defindex": 1011,
-				"item_class": "map_token",
-				"item_type_name": "Map Stamp",
-				"item_name": "CSGO_Collectible_MapTokenPoolDay",
-				"item_description": "",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "backpack\/crafting\/maptoken_pool_day",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",

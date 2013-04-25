@@ -467,15 +467,6 @@
 			"image_inventory"		"backpack/crafting/maptoken_library"
 			"map_name"		"#SFUI_Map_de_library"
 		}
-		"1011"
-		{
-			"name"		"Map Token Pool Day"
-			"prefab"		"map_token"
-			"item_name"		"#CSGO_Collectible_MapTokenPoolDay"
-			"item_description"		"#CSGO_Collectible_MapTokenPoolDay_Desc"
-			"image_inventory"		"backpack/crafting/maptoken_pool_day"
-			"map_name"		"#SFUI_Map_fy_pool_day"
-		}
 	}
 	"attributes"
 	{
