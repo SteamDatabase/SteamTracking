@@ -1,0 +1,234 @@
+
+
+
+#invites_top {
+	position:relative;
+	z-index:10;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#invites_maincontents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:21px;
+}
+#invites_maincontents h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+	padding-left:5px;
+}
+#invites_maincontents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+	padding-left:5px;
+}
+
+
+.commentnotifications_top_content {
+	width: 907px;
+	padding-top: 12px;
+
+}
+
+.commentnotifications_header {
+	/* 907 x 51 */
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/commentnotifications_header.png' );
+	width: 871px;
+	height: 51px;
+	padding-left: 36px;
+
+	margin-bottom: 15px;
+}
+
+.commentnotifications_header_commentcount {
+	float: left;
+	color: #9ada46;
+	height: 51px;
+	line-height: 51px;
+	font-size: 48px;
+	font-weight: bold;
+
+	margin-right: 4px;
+}
+
+.commentnotifications_header_content {
+	padding-top: 13px;
+	font-size: 11px;
+	line-height: 13px;
+	color: #7f7f7f;
+}
+
+.commentnotifications_header_content b {
+	font-weight: normal;
+	color: #9ada46;
+}
+
+.commentnotifications_header_rule {
+	height: 1px;
+	background-color: #000000;
+	border-bottom: 1px solid #333333;
+	margin-bottom: 14px;
+}
+
+
+
+.commentnotification {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/commentnotifications_notification.png' );
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	height: 48px;
+	margin-bottom: 1px;
+	border-radius: 3px;
+
+
+	padding-left: 34px;
+
+	position: relative;
+}
+
+.commentnotification.unread {
+	background-position: top center;
+}
+
+.commentnotification_icon {
+	position: absolute;
+	left: 10px;
+	top: 17px;
+}
+
+.commentnotification_title {
+	padding-top: 6px;
+	line-height: 19px;
+	color: #b4b4b4;
+	font-size: 14px;
+}
+.commentnotification.unread .commentnotification_title {
+	color: #9ada46;
+	font-weight: bold;
+	text-shadow: 1px 1px #434345;
+}
+
+.commentnotification_description {
+	color: #717171;
+	font-size: 11px;
+}
+.commentnotification.unread .commentnotification_description {
+	color: #b2b2b2;
+}
+
+.commentnotification_col {
+	float: right;
+	line-height: 48px;
+	height: 48px;
+}
+
+.commentnotification_col img {
+	vertical-align: middle;
+}
+.commentnotification_newposts {
+	width: 73px;
+	text-align: center;
+	font-size: 14px;
+	color: #fefbf6;
+	font-weight: bold;
+}
+
+.commentnotification_date {
+	color: #969696;
+	font-size: 11px;
+	text-align: right;
+	min-width: 80px;
+	padding-left: 12px;
+}
+.commentnotification.unread .commentnotification_date {
+	color: #fefefe;
+}
+
+.commentnotification_friendpost {
+	padding-left: 12px;
+}
+
+.commentnotification_click_overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.commentnotification_click_overlay a {
+	outline: none;
+}
+.commentnotification_click_overlay, .commentnotification_click_overlay img {
+	height: 48px;
+	width: 622px;
+}
+
+.commentnotification_browseoption .browseOptionImage {
+	display: none;
+}
+
+.commentnotification_browseoption.active .browseOptionImage {
+	display: block;
+}
+
+.commentnotification_browseoption.active .browseOption a {
+	cursor: default;
+	text-decoration: none;
+	color: #EBEBEB;
+}
+	
+
+.notification_paging {
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+	background-color: #1c1c1d;
+	border-radius: 3px;
+	color: #747474;
+
+	padding: 0px 6px;
+	margin: 8px 0px;
+}
+
+.notification_paging_controls {
+	position: absolute;
+	top: 0px;
+	right: 6px;
+}
+
+.notification_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.notification_paging_pagelink, .notification_paging_controls .commentthread_pagelink {
+	color: #ffffff;
+	cursor: pointer;
+	margin: 0px 3px;
+}
+
+.notification_paging_pagelink:hover, .notification_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.notification_paging_pagelink.active, .notification_paging_controls .commentthread_pagelink.active {
+	color: #747474;
+	cursor: default;
+}
+
+.notification_paging_pagelink.active:hover {
+	text-decoration: none;
+}

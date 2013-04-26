@@ -7,6 +7,20 @@
 		private $CurrentTime;
 		private $URLsToFetch = Array( );
 		
+		private $Options = Array(
+			CURLOPT_USERAGENT      => '',
+			CURLOPT_HEADER         => 0,
+			CURLOPT_AUTOREFERER    => 0,
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_FOLLOWLOCATION => 0,
+			CURLOPT_TIMEOUT        => 120,
+			CURLOPT_CONNECTTIMEOUT => 30,
+			CURLOPT_COOKIESESSION  => 1,
+			CURLOPT_BINARYTRANSFER => 1,
+			CURLOPT_FORBID_REUSE   => 1,
+			CURLOPT_FRESH_CONNECT  => 1
+		);
+		
 		public function __construct( )
 		{
 			if( !File_Exists( 'apikey.txt' ) )
@@ -113,24 +127,10 @@
 		
 		private function Fetch( $URLs )
 		{
-			$Options = Array(
-				CURLOPT_USERAGENT      => '',
-				CURLOPT_HEADER         => 0,
-				CURLOPT_AUTOREFERER    => 0,
-				CURLOPT_RETURNTRANSFER => 1,
-				CURLOPT_FOLLOWLOCATION => 0,
-				CURLOPT_TIMEOUT        => 120,
-				CURLOPT_CONNECTTIMEOUT => 30,
-				CURLOPT_COOKIESESSION  => 1,
-				CURLOPT_BINARYTRANSFER => 1,
-				CURLOPT_FORBID_REUSE   => 1,
-				CURLOPT_FRESH_CONNECT  => 1
-			);
-			
 			$Requests = Array( );
 			$Master = cURL_Multi_Init( );
 			
-			$WindowSize = 5;
+			$WindowSize = 10;
 			
 			if( $WindowSize > Count( $URLs ) )
 			{
@@ -139,20 +139,14 @@
 			
 			for( $i = 0; $i < $WindowSize; $i++ )
 			{
-				$Slave = cURL_Init( );
-				
 				$URL = Array_Shift( $URLs );
 				
-				$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
-				
-				cURL_SetOpt_Array( $Slave, $Options );
-				
-				cURL_Multi_Add_Handle( $Master, $Slave );
+				$Slave = $this->CreateHandle( $Master, $URL );
 				
 				$Requests[ $Slave ] = $URL[ 'File' ];
 			}
 			
-			unset( $URL );
+			unset( $URL, $WindowSize, $i );
 			
 			do
 			{
@@ -223,21 +217,11 @@
 					
 					if( Count( $URLs ) )
 					{
-						$SlaveNew = cURL_Init( );
-						
 						$URL = Array_Shift( $URLs );
 						
-						$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ]);
-						
-						cURL_SetOpt_Array( $SlaveNew, $Options );
-						
-						cURL_Multi_Add_Handle( $Master, $SlaveNew );
+						$SlaveNew = $this->CreateHandle( $Master, $URL );
 						
 						$Requests[ $SlaveNew ] = $URL[ 'File' ];
-						
-						$i++;
-						
-						unset( $SlaveNew, $URL );
 					}
 					
 					cURL_Multi_Remove_Handle( $Master, $Slave );
@@ -254,5 +238,18 @@
 			while( $Running );
 			
 			cURL_Multi_Close( $Master );
+		}
+		
+		private function CreateHandle( $Master, $URL )
+		{
+			$Slave = cURL_Init( );
+			
+			$this->Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
+			
+			cURL_SetOpt_Array( $Slave, $this->Options );
+			
+			cURL_Multi_Add_Handle( $Master, $Slave );
+			
+			return $Slave;
 		}
 	}
