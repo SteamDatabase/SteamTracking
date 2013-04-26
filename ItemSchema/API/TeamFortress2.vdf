@@ -64863,7 +64863,6 @@
 		"TF_MAPS_DOOMSDAY_ACHIEVE_PROGRESS1"		"774"
 		"TF_HALLOWEEN_MERASMUS_COLLECT_LOOT"	"941"
 
-
 		"TF_MVM_COMPLETE_POP_FILE"	"489"	
 		
 		"ASW_PARA_HAT"
@@ -64957,6 +64956,36 @@
 		{
 			"SourceAppID"	"104700"
 			"DefIndex"		"761"
+		}
+
+		"com.telltalegames.PokerNight2.UnlockVentureBrothersItem"
+		{
+			"SourceAppID"	"234710"
+			"DefIndex"		"1028"
+		}
+
+		"com.telltalegames.PokerNight2.UnlockBorderlandsItem"	
+		{
+			"SourceAppID"	"234710"
+			"DefIndex"		"1030"
+		}
+
+		"com.telltalegames.PokerNight2.UnlockArmyOfDarknessItem"
+		{
+			"SourceAppID"	"234710"
+			"DefIndex"		"1031"
+		}
+
+		"com.telltalegames.PokerNight2.UnlockSamAndMaxItem"
+		{
+			"SourceAppID"	"234710"
+			"DefIndex"		"1029"
+		}
+
+		"com.telltalegames.PokerNight2.UnlockPortalItem"
+		{
+			"SourceAppID"	"234710"
+			"DefIndex"		"1032"
 		}
 	}
 	"attribute_controlled_attached_particles"
