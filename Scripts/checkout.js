@@ -58,7 +58,7 @@ function PerformPayPalAuthorization()
 	{
 		if ( $('paypaltoken').value )
 		{
-			var paypal_url = escape( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
+			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
@@ -194,7 +194,7 @@ function PerformExternalFinalizeTransaction( url, hasPostParameters )
 	{
 				
 		
-		var escapedUrl = escape( url );
+		var escapedUrl = encodeURIComponent( url );
 		var transID = $('transaction_id').value;
 
 		var method = $('payment_method');
