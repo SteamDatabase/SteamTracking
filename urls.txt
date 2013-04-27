@@ -42,6 +42,7 @@ Styles/styles_sale.css|http://cdn.store.steampowered.com/public/css/styles_sale.
 Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
 Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
 Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
+Styles/workshop_charts.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_charts.css?_=*TIMENOW*
 Styles/workshop_home.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_home.css?_=*TIMENOW*
 Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
@@ -63,6 +64,7 @@ Scripts/dmca.js|http://cdn.steamcommunity.com/public/javascript/dmca.js?_=*TIMEN
 Scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js?_=*TIMENOW*&l=english
 Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*TIMENOW*&l=english
 Scripts/gifts.js|http://cdn.steamcommunity.com/public/javascript/gifts.js?_=*TIMENOW*&l=english
+Scripts/global.js|http://cdn.steamcommunity.com/public/javascript/global.js?_=*TIMENOW*&l=english
 Scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js?_=*TIMENOW*&l=english
 Scripts/group_admin_functions.js|http://cdn.steamcommunity.com/public/javascript/group_admin_functions.js?_=*TIMENOW*&l=english
 Scripts/market.js|http://cdn.steamcommunity.com/public/javascript/market.js?_=*TIMENOW*&l=english
@@ -79,6 +81,7 @@ Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/sear
 Scripts/video_functions.js|http://cdn.steamcommunity.com/public/javascript/video_functions.js?_=*TIMENOW*&l=english
 Scripts/video_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/video_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
+Scripts/workshop_previewplayer.js|http://cdn.steamcommunity.com/public/javascript/workshop_previewplayer.js?_=*TIMENOW*&l=english
 
 # Blogs
 Styles/TF2/header.css|http://www.teamfortress.com/header.css?_=*TIMENOW*
