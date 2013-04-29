@@ -668,7 +668,7 @@ function CWebChatDialog( Chat, elDialog, elContent )
 	this.m_dateLastMessage = null;
 }
 
-CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://\\S*)', 'gi' );
+CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
 
 CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMessage, eMessageType )
 {
