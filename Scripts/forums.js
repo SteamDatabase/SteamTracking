@@ -59,6 +59,7 @@ var CForum = Class.create( {
 
 	m_cTotalCount: 0,
 	m_iCurrentPage: 0,
+	m_iInitialPage: 0,
 	m_cMaxPages: 0,
 	m_bLoading: false,
 	m_bSubmittingTopic: false,
@@ -71,8 +72,8 @@ var CForum = Class.create( {
 		this.m_strActionURL = url;
 
 		this.m_cTotalCount = rgForumData['total_count'];
-		this.m_iCurrentPage = 0;
 		this.m_cPageSize = rgForumData['pagesize'];
+		this.m_iCurrentPage = this.m_iInitialPage = Math.floor( ( rgForumData.start || 0 ) / this.m_cPageSize );
 		this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
 
 		var strPrefix = 'forum_' + this.m_strName;
@@ -94,10 +95,10 @@ var CForum = Class.create( {
 		this.OnLocationChange( window.location.hash );
 
 
-		$(strPrefix + '_pagebtn_prev').observe( 'click', this.PrevPage.bind( this ) );
-		$(strPrefix + '_footerpagebtn_prev') && $(strPrefix + '_footerpagebtn_prev').observe( 'click', this.PrevPage.bind( this ) );
-		$(strPrefix + '_pagebtn_next').observe( 'click', this.NextPage.bind( this ) );
-		$(strPrefix + '_footerpagebtn_next') && $(strPrefix + '_footerpagebtn_next').observe( 'click', this.NextPage.bind( this ) );
+		$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage ) );
+		$(strPrefix + '_footerpagebtn_prev') && $(strPrefix + '_footerpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage ) );
+		$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+		$(strPrefix + '_footerpagebtn_next') && $(strPrefix + '_footerpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 
 		this.UpdatePagingDisplay();
 	},
@@ -189,8 +190,14 @@ var CForum = Class.create( {
 		else if ( !hash )
 		{
 			// reset to initial view
-			this.GoToPage( 0 );
+			this.GoToPage( this.m_iInitialPage );
 		}
+	},
+
+	OnPagingButtonClick: function( event, fnToExecute )
+	{
+		event.stop();
+		fnToExecute.call( this );
 	},
 
 	NextPage: function()
@@ -253,9 +260,9 @@ var CForum = Class.create( {
 			elTopics.update( response.topics_html );
 
 
-			if ( this.m_iCurrentPage != 0 || window.location.hash.length > 1)
+			if ( this.m_iCurrentPage != this.m_iInitialPage || window.location.hash.length > 1)
 			{
-				if ( this.m_iCurrentPage > 0 )
+				if ( this.m_iCurrentPage != this.m_iInitialPage )
 					window.location.hash = 'p' + ( this.m_iCurrentPage + 1);
 				else
 					window.location.hash = '';

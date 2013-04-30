@@ -1390,10 +1390,10 @@ var CCommentThread = Class.create( {
 			this.m_oTextAreaSizer = new CAutoSizingTextArea( this.m_elTextArea, iMinHeight, this.OnTextInput.bind( this, elSaveButton ) );
 		}
 
-		$(strPrefix + '_pagebtn_prev').observe( 'click', this.PrevPage.bind( this ) );
-		$(strPrefix + '_fpagebtn_prev').observe( 'click', this.PrevPage.bind( this ) );
-		$(strPrefix + '_pagebtn_next').observe( 'click', this.NextPage.bind( this ) );
-		$(strPrefix + '_fpagebtn_next').observe( 'click', this.NextPage.bind( this ) );
+		$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
+		$(strPrefix + '_fpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
+		$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+		$(strPrefix + '_fpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 
 		var elForm = $( strPrefix + '_form');
 		if ( elForm )
@@ -1631,6 +1631,12 @@ var CCommentThread = Class.create( {
 	OnAJAXComplete: function()
 	{
 		this.m_bLoading = false;
+	},
+
+	OnPagingButtonClick: function( event, fnToExecute )
+	{
+		event.stop();
+		fnToExecute.call( this );
 	},
 
 	NextPage: function()
