@@ -1,0 +1,381 @@
+
+
+#hws_main {
+	text-align:center;
+	margin-top:22px;
+}
+
+#hws_ctn {
+	width: 940px;
+	margin: 0px auto;
+	overflow: visible;
+	text-align:left;
+	position:relative;
+}
+
+#new_tag_top {
+	position:absolute;
+	top:-32px;
+	left:-140px;
+}
+
+#new_tag_mid {
+	position:absolute;
+	top:20px;
+	left:-150px;
+}
+
+#hws_header,#hws_footer {
+	width:698px;
+	height:7px;
+	margin:0;
+	padding:0;
+}
+
+
+#hws_ctn h1 {
+	margin:0;
+	padding:0 0 6px 0;
+	font-size:24pt;
+	font-weight:normal;
+}
+
+p.blurb {
+	width:585px;
+	font-size:14px;
+	line-height:18px;
+	color:#999999;
+	margin-bottom:6px;
+}
+
+p.blurb2 {
+	width:585px;
+	font-size:14px;
+	line-height:18px;
+	color:#bbbbbb;
+}
+
+.main_graph {
+	float:left;
+	padding:0;
+	margin-bottom:9px;
+	width:325px;
+	height:256px;
+}
+
+.padRight8 {
+	margin-right:7px;
+}
+
+.padRight {
+	margin-right:11px;
+}
+
+.graph_title {
+	width:298px;
+	background-image: url(http://cdn.store.steampowered.com/public/images/v5/rightcol_bg_blue.png);
+	padding:5px 0px 5px 8px;
+	margin-bottom:1px;
+}
+
+
+#main_stats_header {
+	width:925px;
+	padding:5px 0px 5px 15px;
+	margin:2px 0px;
+	margin-top:10px;
+	background-image: url(http://cdn.store.steampowered.com/public/images/hws_headbar.png);
+	background-repeat:repeat-y;
+	background-color:#68788b;
+}
+
+#main_stats, #sub_stats {
+	width:922px;
+	background-color:#262626;
+	border: solid #4d4b4d 1px;
+	padding:8px;
+}
+
+.h1subtext {
+	color:#c4cbd2;
+}
+
+.stats_col_left {
+	float:left;
+	width:527px;
+	padding:2px 0px 2px 8px;
+}
+
+.substats_col_left {
+	float:left;
+	width:527px;
+	padding:2px 0px 2px 8px;
+}
+
+.stats_col_left_holder {
+	float:left;
+	width:20;
+}
+
+.stats_col_mid,.stats_col_mid_details {
+	float:left;
+	width:217px;
+	padding:2px 0px 2px 8px;
+	overflow:hidden;
+}
+
+.substats_col_month,.substats_col_month_last,.substats_col_month_last_pct,.substats_col_month_last_chg {
+	float:left;
+	width:65px;
+	text-align:right;
+	overflow:hidden;
+}
+
+.substats_col_month_last {
+	width:115px;
+}
+
+.substats_col_month_last_pct {
+	width:60px;
+}
+
+.substats_col_month_last_chg {
+	width:55px;
+}
+
+.stats_col_mid_details {
+	width:430px;
+}
+
+.stats_col_right {
+	float:left;
+	width:69px;
+	padding:2px 16px 2px 0px;
+	text-align:right;
+}
+
+.stats_col_right2 {
+	float:left;
+	width:75px;
+	padding:2px 0px 2px 0px;
+}
+
+.col_header {
+	font-weight:normal;
+	font-size:11px;
+	color:#595959;
+}
+
+.stats_row,.stats_row_on {
+	clear:left;
+	padding:4px 0px 4px 0px;
+	color:#999999;
+}
+
+.substats_row {
+	clear:left;
+	padding:4px 0px 4px 0px;
+	color:#999999;
+}
+
+.row_0 {
+	background-color:#1a1a1a;
+}
+
+.row_1 {
+	background-color:#1f1f1f;
+}
+
+.stats_row_on {
+	background-color:#353535;
+	color:#ffffff;
+}
+
+.stats_row a,.stats_row a:hover,.stats_row a:active,.stats_row a:visited,.stats_row_on a,.stats_row_on a:hover,.stats_row_on a:active,.stats_row_on a:visited {
+	text-decoration:none;
+	color:#000000;
+	font-weight:normal;
+}
+
+.stats_row:hover,.stats_row_on:hover {
+	background-color:#353535;
+	cursor:pointer;
+	color:#ffffff;
+}
+
+.graph_block {
+	float:left;
+	width:306px;
+	margin-bottom:14px;
+}
+.graph_holder {
+	width:304px;
+	height:178px;
+	border:solid #4d4d4d 1px;
+	position:relative;
+}
+.chartdiv {
+	position:absolute;
+	top:37px;
+	left:8px;
+	width:240px;
+	height:90px;
+}
+#PCVideoCardMfg {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_pcvideocardmfg_bg.gif');
+}
+#DXLevels {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_dxsystems_bg.gif');
+}
+#PCCPUMfg {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_pccpumfg_bg.gif');
+}
+#PCCPUs {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_numcpus_bg.gif');
+}
+#MacHardware {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_machardware_bg.gif');
+}
+#MacSystemRam {
+	background-image:url('http://cdn.store.steampowered.com/public/images/hws_macram_bg.gif');
+}
+.chartRange {
+	color:#616161;
+	text-transform:uppercase;
+	font-size:10px;
+	font-family:arial,helvetica,sans-serif;
+	position:absolute;
+	top:22px;
+	left:10px;
+}
+.chartCaption {
+	color:#ffffff;
+	font-size:14px;
+	font-family:arial,helvetica,sans-serif;
+	position:absolute;
+	top:6px;
+	left:10px;
+}
+.chartVal {
+	position:absolute;
+	font-size:11px;
+	font-family:arial,helvetica,sans-serif;
+	left:255px;
+}
+.chartInfoLink,.chartInfoLink:hover,.chartInfoLink:active,.chartInfoLink:visited {
+	color:#a1a1a1;
+	position:absolute;
+	font-size:11px;
+	left:96px;
+	top:160px;
+	text-decoration:none;
+}	
+
+#platform_pulldown {
+	color:#acacac;
+	margin:0px 0px 16px 8px;
+}
+
+#platform_nonpulldown {
+	color:#acacac;
+	margin:0px 0px 16px 8px;
+}
+
+#platform_pulldown img, .popup_menu_item img {
+	padding-right:4px;
+}
+
+.stats_arrow {
+	float:left;
+	padding:6px 5px 0px 5px;
+}
+
+.arrow_space {
+	padding-left:15px;
+}
+
+.stats_row_details {
+	background-image: url(http://cdn.store.steampowered.com/public/images/hws_expand.png);
+	background-repeat:no-repeat;
+	background-color:#1f1f1f;
+	display:none;
+}
+
+.greyRow {
+	background-color:#eaeaea;
+}
+
+.row_details {
+	color:#68788b;
+}
+
+.data_row {
+	color:#cccccc;
+	padding-top:6px;
+}
+
+.appdata_row {
+	color:#999999;
+	padding:4px 0px 4px 0px;;
+}
+
+.stat_increase {
+	color:#00cc00;
+}
+
+.stat_decrease {
+	color:#cc0000;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+
+#substats_sort {
+	float:right;
+	text-align:right;
+	padding-right:10px;
+	color:#ffffff;
+}
+
+input {
+	font-size:10px;
+}
+
+select {
+	font-size:10px;
+}
+
+a.backLink,a.backLink:hover,a.backLink:active,a.backLink:visited {
+	text-decoration:none;
+	color: #ffffff;
+}
+
+a.backLink:hover {
+	text-decoration:underline;
+	color:#000000;
+}
+
+.hideme {
+	display:none;
+}
+
+#softwareNote {
+	text-align:left;
+	padding:10px 20px 0px 20px;
+	color:#777777;
+}
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* Hide from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
