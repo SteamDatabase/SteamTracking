@@ -238,35 +238,6 @@ body.flat_page #footer .footer_content {
 	border:solid #b4da45 1px;
 }
 
-.gameLogoHolder_default {
-	position:relative;
-	width:192px;
-	height:77px;
-	border:0;
-	padding:0;
-	margin:0;
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/gamelogoholder_default.jpg');
-}
-
-.gameLogo {
-	position:absolute;
-	width:184px;
-	height:69px;
-	border:0;
-	padding:0;
-	margin:0;
-	top:4px;
-	left:4px;
-}
-
-.gameLogo img {
-	border:0;
-	padding:0;
-	margin:0;
-	width:184px;
-	height:69px;
-}
-
 .avatarHolder_default {
 	position:relative;
 	width:192px;
@@ -701,12 +672,6 @@ p.errorPrivate {
 	color:#f26c4f;
 	font-weight:bold;
 	margin-left:6px;
-}
-
-.pubGroup {
-	color:#d05f29;
-	font-size:11px;
-	font-weight:bold;
 }
 
 .mainSectionHeader,#mainSectionHeaderTop,.rightSectionHeader {

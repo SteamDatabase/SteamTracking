@@ -747,6 +747,7 @@ function CModal( $Content, rgParams )
 	this.m_bIgnoreResizeEvents = rgParams.bIgnoreResizeEvents;
 	this.m_fnSizing = null;
 	this.m_fnBackgroundClick = null;
+	this.m_bDismissOnBackgroundClick = !rgParams.bExplicitDismissalOnly;
 
 	this.m_fnOnDismiss = null;
 	this.m_bRemoveContentOnDismissal = false;
@@ -758,10 +759,7 @@ function CModal( $Content, rgParams )
 
 
 	var _modal = this;
-	if ( !rgParams.bExplicitDismissalOnly )
-	{
-		this.m_fnBackgroundClick = function() { _modal.Dismiss(); };
-	}
+	this.m_fnBackgroundClick = function() { if ( _modal.m_bDismissOnBackgroundClick ) { _modal.Dismiss(); } };
 	this.m_fnSizing = function() { _modal.AdjustSizing(); };
 
 	/* make sure the content is parented correctly */
@@ -781,6 +779,11 @@ CModal.prototype.GetContent = function ()
 CModal.prototype.SetRemoveContentOnDismissal = function ( bRemoveContent )
 {
 	this.m_bRemoveContentOnDismissal = bRemoveContent;
+}
+
+CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundClick )
+{
+	this.m_bDismissOnBackgroundClick = bDismissOnBackgroundClick;
 }
 
 CModal.prototype.AdjustSizing = function( duration )
@@ -823,10 +826,8 @@ CModal.prototype.Show = function()
 	{
 		$J(window).on( 'resize', null, this.m_fnSizing );
 	}
-	if ( this.m_fnBackgroundClick )
-	{
-		CModal.s_$Background.on( 'click', null, this.m_fnBackgroundClick );
-	}
+	CModal.s_$Background.on( 'click', null, this.m_fnBackgroundClick );
+
 	this.AdjustSizing();
 
 	this.m_$Content.show();
@@ -850,10 +851,7 @@ CModal.prototype.Dismiss = function()
 	{
 		$J(window).off( 'resize', null, this.m_fnSizing );
 	}
-	if ( this.m_fnBackgroundClick )
-	{
-		CModal.s_$Background.off( 'click', null, this.m_fnBackgroundClick );
-	}
+	CModal.s_$Background.off( 'click', null, this.m_fnBackgroundClick );
 	CModal.HideModalBackground();
 
 	if ( this.m_fnOnDismiss )

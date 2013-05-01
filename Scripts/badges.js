@@ -117,6 +117,14 @@ function FinishCraft()
 		}
 		window.setTimeout( function() {
 			$BadgeRewardsActions.show();
+
+			// add the close button and "click outside dismisses modal" behavior back to modal.
+			//	when/if they close, we'll reload the page.
+			g_CraftModal.GetContent().find('.newmodal_close').show();
+			g_CraftModal.SetDismissOnBackgroundClick( true );
+
+			g_CraftModal.always( function() { ShowDialog( 'Craft Badge', 'Reloading...' ); window.location.reload(); } );
+
 			g_CraftModal.AdjustSizing( 'slow' );
 		}, nMSToWait );
 

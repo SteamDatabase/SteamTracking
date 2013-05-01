@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.1580808e4d54b2e6aa7279264762ad69cd191b6c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.31782d4ae9e4975d258848e65b9aafb8a4715f48.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -9477,6 +9477,27 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
 				"item_name": "Vengeful Leg Armor",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Elder Titan's Ancestral Spirit",
+				"defindex": 448,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Elder Titan's Ancestral Spirit",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -30528,11 +30549,11 @@
 				}
 			},
 			{
-				"name": "Roehrin, the Pale Stallion",
+				"name": "Roehrin the Pale Stallion",
 				"defindex": 4867,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Horse",
-				"item_name": "Roehrin, the Pale Stallion",
+				"item_name": "Roehrin the Pale Stallion",
 				"item_description": "On a pale horse he rides, this spark of endless suns, this Keeper of the Light.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -31533,11 +31554,11 @@
 				}
 			},
 			{
-				"name": "Bandanna of the Bone Ruin Bandits",
+				"name": "Bandana of the Bone Ruin Bandits",
 				"defindex": 4911,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bandana",
-				"item_name": "Bandanna of the Bone Ruin Bandits",
+				"item_name": "Bandana of the Bone Ruin Bandits",
 				"item_description": "Once in a while you find bandits living in the ruins.  Once in a while they forget things while they're being evicted.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -31647,6 +31668,121 @@
 				}
 			},
 			{
+				"name": "Belt of the Conquering Tyrant",
+				"defindex": 4916,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of the Conquering Tyrant",
+				"item_description": "A ceremonial belt of leather and brass meant to signify the high status of the wearer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_belt_final\/brutal_belt_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_belt_final\/brutal_belt_final.172ebd6786ab09c7e9846dcbf06babcdceca81c6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_belt_final\/brutal_belt_final_large.489d3497076ab8f564130cf22ebf353917f7a601.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracers of the Conquering Tyrant",
+				"defindex": 4917,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of the Conquering Tyrant",
+				"item_description": "Braced for combat.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_bracer_final\/brutal_bracer_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_bracer_final\/brutal_bracer_final.14a867e33591e9f156fdd953b80f639da487651f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_bracer_final\/brutal_bracer_final_large.b75413c540d443208a90708744ee27afb49fa944.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Death Mask of the Conquering Tyrant",
+				"defindex": 4918,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Death Mask of the Conquering Tyrant",
+				"item_description": "Wear this mask, and it will be the last face your enemies ever see.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_head_final\/brutal_head_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_head_final\/brutal_head_final.bcdea637bba30e7d74948a5df2afafc00a9dc771.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_head_final\/brutal_head_final_large.35343e6cfe8955ff908c49342de8e2ef980f0ebc.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Brutal Crescent of the Conquering Tyrant",
+				"defindex": 4919,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Brutal Crescent of the Conquering Tyrant",
+				"item_description": "With this silver crescent, the centaur has cut the strings of many lives.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_axe2\/brutal_axe2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_axe2\/brutal_axe2.d6055b4646cc8bf703689103bb5ce6f3c04ab249.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_axe2\/brutal_axe2_large.f5911958c004abea7ec0ad774ce3fbd50369e655.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Braided Tail of the Conquering Tyrant",
+				"defindex": 4920,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Braided Tail of the Conquering Tyrant",
+				"item_description": "A braid woven into the tail of a centaur signifies that battle is soon at hand.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/tail_final\/tail_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/tail_final\/tail_final.6ef90d21b68695c346fc8947d7080ebb00831d32.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/tail_final\/tail_final_large.8eb99e4191d5fbf81902864a1040c7086b73c6bc.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Sea Dragon's Basher",
 				"defindex": 4921,
 				"item_class": "dota_item_wearable",
@@ -31730,6 +31866,831 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/slardar\/sea_dragon_back\/sea_dragon_back.caa6d316b5ae5d70e615a51271c5ccd7052d727e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/slardar\/sea_dragon_back\/sea_dragon_back_large.39648c2a9f26cf669c5911b896b1ff46cb26b223.png",
 				"item_set": "sea_dragon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Spiked Pauldrons of the Conquering Tyrant",
+				"defindex": 4925,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Spiked Pauldrons of the Conquering Tyrant",
+				"item_description": "Made from the leather of a full grown thunderhide, this armor is a match for any blade.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_pauldrons\/brutal_pauldrons",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_pauldrons\/brutal_pauldrons.52580b8d3a069f4b5f0fd32867cc1ca50562fbf2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_pauldrons\/brutal_pauldrons_large.7bb475fb15c1ba5791d63d3462a6c11a025f8cfd.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Barding of the Conquering Tyrant",
+				"defindex": 4926,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Barding",
+				"item_name": "Barding of the Conquering Tyrant",
+				"item_description": "No saddle has ever graced the back of this conquering hero, but instead a barding worthy of his greatness.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/brutal_shield_final\/brutal_shield_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_shield_final\/brutal_shield_final.2605364b51cade4d8c074aa6acfe802c8eccc549.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/brutal_shield_final\/brutal_shield_final_large.212868c5ed1658022f5d197de49ae63e284775ce.png",
+				"item_set": "conquering_tyrant",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Comb of the Hidden Temple",
+				"defindex": 4927,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Comb",
+				"item_name": "Comb of the Hidden Temple",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "redmoon__assassinators_secret_armor",
+				"defindex": 4928,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "redmoon__assassinators_secret_armor",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "redmoon__assassinators_secret_wraps",
+				"defindex": 4929,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "redmoon__assassinators_secret_wraps",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Penumbral Warblade",
+				"defindex": 4930,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Penumbral Warblade",
+				"item_description": "At the edge of darkness, her warblade shimmers like a piece of dusk cut loose.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin\/pa_veil_of_the_shadow_assassin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin\/pa_veil_of_the_shadow_assassin.caa172ab4404bb3e51c957c45e0b27b127b04afe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin\/pa_veil_of_the_shadow_assassin_large.b44d56d4438bdb73ccc0071c2597502fd9dc46d0.png",
+				"item_set": "penumbral_vesture",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Penumbral Shawl",
+				"defindex": 4931,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shawl",
+				"item_name": "Penumbral Shawl",
+				"item_description": "Even creatures of the twilight can scarcely see the wearer of this shawl.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_shoulder_final\/pa_veil_of_the_shadow_assassin_shoulder_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_shoulder_final\/pa_veil_of_the_shadow_assassin_shoulder_final.6d5c9926a02307b2bd1b79fb6c4c4a2bb3b3189d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_shoulder_final\/pa_veil_of_the_shadow_assassin_shoulder_final_large.3363b246ee98088a8fbf28315349a4834be4c2eb.png",
+				"item_set": "penumbral_vesture",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Penumbral Hood",
+				"defindex": 4932,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Penumbral Hood",
+				"item_description": "The assassin's face is hidden, yet you can still feel through the shadows the power of her gaze.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/veil_of_the_shadow_assassin_head_final\/veil_of_the_shadow_assassin_head_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/veil_of_the_shadow_assassin_head_final\/veil_of_the_shadow_assassin_head_final.e553058f602b7de8505169d72f8577393be38090.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/veil_of_the_shadow_assassin_head_final\/veil_of_the_shadow_assassin_head_final_large.24697a2d5ea41431192b5a738394bb890416ccc5.png",
+				"item_set": "penumbral_vesture",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Penumbral Crest",
+				"defindex": 4933,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Buckle",
+				"item_name": "Penumbral Crest",
+				"item_description": "Emblazoned with the Crepuscular Sigil, this crest draws darkness over its wearer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_veil_veil\/pa_veil_of_the_shadow_assassin_veil_veil",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_veil_veil\/pa_veil_of_the_shadow_assassin_veil_veil.4dcaf60a55c54bc12e5fd137868280b373c796e1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_veil_veil\/pa_veil_of_the_shadow_assassin_veil_veil_large.03c8fd57938083b6194ea2b2c242c5b08afa4f5e.png",
+				"item_set": "penumbral_vesture",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Penumbral Cloak",
+				"defindex": 4934,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Penumbral Cloak",
+				"item_description": "A cloak no less concealing than the night's long shadows.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_back_final\/pa_veil_of_the_shadow_assassin_back_final",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_back_final\/pa_veil_of_the_shadow_assassin_back_final.b51a7e3aa216b5e763f249d5f779a50fb6bef055.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/pa_veil_of_the_shadow_assassin_back_final\/pa_veil_of_the_shadow_assassin_back_final_large.a96b480ce2373dab469e774b6177bf8036c84fa1.png",
+				"item_set": "penumbral_vesture",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Pauldrons of the Battle Caster",
+				"defindex": 4935,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Pauldrons of the Battle Caster",
+				"item_description": "Once a field filled with swords and storms, Lina left little but a smoking crater and handful of grateful allies.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/pauldrons_of_the_slayer\/pauldrons_of_the_slayer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/pauldrons_of_the_slayer\/pauldrons_of_the_slayer.f0dff38a32ee3de1212d5fcefebec05595759574.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/pauldrons_of_the_slayer\/pauldrons_of_the_slayer_large.6f549be0371913333cf609895458b5057079b0e8.png",
+				"item_set": "battle_caster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vambraces of the Battle Caster",
+				"defindex": 4936,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Vambraces",
+				"item_name": "Vambraces of the Battle Caster",
+				"item_description": "As the drums of war boomed on the horizon, Lina prepared to join the fray.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/vambracesoftheslayerz1\/vambracesoftheslayerz1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/vambracesoftheslayerz1\/vambracesoftheslayerz1.8a1246ea4260643ea8bdefd8abd4ee3db5a762bb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/vambracesoftheslayerz1\/vambracesoftheslayerz1_large.256b23becea6ec1d6a6d463a29d8639b075f4181.png",
+				"item_set": "battle_caster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Plates of the Battle Caster",
+				"defindex": 4937,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Plates of the Battle Caster",
+				"item_description": "Many experiments were required, and challenges overcome, to craft material able weather Lina's flame.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/skirtoftheslayerz10\/skirtoftheslayerz10",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/skirtoftheslayerz10\/skirtoftheslayerz10.c3cfbea946236e051530195ffe3fbd9cdbccb3fa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/skirtoftheslayerz10\/skirtoftheslayerz10_large.04d58633686f2805daf58115514d008c2fe21405.png",
+				"item_set": "battle_caster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Cut of the Battle Caster",
+				"defindex": 4938,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Cut of the Battle Caster",
+				"item_description": "War is said to be a cause for great innovation and invention.  No less so for fashion.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/hairoftheslayerr\/hairoftheslayerr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/hairoftheslayerr\/hairoftheslayerr.423403e98af21c4fbdc31f050e548e34d6252594.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lina\/hairoftheslayerr\/hairoftheslayerr_large.c2cebe19f9900581333d6d3edc81ab6ab415afad.png",
+				"item_set": "battle_caster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Stinger of the Ancient Sovereign",
+				"defindex": 4939,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Stinger",
+				"item_name": "Stinger of the Ancient Sovereign",
+				"item_description": "No death has ever been more painful than that perfected by the Ancient Sovereign.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/cantankerous_xerocole__back\/cantankerous_xerocole__back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__back\/cantankerous_xerocole__back.2429fd5dadbcad162adf3b84cf1218c51535f8df.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__back\/cantankerous_xerocole__back_large.5d6950179dcac7231fdf1225061c6efc54e84b08.png",
+				"item_set": "ancient_sovereign",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sandworn Visage of the Ancient Sovereign",
+				"defindex": 4940,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Face",
+				"item_name": "Sandworn Visage of the Ancient Sovereign",
+				"item_description": "Unearthed from the sand-scoured ruins of El'Harath, from this Visage the entire culture of the Sovereign has been resurrected.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/cantankerous_xerocole__head\/cantankerous_xerocole__head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__head\/cantankerous_xerocole__head.24a3feee82c3da65fbfd5f763d37a3f04e227417.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__head\/cantankerous_xerocole__head_large.9c61d071fb029a0fb809ae637600feb304e2fbb2.png",
+				"item_set": "ancient_sovereign",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Claw of the Ancient Sovereign",
+				"defindex": 4941,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Claw",
+				"item_name": "Claw of the Ancient Sovereign",
+				"item_description": "In the fragmentary legends of the Ancient Sovereign, death by such claws was something greatly to be desired.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/cantankerous_xerocole__arms\/cantankerous_xerocole__arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__arms\/cantankerous_xerocole__arms.7a60bae17bbd9678f48826962fdac4027de65748.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__arms\/cantankerous_xerocole__arms_large.1ac5681de62ae2ef5b9a9ab567f564f1a8d00aaf.png",
+				"item_set": "ancient_sovereign",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Crawlers of the Ancient Sovereign",
+				"defindex": 4942,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Legs",
+				"item_name": "Crawlers of the Ancient Sovereign",
+				"item_description": "Sandking pays tribute to the Ancient Sovereign with every step.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/cantankerous_xerocole__legs\/cantankerous_xerocole__legs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__legs\/cantankerous_xerocole__legs.81ce03aa2c7e43464fc9888d5b038e80140908aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole__legs\/cantankerous_xerocole__legs_large.723cc9bae493ecdaf019582e4520489325b5e74e.png",
+				"item_set": "ancient_sovereign",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Vestigial Wings of the Ancient Sovereign",
+				"defindex": 4943,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Vestigial Wings of the Ancient Sovereign",
+				"item_description": "The ancients glided stealthily above the sands in ages when these wings were not yet vestigial.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/cantankerous_xerocole_shoulders\/cantankerous_xerocole_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole_shoulders\/cantankerous_xerocole_shoulders.4fde7239c33ef206b87c3483082fde83aab287fd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sand_king\/cantankerous_xerocole_shoulders\/cantankerous_xerocole_shoulders_large.dbbbc3166587706a9e7392ce286e6cab2654d48b.png",
+				"item_set": "ancient_sovereign",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Young Alchemist's Protection",
+				"defindex": 4944,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armored Lab Coat",
+				"item_name": "Young Alchemist's Protection",
+				"item_description": "When you're just starting out, your formulas are a little braver, a little less precise.  And a lot more dangerous.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/caustic_outfit\/caustic_outfit",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_outfit\/caustic_outfit.73a3ed0224567161dfc52a6c1366bbc1e9216495.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_outfit\/caustic_outfit_large.ea8f5e0b42ff2f3c5a10597b797544c468f13358.png",
+				"item_set": "caustic_steel",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Young Alchemist's Knot",
+				"defindex": 4945,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Young Alchemist's Knot",
+				"item_description": "Ah, to be young again.  This haircut should help!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/caustic_hair\/caustic_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_hair\/caustic_hair.a10f54acb2dc8021c6d218001e76e925fab816f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_hair\/caustic_hair_large.7d79705dce8ce85a4235a08a7ad430a6e5f1e29f.png",
+				"item_set": "caustic_steel",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ogre's Caustic Steel Bracers",
+				"defindex": 4946,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Ogre's Caustic Steel Bracers",
+				"item_description": "If you're gonna work with unstable materials, make sure you can survive a mistake!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/caustic_bracer\/caustic_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_bracer\/caustic_bracer.8404807b273cba164e668dfe7fff0ec2aac8962f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_bracer\/caustic_bracer_large.f73b2eaffba9960eb79405d8381b0cf14e4cb0bd.png",
+				"item_set": "caustic_steel",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ogre's Caustic Steel Blinders",
+				"defindex": 4947,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Ogre's Caustic Steel Blinders",
+				"item_description": "What it may lack for vision it makes up for in protection.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/caustic_armor\/caustic_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_armor\/caustic_armor.120f7710f65c350f907aa172db4c9b218ed31590.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_armor\/caustic_armor_large.7a82bf3cbd0dc8c925d30b6bfd0267402fe6b0f7.png",
+				"item_set": "caustic_steel",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ogre's Caustic Steel Choppers",
+				"defindex": 4948,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Swords",
+				"item_name": "Ogre's Caustic Steel Choppers",
+				"item_description": "Good for stirring mixtures, great for chopping dinner!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/caustic_weapon\/caustic_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_weapon\/caustic_weapon.f7500fc2678f6f248f11b7014b6cd7a082c3889b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/alchemist\/caustic_weapon\/caustic_weapon_large.3b96e4d465d290d9a9a211660c4d61de479aef5b.png",
+				"item_set": "caustic_steel",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bracers of the Moon Rider",
+				"defindex": 4949,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Bracers of the Moon Rider",
+				"item_description": "The moon shines with mystic lustre on Mirana's forearms...or is it the glow of these polished bracers?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_arms\/sl_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_arms\/sl_arms.d824d9b548cb32c18c7cfa69eaf66d103aa22d5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_arms\/sl_arms_large.e32e985587d9dbecb0f2fa68a8d6c6abce71e2d8.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bow of the Moon Rider",
+				"defindex": 4950,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Bow of the Moon Rider",
+				"item_description": "The power of the lunar lioness purrs  in this bow's enchanted string.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_bow\/sl_bow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_bow\/sl_bow.c3f31c95c8497d44ebb1a8f812e80b1e41b307f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_bow\/sl_bow_large.75916f9b4539ac6d3bc0e34899f15b98ef1066af.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Fluted Guard of the Moon Rider",
+				"defindex": 4951,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Guard",
+				"item_name": "Fluted Guard of the Moon Rider",
+				"item_description": "An emblem of honor, worn with grace but never lightly.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_shoulder\/sl_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_shoulder\/sl_shoulder.c1ef9c3bdea6e57d044a9c21e3ed99c729ce0a7e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_shoulder\/sl_shoulder_large.6dddbcc0b0f247f6d5c786ae1c039d07d3308c2f.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Lion Drape of the Moon Rider",
+				"defindex": 4952,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Drape",
+				"item_name": "Lion Drape of the Moon Rider",
+				"item_description": "The Lion of the Moon cloaks its riders in magic and might.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_cape\/sl_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_cape\/sl_cape.697a231d54237fa361c48648d092b662561cebb3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_cape\/sl_cape_large.4e993182005a299fd5057062f5cb86e723498d4d.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Andalmere the Litigon",
+				"defindex": 4953,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mount",
+				"item_name": "Andalmere the Litigon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_cat\/sl_cat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_cat\/sl_cat.100c5413e6ba34d7b9fbc88186fb52d72579575b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_cat\/sl_cat_large.097f381861c127af54f423be6c4aeb26ecea9dcf.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Tail of the Moon Rider",
+				"defindex": 4954,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Tail of the Moon Rider",
+				"item_description": "A braid with mystic stylings woven into it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_head\/sl_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_head\/sl_head.5eb92810febe70400066500c07d6b87123bae035.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_head\/sl_head_large.c60849da3017e95c4680e8cdec4ca8f9b8eae4a4.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Lion Quiver of the Moon Rider",
+				"defindex": 4955,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Lion Quiver of the Moon Rider",
+				"item_description": "The Lion of the Moon lends is mane and its mein to this quiver.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/sl_quiver\/sl_quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_quiver\/sl_quiver.e747d80ccaa837dc40e3a462cc69bb08c83e039c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/mirana\/sl_quiver\/sl_quiver_large.a4bc07295c89f36d04a41f06fde4f56117442e26.png",
+				"item_set": "moon_rider",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Staff of Wind and Sand",
+				"defindex": 4956,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Staff of Wind and Sand",
+				"item_description": "As wind and sand can wear down a mountain, so too this magical staff can wear down even the greatest foe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/keeper_of_the_light\/keeper_staff\/keeper_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/keeper_staff\/keeper_staff.530fd49335d4ab1a2a058c6ca3afd5a9ff90238f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/keeper_staff\/keeper_staff_large.ab54006f9f9dbac067170801689de39339a5bcd2.png",
+				"item_set": "attributes_foretold",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The 22 Keys of Anzar-Anzuli'i",
+				"defindex": 4957,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Keys",
+				"item_name": "The 22 Keys of Anzar-Anzuli'i",
+				"item_description": "Of these 22 keys, one is the key to the final plane of existence.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/keeper_of_the_light\/keeper_skirt\/keeper_skirt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/keeper_skirt\/keeper_skirt.20f41651657c924e7af412830f7aa1855c09f5cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/keeper_skirt\/keeper_skirt_large.ba91560c8ab00f30169806e220084f51df62c60b.png",
+				"item_set": "attributes_foretold",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Bridle of the Fundamental",
+				"defindex": 4958,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Barding",
+				"item_name": "Bridle of the Fundamental",
+				"item_description": "A bridle of unbridled power!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/keeper_of_the_light\/horse_gear\/horse_gear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/horse_gear\/horse_gear.3d34755b21f7d7b37ac139c5192c642f7557c454.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/horse_gear\/horse_gear_large.6a55d1abfb9d6d2d0915f44ad870117b53279bb6.png",
+				"item_set": "attributes_foretold",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Tinek the Unmastered",
+				"defindex": 4959,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horse",
+				"item_name": "Tinek the Unmastered",
+				"item_description": "Never bowed, never broken, Tinek will find the path to victory.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/keeper_of_the_light\/horse_foretold\/horse_foretold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/horse_foretold\/horse_foretold.a454f5eca09fece3477ae9ae68d86b2744199cec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/horse_foretold\/horse_foretold_large.ec04b731c133824733dea341b50d45d5394f4c44.png",
+				"item_set": "attributes_foretold",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Jewel of Futures Foretold",
+				"defindex": 4960,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Jewel of Futures Foretold",
+				"item_description": "With this jewel upon your brow, the future will be one of great victory.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/keeper_of_the_light\/heeper_hood\/heeper_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/heeper_hood\/heeper_hood.4183eb23d90f0ade376cb07ff72fbdc3188126f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/keeper_of_the_light\/heeper_hood\/heeper_hood_large.157841c7454d5f76e56a770aa41d64f53dc5f3c1.png",
+				"item_set": "attributes_foretold",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36611,6 +37572,48 @@
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/courier\/kupu_courier\/kupu_courier_large.03258248101fc741c5ea8265178e2964e2a1b9f3.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Empower",
+				"defindex": 10173,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Empower",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Cold Depths",
+				"defindex": 10174,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Cold Depths",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -42142,7 +43145,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "GEST Dota 2 - April and May",
-				"item_description": "The Gigabyte E-sports tournament is sponsored by Gigabyte and hosted by DotaTalk. The winneres of 8 GMPGL Qualifiers from South-East Asia will compete against one another for another cash prize of $1500. The winners will then compete against the Top Chinese Teams for another $1500.",
+				"item_description": "The Gigabyte E-sports tournament is sponsored by Gigabyte and hosted by DotaTalk. The winners of 8 GMPGL Qualifiers from South-East Asia will compete against one another for another cash prize of $1500. The winners will then compete against the Top Chinese Teams for another $1500.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_gest_april_may",
@@ -42255,6 +43258,76 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amd_premier_league.d6fedca51416ef953a5c2ea0bc63422ed00d85c3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amd_premier_league_large.e0d7ea63903720d41c5442fcc85e31c77ab22d0f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The International East Qualifiers",
+				"defindex": 15157,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International East Qualifiers",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The International West Qualifiers",
+				"defindex": 15158,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International West Qualifiers",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -46730,8 +47803,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Sacred_Bones_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_sacred_bones_set.c2032f3c1854422443fe6a2195bb241ecc75cf7f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_sacred_bones_set_large.ced0e855991abc75094f35a4a65d588f36321978.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_sacred_bones_set.7390b789e5f36973ba45bf82bd32d767d27f2eec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_sacred_bones_set_large.71b40b59b5581fdaf28e94e05d04a3fef730e38f.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -46788,6 +47861,202 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_skeleton_key_set.3109d4b0717f6ce01590a164e4f867b13a583224.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_skeleton_key_set_large.5386a1606eb4bc9546126ffa4d0d99fe10d0bfc8.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Conquering Tyrant Set",
+				"defindex": 20161,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Conquering Tyrant Set",
+				"item_description": "War kit truly worthy of a conquerer.  This bundle contains all of the items in the 'Conquering Tyrant' set for Centaur Warrunner:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Conquering_Tyrant_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_conquering_tyrant_set.2fbd8ff64015638d7ec6a02dde788d44f4811cfb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_conquering_tyrant_set_large.95a0f0bffdf87fa8d375911ea1da93b30f52b63d.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Penumbral Vesture Set",
+				"defindex": 20162,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Penumbral Vesture Set",
+				"item_description": "This bundle contains all of the items in the 'Penumbral Vesture' set for Phantom Assassin:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Penumbral_Vesture_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_penumbral_vesture_set.faae1dad809589ca6b1139e24a8ff72e242ada2e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_penumbral_vesture_set_large.31f10510768c275a5032a81d500e45d50d9ad1fe.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Battle Caster Set",
+				"defindex": 20163,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Battle Caster Set",
+				"item_description": "This bundle contains all of the items in the 'Battle Caster' set for Lina:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Battle_Caster_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_battle_caster_set.73a7cc1cd637a2126f6c4424e30a6cb4504affcd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_battle_caster_set_large.37a01e6b5b9555fa0e9d8e5a071a0aa2088d2915.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Ancient Sovereign Set",
+				"defindex": 20164,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Ancient Sovereign Set",
+				"item_description": "This set contains all of the items in the 'Ancient Sovereign' set for Sand King:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Ancient_Sovereign_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_ancient_sovereign_set.30afabc0a1cd24f57ce6f437aed5fd0e7f0fcdd3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_ancient_sovereign_set_large.d98b5440ec77ba95c07e79b83581d83e48313543.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Caustic Steel Set",
+				"defindex": 20165,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Caustic Steel Set",
+				"item_description": "This bundle contains all of the items in the 'Caustic Steel' set for Alchemist:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Caustic_Steel_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_caustic_steel_set.425fdab02fc97274fe77e364ab30bbfa4b7f082a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_caustic_steel_set_large.d871396fd8b7582d1f48998f71c0853f1fc1a697.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Moon Rider Set",
+				"defindex": 20166,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Moon Rider Set",
+				"item_description": "This bundle contains all of the items in the 'Moon Rider' set for Mirana:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Moon_Rider_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_moon_rider_set.d76cd03882fb387a477c184709441b6da5b70cc1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_moon_rider_set_large.fb1ff1d222170af9da5efa9abd4ad37c766106f8.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Attributes of the Foretold Set",
+				"defindex": 20167,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Attributes of the Foretold Set",
+				"item_description": "It is a foregone conclusion that you buy this set.  This bundle contains all of the items in the 'Attributes of the Foretold' set for Keeper of the Light:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Attributes_of_the_Foretold_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_attributes_of_the_foretold_set.53dd5ab6679624618c0d51ae32b616421ec0b4a8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_attributes_of_the_foretold_set_large.af5d77d879d304eee0d7e8fa044f067151ea034c.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -47783,6 +49052,19 @@
 				
 			},
 			{
+				"item_set": "ancient_sovereign",
+				"name": "The Ancient Sovereign",
+				"store_bundle": "The Ancient Sovereign Set",
+				"items": [
+					"Stinger of the Ancient Sovereign",
+					"Vestigial Wings of the Ancient Sovereign",
+					"Claw of the Ancient Sovereign",
+					"Sandworn Visage of the Ancient Sovereign",
+					"Crawlers of the Ancient Sovereign"
+				]
+				
+			},
+			{
 				"item_set": "antimage_mage_slayer",
 				"name": "The Mage Slayer",
 				"items": [
@@ -47808,6 +49090,19 @@
 					"Infernal Pauldrons of Apocalyptic Fire",
 					"Demon Blade of Apocalyptic Fire",
 					"Tail Plates of Apocalyptic Fire"
+				]
+				
+			},
+			{
+				"item_set": "attributes_foretold",
+				"name": "Attributes of the Foretold",
+				"store_bundle": "Attributes of the Foretold Set",
+				"items": [
+					"Tinek the Unmastered",
+					"Jewel of Futures Foretold",
+					"Bridle of the Fundamental",
+					"The 22 Keys of Anzar-Anzuli'i",
+					"Staff of Wind and Sand"
 				]
 				
 			},
@@ -47907,6 +49202,18 @@
 				
 			},
 			{
+				"item_set": "battle_caster",
+				"name": "The Battle Caster",
+				"store_bundle": "The Battle Caster Set",
+				"items": [
+					"Vambraces of the Battle Caster",
+					"Cut of the Battle Caster",
+					"Pauldrons of the Battle Caster",
+					"Plates of the Battle Caster"
+				]
+				
+			},
+			{
 				"item_set": "blood_seeker_hlotl",
 				"name": "Ritual Garb of the Seeker",
 				"store_bundle": "Ritual Garb of the Seeker Set",
@@ -47940,10 +49247,10 @@
 				"name": "Spoils of the Bone Ruins",
 				"store_bundle": "Spoils of the Bone Ruins Set",
 				"items": [
-					"Bandanna of the Bone Ruin Bandits",
 					"Bone Ruin Excavator Pack",
 					"Key to the Bone Ruins",
-					"Skull of the Bone Ruins"
+					"Skull of the Bone Ruins",
+					"Bandana of the Bone Ruin Bandits"
 				]
 				
 			},
@@ -48046,6 +49353,19 @@
 				
 			},
 			{
+				"item_set": "caustic_steel",
+				"name": "Caustic Steel",
+				"store_bundle": "Caustic Steel Set",
+				"items": [
+					"Ogre's Caustic Steel Blinders",
+					"Ogre's Caustic Steel Bracers",
+					"Ogre's Caustic Steel Choppers",
+					"Young Alchemist's Knot",
+					"Young Alchemist's Protection"
+				]
+				
+			},
+			{
 				"item_set": "ceremonial_carapace",
 				"name": "Ceremonial Carapace of Qaldin",
 				"store_bundle": "Ceremonial Carapace of Qaldin Set",
@@ -48077,6 +49397,21 @@
 					"Torn Guard of the Vandal",
 					"Dark Quiver of the Vandal",
 					"Demon Guise of the Vandal"
+				]
+				
+			},
+			{
+				"item_set": "conquering_tyrant",
+				"name": "The Conquering Tyrant",
+				"store_bundle": "The Conquering Tyrant Set",
+				"items": [
+					"Spiked Pauldrons of the Conquering Tyrant",
+					"Barding of the Conquering Tyrant",
+					"Belt of the Conquering Tyrant",
+					"Bracers of the Conquering Tyrant",
+					"Braided Tail of the Conquering Tyrant",
+					"Brutal Crescent of the Conquering Tyrant",
+					"Death Mask of the Conquering Tyrant"
 				]
 				
 			},
@@ -48330,7 +49665,7 @@
 					"Empowered Skirt of the Gods",
 					"Empowered Hood of the Gods",
 					"Empowered Staff of the Gods",
-					"Roehrin, the Pale Stallion"
+					"Roehrin the Pale Stallion"
 				]
 				
 			},
@@ -48673,6 +50008,21 @@
 				
 			},
 			{
+				"item_set": "moon_rider",
+				"name": "The Moon Rider",
+				"store_bundle": "The Moon Rider Set",
+				"items": [
+					"Bracers of the Moon Rider",
+					"Bow of the Moon Rider",
+					"Lion Drape of the Moon Rider",
+					"Tail of the Moon Rider",
+					"Lion Quiver of the Moon Rider",
+					"Fluted Guard of the Moon Rider",
+					"Andalmere the Litigon"
+				]
+				
+			},
+			{
 				"item_set": "morphling_birots",
 				"name": "Birot's Bindings",
 				"store_bundle": "Birot's Bindings Set",
@@ -48880,6 +50230,19 @@
 					"Excavator's Treasure",
 					"Femur Thrasher",
 					"Skeletal Catch"
+				]
+				
+			},
+			{
+				"item_set": "penumbral_vesture",
+				"name": "Penumbral Vesture",
+				"store_bundle": "Penumbral Vesture Set",
+				"items": [
+					"Penumbral Crest",
+					"Penumbral Cloak",
+					"Penumbral Hood",
+					"Penumbral Shawl",
+					"Penumbral Warblade"
 				]
 				
 			},

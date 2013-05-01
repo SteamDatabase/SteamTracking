@@ -90,6 +90,7 @@ CChatFriend.prototype.ReadPersonaFields = function( rgFriendData )
 
 	this.m_ePersonaState = rgFriendData.m_ePersonaState;
 	this.m_strAvatarHash = rgFriendData.m_strAvatarHash;
+	this.m_bInGame = rgFriendData.m_bInGame;
 	this.m_nInGameAppID = rgFriendData.m_nInGameAppID;
 	this.m_strInGameName = rgFriendData.m_strInGameName;
 }
@@ -318,7 +319,7 @@ CChatFriend.prototype.BIsOnline = function()
 
 CChatFriend.prototype.BIsInGame = function()
 {
-	return this.m_nInGameAppID ? true : false;
+	return this.m_bInGame ? true : false;
 }
 
 CChatFriend.prototype.GetOnlineState = function()
@@ -333,7 +334,7 @@ CChatFriend.prototype.GetOnlineState = function()
 		case 2:
 		case 5:
 		case 6:
-			if ( this.m_nInGameAppID )
+			if ( this.m_bInGame )
 				return 'in-game';
 			else
 				return 'online';
@@ -345,7 +346,7 @@ CChatFriend.prototype.GetOnlineState = function()
 
 CChatFriend.prototype.GetStateSortValue = function()
 {
-	if ( this.m_nInGameAppID )
+	if ( this.m_bInGame )
 		return 2;
 	else if ( this.m_ePersonaState != 0 )
 		return 1;
@@ -355,9 +356,12 @@ CChatFriend.prototype.GetStateSortValue = function()
 
 CChatFriend.prototype.GetStatusDescription = function()
 {
-	if ( this.m_ePersonaState != 0 && this.m_nInGameAppID )
+	if ( this.m_bInGame )
 	{
-		return 'In-Game<br>' + this.m_strInGameName;
+		if ( this.m_nInGameAppID )
+			return 'In-Game<br>' + this.m_strInGameName;
+		else
+			return 'In non-Steam game<br>' + this.m_strInGameName;
 	}
 	else
 	{

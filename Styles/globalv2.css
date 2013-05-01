@@ -58,7 +58,7 @@ a.hoverunderline:hover {
 	text-decoration: underline;
 }
 
-a.whiteLink:hover, .whiteLink:hover {
+a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover {
 	color: #ffffff;
 	text-decoration: underline;
 }
@@ -160,6 +160,14 @@ a.friendBlock {
 }
 
 
+/* used to display the " - public" next to a group name */
+.pubGroup {
+	font-size:11px;
+	color:#d05f29;
+	font-weight:bold;
+}
+
+
 .perf_timing_link {
 	display: block;
 	text-align: center;
@@ -209,6 +217,25 @@ a.pagelink:hover {
 	text-decoration: underline;
 	color: #ffffff;
 }
+
+
+/* note that the old gameLogoHolder_default style does nothing now */
+
+.gameLogo {
+	width:184px;
+	height:69px;
+	border:0;
+	padding: 4px;
+	margin:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/gamelogoholder_default.jpg');
+}
+
+.gameLogo img {
+	border:0;
+	width:184px;
+	height:69px;
+}
+
 
 
 

@@ -63,6 +63,40 @@ function DoUnpackGift( gidGift, packageid, packagename )
 	} );
 }
 
+function DeleteGift( gidGift )
+{
+	ShowConfirmDialog(
+			'Delete gift',
+			'Are you sure you want to permanently delete this gift?',
+			'Delete gift',
+			'Cancel'
+	).done( function() {
+		new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + 'delete', {
+			method: 'post',
+			parameters: { sessionid: g_sessionID },
+			onSuccess: function( transport ) { OnDeleteGiftResults( gidGift, transport ); },
+			onFailure: function( transport ) { ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' ); }
+		} );
+	} );
+}
+
+function OnDeleteGiftResults( gidGift, transport )
+{
+	if ( transport.responseJSON && transport.responseJSON.success == 1 )
+	{
+		UserYou.ReloadInventory( 753, 1 );
+		ShowAlertDialog(
+				'Delete gift',
+				'Success',
+				'OK'
+		);
+	}
+	else
+	{
+		ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' );
+	}
+}
+
 function DoAcceptGift( gidGift, bUnpack )
 {
 	ShowWaiting( gidGift, $('gift' + gidGift + '_step_accept'),  $('gift' + gidGift + '_step_wait') );

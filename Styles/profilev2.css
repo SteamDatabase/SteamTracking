@@ -39,7 +39,6 @@ div.profile_page.has_profile_background {
 
 	padding-top: 24px;
 	height: 200px;
-
 }
 
 .profile_header_content {
@@ -72,6 +71,10 @@ div.profile_page.has_profile_background {
 	right: 0;
 	top: 0;
 	width: 268px;
+}
+
+.profile_header_actions {
+	white-space: nowrap;
 }
 
 .profile_header .persona_name {
@@ -1178,6 +1181,30 @@ a.showcase_stat:hover .label {
 	font-size: 12px;
 }
 
+body .pagecontent.profile_subpage_column {
+	padding-bottom: 0;
+}
+
+.profile_subpage_column .profile_small_header_bg {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg_column.png' );
+	height: 111px;
+	margin-bottom: 0;
+}
+
+.profile_subpage_column .profile_header {
+	height: 87px;
+}
+
+.profile_subpage_column .maincontent {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column.png' );
+	background-repeat: repeat-y;
+	background-position: center;
+	width: 950px;
+
+	padding-top: 12px;
+	padding-bottom: 128px;
+}
+
 .profile_topfriends .friendBlock {
 	background: none;
 }
@@ -1369,39 +1396,29 @@ a.showcase_stat:hover .label {
 }
 
 .badge_card_set_section {
-	padding: 10px;
+	padding: 2px;
 	border-top: solid 1px #33485d;
 	background: -moz-linear-gradient(top, #282c2f 5%, #1d1e20 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#282c2f), color-stop(95%,#1d1e20));background: -webkit-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -o-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -ms-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: linear-gradient(to bottom, #282c2f 5%,#1d1e20 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282c2f', endColorstr='#1d1e20',GradientType=0 );}
 
 .badge_card_set_card {
 	float: left;
-	width: 208px;
-	height: 268px;
-	margin-left: 16px;
+	margin-left: 3px;
 	margin-bottom: 18px;
 }
 
 .badge_card_set_owned {
-	width: 208px;
-	height: 232px;
 }
 
 .badge_card_set_owned img {
-	width: 208px;
-	height: 232px;
 }
 
 .badge_card_set_unowned {
 	border: dashed 1px #504b45;
 	background-color: #101010;
-	width: 208px;
-	height: 232px;
 }
 
 .badge_card_set_unowned img {
 	opacity: 0.1;
-	width: 208px;
-	height: 232px;
 }
 
 .badge_card_set_text {
@@ -1567,8 +1584,8 @@ a.showcase_stat:hover .label {
 .game_card_hover {
 	z-index: 100;
 	position: absolute;
-	width: 208px;
-	height: 232px;
+	width: 232px;
+	height: 267px;
 }
 
 .game_card_hover:hover {
@@ -1576,8 +1593,8 @@ a.showcase_stat:hover .label {
 	background-position: center;
 	z-index: 100;
 	position: absolute;
-	width: 208px;
-	height: 232px;
+	width: 232px;
+	height: 267px;
 }
 
 .gamecard_progress_body {
@@ -1721,7 +1738,6 @@ a.showcase_stat:hover .label {
 body.migrated_profile_page #BG_bottom {
 	background: none;
 }
-
 
 .saved_changes_msg {
 	border: 1px solid #549cd7;
@@ -1869,6 +1885,7 @@ a.graytab:hover {
 
 a.manage_friend_link {
 	display: block;
+	min-height: 40px;
 }
 
 .profile_friends .friendBlock {
@@ -1876,8 +1893,6 @@ a.manage_friend_link {
 	float: left;
 	width: 290px;
 	margin-right: 8px;
-
-	cursor: default;
 }
 
 .profile_friends .friendBlock:nth-child(3n) {
@@ -1889,10 +1904,37 @@ a.manage_friend_link {
 }
 
 .friendPlayerLevel {
-	float: right;
 	margin: 6px 6px 0px 2px;
 	font-size: 16px;
 	border-radius: 50%;
 	padding: 4px;
-	border: solid grey 2px;
+	border: solid white 2px;
+}
+
+.friendPlayerLevel a.friendPlayerLevelNum {
+	color: #9b9b9b;
+}
+
+.friendPlayerLevel.lvl_0 {
+	border: solid #9b9b9b 2px;
+}
+
+.friendPlayerLevel.lvl_10 {
+	border: solid #d96063 2px;
+}
+
+.friendPlayerLevel.lvl_20 {
+	border: solid #cecd70 2px;
+}
+
+.friendPlayerLevel.lvl_30 {
+	border: solid #7652c9 2px;
+}
+
+.friendPlayerLevel.lvl_40 {
+	border: solid #7dae3d 2px;
+}
+
+.friendPlayerLevel.lvl_50 {
+	border: solid #5491cf 2px;
 }

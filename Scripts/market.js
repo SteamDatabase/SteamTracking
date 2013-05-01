@@ -64,11 +64,10 @@ RemoveListingDialog = {
 		$('market_removelisting_dialog_accept_throbber').fade({ duration: 0.25, from: 0, to: 1 });
 		
 		var listingid = this.m_ulListingId;
-		new Ajax.Request( 'http://steamcommunity.com/market/removelisting/', {
+		new Ajax.Request( 'http://steamcommunity.com/market/removelisting/' + listingid, {
 			method: 'post',
 			parameters: {
-				sessionid: g_sessionID,
-				listingid: listingid
+				sessionid: g_sessionID
 			},
 			onSuccess: function( transport ) { RemoveListingDialog.OnSuccess( transport ); },
 			onFailure: function( transport ) { RemoveListingDialog.OnFailure( transport ); }
@@ -346,11 +345,10 @@ BuyItemDialog = {
 		$('market_buynow_dialog_purchase_throbber').fade({ duration: 0.25, from: 0, to: 1 });
 
 		var listingid = this.m_ulListingId;
-		new Ajax.Request( 'http://steamcommunity.com/market/buylisting/', {
+		new Ajax.Request( 'http://steamcommunity.com/market/buylisting/' + listingid, {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
-				listingid: listingid,
 				currency: g_rgWalletInfo['wallet_currency'],
 				subtotal: this.m_nSubtotal,
 				fee: this.m_nFeeAmount,
