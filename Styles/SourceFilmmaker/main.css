@@ -1,0 +1,277 @@
+html, body, * {
+	font-family:arial,helvetica,sans-serif;
+	font-size:14px;
+}
+
+body {
+
+	background: #010101 url('images/bg.jpg') no-repeat center top;
+	margin:0;
+	padding:0;
+	color: #726e68;
+}
+
+p {
+	line-height: 20px;
+}
+
+a,a:hover,a:visited,a:active {
+	color:#b7b7b7;
+	text-decoration:none;
+	border: none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+#page {
+	background: #131313 url('images/inner_bg.jpg') no-repeat center top;
+	width: 906px;
+	border-right: 1px #292929 solid;
+	border-top: 1px #292929 solid;
+	margin: 60px auto 10px auto;
+	box-shadow: 0 0 40px #000
+}
+
+#footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 906px;
+	height: 180px;
+}
+
+#legal {
+	color:#3b3b36;
+	float:left;
+	padding-left:10px;
+	font-size:12px;
+	padding-top:8px;
+}
+
+#valve_logo {
+	float:left;
+}
+
+#leftcol {
+	padding: 60px 35px 0 35px;
+	width: 555px;
+	float: left;
+}
+	#leftcol .linkbar {
+		color: #a89368;
+		padding-bottom:40px;
+	}
+
+	#leftcol .linkbar a {
+		color: #a89368;
+	}
+
+	#leftcol .linkbar p {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 10px;
+	}
+
+	#leftcol h1 {
+		font-size: 32px;
+		color: #eae9e5;
+		font-weight: normal;
+		margin: 60px 0 0 0;
+	}
+	
+	#leftcol .datetime {
+		color: #a89368;
+		margin: 1px 0 30px 0;
+	}
+
+	#leftcol .caption {
+		color: #524f4b;
+		font-size: 11px;
+		margin-top: 3px;
+	}
+
+#rightcol {
+	width: 246px;
+	float: left;
+	padding-top: 60px;
+	line-height:18px;
+}
+	#rightcol .sfmlogo {
+		margin-bottom: 145px;
+	}
+
+	#rightcol .demo {
+		margin-bottom: 13px;
+	}
+
+	#rightcol h1 {
+		font-weight: normal;
+		color: #eae9e5;
+		font-size: 14px;
+		margin: 20px 0 4px 0;
+	}
+
+	#rightcol p {
+		margin: 0 0 10px 0;
+	}
+	
+	
+	#rightcol a {
+		color: #a89368;
+	}
+	
+	#rightcol .get_steam_link {
+		margin: 0 0 10px 0;
+		line-height:18px;
+	}
+
+
+	#rightcol .wiki_link {
+		background: url(images/wiki_bg.jpg);
+		width: 281px;
+		height: 55px;
+		margin: 10px 0 10px 0;
+		display: block;
+	}
+	#rightcol .faq_link {
+		background: url(images/faq_bg.jpg);
+		width: 281px;
+		height: 55px;
+		margin: 10px 0 10px 0;
+		display: block;
+	}
+	#rightcol .showcase_link {
+		background: url(images/showcase_bg.jpg);
+		width: 281px;
+		height: 55px;
+		margin: 10px 0 10px 0;
+		display: block;
+	}
+	#rightcol .steam_link {
+		background: url(images/steam_bg.jpg);
+		width: 281px;
+		height: 55px;
+		margin: 10px 0 10px 0;
+		display: block;
+	}	
+	#rightcol .tutorials_link {
+		background: url(images/tutorials_bg.jpg);
+		width: 281px;
+		height: 55px;
+		margin: 10px 0 10px 0;
+		display: block;
+	}
+	#rightcol .faq_link div {
+		color: #b09e6f;
+		padding: 9px 0 0 55px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#rightcol .tutorials_link div {
+		color: #b09e6f;
+		padding: 9px 0 0 55px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#rightcol .showcase_link div {
+		color: #b09e6f;
+		padding: 9px 0 0 55px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#rightcol .steam_link div {
+		color: #b09e6f;
+		padding: 9px 0 0 55px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#rightcol .wiki_link div {
+		color: #b09e6f;
+		padding: 9px 0 0 55px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	
+.clear {
+	clear: both;
+}
+
+.linkdetail {
+	color:#726447;
+	font-size:12px;
+	padding-left:55px;
+}
+
+.steam_link:hover {
+	background-position:bottom;
+}
+
+.nodeco:hover {
+	text-decoration: none;
+}
+
+.button:hover {
+	background-position:bottom;
+}
+
+#signup {
+		background-image:url(images/signup_button.png);
+		width:246px;
+		height:52px;
+		margin-bottom:16px;
+		display:block;
+	}
+	
+#install {
+		background-image:url(images/install_button.png);
+		width:246px;
+		height:52px;
+		margin-bottom:16px;
+		display:block;
+	}
+	
+#watch_demo {
+		background-image:url(images/watch_demo.jpg);
+		width:246px;
+		height:139px;
+		margin-bottom:16px;
+		display:block;
+}
+
+.question {
+	font-size:16px;
+	color:#CCC;
+	padding-bottom:4px;
+	line-height:24px;
+}
+
+#question_01 {
+	font-size:16px;
+	color:#CCC;
+	padding-bottom:4px;
+	margin-top:60px;
+}
+
+
+.answer {
+	padding-bottom:18px;
+	font-size:14px;
+	line-height:20px;
+}
+
+.answer a {
+	color: #a89368;
+}
+
+li {
+	line-height:20px;
+}
+
+
+
+/* CSS sprites */
+.socialnetworking { background: url(images/sn_sprite.png) no-repeat top left; display: inline-block; margin: 0 3px 0 3px; }
+.socialnetworking.facebook{ background-position: 0 0; width: 17px; height: 17px; }
+.socialnetworking.rss{ background-position: 0 -18px; width: 17px; height: 17px; }
+.socialnetworking.twitter{ background-position: 0 -36px; width: 17px; height: 17px; }
