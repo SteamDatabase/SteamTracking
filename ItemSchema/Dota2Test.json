@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.31782d4ae9e4975d258848e65b9aafb8a4715f48.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.0925f6df5609ad2fc194a74d10ef6a7a389af364.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10684,14 +10684,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
 				"item_name": "Taunt: Come and Get It!",
-				"item_description": "",
+				"item_description": "Axe requests more fools to slaughter!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/axe\/axe_come_get_it_taunt",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Come_and_Get_It",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it.1dcc1ebd06a31f221bfb3c3a83d9b58b784acccb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it_large.298d08de6adfd18e50bec88c778addf2e60a40fb.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -10710,14 +10710,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
 				"item_name": "Taunt: Spider Shuffle",
-				"item_description": "Broodmother Spin Taunt",
+				"item_description": "Celebrate a critical push or an enemy team wipe with this spidery dance. \r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/broodmother\/broodmother_spin_taunt",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Spider_Shuffle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle.ccc7f7bf714b075b9b7b4757feb54c2d815d7c95.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle_large.1d068ec2f3aa18efa7fade38123f4f4c6bd21df0.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -10958,19 +10958,19 @@
 				}
 			},
 			{
-				"name": "Taunt: The Jig",
+				"name": "Taunt: Celebration of Death",
 				"defindex": 4054,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Taunt: The Jig",
-				"item_description": "Witchdoctor Victory Dance Taunt.",
+				"item_type_name": "Taunt",
+				"item_name": "Taunt: Celebration of Death",
+				"item_description": "Draw the eye of the ancestors upon your victory!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/witchdoctor\/witchdoctor_jig_taunt",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_The_Jig",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_jig.509891da400945667e4636de5038acd4eab0bb84.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_jig_large.d6186d16cd66a9526ebde2b08129566cbdb4a4d6.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11067,14 +11067,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
 				"item_name": "Taunt: Shredding the Lute Invisible",
-				"item_description": "Nature's Prophet rocks some tasty licks in honor of your death.",
+				"item_description": "Celebrate a critical push or an enemy team wipe by shredding some hot licks.\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/furion\/taunt_guitar",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Shredding_the_Lute_Invisible",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible.806bb92141b910b063386f9162f5c4d2e7770702.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible_large.b914ed6a7dec82662d7fa78b9cb2f921f140b4f7.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11093,14 +11093,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
 				"item_name": "Taunt: For Death and Honor",
-				"item_description": "Show your enemy your respect.",
+				"item_description": "Show your enemy your respect for their honorable deaths.\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/juggernaut\/taunt_bow",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_For_Death_and_Honor",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor.c56c5c416f304455f5b1b558f82036645bc8cca2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor_large.96e1d095fdb1dace2e89ee583094b72eb2f6ebc5.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11300,19 +11300,19 @@
 				}
 			},
 			{
-				"name": "Taunt: Vaudville Victory Dance",
+				"name": "Taunt: Victory Jig",
 				"defindex": 4067,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
-				"item_name": "Taunt: Vaudville Victory Dance",
-				"item_description": "This new item has no description.",
+				"item_name": "Taunt: Victory Jig",
+				"item_description": "Who knew he could dance?\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/furion\/taunt_dance",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Vaudville_Victory_Dance",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance.3b0d9678a6c0b2a4cd6a90eae5a7c4d786194d3d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance_large.f70b84aea063d2d30955978c92e0ce07a1098a9d.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -32700,6 +32700,116 @@
 				}
 			},
 			{
+				"name": "Hammer of the Skygods",
+				"defindex": 4961,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hammer",
+				"item_name": "Hammer of the Skygods",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/disruptor\/dsrptr12\/dsrptr12",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Tear of Agony",
+				"defindex": 4962,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "The Tear of Agony",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Stalwart Sentinel",
+				"defindex": 4963,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Stalwart Sentinel",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gloomblade",
+				"defindex": 4964,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Gloomblade",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Cursed Crescent",
+				"defindex": 4965,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "The Cursed Crescent",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -37619,6 +37729,45 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Treasure of the Malignant Amanita",
+				"defindex": 10175,
+				"item_class": "supply_crate",
+				"item_type_name": "Treasure",
+				"item_name": "Treasure of the Malignant Amanita",
+				"item_description": "A chest that seems mildly poisonous to the touch. The contents are unknown.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/fungal_crate",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/fungal_crate.839796fab36ada03b78ca04ae5e7d4ece52ffecc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/fungal_crate_large.3c991c27aaded3296a62a37caac519ae8bdd183f.png",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_pack_5"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 31.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Name Tag",

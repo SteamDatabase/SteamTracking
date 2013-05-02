@@ -9553,6 +9553,139 @@
 				}
 			}
 		}
+		"4043"
+		{
+			"name"		"Taunt: Come and Get It!"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_Come_and_Get_It"
+			"item_slot"		"taunt"
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"come_get_it"
+				}
+			}
+			"item_description"		"#DOTA_Item_Desc_Taunt_Come_and_Get_It"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Come_and_Get_It"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_axe"		"1"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"231.828979 -163.964233 140.931183"
+					"PortraitLookAt"		"10.887451 150.661011 0.000000"
+					"PortraitFOV"		"73.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"115.177216 -61.631599 197.718262"
+					"PortraitLightLookAt"		"44.423218 107.166138 331.847534"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"170.000000"
+					"PortraitLightColor"		"0.390000 0.300000 0.190000"
+					"PortraitShadowColor"		"0.000000 0.000000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-53.360001 10.600000 29.570000"
+					"PortraitAmbientColor"		"0.130000 0.130000 0.130000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor3"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundColor4"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"broodmother_portrait"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.856000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
+		"4044"
+		{
+			"name"		"Taunt: Spider Shuffle"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_Spider_Shuffle"
+			"item_slot"		"taunt"
+			"item_rarity"		"mythical"
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"item_description"		"#DOTA_Item_Desc_Taunt_Spider_Shuffle"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Spider_Shuffle"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"broodmother_spin"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_broodmother"		"1"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"386.253204 234.142166 151.963699"
+					"PortraitLookAt"		"12.491455 211.047363 0.000000"
+					"PortraitFOV"		"46.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"116.969498 182.768417 192.202118"
+					"PortraitLightLookAt"		"22.565918 263.144531 331.847534"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"170.000000"
+					"PortraitLightColor"		"0.390000 0.300000 0.190000"
+					"PortraitShadowColor"		"0.000000 0.000000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-53.360001 10.600000 29.570000"
+					"PortraitAmbientColor"		"0.130000 0.130000 0.130000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor3"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundColor4"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"broodmother_portrait"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.176000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
 		"4049"
 		{
 			"name"		"Dress of the Corpse Maiden"
@@ -9684,6 +9817,206 @@
 					"PortraitHideHero"		"1"
 				}
 			}
+		}
+		"4054"
+		{
+			"name"		"Taunt: Celebration of Death"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_Celebration_of_Death"
+			"item_slot"		"taunt"
+			"item_description"		"#DOTA_Item_Desc_Taunt_Celebration_of_Death"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_The_Jig"
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_witch_doctor"		"1"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"witchdoctor_jig"
+				}
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"276.144684 51.603580 130.361282"
+					"PortraitLookAt"		"1.054688 191.552124 0.000000"
+					"PortraitFOV"		"79.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"115.177216 -61.631599 197.718262"
+					"PortraitLightLookAt"		"44.423218 107.166138 331.847534"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"170.000000"
+					"PortraitLightColor"		"0.390000 0.300000 0.190000"
+					"PortraitShadowColor"		"0.000000 0.000000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-53.360001 10.600000 29.570000"
+					"PortraitAmbientColor"		"0.130000 0.130000 0.130000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor3"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundColor4"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"broodmother_portrait"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.268000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
+		"4058"
+		{
+			"name"		"Taunt: Shredding the Lute Invisible"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_Shredding_the_Lute_Invisible"
+			"item_slot"		"taunt"
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"item_description"		"#DOTA_Item_Desc_Taunt_Shredding_the_Lute_Invisible"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Shredding_the_Lute_Invisible"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_furion"		"1"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"guitar"
+				}
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"161.180984 142.049850 177.336105"
+					"PortraitLookAt"		"13.123169 215.348511 0.000000"
+					"PortraitFOV"		"83.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"88.758736 24.213308 231.636826"
+					"PortraitLightLookAt"		"57.233276 179.143066 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"145.000000"
+					"PortraitLightColor"		"0.395294 0.395294 0.395294"
+					"PortraitShadowColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowScale"		"0.040000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-43.880001 41.439999 66.559998"
+					"PortraitAmbientColor"		"0.250000 0.170000 0.040000"
+					"PortraitAmbientScale"		"0.500000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.500000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.500000 0.200000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.212000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_rarity"		"mythical"
+		}
+		"4059"
+		{
+			"name"		"Taunt: For Death and Honor"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_For_Death_and_Honor"
+			"item_slot"		"taunt"
+			"item_description"		"#DOTA_Item_Desc_Taunt_For_Death_and_Honor"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_For_Death_and_Honor"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_juggernaut"		"1"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"loser"
+					"frequency"		"1"
+				}
+			}
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"393.360931 -268.975159 160.386978"
+					"PortraitLookAt"		"12.738647 142.333374 0.000000"
+					"PortraitFOV"		"26.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"115.177216 -61.631599 197.718262"
+					"PortraitLightLookAt"		"44.423218 107.166138 331.847534"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"170.000000"
+					"PortraitLightColor"		"0.390000 0.300000 0.190000"
+					"PortraitShadowColor"		"0.000000 0.000000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-53.360001 10.600000 29.570000"
+					"PortraitAmbientColor"		"0.130000 0.130000 0.130000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor3"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundColor4"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"broodmother_portrait"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.708000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_rarity"		"mythical"
 		}
 		"4062"
 		{
@@ -9925,6 +10258,79 @@
 					"PortraitHideHero"		"1"
 				}
 			}
+		}
+		"4067"
+		{
+			"name"		"Taunt: Victory Jig"
+			"prefab"		"wearable"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"usable"		"1"
+			}
+			"item_type_name"		"#DOTA_WearableType_Taunt"
+			"item_name"		"#DOTA_Item_Taunt_Victory_Jig"
+			"item_slot"		"taunt"
+			"item_description"		"#DOTA_Item_Desc_Taunt_Victory_Jig"
+			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Vaudville_Victory_Dance"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_furion"		"1"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_TAUNT"
+					"modifier"		"happy_dance"
+				}
+				"asset_modifier1"
+				{
+					"type"		"speech"
+					"asset"		"TLK_DOTA_TAUNT"
+					"modifier"		"#DOTA_Chat_Taunt"
+				}
+			}
+			"tool"
+			{
+				"type"		"hero_taunt"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"305.527374 3.471687 113.402290"
+					"PortraitLookAt"		"355.880127 176.956787 0.000000"
+					"PortraitFOV"		"85.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"115.177216 -61.631599 197.718262"
+					"PortraitLightLookAt"		"44.423218 107.166138 331.847534"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"170.000000"
+					"PortraitLightColor"		"0.390000 0.300000 0.190000"
+					"PortraitShadowColor"		"0.000000 0.000000 0.000000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-53.360001 10.600000 29.570000"
+					"PortraitAmbientColor"		"0.130000 0.130000 0.130000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor3"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundColor4"		"0.200000 0.000000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"broodmother_portrait"
+					"PortraitAnimationActivity"		"6"
+					"PortraitAnimationCycle"		"0.756000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_rarity"		"mythical"
 		}
 		"4069"
 		{
@@ -63813,6 +64219,36 @@
 					"frequency"		"1"
 				}
 			}
+		}
+		"10175"
+		{
+			"name"		"Treasure of the Malignant Amanita"
+			"prefab"		"treasure_chest"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"31"
+					"force_gc_to_generate"		"1"
+				}
+			}
+			"tool"
+			{
+				"type"		"supply_crate"
+				"restriction"		"community_pack_5"
+			}
+			"item_type_name"		"#DOTA_WearableType_Treasure"
+			"item_name"		"#DOTA_Item_Treasure_of_the_Malignant_Amanita"
+			"item_description"		"#DOTA_Item_Desc_Treasure_of_the_Malignant_Amanita"
+			"image_inventory"		"econ/tools/fungal_crate"
+			"creation_date"		"2013-05-01"
+			"sound_material"		"1"
 		}
 		"15000"
 		{
