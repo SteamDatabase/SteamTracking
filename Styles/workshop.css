@@ -2166,6 +2166,10 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	padding-right: 8px;
 }
 
+	.workshopItemDescription img {
+		max-width: 630px;
+	}
+
 .workshopItemRevision {
 	color: #494947;
 }
