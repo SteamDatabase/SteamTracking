@@ -130,12 +130,23 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	
 	try 
 	{
+		var phoneNumber = $('mobile_number').value;
+		var re = new RegExp(/^\+7|^\+38/ );
+		var m = re.exec(phoneNumber);
+		
+		phoneNumber = phoneNumber.replace( m, "" );
+		// strip out non-digits
+		phoneNumber = phoneNumber.replace(/\D/g, "" );
+		
+		// add the country code back
+		phoneNumber = m + phoneNumber;
+
 		new Ajax.Request('https://store.steampowered.com/checkout/qiwiinvoice/',
 		{
 		    method:'post',
 		    parameters: { 
 				// Info for all carts
-				'phone' : $('mobile_number').value.replace(/^\s*\+7/, "").replace(/\D/g, ""),
+				'phone' : phoneNumber,
 				'transid' : $('transaction_id').value
 			},
 			onSuccess: function(transport)
@@ -2395,22 +2406,33 @@ function SubmitPaymentInfoForm()
 		{
 			// Expect 10 digits, we'll make sure we at least have that many digits
 			var num = $( 'mobile_number').value;
-
-			// also ignore +7 if it starts with that
-			num = num.replace(/^\s*\+7/, "");
-			num = num.replace(/\D/g, "");
-
-			var digitsFound = 0;
-			for ( i = 0; i < num.length; ++i )
-			{
-				var c = num.charAt(i);
-				if ( c >= '0' && c <= '9' )
-					++digitsFound;
-			}
-			if ( digitsFound != 10 )
+			
+			// check to make sure qiwi phone number starts with +7 or +38
+			var re = new RegExp(/^\+7|^\+38/ );
+			var m = re.exec(num);
+		
+			if ( m == null )
 			{
 				errorString += 'Please enter your 10 digit mobile account number.<br/>';
 				rgBadFields.mobile_number_label = true;
+			}
+			else
+			{
+				num = num.replace( m, "" );
+				num = num.replace(/\D/g, "");
+			
+				var digitsFound = 0;
+				for ( i = 0; i < num.length; ++i )
+				{
+					var c = num.charAt(i);
+					if ( c >= '0' && c <= '9' )
+						++digitsFound;
+				}
+				if ( digitsFound != 10 )
+				{
+					errorString += 'Please enter your 10 digit mobile account number.<br/>';
+					rgBadFields.mobile_number_label = true;
+				}
 			}
 
 			if ( !$('verify_country_only').checked )
