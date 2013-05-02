@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.0925f6df5609ad2fc194a74d10ef6a7a389af364.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.699a475320f29eacb3ca98ea45bd5c66cb1d7064.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -32680,7 +32680,7 @@
 				"name": "Jewel of Futures Foretold",
 				"defindex": 4960,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
+				"item_type_name": "Turban",
 				"item_name": "Jewel of Futures Foretold",
 				"item_description": "With this jewel upon your brow, the future will be one of great victory.",
 				"proper_name": false,
