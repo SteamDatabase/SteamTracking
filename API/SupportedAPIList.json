@@ -303,6 +303,26 @@
 						
 					},
 					{
+						"name": "GetScheduledLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
 						"name": "GetTeamInfoByTeamID",
 						"version": 1,
 						"httpmethod": "GET",
@@ -884,6 +904,20 @@
 						"httpmethod": "GET",
 						"parameters": [
 
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
 						]
 						
 					}
