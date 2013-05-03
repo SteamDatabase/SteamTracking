@@ -255,7 +255,9 @@
 		"cosmetic"
 		{
 			"public_prefab"			"1"
-			"triangle_budget"		"1400"
+			"triangle_budget_lod0"	"1400"
+			"triangle_budget_lod1"	"1000"
+			"triangle_budget_lod2"	"700"
 			"qc_template"			"scripts/itemtest_qc_template.txt"
 			"loadondemand"			"1"
 			"capabilities"
