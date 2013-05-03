@@ -1794,6 +1794,10 @@ div.early_access_announcements {
 	background-color: #000;
 }
 
+.highlight_movie.container {
+	height: 529px;
+}
+
 .html5_video_overlay {
 	position: absolute;
 	bottom: 0px;
