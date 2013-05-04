@@ -68252,7 +68252,7 @@
 			"item_description"		"#DOTA_Item_Desc_The_International_East_Qualifiers"
 			"image_inventory"		"econ/testitem_slot_empty"
 			"creation_date"		"2013-04-30"
-			"tournament_url"		"http://blog.dota2.com/"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_eastqualifier_ingame"
 		}
 		"15158"
@@ -68274,8 +68274,53 @@
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
 			"image_inventory"		"econ/testitem_slot_empty"
 			"creation_date"		"2013-04-30"
-			"tournament_url"		"http://blog.dota2.com/"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
+		}
+		"15160"
+		{
+			"name"		"Curse Dota 2 Invitational"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"41"
+					"order"		"20"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational"
+			"item_description"		"#DOTA_Item_Desc_Curse_Dota_2_Invitational"
+			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
+			"creation_date"		"2013-05-03"
+			"tournament_url"		"http://www.curse.com/news/dota-2/48217-team-brackets-announced-curse-dota-2-invitational"
+			"image_banner"		"econ/leagues/subscriptions_curse_invitational_banner"
+		}
+		"15161"
+		{
+			"name"		"Curse Dota 2 Invitational - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"41"
+					"order"		"20"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Curse_Dota_2_Invitational"
+			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
+			"creation_date"		"2013-05-03"
+			"tournament_url"		"http://www.curse.com/news/dota-2/48217-team-brackets-announced-curse-dota-2-invitational"
+			"image_banner"		"econ/leagues/subscriptions_curse_invitational_banner"
 		}
 		"20000"
 		{

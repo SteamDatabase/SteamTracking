@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.699a475320f29eacb3ca98ea45bd5c66cb1d7064.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.fa68db1e9fd22ddf1b56eee5ffbb9b004c38d1c4.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37714,7 +37714,7 @@
 				"defindex": 10174,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Cold Depths",
+				"item_name": "DOTA_Item_Cold_Depths",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -43477,6 +43477,111 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "International 2013 Ticket",
+				"defindex": 15159,
+				"item_class": "tool",
+				"item_type_name": "Tournament Ticket",
+				"item_name": "International 2013 Ticket",
+				"item_description": "This item is an invitation to personally attend the Dota 2 International Tournament, August 31 - September 2 2012, in Seattle, WA. Attendees will receive preferential seating on the show floor.<br><br>This ticket must be activated from your in-game backpack. Once activated, the ticket will be consumed and removed from your backpack and registered on your Steam account. Ticket information will be emailed no later than June 30th, 2012 to the email address associated with your Steam account.<br><br>This purchase also includes a tradable Dota 2 Invite that grants access to the game (PC only).",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/international_invite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite.eec9938027559aa898919171c2582445fe6476ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite_large.9856b583651542165eb5027eac72faf672ee1bcb.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Curse Dota 2 Invitational",
+				"defindex": 15160,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Curse Dota 2 Invitational",
+				"item_description": "The Curse Dota 2 Invitational, sponsored by Alienware, is an invitational bracket tournament that spans 3 weekends. 8 Teams were invited to compete in a double elimination format with a $10,000 prize pool. (1st $5,000 2nd $3,000 3rd $2,000)",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_curse_invitational",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_curse_invitational.95feb9e2711d688f8ca477ba4a9cf39475e36c59.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_curse_invitational_large.2790ba6fc921b436921efaeb2ca7369c169ab983.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Curse Dota 2 Invitational - ADMIN",
+				"defindex": 15161,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Curse Dota 2 Invitational - ADMIN",
+				"item_description": "The Curse Dota 2 Invitational, sponsored by Alienware, is an invitational bracket tournament that spans 3 weekends. 8 Teams were invited to compete in a double elimination format with a $10,000 prize pool. (1st $5,000 2nd $3,000 3rd $2,000)",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_curse_invitational",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_curse_invitational.95feb9e2711d688f8ca477ba4a9cf39475e36c59.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_curse_invitational_large.2790ba6fc921b436921efaeb2ca7369c169ab983.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
