@@ -71,6 +71,13 @@
 	background: transparent url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/bg_highlight_blue_transparent_darker.png') top center no-repeat;
 }
 
+#BG_bottom.paymentinfo_background {
+	background: none;
+	width: 950px;
+	margin: 0 auto 0 auto;
+	text-align:left;
+}
+
 #ig_bottom.smallheader {
 	background: transparent url('http://cdn.steamcommunity.com/public/images/sharedfiles/ig/bg_highlight_blue_transparent_darker.png') top center no-repeat;
 }
@@ -1302,9 +1309,35 @@ a.instructionsBtn:hover {
 
 .workshop_paymentinf_english_only
 {
-	color: white;
-	font-size: 1.25em;
-	text-align: center;
+	color: #ff9900;
+	font-size: 17px;
+	padding: 16px 16px 0px 0px;
+}
+
+.paymentinfo_background input[type=text]
+{
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+	top: 0px;
+}
+
+.paymentinfo_background select
+{
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+	margin-left: 2px;
 }
 
 .smallForm {
@@ -1329,16 +1362,21 @@ a.instructionsBtn:hover {
 	width:300px;
 	text-align:right;
 	padding-right:4px;
-	font-size:12px;
+	font-size:14px;
 	color:#707070;
-	padding-top:5px;
+	padding: 9px 5px 4px 8px;
 }
 
 .formRowFields
 {
 	float:right;
-	width:559px;
+	width:630px;
 	text-align:left;
+}
+
+.formRowFields .darkGrey
+{
+	padding: 10px 0px;
 }
 
 .taxinfo
@@ -1445,18 +1483,26 @@ textarea {
 .paymentformfaqdesc
 {
 	text-align: left;
-	margin: 0px auto;
-	padding: 18px;
-	background-image: url( http://cdn.steamcommunity.com/public/images/groups/tab_blue_active.png);
-	background-repeat: repeat-x;
-	background-color: #6b9731;
-	color: #ebebeb;
+	padding: 0px;
+	color: #999999;
 	font-size: 14px;
-	border-color: #42522d;
-	border-style: solid;
-	border-width: 2px;
-	margin-bottom: 8px;
-	margin-right: 17px;
+}
+
+.paymentform_small_header_arrow
+{
+	font-size: 14px;
+}
+
+.paymentform_small_subtitle
+{
+	font-size: 16px;
+}
+
+.paymentformtitle
+{
+	font-size: 28px;
+	color: #dddddd;
+	padding: 16px 0px 2px 0px;
 }
 
 .paymentformfaqdesc a
@@ -1480,13 +1526,18 @@ textarea {
 .paymentinfofaq .question
 {
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 10px;
+	font-size: 14px;
+	color: #ababab;
 }
 
 .paymentinfofaq .answer
 {
 	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 22px;
 }
 
 .paymentinfofaq .answerTitle
