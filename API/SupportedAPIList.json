@@ -582,15 +582,6 @@
 							}
 						]
 						
-					},
-					{
-						"name": "GetTicketSaleStatus",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
 					}
 				]
 				

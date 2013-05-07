@@ -64220,6 +64220,177 @@
 				}
 			}
 		}
+		"10174"
+		{
+			"name"		"Smeevil"
+			"prefab"		"courier"
+			"portraits"
+			{
+				"preview"
+				{
+					"PortraitPosition"		"355.392761 12.305215 88.230057"
+					"PortraitLookAt"		"5.590607 -177.687378 0.000000"
+					"PortraitFOV"		"21.646194"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitBackgroundModel"		"models/heroes/pedestal/pedestal_1_small.mdl"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"preview_flying"
+				{
+					"PortraitPosition"		"355.392761 12.305215 88.230057"
+					"PortraitLookAt"		"5.590607 -177.687378 0.000000"
+					"PortraitFOV"		"21.646194"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"icon"
+				{
+					"PortraitPosition"		"313.106628 -45.485073 92.639320"
+					"PortraitLookAt"		"9.882202 171.392212 0.000000"
+					"PortraitFOV"		"23.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"40.235073 -37.232376 312.331787"
+					"PortraitLightLookAt"		"59.610001 131.259995 0.000000"
+					"PortraitLightFOV"		"46.000000"
+					"PortraitLightDistance"		"145.000000"
+					"PortraitLightColor"		"0.230000 0.210000 0.350000"
+					"PortraitShadowColor"		"0.030000 0.050000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"1.960000 -69.220001 131.779999"
+					"PortraitAmbientColor"		"0.200000 0.400000 0.400000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.300000 0.300000 0.300000"
+					"PortraitBackgroundColor3"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundColor4"		"0.300000 0.300000 0.300000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_International_Courier"
+			"item_name"		"#DOTA_Item_Smeevil"
+			"item_rarity"		"immortal"
+			"item_description"		"#DOTA_Item_Desc_Smeevil"
+			"image_inventory"		"econ/courier/smeevil/smeevil"
+			"creation_date"		"2013-05-02"
+			"attributes"
+			{
+				"league id"
+				{
+					"value"		"65006"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+				"skin index"
+				{
+					"attribute_class"		"skin_index"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"model index"
+				{
+					"attribute_class"		"model_index"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"international tag"
+				{
+					"attribute_class"		"international tag"
+					"value"		"2013"
+				}
+			}
+			"visuals"
+			{
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/courier/smeevil/smeevil.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/courier/smeevil/smeevil_flying.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/courier/smeevil/smeevil_flying.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+				"asset_modifier4"
+				{
+					"type"		"courier"
+					"asset"		"models/courier/smeevil/smeevil.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+			}
+		}
 		"10175"
 		{
 			"name"		"Treasure of the Malignant Amanita"
@@ -68277,6 +68448,29 @@
 			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
 		}
+		"15159"
+		{
+			"name"		"International 2013 Ticket"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"event_ticket"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"event_id"		"2"
+					"order"		"19"
+					"bonus_itemdef"		"15162"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_TournamentTicket"
+			"item_name"		"#DOTA_Item_International_2013_Ticket"
+			"item_rarity"		"legendary"
+			"item_description"		"#DOTA_Item_Desc_International_2013_Ticket"
+			"image_inventory"		"econ/tools/international_2013_ticket"
+			"creation_date"		"2013-05-02"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+		}
 		"15160"
 		{
 			"name"		"Curse Dota 2 Invitational"
@@ -68321,6 +68515,74 @@
 			"creation_date"		"2013-05-03"
 			"tournament_url"		"http://www.curse.com/news/dota-2/48217-team-brackets-announced-curse-dota-2-invitational"
 			"image_banner"		"econ/leagues/subscriptions_curse_invitational_banner"
+		}
+		"15162"
+		{
+			"name"		"International 2013 Interactive Compendium"
+			"prefab"		"tool"
+			"item_type_name"		"#DOTA_WearableType_Tournament_Compendium"
+			"item_name"		"#DOTA_Item_International_2013_Interactive_Compendium"
+			"item_rarity"		"legendary"
+			"tool"
+			{
+				"type"		"tournament_passport"
+				"use_string"		"#ActivateProgram"
+				"usage"
+				{
+					"league_id"		"65006"
+					"bonus_itemdef"		"10174"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"item_description"		"#DOTA_Item_Desc_International_2013_Interactive_Compendium"
+			"image_inventory"		"econ/tools/international_companion"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-05-03"
+		}
+		"15163"
+		{
+			"name"		"International 2013 Battle Bonus"
+			"prefab"		"tool"
+			"item_type_name"		"#DOTA_WearableType_Battle_Bonus"
+			"item_name"		"#DOTA_Item_International_2013_Battle_Bonus"
+			"item_rarity"		"rare"
+			"tool"
+			{
+				"type"		"fortunate_soul"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"drop_rate_bonus"		"2.250000"
+					"expiration_date"		"2013-08-12 23:00:00"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"item_description"		"#DOTA_Item_Desc_International_2013_Battle_Bonus"
+			"image_inventory"		"econ/tools/international_2013_battle_bonus"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-05-06"
 		}
 		"20000"
 		{
@@ -76935,7 +77197,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots1"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76949,7 +77211,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots2"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76963,7 +77225,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots3"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76977,7 +77239,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots4"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -77005,7 +77267,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSeed"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -77270,6 +77532,20 @@
 			"max_value"		"0"
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_WhitePower"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"167"
+		{
+			"name"		"model index"
+			"attribute_class"		"model_index"
+			"attribute_name"		"model index"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_ModelIndex"
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"neutral"

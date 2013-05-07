@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.fa68db1e9fd22ddf1b56eee5ffbb9b004c38d1c4.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7f90c3575db42ee4ebf10bbcc62a91bbbea4bf9e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37689,19 +37689,19 @@
 				}
 			},
 			{
-				"name": "Empower",
+				"name": "Deepest Depths",
 				"defindex": 10173,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Empower",
-				"item_description": "This new item has no description.",
+				"item_name": "Deepest Depths",
+				"item_description": "Within the coldest depths one must be clever and adaptable, or become food for one that is.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/huds\/hud_cold_depths",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "",
+				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37710,25 +37710,59 @@
 				}
 			},
 			{
-				"name": "Cold Depths",
+				"name": "Smeevil",
 				"defindex": 10174,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "HUD Skin",
-				"item_name": "DOTA_Item_Cold_Depths",
-				"item_description": "This new item has no description.",
+				"item_type_name": "International Courier",
+				"item_name": "Smeevil",
+				"item_description": "Tis said among artisan and warrior alike that there is no finer servant than a trusty smeevil.  However, a hero who chooses a smeevil as their courier may soon find these clever critters taking new forms in order to gain assistants of their own. Inspired by the great battles they bear witness to, a smeevil may become emboldened to press ever more exotic beasts to their cause.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/courier\/smeevil\/smeevil",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil\/smeevil.a3f609f03892b6cf8618aeb84a512425abef6158.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil\/smeevil_large.ad10b10d886020601994751be9df84466c065d70.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "league id",
+						"class": "",
+						"value": 65006.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					},
+					{
+						"name": "skin index",
+						"class": "skin_index",
+						"value": 0.000000
+					},
+					{
+						"name": "model index",
+						"class": "model_index",
+						"value": 0.000000
+					},
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Treasure of the Malignant Amanita",
@@ -37768,6 +37802,48 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Empowered",
+				"defindex": 10176,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Empowered",
+				"item_description": "The thrum of war, \r\nthe stomp of hooves, \r\nthe bloodstained earth, \r\ngrim forces move.\r\n",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_empower",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Tempest Wing",
+				"defindex": 10177,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Tempest Wing",
+				"item_description": "Those who fail the skies face nothing but a very long fall.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_crystal_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
 			},
 			{
 				"name": "Name Tag",
@@ -43504,14 +43580,14 @@
 				"item_class": "tool",
 				"item_type_name": "Tournament Ticket",
 				"item_name": "International 2013 Ticket",
-				"item_description": "This item is an invitation to personally attend the Dota 2 International Tournament, August 31 - September 2 2012, in Seattle, WA. Attendees will receive preferential seating on the show floor.<br><br>This ticket must be activated from your in-game backpack. Once activated, the ticket will be consumed and removed from your backpack and registered on your Steam account. Ticket information will be emailed no later than June 30th, 2012 to the email address associated with your Steam account.<br><br>This purchase also includes a tradable Dota 2 Invite that grants access to the game (PC only).",
+				"item_description": "This item is an invitation to personally attend the Dota 2 International Tournament, August 7 - 11 2013, at Benaroya Hall in Seattle, WA. Attendees will receive preferential seating on the show floor.<br><br>This ticket must be activated from your in-game backpack. Once activated, the ticket will be consumed and removed from your backpack and registered on your Steam account. Ticket information will be emailed no later than June 30th, 2013 to the email address associated with your Steam account.<br><br>This purchase also includes a International 2013 Interactive Compendium and Smeevil Courier.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/tools\/international_invite",
+				"image_inventory": "econ\/tools\/international_2013_ticket",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite.eec9938027559aa898919171c2582445fe6476ca.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite_large.9856b583651542165eb5027eac72faf672ee1bcb.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_2013_ticket.df5d26c72422f1cfe9ca47121507f12a1f5d938b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_2013_ticket_large.090cb2174306927753020bb0be56a23194184aed.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43521,7 +43597,7 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "league_view_pass",
+					"type": "event_ticket",
 					"use_string": "Use"
 				},
 				"attributes": [
@@ -43592,6 +43668,76 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "International 2013 Interactive Compendium",
+				"defindex": 15162,
+				"item_class": "tool",
+				"item_type_name": "Tournament Compendium",
+				"item_name": "International 2013 Interactive Compendium",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/international_companion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_companion.2d19c14b1f9ef47a88716d98171e0861fccfed44.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_companion_large.6e088506ebe87c11688f128a6ebe0bdacb54fe38.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "tournament_passport",
+					"use_string": "Activate Compendium"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "International 2013 Battle Bonus",
+				"defindex": 15163,
+				"item_class": "tool",
+				"item_type_name": "Battle Bonus",
+				"item_name": "International 2013 Battle Bonus",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> until the end of the International. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/international_2013_battle_bonus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_2013_battle_bonus.69b72f2126b99c6985846a0fdd94bfcd47a950b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_2013_battle_bonus_large.19351d21066f7ab61d07e845ed14de4c5747e9c9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "fortunate_soul",
 					"use_string": "Use"
 				},
 				"attributes": [
@@ -48404,10 +48550,8 @@
 				"attribute_class": "courier_slots_1",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Attrib_CourierSlots1",
-				"description_format": "value_is_additive",
 				"effect_type": "neutral",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
@@ -48416,10 +48560,8 @@
 				"attribute_class": "courier_slots_2",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Attrib_CourierSlots2",
-				"description_format": "value_is_additive",
 				"effect_type": "neutral",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
@@ -48428,10 +48570,8 @@
 				"attribute_class": "courier_slots_3",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Attrib_CourierSlots3",
-				"description_format": "value_is_additive",
 				"effect_type": "neutral",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
@@ -48440,10 +48580,8 @@
 				"attribute_class": "courier_slots_4",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Attrib_CourierSlots4",
-				"description_format": "value_is_additive",
 				"effect_type": "neutral",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
@@ -48464,10 +48602,8 @@
 				"attribute_class": "courier_seed",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Attrib_CourierSeed",
-				"description_format": "value_is_additive",
 				"effect_type": "neutral",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
@@ -48664,6 +48800,16 @@
 				"name": "white power",
 				"defindex": 166,
 				"attribute_class": "white_power",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "model index",
+				"defindex": 167,
+				"attribute_class": "model_index",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
 				"effect_type": "neutral",
