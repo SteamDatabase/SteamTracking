@@ -64228,9 +64228,9 @@
 			{
 				"preview"
 				{
-					"PortraitPosition"		"355.392761 12.305215 88.230057"
-					"PortraitLookAt"		"5.590607 -177.687378 0.000000"
-					"PortraitFOV"		"21.646194"
+					"PortraitPosition"		"600.000000 -48.000000 98.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
 					"PortraitFar"		"1000.000000"
 					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
 					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
@@ -64259,9 +64259,9 @@
 				}
 				"preview_flying"
 				{
-					"PortraitPosition"		"355.392761 12.305215 88.230057"
-					"PortraitLookAt"		"5.590607 -177.687378 0.000000"
-					"PortraitFOV"		"21.646194"
+					"PortraitPosition"		"600.000000 -48.000000 48.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
 					"PortraitFar"		"1000.000000"
 					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
 					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
@@ -64320,7 +64320,9 @@
 			}
 			"item_type_name"		"#DOTA_WearableType_International_Courier"
 			"item_name"		"#DOTA_Item_Smeevil"
-			"item_rarity"		"immortal"
+			"item_rarity"		"legendary"
+			"item_quality"		"genuine"
+			"forced_item_quality"		"genuine"
 			"item_description"		"#DOTA_Item_Desc_Smeevil"
 			"image_inventory"		"econ/courier/smeevil/smeevil"
 			"creation_date"		"2013-05-02"

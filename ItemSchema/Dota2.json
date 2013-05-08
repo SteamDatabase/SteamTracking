@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7f90c3575db42ee4ebf10bbcc62a91bbbea4bf9e.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.46196e29f164d35545786eb6d63f39c730ea5fd9.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37717,7 +37717,7 @@
 				"item_name": "Smeevil",
 				"item_description": "Tis said among artisan and warrior alike that there is no finer servant than a trusty smeevil.  However, a hero who chooses a smeevil as their courier may soon find these clever critters taking new forms in order to gain assistants of their own. Inspired by the great battles they bear witness to, a smeevil may become emboldened to press ever more exotic beasts to their cause.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/courier\/smeevil\/smeevil",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
