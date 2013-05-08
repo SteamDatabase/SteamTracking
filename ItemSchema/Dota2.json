@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.46196e29f164d35545786eb6d63f39c730ea5fd9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d01d5493c1a8ebdef601edb75940bee19b44bf6b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -43680,7 +43680,7 @@
 				
 			},
 			{
-				"name": "International 2013 Interactive Compendium",
+				"name": "The International 2013 Interactive Compendium",
 				"defindex": 15162,
 				"item_class": "tool",
 				"item_type_name": "Tournament Compendium",
@@ -43715,7 +43715,7 @@
 				
 			},
 			{
-				"name": "International 2013 Battle Bonus",
+				"name": "The International 2013 Battle Bonus",
 				"defindex": 15163,
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
@@ -48457,6 +48457,34 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_attributes_of_the_foretold_set.53dd5ab6679624618c0d51ae32b616421ec0b4a8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_attributes_of_the_foretold_set_large.af5d77d879d304eee0d7e8fa044f067151ea034c.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The International 2013 Interactive Compendium Bundle",
+				"defindex": 20169,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The International 2013 Interactive Compendium Bundle",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and International 2013 Battle Bonus stretch goal reward!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/international_companion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_companion.2d19c14b1f9ef47a88716d98171e0861fccfed44.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_companion_large.6e088506ebe87c11688f128a6ebe0bdacb54fe38.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,

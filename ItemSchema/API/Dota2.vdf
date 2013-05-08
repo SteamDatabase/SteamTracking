@@ -68520,7 +68520,7 @@
 		}
 		"15162"
 		{
-			"name"		"International 2013 Interactive Compendium"
+			"name"		"The International 2013 Interactive Compendium"
 			"prefab"		"tool"
 			"item_type_name"		"#DOTA_WearableType_Tournament_Compendium"
 			"item_name"		"#DOTA_Item_International_2013_Interactive_Compendium"
@@ -68554,11 +68554,10 @@
 		}
 		"15163"
 		{
-			"name"		"International 2013 Battle Bonus"
+			"name"		"The International 2013 Battle Bonus"
 			"prefab"		"tool"
 			"item_type_name"		"#DOTA_WearableType_Battle_Bonus"
 			"item_name"		"#DOTA_Item_International_2013_Battle_Bonus"
-			"item_rarity"		"rare"
 			"tool"
 			{
 				"type"		"fortunate_soul"
@@ -68585,6 +68584,7 @@
 				}
 			}
 			"creation_date"		"2013-05-06"
+			"item_rarity"		"ancient"
 		}
 		"20000"
 		{
@@ -77100,6 +77100,21 @@
 					"PortraitAnimationRate"		"0.000000"
 					"PortraitHideHero"		"1"
 				}
+			}
+		}
+		"20169"
+		{
+			"name"		"The International 2013 Interactive Compendium Bundle"
+			"prefab"		"bundle"
+			"item_name"		"#DOTA_Item_The_International_2013_Interactive_Compendium_Bundle"
+			"item_rarity"		"legendary"
+			"item_description"		"#DOTA_Item_Desc_The_International_2013_Interactive_Compendium_Bundle"
+			"image_inventory"		"econ/tools/international_companion"
+			"creation_date"		"2013-05-08"
+			"bundle"
+			{
+				"The International 2013 Interactive Compendium"		"1"
+				"The International 2013 Battle Bonus"		"1"
 			}
 		}
 	}
