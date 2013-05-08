@@ -618,11 +618,12 @@
 			"item_class"		"dota_item_wearable"
 			"item_type_name"		"#DOTA_WearableType_Hud_Skin"
 			"item_name"		"#DOTA_Wearable_Hud_Skin"
-			"item_slot"		"none"
+			"item_slot"		"hud_skin"
 			"item_quality"		"unique"
 			"item_rarity"		"common"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
+			"player_loadout"		"1"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -7080,6 +7081,80 @@
 			}
 			"model_player"		"models/heroes/elder_titan/elder_titan_totem.mdl"
 		}
+		"431"
+		{
+			"name"		"Legion Commander Helmet"
+			"prefab"		"default_item"
+			"item_type_name"		"#DOTA_WearableType_Helmet"
+			"item_name"		"#DOTA_Item_Legion_Commander_Helmet"
+			"item_slot"		"head"
+			"item_description"		"#DOTA_Item_Desc_Legion_Commander_Helmet"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_legion_commander"		"1"
+			}
+			"model_player"		"models/heroes/legion_commander/legion_commander_head.mdl"
+		}
+		"432"
+		{
+			"name"		"Legion Commander Shoulders"
+			"prefab"		"default_item"
+			"item_type_name"		"#DOTA_WearableType_Shoulder_Armor"
+			"item_name"		"#DOTA_Item_Legion_Commander_Shoulders"
+			"item_slot"		"shoulder"
+			"item_description"		"#DOTA_Item_Desc_Legion_Commander_Shoulders"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_legion_commander"		"1"
+			}
+			"model_player"		"models/heroes/legion_commander/legion_commander_shoulders.mdl"
+		}
+		"433"
+		{
+			"name"		"Legion Commander Banners"
+			"prefab"		"default_item"
+			"item_type_name"		"#DOTA_WearableType_Back_Banners"
+			"item_name"		"#DOTA_Item_Legion_Commander_Banners"
+			"item_slot"		"back"
+			"item_description"		"#DOTA_Item_Desc_Legion_Commander_Banner"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_legion_commander"		"1"
+			}
+			"model_player"		"models/heroes/legion_commander/legion_commander_back.mdl"
+		}
+		"434"
+		{
+			"name"		"Legion Commander Weapon"
+			"prefab"		"default_item"
+			"item_type_name"		"#DOTA_WearableType_Sword"
+			"item_name"		"#DOTA_Item_Legion_Commander_Weapon"
+			"item_description"		"#DOTA_Item_Desc_Legion_Commander_Weapon"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_legion_commander"		"1"
+			}
+			"model_player"		"models/heroes/legion_commander/legion_commander_weapon.mdl"
+		}
+		"435"
+		{
+			"name"		"Legion Commander Bracers"
+			"prefab"		"default_item"
+			"item_type_name"		"#DOTA_WearableType_Bracers"
+			"item_name"		"#DOTA_Item_Legion_Commander_Bracers"
+			"item_slot"		"arms"
+			"item_description"		"#DOTA_Item_Desc_Legion_Commander_Bracers"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_legion_commander"		"1"
+			}
+			"model_player"		"models/heroes/legion_commander/legion_commander_arms.mdl"
+		}
 		"436"
 		{
 			"name"		"bristelback_back"
@@ -11869,6 +11944,57 @@
 				}
 			}
 		}
+		"4097"
+		{
+			"name"		"Arctic Hunter's Ice Axe"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Ice_Axe"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Ice_Axe"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_weapon/onizaphk_ahunter_weapon"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_weapon/onizaphk_ahunter_weapon.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-132.195740 -229.866180 76.164879"
+					"PortraitLookAt"		"18.781128 58.474731 349.996948"
+					"PortraitFOV"		"46.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
 		"4098"
 		{
 			"name"		"Kimono of the Ebony Tower"
@@ -13301,6 +13427,58 @@
 					"PortraitAnimationActivity"		"0"
 					"PortraitAnimationCycle"		"0.000000"
 					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
+		"4123"
+		{
+			"name"		"Arctic Hunter's Parka"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Parka"
+			"item_slot"		"shoulder"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Parka"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_shoulder/onizaphk_ahunter_shoulder"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_shoulder/onizaphk_ahunter_shoulder.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"120.326263 -103.398026 160.062759"
+					"PortraitLookAt"		"24.900513 145.579834 349.996948"
+					"PortraitFOV"		"52.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
 					"PortraitHideHero"		"0"
 				}
 			}
@@ -30019,6 +30197,58 @@
 				}
 			}
 		}
+		"4441"
+		{
+			"name"		"Arctic Hunter's Tusks"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Tusks"
+			"item_slot"		"neck"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Tusks"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_neck/onizaphk_ahunter_neck"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_neck/onizaphk_ahunter_neck.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"84.810715 -115.754112 173.774948"
+					"PortraitLookAt"		"21.044312 125.172729 349.996948"
+					"PortraitFOV"		"36.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
 		"4442"
 		{
 			"name"		"Snowdrop Tassels"
@@ -30774,6 +31004,58 @@
 					"PortraitAnimationCycle"		"0.000000"
 					"PortraitAnimationRate"		"0.000000"
 					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4460"
+		{
+			"name"		"Arctic Hunter's Hood"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Hood"
+			"item_slot"		"head"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Hood"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_head/onizaphk_ahunter_head"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_head/onizaphk_ahunter_head.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"46.342617 -114.720619 202.348434"
+					"PortraitLookAt"		"26.575928 118.569946 349.996948"
+					"PortraitFOV"		"36.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
 				}
 			}
 		}
@@ -32772,6 +33054,108 @@
 					"PortraitAnimationActivity"		"0"
 					"PortraitAnimationCycle"		"0.300000"
 					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
+		"4498"
+		{
+			"name"		"Arctic Hunter's Snack"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Snack"
+			"item_slot"		"back"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Snack"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_back/onizaphk_ahunter_back"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_back/onizaphk_ahunter_back.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-352.048523 81.998940 123.338646"
+					"PortraitLookAt"		"1.433716 350.886841 349.996948"
+					"PortraitFOV"		"24.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
+		"4499"
+		{
+			"name"		"Arctic Hunter's Glove"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Arctic_Hunters_Glove"
+			"item_slot"		"arms"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Glove"
+			"image_inventory"		"econ/items/tuskarr/onizaphk_ahunter_armsv2/onizaphk_ahunter_armsv2"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"model_player"		"models/items/tuskarr/onizaphk_ahunter_armsv2/onizaphk_ahunter_armsv2.mdl"
+			"item_set"		"arctic_hunter_set"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"282.776825 7.115160 131.413467"
+					"PortraitLookAt"		"19.286499 171.589966 349.996948"
+					"PortraitFOV"		"37.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
 					"PortraitHideHero"		"0"
 				}
 			}
@@ -51677,6 +52061,70 @@
 			}
 			"particle_file"		"particles/econ/items/juggernaut/jugg_sword_thousand_faces.pcf"
 		}
+		"4905"
+		{
+			"name"		"Eye of Omoz"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Eye_of_Omoz"
+			"item_rarity"		"mythical"
+			"item_description"		"#DOTA_Item_Desc_Eye_of_Omoz"
+			"image_inventory"		"econ/items/doom/weapon_eyeoffetitzu/weapon_eyeoffetitzu"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_doom_bringer"		"1"
+			}
+			"creation_date"		"2013-03-28"
+			"model_player"		"models/items/doom/weapon_eyeoffetitzu/weapon_eyeoffetitzu.mdl"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_ATTACK"
+					"modifier"		"eyeoffetizu"
+				}
+				"asset_modifier1"
+				{
+					"type"		"activity"
+					"asset"		"ACT_DOTA_LOADOUT"
+					"modifier"		"eyeoffetizu"
+				}
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-325.238434 -905.737793 223.534256"
+					"PortraitLookAt"		"6.602783 63.759155 0.000000"
+					"PortraitFOV"		"14.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"77.290001 -68.510002 304.230011"
+					"PortraitLightLookAt"		"41.189999 112.900002 0.000000"
+					"PortraitLightFOV"		"65.000000"
+					"PortraitLightDistance"		"218.000000"
+					"PortraitLightColor"		"0.990000 0.270000 0.000000"
+					"PortraitShadowColor"		"0.420000 0.420000 0.420000"
+					"PortraitShadowScale"		"0.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-122.720001 -51.759998 16.719999"
+					"PortraitAmbientColor"		"0.200000 0.070000 0.070000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.200000 0.100000"
+					"PortraitBackgroundColor2"		"1.000000 0.200000 0.100000"
+					"PortraitBackgroundColor3"		"1.000000 0.100000 0.200000"
+					"PortraitBackgroundColor4"		"1.000000 0.100000 0.200000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
 		"4906"
 		{
 			"name"		"Sacred Bones Chopper"
@@ -58732,7 +59180,7 @@
 				"team ID"
 				{
 					"attribute_class"		"team_id"
-					"value"		"42"
+					"value"		"416900"
 				}
 				"kill eater"
 				{
@@ -64220,6 +64668,179 @@
 				}
 			}
 		}
+		"10174"
+		{
+			"name"		"Smeevil"
+			"prefab"		"courier"
+			"portraits"
+			{
+				"preview"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 98.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitBackgroundModel"		"models/heroes/pedestal/pedestal_1_small.mdl"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"preview_flying"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 48.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"icon"
+				{
+					"PortraitPosition"		"313.106628 -45.485073 92.639320"
+					"PortraitLookAt"		"9.882202 171.392212 0.000000"
+					"PortraitFOV"		"23.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"40.235073 -37.232376 312.331787"
+					"PortraitLightLookAt"		"59.610001 131.259995 0.000000"
+					"PortraitLightFOV"		"46.000000"
+					"PortraitLightDistance"		"145.000000"
+					"PortraitLightColor"		"0.230000 0.210000 0.350000"
+					"PortraitShadowColor"		"0.030000 0.050000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"1.960000 -69.220001 131.779999"
+					"PortraitAmbientColor"		"0.200000 0.400000 0.400000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.300000 0.300000 0.300000"
+					"PortraitBackgroundColor3"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundColor4"		"0.300000 0.300000 0.300000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_International_Courier"
+			"item_name"		"#DOTA_Item_Smeevil"
+			"item_rarity"		"legendary"
+			"item_quality"		"genuine"
+			"forced_item_quality"		"genuine"
+			"item_description"		"#DOTA_Item_Desc_Smeevil"
+			"image_inventory"		"econ/courier/smeevil/smeevil"
+			"creation_date"		"2013-05-02"
+			"attributes"
+			{
+				"league id"
+				{
+					"value"		"65006"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+				"skin index"
+				{
+					"attribute_class"		"skin_index"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"model index"
+				{
+					"attribute_class"		"model_index"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"international tag"
+				{
+					"attribute_class"		"international tag"
+					"value"		"2013"
+				}
+			}
+			"visuals"
+			{
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/courier/smeevil/smeevil.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/courier/smeevil/smeevil_flying.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/courier/smeevil/smeevil_flying.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+				"asset_modifier4"
+				{
+					"type"		"courier"
+					"asset"		"models/courier/smeevil/smeevil.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+			}
+		}
 		"10175"
 		{
 			"name"		"Treasure of the Malignant Amanita"
@@ -68252,7 +68873,7 @@
 			"item_description"		"#DOTA_Item_Desc_The_International_East_Qualifiers"
 			"image_inventory"		"econ/testitem_slot_empty"
 			"creation_date"		"2013-04-30"
-			"tournament_url"		"http://blog.dota2.com/"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_eastqualifier_ingame"
 		}
 		"15158"
@@ -68274,8 +68895,144 @@
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
 			"image_inventory"		"econ/testitem_slot_empty"
 			"creation_date"		"2013-04-30"
-			"tournament_url"		"http://blog.dota2.com/"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
+		}
+		"15159"
+		{
+			"name"		"The International 2013 Ticket"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"event_ticket"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"event_id"		"2"
+					"order"		"19"
+					"bonus_itemdef"		"15162"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_TournamentTicket"
+			"item_name"		"#DOTA_Item_The_International_2013_Ticket"
+			"item_rarity"		"legendary"
+			"item_description"		"#DOTA_Item_Desc_International_2013_Ticket"
+			"image_inventory"		"econ/tools/international_2013_ticket"
+			"creation_date"		"2013-05-02"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+		}
+		"15160"
+		{
+			"name"		"Curse Dota 2 Invitational"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"41"
+					"order"		"20"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational"
+			"item_description"		"#DOTA_Item_Desc_Curse_Dota_2_Invitational"
+			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
+			"creation_date"		"2013-05-03"
+			"tournament_url"		"http://www.curse.com/news/dota-2/48217-team-brackets-announced-curse-dota-2-invitational"
+			"image_banner"		"econ/leagues/subscriptions_curse_invitational_banner"
+		}
+		"15161"
+		{
+			"name"		"Curse Dota 2 Invitational - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"41"
+					"order"		"20"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Curse_Dota_2_Invitational"
+			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
+			"creation_date"		"2013-05-03"
+			"tournament_url"		"http://www.curse.com/news/dota-2/48217-team-brackets-announced-curse-dota-2-invitational"
+			"image_banner"		"econ/leagues/subscriptions_curse_invitational_banner"
+		}
+		"15162"
+		{
+			"name"		"The International 2013 Interactive Compendium"
+			"prefab"		"tool"
+			"item_type_name"		"#DOTA_WearableType_Tournament_Compendium"
+			"item_name"		"#DOTA_Item_The_International_2013_Interactive_Compendium"
+			"item_rarity"		"legendary"
+			"tool"
+			{
+				"type"		"tournament_passport"
+				"use_string"		"#ActivateProgram"
+				"usage"
+				{
+					"league_id"		"65006"
+					"bonus_itemdef"		"10174"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"item_description"		"#DOTA_Item_Desc_International_2013_Interactive_Compendium"
+			"image_inventory"		"econ/tools/international_companion"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-05-03"
+		}
+		"15163"
+		{
+			"name"		"The International 2013 Battle Bonus"
+			"prefab"		"tool"
+			"item_type_name"		"#DOTA_WearableType_Battle_Bonus"
+			"item_name"		"#DOTA_Item_The_International_2013_Battle_Bonus"
+			"item_rarity"		"rare"
+			"tool"
+			{
+				"type"		"fortunate_soul"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"drop_rate_bonus"		"2.250000"
+					"expiration_date"		"2013-08-12 23:00:00"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"item_description"		"#DOTA_Item_Desc_International_2013_Battle_Bonus"
+			"image_inventory"		"econ/tools/international_2013_battle_bonus"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-05-06"
 		}
 		"20000"
 		{
@@ -76793,6 +77550,63 @@
 				}
 			}
 		}
+		"20168"
+		{
+			"name"		"Arctic Hunter Set"
+			"prefab"		"bundle"
+			"item_name"		"#DOTA_Item_Arctic_Hunter_Set"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Arctic_Hunter_Set"
+			"image_inventory"		"econ/sets/DOTA_Item_Arctic_Hunter_Set"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_tusk"		"1"
+			}
+			"creation_date"		"2013-05-07"
+			"bundle"
+			{
+				"Arctic Hunter's Ice Axe"		"1"
+				"Arctic Hunter's Parka"		"1"
+				"Arctic Hunter's Tusks"		"1"
+				"Arctic Hunter's Hood"		"1"
+				"Arctic Hunter's Snack"		"1"
+				"Arctic Hunter's Glove"		"1"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"129.311279 -139.780380 184.865326"
+					"PortraitLookAt"		"29.113770 140.311890 349.996948"
+					"PortraitFOV"		"72.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"14.320000 -110.150002 229.919998"
+					"PortraitLightLookAt"		"45.259998 97.730003 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"184.000000"
+					"PortraitLightColor"		"0.320000 0.320000 0.320000"
+					"PortraitShadowColor"		"0.060000 0.090000 0.130000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-37.540001 -83.949997 47.509998"
+					"PortraitAmbientColor"		"0.070000 0.180000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.900000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_tusk"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+		}
 	}
 	"attributes"
 	{
@@ -76890,7 +77704,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots1"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76904,7 +77718,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots2"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76918,7 +77732,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots3"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76932,7 +77746,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSlots4"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -76960,7 +77774,7 @@
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_CourierSeed"
 			"description_format"		"value_is_additive"
-			"hidden"		"0"
+			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
@@ -77225,6 +78039,20 @@
 			"max_value"		"0"
 			"group"		"only_on_unique"
 			"description_string"		"#Attrib_WhitePower"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"167"
+		{
+			"name"		"model index"
+			"attribute_class"		"model_index"
+			"attribute_name"		"model index"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_ModelIndex"
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"neutral"
@@ -79264,6 +80092,20 @@
 				"Demon Blade of Apocalyptic Fire"		"1"
 				"Tail Plates of Apocalyptic Fire"		"1"
 			}
+		}
+		"arctic_hunter_set"
+		{
+			"name"		"#DOTA_Set_Arctic_Hunter_Set"
+			"items"
+			{
+				"Arctic Hunter's Ice Axe"		"1"
+				"Arctic Hunter's Parka"		"1"
+				"Arctic Hunter's Tusks"		"1"
+				"Arctic Hunter's Hood"		"1"
+				"Arctic Hunter's Snack"		"1"
+				"Arctic Hunter's Glove"		"1"
+			}
+			"store_bundle"		"Arctic Hunter Set"
 		}
 		"attributes_foretold"
 		{

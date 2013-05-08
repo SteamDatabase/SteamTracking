@@ -535,11 +535,16 @@
 						
 					},
 					{
-						"name": "GetTicketSaleStatus",
+						"name": "GetTournamentPrizePool",
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
-
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The prize pool size for the given tournament id."
+							}
 						]
 						
 					}

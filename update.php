@@ -143,7 +143,7 @@
 				
 				$Slave = $this->CreateHandle( $Master, $URL );
 				
-				$Requests[ $Slave ] = $URL[ 'File' ];
+				$Requests[ (int)$Slave ] = $URL[ 'File' ];
 			}
 			
 			unset( $URL, $WindowSize, $i );
@@ -164,7 +164,7 @@
 					$Code  = cURL_GetInfo( $Slave, CURLINFO_HTTP_CODE );
 					$Data  = cURL_Multi_GetContent( $Slave );
 					
-					$Request = $Requests[ $Slave ];
+					$Request = $Requests[ (int)$Slave ];
 					
 					if( isset( $Done[ 'error' ] ) )
 					{
@@ -221,13 +221,13 @@
 						
 						$SlaveNew = $this->CreateHandle( $Master, $URL );
 						
-						$Requests[ $SlaveNew ] = $URL[ 'File' ];
+						$Requests[ (int)$SlaveNew ] = $URL[ 'File' ];
 					}
 					
 					cURL_Multi_Remove_Handle( $Master, $Slave );
 					cURL_Close( $Slave );
 					
-					unset( $Requests[ $Slave ], $Request, $Slave );
+					unset( $Requests[ (int)$Slave ], $Request, $Slave );
 				}
 				
 				if( $Running )
