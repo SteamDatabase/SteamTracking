@@ -971,7 +971,7 @@ function OnGetFinalPriceSuccess( result )
 			var method = $('payment_method');
 			if ( result.externalurl )
 			{
-								var url = result.externalurl.replace( /%/g, '%25' );
+				var url = result.externalurl;
 				$('purchase_button_bottom').href = "javascript:PerformExternalFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"', " + ( result.haspostparameters ? "true" : "false" ) + " );";
 				$('purchase_bottom_note_paypalgc').style.display = 'block';
 
