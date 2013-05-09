@@ -3217,3 +3217,99 @@ h2.stats {
 	font-size: 14px;
 	padding: 1px 6px;
 }
+
+
+/* Workshop Service Providers */
+.service_providers_pick
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.service_provider_revenue_splits
+{
+	margin-top: 20px;
+}
+
+.service_provider_split
+{
+	background-color: #262627;
+	padding: 10px;
+	border: 1px solid #000000;
+	margin-bottom: 1px;
+}
+
+.service_provider_revenue_splits_controls
+{
+	margin-top: 10px;
+}
+
+.service_provider_name
+{
+	width: 100px;
+	float: left;
+}
+
+.service_provider_revenue_percentage
+{
+	width: 50px;
+	padding-right: 20px;
+	float: right;
+}
+
+.service_provider_revenue_slider
+{
+	float: left;
+	width: 398px;
+	padding-left: 1px;
+	padding-right: 1px;
+	height: 8px;
+	border: 1px solid black;
+	position: relative;
+	background-color:#636262;
+	cursor: pointer;
+}
+
+.service_provider_revenue_slider .slider_bg_fill
+{
+	position: relative;
+	top: 1px;
+	left: 1px;
+	height: 6px;
+	background-color: #95967a;
+	pointer-events: none;
+}
+
+.service_provider_revenue_slider .handle
+{
+	position: absolute;
+	top: -4px;
+	width: 7px;
+	height: 13px;
+	cursor: pointer;
+
+	background-color: #909176;
+	border-top: 1px solid #b6b795;
+	border-left: 1px solid #b6b795;
+	border-right: 1px solid #393838;
+	border-bottom: 1px solid #393838;
+}
+
+.service_provider_revenue_slider .handle:hover
+{
+	background-color: #b6b795;
+}
+
+#SavingServiceProviderRevenueShares img
+{
+	vertical-align: middle;
+	height: 25px;
+	padding-left: 5px;
+}
+
+#SavedServiceProviderRevenueShares
+{
+	color: #81a313;
+	padding-left: 10px;
+}

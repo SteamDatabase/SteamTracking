@@ -470,7 +470,7 @@ function SharedFileBindMouseHover( elemId, loggedIn, itemData )
 {
 	var elem = $( elemId );
 	Event.observe( elem, "mouseover", function() { SharedFileHover( elem, null, itemData['id'], loggedIn, itemData ); } );
-	Event.observe( elem, "mouseout", function() { HideWorkshopItemHover( elem, null ); } );
+	Event.observe( elem, "mouseout", function( event ) { HideWorkshopItemHover( elem, event ); } );
 }
 
 function SharedFileHover( elem, event, id, loggedIn, itemData )
@@ -931,4 +931,208 @@ function EditPublishedFileChangeLog( publishedFileID, changeLog )
 		} );
 	} );
 }
+
+/**
+ * Service Provider Revenue Sharing
+ */
+var gServiceProviderRevenueSliders = Array();
+
+function PickWorkshopServiceProviders( publishedFileID, appID )
+{
+	// pass through current values
+	var splits = Array();
+	for ( var i = 0; i < gServiceProviderRevenueSliders.length; ++i )
+	{
+		var slider = gServiceProviderRevenueSliders[i];
+		splits.push( { 'steamid' : slider.GetSteamID(), 'split' : slider.GetValue() } );
+	}
+
+	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetserviceproviders', {
+			'id' : publishedFileID,
+			'appid' : appID,
+			'splits' : splits,
+			'sessionid' : g_sessionID
+		}
+	).done( function( response ) {
+		var strTitle = 'Select service providers';
+		var strSaveChanges = 'Continue';
+		var strDescription = response;
+		var dialog = ShowConfirmDialog( strTitle, strDescription, strSaveChanges );
+		console.log(dialog);
+		console.log( $J('.modalTooltip',dialog.GetContent()).tooltip() );
+
+		dialog.SetRemoveContentOnDismissal( false );
+
+		dialog.done( function() {
+			// build list of service providers
+			var service_providers = Array();
+			var checkboxes = dialog.GetContent().find('input[type="checkbox"]');
+			var existingValues = dialog.GetContent().find('input[type="hidden"]');
+			for ( var i = 0; i < checkboxes.length; ++i )
+			{
+				var checkbox = checkboxes[i];
+				if ( checkbox.checked )
+				{
+					service_providers.push( { 'steamid' : checkbox.value, 'split' : existingValues[i].value } );
+				}
+			}
+
+			// get existing revenue splits, adding new and removing old
+			$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetserviceprovidersplits', {
+					'id' : publishedFileID,
+					'sessionid' : g_sessionID,
+					'service_providers' : service_providers,
+					'override' : true
+				}
+			).done( function( response ) {
+				gServiceProviderRevenueSliders = Array();
+				$J('#ServiceProviders').replaceWith( response );
+			});
+
+			dialog.GetContent().remove();
+		});
+
+		dialog.fail( function() {
+			dialog.GetContent().remove();
+		});
+	} );
+}
+
+var gNormalizingServiceProviderRevenueSliders = false;
+
+function NormalizeServiceProviderRevenue( changingSlider )
+{
+	if ( gNormalizingServiceProviderRevenueSliders )
+		return;
+
+	gNormalizingServiceProviderRevenueSliders = true;
+	var total = 0;
+	for ( var i = 0; i < gServiceProviderRevenueSliders.length; ++i )
+	{
+		var slider = gServiceProviderRevenueSliders[i];
+		total += slider.GetValue();
+	}
+	while ( total > 100 )
+	{
+		for ( var i = 0; i < gServiceProviderRevenueSliders.length && total > 100; ++i )
+		{
+			var slider = gServiceProviderRevenueSliders[i];
+			if ( changingSlider != slider )
+			{
+				var value = slider.GetValue();
+				if ( value > 0 )
+				{
+					slider.SetValue( value - 1 );
+					total -= 1;
+				}
+			}
+		}
+	}
+	gNormalizingServiceProviderRevenueSliders = false;
+}
+
+function SaveWorkshopServiceProviders( publishedFileID )
+{
+	var splits = Array();
+	var total = 0;
+	for ( var i = 0; i < gServiceProviderRevenueSliders.length; ++i )
+	{
+		var slider = gServiceProviderRevenueSliders[i];
+		splits.push( { 'steamid' : slider.GetSteamID(), 'percentage' : slider.GetValue() } );
+		total += slider.GetValue();
+	}
+	if ( total != 0 && total != 100 )
+	{
+		ShowAlertDialog( 'Error', 'The service provider revenue percentages must total up to 100.' );
+		return;
+	}
+
+	$J( "#SavingServiceProviderRevenueShares" ).show();
+	$J( "#SavedServiceProviderRevenueShares" ).hide();
+
+	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxsetserviceprovidersplits', {
+			'id' : publishedFileID,
+			'splits' : splits,
+			'sessionid' : g_sessionID
+		}
+	).done( function( response ) {
+		$J( "#SavingServiceProviderRevenueShares" ).hide();
+		$J( "#SavedServiceProviderRevenueShares" ).show();
+	} ).fail( function( jqxhr ) {
+		var rgResults = jqxhr.responseText.evalJSON();
+		switch ( rgResults['success'] )
+		{
+			case 14:
+				ShowAlertDialog( 'Error', 'You cannot choose a third party organization that is also a normal contributor on your item.' );
+				break;
+			default:
+				ShowAlertDialog( 'Error', 'An error was encountered while processing your request:' + ' ' + rgResults['success'] );
+				break;
+		}
+		$J( "#SavingServiceProviderRevenueShares" ).hide();
+	});
+}
+
+var ServiceProviderRevenueSlider = Class.create( {
+	m_steamID: null,
+	m_elemSlider: null,
+	m_elemSliderBGFill: null,
+	m_elemInput: null,
+	m_elemDisplay: null,
+	m_slider: null,
+
+	initialize: function( args )
+	{
+		this.m_steamID = args.steamID;
+		this.m_elemSlider = $( args.elemSlider );
+		this.m_elemSliderBGFill = $( args.elemSliderBGFill );
+		this.m_elemInput = $( args.elemInput );
+		this.m_elemDisplay = $( args.elemDisplay );
+		this.m_slider = new Control.Slider(
+			this.m_elemSlider.down('.handle'),
+			this.m_elemSlider,
+			{
+				range: $R( 0, 100 ),
+				sliderValue: args.split,
+				increment: 1,
+				onSlide: this.SliderOnChange.bind( this ),
+				onChange: this.SliderOnChange.bind( this )
+			}
+		);
+
+		this.m_elemSliderBGFill.style.width = args.split + '%';
+
+		gServiceProviderRevenueSliders.push( this );
+	},
+
+	SliderOnChange: function( value )
+	{
+		value = Math.ceil( value );
+		this.m_elemInput.value = value;
+		this.m_elemDisplay.innerHTML = value + '%';
+		this.m_elemSliderBGFill.style.width = value + '%';
+		NormalizeServiceProviderRevenue( this );
+	},
+
+	GetSteamID: function()
+	{
+		return this.m_steamID;
+	},
+
+	GetValue: function()
+	{
+		return parseInt( this.m_elemInput.value );
+	},
+
+	SetValue: function( value )
+	{
+		if ( value != this.GetValue() )
+		{
+			this.m_slider.setValue( value );
+			this.m_elemInput.value = value;
+			this.m_elemDisplay.innerHTML = value + '%';
+			this.m_elemSliderBGFill.style.width = value + '%';
+		}
+	}
+} );
 

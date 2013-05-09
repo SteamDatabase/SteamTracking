@@ -3117,3 +3117,20 @@ div.hover {
 {
 	color: #000000;
 }
+
+.publishedfile_popup .hover_box {
+	width: 228px;
+}
+
+.publishedfile_popup_noitems {
+	padding: 40px 20px;
+}
+
+.publishedfile_popup_body {
+	padding: 12px;
+}
+
+.publishedfile_popup #tabs_baseline
+{
+	width: auto;
+}

@@ -798,6 +798,21 @@ a.newitem:hover {
 	border: 1px solid #4f4e4e;
 }
 
+body.migrated_profile_page #pending_gift_link {
+	position: static;
+	top: 0;
+	right: 0;
+	float: right;
+}
+
+body.migrated_profile_page .inventory_links {
+	line-height: 56px;
+}
+
+body.migrated_profile_page .inventory_rightnav {
+	float: left;
+}
+
 .item_market_actions {
 	padding: 11px;
 	min-height: 32px;

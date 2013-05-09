@@ -755,7 +755,9 @@ function CModal( $Content, rgParams )
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
 
-	this.m_$StandardContent = this.m_$Content.find( '.newmodal_content' );
+	this.m_$StandardContent = null;
+	this.m_$SizedContent = null;
+	this.OnContentChanged();	//this will look for StandardContent and SizedContent in the modal body
 
 
 	var _modal = this;
@@ -776,6 +778,19 @@ CModal.prototype.GetContent = function ()
 	return this.m_$Content;
 }
 
+CModal.prototype.GetBoundOnResizeEvent = function()
+{
+	// in case someone outside needs to tell the modal to resize on certain events (eg images or iframes loading in the modal)
+	return this.m_fnSizing;
+}
+
+CModal.prototype.OnContentChanged = function()
+{
+	// make sure we're holding the right elements
+	this.m_$StandardContent = this.m_$Content.find( '.newmodal_content' );
+	this.m_$SizedContent = this.m_$Content.find( '.newmodal_sized_content' );
+}
+
 CModal.prototype.SetRemoveContentOnDismissal = function ( bRemoveContent )
 {
 	this.m_bRemoveContentOnDismissal = bRemoveContent;
@@ -788,17 +803,22 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 
 CModal.prototype.AdjustSizing = function( duration )
 {
+
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
+
+	var nMaxWidth = Math.max( nViewportWidth - 80, 500 );
+	var nMaxHeight = Math.floor( nViewportHeight - 120 );
+
+	// if the modal has a 'newmodal_sized_content' div, it wants to be the max height, so set it now
+	//	before we compute height	( "- 18" is a fudge for a possible horizontal scrollbar )
+	this.m_$SizedContent.css( 'min-height', ( nMaxHeight - 18 ) + 'px' );
 
 	var nContentWidth = this.m_$Content.width();
 	var nContentHeight = this.m_$Content.height();
 
 	var nLeft = Math.floor( ( nViewportWidth - nContentWidth ) / 2 );
 	var nTop = Math.floor( ( nViewportHeight - nContentHeight ) / 2 );
-
-	var nMaxWidth = Math.max( nViewportWidth - 80, 500 );
-	var nMaxHeight = Math.floor( nViewportHeight - 120 );
 
 	if ( duration )
 	{

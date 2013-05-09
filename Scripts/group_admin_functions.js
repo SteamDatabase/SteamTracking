@@ -650,7 +650,8 @@ function ManageMembers_ToggleRank( steamId, memberName )
 		var postData = {
 			"xml": 1,
 			"action": "toggleRank",
-			"memberId": steamId
+			"memberId": steamId,
+			"sessionID": g_sessionID
 		};
 		createQuery2( g_strProcessURL, ManageMembers_OnRankToggleResponse, postData );
 	}

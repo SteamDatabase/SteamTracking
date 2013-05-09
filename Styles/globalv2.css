@@ -1,4 +1,7 @@
 
+html {
+	height: 100%;
+}
 
 body {
 	background-image: none;
@@ -11,6 +14,12 @@ body {
 
 	margin:0;
 	padding:0;
+}
+
+body.flat_page {
+	position: relative;
+	min-height: 100%;
+	background-color: #262627;
 }
 
 body.standard_page {
@@ -35,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pagecontent.in_client, .pagecontent.no_header {
 	background-position: center top;
+}
+
+.pagecontent.no_footerpad {
+	padding-bottom: 0;
 }
 
 .maincontent {
@@ -90,6 +103,22 @@ input[type=text], input[type=password], select {
 	background-color: #000000;
 }
 
+body.flat_page #footer {
+	background-color: #262627;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+	padding-top: 16px;
+}
+
+body.flat_page #footer_spacer {
+	height: 78px;
+	padding-top: 16px;
+}
+
 #footer .footer_content {
 	position: relative;
 	width: 958px;
@@ -129,11 +158,29 @@ input[type=text], input[type=password], select {
 
 	border-radius: 3px;
 
+	position: relative;
+
 	height:40px;
 	background-color: #3a3a3a;
 }
 a.friendBlock {
 	display: block;
+}
+
+.friendBlockLinkOverlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 2;
+}
+
+.friendBlock a.friendBlockInnerLink {
+	position: relative;
+	z-index: 3;
+	color: #ffffff;
 }
 
 .friendBlock:hover {
@@ -159,14 +206,69 @@ a.friendBlock {
 	font-weight: bold;
 }
 
+.friendBlockStatusIcon {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 7px;
+}
+.friendBlockStatusIcon img {
+	vertical-align: middle;
+}
 
-/* used to display the " - public" next to a group name */
+.friendPlayerLevel {
+	margin: 6px 6px 0px 2px;
+	font-size: 16px;
+	border-radius: 50%;
+	padding: 4px;
+	border: solid white 2px;
+}
+
+.friendBlock .friendPlayerLevel {
+	float: right;
+}
+
+.friendPlayerLevel .friendPlayerLevelNum {
+	color: #9b9b9b;
+}
+
+.friendPlayerLevel.lvl_0 {
+	border: solid #9b9b9b 2px;
+}
+
+.friendPlayerLevel.lvl_10 {
+	border: solid #d96063 2px;
+}
+
+.friendPlayerLevel.lvl_20 {
+	border: solid #cecd70 2px;
+}
+
+.friendPlayerLevel.lvl_30 {
+	border: solid #7652c9 2px;
+}
+
+.friendPlayerLevel.lvl_40 {
+	border: solid #7dae3d 2px;
+}
+
+.friendPlayerLevel.lvl_50 {
+	border: solid #5491cf 2px;
+}
+
+
+	/* used to display the " - public" next to a group name */
 .pubGroup {
 	font-size:11px;
 	color:#d05f29;
 	font-weight:bold;
 }
 
+body.flat_page > .perf_timing_link {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
 
 .perf_timing_link {
 	display: block;
@@ -237,10 +339,7 @@ a.pagelink:hover {
 }
 
 
-
-
-
-	/* ---------------- comment threads -------------*/
+/* ---------------- comment threads -------------*/
 .commentthread_header, .commentthread_footer {
 	font-size: 14px;
 	line-height: 24px;
@@ -546,7 +645,7 @@ table.bb_table td img.sharedFilePreviewImage
 	margin: 0px;
 }
 
-	/** Styles for modal popup */
+/** Styles for modal popup */
 
 .modal_top_band {
 	background-image:url( 'http://cdn.steamcommunity.com/public/images/got_steam_top.jpg' );
@@ -1086,4 +1185,13 @@ img.dynamiclink_preview {
 
 .emoticon {
 	vertical-align: middle;
+}
+
+
+.migrated_profile_page_old .pagecontent {
+	padding-bottom: 0;
+}
+
+.migrated_profile_page_old #BG_bottom, .migrated_profile_page_old #BG_top {
+	margin: 0 auto;
 }

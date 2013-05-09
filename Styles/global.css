@@ -20,7 +20,6 @@ body, textarea {
 
 body.flat_page {
 	background-image: none;
-	background-color: #000000;
 
 	text-align: left;
 
@@ -194,30 +193,6 @@ select {
 	float:left;
 	padding-right:6px;
 	padding-top:6px;
-}
-
-body.flat_page #footer {
-	background-color: #000000;
-	padding-top: 32px;
-	width: auto;
-	height: 78px;
-
-	margin: 0px;
-	background-image: none;
-
-	font-size: 11px;
-}
-
-body.flat_page #footer a {
-	color:#777777;
-	text-decoration: underline;
-}
-
-body.flat_page #footer .footer_content {
-	position: relative;
-	width: 958px;
-	margin: 0px auto;
-	height: 78px;
 }
 
 #fullAvatarPop {

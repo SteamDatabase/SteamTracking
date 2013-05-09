@@ -7,7 +7,7 @@ function InitShowcaseEditors( cSlots )
 	// store off the showcase preview elements that have been embedded in the page
 	//	these will be displayed by the dropdowns when chosen.
 	$J('#showcase_previews').children().each( function() {
-		var eShowcaseType = this.getAttribute( '_eshowcasetype' );
+		var eShowcaseType = this.getAttribute( 'data-eshowcasetype' );
 		g_rgShowcasePreviews[eShowcaseType] = this;
 	});
 
@@ -193,6 +193,34 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 	PreviewShowcaseConfig( eShowcase, rgSlots );
 }
 
+function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
+{
+	var Modal = ShowDialog( 'Select a Game You\'ve Recommended', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
+
+	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames', function(html) {
+		Modal.GetContent().find( '.newmodal_content').html('');	// erase the throbber
+		Modal.GetContent().find( '.newmodal_content').append( $ListElement );
+		$ListElement.html( html );
+		Modal.AdjustSizing();
+		$ListElement.children( '.game_list_results' ).children().each( function () {
+			var appid = this.getAttribute( 'data-appid' );
+			var strAppLogoURL = this.getAttribute( 'data-applogo' );
+			var strGroupName = $J(this).children('.group_list_groupname').text();
+			if ( appid )
+			{
+				$J(this).click( function() {
+					Modal.Dismiss();
+					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif">');
+					var rgSlots = {};
+					rgSlots[iSlot] = { appid: appid };
+					PreviewShowcaseConfig( eShowcase, rgSlots );
+				} );
+			}
+		});
+	});
+}
+
 function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 {
 	var url = g_rgProfileData['url'] + 'inventory/?modal=1&picker=1';
@@ -231,6 +259,25 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			ShowAlertDialog( 'Select an item to feature on your profile', 'There was an error saving the featured item configuration.  Please try again later.' );
 		});
 	}
+}
+
+function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, strType )
+{
+	var url = g_rgProfileData['url'] + 'publishedfilebrowsepopup/' + strType + '/';
+
+	var $Content = $J('<div/>', {'class': 'publishedfile_modal_content newmodal_sized_content' } );
+	var $IFrame = $J('<iframe/>', {'class': 'publishedfile_modal_iframe', 'src': url } );
+	var Modal = ShowDialog( strDialogTitle, $Content.append( $IFrame ) );
+
+	$IFrame.load( Modal.GetBoundOnResizeEvent() );
+
+	window.OnPublishedFileSelected = function( publishedfileid )
+	{
+		Modal.Dismiss();
+		var rgSlots = {};
+		rgSlots[iSlot] = { publishedfileid: publishedfileid };
+		PreviewShowcaseConfig( eShowcase, rgSlots );
+	};
 }
 
 var g_GroupListHTML = null;

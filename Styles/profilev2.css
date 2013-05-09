@@ -462,11 +462,14 @@ a.showcase_stat:hover .label {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.favoritegame_showcase_game .favorite_game_cap, .favoritegame_showcase_game .favorite_game_cap img {
 	width: 184px;
 	height: 69px;
 }
 
-.favoritegame_showcase_game .favorite_game_name {
+.showcase_item_detail_title {
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 	font-size: 24px;
 	padding-top: 10px;
@@ -523,9 +526,31 @@ a.showcase_stat:hover .label {
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 }
 
+.recommendation_showcase .showcase_slot {
+	float: none;
+}
+
+.recommendation_showcase .showcase_slot .showcase_openslot_placeholder {
+	line-height: 91px;
+}
+
+.favorite_game_playtime {
+	color: #9b9b9b;
+	font-size: 17px;
+}
+
 .showcase_stats_row.favoritegroup_stats .showcase_stat {
 	padding-top: 4px;
 	padding-bottom: 4px;
+	margin-left: 28px;
+}
+
+.showcase_stats_row.favoritegroup_stats .showcase_stat:first-child {
+	margin-left: 0;
+}
+
+.showcase_stats_row.favoritegroup_stats .showcase_stat .value {
+	font-size: 24px;
 }
 
 .showcase_stat.favoritegroup_ingame .value {
@@ -548,6 +573,50 @@ a.showcase_stat:hover .label {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+
+.workshop_showcase_item {
+	height: 160px;
+	position: relative;
+	padding-left: 170px;
+}
+
+.workshop_showcase_item.showcase_slot {
+	float: none;
+}
+
+.workshop_showcase_item .showcase_openslot_placeholder {
+	line-height: 160px;
+}
+
+img.workshop_showcase_item_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 160px;
+	height: 160px;
+}
+
+.workshop_showcase_details_row {
+	position: absolute;
+	left: 170px;
+	bottom: 0;
+	right: 0;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.workshop_showcase_app_details {
+	line-height: 32px;
+}
+
+.workshop_showcase_app_details .workshop_showcase_app img {
+	vertical-align: middle;
+}
+
+.workshop_showcase_stars {
+	float: right;
 }
 
 .profile_recentgame_header {
@@ -1181,6 +1250,17 @@ a.showcase_stat:hover .label {
 	font-size: 12px;
 }
 
+.profile_small_header_additional {
+	position: absolute;
+	right: 30px;
+	top: 0;
+	bottom: 0;
+}
+
+.profile_small_header_additional .gameLogo {
+	margin-top: 12px;
+}
+
 body .pagecontent.profile_subpage_column {
 	padding-bottom: 0;
 }
@@ -1195,14 +1275,20 @@ body .pagecontent.profile_subpage_column {
 	height: 87px;
 }
 
-.profile_subpage_column .maincontent {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column.png' );
-	background-repeat: repeat-y;
-	background-position: center;
+.profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column_bottom.png' ), url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column.png' );
+	background-repeat: no-repeat, repeat-y;
+	background-position: bottom center, center;
 	width: 950px;
 
 	padding-top: 12px;
 	padding-bottom: 128px;
+}
+
+body.migrated_profile_page #BG_bottom.maincontent {
+	margin: 0 auto;
+	width: 948px;
+	background: none;
 }
 
 .profile_topfriends .friendBlock {
@@ -1721,7 +1807,7 @@ body .pagecontent.profile_subpage_column {
 	overflow: hidden;
 }
 
-.newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover {
+.newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover, .showcase_notes a:hover {
 	text-decoration: underline;
 }
 
@@ -1733,10 +1819,6 @@ body .pagecontent.profile_subpage_column {
 	background-position: center;
 	width: 16px;
 	height: 16px;
-}
-
-body.migrated_profile_page #BG_bottom {
-	background: none;
 }
 
 .saved_changes_msg {
@@ -1877,6 +1959,8 @@ a.graytab:hover {
 	line-height: 48px;
 	background-color: #434343;
 	text-align: center;
+	z-index: 5;	/* overlap link overlay */
+	cursor: default;
 }
 
 .manage_friend_checkbox input {
@@ -1903,38 +1987,15 @@ a.manage_friend_link {
 	color: #ffffff;
 }
 
-.friendPlayerLevel {
-	margin: 6px 6px 0px 2px;
-	font-size: 16px;
-	border-radius: 50%;
-	padding: 4px;
-	border: solid white 2px;
+#blockConfirmBlock {
+	width: 800px;
+	margin: 0 auto;
 }
 
-.friendPlayerLevel a.friendPlayerLevelNum {
-	color: #9b9b9b;
+body.profile_page #footer {
+	background-color: #000000;
 }
 
-.friendPlayerLevel.lvl_0 {
-	border: solid #9b9b9b 2px;
-}
-
-.friendPlayerLevel.lvl_10 {
-	border: solid #d96063 2px;
-}
-
-.friendPlayerLevel.lvl_20 {
-	border: solid #cecd70 2px;
-}
-
-.friendPlayerLevel.lvl_30 {
-	border: solid #7652c9 2px;
-}
-
-.friendPlayerLevel.lvl_40 {
-	border: solid #7dae3d 2px;
-}
-
-.friendPlayerLevel.lvl_50 {
-	border: solid #5491cf 2px;
+.friends_that_play_content .profile_friends {
+	margin-bottom: 12px;
 }

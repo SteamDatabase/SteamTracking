@@ -8,12 +8,21 @@
 	width:958px;
 	height:98px;
 	text-align: left;
+	margin: 0 auto;
 }
 #BG_bottom, #GCL_bottom {
 	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
+	margin: 0 auto;
+	padding-bottom: 16px;
+}
+#BG_bottom_test {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/footerBG.gif');
+	height: 55px;
+	width:958px;
+	margin: 0 auto;
 }
 #BG_top h2 {
 	font-weight:normal;
@@ -175,10 +184,8 @@
 	height:32px;
 	line-height: 28px;
 	background-color:#000000;
-	margin:0;
+	margin: 4px 0 4px 100px;
 	padding:0;
-	margin-left:96px;
-	border:solid #252525 4px;
 	padding-left:4px;
 }
 
@@ -283,3 +290,9 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	padding-left:8px;
 }
 
+
+
+a.linkTitle {
+	font-weight:bold;
+	font-size: 15px;
+}

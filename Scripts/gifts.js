@@ -85,11 +85,6 @@ function OnDeleteGiftResults( gidGift, transport )
 	if ( transport.responseJSON && transport.responseJSON.success == 1 )
 	{
 		UserYou.ReloadInventory( 753, 1 );
-		ShowAlertDialog(
-				'Delete gift',
-				'Success',
-				'OK'
-		);
 	}
 	else
 	{
