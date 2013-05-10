@@ -1002,10 +1002,10 @@ code {
 }
 #rightColSignupLink {
 	display:block;
-	width:261px;
+	width:264px;
 	height:77px;
-	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_signup_button.jpg');
-	margin-left:17px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_signup_button_n.png');
+	margin-left:12px;
 	margin-bottom:20px;
 }
 #rightColSignupSubtext {
@@ -1029,11 +1029,11 @@ code {
 	font-family:arial,sans-serif;
 }
 #rightColPlayerCount {
-	width:265px;
+	width:264px;
 	height:80px;
 	position:relative;
-	margin-left:13px;
-	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_uniqueplayers_bg.png');
+	margin-left:12px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_uniqueplayers_bg_n.png');
 	background-repeat:no-repeat;
 	margin-top:-16px;
 	margin-bottom:4px;
@@ -1051,6 +1051,28 @@ code {
   	left:4px;
   	text-align:center;
   	top:26px;
+  	height:19px;
+  	letter-spacing:2px;
+}
+#rightColPrizePool {
+	display:block;
+	width:264px;
+	height:226px;
+	position:relative;
+	margin-left:12px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/blog_goal_progress.png');
+	margin-top:0px;
+	margin-bottom:4px;
+}
+#rightColPrizePoolNum {
+	font-family:arial,sans-serif;
+	font-weight:bold;
+	font-size:22px;
+	color:#c9c9c9;
+  	position:absolute;
+  	width:264px;
+  	text-align:center;
+  	top:53px;
   	height:19px;
   	letter-spacing:2px;
 }
@@ -1126,10 +1148,10 @@ code {
 }
 #rightColInternational2013Button {
 	display:block;
-	width:256px;
-	height:107px;
-	margin:6px 0px 6px 19px;
-	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_international_2013_button.jpg');
+	width:264px;
+	height:114px;
+	margin:6px 0px 6px 12px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_international2013_button_n.png');
 }
 #rightColInternational2011Button {
 	display:block;
@@ -1633,4 +1655,3 @@ a.navBarItem:hover {
 .navItem {
 	display: inline-block;
 }
- 	 
