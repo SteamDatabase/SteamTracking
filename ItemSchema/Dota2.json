@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d01d5493c1a8ebdef601edb75940bee19b44bf6b.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.492b69ca8c97573738fb9af11ae7d49221ce0c92.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -9493,27 +9493,6 @@
 				}
 			},
 			{
-				"name": "Elder Titan's Ancestral Spirit",
-				"defindex": 448,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Elder Titan's Ancestral Spirit",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 0,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Horn Mask",
 				"defindex": 4000,
 				"item_class": "dota_item_wearable",
@@ -12093,19 +12072,20 @@
 				}
 			},
 			{
-				"name": "Queen of Pain's Slicer",
+				"name": "Arctic Hunter's Ice Axe",
 				"defindex": 4097,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
-				"item_name": "Queen of Pain's Slicer",
-				"item_description": "This new item has no description.",
+				"item_name": "Arctic Hunter's Ice Axe",
+				"item_description": "To brave the peaks beyond Icewrack requires tools specific to the job.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/queen_slicer",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_weapon\/onizaphk_ahunter_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_weapon\/onizaphk_ahunter_weapon.f55e201b0d9722aaf48c155e838f7cec84093b62.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_weapon\/onizaphk_ahunter_weapon_large.1d1aa6afa02b8b9e96fd978f99ddab55aa7f83bc.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -12788,19 +12768,20 @@
 				}
 			},
 			{
-				"name": "Queen of Pain's Ripper Dagger",
+				"name": "Arctic Hunter's Parka",
 				"defindex": 4123,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
-				"item_name": "Queen of Pain's Ripper Dagger",
-				"item_description": "This new item has no description.",
+				"item_name": "Arctic Hunter's Parka",
+				"item_description": "There is no better guard against the arctic cold than the pelt of an Icewrack wolf.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/queen_ripper_dagger",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_shoulder\/onizaphk_ahunter_shoulder",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_shoulder\/onizaphk_ahunter_shoulder.b76d3d68a9e6348a01bfa579d5706910eb0c1488.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_shoulder\/onizaphk_ahunter_shoulder_large.b5cf7d25a24939a364316e01dbacbd87572f7748.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20548,19 +20529,20 @@
 				}
 			},
 			{
-				"name": "headband_final1",
+				"name": "Arctic Hunter's Tusks",
 				"defindex": 4441,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
-				"item_name": "headband_final1",
-				"item_description": "This new item has no description.",
+				"item_name": "Arctic Hunter's Tusks",
+				"item_description": "As his pick found its purchase the ice began to crack and shatter, and Tusk was sent back to the icy tundra below.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_neck\/onizaphk_ahunter_neck",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_neck\/onizaphk_ahunter_neck.8123f662a68b5ab431c3818aa54eb0366b732432.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_neck\/onizaphk_ahunter_neck_large.acad2580bd833612ae7419432391352220f424a8.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20987,19 +20969,20 @@
 				}
 			},
 			{
-				"name": "Horns of the World-Breaker",
+				"name": "Arctic Hunter's Hood",
 				"defindex": 4460,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Horns",
-				"item_name": "Horns of the World-Breaker",
-				"item_description": "This new item has no description.",
+				"item_type_name": "New Item",
+				"item_name": "Arctic Hunter's Hood",
+				"item_description": "In the darkest nights of icy winter, the wolves of Icewrack howl their dirge.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/obsidian_destroyer\/moonhorns\/Moonhorns",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_head\/onizaphk_ahunter_head",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_head\/onizaphk_ahunter_head.54e7a9f6ffe1ea070581859ccd247e5b1eb48333.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_head\/onizaphk_ahunter_head_large.3d5df5a76d6c1c942982e975aecec51a9038a6de.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -21911,19 +21894,20 @@
 				}
 			},
 			{
-				"name": "Tailfin",
+				"name": "Arctic Hunter's Snack",
 				"defindex": 4498,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
-				"item_name": "Tailfin",
-				"item_description": "This new item has no description.",
+				"item_name": "Arctic Hunter's Snack",
+				"item_description": "Never brave the white without a snack!",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_back\/onizaphk_ahunter_back",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_back\/onizaphk_ahunter_back.b57efcd543bed72db7ef2a9c14a86274be4047d7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_back\/onizaphk_ahunter_back_large.528a7a39acc2c219f3353447066ffe149b4b05ac.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -21933,41 +21917,20 @@
 				}
 			},
 			{
-				"name": "Clawbringer",
+				"name": "Arctic Hunter's Glove",
 				"defindex": 4499,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
-				"item_name": "Clawbringer",
-				"item_description": "This new item has no description.",
+				"item_name": "Arctic Hunter's Glove",
+				"item_description": "What it lacks in heft it more than makes up for in tactile precision.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/tuskarr\/onizaphk_ahunter_armsv2\/onizaphk_ahunter_armsv2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Tidehunter's Barbed Belt",
-				"defindex": 4500,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Tidehunter's Barbed Belt",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_armsv2\/onizaphk_ahunter_armsv2.7bec7b0dc1b5081bbe46357883a75ee9485636b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_armsv2\/onizaphk_ahunter_armsv2_large.b0ac18bb3615cb57e379ed7dd0d2553ec91a43f8.png",
+				"item_set": "arctic_hunter_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22341,28 +22304,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyver_head2\/wyver_head2.8f48a58cd0347bac2253d5967acc295917b7e104.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/wyver_head2\/wyver_head2_large.4a9f4c288dd6f13b51c32e3c46ea7ff4b8309549.png",
 				"item_set": "dragon_knight_crimson_wyvern",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Twisted Firekeeper",
-				"defindex": 4517,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Staff",
-				"item_name": "Twisted Firekeeper",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/warlock\/twistedstaff\/twistedstaff",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22928,50 +22869,6 @@
 				}
 			},
 			{
-				"name": "shoulder_silent_protector",
-				"defindex": 4542,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "shoulder_silent_protector",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "armor_silent_protector",
-				"defindex": 4543,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "armor_silent_protector",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Gazing Eye of the Demon Witch",
 				"defindex": 4544,
 				"item_class": "dota_item_wearable",
@@ -23101,28 +22998,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/redwoodarc\/redwoodarc.b4e899a98df3d6d66d9bc9587d1d0f30f50cb04f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/redwoodarc\/redwoodarc_large.143b61c894143b2bcc95f7cbd9c4d9459bf5885f.png",
 				"item_set": "windrunner_redwood",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Diadem of the Dark Destroyer",
-				"defindex": 4550,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Horns",
-				"item_name": "Diadem of the Dark Destroyer",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/obsidian_destroyer\/diadem_dark_destroyer\/diadem_dark_destroyer",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23473,28 +23348,6 @@
 				}
 			},
 			{
-				"name": "Warlock's Thorn Staff",
-				"defindex": 4566,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Warlock's Thorn Staff",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Helm of the Hidden Talent",
 				"defindex": 4567,
 				"item_class": "dota_item_wearable",
@@ -23554,28 +23407,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/iq_robe\/iq_robe.daf20f25906311dd343c3b63abf84673158e5027.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/iq_robe\/iq_robe_large.5f22fd5e984c1b4d2d317fac405dea775f316a77.png",
 				"item_set": "grand_inquisitor",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Essence Collector",
-				"defindex": 4570,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Staff",
-				"item_name": "Essence Collector",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/obsidian_destroyer\/essencecollector\/EssenceCollector",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -25124,72 +24955,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__belt\/eleven_curses__belt.6c5ad47a33a95ff86d14b1adf223d7a540cd3d04.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/eleven_curses__belt\/eleven_curses__belt_large.fcf986f893f593e1ac4a3b40c73d27335bd55cb5.png",
 				"item_set": "eleven_curses",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Orichalcum Ancient Axe",
-				"defindex": 4635,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Orichalcum Ancient Axe",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Belt of Timeless Ritual",
-				"defindex": 4636,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "belt",
-				"item_name": "Belt of Timeless Ritual",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/faceless_void\/ritualbelt\/ritualbelt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Shoulders of Timeless Ritual",
-				"defindex": 4637,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Shoulders",
-				"item_name": "Shoulders of Timeless Ritual",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/faceless_void\/ritualshoulders\/ritualshoulders",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -26773,72 +26538,6 @@
 				}
 			},
 			{
-				"name": "Reaper_Hood",
-				"defindex": 4704,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Reaper_Hood",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Reapers_Scythe",
-				"defindex": 4705,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Reapers_Scythe",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Reaper_Shoulder",
-				"defindex": 4706,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Reaper_Shoulder",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Egg of the Stormcrow",
 				"defindex": 4707,
 				"item_class": "dota_item_wearable",
@@ -27077,28 +26776,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_bracers\/masquerade_bracers.f7b673c521793af021901429fb820df5fda424b8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_bracers\/masquerade_bracers_large.4b3c9955f14665180d00dd4d1268ccdffc8a7544.png",
 				"item_set": "tahlin_assassin",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "nightshade_helm",
-				"defindex": 4716,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "nightshade_helm",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -27644,160 +27321,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_dagger_off\/masquerade_dagger_off.0c93b4fa0fc68a93b1449cfd51b9531728c72663.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/masquerade_dagger_off\/masquerade_dagger_off_large.80e41175a576099c6559700a525426ad08a16212.png",
 				"item_set": "tahlin_assassin",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "hellforge_helm",
-				"defindex": 4741,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "hellforge_helm",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "hellforge_cape",
-				"defindex": 4742,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "hellforge_cape",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "hellforge_pauldrons_v2",
-				"defindex": 4743,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "hellforge_pauldrons_v2",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Staff of Unrelenting Force",
-				"defindex": 4744,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Staff of Unrelenting Force",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "weapon_skully",
-				"defindex": 4745,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "weapon_skully",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "hellforge_gauntlets",
-				"defindex": 4746,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "hellforge_gauntlets",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "hellforge_blade_v3",
-				"defindex": 4747,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "hellforge_blade_v3",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -31417,19 +30940,19 @@
 				}
 			},
 			{
-				"name": "weapon_eyeoffetitzu",
+				"name": "Eye of Omoz",
 				"defindex": 4905,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "weapon_eyeoffetitzu",
-				"item_description": "This new item has no description.",
+				"item_type_name": "Sword",
+				"item_name": "Eye of Omoz",
+				"item_description": "In the burning pits of the stygian waste, the sword sees all.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu.0ae74e97d4716d5650e06dc928b2b2cf7053f3b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu_large.698c596be94c5686533a0527d2799c0df6e2e95a.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32711,8 +32234,8 @@
 				"image_inventory": "econ\/items\/disruptor\/dsrptr12\/dsrptr12",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/dsrptr12\/dsrptr12.9581f1fc11324997bd5a0c70825f55820923e84e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/dsrptr12\/dsrptr12_large.70bb455cdd515011c5a5d9291b68c2b286f6026e.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32733,8 +32256,8 @@
 				"image_inventory": "econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit.277b6d480e926f1ea6f7e85dee8fc111a9075e9c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit_large.16b62369d477cdd2188db23432cf4fad8771e9a2.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32752,11 +32275,11 @@
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01.88fe1d160796a71e760b3894863aa6e562ceb61f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01_large.8cdc457f0281c427813b34330928c7206d5d7f32.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32777,8 +32300,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6.cc64283d168237098744704ef6f4ca058e487c33.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6_large.3a9429cca9cabf30b7f4fb0f2743aa619d0f8999.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32799,8 +32322,8 @@
 				"image_inventory": "econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed.b27f42c2d722e94cc9657566ccbf30fb87c23767.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed_large.f28e40a2edfc8721da38ab9f181316fb7cfdb79d.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -33934,7 +33457,7 @@
 				"image_inventory": "econ\/pennant\/pennant_fluffy_bunnies",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_fluffy_bunnies.088550f580540497e4a3f1db91d4bc9755d34dae.png",
+				"image_url": "",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -33985,7 +33508,7 @@
 				"image_inventory": "econ\/pennant\/pennant_van_buren_boys",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_van_buren_boys.a89465022ff9c75eae7ad7058fd91aa198e0e68d.png",
+				"image_url": "",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -34879,8 +34402,8 @@
 				"image_inventory": "econ\/pennant\/pennant_team42_icon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team42_icon.5f90102b57d0523635e205b29441bf995a5beaf5.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team42_icon_large.063bbcc7563cce166fa87d1d8e38e81d20d46c86.png",
+				"image_url": "",
+				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34898,7 +34421,7 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 42.000000
+						"value": 416900.000000
 					},
 					{
 						"name": "kill eater",
@@ -37737,6 +37260,16 @@
 						"value": 65006.000000
 					},
 					{
+						"name": "league id 2",
+						"class": "",
+						"value": 65004.000000
+					},
+					{
+						"name": "league id 3",
+						"class": "",
+						"value": 65005.000000
+					},
+					{
 						"name": "kill eater",
 						"class": "kill_eater",
 						"value": 0.000000
@@ -37834,6 +37367,90 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_crystal_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Acid Essence",
+				"defindex": 10178,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Acid Essence",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_acid_essence",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frozen Touch",
+				"defindex": 10179,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Frozen Touch",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_frozen_touch",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Menace",
+				"defindex": 10180,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Menace",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_menace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Nature",
+				"defindex": 10181,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Nature",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_nature",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -43513,11 +43130,11 @@
 				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_eastqualifier_ingame",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eastqualifier_ingame.b2b07d86f518dc5be66680ba54ba900676e9c580.png",
+				"image_url_large": "",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43548,11 +43165,11 @@
 				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_westqualifier_ingame",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_westqualifier_ingame.84e1fe1b6d6ea4569a5942b47aab88b6b94beaa7.png",
+				"image_url_large": "",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43575,11 +43192,11 @@
 				
 			},
 			{
-				"name": "International 2013 Ticket",
+				"name": "The International 2013 Ticket",
 				"defindex": 15159,
 				"item_class": "tool",
 				"item_type_name": "Tournament Ticket",
-				"item_name": "International 2013 Ticket",
+				"item_name": "The International 2013 Ticket",
 				"item_description": "This item is an invitation to personally attend the Dota 2 International Tournament, August 7 - 11 2013, at Benaroya Hall in Seattle, WA. Attendees will receive preferential seating on the show floor.<br><br>This ticket must be activated from your in-game backpack. Once activated, the ticket will be consumed and removed from your backpack and registered on your Steam account. Ticket information will be emailed no later than June 30th, 2013 to the email address associated with your Steam account.<br><br>This purchase also includes a International 2013 Interactive Compendium and Smeevil Courier.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -43685,7 +43302,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tournament Compendium",
 				"item_name": "International 2013 Interactive Compendium",
-				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier.",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and Battle Bonus stretch reward!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_companion",
@@ -43738,6 +43355,182 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure Key of the Malignant Amanita",
+				"defindex": 15164,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Treasure Key of the Malignant Amanita",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests of the Malgnant Amanita<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/fungal_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/fungal_key.a86c5fcc8cc8eedc2ad1a44b9ba6a5333ef2320e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/fungal_key_large.cf27411053f43a8de5543ea5f4b9c9177bb712d2.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_pack_5",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Super League",
+				"defindex": 15165,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Dota 2 Super League",
+				"item_description": "Ten top teams from home and abroad compete for two months in Shanghai, China for a total prize pool of 1.05 million yuan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dsl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Super League - ADMIN",
+				"defindex": 15166,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Dota 2 Super League - ADMIN",
+				"item_description": "Ten top teams from home and abroad compete for two months in Shanghai, China for a total prize pool of 1.05 million yuan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dsl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The International East Qualifiers - ADMIN",
+				"defindex": 15167,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International East Qualifiers - ADMIN",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_eastqualifier_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eastqualifier_ingame.b2b07d86f518dc5be66680ba54ba900676e9c580.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The International West Qualifiers - ADMIN",
+				"defindex": 15168,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International West Qualifiers - ADMIN",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_westqualifier_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_westqualifier_ingame.84e1fe1b6d6ea4569a5942b47aab88b6b94beaa7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
 					"use_string": "Use"
 				},
 				"attributes": [
@@ -48472,6 +48265,34 @@
 				}
 			},
 			{
+				"name": "Arctic Hunter Set",
+				"defindex": 20168,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Arctic Hunter Set",
+				"item_description": "Includes all of the items in the 'Arctic Hunter' set for Tusk",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Arctic_Hunter_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arctic_hunter_set.ad783714ed34b3781a7e2f61ddd9b3be01ce1864.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arctic_hunter_set_large.e5e28a4a0ed7f821049b4696702942829bce9165.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "The International 2013 Interactive Compendium Bundle",
 				"defindex": 20169,
 				"item_class": "bundle",
@@ -49379,7 +49200,7 @@
 			{
 				"name": "league id",
 				"defindex": 389,
-				"attribute_class": "league_id",
+				"attribute_class": "league id",
 				"min_value": 0.950000,
 				"max_value": 0.850000,
 				"description_string": "Attrib_LeagueID",
@@ -49423,6 +49244,30 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "league id 2",
+				"defindex": 393,
+				"attribute_class": "league id 2",
+				"min_value": 0.950000,
+				"max_value": 0.850000,
+				"description_string": "Attrib_LeagueID",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "league id 3",
+				"defindex": 394,
+				"attribute_class": "league id 3",
+				"min_value": 0.950000,
+				"max_value": 0.850000,
+				"description_string": "Attrib_LeagueID",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -49518,6 +49363,20 @@
 					"Infernal Pauldrons of Apocalyptic Fire",
 					"Demon Blade of Apocalyptic Fire",
 					"Tail Plates of Apocalyptic Fire"
+				]
+				
+			},
+			{
+				"item_set": "arctic_hunter_set",
+				"name": "Arctic Hunter Set",
+				"store_bundle": "Arctic Hunter Set",
+				"items": [
+					"Arctic Hunter's Ice Axe",
+					"Arctic Hunter's Parka",
+					"Arctic Hunter's Tusks",
+					"Arctic Hunter's Hood",
+					"Arctic Hunter's Snack",
+					"Arctic Hunter's Glove"
 				]
 				
 			},
