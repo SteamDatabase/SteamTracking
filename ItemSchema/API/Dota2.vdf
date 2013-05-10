@@ -69325,6 +69325,187 @@
 			"creation_date"		"2013-05-08"
 			"sound_material"		"3"
 		}
+		"15165"
+		{
+			"name"		"Dota 2 Super League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"42"
+					"order"		"21"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Dota_2_Super_League"
+			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League"
+			"image_inventory"		"econ/leagues/subscriptions_dsl"
+			"creation_date"		"2013-05-09"
+			"image_banner"		"econ/leagues/subscriptions_dsl_ingame"
+			"tournament_url"		"http://play.gosugamers.net/events/113-dota-2-super-league"
+		}
+		"15166"
+		{
+			"name"		"Dota 2 Super League - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"42"
+					"order"		"21"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Dota_2_Super_League__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League__ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_dsl"
+			"creation_date"		"2013-05-09"
+			"image_banner"		"econ/leagues/subscriptions_dsl_ingame"
+			"tournament_url"		"http://play.gosugamers.net/events/113-dota-2-super-league"
+		}
+		"15167"
+		{
+			"name"		"The International East Qualifiers - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"65004"
+					"order"		"19"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_The_International_East_Qualifiers__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
+			"image_inventory"		"econ/leagues/subscriptions_eastqualifier_ingame"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+			"image_banner"		"econ/leagues/subscriptions_eastqualifier_ingame"
+		}
+		"15168"
+		{
+			"name"		"The International West Qualifiers - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"65005"
+					"order"		"19"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_The_International_West_Qualifiers__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_West_Qualifiers"
+			"image_inventory"		"econ/leagues/subscriptions_westqualifier_ingame"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
+		}
+		"15169"
+		{
+			"name"		"Pinoy Gaming Festival Summer Assembly"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"43"
+					"order"		"22"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly"
+			"item_description"		"#DOTA_Item_Desc_Pinoy_Gaming_Festival_Summer_Assembly"
+			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.pgf.ph/"
+			"image_banner"		"econ/leagues/subscriptions_pgf_summer_assembly_ingame"
+		}
+		"15170"
+		{
+			"name"		"Pinoy Gaming Festival Summer Assembly - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"43"
+					"order"		"22"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Pinoy_Gaming_Festival_Summer_Assembly"
+			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.pgf.ph/"
+			"image_banner"		"econ/leagues/subscriptions_pgf_summer_assembly_ingame"
+		}
+		"15171"
+		{
+			"name"		"Rapture Gaming Network League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"44"
+					"order"		"23"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League"
+			"item_description"		"#DOTA_Item_Desc_Rapture_Gaming_Network_League"
+			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.rapturegaming.net/"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+		}
+		"15172"
+		{
+			"name"		"Rapture Gaming Network League - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"44"
+					"order"		"23"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Rapture_Gaming_Network_League"
+			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.rapturegaming.net/"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+		}
 		"20000"
 		{
 			"name"		"Of Ebony and Ivory Set"
