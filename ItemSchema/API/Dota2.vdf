@@ -80432,6 +80432,13 @@
 				}
 			}
 		}
+		"76"
+		{
+			"system"		"courier_trail_fungal"
+			"resource"		"particles/econ/courier/courier_trail_fungal.pcf"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+		}
 	}
 	"upgradeable_base_items"
 	{
@@ -82465,6 +82472,25 @@
 			"Na'Vi's Weaselcrow"		"1"
 			"Cluckles the Brave"		"1"
 		}
+		"unusual_courier_community_5"
+		{
+			"Fearless Badger"		"1"
+			"Stumpy - Nature's Attendant"		"1"
+			"Trusty Mountain Yak"		"1"
+			"Enduring War Dog"		"1"
+			"Mighty Boar"		"1"
+			"Morok's Mechanical Mediary"		"1"
+			"Skip the Delivery Frog"		"1"
+			"Speed Demon"		"1"
+			"Tickled Tegu"		"1"
+			"Baby Roshan"		"1"
+			"Prismatic Drake"		"1"
+			"Cluckles the Brave"		"1"
+			"Nimble Ben"		"1"
+			"Kupu the Metamorpher"		"1"
+			"Porcine Princess Penelope"		"1"
+			"The Llama Llama"		"1"
+		}
 		"the_defense_2_unusual_courier"
 		{
 			"Defense Season 2 War Dog"		"1"
@@ -82797,6 +82823,21 @@
 			"Ormr the Lunar Dragon"		"1"
 			"Bessy the Batmeleon"		"1"
 		}
+		"community_items_5"
+		{
+			"Stalwart Sentinel"		"1"
+			"Hammer of the Skygods"		"1"
+			"The Tear of Agony"		"1"
+			"The Cursed Crescent"		"1"
+			"Gloomblade"		"1"
+			"Eye of Omoz"		"1"
+			"Taunt: Spider Shuffle"		"1"
+			"Taunt: Come and Get It!"		"1"
+			"Taunt: Celebration of Death"		"1"
+			"Taunt: Shredding the Lute Invisible"		"1"
+			"Taunt: For Death and Honor"		"1"
+			"Taunt: Victory Jig"		"1"
+		}
 		"anuxi_items_1"
 		{
 			"Crystalline Sickles"		"1"
@@ -83104,6 +83145,10 @@
 		{
 			"community_items_4"		"1"
 		}
+		"community_item_pack_5"
+		{
+			"community_items_5"		"1"
+		}
 		"anuxi_item_pack_1"
 		{
 			"anuxi_items_1"		"1"
@@ -83146,6 +83191,7 @@
 		"28"		"community_item_pack_4"
 		"29"		"treasure_chest_loot_list_29"
 		"30"		"anuxi_item_pack_1"
+		"31"		"community_item_pack_5"
 	}
 	"item_levels"
 	{

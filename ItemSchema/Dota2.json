@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d53bd81943f2a008c80ae948f01db2d2b71e4c23.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.6269ed84875c62e4cbff55e17cd5327d6dbf7296.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -51692,6 +51692,12 @@
 				"id": 75,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle75"
+			},
+			{
+				"system": "courier_trail_fungal",
+				"id": 76,
+				"attach_to_rootbone": false,
+				"name": "Trail of the Amanita"
 			}
 		]
 		,
