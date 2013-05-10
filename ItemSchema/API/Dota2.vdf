@@ -9644,15 +9644,6 @@
 			{
 				"type"		"hero_taunt"
 			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"come_get_it"
-				}
-			}
 			"item_description"		"#DOTA_Item_Desc_Taunt_Come_and_Get_It"
 			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Come_and_Get_It"
 			"used_by_heroes"
@@ -9713,15 +9704,6 @@
 			}
 			"item_description"		"#DOTA_Item_Desc_Taunt_Spider_Shuffle"
 			"image_inventory"		"econ/taunts/DOTA_Item_Taunt_Spider_Shuffle"
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"broodmother_spin"
-				}
-			}
 			"used_by_heroes"
 			{
 				"npc_dota_hero_broodmother"		"1"
@@ -9916,15 +9898,6 @@
 			{
 				"npc_dota_hero_witch_doctor"		"1"
 			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"witchdoctor_jig"
-				}
-			}
 			"portraits"
 			{
 				"icon"
@@ -9983,15 +9956,6 @@
 			{
 				"npc_dota_hero_furion"		"1"
 			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"guitar"
-				}
-			}
 			"portraits"
 			{
 				"icon"
@@ -10044,16 +10008,6 @@
 			"used_by_heroes"
 			{
 				"npc_dota_hero_juggernaut"		"1"
-			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"loser"
-					"frequency"		"1"
-				}
 			}
 			"tool"
 			{
@@ -10353,21 +10307,6 @@
 			"used_by_heroes"
 			{
 				"npc_dota_hero_furion"		"1"
-			}
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"activity"
-					"asset"		"ACT_DOTA_TAUNT"
-					"modifier"		"happy_dance"
-				}
-				"asset_modifier1"
-				{
-					"type"		"speech"
-					"asset"		"TLK_DOTA_TAUNT"
-					"modifier"		"#DOTA_Chat_Taunt"
-				}
 			}
 			"tool"
 			{
