@@ -1,0 +1,143 @@
+
+
+/* get rid of the extra padding at the bottom of the page on older pages, which may need the background to touch the footer */
+body.migrated_profile_page_old .pagecontent {
+	padding-bottom: 0;
+}
+
+#BG_top {
+	position:relative;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+	margin: 0 auto;
+}
+#BG_bottom {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+	margin: 0 auto;
+	padding-bottom: 128px;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+}
+
+#mainContents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:21px;
+}
+
+h2 {
+	color:#89ADBA;
+	font-size:11px;
+	font-weight:bolder;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+#memberList {
+	margin:0;
+	padding:0;
+	margin-left:26px;
+}
+
+#bottomLinks {
+	position:relative;
+	width:766px;
+	margin:0;
+	padding:0;
+	margin-bottom:6px;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
+	float:left;
+	width:286px;
+	height:40px;
+	padding:0;
+	margin:0;
+	padding-left:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-bottom:4px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/playerBlockBG.gif');
+	font-size:10px;
+	margin-right:8px;
+}
+
+.friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/playerBlockBG_over.gif');
+	cursor:pointer;
+}
+
+
+#game_logo {
+	position:absolute;
+	width:192px;
+	left:748px;
+	top:7px;
+}
+
+
+.friendBlockText {
+	color: #898989;
+}
+
+.friendListSectionHeader {
+	margin-bottom: 8px;
+	height:17px;
+	width:669px;
+	font-size:11px;
+	padding-top:2px;
+}
+
+.blockedText {
+	color:#f26c4f;
+	font-size:11px;
+	font-weight:bold;
+}
+
+
+.profile_friends .friendBlock {
+	position: relative;
+	float: left;
+	width: 290px;
+	margin-right: 8px;
+}
+
+.profile_friends .friendBlock:nth-child(3n) {
+	margin-right: 0;
+}
