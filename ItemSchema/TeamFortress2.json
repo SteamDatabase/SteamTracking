@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.e63f0a022c7556d06bf8800386a8887799902bdd.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2d90726958d8f7f344e6fdb81bf959b3e120b25c.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -15463,8 +15463,8 @@
 				"image_inventory": "backpack\/player\/items\/all_class\/weiner_bomb_medal",
 				"min_ilevel": 25,
 				"max_ilevel": 25,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal.4a512655f3cdea27b07d2aacf8d8d0d31dac1014.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal_large.5aa145c03f489ac9eb01c4ee816b26bbc0668553.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal.51fbb5ae774e1512c8b5f2337b5ffb850b9046f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal_large.0989294c627d77d0775d84709838202e02b0e01c.png",
 				"drop_type": "none",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -32255,12 +32255,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tuxxy_demo.28d634e98552c8ff25f40e551d4edf30cae59c2c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tuxxy_demo_large.4eae775ea31cdfb094cd5a163bb686bd763cc9b5.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -34628,12 +34629,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/starve_demo.d93cf98d39d25b6931963e09b6f1e158f7fa01e8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/starve_demo_large.76bbe629c76b98fb1cf38bb24ade11fbb992f6fd.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34647,14 +34649,6 @@
 					"Medic",
 					"Heavy",
 					"Engineer"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -34674,11 +34668,12 @@
 				"max_ilevel": 5,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ham.5bbd140fa8bd6d2f1918a92712750779232ec874.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_ham_large.d2768e3728805cd2f1be0636ded907682e8f7cdc.png",
-				"craft_class": "",
+				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34694,14 +34689,6 @@
 					"Medic",
 					"Heavy",
 					"Pyro"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -43427,7 +43414,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "RoboCrate",
-				"item_description": "This crate is special.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "This crate is special.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nThere will probably be a way to open it later.\n\nThe RoboCrate contains Unusual effects that will only come from this crate.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -55563,6 +55550,897 @@
 				"max_ilevel": 25,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Platinum Season 9",
+				"defindex": 8248,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Platinum",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum.74101f8d8e944d22339fc493d6776a1fc90b5f65.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum_large.ae0f4edacdb66c0051b5b834184b7a059a862558.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Platinum Season 9",
+				"defindex": 8249,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Platinum",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum.d356031d63b6f2e9967445eb336e0bbb2b9b756f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum_large.d2c87f4e8fbf653366033e60d5373b64963d00f3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Platinum Season 9",
+				"defindex": 8250,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Platinum",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum.921eb7493bb4324b3842ceed42140ed8a8565da4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum_large.a1facf28d909c08417ea781165f51fdfc28bc954.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Gold Season 9",
+				"defindex": 8251,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Gold",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_gold.7358e93cf240d86090dca5b0df3c26df4f8db6cd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_gold_large.92979f4b45c634dbffb5bfd132ebe4b61576a157.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Gold Season 9",
+				"defindex": 8252,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Gold",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_gold.fa25b32369939e2fad8ec62a3382b554a248cf1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_gold_large.feb3310b4c71ec4c01d68820d39ee9ab0302c2fd.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Gold Season 9",
+				"defindex": 8253,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Gold",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_gold.a168d06175a93a95a86501159fd5cac2cc86787f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_gold_large.38f50e8efba3ba52eedd7e93302cf7e8f688ab65.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Silver Season 9",
+				"defindex": 8254,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Silver",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_silver.d7b59388a85175e199b84ae1076a7445e47f7f50.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_silver_large.1ec8c6417d01361ea2bb4e7cb15ddef03c02a425.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Silver Season 9",
+				"defindex": 8255,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Silver",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_silver.7f03ecd74d7cc870601d2b33a6784ca6c5f1520a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_silver_large.5c930807c9cf02ea34c9a40ba859be4beb37b8b9.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Silver Season 9",
+				"defindex": 8256,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Silver",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_silver.7097cbda18f8e26a90789f7c0edfc200188fe570.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_silver_large.571e436462e30ceb45d98363d1fc155559b633d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Steel Season 9",
+				"defindex": 8257,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Steel",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_steel",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_steel.0d6689ffdf85f5640363df1ceb5c8d22592cccb6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_steel_large.7d877ef1de0bfa0c88cd0bac6092020a34b0a041.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Steel Season 9",
+				"defindex": 8258,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Steel",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_steel",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_steel.91fb70c46c3624003fcfa104cec20b8d4b1eeb2d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_steel_large.6da11b3928541c0a96c149f3111fa48ece754b64.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Steel Season 9",
+				"defindex": 8259,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Steel",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_steel",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_steel.9e2819a1fabb781e677391875bbc4c2c12d9b5c8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_steel_large.9d8254518700a5818947326296d963fc67f2515a.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Iron Season 9",
+				"defindex": 8260,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Iron",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_iron",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_iron.2f9fb83784c940db473af32e59e08015172b6fb2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_iron_large.aeaa651458f5cd14a5e69b0125d4376697763e01.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Iron Season 9",
+				"defindex": 8261,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Iron",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_iron",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_iron.ac3f3e7cf8da9a1abc91c5bc07cf5bb43e8addbd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_iron_large.0314e26702a154fa4d3f05696554cae05458935f.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Iron Season 9",
+				"defindex": 8262,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Iron",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_iron",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_iron.cb0c01d18b30c16401fdd266053378f1d18f92e5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_iron_large.7559cada5d2fe9158449d3dd3a305d2982bdb2b2.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Season 9",
+				"defindex": 8263,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_first.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_first_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum.74101f8d8e944d22339fc493d6776a1fc90b5f65.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum_large.ae0f4edacdb66c0051b5b834184b7a059a862558.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Season 9",
+				"defindex": 8264,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_second.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_second_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum.d356031d63b6f2e9967445eb336e0bbb2b9b756f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum_large.d2c87f4e8fbf653366033e60d5373b64963d00f3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Season 9",
+				"defindex": 8265,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_third.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_third_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum.921eb7493bb4324b3842ceed42140ed8a8565da4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum_large.a1facf28d909c08417ea781165f51fdfc28bc954.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Platinum Participant Season 9",
+				"defindex": 8266,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Platinum Participant",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_platinum",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_platinum.99606aedc3f6e86a828866264d7deb5c36f2b157.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_platinum_large.ad4de236910bbf1eb50f4fb368693ce9606130c1.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Gold Participant Season 9",
+				"defindex": 8267,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Gold Participant",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold.ea48ca40373f3a2769c70ffa61c36007fcb1a485.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold_large.7e082f4545836b7dfcc6cc68488dc82c97ac9a9c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Silver Participant Season 9",
+				"defindex": 8268,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Silver Participant",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Steel Participant Season 9",
+				"defindex": 8269,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Steel Participant",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_steel",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel.900828249695490eaf8ab19ac5f4bf2e8a697399.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel_large.45cd05d4e25060cc06f9f5f7707a77a85b958fb3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Iron Participant Season 9",
+				"defindex": 8270,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Iron Participant",
+				"item_description": "UGC Highlander League Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_iron",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_iron.e144916f5497341161e8ab74bcb53e707359d135.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_iron_large.809c8aec912e8f0cdb621c50aadc72476301dc72.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Platinum Participant Season 11",
+				"defindex": 8271,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Platinum Participant",
+				"item_description": "UGC 6vs6 League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold.ea48ca40373f3a2769c70ffa61c36007fcb1a485.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold_large.7e082f4545836b7dfcc6cc68488dc82c97ac9a9c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Silver Participant Season 11",
+				"defindex": 8272,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Silver Participant",
+				"item_description": "UGC 6vs6 League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Steel Participant Season 11",
+				"defindex": 8273,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Steel Participant",
+				"item_description": "UGC 6vs6 League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_steel",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel.900828249695490eaf8ab19ac5f4bf2e8a697399.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel_large.45cd05d4e25060cc06f9f5f7707a77a85b958fb3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 European Participant Season 11",
+				"defindex": 8274,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 European Participant",
+				"item_description": "UGC 6vs6 League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/ugc_season9_participant.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/ugc_season9_participation_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
 				"drop_type": "none",
 				"capabilities": {
 					"can_craft_mark": true,
