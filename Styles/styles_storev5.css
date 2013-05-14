@@ -3663,12 +3663,12 @@ div#global_header .submenuitem.active, div#global_header .submenuitem:hover
 	color: #ffffff;
 }
 
-.submenuitem.moderator
+div#global_header .submenuitem.moderator
 {
 	color: #b80000;
 }
 
-.submenuitem.active.moderator, .submenuitem.moderator:hover
+div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.moderator:hover
 {
 	color: #ff0000;
 }
