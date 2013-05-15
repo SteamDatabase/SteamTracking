@@ -13,6 +13,7 @@ Styles/economy.css|http://cdn.steamcommunity.com/public/css/skin_1/economy.css?_
 Styles/economy_inventory.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_inventory.css?_=*TIMENOW*
 Styles/economy_market.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css?_=*TIMENOW*
 Styles/forums.css|http://cdn.steamcommunity.com/public/css/skin_1/forums.css?_=*TIMENOW*
+Styles/gamecard_crafting.css|http://cdn.steamcommunity.com/public/css/skin_1/gamecard_crafting.css?_=*TIMENOW*
 Styles/global.css|http://cdn.steamcommunity.com/public/css/skin_1/global.css?_=*TIMENOW*
 Styles/globalv2.css|http://cdn.steamcommunity.com/public/css/globalv2.css?_=*TIMENOW*
 Styles/greenlight.css|http://cdn.steamcommunity.com/public/css/skin_1/greenlight.css?_=*TIMENOW*
