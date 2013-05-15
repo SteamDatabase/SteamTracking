@@ -1,0 +1,622 @@
+
+.profile_badges_header {
+	padding-top: 32px;
+	margin-bottom: 16px;
+
+	line-height: 30px;
+}
+
+.profile_badges_header_title {
+
+	font-size: 24px;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	color: #5491cf;
+}
+
+.profile_badges_sortoptions {
+	float: right;
+}
+
+.badge_sort_option {
+	display: inline-block;
+	margin: 0 8px;
+}
+
+.badge_sort_option.active {
+	text-decoration: underline;
+}
+
+.badge_row {
+	display: block;
+	position: relative;
+	padding: 1px;
+	border-radius: 5px;
+	margin-bottom: 31px;
+	border-top: 1px solid #2e2c2c;
+	border-right: 1px solid #242425;
+	border-bottom: 1px solid transparent;
+	border-left: 1px solid transparent;
+	background-color: #212222;
+	background: -moz-linear-gradient(top, #383939 5%, #000000 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#383939), color-stop(95%,#000000));background: -webkit-linear-gradient(top, #383939 5%,#000000 95%);background: -o-linear-gradient(top, #383939 5%,#000000 95%);background: -ms-linear-gradient(top, #383939 5%,#000000 95%);background: linear-gradient(to bottom, #383939 5%,#000000 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383939', endColorstr='#000000',GradientType=0 );}
+
+a.badge_row {
+	color: #828282;
+}
+
+a.badge_row:hover, .badge_row.depressed {
+	background: none;
+	background-color: #1d1e1f;
+	box-shadow: inset 1px 1px 4px #000000;
+	-webkit-box-shadow: inset 1px 1px 4px #000000;
+}
+
+a.badge_row:hover {
+	border: 1px solid #5491CF;
+}
+
+a.badge_row:hover .badge_row_inner, .badge_row.depressed .badge_row_inner {
+	background: none;
+}
+
+.badge_row_overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.badge_row_inner {
+	background-color: #212222;
+	border-radius: 5px;
+	background: -moz-linear-gradient(top, #232424 5%, #141414 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#232424), color-stop(95%,#141414));background: -webkit-linear-gradient(top, #232424 5%,#141414 95%);background: -o-linear-gradient(top, #232424 5%,#141414 95%);background: -ms-linear-gradient(top, #232424 5%,#141414 95%);background: linear-gradient(to bottom, #232424 5%,#141414 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232424', endColorstr='#141414',GradientType=0 );}
+
+.badge_title_row {
+	padding: 8px 12px 0 12px;
+	height: 32px;
+}
+
+.badge_title_stats {
+	float: right;
+	font-size: 12px;
+	color: #7b7b7c;
+	text-align: right;
+}
+
+.badge_title {
+	line-height: 32px;
+	font-size: 20px;
+	color: #ffffff;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+}
+
+.badge_view_details {
+	color: #6ca1d5;
+	font-size: 12px;
+	visibility: hidden;
+}
+
+a.badge_row:hover .badge_view_details {
+	visibility: visible;
+}
+
+.badge_title_rule {
+	margin: 0 3px;
+	height: 1px;
+	border-top: 1px solid #000000;
+	background-color: #333333;
+}
+
+.badge_content {
+	padding: 10px;
+	position: relative;
+}
+
+.badge_info {
+
+}
+
+.gamecard_details {
+	position: relative;
+}
+
+.gamecard_details .badge_info {
+	border: 1px solid #2d2b2b;
+	border-radius: 3px;
+	width: 320px;
+
+	padding-left: 12px;
+}
+
+.badge_info_image {
+	float: left;
+	margin-right: 24px;
+}
+
+.badge_info_description {
+	padding-top: 13px;
+}
+
+.badge_info_title {
+	color: #ffffff;
+}
+
+.badge_info_unlocked {
+	font-size: 12px;
+}
+
+.badge_progress_info {
+	width: 92px;
+	float: right;
+	margin-left: 10px;
+
+	text-align: center;
+	font-size: 13px;
+
+	padding-top: 20px;
+}
+
+.badge_progress_info .progress_info_bold {
+	color: #5491cf;
+}
+
+.badge_task_tooltip {
+	border: 1px solid #333538;
+	border-radius: 3px;
+	padding: 5px;
+	max-width: 292px;
+	background: -moz-linear-gradient(top, #33425A 5%, #282F3D 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#33425A), color-stop(95%,#282F3D));background: -webkit-linear-gradient(top, #33425A 5%,#282F3D 95%);background: -o-linear-gradient(top, #33425A 5%,#282F3D 95%);background: -ms-linear-gradient(top, #33425A 5%,#282F3D 95%);background: linear-gradient(to bottom, #33425A 5%,#282F3D 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425A', endColorstr='#282F3D',GradientType=0 );}
+
+.badge_task_tooltip a:hover {
+	text-decoration: underline;
+}
+
+.badge_craft_button {
+	background-color: #5491cf;
+	display: block;
+	border-radius: 5px;
+	border: 1px solid #27629d;
+
+	line-height: 68px;
+	height: 68px;
+
+	text-shadow: 1px 1px 2px #3c6dab;
+	color: #ffffff;
+	font-size: 17px;
+
+	position: relative;
+	z-index: 4;
+
+	text-align: center;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	cursor: pointer;
+}
+
+.badge_craft_button:hover {
+	background-color: #5ea3e8;
+}
+
+.badge_progress_tasks {
+	width: 512px;
+	float: right;
+}
+
+.badge_current {
+	width: 296px;
+	float: left;
+}
+
+.badge_description {
+	margin-top: 12px
+}
+
+.badge_empty {
+	border: 1px solid #656565;
+	border-radius: 3px;
+}
+
+.badge_active {
+	float: left;
+	width: 268px;
+	border-radius: 3px;
+	margin: 16px;
+	background-color: #262626;
+}
+
+.badge_empty_craftable {
+	float: left;
+	width: 268px;
+	border: solid 1px #5492cf;
+	border-radius: 3px;
+	margin: 16px;
+}
+
+.badge_active_craftable {
+	float: left;
+	width: 268px;
+	border: solid 1px #5492cf;
+	border-radius: 3px;
+	margin: 16px;
+	background-color: #262626;
+}
+
+.badge_empty_circle {
+	width: 46px;
+	height: 46px;
+	margin: 6px 14px 6px 6px;
+	border-radius: 23px;
+	border: 2px dashed #656565;
+	float: left;
+}
+
+.badge_filled {
+	float: left;
+	margin: 6px 14px 6px 6px;
+}
+
+.badge_filled img {
+	width: 46px;
+	height: 46px;
+}
+
+.badge_empty_right {
+	margin-top: 12px;
+}
+
+.badge_empty_name {
+	color: #5c5c5c;
+}
+
+.badge_upgradable_name {
+	color: #fff;
+}
+
+.badge_craft_block {
+	background-color: #5492cf;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+}
+
+.badge_upgrade_text {
+	width: 268px;
+	font-size: 12px;
+	color: #8b8b8b;
+	margin: 0px 18px 0px 18px;
+}
+
+.badge_progress_cards {
+	float: left;
+	width: 522px;
+	margin-top: 12px;
+}
+
+.badge_progress_card {
+	float: left;
+	width: 98px;
+	height: 108px;
+	margin-left: 2px;
+	border: 1px solid transparent;
+}
+
+.badge_progress_card:first-child {
+	margin-left: 0;
+}
+
+.badge_progress_card.owned {
+}
+
+.badge_progress_card.owned img {
+	width: 98px;
+	height: 108px;
+}
+
+.badge_progress_card.unowned {
+	border: dashed 1px #504b45;
+	background-color: #101010;
+}
+
+.badge_progress_card.unowned img {
+	width: 98px;
+	height: 108px;
+	opacity: 0.1;
+}
+
+.badge_progress_right {
+	width: 108px;
+	float: right;
+	font-size: 14px;
+	padding: 24px 6px 6px 0px;
+}
+
+.badge_progress_right_collected {
+	color: #5a89cd;
+	padding-top: 6px;
+}
+
+.badge_progress_task {
+	float: left;
+	margin-left: 18px;
+	margin-bottom: 16px;
+}
+
+.gamecard_badge_progress {
+	position: absolute;
+	right: 12px;
+	bottom: 10px;
+}
+
+.gamecard_badge_progress_label {
+	margin-bottom: 4px;
+	font-size: 13px;
+}
+
+.gamecard_badge_progress_label.bold {
+	color: #5491cf;
+}
+
+.gamecard_badge_progress .badge_info {
+	width: 250px;
+	min-height: 68px;
+}
+
+.gamecard_badge_craftbtn_ctn.wide {
+	width: 444px;
+}
+
+.gamecard_badge_craftbtn_ctn .badge_info {
+	float: left;
+	margin-right: 12px;
+}
+
+.gamecard_badge_craftbtn_ctn .badge_craft_button {
+	float: left;
+	width: 166px;
+}
+
+.badge_card_set_section {
+	padding: 2px;
+	border-top: solid 1px #33485d;
+	background: -moz-linear-gradient(top, #282c2f 5%, #1d1e20 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#282c2f), color-stop(95%,#1d1e20));background: -webkit-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -o-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -ms-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: linear-gradient(to bottom, #282c2f 5%,#1d1e20 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282c2f', endColorstr='#1d1e20',GradientType=0 );}
+
+.badge_card_set_card {
+	float: left;
+	margin-left: 4px;
+	margin-bottom: 18px;
+}
+
+.badge_card_set_owned {
+}
+
+.badge_card_set_owned img {
+}
+
+.badge_card_set_unowned {
+	border: dashed 1px #504b45;
+	background-color: #101010;
+}
+
+.badge_card_set_unowned img {
+	opacity: 0.1;
+}
+
+.badge_card_set_text {
+	font-size: 14px;
+	color: #646464;
+	margin-top: 2px;
+}
+
+.badge_card_to_collect {
+	min-height: 130px;
+	padding: 6px;
+}
+
+.badge_card_set_unowned.small {
+	float: left;
+	width: 98px;
+	height: 110px;
+	margin-right: 20px;
+}
+
+.badge_card_set_unowned.small img {
+	opacity: 0.3;
+	width: 98px;
+	height: 110px;
+}
+
+.badge_card_to_collect_header {
+	color: #8c8c8c;
+	margin-left: 12px;
+	margin-bottom: 4px;
+}
+
+.badge_card_to_collect_info {
+}
+
+.badge_friendswithgamecards_section {
+	padding-top: 8px;
+	margin-left: 120px;
+}
+
+.badge_friendwithgamecard {
+	float: left;
+	min-width: 160px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+}
+
+.badge_friendwithgamecard .playerAvatar {
+	margin-right: 10px
+}
+
+.badge_friendwithgamecard_msg {
+	margin-top: 4px;
+	color: white;
+	font-size: 12px;
+}
+
+
+
+.game_card_hover {
+	z-index: 100;
+	position: absolute;
+	width: 232px;
+	height: 267px;
+}
+
+.game_card_hover:hover {
+	background: url( 'http://cdn.steamcommunity.com/public/images/community/zoom_hover.png' ) no-repeat;
+	background-position: center;
+	z-index: 100;
+	position: absolute;
+	width: 232px;
+	height: 267px;
+}
+
+.game_card_with_zoom {
+	cursor: pointer;
+}
+
+img.gamecard {
+	width: 230px;
+	height: 265px;
+}
+
+.gamecards_inventorylink {
+	padding: 0 8px;
+	margin-bottom: 14px;
+}
+
+.badge_friends_have_earned {
+	padding-left: 12px;
+	padding-bottom: 24px;
+}
+
+.badge_friends_have_earned .badge_friends_have_earned_label {
+	margin-bottom: 8px;
+}
+
+.badge_friends_have_earned .badge_friends_have_earned_friends .playerAvatar {
+	float: left;
+	margin-right: 10px;
+}
+
+.badge_detail_tasks {
+	margin-top: 7px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/badge_tasks_bg.png' );
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-top: 24px;
+}
+
+.badge_detail_tasks .badge_task {
+	width: 292px;
+	margin-right: 16px;
+	margin-bottom: 12px;
+	float: left;
+}
+
+.badge_detail_tasks .badge_task img.quest_icon {
+	float: left;
+	margin-right: 15px;
+}
+
+.badge_detail_tasks .badge_task .badge_task_name {
+	padding-top: 6px;
+}
+
+.badge_details_set_favorite {
+	text-align: right;
+	padding-right: 4px;
+	margin-bottom: 12px;
+}
+
+
+
+.profile_xp_block {
+	width: 906px;
+	border-radius: 4px;
+	border: solid 1px;
+	border-color: #1a1819 #515153 #515153 #1a1819;
+	background-color: #1d1e20;
+	padding: 20px;
+}
+
+.profile_xp_block_left {
+	width: 282px;
+	float: left;
+}
+
+.profile_xp_block_level, .profile_xp_block_xp {
+	color: #e1e1e1;
+	font-size: 17px;
+	margin-left: 12px;
+}
+
+.profile_xp_block_level_num {
+	font-size: 20px;
+	color: #c6c6c6;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/player_level_background.png' );
+	width: 31px;
+	height: 28px;
+	padding-top: 3px;
+	display: inline-block;
+	text-align: center;
+}
+
+.profile_xp_block_mid {
+	width: 246px;
+	margin-right: 60px;
+	float: left;
+}
+
+.profile_level_up_block_mid {
+	width: 246px;
+	margin-right: 60px;
+	float: left;
+	background-color: #5492cf;
+	border-radius: 3px;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	height: 46px;
+	line-height: 46px;
+	border: solid 3px #5492cf;
+}
+
+.profile_level_up_block_mid:hover {
+	border: solid 3px white;
+}
+
+.profile_xp_block_remaining {
+	text-align: center;
+}
+
+.profile_xp_block_remaining_bar {
+	width: 246px;
+	background-color: #58595e;
+	border-radius: 5px;
+	height: 10px;
+	margin-top: 8px;
+}
+
+.profile_xp_block_remaining_bar_progress {
+	background-color: #726e6f;
+	border-left: #b2b0b1 1px black;
+	border-right: #4d4d4d 1px black;
+	border-radius: 5px;
+	background-image: url( 'data:image/png;base64,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');
+	height: 10px;
+}
+
+.profile_xp_block_right {
+	width: 280px;
+	text-align: center;
+	float: left;
+}

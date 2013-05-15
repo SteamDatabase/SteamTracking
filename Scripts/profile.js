@@ -168,6 +168,46 @@ function ConfirmBlock()
 		} );
 }
 
+function ShowFriendsInCommon( unAccountIDTarget )
+{
+	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
+}
+
+function ShowFriendsInGroup( unClanIDTarget )
+{
+	ShowPlayerList( 'Friends in Group', 'friendsingroup', unClanIDTarget );
+}
+
+function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
+{
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
+	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
+
+	Modal.GetContent().css( 'min-width', 268 );
+
+	var rgParams = {};
+	if ( type )
+		rgParams['type'] = type;
+	if ( unAccountIDTarget )
+		rgParams['target'] = unAccountIDTarget;
+	if ( rgAccountIDs )
+		rgParams['accountids'] = rgAccountIDs.join( ',' );
+
+	$J.get( 'http://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
+
+		$ListElement.html( html );
+
+		var $Content = Modal.GetContent().find( '.newmodal_content');
+		$Content.html(''); // erase the throbber
+		$Content.append( $ListElement );
+		$Content.append( $Buttons );
+
+		Modal.AdjustSizing();
+		$ListElement.append();
+	});
+}
+
 function ToggleManageFriends()
 {
 	if ( $J('#manage_friends_actions_ctn').is( ':hidden' ) )

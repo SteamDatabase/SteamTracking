@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "Half-Life 2",
-		"gameVersion": "11",
+		"gameVersion": "12",
 		"availableGameStats": {
 			"achievements": [
 				{
@@ -132,8 +132,7 @@
 					"name": "HL2_BEAT_CEMETERY",
 					"defaultvalue": 0,
 					"displayName": "Hallowed Ground",
-					"hidden": 0,
-					"description": "Escort Gregori safely through the church cemetery.",
+					"hidden": 1,
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_beat_cemetery.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_beat_cemetery_bw.jpg"
 				},
@@ -159,8 +158,7 @@
 					"name": "HL2_KILL_ODESSAGUNSHIP",
 					"defaultvalue": 0,
 					"displayName": "Where Cubbage Fears to Tread",
-					"hidden": 0,
-					"description": "Defend Little Odessa from the gunship attack.",
+					"hidden": 1,
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_kill_odessagunship.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_kill_odessagunship_bw.jpg"
 				},
@@ -276,8 +274,7 @@
 					"name": "HL2_BEAT_GAME",
 					"defaultvalue": 0,
 					"displayName": "Singularity Collapse",
-					"hidden": 0,
-					"description": "Destroy the Citadel's reactor core.",
+					"hidden": 1,
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_beat_game.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/220/hl2_beat_game_bw.jpg"
 				},

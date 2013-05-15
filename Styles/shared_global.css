@@ -9,22 +9,28 @@
 }
 .playerAvatar.offline {
 
-background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#706c6b), color-stop(95%,#4e4d4d));background: -webkit-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -o-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -ms-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: linear-gradient(to bottom, #706c6b 5%,#4e4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d',GradientType=0 );}
+	background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#706c6b), color-stop(95%,#4e4d4d));background: -webkit-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -o-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -ms-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: linear-gradient(to bottom, #706c6b 5%,#4e4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+}
 .playerAvatar.ignored {
 }
 	/* #8dccff to 6da1d0 */
 .playerAvatar.online {
-	background-color: #8ecafc;
+	background-color: #7bafd6;
 
-background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7bafd6), color-stop(95%,#506d92));background: -webkit-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -o-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -ms-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: linear-gradient(to bottom, #7bafd6 5%,#506d92 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92',GradientType=0 );}
+	background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7bafd6), color-stop(95%,#506d92));background: -webkit-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -o-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -ms-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: linear-gradient(to bottom, #7bafd6 5%,#506d92 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+}
 .playerAvatar.online img {
 	border-color: #4d5761;
 }
 	/* gradient from #b3fc55 to #8cc82c */
 .playerAvatar.in-game {
-	background-color: #9de641;
+	background-color: #9bc861;
 
-background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9bc861), color-stop(95%,#789e4c));background: -webkit-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -o-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -ms-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: linear-gradient(to bottom, #9bc861 5%,#789e4c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );
+	background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9bc861), color-stop(95%,#789e4c));background: -webkit-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -o-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -ms-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: linear-gradient(to bottom, #9bc861 5%,#789e4c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+
 }
 .playerAvatar.in-game img {
 	border-color: #525a4f;
