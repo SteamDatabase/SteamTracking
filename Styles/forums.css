@@ -82,6 +82,10 @@ textarea.forumtopic_reply_textarea {
 	text-align: right;
 }
 
+.forum_newtopic_action .emoticon_button {
+	margin-right: 8px;
+}
+
 .forum_topics_container {
 	overflow: hidden;
 }

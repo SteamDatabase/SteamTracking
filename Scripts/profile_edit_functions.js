@@ -122,6 +122,22 @@ function SetShowcaseConfig( eShowcase, iSlot, params )
 	return $J.post( g_rgProfileData['url'] + 'ajaxsetshowcaseconfig', rgParams );
 }
 
+function PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, rgSlot )
+{
+	// read the slot metadata embedded in the page
+	var rgSlots = {};
+	$J(g_rgShowcasePreviews[eShowcase]).find('[data-slotjson]').each( function() {
+		var json = this.getAttribute( 'data-slotjson' );
+		if ( json )
+		{
+			var SlotData = V_ParseJSON( json );
+			rgSlots[ SlotData.slot ] = SlotData;
+		}
+	});
+	rgSlots[iSlot] = rgSlot;
+	PreviewShowcaseConfig( eShowcase, rgSlots );
+}
+
 /* params should be object of appid, publishedfileid, etc */
 function PreviewShowcaseConfig( eShowcase, rgSlotData )
 {
@@ -188,9 +204,7 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 	$Showcase.find('.showcase_stats_row').hide();
 	$Showcase.find('.game_info_stats').hide();
 
-	var rgSlots = {};
-	rgSlots[iSlot] = { appid: game.appid };
-	PreviewShowcaseConfig( eShowcase, rgSlots );
+	PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: game.appid } );
 }
 
 function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
@@ -212,9 +226,7 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif">');
-					var rgSlots = {};
-					rgSlots[iSlot] = { appid: appid };
-					PreviewShowcaseConfig( eShowcase, rgSlots );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: appid } );
 				} );
 			}
 		});
@@ -274,9 +286,7 @@ function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, 
 	window.OnPublishedFileSelected = function( publishedfileid )
 	{
 		Modal.Dismiss();
-		var rgSlots = {};
-		rgSlots[iSlot] = { publishedfileid: publishedfileid };
-		PreviewShowcaseConfig( eShowcase, rgSlots );
+		PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { publishedfileid: publishedfileid } );
 	};
 }
 
@@ -315,9 +325,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 				$J(this).click( function() {
 					Modal.Dismiss();
 					$J( elSlot ).find( '.showcase_openslot_placeholder').html('<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif">');
-					var rgSlots = {};
-					rgSlots[iSlot] = { steamid: groupid };
-					PreviewShowcaseConfig( eShowcase, rgSlots );
+					PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { steamid: groupid } );
 				} );
 			}
 		});

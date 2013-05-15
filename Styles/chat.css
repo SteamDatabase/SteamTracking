@@ -297,8 +297,12 @@ body.chat_body {
 	bottom: 0px;
 }
 
+.chatform_footer {
+	text-align: right;
+	line-height: 36px;
+}
+
 .chatform_footer button {
-	float: right;
 	border: 1px solid #212121;
 }
 

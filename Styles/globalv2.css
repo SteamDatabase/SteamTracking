@@ -193,6 +193,12 @@ a.friendBlock {
 	margin-right: 7px;
 }
 
+.friendBlock .friendBlockContent {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
 .friendBlock .friend_join_game_link {
 	text-decoration: underline;
 }
@@ -217,15 +223,22 @@ a.friendBlock {
 }
 
 .friendPlayerLevel {
-	margin: 6px 6px 0px 2px;
+	display: inline-block;
 	font-size: 16px;
-	border-radius: 50%;
-	padding: 4px;
+	border-radius: 16px;
 	border: solid white 2px;
+	height: 28px;
+	width: 28px;
+
+	text-align: center;
+	line-height: 28px;
+
+	cursor: default;
 }
 
 .friendBlock .friendPlayerLevel {
 	float: right;
+	margin: 4px 4px 0 0;
 }
 
 .friendPlayerLevel .friendPlayerLevelNum {
@@ -437,6 +450,10 @@ a.commentthread_allcommentslink:hover {
 .commentthread_entry_submitlink {
 	text-align: right;
 	padding-top: 5px;
+}
+
+.commentthread_entry_submitlink .emoticon_button {
+	margin-right: 8px;
 }
 
 .commentthread_entry_autosubscribe {
@@ -1183,7 +1200,7 @@ img.dynamiclink_preview {
 	width: 560px;
 }
 
-.emoticon {
+img.emoticon {
 	vertical-align: middle;
 }
 
@@ -1194,4 +1211,64 @@ img.dynamiclink_preview {
 
 .migrated_profile_page_old #BG_bottom, .migrated_profile_page_old #BG_top {
 	margin: 0 auto;
+}
+
+.emoticon_button {
+	display: inline-block;
+
+	height: 36px;
+	width: 36px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/chat/btn_emoticon.png' );
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.emoticon_button:hover, .emoticon_button.focus {
+	background-position: center top;
+}
+
+.emoticon_button.small {
+	height: 22px;
+	width: 22px;
+
+	background-position: center -43px;
+}
+
+.emoticon_button.small:hover, .emoticon_button.small.focus {
+	background-position: center -7px;
+}
+
+.emoticon_popup_ctn {
+	position: absolute;
+}
+
+.emoticon_popup {
+	background-color: #3b3938;
+	padding: 8px;
+	box-shadow: 0 0 12px #000000;
+}
+
+.emoticon_popup_content {
+	max-height: 96px;
+	max-width: 352px;
+	overflow-y: auto;
+}
+
+.emoticon_popup_content .emoticon_option {
+	width: 28px;
+	margin: 2px;
+
+	text-align: center;
+
+	line-height: 18px;
+	height: 18px;
+	padding: 5px 0;
+
+	float: left;
+}
+
+.emoticon_popup_content .emoticon_option:hover {
+	background-color: #201f1d;
+	cursor: pointer;
 }

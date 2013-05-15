@@ -958,8 +958,6 @@ function PickWorkshopServiceProviders( publishedFileID, appID )
 		var strSaveChanges = 'Continue';
 		var strDescription = response;
 		var dialog = ShowConfirmDialog( strTitle, strDescription, strSaveChanges );
-		console.log(dialog);
-		console.log( $J('.modalTooltip',dialog.GetContent()).tooltip() );
 
 		dialog.SetRemoveContentOnDismissal( false );
 

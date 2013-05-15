@@ -156,6 +156,7 @@ a.btn_grey_grey_outer_bevel:hover
 	padding-top: 1px;
 	padding-bottom: 1px;
 	text-decoration: none;
+	border: none;
 }
 
 .btn_grey_grey {
@@ -177,7 +178,7 @@ a.btn_grey_grey_outer_bevel:hover
 }
 
 .btn_grey_grey.btn_comments span, .btn_grey_black.btn_comments span {
-	padding-left: 2;
+	padding-left: 2px;
 }
 
 /* fix for mozilla <button> elements */

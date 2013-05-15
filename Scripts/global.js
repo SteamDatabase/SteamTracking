@@ -747,6 +747,7 @@ function CModal( $Content, rgParams )
 	this.m_bIgnoreResizeEvents = rgParams.bIgnoreResizeEvents;
 	this.m_fnSizing = null;
 	this.m_fnBackgroundClick = null;
+	this.m_fnOnResize = null;
 	this.m_bDismissOnBackgroundClick = !rgParams.bExplicitDismissalOnly;
 
 	this.m_fnOnDismiss = null;
@@ -771,6 +772,11 @@ function CModal( $Content, rgParams )
 CModal.prototype.OnDismiss = function( fn )
 {
 	this.m_fnOnDismiss = fn;
+}
+
+CModal.prototype.OnResize = function( fn )
+{
+	this.m_fnOnResize = fn;
 }
 
 CModal.prototype.GetContent = function ()
@@ -813,6 +819,10 @@ CModal.prototype.AdjustSizing = function( duration )
 	// if the modal has a 'newmodal_sized_content' div, it wants to be the max height, so set it now
 	//	before we compute height	( "- 18" is a fudge for a possible horizontal scrollbar )
 	this.m_$SizedContent.css( 'min-height', ( nMaxHeight - 18 ) + 'px' );
+	if ( this.m_fnOnResize )
+	{
+		this.m_fnOnResize( nMaxWidth - 40, nMaxHeight );
+	}
 
 	var nContentWidth = this.m_$Content.width();
 	var nContentHeight = this.m_$Content.height();
@@ -927,6 +937,164 @@ function StandardCommunityBan( steamid, elemLink )
 			ShowAlertDialog( 'Community Ban', 'Failed to ban.  Message: ' + data.success );
 		});
 	} );
+}
+
+
+
+function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea )
+{
+	this.m_rgEmoticons = rgEmoticons;
+	this.m_$EmoticonButton = $EmoticonButton;
+	this.m_$TextArea = $Textarea;
+
+	this.m_bVisible = false;
+	this.m_$Popup = null;
+
+	var _this = this;
+	this.m_$EmoticonButton.click( function() { _this.OnButtonClick(); } );
+	this.m_fnOnDocumentClick = function() { _this.DismissPopup(); };
+}
+
+CEmoticonPopup.prototype.OnButtonClick = function()
+{
+	if ( this.m_bVisible )
+	{
+		this.DismissPopup();
+	}
+	else
+	{
+		if ( !this.m_$Popup )
+			this.BuildPopup();
+
+		// make sure we aren't listening to this
+		$J(document).off( 'click', this.m_fnOnDocumentclick );
+
+		this.m_$EmoticonButton.addClass( 'focus' );
+		this.m_$Popup.stop();
+		this.m_$Popup.fadeIn( 'fast' );
+		this.m_bVisible = true;
+
+		var _this = this;
+		window.setTimeout( function() { $J(document).on( 'click', _this.m_fnOnDocumentClick ) }, 0 );
+	}
+}
+
+CEmoticonPopup.prototype.DismissPopup = function()
+{
+	this.m_$Popup.fadeOut( 'fast' );
+	this.m_$EmoticonButton.removeClass( 'focus' );
+	this.m_bVisible = false;
+
+	$J(document).off( 'click', this.m_fnOnDocumentclick );
+}
+
+CEmoticonPopup.prototype.BuildPopup = function()
+{
+	this.m_$Popup = $J('<div/>', {'class': 'emoticon_popup_ctn' } );
+
+
+	var $PopupInner = $J('<div/>', {'class': 'emoticon_popup' } );
+	this.m_$Popup.append( $PopupInner );
+	var $Content = $J('<div/>', {'class': 'emoticon_popup_content' } );
+	$PopupInner.append( $Content );
+
+	for( var i = 0; i < this.m_rgEmoticons.length; i++ )
+	{
+		var strEmoticonName = this.m_rgEmoticons[i];
+		var strEmoticonURL = 'http://cdn.steamcommunity.com/economy/emoticon/' + strEmoticonName;
+
+		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'title': strEmoticonName } );
+		$Emoticon.append( $J('<img/>', {'src': strEmoticonURL } ) );
+
+		$Emoticon.click( this.GetEmoticonClickClosure( strEmoticonName ) );
+
+		$Content.append( $Emoticon );
+	}
+
+	$J(document.body).append( this.m_$Popup );
+	PositionEmoticonHover( this.m_$Popup, this.m_$EmoticonButton );
+}
+
+CEmoticonPopup.prototype.GetEmoticonClickClosure = function ( strEmoticonName )
+{
+	var _this = this;
+	return function() {
+		var elTextArea = _this.m_$TextArea[0];
+		if ( elTextArea )
+		{
+			var nSelectionStart = elTextArea.selectionStart;
+			elTextArea.value = elTextArea.value.substr( 0, nSelectionStart ) + strEmoticonName + elTextArea.value.substr( nSelectionStart );
+			elTextArea.selectionStart = nSelectionStart + strEmoticonName.length;
+		}
+
+		_this.m_$TextArea.focus();
+
+		_this.DismissPopup();
+	};
+}
+
+function PositionEmoticonHover( $Hover, $Target )
+{
+		$Hover.css( 'visibility', 'hidden' );
+	$Hover.show();
+
+	var offset = $Target.offset();
+	$Hover.css( 'left', offset.left + 'px' );
+	$Hover.css( 'top', offset.top + 'px');
+
+	var $HoverBox = $Hover.children( '.emoticon_popup' );
+	var $HoverArrowLeft = $Hover.children( '.miniprofile_arrow_left' );
+	var $HoverArrowRight = $Hover.children( '.miniprofile_arrow_right' );
+
+	var nWindowScrollTop = $J(window).scrollTop();
+	var nWindowScrollLeft = $J(window).scrollLeft();
+	var nViewportWidth = $J(window).width();
+	var nViewportHeight = $J(window).height();
+
+		var $HoverArrow = $HoverArrowRight;
+	var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width();
+	var nSpaceRight = nViewportWidth - nBoxRightViewport;
+	var nSpaceLeft = offset.left - $Hover.width();
+	if ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight)
+	{
+				$Hover.css( 'left', ( offset.left - $Hover.width() - 12) + 'px' );
+		$HoverArrowLeft.hide();
+		$HoverArrowRight.show();
+	}
+	else
+	{
+				$Hover.css( 'left', ( offset.left + $Target.outerWidth() ) + 'px' );
+		$HoverArrow = $HoverArrowLeft;
+		$HoverArrowLeft.show();
+		$HoverArrowRight.hide();
+	}
+
+	var nTopAdjustment = 0;
+
+			if ( $Target.height() < 48 )
+		nTopAdjustment = Math.floor( $Target.height() / 2 ) - 12;
+	var nDesiredHoverTop = offset.top - 0 + nTopAdjustment;
+	$Hover.css( 'top', nDesiredHoverTop + 'px' );
+
+	// see if the hover is cut off by the bottom of the window, and bump it up if neccessary
+	var nTargetTopViewport = ( offset.top - nWindowScrollTop ) + nTopAdjustment;
+	if ( nTargetTopViewport + $HoverBox.height() + 35 > nViewportHeight )
+	{
+		var nViewportAdjustment = ( $HoverBox.height() + 35 ) - ( nViewportHeight - nTargetTopViewport );
+
+		var nViewportAdjustedHoverTop = offset.top - nViewportAdjustment;
+		$Hover.css( 'top', nViewportAdjustedHoverTop + 'px' );
+
+		// arrow is normally offset 30pixels.  we move it down the same distance we moved the hover up, so it is "fixed" to where it was initially
+		$HoverArrow.css( 'top', ( 30 + nDesiredHoverTop - nViewportAdjustedHoverTop ) + 'px' );
+	}
+	else
+	{
+		$HoverArrow.css( 'top', '' );
+	}
+
+	$Hover.hide();
+	$Hover.css( 'visibility', '' );
 }
 
 

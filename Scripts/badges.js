@@ -203,3 +203,22 @@ function Profile_LevelUp( profileUrl )
 	});
 }
 
+function GameCardArtDialog( strName, strImgURL )
+{
+	var $Img = $J('<img/>' );
+	var $Link = $J('<a/>', {href: strImgURL, target: '_blank' } );
+	var Modal = ShowDialog( strName, $Link.append( $Img ) );
+	Modal.GetContent().hide();
+
+	// set src after binding onload to be sure we catch it.
+	$Img.load( function() { Modal.GetContent().show(); } );
+	$Img.attr( 'src', strImgURL );
+
+	Modal.OnResize( function( nMaxWidth, nMaxHeight ) {
+		$Img.css( 'max-width', nMaxWidth );
+		$Img.css( 'max-height', nMaxHeight );
+	} );
+
+	Modal.AdjustSizing();
+}
+

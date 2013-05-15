@@ -585,8 +585,19 @@ a.showcase_stat:hover .label {
 	float: none;
 }
 
-.workshop_showcase_item .showcase_openslot_placeholder {
+.workshop_showcase_item .showcase_openslot_placeholder, .workshop_showcase_multiitem .showcase_openslot_placeholder {
 	line-height: 160px;
+}
+
+.workshop_showcase_multiitem {
+	height: 150px;
+	width: 150px;
+	margin: 2px;
+	position: relative;
+}
+
+.workshop_showcase_multiitem.openslot {
+	margin: 0;
 }
 
 img.workshop_showcase_item_image {
@@ -595,6 +606,44 @@ img.workshop_showcase_item_image {
 	left: 0;
 	width: 160px;
 	height: 160px;
+}
+
+.myworkshop_showcase_header {
+	/* 620 x 58 */
+	width: 600px;
+	height: 38px;
+	padding: 10px;
+	line-height: 38px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_showcase_myworkshop.png' );
+
+	margin-bottom: 14px;
+}
+
+.myworkshop_showcase_header .playerAvatar {
+	float: left;
+	margin-right: 10px;
+}
+
+.myworkshop_showcase_header .myworkshop_playerName {
+	font-size: 24px;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	color: #ffffff;
+}
+
+.workshop_showcase_multiitem img.workshop_showcase_item_image {
+	width: 150px;
+	height: 150px;
+}
+
+.workshop_showcase_mini_app {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.workshop_showcase_mini_app, .workshop_showcase_mini_app img {
+	height: 32px;
+	width: 32px;
 }
 
 .workshop_showcase_details_row {
@@ -900,6 +949,30 @@ img.workshop_showcase_item_image {
 	font-size: 24px;
 }
 
+.profile_in_game {
+	margin-bottom: 32px;
+}
+
+.profile_in_game_header {
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	font-size: 20px;
+}
+
+.profile_in_game_name {
+	font-size: 15px;
+	margin-bottom: 12px;
+}
+
+.profile_ban_status {
+	margin-bottom: 32px;
+	color: #a94847;
+	line-height: 22px;
+}
+
+.profile_ban .profile_ban_info {
+	color: #828282;
+}
+
 .profile_badges_badge, .profile_badges_badge img {
 	width: 54px;
 	height: 54px;
@@ -961,245 +1034,6 @@ img.workshop_showcase_item_image {
 .profile_primary_group .profile_group_avatar {
 	width: 64px;
 	height: 64px;
-}
-
-.profile_xp_block {
-	width: 906px;
-	border-radius: 4px;
-	border: solid 1px;
-	border-color: #1a1819 #515153 #515153 #1a1819;
-	background-color: #1d1e20;
-	padding: 20px;
-}
-
-.profile_xp_block_left {
-	width: 282px;
-	float: left;
-}
-
-.profile_xp_block_level, .profile_xp_block_xp {
-	font-size: 24px;
-	color: #c6c6c6;
-	margin-left: 20px;
-}
-
-.profile_xp_block_level_num {
-	font-size: 20px;
-	color: #c6c6c6;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/player_level_background.png' );
-	width: 31px;
-	height: 28px;
-	padding-top: 3px;
-	display: inline-block;
-	text-align: center;
-}
-
-.profile_xp_block_mid {
-	width: 246px;
-	margin-right: 60px;
-	float: left;
-}
-
-.profile_level_up_block_mid {
-	width: 246px;
-	margin-right: 60px;
-	float: left;
-	background-color: #5492cf;
-	border-radius: 3px;
-	color: white;
-	font-size: 24px;
-	text-align: center;
-	height: 46px;
-	line-height: 46px;
-	border: solid 3px #5492cf;
-}
-
-.profile_level_up_block_mid:hover {
-	border: solid 3px white;
-}
-
-.profile_xp_block_remaining {
-	text-align: center;
-}
-
-.profile_xp_block_remaining_bar {
-	width: 246px;
-	background-color: #58595e;
-	border-radius: 5px;
-	height: 10px;
-	margin-top: 8px;
-}
-
-.profile_xp_block_remaining_bar_progress {
-	background-color: #726e6f;
-	border-left: #b2b0b1 1px black;
-	border-right: #4d4d4d 1px black;
-	border-radius: 5px;
-	background-image: url( 'data:image/png;base64,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');
-	height: 10px;
-}
-
-.profile_xp_block_right {
-	width: 280px;
-	text-align: center;
-	float: left;
-}
-
-.badges_sheet {
-	margin-top: 16px;
-	width: 946px;
-}
-
-.badges_tabs {
-	height: 43px;
-}
-
-.badges_tab_active {
-	background-color: #364860;
-	float: left;
-	padding: 11px 11px 11px 15px;
-	font-size: 17px;
-	color: white;
-	border-top: solid 1px #7b8795;
-	border-left: solid 1px #3b4a5d;
-	border-right: solid 1px #201f1d;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	min-width: 180px;
-}
-
-.badges_tab_inactive {
-	background-color: transparent;
-	padding: 10px 10px 10px 15px;
-	float: left;
-	font-size: 17px;
-	color: #6f6f6f;
-	text-decoration: none;
-	min-width: 180px;
-	margin-top: 2px;
-}
-
-.badges_tab_inactive a:hover {
-	text-decoration: none;
-	color: white;
-}
-
-.badges_tab_content {
-	width: 946px;
-	min-height: 200px;
-	padding-top: 16px;
-	margin-top: 1px;
-	background-image:url( 'http://cdn.steamcommunity.com/public/images/profile/badgepg_bg.png' );
-	background-repeat: no-repeat;
-
-}
-
-.badge_list .badge {
-	position: relative;
-	height: 64px;
-	background-color: #181818;
-	border-radius: 4px;
-	border-top: solid 1px #343434;
-	border-bottom: solid 1px #000000;
-	padding: 18px 18px 18px 100px;
-	z-index: 2;
-	background: -moz-linear-gradient(top, #242424 0%, #141414 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242424), color-stop(100%,#141414));background: -webkit-linear-gradient(top, #242424 0%,#141414 100%);background: -o-linear-gradient(top, #242424 0%,#141414 100%);background: -ms-linear-gradient(top, #242424 0%,#141414 100%);background: linear-gradient(to bottom, #242424 0%,#141414 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
-
-.badge_list .badge_entry {
-	margin-bottom: 9px;
-}
-
-
-.badge_logo {
-	position: absolute;
-	left: 8px;
-	top: 8px;
-	height: 80px;
-	width: 80px;
-}
-
-.badge_name {
-	color: #ffffff;
-	font-size: 16px;
-	line-height: 22px;
-}
-
-.badge_description {
-	color: #6784ac;
-	font-size: 14px;
-	line-height: 14px;
-}
-
-.badge_xp_value {
-	float: left;
-	font-size: 16px;
-	line-height: 22px;
-	margin-right: 8px;
-	color: #6a6a6a;
-}
-
-.badge_unlocked {
-	line-height: 24px;
-	font-size: 12px;
-	color: #6784ac;
-}
-
-.badge_controls {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-.badge_control_text {
-	float: left;
-	line-height: 30px;
-	font-size: 12px;
-	margin-left: 4px;
-	margin-right: 14px;
-}
-
-.badge_control_button {
-	min-width: 150px;
-	height: 26px;
-	margin-left: 6px;
-	color: white;
-	font-size: 12px;
-	float: left;
-	background: -moz-linear-gradient(top, #2c2c2c 5%, #262626 20%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#2c2c2c), color-stop(20%,#262626));background: -webkit-linear-gradient(top, #2c2c2c 5%,#262626 20%);background: -o-linear-gradient(top, #2c2c2c 5%,#262626 20%);background: -ms-linear-gradient(top, #2c2c2c 5%,#262626 20%);background: linear-gradient(to bottom, #2c2c2c 5%,#262626 20%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#262626',GradientType=0 );	border-radius: 3px;
-	text-align: center;
-	line-height: 26px;
-	border: solid 2px;
-	border-color: #403e3f #262722 #262722 #403e3f;
-}
-
-.badge_control_button_active {
-	min-width: 150px;
-	height: 26px;
-	margin-left: 6px;
-	color: white;
-	font-size: 12px;
-	float: left;
-	background-color: #364860;
-	border-radius: 3px;
-	text-align: center;
-	line-height: 26px;
-	border: solid 1px;
-	border-color: #293043 #7a8895 #7a8895 #293043;
-}
-
-.badge_actions {
-	float: right;
-}
-
-.badge_progress.hasdetails:hover {
-	border: solid 1px #6CA1D5;
-}
-
-.badge_action_controls {
-	visibility: hidden;
-}
-
-.badge:hover .badge_action_controls {
-	visibility: visible;
 }
 
 .profile_small_header_bg {
@@ -1298,270 +1132,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_topfriends .friendBlock:hover {
 
 	background-color: #3a3a3a;
-}
-
-.badge_progress_list {
-
-}
-
-.badge_progress {
-	border-radius: 8px;
-	width: 100%;
-	height: 186px;
-	border: solid 1px;
-	border-color: #2d2d2d black black #2d2d2d;
-	margin-bottom: 16px;
-	background: -moz-linear-gradient(top, #242424 5%, #141414 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#242424), color-stop(95%,#141414));background: -webkit-linear-gradient(top, #242424 5%,#141414 95%);background: -o-linear-gradient(top, #242424 5%,#141414 95%);background: -ms-linear-gradient(top, #242424 5%,#141414 95%);background: linear-gradient(to bottom, #242424 5%,#141414 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
-
-.badge_progress_top {
-	border-bottom: solid 1px #000000;
-	padding: 6px 12px 6px 12px;
-	font-size: 24px;
-	color: white;
-}
-
-.badge_progress_topright {
-	float: right;
-}
-
-.badge_progress_playtime {
-	font-size: 12px;
-	color: #8b8b8b;
-	text-align: right;
-}
-
-.badge_progress_drops_remaining {
-	font-size: 12px;
-	color: #5a89cd;
-	text-align: right;
-}
-
-.badge_progress_body {
-	border-top: solid 1px #333333;
-}
-
-.badge_empty {
-	float: left;
-	width: 268px;
-	border: solid 1px #656565;
-	border-radius: 3px;
-	margin: 16px;
-}
-
-.badge_active {
-	float: left;
-	width: 268px;
-	border-radius: 3px;
-	margin: 16px;
-	background-color: #262626;
-}
-
-.badge_empty_craftable {
-	float: left;
-	width: 268px;
-	border: solid 1px #5492cf;
-	border-radius: 3px;
-	margin: 16px;
-}
-
-.badge_active_craftable {
-	float: left;
-	width: 268px;
-	border: solid 1px #5492cf;
-	border-radius: 3px;
-	margin: 16px;
-	background-color: #262626;
-}
-
-.badge_empty_circle {
-	width: 46px;
-	height: 46px;
-	margin: 6px 14px 6px 6px;
-	border-radius: 23px;
-	border: dashed 2px #656565;
-	float: left;
-}
-
-.badge_filled {
-	float: left;
-	margin: 6px 14px 6px 6px;
-}
-
-.badge_filled img {
-	width: 46px;
-	height: 46px;
-}
-
-.badge_empty_right {
-	margin-top: 12px;
-}
-
-.badge_empty_name {
-	color: #5c5c5c;
-}
-
-.badge_upgradable_name {
-	color: #fff;
-}
-
-.badge_craft_block {
-	background-color: #5492cf;
-	color: #fff;
-	line-height: 40px;
-	text-align: center;
-}
-
-.badge_upgrade_text {
-	width: 268px;
-	font-size: 12px;
-	color: #8b8b8b;
-	margin: 0px 18px 0px 18px;
-}
-
-.badge_view_details {
-	float: left;
-	color: transparent;
-	font-size: 14px;
-	line-height: 30px;
-	margin-left: 20px;
-}
-
-.badge_progress:hover .badge_view_details {
-	color: #6e93c7;
-}
-
-.badge_progress_cards {
-	float: left;
-	width: 522px;
-	margin-top: 12px;
-}
-
-.badge_progress_card_owned {
-	float: left;
-	width: 98px;
-	height: 108px;
-	margin-right: 4px;
-}
-
-.badge_progress_card_owned img {
-	width: 98px;
-	height: 108px;
-}
-
-.badge_progress_card_unowned {
-	float: left;
-	width: 98px;
-	height: 108px;
-	border: dashed 1px #504b45;
-	margin-right: 4px;
-	background-color: #101010;
-}
-
-.badge_progress_card_unowned img {
-	width: 98px;
-	height: 108px;
-	opacity: 0.1;
-}
-
-.badge_progress_right {
-	width: 108px;
-	float: right;
-	font-size: 14px;
-	padding: 24px 6px 6px 0px;
-}
-
-.badge_progress_right_collected {
-	color: #5a89cd;
-	padding-top: 6px;
-}
-
-.badge_progress_task {
-	float: left;
-	margin-left: 18px;
-	margin-bottom: 16px;
-}
-
-.badge_card_set_section {
-	padding: 2px;
-	border-top: solid 1px #33485d;
-	background: -moz-linear-gradient(top, #282c2f 5%, #1d1e20 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#282c2f), color-stop(95%,#1d1e20));background: -webkit-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -o-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: -ms-linear-gradient(top, #282c2f 5%,#1d1e20 95%);background: linear-gradient(to bottom, #282c2f 5%,#1d1e20 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282c2f', endColorstr='#1d1e20',GradientType=0 );}
-
-.badge_card_set_card {
-	float: left;
-	margin-left: 3px;
-	margin-bottom: 18px;
-}
-
-.badge_card_set_owned {
-}
-
-.badge_card_set_owned img {
-}
-
-.badge_card_set_unowned {
-	border: dashed 1px #504b45;
-	background-color: #101010;
-}
-
-.badge_card_set_unowned img {
-	opacity: 0.1;
-}
-
-.badge_card_set_text {
-	font-size: 14px;
-	color: #646464;
-	margin-top: 2px;
-}
-
-.badge_card_to_collect {
-	min-height: 130px;
-	padding: 6px;
-}
-
-.badge_card_set_unowned.small {
-	float: left;
-	width: 98px;
-	height: 110px;
-	margin-right: 20px;
-}
-
-.badge_card_set_unowned.small img {
-	opacity: 0.3;
-	width: 98px;
-	height: 110px;
-}
-
-.badge_card_to_collect_header {
-	color: #8c8c8c;
-	font-size: 18px;
-	margin-left: 8px;
-	margin-bottom: 4px;
-}
-
-.badge_card_to_collect_info {
-}
-
-.badge_friendswithgamecards_section {
-	padding-top: 8px;
-	margin-left: 120px;
-}
-
-.badge_friendwithgamecard {
-	float: left;
-	min-width: 160px;
-	margin-right: 10px;
-	margin-bottom: 8px;
-}
-
-.badge_friendwithgamecard .playerAvatar {
-	margin-right: 10px
-}
-
-.badge_friendwithgamecard_msg {
-	margin-top: 4px;
-	color: white;
-	font-size: 12px;
-
 }
 
 #group_invite_modal_list {
@@ -1666,55 +1236,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_comment_area .pagebtn {
 	line-height: 16px;
 }
-
-.game_card_hover {
-	z-index: 100;
-	position: absolute;
-	width: 232px;
-	height: 267px;
-}
-
-.game_card_hover:hover {
-	background: url( 'http://cdn.steamcommunity.com/public/images/community/zoom_hover.png' ) no-repeat;
-	background-position: center;
-	z-index: 100;
-	position: absolute;
-	width: 232px;
-	height: 267px;
-}
-
-.gamecard_progress_body {
-	border-top: solid 1px #333333;
-}
-
-.gamecard_progress_body .badge_filled img {
-	height: 64px;
-	width: 64px;
-}
-
-.gamecard_progress_body .badge_empty_circle {
-	height: 64px;
-	width: 64px;
-	border-radius: 32px;
-}
-
-.gamecard_progress_body .badge_empty_craftable, .gamecard_progress_body .badge_active_craftable {
-	width: 600px;
-}
-
-.gamecard_progress_body .badge_craft_block {
-	border-radius: 3px;
-	margin: 10px;
-	padding: 10px 30px 10px 30px;
-}
-
-.gamecard_badge_progress {
-	border-radius: 8px;
-	width: 100%;
-	border: solid 1px;
-	border-color: #2d2d2d black black #2d2d2d;
-	margin-bottom: 16px;
-	background: -moz-linear-gradient(top, #242424 5%, #141414 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#242424), color-stop(95%,#141414));background: -webkit-linear-gradient(top, #242424 5%,#141414 95%);background: -o-linear-gradient(top, #242424 5%,#141414 95%);background: -ms-linear-gradient(top, #242424 5%,#141414 95%);background: linear-gradient(to bottom, #242424 5%,#141414 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#141414',GradientType=0 );}
 
 .profile_background_holder {
 	position: absolute;

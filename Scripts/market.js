@@ -204,26 +204,35 @@ BuyItemDialog = {
 		var rgListing = g_rgListingInfo[listingid];
 		if ( rgListing['converted_fee'] > 0 )
 		{
-			// Since we actually take the fee from the total amount deducted (sent = deducted - (deducted * fee)), but
-			// we display the fee to the user as if if were added on top of the amount being sent, we need to do some
-			// math to show the fee as if it were being added on top of what they were sending.
-			var perceivedFee = -g_rgWalletInfo['wallet_fee_percent'] / ( parseFloat( g_rgWalletInfo['wallet_fee_percent'] ) - 1 );
-
 			this.m_nSubtotal = rgListing['converted_price'];
 			this.m_nFeeAmount = rgListing['converted_fee'];
 			this.m_nTotal = rgListing['converted_price'] + rgListing['converted_fee'];
 
-			var nFeePublisher = ( rgListing['converted_fee'] * (2/3) ) | 0;
-			var nFeeSteam = rgListing['converted_fee'] - nFeePublisher;
+			var nFeePublisher = rgListing['converted_publisher_fee'];
+			var nFeeSteam = rgListing['converted_steam_fee'];
 
-			$('market_buynow_dialog_totals_subtotal').update( v_currencyformat( rgListing['converted_price'], sWalletCurrencyCode ) );
+			if ( this.m_nFeeAmount != nFeePublisher + nFeeSteam || this.m_nTotal != this.m_nSubtotal + nFeePublisher + nFeeSteam )
+			{
+				alert( "An unexpected error occurred trying to show the purchase dialog. Error: " + listingid + " " + this.m_nTotal + " " + this.m_nSubtotal + " " + this.m_nFeeAmount + " " + nFeePublisher + " " + nFeeSteam );
+				return;
+			}
+
+			$('market_buynow_dialog_totals_subtotal').update( v_currencyformat( this.m_nSubtotal, sWalletCurrencyCode ) );
 			$('market_buynow_dialog_totals_publisherfee').update( v_currencyformat( nFeePublisher, sWalletCurrencyCode ) );
-			$('market_buynow_dialog_totals_publisherfee_percent').update( ( perceivedFee * 100 * (2/3) ).toFixed(1) );
-			var elGameName = this.m_oListingOriginalRow.select('.market_listing_game_name').first();
-			$('market_buynow_dialog_totals_publisherfee_gamename').update( elGameName.innerHTML );
+			$('market_buynow_dialog_totals_publisherfee_percent').update( ( rgListing['publisher_fee_percent'] * 100 ).toFixed(1) );
+			if ( typeof g_rgAppContextData[rgListing['publisher_fee_app']] != 'undefined' )
+			{
+				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( g_rgAppContextData[rgListing['publisher_fee_app']].name );
+			}
+			else
+			{
+				// No app data for some reason
+				// Say "Game fee"
+				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( 'Game' );
+			}
 			$('market_buynow_dialog_totals_transactionfee').update( v_currencyformat( nFeeSteam, sWalletCurrencyCode ) );
-			$('market_buynow_dialog_totals_transactionfee_percent').update( ( perceivedFee * 100 * (1/3) ).toFixed(1) );
-			$('market_buynow_dialog_totals_total').update( v_currencyformat( rgListing['converted_price'] + rgListing['converted_fee'], sWalletCurrencyCode ) );
+			$('market_buynow_dialog_totals_transactionfee_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100 ).toFixed(1) );
+			$('market_buynow_dialog_totals_total').update( v_currencyformat( this.m_nTotal, sWalletCurrencyCode ) );
 		}
 		else
 		{
@@ -736,6 +745,22 @@ function MergeWithListingInfoArray ( newListings )
 	}
 }
 
+function MergeWithAppDataArray( newAppData )
+{
+	if ( ObjectIsEmpty( newAppData ) )
+	{
+		return;
+	}
+
+	for ( appid in newAppData )
+	{
+		if ( typeof g_rgAppContextData[appid] == 'undefined' )
+		{
+			g_rgAppContextData[appid] = newAppData[appid];
+		}
+	}
+}
+
 var g_bBusyLoadingMore = false;
 function MoreRecentListingsLink( id, type, rows )
 {
@@ -769,6 +794,7 @@ function MoreRecentListingsLink( id, type, rows )
 						
 						MergeWithAssetArray( response.assets );
 						MergeWithListingInfoArray( response.listinginfo );
+						MergeWithAppDataArray( response.app_data );
 						eval( response.hovers );
 					}
 
@@ -811,6 +837,7 @@ function LoadRecentCompletedListings( )
 
 					MergeWithAssetArray( response.assets );
 					MergeWithListingInfoArray( response.listinginfo );
+					MergeWithAppDataArray( response.app_data );
 					eval( response.hovers );
 				}
 			}

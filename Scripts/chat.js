@@ -673,6 +673,8 @@ function CWebChatDialog( Chat, elDialog, elContent )
 }
 
 CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
+CWebChatDialog.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
+CWebChatDialog.s_regexMyEmoticons = null;
 
 CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMessage, eMessageType )
 {
@@ -710,7 +712,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	var strMessageClass = 'chat_message';
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_HISTORICAL )
 		strMessageClass += ' chat_message_historical';
-	else if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_SELF )
+	else if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_SELF || eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO )
 		strMessageClass += ' chat_message_self';
 	else if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_SYSTEM )
 		strMessageClass += ' chat_message_system';
@@ -733,7 +735,16 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	// insert first as text to escape html
 	var elText = $J('<span/>', {'class': 'chat_message_text' }).text( strMessage );
 	// then format links
-	elText.html( elText.html().replace( CWebChatDialog.s_regexLinks, '$1<a href="$2" class="whiteLink" target="_blank">$2</a>' ) );
+	var strHTML = elText.html();
+	strHTML = strHTML.replace( CWebChatDialog.s_regexLinks, '$1<a href="$2" class="whiteLink" target="_blank">$2</a>' )
+
+	var regexEmoticons = CWebChatDialog.s_regexEmoticons;
+	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
+		regexEmoticons = CWebChatDialog.s_regexMyEmoticons;
+
+	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="http://cdn.steamcommunity.com/economy/emoticon/$1" title="$1">' )
+
+	elText.html( strHTML );
 
 	elMessage.append( elText );
 
@@ -834,6 +845,7 @@ CWebChat.CHATMESSAGE_TYPE_NORMAL = 0;
 CWebChat.CHATMESSAGE_TYPE_HISTORICAL = 1;
 CWebChat.CHATMESSAGE_TYPE_SELF = 2;
 CWebChat.CHATMESSAGE_TYPE_SYSTEM = 3;
+CWebChat.CHATMESSAGE_TYPE_LOCALECHO = 4;
 
 CWebChat.POLL_DEFAULT_TIMEOUT = 20;
 CWebChat.POLL_SUCCESS_INCREMENT = 5;
@@ -1270,7 +1282,7 @@ CWebChat.prototype.OnChatFormSubmit = function()
 	this.AddToRecentChats( Friend );
 
 	// echo immediately
-	var elMessage = _chat.m_rgChatDialogs[ Friend.m_unAccountID ].AppendChatMessage( _chat.m_User, new Date(), strMessage, CWebChat.CHATMESSAGE_TYPE_SELF );
+	var elMessage = _chat.m_rgChatDialogs[ Friend.m_unAccountID ].AppendChatMessage( _chat.m_User, new Date(), strMessage, CWebChat.CHATMESSAGE_TYPE_LOCALECHO );
 	$J('#chatmessage').focus();
 
 	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Message', rgParams, true ).done( function(data) {
@@ -1432,6 +1444,21 @@ CWebChat.prototype.SettingsCheckbox = function( strId, strLabel, bChecked, fnOnC
 	return $Row;
 }
 
+CWebChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
+{
+	var rgEmoticonsStripped = [];
+	for ( var i = 0; i < rgEmoticons.length; i++ )
+	{
+		var strEmoticon = rgEmoticons[i];
+		if ( strEmoticon.length >= 2 && strEmoticon[0] == ':' )
+			rgEmoticonsStripped.push( strEmoticon.substr( 1, strEmoticon.length - 2 ) );
+		else
+			rgEmoticonsStripped.push( strEmoticon );	//dunno
+	}
+	var strRegex = ':(' + rgEmoticonsStripped.join( '|' ) + '):';
+	CWebChatDialog.s_regexMyEmoticons = new RegExp( strRegex, 'g' );
+}
+
 function InitializeChat()
 {
 	Chat.Initialize();
@@ -1557,4 +1584,5 @@ var CTitleManager = {
 			this.ClearInterval();
 	}
 }
+
 

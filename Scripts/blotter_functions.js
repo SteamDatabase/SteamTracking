@@ -410,8 +410,15 @@ function VoteUp(item_id)
 			'http://steamcommunity.com/sharedfiles/voteup',
 			options
 		);
+		LogUpvote();
 	}
 	return false;
+}
+
+function VoteUpCommentThread( commentthreadid )
+{
+	LogUpvote();
+	return CCommentThread.VoteUp( commentthreadid );
 }
 
 function VoteDown(item_id)
@@ -451,6 +458,16 @@ function ShowSpoilerCover(galleryid, screenshotid)
 
 	if ( $('ss_thumb_spoiler_cover_' + screenshotid) )
 		ShowWithFade($('ss_thumb_spoiler_cover_' + screenshotid));
+}
+
+var g_bRecoredUpvote = false;
+function LogUpvote()
+{
+	if ( !g_bRecoredUpvote )
+	{
+				g_bRecoredUpvote = true;
+		$J.post( 'http://steamcommunity.com/actions/LogFriendActivityUpvote', {sessionID: g_sessionID} );
+	}
 }
 
 

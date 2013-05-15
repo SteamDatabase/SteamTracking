@@ -2178,6 +2178,11 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		}
 		else
 		{
+			description.value = description.value.replace(/\[date\](\d*)\[\/date\]/g, function( match, p1 ) {
+				var date = new Date( p1 * 1000 );
+				return date.toLocaleString();
+			});
+
 			elDescription.update( description.value.replace( /\n/g, '<br>' ) );
 		}
 
@@ -2553,6 +2558,7 @@ SellItemDialog = {
 		}
 
 		var price = this.GetPriceAsInt();
+		var buyerPrice = this.GetBuyerPriceAsInt();
 		var quantity = this.GetQuantityAsInt();
 
 		if ( quantity > this.m_item.amount )
@@ -2562,17 +2568,21 @@ SellItemDialog = {
 		}
 
 		// If the price entered exceeds the maximum allowed, prevent the sale.
-		if ( price > g_rgWalletInfo['wallet_max_balance'] )
+		if ( buyerPrice > g_rgWalletInfo['wallet_trade_max_balance'] )
 		{
-			$('market_sell_currency_input').style.borderColor = 'red';
+			$('market_sell_buyercurrency_input').style.borderColor = 'red';
+			if ( price > g_rgWalletInfo['wallet_trade_max_balance'] )
+			{
+				$('market_sell_currency_input').style.borderColor = 'red';
+			}
 
 			var strError = ' The price entered exceeds the maximum price of %1$s.'
-					.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+					.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_trade_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 			this.DisplayError( strError );
 			return;
 		}
 
-		if ( price <= 0 )
+		if ( price <= 0 || buyerPrice <= 0 )
 		{
 			$('market_sell_currency_input').style.borderColor = 'red';
 			this.DisplayError( 'You must enter a valid price.' );
@@ -2729,8 +2739,10 @@ SellItemDialog = {
 		
 		if ( inputValue > 0 )
 		{
-			nAmount = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-			$('market_sell_buyercurrency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+			// Calculate what the buyer pays
+			var publisherFee = typeof this.m_item.market_fee != 'undefined' ? this.m_item.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
+			var info = CalculateAmountToSendForDesiredReceivedAmount( nAmount, publisherFee );
+			$('market_sell_buyercurrency_input').value = v_currencyformat( info.amount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 		}
 	},
 
@@ -2740,7 +2752,10 @@ SellItemDialog = {
 
 		if ( inputValue > 0 )
 		{
-			nAmount = nAmount - CalculateFeeAmount( nAmount );
+			// Calculate what the seller gets
+			var publisherFee = typeof this.m_item.market_fee != 'undefined' ? this.m_item.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
+			var feeInfo = CalculateFeeAmount( nAmount, publisherFee );
+			nAmount = nAmount - feeInfo.fees;
 			$('market_sell_currency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 		}
 	}
@@ -3413,49 +3428,70 @@ function ConvertToOurCurrencyForDisplay( amount )
 	return Math.max( nAmount, 0 );
 }
 
-function CalculateFeeAmount( amount )
+function CalculateFeeAmount( amount, publisherFee )
 {
 	if ( !g_rgWalletInfo['wallet_fee'] )
 		return 0;
 
-	var nFeeAmount = g_rgWalletInfo['wallet_fee_base'] + ( g_rgWalletInfo['wallet_fee_percent'] * amount );
-	if ( nFeeAmount < g_rgWalletInfo['wallet_fee_minimum'] )
-		nFeeAmount = g_rgWalletInfo['wallet_fee_minimum'];
+	publisherFee = ( typeof publisherFee == 'undefined' ) ? 0 : publisherFee;
 
-	return Math.floor(nFeeAmount);
+	// Since CalculateFeeAmount has a Math.floor, we could be off a cent or two. Let's check:
+	var iterations = 0; // shouldn't be needed, but included to be sure nothing unforseen causes us to get stuck
+	var nEstimatedAmountOfWalletFundsReceivedByOtherParty = parseInt( ( amount - parseInt( g_rgWalletInfo['wallet_fee_base'] ) ) / ( parseFloat( g_rgWalletInfo['wallet_fee_percent'] ) + parseFloat( publisherFee ) + 1 ) );
+
+	var bEverUndershot = false;
+	var fees = CalculateAmountToSendForDesiredReceivedAmount( nEstimatedAmountOfWalletFundsReceivedByOtherParty, publisherFee );
+	while ( fees.amount != amount && iterations < 10 )
+	{
+		if ( fees.amount > amount )
+		{
+			if ( bEverUndershot )
+			{
+				fees = CalculateAmountToSendForDesiredReceivedAmount( nEstimatedAmountOfWalletFundsReceivedByOtherParty - 1, publisherFee );
+				fees.steam_fee += ( amount - fees.amount );
+				fees.fees += ( amount - fees.amount );
+				fees.amount = amount;
+				break;
+			}
+			else
+			{
+				nEstimatedAmountOfWalletFundsReceivedByOtherParty--;
+			}
+		}
+		else
+		{
+			bEverUndershot = true;
+			nEstimatedAmountOfWalletFundsReceivedByOtherParty++;
+		}
+
+		fees = CalculateAmountToSendForDesiredReceivedAmount( nEstimatedAmountOfWalletFundsReceivedByOtherParty, publisherFee );
+		iterations++;
+	}
+
+	// fees.amount should equal the passed in amount
+
+	return fees;
 }
 
-function CalculateAmountToSendForDesiredReceivedAmount( receivedAmount )
+function CalculateAmountToSendForDesiredReceivedAmount( receivedAmount, publisherFee )
 {
 	if ( !g_rgWalletInfo['wallet_fee'] )
 	{
 		return receivedAmount;
 	}
 
-	// ReceivedAmount = SentAmount - FeeBase - SentAmount*FeePercent
-	// thus:
-	// SentAmount = (-FeeBase - ReceivedAmount) / (FeePercent-1)
-	var nAmountToSend = Math.ceil( ( -g_rgWalletInfo['wallet_fee_base'] - receivedAmount ) / ( g_rgWalletInfo['wallet_fee_percent'] - 1 ) );
+	publisherFee = ( typeof publisherFee == 'undefined' ) ? 0 : publisherFee;
 
-	// Since CalculateFeeAmount has a Math.floor, we could be off a cent. Let's check:
-	var iterations = 0; // shouldn't be needed, but included to be sure nothing unforseen causes us to get stuck
-	var actualReceivedAmount = nAmountToSend - CalculateFeeAmount( nAmountToSend );
-	while ( receivedAmount != actualReceivedAmount && iterations < 10 )
-	{
-		if ( actualReceivedAmount > receivedAmount )
-		{
-			nAmountToSend--;
-		}
-		else
-		{
-			nAmountToSend++;
-		}
+	var nSteamFee = parseInt( Math.floor( Math.max( receivedAmount * parseFloat( g_rgWalletInfo['wallet_fee_percent'] ), g_rgWalletInfo['wallet_fee_minimum'] ) + parseInt( g_rgWalletInfo['wallet_fee_base'] ) ) );
+	var nPublisherFee = parseInt( Math.floor( publisherFee > 0 ? Math.max( receivedAmount * publisherFee, 1 ) : 0 ) );
+	var nAmountToSend = receivedAmount + nSteamFee + nPublisherFee;
 
-		actualReceivedAmount = nAmountToSend - CalculateFeeAmount( nAmountToSend );
-		iterations++;
-	}
-
-	return nAmountToSend;
+	return {
+		steam_fee: nSteamFee,
+		publisher_fee: nPublisherFee,
+		fees: nSteamFee + nPublisherFee,
+		amount: parseInt( nAmountToSend )
+	};
 }
 
 function SelectItemDialogOnSelect()
