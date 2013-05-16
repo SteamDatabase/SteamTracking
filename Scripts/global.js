@@ -181,17 +181,20 @@ function AlertNonSteamSite( elem )
 				return true;
 			}
 		}
-		var text = "Note: the URL you have clicked on is not an official Steam web site.\n\n";
-		text += url;
-		text += "\n\nIf this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!";
-		text += "\n\nAre you sure you want to visit this page? Click OK to continue at your own risk.";
-		if ( confirm( text ) )
-		{
-			return true;
-		}
+		var $Msg = $J('<div/>');
+		$Msg.append( $J('<div/>').text( "Note: the URL you have clicked on is not an official Steam web site." ) );
+		$Msg.append( '<br>' );
+		$Msg.append( $J('<div/>').text( url ) );
+		$Msg.append( '<br>' );
+		$Msg.append( $J('<div/>').text( "If this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!" ) );
+		$Msg.append( $J('<div/>').text( "Are you sure you want to visit this page? Click OK to continue at your own risk." ) );
+		ShowConfirmDialog( '', $Msg ).done( function() {
+			window.location = url;
+		} );
 		return false;
 	}
-	alert( "The URL is badly formed.");
+
+	ShowAlertDialog( '', "The URL is badly formed.");
 	return false;
 }
 

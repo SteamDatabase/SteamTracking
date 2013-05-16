@@ -151,6 +151,17 @@ function BuildBadgeDisplay( $BadgeCtn, Badge )
 
 function BuildBadgeReward( rgRewardData )
 {
+	if ( rgRewardData.type == 'levelup' )
+		return BuildLevelUpReward( rgRewardData );
+
+	var $RewardCtn = $J('<div/>', {'class': 'badge_reward_ctn'} )
+
+	if ( rgRewardData.label )
+	{
+		var $RewardLabel = $J('<div/>',{'class': 'badge_reward_label'}).text( rgRewardData.label );
+		$RewardCtn.append( $RewardLabel );
+	}
+
 	var $Reward = $J('<div/>', {'class': 'badge_reward'} );
 	var $Icon = $J('<div/>', {'class': 'badge_reward_icon'} );
 	if ( rgRewardData.image )
@@ -164,7 +175,20 @@ function BuildBadgeReward( rgRewardData )
 	);
 
 	$Reward.append( $Icon, $Content, $J('<div/>', {style: 'clear: left;' } ) );
-	return $Reward;
+	$RewardCtn.append( $Reward );
+	return $RewardCtn;
+}
+
+function BuildLevelUpReward( rgRewardData )
+{
+	var $Reward = $J('<div/>', {'class': 'badge_reward_level'} );
+
+	var $Level = $J('<div/>', {'class': rgRewardData.level_css_class } );
+	$Level.append( $J('<span/>', {'class': 'friendPlayerLevelNum' }).text( rgRewardData.level ) );
+
+	var strDescription = 'Level %s achieved'.replace( /%s/, rgRewardData.level );
+
+	return $Reward.append( $Level, strDescription );
 }
 
 function DisplayBadgeRewardClosure( $Reward )

@@ -248,19 +248,46 @@
 	margin-bottom: 36px;
 }
 
-.badge_reward {
-	background-color: #282d39;
-	border: 1px solid #5e8aca;
-	border-radius: 3px;
+.badge_reward_level {
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 14px;
+	color: #bbbaba;
+	font-size: 17px;
+}
 
-	padding: 8px;
-	min-height: 62px;
+.badge_reward_level .friendPlayerLevel {
+	margin-right: 14px;
+}
+
+.badge_reward_ctn {
+	background-color: #5e8aca;
+	/*border: 1px solid #5e8aca; */
+	border-radius: 3px;
+	padding: 1px;
 	width: 343px;
 	margin: 0 auto 14px auto;
+}
+
+.badge_reward {
+
+	border-radius: 3px;
+	background-color: #282d39;
+	padding: 8px;
+	min-height: 62px;
 
 	text-align: left;
 	font-size: 13px;
 	color: #6e6e6e;
+}
+
+.badge_reward_label {
+	background-color: #5e8aca;
+	line-height: 18px;
+	color: #ffffff;
+	text-align: left;
+	padding: 0 8px;
+	font-size: 13px;
 }
 
 .badge_reward_icon {
@@ -279,7 +306,7 @@
 
 .badge_rewards_actions {
 	width: 264px;
-	margin: 0 auto;
+	margin: 0 auto 32px auto;
 }
 
 .badge_rewards_actions .btn_small {
