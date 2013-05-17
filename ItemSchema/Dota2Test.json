@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.e30b097f072afc5953397a0dabc730a335f75ac5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.83654b3269d90aeb7c6877d9396c24455d22347a.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -9517,7 +9517,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9548,7 +9548,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9600,7 +9600,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9653,7 +9653,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9728,7 +9728,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9759,7 +9759,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9790,7 +9790,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9843,7 +9843,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9897,7 +9897,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9928,7 +9928,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9958,7 +9958,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -9988,7 +9988,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10049,8 +10049,8 @@
 				"image_inventory": "econ\/items\/faceless_void\/battlefury\/battlefury",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury.e619ddf98c71a042f732aba90c9555cefb574ec7.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury_large.da8246ba79740a596ec159c93845e49347e6b4df.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury.4ed9ccf592f22baf57171f7a8ddb0c11ffddff03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury_large.aed9b6fe5266bc36f353290977ab7833c5b49441.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -10085,7 +10085,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10116,7 +10116,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10147,7 +10147,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10200,7 +10200,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 9.000000
+						"value": 9
 					}
 				]
 				
@@ -10254,7 +10254,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10308,7 +10308,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10339,7 +10339,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10370,7 +10370,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 15.000000
+						"value": 15
 					}
 				]
 				
@@ -10445,7 +10445,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10476,7 +10476,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10507,7 +10507,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -10887,7 +10887,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11170,7 +11170,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11224,7 +11224,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 2.000000
+						"value": 2
 					}
 				]
 				
@@ -11446,7 +11446,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11499,7 +11499,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11529,12 +11529,12 @@
 					{
 						"name": "animation mod",
 						"class": "animation_mod",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11591,7 +11591,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 2.000000
+						"value": 2
 					}
 				]
 				
@@ -11622,7 +11622,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11653,7 +11653,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11684,7 +11684,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 2.000000
+						"value": 2
 					}
 				]
 				
@@ -11761,7 +11761,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11792,7 +11792,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11938,7 +11938,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -11990,7 +11990,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12020,7 +12020,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12120,7 +12120,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 2.000000
+						"value": 2
 					}
 				]
 				
@@ -12151,7 +12151,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12181,7 +12181,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12234,7 +12234,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 4.000000
+						"value": 4
 					}
 				]
 				
@@ -12309,7 +12309,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12363,7 +12363,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12394,7 +12394,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12447,7 +12447,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12501,7 +12501,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12555,7 +12555,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12609,7 +12609,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12708,7 +12708,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12739,7 +12739,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12930,7 +12930,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -12960,7 +12960,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13012,7 +13012,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13158,7 +13158,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13325,7 +13325,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13402,7 +13402,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13547,7 +13547,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13578,7 +13578,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13609,7 +13609,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13639,7 +13639,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13714,7 +13714,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13858,7 +13858,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13933,7 +13933,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13964,7 +13964,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -13995,7 +13995,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14231,7 +14231,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14262,7 +14262,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14316,7 +14316,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14439,7 +14439,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14559,7 +14559,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14728,7 +14728,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14850,7 +14850,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -14881,7 +14881,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15137,7 +15137,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15167,7 +15167,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15288,7 +15288,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15433,7 +15433,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15464,7 +15464,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15500,17 +15500,17 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -15541,7 +15541,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15572,7 +15572,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15603,7 +15603,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15634,7 +15634,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15730,7 +15730,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15805,7 +15805,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -15879,7 +15879,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16115,7 +16115,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16167,7 +16167,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16333,7 +16333,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16886,7 +16886,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16917,7 +16917,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -16948,7 +16948,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17025,7 +17025,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17056,7 +17056,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17086,7 +17086,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17276,7 +17276,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17307,7 +17307,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17769,7 +17769,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17891,7 +17891,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17922,7 +17922,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17953,7 +17953,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -17984,7 +17984,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -18038,7 +18038,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -18069,7 +18069,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -18258,7 +18258,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -18354,7 +18354,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -18788,7 +18788,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -19320,7 +19320,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -19351,7 +19351,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -19426,7 +19426,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -19659,7 +19659,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -19894,7 +19894,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -20061,7 +20061,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -20115,7 +20115,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -20213,7 +20213,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -20380,7 +20380,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -20410,7 +20410,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -20844,7 +20844,7 @@
 					{
 						"name": "custom powershot",
 						"class": "custom_powershot",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -20874,7 +20874,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21040,7 +21040,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21251,7 +21251,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21530,7 +21530,7 @@
 					{
 						"name": "custom powershot",
 						"class": "custom_powershot",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -21561,7 +21561,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21592,7 +21592,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21735,7 +21735,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21765,7 +21765,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21865,7 +21865,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -21931,6 +21931,28 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_armsv2\/onizaphk_ahunter_armsv2.7bec7b0dc1b5081bbe46357883a75ee9485636b8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tuskarr\/onizaphk_ahunter_armsv2\/onizaphk_ahunter_armsv2_large.b0ac18bb3615cb57e379ed7dd0d2553ec91a43f8.png",
 				"item_set": "arctic_hunter_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Hood of Defiance",
+				"defindex": 4500,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Hood of Defiance",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22101,7 +22123,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -22304,6 +22326,28 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/dragon_knight\/wyver_head2\/wyver_head2.8f48a58cd0347bac2253d5967acc295917b7e104.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/dragon_knight\/wyver_head2\/wyver_head2_large.4a9f4c288dd6f13b51c32e3c46ea7ff4b8309549.png",
 				"item_set": "dragon_knight_crimson_wyvern",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "QoP_TPL_Hair_lvl1",
+				"defindex": 4517,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "DOTA_Item_QoP_TPL_Hair_lvl1",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22695,7 +22739,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -22748,7 +22792,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -22860,6 +22904,50 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/shadow_demon\/back_ishobolaa\/back_ishobolaa.c7238aae6861621b97d15dc15cd323677e96857a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/shadow_demon\/back_ishobolaa\/back_ishobolaa_large.d4c14b7f464793981ff0f35103b475610dd759db.png",
 				"item_set": "summoned_demon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "QoP_TPL_Weapon_lvl1",
+				"defindex": 4542,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "DOTA_Item_QoP_TPL_Weapon_lvl1",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "QoP_TPL_Wings_lvl1",
+				"defindex": 4543,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "DOTA_Item_QoP_TPL_Wings_lvl1",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22998,6 +23086,28 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/windrunner\/redwoodarc\/redwoodarc.b4e899a98df3d6d66d9bc9587d1d0f30f50cb04f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/windrunner\/redwoodarc\/redwoodarc_large.143b61c894143b2bcc95f7cbd9c4d9459bf5885f.png",
 				"item_set": "windrunner_redwood",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "QoP_TPL_Shoulder_lvl1",
+				"defindex": 4550,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "DOTA_Item_QoP_TPL_Shoulder_lvl1",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -24056,12 +24166,12 @@
 					{
 						"name": "custom powershot",
 						"class": "custom_powershot",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "item set anim",
 						"class": "item_set_anim",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -24137,7 +24247,7 @@
 					{
 						"name": "item set anim",
 						"class": "item_set_anim",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -24190,7 +24300,7 @@
 					{
 						"name": "item set anim",
 						"class": "item_set_anim",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -24288,7 +24398,7 @@
 					{
 						"name": "item set anim",
 						"class": "item_set_anim",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -24456,7 +24566,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -24576,7 +24686,7 @@
 					{
 						"name": "item set anim",
 						"class": "item_set_anim",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -24651,7 +24761,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -24728,7 +24838,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -24759,7 +24869,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -24813,7 +24923,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -24913,7 +25023,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -25125,7 +25235,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -25201,7 +25311,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -25255,7 +25365,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -25286,7 +25396,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -25665,7 +25775,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Dagger",
 				"item_name": "Dagger of Enduring Torment",
-				"item_description": "This new item has no description.",
+				"item_description": "Twist once and the blood starts to spill.  Twist again and see the pleasure flow.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/queenofpain\/snakedagger\/snakedagger",
@@ -25708,7 +25818,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -25739,7 +25849,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -25770,7 +25880,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -26141,7 +26251,7 @@
 					{
 						"name": "custom scythe",
 						"class": "custom_scythe",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -26563,7 +26673,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -26594,7 +26704,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -26625,7 +26735,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -26656,7 +26766,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -26687,7 +26797,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -27830,7 +27940,7 @@
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -28616,7 +28726,7 @@
 					{
 						"name": "custom base attack fx",
 						"class": "custom_base_attack_fx",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -28646,7 +28756,7 @@
 					{
 						"name": "custom slark pounce",
 						"class": "custom_slark_pounce",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -30943,7 +31053,7 @@
 				"name": "Eye of Omoz",
 				"defindex": 4905,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
+				"item_type_name": "Sword",
 				"item_name": "Eye of Omoz",
 				"item_description": "In the burning pits of the stygian waste, the sword sees all.",
 				"proper_name": false,
@@ -30951,8 +31061,8 @@
 				"image_inventory": "econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu.e35d3a6b2c6d0dd0c1fe63da86cd70e651e099ca.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu_large.3d31a744af410105ad3d5d8a430fe254c2cd3c83.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu.0ae74e97d4716d5650e06dc928b2b2cf7053f3b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/doom\/weapon_eyeoffetitzu\/weapon_eyeoffetitzu_large.698c596be94c5686533a0527d2799c0df6e2e95a.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32228,14 +32338,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Hammer",
 				"item_name": "Hammer of the Skygods",
-				"item_description": "This new item has no description.",
+				"item_description": "By stormcraft and steady arm is wrought the will of the skies.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/disruptor\/dsrptr12\/dsrptr12",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/disruptor\/dsrptr12\/dsrptr12.9581f1fc11324997bd5a0c70825f55820923e84e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/disruptor\/dsrptr12\/dsrptr12_large.70bb455cdd515011c5a5d9291b68c2b286f6026e.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32250,14 +32360,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Dagger",
 				"item_name": "The Tear of Agony",
-				"item_description": "This new item has no description.",
+				"item_description": "Let your queen will hear their screams and she will smile upon you.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit.277b6d480e926f1ea6f7e85dee8fc111a9075e9c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit_large.16b62369d477cdd2188db23432cf4fad8771e9a2.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32272,14 +32382,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Sword",
 				"item_name": "Stalwart Sentinel",
-				"item_description": "This new item has no description.",
+				"item_description": "The heft and shape of the blade spells danger for both the target and the wielder.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01.88fe1d160796a71e760b3894863aa6e562ceb61f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sven\/sven_weapon_sentinel_01\/sven_weapon_sentinel_01_large.8cdc457f0281c427813b34330928c7206d5d7f32.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32294,14 +32404,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Sword",
 				"item_name": "Gloomblade",
-				"item_description": "This new item has no description.",
+				"item_description": "Beware the gloom, for it is ever the friend an assassin's ally.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6.cc64283d168237098744704ef6f4ca058e487c33.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_assassin\/shard_of_the_corrupted6\/shard_of_the_corrupted6_large.3a9429cca9cabf30b7f4fb0f2743aa619d0f8999.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32316,14 +32426,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Sword",
 				"item_name": "The Cursed Crescent",
-				"item_description": "This new item has no description.",
+				"item_description": "Cursed is the one who wields this blade in anger.  Cursed is the one who faces this blade with cruelty. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed.b27f42c2d722e94cc9657566ccbf30fb87c23767.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/juggernaut\/juggernaut_sword_cursed\/juggernaut_sword_cursed_large.f28e40a2edfc8721da38ab9f181316fb7cfdb79d.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32425,12 +32535,12 @@
 					{
 						"name": "international tag",
 						"class": "international_tag",
-						"value": 2012.000000
+						"value": 2012
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -32460,12 +32570,12 @@
 					{
 						"name": "international tag",
 						"class": "international_tag",
-						"value": 2012.000000
+						"value": 2012
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -32495,12 +32605,12 @@
 					{
 						"name": "international tag",
 						"class": "international_tag",
-						"value": 2012.000000
+						"value": 2012
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -32552,17 +32662,17 @@
 					{
 						"name": "league id",
 						"class": "",
-						"value": 21.000000
+						"value": 21
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -32807,7 +32917,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -32837,7 +32947,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -32870,12 +32980,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 3.000000
+						"value": 3
 					}
 				]
 				
@@ -32908,12 +33018,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 4.000000
+						"value": 4
 					}
 				]
 				
@@ -32946,12 +33056,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 5.000000
+						"value": 5
 					}
 				]
 				
@@ -32984,12 +33094,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 4.000000
+						"value": 4
 					}
 				]
 				
@@ -33195,12 +33305,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 6.000000
+						"value": 6
 					}
 				]
 				
@@ -33255,12 +33365,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 7.000000
+						"value": 7
 					}
 				]
 				
@@ -33293,12 +33403,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 8.000000
+						"value": 8
 					}
 				]
 				
@@ -33332,12 +33442,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 9.000000
+						"value": 9
 					}
 				]
 				
@@ -33371,17 +33481,17 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 10.000000
+						"value": 10
 					}
 				]
 				
@@ -33435,12 +33545,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 11.000000
+						"value": 11
 					}
 				]
 				
@@ -33476,22 +33586,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 23.000000
+						"value": 23
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33527,22 +33637,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 22.000000
+						"value": 22
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33578,22 +33688,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 7.000000
+						"value": 7
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33629,22 +33739,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 15.000000
+						"value": 15
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33680,22 +33790,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 4.000000
+						"value": 4
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33731,22 +33841,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 20.000000
+						"value": 20
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33780,12 +33890,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 12.000000
+						"value": 12
 					}
 				]
 				
@@ -33819,12 +33929,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 13.000000
+						"value": 13
 					}
 				]
 				
@@ -33860,22 +33970,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 3.000000
+						"value": 3
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33911,22 +34021,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 66.000000
+						"value": 66
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -33962,22 +34072,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 30.000000
+						"value": 30
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34013,22 +34123,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 39.000000
+						"value": 39
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34064,22 +34174,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 36.000000
+						"value": 36
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34115,22 +34225,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 22.000000
+						"value": 22
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34166,22 +34276,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 2.000000
+						"value": 2
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34217,22 +34327,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 17.000000
+						"value": 17
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34268,22 +34378,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 6.000000
+						"value": 6
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34319,22 +34429,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 5.000000
+						"value": 5
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34370,22 +34480,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 26.000000
+						"value": 26
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34399,11 +34509,11 @@
 				"item_description": "Show your support for Orange by buying this Team Pennant! Equip it in the 'fan slot' of your Player Loadout to show other spectators who you're rooting for. Upgrade it to show you mean business! In addition, equipping a pennant makes you eligible for item drops while you spectate your team's matches live during the International 2012, and other tournaments Valve may designate in the future.  Orange pennants can be combined with other Orange pennants to upgrade your Team Pennant fan level.  The level of your Team Pennant will increase the total fan value of the team when you are spectating a Tournament match.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/pennant\/pennant_team42_icon",
+				"image_inventory": "econ\/pennant\/pennant_team416900_icon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/pennant\/pennant_team416900_icon.5f90102b57d0523635e205b29441bf995a5beaf5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/pennant\/pennant_team416900_icon_large.063bbcc7563cce166fa87d1d8e38e81d20d46c86.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -34421,22 +34531,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 416900.000000
+						"value": 416900
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34472,22 +34582,22 @@
 					{
 						"name": "team ID",
 						"class": "team_id",
-						"value": 31.000000
+						"value": 31
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "fanfare level",
 						"class": "fanfare_level",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -34562,12 +34672,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 14.000000
+						"value": 14
 					}
 				]
 				
@@ -34600,12 +34710,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 15.000000
+						"value": 15
 					}
 				]
 				
@@ -34638,12 +34748,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 16.000000
+						"value": 16
 					}
 				]
 				
@@ -34679,12 +34789,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "cannot remove custom name",
 						"class": "cannot_remove_custom_name",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -34780,7 +34890,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -35297,12 +35407,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 17.000000
+						"value": 17
 					}
 				]
 				
@@ -36127,12 +36237,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 19.000000
+						"value": 19
 					}
 				]
 				
@@ -36165,22 +36275,22 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 20.000000
+						"value": 20
 					}
 				]
 				
 			},
 			{
-				"name": "Diretide HUD Skin",
+				"name": "Cruel Diretide",
 				"defindex": 10137,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Diretide HUD Skin",
+				"item_name": "Cruel Diretide",
 				"item_description": "As tide and temperature turn, life ebbs from the land.  The Diretide has arrived.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36188,7 +36298,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_diretide.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_diretide_large.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36224,12 +36334,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 18.000000
+						"value": 18
 					}
 				]
 				
@@ -36263,12 +36373,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 21.000000
+						"value": 21
 					}
 				]
 				
@@ -36410,12 +36520,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 22.000000
+						"value": 22
 					}
 				]
 				
@@ -36487,11 +36597,11 @@
 				}
 			},
 			{
-				"name": "Radiant HUD Skin",
+				"name": "Radiant Ore",
 				"defindex": 10149,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Radiant HUD Skin",
+				"item_name": "Radiant Ore",
 				"item_description": "Light pours into the land, blooming resplendent on war-scarred ruins.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36499,7 +36609,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_radiant.d2f71230b50e33b49f965a99fd733f93ed4d972f.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_radiant_large.d2f71230b50e33b49f965a99fd733f93ed4d972f.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36508,11 +36618,11 @@
 				}
 			},
 			{
-				"name": "Dire HUD Skin",
+				"name": "Direstone",
 				"defindex": 10150,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Dire HUD Skin",
+				"item_name": "Direstone",
 				"item_description": "The earth cracks in turmoil as the seeds of destruction take root.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36520,7 +36630,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_dire.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_dire_large.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36529,11 +36639,11 @@
 				}
 			},
 			{
-				"name": "Frostivus HUD Skin",
+				"name": "Snows of Frostivus",
 				"defindex": 10151,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Frostivus HUD Skin",
+				"item_name": "Snows of Frostivus",
 				"item_description": "A chill fills the air as the snows blanket the cold ground.  The time of Frostivus comes.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36541,7 +36651,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_frostivus.cf74154fb484878e4ad90b88c9388498598938df.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_frostivus_large.cf74154fb484878e4ad90b88c9388498598938df.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36577,12 +36687,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 23.000000
+						"value": 23
 					}
 				]
 				
@@ -36615,12 +36725,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 24.000000
+						"value": 24
 					}
 				]
 				
@@ -36653,12 +36763,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 25.000000
+						"value": 25
 					}
 				]
 				
@@ -36692,12 +36802,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 26.000000
+						"value": 26
 					}
 				]
 				
@@ -36771,22 +36881,22 @@
 					{
 						"name": "premier league tag",
 						"class": "premier league tag",
-						"value": 4.000000
+						"value": 4
 					},
 					{
 						"name": "league id",
 						"class": "",
-						"value": 27.000000
+						"value": 27
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -36816,22 +36926,22 @@
 					{
 						"name": "starladder league tag",
 						"class": "starladder league tag",
-						"value": 5.000000
+						"value": 5
 					},
 					{
 						"name": "league id",
 						"class": "",
-						"value": 29.000000
+						"value": 29
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -36886,12 +36996,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 27.000000
+						"value": 27
 					}
 				]
 				
@@ -36991,12 +37101,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 28.000000
+						"value": 28
 					}
 				]
 				
@@ -37029,12 +37139,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 29.000000
+						"value": 29
 					}
 				]
 				
@@ -37090,12 +37200,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 30.000000
+						"value": 30
 					}
 				]
 				
@@ -37147,22 +37257,22 @@
 					{
 						"name": "g-1 league tag",
 						"class": "g-1 league tag",
-						"value": 5.000000
+						"value": 5
 					},
 					{
 						"name": "league id",
 						"class": "",
-						"value": 34.000000
+						"value": 34
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					}
 				]
 				
@@ -37223,8 +37333,8 @@
 				"image_inventory": "econ\/huds\/hud_cold_depths",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_cold_depths.15d057e8edc82b97b13770340c81093fe9434a02.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_cold_depths_large.15d057e8edc82b97b13770340c81093fe9434a02.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37257,32 +37367,42 @@
 					{
 						"name": "league id",
 						"class": "",
-						"value": 65006.000000
+						"value": 65006
+					},
+					{
+						"name": "league id 2",
+						"class": "",
+						"value": 65004
+					},
+					{
+						"name": "league id 3",
+						"class": "",
+						"value": 65005
 					},
 					{
 						"name": "kill eater",
 						"class": "kill_eater",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
-						"value": 33.000000
+						"value": 33
 					},
 					{
 						"name": "skin index",
 						"class": "skin_index",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "model index",
 						"class": "model_index",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "international tag",
 						"class": "international tag",
-						"value": 2013.000000
+						"value": 2013
 					}
 				]
 				
@@ -37316,12 +37436,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 31.000000
+						"value": 31
 					}
 				]
 				
@@ -37338,8 +37458,8 @@
 				"image_inventory": "econ\/huds\/hud_empower",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_empower.94baf506c2755c683af0af83b182c83055efa8b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_empower_large.94baf506c2755c683af0af83b182c83055efa8b0.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37359,8 +37479,8 @@
 				"image_inventory": "econ\/huds\/hud_crystal_wings",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_crystal_wings.39c08efd6611d982ada72dad9ca13937d2242e39.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_crystal_wings_large.39c08efd6611d982ada72dad9ca13937d2242e39.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37369,18 +37489,18 @@
 				}
 			},
 			{
-				"name": "Acid Essence",
+				"name": "Mega-Kills: Pyrion Flax",
 				"defindex": 10178,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "HUD Skin",
-				"item_name": "Acid Essence",
-				"item_description": "This new item has no description.",
+				"item_type_name": "Announcer",
+				"item_name": "Mega-Kills: Pyrion Flax",
+				"item_description": "This pack replaces the Mega-Kills announcer with the unique and unruly humor of Dota 2 satirist Pyrion Flax.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/huds\/hud_acid_essence",
+				"image_inventory": "econ\/announcer\/megakill_pflax_large",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/announcer\/megakill_pflax_large.da193456ed22f9bd46f94bbf6d7743934f07cb13.png",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -37395,14 +37515,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
 				"item_name": "Frozen Touch",
-				"item_description": "This new item has no description.",
+				"item_description": "There is cold wisdom in the core of winter.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_frozen_touch",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_frozen_touch.683a9e7c54e5e3363de24e855e4d22ad664436b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_frozen_touch_large.683a9e7c54e5e3363de24e855e4d22ad664436b5.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37411,19 +37531,19 @@
 				}
 			},
 			{
-				"name": "Menace",
+				"name": "Malice",
 				"defindex": 10180,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Menace",
-				"item_description": "This new item has no description.",
+				"item_name": "Malice",
+				"item_description": "Few things confer courage like the power of malice.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_menace",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_menace.a280c3b5b6c00b21710f810e1d4fb605d753a4c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_menace_large.a280c3b5b6c00b21710f810e1d4fb605d753a4c0.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37437,14 +37557,141 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
 				"item_name": "Nature",
-				"item_description": "This new item has no description.",
+				"item_description": "In the verdant spring grows deep-rooted strength.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_nature",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_nature.f9a06a4c861dbe3d05fd5d47fc5e561e06b1f01f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_nature_large.f9a06a4c861dbe3d05fd5d47fc5e561e06b1f01f.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Driftwood",
+				"defindex": 10182,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Driftwood",
+				"item_description": "Upon a sandy shore lie the tools of victory.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_driftwood",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_driftwood.a1a4b71ed822b9908606e4c5f37887207a92c8a8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_driftwood_large.a1a4b71ed822b9908606e4c5f37887207a92c8a8.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gear Tooth",
+				"defindex": 10183,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Gear Tooth",
+				"item_description": "Ingenuity powers the machinery of war.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_gear_tooth",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_gear_tooth.2c833fafa6c69a75ba9f356ea002f73297118a7c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_gear_tooth_large.2c833fafa6c69a75ba9f356ea002f73297118a7c.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Smeevil_Bird",
+				"defindex": 10184,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Smeevil_Bird",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Announcer: Pyrion Flax",
+				"defindex": 10185,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Announcer",
+				"item_name": "Announcer: Pyrion Flax",
+				"item_description": "This pack replaces the Default announcer with the unique and unruly humor of Dota 2 satirist Pyrion Flax.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/announcer\/announcer_pflax_large",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
 				"image_url": "",
 				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Stone Ruin",
+				"defindex": 10186,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Stone Ruin",
+				"item_description": "Beware the chaos of ages past.\r\n\r\nIncluded with Premier League Season 5 pass.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_premier_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_premier_league.c3f83baeb8e688297bd89b0c57d454e3f5d6e597.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_premier_league_large.c3f83baeb8e688297bd89b0c57d454e3f5d6e597.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Powered Star",
+				"defindex": 10187,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "DOTA_Item_Powered_Star",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_starladder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_starladder.00daeb751862557a230d113e0f4eb75c5eee37a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_starladder_large.0d57a4af0e8545827128ef1f1cb12b83fda37193.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37482,12 +37729,12 @@
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37522,12 +37769,12 @@
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37562,7 +37809,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37597,7 +37844,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37632,7 +37879,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37667,7 +37914,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37701,7 +37948,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37735,12 +37982,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37774,12 +38021,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37814,7 +38061,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 12.000000
+						"value": 12
 					}
 				]
 				
@@ -37848,7 +38095,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37882,12 +38129,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "gamemode restricted",
 						"class": "gamemode_restricted",
-						"value": 9.000000
+						"value": 9
 					}
 				]
 				
@@ -37922,17 +38169,17 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -37966,12 +38213,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38006,7 +38253,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38041,7 +38288,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38076,7 +38323,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38111,7 +38358,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38146,7 +38393,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38181,7 +38428,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 11.000000
+						"value": 11
 					}
 				]
 				
@@ -38216,7 +38463,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 7.000000
+						"value": 7
 					}
 				]
 				
@@ -38251,7 +38498,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 13.000000
+						"value": 13
 					}
 				]
 				
@@ -38286,7 +38533,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38321,7 +38568,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 14.000000
+						"value": 14
 					}
 				]
 				
@@ -38356,7 +38603,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 15.000000
+						"value": 15
 					}
 				]
 				
@@ -38391,17 +38638,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 13647155.000000
+						"value": 13647155
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38436,17 +38683,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 13662003.000000
+						"value": 13662003
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38481,17 +38728,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 13609777.000000
+						"value": 13609777
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38526,17 +38773,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 12046131.000000
+						"value": 12046131
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38571,17 +38818,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 5354320.000000
+						"value": 5354320
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38616,17 +38863,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 38862.000000
+						"value": 38862
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38661,17 +38908,17 @@
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
-						"value": 8532717.000000
+						"value": 8532717
 					},
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -38706,7 +38953,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 16.000000
+						"value": 16
 					}
 				]
 				
@@ -38741,7 +38988,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 17.000000
+						"value": 17
 					}
 				]
 				
@@ -38776,7 +39023,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 18.000000
+						"value": 18
 					}
 				]
 				
@@ -38811,7 +39058,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 19.000000
+						"value": 19
 					}
 				]
 				
@@ -38846,7 +39093,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 20.000000
+						"value": 20
 					}
 				]
 				
@@ -38881,7 +39128,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 21.000000
+						"value": 21
 					}
 				]
 				
@@ -38916,7 +39163,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 22.000000
+						"value": 22
 					}
 				]
 				
@@ -38951,7 +39198,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 23.000000
+						"value": 23
 					}
 				]
 				
@@ -38986,7 +39233,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 24.000000
+						"value": 24
 					}
 				]
 				
@@ -39021,7 +39268,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 25.000000
+						"value": 25
 					}
 				]
 				
@@ -39056,7 +39303,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39091,7 +39338,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39126,7 +39373,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 26.000000
+						"value": 26
 					}
 				]
 				
@@ -39161,7 +39408,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39196,12 +39443,12 @@
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39219,7 +39466,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2.c99b4ea839d10ad865c4300fb9b922576338ccb0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2_large.6c5de8b43149c3057abf7a9c70e35ba687c7dffe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2_large.cf8dec2994fc9b17c0839bac2c53daf0d5fa19c1.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -39236,7 +39483,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39254,7 +39501,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2.c99b4ea839d10ad865c4300fb9b922576338ccb0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2_large.6c5de8b43149c3057abf7a9c70e35ba687c7dffe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder2_large.cf8dec2994fc9b17c0839bac2c53daf0d5fa19c1.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -39271,7 +39518,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39306,7 +39553,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39341,7 +39588,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39376,7 +39623,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39411,7 +39658,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39446,7 +39693,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39481,7 +39728,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39516,7 +39763,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39551,7 +39798,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39586,7 +39833,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 27.000000
+						"value": 27
 					}
 				]
 				
@@ -39621,7 +39868,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 28.000000
+						"value": 28
 					}
 				]
 				
@@ -39656,7 +39903,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 29.000000
+						"value": 29
 					}
 				]
 				
@@ -39691,7 +39938,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 30.000000
+						"value": 30
 					}
 				]
 				
@@ -39726,7 +39973,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 31.000000
+						"value": 31
 					}
 				]
 				
@@ -39761,7 +40008,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 32.000000
+						"value": 32
 					}
 				]
 				
@@ -39796,7 +40043,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39831,7 +40078,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39866,7 +40113,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39901,7 +40148,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -39963,7 +40210,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 34.000000
+						"value": 34
 					}
 				]
 				
@@ -39998,7 +40245,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 35.000000
+						"value": 35
 					}
 				]
 				
@@ -40033,7 +40280,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 36.000000
+						"value": 36
 					}
 				]
 				
@@ -40068,7 +40315,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 37.000000
+						"value": 37
 					}
 				]
 				
@@ -40103,7 +40350,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40138,7 +40385,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40173,7 +40420,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40208,7 +40455,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40243,7 +40490,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40278,7 +40525,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40313,7 +40560,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40348,7 +40595,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40383,17 +40630,17 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40428,7 +40675,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40463,7 +40710,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40498,7 +40745,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40533,7 +40780,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40568,7 +40815,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40603,7 +40850,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40638,7 +40885,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 38.000000
+						"value": 38
 					}
 				]
 				
@@ -40673,7 +40920,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 39.000000
+						"value": 39
 					}
 				]
 				
@@ -40708,7 +40955,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 40.000000
+						"value": 40
 					}
 				]
 				
@@ -40743,7 +40990,7 @@
 					{
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
-						"value": 41.000000
+						"value": 41
 					}
 				]
 				
@@ -40779,12 +41026,12 @@
 					{
 						"name": "essence type",
 						"class": "essence_type",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40820,12 +41067,12 @@
 					{
 						"name": "essence type",
 						"class": "essence_type",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40861,12 +41108,12 @@
 					{
 						"name": "essence type",
 						"class": "essence_type",
-						"value": 2.000000
+						"value": 2
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40902,12 +41149,12 @@
 					{
 						"name": "essence type",
 						"class": "essence_type",
-						"value": 3.000000
+						"value": 3
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40943,12 +41190,12 @@
 					{
 						"name": "essence type",
 						"class": "essence_type",
-						"value": 4.000000
+						"value": 4
 					},
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -40983,7 +41230,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41018,7 +41265,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41053,7 +41300,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41088,7 +41335,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41123,7 +41370,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41158,7 +41405,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41193,7 +41440,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41228,7 +41475,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41263,7 +41510,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41298,7 +41545,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41333,7 +41580,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41368,7 +41615,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41403,7 +41650,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41438,7 +41685,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41473,7 +41720,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41508,7 +41755,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41543,7 +41790,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41578,7 +41825,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41613,7 +41860,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41648,7 +41895,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41684,12 +41931,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41725,12 +41972,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41765,7 +42012,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41800,7 +42047,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41835,7 +42082,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41871,7 +42118,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41906,7 +42153,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41941,7 +42188,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -41976,7 +42223,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42011,7 +42258,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42047,7 +42294,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42082,7 +42329,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42117,7 +42364,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42152,7 +42399,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42187,7 +42434,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42222,7 +42469,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42257,7 +42504,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42293,7 +42540,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42328,7 +42575,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42363,7 +42610,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42398,7 +42645,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42433,7 +42680,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42468,7 +42715,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42503,7 +42750,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42538,7 +42785,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42573,7 +42820,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42608,7 +42855,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42643,7 +42890,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42679,12 +42926,12 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42720,7 +42967,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42756,7 +43003,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42791,7 +43038,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42826,7 +43073,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42861,7 +43108,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42896,7 +43143,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42931,7 +43178,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -42966,7 +43213,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43001,7 +43248,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43036,7 +43283,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43071,7 +43318,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43106,7 +43353,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43120,11 +43367,11 @@
 				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_eastqualifier_ingame",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_eastqualifier_ingame.b2b07d86f518dc5be66680ba54ba900676e9c580.png",
+				"image_url_large": "",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43141,7 +43388,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43155,11 +43402,11 @@
 				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_westqualifier_ingame",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_westqualifier_ingame.84e1fe1b6d6ea4569a5942b47aab88b6b94beaa7.png",
+				"image_url_large": "",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43176,7 +43423,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43211,7 +43458,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43246,7 +43493,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43281,7 +43528,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43292,7 +43539,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tournament Compendium",
 				"item_name": "The International 2013 Interactive Compendium",
-				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier.",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and Battle Bonus stretch reward!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_companion",
@@ -43316,7 +43563,7 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -43351,7 +43598,533 @@
 					{
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
-						"value": 1.000000
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure Key of the Malignant Amanita",
+				"defindex": 15164,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Treasure Key of the Malignant Amanita",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests of the Malgnant Amanita<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/fungal_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/fungal_key.a86c5fcc8cc8eedc2ad1a44b9ba6a5333ef2320e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/fungal_key_large.cf27411053f43a8de5543ea5f4b9c9177bb712d2.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_pack_5",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Super League",
+				"defindex": 15165,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Dota 2 Super League",
+				"item_description": "Ten top teams from home and abroad compete for two months in Shanghai, China for a total prize pool of 1.05 million yuan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dsl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_dsl.168ab21a3dd6257d4e63c47407103b533eac784f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_dsl_large.2eea8a0f9f4278c0b31a89902f85cb04f66fe315.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Super League - ADMIN",
+				"defindex": 15166,
+				"item_class": "tool",
+				"item_type_name": "League",
+				"item_name": "Dota 2 Super League - ADMIN",
+				"item_description": "Ten top teams from home and abroad compete for two months in Shanghai, China for a total prize pool of 1.05 million yuan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dsl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_dsl.168ab21a3dd6257d4e63c47407103b533eac784f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_dsl_large.2eea8a0f9f4278c0b31a89902f85cb04f66fe315.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The International East Qualifiers - ADMIN",
+				"defindex": 15167,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International East Qualifiers - ADMIN",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_eastqualifier_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_eastqualifier_ingame.b2b07d86f518dc5be66680ba54ba900676e9c580.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The International West Qualifiers - ADMIN",
+				"defindex": 15168,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International West Qualifiers - ADMIN",
+				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_westqualifier_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_westqualifier_ingame.84e1fe1b6d6ea4569a5942b47aab88b6b94beaa7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Pinoy Gaming Festival Summer Assembly",
+				"defindex": 15169,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Pinoy Gaming Festival Summer Assembly",
+				"item_description": "Watch 5 Filipino teams defend their home turf against Neolution.Orange, Neolution.International and PMS|Asterisk* at the Pinoy Gaming Festival Summer Assembly 2013 for a prize pool of $1,750.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_pgf_summer_assembly",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_pgf_summer_assembly.ef2fb3e4bdbae715cbc6f9442864d4c0153fecfd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_pgf_summer_assembly_large.0b0ea407fb8cba8ce7353cd2d02bcc99b9c669ed.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Pinoy Gaming Festival Summer Assembly - ADMIN",
+				"defindex": 15170,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Pinoy Gaming Festival Summer Assembly - ADMIN",
+				"item_description": "Watch 5 Filipino teams defend their home turf against Neolution.Orange, Neolution.International and PMS|Asterisk* at the Pinoy Gaming Festival Summer Assembly 2013 for a prize pool of $1,750.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_pgf_summer_assembly",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_pgf_summer_assembly.ef2fb3e4bdbae715cbc6f9442864d4c0153fecfd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_pgf_summer_assembly_large.0b0ea407fb8cba8ce7353cd2d02bcc99b9c669ed.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rapture Gaming Network League",
+				"defindex": 15171,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rapture Gaming Network League",
+				"item_description": "Rapture Gaming Network League 2013\/2014 ticket gives you access to 198 matches over 9 months of the 10 premier teams in Asia vying for a prize pool of SGD19,000 cash, this is one of the biggest DOTA 2 leagues in Asia! Commentary in English, Filipino, Thai, and Vietnamese will be provided by RGN.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rgn_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rgn_league.cb8fab918691c38da94c2beec2d9ff7c07529601.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rgn_league_large.2859656095eb1b6cedda345506410156d5bb4124.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rapture Gaming Network League - ADMIN",
+				"defindex": 15172,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rapture Gaming Network League - ADMIN",
+				"item_description": "Rapture Gaming Network League 2013\/2014 ticket gives you access to 198 matches over 9 months of the 10 premier teams in Asia vying for a prize pool of SGD19,000 cash, this is one of the biggest DOTA 2 leagues in Asia! Commentary in English, Filipino, Thai, and Vietnamese will be provided by RGN.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rgn_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rgn_league.cb8fab918691c38da94c2beec2d9ff7c07529601.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rgn_league_large.2859656095eb1b6cedda345506410156d5bb4124.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Premier League Season 5",
+				"defindex": 15173,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Premier League Season 5",
+				"item_description": "The Premier League is back with a new format! Watch teams compete in weekly cups for 7 weeks to qualify for the grand final and a chance of winning $15,000. Coverage by the biggest eSport websites like joinDOTA, GosuGamers, TeamLiquid, Dota2Lougne, Prodota, Dota2.ru, Ogaming and many more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_premierleague5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Premier League Season 5 - ADMIN",
+				"defindex": 15174,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Premier League Season 5 - ADMIN",
+				"item_description": "The Premier League is back with a new format! Watch teams compete in weekly cups for 7 weeks to qualify for the grand final and a chance of winning $15,000. Coverage by the biggest eSport websites like joinDOTA, GosuGamers, TeamLiquid, Dota2Lougne, Prodota, Dota2.ru, Ogaming and many more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_premierleague5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season VI",
+				"defindex": 15175,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season VI",
+				"item_description": "Broadcast in 4 different languages with v1lat and TobiWan as headliners and a grand prize of $22,500 this should be the best StarSeries yet! The keystone of StarSeries is its LAN finals, held in Kiev Cybersport Arena. Includes an exclusive in-game Starladder HUD Skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder6.cc8a533d31e63c4f7bda393e3fafe08c450d4659.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder6_large.78e7b8d25032f8994fd7c7d00cde70489a206489.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season VI - ADMIN",
+				"defindex": 15176,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season VI - ADMIN",
+				"item_description": "Broadcast in 4 different languages with v1lat and TobiWan as headliners and a grand prize of $22,500 this should be the best StarSeries yet! The keystone of StarSeries is its LAN finals, held in Kiev Cybersport Arena. Includes an exclusive in-game Starladder HUD Skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder6.cc8a533d31e63c4f7bda393e3fafe08c450d4659.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_starladder6_large.78e7b8d25032f8994fd7c7d00cde70489a206489.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Summer 2013",
+				"defindex": 15177,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Summer 2013",
+				"item_description": "The RaidCall EMS One Summer 2013 features teams from all over the world in a battle for 39,000 US dollars in prize money. Established teams and challengers meet in four cups, followed by group stage playoffs and live event finals - giving you dozens of great matches casted by TobiWan and others.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rcemsone_summer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rcemsone_summer.691276c062ec5134cf77ff18064854846284632c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rcemsone_summer_large.3c8b4be8cf9ee002de462e591be243f09045ed91.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Summer 2013 - ADMIN",
+				"defindex": 15178,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Summer 2013 - ADMIN",
+				"item_description": "The RaidCall EMS One Summer 2013 features teams from all over the world in a battle for 39,000 US dollars in prize money. Established teams and challengers meet in four cups, followed by group stage playoffs and live event finals - giving you dozens of great matches casted by TobiWan and others.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rcemsone_summer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rcemsone_summer.691276c062ec5134cf77ff18064854846284632c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_rcemsone_summer_large.3c8b4be8cf9ee002de462e591be243f09045ed91.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
 					}
 				]
 				
@@ -44171,7 +44944,7 @@
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -45768,7 +46541,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -45804,7 +46577,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -45840,7 +46613,7 @@
 					{
 						"name": "polycount tag",
 						"class": "polycount_tag",
-						"value": 2012.000000
+						"value": 2012
 					}
 				]
 				
@@ -48105,6 +48878,62 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "The International 2013 Interactive Compendium Bundle",
+				"defindex": 20169,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The International 2013 Interactive Compendium Bundle",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and International 2013 Battle Bonus stretch goal reward!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/international_companion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/international_companion.2d19c14b1f9ef47a88716d98171e0861fccfed44.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/international_companion_large.6e088506ebe87c11688f128a6ebe0bdacb54fe38.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Pyrion Flax Announcer Pack",
+				"defindex": 20170,
+				"item_class": "bundle",
+				"item_type_name": "Announcer Bundle",
+				"item_name": "Pyrion Flax Announcer Pack",
+				"item_description": "This pack replaces the Default announcer and Mega-Kills announcer with the unique and unruly humor of Dota 2 satirist Pyrion Flax.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/announcer\/announcer_pflax",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/announcer\/announcer_pflax.3cbdc19eab0a7b0265c6b38711cd44b9136baf56.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/announcer\/announcer_pflax_large.d54e09e2308f55d90f4627352213d4b6e142314f.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -48113,8 +48942,8 @@
 				"name": "damage penalty",
 				"defindex": 1,
 				"attribute_class": "mult_dmg",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_DamageDone_Negative",
 				"description_format": "value_is_percentage",
 				"effect_type": "negative",
@@ -48125,8 +48954,8 @@
 				"name": "damage bonus",
 				"defindex": 2,
 				"attribute_class": "mult_dmg",
-				"min_value": 1.050000,
-				"max_value": 1.100000,
+				"min_value": 1.0499999523162842,
+				"max_value": 1.1000000238418579,
 				"description_string": "Attrib_DamageDone_Positive",
 				"description_format": "value_is_percentage",
 				"effect_type": "positive",
@@ -48137,8 +48966,8 @@
 				"name": "attach particle effect",
 				"defindex": 134,
 				"attribute_class": "set_attached_particle",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "Effect: %s1",
 				"description_format": "value_is_particle_index",
 				"effect_type": "neutral",
@@ -48149,8 +48978,8 @@
 				"name": "essence type",
 				"defindex": 135,
 				"attribute_class": "essence_type",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48159,8 +48988,8 @@
 				"name": "animation mod",
 				"defindex": 136,
 				"attribute_class": "animation_mod",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This item modifies the hero's animations.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48171,8 +49000,8 @@
 				"name": "custom powershot",
 				"defindex": 137,
 				"attribute_class": "custom_powershot",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This weapon has a custom Powershot animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48183,8 +49012,8 @@
 				"name": "courier slots 1",
 				"defindex": 138,
 				"attribute_class": "courier_slots_1",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48193,8 +49022,8 @@
 				"name": "courier slots 2",
 				"defindex": 139,
 				"attribute_class": "courier_slots_2",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48203,8 +49032,8 @@
 				"name": "courier slots 3",
 				"defindex": 140,
 				"attribute_class": "courier_slots_3",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48213,8 +49042,8 @@
 				"name": "courier slots 4",
 				"defindex": 141,
 				"attribute_class": "courier_slots_4",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48223,8 +49052,8 @@
 				"name": "set item tint RGB",
 				"defindex": 142,
 				"attribute_class": "set_item_tint_rgb",
-				"min_value": 0.000000,
-				"max_value": 16777215.000000,
+				"min_value": 0,
+				"max_value": 16777215,
 				"description_string": "Color: %s1",
 				"description_format": "value_is_color",
 				"effect_type": "neutral",
@@ -48235,8 +49064,8 @@
 				"name": "courier seed",
 				"defindex": 143,
 				"attribute_class": "courier_seed",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48245,8 +49074,8 @@
 				"name": "item set anim",
 				"defindex": 144,
 				"attribute_class": "item_set_anim",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This item unlocks custom animations when worn with other pieces of the set.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48257,8 +49086,8 @@
 				"name": "item set anim bonus",
 				"defindex": 145,
 				"attribute_class": "item_set_anim_bonus",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "Custom Animation Set",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48269,8 +49098,8 @@
 				"name": "custom scythe",
 				"defindex": 146,
 				"attribute_class": "custom_scythe",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This weapon has a custom Reaper's Scythe animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48281,8 +49110,8 @@
 				"name": "custom slark pounce",
 				"defindex": 147,
 				"attribute_class": "custom_slark_pounce",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This weapon has a custom Pounce animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48293,8 +49122,8 @@
 				"name": "custom base attack fx",
 				"defindex": 148,
 				"attribute_class": "custom_base_attack_fx",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "This item modifies the hero's base attack effects.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48305,8 +49134,8 @@
 				"name": "cannot trade",
 				"defindex": 153,
 				"attribute_class": "cannot_trade",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48315,8 +49144,8 @@
 				"name": "black power",
 				"defindex": 154,
 				"attribute_class": "black_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48325,8 +49154,8 @@
 				"name": "unusual power",
 				"defindex": 155,
 				"attribute_class": "unusual_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48335,8 +49164,8 @@
 				"name": "red power",
 				"defindex": 156,
 				"attribute_class": "red_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48345,8 +49174,8 @@
 				"name": "blue power",
 				"defindex": 157,
 				"attribute_class": "blue_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48355,8 +49184,8 @@
 				"name": "yellow power",
 				"defindex": 158,
 				"attribute_class": "yellow_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48365,8 +49194,8 @@
 				"name": "orange power",
 				"defindex": 159,
 				"attribute_class": "orange_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48375,8 +49204,8 @@
 				"name": "green power",
 				"defindex": 160,
 				"attribute_class": "green_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48385,8 +49214,8 @@
 				"name": "purple power",
 				"defindex": 161,
 				"attribute_class": "purple_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48395,8 +49224,8 @@
 				"name": "skin index",
 				"defindex": 162,
 				"attribute_class": "skin_index",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48405,8 +49234,8 @@
 				"name": "cannot remove custom name",
 				"defindex": 163,
 				"attribute_class": "cannot_remove_custom_name",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48415,8 +49244,8 @@
 				"name": "alternate icon",
 				"defindex": 164,
 				"attribute_class": "alternate_icon",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48425,8 +49254,8 @@
 				"name": "use animation modifier",
 				"defindex": 165,
 				"attribute_class": "use_animation_modifier",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48435,8 +49264,8 @@
 				"name": "white power",
 				"defindex": 166,
 				"attribute_class": "white_power",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48445,8 +49274,8 @@
 				"name": "model index",
 				"defindex": 167,
 				"attribute_class": "model_index",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48455,8 +49284,8 @@
 				"name": "tournament event date",
 				"defindex": 184,
 				"attribute_class": "tournament_event_date",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Date: %s1",
 				"description_format": "value_is_date",
 				"effect_type": "neutral",
@@ -48467,8 +49296,8 @@
 				"name": "event date",
 				"defindex": 185,
 				"attribute_class": "event_date",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Date Received: %s1",
 				"description_format": "value_is_date",
 				"effect_type": "neutral",
@@ -48479,8 +49308,8 @@
 				"name": "gifter account id",
 				"defindex": 186,
 				"attribute_class": "gifter_account_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "\nGift from: %s1",
 				"description_format": "value_is_account_id",
 				"effect_type": "positive",
@@ -48491,8 +49320,8 @@
 				"name": "set supply crate series",
 				"defindex": 187,
 				"attribute_class": "supply_crate_series",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Chest Series #%s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48503,8 +49332,8 @@
 				"name": "elevate quality",
 				"defindex": 189,
 				"attribute_class": "set_elevated_quality",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48513,8 +49342,8 @@
 				"name": "referenced item id low",
 				"defindex": 192,
 				"attribute_class": "referenced_item_id_low",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48523,8 +49352,8 @@
 				"name": "referenced item id high",
 				"defindex": 193,
 				"attribute_class": "referenced_item_id_high",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48533,8 +49362,8 @@
 				"name": "referenced item def",
 				"defindex": 194,
 				"attribute_class": "referenced_item_def",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48543,8 +49372,8 @@
 				"name": "always tradable",
 				"defindex": 195,
 				"attribute_class": "always_tradable",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48553,8 +49382,8 @@
 				"name": "collection bits",
 				"defindex": 198,
 				"attribute_class": "collection_bits",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48563,8 +49392,8 @@
 				"name": "tradable after date",
 				"defindex": 211,
 				"attribute_class": "tradable_after_date",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48573,8 +49402,8 @@
 				"name": "force level display",
 				"defindex": 212,
 				"attribute_class": "force_level_display",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48583,8 +49412,8 @@
 				"name": "random level curve replacement",
 				"defindex": 213,
 				"attribute_class": "random_level_curve_replacement",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48593,8 +49422,8 @@
 				"name": "kill eater",
 				"defindex": 214,
 				"attribute_class": "kill_eater",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48603,8 +49432,8 @@
 				"name": "item find",
 				"defindex": 215,
 				"attribute_class": "item_find",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "Item Find: %s1% increase in the chance of finding items for this hero while playing with this item equipped.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48615,8 +49444,8 @@
 				"name": "makers mark id",
 				"defindex": 228,
 				"attribute_class": "makers_mark_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"description_string": "Attrib_MakersMark",
 				"description_format": "value_is_account_id",
 				"effect_type": "positive",
@@ -48627,8 +49456,8 @@
 				"name": "unique craft index",
 				"defindex": 229,
 				"attribute_class": "unique_craft_index",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48637,8 +49466,8 @@
 				"name": "completed collection id",
 				"defindex": 290,
 				"attribute_class": "completed_collection_id",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48647,8 +49476,8 @@
 				"name": "collection reward id",
 				"defindex": 291,
 				"attribute_class": "collection_reward_id",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48657,8 +49486,8 @@
 				"name": "kill eater score type",
 				"defindex": 292,
 				"attribute_class": "kill_eater_score_type",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48667,8 +49496,8 @@
 				"name": "kill eater score type 2",
 				"defindex": 293,
 				"attribute_class": "kill_eater_score_type_2",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48677,8 +49506,8 @@
 				"name": "kill eater 2",
 				"defindex": 294,
 				"attribute_class": "kill_eater_2",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48687,8 +49516,8 @@
 				"name": "disallow recycling",
 				"defindex": 295,
 				"attribute_class": "disallow_recycling",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48697,8 +49526,8 @@
 				"name": "ignore charge notification",
 				"defindex": 296,
 				"attribute_class": "ignore_charge_notification",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"min_value": 0,
+				"max_value": 0,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48707,8 +49536,8 @@
 				"name": "unlimited quantity",
 				"defindex": 311,
 				"attribute_class": "unlimited_quantity",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"description_string": "Unlimited Use",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48719,8 +49548,8 @@
 				"name": "tournament killer id",
 				"defindex": 312,
 				"attribute_class": "tournament_killer_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_TournamentKillerID",
 				"description_format": "value_is_account_id",
 				"effect_type": "positive",
@@ -48731,8 +49560,8 @@
 				"name": "tournament victim id",
 				"defindex": 313,
 				"attribute_class": "tournament_victim_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_TournamentVictimID",
 				"description_format": "value_is_account_id",
 				"effect_type": "positive",
@@ -48743,8 +49572,8 @@
 				"name": "tournament id",
 				"defindex": 315,
 				"attribute_class": "tournament_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_TournamentID",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48755,8 +49584,8 @@
 				"name": "tournament game id",
 				"defindex": 316,
 				"attribute_class": "tournament_game_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_TournamentGameID",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48767,8 +49596,8 @@
 				"name": "tournament event id",
 				"defindex": 317,
 				"attribute_class": "tournament_event_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_TournamentEventID",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48779,8 +49608,8 @@
 				"name": "match id",
 				"defindex": 318,
 				"attribute_class": "match_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Match ID: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48791,8 +49620,8 @@
 				"name": "game time",
 				"defindex": 319,
 				"attribute_class": "game_time",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Event Time: %s1",
 				"description_format": "value_is_game_time",
 				"effect_type": "positive",
@@ -48803,8 +49632,8 @@
 				"name": "replay time",
 				"defindex": 320,
 				"attribute_class": "replay_time",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_ReplayTime",
 				"description_format": "value_is_game_time",
 				"effect_type": "positive",
@@ -48815,8 +49644,8 @@
 				"name": "international tag",
 				"defindex": 321,
 				"attribute_class": "international_tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "The International %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48827,8 +49656,8 @@
 				"name": "diretide tag",
 				"defindex": 322,
 				"attribute_class": "diretide_tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Diretide %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48839,8 +49668,8 @@
 				"name": "diretide cycle",
 				"defindex": 323,
 				"attribute_class": "diretide_cycle",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Roshan Cycle %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48851,8 +49680,8 @@
 				"name": "polycount tag",
 				"defindex": 324,
 				"attribute_class": "polycount_tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_PolycountTag",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48863,8 +49692,8 @@
 				"name": "frostivus tag",
 				"defindex": 325,
 				"attribute_class": "frostivus_tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Frostivus %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48875,8 +49704,8 @@
 				"name": "locks remaining",
 				"defindex": 342,
 				"attribute_class": "locks_remaining",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": false
@@ -48885,8 +49714,8 @@
 				"name": "kill eater user 1",
 				"defindex": 379,
 				"attribute_class": "kill_eater_user_1",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48895,8 +49724,8 @@
 				"name": "kill eater user score type 1",
 				"defindex": 380,
 				"attribute_class": "kill_eater_user_score_type_1",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48905,8 +49734,8 @@
 				"name": "kill eater user 2",
 				"defindex": 381,
 				"attribute_class": "kill_eater_user_2",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48915,8 +49744,8 @@
 				"name": "kill eater user score type 2",
 				"defindex": 382,
 				"attribute_class": "kill_eater_user_score_type_2",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48925,8 +49754,8 @@
 				"name": "kill eater user 3",
 				"defindex": 383,
 				"attribute_class": "kill_eater_user_3",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48935,8 +49764,8 @@
 				"name": "kill eater user score type 3",
 				"defindex": 384,
 				"attribute_class": "kill_eater_user_score_type_3",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48945,8 +49774,8 @@
 				"name": "strange part new counter ID",
 				"defindex": 385,
 				"attribute_class": "strange_part_new_counter_id",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48955,8 +49784,8 @@
 				"name": "team ID",
 				"defindex": 386,
 				"attribute_class": "team_id",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48965,8 +49794,8 @@
 				"name": "fanfare level",
 				"defindex": 387,
 				"attribute_class": "fanfare_level",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"min_value": 0,
+				"max_value": 1,
 				"description_string": "Level: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48977,8 +49806,8 @@
 				"name": "gamemode restricted",
 				"defindex": 388,
 				"attribute_class": "gamemode_restricted",
-				"min_value": 0.000000,
-				"max_value": 99.000000,
+				"min_value": 0,
+				"max_value": 99,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -48986,9 +49815,9 @@
 			{
 				"name": "league id",
 				"defindex": 389,
-				"attribute_class": "league_id",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"attribute_class": "league id",
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Attrib_LeagueID",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -48999,8 +49828,8 @@
 				"name": "premier league tag",
 				"defindex": 390,
 				"attribute_class": "premier league tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "The Premier League Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -49011,8 +49840,8 @@
 				"name": "starladder league tag",
 				"defindex": 391,
 				"attribute_class": "starladder league tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "Star Series Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -49023,13 +49852,37 @@
 				"name": "g-1 league tag",
 				"defindex": 392,
 				"attribute_class": "g-1 league tag",
-				"min_value": 0.950000,
-				"max_value": 0.850000,
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
 				"description_string": "G-1 League Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "league id 2",
+				"defindex": 393,
+				"attribute_class": "league id 2",
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
+				"description_string": "Attrib_LeagueID",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "league id 3",
+				"defindex": 394,
+				"attribute_class": "league id 3",
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
+				"description_string": "Attrib_LeagueID",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -50782,7 +51635,7 @@
 					{
 						"name": "item set anim bonus",
 						"class": "item_set_anim_bonus",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -51314,6 +52167,12 @@
 				"id": 75,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle75"
+			},
+			{
+				"system": "courier_trail_fungal",
+				"id": 76,
+				"attach_to_rootbone": false,
+				"name": "Trail of the Amanita"
 			}
 		]
 		,

@@ -9693,6 +9693,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
+			"item_rarity"		"rare"
 		}
 		"4044"
 		{
@@ -9706,7 +9707,6 @@
 			"item_type_name"		"#DOTA_WearableType_Taunt"
 			"item_name"		"#DOTA_Item_Taunt_Spider_Shuffle"
 			"item_slot"		"taunt"
-			"item_rarity"		"mythical"
 			"tool"
 			{
 				"type"		"hero_taunt"
@@ -9760,6 +9760,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
+			"item_rarity"		"rare"
 		}
 		"4049"
 		{
@@ -9958,6 +9959,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
+			"item_rarity"		"rare"
 		}
 		"4058"
 		{
@@ -10091,7 +10093,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
-			"item_rarity"		"mythical"
+			"item_rarity"		"rare"
 		}
 		"4062"
 		{
@@ -10360,12 +10362,6 @@
 					"asset"		"ACT_DOTA_TAUNT"
 					"modifier"		"happy_dance"
 				}
-				"asset_modifier1"
-				{
-					"type"		"speech"
-					"asset"		"TLK_DOTA_TAUNT"
-					"modifier"		"#DOTA_Chat_Taunt"
-				}
 			}
 			"tool"
 			{
@@ -10405,7 +10401,7 @@
 					"PortraitHideHero"		"0"
 				}
 			}
-			"item_rarity"		"mythical"
+			"item_rarity"		"rare"
 		}
 		"4069"
 		{
@@ -41077,7 +41073,7 @@
 			"prefab"		"wearable"
 			"item_type_name"		"#DOTA_WearableType_Dagger"
 			"item_name"		"#DOTA_Item_Dagger_of_Enduring_Torment"
-			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_description"		"#DOTA_Item_Desc_Dagger_of_Enduring_Torment"
 			"image_inventory"		"econ/items/queenofpain/snakedagger/snakedagger"
 			"used_by_heroes"
 			{
@@ -52065,7 +52061,7 @@
 		{
 			"name"		"Eye of Omoz"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Sword"
 			"item_name"		"#DOTA_Item_Eye_of_Omoz"
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Eye_of_Omoz"
@@ -52095,15 +52091,15 @@
 			{
 				"icon"
 				{
-					"PortraitPosition"		"-325.238434 -905.737793 223.534256"
-					"PortraitLookAt"		"6.602783 63.759155 0.000000"
-					"PortraitFOV"		"14.000000"
+					"PortraitPosition"		"-374.270203 -836.279053 59.013992"
+					"PortraitLookAt"		"356.226196 59.793091 27.723999"
+					"PortraitFOV"		"18.000000"
 					"PortraitFar"		"1000.000000"
-					"PortraitLightPosition"		"77.290001 -68.510002 304.230011"
-					"PortraitLightLookAt"		"41.189999 112.900002 0.000000"
+					"PortraitLightPosition"		"-135.535355 -60.279896 250.564316"
+					"PortraitLightLookAt"		"30.300293 38.726807 0.000000"
 					"PortraitLightFOV"		"65.000000"
 					"PortraitLightDistance"		"218.000000"
-					"PortraitLightColor"		"0.990000 0.270000 0.000000"
+					"PortraitLightColor"		"0.342941 0.093529 0.000000"
 					"PortraitShadowColor"		"0.420000 0.420000 0.420000"
 					"PortraitShadowScale"		"0.000000"
 					"PortraitGroundShadowScale"		"0.300000"
@@ -52120,8 +52116,8 @@
 					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
 					"PortraitAnimationActivity"		"0"
 					"PortraitAnimationCycle"		"0.000000"
-					"PortraitAnimationRate"		"1.000000"
-					"PortraitHideHero"		"0"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
 				}
 			}
 		}
@@ -54767,6 +54763,253 @@
 				}
 			}
 			"item_set"		"attributes_foretold"
+		}
+		"4961"
+		{
+			"name"		"Hammer of the Skygods"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Hammer"
+			"item_name"		"#DOTA_Item_Hammer_of_the_Skygods"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Hammer_of_the_Skygods"
+			"image_inventory"		"econ/items/disruptor/dsrptr12/dsrptr12"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_disruptor"		"1"
+			}
+			"creation_date"		"2013-05-01"
+			"model_player"		"models/items/disruptor/dsrptr12/dsrptr12.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"156.039948 -6.081232 252.776154"
+					"PortraitLookAt"		"24.164429 202.445068 0.000000"
+					"PortraitFOV"		"37.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-13.410000 -5.730000 331.179993"
+					"PortraitLightLookAt"		"90.339996 130.690002 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"377.000000"
+					"PortraitLightColor"		"0.674510 0.674510 0.674510"
+					"PortraitShadowColor"		"0.040000 0.110000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-17.100000 2.570000 14.040000"
+					"PortraitAmbientColor"		"0.454902 0.454902 0.454902"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.700000 0.500000 1.000000"
+					"PortraitBackgroundColor2"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundColor3"		"0.100000 0.200000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4962"
+		{
+			"name"		"The Tear of Agony"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Dagger"
+			"item_name"		"#DOTA_Item_The_Tear_of_Agony"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_The_Tear_of_Agony"
+			"image_inventory"		"econ/items/queenofpain/qop_tears_of_agony_submit/qop_tears_of_agony_submit"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"creation_date"		"2013-05-01"
+			"model_player"		"models/items/queenofpain/qop_tears_of_agony_submit/qop_tears_of_agony_submit.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-7.870511 135.474121 194.129944"
+					"PortraitLookAt"		"52.855225 285.496216 317.894897"
+					"PortraitFOV"		"39.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.506748 66.093544 188.912842"
+					"PortraitLightLookAt"		"115.032349 12.864990 0.000000"
+					"PortraitLightFOV"		"88.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.266667 0.266667 0.266667"
+					"PortraitShadowColor"		"0.000000 0.106274 0.265686"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.317647 0.317647 0.317647"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4963"
+		{
+			"name"		"Stalwart Sentinel"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Sword"
+			"item_name"		"#DOTA_Item_Stalwart_Sentinel"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Stalwart_Sentinel"
+			"image_inventory"		"econ/items/sven/sven_weapon_sentinel_01/sven_weapon_sentinel_01"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_sven"		"1"
+			}
+			"creation_date"		"2013-05-01"
+			"model_player"		"models/items/sven/sven_weapon_sentinel_01/sven_weapon_sentinel_01.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-26.503038 -161.187408 225.298752"
+					"PortraitLookAt"		"354.957275 96.163330 353.276367"
+					"PortraitFOV"		"82.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"58.507820 -40.839760 462.199951"
+					"PortraitLightLookAt"		"41.529999 118.080002 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"142.000000"
+					"PortraitLightColor"		"0.550000 0.550000 0.550000"
+					"PortraitShadowColor"		"0.050000 0.020000 0.020000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"0.850000 -75.650002 -30.680000"
+					"PortraitAmbientColor"		"0.120000 0.220000 0.150000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.200000"
+					"PortraitBackgroundColor2"		"0.000000 0.000000 0.200000"
+					"PortraitBackgroundColor3"		"0.600000 0.200000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 0.100000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"3"
+					"PortraitAnimationCycle"		"0.328000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4964"
+		{
+			"name"		"Gloomblade"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Sword"
+			"item_name"		"#DOTA_Item_Gloomblade"
+			"item_rarity"		"mythical"
+			"item_description"		"#DOTA_Item_Desc_Gloomblade"
+			"image_inventory"		"econ/items/phantom_assassin/shard_of_the_corrupted6/shard_of_the_corrupted6"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_phantom_assassin"		"1"
+			}
+			"creation_date"		"2013-05-01"
+			"model_player"		"models/items/phantom_assassin/shard_of_the_corrupted6/shard_of_the_corrupted6.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"113.497467 -110.789162 171.046127"
+					"PortraitLookAt"		"30.344238 133.324585 26.158447"
+					"PortraitFOV"		"70.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"352.020264 1.445988 135.521210"
+					"PortraitLightLookAt"		"20.088501 137.592773 0.000000"
+					"PortraitLightFOV"		"55.000000"
+					"PortraitLightDistance"		"429.000000"
+					"PortraitLightColor"		"0.512941 0.458746 0.384103"
+					"PortraitShadowColor"		"0.020000 0.080000 0.060000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"63.255829 -82.956085 99.525131"
+					"PortraitAmbientColor"		"0.377262 0.445098 0.362188"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 0.500000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 0.500000"
+					"PortraitBackgroundColor3"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 0.200000 0.110000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"1"
+					"PortraitAnimationCycle"		"0.240000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4965"
+		{
+			"name"		"The Cursed Crescent"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Sword"
+			"item_name"		"#DOTA_Item_The_Cursed_Crescent"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_The_Cursed_Crescent"
+			"image_inventory"		"econ/items/juggernaut/juggernaut_sword_cursed/juggernaut_sword_cursed"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_juggernaut"		"1"
+			}
+			"creation_date"		"2013-05-01"
+			"model_player"		"models/items/juggernaut/juggernaut_sword_cursed/juggernaut_sword_cursed.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"146.162796 152.601837 134.584824"
+					"PortraitLookAt"		"4.636230 254.421387 0.000000"
+					"PortraitFOV"		"37.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"139.057053 102.455009 137.187500"
+					"PortraitLightLookAt"		"9.310913 311.160278 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"377.000000"
+					"PortraitLightColor"		"0.900000 0.850000 0.800000"
+					"PortraitShadowColor"		"0.070000 0.070000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"79.070000 84.150002 25.320000"
+					"PortraitAmbientColor"		"0.080000 0.150000 0.150000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"juggernaut_portrait"
+					"PortraitAnimationActivity"		"3"
+					"PortraitAnimationCycle"		"0.392000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
 		}
 		"10000"
 		{
@@ -59150,7 +59393,7 @@
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Pennant_Orange"
 			"player_loadout"		"1"
-			"image_inventory"		"econ/pennant/pennant_team42_icon"
+			"image_inventory"		"econ/pennant/pennant_team416900_icon"
 			"tags"
 			{
 				"team_pennant"		"1"
@@ -61715,15 +61958,13 @@
 		}
 		"10137"
 		{
-			"name"		"Diretide HUD Skin"
+			"name"		"Cruel Diretide"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Diretide_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Cruel_Diretide"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Diretide_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_diretide"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier0"
@@ -62429,15 +62670,13 @@
 		}
 		"10149"
 		{
-			"name"		"Radiant HUD Skin"
+			"name"		"Radiant Ore"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Radiant_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Radiant_Ore"
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Radiant_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_radiant"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier1"
@@ -62450,15 +62689,13 @@
 		}
 		"10150"
 		{
-			"name"		"Dire HUD Skin"
+			"name"		"Direstone"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Dire_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Direstone"
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Dire_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_dire"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier0"
@@ -62471,15 +62708,13 @@
 		}
 		"10151"
 		{
-			"name"		"Frostivus HUD Skin"
+			"name"		"Snows of Frostivus"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Frostivus_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Snows_of_Frostivus"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Frostivus_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_frostivus"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier1"
@@ -64668,6 +64903,27 @@
 				}
 			}
 		}
+		"10173"
+		{
+			"name"		"Deepest Depths"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Deepest_Depths"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Deepest_Depths"
+			"image_inventory"		"econ/huds/hud_cold_depths"
+			"creation_date"		"2013-05-02"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"cold_depths"
+					"modifier"		"cold_depths"
+					"frequency"		"1"
+				}
+			}
+		}
 		"10174"
 		{
 			"name"		"Smeevil"
@@ -64780,6 +65036,14 @@
 				{
 					"value"		"65006"
 				}
+				"league id 2"
+				{
+					"value"		"65004"
+				}
+				"league id 3"
+				{
+					"value"		"65005"
+				}
 				"kill eater"
 				{
 					"attribute_class"		"kill_eater"
@@ -64869,7 +65133,311 @@
 			"item_description"		"#DOTA_Item_Desc_Treasure_of_the_Malignant_Amanita"
 			"image_inventory"		"econ/tools/fungal_crate"
 			"creation_date"		"2013-05-01"
+			"associated_item"		"15164"
 			"sound_material"		"1"
+		}
+		"10176"
+		{
+			"name"		"Empowered"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Empowered"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Empowered"
+			"image_inventory"		"econ/huds/hud_empower"
+			"creation_date"		"2013-05-02"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"empower"
+					"modifier"		"empower"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10177"
+		{
+			"name"		"Tempest Wing"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Tempest_Wing"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Tempest_Wing"
+			"image_inventory"		"econ/huds/hud_crystal_wings"
+			"creation_date"		"2013-05-02"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"crystal_wings"
+					"modifier"		"crystal_wings"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10178"
+		{
+			"name"		"Mega-Kills: Pyrion Flax"
+			"prefab"		"announcer"
+			"item_name"		"#DOTA_Item_MegaKills_Pyrion_Flax"
+			"item_slot"		"mega_kills"
+			"item_rarity"		"mythical"
+			"player_loadout"		"1"
+			"item_description"		"#DOTA_Item_Desc_MegaKills_Pyrion_Flax"
+			"image_inventory"		"econ/announcer/megakill_pflax_large"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"announcer"
+					"asset"		"npc_dota_hero_announcer_dlc_pflax_killing_spree"
+					"modifier"		"scripts/voscripts/game_sounds_vo_announcer_dlc_pflax_killing_spree.txt"
+				}
+				"asset_modifier7"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/announcer_chosen_one.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_01"
+				}
+				"asset_modifier1"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/announcer_nine_men_dead_at_feet.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_02"
+				}
+				"asset_modifier2"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/grand_pantheon.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_03"
+				}
+				"asset_modifier3"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/godlike_harmonica_01.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_04"
+				}
+				"asset_modifier4"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/announcer_kill_double_01.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_05"
+				}
+				"asset_modifier6"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax_killing_spree/why_why_why.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_Killing_Spree_06"
+				}
+			}
+			"creation_date"		"2013-05-14"
+		}
+		"10179"
+		{
+			"name"		"Frozen Touch"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Frozen_Touch"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Frozen_Touch"
+			"image_inventory"		"econ/huds/hud_frozen_touch"
+			"creation_date"		"2013-05-06"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"frozen_touch"
+					"modifier"		"frozen_touch"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10180"
+		{
+			"name"		"Malice"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Malice"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Malice"
+			"image_inventory"		"econ/huds/hud_menace"
+			"creation_date"		"2013-05-06"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"menace"
+					"modifier"		"menace"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10181"
+		{
+			"name"		"Nature"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Nature"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Nature"
+			"image_inventory"		"econ/huds/hud_nature"
+			"creation_date"		"2013-05-06"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"nature"
+					"modifier"		"nature"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10182"
+		{
+			"name"		"Driftwood"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Driftwood"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Driftwood"
+			"image_inventory"		"econ/huds/hud_driftwood"
+			"creation_date"		"2013-05-08"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"driftwood"
+					"modifier"		"driftwood"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10183"
+		{
+			"name"		"Gear Tooth"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Gear_Tooth"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Gear_Tooth"
+			"image_inventory"		"econ/huds/hud_gear_tooth"
+			"creation_date"		"2013-05-09"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"gear_tooth"
+					"modifier"		"gear_tooth"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10185"
+		{
+			"name"		"Announcer: Pyrion Flax"
+			"prefab"		"announcer"
+			"item_name"		"#DOTA_Item_Announcer_Pyrion_Flax"
+			"item_slot"		"announcer"
+			"item_rarity"		"mythical"
+			"player_loadout"		"1"
+			"item_description"		"#DOTA_Item_Desc_Announcer_Pyrion_Flax"
+			"image_inventory"		"econ/announcer/announcer_pflax_large"
+			"visuals"
+			{
+				"asset_modifier7"
+				{
+					"type"		"announcer"
+					"asset"		"npc_dota_hero_announcer_dlc_pflax"
+					"modifier"		"scripts/voscripts/game_sounds_vo_announcer_dlc_pflax.txt"
+				}
+				"asset_modifier0"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/creeps_eternal_struggle.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_01"
+				}
+				"asset_modifier8"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/announcer_twr_attack_yr_mid_02.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_02"
+				}
+				"asset_modifier9"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/announcer_mega_now_you_02.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_04"
+				}
+				"asset_modifier11"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/batrider_hasnt_touched_ground.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_05"
+				}
+				"asset_modifier12"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/dragon_knight_bakes.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_06"
+				}
+				"asset_modifier1"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/go_on_creeps.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_03"
+				}
+			}
+			"creation_date"		"2013-05-14"
+		}
+		"10186"
+		{
+			"name"		"Stone Ruin"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Stone_Ruin"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Stone_Ruin"
+			"image_inventory"		"econ/huds/hud_premier_league"
+			"creation_date"		"2013-05-15"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"premier_league"
+					"modifier"		"premier_league"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10187"
+		{
+			"name"		"Powered Star"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Powered_Star"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Powered_Star"
+			"image_inventory"		"econ/huds/hud_starladder"
+			"creation_date"		"2013-05-15"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"starladder"
+					"modifier"		"starladder"
+					"frequency"		"1"
+				}
+			}
 		}
 		"15000"
 		{
@@ -68871,7 +69439,7 @@
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"item_name"		"#DOTA_Item_The_International_East_Qualifiers"
 			"item_description"		"#DOTA_Item_Desc_The_International_East_Qualifiers"
-			"image_inventory"		"econ/testitem_slot_empty"
+			"image_inventory"		"econ/leagues/subscriptions_eastqualifier_ingame"
 			"creation_date"		"2013-04-30"
 			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_eastqualifier_ingame"
@@ -68893,7 +69461,7 @@
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"item_name"		"#DOTA_Item_The_International_West_Qualifiers"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
-			"image_inventory"		"econ/testitem_slot_empty"
+			"image_inventory"		"econ/leagues/subscriptions_westqualifier_ingame"
 			"creation_date"		"2013-04-30"
 			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
 			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
@@ -68980,7 +69548,11 @@
 				"usage"
 				{
 					"league_id"		"65006"
-					"bonus_itemdef"		"10174"
+					"bonus_itemdefs"
+					{
+						"10174"		"1"
+						"15163"		"1"
+					}
 				}
 			}
 			"capabilities"
@@ -68988,7 +69560,7 @@
 				"usable_gc"		"1"
 				"usable_out_of_game"		"1"
 			}
-			"item_description"		"#DOTA_Item_Desc_International_2013_Interactive_Compendium"
+			"item_description"		"#DOTA_Item_Desc_The_International_2013_Interactive_Compendium"
 			"image_inventory"		"econ/tools/international_companion"
 			"attributes"
 			{
@@ -69006,7 +69578,6 @@
 			"prefab"		"tool"
 			"item_type_name"		"#DOTA_WearableType_Battle_Bonus"
 			"item_name"		"#DOTA_Item_The_International_2013_Battle_Bonus"
-			"item_rarity"		"rare"
 			"tool"
 			{
 				"type"		"fortunate_soul"
@@ -69033,6 +69604,368 @@
 				}
 			}
 			"creation_date"		"2013-05-06"
+			"item_rarity"		"ancient"
+		}
+		"15164"
+		{
+			"name"		"Treasure Key of the Malignant Amanita"
+			"prefab"		"key"
+			"item_name"		"#DOTA_Item_Treasure_Key_of_the_Malignant_Amanita"
+			"item_rarity"		"rare"
+			"tool"
+			{
+				"type"		"decoder_ring"
+				"use_string"		"#UnlockUse"
+				"usage_capabilities"
+				{
+					"decodable"		"1"
+				}
+				"restriction"		"community_pack_5"
+			}
+			"item_description"		"#DOTA_Item_Desc_Treasure_Key_of_the_Malignant_Amanita"
+			"image_inventory"		"econ/tools/fungal_key"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-05-08"
+			"sound_material"		"3"
+		}
+		"15165"
+		{
+			"name"		"Dota 2 Super League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"42"
+					"order"		"21"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Dota_2_Super_League"
+			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League"
+			"image_inventory"		"econ/leagues/subscriptions_dsl"
+			"creation_date"		"2013-05-09"
+			"image_banner"		"econ/leagues/subscriptions_dsl_ingame"
+			"tournament_url"		"http://play.gosugamers.net/events/113-dota-2-super-league"
+		}
+		"15166"
+		{
+			"name"		"Dota 2 Super League - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"42"
+					"order"		"21"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_League"
+			"item_name"		"#DOTA_Item_Dota_2_Super_League__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League__ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_dsl"
+			"creation_date"		"2013-05-09"
+			"image_banner"		"econ/leagues/subscriptions_dsl_ingame"
+			"tournament_url"		"http://play.gosugamers.net/events/113-dota-2-super-league"
+		}
+		"15167"
+		{
+			"name"		"The International East Qualifiers - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"65004"
+					"order"		"19"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_The_International_East_Qualifiers__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
+			"image_inventory"		"econ/leagues/subscriptions_eastqualifier_ingame"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+			"image_banner"		"econ/leagues/subscriptions_eastqualifier_ingame"
+		}
+		"15168"
+		{
+			"name"		"The International West Qualifiers - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"65005"
+					"order"		"19"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_The_International_West_Qualifiers__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_West_Qualifiers"
+			"image_inventory"		"econ/leagues/subscriptions_westqualifier_ingame"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.dota2.com/tournaments/international/announcement/"
+			"image_banner"		"econ/leagues/subscriptions_westqualifier_ingame"
+		}
+		"15169"
+		{
+			"name"		"Pinoy Gaming Festival Summer Assembly"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"43"
+					"order"		"22"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly"
+			"item_description"		"#DOTA_Item_Desc_Pinoy_Gaming_Festival_Summer_Assembly"
+			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.pgf.ph/"
+			"image_banner"		"econ/leagues/subscriptions_pgf_summer_assembly_ingame"
+		}
+		"15170"
+		{
+			"name"		"Pinoy Gaming Festival Summer Assembly - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"43"
+					"order"		"22"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Pinoy_Gaming_Festival_Summer_Assembly"
+			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.pgf.ph/"
+			"image_banner"		"econ/leagues/subscriptions_pgf_summer_assembly_ingame"
+		}
+		"15171"
+		{
+			"name"		"Rapture Gaming Network League"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"44"
+					"order"		"23"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League"
+			"item_description"		"#DOTA_Item_Desc_Rapture_Gaming_Network_League"
+			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.rapturegaming.net/"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+		}
+		"15172"
+		{
+			"name"		"Rapture Gaming Network League - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"44"
+					"order"		"23"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Rapture_Gaming_Network_League"
+			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
+			"creation_date"		"2013-05-09"
+			"tournament_url"		"http://www.rapturegaming.net/"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+		}
+		"15173"
+		{
+			"name"		"Premier League Season 5"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"45"
+					"order"		"24"
+					"bonus_itemdefs"
+					{
+						"10186"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Premier_League_Season_5"
+			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5"
+			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
+			"creation_date"		"2013-05-15"
+			"tournament_url"		"http://www.thepremierleague.eu"
+			"image_banner"		"econ/leagues/subscriptions_premierleague5_ingame"
+		}
+		"15174"
+		{
+			"name"		"Premier League Season 5 - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"45"
+					"order"		"24"
+					"admin"		"1"
+					"bonus_itemdefs"
+					{
+						"10186"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Premier_League_Season_5__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5__ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
+			"creation_date"		"2013-05-15"
+			"tournament_url"		"http://www.thepremierleague.eu"
+			"image_banner"		"econ/leagues/subscriptions_premierleague5_ingame"
+		}
+		"15175"
+		{
+			"name"		"StarSeries Season VI"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"46"
+					"order"		"25"
+					"bonus_itemdefs"
+					{
+						"10187"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_StarSeries_Season_VI"
+			"item_description"		"#DOTA_Item_Desc_StarSeries_Season_VI"
+			"image_inventory"		"econ/leagues/subscriptions_starladder6"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_starladder6_ingame"
+			"tournament_url"		"http://dota2.starladder.tv/"
+		}
+		"15176"
+		{
+			"name"		"StarSeries Season VI - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"46"
+					"order"		"25"
+					"admin"		"1"
+					"bonus_itemdefs"
+					{
+						"10187"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_StarSeries_Season_VI__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_StarSeries_Season_VI"
+			"image_inventory"		"econ/leagues/subscriptions_starladder6"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_starladder6_ingame"
+			"tournament_url"		"http://dota2.starladder.tv/"
+		}
+		"15177"
+		{
+			"name"		"RaidCall EMS One Summer 2013"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"47"
+					"order"		"26"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013"
+			"item_description"		"#DOTA_Item_Desc_RaidCall_EMS_One_Summer_2013"
+			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+			"tournament_url"		"http://dota2.raidcall-emsone.com/"
+		}
+		"15178"
+		{
+			"name"		"RaidCall EMS One Summer 2013 - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"47"
+					"order"		"26"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_EMS_One_Summer_2013"
+			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+			"tournament_url"		"http://dota2.raidcall-emsone.com/"
 		}
 		"20000"
 		{
@@ -77607,6 +78540,37 @@
 				}
 			}
 		}
+		"20169"
+		{
+			"name"		"The International 2013 Interactive Compendium Bundle"
+			"prefab"		"bundle"
+			"item_name"		"#DOTA_Item_The_International_2013_Interactive_Compendium_Bundle"
+			"item_rarity"		"legendary"
+			"item_description"		"#DOTA_Item_Desc_The_International_2013_Interactive_Compendium_Bundle"
+			"image_inventory"		"econ/tools/international_companion"
+			"creation_date"		"2013-05-08"
+			"bundle"
+			{
+				"The International 2013 Interactive Compendium"		"1"
+				"The International 2013 Battle Bonus"		"1"
+			}
+		}
+		"20170"
+		{
+			"name"		"Pyrion Flax Announcer Pack"
+			"prefab"		"bundle"
+			"item_type_name"		"#DOTA_WearableType_Announcer_Bundle"
+			"item_name"		"#DOTA_Item_Pyrion_Flax_Announcer_Pack"
+			"item_rarity"		"mythical"
+			"item_description"		"#DOTA_Item_Desc_Pyrion_Flax_Announcer_Pack"
+			"image_inventory"		"econ/announcer/announcer_pflax"
+			"creation_date"		"2013-05-14"
+			"bundle"
+			{
+				"Announcer: Pyrion Flax"		"1"
+				"Mega-Kills: Pyrion Flax"		"1"
+			}
+		}
 	}
 	"attributes"
 	{
@@ -78713,8 +79677,8 @@
 		"389"
 		{
 			"name"		"league id"
-			"attribute_class"		"league_id"
-			"attribute_name"		"league_id tag"
+			"attribute_class"		"league id"
+			"attribute_name"		"league id"
 			"min_value"		"0.950000"
 			"max_value"		"0.850000"
 			"group"		"only_on_unique"
@@ -78765,6 +79729,34 @@
 			"hidden"		"0"
 			"effect_type"		"positive"
 			"stored_as_integer"		"0"
+		}
+		"393"
+		{
+			"name"		"league id 2"
+			"attribute_class"		"league id 2"
+			"attribute_name"		"league id 2"
+			"min_value"		"0.950000"
+			"max_value"		"0.850000"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_LeagueID"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"394"
+		{
+			"name"		"league id 3"
+			"attribute_class"		"league id 3"
+			"attribute_name"		"league id 3"
+			"min_value"		"0.950000"
+			"max_value"		"0.850000"
+			"group"		"only_on_unique"
+			"description_string"		"#Attrib_LeagueID"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
 		}
 	}
 	"attribute_controlled_attached_particles"
@@ -79916,6 +80908,13 @@
 					"attachment"		"attach_shell_high"
 				}
 			}
+		}
+		"76"
+		{
+			"system"		"courier_trail_fungal"
+			"resource"		"particles/econ/courier/courier_trail_fungal.pcf"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
 		}
 	}
 	"upgradeable_base_items"
@@ -81950,6 +82949,25 @@
 			"Na'Vi's Weaselcrow"		"1"
 			"Cluckles the Brave"		"1"
 		}
+		"unusual_courier_community_5"
+		{
+			"Fearless Badger"		"1"
+			"Stumpy - Nature's Attendant"		"1"
+			"Trusty Mountain Yak"		"1"
+			"Enduring War Dog"		"1"
+			"Mighty Boar"		"1"
+			"Morok's Mechanical Mediary"		"1"
+			"Skip the Delivery Frog"		"1"
+			"Speed Demon"		"1"
+			"Tickled Tegu"		"1"
+			"Baby Roshan"		"1"
+			"Prismatic Drake"		"1"
+			"Cluckles the Brave"		"1"
+			"Nimble Ben"		"1"
+			"Kupu the Metamorpher"		"1"
+			"Porcine Princess Penelope"		"1"
+			"The Llama Llama"		"1"
+		}
 		"the_defense_2_unusual_courier"
 		{
 			"Defense Season 2 War Dog"		"1"
@@ -82039,8 +83057,8 @@
 		}
 		"ui_drops_a"
 		{
-			"Radiant HUD Skin"		"1"
-			"Dire HUD Skin"		"1"
+			"Radiant Ore"		"1"
+			"Direstone"		"1"
 		}
 		"juggernaut_kill_eater_a"
 		{
@@ -82225,8 +83243,8 @@
 		}
 		"rarities_list_1"
 		{
-			"Diretide HUD Skin"		"1"
-			"Frostivus HUD Skin"		"1"
+			"Cruel Diretide"		"1"
+			"Snows of Frostivus"		"1"
 			"The Vindicator"		"1"
 			"Buttercup"		"1"
 			"Buttercup's Barding"		"1"
@@ -82281,6 +83299,21 @@
 			"The Instagib OSP"		"1"
 			"Ormr the Lunar Dragon"		"1"
 			"Bessy the Batmeleon"		"1"
+		}
+		"community_items_5"
+		{
+			"Stalwart Sentinel"		"1"
+			"Hammer of the Skygods"		"1"
+			"The Tear of Agony"		"1"
+			"The Cursed Crescent"		"1"
+			"Gloomblade"		"1"
+			"Eye of Omoz"		"1"
+			"Taunt: Spider Shuffle"		"1"
+			"Taunt: Come and Get It!"		"1"
+			"Taunt: Celebration of Death"		"1"
+			"Taunt: Shredding the Lute Invisible"		"1"
+			"Taunt: For Death and Honor"		"1"
+			"Taunt: Victory Jig"		"1"
 		}
 		"anuxi_items_1"
 		{
@@ -82589,6 +83622,10 @@
 		{
 			"community_items_4"		"1"
 		}
+		"community_item_pack_5"
+		{
+			"community_items_5"		"1"
+		}
 		"anuxi_item_pack_1"
 		{
 			"anuxi_items_1"		"1"
@@ -82631,6 +83668,7 @@
 		"28"		"community_item_pack_4"
 		"29"		"treasure_chest_loot_list_29"
 		"30"		"anuxi_item_pack_1"
+		"31"		"community_item_pack_5"
 	}
 	"item_levels"
 	{
