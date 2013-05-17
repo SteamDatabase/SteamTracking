@@ -78,6 +78,7 @@ Scripts/profile_edit_functions.js|http://cdn.steamcommunity.com/public/javascrip
 Scripts/profile_friends_list_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_friends_list_functions.js?_=*TIMENOW*&l=english
 Scripts/profile_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_functions.js?_=*TIMENOW*&l=english
 Scripts/profile_home_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_home_functions.js?_=*TIMENOW*&l=english
+Scripts/profile_gameslist_functions.js|http://cdn.steamcommunity.com/public/javascript/profile_gameslist_functions.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions.js|http://cdn.steamcommunity.com/public/javascript/screenshot_functions.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/screenshot_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/shared_global.js|http://cdn.steamcommunity.com/public/shared/javascript/shared_global.js?_=*TIMENOW*&l=english
