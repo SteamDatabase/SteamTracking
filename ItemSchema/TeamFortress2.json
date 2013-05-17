@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d759c3993f2bf064a7b401eff8c5d5db7add58a3.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.afad34588f8aa9509e16019b7b502efea9c111dd.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -59452,6 +59452,14 @@
 				},
 				"used_by_classes": [
 					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "attach particle effect static",
+						"class": "set_attached_particle_static",
+						"value": 28.000000
+					}
 				]
 				
 			},
