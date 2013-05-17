@@ -168,6 +168,26 @@ function ConfirmBlock()
 		} );
 }
 
+function InitProfileSummary( strSummary )
+{
+	var $Summary = $J( '.profile_summary' );
+	var $SummaryFooter = $J( '.profile_summary_footer' );
+
+	if ( $Summary[0].scrollHeight <= 64 )
+	{
+		$Summary.css( 'height', 64 );
+		$SummaryFooter.hide();
+	}
+	else
+	{
+		$SummaryFooter.find( 'span' ).click( function() {
+			var Modal = ShowDialog( 'Info', strSummary );
+			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );
+		} );
+	}
+
+}
+
 function ShowFriendsInCommon( unAccountIDTarget )
 {
 	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
@@ -297,6 +317,54 @@ function ManageFriendsRemove( $Form )
 	ManageFriendsConfirmBulkAction( $Form, 'remove', 'Remove Friend',
 		'Are you sure you want to remove this friend?' + ' ' + 'This player will no longer appear in your friends list and you will not be able to communicate with them.',
 		'Are you sure you want to remove these %s friends?' + ' ' + 'These players will no longer appear in your friends list and you will not be able to communicate with them.');
+}
+
+
+
+
+var AliasesLoaded = false;
+function ShowAliasPopup(e)
+{
+	ShowMenu( e, 'NamePopup', 'left' );
+
+	if( AliasesLoaded )
+		return true;
+
+	var aliasContainer = $( 'NamePopupAliases' );
+
+	var throbber = document.createElement( 'img' );
+	throbber.src = 'http://cdn.steamcommunity.com/public/images/login/throbber.gif';
+	aliasContainer.appendChild( throbber );
+
+	new Ajax.Request( g_rgProfileData['url'] + 'ajaxaliases/', {
+		method: 'post',
+		parameters: { },
+		onSuccess: function( transport ) {
+
+			var Aliases = transport.responseJSON;
+
+			if( !aliasContainer )
+				return;
+
+			aliasContainer.update('');
+
+			if( !Aliases || Aliases.length == 0 )
+				Aliases.push( {newname: "This user has no known aliases"} );
+
+			for( var x=0; x<Aliases.length; x++ )
+			{
+				var c = Aliases[x];
+
+				var curSpan = document.createElement( 'p' );
+				var curATN = document.createTextNode( c['newname'] );
+				curSpan.appendChild( curATN );
+				aliasContainer.appendChild( curSpan );
+			}
+
+			AliasesLoaded = true;
+		},
+		onFailure: function( transport ) { alert( 'Please try again later' ); }
+	} );
 }
 
 

@@ -1575,3 +1575,21 @@ body.profile_page #footer {
 a.profile_beta_bug_content:hover .profile_beta_bug_link {
 	color: #ffffff;
 }
+
+.namehistory_link {
+	cursor: pointer;
+}
+
+#NamePopup {
+	font-size: 13px;
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	line-height: normal;
+}
+
+#NamePopup .popup_menu {
+	padding: 6px;
+}
+
+#NamePopup #NamePopupAliases {
+	padding: 0 12px;
+}
