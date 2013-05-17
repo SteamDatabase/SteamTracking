@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2d90726958d8f7f344e6fdb81bf959b3e120b25c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d759c3993f2bf064a7b401eff8c5d5db7add58a3.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -15273,6 +15273,11 @@
 						"name": "powerup duration",
 						"class": "powerup_duration",
 						"value": 5.000000
+					},
+					{
+						"name": "lunchbox adds minicrits",
+						"class": "set_weapon_mode",
+						"value": 1.000000
 					}
 				]
 				
@@ -35496,6 +35501,34 @@
 				
 			},
 			{
+				"name": "Pallet of Crates",
+				"defindex": 1037,
+				"item_class": "tf_wearable",
+				"item_type_name": "Gift",
+				"item_name": "Pallet of Crates",
+				"item_description": "When used, this Action Item drops a crate\non up to 23 other people on the server!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/pile_of_crates",
+				"min_ilevel": 23,
+				"max_ilevel": 23,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pile_of_crates.45236e1918e8eef155967caff2f08593ffe78793.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pile_of_crates_large.2d26b4ac0e29dda5a04091f4ffb2aadc3f95ae49.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
 				"name": "World Traveler",
 				"defindex": 1899,
 				"item_class": "tf_wearable",
@@ -43414,7 +43447,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "RoboCrate",
-				"item_description": "This crate is special.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nThere will probably be a way to open it later.\n\nThe RoboCrate contains Unusual effects that will only come from this crate.",
+				"item_description": "This crate is special.\nIts contents are unknown and requires a\nRoboCrate Key to unlock.\n\nThe RoboCrate contains Unusual effects that will only come from this crate.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -43449,6 +43482,101 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Robo Key 2013",
+				"defindex": 5636,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "RoboCrate Key",
+				"item_description": "Used to open locked RoboCrates.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/robo_key",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_key.66640b07fb676337eb36c3c241b6d9b5b37d07c7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_key_large.791c16154f60cd12e7042d4d4275c3b540e56249.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "robo2013",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Gift - 23 RoboKeys 2013",
+				"defindex": 5637,
+				"item_class": "tf_wearable",
+				"item_type_name": "Gift",
+				"item_name": "Pile of RoboKey Gifts",
+				"item_description": "When used, this Action Item gives a RoboCrate Key\nto up to 23 other people on the server!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/pile_of_robo_keys",
+				"min_ilevel": 23,
+				"max_ilevel": 23,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pile_of_robo_keys.00727c95446d79ffb54bf3ad9cf56cad7a22b91b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pile_of_robo_keys_large.1034d84be664adc52f77fe677e224d9e301878af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Gift - 1 RoboKey 2013",
+				"defindex": 5638,
+				"item_class": "tf_wearable",
+				"item_type_name": "Gift",
+				"item_name": "A Random RoboKey Gift",
+				"item_description": "When used, this Action Item gives a RoboCrate Key\nto a random person on the server!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/gift_wrapped_robo_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_wrapped_robo_key.c5f0c46611253ceb92caaaa44ac880325d8c9660.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gift_wrapped_robo_key_large.537ff9907912037da8170581aa452c18bc975797.png",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "gift"
+				}
 			},
 			{
 				"name": "Strange Part (Armory)",
@@ -57549,6 +57677,2026 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Electric Badge-aloo",
+				"defindex": 30000,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Electric Badge-aloo",
+				"item_description": "This badge's monocle lets you know it can't see, the cane tells you it's at death's door, and the top hat says it's rich! Marry this badge before some other gold digger snaps it up!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_bomb_badge\/robo_all_bomb_badge_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_bomb_badge\/robo_all_bomb_badge",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_bomb_badge.07fad97737bda21abe7b7d748bb985e4692075f7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_bomb_badge_large.b5c502ebfd1de29a5f0fae5100976e3a145a6726.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Modest Metal Pile of Scrap",
+				"defindex": 30001,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Modest Metal Pile of Scrap",
+				"item_description": "This humble hat pile of one tells the world that there are more important things in life than money. Like for instance not having any.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_modest_pile\/robo_all_modest_pile_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_modest_pile\/robo_all_modest_pile",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_modest_pile.39ceecea08d057a6d86c265d92a733fa64a77cff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_modest_pile_large.530e61684d48cb890e9e1d5e6339e231695270f2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Letch's LED",
+				"defindex": 30002,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Letch's LED",
+				"item_description": "Comes with x-ray specs that let you see through people's clothes while alerting them with a siren and shouted warnings that you're doing it. Great for prison aficionados who want to go to jail but don't know how.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/robo_sniper_liquidator\/robo_sniper_liquidator.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/robo_sniper_liquidator\/robo_sniper_liquidator",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_liquidator.83ef068973e93ee5430966ff58506651f5647059.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_liquidator_large.aebde4a2a60533e02709dbd900d20fc05f92f899.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "The Galvanized Gibus",
+				"defindex": 30003,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Galvanized Gibus",
+				"item_description": "Elegant simplicity and old-world charm combine with the intoxicating aromas of methyl alcohol and gasoline. Do not wear in unventilated areas.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_gibus\/robo_all_gibus_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_gibus\/robo_all_gibus",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_gibus.3abb36f0f6cf2704518fa96649b75a76e2f2fb42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_gibus_large.141743920496960b81f5f04f734b2c42129e7da6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Soldered Sensei",
+				"defindex": 30004,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Soldered Sensei",
+				"item_description": "Karate masters WANT you to think there’s no belt higher than black. But what if we told you there was a secret metal belt ABOVE black that lets you kick a black belt's ass all over the place? Scared black belt guys have been trying to keep a lid on this for years.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/robo_sniper_soldered_sensei\/robo_sniper_soldered_sensei.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/robo_sniper_soldered_sensei\/robo_sniper_soldered_sensei",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_soldered_sensei.1fc5ca4c3fbfe0fce97deef6ddc72dedcf874a14.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_soldered_sensei_large.276ffdcf00e5a7d1f65201e3d4d24b7620b1b5a5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "Shooter's Tin Topi",
+				"defindex": 30005,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Shooter's Tin Topi",
+				"item_description": "This safari helmet was welded together from actual blood-spattered scraps of jeeps, rifles, shells and fillings discovered at the mauling sites of previous safaris. Wear it as a constant reminder never to do anything as stupid as go on safari.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/robo_sniper_solar_topi\/robo_sniper_solar_topi.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/robo_sniper_solar_topi\/robo_sniper_solar_topi",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_solar_topi.e5dbff0a06b7e739e2176c30f1b660a3698ded53.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_solar_topi_large.38c335b8f36d4eafd0f554b233d0606e67eda45d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "Noble Nickel Amassment of Hats",
+				"defindex": 30006,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Noble Nickel Amassment of Hats",
+				"item_description": "Some hat towers come from humble beginnings, clawing their way to nobility one hat at a time. Other hat towers, like this one, just have rich dads who are the Chief Business Development Officer at Hewlett Packard.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_noble_amassment\/robo_all_noble_amassment_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_noble_amassment\/robo_all_noble_amassment",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_noble_amassment.6a3ba86247a4820746e652719dedc5812b62b7d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_noble_amassment_large.23c81e6ecfce27131e60e2e5d3ed5c6ccf02e00d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "Base Metal Billycock",
+				"defindex": 30007,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Base Metal Billycock",
+				"item_description": "Robo-impersonate your favorite fictional bowler-hatted characters, from Batman's Riddler to Clockwork Orange's Alex to England's Winston Churchill.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/spy\/robo_spy_backbiter_billycock\/robo_spy_backbiter_billycock.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/robo_spy_backbiter_billycock\/robo_spy_backbiter_billycock",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_backbiter_billycock.27daf217fbcec5f3651d2f6acdccf1ebce92af64.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_backbiter_billycock_large.bf5ff30a4926fe16b111433ed7bd749b94507dda.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "Towering Titanium Pillar of Hats",
+				"defindex": 30008,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Towering Titanium Pillar of Hats",
+				"item_description": "Asimov's Three Laws of Robotics state that 1. Robots can’t harm humans and 2. Robots must obey humans, and 3. This hat looks great.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_towering_pillar\/robo_all_towering_pillar_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_towering_pillar\/robo_all_towering_pillar",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_towering_pillar.571d5e4a61458398f0e7263852cb5b2e63c90c64.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_towering_pillar_large.fdac36583e11ff3e6559b48bd20681d7f73e4e96.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "The Megapixel Beard",
+				"defindex": 30009,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Megapixel Beard",
+				"item_description": "Great for taking pictures of all the sexy make-outs you’re going to have now that you’ve got a robot beard. If there’s anything ladies find more irresistible, write in and tell us and we’ll bolt it onto this perpetual make-out machine.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/robo_spy_camera_beard\/robo_spy_camera_beard.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/robo_spy_camera_beard\/robo_spy_camera_beard",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_camera_beard.81f6545cc6d37afafd47378262fc063f2be1fd79.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_camera_beard_large.16d822ea7b98ddc4d1f071b89c9e391c4786990c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "The HDMI Patch",
+				"defindex": 30010,
+				"item_class": "tf_wearable",
+				"item_type_name": "Photograph",
+				"item_name": "HDMI Patch",
+				"item_description": "Bundled with a broad selection of eyeball-related movies (\"Eyes Wide Shut\", \"The Hills Have Eyes, Part II\" and three more) that your friends can enjoy from the comfort of your face.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_pupil\/robo_demo_pupil.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_pupil\/robo_demo_pupil",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_pupil.087713f416ffd2f247333da3dc813dd340382c7c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_pupil_large.dd15a9fb9d14cde1ea8e5240fff0f292ed0558a9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Bolted Bombardier",
+				"defindex": 30011,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Bolted Bombardier",
+				"item_description": "Remember that time you met the wisest robot in the world? And tore his beard off and stole his stupid pipe? Because the police are here and they want to talk to you.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_beard_bombardier\/robo_demo_beard_bombardier.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_beard_bombardier\/robo_demo_beard_bombardier",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_beard_bombardier.8baa8c9f8cad4130374badd1ad96d70f62bc23d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_beard_bombardier_large.07f38b3e4613ab6ac7484f15f4c6ccd91fc456af.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "The Titanium Towel",
+				"defindex": 30012,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Titanium Towel",
+				"item_description": "Sure, regular towels work fine for water, but what if you’re covered in magnets? What’s your regular towel doing for you now? Watching you slowly die of magnetism, that’s what.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/robo_heavy_boltedscraptowel\/robo_heavy_boltedscraptowel.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/robo_heavy_boltedscraptowel\/robo_heavy_boltedscraptowel",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_boltedscraptowel.1f47e38b2a04134625eed860520b8c3788fe499c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_boltedscraptowel_large.f000f3e38449aeba521cd2553754fb0667c4d9a3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Gridiron Guardian",
+				"defindex": 30013,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Gridiron Guardian",
+				"item_description": "This helmet commemorates the epic Canadian Robot Football League showdown between Les Montreal Footballiers and their Manitoban rivals the Winnepeg Saskatchewans. Don’t believe us? Ask any Canadian!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/heavy\/robo_heavy_football_helmet\/robo_heavy_football_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/robo_heavy_football_helmet\/robo_heavy_football_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_football_helmet.556c06caa502a2b66118735c5fc65498f9ecff29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_football_helmet_large.2a433ae0b3135e73b2b09e3b6e432748779aedc9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "Tyrantium Helmet",
+				"defindex": 30014,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Tyrantium Helmet",
+				"item_description": "This hat kicks your ass so hard you'll fly into an alternate dimension where Vikings are robots. Deal with it!",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/soldier\/robo_soldier_tyrantium\/robo_soldier_tyrantium.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/robo_soldier_tyrantium\/robo_soldier_tyrantium",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_tyrantium.94ba6924961be8d940bd942a07a347dc2b25720c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_tyrantium_large.d8a557c30f37f7ae9b21f8902f0fbf739076b3db.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "Battery Canteens",
+				"defindex": 30015,
+				"item_class": "tf_powerup_bottle",
+				"item_type_name": "Usable Item",
+				"item_name": "Battery Canteens",
+				"item_description": "Don't let the name fool you: These aren't actual battery canteens capable of converting stored chemical energy into electrical energy. They're just regular canteens that look identical to your water canteen and are filled with battery acid.",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "models\/workshop\/player\/items\/scout\/robo_all_mvm_canteen\/robo_all_mvm_canteen.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/robo_all_mvm_canteen\/robo_all_mvm_canteen",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_mvm_canteen.cc86b6514a5e4d56e941e639e0820e270f42a0b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_mvm_canteen_large.d9f30820650786595cc7b6486955464e445ad8b5.png",
+				"craft_class": "",
+				"capabilities": {
+					"nameable": true,
+					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "powerup_bottle"
+				},
+				"attributes": [
+					{
+						"name": "powerup charges",
+						"class": "powerup_charges",
+						"value": 0.000000
+					},
+					{
+						"name": "powerup max charges",
+						"class": "powerup_max_charges",
+						"value": 3.000000
+					},
+					{
+						"name": "powerup duration",
+						"class": "powerup_duration",
+						"value": 5.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The FR-0",
+				"defindex": 30016,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "FR-0",
+				"item_description": "Own this one-of-a-kind piece of memorabilia from the classic ‘70s film \"Blaxton Hale vs. Black HAL 9000\".",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_fro\/robo_demo_fro.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_fro\/robo_demo_fro",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_fro.d5c603e6c0a6e49738e34cbbc4439b06e1830a2d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_fro_large.c94fe2b84c8b3d37db81812f89db3a951954f361.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Steel Shako",
+				"defindex": 30017,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Steel Shako",
+				"item_description": "Combining the sublime pageantry of Tchaikovsky’s \"Nutcracker\" with the bold futurism of Tchaikovsky’s \"Robot Nutcracker vs. Tarzan\".",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/soldier\/robo_soldier_shako\/robo_soldier_shako.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/robo_soldier_shako\/robo_soldier_shako",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_shako.069947dcb4c1faa7cd50c6148b0b307c6ea93236.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_shako_large.c40d8e9c92988e8599bfd5f3d622adfc7e4c30d0.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "The Bot Dogger",
+				"defindex": 30018,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bot Dogger",
+				"item_description": "It's inevitable that robot hot dog hats will someday become the most popular fashion accessory on the planet. And when they do, everyone will claim they liked them \"before they were cool.\" Thanks to the Bot Dogger, only YOU will be able to prove it.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/scout\/robo_scout_dogger\/robo_scout_dogger.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/robo_scout_dogger\/robo_scout_dogger",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_dogger.268d91acdb5a9e45c0fbfa5d8d65e1dfcc33107f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_dogger_large.11262bc69ec9fd7390de3b7f4994ab8c0a7ad9ea.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "Ye Oiled Baker Boy",
+				"defindex": 30019,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ye Oiled Baker Boy",
+				"item_description": "It's as if this hat fell off the tiny metal head of a dirt-stained urchinbot selling robonewspapers in 1899 Mecha-London, rolled through a time tunnel and into your modern backpack.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/scout\/robo_scout_baker_boy\/robo_scout_baker_boy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/robo_scout_baker_boy\/robo_scout_baker_boy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_baker_boy.94a205dbf9c71c1ee53717527d70f7002f85c2e9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_baker_boy_large.e0030c11bb8deff0c2229b838e4f9829b22587bd.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "The Scrap Sack",
+				"defindex": 30020,
+				"item_class": "tf_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "Scrap Sack",
+				"item_description": "Concerned about your many stalkers going through your garbage while you’re at work? Rest easy with the Scrap Sack, which lets you keep an eye on your secret-filled trash at all times.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_pyrobotic_tote\/robo_pyro_pyrobotic_tote.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_pyrobotic_tote\/robo_pyro_pyrobotic_tote",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_pyrobotic_tote.3b9b1678b09c460702e89599b80386ace5b8ff95.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_pyrobotic_tote_large.a642ec5221742e4771670350908698f9beacd988.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Pure Tin Capotain",
+				"defindex": 30021,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pure Tin Capotain",
+				"item_description": "Witch-hunting: necessary, but time-consuming. What if we told you you could burn up to five witches a day without lifting a finger? Introducing the Pure Tin Capotain, the greatest time-saving invention since the electric can opener.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_capotain\/robo_demo_capotain.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_capotain\/robo_demo_capotain",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_capotain.beadede8732767152ae6d147b9d7b9a2b011b316.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_capotain_large.3a61d4013109d2241684e8e079b95e8765afee98.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Plumber�s Pipe",
+				"defindex": 30022,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Plumber’s Pipe",
+				"item_description": "Learn plumbing by osmosis with this handy Home Plumber's Kit! Comes with pipe, length of wire.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_prancers_pride\/robo_pyro_prancers_pride.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_prancers_pride\/robo_pyro_prancers_pride",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_prancers_pride.c3963a454328cb8167ac05f6f0a6c67014b9ccd2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_prancers_pride_large.cdc0d08482a6453963f154ca3acf7e453372120c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Teddy Robobelt",
+				"defindex": 30023,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pocket Buddy",
+				"item_name": "Teddy Robobelt",
+				"item_description": "This tiny robotic bear used to be the President. Now he lives in your pocket. How could the mighty have fallen so far? [makes drinking gesture] Glug glug wink wink.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/robo_engineer_teddy\/robo_engineer_teddy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/robo_engineer_teddy\/robo_engineer_teddy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_teddy.1d834579e8a89945f76c853b9e995d13f235dd23.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_teddy_large.7a85ad0857c0c9cd84bff8c151ff7aaad1c03de6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Cyborg Stunt Helmet",
+				"defindex": 30024,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Cyborg Stunt Helmet",
+				"item_description": "If you pause that big fight scene in the classic film \"Swinging Fists of Future Hercules\", you can tell that's not actually famous robot actor Kirk RoboDouglas, but a cyborg stuntman. Support the unsung heroes of the silver-plated screen with this limited edition stunt helmet.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_stuntman\/robo_demo_stuntman.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_stuntman\/robo_demo_stuntman",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_stuntman.c05e44f90fe1c6575921f6f8ee8e0de6027cfda2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_stuntman_large.e0a877e408db66867f4d74f1a3f0cec2fb11d392.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "The Electric Escorter",
+				"defindex": 30025,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Electric Escorter",
+				"item_description": "\"And it seems to me you lived your life \/ with a lightbulb in your head \/ wishing you had cleaned the hole \/ as the cephalic tetanus spread.\" – Elton John (words by Bernie Taupin)",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_electric_escorter\/robo_pyro_electric_escorter.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_electric_escorter\/robo_pyro_electric_escorter",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_electric_escorter.15dfd5daca285ca77666c6dd095a918f8e452820.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_electric_escorter_large.5d9151374efb8e05e01e3e258e4713a23f59c395.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Full Metal Drill Hat",
+				"defindex": 30026,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Full Metal Drill Hat",
+				"item_description": "What is your major malfunction, Private Robot? You had best defrag yourself or I will unscrew your head, access the CPU in your neck and fix your major malfunction!",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/soldier\/robo_soldier_fullmetaldrillhat\/robo_soldier_fullmetaldrillhat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/robo_soldier_fullmetaldrillhat\/robo_soldier_fullmetaldrillhat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat.b1b05e5d85ba35d9842f2d035ebc682577f2f758.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat_large.4fa656ebb826b663af5b752d6c327426db809dd3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "The Bolt Boy",
+				"defindex": 30027,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bolt Boy",
+				"item_description": "That item was originally a make-believe superhero accessory tie-in to an imaginary soft drink enjoyed by a fictional character. Now it's also made of metal. There are so many layers of abstraction going on here even we don't know what to make of it.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/robo_scout_bolt_boy\/robo_scout_bolt_boy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/robo_scout_bolt_boy\/robo_scout_bolt_boy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bolt_boy.1e707448af423613c8b835480376f60f1a24c8b4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bolt_boy_large.553efa232fc4a5f3243c1b11e9c2c37cb7752d35.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "The Metal Slug",
+				"defindex": 30028,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Metal Slug",
+				"item_description": "They came from outer space. And they came to conquer. It was the perfect space crime. But there’s just one problem. YOU. \"The Metal Slug\". Rated R. This Friday. On your HEAD.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_tribtrojan\/robo_pyro_tribtrojan.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_tribtrojan\/robo_pyro_tribtrojan",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_tribtrojan.90d48f2045360141a0450ee7526223b6d8e5bd05.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_tribtrojan_large.a8e518e30f3161d82d0ded2c524f9e2c753cda5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Broadband Bonnet",
+				"defindex": 30029,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Broadband Bonnet",
+				"item_description": "This brimless bonnet cap comes equipped with a satellite pom-pom that streams up-to-the-minute news relevant to the on-the-go Scotsman (golf scores, whiskey prices, when \"Braveheart\" is on).",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_glengarry_botnet\/robo_demo_glengarry_botnet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_glengarry_botnet\/robo_demo_glengarry_botnet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_glengarry_botnet.d537170fa3eb8dec909e78cf0239788c4973930b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_glengarry_botnet_large.130f40e316fcb86109884c6e40fbb9228d326ffc.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Bonk Leadwear",
+				"defindex": 30030,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bonk Leadwear",
+				"item_description": "In 1792, Italian physicist Alessandro Volta invented the battery by mixing zinc, ammonium chloride and molten salt together. In 1932, American soft drink magnate Theophilus Bonk added sugar to this mixture and invented Bonk Cola.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/scout\/robo_scout_bonk_helm\/robo_scout_bonk_helm.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/robo_scout_bonk_helm\/robo_scout_bonk_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bonk_helm.e6b33c8c8602f20d2d2571628746ceaae971d7b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bonk_helm_large.ad1fd90987e5878dd399cef341ac76264b390b9b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "The Plug-In Prospector",
+				"defindex": 30031,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Plug-In Prospector",
+				"item_description": "Robo-future history comes alive! Pretend you’re a grizzled, cantankerous robot prospector, drunk on teeny-tiny shots of nano-whiskey in the Olllld Cyber-West during the Great Battery Rush of 3047.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/engineer\/robo_engineer_greaser\/robo_engineer_greaser.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/robo_engineer_greaser\/robo_engineer_greaser",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_greaser.b6a07dbe90526ead9fea0a37a6552cb1313a77ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_greaser_large.a42c61973194b537950a34739b3c00356ceee8f8.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Rusty Reaper",
+				"defindex": 30032,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Rusty Reaper",
+				"item_description": "Are you the personification of death? Do you need to spraypaint something indoors? This skull-shaped rebreather has you covered.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_last_watt\/robo_pyro_last_watt.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_last_watt\/robo_pyro_last_watt",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_last_watt.150996b57dded33a8b31aa248900f68eee3796e7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_last_watt_large.c49dcb973d59c6944f612f262a19389001564cb3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Soldier's Sparkplug",
+				"defindex": 30033,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cigar",
+				"item_name": "Soldier's Sparkplug",
+				"item_description": "Sometimes a cigar is just a cigar. Other times it is a sparkplug. Sometimes it is a boot. The important thing is that you have something in your mouth that is on fire.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/robo_soldier_sparkplug\/robo_soldier_sparkplug.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/robo_soldier_sparkplug\/robo_soldier_sparkplug",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_sparkplug.fa9dff3775e61bf01d5ddd84480acae25f1490a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_sparkplug_large.51b58bdb8df3cf3a8c8a0d599ee0863c501234b4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "attach particle effect static",
+						"class": "set_attached_particle_static",
+						"value": 28.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Bolted Bicorne",
+				"defindex": 30034,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bolted Bicorne",
+				"item_description": "One little-known fact about parrots: They WILL peck a hole through a human pirate skull. But they can’t peck through solid steel. And if they try? This baby’s electrified to the tune of 10,000 volts. Your move, parrots.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_buccaneer_bicorne\/robo_demo_buccaneer_bicorne.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_buccaneer_bicorne\/robo_demo_buccaneer_bicorne",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_buccaneer_bicorne.6fa5c5848d07ea33d97e13c47d8409221be0153a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_buccaneer_bicorne_large.75e1f7b0a5fca77a550c9c8d4ae14c376496dca5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "The Timeless Topper",
+				"defindex": 30035,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Timeless Topper",
+				"item_description": "Most hats are made of felt, canvas or other non-durable cloths that decompose after a mere 10,000 years. The Timeless Topper’s built for the long haul, with an outer layer of scrap titanium and an inner core of plastic bags, foam cups and disposable diapers.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/engineer\/robo_engineer_rustin\/robo_engineer_rustin.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/robo_engineer_rustin\/robo_engineer_rustin",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_rustin.6eee19755b8d2c8ea226f5f3cb9c715ed57123f3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_rustin_large.9053b744848dcd57e243a983e47b9c6dba25385a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Filamental",
+				"defindex": 30036,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Filamental",
+				"item_description": "Is your Pyro made up of alternating current or direct current? Only your electrician knows for sure!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_figment_filament\/robo_pyro_figment_filament.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_figment_filament\/robo_pyro_figment_filament",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_figment_filament.d1d2dfd32fd4fef6f7306949ba58e69503cc6681.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_figment_filament_large.e254ce80aa0eee99f1a6fb3440a43bdde3974c37.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Strontium Stove Pipe",
+				"defindex": 30037,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Strontium Stove Pipe",
+				"item_description": "Beep boop! I am Old Railsplitter! Welcome to the Hall of Robopresidents! I did my homework on the back of a shovel! Now I must kill all humans with a shovel because I just now became sentient! Beep boop kill all humans!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_scotsmans_stovepipe\/robo_demo_scotsmans_stovepipe.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_scotsmans_stovepipe\/robo_demo_scotsmans_stovepipe",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_scotsmans_stovepipe.7eed4463f9b246ede5ef2270295f1b10979379f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_scotsmans_stovepipe_large.e2c4e616d4d6e4697b0151c167e977b34dfc20a4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "Firewall Helmet",
+				"defindex": 30038,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Firewall Helmet",
+				"item_description": "Learn the secret that firefighters guard fiercely: There is no better hat to wear while entering a burning building than a metal hat. Why? The metal will absorb 100%% of the heat, leaving your bare skin cool and refreshed, probably.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_firewall_helmet\/robo_pyro_firewall_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_firewall_helmet\/robo_pyro_firewall_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_firewall_helmet.6e001f6f6169609c20ed612e85dc1918843e122f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_firewall_helmet_large.fb0cf565a7f920433713431967943baf4ae9090b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Respectless Robo-Glove",
+				"defindex": 30039,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Respectless Robo-Glove",
+				"item_description": "When that robot selflessly gave you its hand, it assumed you’d study it to advance the field of prosthetic medicine. Sucker. Hey, everybody check me out! I’m a metal chicken! Beep beep gobble boop!",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_respectless_glove\/robo_pyro_respectless_glove.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_respectless_glove\/robo_pyro_respectless_glove",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_respectless_glove.760a8a3d634a1760d2039ef4958aeb0cb62e34fa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_respectless_glove_large.d0c629e2c19ab37439ce16c60fd81f93cc52321c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Pyro's Boron Beanie",
+				"defindex": 30040,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pyro's Boron Beanie",
+				"item_description": "Friends and loved ones will call you stupid for wearing this hat. \"Hey, moron!\" your mother will say. But they won’t think it’s so funny when you win the Backwards Swimming competition at the Olympics, and are later stripped of your medal for cheating.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_whirly_bird\/robo_pyro_whirly_bird.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_whirly_bird\/robo_pyro_whirly_bird",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_whirly_bird.3f899471d653be6af22f1b3502880fba729db42d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_whirly_bird_large.5fe2580678ca4d99982126954626b6383a5a28e6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "Halogen Head Lamp",
+				"defindex": 30041,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Halogen Head Lamp",
+				"item_description": "This medical marvel improves on the obsolete doctor’s head mirror by replacing the mirror part with a 10,000 watt lamp part that can be seen from space. Peer inside your patients’ disease-riddled ears, noses and throats from a safe distance.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_otolaryngologists_mirror\/robo_medic_otolaryngologists_mirror.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_otolaryngologists_mirror\/robo_medic_otolaryngologists_mirror",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_otolaryngologists_mirror.7e1dcc5877bb0fddcf4f14a7407098d919f45872.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_otolaryngologists_mirror_large.272ce477f8a28b835713953467a9f358017099c6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "Platinum Pickelhaube",
+				"defindex": 30042,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Platinum Pickelhaube",
+				"item_description": "Invented by Nikolai Tesla in any one of his ten million appearances in crappy steampunk fiction, probably.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_pickelhaube\/robo_medic_pickelhaube.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_pickelhaube\/robo_medic_pickelhaube",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_pickelhaube.4a74773394f4142089f7a9a5c6efbf42c527d21d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_pickelhaube_large.9598df4354898ac5eb8dfc23e9a4830c25048b90.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Virus Doctor",
+				"defindex": 30043,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Virus Doctor",
+				"item_description": "Whether you’re a 17th century plague doctor, a professional wrestler, or a waiter at a plague-themed family restaurant, this hat lets you look the part while delivering last rites, a Tombstone Piledriver and\/or plate after plate of bacon-wrapped jalapeño poppers.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_grimm_hatte\/robo_medic_grimm_hatte.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_grimm_hatte\/robo_medic_grimm_hatte",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte.0495c50aebc04a604574a627c89ad7cf36759e10.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte_large.92b91e71a655dc8791b0b5222b3e28ebc3a0bc72.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "Texas Tin-Gallon",
+				"defindex": 30044,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Texas Tin-Gallon",
+				"item_description": "It's a historical fact that in cowboy times, cloth was hard to come by. Creative cowpokes kept the sun out of their eyes by making hats out of what they had in abundance: sheet-metal trees and bolt cactuses.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/engineer\/robo_engineer_texastingallon\/robo_engineer_texastingallon.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/robo_engineer_texastingallon\/robo_engineer_texastingallon",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_texastingallon.6403267082a66d3290f0b263aae3d4156cc2f3a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_texastingallon_large.64c33059cad4e37b18ff32abe2413c365281c61a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "Titanium Tyrolean",
+				"defindex": 30045,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Titanium Tyrolean",
+				"item_description": "Meet the robot apocalypse in style with this puckish number, perfect for infiltrating the sentient mother computer located in the Swiss pavilion at Epcot Center.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_tyrolean\/robo_medic_tyrolean.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_tyrolean\/robo_medic_tyrolean",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_tyrolean.88b663ae8222e0271d52a08133d645b515a84075.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_tyrolean_large.0d909e089de4c91cf5176319e94a56e428fd7123.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "Practitioner�s Processing Mask",
+				"defindex": 30046,
+				"item_class": "tf_wearable",
+				"item_type_name": "TF_Wearable_GenPractitioner",
+				"item_name": "Practitioner’s Processing Mask",
+				"item_description": "Fact: 70%% of the air you breathe was recently in someone’s butt. This handy contraption runs the farty air you live in through a gauntlet of soapy water and potpourri before entering your body.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_physician_mask\/robo_medic_physician_mask.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_physician_mask\/robo_medic_physician_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_physician_mask.e98968cc472e8d7a6ac588a86e7daf6589aaf6d5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_physician_mask_large.41cbc2a072a45223d670cf258faa9a2bbb8b8286.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "Bootleg Base Metal Billycock",
+				"defindex": 30047,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bootleg Base Metal Billycock",
+				"item_description": "Trick your friends into thinking your enormous metal hat is a smaller, different hat. If this was actually illegal it would be the PERFECT CRIME.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/spy\/robo_spy_bootleg_billycock\/robo_spy_bootleg_billycock.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/robo_spy_bootleg_billycock\/robo_spy_bootleg_billycock",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_bootleg_billycock.4ed6ea8db60d4008d89042a9a90b217a27d0199b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_bootleg_billycock_large.0009a693b346e71f9a55647ce7e4b24e41085cb6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "Mecha-Medes",
+				"defindex": 30048,
+				"item_class": "tf_wearable",
+				"item_type_name": "TF_Wearable_Animal",
+				"item_name": "Mecha-Medes",
+				"item_description": "Mecha-Medes first appeared in Archimedes’ Flights of Fantasy #314 when Archimedes accidentally fell off a table into a parallel world, met his robot double, ate some seeds, squawked in terror at a half-buried Statue of Liberty, then flew into a patio door.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_archimedes\/robo_medic_archimedes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_archimedes\/robo_medic_archimedes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_archimedes.0659363e9061987e8ff9341dde96c925b0b64731.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_archimedes_large.fab44b1d62d3b49cc4151d0d081393a19bf038ce.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Tungsten Toque",
+				"defindex": 30049,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Tungsten Toque",
+				"item_description": "Commemorate history's greatest robot Canadians with this knitted steel cap. Former Prime Minister Pierre Trudeau! Optimus Prime Minister! Commander Data from the hit CBC drama Deep Space Prince Edward Island!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/heavy\/robo_heavy_tungsten_toque\/robo_heavy_tungsten_toque.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/robo_heavy_tungsten_toque\/robo_heavy_tungsten_toque",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_tungsten_toque.64ab42109ead9f70f1c9bcfa126006a39b625255.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_tungsten_toque_large.abce70e9308858202689a3bc556b766ec500a18f.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Steam Pipe",
+				"defindex": 30050,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pipe",
+				"item_name": "Steam Pipe",
+				"item_description": "Just like steampunk ruined reading, the steampipe destroys the harmless pleasure of smoking by tarting it up with a lot of bolts and dials and Nikolai Teslas. Comes with period-appropriate Gary Oldman Dracula glasses!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_ninepipe_problem\/robo_medic_ninepipe_problem.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_ninepipe_problem\/robo_medic_ninepipe_problem",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_ninepipe_problem.68d75518aa541b7541ca033c30bf5767633e3e8c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_ninepipe_problem_large.7427dd15431cbe382db55f615ad647434fa5c6bb.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Data Mining Light",
+				"defindex": 30051,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Data Mining Light",
+				"item_description": "If you’re a rugged coal miner like us, you know the value of throwing away your mining equipment and mining in the nude so people know how tough you are. Finally there’s a version for the office worker to not wear while nudely analyzing spreadsheets.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/engineer\/robo_engineer_mining_light\/robo_engineer_mining_light.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/robo_engineer_mining_light\/robo_engineer_mining_light",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_mining_light.d9b53e3b435a49307019f97634cc9564e9d53786.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_mining_light_large.4b5f45c46f545d7c42d0a75304c3ae79e02b74ca.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Byte�d Beak",
+				"defindex": 30052,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Byte’d Beak",
+				"item_description": "This 17th century plague mask has been upgraded for modern day masquerade-style sex parties with a built-in camera, night vision (for dimly-lit sex parties!) and state-of-the-art sex detection radar.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/robo_medic_blighted_beak\/robo_medic_blighted_beak.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_blighted_beak\/robo_medic_blighted_beak",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_blighted_beak.defb7f30c7b55f2f33b7920c60a628e41eddc11e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_blighted_beak_large.df5310d562d5f51ffe873f35fc502072d72a23e5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Googol Glass Eyes",
+				"defindex": 30053,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Googol Glass Eyes",
+				"item_description": "These digital eye implants will let you check the weather, monitor the stock market and look up cures for infection caused by jamming unclean hunks of metal into your eye sockets.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_site_for_sore_eyes\/robo_pyro_site_for_sore_eyes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_site_for_sore_eyes\/robo_pyro_site_for_sore_eyes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_site_for_sore_eyes.160b7d996c9f2e650666f316db0f6481069ffe3c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_site_for_sore_eyes_large.dee43e46e655a64c0e0de56a9e8cea64f8d1a83d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Bunsen Brave",
+				"defindex": 30054,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bunsen Brave",
+				"item_description": "Scientists have long been baffled by the seamless metal construction of Native American grass houses and wigwams. The secret? Native Americans were filled with gasoline, and could reach a welding flame temperature of 3100 °C.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/heavy\/robo_heavy_chief\/robo_heavy_chief.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/robo_heavy_chief\/robo_heavy_chief",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_chief.bc67ca439241a5b7454815b4220d4efb81e20a3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_chief_large.d019f745b31ae3c34c857af02e0cb5ba4d9e4cb3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Scrumpy Strongbox",
+				"defindex": 30055,
+				"item_class": "tf_wearable",
+				"item_type_name": "Treasure",
+				"item_name": "Scrumpy Strongbox",
+				"item_description": "This nitrogen-cooled liquor locker can only be opened by punching in its constantly evolving polyalphabetic stream cipher, or with the big metal key scotch taped to the bottom.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_chest\/robo_demo_chest.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/robo_demo_chest\/robo_demo_chest",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_chest.c40639fcff49c860a81101d83bb85445c50cc415.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_chest_large.ba1c4a78788cd62df971f7cbb5158c711be96538.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "The Dual-Core Devil Doll",
+				"defindex": 30056,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pocket Buddy",
+				"item_name": "Dual-Core Devil Doll",
+				"item_description": "These pint-sized pain proxies combine the erotic mysticism of Haitian voodoo with the stultifying boredom of math.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/robo_all_spybot\/robo_all_spybot_sniper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/robo_all_spybot\/robo_all_spybot",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_spybot.5c1d4d35934ee8c28016c5583c08ea32ff52658e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_spybot_large.b3636b24cc76526bf58aa902e6791f2436cb9855.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper",
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Bolted Birdcage",
+				"defindex": 30057,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bolted Birdcage",
+				"item_description": "You love the hard-hitting Robin Williams\/Nathan Lane bird prison drama \"The Birdcage\" so much you wish you could be thinking about it all the time. The problem: Life’s many distractions. The solution: This.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/robo_pyro_birdcage\/robo_pyro_birdcage.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/robo_pyro_birdcage\/robo_pyro_birdcage",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_birdcage.d1f8b32d2a68a0ce08e95ff179772e18cb0d0af8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_birdcage_large.8fa4c5744670882594f5a9f52639ab4f41dca473.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
 			}
 		]
 		,
@@ -62965,6 +65113,76 @@
 				"attach_to_rootbone": true,
 				"attachment": "muzzle",
 				"name": "Stormy 13th Hour"
+			},
+			{
+				"system": "unusual_robot_holo_glow_green",
+				"id": 63,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Phosphorous"
+			},
+			{
+				"system": "unusual_robot_holo_glow_orange",
+				"id": 64,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Sulphurous"
+			},
+			{
+				"system": "unusual_robot_orbit_binary",
+				"id": 65,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Memory Leak"
+			},
+			{
+				"system": "unusual_robot_orbit_binary2",
+				"id": 66,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Overclocked"
+			},
+			{
+				"system": "unusual_robot_orbiting_sparks",
+				"id": 67,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Electrostatic"
+			},
+			{
+				"system": "unusual_robot_orbiting_sparks2",
+				"id": 68,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Power Surge"
+			},
+			{
+				"system": "unusual_robot_radioactive",
+				"id": 69,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Anti-Freeze"
+			},
+			{
+				"system": "unusual_robot_time_warp",
+				"id": 70,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Time Warp"
+			},
+			{
+				"system": "unusual_robot_time_warp2",
+				"id": 71,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Green Black Hole"
+			},
+			{
+				"system": "unusual_robot_radioactive2",
+				"id": 72,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Roboactive"
 			}
 		]
 		,
