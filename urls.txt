@@ -67,6 +67,7 @@ Scripts/communityhome.js|http://cdn.steamcommunity.com/public/javascript/communi
 Scripts/discussions.js|http://cdn.steamcommunity.com/public/javascript/discussions.js?_=*TIMENOW*&l=english
 Scripts/dmca.js|http://cdn.steamcommunity.com/public/javascript/dmca.js?_=*TIMENOW*&l=english
 Scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js?_=*TIMENOW*&l=english
+Scripts/economy_trade.js|http://cdn.steamcommunity.com/public/javascript/economy_trade.js?_=*TIMENOW*&l=english
 Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*TIMENOW*&l=english
 Scripts/gifts.js|http://cdn.steamcommunity.com/public/javascript/gifts.js?_=*TIMENOW*&l=english
 Scripts/global.js|http://cdn.steamcommunity.com/public/javascript/global.js?_=*TIMENOW*&l=english
