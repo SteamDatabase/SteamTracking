@@ -33964,6 +33964,104 @@
 				}
 			}
 		}
+		"4517"
+		{
+			"name"		"Horns of the Wicked Succubus"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Horns_of_the_Wicked_Succubus"
+			"item_slot"		"head"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Horns_of_the_Wicked_Succubus"
+			"image_inventory"		"econ/items/queenofpain/tpl_hair_lvl3/tpl_hair_lvl3"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"creation_date"		"2013-05-13"
+			"model_player"		"models/items/queenofpain/tpl_hair_lvl1/tpl_hair_lvl1.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"36.688808 76.942680 177.776901"
+					"PortraitLookAt"		"11.727905 236.579590 357.440186"
+					"PortraitFOV"		"38.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.678541 37.137878 203.741760"
+					"PortraitLightLookAt"		"36.968994 221.665649 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.230000 0.220000 0.370000"
+					"PortraitShadowColor"		"0.000000 0.020000 0.050000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.109804 0.049950 0.050931"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"attributes"
+			{
+				"premier league tag"
+				{
+					"attribute_class"		"premier league tag"
+					"value"		"5"
+				}
+				"league id"
+				{
+					"value"		"45"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"visuals"
+			{
+				"upgrade_path"
+				{
+					"0;29"		"0"
+					"30;59"		"1"
+					"60;100"		"2"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/tpl_hair_lvl1/tpl_hair_lvl1.mdl"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/tpl_hair_lvl2/tpl_hair_lvl2.mdl"
+					}
+					"2"
+					{
+						"model_player"		"models/items/queenofpain/tpl_hair_lvl3/tpl_hair_lvl3.mdl"
+					}
+				}
+			}
+		}
 		"4518"
 		{
 			"name"		"Hellish Gemstaff"
@@ -34931,6 +35029,201 @@
 				}
 			}
 		}
+		"4542"
+		{
+			"name"		"Dirk of the Wicked Succubus"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Dirk_of_the_Wicked_Succubus"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Dirk_of_the_Wicked_Succubus"
+			"image_inventory"		"econ/items/queenofpain/tpl_weapon_lvl3/tpl_weapon_lvl3"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"creation_date"		"2013-05-13"
+			"model_player"		"models/items/queenofpain/tpl_weapon_lvl1/tpl_weapon_lvl1.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-50.102478 -37.470310 213.713531"
+					"PortraitLookAt"		"35.897827 127.128296 38.556519"
+					"PortraitFOV"		"33.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.678541 37.137878 203.741760"
+					"PortraitLightLookAt"		"36.968994 221.665649 0.000000"
+					"PortraitLightFOV"		"53.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.230000 0.220000 0.370000"
+					"PortraitShadowColor"		"0.000000 0.020000 0.050000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.109804 0.049950 0.050931"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"3"
+					"PortraitAnimationCycle"		"0.412000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"attributes"
+			{
+				"premier league tag"
+				{
+					"attribute_class"		"premier league tag"
+					"value"		"5"
+				}
+				"league id"
+				{
+					"value"		"45"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"visuals"
+			{
+				"upgrade_path"
+				{
+					"0;29"		"0"
+					"30;59"		"1"
+					"60;100"		"2"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/tpl_weapon_lvl1/tpl_weapon_lvl1.mdl"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/tpl_weapon_lvl2/tpl_weapon_lvl2.mdl"
+					}
+					"2"
+					{
+						"model_player"		"models/items/queenofpain/tpl_weapon_lvl2/tpl_weapon_lvl2.mdl"
+					}
+				}
+			}
+		}
+		"4543"
+		{
+			"name"		"Wings of the Wicked Succubus"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Wings_of_the_Wicked_Succubus"
+			"item_slot"		"back"
+			"item_description"		"#DOTA_Item_Desc_Wings_of_the_Wicked_Succubus"
+			"image_inventory"		"econ/items/queenofpain/tpl_wing_lvl3/tpl_wing_lvl3"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"creation_date"		"2013-05-13"
+			"model_player"		"models/items/queenofpain/tpl_wing_lvl1/tpl_wing_lvl1.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-90.671959 113.682747 386.074524"
+					"PortraitLookAt"		"64.923706 306.721802 357.302856"
+					"PortraitFOV"		"45.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-51.787453 -6.666420 250.972092"
+					"PortraitLightLookAt"		"72.169189 8.618774 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"178.000000"
+					"PortraitLightColor"		"0.512495 0.577745 0.611765"
+					"PortraitShadowColor"		"0.000000 0.020000 0.050000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"10.587285 -8.469538 17.207249"
+					"PortraitAmbientColor"		"0.251652 0.218406 0.290196"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"3"
+					"PortraitAnimationCycle"		"0.796000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"attributes"
+			{
+				"premier league tag"
+				{
+					"attribute_class"		"premier league tag"
+					"value"		"5"
+				}
+				"league id"
+				{
+					"value"		"45"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"visuals"
+			{
+				"upgrade_path"
+				{
+					"0;29"		"0"
+					"30;59"		"1"
+					"60;100"		"2"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/tpl_wing_lvl1/tpl_wing_lvl1.mdl"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/tpl_wing_lvl2/tpl_wing_lvl2.mdl"
+					}
+					"2"
+					{
+						"model_player"		"models/items/queenofpain/tpl_wing_lvl3/tpl_wing_lvl3.mdl"
+					}
+				}
+			}
+			"item_rarity"		"rare"
+		}
 		"4544"
 		{
 			"name"		"Gazing Eye of the Demon Witch"
@@ -35231,6 +35524,104 @@
 					"PortraitAnimationCycle"		"0.000000"
 					"PortraitAnimationRate"		"0.000000"
 					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"4550"
+		{
+			"name"		"Wraps of the Wicked Succubus"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Wraps_of_the_Wicked_Succubus"
+			"item_slot"		"shoulder"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Wraps_of_the_Wicked_Succubus"
+			"image_inventory"		"econ/items/queenofpain/tpl_shoulder_lvl3/tpl_shoulder_lvl3"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"creation_date"		"2013-05-13"
+			"model_player"		"models/items/queenofpain/tpl_shoulder_lvl1/tpl_shoulder_lvl1.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"117.450829 105.933846 160.696548"
+					"PortraitLookAt"		"15.584106 220.468140 0.000000"
+					"PortraitFOV"		"48.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"67.573387 -2.922455 168.720642"
+					"PortraitLightLookAt"		"32.305298 177.198486 0.000000"
+					"PortraitLightFOV"		"54.000000"
+					"PortraitLightDistance"		"126.000000"
+					"PortraitLightColor"		"0.367015 0.350555 0.597451"
+					"PortraitShadowColor"		"0.112248 0.098424 0.313726"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-27.056961 -45.749191 14.773552"
+					"PortraitAmbientColor"		"0.180392 0.125254 0.123091"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.064000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"attributes"
+			{
+				"premier league tag"
+				{
+					"attribute_class"		"premier league tag"
+					"value"		"5"
+				}
+				"league id"
+				{
+					"value"		"45"
+				}
+				"kill eater"
+				{
+					"attribute_class"		"kill_eater"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"visuals"
+			{
+				"upgrade_path"
+				{
+					"0;29"		"0"
+					"30;59"		"1"
+					"60;100"		"2"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/tpl_shoulder_lvl1/tpl_shoulder_lvl1.mdl"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/tpl_shoulder_lvl2/tpl_shoulder_lvl2.mdl"
+					}
+					"2"
+					{
+						"model_player"		"models/items/queenofpain/tpl_shoulder_lvl2/tpl_shoulder_lvl2.mdl"
+					}
 				}
 			}
 		}
@@ -61958,15 +62349,13 @@
 		}
 		"10137"
 		{
-			"name"		"Diretide HUD Skin"
+			"name"		"Cruel Diretide"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Diretide_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Cruel_Diretide"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Diretide_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_diretide"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier0"
@@ -62672,15 +63061,13 @@
 		}
 		"10149"
 		{
-			"name"		"Radiant HUD Skin"
+			"name"		"Radiant Ore"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Radiant_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Radiant_Ore"
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Radiant_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_radiant"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier1"
@@ -62693,15 +63080,13 @@
 		}
 		"10150"
 		{
-			"name"		"Dire HUD Skin"
+			"name"		"Direstone"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Dire_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Direstone"
 			"item_rarity"		"mythical"
 			"item_description"		"#DOTA_Item_Desc_Dire_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_dire"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier0"
@@ -62714,15 +63099,13 @@
 		}
 		"10151"
 		{
-			"name"		"Frostivus HUD Skin"
+			"name"		"Snows of Frostivus"
 			"prefab"		"hud_skin"
 			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
-			"item_name"		"#DOTA_Item_Frostivus_HUD_Skin"
-			"item_slot"		"hud_skin"
+			"item_name"		"#DOTA_Item_Snows_of_Frostivus"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Frostivus_HUD_Skin"
 			"image_inventory"		"econ/huds/hud_frostivus"
-			"player_loadout"		"1"
 			"visuals"
 			{
 				"asset_modifier1"
@@ -65122,6 +65505,48 @@
 			"creation_date"		"2013-05-01"
 			"associated_item"		"15164"
 			"sound_material"		"1"
+		}
+		"10186"
+		{
+			"name"		"Stone Ruin"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Stone_Ruin"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Stone_Ruin"
+			"image_inventory"		"econ/huds/hud_premier_league"
+			"creation_date"		"2013-05-15"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"premier_league"
+					"modifier"		"premier_league"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10187"
+		{
+			"name"		"Powered Star"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Powered_Star"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Powered_Star"
+			"image_inventory"		"econ/huds/hud_starladder"
+			"creation_date"		"2013-05-15"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"starladder"
+					"modifier"		"starladder"
+					"frequency"		"1"
+				}
+			}
 		}
 		"15000"
 		{
@@ -67895,7 +68320,10 @@
 					"league_id"		"21"
 					"admin"		"0"
 					"order"		"5"
-					"bonus_itemdef"		"10007"
+					"bonus_itemdefs"
+					{
+						"10007"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_League_Pass"
@@ -67919,7 +68347,10 @@
 					"league_id"		"21"
 					"admin"		"1"
 					"order"		"5"
-					"bonus_itemdef"		"10007"
+					"bonus_itemdefs"
+					{
+						"10007"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_League_Pass"
@@ -68349,7 +68780,10 @@
 				{
 					"league_id"		"27"
 					"order"		"3"
-					"bonus_itemdef"		"10158"
+					"bonus_itemdefs"
+					{
+						"10158"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Ticket"
@@ -68372,7 +68806,10 @@
 					"league_id"		"27"
 					"order"		"3"
 					"admin"		"1"
-					"bonus_itemdef"		"10158"
+					"bonus_itemdefs"
+					{
+						"10158"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
@@ -68465,7 +68902,10 @@
 				{
 					"league_id"		"29"
 					"order"		"6"
-					"bonus_itemdef"		"10159"
+					"bonus_itemdefs"
+					{
+						"10159"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_New_Item"
@@ -68488,7 +68928,10 @@
 					"league_id"		"29"
 					"order"		"6"
 					"admin"		"1"
-					"bonus_itemdef"		"10159"
+					"bonus_itemdefs"
+					{
+						"10159"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_New_Item"
@@ -68751,7 +69194,10 @@
 				{
 					"league_id"		"34"
 					"order"		"12"
-					"bonus_itemdef"		"10170"
+					"bonus_itemdefs"
+					{
+						"10170"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
@@ -68774,7 +69220,10 @@
 					"league_id"		"34"
 					"order"		"12"
 					"admin"		"1"
-					"bonus_itemdef"		"10170"
+					"bonus_itemdefs"
+					{
+						"10170"		"1"
+					}
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
@@ -69499,6 +69948,165 @@
 			"creation_date"		"2013-05-09"
 			"tournament_url"		"http://www.rapturegaming.net/"
 			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+		}
+		"15173"
+		{
+			"name"		"Premier League Season 5"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"45"
+					"order"		"24"
+					"bonus_itemdefs"
+					{
+						"4517"		"1"
+						"4550"		"1"
+						"4542"		"1"
+						"4543"		"1"
+						"10186"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Premier_League_Season_5"
+			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5"
+			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
+			"creation_date"		"2013-05-15"
+			"tournament_url"		"http://www.thepremierleague.eu"
+			"image_banner"		"econ/leagues/subscriptions_premierleague5_ingame"
+		}
+		"15174"
+		{
+			"name"		"Premier League Season 5 - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"45"
+					"order"		"24"
+					"admin"		"1"
+					"bonus_itemdefs"
+					{
+						"4517"		"1"
+						"4550"		"1"
+						"4542"		"1"
+						"4543"		"1"
+						"10186"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Premier_League_Season_5__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5__ADMIN"
+			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
+			"creation_date"		"2013-05-15"
+			"tournament_url"		"http://www.thepremierleague.eu"
+			"image_banner"		"econ/leagues/subscriptions_premierleague5_ingame"
+		}
+		"15175"
+		{
+			"name"		"StarSeries Season VI"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"46"
+					"order"		"25"
+					"bonus_itemdefs"
+					{
+						"10187"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_StarSeries_Season_VI"
+			"item_description"		"#DOTA_Item_Desc_StarSeries_Season_VI"
+			"image_inventory"		"econ/leagues/subscriptions_starladder6"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_starladder6_ingame"
+			"tournament_url"		"http://dota2.starladder.tv/"
+		}
+		"15176"
+		{
+			"name"		"StarSeries Season VI - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"46"
+					"order"		"25"
+					"admin"		"1"
+					"bonus_itemdefs"
+					{
+						"10187"		"1"
+					}
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_StarSeries_Season_VI__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_StarSeries_Season_VI"
+			"image_inventory"		"econ/leagues/subscriptions_starladder6"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_starladder6_ingame"
+			"tournament_url"		"http://dota2.starladder.tv/"
+		}
+		"15177"
+		{
+			"name"		"RaidCall EMS One Summer 2013"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"47"
+					"order"		"26"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013"
+			"item_description"		"#DOTA_Item_Desc_RaidCall_EMS_One_Summer_2013"
+			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+			"tournament_url"		"http://dota2.raidcall-emsone.com/"
+		}
+		"15178"
+		{
+			"name"		"RaidCall EMS One Summer 2013 - ADMIN"
+			"prefab"		"league"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"47"
+					"order"		"26"
+					"admin"		"1"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_EMS_One_Summer_2013"
+			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
+			"creation_date"		"2013-05-16"
+			"image_banner"		"econ/leagues/subscriptions_rgn_league_ingame"
+			"tournament_url"		"http://dota2.raidcall-emsone.com/"
 		}
 		"20000"
 		{
@@ -82574,8 +83182,8 @@
 		}
 		"ui_drops_a"
 		{
-			"Radiant HUD Skin"		"1"
-			"Dire HUD Skin"		"1"
+			"Radiant Ore"		"1"
+			"Direstone"		"1"
 		}
 		"juggernaut_kill_eater_a"
 		{
@@ -82760,8 +83368,8 @@
 		}
 		"rarities_list_1"
 		{
-			"Diretide HUD Skin"		"1"
-			"Frostivus HUD Skin"		"1"
+			"Cruel Diretide"		"1"
+			"Snows of Frostivus"		"1"
 			"The Vindicator"		"1"
 			"Buttercup"		"1"
 			"Buttercup's Barding"		"1"

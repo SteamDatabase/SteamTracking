@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.443b0e7001344bb3e871053318d178171cb9444f.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.da06b135c575bb99ce483da89752ed57c45f7134.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10049,8 +10049,8 @@
 				"image_inventory": "econ\/items\/faceless_void\/battlefury\/battlefury",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury.e619ddf98c71a042f732aba90c9555cefb574ec7.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury_large.da8246ba79740a596ec159c93845e49347e6b4df.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury.4ed9ccf592f22baf57171f7a8ddb0c11ffddff03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/battlefury\/battlefury_large.aed9b6fe5266bc36f353290977ab7833c5b49441.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22313,6 +22313,63 @@
 				}
 			},
 			{
+				"name": "Horns of the Wicked Succubus",
+				"defindex": 4517,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Horns of the Wicked Succubus",
+				"item_description": "From deepest twilight come temptations dark and terrifying.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3.2be3aa11a9aa354878f8296728f237d6fcbaaf8b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3_large.6cb86a1e37e51743abb709fcf4f824c925107f13.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "premier league tag",
+						"class": "premier league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 45.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					}
+				]
+				
+			},
+			{
 				"name": "Hellish Gemstaff",
 				"defindex": 4518,
 				"item_class": "dota_item_wearable",
@@ -22869,6 +22926,120 @@
 				}
 			},
 			{
+				"name": "Dirk of the Wicked Succubus",
+				"defindex": 4542,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Dirk of the Wicked Succubus",
+				"item_description": "To poke, to prod, to bleed, to destroy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3.4be55240afc89e21f96923b070abb3542578e335.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3_large.217bb544f8a24f92870493152eb5d9d430e6606a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "premier league tag",
+						"class": "premier league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 45.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Wings of the Wicked Succubus",
+				"defindex": 4543,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Wings of the Wicked Succubus",
+				"item_description": "In beauty there is pain.  In pain there is beauty.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3.c3cdbdef41c811da257293433b77c9f525f3d9f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3_large.da208311b8e276eda217b55340eb50911fd3c9f4.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "premier league tag",
+						"class": "premier league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 45.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					}
+				]
+				
+			},
+			{
 				"name": "Gazing Eye of the Demon Witch",
 				"defindex": 4544,
 				"item_class": "dota_item_wearable",
@@ -23005,6 +23176,63 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Wraps of the Wicked Succubus",
+				"defindex": 4550,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Wraps of the Wicked Succubus",
+				"item_description": "One must bring the appropriate attire to a battle.  To a massacre, however...",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3.94cbf9003a7e340662d39b04f30bf642c24ee196.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3_large.a11e9771955046299284c4c62826e7784b350dd8.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "premier league tag",
+						"class": "premier league tag",
+						"value": 5.000000
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 45.000000
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0.000000
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Decorative Armor of the Bone Scryer",
@@ -36176,11 +36404,11 @@
 				
 			},
 			{
-				"name": "Diretide HUD Skin",
+				"name": "Cruel Diretide",
 				"defindex": 10137,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Diretide HUD Skin",
+				"item_name": "Cruel Diretide",
 				"item_description": "As tide and temperature turn, life ebbs from the land.  The Diretide has arrived.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36188,7 +36416,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_diretide.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_diretide_large.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36393,8 +36621,8 @@
 				"image_inventory": "econ\/tools\/communitypack_1",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/communitypack_1.7709e114e7a3aa31314029f345f075b97a5ebeeb.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/communitypack_1_large.0e59b1fd1cdc3adae7dfb60f80e8b8a5ca0ca538.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/communitypack_1.5ca7f975090b44d1a921f3d619d27efd063a8c47.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/communitypack_1_large.ab155cc67dd4e8119f3b2acbc0b605b1dba8390f.png",
 				"capabilities": {
 					"decodable": true,
 					"can_craft_mark": true,
@@ -36487,19 +36715,19 @@
 				}
 			},
 			{
-				"name": "Radiant HUD Skin",
+				"name": "Radiant Ore",
 				"defindex": 10149,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Radiant HUD Skin",
+				"item_name": "Radiant Ore",
 				"item_description": "Light pours into the land, blooming resplendent on war-scarred ruins.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_radiant",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_radiant.8a926f8d7925edb141df99592979b95051902aab.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_radiant.d2f71230b50e33b49f965a99fd733f93ed4d972f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_radiant_large.d2f71230b50e33b49f965a99fd733f93ed4d972f.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36508,19 +36736,19 @@
 				}
 			},
 			{
-				"name": "Dire HUD Skin",
+				"name": "Direstone",
 				"defindex": 10150,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Dire HUD Skin",
+				"item_name": "Direstone",
 				"item_description": "The earth cracks in turmoil as the seeds of destruction take root.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_dire",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_dire.61e03f9e7c9a03640349a0e35c39b82409200ba1.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_dire.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_dire_large.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -36529,11 +36757,11 @@
 				}
 			},
 			{
-				"name": "Frostivus HUD Skin",
+				"name": "Snows of Frostivus",
 				"defindex": 10151,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
-				"item_name": "Frostivus HUD Skin",
+				"item_name": "Snows of Frostivus",
 				"item_description": "A chill fills the air as the snows blanket the cold ground.  The time of Frostivus comes.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -36541,7 +36769,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_frostivus.cf74154fb484878e4ad90b88c9388498598938df.png",
-				"image_url_large": "",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_frostivus_large.cf74154fb484878e4ad90b88c9388498598938df.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37463,6 +37691,48 @@
 				}
 			},
 			{
+				"name": "Stone Ruin",
+				"defindex": 10186,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Stone Ruin",
+				"item_description": "Beware the chaos of ages past.\r\n\r\nIncluded with Premier League Season 5 pass.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_premier_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_premier_league.c3f83baeb8e688297bd89b0c57d454e3f5d6e597.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_premier_league_large.c3f83baeb8e688297bd89b0c57d454e3f5d6e597.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Powered Star",
+				"defindex": 10187,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "HUD Skin",
+				"item_name": "Powered Star",
+				"item_description": "With power comes victory.\r\n\r\nIncluded with Star Series Season VI pass..",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_starladder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_starladder.232cd6964fdb2ac9fa3b94dfd6ce362a19d8f07e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_starladder_large.d8fac7913c5734b24160403fdf236c9a843e52d1.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 15000,
 				"item_class": "tool",
@@ -38103,8 +38373,8 @@
 				"image_inventory": "econ\/tools\/international_invite",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite.eec9938027559aa898919171c2582445fe6476ca.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite_large.9856b583651542165eb5027eac72faf672ee1bcb.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite.ba3b94ac23d08b58263c4acf13f3320c7fbb9a9f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/international_invite_large.beba52aa9d616204123c26c3e398d15852595f97.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -39229,7 +39499,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2.c99b4ea839d10ad865c4300fb9b922576338ccb0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2_large.6c5de8b43149c3057abf7a9c70e35ba687c7dffe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2_large.cf8dec2994fc9b17c0839bac2c53daf0d5fa19c1.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -39264,7 +39534,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2.c99b4ea839d10ad865c4300fb9b922576338ccb0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2_large.6c5de8b43149c3057abf7a9c70e35ba687c7dffe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder2_large.cf8dec2994fc9b17c0839bac2c53daf0d5fa19c1.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41500,8 +41770,8 @@
 				"image_inventory": "econ\/leagues\/subscription_theasia",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia.2afa04311c6a3f4327e690241073e04a819e3d04.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia_large.b8459d1e0a5ff842e862a0b0386ebd4e89087c2f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia.37a7919f88fd5b331c2297d653ef8fd25ca8543a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia_large.db640541aa5efd2f1ad4d7d213c061697a403448.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41757,8 +42027,8 @@
 				"image_inventory": "econ\/leagues\/subscription_theasia",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia.2afa04311c6a3f4327e690241073e04a819e3d04.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia_large.b8459d1e0a5ff842e862a0b0386ebd4e89087c2f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia.37a7919f88fd5b331c2297d653ef8fd25ca8543a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscription_theasia_large.db640541aa5efd2f1ad4d7d213c061697a403448.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41792,8 +42062,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gleague",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague.7ec51b85f8e8bd2344dd86647514844b8288cf2d.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague_large.6c06e49b2c655269ef46af0971af0ed05fea9128.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague.ef6a257aa475fe832079406ba600fe356381544f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague_large.af8c2c024e2c2e09058e19dc73411eb39d52c0f0.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -41827,8 +42097,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gleague",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague.7ec51b85f8e8bd2344dd86647514844b8288cf2d.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague_large.6c06e49b2c655269ef46af0971af0ed05fea9128.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague.ef6a257aa475fe832079406ba600fe356381544f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague_large.af8c2c024e2c2e09058e19dc73411eb39d52c0f0.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -42038,8 +42308,8 @@
 				"image_inventory": "econ\/tools\/treasure_lotus_chest_key",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_lotus_chest_key.44efd55c4e78477d1581bd8168b00a7338e6070d.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_lotus_chest_key_large.e2ba654df04dec52c1d0b2a8f6b25e3d67b17a9d.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_lotus_chest_key.a714147e27888baaf6d53e0b66051eab2819ee1a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_lotus_chest_key_large.24c59603451c59164293c2065496411c9452fd05.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -42783,8 +43053,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.b51e5d775087630abfbdd750809676b858e5f087.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.1f52f4cd67914e8a007c28cf86d5991324054bfa.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.92d7f59f9f4a11ee95c65c7fe41ad5ba6a533136.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.9d30ae9073ca32f1939c124e83580b16bd817050.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -42818,8 +43088,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_neolitic_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.b51e5d775087630abfbdd750809676b858e5f087.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.1f52f4cd67914e8a007c28cf86d5991324054bfa.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2.92d7f59f9f4a11ee95c65c7fe41ad5ba6a533136.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolitic_2_large.9d30ae9073ca32f1939c124e83580b16bd817050.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -43477,7 +43747,7 @@
 				"defindex": 15167,
 				"item_class": "tool",
 				"item_type_name": "New Item",
-				"item_name": "The International East Qualifiers - ADMIN",
+				"item_name": "DOTA_Item_The_International_East_Qualifiers__ADMIN",
 				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
 				"proper_name": false,
 				"item_quality": 4,
@@ -43512,8 +43782,8 @@
 				"defindex": 15168,
 				"item_class": "tool",
 				"item_type_name": "New Item",
-				"item_name": "The International West Qualifiers - ADMIN",
-				"item_description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+				"item_name": "DOTA_Item_The_International_West_Qualifiers__ADMIN",
+				"item_description": "",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_westqualifier_ingame",
@@ -43661,6 +43931,216 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rgn_league.cb8fab918691c38da94c2beec2d9ff7c07529601.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rgn_league_large.2859656095eb1b6cedda345506410156d5bb4124.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Premier League Season 5",
+				"defindex": 15173,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Premier League Season 5",
+				"item_description": "The Premier League is back with a new format! Watch teams compete in weekly cups for 7 weeks to qualify for the grand final and a chance of winning $15,000. Coverage by the biggest eSport websites like joinDOTA, GosuGamers, TeamLiquid, Dota2Lougne, Prodota, Dota2.ru, Ogaming and many more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_premierleague5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_premierleague5.14b2ba443ffc3856b41a5191ebe4b7eac6ab6a64.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_premierleague5_large.b564017cf43e9dc03fd1b13fa87ffe83a59488b3.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Premier League Season 5 - ADMIN",
+				"defindex": 15174,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Premier League Season 5 - ADMIN",
+				"item_description": "The Premier League is back with a new format! Watch teams compete in weekly cups for 7 weeks to qualify for the grand final and a chance of winning $15,000. Coverage by the biggest eSport websites like joinDOTA, GosuGamers, TeamLiquid, Dota2Lougne, Prodota, Dota2.ru, Ogaming and many more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_premierleague5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_premierleague5.14b2ba443ffc3856b41a5191ebe4b7eac6ab6a64.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_premierleague5_large.b564017cf43e9dc03fd1b13fa87ffe83a59488b3.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season VI",
+				"defindex": 15175,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season VI",
+				"item_description": "Broadcast in 4 different languages with v1lat and TobiWan as headliners and a grand prize of $22,500 this should be the best StarSeries yet! The keystone of StarSeries is its LAN finals, held in Kiev Cybersport Arena. Includes an exclusive in-game Starladder HUD Skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder6.cc8a533d31e63c4f7bda393e3fafe08c450d4659.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder6_large.78e7b8d25032f8994fd7c7d00cde70489a206489.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season VI - ADMIN",
+				"defindex": 15176,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season VI - ADMIN",
+				"item_description": "Broadcast in 4 different languages with v1lat and TobiWan as headliners and a grand prize of $22,500 this should be the best StarSeries yet! The keystone of StarSeries is its LAN finals, held in Kiev Cybersport Arena. Includes an exclusive in-game Starladder HUD Skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder6.cc8a533d31e63c4f7bda393e3fafe08c450d4659.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder6_large.78e7b8d25032f8994fd7c7d00cde70489a206489.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Summer 2013",
+				"defindex": 15177,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Summer 2013",
+				"item_description": "The RaidCall EMS One Summer 2013 features teams from all over the world in a battle for 39,000 US dollars in prize money. Established teams and challengers meet in four cups, followed by group stage playoffs and live event finals - giving you dozens of great matches casted by TobiWan and others.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rcemsone_summer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rcemsone_summer.691276c062ec5134cf77ff18064854846284632c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rcemsone_summer_large.3c8b4be8cf9ee002de462e591be243f09045ed91.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Summer 2013 - ADMIN",
+				"defindex": 15178,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Summer 2013 - ADMIN",
+				"item_description": "The RaidCall EMS One Summer 2013 features teams from all over the world in a battle for 39,000 US dollars in prize money. Established teams and challengers meet in four cups, followed by group stage playoffs and live event finals - giving you dozens of great matches casted by TobiWan and others.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_rcemsone_summer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rcemsone_summer.691276c062ec5134cf77ff18064854846284632c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_rcemsone_summer_large.3c8b4be8cf9ee002de462e591be243f09045ed91.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,

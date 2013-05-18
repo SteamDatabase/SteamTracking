@@ -1279,18 +1279,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	background-position: center -240px;
 	background-repeat: no-repeat;
 	z-index: 0;
-
-	filter: blur(3px);	/* theoretical future browsers */
-	-moz-filter: blur(3px);
-	-webkit-filter: blur(3px);
-	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
-	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='3')";
-}
-
-.profile_background_image_content.in_client {
-	/* client perf killer */
-	filter: none;
-	-webkit-filter: none;
 }
 
 .profile_background_overlay_content {
