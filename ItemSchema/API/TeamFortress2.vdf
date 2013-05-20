@@ -39089,13 +39089,6 @@
 			"item_description"		"#TF_robo_soldier_fullmetaldrillhat_Desc"
 			"equip_region"		"hat"
 			"item_type_name" 	"#TF_Wearable_Hat"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"grenades"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/soldier/robo_soldier_fullmetaldrillhat/robo_soldier_fullmetaldrillhat"
 			"capabilities"
 			{
@@ -39260,13 +39253,6 @@
 			"item_description"		"#TF_robo_soldier_sparkplug_Desc"
 			"equip_region"		"soldier_cigar"
 			"item_type_name"	"#TF_Wearable_Cigar"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"grenades"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/soldier/robo_soldier_sparkplug/robo_soldier_sparkplug"
 			"model_player"		"models/workshop/player/items/soldier/robo_soldier_sparkplug/robo_soldier_sparkplug.mdl"
 			"used_by_classes"
