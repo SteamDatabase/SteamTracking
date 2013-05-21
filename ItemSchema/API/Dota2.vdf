@@ -65578,7 +65578,7 @@
 			"item_rarity"		"mythical"
 			"player_loadout"		"1"
 			"item_description"		"#DOTA_Item_Desc_MegaKills_Pyrion_Flax"
-			"image_inventory"		"econ/announcer/megakill_pflax_large"
+			"image_inventory"		"econ/announcer/megakill_pflax"
 			"visuals"
 			{
 				"asset_modifier0"
@@ -65740,7 +65740,7 @@
 			"item_rarity"		"mythical"
 			"player_loadout"		"1"
 			"item_description"		"#DOTA_Item_Desc_Announcer_Pyrion_Flax"
-			"image_inventory"		"econ/announcer/announcer_pflax_large"
+			"image_inventory"		"econ/announcer/announcer_pflax"
 			"visuals"
 			{
 				"asset_modifier7"

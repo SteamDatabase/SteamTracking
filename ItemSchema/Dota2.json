@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.47c51d17de4fcb6fe9a0125f2b894f8fb3700a1d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.118825a286a45faab1397766f2a48ad3ce9da2bf.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37637,11 +37637,11 @@
 				"item_description": "This pack replaces the Mega-Kills announcer with the unique and unruly humor of Dota 2 satirist Pyrion Flax.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/announcer\/megakill_pflax_large",
+				"image_inventory": "econ\/announcer\/megakill_pflax",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_pflax_large.da193456ed22f9bd46f94bbf6d7743934f07cb13.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_pflax.b2ac9317564ef6684e222386872bf3fdb17ae6df.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_pflax_large.da193456ed22f9bd46f94bbf6d7743934f07cb13.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -37785,11 +37785,11 @@
 				"item_description": "This pack replaces the Default announcer with the unique and unruly humor of Dota 2 satirist Pyrion Flax.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/announcer\/announcer_pflax_large",
+				"image_inventory": "econ\/announcer\/announcer_pflax",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_pflax.3cbdc19eab0a7b0265c6b38711cd44b9136baf56.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_pflax_large.d54e09e2308f55d90f4627352213d4b6e142314f.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
