@@ -39506,7 +39506,7 @@
 			"prefab"		"no_craft cosmetic"
 			"item_name"		"#TF_robo_medic_physician_mask"
 			"item_description"		"#TF_robo_medic_physician_mask_Desc"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"item_type_name"	"#TF_Wearable_GenPractitioner"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_physician_mask/robo_medic_physician_mask"
 			"capabilities"
