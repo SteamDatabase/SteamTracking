@@ -109,6 +109,14 @@
 	margin-left: 0;
 }
 
+.profile_background_blank {
+	background-color: #262627;
+	border: 1px solid #797272;
+	width: 238px;
+	height: 138px;
+	margin-bottom: 4px;
+}
+
 .profile_background_select_row {
 	margin-bottom: 33px;
 	width: 540px;
@@ -175,4 +183,35 @@
 	border: none;
 	height: 100%;
 	width: 100%;
+}
+
+
+.profile_background_current_image_ctn.favorite_badge {
+	width: 54px;
+	height: 54px;
+}
+
+.profile_background_current_image_ctn.favorite_badge .showcase_openslot_placeholder {
+	line-height: 70px;
+}
+
+
+.group_list_option.badge_option {
+	height: 54px;
+	padding-left: 69px;
+}
+
+.group_list_option.badge_option .badge_icon, .group_list_option.badge_option .badge_icon img {
+	height: 54px;
+	width: 54px;
+}
+
+.group_list_option.badge_option .badge_icon {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.group_list_option.badge_option .group_list_groupname {
+	line-height: 54px;
 }

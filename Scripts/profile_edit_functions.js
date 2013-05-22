@@ -373,6 +373,7 @@ var g_rgBackgroundAppNames;
 function InitBackgrounds( rgBackgroundData, rgBackgroundAppData )
 {
 	g_rgBackgroundData = rgBackgroundData;
+	g_rgBackgroundData.unshift( { name: 'Default blank background', is_blank_background: true } );
 	g_rgBackgroundAppNames = rgBackgroundAppData;
 }
 
@@ -392,9 +393,19 @@ function PresentBackgroundSelectDialog()
 		}
 
 		var $BackgroundOption = $J('<div/>', {'class': 'profile_background_select_option'} );
-		$BackgroundOption.append( $J('<img/>', {'class': 'profile_background_select_image', src: GetBackgroundURL( Background.image_large, '252x160' ) }).load( fnOnImageLoad ) );
-		$BackgroundOption.append( $J('<div/>').text( Background.name ) );
-		$BackgroundOption.append( $J('<div/>').text( g_rgBackgroundAppNames[Background.appid] ) );
+
+		if ( Background.is_blank_background )
+		{
+			$BackgroundOption.append( $J('<div/>', {'class': 'profile_background_blank' } ) );
+			$BackgroundOption.append( $J('<div/>').text( Background.name ) );
+		}
+		else
+		{
+			$BackgroundOption.append( $J('<img/>', {'class': 'profile_background_select_image', src: GetBackgroundURL( Background.image_large, '252x160' ) }).load( fnOnImageLoad ) );
+			$BackgroundOption.append( $J('<div/>').text( Background.name ) );
+			$BackgroundOption.append( $J('<div/>').text( g_rgBackgroundAppNames[Background.appid] ) );
+		}
+
 		// use a factory here so we get the present value of Background, but capture the local Modal (not set yet)
 		$BackgroundOption.click( (function( _Background ) { return function() {SelectBackground( Modal, _Background );}; } )(Background) );
 		$Row.append( $BackgroundOption );
@@ -416,20 +427,83 @@ function PresentBackgroundSelectDialog()
 function SelectBackground( Modal, Background )
 {
 	Modal.Dismiss();
-	console.log( Background );
 	SetCurrentBackground( Background );
 }
 
 function SetCurrentBackground( Background )
 {
-	$J('#profile_background_current_image').attr( 'src', GetBackgroundURL( Background.image_large, '140x90' ) );
-	$J('#profile_background_current_name').text( Background.name );
-	$J('#profile_background_current_game').text( g_rgBackgroundAppNames[Background.appid] );
-	$J('#profile_background').val( Background.communityitemid );
+	if ( Background.is_blank_background )
+	{
+		$J('#profile_background_current').hide();
+		$J('#profile_background').val( '' );
+	}
+	else
+	{
+		$J('#profile_background_current_image').attr( 'src', GetBackgroundURL( Background.image_large, '140x90' ) );
+		$J('#profile_background_current_name').text( Background.name );
+		$J('#profile_background_current_game').text( g_rgBackgroundAppNames[Background.appid] );
+		$J('#profile_background').val( Background.communityitemid );
 
-	$J('#profile_background_current').show();
+		$J('#profile_background_current').show();
+	}
 }
 
+var g_rgBadgeData;
+function InitBadges( rgBadges )
+{
+	g_rgBadgeData = rgBadges;
+	g_rgBadgeData.unshift( {
+		badgeid: '',
+		communityitemid: '',
+		name: '<No Featured Badge>',
+		icon: 'http://cdn.steamcommunity.com/public/images/trans.gif',
+		xp: '',
+		is_blank_badge: true
+	} );
+}
+
+function PresentFavoriteBadgeDialog()
+{
+	var $Content = $J('<div/>', {'class': 'group_list_results'} );
+	var Modal = null;	// this will be set later, but we define up here so we can capture in closures
+	var fnOnImageLoad = function() { Modal.AdjustSizing(); };
+	for ( var i = 0; i < g_rgBadgeData.length; i++ )
+	{
+		var Badge = g_rgBadgeData[i];
+		var $Row = $J('<div/>', {'class': 'group_list_option badge_option' } );
+		var $Icon = $J('<img/>', {'src': Badge.icon } );
+		$Row.append( $Icon );
+		$Icon.wrap( $J('<div/>', {'class': 'badge_icon' } ) );
+		$Row.append( $J( '<div/>', {'class': 'group_list_groupname' } ).text( Badge.name ) );
+
+
+		$Content.append( $Row );
+
+		// use a factory here so we get the present value of Background, but capture the local Modal (not set yet)
+		$Row.click( (function( _Badge ) { return function() { Modal.Dismiss(); SetCurrentBadge( _Badge ); }; } )(Badge) );
+	}
+	Modal = ShowDialog( 'Choose a badge to feature', $Content );
+}
+
+function SetCurrentBadge( Badge )
+{
+	$J('#favorite_badge_badgeid').val( Badge.badgeid );
+	$J('#favorite_badge_communityitemid').val( Badge.communityitemid );
+
+	if ( Badge.is_blank_badge )
+	{
+		$J('#favorite_badge_current').hide();
+		$J('#profile_background').val( '' );
+	}
+	else
+	{
+		$J('#favorite_badge_img').attr( 'src', Badge.icon );
+		$J('#favorite_badge_name').text( Badge.name );
+		$J('#favorite_badge_xp').text( Badge.xp );
+
+		$J('#favorite_badge_current').show();
+	}
+}
 
 /* cruft begins here (some is still in use on new page) */
 

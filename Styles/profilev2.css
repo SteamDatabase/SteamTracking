@@ -122,7 +122,6 @@ div.profile_page.has_profile_background {
 }
 
 .profile_header_badge_instructions {
-	color: #414141;
 	padding: 8px;
 }
 
@@ -263,6 +262,8 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin-bottom: 12px;
 
 	font-size: 13px;
+
+	overflow: hidden;
 }
 
 .profile_customization_header {
@@ -540,10 +541,14 @@ a.showcase_stat:hover .label {
 	font-size: 17px;
 }
 
+.showcase_stats_row.favoritegroup_stats {
+	width: 600px;
+}
+
 .showcase_stats_row.favoritegroup_stats .showcase_stat {
 	padding-top: 4px;
 	padding-bottom: 4px;
-	margin-left: 28px;
+	margin-left: 22px;
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat:first-child {

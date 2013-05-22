@@ -503,7 +503,7 @@ img.gamecard {
 
 .badge_friends_have_earned {
 	padding-left: 12px;
-	padding-bottom: 24px;
+	padding-bottom: 14px;
 }
 
 .badge_friends_have_earned .badge_friends_have_earned_label {
@@ -513,6 +513,7 @@ img.gamecard {
 .badge_friends_have_earned .badge_friends_have_earned_friends .playerAvatar {
 	float: left;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .badge_detail_tasks {

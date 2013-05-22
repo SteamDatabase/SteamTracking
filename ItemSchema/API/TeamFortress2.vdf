@@ -34684,6 +34684,7 @@
 		{
 			"name"	"The Ap-Sap"
 			"first_sale_date"	"2013/04/23"
+			"prefab"	"valve"
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -45475,6 +45476,7 @@
 		"2050"
 		{
 			"name" "Football Manager 2012 Promo Bundle"
+			"prefab"	"default_bundle_payment"
 			"first_sale_date"	"2011/10/25"
 			"item_class"	"bundle"
 			"bundle"
