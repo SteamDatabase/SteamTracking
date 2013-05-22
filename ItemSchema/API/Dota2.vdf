@@ -8,6 +8,15 @@
 		"last_valid_item_slot"		"10"
 		"num_item_presets"		"4"
 	}
+	"web_resources"
+	{
+		"0"
+		{
+			"name"		"TI 2013 Results"
+			"url"		"TI_2013_results.txt"
+			"on_demand"		"0"
+		}
+	}
 	"rarities"
 	{
 		"common"
@@ -65827,6 +65836,35 @@
 				}
 			}
 		}
+		"10190"
+		{
+			"name"		"Valor"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_International_HUD_Skin"
+			"item_name"		"#DOTA_Item_Valor"
+			"item_quality"		"genuine"
+			"item_rarity"		"mythical"
+			"item_description"		"#DOTA_Item_Desc_Valor"
+			"image_inventory"		"econ/huds/hud_valor"
+			"creation_date"		"2013-05-20"
+			"attributes"
+			{
+				"international tag"
+				{
+					"attribute_class"		"international tag"
+					"value"		"2013"
+				}
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"ti3"
+					"modifier"		"ti3"
+				}
+			}
+		}
 		"15000"
 		{
 			"name"		"Name Tag"
@@ -69964,6 +70002,7 @@
 					{
 						"10174"		"1"
 						"15163"		"1"
+						"10190"		"1"
 					}
 				}
 			}

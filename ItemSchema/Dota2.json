@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.45cf74ec169829bbbefbcfc2ec7e5c366c041a43.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c03f3685683808739532b852f1a2c7f7a87a5104.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37592,7 +37592,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "HUD Skin",
 				"item_name": "Empowered",
-				"item_description": "The thrum of war, \r\nthe stomp of hooves, \r\nthe bloodstained earth, \r\ngrim forces move.\r\n",
+				"item_description": "The thrum of war,\r\nthe stomp of hooves,\r\nthe bloodstained earth,\r\ngrim forces move.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_empower",
@@ -37838,6 +37838,35 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Valor",
+				"defindex": 10190,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "International HUD Skin",
+				"item_name": "Valor",
+				"item_description": "With courage comes glory. With glory comes immortality.",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ\/huds\/hud_valor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_valor.5e45cb50d65800028be294617cafa9f3a6b9c168.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_valor_large.f299b56bac954ba40c027ccb6c76e82faa905786.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Name Tag",
