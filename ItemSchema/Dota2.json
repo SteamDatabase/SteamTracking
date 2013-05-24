@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c03f3685683808739532b852f1a2c7f7a87a5104.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.1b0db04864032fe7f375ba74eadbc21ad4b0d5be.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -37869,6 +37869,51 @@
 				
 			},
 			{
+				"name": "Maximilian the Beetlebear",
+				"defindex": 10191,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Maximilian the Beetlebear",
+				"item_description": "High on the steppes of Druud, stormcrafters are known to press beasts of burden into their service.  Rare though is the stormcrafter who dares try and control the pugnacious steambear.  That the young bear Maximilian now travels unaccompanied is proof that the domestication process did not go well.  For the stormcrafter.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/d2l_steambear\/d2l_steambear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/d2l_steambear\/d2l_steambear.fcf29e01193c30c62cce8708df5340b1d08f5a6a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/d2l_steambear\/d2l_steambear_large.9f5c026b0d227af198cbdf373cb005f32ab28e6e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "raidcall league tag",
+						"class": "raidcall league tag",
+						"value": 3
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 48
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 15000,
 				"item_class": "tool",
@@ -44299,6 +44344,216 @@
 				
 			},
 			{
+				"name": "RaidCall Dota 2 League Season 3",
+				"defindex": 15179,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall Dota 2 League Season 3",
+				"item_description": "The RaidCall Dota 2 League (D2L) is a 7-week online Dota 2 league featuring the top eight Dota 2 teams in the West battling it out for a portion of the $10,000 seasonal cash prize and the opportunity of competing live at DreamHack Valencia.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcall_d2l_season3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_d2l_season3.d27933db070b1d7bea0af1678daa30f00f96be63.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_d2l_season3_large.6996dd8d237562f41159c24ba724284081caecd7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall Dota 2 League Season 3 - ADMIN",
+				"defindex": 15180,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall Dota 2 League Season 3 - ADMIN",
+				"item_description": "The RaidCall Dota 2 League (D2L) is a 7-week online Dota 2 league featuring the top eight Dota 2 teams in the West battling it out for a portion of the $10,000 seasonal cash prize and the opportunity of competing live at DreamHack Valencia.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcall_d2l_season3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_d2l_season3.d27933db070b1d7bea0af1678daa30f00f96be63.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_d2l_season3_large.6996dd8d237562f41159c24ba724284081caecd7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Canada Cup",
+				"defindex": 15181,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Canada Cup",
+				"item_description": "The Dota 2 Canada Cup is back featuring defending champions WAND and runners up AWT Happen? Casters include Kawa, NYJohn and more! ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_canada_cup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_canada_cup.d5386eef089ab82bc2e443b124443594e98bcaed.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_canada_cup_large.506c7dcb79668a15023f086b043da9493880943d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Canada Cup - ADMIN",
+				"defindex": 15182,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Canada Cup - ADMIN",
+				"item_description": "The Dota 2 Canada Cup is back featuring defending champions WAND and runners up AWT Happen? Casters include Kawa, NYJohn and more! ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_canada_cup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_canada_cup.d5386eef089ab82bc2e443b124443594e98bcaed.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_canada_cup_large.506c7dcb79668a15023f086b043da9493880943d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "American Dota League",
+				"defindex": 15183,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "American Dota League",
+				"item_description": "AMERICAN DOTA LEAGUE features the best teams in North and South America competing for $10,000 in a month and a half long league.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_american_dota_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league.3c4da96c0bc43dc69c7c53dccfe7e196d3ccd6f6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league_large.969abbda962f4d2135aa6b110c19223aee4a82ef.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "American Dota League - ADMIN",
+				"defindex": 15184,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "American Dota League - ADMIN",
+				"item_description": "AMERICAN DOTA LEAGUE features the best teams in North and South America competing for $10,000 in a month and a half long league.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_american_dota_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league.3c4da96c0bc43dc69c7c53dccfe7e196d3ccd6f6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league_large.969abbda962f4d2135aa6b110c19223aee4a82ef.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -50072,6 +50327,18 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "raidcall league tag",
+				"defindex": 398,
+				"attribute_class": "raidcall league tag",
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
+				"description_string": "RaidCall Season %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
