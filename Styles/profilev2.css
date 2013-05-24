@@ -585,6 +585,13 @@ a.showcase_stat:hover .label {
 	height: 160px;
 	position: relative;
 	padding-left: 170px;
+
+	overflow: hidden;
+}
+
+.favoriteguide_showcase .workshop_showcase_item {
+	height: auto;
+	min-height: 160px;
 }
 
 .workshop_showcase_item.showcase_slot {
@@ -658,10 +665,22 @@ img.workshop_showcase_item_image {
 	bottom: 0;
 	right: 0;
 
+	padding-top: 10px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/showcase_content_fade.png' );
+	background-position: center top;
+	background-repeat: repeat-x;
+
+}
+
+.workshop_showcase_details_content {
+	background-color: #0e0e0e;
+
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
 }
+
 .workshop_showcase_app_details {
 	line-height: 32px;
 }
@@ -672,6 +691,151 @@ img.workshop_showcase_item_image {
 
 .workshop_showcase_stars {
 	float: right;
+}
+
+.guide_showcase_contributors {
+	margin-bottom: 8px;
+}
+
+.guide_showcase_appinfo {
+	line-height: 32px;
+	margin-bottom: 8px;
+}
+
+.guide_showcase_appinfo .workshop_showcase_app img {
+	vertical-align: middle;
+}
+
+.guide_showcase_item_description {
+	line-height: 18px;
+	max-height: 72px;
+}
+
+.myworkshop_showcase_header.guides {
+	border-top: 1px solid #444549;
+	border-radius: 3px;
+
+	background-image: none;
+	background-color: #000000;
+
+	background: -moz-linear-gradient(left, #000000 5%, #282828 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#282828));background: -webkit-linear-gradient(left, #000000 5%,#282828 95%);background: -o-linear-gradient(left, #000000 5%,#282828 95%);background: -ms-linear-gradient(left, #000000 5%,#282828 95%);background: linear-gradient(to right, #000000 5%,#282828 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#282828',GradientType=1 );}
+
+.myguide_showcase_item {
+	width: 280px;
+	height: 68px;
+	overflow: hidden;
+	padding: 10px;
+
+	background-color: #101214;
+	background-color: rgba( 0, 0, 0, 0.3 );
+
+	border: 1px solid transparent;
+	border-radius: 3px;
+	margin-bottom: 7px;
+}
+
+.myguide_showcase_item_overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.myguide_showcase_item.left {
+	margin-right: 7px;
+}
+
+.myguide_showcase_item:hover {
+	border-color: #97C0E3;
+}
+
+.guide_showcase_img_ctn {
+	float: left;
+	position: relative;
+	width: 68px;
+	height: 68px;
+
+	margin-right: 8px;
+}
+
+.guide_showcase_img_ctn .workshop_showcase_mini_app, .guide_showcase_img_ctn .workshop_showcase_mini_app img {
+	width: 18px;
+	height: 18px;
+}
+
+.myguide_showcase_item.showcase_slot .showcase_openslot_placeholder {
+	line-height: 88px;
+}
+
+.guide_showcase_title {
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.guide_showcase_author, .guide_showcase_author a {
+	color: #828282;
+}
+
+.screenshot_showcase_primary {
+	width: 508px;
+	float: left;
+	min-height: 268px;
+}
+
+.screenshot_showcase_screenshot {
+	cursor: pointer;
+	border: 1px solid #000000;
+}
+
+.screenshot_showcase_screenshot:hover {
+	border: 1px solid #97C0E3;
+}
+
+.screenshot_showcase_primary .screenshot_showcase_screenshot {
+	margin-bottom: 4px;
+}
+
+.screenshot_showcase_rightcol {
+	float: right;
+	width: 102px;
+	text-align: center;
+}
+
+.screenshot_showcase_smallscreenshot {
+	float: none;
+	margin-bottom: 11px;
+}
+
+.screenshot_showcase_smallscreenshot.screenshot_count {
+	display: block;
+	height: 57px;
+	line-height: 57px;
+	background-color: #222223;
+	color: #ffffff;
+}
+
+.screenshot_showcase_stats {
+	line-height: 24px;
+}
+
+.screenshot_showcase_stat {
+	margin-right: 12px;
+	cursor: default;
+}
+
+.screenshot_showcase_stats .screenshot_showcase_staticon {
+	vertical-align: text-bottom;
+}
+
+.screenshot_showcase_staticon.favorite {
+	display: inline-block;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/ico_fav_tiled.png' );
+	background-repeat: no-repeat;
+	background-position: 0 -65px;
+	width: 17px;
+	height: 17px;
 }
 
 .profile_recentgame_header {
@@ -910,7 +1074,7 @@ img.workshop_showcase_item_image {
 	height: 19px;
 	display: inline-block;
 	margin-right: 4px;
-	background-image: url('http://cdn.steamcommunity.com/public/images/profile/icons_content.png');
+	background-image: url('http://cdn.steamcommunity.com/public/images/profile/icons_content.png?v=2');
 	background-position: center;
 	background-repeat: no-repeat;
 	vertical-align: middle;
@@ -934,6 +1098,10 @@ img.workshop_showcase_item_image {
 
 .published_file_icon.recommendation {
 	background-position: -76px center;
+}
+
+.published_file_icon.artwork {
+	background-position: -95px center;
 }
 
 
@@ -1281,7 +1449,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-position: center -240px;
+	background-position: center -226px;	/* 240px header, -14px margin .profile_content.has_profile_background */
 	background-repeat: no-repeat;
 	z-index: 0;
 }
@@ -1320,6 +1488,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .showcase_notes {
 	word-wrap: break-word;
 	overflow: hidden;
+	overflow-y: auto;
+
+	max-height: 600px;
 }
 
 .newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover, .showcase_notes a:hover {

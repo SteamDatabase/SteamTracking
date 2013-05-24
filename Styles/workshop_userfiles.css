@@ -3134,3 +3134,17 @@ div.hover {
 {
 	width: auto;
 }
+
+.publishedfile_popup_screenshot {
+	float: left;
+	border: 1px solid #000000;
+	cursor: pointer;
+	margin-right: 4px;
+	width: 212px;
+
+	margin-bottom: 4px;
+}
+
+.publishedfile_popup_screenshot:hover {
+	border: 1px solid #97C0E3;
+}
