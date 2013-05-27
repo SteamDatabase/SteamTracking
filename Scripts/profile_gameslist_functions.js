@@ -201,7 +201,7 @@ var gameStatsAchievementsTemplate = new Template( '<a class="popup_menu_item2 ti
 var gameStatsUserTemplate = new Template( '<a class="popup_menu_item2 tight" href="#{profile_link}/stats/#{friendlyURL}/?tab=stats"><h5>#{persona_name}&#039;s Stats</h5></a>');
 var gameStatsLeaderboardTemplate = new Template( '<a class="popup_menu_item2 tight" href="#{profile_link}/stats/#{friendlyURL}/?tab=leaderboards"><h5>#Community_UsersLeaderboards</h5></a>' );
 var gameStatsGlobalAchievementsTemplate = new Template( '<a class="popup_menu_item2 tight" href="http://steamcommunity.com/stats/#{friendlyURL}/achievements/"><h5>Global Achievements</h5></a>' );
-var gameStatsGlobalLeaderboardsTemplate = new Template( '<a class="popup_menu_item2 tight" href="http://steamcommunity.com/stats/#{friendlyURL}/leaderboards/"><h5>Global Leaderboards</h5></a>' );
+var gameStatsGlobalLeaderboardsTemplate = new Template( '<a class="popup_menu_item2 tight" href="http://steamcommunity.com/stats/#{friendlyURL}/leaderboards/"><h5>#Community_GlobalLeaderboards</h5></a>' );
 var gameAchievementItemTemplate = new Template( '<img class="recentAchievementsImg" id="ach_img_#{counterid}" style="position:relative;" onmouseover="AchievementHover( this, event, $(\'global_hover\') )" onmouseout="HideAchievementHover( this, event, $(\'global_hover\') )" width="32" height="32" border="0" src="#{icon_closed}" />');
 var gameInfoBarTextTemplate = new Template( '#GameList_Info_Items' );
 
@@ -385,7 +385,7 @@ function UpdateGameInfoFromSummary( gameInfo, summary )
 	if ( !summary['state'] )
 	{
 		summary['state'] = 'uninstalled';
-		summary['status'] = 'Profile_NotInstalled';
+		summary['status'] = 'Not installed';
 	}
 	
 	gameInfo['text_color'] = '';

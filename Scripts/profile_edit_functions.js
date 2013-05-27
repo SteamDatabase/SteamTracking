@@ -335,7 +335,7 @@ function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 
 function PresentPrimaryClanDialog()
 {
-	var Modal = ShowDialog( '#Profile_ChangePrimaryGroup', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Change primary group', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	LoadPlayerGroupList( function( html ) {

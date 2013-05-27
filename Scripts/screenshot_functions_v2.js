@@ -121,7 +121,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "Select all";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "#Screenshots_SelectAll";
 			$('ScreenshotManagementButtonSelectAll').onclick = SelectAllScreenshots;
 		}
 	}

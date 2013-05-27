@@ -94,22 +94,22 @@ function RemoveFriend()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( 'Remove friend',
+	ShowConfirmDialog( '#Profile_RemoveFriendShort',
 		'Are you sure you want to remove %s from your friend list?'.replace( /%s/, strPersonaName ),
-		'Remove friend'
+		'#Profile_RemoveFriendShort'
 	).done( function() {
 		$J.post(
 			'http://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
-			ShowAlertDialog( 'Remove friend',
+			ShowAlertDialog( '#Profile_RemoveFriendShort',
 				'#Profile_Actions_Unfriend_Succeeded'.replace( /%s/, strPersonaName )
 			).done( function() {
 				// reload the page when they click OK, so we update friend state
 				window.location.reload();
 			} );
 		} ).fail( function() {
-			ShowAlertDialog( 'Remove friend',
+			ShowAlertDialog( '#Profile_RemoveFriendShort',
 				'#Error_ErrorProcessing'
 			);
 		} );
@@ -190,7 +190,7 @@ function InitProfileSummary( strSummary )
 
 function ShowFriendsInCommon( unAccountIDTarget )
 {
-	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
+	ShowPlayerList( '#Profile_FriendsInCommonList', 'friendsincommon', unAccountIDTarget );
 }
 
 function ShowFriendsInGroup( unClanIDTarget )
@@ -307,14 +307,14 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 
 function ManageFriendsBlock( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'ignore', 'Block',
+	ManageFriendsConfirmBulkAction( $Form, 'ignore', '#BulkActions_Block',
 		'#BulkActions_Block_ConfirmSingular' + ' ' + '#BulkActions_BlockMsgSingular',
 		'#BulkActions_Block_ConfirmPlural' + ' ' + '#BulkActions_BlockMsgPlural');
 }
 
 function ManageFriendsRemove( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'remove', 'Remove Friend',
+	ManageFriendsConfirmBulkAction( $Form, 'remove', '#BulkActions_RemoveFriend',
 		'#BulkActions_Remove_ConfirmSingular' + ' ' + '#BulkActions_RemoveMsgSingular',
 		'#BulkActions_Remove_ConfirmPlural' + ' ' + '#BulkActions_RemoveMsgPlural');
 }
