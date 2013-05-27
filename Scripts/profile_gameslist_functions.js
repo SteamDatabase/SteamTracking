@@ -385,7 +385,7 @@ function UpdateGameInfoFromSummary( gameInfo, summary )
 	if ( !summary['state'] )
 	{
 		summary['state'] = 'uninstalled';
-		summary['status'] = 'Profile_NotInstalled';
+		summary['status'] = 'Not installed';
 	}
 	
 	gameInfo['text_color'] = '';

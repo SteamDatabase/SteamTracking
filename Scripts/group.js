@@ -152,7 +152,7 @@ Event.observe( window, 'load', function() {
 
 function deleteEvent( deleteURL )
 {
-	if ( confirm( 'You are about to delete this event. Are you sure?' ) )
+	if ( confirm( '#Events_ConfirmDelete' ) )
 	{
 		location.href = deleteURL;
 	}

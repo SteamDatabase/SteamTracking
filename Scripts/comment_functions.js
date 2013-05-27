@@ -53,7 +53,7 @@ function checkCommentLength()
 	tbox = document.getElementById( 'commentInput' );
 	if ( tbox.value.length > 1000 || tbox.value.length < 1 )
 	{
-		alert( '#Error_CommentLength' );
+		alert( 'Comments must be between 1 and 1000 characters in length.' );
 		return false;
 	}
 	return true;

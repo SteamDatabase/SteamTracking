@@ -79,13 +79,13 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		var strMessage = 'Invitation Sent!';
 		if ( data.duplicate )
 		{
-			strMessage += '<br>#Profile_SomeInvitesDupes';
+			strMessage += '<br>Some invites were not sent because the recipients are already in the group or have already received invites.';
 		}
 		ShowAlertDialog( 'Invite to join your group', strMessage );
 
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();
-		ShowAlertDialog( '', data.results ? data.results : '#Error_ErrorProcessing' );
+		ShowAlertDialog( '', data.results ? data.results : 'Error processing your request. Please try again.' );
 	});
 }
 
@@ -94,23 +94,23 @@ function RemoveFriend()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( 'Remove friend',
+	ShowConfirmDialog( '#Profile_RemoveFriendShort',
 		'Are you sure you want to remove %s from your friend list?'.replace( /%s/, strPersonaName ),
-		'Remove friend'
+		'#Profile_RemoveFriendShort'
 	).done( function() {
 		$J.post(
 			'http://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
-			ShowAlertDialog( 'Remove friend',
-				'#Profile_Actions_Unfriend_Succeeded'.replace( /%s/, strPersonaName )
+			ShowAlertDialog( '#Profile_RemoveFriendShort',
+				'%s has been removed from your friends list.'.replace( /%s/, strPersonaName )
 			).done( function() {
 				// reload the page when they click OK, so we update friend state
 				window.location.reload();
 			} );
 		} ).fail( function() {
-			ShowAlertDialog( 'Remove friend',
-				'#Error_ErrorProcessing'
+			ShowAlertDialog( '#Profile_RemoveFriendShort',
+				'Error processing your request. Please try again.'
 			);
 		} );
 	} );
@@ -150,8 +150,8 @@ function ConfirmBlock()
 	var strPersonaName = g_rgProfileData['personaname'];
 
 	ShowConfirmDialog( 'Block all communication',
-		'#Profile_AboutToBlock'.replace( /%s/, strPersonaName ),
-		'#Profile_YesBlock'
+		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
+		'Yes, block them'
 	).done( function() {
 			$J.post(
 				'http://steamcommunity.com/actions/BlockUserAjax',
@@ -162,7 +162,7 @@ function ConfirmBlock()
 				);
 			} ).fail( function() {
 				ShowAlertDialog( 'Block all communication',
-					'#Error_ErrorProcessing'
+					'Error processing your request. Please try again.'
 				);
 			} );
 		} );
@@ -190,12 +190,12 @@ function InitProfileSummary( strSummary )
 
 function ShowFriendsInCommon( unAccountIDTarget )
 {
-	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
+	ShowPlayerList( '#Profile_FriendsInCommonList', 'friendsincommon', unAccountIDTarget );
 }
 
 function ShowFriendsInGroup( unClanIDTarget )
 {
-	ShowPlayerList( '#Group_FriendsInCommonList', 'friendsingroup', unClanIDTarget );
+	ShowPlayerList( 'Friends in Group', 'friendsingroup', unClanIDTarget );
 }
 
 function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
@@ -271,7 +271,7 @@ function ManageFriendsInviteToGroup( $Form, groupid )
 	}
 	else
 	{
-		ShowAlertDialog( 'Invite to join your group', '#BulkActions_NoFriendsSelected' );
+		ShowAlertDialog( 'Invite to join your group', 'You have not selected any friends.' );
 	}
 }
 
@@ -279,7 +279,7 @@ function ManageFriendsExecuteBulkAction( $Form, strActionName )
 {
 	if ( $Form.find('input[type=checkbox]:checked').length == 0 )
 	{
-		ShowAlertDialog( '', '#BulkActions_NoFriendsSelected' );
+		ShowAlertDialog( '', 'You have not selected any friends.' );
 		return;
 	}
 
@@ -292,7 +292,7 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 	var cFriendsSelected = $Form.find('input[type=checkbox]:checked').length;
 	if ( cFriendsSelected == 0 )
 	{
-		ShowAlertDialog( strTitle, '#BulkActions_NoFriendsSelected' );
+		ShowAlertDialog( strTitle, 'You have not selected any friends.' );
 		return;
 	}
 
@@ -308,15 +308,15 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 function ManageFriendsBlock( $Form )
 {
 	ManageFriendsConfirmBulkAction( $Form, 'ignore', 'Block',
-		'#BulkActions_Block_ConfirmSingular' + ' ' + '#BulkActions_BlockMsgSingular',
-		'#BulkActions_Block_ConfirmPlural' + ' ' + '#BulkActions_BlockMsgPlural');
+		'Are you sure you want to block this friend?' + ' ' + 'You will no longer be able to send or receive messages or invites with this player.',
+		'Are you sure you want to block these %s friends?' + ' ' + 'You will no longer be able to send or receive messages or invites with these players.');
 }
 
 function ManageFriendsRemove( $Form )
 {
 	ManageFriendsConfirmBulkAction( $Form, 'remove', 'Remove Friend',
-		'#BulkActions_Remove_ConfirmSingular' + ' ' + '#BulkActions_RemoveMsgSingular',
-		'#BulkActions_Remove_ConfirmPlural' + ' ' + '#BulkActions_RemoveMsgPlural');
+		'Are you sure you want to remove this friend?' + ' ' + 'This player will no longer appear in your friends list and you will not be able to communicate with them.',
+		'Are you sure you want to remove these %s friends?' + ' ' + 'These players will no longer appear in your friends list and you will not be able to communicate with them.');
 }
 
 

@@ -395,7 +395,7 @@ function Forum_DeleteTopic( gidTopic )
 		'#Discussions_DeleteTopic_Confirm',
 		'#Discussions_DeleteTopic_Message',
 		Forum_DoDeleteTopic.bind( null, gidTopic ),
-		'Delete Thread'
+		'#Discussions_Moderator_DeleteThread'
 	);
 }
 

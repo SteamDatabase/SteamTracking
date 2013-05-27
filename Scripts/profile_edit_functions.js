@@ -150,7 +150,7 @@ function PreviewShowcaseConfig( eShowcase, rgSlotData )
 	.done( function( data ) {
 		$J(g_rgShowcasePreviews[ eShowcase ]).html( data );
 	} ).fail( function() {
-		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.');
+		ShowAlertDialog( 'Error', '#Error_ErrorCommunicatingWithNetwork');
 	} );
 }
 
@@ -159,7 +159,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 	var $DialogContent = $J('<div/>', {'class': 'newmodal_content_innerbg' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( '#Profile_Showcase_GameCollector_SelectOneOfYourGames' ) );
 	$DialogContent.append( $J('<p/>', {'class': '' }).text( '#Profile_Showcase_GameCollector_EnterGameName' ) );
-	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Search games' } );
+	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: '#Group_AssociateGame_SearchGames' } );
 	$Input.attr( 'size', '45' );	/* jquery constructor ignores size for some reason, needs to be set here */
 	$DialogContent.append( $Input );
 	$Input.wrap( $J('<div/>', {'class': 'gray_bevel for_text_input' } ) );
