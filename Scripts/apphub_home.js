@@ -20,7 +20,7 @@ function PerformSearch()
 	if ( searchText.length < 3 && searchText.length > 0 )
 	{
 		$( 'appHubsSearchText' ).focus();
-		alert( '#AppHubHome_SearchTextTooShort' );
+		alert( 'The search text must be at least 3 characters long.' );
 		$( 'appHubsSearchText' ).value = searchText;
 		return;
 	}

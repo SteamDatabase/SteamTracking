@@ -60,19 +60,19 @@ function RenderGameForumList( listType, page, bLoggedIn )
 	switch ( listType )
 	{
 		case 'popular':
-			text = "#AppHubs_Filter_Popular";
+			text = "Most Popular (this week)";
 			break;
 		case 'recent':
 			text = "Your Recently Played Games";
 			break;
 		case 'allowned':
-			text = "#AppHubs_Filter_MyGames";
+			text = "My Games";
 			break;
 		case 'wishlist':
-			text = "#AppHubs_Filter_Wishlist";
+			text = "Wishlist";
 			break;
 		case 'recommended':
-			text = "#AppHubs_Filter_Recommended";
+			text = "Recommended";
 			break;
 		case 'visited':
 			text = "Your Recently Viewed Hubs";

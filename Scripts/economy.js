@@ -236,34 +236,34 @@ function HideTagFilters()
 
 var kStandardTag_Tradable =
 {
-	name: '#Economy_Tag_Tradable',
+	name: 'Tradable',
 	internal_name: "tradable",
 	category: "misc",
-	category_name: '#Economy_Category_Misc'
+	category_name: 'Misc'
 };
 
 var kStandardTag_Untradable =
 {
-	name: '#Economy_Tag_Untradable',
+	name: 'Not Tradable',
 	internal_name: "untradable",
 	category: "misc",
-	category_name: '#Economy_Category_Misc'
+	category_name: 'Misc'
 };
 
 var kStandardTag_Marketable =
 {
-	name: '#Economy_Tag_Marketable',
+	name: 'Marketable',
 	internal_name: "marketable",
 	category: "misc",
-	category_name: '#Economy_Category_Misc'
+	category_name: 'Misc'
 };
 
 var kStandardTag_Unmarketable =
 {
-	name: '#Economy_Tag_Unmarketable',
+	name: 'Not Marketable',
 	internal_name: "unmarketable",
 	category: "misc",
-	category_name: '#Economy_Category_Misc'
+	category_name: 'Misc'
 };
 
 var CInventory = Class.create( {
@@ -758,7 +758,7 @@ var CInventory = Class.create( {
 		var elItem = new Element( 'div', {'class': 'item unknownItem' } );
 		elItem.identify();
 		elItem.update( '<img src="http://cdn.steamcommunity.com/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '">' );
-		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: '#Economy_Trade_UnknownItemName ' + itemid, descriptions: [], fraudwarnings: [ '#Economy_Trade_UnknownItemDesc' ] };
+		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
 
 		if ( g_bIsTrading )
 		{
@@ -1403,7 +1403,7 @@ var CUser = Class.create( {
 				elInventory.hide();
 				$('inventories').insert( elInventory );
 
-				var templAllContextName = new Template( '#Economy_AllGameNameItems');
+				var templAllContextName = new Template( 'All #{appname} Items');
 
 				var rgContext = {
 					id: APPWIDE_CONTEXT,
@@ -1980,7 +1980,7 @@ function CancelItemHover( elItem )
 var iActiveSelectView = 0;
 
 
-var HoverCurrencyFromTemplate = new Template( '#Economy_Currency_CurrencyFromContext');
+var HoverCurrencyFromTemplate = new Template( '<span style="#{currencystyle}">#{amount}</span> from #{contextname}');
 
 function GetNameForItem( item )
 {
@@ -2072,7 +2072,7 @@ function BuildHover( prefix, item, owner )
 			if ( g_bIsInventoryPage && item.is_currency )
 			{
 				var warning = new Element( 'div' );
-				warning.update( '#Economy_Currency_PrivacyNotice' );
+				warning.update( 'This amount is private and shown only to you.' );
 				elFraudWarnings.appendChild( warning );
 			}
 			elFraudWarnings.show();
@@ -2279,7 +2279,7 @@ function PopulateMarketActions( elActions, item )
 
 	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
 	{
-		elActions.appendChild( CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', '#Economy_Market_Action_Sell' ) );
+		elActions.appendChild( CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' ) );
 	}
 		else
 	{
@@ -2296,8 +2296,8 @@ function SellCurrentSelection()
 	if ( g_rgWalletInfo['wallet_currency'] == 0 )
 	{
 		MessageDialog.Show(
-			'Economy_Market_SellDialog_Error_NoWallet',
-			'Economy_Market_SellDialog_Error_NoWallet_DialogTitle'
+			'You cannot sell items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+			'Cannot sell item'
 		);
 	}
 	else
@@ -2553,7 +2553,7 @@ SellItemDialog = {
 
 				if ( !$('market_sell_dialog_accept_ssa') || !$('market_sell_dialog_accept_ssa').checked )
 		{
-			this.DisplayError( '#Economy_Market_SellDialog_SSA_Fail' );
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to sell this item.' );
 			return;
 		}
 
@@ -2576,7 +2576,7 @@ SellItemDialog = {
 				$('market_sell_currency_input').style.borderColor = 'red';
 			}
 
-			var strError = ' #Economy_Market_SellDialog_Error_PriceExceedsMaximum'
+			var strError = ' The price entered exceeds the maximum price of %1$s.'
 					.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_trade_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 			this.DisplayError( strError );
 			return;
@@ -2585,7 +2585,7 @@ SellItemDialog = {
 		if ( price <= 0 || buyerPrice <= 0 )
 		{
 			$('market_sell_currency_input').style.borderColor = 'red';
-			this.DisplayError( '#Economy_Market_SellDialog_Error_InvalidPrice' );
+			this.DisplayError( 'You must enter a valid price.' );
 			return;
 		}
 
@@ -2600,7 +2600,7 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').style.borderColor = '';
 		$('market_sell_dialog_error').hide();
 
-		$('market_sell_dialog_title').update( '#Economy_Market_SellDialog_Confirm_Title' );
+		$('market_sell_dialog_title').update( 'Confirm sell price' );
 		$('market_sell_dialog_background').fade({ duration: 0.25 });
 		new Effect.BlindDown( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
@@ -2694,7 +2694,7 @@ SellItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '#Economy_Market_SellDialog_Error_ServerGeneric' );
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
 		}
 	},
 
@@ -2707,7 +2707,7 @@ SellItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '#Economy_Market_SellDialog_Error_ServerGeneric' );
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
 		}
 	},
 
@@ -3503,7 +3503,7 @@ function SelectItemDialogOnSelect()
 	}
 	else
 	{
-		alert( '#Economy_Inventory_ErrorSelectingItem' );
+		alert( 'There was a problem saving your selection, please try again later.' );
 	}
 }
 

@@ -20,7 +20,7 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 			FinishCraft();
 		}).fail( function() {
 			g_CraftModal && g_CraftModal.Dismiss();
-			ShowAlertDialog( '#Profile_BadgeCrafting_CraftBadge', 'crafting failed' );
+			ShowAlertDialog( 'Craft badge', 'crafting failed' );
 		});
 
 
@@ -28,7 +28,7 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 	var $Crafter = $J('#badge_crafter');
 	var $Throbber = $J('#badge_craft_loop_throbber');
 
-	g_CraftModal = ShowDialog( '#Profile_BadgeCrafting_CraftBadge', $Crafter, { bExplicitDismissalOnly: true } );
+	g_CraftModal = ShowDialog( 'Craft badge', $Crafter, { bExplicitDismissalOnly: true } );
 
 	$Crafter.show();
 	g_CraftModal.GetContent().addClass( 'badge_craft_modal' );
@@ -186,7 +186,7 @@ function BuildLevelUpReward( rgRewardData )
 	var $Level = $J('<div/>', {'class': rgRewardData.level_css_class } );
 	$Level.append( $J('<span/>', {'class': 'friendPlayerLevelNum' }).text( rgRewardData.level ) );
 
-	var strDescription = '#Profile_BadgeCrafting_Reward_LevelUp'.replace( /%s/, rgRewardData.level );
+	var strDescription = 'Level %s achieved'.replace( /%s/, rgRewardData.level );
 
 	return $Reward.append( $Level, strDescription );
 }

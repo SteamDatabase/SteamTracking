@@ -32,7 +32,7 @@ function UnpackGift( gidGift )
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onSuccess: function( transport ) { OnValidateUnpackResults( gidGift, transport ); },
-		onFailure: function( transport ) { ShowGiftModalError( '#Gifts_UnpackGift_GenericError' ); }
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
 	} );
 }
 
@@ -66,16 +66,16 @@ function DoUnpackGift( gidGift, packageid, packagename )
 function DeleteGift( gidGift )
 {
 	ShowConfirmDialog(
-			'#Economy_delete_gift_title',
-			'#Economy_delete_gift_confirmation',
-			'#Economy_delete_gift_title',
+			'Delete gift',
+			'Are you sure you want to permanently delete this gift?',
+			'Delete gift',
 			'Cancel'
 	).done( function() {
 		new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + 'delete', {
 			method: 'post',
 			parameters: { sessionid: g_sessionID },
 			onSuccess: function( transport ) { OnDeleteGiftResults( gidGift, transport ); },
-			onFailure: function( transport ) { ShowGiftModalError( '#Gifts_DeleteGift_GenericError' ); }
+			onFailure: function( transport ) { ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' ); }
 		} );
 	} );
 }
@@ -88,7 +88,7 @@ function OnDeleteGiftResults( gidGift, transport )
 	}
 	else
 	{
-		ShowGiftModalError( '#Gifts_DeleteGift_GenericError' );
+		ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' );
 	}
 }
 
@@ -152,7 +152,7 @@ function OnAcceptGiftResults( gidGift, bUnpack, transport )
 function ShowUnpackError( gidGift, bUnpack, transport )
 {
 	var response = transport.responseJSON;
-	var strError = bUnpack ? '#Gifts_UnpackGift_GenericError' : '#Gifts_AcceptGift_GenericError';
+	var strError = bUnpack ? 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' : 'Unable to accept gift.  The gift may have already been redeemed.  Please try again later.';
 	var strDetails = false;
 	if ( response && response.error )
 	{
@@ -160,7 +160,7 @@ function ShowUnpackError( gidGift, bUnpack, transport )
 	}
 	if ( response && response.accepted )
 	{
-		strDetails = '#Gifts_AcceptGift_GenericErrorWasAccepted';
+		strDetails = 'This game has not been added to your game library.  It will be stored in your inventory, to be traded or added to library later.';
 		if ( response.gidgiftnew )
 			ShowAcceptedGiftMessage( gidGift, response.gidgiftnew );
 	}
@@ -218,7 +218,7 @@ function OnDeclineGiftResults( gidGift, transport )
 	else
 	{
 		ShowDefaultGiftOptions( gidGift );
-		ShowGiftModalError( '#Gifts_DeclineGift_GenericError' );
+		ShowGiftModalError( 'Unable to decline gift.  The gift may have already been declined or redeemed.' );
 	}
 
 	// reset the buttons in the decline gift popup

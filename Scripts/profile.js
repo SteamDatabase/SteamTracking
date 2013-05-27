@@ -94,22 +94,22 @@ function RemoveFriend()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( '#Profile_RemoveFriendShort',
+	ShowConfirmDialog( 'Remove friend',
 		'Are you sure you want to remove %s from your friend list?'.replace( /%s/, strPersonaName ),
-		'#Profile_RemoveFriendShort'
+		'Remove friend'
 	).done( function() {
 		$J.post(
 			'http://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
-			ShowAlertDialog( '#Profile_RemoveFriendShort',
+			ShowAlertDialog( 'Remove friend',
 				'%s has been removed from your friends list.'.replace( /%s/, strPersonaName )
 			).done( function() {
 				// reload the page when they click OK, so we update friend state
 				window.location.reload();
 			} );
 		} ).fail( function() {
-			ShowAlertDialog( '#Profile_RemoveFriendShort',
+			ShowAlertDialog( 'Remove friend',
 				'Error processing your request. Please try again.'
 			);
 		} );
@@ -190,7 +190,7 @@ function InitProfileSummary( strSummary )
 
 function ShowFriendsInCommon( unAccountIDTarget )
 {
-	ShowPlayerList( '#Profile_FriendsInCommonList', 'friendsincommon', unAccountIDTarget );
+	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
 }
 
 function ShowFriendsInGroup( unClanIDTarget )

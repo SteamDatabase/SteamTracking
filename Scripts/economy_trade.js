@@ -20,7 +20,7 @@ function BeginTrading()
 	{
 		var elEvent = new Element( 'div', {'class': 'logevent' } );
 		elEvent.update(
-				'#Economy_Trade_Log_TheyAreOnProbationAndTheyMayNotBeTrustworthy'
+				'<%1$s>Warning:<%2$s> %3$s was recently trade banned and is currently on probation. %4$s may not be trustworthy.'
 					.replace( '%1$s', 'span class="warning"' )
 					.replace( '%2$s', '/span' )
 					.replace( '%3$s', g_strTradePartnerPersonaName )
@@ -125,7 +125,7 @@ var UserThem = Object.extend( new CUser(), {
 });
 
 var templActiveApp = new Template( '<img src="#{icon}"> #{name}' );
-var templAllContextName = new Template( '#Economy_AllGameNameItems');
+var templAllContextName = new Template( 'All #{appname} Items');
 
 function TradePageSelectInventory( appid, contextid, bLoadCompleted )
 {
@@ -1101,12 +1101,12 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			{
 				if ( nNumBadItems == 1 )
 				{
-					strEvent = '#Economy_Trade_Log_CantReceiveOneItemWithName'
+					strEvent = 'You are not allowed to receive the item "%1$s."'
 							.replace( '%1$s', item.name );
 				}
 				else
 				{
-					strEvent = '#Economy_Trade_Log_CantReceiveSomeItemsWithName'
+					strEvent = 'You are not allowed to receive %1$s of the items being offered including "%2$s."'
 							.replace( '%1$s', nNumBadItems )
 							.replace( '%2$s', item.name );
 				}
@@ -1115,11 +1115,11 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			{
 				if ( nNumBadItems == 1 )
 				{
-					strEvent = '#Economy_Trade_Log_CantReceiveOneItem';
+					strEvent = 'You are not allowed to receive one of the items being offered.';
 				}
 				else
 				{
-					strEvent = '#Economy_Trade_Log_CantReceiveSomeItems'
+					strEvent = 'You are not allowed to receive %1$s of the items being offered.'
 							.replace( '%1$s', nNumBadItems );
 				}
 			}
@@ -1127,7 +1127,7 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			if ( nFullInventoryAppId )
 			{
 				var rgAppData = g_rgAppContextData[nFullInventoryAppId];
-				var strEventAppend = '#Economy_Trade_Log_InventoryForGameIsFull'
+				var strEventAppend = 'Your inventory for %1$s is full.'
 						.replace( '%1$s', rgAppData.name );
 
 				strEvent = strEvent + ' ' + strEventAppend;
@@ -1157,18 +1157,18 @@ function HighlightNewlyAddedItem( elItem )
  *		Trade events log
  */
 
-var EventLogAddYouTemplate = new Template( '#Economy_Trade_Log_YouAddedItem');
-var EventLogAddThemTemplate = new Template( '#Economy_Trade_Log_TheyAddedItem');
-var EventLogRemoveYouTemplate = new Template( '#Economy_Trade_Log_YouRemovedItem');
-var EventLogRemoveThemTemplate = new Template( '#Economy_Trade_Log_TheyRemovedItem');
-var EventLogReadyYouTemplate = new Template( '#Economy_Trade_Log_YouReady' );
-var EventLogReadyThemTemplate = new Template( '#Economy_Trade_Log_TheyReady');
-var EventLogUnReadyYouTemplate = new Template( '#Economy_Trade_Log_YouUnReady' );
-var EventLogUnReadyThemTemplate = new Template( '#Economy_Trade_Log_TheyUnReady');
-var EventLogIncreaseCurrencyYouTemplate = new Template( '#Economy_Trade_Log_YouIncreaseCurrency');
-var EventLogDecreaseCurrencyYouTemplate = new Template( '#Economy_Trade_Log_YouDecreaseCurrency');
-var EventLogIncreaseCurrencyThemTemplate = new Template( '#Economy_Trade_Log_TheyIncreaseCurrency');
-var EventLogDecreaseCurrencyThemTemplate = new Template( '#Economy_Trade_Log_TheyDecreaseCurrency');
+var EventLogAddYouTemplate = new Template( 'You added <span class="item" style="#{itemstyle}">#{itemname}</span>');
+var EventLogAddThemTemplate = new Template( '#{theirname} added <span class="item" style="#{itemstyle}">#{itemname}</span>');
+var EventLogRemoveYouTemplate = new Template( 'You removed <span class="item" style="#{itemstyle}">#{itemname}</span>');
+var EventLogRemoveThemTemplate = new Template( '#{theirname} removed <span class="item" style="#{itemstyle}">#{itemname}</span>');
+var EventLogReadyYouTemplate = new Template( 'You are ready' );
+var EventLogReadyThemTemplate = new Template( '#{theirname} is ready');
+var EventLogUnReadyYouTemplate = new Template( 'You are not ready' );
+var EventLogUnReadyThemTemplate = new Template( '#{theirname} is not ready');
+var EventLogIncreaseCurrencyYouTemplate = new Template( 'You increased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
+var EventLogDecreaseCurrencyYouTemplate = new Template( 'You decreased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
+var EventLogIncreaseCurrencyThemTemplate = new Template( '#{theirname} increased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
+var EventLogDecreaseCurrencyThemTemplate = new Template( '#{theirname} decreased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
 
 function UpdateEventLog( events )
 {
@@ -1203,7 +1203,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var itemname = ( item ) ? item.name : '#Economy_Trade_UnknownItemName';
+			var itemname = ( item ) ? item.name : 'Unknown Item';
 			var itemstyle = ( item && item.name_color ) ? 'color: #' + item.name_color + ';' : '';
 
 			strEvent = template.evaluate( { theirname: g_strTradePartnerPersonaName, itemname: itemname, itemstyle: itemstyle } );
@@ -1253,7 +1253,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var currencyname = ( currency ) ? currency.name : '#Economy_Trade_UnknownItemName';
+			var currencyname = ( currency ) ? currency.name : 'Unknown Item';
 
 			var formatFunc;
 			if ( CurrencyIsWalletFunds( currency ) )
@@ -1275,7 +1275,7 @@ function UpdateEventLog( events )
 					if ( g_bWalletBalanceWouldBeOverMax )
 					{
 						strAfterEvent =
-							'#Economy_WalletTrading_Error_CantAcceptTheirOffer'
+							'<%1$s>Error:<%2$s> You can\'t accept %3$s\'s offer of %4$s. You currently have %5$s in your Steam Wallet, but this offer would put you over the maximum of %6$s.'
 								.replace( '%1$s', 'span class="warning"' )
 								.replace( '%2$s', '/span' )
 								.replace( '%3$s', g_strTradePartnerPersonaName )
@@ -1291,7 +1291,7 @@ function UpdateEventLog( events )
 				}
 
 				// Don't show a currency name unless we're changing value ( ex: "increased the amount of Wallet Funds to $1.23" )
-				currencyname = bAmountChanged ? '#Economy_WalletCurrency_WalletFunds' : '';
+				currencyname = bAmountChanged ? 'Wallet Funds' : '';
 
 				formatFunc = function( x ) {
 					var feeInfo = CalculateFeeAmount( x );
@@ -1446,7 +1446,7 @@ function UpdateReadyButtons()
 			var strMessage;
 			if ( badOffer )
 			{
-				strMessage = '#Economy_Trade_CantReadyDueToOffer';
+				strMessage = 'You can\'t accept the offer. See chat.';
 			}
 			else
 			{
@@ -1486,7 +1486,7 @@ function UpdateReadyButtons()
 
 	if ( g_bConfirmPending )
 	{
-		$('trade_confirm_message').update( 'Economy_Trade_ConfirmWaitingForConfirm' );
+		$('trade_confirm_message').update( 'Waiting for the other party to confirm...' );
 		$('trade_confirmbtn').hide();
 		$('trade_confirm_throbber').show();
 	}
@@ -1497,12 +1497,12 @@ function UpdateReadyButtons()
 		if ( UserYou.bReady && UserThem.bReady )
 		{
 			$('trade_confirmbtn').addClassName( 'active' );
-			$('trade_confirm_message').update( '#Economy_Trade_ConfirmReady' );
+			$('trade_confirm_message').update( 'Both parties are ready.' );
 		}
 		else
 		{
 			$('trade_confirmbtn').removeClassName( 'active' );
-			$('trade_confirm_message').update( '#Economy_Trade_ConfirmWaitingForReady' );
+			$('trade_confirm_message').update( 'Waiting for both parties to check the ready box.' );
 		}
 	}
 }
@@ -1743,7 +1743,7 @@ CurrencyDialog = {
 		var inputValue = (this.m_bIsWallet ? $('trade_currency_input').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( ',', '.' ).replace( '.--', '.00') : $('trade_currency_input').value );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
-			this.DisplayError( '#Economy_Currency_Error_EnterCurrency' );
+			this.DisplayError( 'Please enter a valid amount above.' );
 			return;
 		}
 
@@ -1757,7 +1757,7 @@ CurrencyDialog = {
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( '#Economy_Currency_Error_NotEnoughCurrency' );
+			this.DisplayError( 'You do not have enough ' + this.m_currency.name + '.' );
 			return;
 		}
 
@@ -2045,7 +2045,7 @@ CurrencyConversionDialog = {
 		var theirInputValueAsInt = Math.max( Math.round( isNaN(theirInputValueAsFloat) ? 0 : theirInputValueAsFloat ), 0 );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
-			this.DisplayError( '#Economy_Currency_Error_EnterCurrency' );
+			this.DisplayError( 'Please enter a valid amount above.' );
 			return;
 		}
 
@@ -2054,7 +2054,7 @@ CurrencyConversionDialog = {
 		if ( theirInputValue.match( /^[0-9,.]*$/ ) && ConvertToTheirCurrency( xferAmount ) != theirInputValueAsInt )
 		{
 			bHadWarning = true;
-			strWarning = '#Economy_Currency_CannotSendAmountToUser'
+			strWarning = 'Due to currency conversion, you cannot send %1$s to %2$s. The amount being sent has been changed to %3$s and %4$s will receive %5$s.'
 					.replace( '%1$s', v_currencyformat( theirInputValueAsInt, GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) )
 					.replace( '%2$s', g_strTradePartnerPersonaName )
 					.replace( '%3$s', v_currencyformat( xferAmount, this.m_currency.name ) )
@@ -2068,13 +2068,13 @@ CurrencyConversionDialog = {
 
 		if ( bHadWarning && g_rgWalletInfo['wallet_fee'] )
 		{
-			strWarning += ' #Economy_Currency_ImpossibleAmountFee'
+			strWarning += ' After the transaction fee, you will be charged %1$s.'
 					.replace( '%1$s', v_currencyformat( xferAmount, this.m_currency.name ) );
 		}
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( '#Economy_Currency_Error_NotEnoughCurrency' );
+			this.DisplayError( 'You do not have enough ' + this.m_currency.name + '.' );
 			return;
 		}
 

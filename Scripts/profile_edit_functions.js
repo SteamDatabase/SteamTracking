@@ -150,21 +150,21 @@ function PreviewShowcaseConfig( eShowcase, rgSlotData )
 	.done( function( data ) {
 		$J(g_rgShowcasePreviews[ eShowcase ]).html( data );
 	} ).fail( function() {
-		ShowAlertDialog( 'Error', '#Error_ErrorCommunicatingWithNetwork');
+		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.');
 	} );
 }
 
 function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 {
 	var $DialogContent = $J('<div/>', {'class': 'newmodal_content_innerbg' });
-	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( '#Profile_Showcase_GameCollector_SelectOneOfYourGames' ) );
-	$DialogContent.append( $J('<p/>', {'class': '' }).text( '#Profile_Showcase_GameCollector_EnterGameName' ) );
-	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: '#Group_AssociateGame_SearchGames' } );
+	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
+	$DialogContent.append( $J('<p/>', {'class': '' }).text( 'Enter the game\'s name:' ) );
+	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Search games' } );
 	$Input.attr( 'size', '45' );	/* jquery constructor ignores size for some reason, needs to be set here */
 	$DialogContent.append( $Input );
 	$Input.wrap( $J('<div/>', {'class': 'gray_bevel for_text_input' } ) );
 
-	var Modal = ShowDialog( '#Profile_Showcase_GameCollector_SelectFeaturedGame', $DialogContent );
+	var Modal = ShowDialog( 'Select Featured Game', $DialogContent );
 	$Input.focus();
 
 	if ( !fnOnChange )
@@ -188,7 +188,7 @@ function SetShowcaseGame( elSlot, eShowcase, iSlot, game )
 				fnOnChange( eShowcase, elSlot, game );
 
 	}).fail( function() {
-			ShowAlertDialog( '#Profile_Showcase_GameCollector_SelectFeaturedGame', '#Profile_Showcase_GameCollector_FailedToSetGame' );
+			ShowAlertDialog( 'Select Featured Game', 'There was an error saving the featured game configuration.  Please try again later.' );
 	});
 }
 
@@ -209,7 +209,7 @@ function FavoriteGameShowcaseOnGameChange( elSlot, eShowcase, iSlot, game )
 
 function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 {
-	var Modal = ShowDialog( '#Profile_Showcase_Recommendation_SelectAGame', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a Game You\'ve Recommended', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	$J.get( g_rgProfileData['url'] + 'ajaxgetrecommendedgames', function(html) {
@@ -241,7 +241,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 		url += '&tradable_only=1';
 
 	g_bModalModifyAnchorTargets = false;
-	ShowModalContent( url, '#Profile_Showcase_ItemShowcase_SelectAnItem', url, false );
+	ShowModalContent( url, 'Select an item to feature on your profile', url, false );
 	
 	// the inventory picker dialog will call OnItemSelected when the user chooses an item in the dialog
 	window.OnItemSelected = function( item ) {
@@ -268,7 +268,7 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			//$J(elSlot).find('a').attr( 'href', 'http://steamcommunity.com/app/' + game.appid);
 			$J(elSlot).removeClass( 'openslot' );
 		}).fail( function() {
-			ShowAlertDialog( '#Profile_Showcase_ItemShowcase_SelectAnItem', '#Profile_Showcase_ItemShowcase_FailedToSetItem' );
+			ShowAlertDialog( 'Select an item to feature on your profile', 'There was an error saving the featured item configuration.  Please try again later.' );
 		});
 	}
 }
@@ -308,7 +308,7 @@ function LoadPlayerGroupList( fnCallback )
 
 function ShowcaseGroupPicker( elSlot, eShowcase, iSlot, fnOnChange )
 {
-	var Modal = ShowDialog( '#Profile_Showcase_FavoriteGroup_SelectFeaturedGruop', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Select a Group to Feature', '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	LoadPlayerGroupList( function( html ) {
@@ -373,7 +373,7 @@ var g_rgBackgroundAppNames;
 function InitBackgrounds( rgBackgroundData, rgBackgroundAppData )
 {
 	g_rgBackgroundData = rgBackgroundData;
-	g_rgBackgroundData.unshift( { name: '#Profile_Edit_DefaultBlankBackground', is_blank_background: true } );
+	g_rgBackgroundData.unshift( { name: 'Default blank background', is_blank_background: true } );
 	g_rgBackgroundAppNames = rgBackgroundAppData;
 }
 
@@ -421,7 +421,7 @@ function PresentBackgroundSelectDialog()
 		$Row.append( $J('<div/>', {style: 'clear: both;' } ) );
 	}
 
-	Modal = ShowDialog( '#Profile_Edit_ChooseBackground', $Content );
+	Modal = ShowDialog( 'Choose profile background', $Content );
 }
 
 function SelectBackground( Modal, Background )
@@ -455,7 +455,7 @@ function InitBadges( rgBadges )
 	g_rgBadgeData.unshift( {
 		badgeid: '',
 		communityitemid: '',
-		name: '#Profile_Edit_NoFeaturedBadge',
+		name: '<No Featured Badge>',
 		icon: 'http://cdn.steamcommunity.com/public/images/trans.gif',
 		xp: '',
 		is_blank_badge: true
@@ -482,7 +482,7 @@ function PresentFavoriteBadgeDialog()
 		// use a factory here so we get the present value of Background, but capture the local Modal (not set yet)
 		$Row.click( (function( _Badge ) { return function() { Modal.Dismiss(); SetCurrentBadge( _Badge ); }; } )(Badge) );
 	}
-	Modal = ShowDialog( '#Profile_Edit_ChooseFavoriteBadge', $Content );
+	Modal = ShowDialog( 'Choose a badge to feature', $Content );
 }
 
 function SetCurrentBadge( Badge )
@@ -621,29 +621,29 @@ function validateFields()
 	bOk = true;
 	if ( document.getElementById( 'personaName' ) && document.getElementById( 'personaName' ).value.length < 2 )
 	{
-		alert( '#Profile_ProfileNameMinLength' );
+		alert( 'Your Profile Name must be at least 2 characters long.' );
 		bOk = false;
 	}
 	if ( document.getElementById( 'headline' ) && document.getElementById( 'headline' ).value.length > 255 )
 	{
-		alert( '#Error_HeadlineMaxLength' );
+		alert( 'There is a maximum length of 255 characters for headlines. Please shorten it and try again.' );
 		bOk = false;
 	}
 	if ( document.getElementById( 'summary' ) && document.getElementById( 'summary' ).value.length > 3000 )
 	{
-		alert( '#Error_SummaryMaxLength' );
+		alert( 'There is a maximum length of 3000 characters for summaries. Please shorten it and try again.' );
 		bOk = false;
 	}
 	for( x=1; x <= 3; x++ )
 	{
 		if ( document.getElementById( 'weblink_' + x + '_title' ) && document.getElementById( 'weblink_' + x + '_title' ).value.length > 128 )
 		{
-			alert( '#Error_WeblinkTitleLength' );
+			alert( 'Website link titles can only be 128 characters in length' );
 			bOk = false;
 		}
 		if ( document.getElementById( 'weblink_' + x + '_url' ) && document.getElementById( 'weblink_' + x + '_url' ).value.length > 128 )
 		{
-			alert( '#Error_WeblinkURLLength' );
+			alert( 'Website URLs can only be 128 characters in length' );
 			bOk = false;
 		}
 	}
@@ -744,7 +744,7 @@ function receiveFieldSave()
 				}
 				else
 				{
-					alert( "#Error_ErrorSavingChanges" );
+					alert( "There was an error saving your changes.\\n\\nError:\\n&quot;+results+&quot;\\n\\nPlease address the error and try again." );
 					addClass( dataField.id, 'changed' );
 				}
 				updateInProgress = false;
@@ -786,7 +786,7 @@ function receiveGroupDetails()
 			}
 			else
 			{
-				alert( "#Error_ErrorWithGroupSelection" );
+				alert( "There was an error with your group selection.\\n\\nError:\\n&quot;+results+&quot;\\n\\nPlease address the error and try again." );
 			}
 			currentDisabled['primaryGroup'] = false;
 			groupList.focus();

@@ -49,39 +49,39 @@ function friendAction( action )
 	count = getSelectedFriendsCount();
 	if ( count < 1 )
 	{
-		alert( "#BulkActions_NoFriendsSelected" );
+		alert( "You have not selected any friends." );
 		return;
 	}
-	msg = "#BulkActions_FriendsSelected " + count + "\n\n";
+	msg = "Friends selected: " + count + "\n\n";
 	if ( action == 'ignore' || action == 'remove' || action == 'addfriend' )
 	{
 		if ( action == 'ignore' )
 		{
 			if ( count == 1 )
 			{
-				msg += "#BulkActions_BlockMsgSingular";
+				msg += "You will no longer be able to send or receive messages or invites with this player.";
 			}
 			else
 			{
-				msg += "#BulkActions_BlockMsgPlural";
+				msg += "You will no longer be able to send or receive messages or invites with these players.";
 			}
 		}
 		else if ( action == 'remove' )
 		{
 			if ( count == 1 )
 			{
-				msg += "#BulkActions_RemoveMsgSingular";
+				msg += "This player will no longer appear in your friends list and you will not be able to communicate with them.";
 			}
 			else
 			{
-				msg += "#BulkActions_RemoveMsgPlural";
+				msg += "These players will no longer appear in your friends list and you will not be able to communicate with them.";
 			}
 		}
 		else if ( action == 'addfriend' )
 		{
-				msg += "#Profile_AddFriend";
+				msg += "Add to your friends list";
 		}	
-		msg += "\n\n" + "#BulkActions_Confirm";
+		msg += "\n\n" + "Press OK to complete this action or Cancel to go back";
 		if ( !window.confirm( msg ) )
 		{
 			return;
@@ -184,16 +184,16 @@ function filterCoplay( appid )
 	actionInput.value = appid;
 	if ( appid < 1 )
 	{
-		alert( "#BulkActions_NoFriendsSelected" );
+		alert( "You have not selected any friends." );
 		return;
 	}
 	msg = "#BulkActions_FilterCoplayByAppID " + appid + "\n\n";
 	if ( appid > 0 )
 	{
 
-		msg += "#BulkActions_BlockMsgSingular";
+		msg += "You will no longer be able to send or receive messages or invites with this player.";
 
-		msg += "\n\n" + "#BulkActions_Confirm";
+		msg += "\n\n" + "Press OK to complete this action or Cancel to go back";
 		if ( !window.confirm( msg ) )
 		{
 			return;

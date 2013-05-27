@@ -108,7 +108,7 @@ RemoveListingDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( '#Economy_Market_RemoveListingDialog_Error_ServerGeneric' );
+			this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
 		}
 	},
 
@@ -126,7 +126,7 @@ RemoveListingDialog = {
 	
 	OnFailure: function( transport ) {
 		this.OnFailureEffects();
-		this.DisplayError( '#Economy_Market_RemoveListingDialog_Error_ServerGeneric' );
+		this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
 	},
 
 	OnDocumentKeyPress: function( event ) {
@@ -228,7 +228,7 @@ BuyItemDialog = {
 			{
 				// No app data for some reason
 				// Say "Game fee"
-				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( '#Greenlight_Submit_Type_Game' );
+				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( 'Game' );
 			}
 			$('market_buynow_dialog_totals_transactionfee').update( v_currencyformat( nFeeSteam, sWalletCurrencyCode ) );
 			$('market_buynow_dialog_totals_transactionfee_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100 ).toFixed(1) );
@@ -341,7 +341,7 @@ BuyItemDialog = {
 
 				if ( !$('market_buynow_dialog_accept_ssa') || !$('market_buynow_dialog_accept_ssa').checked )
 		{
-			this.DisplayError( '#Economy_Market_BuyDialog_SSA_Fail' );
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 			return;
 		}
 
@@ -389,7 +389,7 @@ BuyItemDialog = {
 		var elMessage = new Element( 'div', {'class': 'market_listing_purchase_message' } );
 		var sItemNameSpanId = this.m_sElementPrefix + '_purchased_' + this.m_ulListingId;
 		elMessage.update(
-				'#Economy_Market_YouHaveJustPurchasedThisItem'
+				'You purchased this <%1$s></%2$s>. View it in your <%3$s>inventory</%4$s>.'
 					.replace( '%1$s', 'span id="' + sItemNameSpanId + '"' )
 					.replace( '%2$s', 'span' )
 					.replace( '%3$s', 'a href="http://steamcommunity.com/my/inventory/"' )
@@ -418,7 +418,7 @@ BuyItemDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( '#Economy_Market_BuyDialog_Error_ServerGeneric' );
+			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
 		}
 	},
 
@@ -442,7 +442,7 @@ BuyItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '#Economy_Market_BuyDialog_Error_ServerGeneric' );
+			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
 		}
 	},
 

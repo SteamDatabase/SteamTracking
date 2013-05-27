@@ -108,7 +108,7 @@ function saveField(e, fId)
 		{
 			if(!fId)
 			{
-				el.value = '#Profile_SavingText';
+				el.value = 'Saving..';
 				el.className = el.className.replace( /dynSave/, 'dynSaveDisabled' );
 			}
 			g_rgCurrentDisabled[dataField.id] = true;
@@ -194,7 +194,7 @@ function receiveFieldSave()
 			}
 			else
 			{
-				alert( "#Error_ErrorSavingChanges" );
+				alert( "There was an error saving your changes.\n\nError:\n"+results+"\n\nPlease address the error and try again." );
 				removeClass( fieldId, 'disabled' );
 			}
 			updateInProgress = false;
@@ -451,24 +451,24 @@ function validateFields()
 	var bOk = true;
 	if ( document.getElementById( 'headline' ).value.length > 255 )
 	{
-		alert( "#Error_HeadlineMaxLength" );
+		alert( "There is a maximum length of 255 characters for headlines. Please shorten it and try again." );
 		bOk = false;
 	}
 	if ( document.getElementById( 'summary' ).value.length > 3000 )
 	{
-		alert( "#Error_SummaryMaxLength" );
+		alert( "There is a maximum length of 3000 characters for summaries. Please shorten it and try again." );
 		bOk = false;
 	}
 	for( x=1; x <= 3; x++ )
 	{
 		if ( document.getElementById( 'weblink_' + x + '_title' ).value.length > 128 )
 		{
-			alert( "#Error_WeblinkTitleLength" );
+			alert( "Website link titles can only be 128 characters in length" );
 			bOk = false;
 		}
 		if ( document.getElementById( 'weblink_' + x + '_url' ).value.length > 128 )
 		{
-			alert( "#Error_WeblinkURLLength" );
+			alert( "Website URLs can only be 128 characters in length" );
 			bOk = false;
 		}
 	}
@@ -562,19 +562,19 @@ function saveEvent()
 {
 	if ( document.getElementById( 'name' ).value.length > 256 )
 	{
-		alert( "#Error_EventNameLength" );
+		alert( "Event names can only be 256 characters in length" );
 	}
 	else if( document.getElementById( 'serverPassword' ).value.length > 256 )
 	{
-		alert( "#Error_EventPasswordLength" );
+		alert( "Server passwords can only be 256 characters in length" );
 	}
 	else if( document.getElementById( 'notes' ).value.length > 1000 )
 	{
-		alert( "#Error_EventNotesLength" );
+		alert( "Event description can only be 1000 characters in length" );
 	}
 	else if ( document.getElementById( 'startDate' ).value == 'MM/DD/YY' && !document.getElementById( 'timeChoiceQuick' ).checked )
 	{
-		alert( "#Error_EventSaveNoDateChosen" );
+		alert( "You must choose a date for the event to occur on." );
 	}
 	else
 	{
@@ -582,7 +582,7 @@ function saveEvent()
 		aID = document.getElementById( 'appID' );
 		if ( eType.options[eType.selectedIndex].value == 'GameEvent' && aID.options[aID.selectedIndex].value == '' )
 		{
-			alert( "#Error_EventSaveNoGameChosen" );
+			alert( "Please select a game for your Game Event." );
 		}
 		else
 		{
@@ -613,7 +613,7 @@ function ShowAdminArea( element )
 
 function ManageMembers_Kick( steamId, memberName )
 {
-	var bAnswer = confirm( '#Group_ConfirmMemberKick' );
+	var bAnswer = confirm( 'You are about to kick ' + memberName + ' from the group.\n\nAre you sure?' );
 	if ( bAnswer )
 	{
 		var form = document.forms['kick_form'];
@@ -632,19 +632,19 @@ function ManageMembers_ToggleRank( steamId, memberName )
 	if ( rankIcon.src.indexOf( 'rankIconMember' ) != -1 )
 	{
 		if ( g_bCanPromoteToModerator )
-			pText = '#Group_PromoteAModerator';
+			pText = 'promote ' + memberName + ' to a Moderator.';
 		else
-			pText = '#Group_PromoteAnOfficer';
+			pText = 'promote ' + memberName + ' to an Officer.';
 	}
 	else if ( rankIcon.src.indexOf( 'rankIconModerator' ) != -1 )
 	{
-		pText = '#Group_PromoteAnOfficer';
+		pText = 'promote ' + memberName + ' to an Officer.';
 	}
 	else
 	{
-		pText = '#Group_DemoteToMember';
+		pText = 'demote ' + memberName + ' to a Member.';
 	}
-	var bAnswer = confirm( '#Group_YouAreAboutToBlank' );
+	var bAnswer = confirm( 'You are about to ' + pText + '\n\nAre you sure?' );
 	if ( bAnswer )
 	{
 		var postData = {
@@ -691,7 +691,7 @@ function ManageMembers_OnRankToggleResponse()
 			}
 			else
 			{
-				alert( '#Error_PromotingOrDemoting' );
+				alert( 'There was an error promoting/demoting that player. \n' + results + '\nPlease address the error and try again.' );
 			}
 		}
 	}
@@ -711,13 +711,13 @@ function togglePOTW( steamId, memberName )
 	var pText;
 	if ( POTWIcon.src.indexOf( 'iconPOTW' ) != -1 )
 	{
-		pText = '#Group_RemovePOTW';
+		pText = 'remove ' + memberName + ' as group Player of the Week.';
 	}
 	else
 	{
-		pText = '#Group_SetPOTW';
+		pText = 'make ' + memberName + ' your new group Player of the Week.';
 	}
-	var bAnswer = confirm( '#Group_YouAreAboutToBlank' );
+	var bAnswer = confirm( 'You are about to ' + pText + '\n\nAre you sure?' );
 	if ( bAnswer )
 	{
 		createQuery2( g_strProcessURL, receivePOTWToggle, { "xml": 1, "action": "potw", "memberId": steamId } );
@@ -750,7 +750,7 @@ function receivePOTWToggle()
 			}
 			else
 			{
-				alert( '#Error_ErrorSettingPOTW' );
+				alert( 'There was an error changing group Player of the Week. \n' + results + '\nPlease address the error and try again.' );
 			}
 		}
 	}
@@ -760,7 +760,7 @@ function receivePOTWToggle()
 
 function ManageBans_Unban( steamId, name )
 {
-	if ( confirm( '#Group_ConfirmChatBanRemove' ) )
+	if ( confirm( 'You are about to remove the ban on \n' + name + '\nAre you sure?' ) )
 	{
 		var postData = {
 			"xml": 1,
@@ -791,7 +791,7 @@ function ManageBans_ReceiveUnban()
 			}
 			else
 			{
-				alert( '#Group_ChatBanRemoveError' + "\n" + results );
+				alert( 'There was a problem processing your unban request:' + "\n" + results );
 			}
 		}
 	}
@@ -893,7 +893,7 @@ function OnForumReorder( elContainer )
 
 function GroupAdmin_DeleteForum( strForumType, gidFeature )
 {
-	if ( confirm( '#Group_Admin_ForumList_DeleteForum_Confirm' ) )
+	if ( confirm( 'Are you sure you want to delete this forum?  This action cannot be undone.' ) )
 	{
 		var elForm = document.forms['delete_forum_form'];
 		elForm.elements['forumtype'].value = strForumType;

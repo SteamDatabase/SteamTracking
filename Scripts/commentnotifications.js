@@ -46,7 +46,7 @@ function MarkAllRead()
 					RefreshNotificationArea();
 				},
 				onFailure: function() {
-					alert( '#Error_ErrorCommunicatingWithNetwork' );
+					alert( 'There was an error communicating with the network. Please try again later.' );
 				},
 				onComplete: function() { g_bMarkAllReadInFlight = false; }
 	} );

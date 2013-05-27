@@ -113,7 +113,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "#Screenshots_DeselectAll";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "Deselect all";
 			$('ScreenshotManagementButtonSelectAll').onclick = DeselectAllScreenshots;
 		}
 	}
@@ -121,7 +121,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "#Screenshots_SelectAll";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "Select all";
 			$('ScreenshotManagementButtonSelectAll').onclick = SelectAllScreenshots;
 		}
 	}
@@ -135,11 +135,11 @@ function ConfirmBatchAction( action ) {
 		$('BatchScreenshotManagementAction').value = action;
 		if ( batchCount == 1 )
 		{
-			countText = '1 ' + '#Screenshots_Screenshot_Singular';
+			countText = '1 ' + 'item';
 		}
 		else
 		{
-			countText = batchCount + ' ' + '#Screenshots_Screenshot_Plural';
+			countText = batchCount + ' ' + 'items';
 		}
 		$$('.ss_batch_count').each( function(c) { c.innerHTML = countText; } );
 		if ( action == 'delete' )
@@ -153,15 +153,15 @@ function ConfirmBatchAction( action ) {
 		{
 			if ( action == 'public' )
 			{
-				$('batchModalPrivacyType').innerHTML = '#Screenshots_AreYouSurePrivacyChange_Public';
+				$('batchModalPrivacyType').innerHTML = 'Public';
 			}
 			else if ( action == 'friendsonly' )
 			{
-				$('batchModalPrivacyType').innerHTML = '#Screenshots_AreYouSurePrivacyChange_FriendsOnly';
+				$('batchModalPrivacyType').innerHTML = 'Friends Only';
 			}
 			else if ( action == 'private' )
 			{
-				$('batchModalPrivacyType').innerHTML = '#Screenshots_AreYouSurePrivacyChange_Private';
+				$('batchModalPrivacyType').innerHTML = 'Private';
 			}
 			$('batchModal_h1_delete').hide();
 			$('modalWarningText_delete').hide();

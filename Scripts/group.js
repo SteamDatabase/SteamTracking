@@ -152,7 +152,7 @@ Event.observe( window, 'load', function() {
 
 function deleteEvent( deleteURL )
 {
-	if ( confirm( '#Events_ConfirmDelete' ) )
+	if ( confirm( 'You are about to delete this event. Are you sure?' ) )
 	{
 		location.href = deleteURL;
 	}
@@ -347,7 +347,7 @@ function validateSearchSubmit()
 
 function ConfirmLeaveGroup( groupName )
 {
-	if ( window.confirm( '#Profile_ConfirmLeaveGroup' ) )
+	if ( window.confirm( 'You are about to leave the group: \n' + groupName + '\nAre you sure?' ) )
 	{
 		$('leave_group_form').submit();
 	}

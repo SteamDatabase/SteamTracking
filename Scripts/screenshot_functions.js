@@ -37,7 +37,7 @@ function _sortScreenshotsByMap( map ) {
 					tab: currentParams.tab
 				};
 
-				var remaindertext = '#Screenshot_Not_Displayed';
+				var remaindertext = '%d more screenshots';
 				remaindertext = remaindertext.replace("%d", remaining);
 				div.insert( '<div class="screenshot_thumb_area morelink"><a href="?' + Object.toQueryString(query) + '">' +  remaindertext + '</a></div>' );
 			}
@@ -133,7 +133,7 @@ function screenshotUpdateCharsLeft() {
 	
 	var charsallowed = 140;
 
-	var text = '#Screenshots_Characters_Left';
+	var text = '%d characters left';
 	if ( $('screenshot_editor_caption_input').value == currentHoverSSCaption )
 	{
 		var charsleft = charsallowed;
@@ -185,7 +185,7 @@ document.observe( 'scroll',
 	} 
 );
 
-var screenshot_editor_caption_input_default_str = '#Screenshots_Add_Caption';
+var screenshot_editor_caption_input_default_str = 'Add a caption';
 var screenshot_editor_locked = false;
 function checkEditorCaptionInput( focusorblur )
 {
@@ -363,7 +363,7 @@ function screenshotUpdateBatchCount() {
 		}
 	});
 	var button = $('button_manage_submit');
-	var linkText = '#Screenshots_Action_Delete';
+	var linkText = 'Delete screenshot';
 	var replaceText = linkText + ( batchCount > 0 ? ' (' + batchCount + ')' : '' );
 	batchCount = checked;
 	var deleteLink = $('button_submit_manage');
@@ -377,11 +377,11 @@ function confirmBatchAction( action )
 		$('batchformaction').value = action;
 		if ( batchCount == 1 )
 		{
-			countText = '1 ' + '#Screenshots_Screenshot_Singular';
+			countText = '1 ' + 'item';
 		}
 		else
 		{
-			countText = batchCount + ' ' + '#Screenshots_Screenshot_Plural';
+			countText = batchCount + ' ' + 'items';
 		}
 		$$('.ss_batch_count').each( function(c) { c.innerHTML = countText; } );
 		if ( action == 'delete' )
@@ -592,7 +592,7 @@ function updateVisibilityOrCaption( visOrCaption )
 			$('ss_vis_friendsonly').checked = false;
 			$('ss_vis_private').checked = false;
 			$('ss_vis_' + privacy).checked = true;
-			pstr = ( privacy == 'public' ? '#Screenshots_Public' : ( privacy == 'friendsonly' ? '#Screenshots_FriendsOnly' : '#Screenshots_Private' ) );
+			pstr = ( privacy == 'public' ? 'Public' : ( privacy == 'friendsonly' ? 'Friends Only' : 'Private' ) );
 			$('current_visibility').innerHTML = pstr;
 			currentSSVisibility = privacy;
 			hideModal('changeVisibilityModal');
