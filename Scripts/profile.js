@@ -94,22 +94,22 @@ function RemoveFriend()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( '#Profile_RemoveFriendShort',
+	ShowConfirmDialog( 'Remove friend',
 		'Are you sure you want to remove %s from your friend list?'.replace( /%s/, strPersonaName ),
-		'#Profile_RemoveFriendShort'
+		'Remove friend'
 	).done( function() {
 		$J.post(
 			'http://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
-			ShowAlertDialog( '#Profile_RemoveFriendShort',
+			ShowAlertDialog( 'Remove friend',
 				'#Profile_Actions_Unfriend_Succeeded'.replace( /%s/, strPersonaName )
 			).done( function() {
 				// reload the page when they click OK, so we update friend state
 				window.location.reload();
 			} );
 		} ).fail( function() {
-			ShowAlertDialog( '#Profile_RemoveFriendShort',
+			ShowAlertDialog( 'Remove friend',
 				'#Error_ErrorProcessing'
 			);
 		} );
@@ -128,18 +128,18 @@ function AddFriend( bRespondingToInvite )
 		if ( !bRespondingToInvite )
 		{
 			ShowAlertDialog( 'Add Friend',
-				'#Profile_FriendInviteSent'
+				'Friend invite sent.'
 			);
 		}
 		else
 		{
-			ShowAlertDialog( '#Profile_ActionAcceptFriend',
+			ShowAlertDialog( 'Accept Friend Request',
 				'Friend request accepted'
 			).done( function() { window.location.reload(); } );
 		}
 	} ).fail( function() {
 		ShowAlertDialog( 'Add Friend',
-			'#Profile_AddFriendError'
+			'Error adding friend. Please try again.'
 		);
 	} );
 }
@@ -190,7 +190,7 @@ function InitProfileSummary( strSummary )
 
 function ShowFriendsInCommon( unAccountIDTarget )
 {
-	ShowPlayerList( '#Profile_FriendsInCommonList', 'friendsincommon', unAccountIDTarget );
+	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
 }
 
 function ShowFriendsInGroup( unClanIDTarget )
@@ -307,14 +307,14 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 
 function ManageFriendsBlock( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'ignore', '#BulkActions_Block',
+	ManageFriendsConfirmBulkAction( $Form, 'ignore', 'Block',
 		'#BulkActions_Block_ConfirmSingular' + ' ' + '#BulkActions_BlockMsgSingular',
 		'#BulkActions_Block_ConfirmPlural' + ' ' + '#BulkActions_BlockMsgPlural');
 }
 
 function ManageFriendsRemove( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'remove', '#BulkActions_RemoveFriend',
+	ManageFriendsConfirmBulkAction( $Form, 'remove', 'Remove Friend',
 		'#BulkActions_Remove_ConfirmSingular' + ' ' + '#BulkActions_RemoveMsgSingular',
 		'#BulkActions_Remove_ConfirmPlural' + ' ' + '#BulkActions_RemoveMsgPlural');
 }
@@ -349,7 +349,7 @@ function ShowAliasPopup(e)
 			aliasContainer.update('');
 
 			if( !Aliases || Aliases.length == 0 )
-				Aliases.push( {newname: "#Profile_NoAliases"} );
+				Aliases.push( {newname: "This user has no known aliases"} );
 
 			for( var x=0; x<Aliases.length; x++ )
 			{

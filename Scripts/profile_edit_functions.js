@@ -159,7 +159,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 	var $DialogContent = $J('<div/>', {'class': 'newmodal_content_innerbg' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( '#Profile_Showcase_GameCollector_SelectOneOfYourGames' ) );
 	$DialogContent.append( $J('<p/>', {'class': '' }).text( '#Profile_Showcase_GameCollector_EnterGameName' ) );
-	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: '#Group_AssociateGame_SearchGames' } );
+	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Search games' } );
 	$Input.attr( 'size', '45' );	/* jquery constructor ignores size for some reason, needs to be set here */
 	$DialogContent.append( $Input );
 	$Input.wrap( $J('<div/>', {'class': 'gray_bevel for_text_input' } ) );

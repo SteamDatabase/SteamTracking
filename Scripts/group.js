@@ -347,7 +347,7 @@ function validateSearchSubmit()
 
 function ConfirmLeaveGroup( groupName )
 {
-	if ( window.confirm( 'You are about to leave the group: \n' + groupName + '\nAre you sure?' ) )
+	if ( window.confirm( '#Profile_ConfirmLeaveGroup' ) )
 	{
 		$('leave_group_form').submit();
 	}

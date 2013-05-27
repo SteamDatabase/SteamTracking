@@ -73,7 +73,7 @@ function checkAbuseSub()
 {
 	if ( !document.getElementById( 'contentType2' ).checked && !document.getElementById( 'contentType3' ).checked && !document.getElementById( 'contentType4' ).checked && !document.getElementById( 'contentType13' ).checked  )
 	{
-		alert( '#Abuse_SelectReason' );
+		alert( 'Please select a reason for reporting abuse' );
 		return false;
 	}
 	document.getElementById( 'abuseForm' ).submit();
@@ -182,19 +182,19 @@ function AlertNonSteamSite( elem )
 			}
 		}
 		var $Msg = $J('<div/>');
-		$Msg.append( $J('<div/>').text( "#Community_AlertNonSteamURL_Part1" ) );
+		$Msg.append( $J('<div/>').text( "Note: the URL you have clicked on is not an official Steam web site." ) );
 		$Msg.append( '<br>' );
 		$Msg.append( $J('<div/>').text( url ) );
 		$Msg.append( '<br>' );
-		$Msg.append( $J('<div/>').text( "#Community_AlertNonSteamURL_Part2" ) );
-		$Msg.append( $J('<div/>').text( "#Community_AlertNonSteamURL_Part3" ) );
+		$Msg.append( $J('<div/>').text( "If this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!" ) );
+		$Msg.append( $J('<div/>').text( "Are you sure you want to visit this page? Click OK to continue at your own risk." ) );
 		ShowConfirmDialog( '', $Msg ).done( function() {
 			window.location = url;
 		} );
 		return false;
 	}
 
-	ShowAlertDialog( '', "#Community_AlertNonSteamURL_BadURL");
+	ShowAlertDialog( '', "The URL is badly formed.");
 	return false;
 }
 
@@ -1937,7 +1937,7 @@ var CCommentThread = Class.create( {
 		if ( transport.responseJSON && transport.responseJSON.error )
 			strMessage += transport.responseJSON.error;
 		else
-			strMessage += '#Error_ErrorCommunicatingWithNetwork';
+			strMessage += 'There was an error communicating with the network. Please try again later.';
 
 		elError.update( strMessage );
 		elError.show();
@@ -3016,10 +3016,10 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 		parameters: { sessionid: g_sessionID, status_text: text, appid: appID },
 		onSuccess: function(transport) {
 			gShareOnSteamDialog.Dismiss();
-			ShowAlertDialog( 'Share', '#SharedFiles_Share_SharedSuccess' );
+			ShowAlertDialog( 'Share', 'The status update has been posted to your Friends Activity.' );
 		},
 		onFailure: function(transport) {
-			ShowAlertDialog( 'Share', '#SharedFiles_Share_SharedFail' );
+			ShowAlertDialog( 'Share', 'There was a problem sharing the status update.  Please try again later.' );
 		}
 	});
 }
