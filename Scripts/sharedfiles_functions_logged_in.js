@@ -56,15 +56,15 @@ function CheckVoteResultsJSON( json )
 	switch ( json['success'] )
 	{
 		case 16:
-			alert( 'There was a problem submitting your request to our servers. Please try again.' );
+			alert( '#SharedFiles_VotingPrivileges_Timeout' );
 			return false;
 		case 24:
-			alert( 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			alert( '#SharedFiles_VotingPrivileges_Insufficient' );
 			return false;
 		case 1:
 			return true;
 		default:
-			alert( 'There was a problem submitting your request.' );
+			alert( '#SharedFiles_VotingPrivileges_Fail' );
 			return false;
 	}
 }
@@ -206,12 +206,12 @@ function ReportItem()
 	if ( $('ReportItemBtn') && $('ReportItemBtn').hasClassName( "toggled" ) )
 		return;
 
-	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
+	var dialog = ShowPromptWithTextAreaDialog( '#SharedFiles_ReportDialogTitle', '', null, null, 1000 );
 	var explanation = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	explanation.html( 'Please enter the reason why you are reporting this item for violating the Steam Terms of Service. This cannot be undone.' );
+	explanation.html( '#SharedFiles_ReportItemConfirm' );
 
 	var dmcaLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	dmcaLink.html( 'If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="http://steamcommunity.com/dmca/create/" target="_blank">here</a>.' );
+	dmcaLink.html( '#SharedFiles_ReportItem_DMCA_Link' );
 	var actualLink = dmcaLink.find( "a" )[0];
 	actualLink.href += publishedfileid;
 
@@ -224,7 +224,7 @@ function ReportItem()
 		data = v_trim( data );
 		if ( data.length < 1 )
 		{
-			alert( 'Please enter a valid reason.')
+			alert( '#SharedFiles_ReportItem_NoReason')
 			return;
 		}
 		$J.post( 'http://steamcommunity.com/sharedfiles/reportitem', {
@@ -536,7 +536,7 @@ function ShowAddToCollection( id, appID )
 
 function RemoveTaggedUser( publishedfileid, accountid )
 {
-	ShowConfirmDialog( 'Are you sure?', 'You are about to remove yourself as being tagged in this screenshot.  Are you sure?', 'Remove', 'Cancel'
+	ShowConfirmDialog( '#SharedFiles_RemoveSelfTagConfirmTitle', '#SharedFiles_RemoveSelfTagConfigDescription', '#SharedFiles_RemoveSelfTag_OK', '#SharedFiles_RemoveSelfTag_Cancel'
 	).done( function() {
 		$J.post( 'http://steamcommunity.com/sharedfiles/removetaggeduser', {
 			'accountid': accountid,

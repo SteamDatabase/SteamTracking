@@ -283,7 +283,7 @@ CChatFriend.prototype.IncrementUnreadMessageCount = function()
 var g_notification;
 CChatFriend.prototype.DisplayUnreadMessageTitleNag = function()
 {
-	CTitleManager.AddMessage( 'unread_' + this.m_unAccountID, '%s sent a message'.replace( /%s/, this.m_strName ) );
+	CTitleManager.AddMessage( 'unread_' + this.m_unAccountID, '#WebChat_NewChatMessage_Title'.replace( /%s/, this.m_strName ) );
 
 };
 
@@ -368,19 +368,19 @@ CChatFriend.prototype.GetStatusDescription = function()
 		switch ( this.m_ePersonaState )
 		{
 			case 0:
-				return 'Offline';
+				return '#Profile_Offline';
 			case 1:
 				return 'Online';
 			case 4:
-				return 'Snooze';
+				return '#Profile_Snooze';
 			case 3:
-				return 'Away';
+				return '#Profile_Away';
 			case 2:
-				return 'Busy';
+				return '#Profile_Busy';
 			case 5:
-				return 'Looking to Trade';
+				return '#Profile_LookingToTrade';
 			case 6:
-				return 'Looking to Play';
+				return '#Profile_LookingToPlay';
 			default:
 				return 'offline';
 		}
@@ -651,12 +651,12 @@ CFriendsList.prototype.UpdateOnlineFriendCountDisplay = function()
 
 		if ( this.m_cInGameFriends )
 		{
-			strText += '%s IN GAME'.replace( /%s/, this.m_cInGameFriends );
+			strText += '#WebChat_NumberOfFriendsInGameLabel'.replace( /%s/, this.m_cInGameFriends );
 			strText += ', ';
 		}
 		if ( this.m_cOnlineFriends > 0 )
 		{
-			strText += '%s ONLINE'.replace( /%s/, this.m_cOnlineFriends );
+			strText += '#WebChat_NumberOfFriendsOnlineLabel'.replace( /%s/, this.m_cOnlineFriends );
 		}
 
 		// update
@@ -791,7 +791,7 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	this.m_rgFriendLists = [];
 
 	// create a special group to hold friends you've recently chatted with
-	this.m_RecentChatsList = new CFriendsList( 'RECENT CHATS', rgRecentChatFriends, CFriendsList.k_EFriendsListType_OnlineAndOffline );
+	this.m_RecentChatsList = new CFriendsList( '#WebChat_FriendGroup_RecentChats', rgRecentChatFriends, CFriendsList.k_EFriendsListType_OnlineAndOffline );
 	this.m_rgFriendLists.push( this.m_RecentChatsList );
 
 	rgFriendGroupData.sort( function( a, b ) { return a.name.toLowerCase() > b.name.toLowerCase(); } );
@@ -818,8 +818,8 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 			continue;
 		rgUngroupedFriendsGroupMembers.push( rgUngroupedFriends[unAccountID] );
 	}
-	this.m_rgFriendLists.push( new CFriendsList( 'FRIENDS', rgUngroupedFriendsGroupMembers ) );
-	this.m_rgFriendLists.push( new CFriendsList( 'OFFLINE', rgAllFriends, CFriendsList.k_EFriendsListType_OfflineOnly, true /* start hidden */ ) );
+	this.m_rgFriendLists.push( new CFriendsList( '#WebChat_FriendGroup_Friends', rgUngroupedFriendsGroupMembers ) );
+	this.m_rgFriendLists.push( new CFriendsList( '#WebChat_FriendGroup_Offline', rgAllFriends, CFriendsList.k_EFriendsListType_OfflineOnly, true /* start hidden */ ) );
 
 	this.m_User = new CChatFriend( rgCurrentUser );
 	this.m_User.m_bChatHistoryLoaded = true;	//no history to load for self
@@ -1088,7 +1088,7 @@ CWebChat.prototype.PollComplete = function( pollid, data )
 
 							if ( this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && window.webkitNotifications.checkPermission() == 0 )
 							{
-								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '%s sent a message'.replace( /%s/, Friend.m_strName ), message.text );
+								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '#WebChat_NewChatMessage_Title'.replace( /%s/, Friend.m_strName ), message.text );
 								var fnOnClick = Friend.m_fnOnClick;
 								notification.onclick = function() { fnOnClick(); window.focus(); };
 								notification.show();
@@ -1227,7 +1227,7 @@ CWebChat.prototype.OnChatHistoryLoaded = function ( Friend, ChatDialog, data )
 	ChatDialog.m_elContent.html('');	//clear the throbber
 
 	var elPhishingWarning = $J( '<div/>', {'class': 'chat_message chat_message_system' } );
-	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( 'Never tell your password to anyone.' ) );
+	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( '#WebChat_NeverTellYourPassword' ) );
 	ChatDialog.m_elContent.append( elPhishingWarning );
 
 	for ( var i = 0; i < Friend.m_rgChatLog.length; i++ )
@@ -1314,7 +1314,7 @@ CWebChat.prototype.SettingsDialog = function()
 
 	var $Dialog = $J('<div/>', {'class': 'webchat_settings_dialog'});
 
-	$Dialog.append( $J('<div/>', {'class': 'webchat_settings_dialog_heading' }).text( 'When I receive a message:' ) );
+	$Dialog.append( $J('<div/>', {'class': 'webchat_settings_dialog_heading' }).text( '#WebChat_Settings_WhenIReceiveAMessage' ) );
 
 
 	// notifications checkbox
@@ -1328,7 +1328,7 @@ CWebChat.prototype.SettingsDialog = function()
 	var strNotes = null;
 	if ( !this.m_bBrowserSupportsAudio )
 	{
-		strNotes = 'HTML5 audio support was not detected on your browser.  Please update your browser to enable this feature.';
+		strNotes = '#Webchat_Settings_SoundNotSupported';
 	}
 	var fnSoundChange = function( bEnabled ) {
 		if ( !_chat.m_bBrowserSupportsAudio )
@@ -1337,7 +1337,7 @@ CWebChat.prototype.SettingsDialog = function()
 		_chat.SetPref( 'soundmuted', !bEnabled );
 		return true;
 	}
-	var $SoundCheckbox = this.SettingsCheckbox( 'settings_sound', 'Play a sound', bSoundChecked, fnSoundChange, !bSoundEnabled, strNotes );
+	var $SoundCheckbox = this.SettingsCheckbox( 'settings_sound', '#WebChat_Settings_Sound', bSoundChecked, fnSoundChange, !bSoundEnabled, strNotes );
 	$Dialog.append( $SoundCheckbox );
 
 	// sound checkbox
@@ -1352,11 +1352,11 @@ CWebChat.prototype.SettingsDialog = function()
 
 		return true;
 	}
-	var $TimestampCheckbox = this.SettingsCheckbox( 'settings_timestamps', 'Display timestamps in chat log', bTimestampChecked, fnTimestampChange );
+	var $TimestampCheckbox = this.SettingsCheckbox( 'settings_timestamps', '#WebChat_Settings_Timestamps', bTimestampChecked, fnTimestampChange );
 	$Dialog.append( $TimestampCheckbox );
 
 
-	var Modal = ShowAlertDialog( 'Web Chat Settings', $Dialog );
+	var Modal = ShowAlertDialog( '#WebChat_Settings', $Dialog );
 
 	// notifications are supported but not enabled in the browser, so we set an interval to watch for the browser permissions to change
 	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() != 0 )
@@ -1388,15 +1388,15 @@ CWebChat.prototype.SettingsNotificationCheckbox = function()
 	var strNotes = null;
 	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 2 )
 	{
-		strNotes = 'You have opted to disable desktop notifications from Steam. You can enable them from your browser’s settings panel.';
+		strNotes = '#WebChat_Settings_NotificationsDisabledByUser';
 	}
 	else if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 1 )
 	{
-		strNotes = 'Enabling this setting may display a prompt in your web browser to grant Steam permission to show notifications.';
+		strNotes = '#WebChat_Settings_NotificationsNeedToAccept';
 	}
 	else if ( !this.m_bBrowserSupportsNotifications )
 	{
-		strNotes = 'Desktop notifications are only available in Chrome and Safari at this time.';
+		strNotes = '#WebChat_Settings_NotificationsSupportedBrowsers';
 	}
 
 	var _chat = this;
@@ -1412,7 +1412,7 @@ CWebChat.prototype.SettingsNotificationCheckbox = function()
 		return true;
 	}
 
-	return this.SettingsCheckbox( 'settings_notifications', 'Display a desktop notification', bNotificationsChecked, fnNotificationsChange, !bNotificationsEnabled, strNotes );
+	return this.SettingsCheckbox( 'settings_notifications', '#WebChat_Settings_Notifications', bNotificationsChecked, fnNotificationsChange, !bNotificationsEnabled, strNotes );
 }
 
 CWebChat.prototype.SettingsCheckbox = function( strId, strLabel, bChecked, fnOnChange, bDisabled, strNotes )
@@ -1497,7 +1497,7 @@ function OnWebchatLaunchURL( params )
 }
 
 var CTitleManager = {
-	m_rgCurrentMessages: [ {key: 'base', message: 'Steam Community :: Chat' } ],
+	m_rgCurrentMessages: [ {key: 'base', message: 'Steam Community :: #WebChat_Title' } ],
 	m_nTimer: -1,
 	m_iCurrentMessage: 0,
 	m_bWindowHasFocus: true,
