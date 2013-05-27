@@ -645,7 +645,7 @@ function InitializeTransaction()
 		      	   	}
 		      	   	else
 		      	   	{
-		      	   		OnInitializeTransactionFailure( result.purchaseresultdetail );
+		      	   		OnInitializeTransactionFailure( result.purchaseresultdetail, result );
 		      	   		return;
 		      	   	}
 			  	}
@@ -721,75 +721,82 @@ function OnInitializeTransactionSuccess( result )
 	}
 }
 
-function OnInitializeTransactionFailure( detail )
+function OnInitializeTransactionFailure( detail, result )
 {
 	try 
 	{
 				SetTabEnabled( 'payment_info' );
 		var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
-		switch ( detail )
+		if ( result && result.specificerrortext )
 		{
-			case 1:
-				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
-				break;
-			case 2:
-				error_text = 'Your billing information has reported insufficient funds are available. Please correct the error or contact support for assistance.';
-				break;
-			case 3:
-				error_text = 'There has been an internal error initializing your transaction.  Please contact support for assistance.';
-				break;
-			case 6:
-				error_text = 'This payment method is currently unavailable for use.  We are working to resolve the issue.  Please select another payment method for your purchase and try again.';
-				break;
-			case 33:
-				error_text = 'Your purchase could not be completed because your credit card has expired.  Please update your credit card information and try again.';
-				break;
-			case 24:
-				error_text = 'Your transaction failed because you are trying to buy a game that requires ownership of another game you do not currently own.  Please correct the error and try again.';
-				break;
-			case 9:
-				error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
-				break;
-			case 31:
-				error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
-				break;
-			case 35:
-				error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
-				break;
-			case 39:
-				error_text = 'Your purchase could not be completed because your cart contains items that cannot be given as a gift.';
-				break;
-			case 40:
-				error_text = 'Your purchase could not be completed because your cart contains items that cannot be shipped outside the United States.';
-				break;
-			case 38:
-				error_text = 'Your order cannot be completed because one or more items in your cart is currently out of stock.  Please try again later.';
-				break;
-			case 44:
-				error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
-				break;
-			case 45:
-				error_text = 'Warning: Your recent transaction with us is still pending! Did you complete payment with your payment service provider? We\'re not sure yet, and we\'re waiting to receive an answer from them.<br/><br/>If you continue, and are purchasing any items a second time, you risk being charged twice.';
-				$('cancel_pending_verification').style.display = 'block';
-				ValidationMarkFieldBad( $('cancel_pending_label' ) );
-				break;
-			case 46:
-				error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
-				break;
-			case 47:
-				error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
-				break;
-			case 23:
-				error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'http://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
-				break;
-			case 8:
-				error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
-				break;
-			case 52:
-				error_text = 'Your transaction cannot be completed because you have another pending transaction for one or more items in your cart.';
-				break;
-			default:
-				break;
+			error_text = result.specificerrortext;
+		}
+		else
+		{
+			switch ( detail )
+			{
+				case 1:
+					error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
+					break;
+				case 2:
+					error_text = 'Your billing information has reported insufficient funds are available. Please correct the error or contact support for assistance.';
+					break;
+				case 3:
+					error_text = 'There has been an internal error initializing your transaction.  Please contact support for assistance.';
+					break;
+				case 6:
+					error_text = 'This payment method is currently unavailable for use.  We are working to resolve the issue.  Please select another payment method for your purchase and try again.';
+					break;
+				case 33:
+					error_text = 'Your purchase could not be completed because your credit card has expired.  Please update your credit card information and try again.';
+					break;
+				case 24:
+					error_text = 'Your transaction failed because you are trying to buy a game that requires ownership of another game you do not currently own.  Please correct the error and try again.';
+					break;
+				case 9:
+					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
+					break;
+				case 31:
+					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
+					break;
+				case 35:
+					error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
+					break;
+				case 39:
+					error_text = 'Your purchase could not be completed because your cart contains items that cannot be given as a gift.';
+					break;
+				case 40:
+					error_text = 'Your purchase could not be completed because your cart contains items that cannot be shipped outside the United States.';
+					break;
+				case 38:
+					error_text = 'Your order cannot be completed because one or more items in your cart is currently out of stock.  Please try again later.';
+					break;
+				case 44:
+					error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
+					break;
+				case 45:
+					error_text = 'Warning: Your recent transaction with us is still pending! Did you complete payment with your payment service provider? We\'re not sure yet, and we\'re waiting to receive an answer from them.<br/><br/>If you continue, and are purchasing any items a second time, you risk being charged twice.';
+					$('cancel_pending_verification').style.display = 'block';
+					ValidationMarkFieldBad( $('cancel_pending_label' ) );
+					break;
+				case 46:
+					error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
+					break;
+				case 47:
+					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
+					break;
+				case 23:
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'http://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
+					break;
+				case 8:
+					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
+					break;
+				case 52:
+					error_text = 'Your transaction cannot be completed because you have another pending transaction for one or more items in your cart.';
+					break;
+				default:
+					break;
+			}
 		}
 		
 		DisplayErrorMessage( error_text );
