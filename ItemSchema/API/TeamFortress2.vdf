@@ -20730,11 +20730,14 @@
 			"name"	"The Conscientious Objector"
 			"first_sale_date"	"2011/09/07"
 			"item_class"	"saxxy"
+			"craft_class"		"weapon"
+			"craft_material_type"	"weapon"
 			"capabilities"
 			{
 				"nameable"		"1"
 				"can_customize_texture"	"1"
 				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
 			}
 			"tags"
 			{
@@ -34857,10 +34860,13 @@
 			"name"	"The Bat Outta Hell"
 			"first_sale_date"	"2012/10/26"
 			"item_class"	"saxxy"
+			"craft_class"		"weapon"
+			"craft_material_type"	"weapon"
 			"capabilities"
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
 			}
 			"tags"
 			{

@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.28b3b9b0145223402362a6f99e92eb43a5495f43.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.7ebb27c8149306597cdad3266e8107bdc17b8a27.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -14846,10 +14846,13 @@
 				"max_ilevel": 25,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_picket.7022ac5835466085f20e73ac030ecafe9ce4401c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_picket_large.2a0375f333526316df0d0b1999fd24128fe2125b.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
 					"can_customize_texture": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -31628,9 +31631,12 @@
 				"max_ilevel": 5,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_skullbat.6c0934b8f63364506ff0cd142c6cf38962eabcae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_skullbat_large.f9d342eaefec6cacada225eab98e8225e49fea9e.png",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
