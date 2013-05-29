@@ -18,19 +18,19 @@
 			"tournament": 12
 		},
 		"qualityNames": {
-			"normal": "normal",
-			"genuine": "genuine",
-			"vintage": "vintage",
-			"unusual": "unusual",
-			"unique": "unique",
-			"community": "community",
-			"developer": "developer",
-			"selfmade": "selfmade",
-			"customized": "customized",
-			"strange": "strange",
-			"completed": "completed",
-			"haunted": "haunted",
-			"tournament": "tournament"
+			"normal": "Base",
+			"genuine": "Genuine",
+			"vintage": "Vintage",
+			"unusual": "Unusual",
+			"unique": "Standard",
+			"community": "Community",
+			"developer": "Valve",
+			"selfmade": "Self-Made",
+			"customized": "Customized",
+			"strange": "Strange",
+			"completed": "Completed",
+			"haunted": "Haunted",
+			"tournament": "Tournament"
 		},
 		"originNames": [
 			{
@@ -15494,7 +15494,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenPack"
+					"use_string": "Open Pack"
 				},
 				"attributes": [
 					{
@@ -18494,7 +18494,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenPack"
+					"use_string": "Open Pack"
 				}
 			},
 			{
@@ -35927,7 +35927,7 @@
 				},
 				"tool": {
 					"type": "egg",
-					"use_string": "Hatch"
+					"use_string": "Hatch the Egg"
 				},
 				"attributes": [
 					{
@@ -39086,7 +39086,7 @@
 				},
 				"tool": {
 					"type": "backpack_expander",
-					"use_string": "ExpandUse"
+					"use_string": "Expand"
 				},
 				"attributes": [
 					{
@@ -39156,7 +39156,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39191,7 +39191,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39259,7 +39259,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "GiftUse"
+					"use_string": "Gift"
 				},
 				"attributes": [
 					{
@@ -39298,7 +39298,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "GiftUse"
+					"use_string": "Gift"
 				},
 				"attributes": [
 					{
@@ -39446,7 +39446,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenPack"
+					"use_string": "Open Pack"
 				},
 				"attributes": [
 					{
@@ -39490,7 +39490,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "GiftUse"
+					"use_string": "Gift"
 				},
 				"attributes": [
 					{
@@ -39530,7 +39530,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39565,7 +39565,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39600,7 +39600,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39635,7 +39635,7 @@
 				},
 				"tool": {
 					"type": "event_ticket",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39670,7 +39670,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -39810,7 +39810,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40580,7 +40580,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40615,7 +40615,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40760,7 +40760,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40795,7 +40795,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40830,7 +40830,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40865,7 +40865,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40900,7 +40900,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40935,7 +40935,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -40970,7 +40970,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41005,7 +41005,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41040,7 +41040,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41075,7 +41075,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41320,7 +41320,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41355,7 +41355,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41390,7 +41390,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41425,7 +41425,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41627,7 +41627,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41662,7 +41662,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41732,7 +41732,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41767,7 +41767,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41802,7 +41802,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41837,7 +41837,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41872,7 +41872,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41907,7 +41907,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenPack"
+					"use_string": "Open Pack"
 				},
 				"attributes": [
 					{
@@ -41952,7 +41952,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -41987,7 +41987,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42022,7 +42022,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42057,7 +42057,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42092,7 +42092,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42127,7 +42127,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42300,7 +42300,7 @@
 				},
 				"tool": {
 					"type": "egg_essence",
-					"use_string": "InfuseEgg",
+					"use_string": "Infuse Egg",
 					"usage_capabilities": {
 						"uses_essence": true
 					}
@@ -42341,7 +42341,7 @@
 				},
 				"tool": {
 					"type": "egg_essence",
-					"use_string": "InfuseEgg",
+					"use_string": "Infuse Egg",
 					"usage_capabilities": {
 						"uses_essence": true
 					}
@@ -42382,7 +42382,7 @@
 				},
 				"tool": {
 					"type": "egg_essence",
-					"use_string": "InfuseEgg",
+					"use_string": "Infuse Egg",
 					"usage_capabilities": {
 						"uses_essence": true
 					}
@@ -42423,7 +42423,7 @@
 				},
 				"tool": {
 					"type": "egg_essence",
-					"use_string": "InfuseEgg",
+					"use_string": "Infuse Egg",
 					"usage_capabilities": {
 						"uses_essence": true
 					}
@@ -42464,7 +42464,7 @@
 				},
 				"tool": {
 					"type": "egg_essence",
-					"use_string": "InfuseEgg",
+					"use_string": "Infuse Egg",
 					"usage_capabilities": {
 						"uses_essence": true
 					}
@@ -42507,7 +42507,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42542,7 +42542,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42612,7 +42612,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42647,7 +42647,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42682,7 +42682,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42717,7 +42717,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42752,7 +42752,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42787,7 +42787,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42822,7 +42822,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42857,7 +42857,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42892,7 +42892,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42927,7 +42927,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42962,7 +42962,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -42997,7 +42997,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43032,7 +43032,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43067,7 +43067,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43102,7 +43102,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43137,7 +43137,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43208,7 +43208,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenGift"
+					"use_string": "Open Gift"
 				},
 				"attributes": [
 					{
@@ -43249,7 +43249,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenGift"
+					"use_string": "Open Gift"
 				},
 				"attributes": [
 					{
@@ -43289,7 +43289,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43324,7 +43324,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43359,7 +43359,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43430,7 +43430,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43465,7 +43465,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43500,7 +43500,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43535,7 +43535,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43606,7 +43606,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43641,7 +43641,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43676,7 +43676,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43711,7 +43711,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43746,7 +43746,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43781,7 +43781,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43852,7 +43852,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43887,7 +43887,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43922,7 +43922,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43957,7 +43957,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -43992,7 +43992,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44027,7 +44027,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44062,7 +44062,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44097,7 +44097,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44132,7 +44132,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44167,7 +44167,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44203,7 +44203,7 @@
 				},
 				"tool": {
 					"type": "gift",
-					"use_string": "OpenGift"
+					"use_string": "Open Gift"
 				},
 				"attributes": [
 					{
@@ -44315,7 +44315,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44350,7 +44350,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44385,7 +44385,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44420,7 +44420,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44455,7 +44455,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44490,7 +44490,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44525,7 +44525,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44560,7 +44560,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44595,7 +44595,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44630,7 +44630,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44665,7 +44665,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44700,7 +44700,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44735,7 +44735,7 @@
 				},
 				"tool": {
 					"type": "event_ticket",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44770,7 +44770,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44805,7 +44805,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44840,7 +44840,7 @@
 				},
 				"tool": {
 					"type": "tournament_passport",
-					"use_string": "ActivateProgram"
+					"use_string": "Activate Compendium"
 				},
 				"attributes": [
 					{
@@ -44875,7 +44875,7 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44946,7 +44946,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -44981,7 +44981,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45016,7 +45016,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45051,7 +45051,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45086,7 +45086,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45121,7 +45121,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45156,7 +45156,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45191,7 +45191,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45226,7 +45226,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45261,7 +45261,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45296,7 +45296,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45331,7 +45331,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45366,7 +45366,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45401,7 +45401,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45436,7 +45436,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45471,7 +45471,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45506,7 +45506,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45541,7 +45541,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45576,7 +45576,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45611,7 +45611,7 @@
 				},
 				"tool": {
 					"type": "league_view_pass",
-					"use_string": "ConsumeItem"
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -45647,7 +45647,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45675,7 +45675,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45703,7 +45703,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45731,7 +45731,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45759,7 +45759,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45787,7 +45787,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45815,7 +45815,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45843,7 +45843,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45871,7 +45871,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45899,7 +45899,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45927,7 +45927,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45955,7 +45955,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -45983,7 +45983,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46011,7 +46011,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46039,7 +46039,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46067,7 +46067,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46095,7 +46095,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46123,7 +46123,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46151,7 +46151,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46179,7 +46179,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46207,7 +46207,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46235,7 +46235,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46263,7 +46263,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46291,7 +46291,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46319,7 +46319,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46347,7 +46347,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46375,7 +46375,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46403,7 +46403,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46431,7 +46431,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				},
 				"attributes": [
 					{
@@ -46467,7 +46467,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46495,7 +46495,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46523,7 +46523,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46551,7 +46551,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46579,7 +46579,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46607,7 +46607,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46635,7 +46635,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46663,7 +46663,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46691,7 +46691,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46719,7 +46719,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46747,7 +46747,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46775,7 +46775,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46803,7 +46803,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46831,7 +46831,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46859,7 +46859,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46887,7 +46887,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46915,7 +46915,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46943,7 +46943,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46971,7 +46971,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -46999,7 +46999,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47027,7 +47027,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47055,7 +47055,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47083,7 +47083,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47111,7 +47111,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47139,7 +47139,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47167,7 +47167,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47195,7 +47195,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47223,7 +47223,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47251,7 +47251,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47279,7 +47279,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47307,7 +47307,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47335,7 +47335,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47363,7 +47363,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47391,7 +47391,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47419,7 +47419,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47447,7 +47447,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47475,7 +47475,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47503,7 +47503,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47531,7 +47531,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47559,7 +47559,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47587,7 +47587,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47615,7 +47615,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47643,7 +47643,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47671,7 +47671,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47699,7 +47699,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47727,7 +47727,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47755,7 +47755,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47783,7 +47783,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47811,7 +47811,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47839,7 +47839,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47867,7 +47867,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47895,7 +47895,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47923,7 +47923,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47951,7 +47951,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -47979,7 +47979,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48028,7 +48028,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				},
 				"attributes": [
 					{
@@ -48064,7 +48064,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				},
 				"attributes": [
 					{
@@ -48100,7 +48100,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				},
 				"attributes": [
 					{
@@ -48136,7 +48136,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48164,7 +48164,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48192,7 +48192,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48220,7 +48220,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48248,7 +48248,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48276,7 +48276,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48304,7 +48304,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48332,7 +48332,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48360,7 +48360,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48388,7 +48388,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48416,7 +48416,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48444,7 +48444,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48472,7 +48472,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48500,7 +48500,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48528,7 +48528,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48556,7 +48556,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48584,7 +48584,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48612,7 +48612,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48640,7 +48640,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48668,7 +48668,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48696,7 +48696,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48724,7 +48724,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48752,7 +48752,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48780,7 +48780,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48808,7 +48808,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48836,7 +48836,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48864,7 +48864,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48892,7 +48892,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48920,7 +48920,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48948,7 +48948,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -48976,7 +48976,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49004,7 +49004,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49032,7 +49032,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49081,7 +49081,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49109,7 +49109,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49137,7 +49137,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49165,7 +49165,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49193,7 +49193,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49221,7 +49221,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49249,7 +49249,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49277,7 +49277,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49305,7 +49305,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49333,7 +49333,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49361,7 +49361,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49389,7 +49389,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49417,7 +49417,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49445,7 +49445,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49473,7 +49473,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49501,7 +49501,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49529,7 +49529,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49557,7 +49557,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49585,7 +49585,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49613,7 +49613,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49641,7 +49641,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49669,7 +49669,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49697,7 +49697,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49725,7 +49725,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49753,7 +49753,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49781,7 +49781,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49809,7 +49809,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49837,7 +49837,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49865,7 +49865,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49893,7 +49893,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49921,7 +49921,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49949,7 +49949,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -49977,7 +49977,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50005,7 +50005,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50033,7 +50033,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50061,7 +50061,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50089,7 +50089,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50117,7 +50117,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50145,7 +50145,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50173,7 +50173,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50201,7 +50201,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50229,7 +50229,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50257,7 +50257,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50285,7 +50285,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50313,7 +50313,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50341,7 +50341,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50369,7 +50369,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50397,7 +50397,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50425,7 +50425,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50453,7 +50453,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50481,7 +50481,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50509,7 +50509,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50537,7 +50537,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50565,7 +50565,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50593,7 +50593,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50621,7 +50621,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50649,7 +50649,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			},
 			{
@@ -50677,7 +50677,7 @@
 				},
 				"tool": {
 					"type": "item_pack",
-					"use_string": "OpenBundle"
+					"use_string": "Open Bundle"
 				}
 			}
 		]
@@ -50713,7 +50713,7 @@
 				"attribute_class": "set_attached_particle",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_AttachedParticle",
+				"description_string": "Effect: %s1",
 				"description_format": "value_is_particle_index",
 				"effect_type": "neutral",
 				"hidden": false,
@@ -50735,7 +50735,7 @@
 				"attribute_class": "animation_mod",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_AnimationMod",
+				"description_string": "This item modifies the hero's animations.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50747,7 +50747,7 @@
 				"attribute_class": "custom_powershot",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_CustomPowershot",
+				"description_string": "This weapon has a custom Powershot animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50799,7 +50799,7 @@
 				"attribute_class": "set_item_tint_rgb",
 				"min_value": 0,
 				"max_value": 16777215,
-				"description_string": "Attrib_SetItemTintRGB",
+				"description_string": "Color: %s1",
 				"description_format": "value_is_color",
 				"effect_type": "neutral",
 				"hidden": false,
@@ -50821,7 +50821,7 @@
 				"attribute_class": "item_set_anim",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_ItemSetAnim",
+				"description_string": "This item unlocks custom animations when worn with other pieces of the set.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50833,7 +50833,7 @@
 				"attribute_class": "item_set_anim_bonus",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_ItemSetAnimBonus",
+				"description_string": "Custom Animation Set",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50845,7 +50845,7 @@
 				"attribute_class": "custom_scythe",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_CustomScythe",
+				"description_string": "This weapon has a custom Reaper's Scythe animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50857,7 +50857,7 @@
 				"attribute_class": "custom_slark_pounce",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_CustomSlarkPounce",
+				"description_string": "This weapon has a custom Pounce animation.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -50869,7 +50869,7 @@
 				"attribute_class": "custom_base_attack_fx",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_CustomBaseAttackFX",
+				"description_string": "This item modifies the hero's base attack effects.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51031,7 +51031,7 @@
 				"attribute_class": "tournament_event_date",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_TournamentEventDate",
+				"description_string": "Date: %s1",
 				"description_format": "value_is_date",
 				"effect_type": "neutral",
 				"hidden": false,
@@ -51043,7 +51043,7 @@
 				"attribute_class": "event_date",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_EventDate",
+				"description_string": "Date Received: %s1",
 				"description_format": "value_is_date",
 				"effect_type": "neutral",
 				"hidden": true,
@@ -51055,7 +51055,7 @@
 				"attribute_class": "gifter_account_id",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_GifterAccountID",
+				"description_string": "\nGift from: %s1",
 				"description_format": "value_is_account_id",
 				"effect_type": "positive",
 				"hidden": true,
@@ -51067,7 +51067,7 @@
 				"attribute_class": "supply_crate_series",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_SupplyCrateSeries",
+				"description_string": "Chest Series #%s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51179,7 +51179,7 @@
 				"attribute_class": "item_find",
 				"min_value": 0,
 				"max_value": 0,
-				"description_string": "Attrib_ItemFind_Positive",
+				"description_string": "Item Find: %s1% increase in the chance of finding items for this hero while playing with this item equipped.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51283,7 +51283,7 @@
 				"attribute_class": "unlimited_quantity",
 				"min_value": 0,
 				"max_value": 1,
-				"description_string": "Attrib_Unlimited",
+				"description_string": "Unlimited Use",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51355,7 +51355,7 @@
 				"attribute_class": "match_id",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_MatchID",
+				"description_string": "Match ID: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": true,
@@ -51367,7 +51367,7 @@
 				"attribute_class": "game_time",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_GameTime",
+				"description_string": "Event Time: %s1",
 				"description_format": "value_is_game_time",
 				"effect_type": "positive",
 				"hidden": true,
@@ -51391,7 +51391,7 @@
 				"attribute_class": "international_tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_InternationalTag",
+				"description_string": "The International %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51403,7 +51403,7 @@
 				"attribute_class": "diretide_tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_DiretideTag",
+				"description_string": "Diretide %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51415,7 +51415,7 @@
 				"attribute_class": "diretide_cycle",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_DiretideCycle",
+				"description_string": "Roshan Cycle %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51439,7 +51439,7 @@
 				"attribute_class": "frostivus_tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_FrostivusTag",
+				"description_string": "Frostivus %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51541,7 +51541,7 @@
 				"attribute_class": "fanfare_level",
 				"min_value": 0,
 				"max_value": 1,
-				"description_string": "Attrib_FanfareLevel",
+				"description_string": "Level: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51575,7 +51575,7 @@
 				"attribute_class": "premier league tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_PremierLeague",
+				"description_string": "The Premier League Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51587,7 +51587,7 @@
 				"attribute_class": "starladder league tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_StarLadder",
+				"description_string": "Star Series Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51599,7 +51599,7 @@
 				"attribute_class": "g-1 league tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_G1League",
+				"description_string": "G-1 League Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -51655,7 +51655,7 @@
 				"attribute_class": "raidcall league tag",
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
-				"description_string": "Attrib_Raidcall",
+				"description_string": "RaidCall Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -53683,49 +53683,49 @@
 				"system": "courier_trail_01",
 				"id": 15,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle15"
+				"name": "Ethereal Flame"
 			},
 			{
 				"system": "courier_trail_02",
 				"id": 16,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle16"
+				"name": "Resonant Energy"
 			},
 			{
 				"system": "courier_eye_glow_01",
 				"id": 17,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle17"
+				"name": "Luminous Gaze"
 			},
 			{
 				"system": "courier_eye_glow_02",
 				"id": 18,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle18"
+				"name": "Searing Essence"
 			},
 			{
 				"system": "courier_eye_glow_03",
 				"id": 19,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle19"
+				"name": "Burning Animus"
 			},
 			{
 				"system": "courier_eye_glow_04",
 				"id": 20,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle20"
+				"name": "Piercing Beams"
 			},
 			{
 				"system": "courier_trail_03",
 				"id": 21,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle21"
+				"name": "Felicity's Blessing"
 			},
 			{
 				"system": "courier_trail_04",
 				"id": 22,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle22"
+				"name": "Affliction of Vermin"
 			},
 			{
 				"system": "furion_staff_glow_curled_root",
@@ -53779,19 +53779,19 @@
 				"system": "courier_eye_glow_defense_01",
 				"id": 31,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle31"
+				"name": "Triumph of Champions"
 			},
 			{
 				"system": "courier_trail_05",
 				"id": 32,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle32"
+				"name": "Sunfire"
 			},
 			{
 				"system": "axe_weapon_eyes_wyvernguard_edge",
 				"id": 33,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle33"
+				"name": "Champion's Aura"
 			},
 			{
 				"system": "courier_murrissey_the_smeevil_fl",
@@ -53869,7 +53869,7 @@
 				"system": "courier_trail_hw_2012",
 				"id": 46,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle46"
+				"name": "Diretide Corruption"
 			},
 			{
 				"system": "golden_roshan_ambient",
@@ -53935,7 +53935,7 @@
 				"system": "courier_trail_winter_2012",
 				"id": 57,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle57"
+				"name": "Frostivus Frost"
 			},
 			{
 				"system": "courier_cluckles_ambient_flying",
@@ -53959,7 +53959,7 @@
 				"system": "courier_trail_blossoms",
 				"id": 61,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle61"
+				"name": "Trail of the Lotus Blossom"
 			},
 			{
 				"system": "courier_grillhound_ambient",
@@ -54001,7 +54001,7 @@
 				"system": "courier_ambient_crystal_rift",
 				"id": 68,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle68"
+				"name": "Crystal Rift"
 			},
 			{
 				"system": "dazzle_ambient_pipe",
@@ -54031,13 +54031,13 @@
 				"system": "courier_cursed_ambient",
 				"id": 73,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle73"
+				"name": "Cursed Essence"
 			},
 			{
 				"system": "courier_divine_ambient",
 				"id": 74,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle74"
+				"name": "Divine Essence"
 			},
 			{
 				"system": "courier_inky_ambient",
@@ -54049,7 +54049,7 @@
 				"system": "courier_trail_fungal",
 				"id": 76,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle76"
+				"name": "Trail of the Amanita"
 			},
 			{
 				"system": "courier_smeevil_ambient",
@@ -54072,92 +54072,92 @@
 					{
 						"level": 0,
 						"required_score": 10,
-						"name": "KillEaterRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 25,
-						"name": "KillEaterRank1"
+						"name": "Unremarkable"
 					},
 					{
 						"level": 2,
 						"required_score": 50,
-						"name": "KillEaterRank2"
+						"name": "Blooded"
 					},
 					{
 						"level": 3,
 						"required_score": 75,
-						"name": "KillEaterRank3"
+						"name": "Menacing"
 					},
 					{
 						"level": 4,
 						"required_score": 100,
-						"name": "KillEaterRank4"
+						"name": "Uncharitable"
 					},
 					{
 						"level": 5,
 						"required_score": 150,
-						"name": "KillEaterRank5"
+						"name": "Dangerous"
 					},
 					{
 						"level": 6,
 						"required_score": 200,
-						"name": "KillEaterRank6"
+						"name": "Notably Dangerous"
 					},
 					{
 						"level": 7,
 						"required_score": 250,
-						"name": "KillEaterRank7"
+						"name": "Lethal"
 					},
 					{
 						"level": 8,
 						"required_score": 300,
-						"name": "KillEaterRank8"
+						"name": "Spectacularly Lethal"
 					},
 					{
 						"level": 9,
 						"required_score": 350,
-						"name": "KillEaterRank9"
+						"name": "Blood-Drenched"
 					},
 					{
 						"level": 10,
 						"required_score": 400,
-						"name": "KillEaterRank10"
+						"name": "Gore-Spattered"
 					},
 					{
 						"level": 11,
 						"required_score": 450,
-						"name": "KillEaterRank11"
+						"name": "Wicked Nasty"
 					},
 					{
 						"level": 12,
 						"required_score": 500,
-						"name": "KillEaterRank12"
+						"name": "Positively Inhumane"
 					},
 					{
 						"level": 13,
 						"required_score": 600,
-						"name": "KillEaterRank13"
+						"name": "Face-Melting"
 					},
 					{
 						"level": 14,
 						"required_score": 700,
-						"name": "KillEaterRank14"
+						"name": "Rage-Inducing"
 					},
 					{
 						"level": 15,
 						"required_score": 800,
-						"name": "KillEaterRank15"
+						"name": "Match-Ending"
 					},
 					{
 						"level": 16,
 						"required_score": 900,
-						"name": "KillEaterRank16"
+						"name": "Imba"
 					},
 					{
 						"level": 17,
 						"required_score": 1000,
-						"name": "KillEaterRank17"
+						"name": "Utterly Broken"
 					}
 				]
 				
@@ -54274,87 +54274,87 @@
 					{
 						"level": 0,
 						"required_score": 1,
-						"name": "WinsRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 5,
-						"name": "WinsRank1"
+						"name": "Newbie"
 					},
 					{
 						"level": 2,
 						"required_score": 10,
-						"name": "WinsRank2"
+						"name": "Initiate"
 					},
 					{
 						"level": 3,
 						"required_score": 25,
-						"name": "WinsRank3"
+						"name": "Apprentice"
 					},
 					{
 						"level": 4,
 						"required_score": 50,
-						"name": "WinsRank4"
+						"name": "Journeyman"
 					},
 					{
 						"level": 5,
 						"required_score": 75,
-						"name": "WinsRank5"
+						"name": "Expert"
 					},
 					{
 						"level": 6,
 						"required_score": 100,
-						"name": "WinsRank6"
+						"name": "Master"
 					},
 					{
 						"level": 7,
 						"required_score": 125,
-						"name": "WinsRank7"
+						"name": "Grand Master"
 					},
 					{
 						"level": 8,
 						"required_score": 150,
-						"name": "WinsRank8"
+						"name": "Authority"
 					},
 					{
 						"level": 9,
 						"required_score": 175,
-						"name": "WinsRank9"
+						"name": "Virtuoso"
 					},
 					{
 						"level": 10,
 						"required_score": 200,
-						"name": "WinsRank10"
+						"name": "Single-Minded"
 					},
 					{
 						"level": 11,
 						"required_score": 250,
-						"name": "WinsRank11"
+						"name": "Try-Hard"
 					},
 					{
 						"level": 12,
 						"required_score": 300,
-						"name": "WinsRank12"
+						"name": "Die-Hard"
 					},
 					{
 						"level": 13,
 						"required_score": 350,
-						"name": "WinsRank13"
+						"name": "Going Pro"
 					},
 					{
 						"level": 14,
 						"required_score": 400,
-						"name": "WinsRank14"
+						"name": "Almost Pro"
 					},
 					{
 						"level": 15,
 						"required_score": 450,
-						"name": "WinsRank15"
+						"name": "Pure Pro"
 					},
 					{
 						"level": 16,
 						"required_score": 500,
-						"name": "WinsRank16"
+						"name": "Win Machine"
 					}
 				]
 				
@@ -54365,77 +54365,77 @@
 					{
 						"level": 0,
 						"required_score": 1,
-						"name": "FurionRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 100,
-						"name": "FurionRank1"
+						"name": "Seedling"
 					},
 					{
 						"level": 2,
 						"required_score": 200,
-						"name": "FurionRank2"
+						"name": "Sproutling"
 					},
 					{
 						"level": 3,
 						"required_score": 300,
-						"name": "FurionRank3"
+						"name": "Twiggy"
 					},
 					{
 						"level": 4,
 						"required_score": 400,
-						"name": "FurionRank4"
+						"name": "Leafy"
 					},
 					{
 						"level": 5,
 						"required_score": 500,
-						"name": "FurionRank5"
+						"name": "Frondly"
 					},
 					{
 						"level": 6,
 						"required_score": 750,
-						"name": "FurionRank6"
+						"name": "Verdant"
 					},
 					{
 						"level": 7,
 						"required_score": 1000,
-						"name": "FurionRank7"
+						"name": "Lush"
 					},
 					{
 						"level": 8,
 						"required_score": 1250,
-						"name": "FurionRank8"
+						"name": "Flourishing"
 					},
 					{
 						"level": 9,
 						"required_score": 1500,
-						"name": "FurionRank9"
+						"name": "Bountiful"
 					},
 					{
 						"level": 10,
 						"required_score": 2000,
-						"name": "FurionRank10"
+						"name": "Lore-Bound"
 					},
 					{
 						"level": 11,
 						"required_score": 3000,
-						"name": "FurionRank11"
+						"name": "Magnificent"
 					},
 					{
 						"level": 12,
 						"required_score": 5000,
-						"name": "FurionRank12"
+						"name": "Consecrated"
 					},
 					{
 						"level": 13,
 						"required_score": 10000,
-						"name": "FurionRank13"
+						"name": "Enshrined"
 					},
 					{
 						"level": 14,
 						"required_score": 25000,
-						"name": "FurionRank14"
+						"name": "Verodicia's Own"
 					}
 				]
 				
@@ -54446,77 +54446,77 @@
 					{
 						"level": 0,
 						"required_score": 1,
-						"name": "JuggernautRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 100,
-						"name": "JuggernautRank1"
+						"name": "Forgotten"
 					},
 					{
 						"level": 2,
 						"required_score": 200,
-						"name": "JuggernautRank2"
+						"name": "Derelict"
 					},
 					{
 						"level": 3,
 						"required_score": 300,
-						"name": "JuggernautRank3"
+						"name": "Outcast"
 					},
 					{
 						"level": 4,
 						"required_score": 400,
-						"name": "JuggernautRank4"
+						"name": "Notable"
 					},
 					{
 						"level": 5,
 						"required_score": 500,
-						"name": "JuggernautRank5"
+						"name": "Accomplished"
 					},
 					{
 						"level": 6,
 						"required_score": 750,
-						"name": "JuggernautRank6"
+						"name": "Experienced"
 					},
 					{
 						"level": 7,
 						"required_score": 1000,
-						"name": "JuggernautRank7"
+						"name": "Unchallenged"
 					},
 					{
 						"level": 8,
 						"required_score": 1250,
-						"name": "JuggernautRank8"
+						"name": "Undefeatable"
 					},
 					{
 						"level": 9,
 						"required_score": 1500,
-						"name": "JuggernautRank9"
+						"name": "Unconquered"
 					},
 					{
 						"level": 10,
 						"required_score": 2000,
-						"name": "JuggernautRank10"
+						"name": "Acclaimed"
 					},
 					{
 						"level": 11,
 						"required_score": 3000,
-						"name": "JuggernautRank11"
+						"name": "Renowned"
 					},
 					{
 						"level": 12,
 						"required_score": 5000,
-						"name": "JuggernautRank12"
+						"name": "Storied"
 					},
 					{
 						"level": 13,
 						"required_score": 10000,
-						"name": "JuggernautRank13"
+						"name": "Celebrated"
 					},
 					{
 						"level": 14,
 						"required_score": 25000,
-						"name": "JuggernautRank14"
+						"name": "Immortal"
 					}
 				]
 				
@@ -54527,87 +54527,87 @@
 					{
 						"level": 0,
 						"required_score": 1,
-						"name": "TowersRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 5,
-						"name": "TowersRank1"
+						"name": "Impaired"
 					},
 					{
 						"level": 2,
 						"required_score": 10,
-						"name": "TowersRank2"
+						"name": "Impairing"
 					},
 					{
 						"level": 3,
 						"required_score": 25,
-						"name": "TowersRank3"
+						"name": "Vandalizing"
 					},
 					{
 						"level": 4,
 						"required_score": 50,
-						"name": "TowersRank4"
+						"name": "Ravaging"
 					},
 					{
 						"level": 5,
 						"required_score": 75,
-						"name": "TowersRank5"
+						"name": "Razing"
 					},
 					{
 						"level": 6,
 						"required_score": 100,
-						"name": "TowersRank6"
+						"name": "Wrecking"
 					},
 					{
 						"level": 7,
 						"required_score": 125,
-						"name": "TowersRank7"
+						"name": "Decimating"
 					},
 					{
 						"level": 8,
 						"required_score": 150,
-						"name": "TowersRank8"
+						"name": "Demolishing"
 					},
 					{
 						"level": 9,
 						"required_score": 175,
-						"name": "TowersRank9"
+						"name": "Disintigrating"
 					},
 					{
 						"level": 10,
 						"required_score": 200,
-						"name": "TowersRank10"
+						"name": "Pulverizing"
 					},
 					{
 						"level": 11,
 						"required_score": 250,
-						"name": "TowersRank11"
+						"name": "Atomizing"
 					},
 					{
 						"level": 12,
 						"required_score": 300,
-						"name": "TowersRank12"
+						"name": "Planckifying"
 					},
 					{
 						"level": 13,
 						"required_score": 350,
-						"name": "TowersRank13"
+						"name": "Steeple Toppling"
 					},
 					{
 						"level": 14,
 						"required_score": 400,
-						"name": "TowersRank14"
+						"name": "Monolith Mashing"
 					},
 					{
 						"level": 15,
 						"required_score": 450,
-						"name": "TowersRank15"
+						"name": "Edifice Defying"
 					},
 					{
 						"level": 16,
 						"required_score": 500,
-						"name": "TowersRank16"
+						"name": "Tower-Bane"
 					}
 				]
 				
@@ -54618,82 +54618,82 @@
 					{
 						"level": 0,
 						"required_score": 10,
-						"name": "BountyHunterRank0"
+						"name": "Scrounger's"
 					},
 					{
 						"level": 1,
 						"required_score": 50,
-						"name": "BountyHunterRank1"
+						"name": "Scavenger's"
 					},
 					{
 						"level": 2,
 						"required_score": 100,
-						"name": "BountyHunterRank2"
+						"name": "Shadower's"
 					},
 					{
 						"level": 3,
 						"required_score": 150,
-						"name": "BountyHunterRank3"
+						"name": "Trapper's"
 					},
 					{
 						"level": 4,
 						"required_score": 250,
-						"name": "BountyHunterRank4"
+						"name": "Hawker's"
 					},
 					{
 						"level": 5,
 						"required_score": 400,
-						"name": "BountyHunterRank5"
+						"name": "Ferreter's"
 					},
 					{
 						"level": 6,
 						"required_score": 700,
-						"name": "BountyHunterRank6"
+						"name": "Tracker's"
 					},
 					{
 						"level": 7,
 						"required_score": 1100,
-						"name": "BountyHunterRank7"
+						"name": "Stalker's"
 					},
 					{
 						"level": 8,
 						"required_score": 1600,
-						"name": "BountyHunterRank8"
+						"name": "Hunter's"
 					},
 					{
 						"level": 9,
 						"required_score": 2200,
-						"name": "BountyHunterRank9"
+						"name": "Hitman's"
 					},
 					{
 						"level": 10,
 						"required_score": 2900,
-						"name": "BountyHunterRank10"
+						"name": "Marauder's"
 					},
 					{
 						"level": 11,
 						"required_score": 3700,
-						"name": "BountyHunterRank11"
+						"name": "Liquidator's"
 					},
 					{
 						"level": 12,
 						"required_score": 4600,
-						"name": "BountyHunterRank12"
+						"name": "Mercenary's"
 					},
 					{
 						"level": 13,
 						"required_score": 6000,
-						"name": "BountyHunterRank13"
+						"name": "Cutthroat's"
 					},
 					{
 						"level": 14,
 						"required_score": 7500,
-						"name": "BountyHunterRank14"
+						"name": "Murderer's"
 					},
 					{
 						"level": 15,
 						"required_score": 10000,
-						"name": "BountyHunterRank15"
+						"name": "Exterminator's"
 					}
 				]
 				
@@ -54704,107 +54704,107 @@
 					{
 						"level": 0,
 						"required_score": 5000,
-						"name": "GoldRank0"
+						"name": "Destitute"
 					},
 					{
 						"level": 1,
 						"required_score": 10000,
-						"name": "GoldRank1"
+						"name": "Deprived"
 					},
 					{
 						"level": 2,
 						"required_score": 15000,
-						"name": "GoldRank2"
+						"name": "Meager"
 					},
 					{
 						"level": 3,
 						"required_score": 25000,
-						"name": "GoldRank3"
+						"name": "Lacking"
 					},
 					{
 						"level": 4,
 						"required_score": 40000,
-						"name": "GoldRank4"
+						"name": "Poor"
 					},
 					{
 						"level": 5,
 						"required_score": 60000,
-						"name": "GoldRank5"
+						"name": "Favored"
 					},
 					{
 						"level": 6,
 						"required_score": 100000,
-						"name": "GoldRank6"
+						"name": "Flourishing"
 					},
 					{
 						"level": 7,
 						"required_score": 160000,
-						"name": "GoldRank7"
+						"name": "Thriving"
 					},
 					{
 						"level": 8,
 						"required_score": 260000,
-						"name": "GoldRank8"
+						"name": "Prosperous"
 					},
 					{
 						"level": 9,
 						"required_score": 420000,
-						"name": "GoldRank9"
+						"name": "Booming"
 					},
 					{
 						"level": 10,
 						"required_score": 680000,
-						"name": "GoldRank10"
+						"name": "Bounteous"
 					},
 					{
 						"level": 11,
 						"required_score": 1100000,
-						"name": "GoldRank11"
+						"name": "Lucrative"
 					},
 					{
 						"level": 12,
 						"required_score": 1780000,
-						"name": "GoldRank12"
+						"name": "Abundant"
 					},
 					{
 						"level": 13,
 						"required_score": 2880000,
-						"name": "GoldRank13"
+						"name": "Flush"
 					},
 					{
 						"level": 14,
 						"required_score": 4660000,
-						"name": "GoldRank14"
+						"name": "Gilded"
 					},
 					{
 						"level": 15,
 						"required_score": 7540000,
-						"name": "GoldRank15"
+						"name": "Bountiful"
 					},
 					{
 						"level": 16,
 						"required_score": 12200000,
-						"name": "GoldRank16"
+						"name": "Affluent"
 					},
 					{
 						"level": 17,
 						"required_score": 19740000,
-						"name": "GoldRank17"
+						"name": "Wealthy"
 					},
 					{
 						"level": 18,
 						"required_score": 31940000,
-						"name": "GoldRank18"
+						"name": "Opulent"
 					},
 					{
 						"level": 19,
 						"required_score": 51680000,
-						"name": "GoldRank19"
+						"name": "Palatial"
 					},
 					{
 						"level": 20,
 						"required_score": 100000000,
-						"name": "GoldRank20"
+						"name": "Triumphant"
 					}
 				]
 				
@@ -54815,92 +54815,92 @@
 					{
 						"level": 0,
 						"required_score": 10,
-						"name": "InvokerRank0"
+						"name": "Strange"
 					},
 					{
 						"level": 1,
 						"required_score": 25,
-						"name": "InvokerRank1"
+						"name": "Superior"
 					},
 					{
 						"level": 2,
 						"required_score": 50,
-						"name": "InvokerRank2"
+						"name": "Faultless"
 					},
 					{
 						"level": 3,
 						"required_score": 75,
-						"name": "InvokerRank3"
+						"name": "Matchless"
 					},
 					{
 						"level": 4,
 						"required_score": 100,
-						"name": "InvokerRank4"
+						"name": "Incomparable"
 					},
 					{
 						"level": 5,
 						"required_score": 150,
-						"name": "InvokerRank5"
+						"name": "Peerless"
 					},
 					{
 						"level": 6,
 						"required_score": 200,
-						"name": "InvokerRank6"
+						"name": "Supreme"
 					},
 					{
 						"level": 7,
 						"required_score": 250,
-						"name": "InvokerRank7"
+						"name": "Unequaled"
 					},
 					{
 						"level": 8,
 						"required_score": 300,
-						"name": "InvokerRank8"
+						"name": "Unrivaled"
 					},
 					{
 						"level": 9,
 						"required_score": 350,
-						"name": "InvokerRank9"
+						"name": "Unparalleled"
 					},
 					{
 						"level": 10,
 						"required_score": 400,
-						"name": "InvokerRank10"
+						"name": "Unsurpassable"
 					},
 					{
 						"level": 11,
 						"required_score": 450,
-						"name": "InvokerRank11"
+						"name": "Inimitable"
 					},
 					{
 						"level": 12,
 						"required_score": 500,
-						"name": "InvokerRank12"
+						"name": "Consummate"
 					},
 					{
 						"level": 13,
 						"required_score": 600,
-						"name": "InvokerRank13"
+						"name": "Preeminent"
 					},
 					{
 						"level": 14,
 						"required_score": 700,
-						"name": "InvokerRank14"
+						"name": "Paramount"
 					},
 					{
 						"level": 15,
 						"required_score": 800,
-						"name": "InvokerRank15"
+						"name": "Transcendant"
 					},
 					{
 						"level": 16,
 						"required_score": 900,
-						"name": "InvokerRank16"
+						"name": "Ultimate"
 					},
 					{
 						"level": 17,
 						"required_score": 1000,
-						"name": "InvokerRank17"
+						"name": "Perfect"
 					}
 				]
 				
@@ -54911,263 +54911,263 @@
 			{
 				"level": 0,
 				"required_score": 10,
-				"name": "KillEaterRank0"
+				"name": "Strange"
 			},
 			{
 				"level": 1,
 				"required_score": 25,
-				"name": "KillEaterRank1"
+				"name": "Unremarkable"
 			},
 			{
 				"level": 2,
 				"required_score": 50,
-				"name": "KillEaterRank2"
+				"name": "Blooded"
 			},
 			{
 				"level": 3,
 				"required_score": 75,
-				"name": "KillEaterRank3"
+				"name": "Menacing"
 			},
 			{
 				"level": 4,
 				"required_score": 100,
-				"name": "KillEaterRank4"
+				"name": "Uncharitable"
 			},
 			{
 				"level": 5,
 				"required_score": 150,
-				"name": "KillEaterRank5"
+				"name": "Dangerous"
 			},
 			{
 				"level": 6,
 				"required_score": 200,
-				"name": "KillEaterRank6"
+				"name": "Notably Dangerous"
 			},
 			{
 				"level": 7,
 				"required_score": 250,
-				"name": "KillEaterRank7"
+				"name": "Lethal"
 			},
 			{
 				"level": 8,
 				"required_score": 300,
-				"name": "KillEaterRank8"
+				"name": "Spectacularly Lethal"
 			},
 			{
 				"level": 9,
 				"required_score": 350,
-				"name": "KillEaterRank9"
+				"name": "Blood-Drenched"
 			},
 			{
 				"level": 10,
 				"required_score": 400,
-				"name": "KillEaterRank10"
+				"name": "Gore-Spattered"
 			},
 			{
 				"level": 11,
 				"required_score": 450,
-				"name": "KillEaterRank11"
+				"name": "Wicked Nasty"
 			},
 			{
 				"level": 12,
 				"required_score": 500,
-				"name": "KillEaterRank12"
+				"name": "Positively Inhumane"
 			},
 			{
 				"level": 13,
 				"required_score": 600,
-				"name": "KillEaterRank13"
+				"name": "Face-Melting"
 			},
 			{
 				"level": 14,
 				"required_score": 700,
-				"name": "KillEaterRank14"
+				"name": "Rage-Inducing"
 			},
 			{
 				"level": 15,
 				"required_score": 800,
-				"name": "KillEaterRank15"
+				"name": "Match-Ending"
 			},
 			{
 				"level": 16,
 				"required_score": 900,
-				"name": "KillEaterRank16"
+				"name": "Imba"
 			},
 			{
 				"level": 17,
 				"required_score": 1000,
-				"name": "KillEaterRank17"
+				"name": "Utterly Broken"
 			}
 		]
 		,
 		"kill_eater_score_types": [
 			{
 				"type": 0,
-				"type_name": "KillEaterEventType_Kills"
+				"type_name": "Kills"
 			},
 			{
 				"type": 1,
-				"type_name": "KillEaterEventType_KillAssists"
+				"type_name": "Kill Assists"
 			},
 			{
 				"type": 2,
-				"type_name": "KillEaterEventType_Wins"
+				"type_name": "Victories"
 			},
 			{
 				"type": 3,
-				"type_name": "KillEaterEventType_Treants_Created"
+				"type_name": "Treants Created"
 			},
 			{
 				"type": 4,
-				"type_name": "KillEaterEventType_Omnislash_Jumps"
+				"type_name": "Omnislash Jumps"
 			},
 			{
 				"type": 5,
-				"type_name": "KillEaterEventType_Blade_Fury_Time"
+				"type_name": "Blade Fury Damage"
 			},
 			{
 				"type": 6,
-				"type_name": "KillEaterEventType_Blade_Dance_Crits"
+				"type_name": "Blade Dance Crits"
 			},
 			{
 				"type": 7,
-				"type_name": "KillEaterEventType_Wards_Placed"
+				"type_name": "Wards Placed"
 			},
 			{
 				"type": 8,
-				"type_name": "KillEaterEventType_Killing_Sprees"
+				"type_name": "Killing Sprees"
 			},
 			{
 				"type": 9,
-				"type_name": "KillEaterEventType_Trees_Created"
+				"type_name": "Trees Created"
 			},
 			{
 				"type": 10,
-				"type_name": "KillEaterEventType_Carries_Killed"
+				"type_name": "Carries Killed"
 			},
 			{
 				"type": 11,
-				"type_name": "KillEaterEventType_First_Blood"
+				"type_name": "First Bloods"
 			},
 			{
 				"type": 12,
-				"type_name": "KillEaterEventType_Godlike"
+				"type_name": "Godlike Sprees"
 			},
 			{
 				"type": 13,
-				"type_name": "KillEaterEventType_Gold_Earned"
+				"type_name": "Gold Earned"
 			},
 			{
 				"type": 14,
-				"type_name": "KillEaterEventType_Gold_Spent"
+				"type_name": "Gold Spent"
 			},
 			{
 				"type": 15,
-				"type_name": "KillEaterEventType_Towers_Destroyed"
+				"type_name": "Towers Destroyed"
 			},
 			{
 				"type": 16,
-				"type_name": "KillEaterEventType_Bounty_TrackedKills"
+				"type_name": "Tracked Kills"
 			},
 			{
 				"type": 17,
-				"type_name": "KillEaterEventType_Bounty_TrackedInvisKills"
+				"type_name": "Tracked Invisible Kills"
 			},
 			{
 				"type": 18,
-				"type_name": "KillEaterEventType_Bounty_InvisJinadaHits"
+				"type_name": "Invisible Jinada Strikes"
 			},
 			{
 				"type": 19,
-				"type_name": "KillEaterEventType_Bounty_TrackGold"
+				"type_name": "Tracked Bonus Gold"
 			},
 			{
 				"type": 20,
-				"type_name": "KillEaterEventType_Tide_GoodRavages"
+				"type_name": "Quad Ravages"
 			},
 			{
 				"type": 21,
-				"type_name": "KillEaterEventType_Windrunner_DoubleShackles"
+				"type_name": "Double Shackles"
 			},
 			{
 				"type": 22,
-				"type_name": "KillEaterEventType_Windrunner_GoodPowershots"
+				"type_name": "Multi-Hero Powershots"
 			},
 			{
 				"type": 23,
-				"type_name": "KillEaterEventType_Invoker_SunstrikeKills"
+				"type_name": "Sunstrike Kills"
 			},
 			{
 				"type": 24,
-				"type_name": "KillEaterEventType_Couriers_Purchased"
+				"type_name": "Couriers Purchased"
 			},
 			{
 				"type": 25,
-				"type_name": "KillEaterEventType_Wards_Purchased"
+				"type_name": "Wards Purchased"
 			},
 			{
 				"type": 26,
-				"type_name": "KillEaterEventType_Tide_EnemiesGushed"
+				"type_name": "Enemies Gushed"
 			},
 			{
 				"type": 27,
-				"type_name": "KillEaterEventType_Axe_Culls"
+				"type_name": "Enemies Culled"
 			},
 			{
 				"type": 28,
-				"type_name": "KillEaterEventType_Axe_BattleHungerKills"
+				"type_name": "Battle Hunger Kills"
 			},
 			{
 				"type": 29,
-				"type_name": "KillEaterEventType_Axe_LowHealthKills"
+				"type_name": "Near Death Kills"
 			},
 			{
 				"type": 30,
-				"type_name": "KillEaterEventType_Axe_CalledDamageDone"
+				"type_name": "Call Damage Done"
 			},
 			{
 				"type": 31,
-				"type_name": "KillEaterEventType_Axe_CalledDamageTaken"
+				"type_name": "Call Damage Taken"
 			},
 			{
 				"type": 32,
-				"type_name": "KillEaterEventType_Invoker_TornadoKills"
+				"type_name": "Tornado Kills"
 			},
 			{
 				"type": 33,
-				"type_name": "KillEaterEventType_GamesViewed"
+				"type_name": "Games Viewed"
 			},
 			{
 				"type": 34,
-				"type_name": "KillEaterEventType_Sven_DoubleStuns"
+				"type_name": "Multi-Hero Storm Hammers"
 			},
 			{
 				"type": 35,
-				"type_name": "KillEaterEventType_Sven_WarcryAssists"
+				"type_name": "Warcry Assists"
 			},
 			{
 				"type": 36,
-				"type_name": "KillEaterEventType_Sven_CleaveDoubleKills"
+				"type_name": "Multi-Hero Cleave Kills"
 			},
 			{
 				"type": 37,
-				"type_name": "KillEaterEventType_Sven_TeleportInterrupts"
+				"type_name": "Storm Hammer Teleport Interrupts"
 			},
 			{
 				"type": 38,
-				"type_name": "KillEaterEventType_Faceless_MultiChrono"
+				"type_name": "Multi-Hero Chronospheres"
 			},
 			{
 				"type": 39,
-				"type_name": "KillEaterEventType_Faceless_ChronoKills"
+				"type_name": "Chronosphere Kills"
 			},
 			{
 				"type": 40,
-				"type_name": "KillEaterEventType_Ursa_MultiShocks"
+				"type_name": "Multi-Hero Earthshocks"
 			},
 			{
 				"type": 41,
-				"type_name": "KillEaterEventType_RoshanKills"
+				"type_name": "Roshan Kills"
 			}
 		]
 		
