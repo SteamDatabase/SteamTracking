@@ -5,11 +5,21 @@ div.profile_page {
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_bg.jpg' );
 	background-repeat: repeat-x;
 	background-color: #262627;
+
+	min-width: 950px;
 }
 
 div.profile_page.has_profile_background {
-	background-image: none;
 	background-color: #000000;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+/* this is a workaround for webkit centering bug with backgrounds that are larger than the window */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div.profile_page.has_profile_background {
+		background-position: 49.999% 0;
+	}
 }
 
 .profile_header_bg {

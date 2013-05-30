@@ -2279,7 +2279,14 @@ function PopulateMarketActions( elActions, item )
 
 	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
 	{
-		elActions.appendChild( CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' ) );
+		var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
+		elActions.appendChild( elSellButton );
+
+		if ( !g_bMarketAllowed )
+		{
+			var elTooltip = $('market_tip_noaccess');
+			InstallHoverTooltip( elSellButton, elTooltip );
+		}
 	}
 		else
 	{
@@ -2293,6 +2300,9 @@ function PopulateMarketActions( elActions, item )
 
 function SellCurrentSelection()
 {
+	if ( !g_bMarketAllowed )
+		return;
+
 	if ( g_rgWalletInfo['wallet_currency'] == 0 )
 	{
 		MessageDialog.Show(
@@ -3505,5 +3515,58 @@ function SelectItemDialogOnSelect()
 	{
 		alert( 'There was a problem saving your selection, please try again later.' );
 	}
+}
+
+function InstallHoverTooltip( elem, tooltip )
+{
+	elem.observe( 'mouseover', function( event ) {
+		HoverTooltipMouseOver( elem, tooltip, event )
+	} );
+	elem.observe( 'mousemove', function( event ) {
+		HoverTooltipMouseMove( tooltip, event )
+	} );
+	elem.observe( 'mouseout', function( event ) {
+		tooltip.hide();
+	} );
+}
+
+function HoverTooltipMouseOver( elem, tooltip, event )
+{
+	tooltip.show();
+	HoverTooltipMouseMove( tooltip, event );
+}
+
+function HoverTooltipMouseMove( tooltip, event )
+{
+	var docWidth = document.documentElement.clientWidth - 8;
+	var toolWidth = tooltip.getWidth();
+	var toolHeight = tooltip.getHeight();
+	var newLeft = event.pageX + 28;
+	var newTop = event.pageY + 20;
+
+	var scrollLeft = document.documentElement.scrollLeft + document.body.scrollLeft;
+	var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+
+	if(newLeft + toolWidth - scrollLeft > docWidth)
+	{
+		newLeft = docWidth - toolWidth + scrollLeft;
+	}
+
+	if(newLeft < scrollLeft)
+	{
+		newLeft = scrollLeft;
+	}
+
+	if(newTop + toolHeight - scrollTop > document.documentElement.clientHeight)
+	{
+		newTop = event.pageY - toolHeight - 20;
+	}
+
+	if(newTop < scrollTop)
+	{
+		newTop = scrollTop;
+	}
+
+	tooltip.setStyle({ left: newLeft + 'px', top: newTop + 'px' });
 }
 

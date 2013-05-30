@@ -755,6 +755,7 @@ a.item_market_action_button {
 
 	width: 32px;
 	height: 32px;
+	overflow: hidden;
 }
 
 .game_button_game_name {
@@ -815,5 +816,20 @@ a.game_button {
 
 #market_headertip_itemsold_itemname {
 	font-weight: bold;
+}
+
+.market_hover_tip {
+	background-color: #3F3F3F;
+	color: #D6D6D6;
+	position: absolute;
+	z-index: 100;
+	border: 1px solid #747474;
+
+	width: 288px;
+	padding: 12px;
+
+	box-shadow: 4px 4px 3px black;
+	-moz-box-shadow: 4px 4px 3px black;
+	-webkit-box-shadow: 4px 4px 5px black;
 }
 

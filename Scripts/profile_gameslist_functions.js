@@ -131,8 +131,9 @@ function AchievementHover( elem, event, divHover )
 	}
 	else if ( ( !hover.visible() || hover.target != elem ) )
 	{
-		achDataKey = elem.id.slice( 8 );
-		hover.down('.content').update( "<h1>" + ach_names[achDataKey] + "</h1>" + ach_descs[achDataKey] );
+		var name=elem.getAttribute( 'data-ach-name' );
+		var description = elem.getAttribute( 'data-ach-description' );
+		hover.down('.content').update( "<h1>" + name + "</h1>" + description );
 		ShowAchievementHover( elem, divHover );
 	}
 }
@@ -141,7 +142,7 @@ function HideAchievementHover( elem, event, divHover )
 {
 	if (!event) var event = window.event;
 	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( reltarget && $(reltarget).up( '#' + divHover.id ) ) 
+	if ( reltarget && $(reltarget).up( '#' + elem.identify() ) )
 	{
 		return;
 	}
@@ -202,7 +203,7 @@ var gameStatsUserTemplate = new Template( '<a class="popup_menu_item2 tight" hre
 var gameStatsLeaderboardTemplate = new Template( '<a class="popup_menu_item2 tight" href="#{profile_link}/stats/#{friendlyURL}/?tab=leaderboards"><h5>#{persona_name}&#039;s Leaderboards</h5></a>' );
 var gameStatsGlobalAchievementsTemplate = new Template( '<a class="popup_menu_item2 tight" href="http://steamcommunity.com/stats/#{friendlyURL}/achievements/"><h5>Global Achievements</h5></a>' );
 var gameStatsGlobalLeaderboardsTemplate = new Template( '<a class="popup_menu_item2 tight" href="http://steamcommunity.com/stats/#{friendlyURL}/leaderboards/"><h5>Global Leaderboards</h5></a>' );
-var gameAchievementItemTemplate = new Template( '<img class="recentAchievementsImg" id="ach_img_#{counterid}" style="position:relative;" onmouseover="AchievementHover( this, event, $(\'global_hover\') )" onmouseout="HideAchievementHover( this, event, $(\'global_hover\') )" width="32" height="32" border="0" src="#{icon_closed}" />');
+var gameAchievementItemTemplate = new Template( '<img class="recentAchievementsImg" style="position:relative;" onmouseover="AchievementHover( this, event, $(\'global_hover\') )" onmouseout="HideAchievementHover( this, event, $(\'global_hover\') )" width="32" height="32" border="0" src="#{icon_closed}" data-ach-name="#{ach_name}" data-ach-description="#{ach_description}">');
 var gameInfoBarTextTemplate = new Template( '#{items_start} - #{items_end} of #{items_total} items' );
 
 function BuildGameRow( gameInfo )
@@ -216,13 +217,13 @@ function BuildGameRow( gameInfo )
 	if( gameInfo['ach_completion'] && gameInfo['ach_completion']['closed'] > 0 )
 	{
 		gameInfo['ach_completed'] = gameInfo['ach_completion']['closed'];
-		gameInfo['ach_total'] = gameInfo['ach_completion']['closed'] + gameInfo['ach_completion']['open'];
+		gameInfo['ach_total'] = gameInfo['ach_completion']['total'];
 		gameInfo['ach_bar_width'] = 185 * ( gameInfo['ach_completed'] / gameInfo['ach_total'] );
 		gameInfo['ach_bar_width_remainder'] = 185 - gameInfo['ach_bar_width'];
 
 		var achievements = '';
 
-		gameInfo['recent_achievements'].each(function( achievement, index ) {
+		gameInfo['ach_completion']['recent_achievements'].each(function( achievement, index ) {
 			achievements += gameAchievementItemTemplate.evaluate( achievement );
 		});
 		gameInfo['achievements'] = achievements;

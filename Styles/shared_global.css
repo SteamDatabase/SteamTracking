@@ -281,3 +281,49 @@ span.popup_menu_pulldown_indicator {
 	text-decoration: none;
 	background-color: #212d3d;
 }
+
+
+
+.friendPlayerLevel {
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 16px;
+	border: solid white 2px;
+	height: 28px;
+	width: 28px;
+
+	text-align: center;
+	line-height: 28px;
+
+	cursor: default;
+}
+
+
+.friendPlayerLevel .friendPlayerLevelNum {
+	color: #9b9b9b;
+}
+
+.friendPlayerLevel.lvl_0 {
+	border: solid #9b9b9b 2px;
+}
+
+.friendPlayerLevel.lvl_10 {
+	border: solid #d96063 2px;
+}
+
+.friendPlayerLevel.lvl_20 {
+	border: solid #cecd70 2px;
+}
+
+.friendPlayerLevel.lvl_30 {
+	border: solid #7652c9 2px;
+}
+
+.friendPlayerLevel.lvl_40 {
+	border: solid #7dae3d 2px;
+}
+
+.friendPlayerLevel.lvl_50 {
+	border: solid #5491cf 2px;
+}
+

@@ -163,8 +163,8 @@ var g_whiteListedDomains = [
 
 function getHostname( str )
 {
-	var re = new RegExp('^(?:f|ht)tp(?:s)?\://([^/]+)', 'im');
-	return str.match(re)[1].toString();
+	var re = new RegExp('^(?:f|ht)tp(?:s)?\://([^@]*@)?([^/]+)', 'im');
+	return str.match(re)[2].toString();
 }
 
 function AlertNonSteamSite( elem )
@@ -176,7 +176,8 @@ function AlertNonSteamSite( elem )
 		hostname.toLowerCase();
 		for ( var i = 0; i < g_whiteListedDomains.length; ++i )
 		{
-			if ( hostname.indexOf( g_whiteListedDomains[i] ) != -1 )
+			var index = hostname.lastIndexOf( g_whiteListedDomains[i] );
+			if ( index != -1 && index == ( hostname.length - g_whiteListedDomains[i].length ) )
 			{
 				return true;
 			}

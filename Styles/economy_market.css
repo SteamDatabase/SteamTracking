@@ -946,21 +946,6 @@ input.filter_search_box:focus {
 	text-align: center;
 }
 
-.market_hover_tip {
-	background-color: #3F3F3F;
-	color: #D6D6D6;
-	position: absolute;
-	z-index: 100;
-	border: 1px solid #747474;
-
-	width: 288px;
-	padding: 12px;
-
-	box-shadow: 4px 4px 3px black;
-	-moz-box-shadow: 4px 4px 3px black;
-	-webkit-box-shadow: 4px 4px 5px black;
-}
-
 .jqplot-highlighter-tooltip {
 	background: #393938;
 	color: white;
@@ -993,4 +978,11 @@ input.filter_search_box:focus {
 #pricehistory_zoom_controls {
 	float: right;
 	margin-right: 45px;
+}
+
+#pricehistory_notavailable_info {
+	height: 50px;
+	padding: 50px 0;
+	font-size: 200%;
+	text-align: center;
 }

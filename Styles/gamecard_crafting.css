@@ -203,12 +203,12 @@
 .completed_badge_icon {
 	position: absolute;
 	left: 17px;
-	top: 7px;
+	top: 11px;
 }
 
 .completed_badge_icon, .completed_badge_icon img {
-	width: 88px;
-	height: 88px;
+	width: 80px;
+	height: 80px;
 }
 
 .completed_badge_content {

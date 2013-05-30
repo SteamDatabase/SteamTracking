@@ -246,3 +246,30 @@ function GameCardArtDialog( strName, strImgURL )
 	Modal.AdjustSizing();
 }
 
+/*
+	'name' => $rgApp ? $rgApp['name'] : '',
+	'drops_remaining' => $Progress->drops_remaining,
+	'cards_dropped' => $Progress->cards_dropped,
+	'drops_earned_pre_release' => $Progress->drops_earned_pre_release,
+	'drops_earned_post_release' => $Progress->drops_earned_post_release,
+	'drops_earned_purchase' => $Progress->drops_earned_purchase,
+	'est_usd_cents_earned_to_next_drop' => $Progress->est_usd_cents_earned_to_next_drop,
+	'est_usd_cents_needed_for_next_drop' => $Progress->est_usd_cents_needed_for_next_drop,
+*/
+
+function ShowCardDropInfo( strGameName, id )
+{
+	var $Content = $J('#' + id);
+	$Content.detach();
+	$Content.show();
+
+	ShowAlertDialog( strGameName, $Content).always(
+		function() {
+			// save it away again for later
+			$Content.hide();
+			$J(document.body).append( $Content );
+		}
+	);
+
+}
+
