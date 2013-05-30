@@ -36383,6 +36383,58 @@
 				}
 			}
 		}
+		"4566"
+		{
+			"name"		"Scythe of Vyse"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Scythe"
+			"item_name"		"#DOTA_Item_Scythe_of_Vyse"
+			"item_description"		"#DOTA_Item_Desc_Scythe_of_Vyse"
+			"image_inventory"		"econ/items/furion/scythe_of_vyse"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_furion"		"1"
+			}
+			"creation_date"		"2013-05-15"
+			"model_player"		"models/items/furion/scythe_of_vyse.mdl"
+			"item_quality"		"genuine"
+			"item_rarity"		"mythical"
+			"forced_item_quality"		"genuine"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"74.160919 -176.440842 142.835266"
+					"PortraitLookAt"		"9.689941 100.640259 10.431519"
+					"PortraitFOV"		"57.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"75.073654 -110.443443 177.433914"
+					"PortraitLightLookAt"		"2.774048 120.064087 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"377.000000"
+					"PortraitLightColor"		"0.545098 0.514815 0.484532"
+					"PortraitShadowColor"		"0.070000 0.070000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"79.070000 84.150002 25.320000"
+					"PortraitAmbientColor"		"0.080000 0.150000 0.150000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"juggernaut_portrait"
+					"PortraitAnimationActivity"		"1"
+					"PortraitAnimationCycle"		"0.084000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
 		"4567"
 		{
 			"name"		"Helm of the Hidden Talent"
