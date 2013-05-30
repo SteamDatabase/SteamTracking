@@ -52,6 +52,8 @@ Styles/workshop_home.css|http://cdn.steamcommunity.com/public/css/skin_1/worksho
 Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
 Styles/workshop_userfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
+Styles/styles_youraccountv5.css|http://cdn.store.steampowered.com/public/css/styles_youraccountv5.css?_=*TIMENOW*
+Styles/styles_steamaccount.css|http://cdn.store.steampowered.com/public/css/styles_steamaccount.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
@@ -86,10 +88,12 @@ Scripts/shared_global.js|http://cdn.steamcommunity.com/public/shared/javascript/
 Scripts/sharedfiles_functions_logged_in.js|http://cdn.steamcommunity.com/public/javascript/sharedfiles_functions_logged_in.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
+Scripts/store_javascript.js|http://cdn.store.steampowered.com/public/javascript/javascript.js?_=*TIMENOW*&l=english
 Scripts/video_functions.js|http://cdn.steamcommunity.com/public/javascript/video_functions.js?_=*TIMENOW*&l=english
 Scripts/video_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/video_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
 Scripts/workshop_previewplayer.js|http://cdn.steamcommunity.com/public/javascript/workshop_previewplayer.js?_=*TIMENOW*&l=english
+Scripts/youraccount.js|http://cdn.store.steampowered.com/public/javascript/youraccount.js?_=*TIMENOW*&l=english
 
 # Blogs
 Styles/TF2/header.css|http://www.teamfortress.com/header.css?_=*TIMENOW*
