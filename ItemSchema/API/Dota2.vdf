@@ -695,6 +695,21 @@
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
 		}
+		"player_card"
+		{
+			"item_class"		"tool"
+			"item_type_name"		"#DOTA_WearableType_PlayerCard"
+			"item_name"		"#DOTA_Wearable_PlayerCard"
+			"item_slot"		"none"
+			"item_quality"		"unique"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"mouse_pressed_sound"		"ui/item_metal_weapon_pickup.wav"
+		}
 		"courier_wearable"
 		{
 			"item_class"		"dota_item_wearable"
@@ -10108,6 +10123,7 @@
 		{
 			"name"		"Staff of the Tusk-Bereft"
 			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Staff"
 			"item_name"		"#DOTA_Item_Staff_of_the_TuskBereft"
 			"image_inventory"		"econ/items/furion/staff_tusks_1"
 			"model_player"		"models/items/furion/staff_tusks_1.mdl"
@@ -10288,6 +10304,7 @@
 		{
 			"name"		"Sinorian Sphere Staff"
 			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Staff"
 			"item_name"		"#DOTA_Item_Sinorian_Sphere_Staff"
 			"image_inventory"		"econ/items/furion/staff_dwarven"
 			"model_player"		"models/items/furion/staff_dwarven.mdl"
@@ -11953,7 +11970,7 @@
 		{
 			"name"		"Arctic Hunter's Ice Axe"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Axe"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Ice_Axe"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Ice_Axe"
@@ -12412,7 +12429,7 @@
 		{
 			"name"		"Call of the Dendrochron"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Ability_Modifier"
+			"item_type_name"		"#DOTA_WearableType_Natures_Call_Treants"
 			"item_name"		"#DOTA_Item_Call_of_the_Dendrochron"
 			"item_slot"		"ability3"
 			"item_rarity"		"mythical"
@@ -12642,6 +12659,7 @@
 		{
 			"name"		"Staff of the Eagle"
 			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Staff"
 			"item_name"		"#DOTA_Item_Staff_of_the_Eagle"
 			"item_rarity"		"rare"
 			"image_inventory"		"econ/items/furion/staff_eagle_1"
@@ -13440,7 +13458,7 @@
 		{
 			"name"		"Arctic Hunter's Parka"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Parka"
 			"item_slot"		"shoulder"
 			"item_rarity"		"uncommon"
@@ -14274,7 +14292,7 @@
 		{
 			"name"		"Armor of the Radiant Crusader"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Armor"
+			"item_type_name"		"#DOTA_WearableType_Pauldrons"
 			"item_name"		"#DOTA_Item_Armor_of_the_Radiant_Crusader"
 			"item_slot"		"shoulder"
 			"item_description"		"#DOTA_Item_Desc_Armor_of_the_Radiant_Crusader"
@@ -16432,7 +16450,7 @@
 		{
 			"name"		"Hardened Hunter's Armor"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Armor"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Hardened_Hunters_Armor"
 			"item_slot"		"armor"
 			"item_rarity"		"uncommon"
@@ -29595,7 +29613,7 @@
 		{
 			"name"		"Frost Shard Pauldrons"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Frost_Shard_Pauldrons"
 			"item_slot"		"shoulder"
 			"item_rarity"		"uncommon"
@@ -30206,7 +30224,7 @@
 		{
 			"name"		"Arctic Hunter's Tusks"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Tusks"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Tusks"
 			"item_slot"		"neck"
 			"item_rarity"		"uncommon"
@@ -31016,7 +31034,7 @@
 		{
 			"name"		"Arctic Hunter's Hood"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Hood"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Hood"
 			"item_slot"		"head"
 			"item_rarity"		"uncommon"
@@ -33067,7 +33085,7 @@
 		{
 			"name"		"Arctic Hunter's Snack"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Basket"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Snack"
 			"item_slot"		"back"
 			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Snack"
@@ -33118,7 +33136,7 @@
 		{
 			"name"		"Arctic Hunter's Glove"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Fist"
 			"item_name"		"#DOTA_Item_Arctic_Hunters_Glove"
 			"item_slot"		"arms"
 			"item_description"		"#DOTA_Item_Desc_Arctic_Hunters_Glove"
@@ -33679,7 +33697,7 @@
 		{
 			"name"		"Assistant's Respirator"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Ogre_Mask__Saddle"
+			"item_type_name"		"#DOTA_WearableType_Ogre_Mask_and_Saddle"
 			"item_name"		"#DOTA_Item_Assistants_Respirator"
 			"item_slot"		"armor"
 			"item_rarity"		"rare"
@@ -33977,7 +33995,7 @@
 		{
 			"name"		"Horns of the Wicked Succubus"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Horns_and_Hair"
 			"item_name"		"#DOTA_Item_Horns_of_the_Wicked_Succubus"
 			"item_slot"		"head"
 			"item_rarity"		"uncommon"
@@ -34033,12 +34051,6 @@
 				"league id"
 				{
 					"value"		"45"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -34533,7 +34545,7 @@
 			"item_type_name"		"#DOTA_WearableType_Slithereen_Dagger"
 			"item_name"		"#DOTA_Item_Encore"
 			"item_rarity"		"rare"
-			"item_description"		"#DOTA_Item_Desc_Encore_the_"
+			"item_description"		"#DOTA_Item_Desc_Encore"
 			"image_inventory"		"econ/items/slark/anuxi_encore_dagger/anuxi_encore_dagger"
 			"used_by_heroes"
 			{
@@ -35042,7 +35054,7 @@
 		{
 			"name"		"Dirk of the Wicked Succubus"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Dagger"
 			"item_name"		"#DOTA_Item_Dirk_of_the_Wicked_Succubus"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_Dirk_of_the_Wicked_Succubus"
@@ -35098,12 +35110,6 @@
 				{
 					"value"		"45"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -35139,7 +35145,7 @@
 		{
 			"name"		"Wings of the Wicked Succubus"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Wings"
 			"item_name"		"#DOTA_Item_Wings_of_the_Wicked_Succubus"
 			"item_slot"		"back"
 			"item_rarity"		"rare"
@@ -35195,12 +35201,6 @@
 				"league id"
 				{
 					"value"		"45"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -35545,7 +35545,7 @@
 		{
 			"name"		"Wraps of the Wicked Succubus"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Armor"
 			"item_name"		"#DOTA_Item_Wraps_of_the_Wicked_Succubus"
 			"item_slot"		"shoulder"
 			"item_rarity"		"uncommon"
@@ -35601,12 +35601,6 @@
 				"league id"
 				{
 					"value"		"45"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -39209,7 +39203,7 @@
 		{
 			"name"		"Tail of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Tail"
 			"item_name"		"#DOTA_Item_Tail_of_the_Eleven_Curses"
 			"item_slot"		"tail"
 			"item_rarity"		"uncommon"
@@ -39314,7 +39308,7 @@
 		{
 			"name"		"Sword of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Runesword"
 			"item_name"		"#DOTA_Item_Sword_of_the_Eleven_Curses"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Eleven_Curses__Sword"
@@ -39542,7 +39536,7 @@
 		{
 			"name"		"Bracer of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Bracer"
 			"item_name"		"#DOTA_Item_Bracer_of_the_Eleven_Curses"
 			"item_slot"		"arms"
 			"item_rarity"		"uncommon"
@@ -39748,7 +39742,7 @@
 		{
 			"name"		"Wings of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Wings"
 			"item_name"		"#DOTA_Item_Wings_of_the_Eleven_Curses"
 			"item_slot"		"back"
 			"item_rarity"		"uncommon"
@@ -39903,7 +39897,7 @@
 		{
 			"name"		"Belt of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Belt"
 			"item_name"		"#DOTA_Item_Belt_of_the_Eleven_Curses"
 			"item_slot"		"belt"
 			"item_rarity"		"uncommon"
@@ -40167,7 +40161,7 @@
 		{
 			"name"		"Shoulder of the Eleven Curses"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Shoulder_of_the_Eleven_Curses"
 			"item_slot"		"shoulder"
 			"item_rarity"		"uncommon"
@@ -42684,7 +42678,7 @@
 		{
 			"name"		"Nightsilver Quiver"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Misc"
+			"item_type_name"		"#DOTA_WearableType_Quiver"
 			"item_name"		"#DOTA_Item_Nightsilver_Quiver"
 			"item_slot"		"misc"
 			"item_rarity"		"uncommon"
@@ -42752,7 +42746,7 @@
 		{
 			"name"		"Nightsilver Bow"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Head"
+			"item_type_name"		"#DOTA_WearableType_Bow"
 			"item_name"		"#DOTA_Item_Nightsilver_Bow"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_Nightsilver_Bow"
@@ -44816,7 +44810,7 @@
 		{
 			"name"		"Mask of Dark Ferocity"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Mask_and_Eye_Patch"
 			"item_name"		"#DOTA_Item_Mask_of_Dark_Ferocity"
 			"item_slot"		"head"
 			"item_rarity"		"uncommon"
@@ -50772,7 +50766,7 @@
 		{
 			"name"		"Ancestors' Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_weapon"
+			"item_type_name"		"#DOTA_WearableType_Spear"
 			"item_name"		"#DOTA_Item_Ancestors_Edge"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_Ancestors_Edge"
@@ -50830,7 +50824,7 @@
 		{
 			"name"		"Ancestors' Pauldron"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_shoulder"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Ancestors_Pauldron"
 			"item_slot"		"shoulder"
 			"item_rarity"		"rare"
@@ -50889,7 +50883,7 @@
 		{
 			"name"		"Ancestors' Vambrace"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_arms"
+			"item_type_name"		"#DOTA_WearableType_Bracer"
 			"item_name"		"#DOTA_Item_Ancestors_Vambrace"
 			"item_slot"		"arms"
 			"item_description"		"#DOTA_Item_Desc_Ancestors_Vambrace"
@@ -50947,7 +50941,7 @@
 		{
 			"name"		"Ancestors' Belt"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_belt"
+			"item_type_name"		"#DOTA_WearableType_Belt"
 			"item_name"		"#DOTA_Item_Ancestors_Belt"
 			"item_slot"		"belt"
 			"item_rarity"		"uncommon"
@@ -51239,7 +51233,7 @@
 		{
 			"name"		"Sanguine Moon Patch"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_EyePatch"
+			"item_type_name"		"#DOTA_WearableType_Eye_Patch"
 			"item_name"		"#DOTA_Item_Sanguine_Moon_Patch"
 			"item_slot"		"head"
 			"item_rarity"		"mythical"
@@ -54820,7 +54814,7 @@
 		{
 			"name"		"Cut of the Battle Caster"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Hair"
 			"item_name"		"#DOTA_Item_Cut_of_the_Battle_Caster"
 			"item_slot"		"head"
 			"item_rarity"		"uncommon"
@@ -56244,7 +56238,7 @@
 		{
 			"name"		"Helm of the Nimble Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Helm"
 			"item_name"		"#DOTA_Item_Helm_of_the_Nimble_Edge"
 			"item_slot"		"head"
 			"item_rarity"		"uncommon"
@@ -56295,7 +56289,7 @@
 		{
 			"name"		"Leaf of the Nimble Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Blade"
 			"item_name"		"#DOTA_Item_Leaf_of_the_Nimble_Edge"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_Leaf_of_the_Nimble_Edge"
@@ -56345,7 +56339,7 @@
 		{
 			"name"		"Cloak of the Nimble Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Cloak"
 			"item_name"		"#DOTA_Item_Cloak_of_the_Nimble_Edge"
 			"item_slot"		"back"
 			"item_rarity"		"rare"
@@ -56396,7 +56390,7 @@
 		{
 			"name"		"Pauldron of the Nimble Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Shoulder"
 			"item_name"		"#DOTA_Item_Pauldron_of_the_Nimble_Edge"
 			"item_slot"		"shoulder"
 			"item_rarity"		"rare"
@@ -56447,7 +56441,7 @@
 		{
 			"name"		"Girdle of the Nimble Edge"
 			"prefab"		"wearable"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Belt"
 			"item_name"		"#DOTA_Item_Girdle_of_the_Nimble_Edge"
 			"item_slot"		"belt"
 			"item_rarity"		"uncommon"
@@ -57663,6 +57657,309 @@
 			"item_rarity"		"rare"
 			"item_set"		"thorns_sundering"
 		}
+		"4995"
+		{
+			"name"		"Gloves of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Bracers"
+			"item_name"		"#DOTA_Item_Gloves_of_Retribution"
+			"item_slot"		"arms"
+			"item_description"		"#DOTA_Item_Desc_Gloves_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_arms/ret_arms"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_arms/ret_arms.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"39.121666 -89.423515 292.540771"
+					"PortraitLookAt"		"11.057739 124.942017 0.000000"
+					"PortraitFOV"		"36.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"58.917683 -116.302734 325.540466"
+					"PortraitLightLookAt"		"37.040405 110.791626 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
+		"4997"
+		{
+			"name"		"Pauldrons of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Pauldrons"
+			"item_name"		"#DOTA_Item_Pauldrons_of_Retribution"
+			"item_slot"		"shoulder"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Pauldrons_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_shoulders/ret_shoulders"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_shoulders/ret_shoulders.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"104.278557 7.874512 347.941772"
+					"PortraitLookAt"		"19.934692 179.384766 0.000000"
+					"PortraitFOV"		"57.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"130.941986 -61.308071 375.399628"
+					"PortraitLightLookAt"		"30.531006 145.662231 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
+		"4998"
+		{
+			"name"		"Wings of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Wings"
+			"item_name"		"#DOTA_Item_Wings_of_Retribution"
+			"item_slot"		"back"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_Wings_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_wings/ret_wings"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_wings/ret_wings.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"93.468811 316.256195 345.441132"
+					"PortraitLookAt"		"347.678833 242.248535 332.182617"
+					"PortraitFOV"		"47.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"130.941986 -61.308071 375.399628"
+					"PortraitLightLookAt"		"30.531006 145.662231 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
+		"4999"
+		{
+			"name"		"Staff of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Staff"
+			"item_name"		"#DOTA_Item_Staff_of_Retribution"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Staff_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_staff/ret_staff"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_staff/ret_staff.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"30.711081 66.801483 380.035645"
+					"PortraitLookAt"		"13.952637 281.030273 49.037476"
+					"PortraitFOV"		"44.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"11.167330 131.456970 310.671112"
+					"PortraitLightLookAt"		"358.747559 276.091919 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
+		"5000"
+		{
+			"name"		"Helm of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Helm"
+			"item_name"		"#DOTA_Item_Helm_of_Retribution"
+			"item_slot"		"head"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Helm_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_helm/ret_helm"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_helm/ret_helm.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"71.302055 54.390614 371.929749"
+					"PortraitLookAt"		"17.863770 218.128052 0.000000"
+					"PortraitFOV"		"47.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"130.941986 -61.308071 375.399628"
+					"PortraitLightLookAt"		"30.531006 145.662231 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
+		"5001"
+		{
+			"name"		"Belt of Retribution"
+			"prefab"		"wearable"
+			"item_type_name"		"#DOTA_WearableType_Belt"
+			"item_name"		"#DOTA_Item_Belt_of_Retribution"
+			"item_slot"		"belt"
+			"item_description"		"#DOTA_Item_Desc_Belt_of_Retribution"
+			"image_inventory"		"econ/items/skywrath_mage/ret_belt/ret_belt"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"model_player"		"models/items/skywrath_mage/ret_belt/ret_belt.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-75.470345 94.605057 308.053375"
+					"PortraitLookAt"		"26.290283 309.649658 0.000000"
+					"PortraitFOV"		"54.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-30.461748 88.098312 303.485168"
+					"PortraitLightLookAt"		"27.042847 222.885132 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_set"		"arms_of_retribution"
+		}
 		"10000"
 		{
 			"name"		"Free Trial Premium Upgrade"
@@ -58436,12 +58733,6 @@
 				"league id"
 				{
 					"value"		"21"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -59628,12 +59919,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"3"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Lost_Treasure_of_the_Ivory_Isles"
 			"tool"
@@ -59659,12 +59944,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"4"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Deep_Druids"
@@ -59692,12 +59971,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"5"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Red_Mist"
 			"tool"
@@ -59723,12 +59996,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"4"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_TreasureChest_Type"
@@ -60578,12 +60845,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"6"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Pangolin_GuildMasters"
 			"tool"
@@ -60744,12 +61005,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"7"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Ancestor_Spirits"
 			"tool"
@@ -60776,12 +61031,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"8"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_High_Tide"
 			"tool"
@@ -60807,12 +61056,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"9"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Sithils_Stash"
@@ -60841,12 +61084,6 @@
 				{
 					"attribute_class"		"cannot_trade"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"10"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Defense_2_Chest"
@@ -60927,12 +61164,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"11"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_Profound_Mysteries"
 			"tool"
@@ -60989,18 +61220,6 @@
 					"attribute_class"		"team_id"
 					"value"		"23"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61047,18 +61266,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"22"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61108,18 +61315,6 @@
 					"attribute_class"		"team_id"
 					"value"		"7"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61167,18 +61362,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"15"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61228,18 +61411,6 @@
 					"attribute_class"		"team_id"
 					"value"		"4"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61288,18 +61459,6 @@
 					"attribute_class"		"team_id"
 					"value"		"20"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61317,12 +61476,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"12"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_Champions"
@@ -61350,12 +61503,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"13"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_Challengers"
@@ -61414,18 +61561,6 @@
 					"attribute_class"		"team_id"
 					"value"		"3"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61473,18 +61608,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"66"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61534,18 +61657,6 @@
 					"attribute_class"		"team_id"
 					"value"		"30"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61593,18 +61704,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"39"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61654,18 +61753,6 @@
 					"attribute_class"		"team_id"
 					"value"		"36"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61713,18 +61800,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"22"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61774,18 +61849,6 @@
 					"attribute_class"		"team_id"
 					"value"		"2"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61833,18 +61896,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"17"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -61894,18 +61945,6 @@
 					"attribute_class"		"team_id"
 					"value"		"6"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -61953,18 +61992,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"5"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -62014,18 +62041,6 @@
 					"attribute_class"		"team_id"
 					"value"		"26"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -62074,18 +62089,6 @@
 					"attribute_class"		"team_id"
 					"value"		"416900"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
@@ -62133,18 +62136,6 @@
 				{
 					"attribute_class"		"team_id"
 					"value"		"31"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"fanfare level"
-				{
-					"attribute_class"		"fanfare_level"
-					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -62276,12 +62267,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"14"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Rogue_Knight"
 			"tool"
@@ -62308,12 +62293,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"15"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Timeless_Treasure_of_Claszureme"
 			"tool"
@@ -62339,12 +62318,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"16"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Wild_Claw"
@@ -63155,12 +63128,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"17"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Ghastly_Treasure_of_Diretide"
@@ -64552,12 +64519,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"19"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Hunted_Dragon"
 			"tool"
@@ -64583,12 +64544,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"20"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_the_Silent_Grove"
@@ -64635,12 +64590,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"18"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"item_name"		"#DOTA_Item_Treasure_of_the_Twins"
@@ -64667,12 +64616,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"21"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Frosty_Treasure_of_Frostivus"
@@ -65007,12 +64950,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"22"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_name"		"#DOTA_Item_Treasure_of_Dark_Implements"
@@ -65385,12 +65322,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"23"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"item_name"		"#DOTA_Item_Treasure_of_the_Omniscient"
@@ -65417,12 +65348,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"24"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
@@ -65451,12 +65376,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"25"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"item_name"		"#DOTA_Item_Treasure_of_Tidal_Power"
@@ -65483,12 +65402,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"26"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
@@ -65648,99 +65561,8 @@
 		{
 			"name"		"Wynchell the Wyrmeleon"
 			"prefab"		"courier"
-			"item_name"		"#DOTA_Item_Wynchell_the_Wyrmeleon"
-			"item_quality"		"genuine"
-			"item_rarity"		"mythical"
-			"forced_item_quality"		"genuine"
-			"item_description"		"#DOTA_Item_Desc_Wynchell_the_Wyrmeleon"
-			"image_inventory"		"econ/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon"
-			"visuals"
-			{
-				"asset_modifier0"
-				{
-					"type"		"courier"
-					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon.mdl"
-					"modifier"		"radiant"
-				}
-				"asset_modifier1"
-				{
-					"type"		"courier"
-					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon.mdl"
-					"modifier"		"dire"
-				}
-				"asset_modifier2"
-				{
-					"type"		"courier_flying"
-					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon_flying.mdl"
-					"modifier"		"radiant"
-				}
-				"asset_modifier3"
-				{
-					"type"		"courier_flying"
-					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon_flying.mdl"
-					"modifier"		"dire"
-				}
-				"attached_particlesystem0"
-				{
-					"system"		"courier_wrymeleon_ambient"
-				}
-			}
-			"attributes"
-			{
-				"premier league tag"
-				{
-					"attribute_class"		"premier league tag"
-					"value"		"4"
-				}
-				"league id"
-				{
-					"value"		"27"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"		"kill_eater_score_type"
-					"value"		"33"
-				}
-			}
-			"particle_file"		"particles/econ/courier/courier_wyrmeleon.pcf"
 			"portraits"
 			{
-				"icon"
-				{
-					"PortraitPosition"		"101.215530 -173.014465 58.172081"
-					"PortraitLookAt"		"8.096924 116.867065 0.000000"
-					"PortraitFOV"		"44.000000"
-					"PortraitFar"		"336.000000"
-					"PortraitLightPosition"		"87.860443 -135.148422 283.027985"
-					"PortraitLightLookAt"		"58.881226 120.102539 0.000000"
-					"PortraitLightFOV"		"28.000000"
-					"PortraitLightDistance"		"344.000000"
-					"PortraitLightColor"		"0.429063 0.383186 0.450980"
-					"PortraitShadowColor"		"0.070000 0.070000 0.070000"
-					"PortraitShadowScale"		"1.000000"
-					"PortraitGroundShadowScale"		"0.300000"
-					"PortraitAmbientOrigin"		"-17.460934 -67.882111 56.752674"
-					"PortraitAmbientColor"		"0.080000 0.150000 0.150000"
-					"PortraitAmbientScale"		"1.000000"
-					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
-					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
-					"PortraitSpecularPower"		"16.000000"
-					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
-					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
-					"PortraitAnimationActivity"		"1"
-					"PortraitAnimationCycle"		"0.224000"
-					"PortraitAnimationRate"		"0.000000"
-					"PortraitHideHero"		"0"
-				}
 				"preview"
 				{
 					"PortraitPosition"		"600.000000 -48.000000 198.000000"
@@ -65802,7 +65624,92 @@
 					"PortraitAnimationRate"		"1.000000"
 					"PortraitHideHero"		"0"
 				}
+				"icon"
+				{
+					"PortraitPosition"		"101.215530 -173.014465 58.172081"
+					"PortraitLookAt"		"8.096924 116.867065 0.000000"
+					"PortraitFOV"		"44.000000"
+					"PortraitFar"		"336.000000"
+					"PortraitLightPosition"		"87.860443 -135.148422 283.027985"
+					"PortraitLightLookAt"		"58.881226 120.102539 0.000000"
+					"PortraitLightFOV"		"28.000000"
+					"PortraitLightDistance"		"344.000000"
+					"PortraitLightColor"		"0.429063 0.383186 0.450980"
+					"PortraitShadowColor"		"0.070000 0.070000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-17.460934 -67.882111 56.752674"
+					"PortraitAmbientColor"		"0.080000 0.150000 0.150000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"1"
+					"PortraitAnimationCycle"		"0.224000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
 			}
+			"item_name"		"#DOTA_Item_Wynchell_the_Wyrmeleon"
+			"item_quality"		"genuine"
+			"item_rarity"		"mythical"
+			"forced_item_quality"		"genuine"
+			"item_description"		"#DOTA_Item_Desc_Wynchell_the_Wyrmeleon"
+			"image_inventory"		"econ/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon.mdl"
+					"modifier"		"radiant"
+				}
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon.mdl"
+					"modifier"		"dire"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon_flying.mdl"
+					"modifier"		"radiant"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/premier_league_wyrmeleon/premier_league_wyrmeleon_flying.mdl"
+					"modifier"		"dire"
+				}
+				"attached_particlesystem0"
+				{
+					"system"		"courier_wrymeleon_ambient"
+				}
+			}
+			"attributes"
+			{
+				"premier league tag"
+				{
+					"attribute_class"		"premier league tag"
+					"value"		"4"
+				}
+				"league id"
+				{
+					"value"		"27"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"particle_file"		"particles/econ/courier/courier_wyrmeleon.pcf"
 		}
 		"10159"
 		{
@@ -65855,12 +65762,6 @@
 				"league id"
 				{
 					"value"		"29"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -66030,12 +65931,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"27"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
@@ -66582,12 +66477,6 @@
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
 				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"28"
-					"force_gc_to_generate"		"1"
-				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"item_name"		"#DOTA_Item_Treasure_of_the_Cursed_Wood"
@@ -66611,12 +66500,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"29"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
@@ -66835,12 +66718,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"30"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"item_type_name"		"#DOTA_WearableType_Treasure"
@@ -67146,12 +67023,6 @@
 				"league id"
 				{
 					"value"		"34"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -67693,28 +67564,10 @@
 				{
 					"value"		"65005"
 				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
 				"kill eater score type"
 				{
 					"attribute_class"		"kill_eater_score_type"
 					"value"		"33"
-				}
-				"skin index"
-				{
-					"attribute_class"		"skin_index"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
-				}
-				"model index"
-				{
-					"attribute_class"		"model_index"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"international tag"
 				{
@@ -67769,12 +67622,6 @@
 				{
 					"attribute_class"		"disallow_recycling"
 					"value"		"1"
-				}
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"31"
-					"force_gc_to_generate"		"1"
 				}
 			}
 			"tool"
@@ -68006,7 +67853,7 @@
 			"image_inventory"		"econ/announcer/announcer_pflax"
 			"visuals"
 			{
-				"asset_modifier7"
+				"asset_modifier0"
 				{
 					"type"		"announcer"
 					"asset"		"npc_dota_hero_announcer_dlc_pflax"
@@ -68018,35 +67865,35 @@
 					"asset"		"*vo/announcer_dlc_pflax/creeps_eternal_struggle.mp3"
 					"modifier"		"#DOTA_Announcer_Preview_Pflax_01"
 				}
-				"asset_modifier8"
-				{
-					"type"		"announcer_preview"
-					"asset"		"*vo/announcer_dlc_pflax/announcer_twr_attack_yr_mid_02.mp3"
-					"modifier"		"#DOTA_Announcer_Preview_Pflax_02"
-				}
-				"asset_modifier9"
-				{
-					"type"		"announcer_preview"
-					"asset"		"*vo/announcer_dlc_pflax/announcer_mega_now_you_02.mp3"
-					"modifier"		"#DOTA_Announcer_Preview_Pflax_04"
-				}
-				"asset_modifier11"
-				{
-					"type"		"announcer_preview"
-					"asset"		"*vo/announcer_dlc_pflax/batrider_hasnt_touched_ground.mp3"
-					"modifier"		"#DOTA_Announcer_Preview_Pflax_05"
-				}
-				"asset_modifier12"
-				{
-					"type"		"announcer_preview"
-					"asset"		"*vo/announcer_dlc_pflax/dragon_knight_bakes.mp3"
-					"modifier"		"#DOTA_Announcer_Preview_Pflax_06"
-				}
 				"asset_modifier1"
 				{
 					"type"		"announcer_preview"
 					"asset"		"*vo/announcer_dlc_pflax/go_on_creeps.mp3"
 					"modifier"		"#DOTA_Announcer_Preview_Pflax_03"
+				}
+				"asset_modifier2"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/announcer_twr_attack_yr_mid_02.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_02"
+				}
+				"asset_modifier3"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/announcer_mega_now_you_02.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_04"
+				}
+				"asset_modifier4"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/batrider_hasnt_touched_ground.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_05"
+				}
+				"asset_modifier5"
+				{
+					"type"		"announcer_preview"
+					"asset"		"*vo/announcer_dlc_pflax/dragon_knight_bakes.mp3"
+					"modifier"		"#DOTA_Announcer_Preview_Pflax_06"
 				}
 			}
 			"creation_date"		"2013-05-14"
@@ -68296,12 +68143,6 @@
 				"league id"
 				{
 					"value"		"48"
-				}
-				"kill eater"
-				{
-					"attribute_class"		"kill_eater"
-					"value"		"0"
-					"force_gc_to_generate"		"1"
 				}
 				"kill eater score type"
 				{
@@ -68737,6 +68578,398 @@
 				}
 			}
 			"item_rarity"		"legendary"
+		}
+		"10194"
+		{
+			"name"		"El Gato"
+			"prefab"		"courier"
+			"portraits"
+			{
+				"preview"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 98.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitBackgroundModel"		"models/heroes/pedestal/pedestal_1_small.mdl"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"preview_flying"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 48.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit.mdl"
+				{
+					"PortraitPosition"		"84.858658 11.284990 93.830124"
+					"PortraitLookAt"		"18.689472 -172.252029 0.000000"
+					"PortraitFOV"		"30.439762"
+					"PortraitFar"		"1500.000000"
+					"PortraitLightPosition"		"169.408173 155.566299 267.000000"
+					"PortraitLightLookAt"		"34.859131 -118.618515 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.406556 0.411139 0.476400"
+					"PortraitShadowColor"		"0.215572 0.074332 0.074332"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-0.200423 0.964510 0.171906"
+					"PortraitAmbientColor"		"0.067723 0.092499 0.086924"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.088094 0.088094 0.088094"
+					"PortraitBackgroundColor2"		"0.250000 0.250000 0.250000"
+					"PortraitBackgroundColor3"		"0.500000 0.500000 0.500000"
+					"PortraitBackgroundColor4"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundTexture"		"vgui/hud/heroportraits/portraitbackground_glacier"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit_flying.mdl"
+				{
+					"PortraitPosition"		"193.650421 -94.791100 167.229813"
+					"PortraitLookAt"		"21.033558 155.339859 0.000000"
+					"PortraitFOV"		"27.974072"
+					"PortraitFar"		"1500.000000"
+					"PortraitLightPosition"		"-68.555138 271.477783 197.000000"
+					"PortraitLightLookAt"		"35.129124 -75.827637 0.000001"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.210489 0.290548 0.785162"
+					"PortraitShadowColor"		"0.048837 0.065941 0.044593"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-0.111338 0.953848 0.278888"
+					"PortraitAmbientColor"		"0.078983 0.039810 0.039810"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor2"		"0.250000 0.250000 0.250000"
+					"PortraitBackgroundColor3"		"0.500000 0.500000 0.500000"
+					"PortraitBackgroundColor4"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundTexture"		"vgui/hud/heroportraits/portraitbackground_moon"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"icon"
+				{
+					"PortraitPosition"		"317.446564 255.550842 128.712173"
+					"PortraitLookAt"		"10.365601 214.810181 0.000000"
+					"PortraitFOV"		"22.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"202.699997 -23.150000 308.170013"
+					"PortraitLightLookAt"		"54.790001 171.699997 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"377.000000"
+					"PortraitLightColor"		"0.521569 0.521569 0.521569"
+					"PortraitShadowColor"		"0.070000 0.070000 0.070000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"79.070000 84.150002 25.320000"
+					"PortraitAmbientColor"		"0.080000 0.150000 0.150000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.508000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_The_Brave_Little_Courier"
+			"item_name"		"#DOTA_Item_El_Gato"
+			"item_rarity"		"mythical"
+			"item_description"		"#DOTA_Item_Desc_El_Gato"
+			"image_inventory"		"econ/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit"
+			"creation_date"		"2013-05-23"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit_flying.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit_flying.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10195"
+		{
+			"name"		"Itsy"
+			"prefab"		"courier"
+			"portraits"
+			{
+				"preview"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 98.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitBackgroundModel"		"models/heroes/pedestal/pedestal_1_small.mdl"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"preview_flying"
+				{
+					"PortraitPosition"		"600.000000 -48.000000 48.000000"
+					"PortraitLookAt"		"357.600006 175.899994 0.000000"
+					"PortraitFOV"		"29.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"276.429993 -18.010000 333.350006"
+					"PortraitLightLookAt"		"33.889999 183.929993 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.400000 0.340000 0.730000"
+					"PortraitShadowColor"		"0.230000 0.230000 0.230000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"76.519997 -7.960000 -38.340000"
+					"PortraitAmbientColor"		"0.000000 0.360000 0.330000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor2"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor3"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundColor4"		"0.550000 0.450000 0.600000"
+					"PortraitBackgroundTexture"		"portraits_card/portrait_backgrounds/full_view_background"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"models/items/courier/itsy/itsy.mdl"
+				{
+					"PortraitPosition"		"180.818924 -41.880856 91.630089"
+					"PortraitLookAt"		"8.749822 161.839401 0.000000"
+					"PortraitFOV"		"27.956673"
+					"PortraitFar"		"1500.000000"
+					"PortraitLightPosition"		"169.408173 155.566299 267.000000"
+					"PortraitLightLookAt"		"34.859131 -118.618515 0.000000"
+					"PortraitLightFOV"		"56.290001"
+					"PortraitLightDistance"		"453.422729"
+					"PortraitLightColor"		"0.884648 0.710589 0.465945"
+					"PortraitShadowColor"		"0.360668 0.230155 0.124363"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-0.301470 0.512622 0.803949"
+					"PortraitAmbientColor"		"0.022853 0.006664 0.013957"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.571878 0.920171 0.206064"
+					"PortraitBackgroundColor2"		"0.250000 0.250000 0.250000"
+					"PortraitBackgroundColor3"		"0.500000 0.500000 0.500000"
+					"PortraitBackgroundColor4"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundTexture"		"vgui/hud/heroportraits/portraitbackground_forest_two"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"models/items/courier/itsy/itsy_flying.mdl"
+				{
+					"PortraitPosition"		"186.517395 -58.931053 74.029991"
+					"PortraitLookAt"		"8.331378 158.250397 0.000000"
+					"PortraitFOV"		"27.974072"
+					"PortraitFar"		"1500.000000"
+					"PortraitLightPosition"		"169.408173 155.566299 267.000000"
+					"PortraitLightLookAt"		"34.859131 -118.618515 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"471.000000"
+					"PortraitLightColor"		"0.854955 0.591488 0.466786"
+					"PortraitShadowColor"		"0.082005 0.048292 0.048292"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-0.301470 0.512622 0.803949"
+					"PortraitAmbientColor"		"0.007057 0.019199 0.012814"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.167278 0.622153 0.167181"
+					"PortraitBackgroundColor2"		"0.250000 0.250000 0.250000"
+					"PortraitBackgroundColor3"		"0.500000 0.500000 0.500000"
+					"PortraitBackgroundColor4"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundTexture"		"vgui/hud/heroportraits/portraitbackground_forest_two"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+				"icon"
+				{
+					"PortraitPosition"		"123.292610 -58.073330 104.862427"
+					"PortraitLookAt"		"29.641113 152.286987 0.000000"
+					"PortraitFOV"		"35.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"212.830002 -87.199997 302.000000"
+					"PortraitLightLookAt"		"53.840000 167.009995 0.000000"
+					"PortraitLightFOV"		"43.000000"
+					"PortraitLightDistance"		"568.000000"
+					"PortraitLightColor"		"0.550000 0.550000 0.550000"
+					"PortraitShadowColor"		"0.130000 0.130000 0.110000"
+					"PortraitShadowScale"		"0.205000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-0.180000 -0.050000 -0.980000"
+					"PortraitAmbientColor"		"0.030000 0.040000 0.040000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.315521 0.903406 0.987929"
+					"PortraitBackgroundColor2"		"0.250000 0.250000 0.250000"
+					"PortraitBackgroundColor3"		"0.500000 0.500000 0.500000"
+					"PortraitBackgroundColor4"		"0.700000 0.700000 0.700000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"1.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"item_type_name"		"#DOTA_WearableType_Courier_Itsid_Bitsid_Arachnid"
+			"item_name"		"#DOTA_Item_Itsy"
+			"item_rarity"		"legendary"
+			"item_description"		"#DOTA_Item_Desc_Itsy"
+			"image_inventory"		"econ/items/courier/itsy/itsy"
+			"creation_date"		"2013-05-24"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/itsy/itsy.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier1"
+				{
+					"type"		"courier"
+					"asset"		"models/items/courier/itsy/itsy.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+				"asset_modifier2"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/itsy/itsy_flying.mdl"
+					"modifier"		"radiant"
+					"frequency"		"1"
+				}
+				"asset_modifier3"
+				{
+					"type"		"courier_flying"
+					"asset"		"models/items/courier/itsy/itsy_flying.mdl"
+					"modifier"		"dire"
+					"frequency"		"1"
+				}
+			}
 		}
 		"15000"
 		{
@@ -70758,7 +70991,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Killing_Spree_North_America_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Killing_Spree_North_America"
 			"image_inventory"		"econ/leagues/subscriptions_killing_spree"
@@ -71445,7 +71678,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_League_DreamHackWinter2012_Admin"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_DreamHack_Dota_2_Corsair_Vengeance_Cup_ADMIN"
@@ -71489,7 +71722,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Star_Series_Season_IV_ADMIN"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_StarSeries_Season_IV"
@@ -71543,7 +71776,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_The_Defense_3_ADMIN"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_The_Defense_3_ADMIN"
@@ -71587,7 +71820,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_Dota_2_League_Season_2_ADMIN"
 			"item_rarity"		"uncommon"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_Dota_2_League_Season_2"
@@ -71837,7 +72070,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Dota_2_The_Asia_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Dota_2_The_Asia"
 			"image_inventory"		"econ/leagues/subscription_theasia"
@@ -71858,7 +72091,7 @@
 					"order"		"7"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_GLeague_2012"
 			"item_description"		"#DOTA_Item_Desc_GLeague_2012"
 			"image_inventory"		"econ/leagues/subscriptions_gleague"
@@ -71880,7 +72113,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_GLeague_2012_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_GLeague_2012"
 			"image_inventory"		"econ/leagues/subscriptions_gleague"
@@ -71929,7 +72162,7 @@
 					"order"		"2"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_SEA_League"
 			"item_description"		"#DOTA_Item_Desc_SEA_League"
 			"image_inventory"		"econ/leagues/subscriptions_sealeague"
@@ -71951,7 +72184,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_SEA_League_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_SEA_League"
 			"image_inventory"		"econ/leagues/subscriptions_sealeague"
@@ -71976,7 +72209,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Ticket"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_The_Premier_League_Season_4"
 			"item_description"		"#DOTA_Item_Desc_The_Premier_League_Season_4"
 			"image_inventory"		"econ/leagues/subscriptions_premierleague4"
@@ -72002,7 +72235,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_The_Premier_League_Season_4_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_Premier_League_Season_4"
 			"image_inventory"		"econ/leagues/subscriptions_premierleague4"
@@ -72051,7 +72284,7 @@
 					"order"		"4"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Spring_2013"
 			"item_description"		"#DOTA_Item_Desc_RaidCall_EMS_One_Spring_2013"
 			"image_inventory"		"econ/leagues/subscriptions_rcemsone"
@@ -72073,7 +72306,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Spring_2013_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_EMS_One_Spring_2013"
 			"image_inventory"		"econ/leagues/subscriptions_rcemsone"
@@ -72098,7 +72331,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Star_Series_Season_V"
 			"item_description"		"#DOTA_Item_Desc_Star_Series_Season_V"
 			"image_inventory"		"econ/leagues/subscriptions_starladder5"
@@ -72124,7 +72357,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Star_Series_Season_V_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Star_Series_Season_V_ADMIN"
 			"image_inventory"		"econ/leagues/subscriptions_starladder5"
@@ -72144,7 +72377,7 @@
 					"league_id"		"65003"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_4Players_League"
 			"item_description"		"#DOTA_Item_Desc_4Players_League"
 			"image_inventory"		"econ/leagues/subscriptions_4pl_dota2"
@@ -72165,7 +72398,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_4Players_League__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_4Players_League"
 			"image_inventory"		"econ/leagues/subscriptions_4pl_dota2"
@@ -72236,7 +72469,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League_Admin_Pass"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_GEST_Dota_2__Feb_and_March_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_GEST_Dota_2__2013"
 			"image_inventory"		"econ/leagues/subscriptions_gest2"
@@ -72257,7 +72490,7 @@
 					"order"		"9"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Armageddon_Dota_2_Grand_Slam"
 			"item_description"		"#DOTA_Item_Desc_Armaggeddon_Dota_2_Grand_Slam"
 			"image_inventory"		"econ/leagues/subscriptions_armageddon"
@@ -72279,7 +72512,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Armageddon_Dota_2_Grand_Slam__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Armageddon_Dota_2_Grand_Slam"
 			"image_inventory"		"econ/leagues/subscriptions_armageddon"
@@ -72300,7 +72533,7 @@
 					"order"		"10"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_WePlay_Dota_2"
 			"item_description"		"#DOTA_Item_Desc_WePlay_Dota_2"
 			"image_inventory"		"econ/leagues/subscriptions_weplay"
@@ -72322,7 +72555,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_WePlay_Dota_2__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_WePlay_Dota_2"
 			"image_inventory"		"econ/leagues/subscriptions_weplay"
@@ -72343,7 +72576,7 @@
 					"order"		"11"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_DreamHack_Dota2_Invitational"
 			"item_description"		"#DOTA_Item_Desc_DreamHack_Dota2_Invitational"
 			"image_inventory"		"econ/leagues/subscriptions_dreamhack_invitational"
@@ -72365,7 +72598,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_DreamHack_Dota2_Invitational__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_DreamHack_Dota2_Invitational"
 			"image_inventory"		"econ/leagues/subscriptions_dreamhack_invitational"
@@ -72390,7 +72623,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_G1_Champions_League_Season_5"
 			"item_description"		"#DOTA_Item_Desc_G1_Champions_League_Season_5"
 			"image_inventory"		"econ/leagues/subscriptions_g-1_season5"
@@ -72416,9 +72649,9 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_G1_Champions_League_Season_5_ADMIN"
-			"item_description"		"#DOTA_Item_Desc_Copy_of_G1_Champions_League_Season_5"
+			"item_description"		"#DOTA_Item_Desc_G1_Champions_League_Season_5_ADMIN"
 			"image_inventory"		"econ/leagues/subscriptions_g-1_season5"
 			"image_banner"		"econ/leagues/subscriptions_g-1_season5_ingame"
 			"tournament_url"		"http://g1.2p.com/dota2/"
@@ -72537,7 +72770,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Netolic_Pro_League_2nd_edition__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Netolic_Pro_League_2nd_edition"
 			"image_inventory"		"econ/leagues/subscriptions_neolitic_2"
@@ -72559,7 +72792,7 @@
 					"order"		"14"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Netolic_Pro_League_2nd_edition"
 			"item_description"		"#DOTA_Item_Desc_Netolic_Pro_League_2nd_edition"
 			"image_inventory"		"econ/leagues/subscriptions_neolitic_2"
@@ -72581,7 +72814,7 @@
 					"order"		"15"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_AtoD_3"
 			"item_description"		"#DOTA_Item_Desc_AtoD3"
 			"image_inventory"		"econ/leagues/subscriptions_atod3"
@@ -72603,7 +72836,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_AtoD_3_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_AtoD3"
 			"image_inventory"		"econ/leagues/subscriptions_atod3"
@@ -72624,7 +72857,7 @@
 					"order"		"16"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_E2Max_L33T_Championship"
 			"item_description"		"#DOTA_Item_Desc_E2Max_L33T_Championship"
 			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
@@ -72647,7 +72880,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_E2Max_L33T_Championship_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_E2Max_L33T_Championship"
 			"image_inventory"		"econ/leagues/subscriptions_e2max_l33t"
@@ -72669,7 +72902,7 @@
 					"order"		"17"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May"
 			"item_description"		"#DOTA_Item_Desc_GEST_Dota_2__April_and_May"
 			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
@@ -72692,7 +72925,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_GEST_Dota_2__April_and_May_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_GEST_Dota_2__April_and_May"
 			"image_inventory"		"econ/leagues/subscriptions_gest_april_may"
@@ -72714,7 +72947,7 @@
 					"order"		"18"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League"
 			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League"
 			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
@@ -72737,7 +72970,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_AMD_Dota2_Premier_League_ADMIN"
 			"item_description"		"#DOTA_Item_Desc_AMD_Dota2_Premier_League_ADMIN"
 			"image_inventory"		"econ/leagues/subscriptions_amd_premier_league"
@@ -72759,7 +72992,7 @@
 					"order"		"19"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_The_International_East_Qualifiers"
 			"item_description"		"#DOTA_Item_Desc_The_International_East_Qualifiers"
 			"image_inventory"		"econ/leagues/subscriptions_eastqualifier_ingame"
@@ -72781,7 +73014,7 @@
 					"order"		"19"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_The_International_West_Qualifiers"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
 			"image_inventory"		"econ/leagues/subscriptions_westqualifier_ingame"
@@ -72826,7 +73059,7 @@
 					"order"		"20"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational"
 			"item_description"		"#DOTA_Item_Desc_Curse_Dota_2_Invitational"
 			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
@@ -72849,7 +73082,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Curse_Dota_2_Invitational__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Curse_Dota_2_Invitational"
 			"image_inventory"		"econ/leagues/subscriptions_curse_invitational"
@@ -72973,7 +73206,7 @@
 					"order"		"21"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Dota_2_Super_League"
 			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League"
 			"image_inventory"		"econ/leagues/subscriptions_dsl"
@@ -72996,7 +73229,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_League"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Dota_2_Super_League__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Dota_2_Super_League__ADMIN"
 			"image_inventory"		"econ/leagues/subscriptions_dsl"
@@ -73019,7 +73252,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_The_International_East_Qualifiers__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_East_Qualifiers"
 			"image_inventory"		"econ/leagues/subscriptions_eastqualifier_ingame"
@@ -73042,7 +73275,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_The_International_West_Qualifiers__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_The_International_West_Qualifiers"
 			"image_inventory"		"econ/leagues/subscriptions_westqualifier_ingame"
@@ -73064,7 +73297,7 @@
 					"order"		"22"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly"
 			"item_description"		"#DOTA_Item_Desc_Pinoy_Gaming_Festival_Summer_Assembly"
 			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
@@ -73087,7 +73320,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Pinoy_Gaming_Festival_Summer_Assembly__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Pinoy_Gaming_Festival_Summer_Assembly"
 			"image_inventory"		"econ/leagues/subscriptions_pgf_summer_assembly"
@@ -73109,7 +73342,7 @@
 					"order"		"23"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League"
 			"item_description"		"#DOTA_Item_Desc_Rapture_Gaming_Network_League"
 			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
@@ -73132,7 +73365,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Rapture_Gaming_Network_League__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Rapture_Gaming_Network_League"
 			"image_inventory"		"econ/leagues/subscriptions_rgn_league"
@@ -73163,7 +73396,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Premier_League_Season_5"
 			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5"
 			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
@@ -73194,7 +73427,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Premier_League_Season_5__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Premier_League_Season_5__ADMIN"
 			"image_inventory"		"econ/leagues/subscriptions_premierleague5"
@@ -73221,7 +73454,7 @@
 					"hud_skin_item_def"		"10187"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_StarSeries_Season_VI"
 			"item_description"		"#DOTA_Item_Desc_StarSeries_Season_VI"
 			"image_inventory"		"econ/leagues/subscriptions_starladder6"
@@ -73248,7 +73481,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_StarSeries_Season_VI__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_StarSeries_Season_VI"
 			"image_inventory"		"econ/leagues/subscriptions_starladder6"
@@ -73270,7 +73503,7 @@
 					"order"		"26"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013"
 			"item_description"		"#DOTA_Item_Desc_RaidCall_EMS_One_Summer_2013"
 			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
@@ -73293,7 +73526,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_EMS_One_Summer_2013__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_EMS_One_Summer_2013"
 			"image_inventory"		"econ/leagues/subscriptions_rcemsone_summer"
@@ -73319,7 +73552,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_Dota_2_League_Season_3"
 			"item_description"		"#DOTA_Item_Desc_RaidCall_Dota_2_League_Season_3"
 			"image_inventory"		"econ/leagues/subscriptions_raidcall_d2l_season3"
@@ -73346,7 +73579,7 @@
 					}
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_RaidCall_Dota_2_League_Season_3__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_RaidCall_Dota_2_League_Season_3"
 			"image_inventory"		"econ/leagues/subscriptions_raidcall_d2l_season3"
@@ -73368,7 +73601,7 @@
 					"order"		"28"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_Dota_2_Canada_Cup"
 			"item_description"		"#DOTA_Item_Desc_Dota_2_Canada_Cup"
 			"image_inventory"		"econ/leagues/subscriptions_canada_cup"
@@ -73391,7 +73624,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_Dota_2_Canada_Cup__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Dota_2_Canada_Cup"
 			"image_inventory"		"econ/leagues/subscriptions_canada_cup"
@@ -73413,7 +73646,7 @@
 					"order"		"29"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"item_name"		"#DOTA_Item_American_Dota_League"
 			"item_description"		"#DOTA_Item_Desc_American_Dota_League"
 			"image_inventory"		"econ/leagues/subscriptions_american_dota_league"
@@ -73436,7 +73669,7 @@
 					"admin"		"1"
 				}
 			}
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_type_name"		"#DOTA_WearableType_Admin_Pass"
 			"item_name"		"#DOTA_Item_American_Dota_League__ADMIN"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_American_Dota_League"
 			"image_inventory"		"econ/leagues/subscriptions_american_dota_league"
@@ -76235,7 +76468,7 @@
 				"Heavy Steel Axe"		"1"
 				"Proof of Courage"		"1"
 			}
-			"item_description"		"#DOTA_Bundle_Desc_Axe_Heavy_Steel_Armor_Set"
+			"item_description"		"#DOTA_Item_Desc_Heavy_Steel_Armor_Set"
 			"image_inventory"		"econ/sets/DOTA_Item_Heavy_Steel_Armor_Set"
 			"used_by_heroes"
 			{
@@ -79842,7 +80075,6 @@
 		{
 			"name"		"The Commendable Commodore Set"
 			"prefab"		"bundle"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"item_name"		"#DOTA_Item_The_Commendable_Commodore_Set"
 			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_The_Commendable_Commodore_Set"
@@ -82161,7 +82393,6 @@
 		{
 			"name"		"Nimble Edge Set"
 			"prefab"		"bundle"
-			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"item_name"		"#DOTA_Item_Nimble_Edge_Set"
 			"item_description"		"#DOTA_Item_Desc_Nimble_Edge_Set"
 			"image_inventory"		"econ/sets/DOTA_Item_Sentinel_Set"
@@ -82493,6 +82724,7 @@
 			"name"		"The Thorns of Sundering Set"
 			"prefab"		"bundle"
 			"item_name"		"#DOTA_Item_The_Thorns_of_Sundering_Set"
+			"item_rarity"		"rare"
 			"item_description"		"#DOTA_Item_Desc_The_Thorns_of_Sundering_Set"
 			"image_inventory"		"econ/sets/DOTA_Item_The_Thorns_of_Sundering_Set"
 			"used_by_heroes"
@@ -82507,7 +82739,6 @@
 				"Roots of Sundering"		"1"
 				"Tail of Sundering"		"1"
 			}
-			"item_rarity"		"rare"
 			"portraits"
 			{
 				"icon"
@@ -82537,6 +82768,62 @@
 					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
 					"PortraitAnimationActivity"		"6"
 					"PortraitAnimationCycle"		"0.212000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+		}
+		"20180"
+		{
+			"name"		"The Arms of Retribution Set"
+			"prefab"		"bundle"
+			"item_name"		"#DOTA_Item_The_Arms_of_Retribution_Set"
+			"item_rarity"		"rare"
+			"item_description"		"#DOTA_Item_Desc_The_Arms_of_Retribution_Set"
+			"image_inventory"		"econ/sets/DOTA_Item_The_Arms_of_Retribution_Set"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+			"creation_date"		"2013-05-29"
+			"bundle"
+			{
+				"Belt of Retribution"		"1"
+				"Gloves of Retribution"		"1"
+				"Helm of Retribution"		"1"
+				"Pauldrons of Retribution"		"1"
+				"Staff of Retribution"		"1"
+				"Wings of Retribution"		"1"
+			}
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"190.830704 70.611839 374.075104"
+					"PortraitLookAt"		"13.419800 209.058838 7.789307"
+					"PortraitFOV"		"63.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"11.167330 131.456970 310.671112"
+					"PortraitLightLookAt"		"358.747559 276.091919 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"138.000000"
+					"PortraitLightColor"		"0.306247 0.274837 0.329804"
+					"PortraitShadowColor"		"0.100000 0.090000 0.140000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.411765 0.411765 0.411765"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
 					"PortraitAnimationRate"		"0.000000"
 					"PortraitHideHero"		"1"
 				}
@@ -85152,6 +85439,20 @@
 				"Armored Exoskeleton Legs"		"1"
 			}
 			"store_bundle"		"Armored Exoskeleton Set"
+		}
+		"arms_of_retribution"
+		{
+			"name"		"#DOTA_Set_Arms_of_Retribution"
+			"items"
+			{
+				"Pauldrons of Retribution"		"1"
+				"Gloves of Retribution"		"1"
+				"Wings of Retribution"		"1"
+				"Staff of Retribution"		"1"
+				"Helm of Retribution"		"1"
+				"Belt of Retribution"		"1"
+			}
+			"store_bundle"		"The Arms of Retribution Set"
 		}
 		"attributes_foretold"
 		{
