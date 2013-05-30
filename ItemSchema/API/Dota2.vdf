@@ -68971,6 +68971,69 @@
 				}
 			}
 		}
+		"10198"
+		{
+			"name"		"Elder Bark"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Elder_Bark"
+			"item_rarity"		"uncommon"
+			"item_description"		"#DOTA_Item_Desc_Elder_Bark"
+			"image_inventory"		"econ/huds/hud_dark_forest"
+			"creation_date"		"2013-05-27"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"dark_forest"
+					"modifier"		"dark_forest"
+					"frequency"		"1"
+				}
+			}
+		}
+		"10201"
+		{
+			"name"		"Jungle Ruin"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Jungle_Ruin"
+			"item_description"		"#DOTA_Item_Desc_Jungle_Ruin"
+			"image_inventory"		"econ/huds/hud_jungle_ruin"
+			"creation_date"		"2013-05-27"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"jungle_ruin"
+					"modifier"		"jungle_ruin"
+					"frequency"		"1"
+				}
+			}
+			"item_rarity"		"uncommon"
+		}
+		"10203"
+		{
+			"name"		"Furnace"
+			"prefab"		"hud_skin"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"item_name"		"#DOTA_Item_Furnace"
+			"item_description"		"#DOTA_Item_Desc_Furnace"
+			"image_inventory"		"econ/huds/hud_ferocious"
+			"creation_date"		"2013-05-27"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"ferocious"
+					"modifier"		"ferocious"
+					"frequency"		"1"
+				}
+			}
+			"item_rarity"		"rare"
+		}
 		"15000"
 		{
 			"name"		"Name Tag"
