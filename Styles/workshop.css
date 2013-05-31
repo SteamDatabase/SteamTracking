@@ -146,7 +146,7 @@
 {
 	font-size: 13px;
 	line-height: 17px;
-	color: #aaaaaa;
+	color: #ffffff;
 }
 
 .Portal2CustomTextTitle
@@ -973,6 +973,12 @@ h3 {
 	position: relative;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.browseOptionSubtext
+{
+	font-size: 11px;
+	margin-top: 4px;
 }
 
 /** app select **/
