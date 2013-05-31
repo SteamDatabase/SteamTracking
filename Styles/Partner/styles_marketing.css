@@ -1,0 +1,219 @@
+
+.titlebar_holder {
+}
+
+.rightnav {
+	float: right;
+	right: 0px;
+	bottom: 0px;
+	padding-top: 14px;
+}
+
+.midGrayRule {
+	border-bottom: 1px solid gray;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 11px;
+	font-size: 2px;
+}
+
+form {
+	margin: 0px;
+}
+	
+
+/* message list */
+
+.activemsg, .msgrow.activemsg .cols {
+	color: #F05A28; 
+}
+
+.msglist_platform_icon {
+	width: 13px;
+	height: 13px;
+	vertical-align: text-top;
+}
+
+.cols .title {
+	float: none;
+}
+
+.cols .messagetype {
+	width: 10em;
+}
+
+.cols .mobilepushtext {
+	width: 580px;
+}
+
+.cols .mobilepushtype {
+	width: 200px;
+}
+
+.cols .mobilepushaction {
+	width: 200px;
+}
+
+.cols .dates {
+	width: 134px;
+}
+
+.cols .dates_mobilepush {
+	width: 340px;
+}
+
+.cols .mobilepushenabled {
+	width: 70px;
+	color: green;
+}
+
+.cols .mobilepushdisabled {
+	width: 70px;
+	color: red;
+}
+
+.cols .mobilepushpast {
+	width: 70px;
+}
+
+.cols .mobilepushpresent {
+	width: 70px;
+	color: green;
+}
+
+.cols .mobilepushfuture {
+	width: 70px;
+	color: yellow;
+}
+
+.cols .creator {
+	width: 12em;	
+}
+
+.cols .visibility {
+	width: 6em;	
+}
+
+.toolbar {
+	width: 125px;
+	float: right;
+	padding-top: 8px;
+}
+
+.messagelist_preview {
+	padding-left: 20px;
+}
+
+.association_content {
+}
+
+select.associationselect {
+	width: 25em;
+}
+
+#all_association_contents, #all_mustown_contents, #all_mustnotown_contents {
+	height: 3em;
+}
+
+/* message edit: content tab */
+
+
+#legaltextentry {
+	height: 75px;
+}
+
+.legaltextholder {
+	float: left;
+	width: 600px;
+}
+
+#imagetemplatepreview {
+	float: right;
+}
+
+.imagepreview {
+	float: left;
+}
+
+.imagepreview img {
+	width: 342px;
+}
+
+.imagepreview div.noimage {
+	width: 342px;
+}
+
+/* message edit: visibility tab */
+div.dateentry {
+	float: left;
+	margin-right: 30px;
+}
+
+#ownership_restriction_desc_text {
+	color: white;
+}
+
+/* message edit: publish tab */
+.previewLink {
+	float: left;
+	width: 12em;
+}
+
+/* message edit: ej's korner content */
+.largetextarea {
+	width: 1022px;
+}
+
+/* Marketing Message Admin Page */
+
+#marketingMessageAdmin .sortable {
+	cursor: pointer;
+	border: 1px solid #333;
+	margin: 4px 0;
+}
+
+#marketingMessageAdmin .sortable:hover {
+	border: 1px solid #666;
+}
+
+#marketingMessageAdmin .savingMsg {
+	color: white;
+	font-size: large;
+	display: none;
+}
+
+#marketingMessageAdmin .savingSpinner {
+	height: 16px;
+	width: 16px;
+}
+
+#marketingMessageAdmin .toolbarItem {
+	height: 25px;
+	width: 25px;
+	position: relative;
+	top: -4px;
+	background-color: #444;
+	border-radius: 5px;
+	border: 1px solid #333;
+	float: right;
+	margin-right: 8px;
+}
+
+#marketingMessageAdmin .toolbarItem img {
+	margin: 4px;
+}
+
+#marketingMessageAdmin .dropHighlight {
+	border: 2px dashed #666;
+	background-color: #222;
+	margin: 5px 0;
+}
+
+#marketingMessageAdmin .msglist {
+	padding-bottom: 15px;
+}
+
+#marketingMessageAdmin .ui-sortable-helper {
+	border: 1px solid #666;
+	box-shadow: 0 0 32px #555;
+}

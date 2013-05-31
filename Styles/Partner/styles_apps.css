@@ -1,0 +1,114 @@
+
+div.leaderboard_name {
+	float: none;
+}
+
+div.leaderboard_sortmethod {
+	float: right;
+	width: 10em;
+}
+
+div.leaderboard_displaytype {
+	float: right;
+	width: 10em;
+}
+
+div.leaderboard_count_entries {
+	float: right;
+	width: 7em;
+}
+
+div.leaderboard_info {
+	clear: both;
+}
+
+div.appLeaderboardsDisplay {
+	max-width: 1024px;
+	margin-bottom: 20px;
+}
+
+div.leaderboards_header {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	clear: both;
+}
+
+div.leaderboard {
+	clear: both;
+	background-color: black;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 4px;
+	padding-top:4px;
+	border-bottom: 12px solid #262626;
+}
+div.leaderboard_entries {	
+	border-top: 2px solid #262626;
+	margin-top: 4px;
+}
+
+div.leaderboard_entry_details {
+	float:	right;
+	width:	22em;
+	margin-right: 2em;
+}
+
+div.leaderboard_entry_score {
+	float:	right;
+	width:	8em;
+	margin-right: 2em;
+	text-align: right;	
+}
+
+div.leaderboard_entry_player {
+	overflow: hidden;	
+}
+
+div.leaderboard_entry_rank {
+	float:	left;
+	width:	5em;
+	margin-left: 4px;	
+}
+
+div.leaderboard_entries_header {
+	background: #303030 none repeat scroll 0 0;
+	font-weight: bold;
+}
+
+div.leaderboard_pageControl {
+	float: right;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+div.leaderboard_entries_list {
+	height: 30em;
+	clear: both;
+	padding-top: 4px;
+}
+
+div.leaderboard_entry {	
+	vertical-align: middle;
+}
+
+div.leaderboard_entry:hover {
+	background: #333333;
+}
+
+div.leaderboard_entry_tools {
+	float: right;
+	width: 5em;
+}
+
+div.leaderboard_info_tools {
+	float: right;
+	width: 10em;
+	text-align: right;
+}
+
+textarea#leaderboard_blob {
+	width: 1024px;
+	height: 256px;
+}

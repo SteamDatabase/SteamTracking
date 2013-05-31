@@ -1,0 +1,206 @@
+
+div.Discount {
+	border: 1px dotted gray;
+	padding: 1px;
+	margin: 5px 0px 5px 0px;
+}
+
+div.Results {
+	color: red;
+}
+
+input.Description {
+	width: 500px;
+}
+
+table.Report {
+	border: 0px solid #303030;
+}
+
+table.Report th, table.Report td {
+	text-align: center;
+	border: 1px solid #404040;
+}
+
+table.Report td.Package {
+	text-align: left;
+	padding: 2px 2px 2px 2px;
+}
+
+div.FindPackageDiv {
+	float: left;
+	padding: 10px;
+	width: 400px;
+}
+
+div.OtherDiv {
+	float: left;
+	padding: 10px;
+	width: 400px;
+}
+
+div.ReportsDiv {
+	float: left;
+	padding: 10px;
+}
+
+ul.ReportsList {
+	list-style-type: none;
+}
+
+ul.OtherList {
+	list-style-type: none;
+}
+
+input.PackageSearch {
+	margin-top: 8px;
+	width: 262px;
+}
+
+div.autocomplete {
+	margin: 0px;  
+	padding: 0px;  
+	width: 250px;
+	background: #000000;
+	border: 1px solid #ACACAC;
+	position: absolute;
+	color: #ACACAC;
+}
+
+div.autocomplete ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div.autocomplete ul li.selected {
+	color: white;
+	background-color: #606060;
+}
+
+div.autocomplete ul li {
+	margin: 0;
+	padding: 2px;
+	display: block;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+form {
+	display: inline;
+}
+
+div.formRow {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.CountryOverrideCostColumn {
+	width: 65px;
+	text-align: right;
+	margin-left: 4px;
+}
+
+input.CountryOverrideCostColumn:disabled {
+	border:  0px;
+}
+
+.CountryOverrideCountryListColumn {
+	width: 200px;
+}
+
+select.CountryOverrideCountryListColumn:disabled {
+	border:  0px;
+}
+
+div.CountryOverrideRow {
+	width: 35em;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+
+input.CountryOverrideButton {
+	width: 65px;
+	text-align: center;
+}
+
+input.costInput {
+	text-align: right;
+	width: 5em;
+}
+
+input.costInput:disabled {
+	border:  0px;
+}
+
+input.disabled {
+	color: #999999;
+}
+
+.OverrideCurrency {
+	width: 50px;
+	margin-left:4px;
+}
+
+.FinalPrice {
+	width: 100px;
+	color: #7CB8E4;
+}
+
+.PercentPrice {
+	width: 40px;
+}
+
+.MultiDiscount_BasePrice, .MultiDiscount_DiscountPrice {
+	width:100px;
+	float:left;
+}
+
+.MultiDiscount_BasePrice .PriceAmount, .MultiDiscount_DiscountPrice .PriceAmount {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.MultiDiscount_BasePrice .PricePercent, .MultiDiscount_DiscountPrice .PricePercent {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #b0b0b0;
+}
+
+.MultiDiscount_FinalPriceDiv
+{
+	margin-top: 4px;
+}
+
+.MultiDiscount_FinalPriceDiv .PriceAmount, .MultiDiscount_FinalPriceDiv .PricePercent
+{
+	border-top: 1px solid gray;
+}
+
+
+.MultiDiscount_BasePrice {
+	color: #ffffff;
+}
+
+.MultiDiscount_DiscountName {
+	color: #808080;
+	width:366px;
+	float:left;
+	padding-left: 20px;
+}
+
+.MultiDiscount_DiscountPrice {
+	color: #808080;
+}
+
+.MultiDiscount_DiscountPercent {
+	float: left;
+	width: 40px;
+}
+
+.MultiDiscount_SummaryHeader {
+	float: left;
+	padding-left: 20px;
+	height: 1px;
+}
+

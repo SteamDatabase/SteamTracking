@@ -193,9 +193,14 @@
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 						
 						// Workarounds... It's not sending Content-Length
-						if( $LengthExpected == -1 && SubStr( $Request, 0, 6 ) === 'Repos/' )
+						$Test = SubStr( $Request, 0, 16 );
+						
+						if( $LengthExpected == -1 )
 						{
-							$LengthExpected = $LengthDownload;
+							if( $Test === 'Scripts/Partner/' || $Test === 'Styles/Partner/s' || $Test === 'Repos/index.html' )
+							{
+								$LengthExpected = $LengthDownload;
+							}
 						}
 						
 						if( $LengthExpected !== $LengthDownload )
