@@ -98,15 +98,19 @@ Scripts/youraccount.js|http://cdn.store.steampowered.com/public/javascript/youra
 # Steamworks CSS
 Styles/Partner/styles_admin.css|https://partner.steamgames.com/public/css/styles_admin.css?_=*TIMENOW*
 Styles/Partner/styles_apps.css|https://partner.steamgames.com/public/css/styles_apps.css?_=*TIMENOW*
+Styles/Partner/styles_global.css|https://partner.steamgames.com/public/css/styles_globalcss?_=*TIMENOW*
 Styles/Partner/styles_global_new.css|https://partner.steamgames.com/public/css/styles_global_new.css?_=*TIMENOW*
 Styles/Partner/styles_marketing.css|https://partner.steamgames.com/public/css/styles_marketing.css?_=*TIMENOW*
 Styles/Partner/styles_packages.css|https://partner.steamgames.com/public/css/styles_packages.css?_=*TIMENOW*
+Styles/Partner/styles_landing.css|https://partner.steamgames.com/public/css/styles_landing.css?_=*TIMENOW*
 
 # Steamworks JS
 Scripts/Partner/admin.js|https://partner.steamgames.com/public/javascript/admin.js?_=*TIMENOW*&l=english
 Scripts/Partner/apps.js|https://partner.steamgames.com/public/javascript/apps.js?_=*TIMENOW*&l=english
 Scripts/Partner/marketing.js|https://partner.steamgames.com/public/javascript/marketing.js?_=*TIMENOW*&l=english
 Scripts/Partner/packages.js|https://partner.steamgames.com/public/javascript/packages.js?_=*TIMENOW*&l=english
+Scripts/Partner/storeadmin.js|https://partner.steamgames.com/public/javascript/storeadmin.js?_=*TIMENOW*&l=english
+Scripts/Partner/newsadmin.js|https://partner.steamgames.com/public/javascript/newsadmin.js?_=*TIMENOW*&l=english
 
 # Blogs
 Styles/TF2/header.css|http://www.teamfortress.com/header.css?_=*TIMENOW*
