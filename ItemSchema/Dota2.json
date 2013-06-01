@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ae4f11d165fc1f4d404968ba04265c4ba972127d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ee154e4665332ac3964a73f4b2e3567503f33a7e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10611,14 +10611,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
 				"item_name": "Taunt: Beautiful Snowangel",
-				"item_description": "",
+				"item_description": "Crystal Maiden makes a snowangel!  You better believe it!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/taunt\/cm_snowangel_taunt",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Beautiful_Snowangel",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel.6bad09d90eb9a74a40f8ce3fce9a0129bbed9888.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel_large.484ffb4dd01042ffeaefb5b33bee7adf5293c697.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -10837,19 +10837,19 @@
 				}
 			},
 			{
-				"name": "Taunt: Get Burned",
+				"name": "Taunt: Keep an Ear Out",
 				"defindex": 4050,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Taunt: Get Burned",
-				"item_description": "",
+				"item_type_name": "Taunt",
+				"item_name": "Taunt: Keep an Ear Out",
+				"item_description": "Did your enemy make a sound?\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/lina\/lina_get_burned_taunt",
+				"image_inventory": "econ\/taunts\/DOTA_Item_whats_that",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_whats_that.9dc4dc9d8f1db64b8065f3f5f82d12d799d423ce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_whats_that_large.4fa3d64f30a34aab1dc0d13b868f847df108748f.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -33587,6 +33587,32 @@
 				}
 			},
 			{
+				"name": "Taunt: Sharp Blade",
+				"defindex": 4994,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Taunt",
+				"item_name": "Taunt: Sharp Blade",
+				"item_description": "Watch as Juggernaut sharpens his blade by cutting down his foes!  Watch out!  That's a Sharp Blade!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Sharp_Blade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade.c775e1f34eaab89590093f1bce50ed691cc8eb55.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade_large.08c7bc95379d1adf67174d7808c85ee0b61d3e5b.png",
+				"capabilities": {
+					"nameable": true,
+					"usable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "hero_taunt"
+				}
+			},
+			{
 				"name": "Gloves of Retribution",
 				"defindex": 4995,
 				"item_class": "dota_item_wearable",
@@ -33610,71 +33636,81 @@
 				}
 			},
 			{
-				"name": "Taunt:  Shake Your Money Maker",
+				"name": "Taunt: The Magic Ends Here",
 				"defindex": 4996,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Taunt",
-				"item_name": "DOTA_Item_Taunt__Shake_Your_Money_Maker",
+				"item_name": "Taunt: The Magic Ends Here",
+				"item_description": "Show their foul sorcery the regard it deserves.\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/taunts\/DOTA_Item_The_Magic_Ends_Here",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_the_magic_ends_here.969801b30693b3b12805488b1c1ed08f1c15ca4d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_the_magic_ends_here_large.b0ab5a4a9dce424c7cfac2e54c1e3aa9a80bac92.png",
+				"capabilities": {
+					"nameable": true,
+					"usable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "hero_taunt"
+				}
+			},
+			{
+				"name": "Taunt: Shake Your Money Maker",
+				"defindex": 4997,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Taunt",
+				"item_name": "Taunt: Shake Your Money Maker",
 				"item_description": "Watch as Pudge \"Shakes his Money Maker\" while his foes cannot look away!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt__Shake_Your_Money_Maker",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt__shake_your_money_maker.26245a5c26c99fdf06145eb1e972761ab387e4d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt__shake_your_money_maker_large.ca7bae3baa974c51e17bba52dea8f7c27e484d25.png",
 				"capabilities": {
 					"nameable": true,
+					"usable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "hero_taunt"
 				}
 			},
 			{
-				"name": "Pauldrons of Retribution",
-				"defindex": 4997,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Pauldrons",
-				"item_name": "Pauldrons of Retribution",
-				"item_description": "With shoulders high, Dragonus gazes far across the world to search those who have incurred the anger of the Skywrath.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders.98fd77f520060aa0ff42589c29021880e9c50759.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders_large.2bc8bac3d0427ebbc122b24a8b0427a06c688113.png",
-				"item_set": "arms_of_retribution",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Wings of Retribution",
+				"name": "Taunt: Get Burned",
 				"defindex": 4998,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Wings",
-				"item_name": "Wings of Retribution",
-				"item_description": "From high above the Ghastly Eyrie, a flutter of feathers drifts when Dragonus carries his earthbound foe to the heights...and lets them fall. ",
+				"item_type_name": "Taunt",
+				"item_name": "Taunt: Get Burned",
+				"item_description": "Lina's Public Service Announcement ... \"Hot Hot Hot!\".  You have been warned!\r\n\r\nEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/skywrath_mage\/ret_wings\/ret_wings",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Get_Burned",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_wings\/ret_wings.c3250c946a3ce8ac14cbac7e164b68186c19a64c.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_wings\/ret_wings_large.d0eb736c69996c50b8f7d397f1d537053bcc9faf.png",
-				"item_set": "arms_of_retribution",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_get_burned.6102a0702d726f96f07907a3a8e3d1b65dde2774.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_get_burned_large.975c7809d52d5324cdee84d49e468b98092f82b0.png",
 				"capabilities": {
 					"nameable": true,
+					"usable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "hero_taunt"
 				}
 			},
 			{
@@ -33737,6 +33773,52 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_belt\/ret_belt.90ec7c859bf2dd99d9227c6108be00cb407a1faf.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_belt\/ret_belt_large.3c7c45b001738fd46de2a7e49ac605c4acef6870.png",
+				"item_set": "arms_of_retribution",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Pauldrons of Retribution",
+				"defindex": 5002,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Pauldrons of Retribution",
+				"item_description": "With shoulders high, Dragonus gazes far across the world to search those who have incurred the anger of the Skywrath.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders.98fd77f520060aa0ff42589c29021880e9c50759.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_shoulders\/ret_shoulders_large.2bc8bac3d0427ebbc122b24a8b0427a06c688113.png",
+				"item_set": "arms_of_retribution",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Wings of Retribution",
+				"defindex": 5003,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Wings of Retribution",
+				"item_description": "From high above the Ghastly Eyrie, a flutter of feathers drifts when Dragonus carries his earthbound foe to the heights...and lets them fall. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/ret_wings\/ret_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_wings\/ret_wings.c3250c946a3ce8ac14cbac7e164b68186c19a64c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/ret_wings\/ret_wings_large.d0eb736c69996c50b8f7d397f1d537053bcc9faf.png",
 				"item_set": "arms_of_retribution",
 				"capabilities": {
 					"nameable": true,
@@ -39311,26 +39393,100 @@
 				}
 			},
 			{
-				"name": "Defense 4 Courier",
+				"name": "Team Pennant: Liquid",
+				"defindex": 10199,
+				"item_class": "tool",
+				"item_type_name": "Fan Item",
+				"item_name": "Team Liquid",
+				"item_description": "Show your support for Team Liquid by buying this Team Pennant! Equip it in the 'fan slot' of your Player Loadout to show other spectators who you're rooting for. Upgrade it to show you mean business! In addition, equipping a pennant makes you eligible for item drops while you spectate your team's matches live during the International 2012, and other tournaments Valve may designate in the future.  Team Liquid pennants can be combined with other Team Liquid pennants to upgrade your Team Pennant fan level.  The level of your Team Pennant will increase the total fan value of the team when you are spectating a Tournament match.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2163_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon.3e0b625f4321c5b355aa016fe74dda807ead6822.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon_large.fb66f8bcd03e475f29ea5de943b6baa502c8e3c8.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"can_increment": true
+				},
+				"tool": {
+					"type": "pennant_upgrade",
+					"usage_capabilities": {
+						"can_increment": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "team ID",
+						"class": "team_id",
+						"value": 2163
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "fanfare level",
+						"class": "fanfare_level",
+						"value": 1
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "Cyril the Syrmeleon",
 				"defindex": 10200,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Courier",
-				"item_name": "DOTA_Item_Defense_4_Courier",
-				"item_description": "This new item has no description.",
+				"item_name": "Cyril the Syrmeleon",
+				"item_description": "The shy syrmeleon of the southern isles are rarely ones to travel abroad, or find themselves in a battle, or hitch a ride on an elder drakefly.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/courier\/defense4_radiant\/defense4_radiant",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/defense4_radiant\/defense4_radiant.e70c672fc358c8e5fe9a45108d63d3b57b708601.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/defense4_radiant\/defense4_radiant_large.e6321fd83ddc7755c41d951854fc5f1a30382e53.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "defense league tag",
+						"class": "defense league tag",
+						"value": 4
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 51
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
 			},
 			{
 				"name": "Jungle Ruin",
@@ -39365,8 +39521,8 @@
 				"image_inventory": "econ\/huds\/hud_ferocious",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_ferocious.2f446b16f4a73bad4bed07774f91a07537733b46.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_ferocious_large.41bf007c0f432dcf9efbf20bc31c578a0f175206.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -45289,7 +45445,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "The International 2013 Battle Bonus",
-				"item_description": "",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> until the end of the International. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_2013_battle_bonus",
@@ -46033,6 +46189,146 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league.3c4da96c0bc43dc69c7c53dccfe7e196d3ccd6f6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_american_dota_league_large.969abbda962f4d2135aa6b110c19223aee4a82ef.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Defense Season 4",
+				"defindex": 15185,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The Defense Season 4",
+				"item_description": "The Defense is going into its fourth season, powered by EIZO and offering USD 25,000 prize money. Watch 20 of the best international teams compete in a two-month long spree of action packed high-class games. Ticket holders will also recieve Munk the Melyon, a fearless courier that adapts to the players current faction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defense4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defense4.71c595873376714eeb2a5f6aa35dbef4b4bb4de1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defense4_large.5c459a5dbab5986540d3915fcc04a7318bba4fd4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Defense Season 4 - ADMIN",
+				"defindex": 15186,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The Defense Season 4 - ADMIN",
+				"item_description": "The Defense is going into its fourth season, powered by EIZO and offering USD 25,000 prize money. Watch 20 of the best international teams compete in a two-month long spree of action packed high-class games. Ticket holders will also recieve Munk the Melyon, a fearless courier that adapts to the players current faction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defense4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defense4.71c595873376714eeb2a5f6aa35dbef4b4bb4de1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defense4_large.5c459a5dbab5986540d3915fcc04a7318bba4fd4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "REDBULL Esports Champion League 2013",
+				"defindex": 15187,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "REDBULL Esports Champion League 2013",
+				"item_description": "24 Asian teams invited, including Orange, TongFu, Rattlesnakes, Vici Gaming, Rising Stars and For.Love. 8 teams go to the offline final for a total prize pool of $21,187. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_redbull2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013.dbb2349feb8850fca37ed4e4c2d86163e9c90639.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013_large.76361ca1049ff85818589a00cff73fc2c27c4123.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "REDBULL Esports Champion League 2013 - ADMIN",
+				"defindex": 15188,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "REDBULL Esports Champion League 2013 - ADMIN",
+				"item_description": "24 Asian teams invited, including Orange, TongFu, Rattlesnakes, Vici Gaming, Rising Stars and For.Love. 8 teams go to the offline final for a total prize pool of $21,187. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_redbull2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013.dbb2349feb8850fca37ed4e4c2d86163e9c90639.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013_large.76361ca1049ff85818589a00cff73fc2c27c4123.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -51139,6 +51435,34 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Compendium Taunt Pack",
+				"defindex": 20182,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Compendium Taunt Pack",
+				"item_description": "Double click this bundle to unpack it and receive 6 different taunts.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/gift_multiple",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_multiple.3f6f530ad19e47b165d5b5ab696468acff2b8e92.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_multiple_large.019cb480bf69a1c732d0f5a8e661f97fd456c1ae.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -52116,6 +52440,18 @@
 				"min_value": 0.94999998807907104,
 				"max_value": 0.85000002384185791,
 				"description_string": "RaidCall Season %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "defense league tag",
+				"defindex": 399,
+				"attribute_class": "defense league tag",
+				"min_value": 0.94999998807907104,
+				"max_value": 0.85000002384185791,
+				"description_string": "The Defense Season %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
