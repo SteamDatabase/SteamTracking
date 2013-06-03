@@ -1006,7 +1006,7 @@ code {
 	height:77px;
 	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_signup_button_n.png');
 	margin-left:12px;
-	margin-bottom:20px;
+	margin-bottom:4px;
 }
 #rightColSignupSubtext {
 	display:block;
@@ -1035,7 +1035,6 @@ code {
 	margin-left:12px;
 	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_uniqueplayers_bg_n.png');
 	background-repeat:no-repeat;
-	margin-top:-16px;
 	margin-bottom:4px;
 }
 #rightColPlayerCountNum {
