@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.7ebb27c8149306597cdad3266e8107bdc17b8a27.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.4ffb757c56ad697a2cb0d71489d9485898bc5260.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -28631,13 +28631,13 @@
 				},
 				"styles": [
 					{
-						"name": "TF_Henchboy_Hat_Style0",
+						"name": "Without Headphones",
 						"additional_hidden_bodygroups": {
 							"headphones": 1
 						}
 					},
 					{
-						"name": "TF_Henchboy_Hat_Style1"
+						"name": "With Headphones"
 					}
 				]
 				,
@@ -35533,6 +35533,125 @@
 				"tool": {
 					"type": "gift"
 				}
+			},
+			{
+				"name": "The Breather Bag",
+				"defindex": 1038,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Breather Bag",
+				"item_description": "Since the invention of the garbage bag, humanity has longed to put it over its head. Until now, this usually meant immediate asphyxiation. UNTIL NOW! Plastic bag over your head? Breathing air? Thanks to the geniuses at FaceBagHole Co., you don't have to choose.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/pyro\/as_pyro_cleansuit.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/as_pyro_cleansuit",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_pyro_cleansuit.9870ba208a7176064a37c873708a551016b1fa1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_pyro_cleansuit_large.0bced140bfa0c8b72c783deaa5c51f8159874439.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Weather Master",
+				"defindex": 1039,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Weather Master",
+				"item_description": "They called you INSANE when you claimed a helmet with foam clouds and lightning taped to it would give you weather powers! Now you'll show them! You'll show them ALL! Moo hoo ha ha ha! (This helmet does not give you weather powers.)",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/medic\/as_medic_cloud_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/medic\/as_medic_cloud_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat.68e654cfbf33ffa0940a1559e4cb36c2e2d7f2b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat_large.62c5bd512a233c781588e50bb3915a9aea554bf7.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Bacteria Blocker",
+				"defindex": 1040,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bacteria Blocker",
+				"item_description": "The human face is nature's garbage can. Everything from saliva (make-outs) to grease (engine repair) to clumps of partially chewed beef (eating) to poison (food-tasting for kings) can be found on the average (your) face. Keep it marginally less filthy with the Bacteria Blocker.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/scout\/as_scout_cleansuit_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/scout\/as_scout_cleansuit_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_scout_cleansuit_hood.c1bc9a66cb264fe4d027b4b0f5d367f185f3279a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_scout_cleansuit_hood_large.7a4a637cdd8ce3607fdcb2a34286ff9109774765.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "With Headphones"
+					},
+					{
+						"name": "Without Headphones",
+						"additional_hidden_bodygroups": {
+							"headphones": 1
+						}
+					}
+				]
+				,
+				"used_by_classes": [
+					"Scout"
+				]
+				
 			},
 			{
 				"name": "World Traveler",
@@ -52649,7 +52768,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Gold Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -52682,7 +52801,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Silver Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -52715,7 +52834,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -53078,7 +53197,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53111,7 +53230,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53144,7 +53263,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53177,7 +53296,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53210,7 +53329,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53243,7 +53362,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Group Winner",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -54068,7 +54187,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54134,7 +54253,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54200,7 +54319,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54266,7 +54385,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54332,7 +54451,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54398,7 +54517,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54464,7 +54583,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Participation Medal",
-				"item_description": "Season 3",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -56583,6 +56702,1508 @@
 					"can_card_upgrade": true,
 					"can_strangify": true
 				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Gold Medal Season 14",
+				"defindex": 8275,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Gold Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Silver Medal Season 14",
+				"defindex": 8276,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Silver Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Bronze Medal Season 14",
+				"defindex": 8277,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Bronze Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Group Winner Season 14",
+				"defindex": 8278,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Group Winner Season 14",
+				"defindex": 8279,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Group Winner Season 14",
+				"defindex": 8280,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Group Winner Season 14",
+				"defindex": 8281,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Group Winner Season 14",
+				"defindex": 8282,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Group Winner Season 14",
+				"defindex": 8283,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Group Winner",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Participation Medal Season 14",
+				"defindex": 8284,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Participation Medal Season 14",
+				"defindex": 8285,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Participation Medal Season 14",
+				"defindex": 8286,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Participation Medal Season 14",
+				"defindex": 8287,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Participation Medal Season 14",
+				"defindex": 8288,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Participation Medal Season 14",
+				"defindex": 8289,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Participation Medal Season 14",
+				"defindex": 8290,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Participation Medal",
+				"item_description": "Season 14",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Gold Medal Season 4",
+				"defindex": 8291,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Gold Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_placement_2012_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold.5083718c069474290e2824778db30539e45c35a6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold_large.5a5713acad47f511578fcb1794f65e6195debc1f.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Silver Medal Season 4",
+				"defindex": 8292,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Silver Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_placement_2012_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver.7519fbe0e65e24372b5dc43f697aba0b345b4ada.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver_large.dfc70ad520a96ad42aee7fa4892f749fdbe4f552.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Bronze Medal Season 4",
+				"defindex": 8293,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_placement_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012.8ff01161f17453fdc52dce8b0fdc8750c8d4a7ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_large.88d46c2ffe779732c7c080ba8e7b9bab57aa737d.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Group Winner Season 4",
+				"defindex": 8294,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Group Winner Season 4",
+				"defindex": 8295,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Group Winner Season 4",
+				"defindex": 8296,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Group Winner Season 4",
+				"defindex": 8297,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Group Winner Season 4",
+				"defindex": 8298,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Group Winner Season 4",
+				"defindex": 8299,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Group Winner",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Participation Medal Season 4",
+				"defindex": 8300,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Participation Medal Season 4",
+				"defindex": 8301,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Participation Medal Season 4",
+				"defindex": 8302,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Participation Medal Season 4",
+				"defindex": 8303,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Participation Medal Season 4",
+				"defindex": 8304,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Participation Medal Season 4",
+				"defindex": 8305,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Participation Medal Season 4",
+				"defindex": 8306,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Participation Medal",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_highlander_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
+				"drop_type": "none",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
 				"attributes": [
 					{
 						"name": "cannot trade",
