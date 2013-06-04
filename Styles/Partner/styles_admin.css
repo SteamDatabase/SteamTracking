@@ -1572,6 +1572,27 @@ html, body { height:100%; }
 }
 
 
+.profilebackground_preview_background {
+	background-color: #000000;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.profilebackground_preview_profile {
+	background-position: center top;
+	background-repeat: no-repeat;
+	width: 1018px;
+	height: 1684px;
+	margin: 0 auto;
+}
+
+/* this is a workaround for webkit centering bug with backgrounds that are larger than the window */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div.profilebackground_preview_background {
+		background-position: 49.999% 0;
+	}
+}
+
 .TargetedCouponProgramDetailsOptions {
 	margin: 10px 0px 10px 20px;
 }

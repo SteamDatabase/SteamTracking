@@ -136,6 +136,10 @@ body{
 			#landingNav .navContent a:not(:first-child) {
 				margin-top: 8px;
 			}
+		
+		#landingNav .navContent a:hover {
+			color: #00adee;
+		}
 
 #landingWelcome {
 	border-bottom: 2px solid #82a6d7;
@@ -263,11 +267,15 @@ body{
 			width: 100%;
 			min-height: 16px;
 			background-repeat: no-repeat;
-			color: #fff;
+			color: #ffffff;
 			margin: 10px 0;
 			text-decoration: none;
 			font-size: 14px;
 			line-height: 14px;
+		}
+		
+		.landingRightCol .panel .iconLink:hover {
+			color: #00adee;
 		}
 
 			.landingRightCol .panel .iconLink.disabled {
