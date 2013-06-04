@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.4ffb757c56ad697a2cb0d71489d9485898bc5260.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.198651391268f4357e7e6634ac8166b79cae3919.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -35551,7 +35551,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_pyro_cleansuit.9870ba208a7176064a37c873708a551016b1fa1f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_pyro_cleansuit_large.0bced140bfa0c8b72c783deaa5c51f8159874439.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -35587,7 +35587,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat.68e654cfbf33ffa0940a1559e4cb36c2e2d7f2b1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat_large.62c5bd512a233c781588e50bb3915a9aea554bf7.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -35622,7 +35622,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_scout_cleansuit_hood.c1bc9a66cb264fe4d027b4b0f5d367f185f3279a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_scout_cleansuit_hood_large.7a4a637cdd8ce3607fdcb2a34286ff9109774765.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -38668,11 +38668,11 @@
 				}
 			},
 			{
-				"name": "Mysterious Promo 7",
+				"name": "Blue Pyro Action Figure Promo",
 				"defindex": 2088,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 7",
+				"item_name": "Blue Pyro Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38688,14 +38688,26 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
-				"name": "Mysterious Promo 8",
+				"name": "Blue Demoman Action Figure Promo",
 				"defindex": 2089,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 8",
+				"item_name": "Blue Demoman Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38711,7 +38723,19 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Mysterious Promo 9",
@@ -65950,6 +65974,22 @@
 				"name": "strange restriction value 3",
 				"defindex": 497,
 				"attribute_class": "strange_restriction_value_3",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "particle effect vertical offset",
+				"defindex": 519,
+				"attribute_class": "particle_effect_vertical_offset",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "particle effect use head origin",
+				"defindex": 520,
+				"attribute_class": "particle_effect_use_head_origin",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
