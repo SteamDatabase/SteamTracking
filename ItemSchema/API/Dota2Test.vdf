@@ -86716,19 +86716,6 @@
 				"Featherfall Bow"		"1"
 			}
 		}
-		"forsaken_beauty_set"
-		{
-			"name"		"#DOTA_Set_Forsaken_Beauty_Set"
-			"items"
-			{
-				"Bracers of Forsaken Beauty"		"1"
-				"Bow of Forsaken Beauty"		"1"
-				"Blouse of Forsaken Beauty"		"1"
-				"Circlet of Forsaken Beauty"		"1"
-				"Sweep of Forsaken Beauty"		"1"
-			}
-			"store_bundle"		"Forsaken Beauty Set"
-		}
 		"furion_beast_bole"
 		{
 			"name"		"#DOTA_Set_Furion_Beast_Bole"

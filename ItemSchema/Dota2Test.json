@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.7af5d6b44b30c9e5e3a5bd2384ccfd418c9cf529.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.4830d8d3dd862e78f79ab8c9476bbb0ac1166e0e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -53355,19 +53355,6 @@
 					"Featherfall Locks",
 					"Featherfall Cloak",
 					"Featherfall Bow"
-				]
-				
-			},
-			{
-				"item_set": "forsaken_beauty_set",
-				"name": "Forsaken Beauty Set",
-				"store_bundle": "Forsaken Beauty Set",
-				"items": [
-					"Bracers of Forsaken Beauty",
-					"Bow of Forsaken Beauty",
-					"Blouse of Forsaken Beauty",
-					"Circlet of Forsaken Beauty",
-					"Sweep of Forsaken Beauty"
 				]
 				
 			},

@@ -80,6 +80,7 @@ a.badge_row {
 .badge_title_row {
 	padding: 8px 12px 0 12px;
 	height: 32px;
+	white-space: nowrap;
 }
 
 .badge_title_stats {
@@ -107,6 +108,9 @@ a.badge_row {
 	font-size: 20px;
 	color: #ffffff;
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .badge_view_details {
