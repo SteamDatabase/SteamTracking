@@ -46,32 +46,121 @@ function PopulatePackageAppLists( rgIncludedItemIds, rgGiftableItemIds )
 	var elemAllApps = $('package_available_app_list');
 	var elemIncludedApps = $('package_included_app_list');
 	
-	for ( var appId in g_rgApps )
-	{
-		var type = g_rgAppTypes[appId];
-		if ( type == "Movie" || type == "Demo" )
-			continue;
-		var opt = new Element('option', {value: appId, 'class': OptClassForItem( appId ) } );
-		opt.innerHTML = g_rgApps[appId];
-		if ( !rgIncludedItemIds[appId] )
-			elemAllApps.appendChild(opt);
-	}
-	
 	// is the list of included apps an empty array?
 	if ( rgIncludedItemIds.size && rgIncludedItemIds.size() == 0 )
 		return;
 
 	rgIncludedItemIds.each(function(itemId, index) {
 
-		var opt = new Element('option', {value: itemId, 'class': OptClassForItem( itemId ) } );
-		opt.innerHTML = g_rgApps[itemId];
+		var opt = new Element('option', {value: itemId, 'class': g_rgReferencedItems[itemId]['cssClass'] } );
+		opt.innerHTML = g_rgReferencedItems[itemId]['name'];
 		if ( rgGiftableItemIds[itemId] )
 			opt.addClassName( 'giftable' );
 		elemIncludedApps.appendChild(opt);
 	});
 }
 
-function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, elemIncludedList, rgAvailableItemIds, rgAvailablePackageIds )
+function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCollection, grantor )
+{
+	var matchText = $J( "#" + elemAutoCompleteName ).val();
+
+	if ( matchText.length < 3 )
+		return;
+
+	var params = {
+		term : matchText
+	};
+	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestpackagejson/', {
+		method: 'post',
+		parameters: params,
+		onSuccess: function( transport ) {
+			var matchingItems = transport.responseJSON || [];
+			var list = $J( "#" + elemListName );
+			list.find("option").remove();
+			for ( var i = 0; i < matchingItems.length; ++i )
+			{
+				var option = matchingItems[i];
+				var name = option['name'];
+				if ( option['notes'] )
+				{
+					name += " [" + option['notes'] + "]";
+				}
+				list.append( $J('<option>', { class : option['cssClass'], value : option['packageid'], text : name } ) );
+			}
+		}
+	} );
+}
+
+function PopulateItemListAJAX( elemAutoCompleteName, elemListName, packageCollection, grantor )
+{
+	var matchText = $J( "#" + elemAutoCompleteName ).val();
+
+	if ( matchText.length < 3 )
+		return;
+
+	var params = {
+		term : matchText
+	};
+	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestitemjson/', {
+		method: 'post',
+		parameters: params,
+		onSuccess: function( transport ) {
+			var matchingItems = transport.responseJSON || [];
+			var list = $J( "#" + elemListName );
+			list.find("option").remove();
+			for ( var i = 0; i < matchingItems.length; ++i )
+			{
+				var option = matchingItems[i];
+				var name = option['name'];
+				if ( option['notes'] )
+				{
+					name += " [" + option['notes'] + "]";
+				}
+				list.append( $J('<option>', { class : option['cssClass'], value : option['itemid'], text : name } ) );
+			}
+		}
+	} );
+}
+
+function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterType )
+{
+	var matchText = elemValue;
+
+	var params = {
+		term : matchText,
+		type : clusterType
+	}
+	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestclusteritemsjson/', {
+		method: 'post',
+		parameters: params,
+		onSuccess: function( transport ) {
+			var matchingItems = transport.responseJSON || [];
+			var list = $J( "#" + elemListID );
+			list.find("div").remove();
+			for ( var i = 0; i < matchingItems.length; ++i )
+			{
+				var option = matchingItems[i];
+				var name = option['name'];
+
+				var newElement = null;
+				if ( option['packageid'] )
+				{
+					newElement = $J('<div/>', {id: clusterName + '_clusterpackage_' + option['packageid'], 'class': option['cssClass'], text : name } );
+				}
+				else if ( option['itemid'] )
+				{
+					newElement = $J('<div/>', {id: clusterName + '_clusteritem_' + option['itemid'], 'class': option['cssClass'], text : name } );
+				}
+				if ( newElement )
+				{
+					list.append( newElement );
+				}
+			}
+		}
+	} );
+}
+
+function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, elemIncludedList, clusterType )
 {
 	var elemAllApps = $(elemAvailableList);
 	var elemIncludedApps = $(elemIncludedList);
@@ -88,33 +177,6 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 		} );
 	}
 	
-	for ( var i = 0; i < rgAvailableItemIds.length; i++ )
-	{
-		var itemId = rgAvailableItemIds[i];
-		if ( !rgIncludedItemIds[itemId] )
-		{
-			var type = g_rgAppTypes[itemId];
-			
-			if ( type == 'Movie' || type == 'Demo' )
-				continue;
-			
-			var opt = new Element('div', {id: clusterName + '_clusteritem_' + itemId, 'class': OptClassForItem( itemId ) } );
-			opt.innerHTML = g_rgApps[itemId];
-			elemAllApps.appendChild(opt);
-		}
-	}
-
-	for ( var i = 0; i < rgAvailablePackageIds.length; i++ )
-	{
-		var packageId = rgAvailablePackageIds[i];
-		if ( !rgIncludedPackageIds[packageId] )
-		{			
-			var opt = new Element('div', {id: clusterName + '_clusterpackage_' + packageId, 'class': 'app_Package' } );
-			opt.innerHTML = g_rgPackages[packageId];
-			elemAllApps.appendChild(opt);
-		}
-	}
-	
 	Event.observe( elemAllApps, 'dblclick', MoveClusterItem.bindAsEventListener( null, elemAllApps, elemIncludedApps, true ) );
 	Event.observe( elemIncludedApps, 'dblclick', MoveClusterItem.bindAsEventListener( null, elemAllApps, elemIncludedApps, false ) );
 	
@@ -128,16 +190,14 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 		var rgItem = rgIncludedItems[i];
 		if ( rgItem.itemid )
 		{
-			var type = g_rgAppTypes[rgItem.itemid];
-			
-			var opt = new Element('div', {id: clusterName + '_clusteritem_' + rgItem.itemid, 'class': OptClassForItem( rgItem.itemid ) } );
-			opt.innerHTML = g_rgApps[rgItem.itemid];
+			var opt = new Element('div', {id: clusterName + '_clusteritem_' + rgItem.itemid, 'class': g_rgReferencedItems[rgItem.itemid]['cssClass'] } );
+			opt.innerHTML = g_rgReferencedItems[rgItem.itemid]['name'];
 			elemIncludedApps.appendChild(opt);
 		} 
 		else if ( rgItem.packageid )
 		{
 			var opt = new Element('div', {id: clusterName + '_clusterpackage_' + rgItem.packageid, 'class': 'app_Package' } );
-			opt.innerHTML = g_rgPackages[rgItem.packageid];
+			opt.innerHTML = g_rgReferencedPackages[rgItem.packageid];
 			elemIncludedApps.appendChild(opt);
 		}
 	}
@@ -171,16 +231,6 @@ function GetClusterItemsAsArray( elemIncludedApps )
 		}
 	});
 	return rgItems;
-}
-
-function OptClassForItem( itemId )
-{
-	if ( g_rgBetaApps[itemId] )
-		return "app_Beta";
-	else if ( g_rgAppTypes[itemId] )
-		return "app_" + g_rgAppTypes[itemId];
-	else
-		return "";
 }
 
 function MoveClusterItem( event, elemAvailable, elemIncluded, bAdding )
@@ -288,6 +338,8 @@ function FilterList( target, str )
 	if( Prototype.Browser.Gecko ||  $(target).tagName == "DIV" )
 		return FilterListFast( target, str );
 
+	// @note Tom Bui: this doesn't work at all for contracting, since we don't just filter apps with this function anymore
+
 	var lastFilter = lastFilters[target];
 	if ( !lastFilter )
 		lastFilter = '';
@@ -308,23 +360,6 @@ function FilterList( target, str )
 	var elemTarget = $(target);
 	var elemParent = elemTarget.parentNode;
 	elemParent.removeChild( elemTarget );
-
-	// When contracting we need to remove ALL elements, add the full list back in, then filter.
-	// display none would be better but only FF supports it. Boo
-	if( contracting )
-	{
-		elemTarget.innerHTML = "";
-		for ( var appId in g_rgApps )
-		{
-			var type = g_rgAppTypes[appId];
-			if ( type == "Movie" || type == "Demo" )
-				continue;
-			var opt = new Element('option', {value: appId, 'class': OptClassForItem( appId ) } );
-			opt.innerHTML = g_rgApps[appId];
-			//if ( !rgIncludedItemIds[appId] )
-			elemTarget.appendChild(opt);
-		}
-	}
 
 	rgChildren = elemTarget.childElements();
 

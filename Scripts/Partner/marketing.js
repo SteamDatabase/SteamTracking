@@ -194,6 +194,13 @@ function AjaxAutocompleteHandler( targetInput, selectedElement )
 		if ( target.onchange )
 			target.onchange();
 	}
+	else if ( $(selectedElement).id == "" )
+	{
+		var target = $(targetInput);
+		target.value = $(selectedElement).innerHTML;
+		if ( target.onchange )
+			target.onchange();
+	}
 }
 
 function AutocompleteHandlerClosure( targetInput, rgKeyValues )
@@ -391,8 +398,6 @@ function ReadAssociationValues( json )
 		mustOwnType = 'package';
 
 	SelectRestrictionType( 'mustown', mustOwnType );
-	SetRestrictionValue( 'app', 'message[mustownappid]', hash.unset('message[mustownappid]') );
-	SetRestrictionValue( 'package', 'message[mustownpackageid]', hash.unset('message[mustownpackageid]') );
 
 	var mustNotOwnType = 'none';
 	if ( hash.get('message[mustnotownappid]') != '' )
@@ -401,9 +406,6 @@ function ReadAssociationValues( json )
 		mustNotOwnType = 'package';
 
 	SelectRestrictionType( 'mustnotown', mustNotOwnType );
-	SetRestrictionValue( 'app', 'message[mustnotownappid]', hash.unset('message[mustnotownappid]') );
-	SetRestrictionValue( 'package', 'message[mustnotownpackageid]', hash.unset('message[mustnotownpackageid]') );
-	
 	
 	hash.each( function( entry ) {	if ( $('messageform')[entry.key] ) $('messageform')[entry.key].value = entry.value; } );
 	
@@ -439,22 +441,6 @@ function SelectRestrictionType( type, subtype )
 	ModalSelect( type + '_' + subtype );
 }
 
-// sets values into the app/package restriction autocomplete fields
-function SetRestrictionValue( subtype, name, value )
-{
-	var valueDesc = '';
-	if ( value != '' )
-	{
-		if ( subtype == 'app' )
-			valueDesc = g_rgApps[ value ];
-		else if ( subtype == 'package' )
-			valueDesc = g_rgPackages[ value ];
-	}
-	
-	$(name + '_compl').value = valueDesc;
-	$(name + '_target').value = value;
-}
-
 // Creates a displayable string based on current restrictions
 function UpdateRestrictionDescription()
 {
@@ -463,19 +449,19 @@ function UpdateRestrictionDescription()
 	
 	if ( mustOwnType == 'app' && GetFormValue('message[mustownappid]') )
 	{
-		SetRestrictionDescription( 'Must own: ', $('message[mustownappid]_compl').value );
+		SetRestrictionDescription( 'Must own: ', $('message_mustownappid__compl').value );
 	}
 	else if ( mustOwnType == 'package' && GetFormValue('message[mustownpackageid]') )
 	{
-		SetRestrictionDescription( 'Must own: ', $('message[mustownpackageid]_compl').value );
+		SetRestrictionDescription( 'Must own: ', $('message_mustownpackageid__compl').value );
 	}
 	else if ( mustNotOwnType == 'app' && GetFormValue('message[mustnotownappid]') )
 	{
-		SetRestrictionDescription( 'Must not own: ', $('message[mustnotownappid]_compl').value );
+		SetRestrictionDescription( 'Must not own: ', $('message_mustnotownappid__compl').value );
 	}
 	else if ( mustNotOwnType == 'package' && GetFormValue('message[mustnotownpackageid]') )
 	{
-		SetRestrictionDescription( 'Must not own: ', $('message[mustnotownpackageid]_compl').value );
+		SetRestrictionDescription( 'Must not own: ', $('message_mustnotownpackageid__compl').value );
 	}
 	else
 		SetRestrictionDescription( 'No ownership restrictions.', '');

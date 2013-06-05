@@ -2553,6 +2553,16 @@ function InferHtmlTagsInTextArea( id )
 	OnLocTextChanged( id );
 }
 
+function InferBBCodeInTextArea( id )
+{
+	// find text area
+	var area = $( id + '_textarea' );
+	window.originalHtmlAreaValue = area.value;
+	area.value = InferBBCode( area.value );
+	jQuery("#app_content_about_default_preview").html( area.value );
+	OnLocTextChanged( id );
+}
+
 function RevertInferedHtml( id, value )
 {
 	if ( window.originalHtmlAreaValue )

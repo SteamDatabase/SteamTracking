@@ -833,3 +833,44 @@ a.game_button {
 	-webkit-box-shadow: 4px 4px 5px black;
 }
 
+.jqplot-highlighter-tooltip {
+	background: #393938;
+	color: white;
+	border: 1px solid #797272;
+	padding: 5px;
+}
+
+.jqplot-yaxis {
+	left: 0 !important;
+	width: 45px !important;
+}
+
+.jqplot-xaxis {
+	overflow: hidden;
+}
+
+.priceHistoryTime {
+	display: none;
+}
+
+.jqplot-highlighter-tooltip .priceHistoryTime {
+	display: inline;
+}
+
+.zoom_controls .zoomopt {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.pricehistory_zoom_controls {
+	float: right;
+	margin-right: 45px;
+}
+
+.pricehistory_notavailable_info {
+	height: 50px;
+	padding: 50px 0;
+	font-size: 200%;
+	text-align: center;
+}
+

@@ -1,3 +1,4 @@
+
 function UpdatePostPreview()
 {
 	$('news_preview_title').update( $('news_input_title').value );
@@ -47,19 +48,30 @@ function OnAssociationAdded()
 	var itemid = $('add_association_target').value;
 	if ( itemid )
 	{
-		var div = new Element( 'div', { 'class': 'news_assoc_item' } );
-		div.observe( 'click', SelectAssoc.bind( null, div, itemid ) );
-		div.appendChild( new Element( 'input', { type: 'hidden', name: 'rgItems[]', value: itemid } ) );
+		var params = {
+			itemid : itemid
+		};
+		new Ajax.Request( 'https://partner.steamgames.com/admin/store/getitemdisplaydetailsjson/', {
+			method: 'post',
+			parameters: params,
+			onSuccess: function( transport ) {
+				var details = transport.responseJSON || [];
 
-		var removeLink = new Element( 'a', { 'href': '#' } );
-		removeLink.observe( 'click', RemoveAssociation.bind( null, div ) );
-		removeLink.appendChild( new Element( 'img', { src: g_szBaseUrl + '/public/images/marketing_tb_delete.gif' } ) );
-		div.appendChild( removeLink );
-		
-		var span = new Element( 'span', { 'class': OptClassForItem( itemid ) } );
-		span.update( ' ' + g_rgApps[itemid] );
-		div.appendChild( span );
-		$('news_assoc_items').appendChild( div );
+				var div = new Element( 'div', { 'class': 'news_assoc_item' } );
+				div.observe( 'click', SelectAssoc.bind( null, div, itemid ) );
+				div.appendChild( new Element( 'input', { type: 'hidden', name: 'rgItems[]', value: itemid } ) );
+
+				var removeLink = new Element( 'a', { 'href': '#' } );
+				removeLink.observe( 'click', RemoveAssociation.bind( null, div ) );
+				removeLink.appendChild( new Element( 'img', { src: g_szBaseUrl + '/public/images/marketing_tb_delete.gif' } ) );
+				div.appendChild( removeLink );
+
+				var span = new Element( 'span', { 'class': details['cssClass'] } );
+				span.update( ' ' + details['name'] );
+				div.appendChild( span );
+				$('news_assoc_items').appendChild( div );
+			}
+		} );
 	}
 	$('add_association_target').value = '';
 	$('add_association_compl').value = '';

@@ -2356,6 +2356,10 @@ SellItemDialog = {
 	m_strName: '',
 	m_fnDocumentKeyHandler: null,
 
+	m_plotPriceHistory: null,
+	m_timePriceHistoryEarliest: new Date(),
+	m_timePriceHistoryLatest: new Date(),
+
 	Initialize: function() {
 		$('market_sell_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
 		$('market_sell_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
@@ -2498,6 +2502,54 @@ SellItemDialog = {
 			oPriceInput.value = '';
 			oPriceInput.value = oldval;
 		}
+
+		// Load price history
+		$J('#pricehistory_container').show();
+		$J('#pricehistory').hide();
+		$J('#pricehistory_throbber').show();
+		$J('#pricehistory_notavailable').hide();
+		new Ajax.Request( 'http://steamcommunity.com/market/pricehistory/', {
+				method: 'get',
+				parameters: {
+					appid: this.m_item.appid,
+					market_name: this.m_item.market_name
+				},
+				onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
+				onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
+		} );
+	},
+
+	OnPriceHistorySuccess: function( transport ) {
+		$J('#pricehistory_throbber').hide();
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			$J('#pricehistory').show();
+
+			var line1 = transport.responseJSON.prices;
+			
+			this.m_timePriceHistoryEarliest = new Date();
+			if ( line1 != false )
+			{
+				this.m_timePriceHistoryEarliest = new Date(line1[0][0]);
+				this.m_timePriceHistoryLatest = new Date(line1[line1.length-1][0]);
+			}
+
+			var strFormatPrefix = transport.responseJSON.price_prefix;
+			var strFormatSuffix = transport.responseJSON.price_suffix;
+
+			this.m_plotPriceHistory = CreatePriceHistoryGraph( line1, 5, strFormatPrefix, strFormatSuffix );
+
+			pricehistory_zoomMonthOrLifetime( this.m_plotPriceHistory, this.m_timePriceHistoryEarliest, this.m_timePriceHistoryLatest );
+		}
+		else
+		{
+			$J('#pricehistory_notavailable').show();
+		}
+	},
+
+	OnPriceHistoryFailure: function( transport ) {
+		$J('#pricehistory_throbber').hide();
+		$J('#pricehistory_notavailable').show();
 	},
 
 	DisplayError: function( error ) {
@@ -2614,6 +2666,7 @@ SellItemDialog = {
 		$('market_sell_dialog_background').fade({ duration: 0.25 });
 		new Effect.BlindDown( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
+		new Effect.BlindUp( 'pricehistory_container', { duration: 0.25 } );
 
 		// Hide the button
 		$('market_sell_dialog_accept').style.cursor = 'default';
@@ -2665,6 +2718,7 @@ SellItemDialog = {
 		$('market_sell_dialog_background').fade({ duration: 0.25, from: 0, to: 1 });
 		new Effect.BlindUp( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
 		new Effect.BlindUp( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
+		new Effect.BlindDown( 'pricehistory_container', { duration: 0.25 } );
 		new Effect.Morph( 'market_sell_dialog_accept', { style: 'opacity:1', duration: 0.25 } );
 		new Effect.Morph( 'market_sell_quantity_input', { style: 'border-color: #707070; background-color: #1A1A1A', duration: 0.25 } );
 		new Effect.Morph( 'market_sell_currency_input', { style: 'border-color: #707070; background-color: #1A1A1A', duration: 0.25 } );
@@ -3568,5 +3622,128 @@ function HoverTooltipMouseMove( tooltip, event )
 	}
 
 	tooltip.setStyle({ left: newLeft + 'px', top: newTop + 'px' });
+}
+
+
+function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strFormatSuffix )
+{
+	return $J.jqplot('pricehistory', [line1], {
+		title:{text: 'Median Sale Prices', textAlign: 'left' },
+		gridPadding:{left: 45, right:45, top:25},
+		axesDefaults:{ showTickMarks:false },
+		axes:{
+			xaxis:{
+				renderer:$J.jqplot.DateAxisRenderer,
+				tickOptions:{formatString:'%b %#d<span class="priceHistoryTime"> %#I%p<span>'},
+				pad: 1
+			},
+			yaxis: {
+				pad: 1.1,
+				tickOptions:{formatString:strFormatPrefix + '%0.2f' + strFormatSuffix, labelPosition:'start', showMark: false},
+				numberTicks: numYAxisTicks,
+			}
+		},
+		grid: {
+			gridLineColor: '#414141',
+			borderColor: '#414141',
+			background: '#262626'
+		},
+		cursor: {
+			show: true,
+			zoom: true,
+			showTooltip: false
+		},
+		highlighter: {
+			show: true,
+			lineWidthAdjust: 2.5,
+			sizeAdjust: 5,
+			showTooltip: true,
+			tooltipLocation: 'n',
+			tooltipOffset: 20,
+			fadeTooltip: true,
+			yvalues: 2,
+			formatString: "<strong>%s</strong><br>%s<br>%s"
+		},
+		series:[{lineWidth:3, markerOptions:{show: false, style:'circle'}}],
+		seriesColors: [ "#688F3E" ]
+	});
+}
+
+function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest, days )
+{
+	var timeSelected = new Date( timePriceHistoryLatest.getTime() - ( days * 24 * 60 * 60 * 1000 ) );
+
+	plotPriceHistory.axes.xaxis.ticks = [];
+	plotPriceHistory.resetZoom();
+	plotPriceHistory.axes.xaxis.reset();
+	plotPriceHistory.axes.y2axis.reset();
+
+	var ticks = ( days == 7 ) ? 7 : 6;
+	plotPriceHistory.axes.xaxis.tickInterval = days / ticks + " days";
+
+	plotPriceHistory.axes.xaxis.min = timeSelected;
+	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+	plotPriceHistory.replot();
+
+	$J('#pricehistory .jqplot-yaxis').children().first().remove();
+	$J('#pricehistory .jqplot-yaxis').children().last().remove();
+
+	return false;
+}
+
+function pricehistory_zoomMonthOrLifetime( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest )
+{
+	var timeMonthAgo = new Date( timePriceHistoryLatest.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
+	plotPriceHistory.resetZoom();
+
+	var days = (timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime()) / ( 24 * 60 * 60 * 1000 );
+	if ( days / 7 < 1 )
+	{
+		var difference = timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime();
+		plotPriceHistory.axes.xaxis.ticks = [timePriceHistoryEarliest, new Date( timePriceHistoryEarliest.getTime() + difference * 0.25  ), new Date( timePriceHistoryEarliest.getTime() + difference * 0.5  ), new Date( timePriceHistoryEarliest.getTime() + difference * 0.75  ), timePriceHistoryLatest];
+	}
+	else
+	{
+		plotPriceHistory.axes.xaxis.tickInterval = (days / 7) + " days";
+	}
+	if ( timePriceHistoryEarliest > timeMonthAgo )
+		plotPriceHistory.axes.xaxis.min = timePriceHistoryEarliest;
+	else
+		plotPriceHistory.axes.xaxis.min = timeMonthAgo;
+	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+	plotPriceHistory.replot();
+
+	$J('#pricehistory .jqplot-yaxis').children().first().remove();
+	$J('#pricehistory .jqplot-yaxis').children().last().remove();
+
+	return false;
+}
+
+function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest )
+{
+	var timeMonthAgo = new Date( timePriceHistoryLatest.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
+	plotPriceHistory.axes.xaxis.ticks = [];
+	plotPriceHistory.resetZoom();
+	plotPriceHistory.axes.xaxis.reset();
+	plotPriceHistory.axes.y2axis.reset();
+
+	var days = (timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime()) / ( 24 * 60 * 60 * 1000 );
+	if ( days / 7 < 1 )
+	{
+		var difference = timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime();
+		plotPriceHistory.axes.xaxis.ticks = [timePriceHistoryEarliest, new Date( timePriceHistoryEarliest.getTime() + difference * 0.25  ), new Date( timePriceHistoryEarliest.getTime() + difference * 0.5  ), new Date( timePriceHistoryEarliest.getTime() + difference * 0.75  ), timePriceHistoryLatest];
+	}
+	else
+	{
+		plotPriceHistory.axes.xaxis.tickInterval = (days / 7) + " days";
+	}
+	plotPriceHistory.axes.xaxis.min = timePriceHistoryEarliest;
+	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+	plotPriceHistory.replot();
+
+	$J('#pricehistory .jqplot-yaxis').children().first().remove();
+	$J('#pricehistory .jqplot-yaxis').children().last().remove();
+
+	return false;
 }
 

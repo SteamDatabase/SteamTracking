@@ -629,7 +629,7 @@ input {
 	height: 128px;
 	width: 100%;
 }
-	#landingFooter > div {
+	#landingFooter .landingFooterConfidential {
 		margin: 10px 46px 10px 46px;
 		max-width: 1280px;
 		min-width: 800px;
@@ -643,6 +643,14 @@ input {
 		color: #fff;
 		text-decoration: none;
 	}
+	
+	#landingFooter .landingFooterLinks {
+		padding: 10px 46px 10px 46px;
+		width: 100%;
+		color: #555555;
+		background-color: #000000;
+	}
+
 
 /* sprites */
 .icon_changenotes{  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FBhcVEyWdZ8IAAACUSURBVDjL7ZOxDcJAFEPfIQYIhWtWYAVGYRNGYgMYgRWoXZANTBNOUUIIoaLA3Un/P39LvpKEUgoAtu9Aw7RaYC/pCpCE9WCgkVRebdo+AlvgbLtCVj3nWUk6AKcOsquAmbMnIcAowjtduhgAt2qaBNvpouRTmu0kqRG+1h/wC4BhkdoFXWhHRVqq/m9c5Cxp83w8AOGcSube+QNkAAAAAElFTkSuQmCC) }
@@ -687,4 +695,21 @@ span.icon_star { display: inline-block;}
 .icon {
 	width: 16px; height: 16px; display: inline-block;
 	background-position: center center; background-repeat: no-repeat;
+}
+
+.permissionLegend
+{
+	color: #b6c5ca;
+}
+
+.permissionLegend:hover
+{
+	color: #00adee;
+}
+
+.permissionLegendItem li
+{
+	margin-top: 10px;
+	list-style-type: disc;
+	
 }

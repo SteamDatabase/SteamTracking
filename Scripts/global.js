@@ -158,7 +158,8 @@ var g_whiteListedDomains = [
 	"playdota.com",
 	"kickstarter.com",
 	"gamingheads.com",
-	"reddit.com"
+	"reddit.com",
+	"counter-strike.net"
 ];
 
 function getHostname( str )
@@ -177,7 +178,8 @@ function AlertNonSteamSite( elem )
 		for ( var i = 0; i < g_whiteListedDomains.length; ++i )
 		{
 			var index = hostname.lastIndexOf( g_whiteListedDomains[i] );
-			if ( index != -1 && index == ( hostname.length - g_whiteListedDomains[i].length ) )
+			if ( index != -1 && index == ( hostname.length - g_whiteListedDomains[i].length )
+			     && ( index == 0 || hostname.charAt( index - 1 ) == '.' ) )
 			{
 				return true;
 			}

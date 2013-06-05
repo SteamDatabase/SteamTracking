@@ -597,7 +597,7 @@ var CSearchResults = Class.create( {
 
 	OnResponseRenderResults: function( transport )
 	{
-		if ( transport.responseJSON )
+		if ( transport.responseJSON && transport.responseJSON.success )
 		{
 			var response = transport.responseJSON;
 			this.m_cTotalCount = response.total_count;
