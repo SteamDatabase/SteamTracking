@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "[STAGING] DotA 2",
-		"gameVersion": "9",
+		"gameVersion": "10",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -48,6 +48,11 @@
 					"name": "pudge.enemy_heroes_hooked",
 					"defaultvalue": 0,
 					"displayName": "Enemy heroes hooked"
+				},
+				{
+					"name": "DOTA_SHOW_FULL_UI",
+					"defaultvalue": 0,
+					"displayName": ""
 				}
 			]
 			,
