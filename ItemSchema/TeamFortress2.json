@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.198651391268f4357e7e6634ac8166b79cae3919.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.5c966e017c29f675abc62df25cb32fda3020eb59.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -34683,7 +34683,6 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
-					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -38529,11 +38528,11 @@
 				}
 			},
 			{
-				"name": "Mysterious Promo 2",
+				"name": "Red Heavy Action Figure Promo",
 				"defindex": 2083,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 2",
+				"item_name": "Red Heavy Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38549,7 +38548,19 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Red Pyro Action Figure Promo",
@@ -38622,11 +38633,11 @@
 				
 			},
 			{
-				"name": "Mysterious Promo 5",
+				"name": "Red Soldier Action Figure Promo",
 				"defindex": 2086,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 5",
+				"item_name": "Red Soldier Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38642,14 +38653,26 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
-				"name": "Mysterious Promo 6",
+				"name": "Blue Heavy Action Figure Promo",
 				"defindex": 2087,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 6",
+				"item_name": "Blue Heavy Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38665,7 +38688,19 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Blue Pyro Action Figure Promo",
@@ -38738,11 +38773,11 @@
 				
 			},
 			{
-				"name": "Mysterious Promo 9",
+				"name": "Blue Soldier Action Figure Promo",
 				"defindex": 2090,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 9",
+				"item_name": "Blue Soldier Action Figure Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -38758,7 +38793,19 @@
 					"strange_parts": true,
 					"can_card_upgrade": true,
 					"can_strangify": true
-				}
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Total War Bundle",
@@ -39346,6 +39393,356 @@
 					"can_card_upgrade": true,
 					"can_strangify": true
 				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Engineer Action Figure Promo",
+				"defindex": 2112,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Red Engineer Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Blue Engineer Action Figure Promo",
+				"defindex": 2113,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Blue Engineer Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Spy Action Figure Promo",
+				"defindex": 2114,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Red Spy Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Blue Spy Action Figure Promo",
+				"defindex": 2115,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Blue Spy Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Sniper Action Figure Promo",
+				"defindex": 2116,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Red Sniper Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Blue Sniper Action Figure Promo",
+				"defindex": 2117,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Blue Sniper Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Scout Action Figure Promo",
+				"defindex": 2118,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Red Scout Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Blue Scout Action Figure Promo",
+				"defindex": 2119,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Blue Scout Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Red Medic Action Figure Promo",
+				"defindex": 2120,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Red Medic Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Blue Medic Action Figure Promo",
+				"defindex": 2121,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Blue Medic Action Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
 				"attributes": [
 					{
 						"name": "elevate quality",
@@ -52792,7 +53189,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Gold Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -52825,7 +53222,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Silver Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -52858,7 +53255,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -53221,7 +53618,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53254,7 +53651,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53287,7 +53684,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53320,7 +53717,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53353,7 +53750,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -53386,7 +53783,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Group Winner",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -54211,7 +54608,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54277,7 +54674,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54343,7 +54740,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54409,7 +54806,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54475,7 +54872,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54541,7 +54938,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -54607,7 +55004,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Participation Medal",
-				"item_description": "Season 4",
+				"item_description": "Season 3",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -57500,6 +57897,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Gold Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -57532,6 +57930,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Silver Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -57564,6 +57963,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_placement_2012.mdl",
@@ -57596,6 +57996,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57628,6 +58029,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57660,6 +58062,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57692,6 +58095,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57724,6 +58128,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57756,6 +58161,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Group Winner",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_winner_2012.mdl",
@@ -57788,6 +58194,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Premier Division Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -57853,6 +58260,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 1 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -57918,6 +58326,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 2 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -57983,6 +58392,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 3 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -58048,6 +58458,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 4 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -58113,6 +58524,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 5 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",
@@ -58178,6 +58590,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "ETF2L Highlander Division 6 Participation Medal",
+				"item_description": "Season 4",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models\/player\/items\/all_class\/etf2l_highlander_participant_2012.mdl",

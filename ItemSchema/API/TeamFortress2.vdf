@@ -30579,7 +30579,6 @@
 			{
 				"paintable"		"1"
 				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
 			}
 			"used_by_classes"
 			{
@@ -37500,7 +37499,6 @@
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
 			}
 			"tags"
 			{
@@ -47003,15 +47001,15 @@
 		}
 		"2083"
 		{
-			"name" "Mysterious Promo 2" 
+			"name" "Red Heavy Action Figure Promo" 
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The Flare Gun"		"1"
+				"Officer's Ushanka"		"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
-			"item_name"		"#TF_Mysterious_Promo2"
-			"item_description"	"#TF_Mysterious_Promo2_Desc"
+			"item_name"		"#TF_RedHeavy_ActionFigure_Promo"
+			"item_description"	"#TF_RedHeavy_ActionFigure_Promo_Desc"
 			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -47020,18 +47018,18 @@
 			"max_ilevel"	"50"
 			"used_by_classes"
 			{
-				"scout"		"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"		"1"
 				"heavy"		"1"
-				"spy" 		"1"
-				"engineer" 	"1"
-				"pyro" 		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 		"2084"
 		{
@@ -47099,15 +47097,15 @@
 		}
 		"2086"
 		{
-			"name" "Mysterious Promo 5" 
+			"name" "Red Soldier Action Figure Promo" 
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The Flare Gun"		"1"
+				"Tyrant's Helm"		"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
-			"item_name"		"#TF_Mysterious_Promo5"
-			"item_description"	"#TF_Mysterious_Promo5_Desc"
+			"item_name"		"#TF_RedSoldier_ActionFigure_Promo"
+			"item_description"	"#TF_RedSoldier_ActionFigure_Promo_Desc"
 			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -47116,30 +47114,30 @@
 			"max_ilevel"	"50"
 			"used_by_classes"
 			{
-				"scout"		"1"
-				"sniper"	"1"
 				"soldier"	"1"
-				"demoman"	"1"
-				"medic"		"1"
-				"heavy"		"1"
-				"spy" 		"1"
-				"engineer" 	"1"
-				"pyro" 		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 		"2087"
 		{
-			"name" "Mysterious Promo 6" 
+			"name" "Blue Heavy Action Figure Promo" 
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The Flare Gun"		"1"
+				"Tough Guy's Toque"		"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
-			"item_name"		"#TF_Mysterious_Promo6"
-			"item_description"	"#TF_Mysterious_Promo6_Desc"
+			"item_name"		"#TF_BlueHeavy_ActionFigure_Promo"
+			"item_description"	"#TF_BlueHeavy_ActionFigure_Promo_Desc"
 			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -47148,18 +47146,18 @@
 			"max_ilevel"	"50"
 			"used_by_classes"
 			{
-				"scout"		"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"		"1"
 				"heavy"		"1"
-				"spy" 		"1"
-				"engineer" 	"1"
-				"pyro" 		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 		"2088"
 		{
@@ -47227,15 +47225,15 @@
 		}
 		"2090"
 		{
-			"name" "Mysterious Promo 9" 
+			"name" "Blue Soldier Action Figure Promo" 
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The Flare Gun"		"1"
+				"Stainless Pot"		"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
-			"item_name"		"#TF_Mysterious_Promo9"
-			"item_description"	"#TF_Mysterious_Promo9_Desc"
+			"item_name"		"#TF_BlueSoldier_ActionFigure_Promo"
+			"item_description"	"#TF_BlueSoldier_ActionFigure_Promo_Desc"
 			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -47244,18 +47242,18 @@
 			"max_ilevel"	"50"
 			"used_by_classes"
 			{
-				"scout"		"1"
-				"sniper"	"1"
 				"soldier"	"1"
-				"demoman"	"1"
-				"medic"		"1"
-				"heavy"		"1"
-				"spy" 		"1"
-				"engineer" 	"1"
-				"pyro" 		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 		"2091"
 		{
@@ -47901,6 +47899,326 @@
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+		}
+		"2112"
+		{
+			"name" "Red Engineer Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Engineer's Cap"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RedEngineer_ActionFigure_Promo"
+			"item_description"	"#TF_RedEngineer_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2113"
+		{
+			"name" "Blue Engineer Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Texas Ten Gallon"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_BlueEngineer_ActionFigure_Promo"
+			"item_description"	"#TF_BlueEngineer_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2114"
+		{
+			"name" "Red Spy Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Backbiter's Billycock"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RedSpy_ActionFigure_Promo"
+			"item_description"	"#TF_RedSpy_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2115"
+		{
+			"name" "Blue Spy Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Camera Beard"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_BlueSpy_ActionFigure_Promo"
+			"item_description"	"#TF_BlueSpy_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2116"
+		{
+			"name" "Red Sniper Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Master's Yellow Belt"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RedSniper_ActionFigure_Promo"
+			"item_description"	"#TF_RedSniper_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2117"
+		{
+			"name" "Blue Sniper Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Professional's Panama"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_BlueSniper_ActionFigure_Promo"
+			"item_description"	"#TF_BlueSniper_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2118"
+		{
+			"name" "Red Scout Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Bonk Helm"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RedScout_ActionFigure_Promo"
+			"item_description"	"#TF_RedScout_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2119"
+		{
+			"name" "Blue Scout Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Ye Olde Baker Boy"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_BlueScout_ActionFigure_Promo"
+			"item_description"	"#TF_BlueScout_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2120"
+		{
+			"name" "Red Medic Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Otolaryngologist's Mirror"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RedMedic_ActionFigure_Promo"
+			"item_description"	"#TF_RedMedic_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2121"
+		{
+			"name" "Blue Medic Action Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Vintage Tyrolean"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_BlueMedic_ActionFigure_Promo"
+			"item_description"	"#TF_BlueMedic_ActionFigure_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 
 
