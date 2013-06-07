@@ -50858,7 +50858,6 @@
 		"5636"
 		{
 			"name"	"Robo Key 2013" 
-			"prefab"	"valve"
 			"item_class"	"tool"
 			"craft_class"	"tool"
 			"first_sale_date"	"2013/05/20"
