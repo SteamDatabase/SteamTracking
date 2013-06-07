@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.55581106509758c186d6ef3846e5dce556c764db.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ed93fad3496e4ba415b9ded9416503f1576e7858.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10171,7 +10171,7 @@
 				"item_name": "Battlefury",
 				"item_description": "A weapon of timeless rage.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/items\/faceless_void\/battlefury\/battlefury",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
@@ -16834,7 +16834,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Skin",
 				"item_name": "Elemental Ice Infusion",
-				"item_description": "Infused with strength glacial ice, Tiny has the power to scour his enemies from the battlefield.",
+				"item_description": "Infused with the strength of glacial ice, Tiny has the power to scour his enemies from the battlefield.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/tiny\/DOTA_Item_Elemental_Ice_Infusion",
@@ -20746,94 +20746,6 @@
 				}
 			},
 			{
-				"name": "dazzle_yuwipi_weapon",
-				"defindex": 4445,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "dazzle_yuwipi_weapon",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "dazzle_yuwipi_back1",
-				"defindex": 4446,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "dazzle_yuwipi_back1",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "dazzle_yuwipi_arm",
-				"defindex": 4447,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "dazzle_yuwipi_arm",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "dazzle_yuwipi_legs",
-				"defindex": 4448,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "dazzle_yuwipi_legs",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "The Storm Rider's Sight",
 				"defindex": 4449,
 				"item_class": "dota_item_wearable",
@@ -22469,11 +22381,11 @@
 				"item_description": "From deepest twilight come temptations dark and terrifying.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3",
+				"image_inventory": "econ\/items\/queenofpain\/tpl_hair_lvl1\/tpl_hair_lvl1",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3.2be3aa11a9aa354878f8296728f237d6fcbaaf8b.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl3\/tpl_hair_lvl3_large.6cb86a1e37e51743abb709fcf4f824c925107f13.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl1\/tpl_hair_lvl1.a4c641c7e4159006d6d30003e9633086c0ac3fe2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl1\/tpl_hair_lvl1_large.ddad40a32d5485e1876f0bbf7bc1fd9ee6fcebf9.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22483,13 +22395,13 @@
 				},
 				"styles": [
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Small Horns"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Medium Horns"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Large Horns"
 					}
 				]
 				,
@@ -22654,50 +22566,6 @@
 				}
 			},
 			{
-				"name": "Anuxi_knight_head",
-				"defindex": 4524,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_knight_head",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_knight_armour",
-				"defindex": 4525,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_knight_armour",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Proof of Courage",
 				"defindex": 4526,
 				"item_class": "dota_item_wearable",
@@ -22721,28 +22589,6 @@
 				}
 			},
 			{
-				"name": "Anuxi_knight_OffWeapon",
-				"defindex": 4527,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_knight_OffWeapon",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Little Blink Dagger",
 				"defindex": 4528,
 				"item_class": "dota_item_wearable",
@@ -22756,50 +22602,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/generic_blinkdag\/generic_blinkdag.c6f1cd62e89e03e84584d7c92dd10f99ed8556d8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/generic_blinkdag\/generic_blinkdag_large.da0d236ce9eda353c57ef2b5f02d522d10fc966d.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_knight_weap",
-				"defindex": 4529,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_knight_weap",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_knight_tail",
-				"defindex": 4530,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_knight_tail",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23082,11 +22884,11 @@
 				"item_description": "To poke, to prod, to bleed, to destroy.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3",
+				"image_inventory": "econ\/items\/queenofpain\/tpl_weapon_lvl1\/tpl_weapon_lvl1",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3.4be55240afc89e21f96923b070abb3542578e335.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl3\/tpl_weapon_lvl3_large.217bb544f8a24f92870493152eb5d9d430e6606a.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl1\/tpl_weapon_lvl1.69aab486b9816f63da57144d52b940050ecb1a2b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl1\/tpl_weapon_lvl1_large.2af6c92e192338025d6ad17043dc7bf907d6ed5e.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23096,13 +22898,13 @@
 				},
 				"styles": [
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Small Dirk"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Medium Dirk"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Large Dirk"
 					}
 				]
 				,
@@ -23139,11 +22941,11 @@
 				"item_description": "In beauty there is pain.  In pain there is beauty.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3",
+				"image_inventory": "econ\/items\/queenofpain\/tpl_wing_lvl1\/tpl_wing_lvl1",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3.c3cdbdef41c811da257293433b77c9f525f3d9f0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl3\/tpl_wing_lvl3_large.da208311b8e276eda217b55340eb50911fd3c9f4.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl1\/tpl_wing_lvl1.ffb39cece9caa89ed26faa5c9a6158311d346583.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl1\/tpl_wing_lvl1_large.a344846a4ef48c2847f7934c0250ac2892e06eed.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23153,13 +22955,13 @@
 				},
 				"styles": [
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Small Wings"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Medium Wings"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Large Wings"
 					}
 				]
 				,
@@ -23334,11 +23136,11 @@
 				"item_description": "One must bring the appropriate attire to a battle.  To a massacre, however...",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3",
+				"image_inventory": "econ\/items\/queenofpain\/tpl_shoulder_lvl1\/tpl_shoulder_lvl1",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3.94cbf9003a7e340662d39b04f30bf642c24ee196.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl3\/tpl_shoulder_lvl3_large.a11e9771955046299284c4c62826e7784b350dd8.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl1\/tpl_shoulder_lvl1.bd78d2ed52d15576145518a5f96ce41218d6d6bf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl1\/tpl_shoulder_lvl1_large.4e86d34be2a5d92a4cfb6d7d0215b469ec287e7c.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23348,13 +23150,13 @@
 				},
 				"styles": [
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Small Wraps"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Medium Wraps"
 					},
 					{
-						"name": "TF_UnknownStyle"
+						"name": "Large Wraps"
 					}
 				]
 				,
@@ -25026,28 +24828,6 @@
 				}
 			},
 			{
-				"name": "Ward Test",
-				"defindex": 4621,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Ability Modifier",
-				"item_name": "Ward Test",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Hammer of Light Inexorable",
 				"defindex": 4622,
 				"item_class": "dota_item_wearable",
@@ -26264,116 +26044,6 @@
 					}
 				]
 				
-			},
-			{
-				"name": "Anuxi_uni_weapon",
-				"defindex": 4671,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_uni_weapon",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_uni_sleeve",
-				"defindex": 4672,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_uni_sleeve",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_uni_head",
-				"defindex": 4673,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_uni_head",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_uni_neck",
-				"defindex": 4674,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_uni_neck",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Anuxi_uni_dress",
-				"defindex": 4675,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Anuxi_uni_dress",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
 			},
 			{
 				"name": "Bangles of the Wildwing's Blessing",
@@ -32187,72 +31857,6 @@
 				}
 			},
 			{
-				"name": "Comb of the Hidden Temple",
-				"defindex": 4927,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Comb",
-				"item_name": "Comb of the Hidden Temple",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "redmoon__assassinators_secret_armor",
-				"defindex": 4928,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "redmoon__assassinators_secret_armor",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "redmoon__assassinators_secret_wraps",
-				"defindex": 4929,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "redmoon__assassinators_secret_wraps",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Penumbral Warblade",
 				"defindex": 4930,
 				"item_class": "dota_item_wearable",
@@ -32787,7 +32391,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "mount",
 				"item_name": "Andalmere the Litigon",
-				"item_description": "This new item has no description.",
+				"item_description": "Blessed by Selemene, honored among the denizens of the Nightsilver Woods, the sacred litigon Andalmere now rides to war.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/mirana\/sl_cat\/sl_cat",
@@ -33966,8 +33570,8 @@
 				"image_inventory": "econ\/items\/medusa\/forsaken_beauty_arms\/forsaken_beauty_arms",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_arms\/forsaken_beauty_arms.cb86c29d28bc87c9abba33f8a08ee999a9240f74.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_arms\/forsaken_beauty_arms_large.b9be3c28ec1b6736953b4c0a5050f592be29d9bd.png",
 				"item_set": "forsaken_beauty_set",
 				"capabilities": {
 					"nameable": true,
@@ -33989,8 +33593,8 @@
 				"image_inventory": "econ\/items\/medusa\/forsaken_beauty_bow\/forsaken_beauty_bow",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_bow\/forsaken_beauty_bow.ea0a63bdfe4a0410444b784e8737bdd23836afd1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_bow\/forsaken_beauty_bow_large.faff93de360daeed00a524a1df66a54dc47991b1.png",
 				"item_set": "forsaken_beauty_set",
 				"capabilities": {
 					"nameable": true,
@@ -34012,8 +33616,8 @@
 				"image_inventory": "econ\/items\/medusa\/forsaken_beauty_chest\/forsaken_beauty_chest",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_chest\/forsaken_beauty_chest.079f27d5f2fb890a57709bbaec53224beb25d805.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_chest\/forsaken_beauty_chest_large.a8aeeb456387fd22c24364b20c0567f49cf04816.png",
 				"item_set": "forsaken_beauty_set",
 				"capabilities": {
 					"nameable": true,
@@ -34035,8 +33639,8 @@
 				"image_inventory": "econ\/items\/medusa\/forsaken_beauty_head\/forsaken_beauty_head",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_head\/forsaken_beauty_head.e254b9eafd4c44fa8d5ff266afd9fd4faa155b70.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_head\/forsaken_beauty_head_large.614345c4b80e969f42092a363d6b1ba577525360.png",
 				"item_set": "forsaken_beauty_set",
 				"capabilities": {
 					"nameable": true,
@@ -34058,9 +33662,538 @@
 				"image_inventory": "econ\/items\/medusa\/forsaken_beauty_tail\/forsaken_beauty_tail",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_tail\/forsaken_beauty_tail.054bf7a4539a99e72c6f22341e64c33a854f9891.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/forsaken_beauty_tail\/forsaken_beauty_tail_large.4cc984b19ac2785e5855196cc4be175887397fe6.png",
 				"item_set": "forsaken_beauty_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Helm",
+				"defindex": 5009,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Frostiron Raider Helm",
+				"item_description": "Denizens of the northern sea, the Frostiron Tribe are a proud people with a rich history.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_helm\/frostiron_raider_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_helm\/frostiron_raider_helm.239193aa85f1e1fbc7c9751058a38599c1d4c63f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_helm\/frostiron_raider_helm_large.f0ff52c457eeae12662b603c17fd4ad3b0e99521.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Axe",
+				"defindex": 5010,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Frostiron Raider Axe",
+				"item_description": "The blacksmithing skill of the Frostiron Tribe has kept many a foe at bay.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_axe\/frostiron_raider_axe",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_axe\/frostiron_raider_axe.3a4bcb62b4b1689b40cfc089de8322ad7df982c2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_axe\/frostiron_raider_axe_large.7059fc56f7fd528b0e8f89046cccae5c0292bc8e.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Fist",
+				"defindex": 5011,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Punchfist",
+				"item_name": "Frostiron Raider Fist",
+				"item_description": "Deceptively light yet incredibly durable, this glove was gifted to Tusk with the hope that it might ensure Ymir's safe return.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_fist\/frostiron_raider_fist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_fist\/frostiron_raider_fist.66fc9807c2e4cddc49f0c99bf15a05fffbb99953.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_fist\/frostiron_raider_fist_large.13cecbfd75a5debbf6ee846f095d9d45b7abc486.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Shield",
+				"defindex": 5012,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Frostiron Raider Shield",
+				"item_description": "During his stay with the Frostiron Tribe, Ymir tried his hand at crafting armor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_back\/frostiron_raider_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_back\/frostiron_raider_back.48fd0314c64d9b82b2abbd36d8dfca7817786f6c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_back\/frostiron_raider_back_large.16c7bddeb8c8a3d29f5d150da0a3f55007bb6d76.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Tusks",
+				"defindex": 5013,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tusks",
+				"item_name": "Frostiron Raider Tusks",
+				"item_description": "Masters of metals, the artisans of the Frostiron Tribe crafted steel tusks for Ymir as a symbol of his bravery.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_tusks\/frostiron_raider_tusks",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_tusks\/frostiron_raider_tusks.3734ee847769023a8a737441f0de7c4183e1110d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_tusks\/frostiron_raider_tusks_large.d7cc658f6e01364211fd7c550cab2a1f77287fa6.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Raider Wrap",
+				"defindex": 5014,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Frostiron Raider Wrap",
+				"item_description": "As Ymir wandered the great northern wilderness, he spent time among the Frostiron Tribe.  Upon his departure, he was given gifts to remember them by.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frostiron_raider_cape\/frostiron_raider_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_cape\/frostiron_raider_cape.20930862807c78a3fb262a274ee4c52ddba217d9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frostiron_raider_cape\/frostiron_raider_cape_large.ae12fb8b7b252e820ecebc66b122d2b485dfd804.png",
+				"item_set": "frostiron_raider_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Brooch",
+				"defindex": 5016,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Frostiron Sorceress Brooch",
+				"item_description": "The brooch is made of glacial sapphire carved by the artisans of the Frostiron tribe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/crystal_maiden\/np_hair\/np_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_hair\/np_hair.b7b18e844eaced3d9c503998d8596dd356b24425.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_hair\/np_hair_large.ebcaf1f2d8eedd4714dba0663f92326660040f19.png",
+				"item_set": "frostiron_sorceress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Cape",
+				"defindex": 5017,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Frostiron Sorceress Cape",
+				"item_description": "A tribe unknown to much of the world, the Frostiron are able to weave fabrics of incredible durability and warmth.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/crystal_maiden\/np_back\/np_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_back\/np_back.2c55aab861f49327873379603c45a0b29e2649eb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_back\/np_back_large.250c406078bb3335c3b8abdf39569b879bc48b00.png",
+				"item_set": "frostiron_sorceress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Cuffs",
+				"defindex": 5018,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cuffs",
+				"item_name": "Frostiron Sorceress Cuffs",
+				"item_description": "As fleeting spring came to the icy north, Ymir set off into the wilderness.  The warm seasons passed, and when winter returned so did he, bringing with him gifts and tales of a hidden tribe living near the coast.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/crystal_maiden\/np_arms\/np_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_arms\/np_arms.e85ac99a3c94e25f1d08d1505cc3ef971e50421d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_arms\/np_arms_large.1cd6c6a278da9166627033db66654d0eefed22ea.png",
+				"item_set": "frostiron_sorceress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Pads",
+				"defindex": 5019,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pads",
+				"item_name": "Frostiron Sorceress Pads",
+				"item_description": "The pads are deceptively durable, able to deflect even the strongest blow.  Such is the skill of the Frostiron Tribe that they remain as light as a snowflake.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/crystal_maiden\/np_shoulder\/np_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_shoulder\/np_shoulder.d5a62c854df60dfe4398707e8dabac96652ff0b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_shoulder\/np_shoulder_large.b8431007d4b097a9aa28dff49db7b6dec6560454.png",
+				"item_set": "frostiron_sorceress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Staff",
+				"defindex": 5020,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Frostiron Sorceress Staff",
+				"item_description": "The cool glow of an uncut glacial sapphire symbolizes the icy resolve of the Frostiron Tribe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/crystal_maiden\/np_weapon\/np_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_weapon\/np_weapon.ab22af0a1edd5aa1bf56d063a811de0e7536f8b7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/crystal_maiden\/np_weapon\/np_weapon_large.a43821f78661fd0fff2738b375032c4f7fa5edb5.png",
+				"item_set": "frostiron_sorceress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Summer's Bounty",
+				"defindex": 5021,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Summer's Bounty",
+				"item_description": "Who would want to run away from such a beautiful spear?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_summer_spear\/anuxi_summer_spear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_spear\/anuxi_summer_spear.7918623774a3941e598c0e04f9c9e86d1006f479.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_spear\/anuxi_summer_spear_large.2e1f25756b81409757a241c847efbeec439eb734.png",
+				"item_set": "summer_aspects",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Summer's Mirth",
+				"defindex": 5022,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Skirt",
+				"item_name": "Summer's Mirth",
+				"item_description": "Mirth and merriment bedeck the lovely Enchantress. Ivy is cool in summer and who cares about winter anyway?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_summer_skirt\/anuxi_summer_skirt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_skirt\/anuxi_summer_skirt.40d4953e8f6bc623f707c4b0ae9834cd08ad7a8c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_skirt\/anuxi_summer_skirt_large.ce4b67ffd9193a7ceb34aecd2139d1f2e4a89c18.png",
+				"item_set": "summer_aspects",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Summer's Light",
+				"defindex": 5023,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Summer's Light",
+				"item_description": "Wearing these luminous pauldrons, Enchantress honors the glory of the summer sky.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_summer_shoulder\/anuxi_summer_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_shoulder\/anuxi_summer_shoulder.27523b28240278a6dcb57df442eeb1254757c4c8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_shoulder\/anuxi_summer_shoulder_large.5d2b9de89ae38468dd074caf24252d593344bffc.png",
+				"item_set": "summer_aspects",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Summer's Charm",
+				"defindex": 5024,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Summer's Charm",
+				"item_description": "Bedizened with oaken branches, Enchantress easily blends into the rich summer shade.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_summer_head\/anuxi_summer_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_head\/anuxi_summer_head.42f7cee1715e07602b758271d8aeb6c62be5dcb1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_head\/anuxi_summer_head_large.8233e3b84457ea401ebeabd8713499502503a666.png",
+				"item_set": "summer_aspects",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Summer's Warmth",
+				"defindex": 5025,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeve",
+				"item_name": "Summer's Warmth",
+				"item_description": "Every warm summer day must eventually give way to the cool breezes of evening. This light covering is more than enough to ward off goosebumps.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/anuxi_summer_arms\/anuxi_summer_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_arms\/anuxi_summer_arms.ef730fb6eeebaa2b5535ca30ea57ac4d0e408269.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/anuxi_summer_arms\/anuxi_summer_arms_large.2738b9455a7467fb8d58784f57732e073583e998.png",
+				"item_set": "summer_aspects",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sanurok the Ever Able",
+				"defindex": 5031,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Riding Cat",
+				"item_name": "Sanurok the Ever Able",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/mount_desert\/mount_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/mount_desert\/mount_desert.f44bcceb9bf93d5a0eb65dee9d63bd5e50d0e06c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/mount_desert\/mount_desert_large.30df125ea6cb233dfd89a543e619a8fce6bf97f8.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gemmed Pauldrons of the Priest Kings",
+				"defindex": 5032,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Gemmed Pauldrons of the Priest Kings",
+				"item_description": "Worn heavy on the shoulders as a symbol that none may shrug off the responsibilities of faith.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/shoulder_desert\/shoulder_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/shoulder_desert\/shoulder_desert.1c5c2b00a291c96abd2236322d5788f8e3d6e22f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/shoulder_desert\/shoulder_desert_large.a46f70ab341d61e3f7201b25cdf60b35082dabcf.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Thrice-Gemmed Barding of Sanurok",
+				"defindex": 5033,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Barding",
+				"item_name": "Thrice-Gemmed Barding of Sanurok",
+				"item_description": "Three times your steed has saved your life.  Three times you have graced its barding with a gem. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/armor_desert\/armor_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/armor_desert\/armor_desert.1b95e6fac33c818c3e8dd39278592775a0a99650.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/armor_desert\/armor_desert_large.00da106fd137bfd04ed41d5b6c8ad5d01d4b75f5.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gemmed Mitre of the Priest Kings",
+				"defindex": 5034,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mitre",
+				"item_name": "Gemmed Mitre of the Priest Kings",
+				"item_description": "Worn only by the most revered, this headpiece symbolizes the highest attainment of the faith.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/head_desert\/head_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/head_desert\/head_desert.775daa056e9e9a89ce61605e6d199457eaeb27d6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/head_desert\/head_desert_large.b14b552b01bfe3c14e0309688bb2523d29e5e5e0.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gemmed Bracers of the Priest Kings",
+				"defindex": 5035,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Gemmed Bracers of the Priest Kings",
+				"item_description": "You are the strong right arm of the faith.  Also, the left arm.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/arms_desert\/arms_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/arms_desert\/arms_desert.4636f740990a605bd2d28ef762488ee87e9ef4ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/arms_desert\/arms_desert_large.6b39d54d0886c5fb4967c0a078e87cb3237e2f3b.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Scarab Pendant of the Priest Kings",
+				"defindex": 5036,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pendant",
+				"item_name": "Scarab Pendant of the Priest Kings",
+				"item_description": "This is no false idol, but an idol true, from which the sacred scarab of the faith may one day spread its golden wings and fly.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/neck_desert\/neck_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/neck_desert\/neck_desert.2e5fe148712c582bd13bf8178eec69231c99543b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/neck_desert\/neck_desert_large.48bb5d844c3087c1070e1cb76db8c6124f42d7c0.png",
+				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ruling Staff of the Priest Kings",
+				"defindex": 5037,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Ruling Staff of the Priest Kings",
+				"item_description": "He is merciful.  Death is the mercy he offers, and this sacred staff the means by which it is granted.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chen\/weapon_desert\/weapon_desert",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/weapon_desert\/weapon_desert.213af918b8eec2eb73627db6436173ea43a3ac60.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/weapon_desert\/weapon_desert_large.519b3073c4c36279e2efd30bc4af2acf97272d24.png",
+				"item_set": "priest_kings",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -37816,27 +37949,6 @@
 				}
 			},
 			{
-				"name": "blocky",
-				"defindex": 10134,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "HUD Skin",
-				"item_name": "blocky",
-				"item_description": "Blocks n blocks n blocks",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/hud_skins\/blocky",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Treasure of the Hunted Dragon",
 				"defindex": 10135,
 				"item_class": "supply_crate",
@@ -38990,6 +39102,30 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				},
+				"styles": [
+					{
+						"name": "Green Smeevil"
+					},
+					{
+						"name": "Red Smeevil"
+					},
+					{
+						"name": "Yellow Smeevil"
+					},
+					{
+						"name": "Purple Smeevil"
+					},
+					{
+						"name": "Red Smeevil and Mammoth"
+					},
+					{
+						"name": "Yellow Smeevil and Bird"
+					},
+					{
+						"name": "Purple Smeevil and Crab"
+					}
+				]
+				,
 				"attributes": [
 					{
 						"name": "league id",
@@ -39030,6 +39166,11 @@
 						"name": "international tag",
 						"class": "international tag",
 						"value": 2013
+					},
+					{
+						"name": "unlocked styles",
+						"class": "unlocked styles",
+						"value": 0
 					}
 				]
 				
@@ -39250,11 +39391,11 @@
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/courier\/smeevil_bird\/smeevil_bird",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_bird\/smeevil_bird.ea10fd99f97083aad365689e314c61f90cf17c1e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_bird\/smeevil_bird_large.5c5b1cbb005b392b4e60d30d2c6903e5ea8893df.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -39335,11 +39476,11 @@
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/courier\/smeevil_crab\/smeevil_crab",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_crab\/smeevil_crab.17dc289e1965808a29c5876da3d523913a269d39.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_crab\/smeevil_crab_large.750c2a4e437e87ef7e753e243f865e818a4e8e9c.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -39357,11 +39498,11 @@
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/courier\/smeevil_mammoth\/smeevil_mammoth",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_mammoth\/smeevil_mammoth.1c3c2d7efaa59fd95527b34b588035f8dc193d2f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_mammoth\/smeevil_mammoth_large.09b5e8553d57732484b47beb9d9cabf83e6dfcf5.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -39751,6 +39892,35 @@
 				}
 			},
 			{
+				"name": "Smeevil Treat",
+				"defindex": 10202,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tasty Snack",
+				"item_name": "Smeevil Treat",
+				"item_description": "A tasty snack used to unlock new Smeevil styles.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/smeevil_treat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/smeevil_treat.75fd7b6f1fc739adaefc48dc0c8c330ebacf8eb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/smeevil_treat_large.17be51f02f59abbbc9d275fa5e386e3ef25f82c0.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Furnace",
 				"defindex": 10203,
 				"item_class": "dota_item_wearable",
@@ -39770,6 +39940,35 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Critter Egg",
+				"defindex": 10204,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tasty Snack",
+				"item_name": "Critter Egg",
+				"item_description": "A magical egg used to unlock new Smeevil styles.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/critter_egg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/critter_egg.0abff82578b58087107921726750a44b72f29217.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/critter_egg_large.aead1d42c8d4f23b6762d73f91af03db309f0713.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Player Card: ixmike88",
@@ -39807,6 +40006,45 @@
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure of Incandescent Wax",
+				"defindex": 10206,
+				"item_class": "supply_crate",
+				"item_type_name": "Treasure",
+				"item_name": "Treasure of Incandescent Wax",
+				"item_description": "A chest that seems to be burning endlessly. The contents are unknown.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/treasure_chest_wax",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_chest_wax.2e37a369e01efbae232316b3e5729c8beb91d3f7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_chest_wax_large.8af3cca76f36333559dd8c8df491a0048cbf788d.png",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_pack_6"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 32
 					}
 				]
 				
@@ -43878,7 +44116,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "75% Battle Bonus (2 Hours)",
-				"item_description": "",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>75%<\/font> for 2 hours. Additionally, you will grant other players a stacking <font color='#9da1a9'>15%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/75_battle_bonus_3",
@@ -43913,7 +44151,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "100% Battle Bonus (2 Hours)",
-				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>75%<\/font> for 2 hours. Additionally, you will grant other players a stacking <font color='#9da1a9'>15%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>100%<\/font> for 2 hours. Additionally, you will grant other players a stacking <font color='#9da1a9'>15%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/75_battle_bonus_3",
@@ -43948,7 +44186,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "200% Battle Bonus (2 Hours)",
-				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>75%<\/font> for 2 hours. Additionally, you will grant other players a stacking <font color='#9da1a9'>15%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>200%<\/font> for 2 hours. Additionally, you will grant other players a stacking <font color='#9da1a9'>15%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/75_battle_bonus_3",
@@ -45651,7 +45889,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tournament Compendium",
 				"item_name": "The International 2013 Interactive Compendium",
-				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. For every purchase of an Interactive Compendium, 25% of the price will go directly into the International 2013 prize pool. Includes an upgrading, customizable Smeevil courier. Owners of the Compendium will also be granted additional stretch goal rewards as the prize pool increases.\r\n\r\nStretch Goals Reached! Now includes:\r\n\r\n- a 125% Battle Bonus\r\n- additional Smeevil customization options\r\n- the Valor HUD Skin\r\n- six all-new Hero Taunts",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and Battle Bonus stretch reward!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_companion",
@@ -45686,7 +45924,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "The International 2013 Battle Bonus",
-				"item_description": "",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> until the end of the International. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_2013_battle_bonus",
@@ -49092,8 +49330,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Winter_Snowdrop_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_winter_snowdrop_set.d940b7b1fef16e3071fb799947e573acd7937c56.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_winter_snowdrop_set_large.12f7a0ccdff833a1fbfd6dd6785fa87045f7c295.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_winter_snowdrop_set.4c686a699ef95f091d52b6a52fa2a55729c57d19.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_winter_snowdrop_set_large.03bfdd966701b5711e4e3effab167d0687707b4e.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -50065,8 +50303,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Regalia_of_the_Crystalline_Queen_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_crystalline_queen_set.2c66b7fdfe76a319ef1978149e96a63d370fcdc9.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_crystalline_queen_set_large.7c8800117a9ce81c967f32d0ed523f0514e21bec.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_crystalline_queen_set.be288430df5468d1c1577ea5056063c793c7697a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_crystalline_queen_set_large.04101bafb208e1519ddfd501a2dce111f52f1cc2.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -51347,7 +51585,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "The International 2013 Interactive Compendium Bundle",
-				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. For every purchase of an Interactive Compendium, 25% of the price will go directly into the International 2013 prize pool. Includes an upgrading, customizable Smeevil courier. Owners of the Compendium will also be granted additional stretch goal rewards as the prize pool increases.\r\n\r\nStretch Goals Reached! Now includes:\r\n\r\n- a 125% Battle Bonus\r\n- additional Smeevil customization options\r\n- the Valor HUD Skin\r\n- six all-new Hero Taunts",
+				"item_description": "Use the International 2013 Interactive Compendium to keep up to date on this year's tournament action. Includes a free Smeevil courier and International 2013 Battle Bonus stretch goal reward!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_companion",
@@ -51681,16 +51919,16 @@
 				"name": "Forsaken Beauty Set",
 				"defindex": 20181,
 				"item_class": "bundle",
-				"item_type_name": "New Item",
+				"item_type_name": "Bundle",
 				"item_name": "Forsaken Beauty Set",
-				"item_description": "This new item has no description.",
+				"item_description": "This bundle contains all of the items in the 'Forsaken Beauty' set for Medusa:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Forsaken_Beauty_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_forsaken_beauty_set.7ba33a84b65d045a339c20a4a29b520b2be13820.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_forsaken_beauty_set_large.1d38b5d9a60c2049257e32a6b8122f5e89d578bb.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -51719,6 +51957,118 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_multiple.3f6f530ad19e47b165d5b5ab696468acff2b8e92.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_multiple_large.019cb480bf69a1c732d0f5a8e661f97fd456c1ae.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Frostiron Raider Set",
+				"defindex": 20183,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Frostiron Raider Set",
+				"item_description": "This bundle contains all of the items in the 'Frostiron Raider' set for Tusk:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_frostiron_raider_set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set.02e4df6ace6cee8127d1c21cc5a4dd81228e73d8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set_large.ff78343e5a8c9a50e97fec7ca79a7f04beef5d66.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Frostiron Sorceress Set",
+				"defindex": 20184,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Frostiron Sorceress Set",
+				"item_description": "This bundle contains all of the items in the 'Frostiron Sorceress' set for Crystal Maiden:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Frostiron_Sorceress_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_sorceress_set.5184c9612f35e4fc5ee882db58e688a5b527a652.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_sorceress_set_large.800fed57e409969fdd61b420dd6d212e34dace73.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Gemmed Armor of the Priest Kings Set",
+				"defindex": 20185,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Gemmed Armor of the Priest Kings Set",
+				"item_description": "Trust in faith, but wear good armor.  This bundle contains all of the items in the 'Gemmed Armor of the Priest Kings' set for Chen:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Gemmed_Armor_of_the_Priest_Kings_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gemmed_armor_of_the_priest_kings_set.28685a759574396d13753d2dd2efd4d072e31ae6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gemmed_armor_of_the_priest_kings_set_large.496f0e17f77d1bc138c753875d7f70ded9d2d87f.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Aspects of Summer Set",
+				"defindex": 20186,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Aspects of Summer Set",
+				"item_description": "This bundle contains all of the items in the 'Aspects of Summer' set for Enchantress:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Aspects_of_Summer_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_aspects_of_summer_set.c09dc5d3e3f280b8729bf78b35f6280d41bf40a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_aspects_of_summer_set_large.8a811860bb80d0d501abc54b4dee6ae6939d4416.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -52543,6 +52893,16 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "unlocked styles",
+				"defindex": 400,
+				"attribute_class": "unlocked styles",
+				"description_string": "Attrib_UnlockedStyles",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -52643,7 +53003,7 @@
 			},
 			{
 				"item_set": "arctic_hunter_set",
-				"name": "Arctic Hunter Set",
+				"name": "The Arctic Hunter",
 				"store_bundle": "Arctic Hunter Set",
 				"items": [
 					"Arctic Hunter's Ice Axe",
@@ -53359,6 +53719,46 @@
 				
 			},
 			{
+				"item_set": "forsaken_beauty_set",
+				"name": "The Forsaken Beauty",
+				"store_bundle": "Forsaken Beauty Set",
+				"items": [
+					"Bracers of Forsaken Beauty",
+					"Bow of Forsaken Beauty",
+					"Blouse of Forsaken Beauty",
+					"Circlet of Forsaken Beauty",
+					"Sweep of Forsaken Beauty"
+				]
+				
+			},
+			{
+				"item_set": "frostiron_raider_set",
+				"name": "The Frostiron Raider",
+				"store_bundle": "Frostiron Raider Set",
+				"items": [
+					"Frostiron Raider Tusks",
+					"Frostiron Raider Fist",
+					"Frostiron Raider Axe",
+					"Frostiron Raider Helm",
+					"Frostiron Raider Shield",
+					"Frostiron Raider Wrap"
+				]
+				
+			},
+			{
+				"item_set": "frostiron_sorceress",
+				"name": "Frostiron Sorcess",
+				"store_bundle": "Frostiron Sorceress Set",
+				"items": [
+					"Frostiron Sorceress Cape",
+					"Frostiron Sorceress Cuffs",
+					"Frostiron Sorceress Pads",
+					"Frostiron Sorceress Staff",
+					"Frostiron Sorceress Brooch"
+				]
+				
+			},
+			{
 				"item_set": "furion_beast_bole",
 				"name": "Master of Beast and Bole",
 				"store_bundle": "Master of Beast and Bole Set",
@@ -53910,6 +54310,21 @@
 				
 			},
 			{
+				"item_set": "priest_kings",
+				"name": "Gemmed Armor of the Priest Kings",
+				"store_bundle": "Gemmed Armor of the Priest Kings Set",
+				"items": [
+					"Gemmed Pauldrons of the Priest Kings",
+					"Gemmed Mitre of the Priest Kings",
+					"Gemmed Bracers of the Priest Kings",
+					"Scarab Pendant of the Priest Kings",
+					"Ruling Staff of the Priest Kings",
+					"Thrice-Gemmed Barding of Sanurok",
+					"Sanurok the Ever Able"
+				]
+				
+			},
+			{
 				"item_set": "red_talon",
 				"name": "Gear of the Red Talon",
 				"items": [
@@ -54100,6 +54515,19 @@
 					"Cloak of the Stormcrow",
 					"Tail of the Stormcrow",
 					"Sigil of the Stormcrow"
+				]
+				
+			},
+			{
+				"item_set": "summer_aspects",
+				"name": "Aspects of Summer",
+				"store_bundle": "Aspects of Summer Set",
+				"items": [
+					"Summer's Bounty",
+					"Summer's Mirth",
+					"Summer's Light",
+					"Summer's Charm",
+					"Summer's Warmth"
 				]
 				
 			},
