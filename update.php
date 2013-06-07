@@ -4,6 +4,7 @@
 	class SteamTracker
 	{
 		private $APIKey;
+		private $AppStart;
 		private $CurrentTime;
 		private $URLsToFetch = Array( );
 		
@@ -34,6 +35,7 @@
 			
 			$this->APIKey = Trim( File_Get_Contents( 'apikey.txt' ) );
 			$this->CurrentTime = Time( );
+			$this->AppStart = MicroTime( true );
 			
 			$Data = File( 'urls.txt' );
 			
@@ -76,7 +78,7 @@
 					return $Test > 0 ? -1 : 1;
 				} );
 				
-				echo Count( $URLs ) . ' urls to be fetched...' . PHP_EOL;
+				$this->Log( '{yellow}' . Count( $URLs ) . ' urls to be fetched...' );
 				
 				$this->Fetch( $URLs );
 			}
@@ -168,7 +170,7 @@
 					
 					if( isset( $Done[ 'error' ] ) )
 					{
-						echo 'cURL Error: ' . $Done[ 'error' ] . ' - ' . $URL . PHP_EOL;
+						$this->Log( '{lightcyan}cURL Error: {yellow}' . $Done[ 'error' ] . '{normal} - ' . $URL );
 						
 						$this->URLsToFetch[ ] = Array(
 							'URL'  => $URL,
@@ -177,7 +179,7 @@
 					}
 					else if( $Code !== 200 )
 					{
-						echo 'HTTP Error ' . $Code . ' - ' . $URL . PHP_EOL;
+						$this->Log( '{lightcyan}HTTP Error ' . $Code . '{normal} - ' . $URL );
 						
 						if( $Code !== 404 )
 						{
@@ -205,7 +207,7 @@
 						
 						if( $LengthExpected !== $LengthDownload )
 						{
-							echo 'Wrong Length (' . $LengthDownload . ' != ' . $LengthExpected . ') - ' . $URL . PHP_EOL;
+							$this->Log( '{lightred}Wrong Length (' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 							
 							$this->URLsToFetch[ ] = Array(
 								'URL'  => $URL,
@@ -216,7 +218,7 @@
 						{
 							$this->HandleResponse( $Request, $Data );
 							
-							echo 'Fetched - ' . $URL . PHP_EOL;
+							$this->Log( '{green}Fetched{normal} - ' . $URL );
 						}
 					}
 					
@@ -256,5 +258,38 @@
 			cURL_Multi_Add_Handle( $Master, $Slave );
 			
 			return $Slave;
+		}
+		
+		private function Log( $String )
+		{
+			$Log  = '[';
+			$Log .= Number_Format( MicroTime( true ) - $this->AppStart, 2 );
+			$Log .= 's] ';
+			$Log .= $String;
+			$Log .= '{normal}';
+			$Log .= PHP_EOL;
+			
+			$Log = Str_Replace( $this->APIKey, '{lightred}*APIKEY*{normal}', $Log );
+			
+			$Log = Str_Replace(
+				Array(
+					'{normal}',
+					'{green}',
+					'{yellow}',
+					'{lightred}',
+					'{lightblue}',
+					'{lightcyan}'
+				),
+				Array(
+					"\033[0m",
+					"\033[0;32m",
+					"\033[1;33m",
+					"\033[1;31m",
+					"\033[1;34m",
+					"\033[1;36m"
+				),
+			$Log );
+			
+			echo $Log;
 		}
 	}
