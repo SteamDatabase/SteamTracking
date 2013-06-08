@@ -1,5 +1,5 @@
 <?php
-	new SteamTracker;
+	new SteamTracker( Count( $argv ) === 2 && $argv[ 1 ] === 'schema' );
 	
 	class SteamTracker
 	{
@@ -22,22 +22,29 @@
 			CURLOPT_FRESH_CONNECT  => 1
 		);
 		
-		public function __construct( )
+		public function __construct( $SchemaOnly )
 		{
+			$this->AppStart = MicroTime( true );
+			
+			$File = $SchemaOnly ? 'urls_schema.txt' : 'urls.txt';
+			
 			if( !File_Exists( 'apikey.txt' ) )
 			{
-				Exit( 'Missing apikey.txt' );
+				$this->Log( '{lightred}Missing apikey.txt' );
+				
+				Exit;
 			}
-			else if( !File_Exists( 'urls.txt' ) )
+			else if( !File_Exists( $File ) )
 			{
-				Exit( 'Missing urls.txt' );
+				$this->Log( '{lightred}Missing ' . $File );
+				
+				Exit;
 			}
 			
 			$this->APIKey = Trim( File_Get_Contents( 'apikey.txt' ) );
 			$this->CurrentTime = Time( );
-			$this->AppStart = MicroTime( true );
 			
-			$Data = File( 'urls.txt' );
+			$Data = File( $File );
 			
 			foreach( $Data as $Line )
 			{
