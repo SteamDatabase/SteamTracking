@@ -6,11 +6,13 @@
 		private $APIKey;
 		private $AppStart;
 		private $CurrentTime;
+		private $ETags = Array( );
+		private $Requests = Array( );
 		private $URLsToFetch = Array( );
 		
 		private $Options = Array(
 			CURLOPT_USERAGENT      => '',
-			CURLOPT_HEADER         => 0,
+			CURLOPT_HEADER         => 1,
 			CURLOPT_AUTOREFERER    => 0,
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_FOLLOWLOCATION => 0,
@@ -39,6 +41,11 @@
 				$this->Log( '{lightred}Missing ' . $File );
 				
 				Exit;
+			}
+			
+			if( File_Exists( 'etags.txt' ) )
+			{
+				$this->ETags = JSON_Decode( File_Get_Contents( 'etags.txt' ), true );
 			}
 			
 			$this->APIKey = Trim( File_Get_Contents( 'apikey.txt' ) );
@@ -90,6 +97,8 @@
 				$this->Fetch( $URLs );
 			}
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
+			
+			File_Put_Contents( 'etags.txt', JSON_Encode( $this->ETags ) );
 		}
 		
 		private function GenerateURL( $URL )
@@ -136,7 +145,8 @@
 		
 		private function Fetch( $URLs )
 		{
-			$Requests = Array( );
+			$this->Requests = Array( );
+			
 			$Master = cURL_Multi_Init( );
 			
 			$WindowSize = 10;
@@ -150,9 +160,7 @@
 			{
 				$URL = Array_Shift( $URLs );
 				
-				$Slave = $this->CreateHandle( $Master, $URL );
-				
-				$Requests[ (int)$Slave ] = $URL[ 'File' ];
+				$this->CreateHandle( $Master, $URL );
 			}
 			
 			unset( $URL, $WindowSize, $i );
@@ -173,7 +181,12 @@
 					$Code  = cURL_GetInfo( $Slave, CURLINFO_HTTP_CODE );
 					$Data  = cURL_Multi_GetContent( $Slave );
 					
-					$Request = $Requests[ (int)$Slave ];
+					$Request = $this->Requests[ (int)$Slave ];
+					
+					$HeaderSize = cURL_GetInfo( $Slave, CURLINFO_HEADER_SIZE );
+					
+					$Header = SubStr( $Data, 0, $HeaderSize );
+					$Data   = SubStr( $Data, $HeaderSize );
 					
 					if( isset( $Done[ 'error' ] ) )
 					{
@@ -183,6 +196,10 @@
 							'URL'  => $URL,
 							'File' => $Request
 						);
+					}
+					else if( $Code === 304 )
+					{
+						$this->Log( '{yellow}Not Modified{normal} - ' . $URL );
 					}
 					else if( $Code !== 200 )
 					{
@@ -202,10 +219,10 @@
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 						
 						// Workarounds... It's not sending Content-Length
-						$Test = SubStr( $Request, 0, 16 );
-						
 						if( $LengthExpected == -1 )
 						{
+							$Test = SubStr( $Request, 0, 16 );
+							
 							if( $Test === 'Scripts/Partner/' || $Test === 'Styles/Partner/s' || $Test === 'Repos/index.html' )
 							{
 								$LengthExpected = $LengthDownload;
@@ -214,7 +231,7 @@
 						
 						if( $LengthExpected !== $LengthDownload )
 						{
-							$this->Log( '{lightred}Wrong Length (' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
+							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 							
 							$this->URLsToFetch[ ] = Array(
 								'URL'  => $URL,
@@ -223,6 +240,11 @@
 						}
 						else
 						{
+							if( Preg_Match( '/^ETag: (.+)$/m', $Header, $Test ) === 1 )
+							{
+								$this->ETags[ $Request ] = Trim( $Test[ 1 ] );
+							}
+							
 							$this->HandleResponse( $Request, $Data );
 							
 							$this->Log( '{green}Fetched{normal} - ' . $URL );
@@ -233,15 +255,13 @@
 					{
 						$URL = Array_Shift( $URLs );
 						
-						$SlaveNew = $this->CreateHandle( $Master, $URL );
-						
-						$Requests[ (int)$SlaveNew ] = $URL[ 'File' ];
+						$this->CreateHandle( $Master, $URL );
 					}
 					
 					cURL_Multi_Remove_Handle( $Master, $Slave );
 					cURL_Close( $Slave );
 					
-					unset( $Requests[ (int)$Slave ], $Request, $Slave );
+					unset( $Request, $Slave );
 				}
 				
 				if( $Running )
@@ -257,8 +277,35 @@
 		private function CreateHandle( $Master, $URL )
 		{
 			$Slave = cURL_Init( );
+			$File  = $URL[ 'File' ];
 			
 			$this->Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
+			
+			$this->Requests[ (int)$Slave ] = $File;
+			
+			// If we have an ETag saved, add If-None-Match header
+			if( Array_Key_Exists( $File, $this->ETags ) )
+			{
+				$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
+			}
+			// Otherwise, check if the file xists
+			else
+			{
+				// Item schemas are handled differently
+				if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
+				{
+					$File = SubStr( $File, 3 );
+				}
+				
+				if( File_Exists( $File ) )
+				{
+					$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
+				}
+				else
+				{
+					unset( $this->Options[ CURLOPT_HTTPHEADER ] );
+				}
+			}
 			
 			cURL_SetOpt_Array( $Slave, $this->Options );
 			
