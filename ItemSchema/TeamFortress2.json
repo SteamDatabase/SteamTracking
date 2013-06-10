@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.74646d8e18b427f66c81aeea16fc8e1462ecfd5d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.86905b1f77abeb7b711bf361f6db6fc973789e62.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -15474,6 +15474,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal.51fbb5ae774e1512c8b5f2337b5ffb850b9046f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_medal_large.0989294c627d77d0775d84709838202e02b0e01c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15507,6 +15508,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_run.29504f16b9dfe186bb5a3394c058365457397d70.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_run_large.e605ec94124e35849bc89ae6bde7266effe17dad.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15540,6 +15542,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_part.929d60f7eac387bc77fc12054537bdb3518d456c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/weiner_bomb_part_large.5420b97e3e0e5702a8ddee8e668cc51175ae07bc.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15573,6 +15576,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal.5791dfe64cbe77d04212987be1e50cfa3fd422ac.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal_large.b204850ef9878bef6c1c5ab08a13aa14c693af96.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15606,6 +15610,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal_1.a8c8aca80378a7087daba9c7ef4832eec88a4395.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal_1_large.386357e1e961a6055f08baa15066020de2244749.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15639,6 +15644,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal_2.8660c3461162ee42fb8317231bbe00f727f1c07a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_medal_2_large.fd31b76f8ddd2d37421280f8f138c8d5b48b858f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15672,6 +15678,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant.8a5c32a7ab14b25e5a39faef1d2dbd391b11311b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_large.1a337ca495dfefe99c37cc7bf1a379a9a1494f9b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15705,6 +15712,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_participant.3ed52fe79c432b90a797ed582572c4b20487e0ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_participant_large.96e1a8ba3affac4de5537f16c416815784a7d828.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15738,6 +15746,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum.7dfd306331ba5c1cad90c42620ee938f551ce8ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum_large.1a3cba2dc34ec19657c4a81b021d0372713e334e.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15771,6 +15780,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum_1.d5d4700c810b0bfb2741d20b7eab25e4d556d657.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum_1_large.bf3675a0f9c2cb44934812c30895c695d1f7ed3f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15804,6 +15814,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum_2.2f578f5bbaad09b2a50dba7c2a6512692849945d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_platinum_2_large.b5ad6f183e5b8a4fea3100dffbf8270ab8699c90.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15837,6 +15848,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver.ecc710084f3a7eeff364dfb3d8ec0ba484006924.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver_large.309c3e07ab351516478e2dd7ca3de1df8f0ff93f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15870,6 +15882,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver_1.a3c5984a2edcc63b3bbcd10519b8dc8a94ee16cf.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver_1_large.e4ca5c9902d4f2ac10659cdaf6e1810257b24aab.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15903,6 +15916,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver_2.5a71681ca75ad15fad491e732cbfb54d1f7c2866.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_silver_2_large.f990677f9172ac6c532f55e9335a4a6136cfa467.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15936,6 +15950,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron.f92c37b72f5cf706fb8ea1be78bd883b51394fbe.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron_large.9b3501f64968b0eaca634d5efd68a0c56582536e.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -15969,6 +15984,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron_1.8b2cbc8f331c1c0b007decf279e0782e066796c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron_1_large.c316ee77eb9fd4b8387ab96828042c45594322f7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -16002,6 +16018,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron_2.168e7206832ce861ccc3b01139884355cba50e14.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_highlander_iron_2_large.ba42c80287b977a1116c31549757192069948730.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22195,6 +22212,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum.85f646e6a27f19454a5999f3f382b04a040f6eb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum_large.c7b272f1a89ed722794e88eace91baa801c69e84.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22228,6 +22246,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum.85f646e6a27f19454a5999f3f382b04a040f6eb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum_large.c7b272f1a89ed722794e88eace91baa801c69e84.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22261,6 +22280,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum.85f646e6a27f19454a5999f3f382b04a040f6eb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum_large.c7b272f1a89ed722794e88eace91baa801c69e84.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22294,6 +22314,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum.85f646e6a27f19454a5999f3f382b04a040f6eb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum_large.c7b272f1a89ed722794e88eace91baa801c69e84.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22327,6 +22348,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum.85f646e6a27f19454a5999f3f382b04a040f6eb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_platinum_large.c7b272f1a89ed722794e88eace91baa801c69e84.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22360,6 +22382,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver.0af401fb00f21164b1e5fe41b9fd08c0645b6d5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver_large.e5143f9472d66a0016b1a5eadd69110ddc4c13c7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22393,6 +22416,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver.0af401fb00f21164b1e5fe41b9fd08c0645b6d5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver_large.e5143f9472d66a0016b1a5eadd69110ddc4c13c7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22426,6 +22450,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver.0af401fb00f21164b1e5fe41b9fd08c0645b6d5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver_large.e5143f9472d66a0016b1a5eadd69110ddc4c13c7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22459,6 +22484,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver.0af401fb00f21164b1e5fe41b9fd08c0645b6d5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver_large.e5143f9472d66a0016b1a5eadd69110ddc4c13c7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22492,6 +22518,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver.0af401fb00f21164b1e5fe41b9fd08c0645b6d5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_silver_large.e5143f9472d66a0016b1a5eadd69110ddc4c13c7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22525,6 +22552,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22558,6 +22586,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22591,6 +22620,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22624,6 +22654,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22657,6 +22688,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22690,6 +22722,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22723,6 +22756,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22756,6 +22790,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -22789,6 +22824,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant.81d952dcdaa3521b3ba98f416222e0a3872a9587.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_trophy_medal_participant_large.02595e7d7753a4f09c3637e2ec2f67cc4399360f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -23221,6 +23257,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mapper_medal.c8640471f8e59ce9ce26f7336e65d4e3df292659.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mapper_medal_large.c5834c43ffb88d9df44685501a05fb59f9378045.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"paintable": true,
 					"can_craft_mark": true,
@@ -46072,6 +46109,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum.7856b34277d7c9eb9cafed6bd609d07a955a6f37.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum_large.78495f6f5ab66e75636c3f0d794cdc7ec0ba1028.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46105,6 +46143,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum.e76209dab505d46b17556efd6f2d0113915f8f71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum_large.899e4cfd87eecbe6b8e1160aa705c49bb3eb7a40.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46138,6 +46177,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum.910df907b7bbfface5116402f14196e3a44a6409.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum_large.11eedc8309e3ca7663aaf0a88ac6fcdc9dc16b80.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46171,6 +46211,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum.7856b34277d7c9eb9cafed6bd609d07a955a6f37.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum_large.78495f6f5ab66e75636c3f0d794cdc7ec0ba1028.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46204,6 +46245,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum.e76209dab505d46b17556efd6f2d0113915f8f71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum_large.899e4cfd87eecbe6b8e1160aa705c49bb3eb7a40.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46237,6 +46279,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum.910df907b7bbfface5116402f14196e3a44a6409.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum_large.11eedc8309e3ca7663aaf0a88ac6fcdc9dc16b80.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46270,6 +46313,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum.7856b34277d7c9eb9cafed6bd609d07a955a6f37.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstplatinum_large.78495f6f5ab66e75636c3f0d794cdc7ec0ba1028.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46303,6 +46347,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum.e76209dab505d46b17556efd6f2d0113915f8f71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondplatinum_large.899e4cfd87eecbe6b8e1160aa705c49bb3eb7a40.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46336,6 +46381,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum.910df907b7bbfface5116402f14196e3a44a6409.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdplatinum_large.11eedc8309e3ca7663aaf0a88ac6fcdc9dc16b80.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46369,6 +46415,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstsilver.b0eec49e5d1967ec59356d1c117c6a3e872b26ec.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstsilver_large.250550ba46f6dc3502021551cafe040fc52f0e44.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46402,6 +46449,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsilver.bcf0418d44f323dcbc777a0c23a5602474f03d54.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsilver_large.05e98a8b53f482413339d6d7783721b94aec3226.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46435,6 +46483,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsilver.5040bce451b8083b6a23d9d1ea29fbd0b9c5e3ad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsilver_large.1096b2b573c475f502b2d57bba26556986e5a319.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46468,6 +46517,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstsilver.b0eec49e5d1967ec59356d1c117c6a3e872b26ec.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firstsilver_large.250550ba46f6dc3502021551cafe040fc52f0e44.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46501,6 +46551,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsilver.bcf0418d44f323dcbc777a0c23a5602474f03d54.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsilver_large.05e98a8b53f482413339d6d7783721b94aec3226.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46534,6 +46585,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsilver.5040bce451b8083b6a23d9d1ea29fbd0b9c5e3ad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsilver_large.1096b2b573c475f502b2d57bba26556986e5a319.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46567,6 +46619,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel.bc87fc6a4a68c95277d3cd5ec1a04062d9a04c3a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel_large.f3f730614be44a4c9342a43c9cd1cd941c7dd4a7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46600,6 +46653,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel.6e5c88ed7e203c46dfb1ffd67898b8dcd5a457e9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel_large.0f215552319c6b509d34cd77e0e4827c236b013a.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46633,6 +46687,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel.0e8f08a78be46e2789eeb87d79e1b858264dc9c8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel_large.7aefab0f854201b0287dafd0ff63d0152e74d6e2.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46666,6 +46721,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel.bc87fc6a4a68c95277d3cd5ec1a04062d9a04c3a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel_large.f3f730614be44a4c9342a43c9cd1cd941c7dd4a7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46699,6 +46755,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel.6e5c88ed7e203c46dfb1ffd67898b8dcd5a457e9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel_large.0f215552319c6b509d34cd77e0e4827c236b013a.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46732,6 +46789,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel.0e8f08a78be46e2789eeb87d79e1b858264dc9c8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel_large.7aefab0f854201b0287dafd0ff63d0152e74d6e2.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46765,6 +46823,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel.bc87fc6a4a68c95277d3cd5ec1a04062d9a04c3a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6firststeel_large.f3f730614be44a4c9342a43c9cd1cd941c7dd4a7.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46798,6 +46857,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel.6e5c88ed7e203c46dfb1ffd67898b8dcd5a457e9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6secondsteel_large.0f215552319c6b509d34cd77e0e4827c236b013a.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46831,6 +46891,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel.0e8f08a78be46e2789eeb87d79e1b858264dc9c8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6thirdsteel_large.7aefab0f854201b0287dafd0ff63d0152e74d6e2.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46864,6 +46925,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantplatinum.168a303670610363fe80547cf25314d8cf39d6f3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantplatinum_large.c56937403493afa67a3914c07178dead19a69cce.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46897,6 +46959,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantsilver.cae2e7108470e8ed6632e5b6959ff321c30c2dd8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantsilver_large.5645e22e620a3ce3168e7e7f62bcb085a2012727.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46930,6 +46993,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantsteel.ecaff1b7dc837438b7bac5ad0a318533f3e804f2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc6participantsteel_large.1896c1258a9b392b589adb08528f911934419341.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46963,6 +47027,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46996,6 +47061,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47029,6 +47095,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47062,6 +47129,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47095,6 +47163,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47128,6 +47197,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47161,6 +47231,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47194,6 +47265,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47227,6 +47299,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47260,6 +47333,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47293,6 +47367,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47326,6 +47401,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47359,6 +47435,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47392,6 +47469,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47425,6 +47503,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47458,6 +47537,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47491,6 +47571,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47524,6 +47605,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47557,6 +47639,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47590,6 +47673,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47623,6 +47707,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47656,6 +47741,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47689,6 +47775,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47722,6 +47809,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47755,6 +47843,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47788,6 +47877,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47821,6 +47911,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47854,6 +47945,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47887,6 +47979,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47920,6 +48013,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47953,6 +48047,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47986,6 +48081,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48019,6 +48115,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48052,6 +48149,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48085,6 +48183,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48118,6 +48217,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48151,6 +48251,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48184,6 +48285,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48217,6 +48319,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48250,6 +48353,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold.4739c94714a55972f6c1272be79d965fc46150dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_gold_large.e2ae26dc9dd4070c853e2a08c3029eb3ca0b0b60.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48283,6 +48387,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver.f32f027847b43736e22017468b3e299828ebf27a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_silver_large.501272d8d865fd10a0abe3c1f4854b8d271ac171.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48316,6 +48421,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze.57f69182343d1b22205b8eb2235c9e3f882f4deb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_bronze_large.4b463d142569e48f37f4b452c518e9879c4961ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48349,6 +48455,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl.275f4a75623e80f6e45cc0121aefc8d6e81b754d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_esl_large.2b492f0798aa180c004bf47f03530ee0e6279500.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48382,6 +48489,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_pan.b0a0975cebb2c5086eaad74f29ac87c42a050d43.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_pan_large.e0ab803ae11b183dadf74ca7ca091bf150554248.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48415,6 +48523,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_pan.b0a0975cebb2c5086eaad74f29ac87c42a050d43.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_class_badge_pan_large.e0ab803ae11b183dadf74ca7ca091bf150554248.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48448,6 +48557,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48481,6 +48591,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48514,6 +48625,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48547,6 +48659,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48580,6 +48693,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48613,6 +48727,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48646,6 +48761,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48679,6 +48795,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48712,6 +48829,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48745,6 +48863,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48778,6 +48897,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48811,6 +48931,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48844,6 +48965,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48877,6 +48999,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48910,6 +49033,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48943,6 +49067,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -48976,6 +49101,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49009,6 +49135,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49042,6 +49169,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49075,6 +49203,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49108,6 +49237,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49141,6 +49271,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49174,6 +49305,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49207,6 +49339,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49240,6 +49373,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49273,6 +49407,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49306,6 +49441,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49339,6 +49475,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49372,6 +49509,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49405,6 +49543,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49438,6 +49577,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49471,6 +49611,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49504,6 +49645,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49537,6 +49679,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49570,6 +49713,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49603,6 +49747,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49636,6 +49781,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49669,6 +49815,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49702,6 +49849,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49735,6 +49883,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49768,6 +49917,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49801,6 +49951,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49834,6 +49985,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49867,6 +50019,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49900,6 +50053,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49933,6 +50087,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49966,6 +50121,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49999,6 +50155,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50032,6 +50189,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50065,6 +50223,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50098,6 +50257,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50131,6 +50291,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50164,6 +50325,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50197,6 +50359,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50230,6 +50393,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50296,6 +50460,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50362,6 +50527,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50428,6 +50594,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50494,6 +50661,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50560,6 +50728,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50626,6 +50795,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50692,6 +50862,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50758,6 +50929,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50824,6 +50996,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50890,6 +51063,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -50956,6 +51130,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51022,6 +51197,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51088,6 +51264,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51154,6 +51331,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51220,6 +51398,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51286,6 +51465,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51352,6 +51532,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51418,6 +51599,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51484,6 +51666,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51550,6 +51733,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51616,6 +51800,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51682,6 +51867,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51748,6 +51934,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51814,6 +52001,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51880,6 +52068,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -51946,6 +52135,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52012,6 +52202,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52078,6 +52269,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52144,6 +52336,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52210,6 +52403,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52276,6 +52470,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52342,6 +52537,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52408,6 +52604,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52474,6 +52671,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52540,6 +52738,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52606,6 +52805,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52672,6 +52872,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52738,6 +52939,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52804,6 +53006,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52870,6 +53073,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -52936,6 +53140,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53002,6 +53207,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold.5083718c069474290e2824778db30539e45c35a6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold_large.5a5713acad47f511578fcb1794f65e6195debc1f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53035,6 +53241,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver.7519fbe0e65e24372b5dc43f697aba0b345b4ada.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver_large.dfc70ad520a96ad42aee7fa4892f749fdbe4f552.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53068,6 +53275,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012.8ff01161f17453fdc52dce8b0fdc8750c8d4a7ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_large.88d46c2ffe779732c7c080ba8e7b9bab57aa737d.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53101,6 +53309,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold.5083718c069474290e2824778db30539e45c35a6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold_large.5a5713acad47f511578fcb1794f65e6195debc1f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53134,6 +53343,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver.7519fbe0e65e24372b5dc43f697aba0b345b4ada.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver_large.dfc70ad520a96ad42aee7fa4892f749fdbe4f552.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53167,6 +53377,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012.8ff01161f17453fdc52dce8b0fdc8750c8d4a7ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_large.88d46c2ffe779732c7c080ba8e7b9bab57aa737d.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53200,6 +53411,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold.5083718c069474290e2824778db30539e45c35a6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold_large.5a5713acad47f511578fcb1794f65e6195debc1f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53233,6 +53445,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver.7519fbe0e65e24372b5dc43f697aba0b345b4ada.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver_large.dfc70ad520a96ad42aee7fa4892f749fdbe4f552.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53266,6 +53479,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012.8ff01161f17453fdc52dce8b0fdc8750c8d4a7ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_large.88d46c2ffe779732c7c080ba8e7b9bab57aa737d.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53299,6 +53513,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53332,6 +53547,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53365,6 +53581,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53398,6 +53615,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53431,6 +53649,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53464,6 +53683,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53497,6 +53717,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53530,6 +53751,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53563,6 +53785,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53596,6 +53819,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53629,6 +53853,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53662,6 +53887,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53695,6 +53921,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53728,6 +53955,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53761,6 +53989,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53794,6 +54023,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53827,6 +54057,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53893,6 +54124,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -53959,6 +54191,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54025,6 +54258,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54091,6 +54325,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54157,6 +54392,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54223,6 +54459,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54289,6 +54526,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54355,6 +54593,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54421,6 +54660,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54487,6 +54727,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54553,6 +54794,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54619,6 +54861,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54685,6 +54928,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54751,6 +54995,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54817,6 +55062,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54883,6 +55129,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -54949,6 +55196,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55015,6 +55263,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55080,6 +55329,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012.013ab69e79d227c4bf0feed62f8981c6e291cb10.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012_large.ed7d2a1c1a86d18e92a1469d55f3ac815c2c6a5f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55112,6 +55362,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012.013ab69e79d227c4bf0feed62f8981c6e291cb10.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012_large.ed7d2a1c1a86d18e92a1469d55f3ac815c2c6a5f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55144,6 +55395,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012.013ab69e79d227c4bf0feed62f8981c6e291cb10.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012_large.ed7d2a1c1a86d18e92a1469d55f3ac815c2c6a5f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55176,6 +55428,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012.013ab69e79d227c4bf0feed62f8981c6e291cb10.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_ultiduo_2012_large.ed7d2a1c1a86d18e92a1469d55f3ac815c2c6a5f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55208,6 +55461,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55240,6 +55494,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55272,6 +55527,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55304,6 +55560,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55336,6 +55593,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55368,6 +55626,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55400,6 +55659,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012.d634b70243101aa0dd5a8985df1ec4054fd44931.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/esh_ultiduo_2012_large.aa20e030ac150ad881104a55474b67d5f0172feb.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55433,6 +55693,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medal.2191e008d6ab1f3fa40101b2c995e20b2f2cecfb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medal_large.9b62a4e95bd6b360f2c2c6d299d16fbce79382ba.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55466,6 +55727,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_plat.4fe290e06dce51c7a89113a8b19ddf6eaa36afff.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_plat_large.e6dc05fa51e6bca7343004ecf16fb23994e14550.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55499,6 +55761,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_plat.4180f66964f01bdae7db55bbbc661397cc7c1fe2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_plat_large.f16bcd8ac2410df6c760d59c271faef2c4ce0559.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55532,6 +55795,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_plat.2c9d2fce46a5bc134f3c9483c8d52375916d34f2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_plat_large.5ce9fddce711ee2e26bb2b8add9ee1059b3c5f72.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55565,6 +55829,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_silver.bea0b0fcf9d428a2b8fa6f93bf1e58e9a6504837.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_silver_large.a1c8ddd9220e06a1e3aff587a79f7f19121103ef.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55598,6 +55863,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_silver.d51a6f90547d25f325e2d98acb09f250b309030c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_silver_large.19667baabdd3bd8c6b364da800b501a94e7054b8.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55631,6 +55897,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_silver.9e1a11b6d4f2c969ac92c6e4a26e58fb37c7faeb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_silver_large.7b847c2f76e85290e33b421197a8c074de59726c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55664,6 +55931,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_steel.2e49c1ec906d0d33993c0b965971f9840f4a3727.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_steel_large.b07a0c8274eea95f3350a4e906af3e6dc1e230e3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55697,6 +55965,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_steel.a42028a938ca954307ff7d8ab40607c05de0d614.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_steel_large.17a027133fdc7fc3965a836322b915d1050759b9.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55730,6 +55999,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_steel.207c6ecdc013b846ae8792dbbfcf128c4cbedded.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_steel_large.d1d418bd67231649753a8fd371057a22dbb7f093.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55763,6 +56033,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_iron.18cfeab1ec6b25d508032364fd5d673af393d70e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_iron_large.023ed22a974f870c1b66434e3f281919782c9722.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55796,6 +56067,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_iron.0d9fe39d7cf6a600c5c2da2f05a9eac032cfa31f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_iron_large.0e212324661900efb75fa2d95957f8a48ba9a110.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55829,6 +56101,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_iron.bac09e05933f5e4ad60cdf27d3bc666e9f39f86e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_iron_large.ea1931dbeb410277dd7052d2fc68328c871558ca.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55862,6 +56135,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_plat.4fe290e06dce51c7a89113a8b19ddf6eaa36afff.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_first_plat_large.e6dc05fa51e6bca7343004ecf16fb23994e14550.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55895,6 +56169,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_plat.4180f66964f01bdae7db55bbbc661397cc7c1fe2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_second_plat_large.f16bcd8ac2410df6c760d59c271faef2c4ce0559.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55928,6 +56203,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_plat.2c9d2fce46a5bc134f3c9483c8d52375916d34f2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_third_plat_large.5ce9fddce711ee2e26bb2b8add9ee1059b3c5f72.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55961,6 +56237,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_plat.74b89f9f0f7e0fc4d48385631e33ad698367b425.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_plat_large.4735c017d3f7248a522c905db53810d24d6d5eaf.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -55994,6 +56271,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_silver.b72a6cce99970796377bfcc1d8ed31aeeff8a720.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_silver_large.da091fb4e0092ca3a243694908c1415de34cccd2.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56027,6 +56305,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_steel.84e52bed50c8db44ebb6774ccf821de27f7b44f8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_steel_large.aafc21443181283a3ed1d105ec496d7cdeb46b89.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56060,6 +56339,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_iron.75480f07a4e96af716239c749de5be6ba508f65d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc8_medal_participant_iron_large.cc11e51558c76fdd61e715589f72b8218b9d1623.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56093,6 +56373,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56126,6 +56407,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56159,6 +56441,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56192,6 +56475,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56225,6 +56509,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02.a0acace6419c6012751d2d5725f121d80fe04c5a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/rsp_s02_large.0981f63084001ba47caf9448bf61e77791b30ac3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56258,6 +56543,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum.74101f8d8e944d22339fc493d6776a1fc90b5f65.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum_large.ae0f4edacdb66c0051b5b834184b7a059a862558.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56291,6 +56577,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum.d356031d63b6f2e9967445eb336e0bbb2b9b756f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum_large.d2c87f4e8fbf653366033e60d5373b64963d00f3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56324,6 +56611,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum.921eb7493bb4324b3842ceed42140ed8a8565da4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum_large.a1facf28d909c08417ea781165f51fdfc28bc954.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56357,6 +56645,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_gold.7358e93cf240d86090dca5b0df3c26df4f8db6cd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_gold_large.92979f4b45c634dbffb5bfd132ebe4b61576a157.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56390,6 +56679,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_gold.fa25b32369939e2fad8ec62a3382b554a248cf1f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_gold_large.feb3310b4c71ec4c01d68820d39ee9ab0302c2fd.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56423,6 +56713,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_gold.a168d06175a93a95a86501159fd5cac2cc86787f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_gold_large.38f50e8efba3ba52eedd7e93302cf7e8f688ab65.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56456,6 +56747,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_silver.d7b59388a85175e199b84ae1076a7445e47f7f50.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_silver_large.1ec8c6417d01361ea2bb4e7cb15ddef03c02a425.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56489,6 +56781,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_silver.7f03ecd74d7cc870601d2b33a6784ca6c5f1520a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_silver_large.5c930807c9cf02ea34c9a40ba859be4beb37b8b9.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56522,6 +56815,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_silver.7097cbda18f8e26a90789f7c0edfc200188fe570.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_silver_large.571e436462e30ceb45d98363d1fc155559b633d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56555,6 +56849,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_steel.0d6689ffdf85f5640363df1ceb5c8d22592cccb6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_steel_large.7d877ef1de0bfa0c88cd0bac6092020a34b0a041.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56588,6 +56883,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_steel.91fb70c46c3624003fcfa104cec20b8d4b1eeb2d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_steel_large.6da11b3928541c0a96c149f3111fa48ece754b64.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56621,6 +56917,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_steel.9e2819a1fabb781e677391875bbc4c2c12d9b5c8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_steel_large.9d8254518700a5818947326296d963fc67f2515a.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56654,6 +56951,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_iron.2f9fb83784c940db473af32e59e08015172b6fb2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_iron_large.aeaa651458f5cd14a5e69b0125d4376697763e01.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56687,6 +56985,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_iron.ac3f3e7cf8da9a1abc91c5bc07cf5bb43e8addbd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_iron_large.0314e26702a154fa4d3f05696554cae05458935f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56720,6 +57019,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_iron.cb0c01d18b30c16401fdd266053378f1d18f92e5.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_iron_large.7559cada5d2fe9158449d3dd3a305d2982bdb2b2.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56753,6 +57053,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum.74101f8d8e944d22339fc493d6776a1fc90b5f65.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_first_platinum_large.ae0f4edacdb66c0051b5b834184b7a059a862558.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56786,6 +57087,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum.d356031d63b6f2e9967445eb336e0bbb2b9b756f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_second_platinum_large.d2c87f4e8fbf653366033e60d5373b64963d00f3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56819,6 +57121,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum.921eb7493bb4324b3842ceed42140ed8a8565da4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_third_platinum_large.a1facf28d909c08417ea781165f51fdfc28bc954.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56852,6 +57155,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_platinum.99606aedc3f6e86a828866264d7deb5c36f2b157.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_platinum_large.ad4de236910bbf1eb50f4fb368693ce9606130c1.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56885,6 +57189,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold.ea48ca40373f3a2769c70ffa61c36007fcb1a485.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold_large.7e082f4545836b7dfcc6cc68488dc82c97ac9a9c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56918,6 +57223,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56951,6 +57257,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel.900828249695490eaf8ab19ac5f4bf2e8a697399.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel_large.45cd05d4e25060cc06f9f5f7707a77a85b958fb3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -56984,6 +57291,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_iron.e144916f5497341161e8ab74bcb53e707359d135.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_iron_large.809c8aec912e8f0cdb621c50aadc72476301dc72.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57017,6 +57325,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold.ea48ca40373f3a2769c70ffa61c36007fcb1a485.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_gold_large.7e082f4545836b7dfcc6cc68488dc82c97ac9a9c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57050,6 +57359,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57083,6 +57393,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel.900828249695490eaf8ab19ac5f4bf2e8a697399.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_steel_large.45cd05d4e25060cc06f9f5f7707a77a85b958fb3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57116,6 +57427,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver.8a112533c7945e311043c8a20ec3dad68bab9b71.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season9_participation_silver_large.4db3efd49380de0170753d755076e8a0133eb10c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57149,6 +57461,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57182,6 +57495,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57215,6 +57529,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57248,6 +57563,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57281,6 +57597,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57314,6 +57631,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57347,6 +57665,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57380,6 +57699,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57413,6 +57733,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57446,6 +57767,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57512,6 +57834,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57578,6 +57901,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57644,6 +57968,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57710,6 +58035,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57776,6 +58102,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57842,6 +58169,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57908,6 +58236,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold.5083718c069474290e2824778db30539e45c35a6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_gold_large.5a5713acad47f511578fcb1794f65e6195debc1f.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57941,6 +58270,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver.7519fbe0e65e24372b5dc43f697aba0b345b4ada.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_silver_large.dfc70ad520a96ad42aee7fa4892f749fdbe4f552.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -57974,6 +58304,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012.8ff01161f17453fdc52dce8b0fdc8750c8d4a7ae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_placement_2012_large.88d46c2ffe779732c7c080ba8e7b9bab57aa737d.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58007,6 +58338,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58040,6 +58372,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58073,6 +58406,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58106,6 +58440,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58139,6 +58474,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58172,6 +58508,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012.cfae2c58510af06a265639689cb69c63c32f4163.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_winner_2012_large.54125105f12d9023f545fae2f525c800f652dc92.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58205,6 +58542,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58271,6 +58609,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58337,6 +58676,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58403,6 +58743,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58469,6 +58810,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58535,6 +58877,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -58601,6 +58944,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012.e8371253d25b21e99ca9e6d140087bfea580d0c9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_highlander_participant_2012_large.d9c146f997265af3bc4d56cfceefbe3e1a22607b.png",
 				"drop_type": "none",
+				"craft_class": "",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -59795,6 +60139,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59826,6 +60171,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59861,6 +60207,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59892,6 +60239,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59927,6 +60275,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59961,6 +60310,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -59992,6 +60342,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60026,6 +60377,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60056,6 +60408,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60090,6 +60443,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60125,6 +60479,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60160,6 +60515,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60195,6 +60551,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60230,6 +60587,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60315,6 +60673,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60350,6 +60709,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60385,6 +60745,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60420,6 +60781,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60455,6 +60817,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60490,6 +60853,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60525,6 +60889,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60560,6 +60925,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60595,6 +60961,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60630,6 +60997,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60665,6 +61033,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60700,6 +61069,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60735,6 +61105,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60770,6 +61141,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60805,6 +61177,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60839,6 +61212,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60874,6 +61248,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60908,6 +61283,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60951,6 +61327,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -60986,6 +61363,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61021,6 +61399,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61055,6 +61434,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61090,6 +61470,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61125,6 +61506,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61160,6 +61542,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61194,6 +61577,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61229,6 +61613,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61264,6 +61649,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61299,6 +61685,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61334,6 +61721,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61369,6 +61757,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61404,6 +61793,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61439,6 +61829,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61474,6 +61865,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61508,6 +61900,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61550,6 +61943,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61585,6 +61979,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61619,6 +62014,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61654,6 +62050,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61689,6 +62086,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61723,6 +62121,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61759,6 +62158,7 @@
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61767,6 +62167,44 @@
 				},
 				"used_by_classes": [
 					"Pyro"
+				]
+				
+			},
+			{
+				"name": "The Crosslinker's Coil",
+				"defindex": 30058,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Crosslinker's Coil",
+				"item_description": "Did you know: before the mercenary fashion world discovered the obvious style and mental health benefits of wearing 22 feet of powered electrical cable around your head, people once wore hatbands made from 'silk' or other barely-lethal textiles! Strange but true.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/gunpointcoilhat\/gunpointcoilhat_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/gunpointcoilhat\/gunpointcoilhat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat.5de90f195cc1dea809a3a966101a21aa68217fb1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat_large.ae2cfae27a22df9b26b5ad86a89fd40992d19679.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
 				]
 				
 			}
