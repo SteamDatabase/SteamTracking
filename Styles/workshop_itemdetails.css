@@ -1655,6 +1655,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	box-shadow: 1px 1px 0 0 #39393a;
 }
 
+.certified_compatible_text
+{
+	font-size: 12px;
+}
+
 .demo_button {
 	display: inline-block;
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/ig/demobutton.png');
