@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ed93fad3496e4ba415b9ded9416503f1576e7858.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ca7df4cac5d1e1fd4ad9542ac2ee81661ff0d81e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -120,6 +120,10 @@
 			{
 				"origin": 21,
 				"name": "Tournament Drop"
+			},
+			{
+				"origin": 22,
+				"name": "Passport Reward"
 			}
 		]
 		,
@@ -22386,6 +22390,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl1\/tpl_hair_lvl1.a4c641c7e4159006d6d30003e9633086c0ac3fe2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_hair_lvl1\/tpl_hair_lvl1_large.ddad40a32d5485e1876f0bbf7bc1fd9ee6fcebf9.png",
+				"item_set": "wicked_succubus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22889,6 +22894,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl1\/tpl_weapon_lvl1.69aab486b9816f63da57144d52b940050ecb1a2b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_weapon_lvl1\/tpl_weapon_lvl1_large.2af6c92e192338025d6ad17043dc7bf907d6ed5e.png",
+				"item_set": "wicked_succubus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22946,6 +22952,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl1\/tpl_wing_lvl1.ffb39cece9caa89ed26faa5c9a6158311d346583.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_wing_lvl1\/tpl_wing_lvl1_large.a344846a4ef48c2847f7934c0250ac2892e06eed.png",
+				"item_set": "wicked_succubus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23141,6 +23148,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl1\/tpl_shoulder_lvl1.bd78d2ed52d15576145518a5f96ce41218d6d6bf.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/tpl_shoulder_lvl1\/tpl_shoulder_lvl1_large.4e86d34be2a5d92a4cfb6d7d0215b469ec287e7c.png",
+				"item_set": "wicked_succubus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -54788,6 +54796,17 @@
 					"Robe of the Archivist",
 					"Bracers of the Archivist",
 					"Grand Mantle of the Archivist"
+				]
+				
+			},
+			{
+				"item_set": "wicked_succubus",
+				"name": "DOTA_Set_The_Wicked_Succubus",
+				"items": [
+					"Dirk of the Wicked Succubus",
+					"Horns of the Wicked Succubus",
+					"Wraps of the Wicked Succubus",
+					"Wings of the Wicked Succubus"
 				]
 				
 			},

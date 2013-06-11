@@ -34327,7 +34327,7 @@
 						"unlock"
 						{
 							"attribute"		"kill eater"
-							"attribute_value"		"30"
+							"attribute_value"		"60"
 						}
 					}
 				}
@@ -34347,6 +34347,7 @@
 					}
 				}
 			}
+			"item_set"		"wicked_succubus"
 		}
 		"4518"
 		{
@@ -35404,13 +35405,13 @@
 					}
 					"2"
 					{
-						"model_player"		"models/items/queenofpain/tpl_weapon_lvl2/tpl_weapon_lvl2.mdl"
+						"model_player"		"models/items/queenofpain/tpl_weapon_lvl2/tpl_weapon_lvl3.mdl"
 						"name"		"#Dirk_Of_The_Wicked_Succubus_Style2"
 						"alternate_icon"		"2"
 						"unlock"
 						{
 							"attribute"		"kill eater"
-							"attribute_value"		"30"
+							"attribute_value"		"60"
 						}
 					}
 				}
@@ -35430,6 +35431,7 @@
 					}
 				}
 			}
+			"item_set"		"wicked_succubus"
 		}
 		"4543"
 		{
@@ -35526,7 +35528,7 @@
 						"alternate_icon"		"2"
 						"unlock"
 						{
-							"attribute"		"kill_eater"
+							"attribute"		"kill eater"
 							"attribute_value"		"60"
 						}
 					}
@@ -35552,6 +35554,7 @@
 				}
 			}
 			"particle_file"		"particles/econ/items/queen_of_pain/qop_wicked_wings.pcf"
+			"item_set"		"wicked_succubus"
 		}
 		"4544"
 		{
@@ -35952,7 +35955,7 @@
 						"unlock"
 						{
 							"attribute"		"kill eater"
-							"attribute_value"		"30"
+							"attribute_value"		"60"
 						}
 					}
 				}
@@ -35972,6 +35975,7 @@
 					}
 				}
 			}
+			"item_set"		"wicked_succubus"
 		}
 		"4551"
 		{
@@ -89897,6 +89901,17 @@
 				"Robe of the Archivist"		"1"
 				"Bracers of the Archivist"		"1"
 				"Grand Mantle of the Archivist"		"1"
+			}
+		}
+		"wicked_succubus"
+		{
+			"name"		"#DOTA_Set_The_Wicked_Succubus"
+			"items"
+			{
+				"Dirk of the Wicked Succubus"		"1"
+				"Horns of the Wicked Succubus"		"1"
+				"Wraps of the Wicked Succubus"		"1"
+				"Wings of the Wicked Succubus"		"1"
 			}
 		}
 		"wildkin_blessing"
