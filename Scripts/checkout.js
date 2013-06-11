@@ -2352,7 +2352,7 @@ function SubmitPaymentInfoForm()
 			{
 				if ( !ValidateCreditCardNumber( $( 'card_number' ).value, method.value ) )
 				{
-					errorString += 'Please verify your payment method and enter a valid card number.<br/>';
+					errorString += 'This card number is not valid for the payment method you selected.<br/>';
 					rgBadFields.card_number = true;
 					rgBadFields.payment_method_trigger = true;
 				}
