@@ -1,11 +1,12 @@
 <?php
-	new SteamTracker( Count( $argv ) === 2 && $argv[ 1 ] === 'schema' );
+	new SteamTracker( Count( $argv ) === 2 ? $argv[ 1 ] : '' );
 	
 	class SteamTracker
 	{
 		private $APIKey;
 		private $AppStart;
 		private $CurrentTime;
+		private $UseCache = true;
 		private $ETags = Array( );
 		private $Requests = Array( );
 		private $URLsToFetch = Array( );
@@ -24,11 +25,20 @@
 			CURLOPT_FRESH_CONNECT  => 1
 		);
 		
-		public function __construct( $SchemaOnly )
+		public function __construct( $Option )
 		{
 			$this->AppStart = MicroTime( true );
 			
-			$File = $SchemaOnly ? 'urls_schema.txt' : 'urls.txt';
+			$File = 'urls.txt';
+			
+			if( $Option === 'schema' )
+			{
+				$File = 'urls_schema.txt';
+			}
+			else if( $Option === 'force' )
+			{
+				$this->UseCache = false;
+			}
 			
 			if( !File_Exists( 'apikey.txt' ) )
 			{
@@ -43,7 +53,7 @@
 				Exit;
 			}
 			
-			if( File_Exists( 'etags.txt' ) )
+			if( $this->UseCache && File_Exists( 'etags.txt' ) )
 			{
 				$this->ETags = JSON_Decode( File_Get_Contents( 'etags.txt' ), true );
 			}
@@ -283,27 +293,30 @@
 			
 			$this->Requests[ (int)$Slave ] = $File;
 			
-			// If we have an ETag saved, add If-None-Match header
-			if( Array_Key_Exists( $File, $this->ETags ) )
+			if( $this->UseCache )
 			{
-				$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
-			}
-			// Otherwise, check if the file xists
-			else
-			{
-				// Item schemas are handled differently
-				if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
+				// If we have an ETag saved, add If-None-Match header
+				if( Array_Key_Exists( $File, $this->ETags ) )
 				{
-					$File = SubStr( $File, 3 );
+					$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
 				}
-				
-				if( File_Exists( $File ) )
-				{
-					$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
-				}
+				// Otherwise, check if the file exists
 				else
 				{
-					unset( $this->Options[ CURLOPT_HTTPHEADER ] );
+					// Item schemas are handled differently
+					if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
+					{
+						$File = SubStr( $File, 3 );
+					}
+					
+					if( File_Exists( $File ) )
+					{
+						$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
+					}
+					else
+					{
+						unset( $this->Options[ CURLOPT_HTTPHEADER ] );
+					}
 				}
 			}
 			
