@@ -1,0 +1,321 @@
+{
+	"result": {
+		"carousel_data": {
+			"max_display_banners": 0,
+			"banners": [
+				{
+					"basefilename": "chicken",
+					"action": "redirect_itemdetails",
+					"placement": "front",
+					"action_param": "10147"
+				}
+			]
+			
+		},
+		"tabs": [
+			{
+				"label": "",
+				"id": "1909853392",
+				"parent_id": 0,
+				"use_large_cells": true,
+				"default": true,
+				"children": [
+
+				]
+				,
+				"home": true
+			},
+			{
+				"label": "",
+				"id": "618468259",
+				"parent_id": 0,
+				"use_large_cells": false,
+				"default": false,
+				"children": [
+
+				]
+				,
+				"home": false,
+				"dropdown_prefab_id": 3814588639
+			},
+			{
+				"label": "",
+				"id": "2141657786",
+				"parent_id": 0,
+				"use_large_cells": false,
+				"default": false,
+				"children": [
+
+				]
+				,
+				"home": false,
+				"dropdown_prefab_id": 3814588639
+			},
+			{
+				"label": "",
+				"id": "2776314621",
+				"parent_id": 0,
+				"use_large_cells": true,
+				"default": false,
+				"children": [
+
+				]
+				,
+				"home": false,
+				"dropdown_prefab_id": 464088892
+			}
+		]
+		,
+		"filters": [
+			{
+				"id": 1468829639,
+				"name": "heroes",
+				"url_history_param_name": "h",
+				"all_element": {
+					"id": 991457757,
+					"localized_text": ""
+				},
+				"elements": [
+					{
+						"name": null,
+						"localized_text": "",
+						"id": 991457757
+					}
+				]
+				,
+				"count": 1
+			},
+			{
+				"id": 1939313376,
+				"name": "item_types",
+				"url_history_param_name": "t",
+				"all_element": {
+					"id": 991457757,
+					"localized_text": ""
+				},
+				"elements": [
+					{
+						"name": null,
+						"localized_text": "",
+						"id": 991457757
+					}
+				]
+				,
+				"count": 1
+			},
+			{
+				"id": 109301539,
+				"name": "rarities",
+				"url_history_param_name": "r",
+				"all_element": {
+					"id": 991457757,
+					"localized_text": ""
+				},
+				"elements": [
+					{
+						"name": null,
+						"localized_text": "",
+						"id": 991457757
+					}
+				]
+				,
+				"count": 1
+			}
+		]
+		,
+		"sorting": {
+			"sorters": [
+				{
+					"id": 4152509351,
+					"name": "release_newest",
+					"data_type": "date",
+					"sort_field": "released",
+					"sort_reversed": false,
+					"localized_text": ""
+				},
+				{
+					"id": 1935804930,
+					"name": "release_oldest",
+					"data_type": "date",
+					"sort_field": "released",
+					"sort_reversed": true,
+					"localized_text": ""
+				},
+				{
+					"id": 2836310360,
+					"name": "price_highest",
+					"data_type": "int",
+					"sort_field": "price",
+					"sort_reversed": false,
+					"localized_text": ""
+				},
+				{
+					"id": 1937844400,
+					"name": "price_lowest",
+					"data_type": "int",
+					"sort_field": "price",
+					"sort_reversed": true,
+					"localized_text": ""
+				},
+				{
+					"id": 395556772,
+					"name": "price_alphabetical",
+					"data_type": "string",
+					"sort_field": "name",
+					"sort_reversed": true,
+					"localized_text": ""
+				},
+				{
+					"id": 3737656384,
+					"name": "hero_name",
+					"data_type": "string",
+					"sort_field": "hero",
+					"sort_reversed": true,
+					"localized_text": ""
+				}
+			]
+			,
+			"sorting_prefabs": [
+				{
+					"id": 3419035254,
+					"name": "sortby",
+					"url_history_param_name": "s",
+					"sorter_ids": [
+						{
+							"id": 4152509351
+						},
+						{
+							"id": 1935804930
+						},
+						{
+							"id": 2836310360
+						},
+						{
+							"id": 1937844400
+						},
+						{
+							"id": 395556772
+						},
+						{
+							"id": 3737656384
+						}
+					]
+					
+				}
+			]
+			
+		},
+		"dropdown_data": {
+			"dropdowns": [
+				{
+					"id": 1468829639,
+					"name": "heroes",
+					"type": "filter",
+					"label_text": "",
+					"url_history_param_name": "h"
+				},
+				{
+					"id": 1939313376,
+					"name": "item_types",
+					"type": "filter",
+					"label_text": "",
+					"url_history_param_name": "t"
+				},
+				{
+					"id": 109301539,
+					"name": "rarities",
+					"type": "filter",
+					"label_text": "",
+					"url_history_param_name": "r"
+				},
+				{
+					"id": 3419035254,
+					"name": "sortby",
+					"type": "sorting_prefab",
+					"label_text": "",
+					"url_history_param_name": "s"
+				}
+			]
+			,
+			"prefabs": [
+				{
+					"id": 3814588639,
+					"name": "default",
+					"config": [
+						{
+							"dropdown_id": 1468829639,
+							"name": "heroes",
+							"enabled": true,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 1939313376,
+							"name": "item_types",
+							"enabled": true,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 109301539,
+							"name": "rarities",
+							"enabled": true,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 3419035254,
+							"name": "sortby",
+							"enabled": true,
+							"default_selection_id": 4152509351
+						}
+					]
+					
+				},
+				{
+					"id": 464088892,
+					"name": "no_itemtypes",
+					"config": [
+						{
+							"dropdown_id": 1468829639,
+							"name": "heroes",
+							"enabled": true,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 1939313376,
+							"name": "item_types",
+							"enabled": false,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 109301539,
+							"name": "rarities",
+							"enabled": true,
+							"default_selection_id": 991457757
+						},
+						{
+							"dropdown_id": 3419035254,
+							"name": "sortby",
+							"enabled": true,
+							"default_selection_id": 4152509351
+						}
+					]
+					
+				}
+			]
+			
+		},
+		"player_class_data": [
+
+		]
+		,
+		"home_page_data": {
+			"home_category_id": 1909853392,
+			"popular_items": [
+				{
+					"def_index": 1000,
+					"order": 0
+				}
+			]
+			
+		}
+	}
+}
