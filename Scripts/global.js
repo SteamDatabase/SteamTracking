@@ -112,15 +112,12 @@ var g_whiteListedDomains = [
 	"hi5.com",
 	"wikipedia.org",
 	"orkut.com",
-	"rapidshare.com",
 	"blogger.com",
-	"megaupload.com",
 	"friendster.com",
 	"fotolog.net",
 	"google.fr",
 	"baidu.com",
 	"microsoft.com",
-	"ebay.com",
 	"shacknews.com",
 	"bbc.co.uk",
 	"cnn.com",
@@ -159,13 +156,14 @@ var g_whiteListedDomains = [
 	"kickstarter.com",
 	"gamingheads.com",
 	"reddit.com",
-	"counter-strike.net"
+	"counter-strike.net",
+	"imgur.com"
 ];
 
 function getHostname( str )
 {
-	var re = new RegExp('^(?:f|ht)tp(?:s)?\://([^@]*@)?([^/]+)', 'im');
-	return str.match(re)[2].toString();
+	var re = new RegExp('^(steam://openurl(_external)?/)?(f|ht)tps?://([^@]*@)?([^/#?]+)', 'im');
+	return str.match(re)[5].toString();
 }
 
 function AlertNonSteamSite( elem )
@@ -174,7 +172,7 @@ function AlertNonSteamSite( elem )
 	var hostname = getHostname( url );
 	if ( hostname )
 	{
-		hostname.toLowerCase();
+		hostname = hostname.toLowerCase();
 		for ( var i = 0; i < g_whiteListedDomains.length; ++i )
 		{
 			var index = hostname.lastIndexOf( g_whiteListedDomains[i] );
@@ -184,17 +182,10 @@ function AlertNonSteamSite( elem )
 				return true;
 			}
 		}
-		var $Msg = $J('<div/>');
-		$Msg.append( $J('<div/>').text( "Note: the URL you have clicked on is not an official Steam web site." ) );
-		$Msg.append( '<br>' );
-		$Msg.append( $J('<div/>').text( url ) );
-		$Msg.append( '<br>' );
-		$Msg.append( $J('<div/>').text( "If this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!" ) );
-		$Msg.append( $J('<div/>').text( "Are you sure you want to visit this page? Click OK to continue at your own risk." ) );
-		ShowConfirmDialog( '', $Msg ).done( function() {
-			window.location = url;
-		} );
-		return false;
+		return confirm( 'Note: the URL you have clicked on is not an official Steam web site.\n\n'
+						+ url.replace( new RegExp( '^steam://openurl(_external)?/' ), '' ) + '\n\n'
+						+ 'If this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!\n'
+						+ 'Are you sure you want to visit this page? Click OK to continue at your own risk.\n' );
 	}
 
 	ShowAlertDialog( '', "The URL is badly formed.");
