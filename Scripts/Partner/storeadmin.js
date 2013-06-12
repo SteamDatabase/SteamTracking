@@ -85,7 +85,7 @@ function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCo
 				{
 					name += " [" + option['notes'] + "]";
 				}
-				list.append( $J('<option>', { class : option['cssClass'], value : option['packageid'], text : name } ) );
+				list.append( $J('<option>', { 'class' : option['cssClass'], value : option['packageid'], text : name } ) );
 			}
 		}
 	} );
@@ -116,7 +116,7 @@ function PopulateItemListAJAX( elemAutoCompleteName, elemListName, packageCollec
 				{
 					name += " [" + option['notes'] + "]";
 				}
-				list.append( $J('<option>', { class : option['cssClass'], value : option['itemid'], text : name } ) );
+				list.append( $J('<option>', { 'class' : option['cssClass'], value : option['itemid'], text : name } ) );
 			}
 		}
 	} );

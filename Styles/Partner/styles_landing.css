@@ -123,7 +123,7 @@ body{
 	#landingNav .navContent {
 
 		background-color: #454545 !important;
-		padding: 10px 20px 3px 20px;
+		padding: 10px 20px 15px 20px;
 	}
 
 		#landingNav .navContent a {
@@ -649,6 +649,48 @@ input {
 		width: 100%;
 		color: #555555;
 		background-color: #000000;
+	}
+
+.fancySelect {
+	display: block;
+	padding: 5px !important;
+	color: #e1e1e1 !important;
+	background: -moz-linear-gradient(top, #82a6d7 5%, #3c6091 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#82a6d7), color-stop(95%,#3c6091));background: -webkit-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -o-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -ms-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: linear-gradient(to bottom, #82a6d7 5%,#3c6091 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82a6d7', endColorstr='#3c6091',GradientType=0 );}
+
+.fancyCurrencyInput {
+	display: inline-block;
+	background-color: #1d1d1d;
+	font-family: tahoma, arial, helvetica, trebuchet ms, sans-serif;
+	color: #e1e1e1;
+	font-size: 13px;
+	border: 1px #777777 solid;
+	padding: 2px 3px !important;
+}
+
+	.fancyCurrencyInput input {
+		background-color: inherit;
+		border: none;
+		color: inherit;
+		font-size: inherit;
+		outline: none;
+		text-align: right;
+		width: 75px;
+	}
+
+.fancySelectBox {
+	display: block;
+	background-color: #3c6091;
+}
+
+	.fancySelectBox > a {
+		display: block;
+		padding: 5px;
+		color: #e1e1e1;
+		text-decoration: none;
+		text-align: center;
+	}
+	.fancySelectBox > a:hover {
+		background-color: #5c80b1;
 	}
 
 
