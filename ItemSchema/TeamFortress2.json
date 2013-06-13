@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.86905b1f77abeb7b711bf361f6db6fc973789e62.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.83f0dead16302df0fd817b0594e40d747d9043a5.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -62205,6 +62205,636 @@
 						"class": "cannot_trade",
 						"value": 1.000000
 					}
+				]
+				
+			},
+			{
+				"name": "The Beastly Bonnet",
+				"defindex": 30059,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Beastly Bonnet",
+				"item_description": "This ceremonial headdress tells your enemies that you have the heart of a lion, the strength of a bear, the speed of a cheetah, and the rotting head of a cheetah.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/scout\/tw2_cheetah_head\/tw2_cheetah_head.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/tw2_cheetah_head\/tw2_cheetah_head",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_head.cd2c910b0e041f65407986f380dd00f25a9f02c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_head_large.a36a6f46fdc72143630e37c7c1a2d3a2ee1c0275.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Cheet Sheet",
+				"defindex": 30060,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Cheet Sheet",
+				"item_description": "This cheetah-print skirt intimidates on the battlefield while allowing for freedom of movement. Let's be honest, it doesn't do a bad job of showing off those man-curves either.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/tw2_cheetah_robe\/tw2_cheetah_robe.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/tw2_cheetah_robe\/tw2_cheetah_robe",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_robe.2508992066e2530014f792cae98ec28cdba75444.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_robe_large.597f8a4e8b0afedf408a559dc81395565ec0f8c8.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Tartantaloons",
+				"defindex": 30061,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Tartantaloons",
+				"item_description": "Are these Scottish pantaloons historically accurate? You got us. Why don't you go ask your boyfriend History?",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/tw2_demo_pants\/tw2_demo_pants.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/tw2_demo_pants\/tw2_demo_pants",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_pants.d01b89e56653719f59d66ae62fd8a2bcf9344820.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_pants_large.cd64c670c8052d06b3b0fd27a1c3a002c58f66eb.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Steel Sixpack",
+				"defindex": 30062,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Steel Sixpack",
+				"item_description": "This wrought-iron cuirass has been exactingly molded from the imaginary muscles you wish you had.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/tw2_greek_armor\/tw2_greek_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/tw2_greek_armor\/tw2_greek_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_armor.847d154448350bca06a914034316acb7fe9ab2e0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_armor_large.6093b939ac498b2a3b91d990abc9cd5c06038429.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Centurion",
+				"defindex": 30063,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Centurion",
+				"item_description": "Unlike those cheap knock-offs, the brush part of THIS centurion helmet is made from the HEAD hair of your fallen enemies.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/tw2_greek_helm\/tw2_greek_helm.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/tw2_greek_helm\/tw2_greek_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm.3195a576e20586043d83d0d7a17c2c31fab859fb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm_large.4e0f709fc0f83a9db1bbf0208945dbff0f97f103.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Tartan Shade",
+				"defindex": 30064,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Tartan Shade",
+				"item_description": "This patterned cloak lets you skulk undetected in any plaid-covered shadows.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/tw2_demo_hood\/tw2_demo_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/tw2_demo_hood\/tw2_demo_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_hood.400fefffb75aed051f43ba005d4add98c56eaa85.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_hood_large.efd411eaa99310e2f81211f4f4579462b4bc177e.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Hardy Laurel",
+				"defindex": 30065,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hardy Laurel",
+				"item_description": "This bundle of spray painted sticks signified that you were a philosopher king in primitive cultures like Ancient Rome and present-day Canada.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/tw2_roman_wreath\/tw2_roman_wreath_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/tw2_roman_wreath\/tw2_roman_wreath",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath.dc7aa052b14a75f3920faac81778e638e0b44784.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath_large.0dc050f1589653e4363de098c63b8a07065f0952.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Brotherhood of Arms",
+				"defindex": 30066,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Brotherhood of Arms",
+				"item_description": "Straight outta 2Fort.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/brotherhood_2\/brotherhood_2_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/brotherhood_2\/brotherhood_2",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/brotherhood_2.57b6fb845dfec7f5625e7ecd084dc1ea6189fabc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/brotherhood_2_large.c06faf037a74e073b5250a490501f491b54d087c.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				}
+			},
+			{
+				"name": "The Well-Rounded Rifleman",
+				"defindex": 30067,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Well-Rounded Rifleman",
+				"item_description": "The smooth lines of this versatile number will be instantly vaguely familiar to anyone who's ever seen a train conductor, been arrested in France, or fought in the U.S. Civil War.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/riflemans_rallycap\/riflemans_rallycap.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/riflemans_rallycap\/riflemans_rallycap",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/riflemans_rallycap.98f74ecc0796123cc35e7c0ffc2b8aece4114f20.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/riflemans_rallycap_large.8d86ab01e3a4ecc46dd58eb2d9114a3adda48704.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "The Breakneck Baggies",
+				"defindex": 30068,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Breakneck Baggies",
+				"item_description": "Combining the comfort of pajamas with the genital-concealing subterfuge of pants, these aerodynamic trackies will let your enemies know you're a man of mystery who probably got a good night's sleep.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/jogon\/jogon.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/jogon\/jogon",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jogon.abe25ea4d6492fda769c2b1018ebe5d97efbf3d5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jogon_large.405022a0bff913fae087ef0cad3354699effee49.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "The Powdered Practitioner",
+				"defindex": 30069,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Powdered Practitioner",
+				"item_description": "An integral part of any travel survival kit, this wig will help you escape Disney World if the Hall of Presidents ever comes to life. Comes with tri-corn hat in case Pirates of the Caribbean comes to life instead.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/enlightened_mann\/enlightened_mann.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/enlightened_mann\/enlightened_mann",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/enlightened_mann.24ddb315d56dc6f5030fcdf460368ae20becf74c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/enlightened_mann_large.47ef066a4c558de4a157182c32f46809b5d644e6.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "The Pocket Pyro",
+				"defindex": 30070,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Pocket Pyro",
+				"item_description": "Loneliness is the world's deadliest silent killer. Next to carbon monoxide. But cuddle up to this adorable firebug, hold your breath, and you'll be free to concentrate on loud killers like car crashes and Freddy Krueger.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/pocket_protector\/pocket_protector.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/pocket_protector\/pocket_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pocket_protector.5691d15735e68c3682ae97e18e14c909664ada1b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pocket_protector_large.ac2b4b432b4e617a571414cc24708c679a7996f2.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "The Cloud Crasher",
+				"defindex": 30071,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Cloud Crasher",
+				"item_description": "This paratrooper's helmet keeps your head safe while you jump out of planes. Show those birds who's boss! Teach some fluffy little clouds what they'll get if you ever catch them around your sky again!",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/soldier\/cloud_crasher\/cloud_crasher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/cloud_crasher\/cloud_crasher",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cloud_crasher.d005ef29b69251e46c6e073f690da0c75f6c3da9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cloud_crasher_large.f57ca72a58ec08350dba856e4dd455121030915c.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "The Pom-Pommed Provocateur",
+				"defindex": 30072,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pom-Pommed Provocateur",
+				"item_description": "The thick woolen pom-pom stitched to the top of this ski mask is filled with poison, in case you are captured by people who want information on why you look ridiculous.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/spy\/facestabber\/facestabber.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/facestabber\/facestabber",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/facestabber.670b16be480d23196fdf553cd9709d17e7e8ceee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/facestabber_large.a43039660d4f5f55c761c599c1374eee00ed5825.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "The Dark Age Defender",
+				"defindex": 30073,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Dark Age Defender",
+				"item_description": "This knight's armor will repell anything someone from the 12th century might throw at you, be it a rock, a sword, a thatched cottage or a Merlin.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/mail_bomber\/mail_bomber.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/mail_bomber\/mail_bomber",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mail_bomber.ba8e3428a58a03043324e83c99de62de118702e0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mail_bomber_large.d3a1e34ea70b779fc170c0dca57de9919a7132c4.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "The Tyurtlenek",
+				"defindex": 30074,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Tyurtlenek",
+				"item_description": "Around the skinny neck of an intellectual, jewel thief or Frenchman, a turtleneck tells people: \"Please open-hand slap me in the face.\" On the iron frame of the Heavy, it says only: \"I wear what I want.\"",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/diehard_dynafil\/diehard_dynafil.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/diehard_dynafil\/diehard_dynafil",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/diehard_dynafil.3bda714588c4a1f83045771af18674d5321cad87.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/diehard_dynafil_large.6bc6dbdce1b2ea35f44fdb429ec40ec5ef9dff53.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "The Mair Mask",
+				"defindex": 30075,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Mair Mask",
+				"item_description": "Comes with a full can of MAIR, Mann Co.'s air substitute! One part nitrogen, no parts oxygen, NINE parts electrolytes—Mair gives regular air a kick in the pants for manly lungs on the go.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/hazeguard\/hazeguard.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/hazeguard\/hazeguard",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hazeguard.e9f2d42b233e4b3b6608bb949983754c63cc4a6b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/hazeguard_large.56bc6e3c8f1efc310af745c9e085dacff33a225e.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+					"Pyro"
 				]
 				
 			}
