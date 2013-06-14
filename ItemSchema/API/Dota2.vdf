@@ -35867,12 +35867,22 @@
 						"model_player"		"models/items/queenofpain/tpl_wing_lvl2/tpl_wing_lvl2.mdl"
 						"name"		"#Wings_Of_The_Wicked_Succubus_Style1"
 						"alternate_icon"		"1"
+						"unlock"
+						{
+							"attribute"		"kill eater"
+							"attribute_value"		"30"
+						}
 					}
 					"2"
 					{
 						"model_player"		"models/items/queenofpain/tpl_wing_lvl3/tpl_wing_lvl3.mdl"
 						"name"		"#Wings_Of_The_Wicked_Succubus_Style2"
 						"alternate_icon"		"2"
+						"unlock"
+						{
+							"attribute"		"kill eater"
+							"attribute_value"		"60"
+						}
 					}
 				}
 				"alternate_icons"
