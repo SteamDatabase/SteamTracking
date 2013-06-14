@@ -2799,5 +2799,14 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 }
 
+function v_trim( str )
+{
+	if ( str.trim )
+		return str.trim();
+	else
+	{
+		return str.replace(/^\s+/, '').replace(/\s+$/, '');
+	}
+}
 
 
