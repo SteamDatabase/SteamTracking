@@ -794,9 +794,6 @@ function OnInitializeTransactionFailure( detail, result )
 				case 52:
 					error_text = 'Your transaction cannot be completed because you have another pending transaction for one or more items in your cart.';
 					break;
-				case 55:
-					error_text = 'This card number is not valid for the payment method you selected.';
-					break;
 				default:
 					break;
 			}
@@ -2107,6 +2104,81 @@ function CardLuhnCheck( card_number )
 }
 	
 
+function ValidateCreditCardNumber( number, type )
+{
+	
+	try 
+	{
+				if ( !CardLuhnCheck( number ) )
+			return false;
+		
+		var cardRange = parseInt( number.substr( 0, 4 ) )*100;
+		
+		if ( cardRange == 0 )
+			return false;
+			
+		if ( type == 'visa' )
+		{
+			if ( number.length != 13 && number.length != 16 )
+				return false;
+			
+			if ( cardRange < 400000 || cardRange > 499999 )
+				return false;
+		}
+		else if ( type == 'mastercard' )
+		{
+			if ( number.length != 16 )
+				return false;
+			
+			if ( cardRange < 500000 || cardRange > 559999 )
+				return false;
+		}
+		else if ( type == 'amex' )
+		{
+			if ( number.length != 15 )
+				return false;
+			
+			if ( (cardRange < 340000 || cardRange > 349999) && (cardRange < 370000 || cardRange > 379999) )
+				return false;
+		}
+		else if ( type == 'discover' )
+		{
+			if ( number.length != 16 )
+				return false;
+			
+			if ( cardRange < 601100 || cardRange > 601199 )
+				return false;
+		}
+		else if ( type == 'jcb' )
+		{
+			if ( number.length != 16 )
+				return false;
+			
+			if ( cardRange < 352800 || cardRange > 358999 )
+				return false;
+		}
+		else if ( type == 'cartebleue' || type == 'dankort' )
+		{
+			if ( number.length != 16 )
+				return false;
+
+						if ( cardRange < 400000 || cardRange > 599999 )
+				return false;
+		}
+		else
+		{
+			alert( 'unexpected card type!' );
+		}
+		
+		return true;
+	} 
+	catch( e ) 
+	{
+		ReportCheckoutJSError( 'Failed validating cc number', e );
+	}
+	
+	return true;
+}
 
 function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 {
@@ -2275,6 +2347,17 @@ function SubmitPaymentInfoForm()
 		var card_is_stored = BIsStoredCreditCard(); 
 				if ( BIsCreditCardMethod( method.value ) )
 		{
+		
+			if ( !card_is_stored )
+			{
+				if ( !ValidateCreditCardNumber( $( 'card_number' ).value, method.value ) )
+				{
+					errorString += 'This card number is not valid for the payment method you selected.<br/>';
+					rgBadFields.card_number = true;
+					rgBadFields.payment_method_trigger = true;
+				}
+			}
+			
 						if ( method.value != 'jcb' && !card_is_stored )
 			{
 				var val = $( 'security_code' ).value;
