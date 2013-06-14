@@ -40397,6 +40397,14 @@
 			{
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30071"
 		{

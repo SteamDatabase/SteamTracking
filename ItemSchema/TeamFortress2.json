@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.83f0dead16302df0fd817b0594e40d747d9043a5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.affaaa521e99c9e89abfa852ace667ae9518a92c.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -62662,6 +62662,14 @@
 				},
 				"used_by_classes": [
 					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1.000000
+					}
 				]
 				
 			},
