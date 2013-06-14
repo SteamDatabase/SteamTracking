@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ca7df4cac5d1e1fd4ad9542ac2ee81661ff0d81e.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.6be976860ca5addc28f41b5b5a57e81f5f51a87f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -20750,6 +20750,94 @@
 				}
 			},
 			{
+				"name": "The Blood Shard",
+				"defindex": 4445,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "The Blood Shard",
+				"item_description": "On rare occasions, Skeleton King finds himself able to appreciate items that are not made of bone.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skeleton_king\/the_blood_shard\/the_blood_shard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/the_blood_shard\/the_blood_shard.e96a44a518895aa92a03cb5711d0cbdb5e5cd3a2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/the_blood_shard\/the_blood_shard_large.4e024e34aa1a3e65895c3da4ac9657e026499860.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Pyre",
+				"defindex": 4446,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Doomblade",
+				"item_name": "Pyre",
+				"item_description": "Give up hope and cast yourself upon the blazing Pyre!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/pyre\/pyre",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/pyre\/pyre.d32b20ae80834ef003d993ca9458ec1e7cd5010b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/pyre\/pyre_large.0a5d637e74517603f3b051f251eb4b4ece179aaf.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Falcon's Rise",
+				"defindex": 4447,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Falcon's Rise",
+				"item_description": "The Skywrath revere all avian species, and hold the falcon in particularly high esteem.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/swm_falconsrise\/swm_falconsrise",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/swm_falconsrise\/swm_falconsrise.588a458624af998e5d7d88f8d462b5aad83991db.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/swm_falconsrise\/swm_falconsrise_large.1df84bcd652dbfd63b1dd176da17982153a451b3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Azure Shroud",
+				"defindex": 4448,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shroud",
+				"item_name": "The Azure Shroud",
+				"item_description": "Skywrath Mage cowls himself in the blue of the sky above the Ghastly Eyrie",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/azureshroud03\/azureshroud03",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/azureshroud03\/azureshroud03.2c4dc29269096863ec845735247646e31b06b9a0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/azureshroud03\/azureshroud03_large.a535044d9b51e66355a0844749d9c13b3576be2d.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "The Storm Rider's Sight",
 				"defindex": 4449,
 				"item_class": "dota_item_wearable",
@@ -20763,6 +20851,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_head\/disruptor_rider_storm_head.51f4b121fe3dda9780d9c624420c84e3075c6700.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_head\/disruptor_rider_storm_head_large.01ae9982381643dcaa59deb81aaf968f154bb9dc.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20785,6 +20874,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_arms\/disruptor_rider_storm_arms.a430ea7cdf003aacf61149c855a2fc6f304f6b2e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_arms\/disruptor_rider_storm_arms_large.abaee0fa5a46f26a8449bbe9c16c7a67d6e2b1a8.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20905,6 +20995,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_hammer\/disruptor_rider_storm_hammer.77b2f08b376ba0352940fbde86902c271f0e18cf.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_hammer\/disruptor_rider_storm_hammer_large.4ec2715c24b2a26445dbb95de9fef9694e6b2b90.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -20935,6 +21026,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_shoulder\/disruptor_rider_storm_shoulder.b4d19cdefc7f1eeb2e5ab7a8a183657c08e46aae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_shoulder\/disruptor_rider_storm_shoulder_large.03719f57a7f33bcd0b6f1b3cead84f65df315a39.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -21123,6 +21215,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_back\/disruptor_rider_storm_back.ed2f6f2e441a5f49341a69af7c82204db689c1f0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_back\/disruptor_rider_storm_back_large.cca71fb2c95f863615538765534c25a2dcf2f476.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -21168,6 +21261,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_mount\/disruptor_rider_storm_mount.0f4585e28a7ea65d298d0a95a13f85ec060b2fcc.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/disruptor\/disruptor_rider_storm_mount\/disruptor_rider_storm_mount_large.3c298ecf75c7879d697733b1cac58363863a27a5.png",
+				"item_set": "disruptor_rider_of_the_storm",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22571,6 +22665,50 @@
 				}
 			},
 			{
+				"name": "Smashing Brawler's Shirt",
+				"defindex": 4524,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shirt",
+				"item_name": "Smashing Brawler's Shirt",
+				"item_description": "Oy, better wear this shirt before it's full of holes!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/smasher_back\/smasher_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Brawler's Hard Helm",
+				"defindex": 4525,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Brawler's Hard Helm",
+				"item_description": "He always was a hard-head. Now he's even harder.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/onizaphk_brawler_head\/onizaphk_brawler_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Proof of Courage",
 				"defindex": 4526,
 				"item_class": "dota_item_wearable",
@@ -22594,6 +22732,28 @@
 				}
 			},
 			{
+				"name": "Blade of Chaos Incarnate",
+				"defindex": 4527,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Blade of Chaos Incarnate",
+				"item_description": "Chaos comes to earth. Chaos rides you down. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/weapon3_lastt\/weapon3_lastt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon3_lastt\/weapon3_lastt.a056732a9ba6357f255e5b5eabcb3cdbf0c730b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon3_lastt\/weapon3_lastt_large.43706d598f78d466545042e38ea08404c80c6ea3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Little Blink Dagger",
 				"defindex": 4528,
 				"item_class": "dota_item_wearable",
@@ -22607,6 +22767,50 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/generic_blinkdag\/generic_blinkdag.c6f1cd62e89e03e84584d7c92dd10f99ed8556d8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/generic_blinkdag\/generic_blinkdag_large.da0d236ce9eda353c57ef2b5f02d522d10fc966d.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Peacebringer",
+				"defindex": 4529,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hammer",
+				"item_name": "The Peacebringer",
+				"item_description": "He brings the peace, and then he keeps it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/omniknight\/aries_peacebringer\/aries_peacebringer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/aries_peacebringer\/aries_peacebringer.bf8f6ccad709312ea5c164154567fced7e8ee2e4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/omniknight\/aries_peacebringer\/aries_peacebringer_large.41259b435cecb486565e32bcbef2a3fc91036a1e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "The Shell Slicer",
+				"defindex": 4530,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "The Shell Slicer",
+				"item_description": "Even those who huddle inside their tight-shut shells cannot consider themselves safe from Slark.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/shell_dagger\/shell_dagger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/shell_dagger\/shell_dagger.fb3ee76ae7c0732e363ff8920b7f1736a84e72ac.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/shell_dagger\/shell_dagger_large.b142cfdcbe0d90b714fdce3ead336f6a7877eb90.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -24836,6 +25040,28 @@
 				}
 			},
 			{
+				"name": "Scythe of Pestilence",
+				"defindex": 4621,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scythe",
+				"item_name": "Scythe of Pestilence",
+				"item_description": "Plague and pestilence are the Reaper's trusty tools for harvesting souls.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/scythe_of_pestilence\/scythe_of_pestilence",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/scythe_of_pestilence\/scythe_of_pestilence.ff03862ce1480409e33bd8740b80718b8136a8c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/scythe_of_pestilence\/scythe_of_pestilence_large.d5e675571942cc9572bfdf4060ec22b579cc46b4.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Hammer of Light Inexorable",
 				"defindex": 4622,
 				"item_class": "dota_item_wearable",
@@ -26052,6 +26278,116 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Scythe of Sacrifice",
+				"defindex": 4671,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scythe",
+				"item_name": "Scythe of Sacrifice",
+				"item_description": "It is an honor to be sacrificed on Phantom Assassin's scythe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/scythe_of_sacrifice\/scythe_of_sacrifice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/scythe_of_sacrifice\/scythe_of_sacrifice.81b3e8281f8ab69dc253eed32a34db41a9037bc4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/scythe_of_sacrifice\/scythe_of_sacrifice_large.af63c25b259cd34bb4b588de5aa9e007a37c1e22.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Blade of the Black Rider",
+				"defindex": 4672,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Blade of the Black Rider",
+				"item_description": "With blade aloft, Chaos Knight falls upon his foe like a sky of endless gloom.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/weapon_sordo\/weapon_sordo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon_sordo\/weapon_sordo.e19da7da4e0e8d534fef992a36f0fdbdae0ad1f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon_sordo\/weapon_sordo_large.d59ef9d4a38e0f3a3ee3428717a2d765823aba45.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Eye of the Eyrie",
+				"defindex": 4673,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Eye of the Eyrie",
+				"item_description": "A wizardly staff bearing the Skywrath symbol of clairvoyance.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/skywrathfinal_eye\/skywrathfinal_eye",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/skywrathfinal_eye\/skywrathfinal_eye.dc1aeb70da554d7574ecb7eb4419fbbf5d02a509.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/skywrathfinal_eye\/skywrathfinal_eye_large.c936f2273c11bdc24ce2295afbdcc9b6e3790bf1.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Graveheart Staff",
+				"defindex": 4674,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Graveheart Staff",
+				"item_description": "At the edge of death, a spark of life remains to restart a faltering heart.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/dazzle_final_graveheart\/dazzle_final_graveheart",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzle_final_graveheart\/dazzle_final_graveheart.29d221268faacd3e2a53bb16986627ff70f905aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzle_final_graveheart\/dazzle_final_graveheart_large.bd7e60dfcccb82d8f0de588ddf8a1307a0ea17b9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Ainidul the Eternal",
+				"defindex": 4675,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Ainidul the Eternal",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
 			},
 			{
 				"name": "Bangles of the Wildwing's Blessing",
@@ -27647,8 +27983,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/dark_head\/dark_head",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_head\/dark_head.a893a1f7e1fa2ee99e0c50ca6c2815c2eb95d398.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_head\/dark_head_large.715976e95b3b4d8c2b3921caf24f272fd6b9d257.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_head\/dark_head.ee50573eb0070607c5f9c17df7c92e3b46d44423.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_head\/dark_head_large.e2dcf173d699ec359b6d6fc9f57a94ddeba30b15.png",
 				"item_set": "dark_ruin",
 				"capabilities": {
 					"nameable": true,
@@ -27670,8 +28006,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/dark_ruin_upd\/dark_ruin_upd",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_ruin_upd\/dark_ruin_upd.acec7896b3fd5460c577dc088cde13b09604c3f4.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_ruin_upd\/dark_ruin_upd_large.a63125664468a91a2521b6cc3f8da04fa3a2e7c2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_ruin_upd\/dark_ruin_upd.febc023023d8e8842b37ed97dc233efe6a2921be.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_ruin_upd\/dark_ruin_upd_large.e54a23b7fbf75a5b935cacf86b238f19b936e289.png",
 				"item_set": "dark_ruin",
 				"capabilities": {
 					"nameable": true,
@@ -27693,8 +28029,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/dark_shield\/dark_shield",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shield\/dark_shield.cc100c01e06fcfef3afb5330e7c2d2c183c9091a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shield\/dark_shield_large.4fdcee7e43c64347db1804885452074b7dfe1a39.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shield\/dark_shield.70b50facb45b69414a8765580d5dd7130a87c299.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shield\/dark_shield_large.554aab8e3c1c4cecba2f05585aa6badf828cf9f6.png",
 				"item_set": "dark_ruin",
 				"capabilities": {
 					"nameable": true,
@@ -27716,8 +28052,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/dark_shoulder_upd\/dark_shoulder_upd",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shoulder_upd\/dark_shoulder_upd.84abd4a433f7ee38bad7fafdc97ac055883f0fa9.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shoulder_upd\/dark_shoulder_upd_large.02c8139c15463b9ca2c53174b734903c810c62e6.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shoulder_upd\/dark_shoulder_upd.60fa8f10f80bc5b972b618cb5649d9681658b0ef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_shoulder_upd\/dark_shoulder_upd_large.b44873a88a48448f00c0302ca37f667b41322c06.png",
 				"item_set": "dark_ruin",
 				"capabilities": {
 					"nameable": true,
@@ -27739,8 +28075,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/dark_weapon\/dark_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_weapon\/dark_weapon.1b183d2b60e2f062afbd41c99c17dc7ae2e877e1.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_weapon\/dark_weapon_large.fd97aa77a7dbc2f3a052382a740daa92396d690b.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_weapon\/dark_weapon.c7a32de5243f9acda92a1e6f5d8a2b3ed7578ed8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/dark_weapon\/dark_weapon_large.80a5e3f2815ab5b2bb806c703a5cab65a2a85093.png",
 				"item_set": "dark_ruin",
 				"capabilities": {
 					"nameable": true,
@@ -31865,6 +32201,72 @@
 				}
 			},
 			{
+				"name": "Regalia of the Bonelord Bracer",
+				"defindex": 4927,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Bracer",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Regalia of the Bonelord Cape",
+				"defindex": 4928,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Cape",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Regalia of the Bonelord Crown",
+				"defindex": 4929,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Crown",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Penumbral Warblade",
 				"defindex": 4930,
 				"item_class": "dota_item_wearable",
@@ -32605,7 +33007,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Dagger",
 				"item_name": "The Tear of Agony",
-				"item_description": "Let your queen will hear their screams and she will smile upon you.",
+				"item_description": "Let your queen hear their screams and she will smile upon you.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/queenofpain\/qop_tears_of_agony_submit\/qop_tears_of_agony_submit",
@@ -32699,8 +33101,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/senhelm_001\/senhelm_001",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/senhelm_001\/senhelm_001.42cbc9632cd8209523c39ff2613bd4f8a5421901.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/senhelm_001\/senhelm_001_large.98d35b27d31870b7c647172e70a44c353d3b7701.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/senhelm_001\/senhelm_001.be8545fd7bae87de2337d16cffb73492629ddf7d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/senhelm_001\/senhelm_001_large.4647a4286bb6f0fa5af58c84a71951538e38e43c.png",
 				"item_set": "nimble_edge",
 				"capabilities": {
 					"nameable": true,
@@ -32722,8 +33124,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/sentblade_001\/sentblade_001",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentblade_001\/sentblade_001.7a2df31beed4aa95a9c68ff71ab52233f4df1371.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentblade_001\/sentblade_001_large.1858ff7285c71081539cda00cacf6c87ea60b38c.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentblade_001\/sentblade_001.5f908d4948b5c887030b4b182f998e973f419a94.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentblade_001\/sentblade_001_large.14fb9518be838ba3fd5470c87b8a579c345e804f.png",
 				"item_set": "nimble_edge",
 				"capabilities": {
 					"nameable": true,
@@ -32745,8 +33147,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/sentcloak_001\/sentcloak_001",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentcloak_001\/sentcloak_001.71646902fce0dbf7f78e020e2f7b4918c70e86eb.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentcloak_001\/sentcloak_001_large.e06c25cd3f27d9beecec817381f644c9f854f2aa.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentcloak_001\/sentcloak_001.3ddc9048483eedf7e45a8e533c43543e70e36193.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentcloak_001\/sentcloak_001_large.860180e194f78bc35eb22969e8294bcd95d65781.png",
 				"item_set": "nimble_edge",
 				"capabilities": {
 					"nameable": true,
@@ -32768,8 +33170,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/sentshoulders_001\/sentshoulders_001",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentshoulders_001\/sentshoulders_001.41801ac44dfa95b35d44cfc2409569d55f4c3c4d.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentshoulders_001\/sentshoulders_001_large.19a300b3bd801f860df370d6805c873024eeef14.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentshoulders_001\/sentshoulders_001.fc75d2cf496440a12720c371cfd754fe152611ad.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/sentshoulders_001\/sentshoulders_001_large.a8d975b19cef6e08ab58188a1dc5b41bdf815fd3.png",
 				"item_set": "nimble_edge",
 				"capabilities": {
 					"nameable": true,
@@ -32791,8 +33193,8 @@
 				"image_inventory": "econ\/items\/phantom_assassin\/belt_001\/belt_001",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/belt_001\/belt_001.91526e52d657a0e1459fa151c39aa329c3c1c087.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/belt_001\/belt_001_large.64c5a21202a909071a128d0b0264c0fb762526ba.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/belt_001\/belt_001.be7792b043cabb11a556739a1c269ee447407ea2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/belt_001\/belt_001_large.b4d89a963121beaed0cdc4ee8d42bc1bc0024b94.png",
 				"item_set": "nimble_edge",
 				"capabilities": {
 					"nameable": true,
@@ -32885,6 +33287,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/armor_royal\/armor_royal.9b8206422418f4334ff64e1da4ba6e710b880d38.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/armor_royal\/armor_royal_large.39a1b11d6c66c4106696861ae6dd49cfb405ef5c.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32907,6 +33310,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/belt_alpha\/belt_alpha.8593463dec3435c5ffb6121c46b3e2ad782acc3c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/belt_alpha\/belt_alpha_large.eb98ced9b39af876dfa447ac13cd7c7531550de4.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32929,6 +33333,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/clawsy_greatg\/clawsy_greatg.cf4b11c4a861ca8ceae90b60bd8bb99f814aa354.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/clawsy_greatg\/clawsy_greatg_large.6db49b79834a79f5f85943168c271384615f683e.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32951,6 +33356,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/shoulder_alpha\/shoulder_alpha.2abc5a24849867b4fd3b5dc3d70bd50a20c4d286.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/shoulder_alpha\/shoulder_alpha_large.d6917ab835857d4bc1347f982b8a52aca956c130.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -32973,6 +33379,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/head_alpha\/head_alpha.9747f809fc040c792c39ead78124ca3b70984f37.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/head_alpha\/head_alpha_large.2484cf28d737e7dfb0e8d508ece51c3e1b83846f.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -33202,6 +33609,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/wolves\/alpha_summon_01\/alpha_summon_01_npc_dota_lycan_wolf.821eff603bd2d77ba71de80a89c765ef7059a289.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/wolves\/alpha_summon_01\/alpha_summon_01_npc_dota_lycan_wolf_large.65787cface269a34375c65a73b6062ba80c74dd7.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -33224,6 +33632,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/ultimate\/alpha_trueform9\/alpha_trueform9_models\/items\/lycan\/ultimate\/alpha_trueform9\/alpha_trueform9.3d199776c62bace865cbcedcacc732431f949673.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lycan\/ultimate\/alpha_trueform9\/alpha_trueform9_models\/items\/lycan\/ultimate\/alpha_trueform9\/alpha_trueform9_large.a77d0a570424e541ee9e4592665ea3a1d6843261.png",
+				"item_set": "lycan_great_grey",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -33820,6 +34229,28 @@
 				}
 			},
 			{
+				"name": "Regalia of the Bonelord Shoulder",
+				"defindex": 5015,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Shoulder",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Frostiron Sorceress Brooch",
 				"defindex": 5016,
 				"item_class": "dota_item_wearable",
@@ -34050,6 +34481,116 @@
 				}
 			},
 			{
+				"name": "Regalia of the Bonelord Blade",
+				"defindex": 5026,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Blade",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Axe of the Red Conqueror",
+				"defindex": 5027,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Axe of the Red Conqueror",
+				"item_description": "Red rules! Axe does not have time for other colors!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/axeweapon_conq\/axeweapon_conq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axeweapon_conq\/axeweapon_conq.34370875e53f29d62f72bb9d3ccfbddb718b5561.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axeweapon_conq\/axeweapon_conq_large.9d683d89a6717f477e2ff7d12bec1e0219ebf028.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Helm of the Red Conqueror",
+				"defindex": 5028,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Helm of the Red Conqueror",
+				"item_description": "When Axe wears this helm, Axe sees red. Which is perfectly fine with Axe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/axehelm_conq\/axehelm_conq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axehelm_conq\/axehelm_conq.a932420c34a537d4b8cdea24feb1bdd9c2faf747.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axehelm_conq\/axehelm_conq_large.236b2f60cc0b6d9839934719a5fccf2f08071cbb.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Pauldron of the Red Conqueror",
+				"defindex": 5029,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Pauldron of the Red Conqueror",
+				"item_description": "It seems a shame to cover Axe's mighty thews with pauldrons, but at least these are suitably red.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/axearmor_conq\/axearmor_conq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axearmor_conq\/axearmor_conq.bf39a71a6377be46b0e8d532e7f292991aab37fd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axearmor_conq\/axearmor_conq_large.b5805fa7dcfdc9017ca9463309fcaee4095542a9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Tassets of the Red Conqueror",
+				"defindex": 5030,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Tassets of the Red Conqueror",
+				"item_description": "Axe girds his loins with tassets as red as his rage.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/axebelt_conq\/axebelt_conq",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axebelt_conq\/axebelt_conq.cc335c19f86d9b8edf1d6d33ee8446241fe62149.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axebelt_conq\/axebelt_conq_large.e09f7ba31ccd7499aa54dcaf950f9633f376d627.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Sanurok the Ever Able",
 				"defindex": 5031,
 				"item_class": "dota_item_wearable",
@@ -34202,6 +34743,322 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/weapon_desert\/weapon_desert.213af918b8eec2eb73627db6436173ea43a3ac60.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chen\/weapon_desert\/weapon_desert_large.519b3073c4c36279e2efd30bc4af2acf97272d24.png",
 				"item_set": "priest_kings",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gunslinger's Hat",
+				"defindex": 5038,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Gunslinger's Hat",
+				"item_description": "The perfect hat for a shootest accused of having bullets on the brain.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/gunslinger_head\/gunslinger_headitem",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_head\/gunslinger_headitem.0cdc0273e6a8ae88ff6f24d6f668b8ce4b08d09b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_head\/gunslinger_headitem_large.eaed83e3dd7636ef73645f81a0819d6024752d4e.png",
+				"item_set": "sniper_gunslinger_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gunslinger's Rifle",
+				"defindex": 5039,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Gunslinger's Rifle",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/gunslinger_rifle\/gunslinger_rifle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_rifle\/gunslinger_rifle.87208fdbd3e0432280b1b42fe4590db3d919647d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_rifle\/gunslinger_rifle_large.93f5e4ef61da6576d31d164e77ce44bee90defa9.png",
+				"item_set": "sniper_gunslinger_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gunslinger's Bracers",
+				"defindex": 5040,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Gunslinger's Bracers",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/gunslinger_bracers\/gunslinger_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_bracers\/gunslinger_bracers.334be1ef3809937452141eafe9ba590774ea524f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_bracers\/gunslinger_bracers_large.20d417f7d2e279bc6af8369c6f91fd968d350413.png",
+				"item_set": "sniper_gunslinger_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gunslinger's Cape",
+				"defindex": 5041,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Gunslinger's Cape",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/gunslinger_cape\/gunslinger_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_cape\/gunslinger_cape.bfee4e6def0f2456e0b38663b5bc75eded555fef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/gunslinger_cape\/gunslinger_cape_large.55122ec361ec7d5f9d73fb5746a3ab15f62031d9.png",
+				"item_set": "sniper_gunslinger_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Sleeves of the Phoenix Bloodline",
+				"defindex": 5042,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeves",
+				"item_name": "Sleeves of the Phoenix Bloodline",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/x_arms_xxx\/x_arms_xxx",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_arms_xxx\/x_arms_xxx.378f6358a3b198bed7e6f2b80af3451cea1fbd34.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_arms_xxx\/x_arms_xxx_large.00d59455c2609b020d768bbd116cc977652c6507.png",
+				"item_set": "phoenix_bloodline",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Heirloom of the Phoenix Bloodline",
+				"defindex": 5043,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Necklace",
+				"item_name": "Heirloom of the Phoenix Bloodline",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/x_necklace_xxx\/x_necklace_xxx",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_necklace_xxx\/x_necklace_xxx.d2c7415ed5a3acbb0213ceee73dc57158afd2ad0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_necklace_xxx\/x_necklace_xxx_large.3b7eb03bac0b4f18da477507853c3e53ebe6698b.png",
+				"item_set": "phoenix_bloodline",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Hair of the Phoenix Bloodline",
+				"defindex": 5044,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Hair of the Phoenix Bloodline",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/x_hair_xxx\/x_hair_xxx",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_hair_xxx\/x_hair_xxx.a964192d4d68cf680489907368f3cb9530c11865.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_hair_xxx\/x_hair_xxx_large.b7bd9ac57bf1ca70317d518e422158c68e3d82bd.png",
+				"item_set": "phoenix_bloodline",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Gown of the Phoenix Bloodline",
+				"defindex": 5045,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dress",
+				"item_name": "Gown of the Phoenix Bloodline",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/x_dress_xxx\/x_dress_xxx",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_dress_xxx\/x_dress_xxx.1b6047561c023f121d8f10619cbc37251f25bcb6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lina\/x_dress_xxx\/x_dress_xxx_large.2780cf13c0df741750386419a545858154315f8e.png",
+				"item_set": "phoenix_bloodline",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Chopper",
+				"defindex": 5046,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Chopper",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Haymaker",
+				"defindex": 5047,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Haymaker",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Intestines",
+				"defindex": 5048,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Intestines",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Mask",
+				"defindex": 5049,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Mask",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Nail Arm",
+				"defindex": 5050,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Nail Arm",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Insanity Wrist Restraint",
+				"defindex": 5051,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Wrist Restraint",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36612,19 +37469,19 @@
 				}
 			},
 			{
-				"name": "Lightning Rod",
+				"name": "Skywrath Sentinel",
 				"defindex": 10069,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Ward",
-				"item_name": "Lightning Rod",
-				"item_description": "Far sees the eye when lightning illuminates the darkness.",
+				"item_name": "Skywrath Sentinel",
+				"item_description": "Although she may never reach the lofty hights of the Ghastly Eyrie again, Shendelzare still has allies that will grant her assistance when she requires it.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/wards\/disruptor_ward\/disruptor_ward_npc_dota_observer_wards",
+				"image_inventory": "econ\/items\/wards\/skywrath_sentinel\/skywrath_sentinel_npc_dota_observer_wards",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/skywrath_sentinel\/skywrath_sentinel_npc_dota_observer_wards.f190b0fde2e52d85200b5eb5275ddcf5cc16adac.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/skywrath_sentinel\/skywrath_sentinel_npc_dota_observer_wards_large.582a2d061ba50fdc5de06175cddd1f830c26d411.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -37957,6 +38814,28 @@
 				}
 			},
 			{
+				"name": "Augury's Guardian",
+				"defindex": 10134,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ward",
+				"item_name": "Augury's Guardian",
+				"item_description": "From deep within the mystic woods behind the veil of augury, the guardian watches over and protects its allies.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/wards\/augurys_guardian\/augurys_guardian_npc_dota_observer_wards",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/augurys_guardian\/augurys_guardian_npc_dota_observer_wards.fb912dc455a0693fdcabbbe7b4cdb4c918b25075.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/augurys_guardian\/augurys_guardian_npc_dota_observer_wards_large.fd2de11fd3213ef361a8e2cf26860e7aaece3504.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Treasure of the Hunted Dragon",
 				"defindex": 10135,
 				"item_class": "supply_crate",
@@ -38208,28 +39087,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/greevil\/gold_greevil.bf1119f99bfbd066d75cab66805f67b8986ecf24.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/greevil\/gold_greevil_large.5c64eb3020e6004331e0c30fc3f5eadaa5a7224c.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Sea Dog's Watcher",
-				"defindex": 10144,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Ward",
-				"item_name": "Sea Dog's Watcher",
-				"item_description": "Needs Desc",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/wards\/warlock_hells_sight\/warlock_hells_sight_npc_dota_observer_wards_large",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/warlock_hells_sight\/warlock_hells_sight_npc_dota_observer_wards_large.171f3dae876fd73fd8264d5030132be9e69d520b.png",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -39391,28 +40248,6 @@
 				}
 			},
 			{
-				"name": "Smeevil_Bird",
-				"defindex": 10184,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Smeevil_Bird",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/courier\/smeevil_bird\/smeevil_bird",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_bird\/smeevil_bird.ea10fd99f97083aad365689e314c61f90cf17c1e.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_bird\/smeevil_bird_large.5c5b1cbb005b392b4e60d30d2c6903e5ea8893df.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
 				"name": "Announcer: Pyrion Flax",
 				"defindex": 10185,
 				"item_class": "dota_item_wearable",
@@ -39469,50 +40304,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_starladder.00daeb751862557a230d113e0f4eb75c5eee37a4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_starladder_large.0d57a4af0e8545827128ef1f1cb12b83fda37193.png",
 				"capabilities": {
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Smeevil Crab",
-				"defindex": 10188,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Smeevil Crab",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/courier\/smeevil_crab\/smeevil_crab",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_crab\/smeevil_crab.17dc289e1965808a29c5876da3d523913a269d39.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_crab\/smeevil_crab_large.750c2a4e437e87ef7e753e243f865e818a4e8e9c.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true
-				}
-			},
-			{
-				"name": "Smeevil Mammoth",
-				"defindex": 10189,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Smeevil Mammoth",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/courier\/smeevil_mammoth\/smeevil_mammoth",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_mammoth\/smeevil_mammoth.1c3c2d7efaa59fd95527b34b588035f8dc193d2f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/smeevil_mammoth\/smeevil_mammoth_large.09b5e8553d57732484b47beb9d9cabf83e6dfcf5.png",
-				"capabilities": {
-					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -39682,11 +40473,11 @@
 				}
 			},
 			{
-				"name": "Player Card: Chuan",
+				"name": "Player Card: ChuaN",
 				"defindex": 10196,
-				"item_class": "tool",
+				"item_class": "player_card",
 				"item_type_name": "Player Card",
-				"item_name": "Player Card: Chuan",
+				"item_name": "Player Card: ChuaN",
 				"item_description": "",
 				"proper_name": false,
 				"item_quality": 4,
@@ -39724,7 +40515,7 @@
 			{
 				"name": "Player Card: Dendi",
 				"defindex": 10197,
-				"item_class": "tool",
+				"item_class": "player_card",
 				"item_type_name": "Player Card",
 				"item_name": "Player Card: Dendi",
 				"item_description": "",
@@ -39981,17 +40772,17 @@
 			{
 				"name": "Player Card: ixmike88",
 				"defindex": 10205,
-				"item_class": "tool",
+				"item_class": "player_card",
 				"item_type_name": "Player Card",
 				"item_name": "Player Card: ixmike88",
 				"item_description": "",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/pennant\/pennant_team36_icon",
+				"image_inventory": "econ\/pennant\/pennant_team2163_icon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon.53d8d645d327d3e6a34612bc5e60cbc21166b94f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon_large.6171396a95b2965aa93088b34d5a3080e984dfe2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon.3e0b625f4321c5b355aa016fe74dda807ead6822.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon_large.fb66f8bcd03e475f29ea5de943b6baa502c8e3c8.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -40053,6 +40844,2006 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 32
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Zhou",
+				"defindex": 10207,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Zhou",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team5_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon.ffafdda842d57fbfe0b89f4cf581f96bc14cf77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon_large.0a070a8f98c7ec75edadd41bafb2f42ee7569dc5.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Ferrari_430",
+				"defindex": 10208,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Ferrari_430",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team5_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon.ffafdda842d57fbfe0b89f4cf581f96bc14cf77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon_large.0a070a8f98c7ec75edadd41bafb2f42ee7569dc5.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: YYF",
+				"defindex": 10209,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: YYF",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team5_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon.ffafdda842d57fbfe0b89f4cf581f96bc14cf77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon_large.0a070a8f98c7ec75edadd41bafb2f42ee7569dc5.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Faith",
+				"defindex": 10210,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Faith",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team5_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon.ffafdda842d57fbfe0b89f4cf581f96bc14cf77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team5_icon_large.0a070a8f98c7ec75edadd41bafb2f42ee7569dc5.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Hao",
+				"defindex": 10211,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Hao",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team20_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon.78db53508d89b117c76e1bdf290e0ff6429275c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon_large.30e07584e8e52f8aa27f2705827be5647541e8af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Mu",
+				"defindex": 10212,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Mu",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team20_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon.78db53508d89b117c76e1bdf290e0ff6429275c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon_large.30e07584e8e52f8aa27f2705827be5647541e8af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Sansheng",
+				"defindex": 10213,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Sansheng",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team20_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon.78db53508d89b117c76e1bdf290e0ff6429275c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon_large.30e07584e8e52f8aa27f2705827be5647541e8af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: KingJ",
+				"defindex": 10214,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: KingJ",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team20_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon.78db53508d89b117c76e1bdf290e0ff6429275c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team20_icon_large.30e07584e8e52f8aa27f2705827be5647541e8af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Mushi",
+				"defindex": 10215,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Mushi",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team416900_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team416900_icon.5f90102b57d0523635e205b29441bf995a5beaf5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team416900_icon_large.063bbcc7563cce166fa87d1d8e38e81d20d46c86.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Xtinct",
+				"defindex": 10216,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Xtinct",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team416900_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team416900_icon.5f90102b57d0523635e205b29441bf995a5beaf5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team416900_icon_large.063bbcc7563cce166fa87d1d8e38e81d20d46c86.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Akke",
+				"defindex": 10217,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Akke",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team111474_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Loda",
+				"defindex": 10218,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Loda",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team111474_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: FLUFFNSTUFF",
+				"defindex": 10219,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: FLUFFNSTUFF",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2163_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon.3e0b625f4321c5b355aa016fe74dda807ead6822.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon_large.fb66f8bcd03e475f29ea5de943b6baa502c8e3c8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: TC",
+				"defindex": 10220,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: TC",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2163_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon.3e0b625f4321c5b355aa016fe74dda807ead6822.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon_large.fb66f8bcd03e475f29ea5de943b6baa502c8e3c8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Bulba",
+				"defindex": 10221,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Bulba",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2163_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon.3e0b625f4321c5b355aa016fe74dda807ead6822.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2163_icon_large.fb66f8bcd03e475f29ea5de943b6baa502c8e3c8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: XBOCT",
+				"defindex": 10222,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: XBOCT",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team36_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon.53d8d645d327d3e6a34612bc5e60cbc21166b94f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon_large.6171396a95b2965aa93088b34d5a3080e984dfe2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Puppey",
+				"defindex": 10223,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Puppey",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team36_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon.53d8d645d327d3e6a34612bc5e60cbc21166b94f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon_large.6171396a95b2965aa93088b34d5a3080e984dfe2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Funn1k",
+				"defindex": 10224,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Funn1k",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team36_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon.53d8d645d327d3e6a34612bc5e60cbc21166b94f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon_large.6171396a95b2965aa93088b34d5a3080e984dfe2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: KuroKy",
+				"defindex": 10225,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: KuroKy",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team36_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon.53d8d645d327d3e6a34612bc5e60cbc21166b94f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team36_icon_large.6171396a95b2965aa93088b34d5a3080e984dfe2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: iceiceice",
+				"defindex": 10226,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: iceiceice",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon.3752e1a48c803af28d7b9bda5a3b3b3a3983f7cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon_large.da0b447c02a2d4101e8f063379afd6e90cf04a8d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: xFreedom",
+				"defindex": 10227,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: xFreedom",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon.3752e1a48c803af28d7b9bda5a3b3b3a3983f7cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon_large.da0b447c02a2d4101e8f063379afd6e90cf04a8d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: xy",
+				"defindex": 10228,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: xy",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon.3752e1a48c803af28d7b9bda5a3b3b3a3983f7cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon_large.da0b447c02a2d4101e8f063379afd6e90cf04a8d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Yamateh",
+				"defindex": 10229,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Yamateh",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon.3752e1a48c803af28d7b9bda5a3b3b3a3983f7cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon_large.da0b447c02a2d4101e8f063379afd6e90cf04a8d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: universe",
+				"defindex": 10231,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: universe",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team142_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: ARS-ART",
+				"defindex": 10233,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: ARS-ART",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team40_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: BurNIng",
+				"defindex": 10234,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: BurNIng",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team7_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon.6d9f910827c22a70aad5d577b4dcea79fe1c304b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon_large.e3a912ffaf404cbb894a8f7f697cd05911e9f199.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Super",
+				"defindex": 10235,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Super",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team7_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon.6d9f910827c22a70aad5d577b4dcea79fe1c304b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon_large.e3a912ffaf404cbb894a8f7f697cd05911e9f199.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: rOtk",
+				"defindex": 10236,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: rOtk",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team7_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon.6d9f910827c22a70aad5d577b4dcea79fe1c304b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon_large.e3a912ffaf404cbb894a8f7f697cd05911e9f199.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: QQQ",
+				"defindex": 10237,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: QQQ",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team7_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon.6d9f910827c22a70aad5d577b4dcea79fe1c304b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon_large.e3a912ffaf404cbb894a8f7f697cd05911e9f199.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: X!!",
+				"defindex": 10238,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: X!!",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team7_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon.6d9f910827c22a70aad5d577b4dcea79fe1c304b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team7_icon_large.e3a912ffaf404cbb894a8f7f697cd05911e9f199.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Misery",
+				"defindex": 10239,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Misery",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team77666_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Pajkatt",
+				"defindex": 10240,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Pajkatt",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team77666_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: God",
+				"defindex": 10241,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: God",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team77666_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: 1437",
+				"defindex": 10242,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: 1437",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team77666_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Winter",
+				"defindex": 10243,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Winter",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team497529_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Black^",
+				"defindex": 10244,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Black^",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team26_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team26_icon.c243ba345036061c966c1200f033d47408530ecd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team26_icon_large.a96b26c2c4f47eb68721a2ae624b82768aa4663e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: syndereN",
+				"defindex": 10245,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: syndereN",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team26_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team26_icon.c243ba345036061c966c1200f033d47408530ecd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team26_icon_large.a96b26c2c4f47eb68721a2ae624b82768aa4663e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: xiao8",
+				"defindex": 10246,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: xiao8",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team15_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon.776dfd6b57d6f06b085efefe4bb631ff9256ac7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon_large.51534b8dbcf55d453c643c0987c5a3917fa3cb0e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: DDC",
+				"defindex": 10247,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: DDC",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team15_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon.776dfd6b57d6f06b085efefe4bb631ff9256ac7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon_large.51534b8dbcf55d453c643c0987c5a3917fa3cb0e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Yao",
+				"defindex": 10248,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Yao",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team15_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon.776dfd6b57d6f06b085efefe4bb631ff9256ac7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon_large.51534b8dbcf55d453c643c0987c5a3917fa3cb0e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Sylar",
+				"defindex": 10249,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Sylar",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team15_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon.776dfd6b57d6f06b085efefe4bb631ff9256ac7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon_large.51534b8dbcf55d453c643c0987c5a3917fa3cb0e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: DD",
+				"defindex": 10250,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: DD",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team15_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon.776dfd6b57d6f06b085efefe4bb631ff9256ac7b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team15_icon_large.51534b8dbcf55d453c643c0987c5a3917fa3cb0e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: ice",
+				"defindex": 10251,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: ice",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team2_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon.3752e1a48c803af28d7b9bda5a3b3b3a3983f7cf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team2_icon_large.da0b447c02a2d4101e8f063379afd6e90cf04a8d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: 7ckngmad",
+				"defindex": 10252,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: 7ckngmad",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team680683_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Funzii",
+				"defindex": 10253,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Funzii",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team680683_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Sockshka",
+				"defindex": 10254,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Sockshka",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team680683_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Silent",
+				"defindex": 10255,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Silent",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team680683_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Goblak",
+				"defindex": 10256,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Goblak",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team680683_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Kabu",
+				"defindex": 10257,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Kabu",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team496774_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Player Card: Lanm",
+				"defindex": 10258,
+				"item_class": "player_card",
+				"item_type_name": "Player Card",
+				"item_name": "Player Card: Lanm",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team496774_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "player_card",
+					"use_string": "Use on Compendium"
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
 					}
 				]
 				
@@ -42679,11 +45470,11 @@
 				
 			},
 			{
-				"name": "The International",
+				"name": "The International 2012",
 				"defindex": 15072,
 				"item_class": "tool",
 				"item_type_name": "League Pass",
-				"item_name": "The International",
+				"item_name": "The International 2012",
 				"item_description": "Watch the top 16 teams from around the world compete in The International.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -45932,7 +48723,7 @@
 				"item_class": "tool",
 				"item_type_name": "Battle Bonus",
 				"item_name": "The International 2013 Battle Bonus",
-				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> until the end of the International. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"item_description": "",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/international_2013_battle_bonus",
@@ -46816,6 +49607,322 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013.dbb2349feb8850fca37ed4e4c2d86163e9c90639.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull2013_large.76361ca1049ff85818589a00cff73fc2c27c4123.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Treasure Key of Incandescent Wax",
+				"defindex": 15189,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Treasure Key of Incandescent Wax",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure of Incandescent Wax<\/font>.\r\nDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/treasure_key_wax",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_wax.9bab71f0ce22eb9cb150a4a33d31f90ea2b7af28.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_wax_large.8a49000b1361386d3a9f101235aeb5c92903d1b0.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_pack_6",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack ASUS ROG Dota 2 Tournament",
+				"defindex": 15190,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DreamHack ASUS ROG Dota 2 Tournament",
+				"item_description": "DreamHack ASUS ROG Dota 2 Tournament is run on the 15-17th of June at DreamHack Summer 2013, the world's largest Digitial Festival. 16 teams will fight for 300 000 SEK. The tournament is supported by ASUS ROG and Plantronics GameCom. Casted by Draskyl and Ayesee.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dreamhack_summer2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhack_summer2013.00f3e52115e7a68969ca2aff09a1f5b1e42a456a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhack_summer2013_large.506758c4c615766ab151827eddb540a111197bc7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack ASUS ROG Dota 2 Tournament - ADMIN",
+				"defindex": 15191,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DreamHack ASUS ROG Dota 2 Tournament - ADMIN",
+				"item_description": "DreamHack ASUS ROG Dota 2 Tournament is run on the 15-17th of June at DreamHack Summer 2013, the world's largest Digitial Festival. 16 teams will fight for 300 000 SEK. The tournament is supported by ASUS ROG and Plantronics GameCom. Casted by Draskyl and Ayesee.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dreamhack_summer2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhack_summer2013.00f3e52115e7a68969ca2aff09a1f5b1e42a456a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhack_summer2013_large.506758c4c615766ab151827eddb540a111197bc7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Alienware Cup - 2013 Season 1",
+				"defindex": 15192,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Alienware Cup - 2013 Season 1",
+				"item_description": "Na`Vi joins all nine TI3 East teams to compete for a lionâs share of the USD 60,000 prize pool. The 58-78 premium games will be casted by Beyond The Summit and special guests. Sponsored by Alienware and Mastercard. Organized by DPM Interactive.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_alienware_season1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_alienware_season1.4ee99f98fb0b25bf7abda6d24f0b117c9e9b8a4c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_alienware_season1_large.19875599960b6676fa5228b67782b73510bd5ad1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Alienware Cup - 2013 Season 1 - ADMIN",
+				"defindex": 15193,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Alienware Cup - 2013 Season 1 - ADMIN",
+				"item_description": "Na`Vi joins all nine TI3 East teams to compete for a lionÃ¢ÂÂs share of the USD 60,000 prize pool. The 58-78 premium games will be casted by Beyond The Summit and special guests. Sponsored by Alienware and Mastercard. Organized by DPM Interactive.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_alienware_season1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_alienware_season1.4ee99f98fb0b25bf7abda6d24f0b117c9e9b8a4c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_alienware_season1_large.19875599960b6676fa5228b67782b73510bd5ad1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The International",
+				"defindex": 15194,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International",
+				"item_description": "Watch the top 16 teams from around the world compete in The International.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_international_2013_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_international_2013_ingame.bdcf612cab48cb613861a4b4e32930d69e29b169.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The International 2013 - ADMIN",
+				"defindex": 15195,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The International 2013 - ADMIN",
+				"item_description": "Watch the top 16 teams from around the world compete in The International.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_international_2013_ingame",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_international_2013_ingame.bdcf612cab48cb613861a4b4e32930d69e29b169.png",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CDEC - Season 1",
+				"defindex": 15196,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CDEC - Season 1",
+				"item_description": "China Dota Elite Community, the renowned inhouse league from DotA, is about to enter the DotA 2 world and redefine the Asian scene once again.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cdec_season1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cdec_season1.6b4a51e444ff34935ce88e1bcc6758ebaa7aa266.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cdec_season1_large.cdfa7b21d14c9f708fb5510ada5cf280682594ab.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CDEC - Season 1 - ADMIN",
+				"defindex": 15197,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CDEC - Season 1 - ADMIN",
+				"item_description": "China Dota Elite Community, the renowned inhouse league from DotA, is about to enter the DotA 2 world and redefine the Asian scene once again.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cdec_season1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cdec_season1.6b4a51e444ff34935ce88e1bcc6758ebaa7aa266.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cdec_season1_large.cdfa7b21d14c9f708fb5510ada5cf280682594ab.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -51431,8 +54538,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_The_Battle_Caster_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_battle_caster_set.73a7cc1cd637a2126f6c4424e30a6cb4504affcd.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_battle_caster_set_large.37a01e6b5b9555fa0e9d8e5a071a0aa2088d2915.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_battle_caster_set.e7d72f7dba65b90475a9a6a45659aed4f0896a5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_battle_caster_set_large.13c6e4ef4e41a4c61cc336df74c734c6d52e76ac.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -51683,8 +54790,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Dark_Ruin_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_ruin_set.57dfc6b05796bf15bb31eaa1ce452e5e6f8f59e0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_ruin_set_large.4376e546be590c50f9776430d73935f77eab2e69.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_ruin_set.594f3682d6f855625b703e9040f8be19ce012610.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_ruin_set_large.125440fe3204446e39cbf27ae974b5b6af4fff4e.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -51708,11 +54815,11 @@
 				"item_description": "Includes all of the items in the 'Nimble Edge' set for Phantom Assassin:",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/sets\/DOTA_Item_Sentinel_Set",
+				"image_inventory": "econ\/sets\/DOTA_Item_Nimble_Edge_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sentinel_set.f1cc4eb38499f6947da356912992202226e0a18a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sentinel_set_large.b72de3c7a7cc6dddc952c9519926468fa46643e3.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_nimble_edge_set.52f30834405a24370a6b56df875fc9afb610442c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_nimble_edge_set_large.d5e735c54376a84ef7ebc7f228b044174edf195a.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -52077,6 +55184,118 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_aspects_of_summer_set.c09dc5d3e3f280b8729bf78b35f6280d41bf40a4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_aspects_of_summer_set_large.8a811860bb80d0d501abc54b4dee6ae6939d4416.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Red Conqueror Set",
+				"defindex": 20187,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Red Conqueror Set",
+				"item_description": "This bundle contains all of the items in the 'Red Conqueror' set for Axe:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Red_Conqueror_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_red_conqueror_set.3aa7a134135ac51e348d71ee26ad6bf7c93b3897.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_red_conqueror_set_large.2ba08494d86177ef13ca7410ae9ea458e537004b.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Phoenix Bloodline Set",
+				"defindex": 20188,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Phoenix Bloodline Set",
+				"item_description": "This bundle contains all of the items in the 'Phoenix Bloodline' set for Lina:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Phoenix_Bloodline_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_phoenix_bloodline_set.a63da238f5d2c4887473d7d1c9c050297337c97b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_phoenix_bloodline_set_large.15f2c4144424fe81f01459bbfd005f91e629de68.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Regalia of the Bonelord Set",
+				"defindex": 20189,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Regalia of the Bonelord Set",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Insanity Set",
+				"defindex": 20190,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Insanity Set",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -53482,6 +56701,20 @@
 				
 			},
 			{
+				"item_set": "disruptor_rider_of_the_storm",
+				"name": "Rider of the Storm",
+				"store_bundle": "Rider of the Storm Set",
+				"items": [
+					"Stormthrasher",
+					"The Storm Rider's Sight",
+					"The Storm Rider's Bracer",
+					"The Storm Rider's Deflector",
+					"Aegis of the Storm",
+					"Rampant the Scaled Hunter"
+				]
+				
+			},
+			{
 				"item_set": "distant_sands",
 				"name": "Hunter in Distant Sands",
 				"store_bundle": "Hunter in Distant Sands Set",
@@ -54030,6 +57263,21 @@
 				
 			},
 			{
+				"item_set": "lycan_great_grey",
+				"name": "The Great Grey",
+				"store_bundle": "Form of the Great Grey Set",
+				"items": [
+					"Royal Cape of the Great Grey",
+					"Sigil Belt of the Great Grey",
+					"Battle Claws of the Great Grey",
+					"Housemark of the Great Grey",
+					"Comb of the Great Grey",
+					"Familiar of the Great Grey",
+					"Form of the Great Grey"
+				]
+				
+			},
+			{
 				"item_set": "moon_rider",
 				"name": "The Moon Rider",
 				"store_bundle": "The Moon Rider Set",
@@ -54306,6 +57554,18 @@
 				
 			},
 			{
+				"item_set": "phoenix_bloodline",
+				"name": "DOTA_Set_Garments_of_the_Phoenix_Bloodline",
+				"store_bundle": "The Phoenix Bloodline Set",
+				"items": [
+					"Sleeves of the Phoenix Bloodline",
+					"Heirloom of the Phoenix Bloodline",
+					"Hair of the Phoenix Bloodline",
+					"Gown of the Phoenix Bloodline"
+				]
+				
+			},
+			{
 				"item_set": "pirates_booty",
 				"name": "The Pirate's Booty",
 				"store_bundle": "The Pirate's Booty Set",
@@ -54473,6 +57733,17 @@
 					"Headdress of the Slithereen Nobility",
 					"Tail Fins of the Slithereen Nobility",
 					"Dress of the Slithereen Nobility"
+				]
+				
+			},
+			{
+				"item_set": "sniper_gunslinger_set",
+				"name": "Gunslinger",
+				"items": [
+					"Gunslinger's Rifle",
+					"Gunslinger's Bracers",
+					"Gunslinger's Hat",
+					"Gunslinger's Cape"
 				]
 				
 			},
@@ -54801,7 +58072,7 @@
 			},
 			{
 				"item_set": "wicked_succubus",
-				"name": "DOTA_Set_The_Wicked_Succubus",
+				"name": "The Wicked Succubus",
 				"items": [
 					"Dirk of the Wicked Succubus",
 					"Horns of the Wicked Succubus",
