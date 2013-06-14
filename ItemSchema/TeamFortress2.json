@@ -62749,7 +62749,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "",
 				"item_name": "Dark Age Defender",
-				"item_description": "This knight's armor will repell anything someone from the 12th century might throw at you, be it a rock, a sword, a thatched cottage or a Merlin.",
+				"item_description": "This knight's armor will repel anything someone from the 12th century might throw at you, be it a rock, a sword, a thatched cottage or a Merlin.",
 				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/demo\/mail_bomber\/mail_bomber.mdl",
