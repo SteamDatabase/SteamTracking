@@ -255,18 +255,18 @@ btn_border_2px > span {
 /* Icons */
 
 .btn_grey_grey.btn_ico_thumbs_up, .btn_grey_black.btn_ico_thumbs_up {
-	background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_rateup.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup.png' );
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding-left: 20px;
 }
 
 .btn_grey_grey.btn_ico_thumbs_up:hover, .btn_grey_black.btn_ico_thumbs_up:hover {
-	background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_hover.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_hover.png' );
 }
 
 	.btn_grey_grey.btn_ico_thumbs_up.active, .btn_grey_black.btn_ico_thumbs_up.active {
-		background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_green.png' );
+		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_green.png' );
 	}
 
 		.btn_grey_grey.btn_ico_thumbs_up.active:hover {
@@ -276,18 +276,18 @@ btn_border_2px > span {
 		}
 
 .btn_grey_grey.btn_ico_thumbs_down, .btn_grey_black.btn_ico_thumbs_down {
-	background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown.png' );
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding-left: 15px;
 }
 
 	.btn_grey_grey.btn_ico_thumbs_down:hover, .btn_grey_black.btn_ico_thumbs_down:hover {
-		background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_hover.png' );
+		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_hover.png' );
 	}
 
 	.btn_grey_grey.btn_ico_thumbs_down.active, .btn_grey_black.btn_ico_thumbs_down.active {
-		background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_red.png' );
+		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_red.png' );
 	}
 
 		.btn_grey_grey.btn_ico_thumbs_down.active:hover {
@@ -297,14 +297,14 @@ btn_border_2px > span {
 		}
 
 .btn_grey_grey.btn_ico_comments, .btn_grey_black.btn_ico_comments  {
-	background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_comment.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_comment.png' );
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding-left: 20px;
 }
 
 .btn_grey_grey.btn_ico_comments:hover, .btn_grey_black.btn_ico_comments:hover {
-	background-image: url( 'http://steamcommunity.com/public/shared/images/buttons/icon_btn_comment_hover.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_comment_hover.png' );
 }
 
 
@@ -313,7 +313,7 @@ btn_border_2px > span {
 	display: inline-block;
 	width: 15px;
 	height: 16px;
-	background-image:url('http://steamcommunity.com/public/shared/images/buttons/icon_double_arrows.png');
+	background-image:url('http://cdn.steamcommunity.com/public/shared/images/buttons/icon_double_arrows.png');
 	vertical-align: middle;
 }
 
