@@ -30601,6 +30601,7 @@
 			"model_player"	"models/player/items/sniper/pro_hat.mdl"
 			"capabilities"
 			{
+				"paintable"		"1"
 				"can_craft_count"	"1"
 			}
 			"used_by_classes"
@@ -40440,11 +40441,7 @@
 			"first_sale_date"	"2013/06/13"
 			"item_name"		"#TF_facestabber"
 			"item_description"		"#TF_facestabber_Desc"
-			"equip_regions"
-			{
-				"face"		"1"
-				"hat"		"1"
-			}
+			"equip_region"		"hat"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/spy/facestabber/facestabber"
 			"capabilities"
@@ -40464,13 +40461,7 @@
 			"first_sale_date"	"2013/06/13"
 			"item_name"		"#TF_mail_bomber"
 			"item_description"		"#TF_mail_bomber_Desc"
-			"equip_regions"
-			{
-				"Back"		"1"
-				"feet"		"1"
-				"demoman_pants"		"1"
-				"left_shoulder"		"1"
-			}
+			"equip_region"	"left_shoulder"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/mail_bomber/mail_bomber"
 			"model_player"		"models/workshop/player/items/demo/mail_bomber/mail_bomber.mdl"
