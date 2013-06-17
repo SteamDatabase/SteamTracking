@@ -149,7 +149,7 @@ body{
 	color: #fff;
 	margin-bottom: 0px;
 	margin-top: 28px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 	#landingWelcome .breadcrumbs, #landingWelcome .breadcrumbs a {
 		color: #808285;
@@ -162,13 +162,22 @@ body{
 		float: left;
 		width: 55px;
 		height: 55px;
-		margin: 5px 13px 0 3px;
+		margin: 5px 10px 0px 0px;
 	}
 
 	#landingWelcome .capsule {
 		float: left;
 		max-height: 28px;
-		margin: 5px 13px 0 3px;
+		margin: 5px 5px 0 0px;
+	}
+	
+	#landingWelcome .landingName {
+		float: left;
+		margin-top: 6px;
+	}
+		
+	#landingWelcome .appName {
+		margin-top: 5px;
 	}
 
 /* Utility styles */
@@ -646,10 +655,13 @@ input {
 	}
 	
 	#landingFooter .landingFooterLinks {
-		padding: 10px 46px 10px 46px;
+		padding: 10px 0px 10px 0px;
 		width: 100%;
 		color: #555555;
 		background-color: #000000;
+	}
+	#landingFooter .landingFooterLinksSpacing {
+		margin: 0px 46px 0px 46px;
 	}
 
 .fancySelect {
