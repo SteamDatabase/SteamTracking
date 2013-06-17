@@ -99,6 +99,7 @@ Scripts/redeemwalletcode.js|http://cdn.store.steampowered.com/public/javascript/
 # Steamworks CSS
 Styles/Partner/styles_admin.css|https://partner.steamgames.com/public/css/styles_admin.css?_=*TIMENOW*
 Styles/Partner/styles_apps.css|https://partner.steamgames.com/public/css/styles_apps.css?_=*TIMENOW*
+Styles/Partner/styles_global.css|https://partner.steamgames.com/public/css/styles_global.css?_=*TIMENOW*
 Styles/Partner/styles_global_new.css|https://partner.steamgames.com/public/css/styles_global_new.css?_=*TIMENOW*
 Styles/Partner/styles_marketing.css|https://partner.steamgames.com/public/css/styles_marketing.css?_=*TIMENOW*
 Styles/Partner/styles_packages.css|https://partner.steamgames.com/public/css/styles_packages.css?_=*TIMENOW*
