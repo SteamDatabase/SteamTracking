@@ -161,3 +161,4 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 
 # Repos
 Repos/index.html|http://repo.steampowered.com/
+Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/

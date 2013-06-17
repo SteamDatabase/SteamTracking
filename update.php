@@ -231,9 +231,9 @@
 						// Workarounds... It's not sending Content-Length
 						if( $LengthExpected == -1 )
 						{
-							$Test = SubStr( $Request, 0, 16 );
-							
-							if( $Test === 'Scripts/Partner/' || $Test === 'Styles/Partner/s' || $Test === 'Repos/index.html' )
+							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
+							||  SubStr( $Request, 0, 15 ) === 'Styles/Partner/'
+							||  SubStr( $Request, 0, 6 ) === 'Repos/' )
 							{
 								$LengthExpected = $LengthDownload;
 							}
