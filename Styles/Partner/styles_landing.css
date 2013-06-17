@@ -121,7 +121,8 @@ body{
 		}
 
 	#landingNav .navContent {
-
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
 		background-color: #454545 !important;
 		padding: 10px 20px 15px 20px;
 	}
