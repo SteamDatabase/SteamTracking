@@ -8,6 +8,7 @@ body{
 
 #pageContainer {
 	position: relative;
+	min-height: 100%;
 }
 
 #landingHeader {
@@ -64,7 +65,7 @@ body{
 #landingNav {
 	height: 41px;
 	border-top: 1px solid #e5e5e5;
-	padding: 0 45px;
+	padding: 0 0 0 45px;
 
 	background: #c1c1c1; /* Old browsers */
 	background: -moz-linear-gradient(top,  #c1c1c1 85%, #919191 100%); /* FF3.6+ */
@@ -141,6 +142,15 @@ body{
 		#landingNav .navContent a:hover {
 			color: #00adee;
 		}
+		
+		#landingNav .navContent > hr {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-color: #b3b3b3;
+			color: transparent;
+			height: 1px;
+			border-style: none;
+		}
 
 #landingWelcome {
 	border-bottom: 2px solid #82a6d7;
@@ -179,6 +189,15 @@ body{
 	#landingWelcome .appName {
 		margin-top: 5px;
 	}
+	
+		#landingWelcome .appName .adminSection {
+			color: #00adee;
+		}
+
+#appFrame #landingWelcome {
+	margin-bottom: 20px;
+}
+
 
 /* Utility styles */
 .break { /* Used to prevent CSS from collapsing margins */

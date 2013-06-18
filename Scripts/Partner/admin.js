@@ -319,22 +319,7 @@ function OnAjaxCallback( transport, parameters, text )
 
 function OnApplicationAdded( parameters, appId )
 {
-	// The application has been added, we need to do two things
-
-	// Watch the application...
-	var watchlistParameters = { appId: appId, mode: 'add' };
-	new Ajax.Request( g_szBaseURL + '/admin/updatewatchlistajax',
-		{
-			parameters:		watchlistParameters,
-			method:			'post',
-			requestHeaders:	{ 'Accept': 'application/json' },
-			evalJSON:		'force',
-			onSuccess: function ( transport ) { OnAjaxCallback( transport, watchlistParameters, 'Application added to your watchlist.' ) },
-			onFailure: function ( transport ) { alert( 'Ajax call failed for OnApplicationAdded().' ); RestoreActionButtons( watchlistParameters ); },
-			onException: function ( request, e ) { alert( 'Exception during Ajax call for OnApplicationAdded().' ); RestoreActionButtons( watchlistParameters ); throw e; }
-	} );
-
-	// And if necessary, set its global release date
+	//if necessary, set its global release date
 	if ( parameters.releaseDate == 'datePicker' )
 	{
 		var date = new Date( parameters.releaseDatePicker );				// Convert from Month/Day/Year to number of seconds since 1970
@@ -1984,26 +1969,6 @@ function DisplayAllApps( result, resultsElement, prefixText, hideDepot )
 		}
 		admin.CreateDiv( applicationElement, 'packagesHeader', 'packages', text );
 
-		/*
-		url = "javascript:UpdateWatchlist( 'WatchlistOn" + appIdText+ "', 'WatchlistOff" + appIdText + "', " + thisApp.AppId + ", 'remove' )";
-		inWatchlist = 'yes (' + '<a href="' + url + '">remove</a>' + ')';
-		var watchlistOn = admin.CreateDiv( applicationElement, 'watchlistHeader', 'WatchlistOn' + appIdText, inWatchlist );
-		url = "javascript:UpdateWatchlist( 'WatchlistOff" + appIdText+ "', 'WatchlistOn" + appIdText + "', " + thisApp.AppId + ", 'add' )";
-		inWatchlist = 'no (' + '<a href="' + url + '">add</a>' + ')';
-		var watchlistOff = admin.CreateDiv( applicationElement, 'watchlistHeader', 'WatchlistOff' + appIdText, inWatchlist );
-
-		if ( g_watchlistAppIdsAsText.indexOf( ',' + thisApp.AppId + ',' ) != -1 )
-		{
-			watchlistOn.style.display = '';
-			watchlistOff.style.display = 'none';
-		}
-		else
-		{
-			watchlistOn.style.display = 'none';
-			watchlistOff.style.display = '';
-		}
-		*/
-
 		CreateBr( applicationElement );
 
 		// Then if there are some depots, display the depots...
@@ -2197,40 +2162,6 @@ function OnChangeAllPackagesAsync()
 function OnPackageClick( depotId )
 {
 	$( depotId ).style.display = ( $( depotId ).style.display == '' ? 'none' : '' );
-}
-
-// Code related to the watchlist
-
-function UpdateWatchlistCallback( transport, elementIdBefore, elementIdAfter )
-{
-	var response = transport.responseJSON;
-	if ( !response )
-	{
-		return;
-	}
-	if ( response.success == false )
-	{
-		alert( "Failed: " + response.result );
-		return;
-	}
-
-	$( elementIdBefore ).style.display = 'none';
-	$( elementIdAfter ).style.display = '';
-}
-
-function UpdateWatchlist( elementIdBefore, elementIdAfter, appId, mode )
-{
-	var parameters = { appId: appId, mode: mode };
-	new Ajax.Request( g_szBaseURL + '/admin/updatewatchlistajax',
-			{
-				method:'get',
-				requestHeaders: { 'Accept': 'application/json' },
-				evalJSON: 'force',
-				parameters: parameters,
-				onSuccess: function(transport){	UpdateWatchlistCallback( transport, elementIdBefore, elementIdAfter );	},
-				onFailure: function ( transport ) { alert( 'Ajax call failed in UpdateWatchlist().' ); },
-				onException: function ( request, e ) { alert( 'Exception during call to UpdateWatchlist().' + e ); throw e; }
-			} );
 }
 
 function GoToLink( linkId )

@@ -33,8 +33,9 @@ h2, .title2 {
 
 .titleHelper {
 	float: left;
-	margin-top: 10px;
+	margin-top: 6px;
 	margin-left: 6px;
+	margin-bottom: 6px;
 }
 
 h2.valveh2 {
