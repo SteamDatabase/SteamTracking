@@ -937,7 +937,6 @@ function GetFinalPriceAndUpdateReviewTab()
 }
 
 var g_bRequiresCVVReEntry = false;
-var g_rgPostParameters = Array();
 function OnGetFinalPriceSuccess( result )
 {
 	try 
@@ -985,11 +984,6 @@ function OnGetFinalPriceSuccess( result )
 				$('purchase_button_bottom').href = "javascript:PerformExternalFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"', " + ( result.haspostparameters ? "true" : "false" ) + " );";
 				$('purchase_bottom_note_paypalgc').style.display = 'block';
 
-				if ( result.haspostparameters )
-				{
-					g_rgPostParameters = result.postparameters;
-				}
-				
 				$('purchase_top').show();
 				
 				if ( method.value == 'giropay' )
