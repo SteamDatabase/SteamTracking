@@ -478,3 +478,46 @@ div.youraccount_history_home>div.account_wallet {
 .email_footer_notes {
 	padding-top: 8px;
 }
+
+.accountTable {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #4d4b49;
+
+}
+	.accountTable > thead > tr {
+		background-color: #413f3d;
+		border-left: 1px solid #4d4b49;
+		border-right: 1px solid #4d4b49;
+	}
+
+		.accountTable th {
+			color: #82807c;
+			font-size: 11px;
+			text-transform: uppercase;
+			font-weight: normal;
+			text-align: left;
+			padding: 4px 14px;
+		}
+
+	.accountTable > tbody > tr {
+		border-top: 1px solid #000;
+		border-left: 1px solid #4d4b49;
+		border-right: 1px solid #4d4b49;
+	}
+
+	.accountTable > tbody > tr:last-child {
+		border-bottom: 1px solid #000;
+	}
+
+		.accountTable > tbody > tr:nth-child(even) {
+			background-color: #1a1a1a;
+		}
+
+		.accountTable > tbody > tr:nth-child(odd) {
+			background-color: #1f1f1f;
+		}
+
+	.accountTable td {
+		padding: 5px 14px;
+	}
