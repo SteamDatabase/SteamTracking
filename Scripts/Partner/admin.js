@@ -2465,6 +2465,27 @@ function ActionOnPackages( parentElement, appIds, action )
 		} );
 }
 
+// updates allowed country hidden input fields
+function UpdateAllowedCountries()
+{
+	var select = $( 'AllowedCountriesSelect' );
+	var text = $( 'AllowedCountriesText' ).value;
+
+	var hiddenAllowed = $('AllowedCountries_Hidden');
+	var hiddenRestricted = $('RestrictedCountries_Hidden');
+
+	if ( select.value == 'not' )
+	{
+		hiddenAllowed.value = '';
+		hiddenRestricted.value = text;
+	}
+	else
+	{
+		hiddenAllowed.value = text;
+		hiddenRestricted.value = '';
+	}
+}
+
 //
 // Localized text areas
 //
