@@ -815,7 +815,7 @@ span.icon_star { display: inline-block;}
 		vertical-align: top;
 		border: none;
 		line-height: 34px;
-		height: 38px;
+		height: 28px;
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 		margin-right: 1px;
@@ -829,7 +829,7 @@ span.icon_star { display: inline-block;}
 		vertical-align: top;
 		border-right: none;
 		line-height: 34px;
-		height: 38px;
+		height: 28px;
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 		margin-right: 1px;
@@ -843,6 +843,7 @@ span.icon_star { display: inline-block;}
 
 		background-color: #454545 !important;
 		padding: 10px 20px 3px 20px;
+		margin-top: 5px;
 	}
 
 	#addPartnerOptions .navContent a {
