@@ -218,7 +218,7 @@ function SetRequestKeys( appid, requests )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/requestkeys/' + appid,
 		{
-			'keys': requests
+			'keys': Object.toJSON( requests )
 		},
 		function( results )
 		{
