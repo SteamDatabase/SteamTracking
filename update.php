@@ -139,6 +139,40 @@
 				
 				unset( $DataJSON );
 			}
+			// Get strings_all.zip file name from beta manifest
+			else if( $File === 'ClientManifest/steam_client_publicbeta_win32.manifest' )
+			{
+				if( Preg_Match( '/"(strings_all\.zip\.[a-f0-9]+)"/m', $Data, $Test ) === 1 )
+				{
+					$Test = $Test[ 1 ];
+					
+					// TODO: Compare checksums
+					
+					if( !Array_Key_Exists( 'strings_all.zip', $this->ETags ) || $this->ETags[ 'strings_all.zip' ] !== $Test )
+					{
+						$this->Log( 'Downloading new strings_all.zip: {yellow}' . $Test );
+						
+						$this->ETags[ 'strings_all.zip' ] = $Test;
+						
+						$this->URLsToFetch[ ] = Array(
+							'URL'  => 'http://media.steampowered.com/client/' . $Test,
+							'File' => 'ClientStrings/strings_all.zip'
+						);
+					}
+				}
+				
+				unset( $Test );
+			}
+			// Unzip it
+			else if( $File === 'ClientStrings/strings_all.zip' )
+			{
+				File_Put_Contents( __DIR__ . '/' . $File, $Data );
+				
+				// Let's break all kinds of things! :(
+				System( 'unzip ClientStrings/strings_all.zip -d ' . __DIR__ . '/ClientStrings/' );
+				
+				return true;
+			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
@@ -147,10 +181,12 @@
 			
 			if( File_Exists( $File ) && File_Get_Contents( $File ) === $Data )
 			{
-				return;
+				return false;
 			}
 			
 			File_Put_Contents( $File, $Data );
+			
+			return true;
 		}
 		
 		private function Fetch( $URLs )
@@ -255,9 +291,14 @@
 								$this->ETags[ $Request ] = Trim( $Test[ 1 ] );
 							}
 							
-							$this->HandleResponse( $Request, $Data );
-							
-							$this->Log( '{green}Fetched{normal} - ' . $URL );
+							if( $this->HandleResponse( $Request, $Data ) === true )
+							{
+								$this->Log( '{green}Fetched{normal} - ' . $URL );
+							}
+							else
+							{
+								$this->Log( '{lightcyan}Not Modified{normal} - ' . $URL );
+							}
 						}
 					}
 					

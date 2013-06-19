@@ -11,6 +11,7 @@ echo $$ > $LOCKFILE
 
 php update.php $1
 
+git add -A
 git commit -a -m "`git status --porcelain | sed '{:q;N;s/\n/, /g;t q}' | sed 's/^ *//g'`"
 git push
 
