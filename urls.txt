@@ -165,3 +165,9 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 # Repos
 Repos/index.html|http://repo.steampowered.com/
 Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/
+
+# Promos
+Styles/promo_summer2013.css|http://cdn.store.steampowered.com/public/css/promo/promo_summer2013.css
+Styles/promo_styles_summersale.css|http://cdn.store.steampowered.com/public/css/promo/styles_summersale.css
+Styles/promo_styles_css.css|http://cdn.store.steampowered.com/public/css/promo/styles_css.css
+Styles/promo_styles_holiday2013.css|http://cdn.store.steampowered.com/public/css/promo/styles_holiday2013.css

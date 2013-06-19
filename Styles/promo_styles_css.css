@@ -1,0 +1,109 @@
+
+
+body {
+	background:#000000;
+	margin:0;
+	padding:0;	
+}
+
+#backgroundHolder {
+	background-image:url(http://cdn.store.steampowered.com/public/images/promo/css/wide_bg.jpg);
+	background-position:top center;
+	background-repeat:no-repeat;
+	min-width: 900px;
+}
+
+#pageContainer {
+	width:900px;
+	height:1800px;
+	text-align:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:20px;
+	color:#dedede;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(http://cdn.store.steampowered.com/public/images/promo/css/main_bg.jpg);
+	background-repeat:no-repeat;
+	background-position:top center;
+	
+}
+
+#logo_css {
+	position:absolute;
+	left:12px;
+	top:20px;
+}
+
+#steamplay_icon {
+	position: absolute;
+	right: 12px;
+	top: 620px;
+}
+
+#steamplay_icon img {
+	margin-right: 0px;
+}
+
+#discount_box {
+	position: absolute;
+	right: 0px;
+	top: 649px;
+}
+
+#content_1 {
+	position:absolute;
+	width:432px;
+	left:12px;
+	top:510px;
+}
+
+#content_2 {
+	position:absolute;
+	width:432px;
+	left:456px;
+	top:794px;
+}
+
+#content_3 {
+	position:absolute;
+	width:432px;
+	left:308px;
+	top:1034px;
+}
+
+#content_4 {
+	position:absolute;
+	width:432px;
+	left:456px;
+	top:1268px;
+}
+
+#content_5 {
+	position:absolute;
+	width:432px;
+	left:308px;
+	top:1530px;
+}
+
+#footer {
+	position:absolute;
+	top:1740px;
+	padding-bottom:60px;
+}
+
+.game_purchase_action {
+	float: right;
+}
+
+.game_purchase_discount .discount_original_price {
+	top: 0px;
+}
+
+.game_purchase_discount .discuont_final_price {
+	margin: 0px;
+	padding-left: 76px;
+	padding-top: 13px;
+	padding-right: 6px;
+}
