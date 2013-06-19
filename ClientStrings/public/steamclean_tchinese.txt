@@ -1,0 +1,14 @@
+"Language" "tchinese"
+"Tokens"
+{
+"SteamClean_Title"	"刪除 Steam？"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Steam 在 %@ 中仍存有遊戲內容。是否要讓 Steam 立即刪除內容？"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"刪除檔案"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"保留檔案"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"在 Finder 中顯示"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

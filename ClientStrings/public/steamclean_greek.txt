@@ -1,0 +1,10 @@
+"Language" "greek" 
+"Tokens" 
+{ 
+SteamClean_Title "Διαγραφή Steam;"
+SteamClean_Message "Το Steam έχει ακόμα κάποια αρχεία παιχνιδιών στο %@.  Θέλετε το Steam να τα διαγράψει τώρα;"
+SteamClean_Delete "ΝΑΙ"
+SteamClean_Keep "ΟΧΙ"
+SteamClean_ShowInFinder "ΕΜΦΑΝΙΣΗ ΑΡΧΕΙΩΝ"
+}
+

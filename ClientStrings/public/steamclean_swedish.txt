@@ -1,0 +1,14 @@
+"Language" "swedish"
+"Tokens"
+{
+"SteamClean_Title"	"Ta bort Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Det finns fortfarande spelfiler för Steam sparade i %@. Vill du ta bort dem från nu?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Ta bort filer"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Behåll filer"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Visa i Finder"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

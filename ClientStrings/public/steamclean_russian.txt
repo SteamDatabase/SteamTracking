@@ -1,0 +1,14 @@
+"Language" "russian"
+"Tokens"
+{
+"SteamClean_Title"	"Удаляете Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Steam все еще хранит контент игр в %@. Вы хотите чтобы Steam удалил файлы прямо сейчас?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Удалить файлы"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Оставить файлы"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Показать в Finder"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

@@ -1,0 +1,14 @@
+"Language" "italian"
+"Tokens"
+{
+"SteamClean_Title"	"Eliminare Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Ci sono ancora contenuti di gioco di Steam memorizzati in %@. Desideri che Steam li elimini?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Elimina i file"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Conserva i file"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Mostra nella finestra di ricerca"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

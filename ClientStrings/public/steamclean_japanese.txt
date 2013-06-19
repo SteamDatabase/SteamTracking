@@ -1,0 +1,14 @@
+"Language" "japanese"
+"Tokens"
+{
+"SteamClean_Title"	"Steam を削除しますか？"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Steam のゲームコンテンツが %@ に保存されています。これらも今削除しますか？"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"削除する"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"残しておく"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Finder で表示"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

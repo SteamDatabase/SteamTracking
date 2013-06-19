@@ -1,0 +1,14 @@
+"Language" "finnish"
+"Tokens"
+{
+"SteamClean_Title"	"Poistetaanko Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Hakemistossa %@ on edelleen Steamin tallentamaa pelisisältöä. Haluatko, että Steam poistaa ne nyt?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Poista tiedostot"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Säilytä tiedostot"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Näytä Finderissa"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

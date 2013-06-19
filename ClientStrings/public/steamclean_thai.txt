@@ -1,0 +1,14 @@
+"Language" "thai"
+"Tokens"
+{
+"SteamClean_Title"	"ลบ Steam หรือไม่"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Steam ยังมีข้อมูลเกมเก็บไว้ใน %@ คุณต้องการลบตอนนี้หรือไม่"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"ลบไฟล์"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"เก็บไฟล์ไว้"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"แสดงใน Finder"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

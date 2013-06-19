@@ -1,0 +1,14 @@
+"Language" "czech"
+"Tokens"
+{
+"SteamClean_Title"	"Chcete odstranit službu Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Služba Steam má stále uložen obsah hry v %@. Chcete ho nyní vymazat pomocí služby Steam?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Odstranit soubory"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Uchovat soubory"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Ukázat ve vyhledávání"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

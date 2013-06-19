@@ -1,0 +1,14 @@
+"Language" "danish"
+"Tokens"
+{
+"SteamClean_Title"	"Slet Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Der er stadig spilindhold gemt i %@.  Ønsker du, at Steam sletter dette nu?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Slet filer"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Behold filer"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Vis i Finder"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}
