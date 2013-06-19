@@ -142,20 +142,18 @@
 			// Get strings_all.zip file name from beta manifest
 			else if( $File === 'ClientManifest/steam_client_publicbeta_win32.manifest' )
 			{
-				if( Preg_Match( '/"(strings_all\.zip\.[a-f0-9]+)"/m', $Data, $Test ) === 1 )
+				if( Preg_Match( '/"strings_all\.zip\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
 				{
 					$Test = $Test[ 1 ];
 					
-					// TODO: Compare checksums
-					
 					if( !Array_Key_Exists( 'strings_all.zip', $this->ETags ) || $this->ETags[ 'strings_all.zip' ] !== $Test )
 					{
-						$this->Log( 'Downloading new strings_all.zip: {yellow}' . $Test );
+						$this->Log( '{lightblue}Downloading new strings_all.zip.' . $Test );
 						
 						$this->ETags[ 'strings_all.zip' ] = $Test;
 						
 						$this->URLsToFetch[ ] = Array(
-							'URL'  => 'http://media.steampowered.com/client/' . $Test,
+							'URL'  => 'http://media.steampowered.com/client/strings_all.zip.' . $Test,
 							'File' => 'ClientStrings/strings_all.zip'
 						);
 					}
@@ -166,7 +164,16 @@
 			// Unzip it
 			else if( $File === 'ClientStrings/strings_all.zip' )
 			{
-				File_Put_Contents( __DIR__ . '/' . $File, $Data );
+				$File = __DIR__ . '/' . $File;
+				
+				File_Put_Contents( $File, $Data );
+				
+				if( SHA1_File( $File ) !== $this->ETags[ 'strings_all.zip' ] )
+				{
+					$this->Log( '{lightred}Checksum mismatch for strings_all.zip' );
+					
+					return false;
+				}
 				
 				// Let's break all kinds of things! :(
 				System( 'sh ' . __DIR__ . '/ClientStrings/extract.sh' );
@@ -179,7 +186,7 @@
 			
 			$File = __DIR__ . '/' . $File;
 			
-			if( File_Exists( $File ) && File_Get_Contents( $File ) === $Data )
+			if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Data ) === 0 )
 			{
 				return false;
 			}
@@ -264,7 +271,7 @@
 						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 						
-						// Workarounds... It's not sending Content-Length
+						// TODO: Workarounds... It's not sending Content-Length
 						if( $LengthExpected == -1 )
 						{
 							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
@@ -297,7 +304,7 @@
 							}
 							else
 							{
-								$this->Log( '{lightcyan}Not Modified{normal} - ' . $URL );
+								$this->Log( '{green}Not Modified{normal} - ' . $URL );
 							}
 						}
 					}
