@@ -2142,7 +2142,10 @@ var CCommentThread = Class.create( {
 		var elAutosubscribe = $( 'commentthread_' + this.m_strName + '_autosubscribe' );
 		if ( elAutosubscribe )
 		{
-			SetValueLocalStorage( 'forum_autosubscribe', elAutosubscribe.checked );
+			if ( elAutosubscribe.checked )
+				SetValueLocalStorage( 'forum_autosubscribe', true );
+			else
+				UnsetValueLocalStorage( 'forum_autosubscribe' );
 		}
 	}
 

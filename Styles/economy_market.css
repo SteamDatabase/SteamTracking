@@ -658,6 +658,10 @@ a.market_tab_well_tab_inactive:hover {
 	margin-bottom: 16px;
 }
 
+.econ_tag_filter_category {
+	margin-top: 1em;
+}
+
 .marker_search_sidebar_section_tip {
 	margin-bottom: 5px;
 	font-size: 14px;

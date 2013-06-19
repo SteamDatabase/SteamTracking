@@ -382,6 +382,10 @@ input.filter_search_box:-moz-placeholder {
 	display: none;
 }
 
+.econ_tag_count {
+	font-size: 71.4%;
+}
+
 
 /* Steam gift styles */
 .item_desc_content.app753.context1 .item_desc_descriptors {

@@ -275,10 +275,6 @@ a.games_list_tab:hover {
 	font-size: 14px;
 }
 
-.econ_tag_count {
-	font-size: 10px;
-}
-
 #context_selector {
 	margin-left: 12px;
 	margin-bottom: 12px;
@@ -798,19 +794,23 @@ a.newitem:hover {
 	border: 1px solid #4f4e4e;
 }
 
-body.migrated_profile_page #pending_gift_link {
-	position: static;
-	top: 0;
-	right: 0;
-	float: right;
-}
-
 body.migrated_profile_page .inventory_links {
-	line-height: 56px;
+	margin: 0 0 24px;
 }
 
 body.migrated_profile_page .inventory_rightnav {
-	float: left;
+	float: right;
+	margin-right: 0;
+}
+
+body.migrated_profile_page .inventory_rightnav a.btn_grey_black {
+	color: white;
+	margin-left: 12px;
+}
+
+.inventory_newtradeoffer {
+	min-width: 230px;
+	text-align: center;
 }
 
 .item_market_actions {

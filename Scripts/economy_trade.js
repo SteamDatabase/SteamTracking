@@ -4,6 +4,7 @@
 var TRADE_UPDATE_INTEVRAL = 1000;
 var MESSAGE_TRADE_PARTNER_ABSENSE_TIME = 5;
 var g_bWalletBalanceWouldBeOverMax = false;
+var g_bTradeOffer = false;
 var g_nItemsFromContextWithNoPermissionToReceive = 0;
 
 function BeginTrading()
@@ -14,6 +15,7 @@ function BeginTrading()
 	INVENTORY_PAGE_WIDTH = 104 * 4;
 	g_bIsTrading = true;
 	g_bShowTradableItemsOnly = true;
+	g_ActiveUser = UserYou;
 
 	
 	if ( g_bTradePartnerProbation )
@@ -34,31 +36,48 @@ function BeginTrading()
 	// set up the filter control
 	Filter.InitFilter( $('filter_control') );
 
-	//set up chat controls
-	var elChatEntry = $('chat_text_entry');
-	elChatEntry.observe( 'keypress', OnChatKeypress );
-	elChatEntry.observe( 'keyup', OnChatKeyup );
-	elChatEntry.observe( 'paste', OnChatUpdate );
-	elChatEntry.observe( 'cut', OnChatUpdate );
-	$('chat_send_btn').observe( 'click', DoChat );
-
-	// if the user starts typing in the trade dialog, move the focus to the chat control
-	$(document).observe( 'keypress', TransferFocusToChat );
-	
 	Event.observe( window, 'resize', SizeWindow );
 	Event.observe( window, 'unload', TradingUnloaded );
 
-	RefreshTradeStatus( g_rgCurrentTradeStatus, true );
-	RequestTradeStatusUpdate();
+	if ( !g_bTradeOffer )
+	{
+		//set up chat controls
+		var elChatEntry = $('chat_text_entry');
+		elChatEntry.observe( 'keypress', OnChatKeypress );
+		elChatEntry.observe( 'keyup', OnChatKeyup );
+		elChatEntry.observe( 'paste', OnChatUpdate );
+		elChatEntry.observe( 'cut', OnChatUpdate );
+		$('chat_send_btn').observe( 'click', DoChat );
+
+		// if the user starts typing in the trade dialog, move the focus to the chat control
+		$(document).observe( 'keypress', TransferFocusToChat );
+
+		RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+		RequestTradeStatusUpdate();
+	}
 
 	// default to the last used inventory
 	var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
 	if ( BValidateHashParams( oCookieParams ) )
-		TradePageSelectInventory( oCookieParams.appid, oCookieParams.contextid );
+		TradePageSelectInventory( UserYou, oCookieParams.appid, oCookieParams.contextid );
+}
+
+function BeginTradeOffer()
+{
+	g_bTradeOffer = true;
+	
+	BeginTrading();
+
+	UpdateSlots( new Array(), new Array(), true, UserYou, 0 );
+	UpdateSlots( new Array(), new Array(), false, UserThem, 0 );
+
+	$J('#inventory_select_their_inventory').addClass('active');
+	$J('#trade_theirs_active').show();
+	$J('#trade_items_separator').css( 'visibility', 'hidden' );
 }
 
 
-var UserThem = Object.extend( new CUser(), {
+CUserThem = Class.create( CUser, {
 
 	GetContext: function( appid, contextid ) {
 		// TODO: load trade partner app contexts
@@ -83,17 +102,32 @@ var UserThem = Object.extend( new CUser(), {
 		this.addInventory( new CForeignInventoryPending( this, appid, contextid, null, null ) );
 		var thisClosure = this;
 
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/', {
-				method: 'post',
-				parameters: {
-					sessionid:	g_sessionID,
-					steamid: 	steamid,
-					appid:		appid,
-					contextid:	contextid
-				},
-				onSuccess: function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); }
-			}
-		);
+		if ( g_bTradeOffer )
+		{
+			g_strTradePartnerInventoryLoadURL;
+			new Ajax.Request( g_strTradePartnerInventoryLoadURL + appid + '/' + contextid + '/', {
+					method: 'get',
+					parameters: {
+						trading: 	1
+					},
+					onSuccess: function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); }
+				}
+			);
+		}
+		else
+		{
+			new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/', {
+					method: 'post',
+					parameters: {
+						sessionid:	g_sessionID,
+						steamid: 	steamid,
+						appid:		appid,
+						contextid:	contextid
+					},
+					onSuccess: function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); }
+				}
+			);
+		}
 		return true;
 	},
 
@@ -112,27 +146,57 @@ var UserThem = Object.extend( new CUser(), {
 			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
 
 			// replace the pending inventory object with the real inventory
-			this.addInventory( new CForeignInventory( this, appid, contextid, merged.inventory, merged.currency ) );
+			var inventory = new CForeignInventory( this, appid, contextid, merged.inventory, merged.currency );
+			this.addInventory( inventory );
+			if ( g_bTradeOffer )
+			{
+				var elInventory = inventory.getInventoryElement();
+				elInventory.hide();
+				$('inventories').insert( elInventory );
 
-			RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+				var elTags = inventory.getTagContainer();
+				var elTagHolder = $( 'filter_options' );
+				if( elTagHolder && elTags )
+				{
+					elTags.hide();
+					elTagHolder.insert( elTags );
+					elTagHolder.addClassName( 'filter_collapsed' );
+				}
+			}
+
+			this.ShowInventoryIfActive( appid, contextid );
+
+			if ( !g_bTradeOffer )
+				RefreshTradeStatus( g_rgCurrentTradeStatus, true );
 		}
 		else
 		{
 			// erase the pending inventory object so it will be reloaded
-			this.rgInventories[appid][contextid] = null;
+			this.GetContext( appid, contextid ).inventory = null;
 		}
 	}
 });
 
+var UserThem = new CUserThem();
+
 var templActiveApp = new Template( '<img src="#{icon}"> #{name}' );
 var templAllContextName = new Template( 'All #{appname} Items');
 
-function TradePageSelectInventory( appid, contextid, bLoadCompleted )
+function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 {
-	HideMenu( $('appselect'), $('appselect_options') );
+	if ( g_bTradeOffer )
+	{
+		HideMenu( $('appselect'), $('appselect_you_options') );
+		HideMenu( $('appselect'), $('appselect_them_options') );
+	}
+	else
+	{
+		HideMenu( $('appselect'), $('appselect_options') );
+	}
+
 	Filter.ApplyFilter( '' );
 
-	if ( SelectInventory( appid, contextid, bLoadCompleted ) )
+	if ( SelectInventoryFromUser( user, appid, contextid, bLoadCompleted ) )
 	{
 		Filter.ReApplyFilter();
 
@@ -145,9 +209,9 @@ function TradePageSelectInventory( appid, contextid, bLoadCompleted )
 		{
 			//displayName = templAllContextName.evaluate( { appname: rgAppData.name } );
 		}
-		else if ( !UserYou.BIsSingleContextApp( appid ) )
+		else if ( !user.BIsSingleContextApp( appid ) )
 		{
-			displayName = displayName + ' ' + UserYou.GetContext( appid, contextid ).name;
+			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
 		}
 
 		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData.icon, name: displayName } ) );
@@ -2415,7 +2479,7 @@ var Tutorial = {
 		for ( var i = 1; i <= this.MAX_STEPS; i++ )
 		{
 			var elArrow = $('tutorial_arrow_step' + i );
-			var elStep = $('trading_welcome_step' + i );
+			var elStep = $('tutorial_message_step' + i );
 			if ( elArrow )
 			{
 				if ( this.bActive && i == this.iStep )
@@ -2514,7 +2578,7 @@ function SizeWindow()
 
 function TradingUnloaded( e )
 {
-	if ( g_bTradeCancelled )
+	if ( g_bTradeCancelled || g_bTradeOffer )
 		return;
 
 	g_bTradeCancelled = true;

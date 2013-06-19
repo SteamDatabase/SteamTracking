@@ -5,6 +5,7 @@ var g_bIsInventoryPage = false;
 var g_bWalletTradeUnavailable = false;
 var g_bSellItemOnInventoryLoad = false;
 var g_bShowTradableItemsOnly = false;
+var g_ActiveUser = null;
 var ITEM_HOVER_DELAY = 500;
 
 /*
@@ -299,7 +300,7 @@ var CInventory = Class.create( {
 		this.contextid = contextid;
 		this.rgInventory = rgInventory;
 		this.rgCurrency = rgCurrency;
-		var strCompositeId = appid + '_' + contextid;
+		var strCompositeId = owner.GetSteamId() + '_' + appid + '_' + contextid;
 		this.elInventory = new Element( 'div', {id: 'inventory_' + strCompositeId, 'class': 'inventory_ctn' } );
 		this.rgItemElements = new Array();
 		this.elTagContainer = new Element( 'div', {id: 'tags_' + strCompositeId } );
@@ -1272,10 +1273,12 @@ var CUser = Class.create( {
 	cLoadsInFlight: 0,
 	bDynamicLoadInventory: true,
 	strProfileURL: null,
+	strSteamId: null,
 	rgContexts: null,
 	rgAppwideInventories: null,
 	rgContextIdsByApp: null,
 	rgAppInfo: null,
+	nActiveAppId: null,
 
 	initialize: function() {
 		this.rgContexts = {};
@@ -1324,6 +1327,17 @@ var CUser = Class.create( {
 	addInventory: function( inventory ) {
 		var rgContext = this.GetContext( inventory.appid, inventory.contextid );
 		rgContext.inventory = inventory;
+
+		if ( ( this == UserYou || g_bTradeOffer ) && !inventory.BIsPendingInventory() && !this.BIsSingleContextApp( inventory.appid ) )
+		{
+			var appwideContext = this.GetContext( inventory.appid, APPWIDE_CONTEXT );
+			appwideContext.inventory.AddChildInventory( inventory );
+
+			if ( !appwideContext.inventory.BIsPendingInventory() )
+			{
+				this.ShowInventoryIfActive( inventory.appid, APPWIDE_CONTEXT );
+			}
+		}
 	},
 
 	findAsset: function( appid, contextid, itemid ) {
@@ -1369,6 +1383,16 @@ var CUser = Class.create( {
 	GetProfileURL: function()
 	{
 		return this.strProfileURL;
+	},
+
+	SetSteamId: function( strSteamId )
+	{
+		this.strSteamId = strSteamId;
+	},
+
+	GetSteamId: function()
+	{
+		return this.strSteamId;
 	},
 
 	LoadContexts: function( rgAppContextData )
@@ -1431,24 +1455,30 @@ var CUser = Class.create( {
 
 	GetFirstContextForApp: function( appid ) {
 		return this.GetContext( appid, this.rgContextIdsByApp[appid][0] );
-	}
-
-});
-
-CUserYou = Class.create( CUser, {
-
-	oDefaultInventoryId: null,
-	nActiveAppId: null,
-	rgActiveContextIdByApp: null,
-
-
-	initialize: function( $super )
-	{
-		$super();
-		this.rgActiveContextIdByApp = {};
 	},
 
-	GetTradePermissions: function( appid, contextid )
+	ShowInventoryIfActive: function( appid, contextid )
+	{
+		if ( g_ActiveUser == this && g_ActiveInventory && g_ActiveInventory.appid == appid && g_ActiveInventory.contextid == contextid )
+		{
+			if ( g_bIsInventoryPage )
+				ShowItemInventory( appid, contextid, null, true );
+			else if ( g_bIsTrading )
+			{
+				TradePageSelectInventory( g_ActiveUser, appid, contextid, true );
+			}
+		}
+	},
+
+	SetActiveAppId: function( appid ) {
+		this.nActiveAppId = appid;
+	},
+
+	GetActiveAppId: function() {
+		return this.nActiveAppId;
+	},
+
+		GetTradePermissions: function( appid, contextid )
 	{
 		/* trade permissions are app-wide, but could be context-specific in the future */
 		var rgContext = this.GetContext( appid, contextid );
@@ -1483,11 +1513,24 @@ CUserYou = Class.create( CUser, {
 		return ( permissions == 'FULL' ) || ( permissions == 'RECEIVEONLY' );
 	},
 
-
 	BInventoryIsFull: function( appid, contextid )
 	{
 		var permissions = this.GetTradePermissions( appid, contextid );
 		return permissions == 'SENDONLY_FULLINVENTORY';
+	}
+
+});
+
+CUserYou = Class.create( CUser, {
+
+	oDefaultInventoryId: null,
+	rgActiveContextIdByApp: null,
+
+
+	initialize: function( $super )
+	{
+		$super();
+		this.rgActiveContextIdByApp = {};
 	},
 
 	ReloadInventory: function( appid, contextid )
@@ -1533,21 +1576,6 @@ CUserYou = Class.create( CUser, {
 			parameters: params,
 			onComplete: function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ); }
 		} );
-	},
-
-	addInventory: function( $super, inventory ) {
-		$super( inventory );
-
-		if ( !inventory.BIsPendingInventory() && !this.BIsSingleContextApp( inventory.appid ) )
-		{
-			var appwideContext = this.GetContext( inventory.appid, APPWIDE_CONTEXT );
-			appwideContext.inventory.AddChildInventory( inventory );
-
-			if ( !appwideContext.inventory.BIsPendingInventory() )
-			{
-				this.ShowInventoryIfActive( inventory.appid, APPWIDE_CONTEXT );
-			}
-		}
 	},
 
 	OnLoadInventoryComplete: function( transport, appid, contextid )
@@ -1600,21 +1628,8 @@ CUserYou = Class.create( CUser, {
 
 		this.ShowInventoryIfActive( appid, contextid );
 
-		if ( g_bIsTrading )
+		if ( g_bIsTrading && !g_bTradeOffer )
 			RefreshTradeStatus( g_rgCurrentTradeStatus, true );
-	},
-
-	ShowInventoryIfActive: function( appid, contextid )
-	{
-		if ( g_ActiveInventory && g_ActiveInventory.appid == appid && g_ActiveInventory.contextid == contextid )
-		{
-			if ( g_bIsInventoryPage )
-				ShowItemInventory( appid, contextid, null, true );
-			else if ( g_bIsTrading )
-			{
-				TradePageSelectInventory( appid, contextid, true );
-			}
-		}
 	},
 
 	// an obj with .appid and .contextid
@@ -1624,14 +1639,6 @@ CUserYou = Class.create( CUser, {
 
 	SetDefaultInventoryId: function( oDefaultInventoryId ) {
 		this.oDefaultInventoryId = oDefaultInventoryId;
-	},
-
-	SetActiveAppId: function( appid ) {
-		this.nActiveAppId = appid;
-	},
-
-	GetActiveAppId: function() {
-		return this.nActiveAppId;
 	}
 
 });
@@ -1660,18 +1667,23 @@ function ShowPendingGifts()
 var g_deferredAsset = null;
 function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 {
+	if ( g_ActiveUser == null )
+	{
+		g_ActiveUser = UserYou;
+	}
+
 	$('tabcontent_inventory').show();
 	$('tabcontent_pendinggifts') && $('tabcontent_pendinggifts').hide();
 
 	if ( !contextid )
 	{
-		if ( UserYou.BIsSingleContextApp( appid ) )
-			contextid = UserYou.GetFirstContextForApp( appid ).id;
+		if ( g_ActiveUser.BIsSingleContextApp( appid ) )
+			contextid = g_ActiveUser.GetFirstContextForApp( appid ).id;
 		else
 			contextid = APPWIDE_CONTEXT;
 	}
 
-	var inventory = UserYou.getInventory( appid, contextid );
+	var inventory = g_ActiveUser.getInventory( appid, contextid );
 	var bAlreadyInitialized = inventory.initialized;
 	var bSellNow = false;
 
@@ -1701,14 +1713,14 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		contextid = APPWIDE_CONTEXT;
 	}
 
-	if ( SelectInventory( appid, contextid, bLoadCompleted ) )
+	if ( SelectInventoryFromUser( g_ActiveUser, appid, contextid, bLoadCompleted ) )
 	{
 		$('iteminfo0').hide();
 		$('iteminfo1').hide();
 
-		if ( UserYou.GetActiveAppId() != appid )
+		if ( g_ActiveUser.GetActiveAppId() != appid )
 		{
-			UserYou.SetActiveAppId( appid );
+			g_ActiveUser.SetActiveAppId( appid );
 
 			var elTab = $('inventory_link_' + appid );
 			elTab.siblings().invoke( 'removeClassName', 'active');
@@ -1739,18 +1751,18 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 				$('inventory_applogo').hide();
 			}
 
-			if ( UserYou.BIsSingleContextApp( appid ) )
+			if ( g_ActiveUser.BIsSingleContextApp( appid ) )
 			{
 				$('context_selector').hide();
 			}
 			else
 			{
 				$('contextselect_options_contexts').update('');
-				var rgContextIds = UserYou.GetContextIdsForApp( appid );
+				var rgContextIds = g_ActiveUser.GetContextIdsForApp( appid );
 				var fnContextClick = function( appid, contextid ) { HideMenu( $('contextselect'), $('contextselect_options') ); window.location = '#' + appid + '_' + contextid; };
 				for ( var i = 0; i < rgContextIds.length; i++ )
 				{
-					var rgContext = UserYou.GetContext( appid, rgContextIds[i] );
+					var rgContext = g_ActiveUser.GetContext( appid, rgContextIds[i] );
 					var elContext = new Element( 'div', {'class': 'popup_item context_name', 'id': 'context_option_' + appid + '_' + rgContext.id } );
 					elContext.update( rgContext.name );
 					var strHash = '#' + appid + '_' + rgContext.id;
@@ -1764,7 +1776,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		}
 
 		// display the current context in the drop down menu
-		if ( !UserYou.BIsSingleContextApp( appid ) )
+		if ( !g_ActiveUser.BIsSingleContextApp( appid ) )
 		{
 			// make sure the popup isn't visible
 			HideMenu( $('contextselect'), $('contextselect_options') );
@@ -1867,9 +1879,9 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			}
 }
 
-function SelectInventory( appid, contextid, bForceSelect )
+function SelectInventoryFromUser( user, appid, contextid, bForceSelect )
 {
-	var inventory = UserYou.getInventory( appid, contextid );
+	var inventory = user.getInventory( appid, contextid );
 	if ( inventory == g_ActiveInventory && !bForceSelect )
 	{
 		return false;
@@ -1880,6 +1892,7 @@ function SelectInventory( appid, contextid, bForceSelect )
 		g_ActiveInventory.hide();
 	}
 	g_ActiveInventory = inventory;
+	g_ActiveUser = user;
 	if ( !inventory.initialized )
 	{
 		inventory.Initialize();
@@ -1888,6 +1901,11 @@ function SelectInventory( appid, contextid, bForceSelect )
 	inventory.MakeActive();
 
 	return true;
+}
+
+function SelectInventory( appid, contextid, bForceSelect )
+{
+	return SelectInventoryFromUser( UserYou, appid, contextid, bForceSelect );
 }
 
 /* special display rules for economy apps, logos, special messages, etc */

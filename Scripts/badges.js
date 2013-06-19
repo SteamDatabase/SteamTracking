@@ -20,7 +20,7 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 			FinishCraft();
 		}).fail( function() {
 			g_CraftModal && g_CraftModal.Dismiss();
-			ShowAlertDialog( 'Craft badge', 'crafting failed' );
+			ShowAlertDialog( 'Craft badge', 'There was an error trying to craft the badge.  Please try again later.' );
 		});
 
 
@@ -123,7 +123,7 @@ function FinishCraft()
 			g_CraftModal.GetContent().find('.newmodal_close').show();
 			g_CraftModal.SetDismissOnBackgroundClick( true );
 
-			g_CraftModal.always( function() { ShowDialog( 'Craft Badge', 'Reloading...' ); window.location.reload(); } );
+			g_CraftModal.always( function() { ShowDialog( 'Craft badge', 'Reloading...' ); window.location.reload(); } );
 
 			g_CraftModal.AdjustSizing( 'slow' );
 		}, nMSToWait );
@@ -246,17 +246,6 @@ function GameCardArtDialog( strName, strImgURL )
 	Modal.AdjustSizing();
 }
 
-/*
-	'name' => $rgApp ? $rgApp['name'] : '',
-	'drops_remaining' => $Progress->drops_remaining,
-	'cards_dropped' => $Progress->cards_dropped,
-	'drops_earned_pre_release' => $Progress->drops_earned_pre_release,
-	'drops_earned_post_release' => $Progress->drops_earned_post_release,
-	'drops_earned_purchase' => $Progress->drops_earned_purchase,
-	'est_usd_cents_earned_to_next_drop' => $Progress->est_usd_cents_earned_to_next_drop,
-	'est_usd_cents_needed_for_next_drop' => $Progress->est_usd_cents_needed_for_next_drop,
-*/
-
 function ShowCardDropInfo( strGameName, id )
 {
 	var $Content = $J('#' + id);
@@ -271,5 +260,159 @@ function ShowCardDropInfo( strGameName, id )
 		}
 	);
 
+}
+
+function ReloadCommunityInventory()
+{
+	if ( typeof UserYou != 'undefined' )
+		UserYou.ReloadInventory( 753, 6 );
+}
+
+var CARDS_PER_BOOSTER = 3;
+function OpenBooster( appid, itemid )
+{
+	var $Content = $J('<div/>', {'class': 'booster_unpack_dialog' } );
+
+	var $CardArea = $J('<div/>', {'class': 'booster_unpack_cardarea' } );
+	var $PostUnpackActions = $J('<div/>', {'class': 'booster_unpack_actions' } );
+
+	var $BtnBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium', 'href': g_strProfileURL + '/gamecards/' + appid + '/' } );
+	$BtnBadgeProgress.append( $J('<span/>').text('View badge progress') );
+
+	var $BtnFoilBadgeProgress = $J('<a/>', {'class': 'btn_grey_white_innerfade btn_medium', 'href': g_strProfileURL + '/gamecards/' + appid + '/?border=1' } );
+	$BtnFoilBadgeProgress.append( $J('<span/>').text('View foil badge progress') );
+	$BtnFoilBadgeProgress.hide();
+
+	var $BtnClose = $J('<div/>', {'class': 'btn_grey_white_innerfade btn_medium booster_unpack_closebtn' } );
+	$BtnClose.append( $J('<span/>').text('Close') );
+
+	$PostUnpackActions.append( $BtnBadgeProgress, $BtnFoilBadgeProgress, $BtnClose );
+	$PostUnpackActions.hide();
+
+	$Content.append( $CardArea, $PostUnpackActions );
+
+	var Modal = ShowDialog( 'Unpacking booster pack', $Content, { bExplicitDismissalOnly: true } );
+	Modal.GetContent().find('.newmodal_close').hide();
+
+	$BtnClose.click( function() { Modal.Dismiss(); } );
+
+	//var $ImgBooster = $J('<img/>', {'class': 'booster_unpack_booster', src: 'http://cdn.steamcommunity.com/economy/boosterpack/' + appid + '?l=' + g_strLanguage } );
+	//$CardArea.append( $ImgBooster );
+
+	var $Booster = $J('<div/>', {'class': 'booster_unpack_booster' } );
+	var $rgCardBacks = [];
+	for ( var i = 0; i < CARDS_PER_BOOSTER; i++ )
+	{
+		var $CardBack = $J('<div/>', {'class': 'booster_unpack_card card_back card' + (i+1) } );
+		var $ImgFlipGradient = $J('<div/>', {'class': 'booster_unpack_card_image_flip_gradient'});
+		var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: 'http://cdn.steamcommunity.com/economy/boosterpack/' + appid + '?l=english&single=1' } );
+		$CardBack.append( $Img, $ImgFlipGradient );
+		$Booster.append( $CardBack );
+		$rgCardBacks.push( $CardBack );
+	}
+
+	var $ImgRibbon = $J('<img/>', {'class': 'booster_unpack_ribbon', 'src': 'http://cdn.steamcommunity.com/economy/boosterpackribbon/?l=english' });
+	$Booster.append( $ImgRibbon );
+	$CardArea.append( $Booster );
+
+	var submitUrl = g_strProfileURL + "/ajaxunpackbooster/";
+
+	var tsStart = (new Date()).getTime();
+
+
+	Modal.GetContent().find('.newmodal_close').show();
+	Modal.SetDismissOnBackgroundClick( true );
+
+	window.setTimeout( function() {
+		$ImgRibbon.addClass( 'unwrap' );
+		$Booster.addClass( 'move_to_position' );
+		for( var i = 0; i < $rgCardBacks.length; i++ )
+		{
+			$rgCardBacks[i].addClass('final_position');
+		}
+
+		/*
+		window.setTimeout( function() {
+			for( var i = 0; i < $rgCardBacks.length; i++ )
+			{
+				$rgCardBacks[i].addClass('final_position');
+			}
+		}, 500 );
+		*/
+	}, 1000 );
+
+
+	// fire off the ajax request to unpack the booster
+	$J.post( submitUrl, { appid: appid, communityitemid: itemid, sessionid: g_sessionID } )
+	.done( function( data ) {
+
+		if ( data.rgItems && data.rgItems.length > 0 )
+		{
+			var $rgCards = [];
+			for( var i = 0; i < CARDS_PER_BOOSTER; i++ )
+			{
+				var item = data.rgItems[i];
+				if ( item.foil )
+					$BtnFoilBadgeProgress.show();
+
+				var $Card = $J('<div/>', {'class': 'booster_unpack_card card_front card' + (i+1) } );
+				var $ImgFlipGradient = $J('<div/>', {'class': 'booster_unpack_card_image_flip_gradient'});
+				var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: item.image } );
+				var $CardTitle = $J('<div/>', {'class': 'booster_unpack_card_title'} ).text( item.name );
+				var $CardSeries= $J('<div/>', {'class': 'booster_unpack_card_title'}).text( 'Series %s'.replace( /%s/, item.series ) );
+				$Card.append( $Img, $ImgFlipGradient, $CardTitle, $CardSeries );
+				$Card.hide();
+				$CardTitle.hide();
+				$CardSeries.hide();
+				$CardArea.append( $Card );
+				$rgCards.push( $Card );
+			}
+
+			// make sure we show it for a moment, even if the ajax gets back early
+			var tsNow = (new Date()).getTime();
+			var msToWait = Math.max( 2500 - (tsNow - tsStart), 1 );
+			window.setTimeout( function() {
+
+				var nNextTimeout = 0;
+
+				for ( var i = 0; i < $rgCardBacks.length; i++ )
+				{
+					window.setTimeout( (function(iCard) { return function() {
+						$rgCardBacks[iCard].addClass('start_flip_card');
+
+						if ( iCard < $rgCards.length )
+						{
+							$rgCards[iCard].addClass( 'start_flip_card');
+							$rgCards[iCard].show();
+							window.setTimeout( function() {
+								$rgCards[iCard].children('.booster_unpack_card_title').fadeIn( 500 );
+							}, 750 );
+						}
+					}; })(i), nNextTimeout );
+					nNextTimeout += 500;
+				}
+
+				window.setTimeout( function() {
+					$PostUnpackActions.fadeIn( 500 );
+					for( var i = 0; i < $rgCards.length; i++ )
+					{
+						//$rgCards[i].children('.booster_unpack_card_title').fadeIn( 500 );
+					}
+					Modal.GetContent().find('.newmodal_close').show();
+					Modal.SetDismissOnBackgroundClick( true );
+					//ReloadCommunityInventory();
+				}, nNextTimeout - 250 );
+
+				Modal.always( function() { ShowDialog( 'Unpacking booster pack', 'Reloading...' ); window.location.reload(); } );
+
+			}, msToWait );
+
+		}
+
+	}).fail( function() {
+		Modal && Modal.Dismiss();
+		ShowAlertDialog( 'Unpacking booster pack', 'Sorry, there was a problem unpacking this booster pack.  It may have already been unpacked.  Please try again later.' );
+		ReloadCommunityInventory();
+	});
 }
 

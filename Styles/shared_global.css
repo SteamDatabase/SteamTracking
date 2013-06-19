@@ -304,26 +304,38 @@ span.popup_menu_pulldown_indicator {
 }
 
 .friendPlayerLevel.lvl_0 {
-	border: solid #9b9b9b 2px;
+	border-color: #9b9b9b;
 }
 
 .friendPlayerLevel.lvl_10 {
-	border: solid #d96063 2px;
+	border-color: #d96063;
 }
 
 .friendPlayerLevel.lvl_20 {
-	border: solid #cecd70 2px;
+	border-color: #cecd70;
 }
 
 .friendPlayerLevel.lvl_30 {
-	border: solid #7652c9 2px;
+	border-color: #7652c9;
 }
 
 .friendPlayerLevel.lvl_40 {
-	border: solid #7dae3d 2px;
+	border-color: #7dae3d;
 }
 
 .friendPlayerLevel.lvl_50 {
-	border: solid #5491cf 2px;
+	border-color: #5491cf;
+}
+
+.friendPlayerLevel.lvl_60 {
+	border-color: #7652c9;
+}
+
+.friendPlayerLevel.lvl_70 {
+	border-color: #c252c9;
+}
+
+.friendPlayerLevel.lvl_80 {
+	border-color: #542437;
 }
 

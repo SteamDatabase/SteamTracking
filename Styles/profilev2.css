@@ -1265,7 +1265,8 @@ img.workshop_showcase_item_image {
 }
 
 .profile_small_header_arrow {
-	font-size: 12px;
+	font-size: 16px;
+	color: #828282;
 }
 
 .profile_small_header_additional {
