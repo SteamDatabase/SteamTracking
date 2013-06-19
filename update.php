@@ -169,7 +169,7 @@
 				File_Put_Contents( __DIR__ . '/' . $File, $Data );
 				
 				// Let's break all kinds of things! :(
-				System( 'unzip ClientStrings/strings_all.zip -d ' . __DIR__ . '/ClientStrings/' );
+				System( 'unzip ClientStrings/strings_all.zip -o -d ' . __DIR__ . '/ClientStrings/' );
 				
 				return true;
 			}
