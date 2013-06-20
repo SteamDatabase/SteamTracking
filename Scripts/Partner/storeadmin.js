@@ -208,7 +208,7 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 function SerializeClusterToForm( event, form, inputName, elemIncludedApps )
 {
 	var rgItems = GetClusterItemsAsArray( elemIncludedApps );
-	var value = rgItems.toJSON();
+	var value = Object.toJSON( rgItems );
 	form.appendChild( new Element( 'input', {type: 'hidden', value: value, name: inputName } ) );
 	return true;
 }
@@ -257,7 +257,7 @@ function PreviewCapsules( strSize, elemIncluded )
 	var rgItems = GetClusterItemsAsArray( $(elemIncluded) );
 
 	var url = g_szBaseUrl + '/admin/store/pagecapsulepreview/?'; 
-	url += Object.toQueryString( { strCapsuleJSON: rgItems.toJSON(), strCapsuleSize: strSize } );
+	url += Object.toQueryString( { strCapsuleJSON: Object.toJSON( rgItems ), strCapsuleSize: strSize } );
 	
 	var win = window.open(url,'capsule_preview','height=584,width=724,resize=yes,scrollbars=yes');
 	win.focus();
