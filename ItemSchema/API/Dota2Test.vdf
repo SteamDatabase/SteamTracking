@@ -78422,13 +78422,13 @@
 		}
 		"15196"
 		{
-			"name"		"CDEC - Season 1"
+			"name"		"CDEC Season 2-4"
 			"prefab"		"league"
 			"creation_date"		"2013-06-12"
 			"image_banner"		"econ/leagues/subscriptions_cdec_season1_ingame"
 			"image_inventory"		"econ/leagues/subscriptions_cdec_season1"
-			"item_description"		"#DOTA_Item_Desc_CDEC__Season_1"
-			"item_name"		"#DOTA_Item_CDEC__Season_1"
+			"item_description"		"#DOTA_Item_Desc_CDEC_Season_24"
+			"item_name"		"#DOTA_Item_CDEC_Season_24"
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"tool"
 			{
@@ -78444,13 +78444,13 @@
 		}
 		"15197"
 		{
-			"name"		"CDEC - Season 1 - ADMIN"
+			"name"		"CDEC Season 2-4 - ADMIN"
 			"prefab"		"league"
 			"creation_date"		"2013-06-12"
 			"image_banner"		"econ/leagues/subscriptions_cdec_season1_ingame"
 			"image_inventory"		"econ/leagues/subscriptions_cdec_season1"
-			"item_description"		"#DOTA_Item_Desc_CDEC__Season_1__ADMIN"
-			"item_name"		"#DOTA_Item_CDEC__Season_1__ADMIN"
+			"item_description"		"#DOTA_Item_Desc_CDEC_Season_24__ADMIN"
+			"item_name"		"#DOTA_Item_CDEC_Season_24__ADMIN"
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
 			"tool"
 			{

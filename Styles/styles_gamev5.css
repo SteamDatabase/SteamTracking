@@ -1926,3 +1926,7 @@ div.early_access_announcements {
 		height: 100%;
 		background-color: #6f9fc8;
 	}
+
+h2.bb_tag + br {
+	display: none;
+}

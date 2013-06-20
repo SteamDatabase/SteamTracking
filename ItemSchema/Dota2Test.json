@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.7b66d09ec6e94f8e6bd802d26e21efa26704d7ef.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.e052289240b3ef876c02063dea62e0e4dd1e2cab.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -50595,12 +50595,12 @@
 				
 			},
 			{
-				"name": "CDEC - Season 1",
+				"name": "CDEC Season 2-4",
 				"defindex": 15196,
 				"item_class": "tool",
 				"item_type_name": "New Item",
-				"item_name": "CDEC - Season 1",
-				"item_description": "China Dota Elite Community, the renowned inhouse league from DotA, is about to enter the DotA 2 world and redefine the Asian scene once again.",
+				"item_name": "CDEC Season 2-4",
+				"item_description": "CDEC is an in house league consisting if the best Chinese players. Each day the top three games will be broadcasted. There will also be a top 10 players match each week. This is a unique format that allows you to see different pro players working together. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_cdec_season1",
@@ -50630,12 +50630,12 @@
 				
 			},
 			{
-				"name": "CDEC - Season 1 - ADMIN",
+				"name": "CDEC Season 2-4 - ADMIN",
 				"defindex": 15197,
 				"item_class": "tool",
 				"item_type_name": "New Item",
-				"item_name": "CDEC - Season 1 - ADMIN",
-				"item_description": "China Dota Elite Community, the renowned inhouse league from DotA, is about to enter the DotA 2 world and redefine the Asian scene once again.",
+				"item_name": "CDEC Season 2-4 - ADMIN",
+				"item_description": "CDEC is an in house league consisting if the best Chinese players. Each day the top three games will be broadcasted. There will also be a top 10 players match each week. This is a unique format that allows you to see different pro players working together. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_cdec_season1",
