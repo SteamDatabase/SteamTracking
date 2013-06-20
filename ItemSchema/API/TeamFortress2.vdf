@@ -52206,6 +52206,32 @@
 			"item_name"	"#TF_StrangePart_KillsWhileExplosiveJumping"
 			"item_description"	"#TF_StrangePart_KillsWhileExplosiveJumping_Desc"
 		}
+		"6023"
+		{
+			"name"	"Strange Part: Ubers Dropped"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"38"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_ubers_dropped"
+			"item_name"	"#TF_StrangePart_UbersDropped"
+			"item_description"	"#TF_StrangePart_UbersDropped_Desc"
+		}
 		"6024"
 		{
 			"name"	"Strange Part: Cloaked Spies Killed"
@@ -52283,6 +52309,32 @@
 			"image_inventory"	"backpack/crafting/strange_part_mvm_robot_kills"
 			"item_name"	"#TF_StrangePart_RobotsDestroyed"
 			"item_description"	"#TF_StrangePart_RobotsDestroyed_Desc"
+		}
+		"6028"
+		{
+			"name"	"Strange Part: Giant Robots Destroyed"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"40"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_giant_kills"
+			"item_name"	"#TF_StrangePart_GiantRobotsDestroyed"
+			"item_description"	"#TF_StrangePart_GiantRobotsDestroyed_Desc"
 		}
 		"6032"
 		{
@@ -59630,6 +59682,12 @@
 			"The Neon Annihilator"		"1"
 			"Jarate"		"1"
 		}
+		"kill_eater_set_mixed_t"
+		{
+			"Upgradeable TF_WEAPON_CLUB"		"1"
+			"The Huo Long Heatmaker"		"1"
+			"The Enforcer"		"1"
+		}
 		"supply_crate_loot_list_1"
 		{
 			"The Vita-Saw"		"1"
@@ -60066,6 +60124,16 @@
 			"Tam O'Shanter"		"1"
 			"Detective Noir"		"1"
 		}
+		"supply_crate_loot_list_59"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Strange_Weapons"
+			"kill_eater_set_mixed_t"		"1"
+			"Strange Part: Ubers Dropped"		"1"
+			"Strange Part: Heavies Killed"		"1"
+			"Strange Part: Giant Robots Destroyed"		"1"
+			"The War Pig"		"1"
+			"The Fast Learner"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -60127,6 +60195,7 @@
 		"supply_crate_loot_list_56"	"56"	
 		"supply_crate_loot_list_57"	"57"	
 		"robo_2013_crate_loot_list"	"58"	
+		"supply_crate_loot_list_59"	"59"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -68505,6 +68574,56 @@
 			"attachment"		"muzzle" 
 		}
 		
+		"55"
+		{
+			"system"			"unusual_orbit_cards_teamcolor_blue"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		
+		"56"
+		{
+			"system"			"unusual_zap_yellow"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"57"
+		{
+			"system"			"unusual_zap_green"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"58"
+		{
+			"system"			"unusual_hearts_bubbling" 
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"59"
+		{
+			"system"			"unusual_orbit_cards_teamcolor_red"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"60"
+		{
+			"system"			"unusual_orbit_cash"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"61"
+		{
+			"system"			"unusual_crisp_spotlights"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"62"
+		{
+			"system"			"unusual_spotlights"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		
 		"63"
 		{
 			"system"			"unusual_robot_holo_glow_green"
@@ -69471,9 +69590,19 @@
 		{
 			"type_name"	"KillEaterEventType_InvisibleSpiesKilled"
 		}
+		"38"
+		{
+			"type_name"	"KillEaterEventType_MedicsWithFullUberKilled"
+		}
 		"39"
 		{
 			"type_name"	"KillEaterEventType_RobotsKilled"
+			"level_data"	"KillEater_RobotsKilledRank"
+			"allow_bot_victims"	"1"
+		}
+		"40"
+		{
+			"type_name"	"KillEaterEventType_MinibossRobotsKilled"
 			"level_data"	"KillEater_RobotsKilledRank"
 			"allow_bot_victims"	"1"
 		}
@@ -69536,6 +69665,7 @@
 		{
 			"type_name"			"KillEaterEvent_LongDistanceKills"
 		}
+
 
 
 	}
