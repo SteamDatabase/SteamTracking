@@ -193,11 +193,16 @@ a.badge_row:hover .badge_view_details {
 
 .card_drop_info_dialog {
 	font-size: 14px;
+	max-width: 556px;
 }
 
 .card_drop_info_header {
 	font-size: 17px;
 	color: #5491cf;
+}
+
+.card_drop_info_header.disabled {
+	color: #5c5c5c;
 }
 
 .card_drop_info_header_secondary {
