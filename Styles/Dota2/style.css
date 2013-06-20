@@ -1008,6 +1008,14 @@ code {
 	margin-left:12px;
 	margin-bottom:4px;
 }
+#rightColGetDotaLink {
+	display:block;
+	width:264px;
+	height:77px;
+	background-image:url('http://media.steampowered.com/apps/dota2/images/blogfiles/rightcol_steam_button.jpg');
+	margin-left:12px;
+	margin-bottom:8px;
+}
 #rightColSignupSubtext {
 	display:block;
 	width:260px;
