@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.54f0c15b49bfb8c9ee97be726d0a7a40d745b18c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.dce93efbb6f6e110c11753871be9f697f8290377.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -41320,7 +41320,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 55.000000
+						"value": 59.000000
 					}
 				]
 				
@@ -45016,6 +45016,47 @@
 				
 			},
 			{
+				"name": "Strange Part: Ubers Dropped",
+				"defindex": 6023,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Medics Killed That Have Full ÜberCharge",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of medics you kill while they have full ÜberCharge.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_ubers_dropped",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_ubers_dropped.ccde45c8247f506f14428888f8c5acd81c1849bf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_ubers_dropped_large.bc8546802b4305fa06bdc58c18c13e2aad90374e.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 38.000000
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Part: Cloaked Spies Killed",
 				"defindex": 6024,
 				"item_class": "tool",
@@ -45134,6 +45175,47 @@
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
 						"value": 39.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Giant Robots Destroyed",
+				"defindex": 6028,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Giant Robots Destroyed",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon of your choice will enable it to track the number of invading Giant Robots you destroy with it in Mann-vs-Machine games.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_giant_kills",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_giant_kills.aa73dfed53113719195c7cf18845905e7c168d00.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_giant_kills_large.4a73b6a5f63b29b8a2ab71324c2dd8701942bb59.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 40.000000
 					}
 				]
 				
@@ -61024,8 +61106,8 @@
 				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/robo_soldier_fullmetaldrillhat\/robo_soldier_fullmetaldrillhat",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat.b1b05e5d85ba35d9842f2d035ebc682577f2f758.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat_large.4fa656ebb826b663af5b752d6c327426db809dd3.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat.72e2f15e4f61317c570abe0bca1d3c206b855fd6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat_large.418f858727b5a9b4e1e3aefd18de5cf3beec9384.png",
 				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
@@ -61640,8 +61722,8 @@
 				"image_inventory": "backpack\/workshop\/player\/items\/medic\/robo_medic_grimm_hatte\/robo_medic_grimm_hatte",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte.0495c50aebc04a604574a627c89ad7cf36759e10.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte_large.92b91e71a655dc8791b0b5222b3e28ebc3a0bc72.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte.58156ffa901bf6b1b25401682913fcb6ee566875.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte_large.3c83b32886b85f5bb61fe1d976465885922c6f5f.png",
 				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
@@ -68280,6 +68362,62 @@
 				"name": "Stormy 13th Hour"
 			},
 			{
+				"system": "unusual_orbit_cards_teamcolor_blue",
+				"id": 55,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Attrib_Particle55"
+			},
+			{
+				"system": "unusual_zap_yellow",
+				"id": 56,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Kill-a-Watt"
+			},
+			{
+				"system": "unusual_zap_green",
+				"id": 57,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Terror-Watt"
+			},
+			{
+				"system": "unusual_hearts_bubbling",
+				"id": 58,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Cloud 9"
+			},
+			{
+				"system": "unusual_orbit_cards_teamcolor_red",
+				"id": 59,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Aces High"
+			},
+			{
+				"system": "unusual_orbit_cash",
+				"id": 60,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Dead Presidents"
+			},
+			{
+				"system": "unusual_crisp_spotlights",
+				"id": 61,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Miami Nights"
+			},
+			{
+				"system": "unusual_spotlights",
+				"id": 62,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Disco Beat Down"
+			},
+			{
 				"system": "unusual_robot_holo_glow_green",
 				"id": 63,
 				"attach_to_rootbone": true,
@@ -69522,8 +69660,18 @@
 				"level_data": "KillEaterRank"
 			},
 			{
+				"type": 38,
+				"type_name": "Medics Killed That Have Full ÜberCharge",
+				"level_data": "KillEaterRank"
+			},
+			{
 				"type": 39,
 				"type_name": "Robots Destroyed",
+				"level_data": "KillEater_RobotsKilledRank"
+			},
+			{
+				"type": 40,
+				"type_name": "Giant Robots Destroyed",
 				"level_data": "KillEater_RobotsKilledRank"
 			},
 			{
