@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1371688976"
+	"version"		"1371763076"
 	"strings_all"
 	{
 		"file"		"strings_all.zip.66df46cd90005488a8373d801a617098a3aefc9f"
@@ -51,15 +51,15 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.887945f74fb7b7fa231ca0ce81888d9ea0a8e627"
-		"checksum"		"887945f74fb7b7fa231ca0ce81888d9ea0a8e627"
-		"size"		"20469694"
+		"file"		"bins_win32.zip.11494b6f0b73805f40f3d0fa14fa534432ada6da"
+		"checksum"		"11494b6f0b73805f40f3d0fa14fa534432ada6da"
+		"size"		"20468676"
 	}
 	"webkit_win32"
 	{
-		"file"		"webkit_win32.zip.6d097df67b507ca0536607b86a921be109ae076a"
-		"checksum"		"6d097df67b507ca0536607b86a921be109ae076a"
-		"size"		"14063412"
+		"file"		"webkit_win32.zip.dcf267c07ffd184c926420c232d323120340d8bb"
+		"checksum"		"dcf267c07ffd184c926420c232d323120340d8bb"
+		"size"		"14068833"
 	}
 	"gamesforwindows_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.b435eb22085e9d790a915268ae43060360e4b29e"
-		"checksum"		"b435eb22085e9d790a915268ae43060360e4b29e"
-		"size"		"766042"
+		"file"		"steam_win32.zip.fa46fb6107836fe4b5fb6bcb413fdb2df8ef9521"
+		"checksum"		"fa46fb6107836fe4b5fb6bcb413fdb2df8ef9521"
+		"size"		"766061"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"c867dc202a62df094442281eb502618c3cb70b7d843557fc55a4e4231832a282f3b29ae0a37d66eb6f2bbc3d1581aac5a112fb7c2d8db8678899f2550ec85b98a486c5f7471c6758948920b16e6239319d95f1b504aeba2deb5909a77a1f0db5e85ca6a85f25f4b301adf62ca8107046e992572934be07bf1b6ad588d203040f"
+	"win32"		"c9099f8c183bde319952d4d7817ee1a8207039d5f109944e559f388a7d00d01dc180a110bfd52bb71dec74f7ec824c71dee731469c79f40fe527b09622f45dcac9ca6c0f60b69e35cdb84d660b651a042949733ab297cad410a98607d2ea71eded0f1968afaecbc53d3497fbca0d131ccf09b55ef54cdbf18817fc608f5cec14"
 }
