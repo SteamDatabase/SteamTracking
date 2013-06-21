@@ -486,6 +486,9 @@ select.hourselect,  select.minuteselect {
     visibility: hidden;
 }
 
+.assocContentGroup {
+	margin-bottom: 10px;
+}
 
 .association_link {
 	float: right;
@@ -1531,6 +1534,11 @@ html, body { height:100%; }
 	border: 2px dashed #666;
 	background-color: #333;
 	margin: 8px 0;
+}
+
+.recent_app_row .titleDragHandle
+{
+	top: 0px;
 }
 
 .app_list > li {
