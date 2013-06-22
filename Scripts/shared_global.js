@@ -7,7 +7,11 @@ function GetDefaultCommunityAJAXParams( path, method )
 		rgParams.type = method;
 
 	// if this js file was hosted off the store, add CORS request headers
-	
+	if ( window.location.href.indexOf( 'http://steamcommunity.com/' ) != 0 )
+	{
+		rgParams.crossDomain = true;
+		rgParams.xhrFields = { withCredentials: true };
+	}
 	return rgParams;
 }
 
@@ -18,18 +22,19 @@ var MINIPROFILE_DELAY_BEFORE_AJAX = 150;
 // the delay before we'll show the hover, must be longer than DELAY_BEFORE_AJAX
 var MINIPROFILE_DELAY_BEFORE_SHOW = 300;
 
-function CMiniprofileData( accountid )
+function CDelayedAJAXData( strURL, msDelayBeforeAJAX )
 {
-	this.m_nAccountID = accountid;
 	this.m_$Data = null;
 	this.m_bAJAXFailed = false;
 	this.m_timerDelayedAJAX = null;
 	this.m_bAJAXRequestMade = false;
+	this.m_msDelayBeforeAJAX = msDelayBeforeAJAX;
+	this.m_strURL = strURL;
 
 	this.m_fnOnAJAXComplete = null;
 }
 
-CMiniprofileData.prototype.QueueAjaxRequestIfNecessary = function()
+CDelayedAJAXData.prototype.QueueAjaxRequestIfNecessary = function()
 {
 	if ( !this.m_$Data && !this.m_bAJAXRequestMade )
 	{
@@ -37,7 +42,7 @@ CMiniprofileData.prototype.QueueAjaxRequestIfNecessary = function()
 		this.m_timerDelayedAJAX = window.setTimeout( function() {
 			_this.m_timerDelayedAJAX = null;
 			_this.m_bAJAXRequestMade = true;
-			var rgAJAXParams = GetDefaultCommunityAJAXParams( 'miniprofile/' + _this.m_nAccountID, 'GET' );
+			var rgAJAXParams = GetDefaultCommunityAJAXParams( _this.m_strURL, 'GET' );
 			$J.ajax( rgAJAXParams )
 				.done( function(data) {
 					_this.m_$Data = $J(data);
@@ -46,11 +51,11 @@ CMiniprofileData.prototype.QueueAjaxRequestIfNecessary = function()
 				}).fail( function() {
 					_this.m_bAJAXFailed = true;
 				});
-		}, MINIPROFILE_DELAY_BEFORE_AJAX );
+		}, this.m_msDelayBeforeAJAX );
 	}
 }
 
-CMiniprofileData.prototype.CancelAJAX = function()
+CDelayedAJAXData.prototype.CancelAJAX = function()
 {
 	if ( this.m_timerDelayedAJAX )
 		window.clearTimeout( this.m_timerDelayedAJAX );
@@ -58,7 +63,7 @@ CMiniprofileData.prototype.CancelAJAX = function()
 	this.m_fnOnAJAXComplete = null;
 }
 
-CMiniprofileData.prototype.RunWhenAJAXReady = function( fnOnReady )
+CDelayedAJAXData.prototype.RunWhenAJAXReady = function( fnOnReady )
 {
 	if ( this.m_$Data )
 		fnOnReady();
@@ -70,7 +75,7 @@ CMiniprofileData.prototype.RunWhenAJAXReady = function( fnOnReady )
 	// if ajax failed we will not call fnOnReady
 }
 
-CMiniprofileData.prototype.Show = function( $HoverContent )
+CDelayedAJAXData.prototype.Show = function( $HoverContent )
 {
 	$HoverContent.children().detach();
 	$HoverContent.append( this.m_$Data );
@@ -91,35 +96,49 @@ function InitMiniprofileHovers()
 	$Hover.hide();
 	$J(document.body).append( $Hover );
 
+	var fnDataFactory = function( key ) { return new CDelayedAJAXData( 'miniprofile/' + key, MINIPROFILE_DELAY_BEFORE_AJAX ); }
+	var fnPositionHover = PositionMiniprofileHover;
+	var strDataName = 'miniprofile';
+	var strURLMatch = 'miniprofile';
+
+	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch );
+
+	window.BindMiniprofileHovers = rgCallbacks.fnBindAllHoverElements;
+	window.BindSingleMiniprofileHover = rgCallbacks.fnBindSingleHover;
+}
+
+function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch )
+{
+
 	// indexed by accountid
-	var rgMiniprofileData = {};
+	var rgHoverData = {};
 	var HoverTarget = null;
 	var timerHover = null;
 
-	var fnOnHover = function( $Target, accountid ) {
+	var fnOnHover = function( $Target, key ) {
 
 		var bHoverVisible = ( $Hover.css('display') != 'none' );
 
-		var MiniprofileData = rgMiniprofileData[accountid];
-		if ( !MiniprofileData )
+		var HoverData = rgHoverData[key];
+		if ( !HoverData )
 		{
-			MiniprofileData = rgMiniprofileData[accountid] = new CMiniprofileData( accountid );
+			HoverData = rgHoverData[key] = fnDataFactory( key );
 		}
 
-		if ( HoverTarget == MiniprofileData && bHoverVisible )
+		if ( HoverTarget == HoverData && bHoverVisible )
 		{
 			//really only want to do this while fading out
 			$Hover.stop();
-			PositionMiniprofileHover( $Hover, $Target );
+			fnPositionHover( $Hover, $Target );
 			$Hover.show();	// PositionMiniprofile toggles visibility
 			$Hover.fadeTo( MINIPROFILE_ANIM_SPEED, 1.0 );
 		}
-		else if ( !timerHover || MiniprofileData != HoverTarget )
+		else if ( !timerHover || HoverData != HoverTarget )
 		{
 			// this is the new target
-			if ( HoverTarget && HoverTarget != MiniprofileData )
+			if ( HoverTarget && HoverTarget != HoverData )
 				HoverTarget.CancelAJAX();
-			HoverTarget = MiniprofileData;
+			HoverTarget = HoverData;
 
 			if ( timerHover )
 			{
@@ -127,17 +146,17 @@ function InitMiniprofileHovers()
 				timerHover = null;
 			}
 
-			MiniprofileData.QueueAjaxRequestIfNecessary();
+			HoverData.QueueAjaxRequestIfNecessary();
 
 			timerHover = window.setTimeout( function() {
 				window.clearTimeout( timerHover );
 				timerHover = null;
 
-				MiniprofileData.RunWhenAJAXReady( function() {
-					MiniprofileData.Show( $HoverContent );
+				HoverData.RunWhenAJAXReady( function() {
+					HoverData.Show( $HoverContent );
 					$Hover.stop();
 					$Hover.css( 'opacity', '' ); //clean up jquery animation
-					PositionMiniprofileHover( $Hover, $Target );
+					fnPositionHover( $Hover, $Target );
 					$Hover.fadeIn( MINIPROFILE_ANIM_SPEED );
 				} );
 			}, MINIPROFILE_DELAY_BEFORE_SHOW );
@@ -148,10 +167,10 @@ function InitMiniprofileHovers()
 	{
 		var bHoverVisible = ( $Hover.css('display') != 'none' );
 
-		var MiniprofileData = rgMiniprofileData[accountid];
-		if ( MiniprofileData )
+		var HoverData = rgHoverData[accountid];
+		if ( HoverData )
 		{
-			MiniprofileData.CancelAJAX();
+			HoverData.CancelAJAX();
 		}
 
 		if ( timerHover )
@@ -167,38 +186,43 @@ function InitMiniprofileHovers()
 		}
 	}
 
-	var fnBindSingleMiniprofileHover = function( target ) {
+	var strAttributeName = 'data-' + strDataName;
+	var strBoundDataName = strDataName + '_bound';
+	var fnBindSingleHover = function( target ) {
 		var $Target = $J(target);
-		var accountid = parseInt( $Target.attr( 'data-miniprofile' ) );
-		if ( accountid && !$Target.data('miniprofile_bound' ) )
+		var key = $Target.attr( strAttributeName );
+		if ( key && !$Target.data( strBoundDataName ) )
 		{
-			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, accountid ) );
+			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, key ) );
 			$Target.mouseleave( fnCancelHover );
-			$Target.data( 'miniprofile_bound', true );
+			$Target.data( strBoundDataName, true );
 		}
 	};
-	var fnBindAllAccountIDElements = function() {
-		$J('[data-miniprofile]').each( function() { fnBindSingleMiniprofileHover( this ); } );
+	var fnBindAllHoverElements = function() {
+		$J('[' + strAttributeName + ']').each( function() { fnBindSingleHover( this ); } );
 	}
 
-	fnBindAllAccountIDElements();
+	fnBindAllHoverElements();
+
 	$J(document).ajaxComplete( function( event, xhr, settings ) {
 		// skip any ajax calls we generated ourselves
-		if ( settings && settings.url && settings.url.match( /miniprofile/ ) )
+		if ( settings && settings.url && settings.url.match( strURLMatch ) )
 			return;
 
-		fnBindAllAccountIDElements();
+		fnBindAllHoverElements();
 	} );
 	if ( typeof Ajax != 'undefined' )
 	{
 		//prototype AJAX
 		Ajax.Responders.register({
-			onComplete: fnBindAllAccountIDElements
+			onComplete: fnBindAllHoverElements
 		});
 	}
 
-	window.BindMiniprofileHovers = fnBindAllAccountIDElements;
-	window.BindSingleMiniprofileHover = fnBindSingleMiniprofileHover;
+	return {
+		fnBindAllHoverElements: fnBindAllHoverElements,
+		fnBindSingleHover: fnBindSingleHover
+	};
 }
 
 function PositionMiniprofileHover( $Hover, $Target )
@@ -211,6 +235,9 @@ function PositionMiniprofileHover( $Hover, $Target )
 	$Hover.css( 'top', offset.top + 'px');
 
 	var $HoverBox = $Hover.children( '.shadow_content' );
+	if ( !$HoverBox.length )
+		$HoverBox = $J( $Hover.children()[0] );
+
 	var $HoverArrowLeft = $Hover.children( '.miniprofile_arrow_left' );
 	var $HoverArrowRight = $Hover.children( '.miniprofile_arrow_right' );
 

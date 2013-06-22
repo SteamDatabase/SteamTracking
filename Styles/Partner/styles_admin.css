@@ -127,6 +127,10 @@ h1 span.titletext, h2 span.titletext {
 	margin-bottom: 24px;
 }
 
+.sectionDescription {
+	margin-bottom: 20px;
+}
+
 div.rightcol {
 	float: right;
 	width: 300px;
@@ -1675,7 +1679,7 @@ html, body { height:100%; }
 {
 	margin-bottom: 20px;
 	background-color: #333333;
-	border: 2px dashed #777777;
+	border: 2px dashed #00adee;
 	padding: 8px;
 	text-align: center;
 }
@@ -1704,4 +1708,11 @@ html, body { height:100%; }
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.preview_in_store_link
+{
+	float: right;
+	line-height: 22px;
+	margin: 0px 10px 20px 0px;
 }

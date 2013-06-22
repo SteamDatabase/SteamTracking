@@ -57,7 +57,7 @@ function BVerifyAutograntDelete( unPackageID, sPublisherName )
 }
 
 // Code for AddPublished modal box
-// Refactor modal box code (here and in checklist.js) so we can reduce the number of implementations.
+// Refactor modal box code (here) so we can reduce the number of implementations.
 var g_CustomIdBeingEdited;
 
 // Functions to get viewport and scroll offset are coming from here (works better than others I found on the web):

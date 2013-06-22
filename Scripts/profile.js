@@ -180,8 +180,9 @@ function InitProfileSummary( strSummary )
 	}
 	else
 	{
+		var $ModalSummary = $J('<div/>', {'class': 'profile_summary_modal'}).html( strSummary );
 		$SummaryFooter.find( 'span' ).click( function() {
-			var Modal = ShowDialog( 'Info', strSummary );
+			var Modal = ShowDialog( 'Info', $ModalSummary );
 			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );
 		} );
 	}

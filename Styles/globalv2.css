@@ -1230,3 +1230,16 @@ img.emoticon {
 	background-color: #201f1d;
 	cursor: pointer;
 }
+
+
+.economyitem_hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1200;
+}
+.economyitem_hover_content {
+	width: 350px;
+	margin: 12px;
+	box-shadow: 0 0 12px #000000;
+}
