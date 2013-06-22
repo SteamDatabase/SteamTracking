@@ -80,7 +80,7 @@ div.profile_page.has_profile_background {
 .profile_header_badgeinfo {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 8px;
 	width: 268px;
 }
 
@@ -117,7 +117,16 @@ div.profile_page.has_profile_background {
 }
 
 .profile_header_badgeinfo .persona_level {
+	line-height: 40px;
 	margin-bottom: 13px;
+}
+
+.profile_header_badgeinfo .persona_level .friendPlayerLevel {
+	vertical-align: middle;
+}
+
+.profile_header_badgeinfo .persona_level .friendPlayerLevel .friendPlayerLevelNum {
+	color: #ffffff;
 }
 
 .profile_header_badge {
@@ -344,6 +353,7 @@ a.showcase_stat:hover .label {
 .showcase_achievement {
 	width: 64px;
 	height: 64px;
+	line-height: 64px;
 	float: left;
 
 	margin-left: 25px;
@@ -354,8 +364,14 @@ a.showcase_stat:hover .label {
 	height: 64px;
 }
 
-.showcase_achievement.first {
+.showcase_achievement:first-child {
 	margin-left: 0px;
+}
+
+.showcase_achievement.openslot {
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
 }
 
 .showcase_badges_icons {
@@ -413,24 +429,13 @@ a.showcase_stat:hover .label {
 	padding-top: 14px;
 }
 
-
 .item_showcase_item {
 	width: 96px;
 	height: 96px;
 	line-height: 96px;
-	margin-left: 4px;
-	margin-bottom: 4px;
-}
-
-.trade_showcase_items {
-	margin-bottom: 10px;
-}
-
-.tradable_item {
 	margin-left: 5px;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 	border: 1px solid #3a3a3a;
-	background-color: #292929;
 }
 
 .item_showcase_item:first-child {
@@ -443,15 +448,13 @@ a.showcase_stat:hover .label {
 }
 
 .item_showcase_item.openslot {
-	width: 92px;
-	height: 92px;
-	line-height: 92px;
-}
-
-.item_showcase_item.tradable_item.openslot {
 	width: 94px;
 	height: 94px;
 	line-height: 94px;
+}
+
+.trade_showcase_items {
+	margin-bottom: 10px;
 }
 
 .showcase_stats_trading {
@@ -1163,9 +1166,7 @@ img.workshop_showcase_item_image {
 }
 .profile_badges_badge {
 	float: left;
-	margin-right: 14px;
-	border: 1px solid #000000;
-	box-shadow: 1px 1px 3px #0c0c0c;
+	margin-right: 16px;
 }
 .profile_badges_badge.last {
 	margin-right: 0;
@@ -1173,10 +1174,6 @@ img.workshop_showcase_item_image {
 
 .profile_badges, .profile_item_links, .profile_group_links, .profile_friend_links {
 	margin-bottom: 40px;
-}
-
-.profile_group_links .profile_count_link_total, .profile_friend_links .profile_count_link_total {
-	color: #ffffff;
 }
 
 .profile_in_common {
@@ -1506,6 +1503,10 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover, .showcase_notes a:hover {
 	text-decoration: underline;
+}
+
+.profile_summary_modal .bb_h1, .customtext_showcase .bb_h1 {
+	border-bottom: 1px dotted #666666;
 }
 
 .profile_customization_edit_icon {

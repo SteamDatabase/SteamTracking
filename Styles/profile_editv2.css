@@ -215,3 +215,51 @@
 .group_list_option.badge_option .group_list_groupname {
 	line-height: 54px;
 }
+
+.showcase_achievement_picker {
+	width: 600px;
+}
+
+.showcase_achievement_picker_list {
+	padding-top: 16px;
+	min-height: 300px;
+}
+
+.showcase_achievement_picker_instructions {
+	text-align: center;
+	padding-top: 120px;
+	font-size: 16px;
+}
+
+.achievement_list_item {
+	min-height: 64px;
+	position: relative;
+	padding-left: 70px;
+
+	margin-bottom: 12px;
+
+	cursor: pointer;
+}
+
+.achievement_list_item:hover .achievement_list_desc {
+	background-color: #33425A;
+}
+
+.achievement_list_item .achievement_icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 64px;
+	width: 64px;
+}
+
+.achievement_list_item .achievement_list_desc {
+	border: 1px solid #4f4f4e;
+	border-radius: 3px;
+	padding: 8px;
+	min-height: 46px;
+}
+
+.achievement_list_item .achievement_list_desc b {
+	color: #ffffff;
+}

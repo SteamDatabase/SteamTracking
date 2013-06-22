@@ -259,9 +259,9 @@ function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 			var strBackgroundColor = '#' + ( item.background_color ? item.background_color : '292929' );
 
 			$J(elSlot).find('img').attr( 'src', strImageURL );
+			$J(elSlot).css( 'border-color', strBorderColor );
 			if ( eShowcase == 4 )
 			{
-				$J(elSlot).css( 'border-color', strBorderColor );
 				$J(elSlot).css( 'background-color', strBackgroundColor );
 			}
 
@@ -288,6 +288,73 @@ function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, 
 		Modal.Dismiss();
 		PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { publishedfileid: publishedfileid } );
 	};
+}
+
+var g_AchievementShowcaseLastApp = 0;
+function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchievements )
+{
+	var $Content = $J('<div/>', {'class': 'showcase_achievement_picker'} );
+	var $SelectCtn = $J('<div/>', {'class': 'showcase_achievement_picker_select_ctn'});
+	$SelectCtn.text( 'Game:');
+
+	var $Select = $J('<select/>', {'class': 'gray_bevel'} );
+	$Select.append( $J('<option/>', {'value': 0}).text( '<None selected>' ) );
+	for( var i = 0; i < rgGamesWithAchievements.length; i++ )
+	{
+		var $Option = $J('<option/>', { 'value': rgGamesWithAchievements[i].appid }).text( rgGamesWithAchievements[i].name );
+		$Select.append( $Option );
+	}
+
+	$Select.val( g_AchievementShowcaseLastApp );
+
+
+	var $SelectInstructions = $J('<div/>', {'class': 'showcase_achievement_picker_instructions' } ).text( 'Select a game to see your achievements from that game.' )
+
+	var $AchievementCtn = $J('<div/>', {'class': 'showcase_achievement_picker_list'} );
+
+	$Content.append( $SelectCtn.append( $Select ), $AchievementCtn.append( $SelectInstructions ) );
+
+	var Modal = ShowAlertDialog( 'Select an achievement to feature', $Content, 'Cancel' );
+
+	var appidCurrent = 0;
+	var fnOnSelectChange = function() {
+		var appid = $Select.val();
+		if ( appid != appidCurrent )
+		{
+			g_AchievementShowcaseLastApp = appidCurrent = appid;
+			if ( appid == 0 )
+			{
+				$AchievementCtn.children().detach();
+				$AchievementCtn.append( $SelectInstructions );
+			}
+			else
+			{
+				$J.get( g_rgProfileData['url'] + 'ajaxgetachievementsforgame/' + appid, function( html ) {
+					if ( appidCurrent == appid )
+					{
+						$AchievementCtn.children().detach();
+						$AchievementCtn.append( html );
+
+						$AchievementCtn.find( '.achievement_list_item').each( function() {
+							var $Achievement = $J(this);
+							$Achievement.click( function() {
+								var statid = $Achievement.data('statid');
+								var bit = $Achievement.data('bit');
+								PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, { appid: appid, title: statid + '_' + bit } );
+								Modal.Dismiss();
+							} );
+						});
+
+						Modal.AdjustSizing();
+					}
+				} );
+			}
+		}
+	}
+
+	fnOnSelectChange();
+	$Select.change( fnOnSelectChange );
+
 }
 
 var g_GroupListHTML = null;

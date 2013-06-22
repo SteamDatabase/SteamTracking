@@ -1095,6 +1095,57 @@ function PositionEmoticonHover( $Hover, $Target )
 }
 
 
+function InitEconomyHovers( strEconomyCSS, strEconomyJS )
+{
+	var $Hover = $J('<div/>', {'class': 'economyitem_hover'} );
+	var $HoverContent = $J('<div/>', {'class': 'economyitem_hover_content'} );
+
+	$Hover.append( $HoverContent );
+
+	$Hover.hide();
+	$J(document.body).append( $Hover );
+
+	var fnOneTimeEconomySetup = function() {
+		if ( typeof UserYou == 'undefined' )
+			$J('head').append( strEconomyCSS, strEconomyJS );
+	};
+
+	var fnDataFactory = function( key ) {
+		var rgItemKey = key.split('/');
+		if ( rgItemKey.length == 3 || rgItemKey.length == 4 )
+		{
+			if ( fnOneTimeEconomySetup )
+			{
+				fnOneTimeEconomySetup();
+				fnOneTimeEconomySetup = null;
+			}
+
+			var appid = rgItemKey[0];
+			var contextid = rgItemKey[1];
+			var assetid = rgItemKey[2];
+			var strURL = 'economy/itemhover/' + appid + '/' + contextid + '/' + assetid;
+			strURL += '?content_only=1&omit_owner=1&l=english';
+			if ( rgItemKey.length == 4 && rgItemKey[3] )
+			{
+				var strOwner = rgItemKey[3];
+				if ( strOwner.indexOf( 'id:' ) == 0 )
+					strURL += '&o_url=' + strOwner.substr( 3 );
+				else
+					strURL += '&o=' + strOwner;
+			}
+			return new CDelayedAJAXData( strURL, 100 );
+		}
+		else
+			return null;
+	}
+	var fnPositionHover = PositionMiniprofileHover;
+	var strDataName = 'economy-item';
+	var strURLMatch = 'itemhover';
+
+	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch );
+}
+
+
 
 
 function RegisterPopupDismissal( dismissFunc, elemIgnore, bNoGuard )
