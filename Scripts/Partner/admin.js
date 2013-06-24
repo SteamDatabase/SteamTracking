@@ -598,13 +598,6 @@ function FinalizeUiAfterAddedApplication( parameters )
 		$( GetElementId( index, 'remove' ) ).style.display = "none";
 	}
 
-	// Finally, we have to disable the checkboxes for the product features
-	var allFeatures = $( 'listOfProductFeatures' ).value;
-	allFeatures = allFeatures.split( ',' );
-	for ( var index = 0 ; index < allFeatures.length ; ++index )
-	{
-		$( 'checkbox_feature_' + allFeatures[ index ] ).href = "javascript:;";		// Do nothing href
-	}
 }
 
 function AddApplicationToStoreCallback( parameters, transport )
@@ -839,13 +832,6 @@ function RemoveUnneededParameters( appType, parameters )
 		// For example, Game has ceg and in_the_box checkable, however it does not make sense for Demo, Dlc and Mod.
 		var gameOnlyFeatures = $( 'listOfGameOnlyProductFeatures' ).value;
 		RemoveUneededFeatureFromList( gameOnlyFeatures, parameters );
-	}
-
-	// Similarly, if all features have to be removed
-	if ( ContainsFeatures( appType ) == false )
-	{
-		var allFeatures = $( 'listOfProductFeatures' ).value;
-		RemoveUneededFeatureFromList( allFeatures, parameters );
 	}
 
 	if ( ContainsPartner( appType) == false )
