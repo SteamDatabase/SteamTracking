@@ -813,8 +813,6 @@ function OnAppTypeChanged()
 	$( 'appNameLabel').innerHTML = appType + " name:";
 	// Some product features are for games / applications only
 
-	$( 'featuresBlock' ).style.display = ContainsFeatures( appType ) ? 'inline' : 'none';
-	$( 'extendedFeaturesBlock' ).style.display = ContainsExtendedFeatures( appType ) ? 'inline' : 'none';
 	$( 'partnerBlock' ).style.display = ContainsPartner( appType ) ? 'inline' : 'none';
 	$( 'parentBlock' ).style.display = ContainsParent( appType ) ? 'inline' : 'none';
 }
