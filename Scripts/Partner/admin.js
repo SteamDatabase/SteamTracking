@@ -825,15 +825,6 @@ function RemoveUneededFeatureFromList( featureNamesToRemove, parameters )
 
 function RemoveUnneededParameters( appType, parameters )
 {
-	if ( ContainsExtendedFeatures( appType ) == false )
-	{
-		// In case some checkboxes were activated before the type got changed to something else, we have to remove their state first
-		// otherwise the corresponding checklist would be activated even if it did not make any sense.
-		// For example, Game has ceg and in_the_box checkable, however it does not make sense for Demo, Dlc and Mod.
-		var gameOnlyFeatures = $( 'listOfGameOnlyProductFeatures' ).value;
-		RemoveUneededFeatureFromList( gameOnlyFeatures, parameters );
-	}
-
 	if ( ContainsPartner( appType) == false )
 	{
 		// We don't have a partner, let's make sure that we don't pass any related parameters
