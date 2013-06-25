@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a7be065aedb685b046390f7bdc6e5b8af0cbdeaa.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.04d63e645f3be4d583c03bf2a00048fd06d77da9.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -44031,6 +44031,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_bacon_grease.e5185b96d3795303a4e26dabe942eb0845b61052.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_bacon_grease_large.7bb2a5fe6c58a59a83f09304004f14194c95d012.png",
 				"capabilities": {
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
