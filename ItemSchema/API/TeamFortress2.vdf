@@ -51530,6 +51530,10 @@
 		{
 			"name"	"Strange Bacon Grease"
 			"prefab" "strangifier_base"
+			"capabilities"
+			{
+				"can_gift_wrap" 	"1"
+			}
 			"tool"
 			{
 				"usage"
