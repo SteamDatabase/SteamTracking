@@ -3781,6 +3781,54 @@ body{
 	text-align: center;
 }
 
+.detailPanel {
+	background: #141415;
+	border: 1px solid #262627;
+	padding: 10px 10px 10px 11px;
+	margin-bottom: 20px;
+}
+
+	.detailPanel > .bigNumber {
+		font-size: 41px;
+		color: #b7b7b7;
+	}
+	
+	.detailPanel > .smallText {
+		font-size: 11px;
+		margin-top: 5px;
+	}
+	
+.detailPanelHighlight {
+	border-right: 1px solid #000000;
+	border-left: 1px solid #213147;
+	border-top: 1px solid #213147;
+	padding: 10px 10px 10px 11px;
+	border-bottom: 1px solid #000000;
+	background: url('http://cdn.steamcommunity.com/public/images/sharedfiles/workshop_about_section_highlight.jpg') center no-repeat;
+	box-shadow: 0 0 5px #111;
+	margin-bottom: 5px;
+}
+
+	.detailPanelHighlight > .bigNumber {
+		font-size: 41px;
+		color: #e1e1e1;
+	}
+	
+	.detailPanelHighlight > .smallText {
+		font-size: 11px;
+		color: #396c99;
+	}
+	
+	.detailPanelHighlight > .descriptorText {
+		font-size: 12px;
+		color: #6d8499;
+	}
+	
+	.detailPanelHighlight > .descriptorText > a {
+		color: #a9cded;
+	}
+	
+
 #ig_bottom .sidebar h2, #ig_item .sidebar h2 {
 	font-size: 11px;
 	text-transform: uppercase;
