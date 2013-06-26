@@ -139,28 +139,28 @@ h2 {
 
 }
 
-.friendCheckbox {
+body input.friendCheckbox, .friendCheckbox {
 	position:absolute;
 	border:0;
 	padding:0;
-	background-color:auto;
+	background-color:inherit;
 	left:266px;
 	top:16px;
 }
 
-.friendCheckbox2 {
+body input.friendCheckbox2, .friendCheckbox2 {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	background-color: auto;
+	background-color: inherit;
 	left: 8px;
 	top: 15px;
 }
 
-input {
+body input {
 	border:0;
 	padding:0;
-	background-color:auto;
+	background-color:inherit;
 }
 
 .coplayGroup {

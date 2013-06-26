@@ -9,6 +9,10 @@ div.profile_page {
 	min-width: 950px;
 }
 
+div.profile_page.private_profile {
+	background-image: none;
+}
+
 div.profile_page.has_profile_background {
 	background-color: #000000;
 	background-position: center top;
@@ -231,6 +235,14 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 	margin: 0 auto;
 
 	font-size: 13px;
+}
+
+.private_profile .profile_content {
+
+	padding-bottom: 120px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg_fade.png' ), url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg.png' );
+	background-position: center bottom, center;
+	background-repeat: no-repeat, repeat-y;
 }
 
 .profile_content.has_profile_background
@@ -1148,6 +1160,13 @@ img.workshop_showcase_item_image {
 .profile_in_game_name {
 	font-size: 15px;
 	margin-bottom: 12px;
+}
+
+.profile_private_info {
+
+	padding: 12px 0;
+	color: #a94847;
+	font-size: 17px;
 }
 
 .profile_ban_status {
