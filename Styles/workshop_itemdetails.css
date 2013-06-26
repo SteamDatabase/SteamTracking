@@ -3257,14 +3257,12 @@ h2.stats {
 
 .service_provider_name
 {
-	width: 100px;
+	width: 138px;
 	float: left;
 }
 
 .service_provider_revenue_percentage
 {
-	width: 50px;
-	padding-right: 20px;
 	float: right;
 }
 
@@ -3274,6 +3272,7 @@ h2.stats {
 	width: 398px;
 	padding-left: 1px;
 	padding-right: 1px;
+	margin-top: 3px;
 	height: 8px;
 	border: 1px solid black;
 	position: relative;

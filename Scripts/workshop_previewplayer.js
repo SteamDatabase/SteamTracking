@@ -18,57 +18,14 @@ function onYouTubePlayerReady(playerId) {
 }
 
 function onPlayerError(errorCode) {
-  alert("An error occured: " + errorCode);
+	OnMovieComplete(); // Skip!
 }
 
-function onytplayerStateChange(newState) {
-	if ( newState == 0 )
+function onytplayerStateChange( state ) {
+	if ( state.data == 0 )
 	{
 		OnMovieComplete();
 	}
-}
-
-// functions for the api calls
-function loadNewVideo(id, startSeconds) {
-  if (ytplayer) {
-	ytplayer.loadVideoById(id, parseInt(startSeconds));
-  }
-}
-
-function cueNewVideo(id, startSeconds) {
-  if (ytplayer) {
-	ytplayer.cueVideoById(id, startSeconds);
-  }
-}
-
-function play() {
-  if (ytplayer) {
-	ytplayer.playVideo();
-  }
-}
-
-function pause() {
-  if (ytplayer) {
-	ytplayer.pauseVideo();
-  }
-}
-
-function stop() {
-  if (ytplayer) {
-	ytplayer.stopVideo();
-  }
-}
-
-function getPlayerState() {
-  if (ytplayer) {
-	return ytplayer.getPlayerState();
-  }
-}
-
-function seekTo(seconds) {
-  if (ytplayer) {
-	ytplayer.seekTo(seconds, true);
-  }
 }
 
 var g_player = null;
@@ -238,32 +195,21 @@ var HighlightPlayer = Class.create( {
 		var strTarget = 'movie_' + id;
 		var rgFlashVars = this.m_rgDefaultMovieFlashvars.merge( this.m_rgMovieFlashvars[ 'movie_' + id ] ).toObject();
 
-		if ( !this.m_bVideoOnlyMode )
-		{
-			if ( BIsUserGameHighlightAutoplayEnabled() )
-				rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
-			if ( !BIsUserGameHighlightAudioEnabled() )
-				rgFlashVars.START_MUTE = 'true';
-		}
-
 		if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
 		{
-			var strRequiredVersion = "9";
-			if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
 
-			// allowScriptAccess must be set to allow the Javascript from one
-			// domain to access the swf on the youtube domain
-			var params = { allowScriptAccess: "always", wmode: "opaque", allowFullScreen: "true" };
-			// this sets the id of the object or embed tag to 'myytplayer'.
-			// You then use this id to access the swf and make calls to the player's API
-			var atts = { id: strTarget };
-			swfobject.embedSWF("http://www.youtube.com/v/" + rgFlashVars['YOUTUBE_VIDEO_ID'] + "?border=0&amp;autohide=1&amp;fs=1&amp;hd=1&amp;enablejsapi=1&amp;playerapiid=" + id,
-							   strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, null, null, params, atts);
-			if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
-			{
-				//looks like the user doesn't have flash, show this message
-				$(strTarget).show();
-			}
+			player = new YT.Player(strTarget, {
+				height: rgFlashVars['STAGE_HEIGHT'],
+				width: rgFlashVars['STAGE_WIDTH'],
+				videoId: rgFlashVars['YOUTUBE_VIDEO_ID'],
+				playerVars: { 'autoplay': 1 },
+				events: {
+					'onStateChange': onytplayerStateChange,
+					'onError': onPlayerError
+				}
+			});
+
+			$(strTarget).show();
 		}
 	},
 
@@ -463,6 +409,5 @@ var HighlightPlayer = Class.create( {
 		this.StartCycle();
 	}
 } );
-
 
 
