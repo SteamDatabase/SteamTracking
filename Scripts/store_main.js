@@ -1137,6 +1137,7 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVers
 	new Form.Element.DelayedObserver( elemTerm, 0.4, SearchTimeout );
 	elemTerm.observe( 'keydown', SearchSuggestOnKeyDown.bindAsEventListener( null, elemTerm ) );
 	elemTerm.observe( 'click', SearchSuggestClearDefaultSearchText.bind( null, elemTerm ) );
+	elemTerm.observe( 'focus', SearchSuggestClearDefaultSearchText.bind( null, elemTerm ) );
 	elemTerm.observe( 'blur', SearchSuggestSetDefaultSearchText.bind( null, elemTerm ) );
 	g_oSuggestParams = {
 		cc: cc,
