@@ -985,7 +985,7 @@ Event.observe( document, 'dom:loaded', function() {
 			HideHover();
 
 			oTabContentsPopularItems.show();
-			oTabContentsRecentSellListings.hide();
+			oTabContentsRecentSellListings && oTabContentsRecentSellListings.hide();
 			oTabContentsRecentSoldListings.hide();
 
 			oTabPopularItems.addClassName( 'market_tab_well_tab_active' );
@@ -995,29 +995,33 @@ Event.observe( document, 'dom:loaded', function() {
 			oTabRecentSoldListings.addClassName( 'market_tab_well_tab_inactive' );
 			oTabRecentSoldListings.removeClassName( 'market_tab_well_tab_active' );
 		} );
-		
-		oTabRecentSellListings.observe( 'click', function( event ) {
-			event.stop();
-			HideHover();
 
-			oTabContentsPopularItems.hide();
-			oTabContentsRecentSellListings.show();
-			oTabContentsRecentSoldListings.hide();
+		if ( oTabContentsRecentSellListings )
+		{
+			// only set up the on click if we have the listing data
+			oTabRecentSellListings.observe( 'click', function( event ) {
+				event.stop();
+				HideHover();
 
-			oTabPopularItems.addClassName( 'market_tab_well_tab_inactive' );
-			oTabPopularItems.removeClassName( 'market_tab_well_tab_active' );
-			oTabRecentSellListings.addClassName( 'market_tab_well_tab_active' );
-			oTabRecentSellListings.removeClassName( 'market_tab_well_tab_inactive' );
-			oTabRecentSoldListings.addClassName( 'market_tab_well_tab_inactive' );
-			oTabRecentSoldListings.removeClassName( 'market_tab_well_tab_active' );
-		} );
+				oTabContentsPopularItems.hide();
+				oTabContentsRecentSellListings && oTabContentsRecentSellListings.show();
+				oTabContentsRecentSoldListings.hide();
+
+				oTabPopularItems.addClassName( 'market_tab_well_tab_inactive' );
+				oTabPopularItems.removeClassName( 'market_tab_well_tab_active' );
+				oTabRecentSellListings.addClassName( 'market_tab_well_tab_active' );
+				oTabRecentSellListings.removeClassName( 'market_tab_well_tab_inactive' );
+				oTabRecentSoldListings.addClassName( 'market_tab_well_tab_inactive' );
+				oTabRecentSoldListings.removeClassName( 'market_tab_well_tab_active' );
+			} );
+		}
 
 		oTabRecentSoldListings.observe( 'click', function( event ) {
 			event.stop();
 			HideHover();
 
 			oTabContentsPopularItems.hide();
-			oTabContentsRecentSellListings.hide();
+			oTabContentsRecentSellListings && oTabContentsRecentSellListings.hide();
 			oTabContentsRecentSoldListings.show();
 
 			oTabPopularItems.addClassName( 'market_tab_well_tab_inactive' );
