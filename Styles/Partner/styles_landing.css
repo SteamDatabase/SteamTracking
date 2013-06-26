@@ -682,8 +682,7 @@ input {
 	}
 	
 	#landingFooter .landingFooterLinks {
-		padding: 10px 0px 10px 0px;
-		width: 100%;
+		padding: 10px 46px 10px 46px;
 		color: #555555;
 		background-color: #000000;
 	}
@@ -696,6 +695,10 @@ input {
 	padding: 5px !important;
 	color: #e1e1e1 !important;
 	background: -moz-linear-gradient(top, #82a6d7 5%, #3c6091 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#82a6d7), color-stop(95%,#3c6091));background: -webkit-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -o-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -ms-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: linear-gradient(to bottom, #82a6d7 5%,#3c6091 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82a6d7', endColorstr='#3c6091',GradientType=0 );}
+
+	.fancySelect > span {
+		color: #e1e1e1 !important;
+	}
 
 .fancyCurrencyInput {
 	display: inline-block;
@@ -732,6 +735,14 @@ input {
 	.fancySelectBox > a:hover {
 		background-color: #5c80b1;
 	}
+
+.pricing_note {
+	background-color: #333333;
+	color: #e66d34;
+	font-size: 16px;
+	padding: 10px;
+	text-align: center;
+}
 
 
 /* sprites */
