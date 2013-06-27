@@ -1359,9 +1359,17 @@ html, body { height:100%; }
 	display: inline-block;
 }
 
+.LocTextAreaBar
+{
+	margin-bottom: 4px;
+}
+
 .LocTextAreaBar .LocTextAreaLangSelect
 {
 	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
 }
 
 .LocTextAreaLangSelect .HasText, .LocTextAreaLangSelect .HasText:hover, .LocTextAreaLangSelect .HasText:checked
@@ -1373,6 +1381,16 @@ html, body { height:100%; }
 {
 	width: 150px;
 	margin-left: 12px;
+}
+
+.LocTextArea textarea
+{
+	width: 100%;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
 }
 
 #app_content_about__area textarea
@@ -1434,8 +1452,8 @@ html, body { height:100%; }
 
 .SysReqs textarea
 {
-	width: 280px;
-	height: 120px;
+	width: 500px;
+	height: 200px;
 }
 
 .LocPurchaseNote textarea
