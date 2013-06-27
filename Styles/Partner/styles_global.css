@@ -859,10 +859,10 @@ a.tab, .tab a {
 
 .BBCodeTemplateBlock > .button {
 	display: inline-block;
-	margin: 0 3px;
+	margin-right: 5px;
 	border: 1px solid #acacac;
 	background-color: #333333;
 	color: orange;
-	padding: 0 5px;
+	padding: 1px 5px;
 	cursor: pointer;
 }
