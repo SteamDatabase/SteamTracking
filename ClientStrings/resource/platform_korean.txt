@@ -67,7 +67,7 @@
 "[english]Steam_Login_Cancel"	"Cancel"
 "Steam_AccountName"	"계정 이름"
 "[english]Steam_AccountName"	"Account name"
-"app_task_screenshots"	"스크린 샷"
+"app_task_screenshots"	"스크린샷"
 "[english]app_task_screenshots"	"Screenshots"
 "Steam_NeverConnectedNoConnection"	"'%account%' 계정은 한 번도 이 컴퓨터에서 접속한 적이 없으며, Steam 서버와 연결할 수 없습니다.\n일부 서비스를 사용할 수 없습니다. Steam은 접속을 계속 시도할 것이며 접속에 성공하면 모든 서비스를 사용할 수 있게 됩니다."
 "[english]Steam_NeverConnectedNoConnection"	"This account '%account%' has never been accessed on this machine before and a connection to steam servers cannot be made.\nSome services will not be available. Steam will continue to attempt the connection and services will be available upon success."

@@ -91,5 +91,7 @@
 "[english]app_task_bigpicture"	"Big Picture"
 "app_task_friend_activity"	"フレンドアクティビティ"
 "[english]app_task_friend_activity"	"Friend Activity"
+"app_task_console"	"コンソール"
+"[english]app_task_console"	"Console"
 }
 }

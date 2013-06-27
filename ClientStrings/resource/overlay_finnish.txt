@@ -289,7 +289,7 @@
 "[english]Overlay_View_CommunityDiscussions"	"View Discussions"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% aktiivista keskustelua"
 "[english]Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% active discussions"
-"Overlay_MicroTxnSubscription"	"%cost% tilaus laskutetaan %time%"
+"Overlay_MicroTxnSubscription"	"Tilaus maksaa %cost% %time%"
 "[english]Overlay_MicroTxnSubscription"	"You will be charged %cost% every %time% %acct%"
 "Overlay_MicroTxnSubscriptionEvery"	" "
 "[english]Overlay_MicroTxnSubscriptionEvery"	"every"

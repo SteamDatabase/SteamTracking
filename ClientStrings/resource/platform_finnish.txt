@@ -89,7 +89,9 @@
 "[english]LoginIPTConnectFailed"	"Cannot contact the Steam servers.\nPlease try again later."
 "app_task_bigpicture"	"Televisiotila"
 "[english]app_task_bigpicture"	"Big Picture"
-"app_task_friend_activity"	"Kaverien toimet"
+"app_task_friend_activity"	"Tapahtumasyöte"
 "[english]app_task_friend_activity"	"Friend Activity"
+"app_task_console"	"Konsoli"
+"[english]app_task_console"	"Console"
 }
 }

@@ -5990,4 +5990,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo"	"Frissítés átugrása és játék"
 "[english]SteamUI_JoinDialog_SkipUpdateInfo"	"Skip the update and play now"
+"steam_inbox_tradeoffer"	"1 függő csereajánlat"
+"[english]steam_inbox_tradeoffer"	"1 pending trade offer"
+"steam_inbox_tradeoffers"	"%count% függő csereajánlat"
+"[english]steam_inbox_tradeoffers"	"%count% pending trade offers"
 }

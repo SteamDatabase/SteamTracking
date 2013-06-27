@@ -107,7 +107,7 @@
 "[english]IME_0404"	"Chinese (Taiwan)"
 "IME_0804"	"Chino (PRC)"
 "[english]IME_0804"	"Chinese (PRC)"
-"IME_0409"	"Inglés (EE.UU.)"
+"IME_0409"	"Inglés (EE. UU.)"
 "[english]IME_0409"	"English (United States)"
 "IME_0411"	"Japonés"
 "[english]IME_0411"	"Japanese"

@@ -5817,7 +5817,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]steam_guides"	"Community Guides"
 "Steam_Convert_Content_Updating"	"Обновление... %progress%"
 "[english]Steam_Convert_Content_Updating"	"Updating content ... %progress%"
-"steam_inbox_offlinemessage"	"1 непрочитанное сообщение"
+"steam_inbox_offlinemessage"	"Непрочитанных сообщений: 1"
 "[english]steam_inbox_offlinemessage"	"1 unread chat message"
 "steam_inbox_offlinemessages"	"Непрочитанных сообщений: %offlinemessages%"
 "[english]steam_inbox_offlinemessages"	"%offlinemessages% unread chat messages"
@@ -6013,4 +6013,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo"	"Пропустить обновление и запустить игру"
 "[english]SteamUI_JoinDialog_SkipUpdateInfo"	"Skip the update and play now"
+"steam_inbox_tradeoffer"	"Обменов предложено: 1"
+"[english]steam_inbox_tradeoffer"	"1 pending trade offer"
+"steam_inbox_tradeoffers"	"Обменов предложено: %count%"
+"[english]steam_inbox_tradeoffers"	"%count% pending trade offers"
 }

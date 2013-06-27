@@ -6010,4 +6010,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo"	"Ignoră actualizarea și joacă-te acum"
 "[english]SteamUI_JoinDialog_SkipUpdateInfo"	"Skip the update and play now"
+"steam_inbox_tradeoffer"	"O ofertă de schimb în așteptare"
+"[english]steam_inbox_tradeoffer"	"1 pending trade offer"
+"steam_inbox_tradeoffers"	"%count% oferte de schimb în așteptare"
+"[english]steam_inbox_tradeoffers"	"%count% pending trade offers"
 }

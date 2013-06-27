@@ -3679,5 +3679,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "steam_inbox_tradeoffer"	"1 pending trade offer"
 "steam_inbox_tradeoffers"	"%count% pending trade offers"
 
+"Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"Allow game launch"
 }
 

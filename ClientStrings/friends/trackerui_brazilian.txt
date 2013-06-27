@@ -439,7 +439,7 @@
 "[english]Friends_MsgNotification_Sender"	"%name% says,"
 "Friends_MsgNotification_Body"	"%message%"
 "[english]Friends_MsgNotification_Body"	"%message%"
-"Friends_AddUser"	"Adicionar à sua lista de amigos..."
+"Friends_AddUser"	"Adicionar como amigo..."
 "[english]Friends_AddUser"	"Add to your Friends list..."
 "Friends_Voice_Call"	"Iniciar conversa por voz"
 "[english]Friends_Voice_Call"	"Begin voice chat"

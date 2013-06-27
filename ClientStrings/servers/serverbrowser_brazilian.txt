@@ -283,7 +283,7 @@
 "[english]VAC_BannedFromServerToolTip"	"You cannot connect to this secure server"
 "VAC_Secure"	"Seguro"
 "[english]VAC_Secure"	"Secure"
-"VAC_ConnectingToSecureServer"	"Nota: Esse servidor é protegido por VAC.\n\nTrapaças resultarão em banimento permanente."
+"VAC_ConnectingToSecureServer"	"Nota: Este servidor é protegido por VAC.\n\nTrapaças resultarão em banimento permanente."
 "[english]VAC_ConnectingToSecureServer"	"Note: This server is VAC-secured.\n\nCheating will result in a permanent ban."
 "VAC_BannedFromServers"	"Banido de alguns servidores seguros devido a uma infração de trapaça."
 "[english]VAC_BannedFromServers"	"Banned from some secure servers because of a cheating infraction."

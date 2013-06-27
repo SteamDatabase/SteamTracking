@@ -6014,6 +6014,12 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_Invalid_Email_Address"	"Invalid Email Address"
 "SteamUI_JoinDialog_UpdateLater_Btn"	"Later bijwerken"
 "[english]SteamUI_JoinDialog_UpdateLater_Btn"	"Update later"
+"SteamUI_JoinDialog_OverrideThrottle"	"Huidig bandbreedtelimiet negeren"
+"[english]SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo"	"Update overslaan en nu spelen"
 "[english]SteamUI_JoinDialog_SkipUpdateInfo"	"Skip the update and play now"
+"steam_inbox_tradeoffer"	"1 afwachtend ruilaanbod"
+"[english]steam_inbox_tradeoffer"	"1 pending trade offer"
+"steam_inbox_tradeoffers"	"%count% afwachtende ruilaanbiedingen"
+"[english]steam_inbox_tradeoffers"	"%count% pending trade offers"
 }
