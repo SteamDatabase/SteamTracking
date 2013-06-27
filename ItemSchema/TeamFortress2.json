@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.04d63e645f3be4d583c03bf2a00048fd06d77da9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.6a8f7d4e175c7631b867b65832bf86aadd30374c.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -44185,6 +44185,34 @@
 				"tool": {
 					"type": "gift"
 				}
+			},
+			{
+				"name": "July 2013 Claim Check",
+				"defindex": 5639,
+				"item_class": "tool",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Summer Claim Check",
+				"item_description": "At a later date,\nuse this item to get a special crate.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/claimcheck",
+				"min_ilevel": 61,
+				"max_ilevel": 69,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/claimcheck.beb00268afc04ba4e3b0403f957c9e3d6c8a4b31.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/claimcheck_large.a9647e42645c4e0bc2f0ce4eda3e44a8c8e74b77.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"used_by_classes": [
+
+				]
+				
 			},
 			{
 				"name": "Strange Part (Armory)",
