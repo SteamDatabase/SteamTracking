@@ -2347,6 +2347,10 @@
 		{
 			"craft_class"			""
 		}
+		"robokey_rules"
+		{
+		}
+
 
 
 
@@ -51588,6 +51592,7 @@
 		"5636"
 		{
 			"name"	"Robo Key 2013" 
+			"prefab"	"robokey_rules" 
 			"item_class"	"tool"
 			"craft_class"	"tool"
 			"first_sale_date"	"2013/05/20"
@@ -51620,7 +51625,7 @@
 		"5637"
 		{
 			"name"	"Gift - 23 RoboKeys 2013"
-			"prefab"	"valve"
+			"prefab"	"robokey_rules"
 			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"first_sale_date"	"2013/05/19"
@@ -51669,7 +51674,7 @@
 		"5638"
 		{
 			"name"	"Gift - 1 RoboKey 2013"
-			"prefab"	"valve"
+			"prefab"	"robokey_rules"
 			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"first_sale_date"	"2013/05/19"
@@ -51712,6 +51717,24 @@
 				"engineer" "1"
 				"pyro" "1"
 			}
+			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
+			"drop_sound"		"ui/item_cardboard_drop.wav"
+		}
+		"5639"
+		{
+			"name"	"July 2013 Claim Check"
+			"item_class"	"tool"
+			"craft_class"	"tool"
+			"show_in_armory"	"0"
+			"item_type_name"	"#TF_LockedCrate"
+			"item_name"	"#TF_ClaimCheck_July2013"
+			"item_description"	"#TF_ClaimCheck_July2013_Desc"
+			"image_inventory"	"backpack/crafting/claimcheck"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"61"
+			"max_ilevel"	"69"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
 		}
