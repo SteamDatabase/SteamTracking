@@ -74146,12 +74146,24 @@
 		{
 			"name"		"El Gato"
 			"prefab"		"courier"
+			"attributes"
+			{
+				"corporation id"
+				{
+					"value"		"132819754"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
 			"creation_date"		"2013-05-23"
 			"image_inventory"		"econ/items/courier/el_gato_beyond_the_summit/el_gato_beyond_the_summit"
 			"item_description"		"#DOTA_Item_Desc_El_Gato"
 			"item_name"		"#DOTA_Item_El_Gato"
 			"item_rarity"		"mythical"
-			"item_type_name"		"#DOTA_WearableType_The_Brave_Little_Courier"
+			"item_type_name"		"#DOTA_WearableType_Brave_Little_Courier"
 			"portraits"
 			{
 				"preview"
@@ -94991,6 +95003,17 @@
 			"attribute_class"		"unlocked styles"
 			"attribute_name"		"unlocked styles"
 			"description_string"		"#Attrib_UnlockedStyles"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"401"
+		{
+			"name"		"corporation id"
+			"attribute_class"		"corporation id"
+			"attribute_name"		"corporation id"
+			"description_string"		"#Attrib_CorporationID"
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"positive"
