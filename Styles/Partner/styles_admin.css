@@ -1700,6 +1700,8 @@ html, body { height:100%; }
 	border: 2px dashed #00adee;
 	padding: 8px;
 	text-align: center;
+	padding-top: 40px;
+	height: 50px;
 }
 
 .drag_and_drop.drag_over
@@ -1733,4 +1735,21 @@ html, body { height:100%; }
 	float: right;
 	line-height: 22px;
 	margin: 0px 10px 20px 0px;
+}
+
+.valveContact
+{
+
+}
+
+.valveContactRemove
+{
+	float: right;
+	padding-right: 10px;
+	display: none;
+}
+
+.valveContact:hover .valveContactRemove
+{
+	display: block;
 }
