@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.ba1b61898f94f8ae0f55e33fbce93bb219e240e4.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.496d6dc789ee165983ad475a696f9703eac1ebaf.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -41072,7 +41072,7 @@
 				"name": "El Gato",
 				"defindex": 10194,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "The Brave Little Courier",
+				"item_type_name": "Brave Little Courier",
 				"item_name": "El Gato",
 				"item_description": "Fiercely determined, ever courageous, and always clever, not even the mighty Roshan may frighten El Gato from his mission.",
 				"proper_name": false,
@@ -41088,7 +41088,25 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "corporation id",
+						"class": "",
+						"value": 132819752
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
 			},
 			{
 				"name": "Itsy",
@@ -58221,6 +58239,16 @@
 				"defindex": 400,
 				"attribute_class": "unlocked styles",
 				"description_string": "Attrib_UnlockedStyles",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "corporation id",
+				"defindex": 401,
+				"attribute_class": "corporation id",
+				"description_string": "Brand",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": true,
