@@ -1706,7 +1706,7 @@ html, body { height:100%; }
 	padding: 8px;
 	text-align: center;
 	padding-top: 40px;
-	height: 50px;
+	min-height: 50px;
 }
 
 .drag_and_drop.drag_over
