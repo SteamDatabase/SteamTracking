@@ -1450,6 +1450,11 @@ html, body { height:100%; }
 	height: 50px;
 }
 
+.SysReqs
+{
+	min-width: 1280px;
+}
+
 .SysReqs textarea
 {
 	width: 500px;
