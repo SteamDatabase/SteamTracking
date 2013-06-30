@@ -182,7 +182,7 @@
 			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
-			$Data = Str_Replace( Array( 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
+			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
 			
 			$File = __DIR__ . '/' . $File;
 			
