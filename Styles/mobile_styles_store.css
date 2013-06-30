@@ -107,7 +107,7 @@ div[data-role='page'] {
 	position: absolute;
 	top: 40%;
 	left: 5px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/arrow_blue_left.gif );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/arrow_blue_left.gif );
 	background-size: 12px 21px;
 	width: 12px;
 	height: 21px;
@@ -119,7 +119,7 @@ div[data-role='page'] {
 	position: absolute;
 	top: 40%;
 	right: 5px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/arrow_blue_right.gif );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/arrow_blue_right.gif );
 	background-size: 12px 21px;
 	width: 12px;
 	height: 21px;
@@ -455,19 +455,19 @@ div.smallCapIcon img {
 	height: 34px;
 	top: 0px;
 
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
 }
 
 .btn_addtocart .btn_addtocart_left {
@@ -491,7 +491,7 @@ div.smallCapIcon img {
     padding: 0px 11px;
     line-height: 34px;
 
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
     background-repeat: repeat-x;
 
 	text-transform: uppercase;
@@ -502,15 +502,15 @@ div.smallCapIcon img {
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -656,7 +656,7 @@ div.smallCapIcon img {
 }
 
 .cart_status_message_arrow {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/cart_statusmessage_arrow.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/cart_statusmessage_arrow.png );
 	height: 9px;
 	width: 18px;
 	margin: 0px auto;
@@ -953,7 +953,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 .cart_no_clientconn_area {
     display: block;
     overflow: hidden;
-    background-image: url( http://cdn.store.steampowered.com/public/images/mobile/Icon_DownloadsBar.png );
+    background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/Icon_DownloadsBar.png );
     background-repeat: no-repeat;
     background-size: cover;
     color: #D0D0D0;
@@ -1162,7 +1162,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 
 .cart_tab_left_on {
 	position: absolute;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_pipeline_undershadow.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/checkout_pipeline_undershadow.png );
 	height: 9px;
 	top: 30px;
 	left: 1px;
@@ -1179,7 +1179,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 	top: 0px;
 	right: 0px;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_pipeline_rightshadow.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/checkout_pipeline_rightshadow.png );
 }
 
 .cart_tab_on, .cart_tab_off, .cart_tab_inactive {
@@ -1204,7 +1204,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 .cart_tab_spacer {
 	width: 4px;
 	height: 8px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_tab_spacer.gif );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/checkout_tab_spacer.gif );
 	background-repeat: no-repeat;
 	margin: 10px 10px;
 }
@@ -1641,7 +1641,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 }
 
 a.trigger, a.activetrigger {
-	background: url(http://cdn.store.steampowered.com/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
+	background: url(http://cdn4.store.steampowered.com/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
 
 	display:block;
 	float:left;
@@ -1801,7 +1801,7 @@ a.trigger, a.activetrigger {
 
 	color: #FFFFFF;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
 	background-repeat: no-repeat;
 	background-position: bottom left;
 
@@ -1834,7 +1834,7 @@ a.trigger, a.activetrigger {
 
 .platformImgMac {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
 	background-repeat: no-repeat;
 	background-size: 22px 22px;
 	width: 22px;
@@ -1844,7 +1844,7 @@ a.trigger, a.activetrigger {
 
 .platformImgWin {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_win.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/platforms/platform_win.png );
 	background-repeat: no-repeat;
 	background-size: 22px 22px;
 	width: 22px;
@@ -1854,7 +1854,7 @@ a.trigger, a.activetrigger {
 
 .platformImgMacSmall {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
 	background-repeat: no-repeat;
 	background-size: 11px 11px;
 	width: 11px;
@@ -1863,7 +1863,7 @@ a.trigger, a.activetrigger {
 
 .platformImgWinSmall {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_win.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/platforms/platform_win.png );
 	background-repeat: no-repeat;
 	background-size: 11px 11px;
 	width: 11px;
@@ -1872,7 +1872,7 @@ a.trigger, a.activetrigger {
 
 .platformImgSteamPlaySmall {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_steamplay.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/v5/platforms/platform_steamplay.png );
 	background-repeat: no-repeat;
 	background-size: 61px 11px;
 	width: 61px;
@@ -1930,7 +1930,7 @@ a.trigger, a.activetrigger {
 }
 
 .dlcSectionHeader {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/dlc-section-heading-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/dlc-section-heading-background.png );
 }
 
 .genreBlocks, .gameBlocks, .friendBlocks, .appFeatureBlocks, .gameDlcBlocks, .newsFeedBlocks {
@@ -1974,21 +1974,21 @@ div.divider {
 
 .buttonFullWidth, .buttonHalfWidth {
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-enabled-background.png );
 	border-radius: 0px;
 }
 
 .buttonSpecial {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/special-button-enabled-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/special-button-enabled-background.png );
 }
 
 .buttonActive {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-pressed-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-pressed-background.png );
 	color: #FFFFFF;
 }
 
 .buttonDisabled {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-disabled-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-disabled-background.png );
 }
 
 .buttonText {
@@ -2002,7 +2002,7 @@ div.divider {
 
 .tableViewCellInactive {
 	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/table-cell-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/table-cell-background.png );
 	background-repeat: repeat-x;
 	background-size: 32px 45px;
 	height: 44px;
@@ -2027,7 +2027,7 @@ div.divider {
 
 .tableViewCellActive {
 	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/table-cell-background-selected.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/table-cell-background-selected.png );
 	background-repeat: repeat-x;
 	background-size: 32px 45px;
 	height: 44px;
@@ -2093,7 +2093,7 @@ div.divider {
 
 .tableViewCellRadioButtonSetInactive, .tableViewCellRadioButtonSetActive {
 	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-enabled-background.png );
 	background-repeat: repeat-x;
 	background-size: 32px 45px;
 	height: 30px;
@@ -2101,7 +2101,7 @@ div.divider {
 }
 
 .tableViewCellRadioButtonSetActive {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-disabled-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-disabled-background.png );
 	color: #FFFFFF;
 }
 
@@ -2175,7 +2175,7 @@ div.avatarIcon img {
 	margin: 15px 10px 14px 0px;
 	width: 11px;
 	height: 15px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/chevron.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/chevron.png );
 	background-size: 11px 15px;
 }
 
@@ -2185,7 +2185,7 @@ div.avatarIcon img {
 
 #gameAreaMetascore {
 	margin: 10px auto 10px auto;
-	background-image: url( http://cdn.store.steampowered.com/public/images/metacritic_bg.gif );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/metacritic_bg.gif );
 	height: 35px;
 	width: 180px;
 	font-family: "Trebuchet MS", "Arial Narrow", HelveticaNeue-Thin, Helvetica-Light, sans-serif;
@@ -2234,7 +2234,7 @@ div.appFeature {
 	background-size: 32px 45px;
 	height: 44px;
 	color: #D0D0D0;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-pressed-background.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/button-pressed-background.png );
 }
 
 	div.earlyAccess h1 {
@@ -2483,7 +2483,7 @@ img.agegate_img_package {
 	height: 40px;
 	width: 100%;
 	background-color: #000000;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_icon_mainnavbg.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/header_icon_mainnavbg.png );
 	overflow: hidden;
 	white-space: nowrap;
 }
@@ -2492,7 +2492,7 @@ img.agegate_img_package {
 	height: 50px;
 	width: 100%;
 	background-color: #000000;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_icon_scndnavbg.png );
+	background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/header_icon_scndnavbg.png );
 	overflow-x: hidden;
 	white-space: nowrap;
 	position: relative;
@@ -2707,7 +2707,7 @@ div#global_actions_pageoverlay #roundedboxpadtop {
 
 div#global_actions_pageoverlay #roundedbox {
 	background-color:rgba(0, 0, 0, 0.0);
-	/* background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_globalactions_overlay.png ); */
+	/* background-image: url( http://cdn4.store.steampowered.com/public/images/mobile/header_globalactions_overlay.png ); */
 
 	margin-left: 10px;
 	margin-right: 10px;
