@@ -56,6 +56,7 @@ Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
 Styles/workshop_userfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
 Styles/mobile_styles_store.css|http://cdn.store.steampowered.com/public/css/mobile/styles_store.css?_=*TIMENOW*
+Styles/mobile_styles_profile.css|http://cdn.steamcommunity.com/public/css/mobile/styles_profile.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english

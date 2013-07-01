@@ -1,0 +1,1331 @@
+
+/*
+------------------------- GENERAL STYLE ---------------------------
+*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+div[data-role='page'] {
+	background-color: #000000;
+	background-image: none;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 12px;
+	color: #d6d7d8;
+	background-color: #303030;
+}
+
+/*
+------------------------- USER/GROUP PROFILE INFO ---------------------------
+*/
+
+.profileSnippet, .groupSnippet {
+	margin: 8px 8px 4px 8px;
+}
+
+.profileAvatarImgHolder, .groupAvatarImgHolder {
+	float: left;
+	width: 94px;
+	height: 94px;
+	position: relative;
+}
+
+.oggAvatarImgHolder {
+	float: left;
+	width: 115px;
+	height: 56px;
+	position: relative;
+}
+
+.profileAvatarImg, .groupAvatarImg {
+	width: 92px;
+	height: 92px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	border-radius: 3px;
+}
+
+.oggAvatarImg {
+	width: 113px;
+	height: 54px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	border-radius: 3px;
+}
+
+.profileMainTextBlock, .groupMainTextBlock {
+	padding-left: 100px;
+	word-wrap: break-word;
+}
+
+.oggMainTextBlock {
+	padding-left: 121px;
+	word-wrap: break-word;
+}
+
+.profilePersonaName {
+	font-size: 20px;
+	text-decoration: bold;
+}
+
+.groupName {
+	font-size: 16px;
+	text-decoration: bold;
+	color: #CFD2D4;
+}
+
+.profileOnlineStatus {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.profileRealName {
+	font-size: 12px;
+	color: #CFD2D4;
+	margin-bottom: 5px;
+}
+
+.profileLocation, .groupLocation {
+	font-size: 12px;
+	color: #CFD2D4;
+	margin-bottom: 5px;
+}
+
+.profileSummaryBlock, .groupSummaryBlock {
+	border-radius: 4px;
+	padding: 8px;
+	border: 1px solid #4D4B49;
+	word-wrap: break-word;
+
+	background: -moz-linear-gradient(top,  rgba(45,46,47,1) 0%, rgba(45,46,47,0.3) 25%, rgba(45,46,47,0.3) 75%, rgba(45,46,47,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,46,47,1)), color-stop(25%,rgba(45,46,47,0.3)), color-stop(75%,rgba(45,46,47,0.3)), color-stop(100%,rgba(45,46,47,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(45,46,47,1) 0%,rgba(45,46,47,0.3) 25%,rgba(45,46,47,0.3) 75%,rgba(45,46,47,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(45,46,47,1) 0%,rgba(45,46,47,0.3) 25%,rgba(45,46,47,0.3) 75%,rgba(45,46,47,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(45,46,47,1) 0%,rgba(45,46,47,0.3) 25%,rgba(45,46,47,0.3) 75%,rgba(45,46,47,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(45,46,47,1) 0%,rgba(45,46,47,0.3) 25%,rgba(45,46,47,0.3) 75%,rgba(45,46,47,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2e2f', endColorstr='#2d2e2f',GradientType=0 ); /* IE6-9 */
+}
+
+.profileHeadline, .groupHeadline {
+	font-size: 16px;
+	color: #CFD2D4;
+	margin-bottom: 10px;
+}
+
+.profileSummary, .groupSummary {
+	font-size: 14px;
+	color: #CFD2D4;
+}
+
+
+span.membersInGame {
+	color: #8bc53f;
+	text-decoration:none;
+}
+
+span.membersOnline {
+	color: #62a7e3;
+	text-decoration:none;
+}
+
+
+/*
+------------------------- USER PROFILE EDITING ---------------------------
+*/
+
+.textEdit {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.profileInputLabel {
+	display: inline-block;
+	color: #939393;
+	font-size: 13px;
+	margin-left: 5px;
+	width: 25%;
+	vertical-align: top;
+}
+
+.profileInput {
+	display: inline-block;
+	margin: 5px 0px 5px 0px;
+	padding:  2px;
+	font-size: 15px;
+	color: #D6D6D6;
+	background-color: #182E39;
+	border-radius: 4px;
+	min-width: 60%;
+}
+
+.privacyEdit {
+	margin: 8px;
+}
+
+.profileRadioLabel {
+}
+
+.radioLabel {
+}
+
+.hiddenSubmit {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+}
+
+/*
+------------------------- SECTION HEADINGS ---------------------------
+*/
+
+.sectionHeader {
+    background-color: #3C3D3E;
+	background-size: 32px 27px;
+	height: 26px;
+
+	text-align: center;
+	line-height: 26px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+	color: #D0D0D0;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+#groupBlocks, #clientConnBlock, #clientConnGameBlocks, #gameBlocks, #friendBlocks, #wishlistBlocks, #change_language_large {
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 8px;
+}
+
+#announcementBlocks, #commentBlocks, #blotterBlocks, #aboutBlocks {
+	margin: 8px;
+}
+
+/*
+------------------------- COMMON CONTROLS ---------------------------
+*/
+
+#requestBlock {
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 8px 8px 4px 8px;
+}
+
+#requestText {
+	text-align: center;
+}
+
+div.statsBlock {
+	width: 100%;
+	display: table;
+}
+
+span.statsItemName {
+	color: #545454;
+	width: 40%;
+	margin-left: 8px;
+	font-size: 15px;
+	display: table-cell;
+}
+
+span.statsItem {
+	color: #939393;
+	font-size: 15px;
+	width: 60%;
+	display: table-cell;
+}
+
+div.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #363636;
+	margin: 1px 0px 1px 0px;
+}
+
+.buttonFullWidth, .buttonHalfWidth, .buttonThirdWidth {
+	display: inline-block;
+	float: left;
+	margin: 4px 0px 4px 8px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-enabled-background.png );
+	background-repeat: repeat-x;
+	background-size: 32px 45px;
+	height: 44px;
+	color: #D0D0D0;
+	border-radius: 4px;
+}
+
+.buttonFlexWidth {
+	display: inline-block;
+	float: left;
+	margin: 8px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-enabled-background.png );
+	background-repeat: repeat-x;
+	background-size: 32px 45px;
+	height: 44px;
+	color: #D0D0D0;
+	border-radius: 4px;
+	padding: 0px 10px;
+}
+
+.buttonSpecial {
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/special-button-enabled-background.png );
+}
+
+.buttonActive {
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-pressed-background.png );
+	color: #FFFFFF;
+}
+
+.buttonDisabled {
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-disabled-background.png );
+}
+
+.buttonText {
+	text-align: center;
+	line-height: 44px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.clientConnArea {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #D0D0D0;
+    z-index: 2;
+}
+
+.clientConnArea #fullstretch {
+    width: 100%;
+    height: 100%;
+}
+
+.clientConnAdIcon {
+    float: left;
+    vertical-align: middle;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.clientConnAdTextBlock {
+    vertical-align: middle;
+    margin: 8px;
+    margin-left: 96px;
+    white-space: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.clientConnHeaderText {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #505050;
+}
+
+.clientConnMachineText {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.clientConnMachineBar {
+    font-size: 13px;
+    font-weight: bold;
+    color: #505050;
+    vertical-align: top;
+}
+
+.clientConnChangingText {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.changingProgressBar {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 12px;
+}
+
+.thinBlackBorder {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clientConnStatusBlock {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.clientConnStatusIcon {
+    vertical-align: middle;
+}
+
+.clientConnStatusText {
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.clientConnSpace {
+    font-size: 8px;
+}
+
+.gamesListCellDefault {
+    display: block;
+    background-image: url( http://cdn.steamcommunity.com/public/images/mobile/GamesListBG_Default.png );
+    background-size: cover;
+    height: 44px;
+    color: #D0D0D0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.gamesListCellActive {
+    display: block;
+    background-image: url( http://cdn.steamcommunity.com/public/images/mobile/GamesListBG_Active.png );
+    background-size: cover;
+    height: 44px;
+    color: #D0D0D0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.gamesListCellUnavailable {
+    display: block;
+    background-image: url( http://cdn.steamcommunity.com/public/images/mobile/GamesListBG_Unavailable.png );
+    background-size: cover;
+    height: 44px;
+    color: #D0D0D0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#uninstallConfirm {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.uninstallConfirmButton {
+    display: inline-block;
+    width: 40%;
+    background-color: #606060;
+    margin: 4px;
+    margin-top: 9px;
+    border-radius: 4px;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.uninstallConfirmButton * {
+    color: #FFFFFF;
+}
+
+.tableViewCellInactive {
+    display: block;
+    background-image: url( http://cdn.steamcommunity.com/public/images/mobile/table-cell-background.png );
+    background-repeat: repeat-x;
+    background-size: 32px 45px;
+    height: 44px;
+    color: #D0D0D0;
+}
+
+.tableViewCellActive {
+	display: block;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/table-cell-background-selected.png );
+	background-repeat: repeat-x;
+	background-size: 32px 45px;
+	height: 44px;
+	color: #FFFFFF;
+}
+
+.tableViewCellTextBlock {
+	padding-top: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tableViewCellMainText, .tableViewCellMainText a {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+.tableViewCellMainTextCentered, .tableViewCellMainTextCentered a {
+	text-align: center;
+	line-height: 45px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+.tableViewCellSecondaryText {
+	text-decoration: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+.tableViewCellRadioButtonSetInactive, .tableViewCellRadioButtonSetActive {
+	display: block;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-enabled-background.png );
+	background-repeat: repeat-x;
+	background-size: 32px 45px;
+	height: 30px;
+	color: #E0E0E0;
+}
+
+.tableViewCellRadioButtonSetActive {
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/button-disabled-background.png );
+	color: #FFFFFF;
+}
+
+.tableViewCellRadioButtonSetText {
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+.color_in-game {
+    color: #AFD14F;
+}
+
+.color_online {
+    color: #9CC7FF;
+}
+
+.color_offline {
+    color: #CFD2D4;
+}
+
+.color_error {
+    color: #FF0000;
+}
+
+.color_dark {
+    color: #808080;
+}
+
+.color_disabled {
+    color: #606060;
+}
+
+.itemBlockIcon {
+	display: block;
+	float: left;
+	margin: 5px;
+	margin-right: 7px;
+	width: 34px;
+	height: 34px;
+}
+
+.iconHolder {
+	width: 34px;
+	height: 34px;
+	position: relative;
+}
+
+.iconHolder_in-game {
+	background-color: #AFD14F;
+	border-radius: 4px;
+}
+
+.iconHolder_online {
+	background-color: #9CC7FF;
+	border-radius: 4px;
+}
+
+.iconHolder_offline {
+	background-color: #606060;
+	border-radius: 4px;
+}
+
+.iconHolder_default {
+	background-color: #CFD2D4;
+	border-radius: 4px;
+}
+
+.iconHolder_game {
+	background-color: #272E2C;
+	border-radius: 4px;
+}
+
+.playerAvatar {
+	width: 32px;
+	height: 32px;
+	padding: 2px;
+	background-color: #CFD2D4;
+	border-radius: 4px;
+}
+.playerAvatar.offline {
+	background-color: #606060;
+}
+.playerAvatar.ignored {
+	background-color: #606060;
+}
+.playerAvatar.online {
+	background-color: #9CC7FF;
+}
+.playerAvatar.in-game {
+	background-color: #AFD14F;
+}
+.playerAvatar img {
+	width: 32px;
+	height: 32px;
+}
+
+div.avatarIcon {
+	width: 32px;
+	height: 32px;
+	top: 1px;
+	left: 1px;
+	position: absolute;
+}
+
+div.avatarIcon img {
+	border-radius: 3px;
+	width: 32px;
+	height: 32px;
+}
+
+.smallCapItemBlockIcon {
+	display: block;
+	float: left;
+	margin: 5px;
+	margin-right: 7px;
+	width: 87px;
+	height: 34px;
+}
+
+.smallCapIconHolder {
+	width: 87px;
+	height: 34px;
+	position: relative;
+}
+
+div.smallCapIcon {
+	width: 85px;
+	height: 32px;
+	top: 1px;
+	left: 1px;
+	position: absolute;
+}
+
+div.smallCapIcon img {
+	border-radius: 3px;
+	width: 85px;
+	height: 32px;
+}
+
+.rightFloatLinkIcon {
+    display: inline-block;
+    float: right;
+    margin: 5px;
+}
+
+.rightFloatLinkIcon img {
+    width: 34px;
+    height: 34px;
+}
+
+.upperRightChevronIcon {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.upperRightChevronIcon img {
+    width: 20px;
+    height: 20px;
+}
+
+.rightFloatSmallIcon {
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.rightFloatSmallIcon img {
+    width: 18px;
+    height: 18px
+}
+
+.chevronIcon {
+	display: block;
+	float: right;
+	margin: 15px 10px 14px 0px;
+	width: 11px;
+	height: 15px;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/chevron.png );
+	background-size: 11px 15px;
+}
+
+.removeIcon {
+	display: block;
+	float: right;
+	margin: 15px 11px 15px 0px;
+	text-align: right;
+	height: 14px;
+}
+
+.removeIcon .ui-link {
+	color: #626366;
+	text-decoration: underline;
+}
+
+.friendSmallText {
+	font-size: 12px;
+}
+
+.groupTextMembers {
+	color: #D0D0D0;
+	display: inline-block;
+	width: 30%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+.groupTextOnline {
+	color: #9CC7FF;
+	display: inline-block;
+	width: 27%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+}
+
+/*
+------------------------- POSTS, COMMENTS, ANNOUNCEMENTS ---------------------------
+*/
+
+.postBlock {
+	border: 1px solid #4D4B49;
+	padding: 2px;
+	background-color: #222222;
+	word-wrap: break-word;
+	border-radius: 4px;
+}
+
+.spacer {
+	margin-bottom: 10px;
+}
+
+.postContentBlock {
+	padding: 0px;
+}
+
+.postTitleBlock {
+	padding: 2px 10px 10px 47px;
+}
+
+.postHeadline {
+	font-size: 15px;
+	color: #D0D0D0;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.postByline {
+	color: #929292;
+}
+
+a#postLink, a#blotterLink {
+	text-decoration: none;
+	color: #D0D0D0;
+}
+
+.postBody {
+	color: #929292;
+	padding: 5px;
+	font-size: 15px;
+}
+
+.postBody img {
+	/* force images in group posts to fit within the bounds of the post */
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+.postBody ul {
+	margin-left: 10px;
+}
+
+.postBody li {
+	margin-left: 5px;
+}
+
+
+.postDeleteLink {
+	float: right;
+	padding: 0px 4px 2px 4px;
+	margin: 2px;
+	color: #D0D0D0;
+	background-color: #404040;
+	text-shadow: none;
+	border-radius: 2px;
+}
+
+.postDeleteLinkPressed {
+	background-color: #A0A0A0;
+}
+
+.blotterBody {
+	color: #929292;
+	min-height: 41px;
+	padding-left: 47px;
+	padding-top: 3px;
+}
+
+.blotterIcon {
+	display: block;
+	float: right;
+	margin: 4px;
+	margin-top: 10px;
+	width: 24px;
+	height: 24px;
+}
+
+.blotterIcon img {
+	width: 24px;
+	height: 24px;
+}
+
+.blotterDate {
+	display: block;
+	font-size: 14px;
+	color: #d6d7d8;
+	background-color: #303030;
+	padding: 4px;
+}
+
+.postCommentBlock {
+	margin: 8px;
+}
+
+.commentTextArea {
+	border: 1px solid #4D4B49;
+	border-radius: 4px;
+	padding: 5px;
+	background-color: #222222;
+	color: #929292;
+	/* width set programmatically */
+}
+
+.commentErrorText {
+	display: block;
+}
+
+.mobileSettingsStatusText {
+    text-align: center;
+    font-size: 13px;
+    color: #eeee00;
+}
+
+.mobileSettingsCategoryLabel {
+    font-size: 13px;
+	padding-left: 12px;
+	font-weight: bold;
+}
+
+.mobileSettingsCategoryDesc {
+    font-size: 11px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+/*
+------------------------- PRICES, DISCOUNTS, WISHLIST ---------------------------
+*/
+
+.discountedPriceBlock {
+	display: inline;
+}
+
+.discountedPriceBlock div {
+	display: inline;
+	padding: 2px;
+}
+
+.discountPercent {
+	background-color: #4C6B22;
+}
+
+.discountOriginalPrice {
+	text-decoration: line-through;
+	color: #929292;
+}
+
+/*
+------------------------- PAGING ---------------------------
+*/
+
+.pagingBar {
+	margin: 4px;
+	padding: 4px;
+	border: 1px solid #4D4B49;
+	border-radius: 4px;
+}
+
+.pagingPageLinks {
+	text-align: center;
+}
+
+.pagingPageLink {
+	font-size: 16px;
+	margin: 0px 8px 0px 8px;
+	text-decoration: none;
+	vertical-align: middle;
+	color: #AFD14F;
+}
+
+.pagingCurrentPage {
+	font-size: 16px;
+	margin: 0px 8px 0px 8px;
+	vertical-align: middle;
+	color: #CFD2D4;
+}
+
+.pagingText {
+	font-size: 16px;
+	text-align: center;
+}
+
+.pagingLeftArrowImg, .pagingRightArrowImg {
+	width: 33px;
+	height: 33px;
+	vertical-align: middle;
+}
+
+.pagingBlankImg {
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+	border: none;
+}
+
+.pagingArrowLink {
+	text-decoration: none;
+}
+
+/*
+------------------------- SCREENSHOTS, VIDEOS ---------------------------
+*/
+
+.noUserScreenshots {
+	font-size: 20px;
+	text-align: center;
+}
+
+.userScreenshotsBody {
+	margin: 8px;
+}
+
+.userScreenshotLink {
+	text-decoration: none;
+}
+
+.userScreenshotThumbnail {
+	width: 200px;
+	height: auto;
+	max-width: 32%;
+}
+
+.userScreenshotHolder {
+	position: relative;
+}
+
+.userScreenshotBorder {
+	position: absolute;
+	border-radius: 4px;
+	border: 1px solid #4D4B49;
+	overflow: hidden;
+
+	/* width/height/position specified programmatically */
+}
+
+.userScreenshotImg {
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+.userScreenshotMetadataBlock {
+	margin: 8px;
+}
+
+.userScreenshotMetadataLabel {
+	color: #CFD2D4
+}
+
+.userScreenshotGameLink {
+	text-decoration: none;
+	color: #D0D0D0;
+	font-size: 15px;
+}
+
+.captionText {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.itemName {
+	color: #545454;
+	width: 25%;
+	margin-left: 8px;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itemValue {
+	color: #939393;
+	font-size: 13px;
+	max-width: 70%;
+	display: inline-block;
+}
+
+.itemLink {
+	color: #D0D0D0;
+	font-size: 14px;
+	display: inline-block;
+}
+
+/*
+------------------------- STYLE FOR HEADER AND FOOTER ---------------------------
+*/
+
+#global_header {
+	height: 40px;
+	width: 100%;
+	background-color: #000000;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/header_icon_mainnavbg.png );
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#secondary_header, #secondary_header_title {
+	height: 50px;
+	width: 100%;
+	background-color: #000000;
+	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/header_icon_scndnavbg.png );
+	overflow-x: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+div#secondary_header .content, div#secondary_header_title .content {
+	position: absolute;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+#secondary_header_leftfade, #secondary_header_rightfade {
+	position: absolute;
+	z-index: 1;
+	height: 49px;
+	width: 50px;
+	top: 1px;
+}
+
+#secondary_header_leftfade {
+	left: 0px;
+}
+
+#secondary_header_rightfade {
+	right: 0px;
+}
+
+#headerLogoImage {
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	right: 28px;
+	width: 124px;
+	height: 40px;
+}
+
+#headerUserAvatarIcon {
+	width: 32px;
+	height: 32px;
+}
+
+#global_actions_avatar {
+	position: absolute;
+	right: 6px;
+	top: 3px;
+	height: 21px;
+	line-height: 21px;
+	color: #b8b6b4;
+	font-size: 11px;
+	z-index: 3;
+}
+#global_actions_headerExpandIndicator {
+	position: absolute;
+	right: 42px;
+	top: 15px;
+	height: 10px;
+	width: 10px;
+	z-index: 3;
+}
+
+#secondary_actions_scndnav_search_btn {
+	position: absolute;
+	right: 6px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+#secondary_actions_scndnav_cart_btn {
+	position: absolute;
+	left: 6px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+#secondary_actions_scndnav_wishlist_btn {
+	position: absolute;
+	left: 49px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+
+	/* main nav */
+
+div#global_header .menuitemdiv {
+	font-size: 13px;
+	display: inline;
+	background-color: transparent;
+	position: relative;
+}
+
+div#global_header .menuitemdiv.menuitemdiv_login {
+	float: right;
+	margin-right: 10px;
+}
+
+div#global_header .menuitema {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: normal;
+	color: #A6A6A6;
+
+	position: relative;
+	left: 0px;
+	top: 13px;
+	padding-left: 3px;
+	padding-right: 3px;
+	width: 100%;
+	height: 100%;
+}
+
+div#global_header .menuitema.active {
+	color: #FFFFFF;
+}
+
+div#global_header #background {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+div#global_header #fullstretch {
+	width: 100%;
+	height: 40px;
+}
+
+	/* secondary nav */
+
+div#secondary_header .menuitemdiv, div#secondary_header_title .menuitemdiv {
+	font-size: 27px;
+	vertical-align: top;
+	display: inline;
+	background-color: transparent;
+	position: relative;
+}
+
+div#secondary_header_title .menuitemdiv.pageTitleHeader {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 0;
+}
+
+div#secondary_header .menuitema, div#secondary_header_title .menuitema {
+	padding-left: 6px;
+	padding-right: 6px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 27px;
+	font-weight: bold;
+	color: #979797;
+
+	position: relative;
+	left: 0px;
+	top: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+div#secondary_header .menuitema.active, div#secondary_header_title .menuitema.active {
+	color: #FFFFFF;
+}
+
+div#secondary_header #background, div#secondary_header_title #background {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+div#secondary_header #fullstretch, div#secondary_header_title #fullstretch {
+	width: 100%;
+	height: 50px;
+}
+
+	/* user account information */
+
+#global_actions_pageoverlay {
+	background-color: transparent;
+	position:absolute;
+	z-index: 900;
+	overflow: hidden;
+
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+div#global_actions_pageoverlay #dimmedbackground {
+	background-color:rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+div#global_actions_pageoverlay #roundedboxpadtop {
+	height: 10px;
+}
+
+div#global_actions_pageoverlay #roundedbox {
+	background-color:rgba(0, 0, 0, 0.0);
+	/* background-image: url( http://cdn.steamcommunity.com/public/images/mobile/header_globalactions_overlay.png ); */
+
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+	z-index: 901;
+}
+
+div#global_actions_pageoverlay #leftcol, div#global_actions_pageoverlay #rightcol {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div#global_actions_pageoverlay #leftcol {
+	margin-left: 2%;
+	margin-right: 1%;
+	width: 68%;
+}
+
+div#global_actions_pageoverlay #rightcol {
+	margin-left: 1%;
+	margin-right: 2%;
+	width: 24%;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionlink {
+	color: #FFFFFF;
+	float: left;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionhint {
+	color: #AAAAAA;
+	text-transform: uppercase;
+	margin-top: 5px;
+	float: right;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionval {
+	color: #FFFFFF;
+	float: left;
+	font-size: 9px;
+	font-weight: bold;
+}
