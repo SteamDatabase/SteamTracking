@@ -1011,5 +1011,17 @@
 "[english]friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"You must have had Steam Guard enabled for at least %days% days before you can participate in a trade."
 "Friends_Chat_SendOfflineMessage"	"%friend% şu anda çevrimdışı. Bir sonraki oturum açışında iletinizi alacak.\n"
 "[english]Friends_Chat_SendOfflineMessage"	"%friend% is currently offline, they will receive your message the next time they log in.\n"
+"friends_trade_you_recently_reset_password"	"Kısa süre önce Steam hesabınızın parolasını unutup parolanızı sıfırladınız. En son parola sıfırlamasından sonra yaklaşık beş gün süreyle takas yapamazsınız."
+"[english]friends_trade_you_recently_reset_password"	"You recently forgot and then reset your Steam account's password. You will not be able to trade until about five days after the most recent password reset."
+"friends_managefriends"	"Arkadaşları Düzenle"
+"[english]friends_managefriends"	"Manage Friends"
+"Friends_WebStatus_Tooltip"	"Web arayüzünde çevrimiçi"
+"[english]Friends_WebStatus_Tooltip"	"Online using the Web"
+"Friends_MobileStatus_Tooltip"	"Mobil aygıtta çevrimiçi"
+"[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
+"Friends_BigPictureStatus_Tooltip"	"Geniş Ekran modunda çevrimiçi"
+"[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Yeni bir cihazdan giriş yaptınız. Envanterinizdeki eşyaları korumak adına bu cihazdan %days% gün boyunca takas yapamayacaksınız."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

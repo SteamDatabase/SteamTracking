@@ -43,7 +43,7 @@
 "[english]Steam_AccountAlreadyLoggedInNeedShutdown"	"Your account '%account%' is currently in use at another machine.\nYou'll need to shut down Steam on your other computer in order to log in here."
 "Steam_AccountAlreadyLoggedInNeedPassword"	"Esta conta já foi iniciada noutro local.\nIntroduz de novo a palavra-passe para iniciar sessão neste computador."
 "[english]Steam_AccountAlreadyLoggedInNeedPassword"	"This account is currently logged in elsewhere.\nRe-enter your password to login on this computer."
-"Steam_AccountOfflineMissingConfig"	"Falha na transferência dos dados de configuração da plataforma.."
+"Steam_AccountOfflineMissingConfig"	"Falha ao transferir os dados de configuração da plataforma."
 "[english]Steam_AccountOfflineMissingConfig"	"Failed to download platform configuration data."
 "Steam_RefreshLogin_Title"	"Steam - Atualizar o Início de Sessão"
 "[english]Steam_RefreshLogin_Title"	"Steam - Refresh Login"

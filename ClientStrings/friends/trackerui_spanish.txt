@@ -509,11 +509,11 @@
 "[english]Friends_GroupSectionInfo_Offline"	""
 "Friends_GroupSectionInfo_Online"	"%online% EN LÍNEA"
 "[english]Friends_GroupSectionInfo_Online"	"%online% ONLINE"
-"Friends_GroupSectionInfo_OnlineInGame"	"%ingame% EN UNA PARTIDA, %online% EN LÍNEA"
+"Friends_GroupSectionInfo_OnlineInGame"	"%ingame% JUGANDO, %online% EN LÍNEA"
 "[english]Friends_GroupSectionInfo_OnlineInGame"	"%ingame% IN GAME, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"	"%inchat% EN CHAT, %online% EN LÍNEA"
 "[english]Friends_GroupSectionInfo_OnlineChatting"	"%inchat% IN CHAT, %online% ONLINE"
-"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% EN CHAT, %ingame% EN UNA PARTIDA, %online% EN LÍNEA"
+"Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% EN CHAT, %ingame% JUGANDO, %online% EN LÍNEA"
 "[english]Friends_GroupSectionInfo_OnlineInGameChatting"	"%inchat% IN CHAT, %ingame% IN GAME, %online% ONLINE"
 "Friends_GroupSectionInfo_PublicGroup"	"%groupname% (Grupo público)"
 "[english]Friends_GroupSectionInfo_PublicGroup"	"%groupname% (Public Group)"
@@ -1023,5 +1023,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"Conectado desde Big Picture"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Has iniciado sesión desde un nuevo dispositivo. Con el fin de proteger los artículos de tu inventario, no podrás realizar intercambios desde este dispositivo durante %days% días."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

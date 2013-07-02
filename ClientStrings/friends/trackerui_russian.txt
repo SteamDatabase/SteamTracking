@@ -786,7 +786,7 @@
 "[english]Friends_Chat_RoomUnmoderated_Entry"	"The chat room has been set to all-users chat by %member_making_change%.\n"
 "Friends_Chat_RoomUnmoderated_Info"	"Только офицеры группы могут отправлять сообщения в закрытом чате"
 "[english]Friends_Chat_RoomUnmoderated_Info"	"Only group officers can send messages in officers-only chat"
-"Friends_Chat_ModerateRoom"	"Включить чат для управляющих"
+"Friends_Chat_ModerateRoom"	"Разрешить говорить только офицерам"
 "[english]Friends_Chat_ModerateRoom"	"Enable officers-only chat"
 "Friends_Chat_UnmoderateRoom"	"Включить чат для всех"
 "[english]Friends_Chat_UnmoderateRoom"	"Disable officers-only chat (anyone can chat)"
@@ -1024,5 +1024,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"В сети через Big Picture"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Вы зашли с нового устройства. Чтобы защитить предметы в вашем инвентаре, вы не сможете совершать обмены с этого устройства в течение %days% дней."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

@@ -1023,5 +1023,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"大屏幕在线"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"您使用了一台新设备登录。为了保护您库存中的物品，在 %days% 天内您将不能在此设备上进行交易。"
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

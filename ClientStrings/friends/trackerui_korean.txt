@@ -123,7 +123,7 @@
 "[english]Friends_Options_ProfileTab"	"Profile"
 "Friends_Options_SoundsTab"	"사운드"
 "[english]Friends_Options_SoundsTab"	"Sounds"
-"Friends_EnterAccountNameOrEmailAddress"	"친구 목록에 추가할 플레이어의 Steam 계정 이름 또는 메일 주소를 입력하십시오."
+"Friends_EnterAccountNameOrEmailAddress"	"친구 목록에 추가할 플레이어의 Steam 계정 이름 또는 메일 주소를 입력하세요."
 "[english]Friends_EnterAccountNameOrEmailAddress"	"Enter the Steam account name OR the email address of the person you wish to add to your Friends list."
 "Friends_SearchingForFriend"	"%search% 검색 중..."
 "[english]Friends_SearchingForFriend"	"Searching for %search%..."
@@ -207,7 +207,7 @@
 "[english]Friends_NotifyFriendOnline_Info"	"Your Friend %friend% has come online."
 "Friends_RefreshLogin_Title"	"Steam - 로그인 갱신"
 "[english]Friends_RefreshLogin_Title"	"Steam - Refresh login"
-"Friends_RefreshLogin"	"친구 네트워크에 로그인하려면 Steam 로그인 정보를 다시 입력하십시오."
+"Friends_RefreshLogin"	"친구 네트워크에 로그인하려면 Steam 로그인 정보를 다시 입력하세요."
 "[english]Friends_RefreshLogin"	"Please re-enter your Steam login details in order to sign into Friends."
 "Friends_AccountName"	"계정 이름"
 "[english]Friends_AccountName"	"Account name"
@@ -1021,5 +1021,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"온라인 (Big Picture)"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"귀하는 새로운 기기에서 접속하셨습니다. 보관함 항목 보호의 일환으로, 이 기기에서는 향후 %days%일간 거래하실 수 없습니다."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

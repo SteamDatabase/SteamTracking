@@ -87,7 +87,7 @@
 "[english]ServerBrowser_PlayersLabel"	"Players:"
 "ServerBrowser_LatencyLabel"	"지연 시간:"
 "[english]ServerBrowser_LatencyLabel"	"Latency:"
-"ServerBrowser_EnterIPofServerToAdd"	"추가하실 서버의 IP 주소를 입력하십시오."
+"ServerBrowser_EnterIPofServerToAdd"	"추가할 서버의 IP 주소를 입력하세요."
 "[english]ServerBrowser_EnterIPofServerToAdd"	"Enter the IP address of the server you wish to add."
 "ServerBrowser_OK"	"확인"
 "[english]ServerBrowser_OK"	"OK"

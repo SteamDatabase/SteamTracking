@@ -1021,5 +1021,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"Online med Big Picture"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Du har loggat in från en ny enhet. För att skydda föremålen du har i ditt förråd kommer du inte kunna byta från denna enhet under %days% dagar."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

@@ -289,7 +289,7 @@
 "[english]Overlay_View_CommunityDiscussions"	"View Discussions"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% aktif başlık"
 "[english]Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% active discussions"
-"Overlay_MicroTxnSubscription"	"%acct% her %time% %cost% ödeyeceksin."
+"Overlay_MicroTxnSubscription"	"%acct% her %time% %cost% ücretlendirileceksiniz"
 "[english]Overlay_MicroTxnSubscription"	"You will be charged %cost% every %time% %acct%"
 "Overlay_MicroTxnSubscriptionEvery"	"her"
 "[english]Overlay_MicroTxnSubscriptionEvery"	"every"
@@ -345,7 +345,7 @@
 "[english]Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc"	"You need to accept the latest Steam Workshop Legal Agreement before your item is fully published."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem"	"Öğeyi görüntüle"
 "[english]Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem"	"View item"
-"Overlay_MicroTxnGameSubscription"	"Oyun hesabınız tarafından belirlenen şekilde"
+"Overlay_MicroTxnGameSubscription"	"oyun hesabınız tarafından belirlenen şekilde"
 "[english]Overlay_MicroTxnGameSubscription"	"as determined by your game account"
 }
 }

@@ -709,7 +709,7 @@
 "[english]Friends_ChatPasswordWarning_Info"	"Warning: you are about to share your password."
 "Friends_ChatPasswordWarning_Info2"	"Steams kundestøtte vil aldri trenge passordet ditt. Ved å dele passordet ditt risikerer du å miste Steam-kontoen din og alle spillene dine.\n\nEr du sikker på at du vil dele denne informasjonen?"
 "[english]Friends_ChatPasswordWarning_Info2"	"Steam Support will never need your password for any reason. By sharing your password, you could lose your Steam account and all your games!\n\nAre you sure you wish to share this information?"
-"Friends_ChatPasswordWarning_Continue"	"Ja, send pratemeldingen"
+"Friends_ChatPasswordWarning_Continue"	"Ja, send samtalemeldingen min"
 "[english]Friends_ChatPasswordWarning_Continue"	"Yes, send my chat message"
 "Friends_ChatPasswordWarning_DontSend"	"Nei, ikke send den"
 "[english]Friends_ChatPasswordWarning_DontSend"	"No, don't send it"
@@ -1021,5 +1021,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"Tilkoblet via Big Picture"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Du har logget inn fra en ny enhet. For å kunne beskytte gjenstandene i lageret ditt, vil du ikke være i stand til å bytte fra denne enheten før om %days% dager."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

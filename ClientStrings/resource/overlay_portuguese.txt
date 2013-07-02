@@ -11,7 +11,7 @@
 "[english]Overlay_SettingsTabTitle"	"In-game"
 "Overlay_SettingsDescription"	"O Steam pode permanecer ativo e mostrar-te notificações da Comunidade Steam dentro do jogo, incluindo uma interface completa de amigos."
 "[english]Overlay_SettingsDescription"	"Steam can remain active and present you with in-game Steam Community message notifications as well as with a full friends interface inside your game."
-"Overlay_SettingsEnable"	"Ativar a Comunidade Steam em jogos"
+"Overlay_SettingsEnable"	"Ativar a Comunidade Steam dentro do jogo"
 "[english]Overlay_SettingsEnable"	"Enable Steam Community In-Game"
 "Overlay_SettingsHotKeyLabel"	"Teclas de atalho:"
 "[english]Overlay_SettingsHotKeyLabel"	"Press shortcut keys:"

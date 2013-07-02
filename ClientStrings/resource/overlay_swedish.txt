@@ -289,7 +289,7 @@
 "[english]Overlay_View_CommunityDiscussions"	"View Discussions"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% aktiva diskussioner"
 "[english]Overlay_CommunityDiscussions_Panel_NumDiscussions"	"%num_discussions% active discussions"
-"Overlay_MicroTxnSubscription"	"Abonnemanget kostar %cost% och kommer debiteras %time%"
+"Overlay_MicroTxnSubscription"	"%cost% kommer dras från ditt konto varje %time% %acct%"
 "[english]Overlay_MicroTxnSubscription"	"You will be charged %cost% every %time% %acct%"
 "Overlay_MicroTxnSubscriptionEvery"	"varje"
 "[english]Overlay_MicroTxnSubscriptionEvery"	"every"

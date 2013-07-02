@@ -287,7 +287,7 @@
 "[english]VAC_ConnectingToSecureServer"	"Note: This server is VAC-secured.\n\nCheating will result in a permanent ban."
 "VAC_BannedFromServers"	"由于作弊违规，已禁止使用某些安全服务器。"
 "[english]VAC_BannedFromServers"	"Banned from some secure servers because of a cheating infraction."
-"VAC_NoBans"	"有效存在"
+"VAC_NoBans"	"声誉良好"
 "[english]VAC_NoBans"	"In good standing"
 "VAC_Status"	"VAC 状态："
 "[english]VAC_Status"	"VAC Status:"

@@ -387,7 +387,7 @@
 "[english]vgui_HTMLViewSource"	"View Source..."
 "vgui_Webkit_error_header"	"Foutcode:"
 "[english]vgui_Webkit_error_header"	"Error Code: "
-"vgui_Webkit_proxyconnectionproblem"	"Kan niet verbinden met de HTTP Proxy. Uw proxy kan fout geconfigureerd zijn of uit staan."
+"vgui_Webkit_proxyconnectionproblem"	"Kan geen verbinding maken met de HTTP Proxy. Uw proxy kan fout geconfigureerd zijn of uit staan."
 "[english]vgui_Webkit_proxyconnectionproblem"	"Unable to connect to HTTP Proxy. Your proxy may be misconfigured or offline."
 "vgui_HTMLCopyUrl"	"Pagina-URL kopiëren"
 "[english]vgui_HTMLCopyUrl"	"Copy Page URL"

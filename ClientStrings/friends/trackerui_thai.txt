@@ -1004,5 +1004,13 @@
 "[english]friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"You must have had Steam Guard enabled for at least %days% days before you can participate in a trade."
 "Friends_Chat_SendOfflineMessage"	"%friend% ในขณะนี้กำลังออฟไลน์อยู่ เขาจะได้รับข้อความของคุณในครั้งต่อไปที่เข้าสู่ระบบ\n"
 "[english]Friends_Chat_SendOfflineMessage"	"%friend% is currently offline, they will receive your message the next time they log in.\n"
+"Friends_WebStatus_Tooltip"	"ออนไลน์ผ่านเว็บ"
+"[english]Friends_WebStatus_Tooltip"	"Online using the Web"
+"Friends_MobileStatus_Tooltip"	"ออนไลน์ผ่านอุปกรณ์พกพา"
+"[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
+"Friends_BigPictureStatus_Tooltip"	"ออนไลน์ผ่าน Big Picture"
+"[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"คุณได้เข้าสู่ระบบจากอุปกรณ์ชิ้นใหม่ เพื่อป้องกันไอเท็มในช่องเก็บของของคุณ คุณจะไม่สามารถแลกเปลี่ยนจากอุปกรณ์ชิ้นนี้ได้ในระยะเวลา %days% วัน"
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }
