@@ -555,7 +555,7 @@ var CInventory = Class.create( {
 				elItemCount.update( " (" + rgTag.count + ")" );
 				elTagLabel.appendChild( elItemCount );
 
-				$( elTagFilter ).observe( 'click', this.TagCheckboxChanged.bind( this ) );
+				$( elTagFilter ).observe( 'change', this.TagCheckboxChanged.bind( this ) );
 
 				elTagDiv.appendChild( elTagFilter );
 				elTagDiv.appendChild( elTagLabel );
@@ -3174,7 +3174,7 @@ var Filter = {
 		}
 
 		// adjust page controls.  If the active page no longer has any items, dump the user on the first (0th) page
-		var cNewMaxPages = Math.ceil( (cElementsDisplayed > 0 ? cElementsDisplayed - 1 : 0 ) / INVENTORY_PAGE_ITEMS );
+		var cNewMaxPages = Math.ceil( (cElementsDisplayed > 1 ? cElementsDisplayed - 1 : 1 ) / INVENTORY_PAGE_ITEMS );
 		g_ActiveInventory.pageTotal = cNewMaxPages;
 		if ( g_ActiveInventory.pageCurrent >= cNewMaxPages )
 		{
