@@ -76925,6 +76925,54 @@
 				"hero_3"		"63"
 			}
 		}
+		"10232"
+		{
+			"name"		"Team Pennant: LGD.Int"
+			"prefab"		"pennant"
+			"attributes"
+			{
+				"team ID"
+				{
+					"attribute_class"		"team_id"
+					"value"		"77666"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"capabilities"
+			{
+				"can_increment"		"1"
+			}
+			"creation_date"		"2013-07-01"
+			"image_inventory"		"econ/pennant/pennant_team77666_icon"
+			"item_description"		"#DOTA_Item_Desc_Team_Pennant_LGDInt"
+			"item_name"		"#DOTA_Item_Team_Pennant_LGDInt"
+			"item_rarity"		"mythical"
+			"item_type_name"		"#DOTA_WearableType_Fan_Item"
+			"tags"
+			{
+				"team_pennant"		"1"
+				"team_pennant_lgdint"		"1"
+			}
+			"tool"
+			{
+				"type"		"pennant_upgrade"
+				"usage"
+				{
+					"required_tags"
+					{
+						"team_pennant_lgdint"		"1"
+					}
+				}
+				"usage_capabilities"
+				{
+					"can_increment"		"1"
+				}
+			}
+		}
 		"10233"
 		{
 			"name"		"Player Card: ARS-ART"
@@ -84858,7 +84906,7 @@
 			"name"		"GEST June and July 2013"
 			"prefab"		"league"
 			"creation_date"		"2013-06-25"
-			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
+			"image_banner"		"econ/leagues/subscriptions_gest_june13_ingame"
 			"image_inventory"		"econ/leagues/subscriptions_gest_june13"
 			"item_description"		"#DOTA_Item_Desc_GEST_June_and_July_2013"
 			"item_name"		"#DOTA_Item_GEST_June_and_July_2013"
@@ -84881,7 +84929,7 @@
 			"name"		"GEST June and July 2013 - ADMIN"
 			"prefab"		"league"
 			"creation_date"		"2013-06-25"
-			"image_banner"		"econ/leagues/subscriptions_amd_premier_league_ingame"
+			"image_banner"		"econ/leagues/subscriptions_gest_june13_ingame"
 			"image_inventory"		"econ/leagues/subscriptions_gest_june13"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_GEST_June_and_July_2013"
 			"item_name"		"#DOTA_Item_GEST_June_and_July_2013__ADMIN"

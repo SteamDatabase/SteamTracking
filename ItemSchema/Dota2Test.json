@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.85b4b2bae4d611d73235c6140ac6cba06d55a447.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.800d8ce18e7819d50eb2bd703262150a1e0105e3.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -42796,6 +42796,57 @@
 				
 			},
 			{
+				"name": "Team Pennant: LGD.Int",
+				"defindex": 10232,
+				"item_class": "tool",
+				"item_type_name": "Fan Item",
+				"item_name": "Team LGD.Int",
+				"item_description": "Show your support for Team LGD.Int by buying this Team Pennant! Equip it in the 'fan slot' of your Player Loadout to show other spectators who you're rooting for. Upgrade it to show you mean business! In addition, equipping a pennant makes you eligible for item drops while you spectate your team's matches live during Valve supported tournaments.  Team LGD.Int pennants can be combined with other Team LGD.Int pennants to upgrade your Team Pennant fan level.  The level of your Team Pennant will increase the total fan value of the team when you are spectating a Tournament match.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team77666_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/pennant\/pennant_team77666_icon.a61ebda1d6e2984c2fa6c3947d0525965fce3bb7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/pennant\/pennant_team77666_icon_large.abdd7bb3655c75368cf59b85bf3497be625fb3e9.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"can_increment": true
+				},
+				"tool": {
+					"type": "pennant_upgrade",
+					"usage_capabilities": {
+						"can_increment": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "team ID",
+						"class": "team_id",
+						"value": 77666
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "fanfare level",
+						"class": "fanfare_level",
+						"value": 1
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
 				"name": "Player Card: ARS-ART",
 				"defindex": 10233,
 				"item_class": "player_card",
@@ -52112,7 +52163,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "AMD Dota2 Premier League Season 2",
-				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
+				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEA's finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league_s2",
@@ -52147,7 +52198,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "AMD Dota2 Premier League Season 2 - ADMIN",
-				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
+				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEA's finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league_s2",
