@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.800d8ce18e7819d50eb2bd703262150a1e0105e3.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.2d0a4f8d69f5b4aee85066eef4a6d7a9ce51ae2f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -52163,7 +52163,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "AMD Dota2 Premier League Season 2",
-				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEA's finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
+				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league_s2",
@@ -52198,7 +52198,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "AMD Dota2 Premier League Season 2 - ADMIN",
-				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEA's finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
+				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league_s2",

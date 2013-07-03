@@ -75350,8 +75350,8 @@
 				"team_id"		"5"
 				"match_id"		"202997371"
 				"hero_1"		"86"
-				"hero_2"		"58"
-				"hero_3"		"16"
+				"hero_2"		"16"
+				"hero_3"		"58"
 			}
 		}
 		"10197"
@@ -75392,14 +75392,14 @@
 				"playerimage"		"dendi"
 				"date_of_birth"		"1989-12-30"
 				"country_code"		"ua"
-				"role"		"#DOTA_Hero_Selection_AdvFilter_Support"
+				"role"		"#DOTA_Hero_Selection_AdvFilter_SoloMid"
 				"team_id"		"36"
 				"team_name"		"Natus Vincere"
 				"team_image"		"navi"
 				"match_id"		"188075407"
-				"hero_1"		"14"
-				"hero_2"		"86"
-				"hero_3"		"74"
+				"hero_1"		"97"
+				"hero_2"		"39"
+				"hero_3"		"17"
 			}
 		}
 		"10198"
@@ -75744,7 +75744,7 @@
 				"team_image"		"liquid"
 				"match_id"		"146207862"
 				"hero_1"		"90"
-				"hero_2"		"91"
+				"hero_2"		"86"
 				"hero_3"		"79"
 			}
 		}
@@ -76574,7 +76574,7 @@
 			{
 				"type"		"player_card"
 				"use_string"		"#StampPlayerCard"
-				"id"		"76561198050403391"
+				"id"		"76561198047544485"
 				"name"		"Clement Ivanov"
 				"playerimage"		"Puppey"
 				"date_of_birth"		"1990-06-3"
