@@ -546,9 +546,20 @@ textarea.fullwidth, select.fullwidth {
 }
 
 .msgrow_admin {
+	position: relative;
 	background-color: #333333;
 	color: white;
 	cursor: pointer;
+}
+
+.msgrow_admin_link {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 5;
 }
 
 .msgrow_content_required {
@@ -1696,6 +1707,12 @@ html, body { height:100%; }
 	text-align: right;
 	display: inline-block;
 	padding-right: 6px;
+}
+
+.communityitem_localized_image {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
 }
 
 .drag_and_drop

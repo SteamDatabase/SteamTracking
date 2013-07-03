@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.6a8f7d4e175c7631b867b65832bf86aadd30374c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a099ff856bd6b5380c5b41b53033883ceb9114c1.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -40385,6 +40385,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 57.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021.000000
 					}
 				]
 				
@@ -41182,6 +41187,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 56.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021.000000
 					}
 				]
 				
@@ -41344,6 +41354,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 59.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021.000000
 					}
 				]
 				
@@ -42291,6 +42306,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 50.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021.000000
 					}
 				]
 				
@@ -44087,6 +44107,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 58.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5636.000000
 					}
 				]
 				
@@ -44210,6 +44235,92 @@
 					"can_strangify": true
 				},
 				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "July 2013 Early Crate",
+				"defindex": 5640,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Summer Appetizer Crate",
+				"item_description": "Contains the first set of Gold Star approved Community Items\nfrom the Workshop item import tool.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/summer_appetizer_crate",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/summer_appetizer_crate.f0fe91c57108a72ccf62265c227a8ad379b9e66b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/summer_appetizer_crate_large.486568a7b53dbd62f1d1badbb35f00fd6431789f.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "jul2013_early"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 61.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5641.000000
+					}
+				]
+				
+			},
+			{
+				"name": "July 2013 Early Key",
+				"defindex": 5641,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Summer Appetizer Key",
+				"item_description": "Used to open locked Summer Appetizer Crates",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/summer_jul13_appetizer_key",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/summer_jul13_appetizer_key.b937cde370ca5ae90e3616bcf6bcd0a2ad202f65.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/summer_jul13_appetizer_key_large.f68d9c16b5213bd2bbdd3ca591c87cae4da8ee42.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "jul2013_early",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
 
 				]
 				
@@ -67617,6 +67728,14 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "decoded by itemdefindex",
+				"defindex": 528,
+				"attribute_class": "decoded_by_itemdefindex",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
 			},
 			{
 				"name": "CARD: damage bonus",
