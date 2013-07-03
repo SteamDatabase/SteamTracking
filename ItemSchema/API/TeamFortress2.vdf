@@ -2350,6 +2350,58 @@
 		"robokey_rules"
 		{
 		}
+		"eventcrate" 
+		{
+			"item_class"	"supply_crate"
+			"craft_class"	"supply_crate"
+			"craft_material_type"	"supply_crate"
+			"tool"
+			{
+				"type"	""
+				"usage"
+				{
+				}
+			}
+			"capabilities"
+			{
+				"decodable"		"1"			
+			}
+			"show_in_armory" "1"
+			"item_type_name"	"#TF_LockedCrate"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"	"unique"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
+			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
+			"drop_sound"		"ui/item_crate_drop.wav"
+		}
+		"eventkey"		
+		{
+			"item_class"	"tool"
+			"craft_class"	"tool"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+			}
+			"attributes"
+			{
+			}
+			"armory_desc" "key"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_T"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
 
 
 
@@ -49455,6 +49507,11 @@
 			"max_ilevel"	"10"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -49771,6 +49828,11 @@
 			"max_ilevel"	"10"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -49913,6 +49975,11 @@
 			"max_ilevel"	"10"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -50409,6 +50476,11 @@
 			"max_ilevel"	"10"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -51584,6 +51656,11 @@
 			"max_ilevel"	"13"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5636"	
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -51720,6 +51797,9 @@
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
 		}
+		
+		
+		
 		"5639"
 		{
 			"name"	"July 2013 Claim Check"
@@ -51739,6 +51819,41 @@
 			"drop_sound"		"ui/item_cardboard_drop.wav"
 		}
 
+		"5640"
+		{
+			"name"	"July 2013 Early Crate"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"jul2013_early"
+			}
+			"item_name"		"#TF_Jul2013Crate_early"
+			"item_description"	"#TF_Jul2013Crate_early_Desc"
+			"image_inventory"	"backpack/crafting/summer_appetizer_crate"
+			"attributes"
+			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5641"	
+				}
+			}
+		}
+		"5641"
+		{
+			"name"	"July 2013 Early Key" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2013/07/02"
+			"tool"
+			{
+				"restriction"	"jul2013_early"
+			}
+			"item_name"		"#TF_Jul2013Key_early"
+			"item_description"	"#TF_Jul2013Key_early_Desc"
+			"image_inventory"	"backpack/crafting/summer_jul13_appetizer_key"
+		}
+		
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -58867,6 +58982,16 @@
 			"effect_type"	"positive"
 			"stored_as_integer"	"1"
 		}
+		"528"
+		{
+			"name"	"decoded by itemdefindex"
+			"attribute_class"	"decoded_by_itemdefindex"
+			"attribute_name"	"decoded by itemdef index"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		
 		"1000"
 		{
@@ -60201,6 +60326,19 @@
 			"The War Pig"		"1"
 			"The Fast Learner"		"1"
 		}
+		"jul_2013_crate_list_early"
+		{
+			"The Brotherhood of Arms"		"1"
+			"The Well-Rounded Rifleman"		"1"
+			"The Breakneck Baggies"		"1"
+			"The Powdered Practitioner"		"1"
+			"The Pocket Pyro"		"1"
+			"The Cloud Crasher"		"1"
+			"The Pom-Pommed Provocateur"		"1"
+			"The Dark Age Defender"		"1"
+			"The Tyurtlenek"		"1"
+			"The Mair Mask"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -60263,6 +60401,7 @@
 		"supply_crate_loot_list_57"	"57"	
 		"robo_2013_crate_loot_list"	"58"	
 		"supply_crate_loot_list_59"	"59"	
+		"jul_2013_crate_list_early"	"61"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
