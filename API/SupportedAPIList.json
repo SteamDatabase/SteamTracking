@@ -475,6 +475,26 @@
 						
 					},
 					{
+						"name": "GetScheduledLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
 						"name": "GetTeamInfoByTeamID",
 						"version": 1,
 						"httpmethod": "GET",
@@ -643,11 +663,16 @@
 						
 					},
 					{
-						"name": "GetTicketSaleStatus",
+						"name": "GetTournamentPrizePool",
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
-
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The prize pool size for the given tournament id."
+							}
 						]
 						
 					}
@@ -1039,6 +1064,20 @@
 						"httpmethod": "GET",
 						"parameters": [
 
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
 						]
 						
 					}
@@ -2036,90 +2075,6 @@
 								"optional": true,
 								"description": "Boolean, 0 (default): return steamid_from in output, 1: return accountid_from"
 							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IStore_816",
-				"methods": [
-					{
-						"name": "GetItemList",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
-					{
-						"name": "GetLocalizedItemData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language for the descriptions."
-							},
-							{
-								"name": "item_count",
-								"type": "uint32",
-								"optional": false,
-								"description": "Number of item classes to parse. There will always be at least one."
-							},
-							{
-								"name": "def_index[0]",
-								"type": "int32",
-								"optional": false,
-								"description": "Item def index of the Nth item. There will always be at least one."
-							}
-						]
-						
-					},
-					{
-						"name": "GetMetaData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to results in."
-							}
-						]
-						
-					},
-					{
-						"name": "GetStaticItemData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "item_count",
-								"type": "uint32",
-								"optional": false,
-								"description": "Number of item classes to parse. There will always be at least one."
-							},
-							{
-								"name": "def_index[0]",
-								"type": "int32",
-								"optional": false,
-								"description": "Item def index of the Nth item. There will always be at least one."
-							}
-						]
-						
-					},
-					{
-						"name": "GetStatus",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
 						]
 						
 					}
