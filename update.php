@@ -180,6 +180,28 @@
 				
 				return true;
 			}
+			else if( $File === 'Repos/mysterious_cards.json' )
+			{
+				$Data = JSON_Decode( $Data, true );
+				
+				if( !isset( $Data[ 'success' ] ) )
+				{
+					return false;
+				}
+				
+				$Data  = $Data[ 'rgDescriptions' ];
+				$Items = Array( );
+				
+				foreach( $Data as $ID => $Item )
+				{
+					if( $Item[ 'market_fee_app' ] == '245070' )
+					{
+						$Items[ $ID ] = $Item;
+					}
+				}
+				
+				$Data = JSON_Encode( $Items, JSON_PRETTY_PRINT );
+			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
