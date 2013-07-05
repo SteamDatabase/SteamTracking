@@ -61,11 +61,22 @@ function TabCompletionClosure( tab, delta, max )
 
 function RollTab( tab, delta )
 {
-	var ydiff = -RowHeightForTab( tab ) * delta;
-	if ( $('tab_' + tab + '_items' ).hasClassName( 'summersale' ) )
-		ydiff = -(RowHeightForTab( tab ) + 6) * (delta / 2);
-	new Effect.Move( $('tab_' + tab + '_items'), {y: ydiff, afterFinish: TabScrollFinishClosure( tab, delta ) } );
-	Effect.ScrollTo( $('tab_' + tab + '_items').up('.tabarea' ), { afterFinish: TabScrollFinishClosure( tab, delta ) } );
+	if ( $('tab_' + tab + '_items' ).hasClassName( 'summersale_tab_items' ) )
+	{
+		var xdiff = 940;
+		if ( delta > 0 )
+			xdiff = -xdiff;
+		new Effect.Move( $('tab_' + tab + '_items'), {x: xdiff, afterFinish: TabScrollFinishClosure( tab, delta ) } );
+	}
+	else
+	{
+		//standard tab
+		var ydiff = -RowHeightForTab( tab ) * delta;
+		new Effect.Move( $('tab_' + tab + '_items'), {y: ydiff, afterFinish: TabScrollFinishClosure( tab, delta ) } );
+	}
+	var elTabArea = $('tab_' + tab + '_items').up('.tabarea' );
+	if ( elTabArea )
+		Effect.ScrollTo( elTabArea, { afterFinish: TabScrollFinishClosure( tab, delta ) } );
 }
 
 function TabScrollFinishClosure( tab, delta )
@@ -1095,7 +1106,8 @@ var CScrollOffsetWatcher = Class.create( {
 
 function LoadImageGroupOnScroll( elTarget, strGroup )
 {
-	new CScrollOffsetWatcher( $(elTarget), LoadDelayedImages.bind( null, strGroup ) );
+	if ( $(elTarget) )
+		new CScrollOffsetWatcher( $(elTarget), LoadDelayedImages.bind( null, strGroup ) );
 }
 
 function LoadDelayedImages( group )
