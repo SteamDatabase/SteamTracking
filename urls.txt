@@ -138,6 +138,8 @@ ClientManifest/steam_client_publicbeta_win32.manifest|http://media.steampowered.
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 API/Dota2Heroes.json|http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1/?key=*APIKEY*&language=english
 API/Dota2TestHeroes.json|http://api.steampowered.com/IEconDOTA2_205790/GetHeroes/v1/?key=*APIKEY*&language=english
+API/MysteriousCards.json|http://api.steampowered.com/ISteamEconomy/GetAssetClassInfo/v1/?key=*APIKEY*&format=json&language=en&appid=753&class_count=10&classid0=168230920&classid1=168230921&classid2=168230922&classid3=168230923&classid4=168230924&classid5=168230926&classid6=168230927&classid7=168230928&classid8=168230929&classid9=168230930
+API/MysteriousCardsFoils.json|http://api.steampowered.com/ISteamEconomy/GetAssetClassInfo/v1/?key=*APIKEY*&format=json&language=en&appid=753&class_count=10&classid0=169133248&classid1=169134045&classid2=169134324&classid3=169137089&classid4=169137429&classid5=169138073&classid6=169141462&classid7=169143419&classid8=169143724&classid9=169153864
 
 # Item Schemas
 GetItemSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/IEconItems_730/GetSchema/v1/?key=*APIKEY*&language=english
@@ -169,7 +171,6 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 Repos/index.html|http://repo.steampowered.com/
 Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/
 Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
-Repos/mysterious_cards.json|http://steamcommunity.com/id/threedotonefour/inventory/json/753/6/
 
 # Promos
 Styles/promo_summer2013.css|http://cdn.store.steampowered.com/public/css/promo/promo_summer2013.css

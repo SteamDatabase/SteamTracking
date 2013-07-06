@@ -1,0 +1,465 @@
+{
+	"result": {
+		"169133248": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169133248"
+		},
+		"169134045": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169134045"
+		},
+		"169134324": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169134324"
+		},
+		"169137089": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169137089"
+		},
+		"169137429": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169137429"
+		},
+		"169138073": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169138073"
+		},
+		"169141462": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169141462"
+		},
+		"169143419": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169143419"
+		},
+		"169143724": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169143724"
+		},
+		"169153864": {
+			"icon_url": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_url_large": "TXlZGocdNLUoF5ZnQ5G1A_U1k6vDbTrr7dhNcepr5KyQcXf60EpjrYHPjJVnsOeQ5G6AupQndvnr2RNw6GrutIR4e7PMCmeuhZOB0Gmu-JT5fNXvzHIiqL_JRWjlYbSMnGxq69sdJquBgY6TNe6-z_l0hbrOIHGorYVJLbk9u6eDey26kVcx8NmFj847uLrEryeEv5psZfb-m05z-2Dss7p2c-_OAT3yjoXZlTzuscmvdoW-zyB0_quOSiqxZevy1Skuvs8FZaHe193GOey-0-0vgP2PfyQ=",
+			"icon_drag_url": "",
+			"name": "Mystery (Foil Trading Card)",
+			"market_name": "Mystery (Foil Trading Card)",
+			"name_color": "",
+			"background_color": "",
+			"type": "Mysterious Foil Trading Card",
+			"tradable": "1",
+			"marketable": "1",
+			"market_fee_app": "245070",
+			"descriptions": {
+				"0": {
+					"type": "text",
+					"value": "This card is very mysterious.  Very, very mysterious.  The kind of mysterious card you might want to hold on to."
+				}
+			},
+			"tags": {
+				"0": {
+					"internal_name": "app_245070",
+					"name": "Mysterious",
+					"category": "Game",
+					"category_name": "Game"
+				},
+				"1": {
+					"internal_name": "droprate_0",
+					"name": "Common",
+					"category": "droprate",
+					"category_name": "Rarity"
+				},
+				"2": {
+					"internal_name": "cardborder_1",
+					"name": "Foil",
+					"category": "cardborder",
+					"category_name": "Card Border"
+				},
+				"3": {
+					"internal_name": "item_class_2",
+					"name": "Trading Card",
+					"category": "item_class",
+					"category_name": "Item Type"
+				}
+			},
+			"classid": "169153864"
+		},
+		"success": true
+	}
+}
