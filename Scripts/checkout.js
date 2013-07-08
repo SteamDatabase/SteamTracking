@@ -1908,7 +1908,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Steam purchases are not currently supported by E-Plus or O2';
+			$('payment_method_specific_note').innerHTML = '* Note: Steam purchases are not currently supported by E-Plus';
 		}
 		else if ( method.value == 'qiwi' )
 		{
