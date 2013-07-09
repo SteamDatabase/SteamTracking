@@ -63,7 +63,7 @@ function RollTab( tab, delta )
 {
 	if ( $('tab_' + tab + '_items' ).hasClassName( 'summersale_tab_items' ) )
 	{
-		var xdiff = 940;
+		var xdiff = 950;
 		if ( delta > 0 )
 			xdiff = -xdiff;
 		new Effect.Move( $('tab_' + tab + '_items'), {x: xdiff, afterFinish: TabScrollFinishClosure( tab, delta ) } );
