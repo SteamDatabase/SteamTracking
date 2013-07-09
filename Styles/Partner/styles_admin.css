@@ -1401,7 +1401,6 @@ html, body { height:100%; }
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-
 }
 
 #app_content_about__area textarea
@@ -1470,6 +1469,61 @@ html, body { height:100%; }
 {
 	width: 500px;
 	height: 200px;
+}
+
+.AppReviewRow
+{
+	width: 1000px;
+	margin-bottom: 4px;
+}
+
+.AppReviewRow button
+{
+	margin-top: 4px;
+}
+
+.AppReviewOrganization
+{
+	width: 220px;
+	display: inline-block;
+}
+
+.AppReviewOrganization input
+{
+	width: 200px;
+}
+
+.AppReviewURL
+{
+	width: 140px;
+	display: inline-block;
+}
+
+.AppReviewURL input
+{
+	width: 120px;
+}
+
+.AppReviewScore
+{
+	width: 70px;
+	display: inline-block;
+}
+
+.AppReviewScore input
+{
+	width: 50px;
+}
+
+.AppReviewQuote
+{
+	width: 550px;
+	display: inline-block;
+}
+
+#app_content_reviews_0_quote__textarea, #app_content_reviews_1_quote__textarea, #app_content_reviews_2_quote__textarea
+{
+	width: 380px;
 }
 
 .LocPurchaseNote textarea
