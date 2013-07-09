@@ -287,9 +287,11 @@ BuyItemDialog = {
 
 		oListingRow.id = oListingRow.id + 'Copy';
 		var oItemImg = oListingRow.select('.market_listing_item_img').first();
-		oItemImg.id = oItemImg.id + 'Copy';
+		if ( typeof oItemImg != 'undefined' )
+			oItemImg.id = oItemImg.id + 'Copy';
+
 		var oItemName = oListingRow.select('.market_listing_item_name').first();
-		oItemName.id = oItemImg.id + 'Copy';
+		oItemName.id = oItemName.id + 'Copy';
 		oListingTableRows.appendChild( oListingRow );
 
 		var oAvatarLink = oListingTableRows.select('a').each( function( item ) {
@@ -302,7 +304,8 @@ BuyItemDialog = {
 
 		$('market_buynow_dialog_item').innerHTML = '';
 		$('market_buynow_dialog_item').appendChild( oListingTable );
-		CreateItemHoverFromContainer( g_rgAssets, oItemImg.id, item.appid, item.contextid, item.id, item.amount );
+		if ( typeof oItemImg != 'undefined' )
+			CreateItemHoverFromContainer( g_rgAssets, oItemImg.id, item.appid, item.contextid, item.id, item.amount );
 		CreateItemHoverFromContainer( g_rgAssets, oItemName.id, item.appid, item.contextid, item.id, item.amount );
 		$('hover').style.zIndex = 1001;
 

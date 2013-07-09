@@ -526,6 +526,8 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	font-size: 11px;
 	font-weight: bold;
 	line-height: normal;
+
+	cursor: pointer;
 }
 
 .popup_menu span.popup_menu_item {

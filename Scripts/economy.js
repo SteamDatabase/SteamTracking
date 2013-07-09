@@ -3284,6 +3284,9 @@ function CreateCurrencyHoverFromContainer( container, id, appid, contextid, curr
 function CreateItemHoverFromContainer( container, id, appid, contextid, assetid, amount )
 {
 	var element = $(id);
+	if ( element == null )
+		return;
+	
 	var rgItem = container[appid][contextid][assetid];
 	if ( !rgItem )
 		return;
