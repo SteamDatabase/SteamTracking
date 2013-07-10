@@ -1686,6 +1686,29 @@ html, body { height:100%; }
 	margin: 0 auto;
 }
 
+.gamecard_edit_block {
+	background-color: #2D2D2D;
+	margin-bottom: 6px;
+	padding: 6px;
+}
+
+.gamecard_edit_line {
+	line-height: 18px;
+	margin-left: 16px;
+}
+
+.gamecard_edit_property {
+	color: whitesmoke;
+}
+
+.gamecard_edit_oldvalue {
+	color: grey;
+}
+
+.gamecard_edit_newvalue {
+	color: whitesmoke;
+}
+
 /* this is a workaround for webkit centering bug with backgrounds that are larger than the window */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	div.profilebackground_preview_background {
@@ -1829,3 +1852,4 @@ html, body { height:100%; }
 {
 	display: block;
 }
+
