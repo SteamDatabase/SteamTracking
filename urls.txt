@@ -66,7 +66,6 @@ Scripts/blotter_functions.js|http://cdn.steamcommunity.com/public/javascript/blo
 Scripts/cart.js|http://cdn.store.steampowered.com/public/javascript/cart.js?_=*TIMENOW*&l=english
 Scripts/chat.js|http://cdn.steamcommunity.com/public/javascript/chat.js?_=*TIMENOW*&l=english
 Scripts/checkout.js|http://cdn.store.steampowered.com/public/javascript/checkout.js?_=*TIMENOW*&l=english
-Scripts/comment_functions.js|http://cdn.steamcommunity.com/public/javascript/comment_functions.js?_=*TIMENOW*&l=english
 Scripts/commentnotifications.js|http://cdn.steamcommunity.com/public/javascript/commentnotifications.js?_=*TIMENOW*&l=english
 Scripts/communityhome.js|http://cdn.steamcommunity.com/public/javascript/communityhome.js?_=*TIMENOW*&l=english
 Scripts/discussions.js|http://cdn.steamcommunity.com/public/javascript/discussions.js?_=*TIMENOW*&l=english
