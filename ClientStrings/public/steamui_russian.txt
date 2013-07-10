@@ -6039,4 +6039,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"Пожалуйста, введите для этого компьютера название длиной не менее 6 символов"
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"Разрешить запуск %game% с дополнительными параметрами «%arguments%»?\nЕсли вы не осуществляли запуск, нажмите «Отмена»"
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"Разрешение на запуск игры"
+"[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }

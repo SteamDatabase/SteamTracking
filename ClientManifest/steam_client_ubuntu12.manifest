@@ -1,11 +1,11 @@
 "ubuntu12"
 {
-	"version"		"1373405099"
+	"version"		"1373418487"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.c537a520a8b44e85379cdb10bcaf7ce07d19111c"
-		"checksum"		"c537a520a8b44e85379cdb10bcaf7ce07d19111c"
-		"size"		"5024781"
+		"file"		"strings_all.zip.4178350204feb8c5902fa92a156d9c30301eee01"
+		"checksum"		"4178350204feb8c5902fa92a156d9c30301eee01"
+		"size"		"5027737"
 	}
 	"resources_all"
 	{
@@ -51,9 +51,9 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.51c7a16c20890d9cf8e2c530c751764810eb810c"
-		"checksum"		"51c7a16c20890d9cf8e2c530c751764810eb810c"
-		"size"		"38219467"
+		"file"		"bins_ubuntu12.zip.afe5a519a1fe4a793b7a265e587dbf2b926dfc0d"
+		"checksum"		"afe5a519a1fe4a793b7a265e587dbf2b926dfc0d"
+		"size"		"38219459"
 	}
 	"webkit_ubuntu12"
 	{
@@ -75,8 +75,8 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.4b000d804df8cc483558f7eb5d73a78a3cbcb202"
-		"checksum"		"4b000d804df8cc483558f7eb5d73a78a3cbcb202"
+		"file"		"steam_ubuntu12.zip.3a730a115efb9814eb38758a810390ef7cb05e7d"
+		"checksum"		"3a730a115efb9814eb38758a810390ef7cb05e7d"
 		"size"		"1900641"
 		"IsBootstrapperPackage"		"1"
 	}
@@ -95,5 +95,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"12de6ac8ea4ffb4cc1d3fb6834f2791d9d8969394f3ab923e3a131bf54f377f2e34f1a641113b4e6f38a2ab2c125e3f46702d57b2a8efbb164d452580552664f74f042e92e33905b252309bc2bfd24e9e4ebb0e537de01a2baa37e74a2fe1f5be22e9d858bad06a2ad575900d10843f28e0dfbfec56e39522b7fbdad4e16b739"
+	"ubuntu12"		"baba35c445566a848fcd96a8b7d7af15951ad3f82366a30cb2aec1d549697a26e2e28c7ba51326d8b4d78c8addfd57d2746098749ad484e0c7c8d25c1833cbcc21242070956bea31ded98d243745849ae6b6b2296fd4d8352e8a09f0e38fb60718e7f4570a074f8e8970720c4004bb33de42b7dbeb4c6e971e0e2a3f42d01f5a"
 }

@@ -5041,7 +5041,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]steam_screenshots_upload_info"	"Uploading %upload_screenshot_count% screenshots to Steam Cloud"
 "steam_also_delete_from_cloud"	"Steam Cloud'dan da sil"
 "[english]steam_also_delete_from_cloud"	"Delete from Steam Cloud as well"
-"steam_screenshots_error_info"	"%ScreenshotsErrors% ekran görüntüsü yüklenirken hata meydana geldin. Steam Cloud geçici olarak devre dışı olabilir."
+"steam_screenshots_error_info"	"%ScreenshotsErrors% ekran görüntüsü yüklenirken hata meydana geldi. Steam Cloud geçici olarak devre dışı olabilir."
 "[english]steam_screenshots_error_info"	"There was an error uploading %ScreenshotsErrors% screenshots.  Steam Cloud may be temporarily unavailable."
 "steam_are_you_sure_delete_screenshot"	"Bu ekran görüntüsünü sabit diskinizden kalıcı olarak silmek istediğinize emin misiniz?"
 "[english]steam_are_you_sure_delete_screenshot"	"Are you sure you want to permanently delete this screenshot from your hard disk?"

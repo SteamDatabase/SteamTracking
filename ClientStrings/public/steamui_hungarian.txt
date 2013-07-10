@@ -6016,4 +6016,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"Írj be egy legalább 6 karakter hosszú nevet ennek a számítógépnek."
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"Engedélyezed a(z) %game% következő opcionális parancssori paraméterekkel indítását: \"%arguments%\" ?\nHa nem te kérted az indítást, kattints a Mégsemre."
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"Indítás engedélyezése"
+"[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }

@@ -6043,4 +6043,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"請輸入至少 6 個以上的字元來為此電腦命名。"
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"要用非必要指令「%arguments%」來啟動 %game% 嗎？\n如果您並未要求這次的啟動，請按下取消"
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"允許啟動遊戲"
+"[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }
