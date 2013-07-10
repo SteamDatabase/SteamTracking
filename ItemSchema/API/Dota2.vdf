@@ -81405,6 +81405,69 @@
 			}
 			"tournament_url"		"http://www.dota2.com/tournaments/international/"
 		}
+		"15058"
+		{
+			"name"		"Bloodstone of the Ancestor"
+			"prefab"		"tool"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"42"
+				}
+			}
+			"creation_date"		"2013-07-08"
+			"image_inventory"		"econ/tools/bloodstone1"
+			"item_description"		"#DOTA_Item_Desc_Bloodstone_of_the_Ancestor"
+			"item_name"		"#DOTA_Item_Bloodstone_of_the_Ancestor"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"item_rarity"		"rare"
+			"used_by_heroes"		"0"
+			"disable_style_selector"		"1"
+		}
+		"15059"
+		{
+			"name"		"Bloodstone of the Precursor"
+			"prefab"		"tool"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"42"
+				}
+			}
+			"creation_date"		"2013-07-09"
+			"disable_style_selector"		"1"
+			"image_inventory"		"econ/tools/bloodstone2"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Bloodstone_of_the_Ancestor"
+			"item_name"		"#DOTA_Item_Bloodstone_of_the_Precursor"
+			"item_rarity"		"mythical"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"used_by_heroes"		"0"
+		}
+		"15060"
+		{
+			"name"		"Bloodstone of the Founder"
+			"prefab"		"tool"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"42"
+				}
+			}
+			"creation_date"		"2013-07-09"
+			"disable_style_selector"		"1"
+			"image_inventory"		"econ/tools/bloodstone3"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Bloodstone_of_the_Precursor"
+			"item_name"		"#DOTA_Item_Bloodstone_of_the_Founder"
+			"item_rarity"		"legendary"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"used_by_heroes"		"0"
+		}
 		"15061"
 		{
 			"name"		"Nexon Starter League"
@@ -101035,6 +101098,11 @@
 		"41"
 		{
 			"type_name"		"KillEaterEventType_RoshanKills"
+		}
+		"42"
+		{
+			"type_name"		"KillEaterEventType_GiftsGranted"
+			"use_level_data"		"0"
 		}
 	}
 }

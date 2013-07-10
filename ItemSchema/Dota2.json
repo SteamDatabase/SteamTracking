@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.edee3d0cfaa8d3af913936e2a3bdfc2548f02e7a.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.1170c124041573f2cfcd777fb5507674ca984421.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -47271,6 +47271,108 @@
 				
 			},
 			{
+				"name": "Bloodstone of the Ancestor",
+				"defindex": 15058,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Bloodstone of the Ancestor",
+				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/bloodstone1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/bloodstone1.bc2e6f6cc4c02644f9ffdeab9ba03362af9eef99.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 42
+					}
+				]
+				
+			},
+			{
+				"name": "Bloodstone of the Precursor",
+				"defindex": 15059,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Bloodstone of the Precursor",
+				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/bloodstone2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/bloodstone2.a60d405791e21868fce9cec3a90f0fb71488b1e7.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 42
+					}
+				]
+				
+			},
+			{
+				"name": "Bloodstone of the Founder",
+				"defindex": 15060,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Bloodstone of the Founder",
+				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/bloodstone3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/bloodstone3.bcb46e3c595ce3946cb30ca2ef30274c2682dd07.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 42
+					}
+				]
+				
+			},
+			{
 				"name": "Nexon Starter League",
 				"defindex": 15061,
 				"item_class": "tool",
@@ -62408,6 +62510,10 @@
 			{
 				"type": 41,
 				"type_name": "Roshan Kills"
+			},
+			{
+				"type": 42,
+				"type_name": "Gifts Granted"
 			}
 		]
 		
