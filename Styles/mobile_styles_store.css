@@ -1973,15 +1973,9 @@ div.divider {
 }
 
 .buttonFullWidth, .buttonHalfWidth {
-    display: inline-block;
-    float: left;
-    margin: 4px 0px 4px 8px;
-    background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
-    background-repeat: repeat-x;
-    background-size: 32px 45px;
-    height: 44px;
-    color: #D0D0D0;
-    border-radius: 4px;
+
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
+	border-radius: 0px;
 }
 
 .buttonSpecial {
