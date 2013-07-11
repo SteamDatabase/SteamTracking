@@ -194,6 +194,7 @@ div#global_header {
 	background-color: #000000;
 	border-bottom: 1px solid #4D4B48;
 	background-position: center top;
+	min-width: 940px;
 }
 
 /**/
@@ -363,6 +364,7 @@ div#global_header .activebg {
 
 div#store_header, div#store_header_dlc {
 	background-color: #3b3938;
+	min-width: 940px;
 }
 
 div#store_header .content, div#store_header_dlc .content {
