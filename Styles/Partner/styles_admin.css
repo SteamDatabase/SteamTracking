@@ -1471,6 +1471,45 @@ html, body { height:100%; }
 	height: 200px;
 }
 
+.SysReqs hr
+{
+	margin: 0px 0px 12px 300px;
+	padding: 0px;
+	width: 700px;
+}
+
+.SysReqRow
+{
+	width: 500px;
+	margin-bottom: 4px;
+}
+
+.SysReqRowLabel
+{
+	width: 100px;
+	display: inline-block;
+}
+
+.SysReqRow input
+{
+	width: 390px;
+}
+
+#MinSysReqLangSelect_select, #RecSysReqLangSelect_select
+{
+	float: right;
+}
+
+.SysReqRowWrapper
+{
+	display: block;
+}
+
+.SysReqRowWrapper input
+{
+	width: 100%;
+}
+
 .AppReviewRow
 {
 	width: 1000px;

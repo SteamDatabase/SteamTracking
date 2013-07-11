@@ -2430,12 +2430,17 @@ function LocListenForEvents( id )
 function LocLanguageSelect( id, language )
 {
 	var select = $( id + '_select' );
-	select.value = language;
+	if ( select )
+		select.value = language;
 
-	$( id + '_currentlanguage' ).value = language;
+	var currentLang = $( id + '_currentlanguage' );
+	if ( currentLang )
+		currentLang.value = language;
+
 	var textArea = $( id + '_textarea' );
 	var hiddenInput = $( id + language + '__hidden' );
-	textArea.value = hiddenInput.value;
+	if ( textArea && hiddenInput )
+		textArea.value = hiddenInput.value;
 }
 
 // called when localized text input changes. Updates hidden inputs
