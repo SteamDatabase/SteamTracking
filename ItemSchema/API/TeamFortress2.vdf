@@ -18434,11 +18434,15 @@
 			"image_inventory"	"backpack/weapons/c_models/c_reserve_shooter/c_reserve_shooter"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
 			"used_by_classes"
 			{
 				"soldier"	"1"
 				"pyro"		"1"
+			}
+			"model_player_per_class"
+			{
+				"soldier"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter.mdl"
+				"pyro"	"models/weapons/c_models/c_reserve_shooter/c_reserve_shooter_p.mdl"
 			}
 			"visuals"
 			{
@@ -22667,7 +22671,12 @@
 				"mod ammo per shot"
 				{
 					"attribute_class"	"mod_ammo_per_shot"
-					"value"	"17.5"
+					"value"	"18"
+				}
+				"mod ammo per shot missed DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_ammo_per_shot_missed_DISPLAY_ONLY"
+					"value"	"36"
 				}
 				"electrical airblast DISPLAY ONLY"
 				{
@@ -46664,7 +46673,7 @@
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Process"
 			"item_description"	"#TF_MapToken_Process_Desc"
-			"map_name"		"#TF_KongKing"
+			"map_name"		"#TF_Map_Process"
 			"show_in_armory"	"1"
 			"armory_desc"		"maptoken"
 			"image_inventory"	"backpack/player/items/all_class/stamp_process"
@@ -46684,7 +46693,7 @@
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Standin"
 			"item_description"	"#TF_MapToken_Standin_Desc"
-			"map_name"		"#TF_KongKing"
+			"map_name"		"#TF_Map_Standin"
 			"show_in_armory"	"1"
 			"armory_desc"		"maptoken"
 			"image_inventory"	"backpack/player/items/all_class/stamp_standin"
@@ -59458,6 +59467,16 @@
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}	
+		"355"
+		{
+			"name"	"mod ammo per shot missed DISPLAY ONLY"
+			"attribute_class"	"mod_ammo_per_shot_missed_DISPLAY_ONLY"
+			"description_string"	"#Attrib_AmmoPerShotMissed"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
 		"356"
 		{
 			"name"	"airblast disabled"

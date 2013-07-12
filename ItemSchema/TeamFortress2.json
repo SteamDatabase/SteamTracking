@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.ff16b30628369ff6fa06db6aefed139ee3bd56e0.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.32ee38b4d1e8fbd89a4f70688773ef35cee82743.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -17163,7 +17163,12 @@
 					{
 						"name": "mod ammo per shot",
 						"class": "mod_ammo_per_shot",
-						"value": 17.500000
+						"value": 18.000000
+					},
+					{
+						"name": "mod ammo per shot missed DISPLAY ONLY",
+						"class": "mod_ammo_per_shot_missed_DISPLAY_ONLY",
+						"value": 36.000000
 					},
 					{
 						"name": "electrical airblast DISPLAY ONLY",
@@ -71479,6 +71484,16 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "mod ammo per shot missed DISPLAY ONLY",
+				"defindex": 355,
+				"attribute_class": "mod_ammo_per_shot_missed_DISPLAY_ONLY",
+				"description_string": "Per Shot Missed: -%s1 ammo",
+				"description_format": "value_is_additive",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
 				"name": "airblast disabled",
 				"defindex": 356,
 				"attribute_class": "airblast_disabled",
@@ -72499,7 +72514,7 @@
 				"name": "grenade launcher mortar mode",
 				"defindex": 466,
 				"attribute_class": "grenade_launcher_mortar_mode",
-				"description_string": "Cannonballs have a fuse time of 2 seconds; fuses can be primed to explode earlier by holding down the fire key.",
+				"description_string": "Cannonballs have a fuse time of 1 second; fuses can be primed to explode earlier by holding down the fire key.",
 				"description_format": "value_is_additive",
 				"effect_type": "neutral",
 				"hidden": false,
