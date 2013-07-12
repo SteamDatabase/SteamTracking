@@ -640,11 +640,22 @@ input.market_dialog_input:focus {
 	width: 7em;
 }
 
+#market_sell_dialog_confirm_buttons .market_dialog_bottom_buttons {
+	position: relative;
+	min-height: 32px;
+}
+
 #market_sell_dialog_accept {
 	float: right;
 	margin: 0.4em 0 0 1em;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+#market_sell_dialog_throbber {
+	position: absolute;
+	bottom: -2px;
+	right: 34px;
 }
 
 #marker_sell_dialog_terms {
