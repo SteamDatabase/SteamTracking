@@ -2432,8 +2432,10 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').enable();
 		$('market_sell_dialog_accept_ssa').enable();
 
+		$('market_sell_dialog_ok').show();
 		$('market_sell_dialog_ok').style.cursor = '';
 		$('market_sell_dialog_ok').style.opacity = 1;
+		$('market_sell_dialog_back').show();
 		$('market_sell_dialog_back').style.cursor = '';
 		$('market_sell_dialog_back').style.opacity = 1;
 		$('market_sell_dialog_throbber').hide();
