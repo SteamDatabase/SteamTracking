@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.8851c6fd0fb3abf8d27409f655a01f765bd6f9e1.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.ff16b30628369ff6fa06db6aefed139ee3bd56e0.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -65112,11 +65112,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat.5de90f195cc1dea809a3a966101a21aa68217fb1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat_large.ae2cfae27a22df9b26b5ad86a89fd40992d19679.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -65124,15 +65125,7 @@
 					"can_card_upgrade": true,
 					"can_strangify": true,
 					"can_consume": true
-				},
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "The Beastly Bonnet",
