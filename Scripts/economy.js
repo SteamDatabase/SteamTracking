@@ -2368,6 +2368,7 @@ MessageDialog = {
 SellItemDialog = {
 	m_bInitialized: false,
 	m_bWaitingForUserToConfirm: false,
+	m_bWaitingOnServer: false,
 	m_nConfirmedPrice: 0,
 	m_nConfirmedQuantity: 0,
 	m_item: null,
@@ -2430,6 +2431,12 @@ SellItemDialog = {
 		$('market_sell_currency_input').enable();
 		$('market_sell_buyercurrency_input').enable();
 		$('market_sell_dialog_accept_ssa').enable();
+
+		$('market_sell_dialog_ok').style.cursor = '';
+		$('market_sell_dialog_ok').style.opacity = 1;
+		$('market_sell_dialog_back').style.cursor = '';
+		$('market_sell_dialog_back').style.opacity = 1;
+		$('market_sell_dialog_throbber').hide();
 
 		this.m_item = item;
 
@@ -2708,6 +2715,21 @@ SellItemDialog = {
 	},
 
 	OnConfirmationAccept: function( event ) {
+		if ( this.m_bWaitingOnServer )
+		{
+			event.stop();
+			return;
+		}
+
+		this.m_bWaitingOnServer = true;
+
+		$('market_sell_dialog_error').hide();
+
+		$('market_sell_dialog_ok').fade({ duration: 0.25 });
+		$('market_sell_dialog_back').fade({ duration: 0.25 });
+		$('market_sell_dialog_throbber').show();
+		$('market_sell_dialog_throbber').fade({ duration: 0.25, from: 0, to: 1 });
+		
 		new Ajax.Request( 'http://steamcommunity.com/market/sellitem/', {
 				method: 'post',
 				parameters: {
@@ -2726,8 +2748,14 @@ SellItemDialog = {
 	},
 
 	OnConfirmationBack: function( event ) {
-		this.m_bWaitingForUserToConfirm = false;
+		if ( this.m_bWaitingOnServer )
+		{
+			event.stop();
+			return;
+		}
 		
+		this.m_bWaitingForUserToConfirm = false;
+
 		// reverse the effects
 		$('market_sell_dialog_title').update( 'Put an item up for sale' );
 
@@ -2757,6 +2785,7 @@ SellItemDialog = {
 
 	OnSuccess: function( transport ) {
 		this.m_bWaitingForUserToConfirm = false;
+		this.m_bWaitingOnServer = false;
 
 		if ( transport.responseJSON )
 		{
@@ -2781,7 +2810,18 @@ SellItemDialog = {
 	},
 
 	OnFailure: function( transport ) {
-		this.m_bWaitingForUserToConfirm = false;
+		this.m_bWaitingOnServer = false;
+
+		var queue = Effect.Queues.get('global');
+		queue.each(function(effect) { effect.cancel(); });
+
+		$('market_sell_dialog_ok').show();
+		$('market_sell_dialog_ok').setOpacity('0');
+		$('market_sell_dialog_ok').fade({ duration: 0.25, from: 0, to: 1 });
+		$('market_sell_dialog_back').show();
+		$('market_sell_dialog_back').setOpacity('0');
+		$('market_sell_dialog_back').fade({ duration: 0.25, from: 0, to: 1 });
+		$('market_sell_dialog_throbber').fade({ duration: 0.25 });
 
 		if ( transport.responseJSON && transport.responseJSON.message )
 		{
