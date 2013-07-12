@@ -40435,7 +40435,7 @@
 		"30058"
 		{
 			"name"		"The Crosslinker's Coil"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
