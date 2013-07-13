@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1373503443"
+	"version"		"1373658924"
 	"strings_all"
 	{
 		"file"		"strings_all.zip.4178350204feb8c5902fa92a156d9c30301eee01"
@@ -51,9 +51,9 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.9dfee7e73513695cef4aa7d32dbcd1cf775e0509"
-		"checksum"		"9dfee7e73513695cef4aa7d32dbcd1cf775e0509"
-		"size"		"20495689"
+		"file"		"bins_win32.zip.a664a0165a5c78898593772038a03dc40113679b"
+		"checksum"		"a664a0165a5c78898593772038a03dc40113679b"
+		"size"		"20495094"
 	}
 	"webkit_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.c4ddac0edb65d92b3bf90890e81fab2f7ba11e1a"
-		"checksum"		"c4ddac0edb65d92b3bf90890e81fab2f7ba11e1a"
-		"size"		"767221"
+		"file"		"steam_win32.zip.9606a75286d79ccc3f4b54c0eab3709718cc85ad"
+		"checksum"		"9606a75286d79ccc3f4b54c0eab3709718cc85ad"
+		"size"		"767271"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"4d733ac03a02cbbe462e3eb04693fc9a646a866d494a1d1cd0524607fb76897feb24c226d8d3d8d64d67cc9347bb245d9bec3fffff8b948885d60c7e93f8c8a26da17214711b4617f6d1d43c8cdabfbd9dd2a7ee76d640396420a4d0b886b4a4a4dbee64be0b220ff280fb113f139b81599ea1ea216f1937a535e0a9c03c54d8"
+	"win32"		"6b5d1f35d986e2fe55aebb176d9f2384d213655642376acf3b1bf8fdde48fd7ad21e494664dae4db32951feea535b8f4cfd4625f48cd3d6444fe3e9041450b4ca6207f6a13bd628b5184c2c2bec12fb708e8ae71c9f258480746d67633dd96e67d85c45ace7de48444e1d4192a9d956a92bac87602eb4a12399ff7494f8d898d"
 }
