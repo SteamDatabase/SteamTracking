@@ -291,9 +291,8 @@ span.popup_menu_pulldown_indicator {
 	border: solid white 2px;
 	height: 28px;
 	width: 28px;
-
-	text-align: center;
 	line-height: 28px;
+	text-align: center;
 
 	cursor: default;
 }
@@ -339,6 +338,52 @@ span.popup_menu_pulldown_indicator {
 	border-color: #542437;
 }
 
+.friendPlayerLevel.lvl_90 {
+	border-color: #997c52;
+}
+
+.friendPlayerLevel.lvl_100 {
+	border: none;
+	border-radius: 0;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_hexagons.png' );
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+	font-size: 14px;
+
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+
+}
+
+.friendPlayerLevel.lvl_100.lvl_plus_10 {
+	background-position: 0 -32px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_20 {
+	background-position: 0 -64px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_30 {
+	background-position: 0 -96px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_40 {
+	background-position: 0 -128px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_50 {
+	background-position: 0 -160px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_60 {
+	background-position: 0 -192px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_70 {
+	background-position: 0 -224px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_80 {
+	background-position: 0 -256px;
+}
+.friendPlayerLevel.lvl_100.lvl_plus_90 {
+	background-position: 0 -288px;
+}
 
 .newmodal {
 	position: absolute;
