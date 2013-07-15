@@ -1138,3 +1138,13 @@ a.headlineLink:hover {
 	float: left;
 	margin-right: 8px;
 }
+
+#group_trending_topics_pending {
+	text-align: center;
+	height: 198px;
+	line-height: 198px;
+}
+
+#group_trending_topics_pending img {
+	vertical-align: middle;
+}
