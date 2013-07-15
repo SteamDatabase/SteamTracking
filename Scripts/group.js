@@ -46,6 +46,11 @@ function OnGroupHashChange( hash, bInitialLoad )
 		}
 		LoadURL( strTab, url );
 	}
+	else if ( bInitialLoad )
+	{
+		// not flipping to another tab, so load trending topics on the group overview page
+		LoadTrendingTopics();
+	}
 }
 
 function LoadURL( strTab, url )
@@ -125,8 +130,24 @@ function FlipToTab( strTab )
 		$('group_tab_content_overview').hide();
 		$('group_page_dynamic_content').show();
 	}
+	else
+	{
+		LoadTrendingTopics();
+	}
 
 	g_strActiveTab = strTab;
+}
+
+g_bTrendingTopicsLoading = false;
+function LoadTrendingTopics()
+{
+	var elTrendingTopics = $('group_trending_topics');
+	if ( elTrendingTopics.children.length == 0 )
+	{
+		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>')
+		g_bTrendingTopicsLoading = true;
+		new Ajax.Updater( elTrendingTopics, g_strGroupURL + '/trendingtopics', {method: 'get'} );
+	}
 }
 
 Event.observe( window, 'load', function() {
