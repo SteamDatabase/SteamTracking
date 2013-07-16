@@ -412,6 +412,22 @@ p {
 		text-decoration: none;
 	}
 
+	.landingTable .th a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	.landingTable .th a:hover {
+		color: white;
+	}
+
+	.landingTable .td a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	.landingTable .td a:hover {
+		color: white;
+	}
+
 	.landingTable strong {
 		color: #fff;
 	}
