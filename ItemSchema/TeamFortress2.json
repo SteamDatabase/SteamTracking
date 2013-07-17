@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.32ee38b4d1e8fbd89a4f70688773ef35cee82743.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.1521f21faa37a3d782057596961913025203c1d0.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -29652,11 +29652,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_heavyhat.6bb8d2311283f650da7281dd0b89f1fc1e1e38be.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_heavyhat_large.c62db1876f7c895fc37e849bd036ce1bad419959.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -29667,14 +29668,6 @@
 				},
 				"used_by_classes": [
 					"Heavy"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -29695,11 +29688,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_medichat.5805c25346dfa66e0772514730eee50b657e30e3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_medichat_large.350a8631b491339d88709c016763a64a50dad87e.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -29710,14 +29704,6 @@
 				},
 				"used_by_classes": [
 					"Medic"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
 				]
 				
 			},
@@ -29738,11 +29724,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_badge_sovjet.3c3b779de189e9b3a1437f136b76126dffee107a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/coh_badge_sovjet_large.ee314db9dcbd6370a4cad84abb4351d11f4e55db.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -29757,14 +29744,6 @@
 					},
 					{
 						"name": "German"
-					}
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
