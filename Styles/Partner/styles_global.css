@@ -449,11 +449,18 @@ input[type=submit].btn_darkblue_white_innerfade.btn_medium {
 	line-height: 30px;
 }
 
-input[type=submit].btn_darkblue_white_innerfade.btn_small_thin {
+input[type=submit].btn_darkblue_white_innerfade.btn_small_thin, button.btn_darkblue_white_innerfade.btn_small_thin {
 	padding: 0 15px;
 	font-size: 12px;
 	line-height: 20px;
 }
+
+input[type=submit].btn_green_white_innerfade.btn_medium {
+	padding: 0 15px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
 
 input[type=file] {
 
