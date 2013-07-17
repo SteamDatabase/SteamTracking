@@ -4,12 +4,12 @@
 	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/bg_highlight_blue.jpg');
 }
 
-
 .title
 {
 	font-size: 30px;
 	color: #ffffff;
 	padding-top: 10px;
+	font-family: 'Motiva Sans', Arial, Tahoma;
 }
 
 .subtitle
@@ -17,6 +17,7 @@
 	font-size: 14px;
 	color: #737373;
 	line-height: 20px;
+	margin-bottom: 20px;
 }
 
 .subtitle a
@@ -29,6 +30,160 @@
 {
 	text-shadow: 1px 1px 0px #000000;
 }
+
+.browseApps
+{
+	background-color: #686868;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.4), 0px 0px 150px rgba(0,0,0,0.4) inset;
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.4), 0px 0px 150px rgba(0,0,0,0.4) inset;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.4), 0px 0px 150px rgba(0,0,0,0.4) inset;
+}
+
+.browseAppsTitleContainer
+{
+	padding: 10px;
+	background-color: #353535;
+	background: -moz-linear-gradient(top, #363636 91%, #303030 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(91%,#363636), color-stop(95%,#303030));background: -webkit-linear-gradient(top, #363636 91%,#303030 95%);background: -o-linear-gradient(top, #363636 91%,#303030 95%);background: -ms-linear-gradient(top, #363636 91%,#303030 95%);background: linear-gradient(to bottom, #363636 91%,#303030 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#303030',GradientType=0 );}
+
+.browseAppsTitle
+{
+	font-size: 21px;
+	line-height: 27px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+}
+
+.browseAppsTitle .highlight
+{
+	color: #ffffff;
+}
+
+.browseAppsTitle.beta
+{
+	color: #e16500;
+}
+
+.searchApps
+{
+	float: right;
+	position: relative;
+	width:279px;
+	height:30px;
+	background-image: url(http://cdn.steamcommunity.com/public/images/sharedfiles/ig/searchbox_workshop_bg_wide.png);
+	background-repeat:no-repeat;
+	padding: 0;
+	margin: 0;
+}
+
+input.searchAppsInput
+{
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 215px;
+	font-style: italic;
+	background-color: transparent;
+}
+
+.searchAppImage
+{
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 23px;
+	height: 18px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.workshopApps
+{
+	padding: 10px 10px 0px 10px;
+	width: 740px;
+}
+
+.workshopAppsSort
+{
+	float: right;
+	width: 180px;
+}
+
+.workshopAppsSort .browseOptionImage
+{
+	width: 205px;
+}
+
+.workshopAppsSort .browseOption
+{
+	font-size: 14px;
+}
+
+.workshopAppsSortTitle
+{
+	text-transform: uppercase;
+	font-size: 12px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	color: #979797;
+}
+
+.workshop_apps_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+	padding: 0px 20px 10px 20px;
+	width: 720px;
+}
+
+.workshop_apps_paging_summary
+{
+	color: #969696;
+	float: left;
+}
+
+.workshop_apps_paging_controls
+{
+	float: right;
+}
+
+.workshop_apps_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.workshop_apps_paging_pagelink, .workshop_apps_paging_controls .commentthread_pagelink {
+	color: #ffffff;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.workshop_apps_paging_pagelink:hover, .workshop_apps_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.workshop_apps_paging_pagelink.active, .workshop_apps_paging_controls .commentthread_pagelink.active {
+	color: #000000;
+	cursor: default;
+}
+
+.mworkshop_apps_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+.workshopAppsRow {
+	margin: 10px 0px;
+	border-bottom: 1px solid #828282;
+	background: -moz-linear-gradient(top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,102,102,0)), color-stop(95%,rgba(38,38,39,1)));background: -webkit-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: -o-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: -ms-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: linear-gradient(to bottom, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(102,102,102,0)', endColorstr='rgba(38,38,39,1)',GradientType=0 );}
+
+
 
 .browseHighlightedApps
 {
@@ -65,7 +220,7 @@
 	float: left;
 	width: 175px;
 	height: 172px;
-	margin: 0 5px 0 5px;
+	margin: 0 5px 10px 5px;
 	cursor: pointer;
 	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/Workshop_FeatureStack.png');
 	background-repeat: no-repeat;
@@ -298,5 +453,3 @@
 	vertical-align: middle;
 	margin-right: 10px;
 }
-
-
