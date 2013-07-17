@@ -2025,6 +2025,24 @@ CGameSelector = Class.create( {
 
 } );
 
+CGameSelectorWorkshopGames = Class.create( CGameSelector, {
+	OnGameSelectTextEntry: function( elInput, value )
+	{
+		if ( value )
+		{
+			new Ajax.Request( 'http://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=' + encodeURIComponent( value ), {
+				method: 'get',
+				onSuccess: this.ReceiveGameSelectResponse.bind( this, value )
+			} );
+		}
+		else
+		{
+			this.elSuggestions.update('');
+			this.bHaveSuggestions = false;
+		}
+	},
+} );
+
 CGameSelectorOwnedGames = Class.create( CGameSelector, {
 
 	m_bOwnedGamesReady: false,
@@ -2691,6 +2709,207 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 		}
 	});
 }
+
+var CAjaxPagingControls = Class.create( {
+	m_strActionURL: null,
+	m_cPageSize: null,
+	m_strElementPrefix: "",
+	m_rgStaticParams: null,
+
+	m_strQuery: null,
+	m_cTotalCount: 0,
+	m_iCurrentPage: 0,
+	m_cMaxPages: 0,
+	m_bLoading: false,
+
+	m_fnResponseHandler: null,
+	m_fnPageChangedHandler: null,
+
+	initialize: function( rgSearchData, url )
+	{
+		this.m_strActionURL = url;
+
+		this.m_strQuery = rgSearchData['query'];
+		this.m_cTotalCount = rgSearchData['total_count'];
+		this.m_iCurrentPage = 0;
+		this.m_cPageSize = rgSearchData['pagesize'];
+		this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
+
+		if ( rgSearchData['prefix'] )
+			this.m_strElementPrefix = rgSearchData['prefix'];
+
+		$(this.m_strElementPrefix + '_btn_prev').observe( 'click', this.PrevPage.bind( this ) );
+		$(this.m_strElementPrefix + '_btn_next').observe( 'click', this.NextPage.bind( this ) );
+
+		this.UpdatePagingDisplay();
+	},
+
+	GetActionURL: function( action )
+	{
+		var url = this.m_strActionURL + action + '/';
+		return url;
+	},
+
+	SetResponseHandler: function( fnHandler )
+	{
+		this.m_fnResponseHandler = fnHandler;
+	},
+
+	SetPageChangedHandler: function ( fnHandler )
+	{
+		this.m_fnPageChangedHandler = fnHandler;
+	},
+
+	SetStaticParameters: function ( rgParams )
+	{
+		this.m_rgStaticParams = rgParams;
+	},
+
+	OnAJAXComplete: function()
+	{
+		this.m_bLoading = false;
+	},
+
+	NextPage: function()
+	{
+		if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+			this.GoToPage( this.m_iCurrentPage + 1 );
+	},
+
+	PrevPage: function()
+	{
+		if ( this.m_iCurrentPage > 0 )
+			this.GoToPage( this.m_iCurrentPage - 1 );
+	},
+
+	GoToPage: function( iPage )
+	{
+		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || iPage == this.m_iCurrentPage )
+			return;
+
+		var params = {
+			query: this.m_strQuery,
+			start: this.m_cPageSize * iPage,
+			count: this.m_cPageSize
+		};
+
+		if ( this.m_rgStaticParams != null )
+		{
+			for ( var sParamName in this.m_rgStaticParams )
+			{
+				if ( typeof sParamName != "string" )
+					continue;
+
+				if ( typeof this.m_rgStaticParams[sParamName] != "string" )
+					continue;
+
+				params[sParamName] = this.m_rgStaticParams[sParamName];
+			}
+		}
+
+		this.m_bLoading = true;
+		new Ajax.Request( this.GetActionURL( 'render' ), {
+			method: 'get',
+			parameters: params,
+			onSuccess: this.OnResponseRenderResults.bind( this ),
+			onComplete: this.OnAJAXComplete.bind( this )
+		});
+	},
+
+	OnResponseRenderResults: function( transport )
+	{
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			var response = transport.responseJSON;
+			this.m_cTotalCount = response.total_count;
+			this.m_cMaxPages = Math.ceil( response.total_count / this.m_cPageSize );
+			this.m_iCurrentPage = Math.floor( response.start / this.m_cPageSize );
+
+			if ( this.m_cTotalCount <= response.start )
+			{
+				// this page is no longer valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
+				this.GoToPage.bind( this, this.m_iCurrentPage - 1 ).defer();
+				return;
+			}
+
+			var elResults = $(this.m_strElementPrefix + 'Rows');
+
+			elResults.update( response.results_html );
+
+			if ( this.m_fnResponseHandler != null )
+				this.m_fnResponseHandler( response );
+
+			ScrollToIfNotInView( $(this.m_strElementPrefix + 'Table'), 40 );
+
+			this.UpdatePagingDisplay();
+		}
+	},
+
+	UpdatePagingDisplay: function()
+	{
+		$(this.m_strElementPrefix + '_total').update( v_numberformat( this.m_cTotalCount ) );
+		$(this.m_strElementPrefix + '_start').update( v_numberformat( this.m_iCurrentPage * this.m_cPageSize + 1 ) );
+		$(this.m_strElementPrefix + '_end').update( Math.min( ( this.m_iCurrentPage + 1 ) * this.m_cPageSize, this.m_cTotalCount ) );
+
+
+		if ( this.m_cMaxPages <= 1 )
+		{
+			$(this.m_strElementPrefix + '_controls').hide();
+		}
+		else
+		{
+			$(this.m_strElementPrefix + '_controls').show();
+			if ( this.m_iCurrentPage > 0 )
+				$(this.m_strElementPrefix + '_btn_prev').removeClassName('disabled');
+			else
+				$(this.m_strElementPrefix + '_btn_prev').addClassName('disabled');
+
+			if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+				$(this.m_strElementPrefix + '_btn_next').removeClassName('disabled');
+			else
+				$(this.m_strElementPrefix + '_btn_next').addClassName('disabled');
+
+			var elPageLinks = $(this.m_strElementPrefix + '_links');
+			elPageLinks.update('');
+			// we always show first, last, + 3 page links closest to current page
+			var cPageLinksAheadBehind = 2;
+			var firstPageLink = Math.max( this.m_iCurrentPage - cPageLinksAheadBehind, 1 );
+			var lastPageLink = Math.min( this.m_iCurrentPage + (cPageLinksAheadBehind*2) + ( firstPageLink - this.m_iCurrentPage ), this.m_cMaxPages - 2 );
+
+			if ( lastPageLink - this.m_iCurrentPage < cPageLinksAheadBehind )
+				firstPageLink = Math.max( this.m_iCurrentPage - (cPageLinksAheadBehind*2) + ( lastPageLink - this.m_iCurrentPage ), 1 );
+
+			this.AddPageLink( elPageLinks, 0 );
+			if ( firstPageLink != 1 )
+				elPageLinks.insert( ' ... ' );
+
+			for ( var iPage = firstPageLink; iPage <= lastPageLink; iPage++ )
+			{
+				this.AddPageLink( elPageLinks, iPage );
+			}
+
+			if ( lastPageLink != this.m_cMaxPages - 2 )
+				elPageLinks.insert( ' ... ' );
+			this.AddPageLink( elPageLinks, this.m_cMaxPages - 1 );
+		}
+
+		if ( this.m_fnPageChangedHandler != null )
+			this.m_fnPageChangedHandler( this.m_iCurrentPage );
+	},
+
+	AddPageLink: function( elPageLinks, iPage )
+	{
+		var el = new Element( 'span', {'class': this.m_strElementPrefix + '_paging_pagelink' } );
+		el.update( (iPage + 1) + ' ' );
+
+		if ( iPage == this.m_iCurrentPage )
+			el.addClassName( 'active' );
+		else
+			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
+
+		elPageLinks.insert( el );
+	}
+} );
 
 
 
