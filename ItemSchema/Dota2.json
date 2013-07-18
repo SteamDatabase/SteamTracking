@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.746947ca7a332bf2b99ce471fb484e31986b721d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.f1c6f31cb7990ec96f7ec3de402b5e5179c6ae6b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -300,7 +300,7 @@
 				"name": "Juggernaut's Cape",
 				"defindex": 8,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Juggernaut's Cape",
 				"proper_name": false,
 				"item_quality": 0,
@@ -621,7 +621,7 @@
 				"name": "Windrunner's Default Cape",
 				"defindex": 24,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Windrunner's Cape",
 				"proper_name": false,
 				"item_quality": 0,
@@ -781,7 +781,7 @@
 				"name": "Furion's Default Cape",
 				"defindex": 32,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Prophet's Cape",
 				"proper_name": false,
 				"item_quality": 0,
@@ -1002,7 +1002,7 @@
 				"name": "Omniknight's Cape",
 				"defindex": 43,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Omniknight's Cape",
 				"item_description": "Omniknight's old cape",
 				"proper_name": false,
@@ -1107,7 +1107,7 @@
 				"name": "Invoker's Cape",
 				"defindex": 48,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Invoker's Cape",
 				"item_description": "",
 				"proper_name": false,
@@ -2975,7 +2975,7 @@
 				"name": "Phantom Assassin's Helmet",
 				"defindex": 137,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Phantom Assassin's Helmet",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
@@ -3017,7 +3017,7 @@
 				"name": "Phantom Assassin's Cape",
 				"defindex": 139,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Phantom Assassin's Cape",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
@@ -5768,7 +5768,7 @@
 				"name": "Huskar's Helmet",
 				"defindex": 270,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Huskar's Helmet",
 				"item_description": "",
 				"proper_name": false,
@@ -9149,7 +9149,7 @@
 				"name": "Legion Commander Helmet",
 				"defindex": 431,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Legion Commander Helmet",
 				"item_description": "Legion Commander's helmet",
 				"proper_name": false,
@@ -9842,7 +9842,7 @@
 				"name": "Tinker's Helmet",
 				"defindex": 465,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Tinker's Helmet",
 				"item_description": "",
 				"proper_name": false,
@@ -9884,7 +9884,7 @@
 				"name": "Tinker's Cape",
 				"defindex": 467,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Tinker's Cape",
 				"item_description": "",
 				"proper_name": false,
@@ -10284,7 +10284,7 @@
 				"name": "Twelve-Tusks the Cape of Boars",
 				"defindex": 4014,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Twelve-Tusks the Cape of Boars",
 				"item_description": "Here we have Honor times twelve. As one might adorn a gloried warrior-king, each tusk a symbol of triumph.",
 				"proper_name": false,
@@ -10565,7 +10565,7 @@
 				"name": "Coat of the Elder Grove",
 				"defindex": 4024,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Coat of the Elder Grove",
 				"item_description": "A coat of leaves, common amongst the Druids of Verodicia, worn now by Nature's own prophet.",
 				"proper_name": false,
@@ -10695,7 +10695,7 @@
 				"name": "Cape of Verdant Dreaming",
 				"defindex": 4029,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of Verdant Dreaming",
 				"item_description": "Wrapped in the power of the ancient woods.",
 				"proper_name": false,
@@ -12071,7 +12071,7 @@
 				"name": "Wolf Cape of the High Plains",
 				"defindex": 4081,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Wolf Cape of the High Plains",
 				"item_description": "A warrior that slays the wolf with open handed strikes may bear its aspect into war as a symbol of courage and tenacity.",
 				"proper_name": false,
@@ -12210,7 +12210,7 @@
 				"name": "Drape of Foliate Magery",
 				"defindex": 4086,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Drape of Foliate Magery",
 				"item_description": "While lesser druids draw upon blood and mana to work their arts, Nature's Prophet taps directly the heart of Verodicia's wrathsome will.",
 				"proper_name": false,
@@ -12507,7 +12507,7 @@
 				"name": "Kimono of the Ebony Tower",
 				"defindex": 4098,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Kimono of the Ebony Tower",
 				"item_description": "The greatest warrior stands between Ivory and Ebony, lending sword and hand but not heart or mind.",
 				"proper_name": false,
@@ -12696,7 +12696,7 @@
 				"name": "100-Proof Jug",
 				"defindex": 4105,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "100-Proof Jug",
 				"item_description": "Courage may be born of a fearless demeanor or a masterful blade-arm. For those who lack these things, there is always the bottle and the jug.",
 				"proper_name": false,
@@ -14155,7 +14155,7 @@
 				"name": "Executioner's Cape",
 				"defindex": 4162,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Executioner's Cape",
 				"item_description": "A heavy woolen cloak dyed black. It could make even Axe seem stealthy.",
 				"proper_name": false,
@@ -16192,7 +16192,7 @@
 				"name": "Cape of Arcane Artistry",
 				"defindex": 4243,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of Arcane Artistry",
 				"item_description": "An archmagister must be the greatest at all things magical: spell-casting, scroll-reading, and costume-wearing.",
 				"proper_name": false,
@@ -19028,8 +19028,8 @@
 				"image_inventory": "econ\/items\/ogre_magi\/goldenwalruswhacker\/goldenwalruswhacker",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/goldenwalruswhacker\/goldenwalruswhacker.c7a4e48ebe45d82c20bf383443ce8ddf094f4b92.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/goldenwalruswhacker\/goldenwalruswhacker_large.0f323f00ef887dfc3b7ae112b10f150a210ffa87.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -19050,8 +19050,8 @@
 				"image_inventory": "econ\/items\/lone_druid\/cloakofthedawn\/cloakofthedawn",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/cloakofthedawn\/cloakofthedawn.3fb59b865263ebea8911896d53dc77bcbc02b4fd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/cloakofthedawn\/cloakofthedawn_large.1ed5d7d2b2aed720e04f7b976943fd758df8d4b8.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -19615,7 +19615,7 @@
 				"name": "Cape of the Crystalline Queen",
 				"defindex": 4386,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of the Crystalline Queen",
 				"item_description": "Nights are cold in the contested lands, but for some, not cold enough.  This frost-charmed cape keeps cold what the sun would warm.",
 				"proper_name": false,
@@ -20054,8 +20054,8 @@
 				"image_inventory": "econ\/items\/morphling\/crown_general\/crown_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/crown_general\/crown_general.e604438ea9d3d5bbe4f74f0592607e62f5a14b12.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/crown_general\/crown_general_large.b51058fa15eb5797b73dfe9b9f383a045afc8df0.png",
 				"item_set": "morphling_polymorphia",
 				"capabilities": {
 					"nameable": true,
@@ -20199,8 +20199,8 @@
 				"image_inventory": "econ\/items\/morphling\/shoulder_general\/shoulder_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/shoulder_general\/shoulder_general.1bf7d7cc63ac0642272ff46b12c31ce56ebe0d5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/shoulder_general\/shoulder_general_large.de320012bae6cb072fafa895ce08b7a0fd915616.png",
 				"item_set": "morphling_polymorphia",
 				"capabilities": {
 					"nameable": true,
@@ -20487,8 +20487,8 @@
 				"image_inventory": "econ\/items\/morphling\/bracer_general\/bracer_general",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/bracer_general\/bracer_general.bea2838e89e90ddd088ae7204b6f3b621da38abc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/bracer_general\/bracer_general_large.5e92ef5ac56de3c0a729f30bbb7dae0af86334f4.png",
 				"item_set": "morphling_polymorphia",
 				"capabilities": {
 					"nameable": true,
@@ -20639,8 +20639,8 @@
 				"image_inventory": "econ\/items\/morphling\/frostshardcrown\/frostshardcrown",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/frostshardcrown\/frostshardcrown.b2603a08865a59931abb6d3597c4b36d73380190.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/frostshardcrown\/frostshardcrown_large.24a12efb21c753d0ca7aea9ea31e53931fdbb7da.png",
 				"item_set": "morphling_frost_shard",
 				"capabilities": {
 					"nameable": true,
@@ -20964,7 +20964,7 @@
 				"name": "Snowdrop Tassels",
 				"defindex": 4442,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Snowdrop Tassels",
 				"item_description": "No Wolf of Icewrack tail was harmed in the making of these tassels. They are formed entirely of soft, fluffy ice.",
 				"proper_name": false,
@@ -21408,7 +21408,7 @@
 				"name": "Cape of the Drake",
 				"defindex": 4461,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of the Drake",
 				"item_description": "A long cape designed in honor of all drakes who have died in battle.",
 				"proper_name": false,
@@ -22137,8 +22137,8 @@
 				"image_inventory": "econ\/items\/blood_seeker\/spinal_offhand\/spinal_offhand",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_offhand\/spinal_offhand.118d3860c869670b6d79a4f97644ca8617ddebb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_offhand\/spinal_offhand_large.157282d1378e4acb8fdefba408ed9b6ab73ee751.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22167,8 +22167,8 @@
 				"image_inventory": "econ\/items\/blood_seeker\/spinal_weapon\/spinal_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_weapon\/spinal_weapon.4bfed9ab36db44574da8266fa366201268bdbc42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_weapon\/spinal_weapon_large.9452271b06b759d710907480932a3ad6d615480f.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -22516,7 +22516,7 @@
 				"name": "Cape of Thunderwrath's Calling",
 				"defindex": 4507,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of Thunderwrath's Calling",
 				"item_description": "Only those who are called in service to the Omniscient can wear a cape such as this.",
 				"proper_name": false,
@@ -22638,7 +22638,7 @@
 				"name": "Cape of the Wind Leaf",
 				"defindex": 4512,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of the Wind Leaf",
 				"item_description": "A cape for all weather, this is a garment that any falconer would be proud to wear.",
 				"proper_name": false,
@@ -22856,7 +22856,7 @@
 				"name": "Zaru'Kina Protector's Cape",
 				"defindex": 4520,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Zaru'Kina Protector's Cape",
 				"item_description": "Named after her village that was destroyed in a storm long ago, this cape is a reminder that wind can protect as well as destroy.",
 				"proper_name": false,
@@ -24340,7 +24340,7 @@
 				"name": "Winged Paladin's Glorious Cape",
 				"defindex": 4580,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Winged Paladin's Glorious Cape",
 				"item_description": "A glorious cape sewn by a hundred monks in honor of the Omniscient.",
 				"proper_name": false,
@@ -24829,7 +24829,7 @@
 				"name": "Sparrowhawk Cape",
 				"defindex": 4601,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Sparrowhawk Cape",
 				"item_description": "In addition to being stylish, this cape of the sparrowhawk manages the trick of also being camouflaging, provided that you're standing next to a flock of sparrowhawks.",
 				"proper_name": false,
@@ -25451,7 +25451,7 @@
 				"name": "Sylvan Guard's Cape",
 				"defindex": 4626,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Sylvan Guard's Cape",
 				"item_description": "Stealth is of utmost importance to those who number themselves among the Sylvan Guard. Even Drow finds this an acceptable cape for moving unseen through the wooded ways.",
 				"proper_name": false,
@@ -25962,7 +25962,7 @@
 				"name": "Cape of the Dark Magic",
 				"defindex": 4647,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of the Dark Magic",
 				"item_description": "To the Invoker, those without the gifts of magic are insects to be ignored or destroyed.  For at time, his ferocity was such that the magical arts were treated with superstition and fear by all.",
 				"proper_name": false,
@@ -27870,7 +27870,7 @@
 				"name": "Cape of the Great Safari",
 				"defindex": 4726,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Cape of the Great Safari",
 				"item_description": "Simple, elegant, ripped from a corpse.  The scap of banner taken from a Vigil Knight now makes a fine cape for a Keen.",
 				"proper_name": false,
@@ -29735,7 +29735,7 @@
 				"name": "Gramma Sharpie's Smokin' Rug",
 				"defindex": 4807,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Gramma Sharpie's Smokin' Rug",
 				"item_description": "Gramma Sharpeye never touched a rifle in her life, but she rolled a fine cigar and packed a solid cartridge. Every fifth eve, after chores were done gramma would sit by the fire and puff her cigar and rock her chair and pack enough cartridges to serve the entire family's shooting. Wear her favorite smokin' rug on your back as a memento of those happy days.",
 				"proper_name": false,
@@ -32070,7 +32070,7 @@
 				"name": "Sacred Bones Helmet",
 				"defindex": 4909,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Sacred Bones Helmet",
 				"item_description": "The warriors of the Dezun Order hold dear the bones of those whose sacrifice has come before.",
 				"proper_name": false,
@@ -33559,7 +33559,7 @@
 				"name": "Royal Cape of the Great Grey",
 				"defindex": 4974,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Royal Cape of the Great Grey",
 				"item_description": "Red is the cape that drapes the Lycanthrope's neck, a symbol of the tainted blood that courses through his veins.",
 				"proper_name": false,
@@ -34491,7 +34491,7 @@
 				"name": "Frostiron Raider Wrap",
 				"defindex": 5014,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Frostiron Raider Wrap",
 				"item_description": "As Ymir wandered the great northern wilderness, he spent time among the Frostiron Tribe.  Upon his departure, he was given gifts to remember them by.",
 				"proper_name": false,
@@ -34514,7 +34514,7 @@
 				"name": "Helm of the Steppe",
 				"defindex": 5015,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Helm of the Steppe",
 				"item_description": "Near the height of his climb through the ranks of the arena, Bradwarden donned this helm, and could be recognized by cheering crowds when the first tip of horn appeared from the arena gates.",
 				"proper_name": false,
@@ -34560,7 +34560,7 @@
 				"name": "Frostiron Sorceress Cape",
 				"defindex": 5017,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Frostiron Sorceress Cape",
 				"item_description": "A tribe unknown to much of the world, the Frostiron are able to weave fabrics of incredible durability and warmth.",
 				"proper_name": false,
@@ -35361,7 +35361,7 @@
 				"name": "Regalia of the Bonelord Cape",
 				"defindex": 5052,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Regalia of the Bonelord Cape",
 				"item_description": "The surviving subjects of a small kingdom known for its textile specialists fashioned this cape for Skeleton King in hopes that he would spare their lives. Which he did. (Just this once.)",
 				"proper_name": false,
@@ -35682,7 +35682,7 @@
 				"name": "Dreadknight Cloak",
 				"defindex": 5066,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Dreadknight Cloak",
 				"item_description": "The sigils lining this cloak were said to render the Dreadknight invincible.  Ostarion proved otherwise.",
 				"proper_name": false,
@@ -36351,19 +36351,19 @@
 				}
 			},
 			{
-				"name": "flying desolation",
+				"name": "Flying Desolation",
 				"defindex": 5096,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Shuriken",
-				"item_name": "flying desolation",
+				"item_name": "Flying Desolation",
 				"item_description": "Death flies when you're having fun.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/bounty_hunter\/flying_desolation\/flying_desolation",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/flying_desolation\/flying_desolation.8ca0b4dfd92bc57a9902a9fcce4b8fc69cd55aa0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/flying_desolation\/flying_desolation_large.575634952d20339501d6e9d54f6aa035098d64c1.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36373,19 +36373,19 @@
 				}
 			},
 			{
-				"name": "twin_serpent_bow",
+				"name": "Twin Serpent Bow",
 				"defindex": 5097,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
-				"item_name": "twin_serpent_bow",
+				"item_name": "Twin Serpent Bow",
 				"item_description": "Beware the bite of the serpent bow.  There is no anitdote to an arrow in the chest.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/medusa\/twin_serpent_bow\/twin_serpent_bow",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/twin_serpent_bow\/twin_serpent_bow.e6b9043ee38237b1cd87ed2b5d499179c2b790b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/medusa\/twin_serpent_bow\/twin_serpent_bow_large.976f22e3f250ce7b89483865f3fb44fe0f6abe69.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36395,19 +36395,19 @@
 				}
 			},
 			{
-				"name": "raven_scythe",
+				"name": "Raven Scythe",
 				"defindex": 5098,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Scythe",
-				"item_name": "raven_scythe",
+				"item_name": "Raven Scythe",
 				"item_description": "What the white bird sows, the raven shall reap.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/necrolyte\/raven_scythe\/raven_scythe",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/raven_scythe\/raven_scythe.36eaba642fe2edfeb1fe0415a8eb894c4fd43e03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/raven_scythe\/raven_scythe_large.728828f212f62837423dd65b176011532f754485.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36417,19 +36417,19 @@
 				}
 			},
 			{
-				"name": "spine_splitter",
+				"name": "Spine Splitter",
 				"defindex": 5099,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Sword",
-				"item_name": "spine_splitter",
+				"item_name": "Spine Splitter",
 				"item_description": "This sword doesn't even need to be sharp.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/skeleton_king\/spine_splitter\/spine_splitter",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/spine_splitter\/spine_splitter.448d863ca8f7880a9110f55623e2f9e27e49ed91.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skeleton_king\/spine_splitter\/spine_splitter_large.64aaf6fa965b0ca5cb5f53025735bde5042f4932.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36439,19 +36439,19 @@
 				}
 			},
 			{
-				"name": "reverent_headdress_ofthe_protector",
+				"name": "Headdress of the Protector",
 				"defindex": 5100,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Headdress",
-				"item_name": "reverent_headdress_ofthe_protector",
+				"item_name": "Headdress of the Protector",
 				"item_description": "One can only speculate on the deep thoughts housed within golden confines of this reverent headdress.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/skywrath_mage\/reverent_headdress_ofthe_protector\/reverent_headdress_ofthe_protector",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/reverent_headdress_ofthe_protector\/reverent_headdress_ofthe_protector.a109d3ac4e42ac10562633b83ef5f26c66f0fab6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/reverent_headdress_ofthe_protector\/reverent_headdress_ofthe_protector_large.4e582231053ab1fd58f78065ec9d0d07c7a9e46d.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36461,19 +36461,19 @@
 				}
 			},
 			{
-				"name": "wavecutter",
+				"name": "Wavecutter",
 				"defindex": 5101,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Dorsal Fin",
-				"item_name": "wavecutter",
+				"item_name": "Wavecutter",
 				"item_description": "This fin will slice the water like its owner's blade will slice your throat.  ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/slark\/wavecutter\/wavecutter",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/wavecutter\/wavecutter.51f22c7d39f8145e9a152a78d488a64ea6686a7e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/wavecutter\/wavecutter_large.6d73ecea3c339c75fcad6a99c9fca0dabedc143a.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36483,19 +36483,19 @@
 				}
 			},
 			{
-				"name": "evildoer",
+				"name": "Evildoer",
 				"defindex": 5102,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Blade",
-				"item_name": "evildoer",
+				"item_name": "Evildoer",
 				"item_description": "The good we do dies with us, while our evils echo long after.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/phantom_assassin\/evildoer\/evildoer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/evildoer\/evildoer.7d79ed71082bfad2ecd8f3f0a5c7d718f97b43ec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/evildoer\/evildoer_large.bcbb2e16fe27fbb4ce247a566d54fb6615fab810.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36505,19 +36505,19 @@
 				}
 			},
 			{
-				"name": "aghanims_basher",
+				"name": "Aghanim's Basher",
 				"defindex": 5103,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Flail",
-				"item_name": "aghanims_basher",
+				"item_name": "Aghanim's Basher",
 				"item_description": "What could be better than an Aghanims scepter?  This.  This is better.\r\n\t\r\n\t",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/brewmaster\/aghanims_basher\/aghanims_basher",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/aghanims_basher\/aghanims_basher.bcce20545dae017999c138e1a0dd2c6c4b751594.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/brewmaster\/aghanims_basher\/aghanims_basher_large.cfc36bb303362ca6e0b686441858d2c138ca295e.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36942,7 +36942,7 @@
 				"name": "Helm of Impending Transgressions",
 				"defindex": 5127,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Helmet",
+				"item_type_name": "helmet",
 				"item_name": "Helm of Impending Transgressions",
 				"item_description": "The helm hungers.",
 				"proper_name": false,
@@ -37356,7 +37356,7 @@
 				"name": "Flamestitched Suitings Cape",
 				"defindex": 5145,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cape",
+				"item_type_name": "cape",
 				"item_name": "Flamestitched Suitings Cape",
 				"item_description": "Flyin' with style!",
 				"proper_name": false,
@@ -37597,6 +37597,382 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/lost_viking_shoulder\/lost_viking_shoulder.7a5519edada053e56a59daf6e4686f69c80f7132.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/clinkz\/lost_viking_shoulder\/lost_viking_shoulder_large.91ad874c6886a595b5dde688da89e5edf7fcfb32.png",
 				"item_set": "clinkz_lost_hills",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Immortal Armor",
+				"defindex": 5156,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Immortal Armor",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/immortal_armor\/immortal_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shade of Anguish",
+				"defindex": 5157,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Shade of Anguish",
+				"item_description": "They will crave her. They will reach for her. They cannot have her.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/shadeofagony\/shadeofagony",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/shadeofagony\/shadeofagony.bd52252b4900c14bfffd003c9e35f7b37baf0ea1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/shadeofagony\/shadeofagony_large.1978354eed817f7efc07d9ffdd3a94bfba6b7f70.png",
+				"item_set": "queen_of_agony",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "Shaded"
+					},
+					{
+						"name": "Unshaded"
+					}
+				]
+				
+			},
+			{
+				"name": "Nature's Grip",
+				"defindex": 5158,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Nature's Grip",
+				"item_description": "A well-seasoned staff, suited to the hoary wisdom of a woodland prophet.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/natures_grasp\/natures_grasp",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/natures_grasp\/natures_grasp.c304da347ea736fe8fb667bd999e93cc54bc2c9a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/natures_grasp\/natures_grasp_large.cb4d76405bc03b91e20dda7b5fcdeb710441ccfc.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Guard of Anguish",
+				"defindex": 5159,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Guard of Anguish",
+				"item_description": "A skull plucked from among the eager forsaken.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/armorofagony\/armorofagony",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/armorofagony\/armorofagony.91c8625a957f6fbfb3a2d10a873d3a9adca69e5a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/armorofagony\/armorofagony_large.283ba7939b9dd57dfe33ecf3bbf15f317eae92dd.png",
+				"item_set": "queen_of_agony",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Dagger of Anguish",
+				"defindex": 5160,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Dagger of Anguish",
+				"item_description": "Dipped in the blood of many, willing and otherwise.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/daggerofagonizingpain\/daggerofagonizingpain",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/daggerofagonizingpain\/daggerofagonizingpain.a3099c34d502da59ad5f6db6185ff6a3bc1195fb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/daggerofagonizingpain\/daggerofagonizingpain_large.13dcf4d7ef5dfcf4326eafba011255ea4537364a.png",
+				"item_set": "queen_of_agony",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Meat Dragger",
+				"defindex": 5161,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "Meat Dragger",
+				"item_description": "Sometimes the meat won't go nowhere unless you drag it.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/meat_dragger\/meat_dragger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/meat_dragger\/meat_dragger.4163d406f165f22e5f27fca4e133b4206b92f0bf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/meat_dragger\/meat_dragger_large.6144c33ba2947940d7b62298a8674018c2980b66.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Maze of Anguish",
+				"defindex": 5162,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Maze of Anguish",
+				"item_description": "To be wrapped in her wings is to be trapped in her web.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/wingsofagony\/wingsofagony",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/wingsofagony\/wingsofagony.29a1c0593e502ee3f30a1e8885713f5253a44885.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/wingsofagony\/wingsofagony_large.52b96b842a6ee5d4fb716619db1f0be929791c11.png",
+				"item_set": "queen_of_agony",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"styles": [
+					{
+						"name": "Torn"
+					},
+					{
+						"name": "Pristine"
+					}
+				]
+				
+			},
+			{
+				"name": "Stone Infusion",
+				"defindex": 5163,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demon Arm",
+				"item_name": "Stone Infusion",
+				"item_description": "\"I can't feel my arm. Perfect.\"",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/stone_hand\/stone_hand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/stone_hand\/stone_hand.a2d9af6a842dff65c30f5d12a4011342c2032ad0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/stone_hand\/stone_hand_large.b3d402743cc5affa9e03ae4ef48801d923e7ecf9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shadowshard - Off-Hand",
+				"defindex": 5164,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Shadowshard - Off-Hand",
+				"item_description": "A bit of the dark world, broken off and ready to pierce the flesh and drain away the soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/shadowfang_offhand\/shadowfang_offhand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_offhand\/shadowfang_offhand.bb58e2103cd539eac3ed0a4ed10af212b1eaa334.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_offhand\/shadowfang_offhand_large.b061002e46b45137e01a1a3a773722ddd4b478ff.png",
+				"item_set": "riki_shadowshards",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Shadowshard",
+				"defindex": 5165,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Shadowshard",
+				"item_description": "A bit of the dark world, broken off and ready to pierce the flesh and drain away the soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main.87e3a115eeeb6054b542980cb492cdf9f450f580.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main_large.5553a3c5ed1d8d9dc04e5e494200ac265bf29045.png",
+				"item_set": "riki_shadowshards",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Chaos knight's armlet",
+				"defindex": 5166,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Chaos knight's armlet",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Abaddon's Gryphon",
+				"defindex": 5167,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Abaddon's Gryphon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Abaddon's Mace",
+				"defindex": 5168,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Abaddon's Mace",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Abaddon's Talon Cape",
+				"defindex": 5169,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Abaddon's Talon Cape",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Abaddon's Raven Shoulders",
+				"defindex": 5170,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "shoulder",
+				"item_name": "Abaddon's Raven Shoulders",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Abaddon's Cowl Down",
+				"defindex": 5171,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Abaddon's Cowl Down",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46396,6 +46772,57 @@
 				
 			},
 			{
+				"name": "Team Pennant: Fnatic",
+				"defindex": 10280,
+				"item_class": "tool",
+				"item_type_name": "Fan Item",
+				"item_name": "Team Fnatic",
+				"item_description": "Show your support for Team Fnatic by buying this Team Pennant! Equip it in the 'fan slot' of your Player Loadout to show other spectators who you're rooting for. Upgrade it to show you mean business! In addition, equipping a pennant makes you eligible for item drops while you spectate your team's matches live during Valve supported tournaments.  Team Fnatic pennants can be combined with other Team Fnatic pennants to upgrade your Team Pennant fan level.  The level of your Team Pennant will increase the total fan value of the team when you are spectating a Tournament match.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/pennant\/pennant_team350190_icon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team350190_icon.e3f67dc877b9e134c05a78b2a0822866ef50f162.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/pennant\/pennant_team350190_icon_large.4a0eadb4eaa17804ecb9a7bf0148eb140314b597.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"can_increment": true
+				},
+				"tool": {
+					"type": "pennant_upgrade",
+					"usage_capabilities": {
+						"can_increment": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "team ID",
+						"class": "team_id",
+						"value": 350190
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "fanfare level",
+						"class": "fanfare_level",
+						"value": 1
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
 				"name": "Player Card: Brax",
 				"defindex": 10282,
 				"item_class": "player_card",
@@ -46586,6 +47013,41 @@
 						"name": "international tag",
 						"class": "international tag",
 						"value": 2013
+					},
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "donkey unicorn",
+				"defindex": 10287,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "International Courier",
+				"item_name": "donkey unicorn",
+				"item_description": "need description",
+				"proper_name": false,
+				"item_quality": 3,
+				"image_inventory": "econ\/courier\/drodo\/drodo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/drodo\/drodo.0b8398b696068b33281c77830591f42e4a109dbb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/courier\/drodo\/drodo_large.8e621b6fedcd04f90b934f0365f0844ef6601765.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
 					},
 					{
 						"name": "disallow recycling",
@@ -46836,6 +47298,28 @@
 				
 			},
 			{
+				"name": "Trapjaw the Boxhound",
+				"defindex": 10294,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "International Courier",
+				"item_name": "Trapjaw the Boxhound",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Announcer: Defense Grid",
 				"defindex": 10307,
 				"item_class": "dota_item_wearable",
@@ -46968,8 +47452,8 @@
 				"image_inventory": "econ\/items\/courier\/lgd_golden_skipper\/lgd_golden_skipper",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/lgd_golden_skipper\/lgd_golden_skipper.3a4dee0db667ed43ec437689e0cbd9bcdd1189b6.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/lgd_golden_skipper\/lgd_golden_skipper_large.4de2a44a7a8f71a35d5c92d60a9ffaa902f4b014.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/lgd_golden_skipper\/lgd_golden_skipper.dee14c690565b6144b4e8c3f5aa880525d33a56e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/lgd_golden_skipper\/lgd_golden_skipper_large.3bfe144db84440d872cd288cc7b4da01ce7172d3.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -49094,8 +49578,8 @@
 				"image_inventory": "econ\/tools\/quirts_summer_key_2013",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/quirts_summer_key_2013.52e934f74275dbf37161365c0d84c2fd22c2926d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/quirts_summer_key_2013_large.2ca7541f24c96bdbb0f02873d053999687851c97.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -49108,7 +49592,15 @@
 					"usage_capabilities": {
 						"decodable": true
 					}
-				}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Bloodstone of the Ancestor",
@@ -54267,6 +54759,76 @@
 				}
 			},
 			{
+				"name": "Neolution GosuCup",
+				"defindex": 15207,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Neolution GosuCup",
+				"item_description": "Neolution GosuCup is a monthly cup where 4 of the top Asian teams compete for a prize pool of $1000. This cup runs for 5 months and is hosted by GosuGamers.net.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolution_gosucup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolution_gosucup.1a1909c5364937ab31e0864b7c24a5b7c2979408.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolution_gosucup_large.9574722ef484a21ee9d7833e09201afc5773f324.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Neolution GosuCup - ADMIN",
+				"defindex": 15208,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Neolution GosuCup - ADMIN",
+				"item_description": "Neolution GosuCup is a monthly cup where 4 of the top Asian teams compete for a prize pool of $1000. This cup runs for 5 months and is hosted by GosuGamers.net.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_neolution_gosucup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolution_gosucup.1a1909c5364937ab31e0864b7c24a5b7c2979408.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_neolution_gosucup_large.9574722ef484a21ee9d7833e09201afc5773f324.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -56358,8 +56920,8 @@
 				"image_inventory": "econ\/items\/blood_seeker\/spinal_weapon\/Spinal_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_weapon\/spinal_weapon.4bfed9ab36db44574da8266fa366201268bdbc42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/spinal_weapon\/spinal_weapon_large.9452271b06b759d710907480932a3ad6d615480f.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -59829,6 +60391,34 @@
 				}
 			},
 			{
+				"name": "Throes of Anguish Set",
+				"defindex": 20198,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Throes of Anguish Set",
+				"item_description": "This bundle contains all of the items in the 'Throes of Anguish' set for Queen of Pain:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Queen_of_Agony_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_queen_of_agony_set.82729f8f5df64404b508790cac0b2ed513a49a32.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_queen_of_agony_set_large.85a2366df341db0b5ab76e505a4fd87e8e6bbc06.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "Luminary of the Dreadful Abyss Set",
 				"defindex": 20199,
 				"item_class": "bundle",
@@ -60122,6 +60712,34 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_flamestitched_suitings_set.9404c8ff5aa9238427a9e4bf45a411c9520721fd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_flamestitched_suitings_set_large.727140183b44fdceae2a0372a7cbfc11e98da5b1.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Shadowshards",
+				"defindex": 20210,
+				"item_class": "bundle",
+				"item_type_name": "Daggers",
+				"item_name": "Shadowshards",
+				"item_description": "A bit of the dark world, broken off and ready to pierce the flesh and drain away the soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main.87e3a115eeeb6054b542980cb492cdf9f450f580.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/shadowfang_main\/shadowfang_main_large.5553a3c5ed1d8d9dc04e5e494200ac265bf29045.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -62586,6 +63204,18 @@
 				
 			},
 			{
+				"item_set": "queen_of_agony",
+				"name": "The Queen of Agony",
+				"store_bundle": "Throes of Anguish Set",
+				"items": [
+					"Maze of Anguish",
+					"Dagger of Anguish",
+					"Guard of Anguish",
+					"Shade of Anguish"
+				]
+				
+			},
+			{
 				"item_set": "red_talon",
 				"name": "Gear of the Red Talon",
 				"items": [
@@ -62629,6 +63259,16 @@
 				"items": [
 					"Sange the Backseeker",
 					"Yasha the Quickblade"
+				]
+				
+			},
+			{
+				"item_set": "riki_shadowshards",
+				"name": "Shadowshards",
+				"store_bundle": "Shadowshards",
+				"items": [
+					"Shadowshard - Off-Hand",
+					"Shadowshard"
 				]
 				
 			},
@@ -63776,6 +64416,48 @@
 				"id": 89,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle89"
+			},
+			{
+				"system": "courier_smeevil_red_ambient",
+				"id": 90,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle90"
+			},
+			{
+				"system": "courier_smeevil_yellow_ambient",
+				"id": 91,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle91"
+			},
+			{
+				"system": "courier_smeevil_purple_ambient",
+				"id": 92,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle92"
+			},
+			{
+				"system": "courier_smeevil_mammoth_ambient",
+				"id": 93,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle93"
+			},
+			{
+				"system": "courier_smeevil_bird_ambient",
+				"id": 94,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle94"
+			},
+			{
+				"system": "courier_smeevil_crab_ambient",
+				"id": 95,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle95"
+			},
+			{
+				"system": "courier_trail_lava",
+				"id": 96,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle96"
 			}
 		]
 		,

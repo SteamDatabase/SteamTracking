@@ -7598,6 +7598,53 @@
 				"npc_dota_hero_abaddon"		"1"
 			}
 		}
+		"459"
+		{
+			"name"		"Earthshaker's Totem"
+			"prefab"		"default_item"
+			"creation_date"		"2013-06-26"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"item_description"		"#DOTA_Item_Desc_Unnamed_New_Item"
+			"item_name"		"#DOTA_Item_Earthshakers_Totem"
+			"item_type_name"		"#DOTA_WearableType_weapon"
+			"model_player"		"models/heroes/earthshaker/totem.mdl"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_earthshaker"		"1"
+			}
+		}
+		"460"
+		{
+			"name"		"Earthshaker's Bracers"
+			"prefab"		"default_item"
+			"creation_date"		"2013-06-26"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Earthshakers_Totem"
+			"item_name"		"#DOTA_Item_Earthshakers_Bracers"
+			"item_slot"		"arms"
+			"item_type_name"		"#DOTA_WearableType_arms"
+			"model_player"		"models/heroes/earthshaker/bracers.mdl"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_earthshaker"		"1"
+			}
+		}
+		"461"
+		{
+			"name"		"Earthshaker's Belt"
+			"prefab"		"default_item"
+			"creation_date"		"2013-06-26"
+			"image_inventory"		"econ/testitem_slot_empty"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Earthshakers_Bracers"
+			"item_name"		"#DOTA_Item_Earthshakers_Belt"
+			"item_slot"		"belt"
+			"item_type_name"		"#DOTA_WearableType_belt"
+			"model_player"		"models/heroes/earthshaker/belt.mdl"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_earthshaker"		"1"
+			}
+		}
 		"463"
 		{
 			"name"		"Tinker's Left Arm"
@@ -64004,6 +64051,420 @@
 				"npc_dota_hero_slardar"		"1"
 			}
 		}
+		"5096"
+		{
+			"name"		"Flying Desolation"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/bounty_hunter/flying_desolation/flying_desolation"
+			"item_description"		"#DOTA_Item_Desc_flying_desolation"
+			"item_name"		"#DOTA_Item_Flying_Desolation"
+			"item_rarity"		"rare"
+			"item_slot"		"shoulder"
+			"item_type_name"		"#DOTA_WearableType_Shuriken"
+			"model_player"		"models/items/bounty_hunter/flying_desolation/flying_desolation.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-76.497177 -36.363880 159.847488"
+					"PortraitLookAt"		"30.404663 22.769165 0.000000"
+					"PortraitFOV"		"86.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-97.798065 45.265373 148.184967"
+					"PortraitLightLookAt"		"356.154785 325.783081 0.000000"
+					"PortraitLightFOV"		"61.000000"
+					"PortraitLightDistance"		"126.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"22.889999 24.590000 -72.430000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.000000 0.000000 0.000000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.650000 0.350000 0.000000"
+					"PortraitBackgroundColor2"		"0.650000 0.350000 0.000000"
+					"PortraitBackgroundColor3"		"0.650000 0.350000 0.000000"
+					"PortraitBackgroundColor4"		"0.650000 0.350000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_bounty_hunter"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.340000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_bounty_hunter"		"1"
+			}
+		}
+		"5097"
+		{
+			"name"		"Twin Serpent Bow"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/medusa/twin_serpent_bow/twin_serpent_bow"
+			"item_description"		"#DOTA_Item_Desc_twin_serpent_bow"
+			"item_name"		"#DOTA_Item_Twin_Serpent_Bow"
+			"item_rarity"		"mythical"
+			"item_type_name"		"#DOTA_WearableType_Bow"
+			"model_player"		"models/items/medusa/twin_serpent_bow/twin_serpent_bow.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"83.178123 145.123535 209.469162"
+					"PortraitLookAt"		"31.184692 244.242554 347.129517"
+					"PortraitFOV"		"61.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"24.701683 113.851265 139.949692"
+					"PortraitLightLookAt"		"10.717163 251.449585 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"132.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"23.719999 -37.680000 15.920000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 1.000000 0.600000"
+					"PortraitBackgroundColor2"		"0.100000 0.100000 0.100000"
+					"PortraitBackgroundColor3"		"0.100000 0.100000 0.100000"
+					"PortraitBackgroundColor4"		"2.000000 2.000000 0.500000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_medusa"		"1"
+			}
+		}
+		"5098"
+		{
+			"name"		"Raven Scythe"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/necrolyte/raven_scythe/raven_scythe"
+			"item_description"		"#DOTA_Item_Desc_raven_scythe"
+			"item_name"		"#DOTA_Item_Raven_Scythe"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Scythe"
+			"model_player"		"models/items/necrolyte/raven_scythe/raven_scythe.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"257.322601 98.249329 31.128307"
+					"PortraitLookAt"		"342.707520 189.766846 352.408447"
+					"PortraitFOV"		"68.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"206.282410 144.415817 31.789789"
+					"PortraitLightLookAt"		"341.405640 210.520020 0.000000"
+					"PortraitLightFOV"		"58.000000"
+					"PortraitLightDistance"		"239.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-197.589996 236.880005 23.980000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"0.455000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.900000 0.200000 0.200000"
+					"PortraitBackgroundColor2"		"0.300000 0.150000 0.150000"
+					"PortraitBackgroundColor3"		"0.300000 0.150000 0.150000"
+					"PortraitBackgroundColor4"		"0.300000 0.150000 0.150000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"spirit_breaker_portrait"
+					"PortraitAnimationActivity"		"2"
+					"PortraitAnimationCycle"		"0.668000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_necrolyte"		"1"
+			}
+		}
+		"5099"
+		{
+			"name"		"Spine Splitter"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/skeleton_king/spine_splitter/spine_splitter"
+			"item_description"		"#DOTA_Item_Desc_spine_splitter"
+			"item_name"		"#DOTA_Item_Spine_Splitter"
+			"item_rarity"		"mythical"
+			"item_type_name"		"#DOTA_WearableType_Sword"
+			"model_player"		"models/items/skeleton_king/spine_splitter/spine_splitter.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-233.959793 -369.972931 286.518677"
+					"PortraitLookAt"		"29.036865 52.525635 341.647339"
+					"PortraitFOV"		"24.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-50.678432 -25.028801 260.401886"
+					"PortraitLightLookAt"		"71.932983 45.170288 0.000000"
+					"PortraitLightFOV"		"75.000000"
+					"PortraitLightDistance"		"99.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"0.300000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"26.570000 12.970000 12.360000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skeleton_king"		"1"
+			}
+		}
+		"5100"
+		{
+			"name"		"Headdress of the Protector"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/skywrath_mage/reverent_headdress_ofthe_protector/reverent_headdress_ofthe_protector"
+			"item_description"		"#DOTA_Item_Desc_reverent_headdress_ofthe_protector"
+			"item_name"		"#DOTA_Item_Headdress_of_the_Protector"
+			"item_rarity"		"rare"
+			"item_slot"		"head"
+			"item_type_name"		"#DOTA_WearableType_Headdress"
+			"model_player"		"models/items/skywrath_mage/reverent_headdress_ofthe_protector/reverent_headdress_ofthe_protector.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"92.816360 46.395592 370.328888"
+					"PortraitLookAt"		"17.929688 207.097778 0.000000"
+					"PortraitFOV"		"49.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"130.941986 -61.308071 375.399628"
+					"PortraitLightLookAt"		"24.016113 152.479248 0.000000"
+					"PortraitLightFOV"		"51.000000"
+					"PortraitLightDistance"		"187.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"3.140000 -9.860000 -1.520000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.300000 0.600000 1.000000"
+					"PortraitBackgroundColor2"		"0.700000 0.900000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.300000 0.500000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_skywrath_mage"		"1"
+			}
+		}
+		"5101"
+		{
+			"name"		"Wavecutter"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/slark/wavecutter/wavecutter"
+			"item_description"		"#DOTA_Item_Desc_wavecutter"
+			"item_name"		"#DOTA_Item_Wavecutter"
+			"item_rarity"		"rare"
+			"item_slot"		"back"
+			"item_type_name"		"#DOTA_WearableType_Dorsal_Fin"
+			"model_player"		"models/items/slark/wavecutter/wavecutter.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-98.331093 181.608978 168.012741"
+					"PortraitLookAt"		"20.137939 298.103027 0.791016"
+					"PortraitFOV"		"33.000000"
+					"PortraitFar"		"294.000000"
+					"PortraitLightPosition"		"63.180000 137.759995 141.960007"
+					"PortraitLightLookAt"		"34.160000 250.339996 0.000000"
+					"PortraitLightFOV"		"63.000000"
+					"PortraitLightDistance"		"267.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"0.565000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"14.670000 120.379997 46.560001"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_slark"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_slark"		"1"
+			}
+		}
+		"5102"
+		{
+			"name"		"Evildoer"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/phantom_assassin/evildoer/evildoer"
+			"item_description"		"#DOTA_Item_Desc_evildoer"
+			"item_name"		"#DOTA_Item_Evildoer"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Blade"
+			"model_player"		"models/items/phantom_assassin/evildoer/evildoer.mdl"
+			"particle_file"		"particles/econ/items/phantom_assassin/phantom_assassin_weapon_generic.pcf"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"92.195000 -286.336548 136.792358"
+					"PortraitLookAt"		"8.003540 113.609619 2.109375"
+					"PortraitFOV"		"27.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"47.625965 -101.948120 191.456207"
+					"PortraitLightLookAt"		"50.916138 140.092163 0.000000"
+					"PortraitLightFOV"		"46.000000"
+					"PortraitLightDistance"		"148.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"0.300000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-197.903671 -4.526461 33.189579"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"0.550000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"5"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_phantom_assassin"		"1"
+			}
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"particle"
+					"asset"		"phantom_assassin_ambient_blade"
+					"modifier"		"phantom_assassin_ambient_blade_generic"
+				}
+				"asset_modifier1"
+				{
+					"type"		"particle_snapshot"
+					"asset"		"particles/econ/items/phantom_assassin/phantom_assassin_weapon_generic.psf"
+					"modifier"		"particles/models/items/phantom_assassin/the_evildoer/the_evildoer.psf"
+				}
+			}
+		}
+		"5103"
+		{
+			"name"		"Aghanim's Basher"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/items/brewmaster/aghanims_basher/aghanims_basher"
+			"item_description"		"#DOTA_Item_Desc_aghanims_basher"
+			"item_name"		"#DOTA_Item_Aghanims_Basher"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Flail"
+			"model_player"		"models/items/brewmaster/aghanims_basher/aghanims_basher.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"194.875580 202.199661 224.975357"
+					"PortraitLookAt"		"17.457275 230.322876 0.000000"
+					"PortraitFOV"		"46.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-31.188391 197.695816 187.668686"
+					"PortraitLightLookAt"		"13.529663 271.417236 0.000000"
+					"PortraitLightFOV"		"59.000000"
+					"PortraitLightDistance"		"315.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"-30.780001 -32.650002 -15.890000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.452000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_brewmaster"		"1"
+			}
+		}
 		"5106"
 		{
 			"name"		"Red Mist Reaper's Shawl"
@@ -66311,6 +66772,519 @@
 			"used_by_heroes"
 			{
 				"npc_dota_hero_clinkz"		"1"
+			}
+		}
+		"5157"
+		{
+			"name"		"Shade of Anguish"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/queenofpain/shadeofagony/shadeofagony"
+			"item_description"		"#DOTA_Item_Desc_Shade_of_Agony"
+			"item_name"		"#DOTA_Item_Shade_of_Anguish"
+			"item_rarity"		"rare"
+			"item_set"		"queen_of_agony"
+			"item_slot"		"head"
+			"item_type_name"		"#DOTA_WearableType_Hood"
+			"model_player"		"models/items/queenofpain/shadeofagony/shadeofagony.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"127.665459 131.460068 202.414505"
+					"PortraitLookAt"		"14.051514 224.703369 0.000000"
+					"PortraitFOV"		"22.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.506748 66.093544 188.912842"
+					"PortraitLightLookAt"		"115.032349 12.864990 0.000000"
+					"PortraitLightFOV"		"88.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/shadeofagony/shadeofagony.mdl"
+						"name"		"#DOTA_Item_Shade_of_Agony_Style0"
+						"alternate_icon"		"0"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/shadeofagonyversion21/shadeofagonyversion21.mdl"
+						"name"		"#DOTA_Item_Shade_of_Agony_Style1"
+						"alternate_icon"		"1"
+					}
+				}
+				"alternate_icons"
+				{
+					"0"
+					{
+						"icon_path"		"econ/items/queenofpain/shadeofagony/shadeofagony"
+					}
+					"1"
+					{
+						"icon_path"		"econ/items/queenofpain/shadeofagonyversion21/shadeofagonyversion21"
+					}
+				}
+			}
+		}
+		"5158"
+		{
+			"name"		"Nature's Grip"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/furion/natures_grasp/natures_grasp"
+			"item_description"		"#DOTA_Item_Desc_Natures_Grip"
+			"item_name"		"#DOTA_Item_Natures_Grip"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Staff"
+			"model_player"		"models/items/furion/natures_grasp/natures_grasp.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"465.588684 -260.938965 -373.044647"
+					"PortraitLookAt"		"318.076172 142.586060 346.975708"
+					"PortraitFOV"		"22.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"242.560669 58.474369 97.974251"
+					"PortraitLightLookAt"		"338.939209 156.840820 0.000000"
+					"PortraitLightFOV"		"69.000000"
+					"PortraitLightDistance"		"377.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"79.070000 84.150002 25.320000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"juggernaut_portrait"
+					"PortraitAnimationActivity"		"1"
+					"PortraitAnimationCycle"		"0.084000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_furion"		"1"
+			}
+		}
+		"5159"
+		{
+			"name"		"Guard of Anguish"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/queenofpain/armorofagony/armorofagony"
+			"item_description"		"#DOTA_Item_Desc_Guard_of_Anguish"
+			"item_name"		"#DOTA_Item_Guard_of_Anguish"
+			"item_set"		"queen_of_agony"
+			"item_slot"		"shoulder"
+			"item_type_name"		"#DOTA_WearableType_Pauldron"
+			"model_player"		"models/items/queenofpain/armorofagony/armorofagony.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"141.381897 131.245575 221.249817"
+					"PortraitLookAt"		"23.428345 220.665894 0.000000"
+					"PortraitFOV"		"22.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.506748 66.093544 188.912842"
+					"PortraitLightLookAt"		"115.032349 12.864990 0.000000"
+					"PortraitLightFOV"		"88.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+		}
+		"5160"
+		{
+			"name"		"Dagger of Anguish"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/queenofpain/daggerofagonizingpain/daggerofagonizingpain"
+			"item_description"		"#DOTA_Item_Desc_Dagger_of_Anguish"
+			"item_name"		"#DOTA_Item_Dagger_of_Anguish"
+			"item_set"		"queen_of_agony"
+			"item_type_name"		"#DOTA_WearableType_Dagger"
+			"model_player"		"models/items/queenofpain/daggerofagonizingpain/daggerofagonizingpain.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"4.492865 178.232193 156.551819"
+					"PortraitLookAt"		"24.279785 272.713623 351.738281"
+					"PortraitFOV"		"26.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"27.506748 66.093544 188.912842"
+					"PortraitLightLookAt"		"115.032349 12.864990 0.000000"
+					"PortraitLightFOV"		"88.000000"
+					"PortraitLightDistance"		"109.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+		}
+		"5161"
+		{
+			"name"		"Meat Dragger"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/pudge/meat_dragger/meat_dragger"
+			"item_description"		"#DOTA_Item_Desc_Meat_Dragger"
+			"item_name"		"#DOTA_Item_Meat_Dragger"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Hook"
+			"model_player"		"models/items/pudge/meat_dragger/meat_dragger.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-19.923037 -204.186020 175.934662"
+					"PortraitLookAt"		"29.701538 71.691284 16.946411"
+					"PortraitFOV"		"52.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"33.723782 57.607002 194.885605"
+					"PortraitLightLookAt"		"115.570679 306.282349 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"118.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"4.580000 3.380000 12.900000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"0.450000 0.505000 0.680000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.180000 0.200000 0.280000"
+					"PortraitBackgroundColor4"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_pudge"		"1"
+			}
+		}
+		"5162"
+		{
+			"name"		"Maze of Anguish"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/queenofpain/wingsofagony/wingsofagony"
+			"item_description"		"#DOTA_Item_Desc_Maze_of_Anguish"
+			"item_name"		"#DOTA_Item_Maze_of_Anguish"
+			"item_rarity"		"uncommon"
+			"item_set"		"queen_of_agony"
+			"item_slot"		"back"
+			"item_type_name"		"#DOTA_WearableType_Wings"
+			"model_player"		"models/items/queenofpain/wingsofagony/wingsofagony.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-90.671959 113.682747 386.074524"
+					"PortraitLookAt"		"63.078003 305.496826 357.302856"
+					"PortraitFOV"		"53.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"-51.787453 -6.666420 250.972092"
+					"PortraitLightLookAt"		"72.169189 8.618774 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"178.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"10.587285 -8.469538 17.207249"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"3"
+					"PortraitAnimationCycle"		"0.796000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"0"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/items/queenofpain/wingsofagony/wingsofagony.mdl"
+						"name"		"#DOTA_Item_Wings_of_Agony_Style0"
+						"alternate_icon"		"0"
+					}
+					"1"
+					{
+						"model_player"		"models/items/queenofpain/wingsofagony2/wingsofagony2.mdl"
+						"name"		"#DOTA_Item_Wings_of_Agony_Style1"
+						"alternate_icon"		"1"
+					}
+				}
+				"alternate_icons"
+				{
+					"0"
+					{
+						"icon_path"		"econ/items/queenofpain/wingsofagony/wingsofagony"
+					}
+					"1"
+					{
+						"icon_path"		"econ/items/queenofpain/wingsofagony2/wingsofagony2"
+					}
+				}
+			}
+		}
+		"5163"
+		{
+			"name"		"Stone Infusion"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/lion/stone_hand/stone_hand"
+			"item_description"		"#DOTA_Item_Desc_Stone_Infusion"
+			"item_name"		"#DOTA_Item_Stone_Infusion"
+			"item_rarity"		"rare"
+			"item_slot"		"arms"
+			"item_type_name"		"#DOTA_WearableType_Demon_Arm"
+			"model_player"		"models/items/lion/stone_hand/stone_hand.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"266.099762 67.381332 142.567551"
+					"PortraitLookAt"		"15.754395 186.443481 355.292358"
+					"PortraitFOV"		"35.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"66.739998 -71.519997 235.320007"
+					"PortraitLightLookAt"		"49.520000 126.070000 0.000000"
+					"PortraitLightFOV"		"24.000000"
+					"PortraitLightDistance"		"148.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"0.420000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"9.030000 -40.529999 -42.700001"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"0.545000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.300000 0.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 0.200000"
+					"PortraitBackgroundColor3"		"1.000000 0.300000 0.300000"
+					"PortraitBackgroundColor4"		"1.000000 0.200000 0.100000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_lion"		"1"
+			}
+		}
+		"5164"
+		{
+			"name"		"Shadowshard - Off-Hand"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/rikimaru/shadowfang_offhand/shadowfang_offhand"
+			"item_description"		"#DOTA_Item_Desc_Shadowshard__OffHand"
+			"item_name"		"#DOTA_Item_Shadowshard__OffHand"
+			"item_rarity"		"rare"
+			"item_set"		"riki_shadowshards"
+			"item_slot"		"offhand_weapon"
+			"item_type_name"		"#DOTA_WearableType_Dagger"
+			"model_player"		"models/items/rikimaru/shadowfang_offhand/shadowfang_offhand.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"-0.649102 182.290695 197.431976"
+					"PortraitLookAt"		"39.375000 260.667114 24.219360"
+					"PortraitFOV"		"24.000000"
+					"PortraitFar"		"987.000000"
+					"PortraitLightPosition"		"5.089793 105.281410 188.254639"
+					"PortraitLightLookAt"		"121.195679 69.565430 0.000000"
+					"PortraitLightFOV"		"29.000000"
+					"PortraitLightDistance"		"180.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"61.389999 -114.349998 5.260000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_riki"		"1"
+			}
+		}
+		"5165"
+		{
+			"name"		"Shadowshard"
+			"prefab"		"wearable"
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/rikimaru/shadowfang_main/shadowfang_main"
+			"item_description"		"#DOTA_Item_Desc_Shadowshard"
+			"item_name"		"#DOTA_Item_Shadowshard"
+			"item_rarity"		"rare"
+			"item_set"		"riki_shadowshards"
+			"item_type_name"		"#DOTA_WearableType_Dagger"
+			"model_player"		"models/items/rikimaru/shadowfang_main/shadowfang_main.mdl"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"81.133202 103.241341 182.096970"
+					"PortraitLookAt"		"50.976563 240.606079 357.412720"
+					"PortraitFOV"		"26.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"110.239998 -37.500000 124.110001"
+					"PortraitLightLookAt"		"156.029999 335.709991 0.000000"
+					"PortraitLightFOV"		"90.000000"
+					"PortraitLightDistance"		"203.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"61.389999 -114.349998 5.260000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundColor3"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"0.000000 0.000000 0.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_riki"		"1"
 			}
 		}
 		"10000"
@@ -76450,64 +77424,45 @@
 					"frequency"		"1"
 					"style"		"7"
 				}
-				"asset_modifier21"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_ambient"
-				}
-				"asset_modifier22"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_red_ambient"
-					"style"		"1"
-				}
-				"asset_modifier23"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_yellow_ambient"
-					"style"		"2"
-				}
-				"asset_modifier24"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_purple_ambient"
-					"style"		"3"
-				}
-				"asset_modifier25"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_mammoth_ambient"
-					"style"		"4"
-				}
-				"asset_modifier26"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_bird_ambient"
-					"style"		"5"
-				}
-				"asset_modifier27"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_crab_ambient"
-					"style"		"6"
-				}
-				"asset_modifier28"
-				{
-					"type"		"particle"
-					"asset"		"courier_smeevil_ambient"
-					"modifier"		"courier_smeevil_crab_ambient"
-					"style"		"7"
-				}
 				"attached_particlesystem0"
 				{
 					"system"		"courier_smeevil_ambient"
+					"style"		"0"
+				}
+				"attached_particlesystem1"
+				{
+					"system"		"courier_smeevil_red_ambient"
+					"style"		"1"
+				}
+				"attached_particlesystem2"
+				{
+					"system"		"courier_smeevil_yellow_ambient"
+					"style"		"2"
+				}
+				"attached_particlesystem3"
+				{
+					"system"		"courier_smeevil_purple_ambient"
+					"style"		"3"
+				}
+				"attached_particlesystem4"
+				{
+					"system"		"courier_smeevil_mammoth_ambient"
+					"style"		"4"
+				}
+				"attached_particlesystem5"
+				{
+					"system"		"courier_smeevil_bird_ambient"
+					"style"		"5"
+				}
+				"attached_particlesystem6"
+				{
+					"system"		"courier_smeevil_crab_ambient"
+					"style"		"6"
+				}
+				"attached_particlesystem7"
+				{
+					"system"		"courier_smeevil_crab_ambient"
+					"style"		"7"
 				}
 				"styles"
 				{
@@ -79743,6 +80698,7 @@
 		{
 			"name"		"Quirt's Summer Stash"
 			"prefab"		"treasure_chest"
+			"associated_item"		"15057"
 			"attributes"
 			{
 				"disallow recycling"
@@ -82119,6 +83075,54 @@
 			"item_description"		"#DOTA_Item_Desc_Player_Card_Illidan"
 			"image_inventory"		"econ/player_card/VP"
 		}
+		"10280"
+		{
+			"name"		"Team Pennant: Fnatic"
+			"prefab"		"pennant"
+			"attributes"
+			{
+				"team ID"
+				{
+					"attribute_class"		"team_id"
+					"value"		"350190"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"		"kill_eater_score_type"
+					"value"		"33"
+				}
+			}
+			"capabilities"
+			{
+				"can_increment"		"1"
+			}
+			"creation_date"		"2013-07-10"
+			"image_inventory"		"econ/pennant/pennant_team350190_icon"
+			"item_description"		"#DOTA_Item_Desc_Team_Pennant_Fnatic"
+			"item_name"		"#DOTA_Item_Team_Pennant_Fnatic"
+			"item_rarity"		"mythical"
+			"item_type_name"		"#DOTA_WearableType_Fan_Item"
+			"tags"
+			{
+				"team_pennant"		"1"
+				"team_pennant_fnatic"		"1"
+			}
+			"tool"
+			{
+				"type"		"pennant_upgrade"
+				"usage"
+				{
+					"required_tags"
+					{
+						"team_pennant_fnatic"		"1"
+					}
+				}
+				"usage_capabilities"
+				{
+					"can_increment"		"1"
+				}
+			}
+		}
 		"10282"
 		{
 			"prefab"		"player_card"
@@ -82933,7 +83937,7 @@
 				"icon"
 				{
 					"PortraitPosition"		"156.885941 -199.947861 158.427704"
-					"PortraitLookAt"		"30.086060 129.622192 0.000000"
+					"PortraitLookAt"		"30.086060 132.857666 0.000000"
 					"PortraitFOV"		"32.000000"
 					"PortraitFar"		"1000.000000"
 					"PortraitLightPosition"		"186.327271 -41.108780 145.318054"
@@ -84645,6 +85649,36 @@
 				}
 			}
 			"tournament_url"		"http://www.dota2.com/tournaments/international/"
+		}
+		"15057"
+		{
+			"name"		"Quirt's Summer Key"
+			"prefab"		"key"
+			"attributes"
+			{
+				"disallow recycling"
+				{
+					"attribute_class"		"disallow_recycling"
+					"value"		"1"
+				}
+			}
+			"creation_date"		"2013-07-05"
+			"image_inventory"		"econ/tools/quirts_summer_key_2013"
+			"item_description"		"#DOTA_Item_Desc_Quirts_Summer_Key"
+			"item_name"		"#DOTA_Item_Quirts_Summer_Key"
+			"item_type_name"		"#DOTA_WearableType_Tool"
+			"sound_material"		"3"
+			"tool"
+			{
+				"type"		"decoder_ring"
+				"use_string"		"#UnlockUse"
+				"usage_capabilities"
+				{
+					"decodable"		"1"
+				}
+				"restriction"		"quirts_summer_2013"
+			}
+			"used_by_heroes"		"1"
 		}
 		"15058"
 		{
@@ -86602,7 +87636,6 @@
 			"image_inventory"		"econ/leagues/subscriptions_gest2"
 			"item_description"		"#DOTA_Item_Desc_GEST_Dota_2__2013"
 			"item_name"		"#DOTA_Item_GEST_Dota_2__Feb_and_March"
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"tool"
 			{
 				"type"		"league_view_pass"
@@ -88273,6 +89306,53 @@
 				"type"		"passport_fantasy_team"
 				"use_string"		"#ConsumeItem"
 			}
+			"used_by_heroes"		"1"
+		}
+		"15207"
+		{
+			"name"		"Neolution GosuCup"
+			"prefab"		"league"
+			"creation_date"		"2013-07-16"
+			"image_banner"		"econ/leagues/subscriptions_neolution_gosucup_ingame"
+			"image_inventory"		"econ/leagues/subscriptions_neolution_gosucup"
+			"item_description"		"#DOTA_Item_Desc_Neolution_GosuCup"
+			"item_name"		"#DOTA_Item_Neolution_GosuCup"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"60"
+					"order"		"40"
+				}
+			}
+			"tournament_url"		"http://www.gosugamers.net/events/138-neolution-gosucup"
+			"used_by_heroes"		"1"
+		}
+		"15208"
+		{
+			"name"		"Neolution GosuCup - ADMIN"
+			"prefab"		"league"
+			"creation_date"		"2013-07-16"
+			"image_banner"		"econ/leagues/subscriptions_neolution_gosucup_ingame"
+			"image_inventory"		"econ/leagues/subscriptions_neolution_gosucup"
+			"item_description"		"#DOTA_Item_Desc_Copy_of_Neolution_GosuCup"
+			"item_name"		"#DOTA_Item_Neolution_GosuCup__ADMIN"
+			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
+			"tool"
+			{
+				"type"		"league_view_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"league_id"		"60"
+					"order"		"40"
+					"admin"		"1"
+				}
+			}
+			"tournament_url"		"http://www.gosugamers.net/events/138-neolution-gosucup"
 			"used_by_heroes"		"1"
 		}
 		"20000"
@@ -98292,6 +99372,61 @@
 			"item_rarity"		"rare"
 			"used_by_heroes"		"1"
 		}
+		"20198"
+		{
+			"name"		"Throes of Anguish Set"
+			"prefab"		"bundle"
+			"bundle"
+			{
+				"Maze of Anguish"		"1"
+				"Dagger of Anguish"		"1"
+				"Guard of Anguish"		"1"
+				"Shade of Anguish"		"1"
+			}
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/sets/DOTA_Item_Queen_of_Agony_Set"
+			"item_description"		"#DOTA_Item_Desc_Throes_of_Anguish_Set"
+			"item_name"		"#DOTA_Item_Throes_of_Anguish_Set"
+			"item_rarity"		"rare"
+			"portraits"
+			{
+				"icon"
+				{
+					"PortraitPosition"		"226.017761 -12.125951 199.555298"
+					"PortraitLookAt"		"23.494263 176.226196 0.000000"
+					"PortraitFOV"		"67.000000"
+					"PortraitFar"		"1000.000000"
+					"PortraitLightPosition"		"130.936310 35.861103 221.113907"
+					"PortraitLightLookAt"		"124.024658 13.370361 0.000000"
+					"PortraitLightFOV"		"88.000000"
+					"PortraitLightDistance"		"322.000000"
+					"PortraitLightColor"		"0.350000 0.350000 0.350000"
+					"PortraitShadowColor"		"0.120000 0.120000 0.120000"
+					"PortraitShadowScale"		"1.000000"
+					"PortraitGroundShadowScale"		"0.300000"
+					"PortraitAmbientOrigin"		"16.540001 5.250000 9.280000"
+					"PortraitAmbientColor"		"0.300000 0.300000 0.300000"
+					"PortraitAmbientScale"		"1.000000"
+					"PortraitSpecularColor"		"0.970000 0.070000 0.090000"
+					"PortraitSpecularDirection"		"0.000000 0.000000 -1.000000"
+					"PortraitSpecularPower"		"16.000000"
+					"PortraitBackgroundColor1"		"1.000000 0.100000 1.000000"
+					"PortraitBackgroundColor2"		"1.000000 0.100000 0.410000"
+					"PortraitBackgroundColor3"		"1.000000 0.000000 0.000000"
+					"PortraitBackgroundColor4"		"1.000000 1.000000 1.000000"
+					"PortraitBackgroundTexture"		"vgui/econ/item_icon_bg"
+					"PortraitParticle"		"portrait_queenofpain"
+					"PortraitAnimationActivity"		"0"
+					"PortraitAnimationCycle"		"0.000000"
+					"PortraitAnimationRate"		"0.000000"
+					"PortraitHideHero"		"1"
+				}
+			}
+			"used_by_heroes"
+			{
+				"npc_dota_hero_queenofpain"		"1"
+			}
+		}
 		"20199"
 		{
 			"name"		"Luminary of the Dreadful Abyss Set"
@@ -98831,6 +99966,26 @@
 			"used_by_heroes"
 			{
 				"npc_dota_hero_batrider"		"1"
+			}
+		}
+		"20210"
+		{
+			"name"		"Shadowshards"
+			"prefab"		"bundle"
+			"bundle"
+			{
+				"Shadowshard - Off-Hand"		"1"
+				"Shadowshard"		"1"
+			}
+			"creation_date"		"2013-07-15"
+			"image_inventory"		"econ/items/rikimaru/shadowfang_main/shadowfang_main"
+			"item_description"		"#DOTA_Item_Desc_Shadowshards"
+			"item_name"		"#DOTA_Item_Shadowshards"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_Daggers"
+			"used_by_heroes"
+			{
+				"npc_dota_hero_riki"		"1"
 			}
 		}
 	}
@@ -101174,6 +102329,133 @@
 				}
 			}
 		}
+		"90"
+		{
+			"system"		"courier_smeevil_red_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"91"
+		{
+			"system"		"courier_smeevil_yellow_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"92"
+		{
+			"system"		"courier_smeevil_purple_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"93"
+		{
+			"system"		"courier_smeevil_mammoth_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"94"
+		{
+			"system"		"courier_smeevil_bird_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"95"
+		{
+			"system"		"courier_smeevil_crab_ambient"
+			"attach_type"		"renderorigin_follow"
+			"attach_entity"		"self"
+			"control_points"
+			{
+				"0"
+				{
+					"control_point_index"		"0"
+					"attach_type"		"renderorigin_follow"
+				}
+				"1"
+				{
+					"control_point_index"		"1"
+					"attach_type"		"point_follow"
+					"attachment"		"attach_hitloc"
+				}
+			}
+		}
+		"96"
+		{
+			"resource"		"particles/econ/courier/courier_trail_lava.pcf"
+			"system"		"courier_trail_lava"
+			"attach_type"		"absorigin_follow"
+			"attach_entity"		"parent"
+		}
 	}
 	"upgradeable_base_items"
 	{
@@ -102796,6 +104078,18 @@
 			}
 			"store_bundle"		"Gemmed Armor of the Priest Kings Set"
 		}
+		"queen_of_agony"
+		{
+			"name"		"#DOTA_Set_The_Queen_of_Agony"
+			"items"
+			{
+				"Maze of Anguish"		"1"
+				"Dagger of Anguish"		"1"
+				"Guard of Anguish"		"1"
+				"Shade of Anguish"		"1"
+			}
+			"store_bundle"		"Throes of Anguish Set"
+		}
 		"red_talon"
 		{
 			"name"		"#DOTA_Set_Gear_of_the_Red_Talon"
@@ -102842,6 +104136,16 @@
 				"Sange the Backseeker"		"1"
 				"Yasha the Quickblade"		"1"
 			}
+		}
+		"riki_shadowshards"
+		{
+			"name"		"#DOTA_Set_Shadowshards"
+			"items"
+			{
+				"Shadowshard - Off-Hand"		"1"
+				"Shadowshard"		"1"
+			}
+			"store_bundle"		"Shadowshards"
 		}
 		"riptide_blades"
 		{
@@ -104300,6 +105604,26 @@
 			"Snelfret the Snail"		"1"
 			"Captain Bamboo"		"1"
 			"Snowl"		"1"
+			"Mok"		"1"
+		}
+		"quirts_summer_2013_items"
+		{
+			"Flying Desolation"		"1"
+			"Twin Serpent Bow"		"1"
+			"Raven Scythe"		"1"
+			"Headdress of the Protector"		"1"
+			"Wavecutter"		"1"
+			"Evildoer"		"1"
+			"Aghanim's Basher"		"1"
+			"Nature's Grip"		"1"
+			"Meat Dragger"		"1"
+			"Stone Infusion"		"1"
+			"Shadowshards"		"1"
+			"Spine Splitter"		"1"
+		}
+		"quirts_summer_2013_crate"
+		{
+			"quirts_summer_2013_items"		"1"
 		}
 	}
 	"revolving_loot_lists"
