@@ -13,6 +13,18 @@ function UpdateMetacriticLink( name, metacritic )
 	}
 }
 
+function OnBlurMetacritic( name )
+{
+	if ( g_rgMetacriticURLs && g_rgMetacriticURLs[name] )
+		return;
+
+	// invalid metacritic name.. clear
+	$( 'app_game_metacritic_metacritic_name__target' ).value = '';
+	$( 'app_game_metacritic_metacritic_name__compl' ).value = '';
+	UpdateMetacriticLink( '', 'metacritic_link' );
+
+}
+
 function UpdateAdminLink( elem, urlpath, value )
 {
 	var elemLink = $(elem);
