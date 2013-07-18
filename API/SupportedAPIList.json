@@ -373,6 +373,38 @@
 							}
 						]
 						
+					},
+					{
+						"name": "GetTournamentPlayerStats",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": false,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "hero_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "time_frame",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
 					}
 				]
 				
