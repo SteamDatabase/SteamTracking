@@ -80712,7 +80712,6 @@
 			"image_inventory"		"econ/tools/quirts_summer_crate_2013"
 			"item_description"		"#DOTA_Item_Desc_Quirts_Summer_Stash"
 			"item_name"		"#DOTA_Item_Quirts_Summer_Stash"
-			"item_rarity"		"mythical"
 			"item_type_name"		"#DOTA_WearableType_Treasure"
 			"sound_material"		"1"
 			"tool"
