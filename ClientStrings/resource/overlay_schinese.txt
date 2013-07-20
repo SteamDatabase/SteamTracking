@@ -119,7 +119,7 @@
 "[english]Overlay_CDKeyNotification_Message_MultipleKey"	"This Steam game requires multiple product keys. When the game asks for one, you can press %hotkey% to view your product keys."
 "Overlay_CDKeyNotification_CDKey"	"%cdkey%"
 "[english]Overlay_CDKeyNotification_CDKey"	"%cdkey%"
-"Overlay_CDKeyNotification_Hotkey"	"按 %hotkey% 以关闭此消息。"
+"Overlay_CDKeyNotification_Hotkey"	"按 %hotkey% 以关闭此消息"
 "[english]Overlay_CDKeyNotification_Hotkey"	"Press %hotkey% to close this message"
 "Overlay_CDKeyNotification_Title"	"%gamename% 序列号"
 "[english]Overlay_CDKeyNotification_Title"	"%gamename% CD key"

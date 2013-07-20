@@ -3245,6 +3245,7 @@ To enable to the in-game overlay, open the Universal Access preference pane and 
 "steam_library_filter_favorites"	"Favorites"
 "steam_library_filter_addtag"	"Add a New Category..."
 "steam_library_filter_owner" "%owner%'s Games"
+"steam_library_unknown_owner" "Other Games"
 
 "steam_downloads_networkusage"	"Current Network Usage"
 "steam_downloads_downloadrate"	"Download Rate "

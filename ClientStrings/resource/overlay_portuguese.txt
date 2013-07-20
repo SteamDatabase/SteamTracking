@@ -29,7 +29,7 @@
 "[english]Overlay_Taskbar_Achievements"	"Achievements"
 "Overlay_Taskbar_News"	"Notícias"
 "[english]Overlay_Taskbar_News"	"News"
-"Overlay_Taskbar_GameGroups"	"Grupos de Jogos"
+"Overlay_Taskbar_GameGroups"	"Grupos do Jogo"
 "[english]Overlay_Taskbar_GameGroups"	"Game Groups"
 "Overlay_Taskbar_ChatRoom"	"Sala de Chat"
 "[english]Overlay_Taskbar_ChatRoom"	"Chat Room"

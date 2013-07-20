@@ -261,7 +261,7 @@
 "[english]Friends_FriendList_Pendings"	"INVITATIONS SENT"
 "Friends_FriendList_InvitesReceived"	"ПОКАНИ"
 "[english]Friends_FriendList_InvitesReceived"	"INVITES"
-"Friends_Friendlist_Members"	"ЧЛЕНА"
+"Friends_Friendlist_Members"	"ЧЛЕНОВЕ"
 "[english]Friends_Friendlist_Members"	"MEMBERS"
 "Friends_Friendlist_Guests"	"ГОСТИ"
 "[english]Friends_Friendlist_Guests"	"GUESTS"

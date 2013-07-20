@@ -6044,6 +6044,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"Vul een naam van minstens 6 tekens voor deze computer in"
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"Mag %game% starten met de optionele commando's \"%arguments%\" ?\nKlik op Annuleren als je geen toestemming voor het starten hebt gegeven."
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
 "Steam_AllowGameLaunch_Title"	"Spel starten"
 "[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }

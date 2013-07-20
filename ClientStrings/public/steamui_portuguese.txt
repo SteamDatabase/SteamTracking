@@ -5198,7 +5198,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Friends_lookingtoplay"	"Looking to Play"
 "Steam_Convert_Content_Dialog_Title"	"Conversão do conteúdo do jogo"
 "[english]Steam_Convert_Content_Dialog_Title"	"Game content conversion"
-"Steam_Convert_Content_Text"	"O Steam precisa de converter o conteúdo do jogo \"%game%\" para um novo e mais eficiente formato. Isto requer conexão à Internet e alguns minutos."
+"Steam_Convert_Content_Text"	"O Steam precisa de converter o conteúdo do jogo \"%game%\" para um formato novo e mais eficiente. Isto requer uma ligação à Internet e alguns minutos."
 "[english]Steam_Convert_Content_Text"	"Steam needs to convert the game content for \"%game%\" to a new, more efficient format. This will require an Internet connection and a few minutes’ time."
 "Steam_Convert_Content_Start"	"Ok"
 "[english]Steam_Convert_Content_Start"	"Ok"
@@ -6032,4 +6032,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"Por favor introduz um nome para este computador com pelo menos 6 caracteres."
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"Permitir que %game% seja iniciado com a linha de comando opcional \"%arguments%\" ?\nSe este arranque não foi pedido, clica em Cancelar"
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"Permitir arranque"
+"[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }

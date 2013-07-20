@@ -6024,7 +6024,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]steam_inbox_tradeoffers"	"%count% pending trade offers"
 "SteamUI_JoinDialog_SharedLicense_Title"	"Delt spilbibliotek"
 "[english]SteamUI_JoinDialog_SharedLicense_Title"	"Shared game library"
-"SteamUI_JoinDialog_SharedLicenseLocked_OwnerText"	"Bare så du ved, dine spil er i øjeblikket i brug af %borrower%. Ved start af spil nu, modtager %borrower% en meddelelse om, at det er tid til at stoppe."
+"SteamUI_JoinDialog_SharedLicenseLocked_OwnerText"	"Bare så du ved det, så er dine spil er i øjeblikket i brug af %borrower%. Ved start af spillet, modtager %borrower% en meddelelse om, at det er tid til at stoppe."
 "[english]SteamUI_JoinDialog_SharedLicenseLocked_OwnerText"	"Just so you know, your games are currently in use by %borrower%. Playing now will send %borrower% a notice that it's time to quit."
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText"	"Dette delte spil er i øjeblikket ikke tilgængeligt. Prøv venligst igen senere, eller køb dette spil til dit eget bibliotek."
 "[english]SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText"	"This shared game is currently unavailable. Please try again later or buy this game for your own library."
@@ -6042,4 +6042,6 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameLabel"	"friendly name"
 "Steam_RecoverLocked_MachineNameBox"	"Steam Guard-computernavn"
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
+"Steam_RecoverLocked_MachineNameBoxText"	"Indtast venligst et navn på mindst 6 tegn for denne computer"
+"[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
 }

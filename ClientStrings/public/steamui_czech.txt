@@ -4832,7 +4832,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_ValveSurvey_Summary_OSWineString"	"Wine version: %s1"
 "Steam_Uninstall_Games_Dialog_Title"	"Steam – Probíhá odinstalace"
 "[english]Steam_Uninstall_Games_Dialog_Title"	"Steam - Uninstall"
-"Steam_Uninstall_Games_Dialog_Text"	"Odinstalovává se %game% ..."
+"Steam_Uninstall_Games_Dialog_Text"	"Odinstalovávání %game% ..."
 "[english]Steam_Uninstall_Games_Dialog_Text"	"Uninstalling %game% ..."
 "steam_menu_updatevendorgraphicscard"	"Aktualizovat ovladače grafické karty %graphics_vendor% ..."
 "[english]steam_menu_updatevendorgraphicscard"	"Update %graphics_vendor% Video Drivers..."

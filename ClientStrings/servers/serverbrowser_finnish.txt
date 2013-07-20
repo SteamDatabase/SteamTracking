@@ -261,7 +261,7 @@
 "[english]ServerBrowser_ServerHasNoPlayers"	"No users currently playing on this server."
 "VAC_BanNotification"	"Valven huijaukseneston ilmoitus"
 "[english]VAC_BanNotification"	"Valve Anti-Cheat Notification"
-"VAC_AccountBanned"	"Tämän Steam-tilin käyttö on kielletty"
+"VAC_AccountBanned"	"Tällä Steam-tilillä on VAC-esto"
 "[english]VAC_AccountBanned"	"Steam account banned"
 "VAC_YourAccountBanned"	"Steam-tilisi %account% käyttö on kielletty suojatuissa pelipalvelimissa huijaamisen vuoksi."
 "[english]VAC_YourAccountBanned"	"Your Steam account '%account%' has been banned from secure game servers due to a cheating infraction."

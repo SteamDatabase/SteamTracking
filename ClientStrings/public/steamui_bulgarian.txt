@@ -5923,7 +5923,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]SteamUI_SteamGuardCompromised_ExplainPasswords"	"Next you will change your Steam password."
 "SteamUI_SteamGuardCompromised_ChangePasswordButton"	"Промяна на паролата"
 "[english]SteamUI_SteamGuardCompromised_ChangePasswordButton"	"Change password"
-"steam_subnav_featured"	"Препоръчани"
+"steam_subnav_featured"	"Представени"
 "[english]steam_subnav_featured"	"Featured"
 "steam_subnav_news"	"Новини"
 "[english]steam_subnav_news"	"News"

@@ -6048,4 +6048,8 @@ Set a category for this game to help you find it quickly and organize your Libra
 "[english]Steam_RecoverLocked_MachineNameBox"	"Steam Guard Computer Name"
 "Steam_RecoverLocked_MachineNameBoxText"	"Skriv in ett namn på minst sex tecken för denna dator"
 "[english]Steam_RecoverLocked_MachineNameBoxText"	"Please enter a name at least 6 characters long for this computer"
+"Steam_AllowGameLaunch_Info"	"Tillåt %game% att starta med den valfria kommandoraden \"%arguments%\" ?\nOm du inte bad om att starta det här; klicka Avbryt"
+"[english]Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
+"Steam_AllowGameLaunch_Title"	"Tillåt spelstart"
+"[english]Steam_AllowGameLaunch_Title"	"Allow game launch"
 }
