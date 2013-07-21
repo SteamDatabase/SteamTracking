@@ -32911,7 +32911,7 @@
 		"866"
 		{
 			"name"	"The Heavy Artillery Officer's Cap"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -32930,7 +32930,7 @@
 		"867"
 		{
 			"name"	"The Combat Medic's Crusher Cap"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -32949,7 +32949,7 @@
 		"868"
 		{
 			"name"	"The Heroic Companion Badge"
-			"prefab"	"promo misc"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
