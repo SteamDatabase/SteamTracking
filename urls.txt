@@ -135,8 +135,6 @@ ClientManifest/steam_client_publicbeta_win32.manifest|http://media.steampowered.
 
 # API
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
-API/Dota2Heroes.json|http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1/?key=*APIKEY*&language=english
-API/Dota2TestHeroes.json|http://api.steampowered.com/IEconDOTA2_205790/GetHeroes/v1/?key=*APIKEY*&language=english
 
 # Item Schemas
 GetItemSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/IEconItems_730/GetSchema/v1/?key=*APIKEY*&language=english
