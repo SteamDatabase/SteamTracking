@@ -39,6 +39,10 @@
 
 }
 
+.imgWallItem.incompatible {
+	border: 1px solid #c69c5f;
+}
+
 .imgWallItem.banned {
 	border: 1px solid #ff0000;
 }
