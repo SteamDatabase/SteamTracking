@@ -12739,11 +12739,6 @@
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
 				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
 			}
 			"visuals"
 			{
@@ -12798,11 +12793,6 @@
 				{
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
-				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
 				}
 			}
 			"visuals"
@@ -12859,11 +12849,6 @@
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
 				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
 			}
 			"visuals"
 			{
@@ -12918,11 +12903,6 @@
 				{
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
-				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
 				}
 			}
 			"visuals"
@@ -12979,11 +12959,6 @@
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
 				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
 			}
 			"visuals"
 			{
@@ -13038,11 +13013,6 @@
 				{
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
-				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
 				}
 			}
 			"visuals"
@@ -13174,11 +13144,6 @@
 				{
 					"attribute_class"	"enable_misc2_noisemaker"
 					"value"			"1"
-				}
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
 				}
 			}
 			"visuals"

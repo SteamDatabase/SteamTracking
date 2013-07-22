@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.1521f21faa37a3d782057596961913025203c1d0.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.19d319790a9ac886d632481ed10fddb72de9e97f.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -8684,11 +8684,6 @@
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
 						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1.000000
 					}
 				]
 				
@@ -8725,11 +8720,6 @@
 					{
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
-						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
 						"value": 1.000000
 					}
 				]
@@ -8768,11 +8758,6 @@
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
 						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1.000000
 					}
 				]
 				
@@ -8809,11 +8794,6 @@
 					{
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
-						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
 						"value": 1.000000
 					}
 				]
@@ -8852,11 +8832,6 @@
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
 						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1.000000
 					}
 				]
 				
@@ -8893,11 +8868,6 @@
 					{
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
-						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
 						"value": 1.000000
 					}
 				]
@@ -8974,11 +8944,6 @@
 					{
 						"name": "noise maker",
 						"class": "enable_misc2_noisemaker",
-						"value": 1.000000
-					},
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
 						"value": 1.000000
 					}
 				]
