@@ -12,34 +12,29 @@ function DisplayPage( page )
 				$('redeem_wallet_code_upsell_text').style.display = '';
 				$('address_form').style.display = 'none';
 				$('redeem_amount_form').style.display = 'none';
-				$('receipt_form').style.display = 'none';
+				$('validate_btn').style.display = '';
+				$('validate_btn_in_progress').style.display = 'none';		
+				$('wallet_code').value = '';		
 			break;
 			
 			case 'address':
+				$('address_btn').style.display = '';
+				$('address_btn_in_progress').style.display = 'none';
 				$('wallet_code_form').style.display = 'none';
 				$('redeem_wallet_code_upsell_text').style.display = 'none';
 				$('main_content').style.backgroundImage = "url('')";
 				$('address_form').style.display = '';
 				$('redeem_amount_form').style.display = 'none';
-				$('receipt_form').style.display = 'none';
 			break;
 			
 			case 'redeem_amount':
+				$('redeem_btn').style.display = '';
+				$('redeem_btn_in_progress').style.display = 'none';			
 				$('wallet_code_form').style.display = 'none';
 				$('redeem_wallet_code_upsell_text').style.display = 'none';
 				$('main_content').style.backgroundImage = "url('')";
 				$('address_form').style.display = 'none';
 				$('redeem_amount_form').style.display = '';
-				$('receipt_form').style.display = 'none';
-			break;
-			
-			case 'receipt':
-				$('wallet_code_form').style.display = 'none';
-				$('redeem_wallet_code_upsell_text').style.display = 'none';
-				$('main_content').style.backgroundImage = "url('')";
-				$('address_form').style.display = 'none';
-				$('redeem_amount_form').style.display = 'none';
-				$('receipt_form').style.display = '';
 			break;
 		}
 }
@@ -152,9 +147,9 @@ function OnValidateWalletCodeSuccess( result )
 
 				g_sWalletCodeAmount = result.formattedcodeamount;
 		g_sExchangedWalletCodeAmount = g_sWalletCodeAmount;
-		
-				$('receipt_confirmation_amount_message').innerHTML = result.confirmation_message;
 
+		UpdateRedeemForm( result );
+		
 				if ( result.haswallet )
 		{
 			if ( result.currency == result.wallet.currencycode )
@@ -359,6 +354,27 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 	}
 }
 
+function UpdateRedeemForm( result )
+{
+		$('redeem_wallet_success_description').innerHTML = result.success_message;
+		$('redeem_wallet_success_upsell_text').innerHTML = result.upsell_text;
+		$('redeem_wallet_success_app_image_link').href = result.redirect_url;
+		$('redeem_wallet_success_button').href = result.redirect_url;
+		$('redeem_wallet_success_button_text').innerHTML = result.redirect_button_text;
+		
+		if ( result.bRedirectToApp )
+		{
+			$('redeem_wallet_success_default_image').style.display = 'none';
+			$('redeem_wallet_success_image').src = result.redirect_image;
+			$('redeem_wallet_success_app_image').style.display = '';
+		}
+		else
+		{
+			$('redeem_wallet_success_default_image').style.display = '';
+			$('redeem_wallet_success_app_image').style.display = 'none';
+		}	
+}
+
 function OnCreateWalletAndCheckFundsSuccess( result )
 {
 	try 
@@ -367,7 +383,7 @@ function OnCreateWalletAndCheckFundsSuccess( result )
 		$('error_display').style.display = 'none';
 		
 		g_sExchangedWalletCodeAmount = result.formattedcodeexchangeamount;
-		$('receipt_confirmation_amount_message').innerHTML = result.confirmation_message;
+		UpdateRedeemForm( result );
 		
 		if ( result.currency != result.grant_currency )
 		{
@@ -465,7 +481,8 @@ function OnRedeemWalletCodeSuccess( result )
 	try 
 	{
 		$('wallet_current_balance').innerHTML = result.formattednewwalletbalance;
-			DisplayPage( 'receipt' );
+		DisplayPage( 'code' );
+		showModal ( 'redirectStorePageModal', true );
 	} 
 	catch( e ) 
 	{
