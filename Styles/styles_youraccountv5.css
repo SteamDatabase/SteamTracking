@@ -363,6 +363,87 @@
 	padding: 4px;
 }
 
+.modal_top_band {
+	background-image:url( 'http://cdn.store.steampowered.com/public/images/got_steam_top.jpg' );
+	background-repeat:no-repeat;
+	width:508px;
+	height:25px;
+	margin-bottom:1px;
+}
+
+.modal_close {
+	float:right;
+	width:9px;
+	height:9px;
+	margin-right:9px;
+	margin-top:7px;
+}
+
+.modal_box {
+	border-color:#4d4b49;
+	border-style:solid;
+	border-width:2px 1px;
+	width: 466px;
+	background-color:#262626;
+	padding: 20px;
+}
+
+#modalBG {
+	position:absolute;
+	z-index:900;
+	background-color:#000000;
+	filter:alpha(opacity=60);
+	opacity:0.8;
+}
+
+.modal_frame {
+	width:508px;
+	position:absolute;
+	z-index:1000;
+	background-color:#000000;
+}
+
+.redeem_modal_header
+{
+	height: 50px;
+}
+
+.redeem_modal_header_title
+{
+	 padding-left: 20px;
+	 padding-top: 5px;
+}
+
+#redeem_wallet_success_description
+{
+	font-size: 14px;
+}
+
+.redeem_modal_header_title_text
+{
+	font-size: 22px;
+}
+
+.redeem_wallet_success_image
+{
+	padding-top: 10px;
+}
+
+#redeem_wallet_success_upsell_text
+{
+	padding-top: 4px;
+}
+
+.redeem_wallet_upsell_button
+{
+	padding-left: 10px;
+}
+
+.redeem_wallet_link_bar
+{
+	margin-top: 20px;
+	height: 25px;
+}
 div.tx_record_row_holder
 {
     width: 100%;
