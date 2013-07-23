@@ -69,6 +69,14 @@ h5 {
 	text-transform: uppercase;
 }
 
+h6 {
+	font-family:Arial;
+	font-size:12pt;
+	font-weight:bold;
+	color:#8bc53f;
+	margin-top: 18px;
+}
+
 .ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
