@@ -553,16 +553,6 @@
 	color: #626366;
 }
 
-.cart_item_desc_ext {
-	color: #ff9900;
-}
-
-.cart_bodycopy_highlight {
-	color: #ff9900;
-	padding-right: 5px;
-	font-size: 16px;
-}
-
 .cart_item_desc .cart_item_platform {
 	float: right;
 }
