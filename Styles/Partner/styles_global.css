@@ -143,7 +143,7 @@ tr.checkerboard2 {
 }
 
 tr.warning1 {
-	background: #602020;
+	background: #886A08;
 }
 
 tr.warning2 {
@@ -444,6 +444,12 @@ input, select , textarea, button, .likeButton {
 }
 
 input[type=submit].btn_darkblue_white_innerfade.btn_medium {
+	padding: 0 15px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+button[type=submit].btn_darkblue_white_innerfade.btn_medium {
 	padding: 0 15px;
 	font-size: 15px;
 	line-height: 30px;
