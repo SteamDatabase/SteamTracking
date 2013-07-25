@@ -702,8 +702,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11					|| result.paymentmethod == 12 
 					|| result.paymentmethod == 14 
 					|| result.paymentmethod == 17 
-					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
-					|| result.paymentmethod == 31 )
+					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1239,16 +1238,6 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
-				else if ( method.value == 'molpoints' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'MOL Points transactions are authorized through the MOL website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to MOL';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MOL Points customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the MOL website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}				
 			}
 			else
 			{
@@ -1902,8 +1891,7 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
-			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
-			|| method.value == 'molpoints' )
+			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2324,8 +2312,7 @@ function SubmitPaymentInfoForm()
 		if ( method.value == 'giropay' || method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
-			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
-			|| method.value == 'molpoints' )
+			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2737,11 +2724,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Diner\'s Club (National)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
-			else if ( method.value == 'molpoints' && providerPaymentMethod == 31 )
-			{
-				$('payment_method_review_text').innerHTML = 'MOL Points';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
 		}
 		
 		$('review_address_body').innerHTML = $('first_name').value+' '+$('last_name').value;
@@ -3083,7 +3065,6 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail )
 			case 27:
 			case 28:
 			case 29:
-			case 31:
 			default:
 			{
 				switch ( eErrorDetail )
