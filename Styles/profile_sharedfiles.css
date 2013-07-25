@@ -528,7 +528,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 
-#ScreenshotUploadLink
+#ScreenshotUploadLink, #VideoUploadLink
 {
 	border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -546,7 +546,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	cursor: pointer;
 }
 
-#ScreenshotUploadLink:hover {
+#ScreenshotUploadLink:hover, #VideoUploadLink:hover {
 	color: black;
 }
 

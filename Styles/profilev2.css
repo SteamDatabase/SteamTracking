@@ -1081,7 +1081,7 @@ img.workshop_showcase_item_image {
 }
 
 .game_info_stats_publishedfilecounts .published_file_count_ctn {
-	white-space: nowrap;
+	display: inline-block;
 }
 
 .game_info_stats_publishedfilecounts .published_file_link {

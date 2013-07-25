@@ -2539,7 +2539,7 @@ SellItemDialog = {
 				method: 'get',
 				parameters: {
 					appid: this.m_item.appid,
-					market_name: this.m_item.market_name
+					market_hash_name: typeof this.m_item.market_hash_name != 'undefined' ? this.m_item.market_hash_name : this.m_item.market_name
 				},
 				onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
 				onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
@@ -2657,7 +2657,7 @@ SellItemDialog = {
 		}
 
 		// If the price entered exceeds the maximum allowed, prevent the sale.
-		if ( buyerPrice > g_rgWalletInfo['wallet_trade_max_balance'] )
+		if ( buyerPrice > g_rgWalletInfo['wallet_trade_max_balance'] || price > g_rgWalletInfo['wallet_trade_max_balance'] )
 		{
 			$('market_sell_buyercurrency_input').style.borderColor = 'red';
 			if ( price > g_rgWalletInfo['wallet_trade_max_balance'] )
@@ -2731,7 +2731,7 @@ SellItemDialog = {
 		$('market_sell_dialog_back').fade({ duration: 0.25 });
 		$('market_sell_dialog_throbber').show();
 		$('market_sell_dialog_throbber').fade({ duration: 0.25, from: 0, to: 1 });
-		
+
 		new Ajax.Request( 'http://steamcommunity.com/market/sellitem/', {
 				method: 'post',
 				parameters: {
@@ -2861,7 +2861,7 @@ SellItemDialog = {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
 		
-		if ( inputValue > 0 )
+		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			// Calculate what the buyer pays
 			var publisherFee = typeof this.m_item.market_fee != 'undefined' ? this.m_item.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
@@ -2874,7 +2874,7 @@ SellItemDialog = {
 		var inputValue = this.GetBuyerPriceAsInt();
 		var nAmount = inputValue;
 
-		if ( inputValue > 0 )
+		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			// Calculate what the seller gets
 			var publisherFee = typeof this.m_item.market_fee != 'undefined' ? this.m_item.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];

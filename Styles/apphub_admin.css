@@ -6,6 +6,10 @@ body
 	background-position: 0 105px;
 }
 
+P {
+	font-size: 14px;
+}
+
 .maincontent
 {
 	padding-top: 20px;
@@ -79,7 +83,7 @@ body
 {
 	color: white;
 	font-size: 1.25em;
-	background-color: #2f2f30;
+	background-color: #222222;
 	line-height: 64px;
 }
 
@@ -110,8 +114,8 @@ body
 
 .faq_title
 {
-	text-transform: uppercase;
 	padding-bottom: 10px;
+	font-size: 17px;
 }
 
 .faq_sub_title

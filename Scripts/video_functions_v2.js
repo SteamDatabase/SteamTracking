@@ -42,15 +42,36 @@ function UpdateAddVideoControls()
 	}
 }
 
-
-function OnVideoClicked( event, id, itemLink, itemLinkText, itemLinkNotModal )
-{
+function OnVideoClicked( event, id, itemLink, itemLinkText, itemLinkNotModal ) {
 	if ( !event )
 		event = window.event;
 	event = $(event);
-	if ( event.isLeftClick && !event.isLeftClick() )
-		return true;
-	ShowModalContent( itemLink, itemLinkText, itemLinkNotModal, false );
+	if ( g_bManaging ) {
+		SelectVideo( id );
+	} else {
+		event = $(event);
+		if ( event.isLeftClick && !event.isLeftClick() )
+			return true;
+		ShowModalContent( itemLink, itemLinkText, itemLinkNotModal, false );
+		return false;
+	}
 	return false;
 }
+
+function SelectVideo( id )
+{
+	cb = $('screenshot_checkbox_'+id);
+	cb.checked = !cb.checked;
+	item = $('imgWallItem_' + id);
+	if ( cb.checked )
+	{
+		$(item).addClassName( 'imgWallItemChecked' );
+	}
+	else
+	{
+		$(item).removeClassName( 'imgWallItemChecked' );
+	}
+	ScreenshotUpdateBatchCount();
+}
+
 
