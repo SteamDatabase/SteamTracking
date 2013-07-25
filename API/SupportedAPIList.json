@@ -206,6 +206,210 @@
 				
 			},
 			{
+				"name": "IDOTA2Match_570",
+				"methods": [
+					{
+						"name": "GetLeagueListing",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetLiveLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetMatchDetails",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "match_id",
+								"type": "string",
+								"optional": false,
+								"description": "Match id"
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistory",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "hero_id",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "game_mode",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "skill",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "min_players",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "start_at_match_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "tournament_games_only",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetMatchHistoryBySequenceNum",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_match_seq_num",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "matches_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetScheduledLeagueGames",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "date_min",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "date_max",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetTeamInfoByTeamID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "start_at_team_id",
+								"type": "uint64",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "teams_requested",
+								"type": "uint32",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					},
+					{
+						"name": "GetTournamentPlayerStats",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "account_id",
+								"type": "string",
+								"optional": false,
+								"description": ""
+							},
+							{
+								"name": "league_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "hero_id",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							},
+							{
+								"name": "time_frame",
+								"type": "string",
+								"optional": true,
+								"description": ""
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IDOTA2Match_816",
 				"methods": [
 					{
@@ -379,6 +583,60 @@
 			},
 			{
 				"name": "IEconDOTA2_205790",
+				"methods": [
+					{
+						"name": "GetHeroes",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
+							},
+							{
+								"name": "itemizedonly",
+								"type": "bool",
+								"optional": true,
+								"description": "Return a list of itemized heroes only."
+							}
+						]
+						
+					},
+					{
+						"name": "GetRarities",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide rarity names in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetTournamentPrizePool",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The prize pool size for the given tournament id."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IEconDOTA2_570",
 				"methods": [
 					{
 						"name": "GetHeroes",
@@ -643,6 +901,63 @@
 				
 			},
 			{
+				"name": "IEconItems_570",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IEconItems_710",
 				"methods": [
 					{
@@ -871,6 +1186,39 @@
 				"methods": [
 					{
 						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_570",
+				"methods": [
+					{
+						"name": "GetClientVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetClusterVersion",
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
@@ -1852,6 +2200,52 @@
 			},
 			{
 				"name": "ITFPromos_440",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_570",
 				"methods": [
 					{
 						"name": "GetItemID",

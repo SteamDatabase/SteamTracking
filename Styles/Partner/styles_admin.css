@@ -1892,3 +1892,170 @@ html, body { height:100%; }
 	display: block;
 }
 
+/* Movie upload related */
+.movie_upload_preview_container
+{
+	width: 700px;
+	padding: 4px;
+	border: 1px solid #ACACAC;
+	margin: 4px;
+}
+
+.movie_upload_name
+{
+	text-align: left;
+}
+
+.movie_upload_progress_wrapper
+{
+	width: 200px;
+	background-color: green;
+	float: right;
+	position: relative;
+}
+
+.movie_upload_progress
+{
+	width: 0px;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.movie_upload_status
+{
+	position: relative;
+	text-align: center;
+	color: red;
+}
+
+.movie_upload_ui
+{
+	margin: 5px 5px 0px 20px;
+}
+
+.movie_upload_ui .drag_and_drop
+{
+	margin-top: 4px;
+}
+
+.movie_uploaded_ui
+{
+	margin: 5px 5px 5px 20px;
+}
+
+.movie_screenshot
+{
+	width: 178px;
+	height: 100px;
+	float: left;
+}
+
+.movie_screenshot .drag_and_drop
+{
+	background: rgba( 25, 25, 25, 0.4 );
+}
+
+.movie_screenshot .drag_and_drop span
+{
+	padding: 2px;
+	background: rgba( 25, 25, 25, 0.8 );
+}
+
+.movie_name_label
+{
+	width: 60px;
+	display: inline-block;
+	margin-top: 30px;
+}
+.movie_name_input
+{
+	width: 400px;
+}
+
+.movie_highlighted_row
+{
+	margin: 8px 0px 0px 60px;
+}
+
+.movie_rightofscreenshot
+{
+	float: left;
+	margin-left: 16px;
+	width: 598px;
+}
+
+.movie_more_row
+{
+	margin-top: 8px;
+	padding: 2px;
+	background-color: #373737;
+	text-align: center;
+}
+
+.movie_more_row a
+{
+	width: 100%;
+}
+
+.movie_more_row:hover
+{
+	background-color: #444444;
+}
+
+.movie_group
+{
+	background-color: #323233;
+	border: 1px solid #373737;
+	margin-bottom: 10px;
+	width: 818px;
+}
+
+.movie_group .titleDragHandle
+{
+	margin: 0px 0px 0px 1px	;
+	top: 0px;
+}
+
+.movie_save
+{
+	float: right;
+}
+
+.movie_expanded
+{
+	padding-top: 8px;
+}
+
+.movie_expanded_row
+{
+	margin-top: 8px;
+}
+
+.movie_expanded_label
+{
+	width: 100px;
+	float: left;
+}
+
+.movie_expanded_data
+{
+	float: left;
+}
+
+.movie_allowed_countries_select
+{
+	width: 130px;
+}
+
+.movie_allowed_countries_text
+{
+	width: 420px;
+}
+
+.movie_more_link
+{
+	text-decoration: none;
+}
