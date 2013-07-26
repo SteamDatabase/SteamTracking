@@ -2,6 +2,214 @@
 	"apilist": {
 		"interfaces": [
 			{
+				"name": "IDOTA2Fantasy_570",
+				"methods": [
+					{
+						"name": "GetFantasyLeagueLeaderboard",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The Fantasy League ID to get the leaderboard of"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": false,
+								"description": "The number of teams to return"
+							},
+							{
+								"name": "startTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by earlist time"
+							},
+							{
+								"name": "endTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by latest time"
+							},
+							{
+								"name": "matchIDFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Limit the scores to a particular match ID"
+							},
+							{
+								"name": "last_match",
+								"type": "bool",
+								"optional": true,
+								"description": "Limit the scores to the last match played in a league"
+							},
+							{
+								"name": "in_hall",
+								"type": "bool",
+								"optional": true,
+								"description": "Restrict to only owners in the International hall"
+							}
+						]
+						
+					},
+					{
+						"name": "GetFantasyPlayerScore",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The Fantasy League ID for scoring purposes"
+							},
+							{
+								"name": "playerAccountID",
+								"type": "uint32",
+								"optional": false,
+								"description": "Pro player account ID"
+							},
+							{
+								"name": "startTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by earlist time"
+							},
+							{
+								"name": "endTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by latest time"
+							},
+							{
+								"name": "matchIDFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Limit the scores to a particular match ID"
+							},
+							{
+								"name": "last_match",
+								"type": "bool",
+								"optional": true,
+								"description": "Limit the scores to the last match played in a league"
+							}
+						]
+						
+					},
+					{
+						"name": "GetFantasyTeamInfoOwnedBy",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "ownerAccountID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The AccountID of the user to get the fantasy teams of"
+							},
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by fantasy league ID"
+							},
+							{
+								"name": "startTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by earlist time"
+							},
+							{
+								"name": "endTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by latest time"
+							}
+						]
+						
+					},
+					{
+						"name": "GetFantasyTopPlayers",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The Fantasy League ID to get the top players of"
+							},
+							{
+								"name": "count",
+								"type": "uint32",
+								"optional": false,
+								"description": "The number of teams to return"
+							},
+							{
+								"name": "role",
+								"type": "uint32",
+								"optional": true,
+								"description": "The role of the players to return"
+							},
+							{
+								"name": "startTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by earlist time"
+							},
+							{
+								"name": "endTimeFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Filter by latest time"
+							},
+							{
+								"name": "matchIDFilter",
+								"type": "uint32",
+								"optional": true,
+								"description": "Limit the scores to a particular match ID"
+							},
+							{
+								"name": "last_match",
+								"type": "bool",
+								"optional": true,
+								"description": "Limit the scores to the last match played in a league"
+							}
+						]
+						
+					},
+					{
+						"name": "GetValidFantasyPlayersForRoles",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The Fantasy League ID"
+							},
+							{
+								"name": "ownerAccountID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The AccountID of the owner of the team"
+							},
+							{
+								"name": "teamIndex",
+								"type": "uint32",
+								"optional": false,
+								"description": "Index of the owner's team in the fantasy league"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IDOTA2Match_205790",
 				"methods": [
 					{
@@ -1208,24 +1416,6 @@
 			{
 				"name": "IGCVersion_570",
 				"methods": [
-					{
-						"name": "GetClientVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
-					{
-						"name": "GetClusterVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
 					{
 						"name": "GetServerVersion",
 						"version": 1,
