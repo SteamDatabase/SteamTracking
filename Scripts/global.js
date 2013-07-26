@@ -2820,6 +2820,8 @@ var CAjaxPagingControls = Class.create( {
 	{
 		if ( transport.responseJSON && transport.responseJSON.success )
 		{
+			RecordAJAXPageView( transport.request.url );
+
 			var response = transport.responseJSON;
 			this.m_cTotalCount = response.total_count;
 			this.m_cMaxPages = Math.ceil( response.total_count / this.m_cPageSize );
