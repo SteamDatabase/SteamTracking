@@ -7,6 +7,13 @@
 	min-width: 800px;
 	text-align: left;
 }
+ol {
+	margin-top: 2px;
+}
+
+li {
+	margin-bottom: 8px;
+}
 
 h4 {
 	margin-bottom: 3px;
