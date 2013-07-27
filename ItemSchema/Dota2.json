@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c01ae98e5bd7c69afbc8e0a2158fd94212601235.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.9c0c933127e637106a279d1fab0e3ad775eea839.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -38333,11 +38333,11 @@
 				}
 			},
 			{
-				"name": "Vengencebound Wings",
+				"name": "Vengeancebound Wings",
 				"defindex": 5114,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Wings",
-				"item_name": "Vengencebound Wings",
+				"item_name": "Vengeancebound Wings",
 				"item_description": "Upon hearing of his Beloved's fall at the hands of her sister, Dragonus pledged to bind his wings as a symbol for his failure to protect her.  The bindings are forged in arcane magic, causing excruciating pain whenever he takes flight.  A small price to pay, for he knows that though he can fly, she never will.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -46934,8 +46934,8 @@
 				"image_inventory": "econ\/items\/courier\/deathripper\/deathripper",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathripper\/deathripper.341a31cae1c580ec48ee455863288ab68f6e77f8.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathripper\/deathripper_large.f4df6c753b0bec2d1eddc00487f1a831f8563b84.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathripper\/deathripper.fa56d9cafc0a9309e6b3e2a98c7948e52e3af955.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathripper\/deathripper_large.79dd8eae6d4b7b5b2d6696e517e3164d3dfe5b98.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -66828,8 +66828,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Bonds_of_Vincere_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_bonds_of_vincere_set.a81427d16bbd4c1ea9b3e222edc1b8af9a58aabd.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_bonds_of_vincere_set_large.a03f5e6a2785f8eb8bc45c77592e283ae54edeb4.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_bonds_of_vincere_set.baa7fac36174a16c0070af470729a9ad3e9b14a3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_bonds_of_vincere_set_large.4cc415455faa971ee052229a3eb21a56a617833b.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
