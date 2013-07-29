@@ -1900,32 +1900,35 @@ html, body { height:100%; }
 }
 
 /* Movie upload related */
-.movie_upload_preview_container
+.movie_uploading
 {
-	width: 700px;
 	padding: 4px;
-	border: 1px solid #ACACAC;
-	margin: 4px;
+	margin: 4px 0px 10px 0px;
+	border: 2px dashed #ACACAC;
+	min-height: 50px;
+	padding: 20px 8px 8px;
+	text-align: center;
 }
 
-.movie_upload_name
+.movie_upload_name_wrapper
 {
-	text-align: left;
+	text-align: center;
 }
 
 .movie_upload_progress_wrapper
 {
-	width: 200px;
-	background-color: green;
-	float: right;
+	width: 300px;
+	background-color: #007dae;
 	position: relative;
+	margin: auto;
+	margin-top: 4px;
 }
 
 .movie_upload_progress
 {
 	width: 0px;
 	height: 100%;
-	background-color: black;
+	background-color: #00adee;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -1935,7 +1938,7 @@ html, body { height:100%; }
 {
 	position: relative;
 	text-align: center;
-	color: red;
+	color: #333333;
 }
 
 .movie_upload_ui
@@ -1946,6 +1949,10 @@ html, body { height:100%; }
 .movie_upload_ui .drag_and_drop
 {
 	margin-top: 4px;
+	margin-bottom: 10px;
+	min-height: 38px;
+	padding: 32px 8px 8px;
+	text-align: center;
 }
 
 .movie_uploaded_ui
@@ -1963,6 +1970,11 @@ html, body { height:100%; }
 .movie_screenshot .drag_and_drop
 {
 	background: rgba( 25, 25, 25, 0.4 );
+}
+
+.movie_screenshot .drag_and_drop.drag_over
+{
+	background: rgba( 200, 200, 200, 0.8 );
 }
 
 .movie_screenshot .drag_and_drop span
@@ -2018,12 +2030,18 @@ html, body { height:100%; }
 	border: 1px solid #373737;
 	margin-bottom: 10px;
 	width: 818px;
+	position: relative;
 }
 
 .movie_group .titleDragHandle
 {
 	margin: 0px 0px 0px 1px	;
 	top: 0px;
+}
+
+#trailer_list .dragAndDropHighlight
+{
+	width: 818px;
 }
 
 .movie_save
@@ -2065,4 +2083,80 @@ html, body { height:100%; }
 .movie_more_link
 {
 	text-decoration: none;
+}
+
+.movie_create_area
+{
+	background-color: #323233;
+	border: 1px solid #373737;
+	display: inline-block;
+	padding: 8px;
+}
+
+.movie_create_label
+{
+	margin-bottom: 4px;
+}
+
+.movie_create_name
+{
+	width: 300px;
+}
+
+.movie_upload_title
+{
+	margin-bottom: 4px;
+}
+
+.movie_processing, #movie_list_processing
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 100;
+
+	background-color: rgba( 20, 20, 20, 0.9);
+	height: 100%;
+	width: 100%;
+}
+
+.movie_processing.processing, #movie_list_processing.processing
+{
+	visibility: visible;
+}
+
+.movie_processing.processing .throbber, #movie_list_processing.processing .throbber
+{
+	width: 100%;
+	height: 100%;
+	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
+}
+
+.movie_list_wrapper
+{
+	position: relative;
+	width: 820px;
+}
+
+.movie_error
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 100;
+
+	background-color: rgba( 20, 20, 20, 0.9);
+	height: 100%;
+	width: 100%;
+
+	text-align: center;
+	color: red;
+}
+
+.movie_error.error
+{
+	visibility: visible;
+}
+
+.movie_error.error .movie_error_text
+{
+	margin-top: 40px;
 }
