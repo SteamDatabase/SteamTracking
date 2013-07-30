@@ -65143,12 +65143,12 @@
 		}
 		"5114"
 		{
-			"name"		"Vengencebound Wings"
+			"name"		"Vengeancebound Wings"
 			"prefab"		"wearable"
 			"creation_date"		"2013-07-19"
 			"image_inventory"		"econ/items/skywrath_mage/vengancebound_wings/vengancebound_wings"
 			"item_description"		"#DOTA_Item_Desc_Vengencebound_Wings"
-			"item_name"		"#DOTA_Item_Vengencebound_Wings"
+			"item_name"		"#DOTA_Item_Vengeancebound_Wings"
 			"item_rarity"		"rare"
 			"item_slot"		"back"
 			"item_type_name"		"#DOTA_WearableType_Wings"
@@ -72353,6 +72353,7 @@
 			"image_inventory"		"econ/items/keeper_of_the_light/the_one_horn/the_one_horn"
 			"item_description"		"#DOTA_Item_Desc_The_One_Horn"
 			"item_name"		"#DOTA_Item_The_One_Horn"
+			"item_rarity"		"rare"
 			"item_slot"		"armor"
 			"item_type_name"		"#DOTA_WearableType_Poke"
 			"model_player"		"models/items/keeper_of_the_light/the_one_horn/the_one_horn.mdl"
@@ -92225,6 +92226,27 @@
 			"item_rarity"		"mythical"
 			"item_type_name"		"#DOTA_WearableType_Lure"
 		}
+		"10305"
+		{
+			"name"		"ESWC Diamond"
+			"prefab"		"hud_skin"
+			"creation_date"		"2013-07-29"
+			"image_inventory"		"econ/huds/hud_eswc_diamond"
+			"item_description"		"#DOTA_Item_Desc_ESWC_Diamond"
+			"item_name"		"#DOTA_Item_ESWC_Diamond"
+			"item_rarity"		"rare"
+			"item_type_name"		"#DOTA_WearableType_HUD_Skin"
+			"visuals"
+			{
+				"asset_modifier0"
+				{
+					"type"		"hud_skin"
+					"asset"		"eswc_diamond"
+					"modifier"		"eswc_diamond"
+					"frequency"		"1"
+				}
+			}
+		}
 		"10307"
 		{
 			"name"		"Announcer: Defense Grid"
@@ -97863,8 +97885,8 @@
 			"name"		"Electronic Sports World Cup 2013"
 			"prefab"		"league"
 			"creation_date"		"2013-07-22"
-			"image_banner"		"econ/leagues/subscriptions_eswc2013_large"
-			"image_inventory"		"econ/leagues/subscriptions_eswc2013_large"
+			"image_banner"		"econ/leagues/subscriptions_ewcs2013_ingame"
+			"image_inventory"		"econ/leagues/subscriptions_ewcs2013"
 			"item_description"		"#DOTA_Item_Desc_Electronic_Sports_World_Cup_2013"
 			"item_name"		"#DOTA_Item_Electronic_Sports_World_Cup_2013"
 			"item_type_name"		"#DOTA_WearableType_Unnamed_New_Item"
@@ -97876,6 +97898,11 @@
 				{
 					"league_id"		"61"
 					"order"		"41"
+					"hud_skin_item_def"		"10305"
+					"bonus_itemdefs"
+					{
+						"10305"		"1"
+					}
 				}
 			}
 			"tournament_url"		"http://www.eswc.com/"
@@ -97886,7 +97913,7 @@
 			"name"		"Electronic Sports World Cup 2013 - ADMIN PASS"
 			"prefab"		"league"
 			"creation_date"		"2013-07-22"
-			"image_banner"		"econ/leagues/subscriptions_eswc2013_large"
+			"image_banner"		"econ/leagues/subscriptions_ewcs2013_ingame"
 			"image_inventory"		"econ/leagues/subscriptions_eswc2013_large"
 			"item_description"		"#DOTA_Item_Desc_Copy_of_Electronic_Sports_World_Cup_2013"
 			"item_name"		"#DOTA_Item_Electronic_Sports_World_Cup_2013__ADMIN_PASS"
@@ -116164,7 +116191,7 @@
 		"international_2013_items"
 		{
 			"Cranial Clap Trap"		"1"
-			"Vengencebound Wings"		"1"
+			"Vengeancebound Wings"		"1"
 			"Craniomancer"		"1"
 			"Helm of Infernal Despair"		"1"
 			"Possessed Blade"		"1"
