@@ -1043,6 +1043,72 @@
 				
 			},
 			{
+				"name": "IEconItems_440",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchemaURL",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetStoreMetaData",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to results in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetStoreStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IEconItems_570",
 				"methods": [
 					{
@@ -1304,6 +1370,30 @@
 					},
 					{
 						"name": "GetClusterVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					},
+					{
+						"name": "GetServerVersion",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "IGCVersion_440",
+				"methods": [
+					{
+						"name": "GetClientVersion",
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
@@ -2192,6 +2282,21 @@
 				
 			},
 			{
+				"name": "ITFItems_440",
+				"methods": [
+					{
+						"name": "GetGoldenWrenches",
+						"version": 2,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "ITFPromos_205790",
 				"methods": [
 					{
@@ -2239,6 +2344,52 @@
 			},
 			{
 				"name": "ITFPromos_260",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_440",
 				"methods": [
 					{
 						"name": "GetItemID",
