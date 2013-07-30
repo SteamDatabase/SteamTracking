@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c079096fcb24541e8433f7a35111e0eee11debd0.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d8ab2f9911cea9d7f4bce1add62c7bb83a902322.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -60638,6 +60638,78 @@
 					{
 						"name": "ignore charge notification",
 						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Batalha Gamer",
+				"defindex": 15212,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Batalha Gamer",
+				"item_description": "The Battle Gamer (BG) is a tournament that features 16 of the best Brazilian teams fighting for a prize of R $ 2,800.00.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_batalhagamer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_batalhagamer.646fda17193ed4ac496f3ff8c2470fb6daaf9ca9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_batalhagamer_large.bbeb1ee9a1c007182a91fd3fca651bd7427e76b0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Batalha Gamer - ADMIN",
+				"defindex": 15213,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Batalha Gamer - ADMIN",
+				"item_description": "The Battle Gamer (BG) is a tournament that features 16 of the best Brazilian teams fighting for a prize of R $ 2,800.00",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_batalhagamer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_batalhagamer.646fda17193ed4ac496f3ff8c2470fb6daaf9ca9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_batalhagamer_large.bbeb1ee9a1c007182a91fd3fca651bd7427e76b0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
 						"value": 1
 					}
 				]
