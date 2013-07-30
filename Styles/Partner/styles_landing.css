@@ -973,6 +973,18 @@ span.icon_star { display: inline-block;}
 		font-weight: normal;
 	}
 
+.section.bluebox {
+	border: 2px solid #82a6d7;
+	border-radius: 3px;
+	background-color: #000;
+	padding: 10px;
+}
+
+	.section.bluebox h1 {
+		color: #82a6d7;
+		font-weight: normal;
+	}
+
 #publish_status_message {
 	line-height: 32px;
 	vertical-align: top;
