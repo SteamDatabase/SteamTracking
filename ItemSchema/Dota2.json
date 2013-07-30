@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.9c0c933127e637106a279d1fab0e3ad775eea839.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c079096fcb24541e8433f7a35111e0eee11debd0.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -39898,7 +39898,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Club",
 				"item_name": "A Bit of Boat",
-				"item_description": "Clinkz is not the only member of his clan to be preserved in a form of immortal bone. This bow, all that remains of his grandsire, is full of spirit fire and unwanted advice. ",
+				"item_description": "A mutinous member of Kunkka's crew nearly made it to shore in this fateful craft. Tidehunter wields it as a reminder of that dread day, little knowing that Kunkka heartily approves of the message it sends to would-be deserters.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/tidehunter\/a_bit_of_boat\/a_bit_of_boat",
@@ -52679,6 +52679,28 @@
 				
 			},
 			{
+				"name": "ESWC Diamond",
+				"defindex": 10305,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "ESWC Diamond",
+				"item_description": "Included with the Electronic Sports World Cup 2013 league pass.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_eswc_diamond",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_eswc_diamond.b1ed423cee555f0eb815ed048eb8c8ea615c2648.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Announcer: Defense Grid",
 				"defindex": 10307,
 				"item_class": "dota_item_wearable",
@@ -60305,14 +60327,14 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Electronic Sports World Cup 2013",
-				"item_description": "The Electronic Sports World Cup 2013 features regional online qualifying tournaments from May to September, culminating with the Grand Final tournament in Paris from October 30 to November 3, 2013.",
+				"item_description": "The Electronic Sports World Cup 2013 features regional online qualifying tournaments from August to October 2013, culminating with the Grand Final tournament in Paris from October 30 to November 3, 2013.\r\n\tThe ticket comes with the ESWC Diamond HUD\r\n\t",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_eswc2013_large",
+				"image_inventory": "econ\/leagues\/subscriptions_ewcs2013",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ewcs2013.12e25aab653b89ff8626bfa5bbde788535aa81f6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ewcs2013_large.262d1a6b4b0fad72bb2aaaf7738a77e1ad57df8d.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
