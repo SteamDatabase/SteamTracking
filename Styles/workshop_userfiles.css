@@ -3148,3 +3148,12 @@ div.hover {
 .publishedfile_popup_screenshot:hover {
 	border: 1px solid #97C0E3;
 }
+
+.publishedfile_popup_screenshot.banned {
+	border: 1px solid red;
+	cursor: default;
+}
+
+.publishedfile_popup_screenshot.banned img {
+	opacity: 0.125;
+}
