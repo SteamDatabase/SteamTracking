@@ -1,6 +1,6 @@
 {
   "id": "1.5.2",
-  "time": "2013-07-02T19:27:58+02:00",
+  "time": "2013-07-31T23:56:06+02:00",
   "releaseTime": "2013-04-25T17:45:00+02:00",
   "type": "release",
   "processArguments": "legacy",
@@ -8,13 +8,19 @@
   "minimumLauncherVersion": 4,
   "libraries": [
     {
-      "name": "net.minecraft:launchwrapper:1.3"
+      "name": "net.minecraft:launchwrapper:1.4"
     },
     {
       "name": "net.sf.jopt-simple:jopt-simple:4.5"
     },
     {
       "name": "org.ow2.asm:asm-all:4.1"
+    },
+    {
+      "name": "net.java.jinput:jinput:2.0.5"
+    },
+    {
+      "name": "net.java.jutils:jutils:1.0.0"
     },
     {
       "name": "org.lwjgl.lwjgl:lwjgl:2.9.0",
@@ -72,7 +78,7 @@
       ]
     },
     {
-      "name": "org.lwjgl.lwjgl:lwjgl:2.4.2",
+      "name": "org.lwjgl.lwjgl:lwjgl:2.9.1-nightly-20130708-debug3",
       "rules": [
         {
           "action": "allow",
@@ -84,7 +90,7 @@
       ]
     },
     {
-      "name": "org.lwjgl.lwjgl:lwjgl_util:2.4.2",
+      "name": "org.lwjgl.lwjgl:lwjgl_util:2.9.1-nightly-20130708-debug3",
       "rules": [
         {
           "action": "allow",
@@ -96,7 +102,7 @@
       ]
     },
     {
-      "name": "org.lwjgl.lwjgl:lwjgl-platform:2.4.2",
+      "name": "org.lwjgl.lwjgl:lwjgl-platform:2.9.1-nightly-20130708-debug3",
       "natives": {
         "linux": "natives-linux",
         "windows": "natives-windows",
@@ -118,10 +124,17 @@
       ]
     },
     {
-      "name": "net.java.jinput:jinput:2.0.5"
-    },
-    {
-      "name": "net.java.jutils:jutils:1.0.0"
+      "name": "net.java.jinput:jinput-platform:2.0.5",
+      "natives": {
+        "linux": "natives-linux",
+        "windows": "natives-windows",
+        "osx": "natives-osx"
+      },
+      "extract": {
+        "exclude": [
+          "META-INF/"
+        ]
+      }
     },
     {
       "name": "net.java.jinput:jinput-platform:2.0.5",
