@@ -100,7 +100,7 @@ function OnRSAKeyResponse( transport )
 				captcha_text: form.elements['captcha_text'].value,
 				emailsteamid: form.elements['emailsteamid'].value,
 				rsatimestamp: results.timestamp,
-				remember_login: form.elements['remember_login'] && form.elements['remember_login'].checked
+				remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false'
 			},
 			onSuccess: OnLoginResponse,
 			onException: function( req, e ) { throw e; }
