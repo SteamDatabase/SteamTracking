@@ -166,3 +166,6 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 Repos/index.html|http://repo.steampowered.com/
 Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/
 Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
+
+# Minecraft
+Minecraft/versions.json|http://s3.amazonaws.com/Minecraft.Download/versions/versions.json

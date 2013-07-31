@@ -1,1 +1,2 @@
+Minecraft/versions.json|http://s3.amazonaws.com/Minecraft.Download/versions/versions.json
 GetItemSchema/TeamFortress2.json|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
