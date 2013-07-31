@@ -180,6 +180,26 @@
 				
 				return true;
 			}
+			// Minecraft versions file
+			else if( $File === 'Minecraft/versions.json' )
+			{
+				$DataJSON = JSON_Decode( $Data, true );
+				
+				if( isset( $DataJSON[ 'versions' ] ) )
+				{
+					foreach( $DataJSON[ 'versions' ] as $Version )
+					{
+						$ID = $Version[ 'id' ];
+						
+						$this->URLsToFetch[ ] = Array(
+							'URL'  => 'http://s3.amazonaws.com/Minecraft.Download/versions/' . $ID . '/' . $ID . '.json',
+							'File' => 'Minecraft/' . $ID . '.json'
+						);
+					}
+				}
+				
+				unset( $DataJSON, $Version, $ID );
+			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
