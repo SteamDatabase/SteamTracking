@@ -1114,8 +1114,12 @@ var CAutoSizingTextArea = Class.create( {
 		this.m_nMinHeight = nMinHeight || 20;
 		this.m_fnChangeCallback = fnChangeCallback || null;
 
+		// briefly empty the text area and set the height so we can see how much padding there is
+		var strContents = this.m_elTextArea.value;
+		this.m_elTextArea.value = '';
 		this.m_elTextArea.style.height = this.m_nMinHeight + 'px';
 		this.m_nTextAreaPadding = this.m_elTextArea.scrollHeight - this.m_nMinHeight;
+		this.m_elTextArea.value = strContents;
 
 		this.OnTextInput();
 	},
