@@ -192,7 +192,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 }
 
 var g_winExternal = false;
-function PerformExternalFinalizeTransaction( url, hasPostParameters )
+function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 {
 		if ( !$('accept_ssa') || !$('accept_ssa').checked )
 	{
@@ -222,7 +222,7 @@ function PerformExternalFinalizeTransaction( url, hasPostParameters )
 
 			document.body.appendChild(iframe);
 		}
-		else if( hasPostParameters )
+		else if( useExternalRedirect )
 		{
 			var displayPendingReceipt = false;
 			switch ( method.value )
@@ -982,7 +982,7 @@ function OnGetFinalPriceSuccess( result )
 			if ( result.externalurl )
 			{
 								var url = result.externalurl.replace( /%/g, '%25' );
-				$('purchase_button_bottom').href = "javascript:PerformExternalFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"', " + ( result.haspostparameters ? "true" : "false" ) + " );";
+				$('purchase_button_bottom').href = "javascript:PerformExternalFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"', " + ( result.useexternalredirect ? "true" : "false" ) + " );";
 				$('purchase_bottom_note_paypalgc').style.display = 'block';
 
 				$('purchase_top').show();

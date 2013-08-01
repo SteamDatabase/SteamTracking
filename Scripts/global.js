@@ -719,13 +719,13 @@ function InitEconomyHovers( strEconomyCSS, strEconomyJS )
 {
 	var $Hover = $J('<div/>', {'class': 'economyitem_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'economyitem_hover_content'} );
-
 	$Hover.append( $HoverContent );
-
 	$Hover.hide();
-	$J(document.body).append( $Hover );
+
 
 	var fnOneTimeEconomySetup = function() {
+		$J(document.body).append( $Hover );
+
 		if ( typeof UserYou == 'undefined' )
 			$J('head').append( strEconomyCSS, strEconomyJS );
 	};
@@ -758,11 +758,12 @@ function InitEconomyHovers( strEconomyCSS, strEconomyJS )
 		else
 			return null;
 	}
-	var fnPositionHover = PositionMiniprofileHover;
-	var strDataName = 'economy-item';
-	var strURLMatch = 'itemhover';
 
-	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch );
+	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
+		fnDataFactory: fnDataFactory,
+		strDataName: 'economy-item',
+		strURLMatch: 'itemhover'
+	} );
 }
 
 
@@ -1089,6 +1090,7 @@ var CAutoSizingTextArea = Class.create( {
 	m_nMaxHeight: 500,
 	m_cCurrentSize: Number.MAX_VALUE,
 	m_fnChangeCallback: null,
+	m_nTextAreaPadding: 0,
 
 	initialize: function( elTextArea, nMinHeight, fnChangeCallback )
 	{
@@ -1103,6 +1105,9 @@ var CAutoSizingTextArea = Class.create( {
 		this.m_cEntryLength = Number.MAX_VALUE;
 		this.m_nMinHeight = nMinHeight || 20;
 		this.m_fnChangeCallback = fnChangeCallback || null;
+
+		this.m_elTextArea.style.height = this.m_nMinHeight + 'px';
+		this.m_nTextAreaPadding = this.m_elTextArea.scrollHeight - this.m_nMinHeight;
 
 		this.OnTextInput();
 	},
@@ -1132,7 +1137,7 @@ var CAutoSizingTextArea = Class.create( {
 		else if ( this.m_elTextArea.scrollHeight != this.m_elTextArea.getHeight() )
 		{
 			var nHeight = Math.max( this.m_elTextArea.scrollHeight, this.m_nMinHeight );
-			this.m_elTextArea.style.height = nHeight + 'px';
+			this.m_elTextArea.style.height = ( nHeight - this.m_nTextAreaPadding ) + 'px';
 
 			if ( this.m_elTextArea.style.overflow == 'auto' )
 				this.m_elTextArea.style.overflow = 'hidden';
