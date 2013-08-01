@@ -1,0 +1,584 @@
+
+#mainBody {
+	width:958px;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+
+#mainBodyHeader {
+	width:958px;
+	height:163px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/homeBoxTopper.gif');
+}
+
+#mainBodyHeader h1 {
+	margin:0;
+	padding:0;
+	font-size:26px;
+	font-weight:normal;
+	color:#e1e1e1;
+	padding-left:24px;
+	padding-bottom:4px;
+	padding-top:24px;
+}
+
+#mainBodyHeader p {
+	margin:0;
+	padding:0;
+	padding-right:140px;
+	font-size:15px;
+	font-weight:bold;
+	color:#6a6a6a;
+	line-height:18px;
+	padding-left:24px;
+	padding-bottom:4px;
+}
+
+#userNumbers {
+	padding-left:24px;
+	font-size:15px;
+	font-weight:bold;
+	padding-top:13px;
+	color:#4d4d4d;
+}
+
+#iTotalAccounts {
+	color:#bebebe;
+}
+
+#iAccountsInGame {
+	color:#8BC53F;
+}
+
+#iAccountsOnline {
+	color:#62A7E3;
+}
+
+#iAccountsInChat {
+	color:#bebebe;
+}
+
+#lowerContents {
+	margin:0;
+	padding:0;
+	width:958px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/homeBoxBG.gif');
+}
+
+#lowerLeftContents {
+	margin-left:5px;
+	background-position:top left;
+	background-repeat: no-repeat;
+	width:681px;
+	min-height:179px;
+	height:179px;
+	padding-top:325px;
+}
+
+#screenshots_detail_link {
+	text-align:center;
+	margin-top:-43px;
+	margin-bottom:10px;
+}
+
+#screenshots_detail_a,#screenshots_detail_a:visited,#screenshots_detail_a:active {
+	color:#697958;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+	text-decoration:none;
+}
+#screenshots_detail_a:hover {
+	text-decoration:underline;
+}
+
+
+#lowerLeftColLeft {
+	padding-left:17px;
+	padding-right:18px;
+}
+
+#lowerLeftColRight {
+	float:right;
+	left:18px;
+	width:314px;
+	padding-left:15px;
+}
+
+#lowerLeftColLeft h2 {
+	color:#898989;
+	font-weight:bold;
+	font-size:15px;
+}
+
+.halfBreak {
+	padding:4px 0px 12px 1px;
+}
+
+#lowerLeftColLeft {
+	color:#6a6a6a;
+	font-weight:bold;
+	font-size:15px;
+}
+
+#lowerLeftColLeft a,#lowerLeftColLeft a:hover,#lowerLeftColLeft a:visited,#lowerLeftColLeft a:active {
+	color:#ebebeb;
+	font-weight:bold;
+	font-size:15px;
+}	
+
+#lowerRightContents {
+	float:right;
+	width:254px;
+	margin:0;
+	padding:0;
+	padding-right:5px;
+	padding-top:10px;
+}
+
+#lowerRightContents h1 {
+	margin:0;
+	padding:0;
+	font-size:11px;
+	color:#e1e1e1;
+	font-weight:normal;
+}
+
+#rightActionBlockHeader {
+	width:254px;
+	height:9px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockHeader.gif');
+}
+#rightActionBlockFooter {
+	width:254px;
+	height:9px;
+	margin:0;
+	margin-bottom:20px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockFooter.gif');
+}
+#rightActionBlock {
+	width:254px;
+	margin:0;
+	padding:0;
+	padding-bottom:6px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightActionBlockBG.gif');
+	background-repeat:repeat-y;
+}
+
+#rightActionBlock label {
+	display:block;
+	color:#898989;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	padding-left:12px;
+}
+
+
+#rightActionBlock label.smallLabel {
+	display:block;
+	color:#898989;
+	font-size:9px;
+	margin:0;
+	padding:0;
+	padding-left:12px;
+}
+
+#rightActionBlock label.checkboxLabel {
+	display:inline;
+	color:#898989;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	padding-left:5px;
+}
+
+#rightActionBlock h2 {
+	margin:0;
+	padding:0;
+	font-size:11px;
+	font-weight:bold;
+	color:#ff0000;
+	padding-left:12px;
+	padding-top:5px;
+}
+
+#rightActionBlock p{
+	margin:0;
+	padding:0;
+	padding-top:12px;
+	padding-bottom:2px;
+	font-size: 11px;
+	color: #7c7c7c;
+	padding-left:12px;
+	padding-right:10px;
+}
+
+#rightSetupBlockHeader {
+	width:254px;
+	height:8px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockHeader.gif');
+}
+#rightSetupBlockFooter {
+	width:254px;
+	height:8px;
+	margin:0;
+	margin-bottom:8px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockFooter.gif');
+}
+#rightSetupBlock {
+	width:254px;
+	height:78px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockBG.gif');
+	background-repeat:repeat-y;
+}
+
+#rightSetupBlock p{
+	margin:0;
+	padding:0;
+	padding-bottom:0px;
+	font-size: 11px;
+	color: #7c7c7c;
+	padding-left:12px;
+	padding-right:10px;
+}
+
+.rightLowBlockHeader {
+	width:254px;
+	height:8px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockHeader.gif');
+}
+.rightLowBlockFooter {
+	width:254px;
+	height:8px;
+	margin:0;
+	margin-bottom:12px;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockFooter.gif');
+}
+.rightLowBlock {
+	width:254px;
+	margin:0;
+	padding:0;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/rightStatsBlockBG.gif');
+	background-repeat:repeat-y;
+}
+
+.rightLowBlock p{
+	margin:0;
+	padding:0;
+	padding-bottom:0px;
+	font-size: 12px;
+	color: #7c7c7c;
+	padding-left:12px;
+	padding-right:10px;
+	padding-bottom:4px;
+	
+}
+
+.boldWhite {
+	font-weight:bold;
+	color:#ebebeb;
+}	
+
+.rightLowBlock a,.rightLowBlock a:hover,.rightLowBlock a:active,.rightLowBlock a:visited {
+	color:#ebebeb;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.rightLowBlock h2 {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	font-weight:bold;
+	color: #8bc53f;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+}	
+
+#rightTakeTour {
+	width:254px;
+	margin:0;
+	padding:0;
+	padding-left:12px;
+	color:#bebebe;
+	font-size:12px;
+}
+
+#dashBreak {
+	margin:0;
+	padding:0;
+	margin-top:5px;
+	margin-bottom:12px;
+	margin-left:10px;
+}
+
+#captchaImg {
+	margin-left:12px;
+	margin-top: 1px;
+	margin-bottom: 6px;
+}
+
+input.textField {
+	margin-top:-2px;
+	margin-bottom:6px;
+	padding:2px;
+	width: 200px;
+}
+input.textField,input.subImage, .checkboxRow {
+	margin-left:12px;
+}
+input.checkField {
+	margin-left:20px;
+	margin-bottom:4px;
+}
+input.subImage {
+	margin-top:6px;
+	border:0;
+}
+
+.checkboxRow {
+	padding: 8px 0px;
+}
+
+#rightActionBlock .checkboxRow label {
+	display: inline;
+	padding-left: 4px;
+}
+
+.rightLowBlock ul {
+	list-style:none;
+	margin:0 0 0 20px;
+	padding:6px 10px 4px 0px;
+	font-size:11px;
+	color:#939393;
+}
+
+.rightLowBlock li {
+	margin:0;
+	padding:0;
+	padding-left:13px;
+	margin-bottom:7px;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bulletArrow.gif');
+	background-repeat:no-repeat;
+	background-position:0px 5px;
+}
+
+p.ulTitle {
+	padding:0;
+	margin:0;
+	padding-left:13px;
+	font-size:11px;
+	color:#939393;
+}
+
+#lowerContents h1 {
+	margin:0;
+	padding:0;
+	font-size:24px;
+	font-weight:bold;
+	color:#e1e1e1;
+	padding-left:8px;
+	padding-bottom:4px;
+}
+
+#lowerBlurbs h2 {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	font-weight:bold;
+	color: #8bc53f;
+	padding-left:10px;
+	padding-right:10px;
+}	
+
+#lowerBlurbs p {
+	margin:0;
+	padding:0;
+	padding-top:4px;
+	padding-bottom:4px;
+	font-size: 12px;
+	color: #7c7c7c;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
+	font-size: 12px;
+}
+
+.blurbsGreyHR {
+	margin:0;
+	padding:0;
+	height:1px;
+	margin-top:8px;
+	margin-bottom:8px;
+	margin-left:10px;
+	margin-right:10px;
+	background-color:#383839;
+}
+
+#setupButton {
+	padding-top:8px;
+	padding-left:5px;
+}
+
+#loggedInText {
+	font-size: 12px;
+	color: #bebebe;
+	padding-left:10px;
+	line-height:18px;
+}
+
+#loggedInName {
+	font-weight:bold;
+	font-size: 12px;
+	color: #bebebe;
+}
+
+#captchaLabel
+{
+	clear:none;
+	float:left;
+	line-height:17px;
+}
+
+#captchaRefresh
+{
+	clear:none;
+	float:right;
+	padding-top:3px;
+	padding-right:36px;
+	font-size:10px;
+	line-height:12px;
+}
+
+#captchaRefreshImg 
+{
+	vertical-align:middle;
+}
+
+.OpenID_ImageHeader
+{
+	height: 60px;
+}
+
+.OpenID_Subheader
+{
+	background-image:url('http://cdn.steamcommunity.com/public/images/header/lowerBarBG.gif');
+	background-repeat:repeat-x;
+	color:#344C5F;
+	margin:1px 0 0;
+	padding:0 0 0 111px;
+	position:relative;
+
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	background-position: 0px -28px;
+	height: 8px;
+}
+
+.OpenID_MainHeaderBody
+{
+	height: auto;
+	padding-bottom: 24px;
+	width: 958px;
+	margin: 0;
+	background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/homeBoxTopper.gif');
+	text-align: left;
+}
+
+.OpenID_MainHeaderBody h1 {
+	margin:0;
+	padding:0;
+	font-size:26px;
+	font-weight:normal;
+	color:#e1e1e1;
+	padding-left:24px;
+	padding-bottom:4px;
+	padding-top:24px;
+}
+
+.OpenID_MainHeaderBody p {
+	margin:0;
+	padding:0;
+	padding-right:140px;
+	font-size:15px;
+	font-weight:bold;
+	color:#6a6a6a;
+	line-height:18px;
+	padding-left:24px;
+	padding-bottom:4px;
+}
+
+.OpenID_LowerLeftContents
+{
+	margin-left:5px;
+	background-position:top left;
+	background-repeat:none;
+	width:681px;
+	min-height: 480px;
+	height:480px;
+	padding-top: 24px
+}
+
+.OpenID_Highlight
+{
+	color: #EBEBEB;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.OpenID_HighlightSmall
+{
+	color: #EBEBEB;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.OpenID_LowerHeader
+{
+	color: #EBEBEB;
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.OpenID_Legal
+{
+	margin-top: 300px;
+	font-size:10px;
+}
+
+.OpenID_Logout
+{
+	color: #959595;
+	font-size: 12px;
+}
+
+.OpenID_Logout a
+{
+	color: #959595;
+	font-size: 12px;
+}
+
+#login_btn_wait {
+	margin-left: 12px;
+}
