@@ -474,6 +474,9 @@ span.popup_menu_pulldown_indicator {
 .newmodal_prompt_input {
 }
 
+.newmodal_prompt_input input[type=text] {
+	width: 100%;
+}
 
 
 .emoticon_hover {
@@ -490,6 +493,7 @@ span.popup_menu_pulldown_indicator {
 
 	margin: 12px;
 	box-shadow: 0 0 12px #000000;
+	white-space: nowrap;
 }
 
 .emoticon_hover_content.client {

@@ -617,11 +617,15 @@ CEmoticonPopup.prototype.BuildPopup = function()
 
 	for( var i = 0; i < this.m_rgEmoticons.length; i++ )
 	{
-		var strEmoticonName = this.m_rgEmoticons[i];
+		var strEmoticonName = this.m_rgEmoticons[i].replace( /:/g, '' );
 		var strEmoticonURL = 'http://cdn.steamcommunity.com/economy/emoticon/' + strEmoticonName;
 
-		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'title': strEmoticonName } );
-		$Emoticon.append( $J('<img/>', {'src': strEmoticonURL } ) );
+		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
+		var $Img = $J('<img/>', {'src': strEmoticonURL } );
+		$Emoticon.append( $Img );
+
+		if ( window.BindEmoticonHover )
+			BindEmoticonHover( $Emoticon );
 
 		$Emoticon.click( this.GetEmoticonClickClosure( strEmoticonName ) );
 
@@ -635,18 +639,22 @@ CEmoticonPopup.prototype.BuildPopup = function()
 CEmoticonPopup.prototype.GetEmoticonClickClosure = function ( strEmoticonName )
 {
 	var _this = this;
+	var strTextToInsert = ':' + strEmoticonName + ':';
 	return function() {
 		var elTextArea = _this.m_$TextArea[0];
 		if ( elTextArea )
 		{
 			var nSelectionStart = elTextArea.selectionStart;
-			elTextArea.value = elTextArea.value.substr( 0, nSelectionStart ) + strEmoticonName + elTextArea.value.substr( nSelectionStart );
-			elTextArea.selectionStart = nSelectionStart + strEmoticonName.length;
+			elTextArea.value = elTextArea.value.substr( 0, nSelectionStart ) + strTextToInsert + elTextArea.value.substr( nSelectionStart );
+			elTextArea.selectionStart = nSelectionStart + strTextToInsert.length;
 		}
 
 		_this.m_$TextArea.focus();
 
 		_this.DismissPopup();
+
+		if ( window.DismissEmoticonHover )
+			DismissEmoticonHover();
 	};
 }
 
