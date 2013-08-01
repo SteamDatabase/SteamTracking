@@ -742,9 +742,10 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
 		regexEmoticons = CWebChatDialog.s_regexMyEmoticons;
 
-	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="http://cdn.steamcommunity.com/economy/emoticon/$1" title="$1">' )
+	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="http://cdn.steamcommunity.com/economy/emoticon/$1">' )
 
 	elText.html( strHTML );
+	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );
 
 	elMessage.append( elText );
 

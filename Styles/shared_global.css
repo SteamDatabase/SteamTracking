@@ -178,22 +178,24 @@ background: -moz-linear-gradient(top, #525151 5%, #292827 95%);background: -webk
 	font-size: 12px;
 }
 
-.miniprofile_arrow_left, .miniprofile_arrow_right {
+.hover_arrow {
 	position: absolute;
 	top: 30px;
+}
 
+.miniprofile_arrow {
 	border-top: 9px solid transparent;
 	border-bottom: 9px solid transparent;
 	width: 0;
 	height: 0;
 }
 
-.miniprofile_arrow_left {
+.miniprofile_arrow.left {
 	border-right: 8px solid #313f56;
 	left: 4px;
 }
 
-.miniprofile_arrow_right {
+.miniprofile_arrow.right {
 	border-left: 8px solid #313f56;
 	right: 4px;
 }
@@ -207,11 +209,11 @@ background: -moz-linear-gradient(top, #525151 5%, #292827 95%);background: -webk
 }
 
 
-.miniprofile_arrow_left .miniprofile_arrow_inner {
+.miniprofile_arrow.left .miniprofile_arrow_inner {
 	left: 2px;
 }
 
-.miniprofile_arrow_right .miniprofile_arrow_inner {
+.miniprofile_arrow.right .miniprofile_arrow_inner {
 	right: 2px;
 }
 
@@ -472,3 +474,70 @@ span.popup_menu_pulldown_indicator {
 .newmodal_prompt_input {
 }
 
+
+
+.emoticon_hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1200;
+}
+
+.emoticon_hover_content {
+	padding: 6px 10px 6px 6px;
+	background-color: #3b3938;
+	border: 1px solid #797979;
+
+	margin: 12px;
+	box-shadow: 0 0 12px #000000;
+}
+
+.emoticon_hover_content.client {
+	margin: 0;
+	box-shadow: none;
+	display: inline-block;
+}
+
+.emoticon_hover_content_inner {
+	position: relative;
+	min-height: 54px;
+	padding-left: 62px;
+	font-size: 13px;
+}
+
+.emoticon_hover_content_inner img.emoticon_large {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.emoticon_hover_title {
+	padding-top: 8px;
+	color: #898989;
+}
+
+.emoticon_hover_desc {
+	color: #686868;
+}
+
+.emoticon_hover_arrow {
+	width: 13px;
+	height: 26px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/popups/hover_arrow_both.gif' );
+	background-repeat: no-repeat;
+
+	position: absolute;
+	top: 26px;
+}
+
+.emoticon_hover_arrow.left {
+	background-position: left top;
+
+	left: 0;
+}
+
+.emoticon_hover_arrow.right {
+	background-position: right top;
+
+	right: 0;
+}

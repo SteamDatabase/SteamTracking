@@ -414,6 +414,11 @@ function CDelayedAJAXData( strURL, msDelayBeforeAJAX )
 	this.m_fnOnAJAXComplete = null;
 }
 
+CDelayedAJAXData.prototype.GetAJAXParams = function()
+{
+	return GetDefaultCommunityAJAXParams( this.m_strURL, 'GET' );
+}
+
 CDelayedAJAXData.prototype.QueueAjaxRequestIfNecessary = function()
 {
 	if ( !this.m_$Data && !this.m_bAJAXRequestMade )
@@ -422,7 +427,7 @@ CDelayedAJAXData.prototype.QueueAjaxRequestIfNecessary = function()
 		this.m_timerDelayedAJAX = window.setTimeout( function() {
 			_this.m_timerDelayedAJAX = null;
 			_this.m_bAJAXRequestMade = true;
-			var rgAJAXParams = GetDefaultCommunityAJAXParams( _this.m_strURL, 'GET' );
+			var rgAJAXParams = _this.GetAJAXParams();
 			$J.ajax( rgAJAXParams )
 				.done( function(data) {
 					_this.m_$Data = $J(data);
@@ -466,9 +471,9 @@ function InitMiniprofileHovers()
 	var $Hover = $J('<div/>', {'class': 'miniprofile_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'miniprofile_hover_inner shadow_content'} );
 
-	var $HoverArrowLeft = $J('<div/>', {'class': 'miniprofile_arrow_left'} )
+	var $HoverArrowLeft = $J('<div/>', {'class': 'hover_arrow left miniprofile_arrow'} )
 	$HoverArrowLeft.append( '<div class="miniprofile_arrow_inner"></div>' );
-	var $HoverArrowRight = $J('<div/>', {'class': 'miniprofile_arrow_right'} )
+	var $HoverArrowRight = $J('<div/>', {'class': 'hover_arrow right miniprofile_arrow'} )
 	$HoverArrowRight.append( '<div class="miniprofile_arrow_inner"></div>' );
 
 	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>'), $HoverContent, $HoverArrowLeft, $HoverArrowRight );
@@ -477,18 +482,29 @@ function InitMiniprofileHovers()
 	$J(document.body).append( $Hover );
 
 	var fnDataFactory = function( key ) { return new CDelayedAJAXData( 'miniprofile/' + key, MINIPROFILE_DELAY_BEFORE_AJAX ); }
-	var fnPositionHover = PositionMiniprofileHover;
-	var strDataName = 'miniprofile';
-	var strURLMatch = 'miniprofile';
 
-	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch );
+	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
+		fnDataFactory: fnDataFactory,
+		fnPositionHover: PositionMiniprofileHover,
+		strDataName: 'miniprofile',
+		strURLMatch: 'miniprofile'
+	}  );
 
 	window.BindMiniprofileHovers = rgCallbacks.fnBindAllHoverElements;
 	window.BindSingleMiniprofileHover = rgCallbacks.fnBindSingleHover;
 }
 
-function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, strDataName, strURLMatch )
+function BindAJAXHovers( $Hover, $HoverContent, oParams )
 {
+	var fnDataFactory = oParams.fnDataFactory;
+	var fnPositionHover = oParams.fnPositionHover || PositionMiniprofileHover;
+	var strDataName = oParams.strDataName;
+	var strURLMatch = oParams.strURLMatch;
+	var fnReadKey = function( $Element ) { return $Element.attr( 'data-' + strDataName ); };
+	if ( oParams.fnReadKey )
+		fnReadKey = oParams.fnReadKey;
+	var strSelector = oParams.strSelector || '[data-' + strDataName + ']';
+	var nDelayBeforeShow = oParams.nDelayBeforeShow || MINIPROFILE_DELAY_BEFORE_SHOW;
 
 	// indexed by accountid
 	var rgHoverData = {};
@@ -539,7 +555,7 @@ function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, 
 					fnPositionHover( $Hover, $Target );
 					$Hover.fadeIn( MINIPROFILE_ANIM_SPEED );
 				} );
-			}, MINIPROFILE_DELAY_BEFORE_SHOW );
+			}, nDelayBeforeShow );
 		}
 	};
 
@@ -570,7 +586,7 @@ function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, 
 	var strBoundDataName = strDataName + '_bound';
 	var fnBindSingleHover = function( target ) {
 		var $Target = $J(target);
-		var key = $Target.attr( strAttributeName );
+		var key = fnReadKey( $Target );
 		if ( key && !$Target.data( strBoundDataName ) )
 		{
 			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, key ) );
@@ -579,7 +595,7 @@ function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, 
 		}
 	};
 	var fnBindAllHoverElements = function() {
-		$J('[' + strAttributeName + ']').each( function() { fnBindSingleHover( this ); } );
+		$J(strSelector).each( function() { fnBindSingleHover( this ); } );
 	}
 
 	fnBindAllHoverElements();
@@ -605,7 +621,7 @@ function BindAJAXHovers( $Hover, $HoverContent, fnDataFactory, fnPositionHover, 
 	};
 }
 
-function PositionMiniprofileHover( $Hover, $Target )
+function PositionMiniprofileHover( $Hover, $Target, bPreferRightSide )
 {
 	$Hover.css( 'visibility', 'hidden' );
 	$Hover.show();
@@ -618,8 +634,8 @@ function PositionMiniprofileHover( $Hover, $Target )
 	if ( !$HoverBox.length )
 		$HoverBox = $J( $Hover.children()[0] );
 
-	var $HoverArrowLeft = $Hover.children( '.miniprofile_arrow_left' );
-	var $HoverArrowRight = $Hover.children( '.miniprofile_arrow_right' );
+	var $HoverArrowLeft = $Hover.children( '.hover_arrow.left' );
+	var $HoverArrowRight = $Hover.children( '.hover_arrow.right' );
 
 	var nWindowScrollTop = $J(window).scrollTop();
 	var nWindowScrollLeft = $J(window).scrollLeft();
@@ -630,15 +646,15 @@ function PositionMiniprofileHover( $Hover, $Target )
 	var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - nBoxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
-	if ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight)
+	if ( ( ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight ) && !bPreferRightSide ) || ( bPreferRightSide && nSpaceRight < 0 && nSpaceLeft > nSpaceRight ) )
 	{
-			$Hover.css( 'left', ( offset.left - $Hover.width() + 5 ) + 'px' );
+				$Hover.css( 'left', ( offset.left - $Hover.width() + 5 ) + 'px' );
 		$HoverArrowLeft.hide();
 		$HoverArrowRight.show();
 	}
 	else
 	{
-			$Hover.css( 'left', ( offset.left + $Target.outerWidth() - 2 ) + 'px' );
+				$Hover.css( 'left', ( offset.left + $Target.outerWidth() - 2 ) + 'px' );
 		$HoverArrow = $HoverArrowLeft;
 		$HoverArrowLeft.show();
 		$HoverArrowRight.hide();
@@ -676,6 +692,71 @@ function PositionMiniprofileHover( $Hover, $Target )
 
 	$Hover.hide();
 	$Hover.css( 'visibility', '' );
+}
+
+
+/* Emoticon hovers */
+
+function CEmoticonDelayedAJAXData( strEmoticonName, msDelayBeforeAJAX )
+{
+	CDelayedAJAXData.apply( this, [ 'economy/emoticonhover/' + strEmoticonName + '/jsonp.js', msDelayBeforeAJAX ]);
+	this.m_strEmoticonName = strEmoticonName;
+}
+
+// subclass CDelayedAJAXData so we can request via JSONP
+CEmoticonDelayedAJAXData.prototype = new CDelayedAJAXData;
+CEmoticonDelayedAJAXData.prototype.constructor = CEmoticonDelayedAJAXData;
+
+CEmoticonDelayedAJAXData.prototype.GetAJAXParams = function()
+{
+	return {
+		url: 'http://cdn.steamcommunity.com/' + this.m_strURL,
+		dataType: 'jsonp',
+		jsonpCallback: 'OnLoadEmoticon_' + this.m_strEmoticonName,	//consistent name for cachability
+		cache: true,
+		data: {l: 'english' }
+	}
+}
+
+function InitEmoticonHovers()
+{
+	var $Hover = $J('<div/>', {'class': 'emoticon_hover'} );
+	var $HoverContent = $J('<div/>', {'class': 'emoticon_hover_content'} );
+	$Hover.append( $HoverContent, $J('<div/>', {'class': 'hover_arrow left emoticon_hover_arrow' } ), $J('<div/>', {'class': 'hover_arrow right emoticon_hover_arrow' } ) );
+	$Hover.hide();
+
+	var fnOneTimeEmoticonSetup = function() {
+		$J(document.body).append( $Hover );
+	};
+
+	var fnReadKey = function ( $Element ) {
+		var rgMatches = $Element.attr( 'src' ).match( 'emoticon/(.*)$' );
+		if ( rgMatches && rgMatches[1] )
+			return rgMatches[1];
+
+		return null;
+	};
+
+	var fnDataFactory = function( key )	{
+		if ( fnOneTimeEmoticonSetup )
+		{
+			fnOneTimeEmoticonSetup();
+			fnOneTimeEmoticonSetup = null;
+		}
+
+		return new CEmoticonDelayedAJAXData( key, 50 );
+	};
+
+	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
+		fnDataFactory: fnDataFactory,
+		fnPositionHover: function( $Hover, $HoverContent ) { PositionMiniprofileHover( $Hover, $HoverContent, true /*prefer pop right */ ); },
+		fnReadKey: fnReadKey,
+		strSelector: 'img.emoticon',
+		strURLMatch: 'emoticonhover',
+		nDelayBeforeShow: 100,
+	} );
+
+	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
 }
 
 
