@@ -559,14 +559,17 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 		}
 	};
 
-	var fnCancelHover = function( accountid )
+	var fnCancelHover = function( key )
 	{
 		var bHoverVisible = ( $Hover.css('display') != 'none' );
 
-		var HoverData = rgHoverData[accountid];
-		if ( HoverData )
+		if ( key )
 		{
-			HoverData.CancelAJAX();
+			var HoverData = rgHoverData[key];
+			if ( HoverData )
+			{
+				HoverData.CancelAJAX();
+			}
 		}
 
 		if ( timerHover )
@@ -617,12 +620,18 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 
 	return {
 		fnBindAllHoverElements: fnBindAllHoverElements,
-		fnBindSingleHover: fnBindSingleHover
+		fnBindSingleHover: fnBindSingleHover,
+		fnCancelHover: fnCancelHover
 	};
 }
 
-function PositionMiniprofileHover( $Hover, $Target, bPreferRightSide )
+function PositionMiniprofileHover( $Hover, $Target, oParams )
 {
+	if ( !oParams )
+		oParams = {};
+	var bPreferRightSide = oParams.bPreferRightSide || false;
+	var nPxArrowOverlap = ( oParams.nPxArrowOverlap != undefined ) ? oParams.nPxArrowOverlap : 2;
+
 	$Hover.css( 'visibility', 'hidden' );
 	$Hover.show();
 
@@ -646,15 +655,15 @@ function PositionMiniprofileHover( $Hover, $Target, bPreferRightSide )
 	var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - nBoxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
-	if ( ( ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight ) && !bPreferRightSide ) || ( bPreferRightSide && nSpaceRight < 0 && nSpaceLeft > nSpaceRight ) )
+	if ( ( ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight ) && !bPreferRightSide ) || ( bPreferRightSide && nSpaceRight < 14 && nSpaceLeft > nSpaceRight ) )
 	{
-				$Hover.css( 'left', ( offset.left - $Hover.width() + 5 ) + 'px' );
+				$Hover.css( 'left', ( offset.left - $Hover.width() + nPxArrowOverlap + 3 ) + 'px' );
 		$HoverArrowLeft.hide();
 		$HoverArrowRight.show();
 	}
 	else
 	{
-				$Hover.css( 'left', ( offset.left + $Target.outerWidth() - 2 ) + 'px' );
+				$Hover.css( 'left', ( offset.left + $Target.outerWidth() - nPxArrowOverlap ) + 'px' );
 		$HoverArrow = $HoverArrowLeft;
 		$HoverArrowLeft.show();
 		$HoverArrowRight.hide();
@@ -730,9 +739,16 @@ function InitEmoticonHovers()
 	};
 
 	var fnReadKey = function ( $Element ) {
-		var rgMatches = $Element.attr( 'src' ).match( 'emoticon/(.*)$' );
-		if ( rgMatches && rgMatches[1] )
-			return rgMatches[1];
+		if ( $Element.data('emoticon') )
+		{
+			return $Element.data('emoticon');
+		}
+		else
+		{
+			var rgMatches = $Element.attr( 'src' ).match( 'emoticon/(.*)$' );
+			if ( rgMatches && rgMatches[1] )
+				return rgMatches[1];
+		}
 
 		return null;
 	};
@@ -749,7 +765,15 @@ function InitEmoticonHovers()
 
 	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
 		fnDataFactory: fnDataFactory,
-		fnPositionHover: function( $Hover, $HoverContent ) { PositionMiniprofileHover( $Hover, $HoverContent, true /*prefer pop right */ ); },
+		fnPositionHover: function( $Hover, $Target ) {
+			PositionMiniprofileHover( $Hover, $Target, {
+				bPreferRightSide: true,
+				nPxArrowOverlap: 0
+			} );
+			//slide it down a little for emoticon option popup
+			if ( $Target.hasClass('emoticon_option') )
+				$Hover.css( 'top', parseInt( $Hover.css('top') ) + 5 );
+		},
 		fnReadKey: fnReadKey,
 		strSelector: 'img.emoticon',
 		strURLMatch: 'emoticonhover',
@@ -757,6 +781,7 @@ function InitEmoticonHovers()
 	} );
 
 	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
+	window.DismissEmoticonHover = rgCallbacks.fnCancelHover;
 }
 
 
