@@ -181,6 +181,26 @@
 						
 					},
 					{
+						"name": "GetNextFantasyEvent",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyLeagueID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The Fantasy League ID"
+							},
+							{
+								"name": "eventType",
+								"type": "uint32",
+								"optional": false,
+								"description": "1=league lock, 2=league unlock"
+							}
+						]
+						
+					},
+					{
 						"name": "GetValidFantasyPlayersForRoles",
 						"version": 1,
 						"httpmethod": "GET",
