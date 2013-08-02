@@ -2160,3 +2160,17 @@ html, body { height:100%; }
 {
 	margin-top: 40px;
 }
+
+.waiting_dialog_container
+{
+	line-height: 32px;
+}
+
+.waiting_dialog_throbber
+{
+	width: 32px;
+	height: 32px;
+	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
+	margin-right: 5px;
+	float: left;
+}
