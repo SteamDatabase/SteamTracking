@@ -201,6 +201,20 @@
 						
 					},
 					{
+						"name": "GetStartEndTimesForDay",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "fantasyDay",
+								"type": "uint32",
+								"optional": false,
+								"description": "The day of the touranment"
+							}
+						]
+						
+					},
+					{
 						"name": "GetValidFantasyPlayersForRoles",
 						"version": 1,
 						"httpmethod": "GET",
