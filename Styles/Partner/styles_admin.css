@@ -11,9 +11,6 @@ ol {
 	margin-top: 2px;
 }
 
-li {
-	margin-bottom: 8px;
-}
 
 h4 {
 	margin-bottom: 3px;
@@ -2173,4 +2170,30 @@ html, body { height:100%; }
 	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
 	margin-right: 5px;
 	float: left;
+}
+
+.progress_container
+{
+	min-height: 100px;
+	max-height: 600px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.add_dlc_msg
+{
+
+}
+
+.add_dlc_msg.parent
+{
+	padding-top: 10px;
+	font-weight: bold;
+	color: white;
+}
+
+.add_dlc_error_msg
+{
+	color: red;
+	font-weight: bold;
 }
