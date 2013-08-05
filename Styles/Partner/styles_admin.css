@@ -2197,3 +2197,16 @@ html, body { height:100%; }
 	color: red;
 	font-weight: bold;
 }
+
+.search_results {
+	margin-bottom: 15px;
+}
+
+.search_result>.copyIndent>em {
+	background-color: #68932f;
+	color: #d2ff96;
+}
+.search_result>h2>a>em {
+	background-color: #68932f;
+	color: #d2ff96;
+}
