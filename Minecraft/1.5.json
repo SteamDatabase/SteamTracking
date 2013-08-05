@@ -1,8 +1,8 @@
 {
   "id": "1.5",
-  "time": "2013-08-01T00:01:47-22:00",
+  "time": "2013-08-05T16:07:36+02:00",
   "releaseTime": "2013-03-07T00:00:00+02:00",
-  "type": "release",
+  "type": "snapshot",
   "processArguments": "legacy",
   "minecraftArguments": "${auth_player_name} ${auth_session} --gameDir ${game_directory} --assetsDir ${game_assets}",
   "minimumLauncherVersion": 4,
