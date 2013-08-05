@@ -172,6 +172,14 @@
 	background-repeat:repeat-y;
 }
 
+#rightActionBlock.rightBlock_oauth {
+	padding-left: 8px;
+}
+
+.captcha_oauth {
+	width: 210px;
+}
+
 #rightActionBlock label {
 	display:block;
 	color:#898989;
