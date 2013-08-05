@@ -370,3 +370,9 @@ a.auth_button, a.auth_button:hover {
 		padding-top: 0px;
 		text-align: center;
 	}
+
+.oauthLoginButton {
+	margin-top: 12px;
+	border: 0;
+	
+}
