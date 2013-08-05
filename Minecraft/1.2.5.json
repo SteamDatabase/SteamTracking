@@ -1,6 +1,6 @@
 {
   "id": "1.2.5",
-  "time": "2013-08-01T01:40:52-22:00",
+  "time": "2013-08-05T16:07:36+02:00",
   "releaseTime": "2012-03-30T00:00:00+02:00",
   "type": "release",
   "processArguments": "legacy",
@@ -8,7 +8,7 @@
   "minimumLauncherVersion": 4,
   "libraries": [
     {
-      "name": "net.minecraft:launchwrapper:1.4"
+      "name": "net.minecraft:launchwrapper:1.5"
     },
     {
       "name": "net.sf.jopt-simple:jopt-simple:4.5"
