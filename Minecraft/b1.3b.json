@@ -1,9 +1,8 @@
 {
   "id": "b1.3b",
-  "time": "2013-08-01T17:23:01+02:00",
-  "releaseTime": "2011-02-22T08:00:00+02:00",
+  "time": "2013-08-06T13:00:00+02:00",
+  "releaseTime": "2011-02-22T00:00:00+02:00",
   "type": "old_beta",
-  "processArguments": "legacy",
   "minecraftArguments": "${auth_player_name} ${auth_session} --gameDir ${game_directory} --assetsDir ${game_assets}",
   "minimumLauncherVersion": 7,
   "libraries": [
