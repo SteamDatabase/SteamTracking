@@ -692,28 +692,72 @@ function AddApplication( )
 			} );
 }
 
+function ShowAddAppIDsProgress( strTitle, strDescription )
+{
+	var deferred = new jQuery.Deferred();
+	var fnOK = function() { deferred.resolve(); };
+
+	var throbber_container = $J('<div/>', {'class': 'waiting_dialog_container'} );
+	var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
+	throbber_container.append( throbber );
+	throbber_container.append( strDescription );
+
+	var Modal = _BuildDialog( strTitle, throbber_container, [], fnOK );
+	deferred.always( function() { Modal.Dismiss(); } );
+	Modal.Show();
+
+	// attach the deferred's events to the modal
+	deferred.promise( Modal );
+
+	return Modal;
+}
+
+function GenerateAppIDs( dialog, idx, numAppIds, appName, bForSelfPublishing )
+{
+	if ( idx >= numAppIds )
+	{
+		dialog.Dismiss();
+		return;
+	}
+
+	// add initial one to create the range
+	$J.post( 'https://partner.steamgames.com/admin/generateappidscript',
+		{
+			'appIdCount' : 1,
+			'appName' : appName,
+			'forSelfPublishing' : bForSelfPublishing ? 1 : 0
+		}
+	).done(
+		function( response ) {
+
+			for ( var i = 0; i < response.length; ++i )
+			{
+				if ( response[i] )
+				{
+					// Successful JSON parsing
+					$( 'resultErrors' ).innerHTML += BuildText( response[i].Errors );
+					$( 'resultWarnings' ).innerHTML += BuildText( response[i].Warnings );
+					$( 'resultMessages' ).innerHTML += BuildText( response[i].Messages );
+				}
+			}
+
+			GenerateAppIDs( dialog, idx + 1, numAppIds, appName, bForSelfPublishing );
+		}
+	).fail( function( jqxhr ) {
+		dialog.Dismiss();
+		ShowAlertDialog( 'Failed to Add AppID', jqxhr.responseText );
+	});
+}
 
 function GenerateAppIDScript( )
 {
+	var numAppIds = $J( "#appIdCount" ).val();
+	var bForSelfPublishing = $J( "#forSelfPublishing" ).prop( "checked" );
+	var appName = $J( "#appName" ).val();
 
-	// To make it work, first we have to parse all the inputs of the form so we can populate accordingly the Ajax call
-	// Then once we do the call, we have to parse the result and display this to the end user.
-	var formElement = document.getElementById( 'createNew' );
-	var parameters = {};
-	ScanElements( formElement, 'input', parameters );
-	ScanElements( formElement, 'select', parameters );
-	ScanElements( formElement, 'textarea', parameters );
+	var dialog = ShowAddAppIDsProgress( 'Generating ' + numAppIds + ' App IDs', 'Please wait while the app ids are being generated...' );
 
-	new Ajax.Request( g_szBaseURL + '/admin/generateappidscript',
-			{
-				parameters: parameters,
-				method: 'post',
-				requestHeaders: { 'Accept': 'application/json' },
-				evalJSON: 'force',
-				onSuccess: function ( transport ) { GenerateAppIDsCallback( parameters, transport ) },
-				onFailure: function ( transport ) { alert( 'Ajax call failed for Exception during Ajax call for GenerateAppIDsCallback().' );  },
-				onException: function ( request, e ) { alert( 'Exception during Ajax call for GenerateAppIDsCallback().' );  throw e; }
-			} );
+	GenerateAppIDs( dialog, 0, numAppIds, appName, bForSelfPublishing );
 }
 
 function EscapeHTML( text )
@@ -808,19 +852,6 @@ function OnAppTypeChanged()
 
 	$( 'partnerBlock' ).style.display = ContainsPartner( appType ) ? 'inline' : 'none';
 	$( 'parentBlock' ).style.display = ContainsParent( appType ) ? 'inline' : 'none';
-}
-
-function RemoveUneededFeatureFromList( featureNamesToRemove, parameters )
-{
-	var splitString = featureNamesToRemove.split( ',' );
-	for( var i = 0; i < splitString.length; i++ )
-	{
-		var featureName = 'feature_' + splitString[ i ];
-		if ( parameters[ featureName ] )
-		{
-			parameters[ featureName ] = undefined;		// That was checked, let's undefined it before we post it
-		}
-	}
 }
 
 function RemoveUnneededParameters( appType, parameters )
