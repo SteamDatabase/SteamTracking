@@ -1986,6 +1986,13 @@ html, body { height:100%; }
 	display: inline-block;
 	margin-top: 30px;
 }
+
+.movie_name_label_upload
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+
 .movie_name_input
 {
 	width: 400px;
@@ -2000,14 +2007,14 @@ html, body { height:100%; }
 {
 	float: left;
 	margin-left: 16px;
-	width: 598px;
+	width: 595px;
 }
 
 .movie_more_row
 {
 	margin-top: 8px;
 	padding: 2px;
-	background-color: #373737;
+	background-color: #474747;
 	text-align: center;
 }
 
@@ -2018,21 +2025,28 @@ html, body { height:100%; }
 
 .movie_more_row:hover
 {
-	background-color: #444444;
+	background-color: #575757;
 }
 
 .movie_group
 {
-	background-color: #323233;
-	border: 1px solid #373737;
-	margin-bottom: 10px;
 	width: 818px;
+	margin-bottom: 10px;
+}
+
+.movie_group form
+{
+	border: 1px solid #373737;
+	background-color: #323233;
+	margin:0;
+	padding:0;
+	display: block;
 	position: relative;
 }
 
 .movie_group .titleDragHandle
 {
-	margin: 0px 0px 0px 1px	;
+	margin: 2px 0px 0px 1px	;
 	top: 0px;
 }
 
@@ -2043,7 +2057,9 @@ html, body { height:100%; }
 
 .movie_save
 {
-	float: right;
+	position: absolute;
+	top: 4px;
+	right: 4px;
 }
 
 .movie_expanded
