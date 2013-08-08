@@ -2109,6 +2109,10 @@ html, body { height:100%; }
 .movie_create_label
 {
 	margin-bottom: 4px;
+	color: #00adee;
+	font-family: Tahoma,Arial,Sans-serif;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 .movie_create_name
