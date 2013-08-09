@@ -954,7 +954,7 @@
 "friends_trade_they_are_school"	"Nu poţi schimba obiecte cu %friend% deoarece foloseşte un cont School Lab."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"ALĂTURĂ-TE DISCUŢIEI"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"Ai fost invitat la o discuţie privată cu %patron%."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"Eşti pe cale să blochezi orice comunicare cu %username%.\n\nAsta înseamnă că nu veţi putea juca pe acelaşi server folosind serviciile de matchmaking Steamworks."

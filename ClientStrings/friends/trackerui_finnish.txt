@@ -954,7 +954,7 @@
 "friends_trade_they_are_school"	"Et voi vaihtaa henkilön %friend% kanssa, sillä hän on koulun labratilillä."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"LIITY KESKUSTELUUN"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"Sinut on kutsuttu yksityiseen keskusteluun henkilön %patron% kanssa."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"Olet aikeissa kestää kaikki yhteydet henkilön  %username% kanssa.\n\nTämä estää teitä myös liittymästä samaan peliin Steamworks-pelihaulla."

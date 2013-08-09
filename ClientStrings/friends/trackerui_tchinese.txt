@@ -955,7 +955,7 @@
 "friends_trade_they_are_school"	"您無法與 %friend% 交易，因為他們現在使用的是學校帳號。"
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"加入聊天"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"您已被 %patron% 邀請加入至私人聊天室。"
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"您正要封鎖與 %username% 的所有通訊。\n\n這一樣會封鎖您和他用 Steeamworks 遊戲配對系統加入同一場遊戲。"

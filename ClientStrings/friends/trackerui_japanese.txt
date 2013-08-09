@@ -955,7 +955,7 @@
 "friends_trade_they_are_school"	"%friend% はSchool Labアカウントでログイン中なのでトレードすることは出来ません。"
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"チャットに参加"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"あなたは %patron% からプライベートチャットに招待されました。"
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"あなたは、%username% とのすべてのコミュニケーションをブロックしようとしています。\n\nこのブロックは、Steamworks のマッチメイキング機能で、あなた方ふたりが同じゲームに参加することも防ぎます。"

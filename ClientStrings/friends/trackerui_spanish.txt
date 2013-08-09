@@ -956,7 +956,7 @@
 "friends_trade_they_are_school"	"No puedes realizar un intercambio con %friend% porque está usando una cuenta de Enseñanza."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"UNIRSE AL CHAT"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"Has sido invitado a unirte a un chat privado con %patron%."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"Estás a punto de bloquear toda comunicación con %username%.\n\nEste bloqueo también impedirá que ambos coincidáis en una misma partida de un juego compatible con el sistema matchmaking de Steamworks."

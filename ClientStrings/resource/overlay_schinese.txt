@@ -3,7 +3,7 @@
 "Language"	"schinese"
 "Tokens"
 {
-"Overlay_Splash_Hotkey"	"按 %hotkey% 开始"
+"Overlay_Splash_Hotkey"	"按 %hotkey% 以开始"
 "[english]Overlay_Splash_Hotkey"	"Press %hotkey% to begin"
 "Overlay_Splash_Message"	"在进行游戏时访问 Steam 社区。"
 "[english]Overlay_Splash_Message"	"Access the Steam Community while playing."
@@ -281,7 +281,7 @@
 "[english]Overlay_CommunityHub_Panel_Title"	"Community Hub"
 "Overlay_View_CommunityHub"	"浏览社区中心"
 "[english]Overlay_View_CommunityHub"	"View Community Hub"
-"Overlay_CommunityHub_Panel_NumContributions"	"%num_contributions% 点社区贡献值"
+"Overlay_CommunityHub_Panel_NumContributions"	"%num_contributions% 个社区投稿"
 "[english]Overlay_CommunityHub_Panel_NumContributions"	"%num_contributions% Community Contributions"
 "Overlay_CommunityDiscussions_Panel_Title"	"讨论"
 "[english]Overlay_CommunityDiscussions_Panel_Title"	"Discussions"

@@ -956,7 +956,7 @@
 "friends_trade_they_are_school"	"Você não pode trocar com %friend% porque ele(a) está em uma conta de Laboratório Escolar."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"ENTRAR NA CONVERSA"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"%patron% convidou você para uma conversa privada."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"Você está prestes a bloquear a comunicação com %username%.\n\nEsse bloqueio também impedirá que vocês entrem na mesma partida que usa a criação de partidas do Steamworks."
@@ -1023,5 +1023,7 @@
 "[english]Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"Online pelo Big Picture"
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+"friends_trade_you_are_using_new_device"	"Você iniciou sessão de um dispositivo novo. Para proteger os itens em seu inventário, você não poderá efetuar trocas através deste dispositivo por %days% dias."
+"[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 }
 }

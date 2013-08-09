@@ -49,7 +49,7 @@
 "[english]Overlay_Taskbar_legacycdkey"	"CD Key"
 "Overlay_Hotkey_Explain"	"也會關閉重疊"
 "[english]Overlay_Hotkey_Explain"	"also closes the overlay"
-"Overlay_Playtime_Stats"	"遊戲時間統計"
+"Overlay_Playtime_Stats"	"遊戲時數統計"
 "[english]Overlay_Playtime_Stats"	"Playtime Stats"
 "Overlay_Playtime_Intro"	"您已經執行過此遊戲"
 "[english]Overlay_Playtime_Intro"	"You've played this game"

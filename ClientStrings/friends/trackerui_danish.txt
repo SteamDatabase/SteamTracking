@@ -954,7 +954,7 @@
 "friends_trade_they_are_school"	"Du kan bytte med %friend%, fordi vedkommende er på en laboratoriumskole-konto."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
 "group_enterchatroom"	"TILSLUT TIL CHAT"
-"[english]group_enterchatroom"	"JOIN CHAT"
+"[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"Du er blevet inviteret til at tage del i en privat chat med %patron%."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."
 "Friends_BlockCommunicationWarning_Info"	"Du er ved at blokere al kommunikation med %username%.\n\nDenne blokering vil også forhindre jer i at tilslutte til det samme spil med muligheder for Steamworks-matchmaking"

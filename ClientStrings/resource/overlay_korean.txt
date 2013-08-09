@@ -345,5 +345,7 @@
 "[english]Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc"	"You need to accept the latest Steam Workshop Legal Agreement before your item is fully published."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem"	"아이템 보기"
 "[english]Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem"	"View item"
+"Overlay_MicroTxnGameSubscription"	": 게임 계정에 기록된 바에 따름"
+"[english]Overlay_MicroTxnGameSubscription"	"as determined by your game account"
 }
 }

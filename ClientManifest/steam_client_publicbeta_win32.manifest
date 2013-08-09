@@ -1,23 +1,23 @@
 "win32"
 {
-	"version"		"1374875626"
+	"version"		"1376004290"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.223ae7c1117de9ac21e92bc719c645dc9ce161c1"
-		"checksum"		"223ae7c1117de9ac21e92bc719c645dc9ce161c1"
-		"size"		"5029660"
+		"file"		"strings_all.zip.1de49c5d6bc6e7585340833573097034ebd4e743"
+		"checksum"		"1de49c5d6bc6e7585340833573097034ebd4e743"
+		"size"		"5029918"
 	}
 	"resources_all"
 	{
-		"file"		"resources_all.zip.be469e8af8dc3ce6147f7bad396108e18a1a20f6"
-		"checksum"		"be469e8af8dc3ce6147f7bad396108e18a1a20f6"
-		"size"		"8608743"
+		"file"		"resources_all.zip.4ce92a88fa4472a6a9cfbb194cf497e15d4ad8fe"
+		"checksum"		"4ce92a88fa4472a6a9cfbb194cf497e15d4ad8fe"
+		"size"		"8611191"
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.8a17505b3fb0016f4992f01edf0b96721d3b0822"
-		"checksum"		"8a17505b3fb0016f4992f01edf0b96721d3b0822"
-		"size"		"8906456"
+		"file"		"tenfoot_all.zip.cc257bb07a8662224a849522fb50dfa8879df97c"
+		"checksum"		"cc257bb07a8662224a849522fb50dfa8879df97c"
+		"size"		"8918721"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -39,27 +39,27 @@
 	}
 	"tenfoot_images_all"
 	{
-		"file"		"tenfoot_images_all.zip.b5964574a8f5fae3ee1a372603005fc4b455877f"
-		"checksum"		"b5964574a8f5fae3ee1a372603005fc4b455877f"
-		"size"		"19565860"
+		"file"		"tenfoot_images_all.zip.96c605fc077ae1627614040378dd2c3144aaea57"
+		"checksum"		"96c605fc077ae1627614040378dd2c3144aaea57"
+		"size"		"19583028"
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.796f134bdc5619bdd49384e497eca66af00a913a"
-		"checksum"		"796f134bdc5619bdd49384e497eca66af00a913a"
-		"size"		"1207804"
+		"file"		"public_all.zip.79c3f6ecdd839d1737af69718602ba7a94076805"
+		"checksum"		"79c3f6ecdd839d1737af69718602ba7a94076805"
+		"size"		"1207818"
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.23c26c07a03074394e36942a5bb28e73a3cf9f9a"
-		"checksum"		"23c26c07a03074394e36942a5bb28e73a3cf9f9a"
-		"size"		"20617602"
+		"file"		"bins_win32.zip.da1c5c6771ba4a3fb45bfaa79691b9be7e250d01"
+		"checksum"		"da1c5c6771ba4a3fb45bfaa79691b9be7e250d01"
+		"size"		"20738027"
 	}
 	"webkit_win32"
 	{
-		"file"		"webkit_win32.zip.4e97b4e05799df7b48e5a328d2e9ac2e5db189af"
-		"checksum"		"4e97b4e05799df7b48e5a328d2e9ac2e5db189af"
-		"size"		"14067102"
+		"file"		"webkit_win32.zip.4fd68421880b32c173dd2f64caab265577359ebe"
+		"checksum"		"4fd68421880b32c173dd2f64caab265577359ebe"
+		"size"		"14067060"
 	}
 	"gamesforwindows_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.071a9122182800fb13d4451b911bf6346a2854ff"
-		"checksum"		"071a9122182800fb13d4451b911bf6346a2854ff"
-		"size"		"836440"
+		"file"		"steam_win32.zip.35a121422f5a2a2bcc15406e42cf05ca42bca155"
+		"checksum"		"35a121422f5a2a2bcc15406e42cf05ca42bca155"
+		"size"		"838230"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"cbe9258312d0746e1aaefdbabdf0e24246f86c4df49125c817e5fa3196d5e7d5bc809da8ae13523f221dbd0eb4230e052591fc707de7ba50a3b99d4c556307b8608e591574e528ab651c8f20a250032d9cfd2524de34ed2543cd804cc6418225b0cc7c71a87927e7bf1f779904387608cf1b0f5ec4b5cd4bab8ff6d088bd2df0"
+	"win32"		"75e29c9738bfd5d82b2fa994ed1ab0355dc72f0357807ebb3da4b1da950ca10b3dd3db79589dee0cc05fe16e7176edd49e9a7a1ded7392196d9403737aeb269f765f6af8154e11b604776e8a3fd430d6058feb42ceb97b9873d5c6df0611d7f6fc7767b33d4a8b6bf4ac26dcdff22838d9b35fcf9573cb885bc1b88054f1effb"
 }
