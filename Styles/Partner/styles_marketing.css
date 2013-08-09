@@ -1,3 +1,6 @@
+<br />
+<b>Notice</b>:  Memcache::pconnect() [<a href='memcache.pconnect'>memcache.pconnect</a>]: send of 9 bytes failed with errno=10054 An existing connection was forcibly closed by the remote host.
+ in <b>C:\web_root\web\common\memcached\objectcache.php</b> on line <b>23</b><br />
 
 .titlebar_holder {
 }
