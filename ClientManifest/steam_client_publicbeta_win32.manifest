@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1376004290"
+	"version"		"1376347961"
 	"strings_all"
 	{
 		"file"		"strings_all.zip.1de49c5d6bc6e7585340833573097034ebd4e743"
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.cc257bb07a8662224a849522fb50dfa8879df97c"
-		"checksum"		"cc257bb07a8662224a849522fb50dfa8879df97c"
-		"size"		"8918721"
+		"file"		"tenfoot_all.zip.db46003ac911c04a0fb69ab61b78bd4214eba49b"
+		"checksum"		"db46003ac911c04a0fb69ab61b78bd4214eba49b"
+		"size"		"8918725"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -45,15 +45,15 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.79c3f6ecdd839d1737af69718602ba7a94076805"
-		"checksum"		"79c3f6ecdd839d1737af69718602ba7a94076805"
-		"size"		"1207818"
+		"file"		"public_all.zip.4e1fcb60ddfde49b5810521635fe9eb4a6b1cb8d"
+		"checksum"		"4e1fcb60ddfde49b5810521635fe9eb4a6b1cb8d"
+		"size"		"1207753"
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.da1c5c6771ba4a3fb45bfaa79691b9be7e250d01"
-		"checksum"		"da1c5c6771ba4a3fb45bfaa79691b9be7e250d01"
-		"size"		"20738027"
+		"file"		"bins_win32.zip.355e037cf71543b79f003b06af968ffbff9274b0"
+		"checksum"		"355e037cf71543b79f003b06af968ffbff9274b0"
+		"size"		"20740061"
 	}
 	"webkit_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.35a121422f5a2a2bcc15406e42cf05ca42bca155"
-		"checksum"		"35a121422f5a2a2bcc15406e42cf05ca42bca155"
-		"size"		"838230"
+		"file"		"steam_win32.zip.3807ec866b66671495d7aa71ce01ac4d20069bb1"
+		"checksum"		"3807ec866b66671495d7aa71ce01ac4d20069bb1"
+		"size"		"837869"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"75e29c9738bfd5d82b2fa994ed1ab0355dc72f0357807ebb3da4b1da950ca10b3dd3db79589dee0cc05fe16e7176edd49e9a7a1ded7392196d9403737aeb269f765f6af8154e11b604776e8a3fd430d6058feb42ceb97b9873d5c6df0611d7f6fc7767b33d4a8b6bf4ac26dcdff22838d9b35fcf9573cb885bc1b88054f1effb"
+	"win32"		"b62b8ac0d6af0ec39dd78255c12f798175d836f1765d67993ed5420f3838d74bda92c3cc661a0a7416ad6e79077abba85ec341e6810b270ed28bd0a9ba69d7037009a181ff2d5d6ce93a3023ef3ed812fa1bf92ca0a3e9d525b8ddba2cbd7676b54de01daec73f9f79532c04f6f7da9d17bfcd0f551846353dd7b720a387b6b5"
 }
