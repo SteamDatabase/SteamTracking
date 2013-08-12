@@ -249,7 +249,6 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 {
 	background: none;
 
-	/*todo: change profile header to not have the center column baked in*/
 	margin-top: -14px;
 	overflow: hidden;
 	padding-top: 14px;
@@ -1306,7 +1305,13 @@ body .pagecontent.profile_subpage_column {
 	margin-bottom: 0;
 }
 
-.profile_subpage_column .profile_header {
+.profile_subpage_general .profile_small_header_bg {
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg_none.png' );
+	height: 111px;
+	margin-bottom: 0;
+}
+
+.profile_subpage_column .profile_header, .profile_subpage_general .profile_header {
 	height: 87px;
 }
 
@@ -1318,6 +1323,21 @@ body .pagecontent.profile_subpage_column {
 
 	padding-top: 12px;
 	padding-bottom: 128px;
+}
+
+.profile_subpage_general .maincontent {
+	margin-top: -7px;
+
+	border-left: 1px solid #000000;
+	border-right: 1px solid #545454;
+	background-color: #262627;
+	padding-top: 12px;
+
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 926px;
+
+	box-shadow: inset 0 -1px 3px #101010;
 }
 
 body.migrated_profile_page #BG_bottom.maincontent {
@@ -1746,4 +1766,19 @@ body.profile_page #footer {
 
 #NamePopup #NamePopupAliases {
 	padding: 0 12px;
+}
+
+.rightcol_controls {
+	background-color: #1e1e1f;
+	border-radius: 5px;
+}
+
+.rightcol_controls_content {
+	padding: 20px 14px;
+}
+
+.rightcol_controls_rule {
+	height: 1px;
+	background-color: #333333;
+	border-top: 1px solid #000000;
 }

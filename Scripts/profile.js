@@ -369,3 +369,37 @@ function ShowAliasPopup(e)
 }
 
 
+function ShowFriendSelect( title, fnOnSelect )
+{
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
+	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
+
+	Modal.GetContent().css( 'min-width', 268 );
+
+	var rgParams = {type: 'friends'};
+
+	$J.get( 'http://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
+
+		$ListElement.html( html );
+
+		$ListElement.find( 'a' ).remove();
+		$ListElement.find( '[data-miniprofile]').each( function() {
+			var $El = $J(this);
+			$El.click( function() { fnOnSelect( $El.data('miniprofile') ); } );
+		} );
+
+		var $Content = Modal.GetContent().find( '.newmodal_content');
+		$Content.html(''); // erase the throbber
+		$Content.append( $ListElement );
+		$Content.append( $Buttons );
+
+		Modal.AdjustSizing();
+	});
+}
+
+function SendTradeOffer( unAccountID )
+{
+	window.location = 'http://steamcommunity.com/tradeoffer/new/?partner=' + unAccountID;
+}
+

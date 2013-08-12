@@ -68,7 +68,6 @@ function CChatFriend( rgFriendData, fnOnClick )
 	this.ReadPersonaFields( rgFriendData );
 
 	this.m_bChatHistoryLoaded = false;
-	this.m_rgChatLog = null;
 
 	this.m_fnOnClick = fnOnClick;
 
@@ -1216,14 +1215,17 @@ CWebChat.prototype.LoadChatHistory = function( Friend, ChatDialog )
 			url: 'http://steamcommunity.com/chat/chatlog/' + Friend.m_unAccountID,
 			data: { sessionid: g_sessionID },
 			type: 'POST'
-		}).done( function( data ) { _chat.OnChatHistoryLoaded( Friend, ChatDialog, data ); } );
+		}).done( function( data ) {
+			_chat.OnChatHistoryLoaded( Friend, ChatDialog, data );
+		}).fail( function() {
+			_chat.OnChatHistoryLoaded( Friend, ChatDialog, [] );
+		});
 	}
 };
 
 CWebChat.prototype.OnChatHistoryLoaded = function ( Friend, ChatDialog, data )
 {
 	Friend.m_bChatHistoryLoaded = true;
-	Friend.m_rgChatLog = data;
 
 	ChatDialog.m_elContent.html('');	//clear the throbber
 
@@ -1231,9 +1233,9 @@ CWebChat.prototype.OnChatHistoryLoaded = function ( Friend, ChatDialog, data )
 	elPhishingWarning.append( $J( '<a/>', {'class': 'whiteLink', href: 'https://support.steampowered.com/kb_article.php?p_faqid=301', target: '_blank' }).text( 'Never tell your password to anyone.' ) );
 	ChatDialog.m_elContent.append( elPhishingWarning );
 
-	for ( var i = 0; i < Friend.m_rgChatLog.length; i++ )
+	for ( var i = 0; i < data.length; i++ )
 	{
-		var sChatMessage = Friend.m_rgChatLog[i];
+		var sChatMessage = data[i];
 
 		var Sender = this.m_rgPlayerCache[ sChatMessage.m_unAccountID ];
 		if ( Sender )
