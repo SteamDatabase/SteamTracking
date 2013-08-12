@@ -4,12 +4,22 @@
 var TRADE_UPDATE_INTEVRAL = 1000;
 var MESSAGE_TRADE_PARTNER_ABSENSE_TIME = 5;
 var g_bWalletBalanceWouldBeOverMax = false;
-var g_bTradeOffer = false;
 var g_nItemsFromContextWithNoPermissionToReceive = 0;
+var GTradeStateManager = null;
+var Tutorial = null;
 
-function BeginTrading()
+function BeginTrading( bShowTutorial )
 {
 	SizeWindow();
+
+	if ( !GTradeStateManager )
+		GTradeStateManager = CTradeStateManager;
+
+	if ( !Tutorial )
+		Tutorial = new CTradeTutorial();
+
+	if ( bShowTutorial )
+		Tutorial.Init();
 
 	INVENTORY_PAGE_ITEMS = 16;	//4 x 4 grid
 	INVENTORY_PAGE_WIDTH = 104 * 4;
@@ -32,6 +42,8 @@ function BeginTrading()
 
 	// set up inventory and drag drop
 	Droppables.add( $('trade_yours'), {hoverclass: 'readyForDrop', onDrop: OnDropItemInTrade } );
+	if ( g_bTradeOffer )
+		Droppables.add( $('trade_theirs'), {hoverclass: 'readyForDrop', onDrop: OnDropItemInTrade } );
 
 	// set up the filter control
 	Filter.InitFilter( $('filter_control') );
@@ -52,28 +64,14 @@ function BeginTrading()
 		// if the user starts typing in the trade dialog, move the focus to the chat control
 		$(document).observe( 'keypress', TransferFocusToChat );
 
-		RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+		RedrawCurrentTradeStatus();
 		RequestTradeStatusUpdate();
 	}
 
 	// default to the last used inventory
 	var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
 	if ( BValidateHashParams( oCookieParams ) )
-		TradePageSelectInventory( UserYou, oCookieParams.appid, oCookieParams.contextid );
-}
-
-function BeginTradeOffer()
-{
-	g_bTradeOffer = true;
-	
-	BeginTrading();
-
-	UpdateSlots( new Array(), new Array(), true, UserYou, 0 );
-	UpdateSlots( new Array(), new Array(), false, UserThem, 0 );
-
-	$J('#inventory_select_their_inventory').addClass('active');
-	$J('#trade_theirs_active').show();
-	$J('#trade_items_separator').css( 'visibility', 'hidden' );
+		TradePageSelectInventory( g_bTradeOffer ? UserThem : UserYou, oCookieParams.appid, oCookieParams.contextid );
 }
 
 
@@ -146,7 +144,8 @@ CUserThem = Class.create( CUser, {
 			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
 
 			// replace the pending inventory object with the real inventory
-			var inventory = new CForeignInventory( this, appid, contextid, merged.inventory, merged.currency );
+			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
+
 			this.addInventory( inventory );
 			if ( g_bTradeOffer )
 			{
@@ -166,8 +165,7 @@ CUserThem = Class.create( CUser, {
 
 			this.ShowInventoryIfActive( appid, contextid );
 
-			if ( !g_bTradeOffer )
-				RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+			RedrawCurrentTradeStatus();
 		}
 		else
 		{
@@ -278,8 +276,8 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 		}
 		else
 		{
-			Tutorial.OnSelectedNonEmptyInventory();
-			SetCookie( 'strTradeLastInventoryContext', appid + '_' + contextid, 14, '/trade/' );
+			Tutorial.OnSelectedNonEmptyInventory( user );
+			SetCookie( 'strTradeLastInventoryContext', appid + '_' + contextid, 14, g_bTradeOffer ? '/tradeoffer/' : '/trade/' );
 		}
 
 		// hide the tags after we select the new inventory so
@@ -353,21 +351,34 @@ function StartDrag( draggable, event )
 		draggable.element.wants_hover = false;
 	draggable.element.removeClassName( 'hover' );
 
-	$('your_slots').childElements().invoke( 'removeClassName', 'nextTarget' );
 	var item = draggable.element.rgItem;
+
+	var elSlots = ( item.is_their_item ? $('their_slots') : $('your_slots') );
+
+	elSlots.childElements().invoke( 'removeClassName', 'nextTarget' );
 	if ( BIsInTradeSlot( draggable.element ) )
 	{
 		Droppables.add( $('inventories' ) , {hoverclass: 'readyForDrop', onDrop: OnDropItemInInventory } );
 		$(draggable.element.parentNode.parentNode).down('.slot_applogo').hide();
 	}
-	else if ( item.trade_stack && BIsInTradeSlot( item.trade_stack.element ) )
-	{
-		$(item.trade_stack.element.parentNode.parentNode).addClassName( 'nextTarget' );
-	}
 	else
 	{
-		var oSlotInfo = FindFreeSlot( $('your_slots' ) );
-		oSlotInfo.elSlot.addClassName( 'nextTarget' );
+		if ( item.trade_stack && BIsInTradeSlot( item.trade_stack.element ) )
+		{
+			$(item.trade_stack.element.parentNode.parentNode).addClassName( 'nextTarget' );
+		}
+		else
+		{
+			var oSlotInfo = FindFreeSlot( elSlots );
+			oSlotInfo.elSlot.addClassName( 'nextTarget' );
+		}
+
+		if ( g_bTradeOffer )
+		{
+			var elUnusedOffer = ( item.is_their_item ? $('trade_yours') : $('trade_theirs' ) );
+			elUnusedOffer.effect && elUnusedOffer.effect.cancel();
+			elUnusedOffer.effect = new Effect.Opacity( elUnusedOffer, {to: 0.3, delay: 0.1, duration: 0.15 } );
+		}
 	}
 
 	g_bInDrag = true;
@@ -383,7 +394,21 @@ function EndDrag( draggable, event )
 		$(draggable.element.parentNode.parentNode).down('.slot_applogo').show();
 	}
 
+	if ( g_bTradeOffer )
+	{
+		ResetTradeOfferOpacity( $('trade_yours' ) );
+		ResetTradeOfferOpacity( $('trade_theirs' ) );
+	}
+
 	RemoveDroppable( $('inventories' ) );
+}
+
+function ResetTradeOfferOpacity( elOffer )
+{
+	if ( elOffer.effect )
+		elOffer.effect.cancel();
+
+	elOffer.effect = new Effect.Opacity( elOffer, {to: 1.0, duration: 0.15 } );
 }
 
 function RemoveDroppable( element )
@@ -457,14 +482,16 @@ function FindSlotAndSetItem( item, xferAmount )
 {
 	var elItem = item.element;
 	var bStackable = item.is_stackable;
+	var bTheirItem = item.is_their_item;
+	var elSlots = ( bTheirItem ? $('their_slots') : $('your_slots') );
 	if ( bStackable )
 	{
-		var stack = GetTradeItemStack( UserYou, item );
+		var stack = GetTradeItemStack( bTheirItem ? UserThem : UserYou, item );
 		elItem = stack.element;
 
 		if ( xferAmount == 0 )
 		{
-			RemoveItemFromTrade( item );
+			GTradeStateManager.RemoveItemFromTrade( item );
 			return;
 		}
 	}
@@ -474,7 +501,7 @@ function FindSlotAndSetItem( item, xferAmount )
 	// find a slot to drop this item in
 	if ( !BIsInTradeSlot( elItem ) )
 	{
-		var oSlotInfo = FindFreeSlot( $('your_slots') );
+		var oSlotInfo = FindFreeSlot( elSlots );
 		ReserveSlot( oSlotInfo.elSlot );
 		iSlot = oSlotInfo.iSlot;
 	}
@@ -487,7 +514,7 @@ function FindSlotAndSetItem( item, xferAmount )
 	if ( !BIsInTradeSlot( elItem ) || bStackable )
 	{
 		// commit the update
-		SetItemInTrade( item, iSlot, xferAmount );
+		GTradeStateManager.SetItemInTrade( item, iSlot, xferAmount );
 	}
 }
 
@@ -500,67 +527,110 @@ function MoveItemToInventory( elItem )
 	}
 	RevertItem( item );
 
-	RemoveItemFromTrade( item );
+	GTradeStateManager.RemoveItemFromTrade( item );
 }
 
-function RemoveItemFromTrade( item )
-{
-	CancelTradeStatusPoll();
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/removeitem/', {
-		method: 'post',
-		parameters: {
-			sessionid: g_sessionID,
-			appid: item.appid,
-			contextid: item.contextid,
-			itemid: item.id
-		},
-		onComplete: HandleDropFailure
-	} );
-}
+CTradeStateManager = {
 
-function SetCurrencyInTrade( currency, xferAmount )
-{
-	CancelTradeStatusPoll();
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/setcurrency/', {
+	RemoveItemFromTrade: function( item )
+	{
+		CancelTradeStatusPoll();
+		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/removeitem/', {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
-				appid: currency.appid,
-				contextid: currency.contextid,
-				currencyid: currency.id,
-				amount: xferAmount
+				appid: item.appid,
+				contextid: item.contextid,
+				itemid: item.id
+			},
+			onComplete: HandleDropFailure
+		} );
+	},
+
+	SetCurrencyInTrade: function( currency, xferAmount )
+	{
+		CancelTradeStatusPoll();
+		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/setcurrency/', {
+				method: 'post',
+				parameters: {
+					sessionid: g_sessionID,
+					appid: currency.appid,
+					contextid: currency.contextid,
+					currencyid: currency.id,
+					amount: xferAmount
+				},
+				onSuccess: OnTradeStatusUpdate,
+				onFailure: RequestTradeStatusUpdate
+		} );
+	},
+
+	SetItemInTrade: function( item, slot, xferAmount )
+	{
+		CancelTradeStatusPoll();
+
+		var params = {
+					sessionid: g_sessionID,
+					appid: item.appid,
+					contextid: item.contextid,
+					itemid: item.id,
+					slot: slot
+				};
+
+		if ( xferAmount )
+			params.amount = xferAmount;
+
+		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/additem/', {
+				method: 'post',
+				parameters: params,
+				onComplete: function( transport ) { HandleDropFailure( transport ); }
+		} );
+	},
+
+	ToggleReady: function( bReady )
+	{
+		CancelTradeStatusPoll();
+		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/toggleready/', {
+			method: 'post',
+			parameters: {
+				sessionid: g_sessionID,
+				ready: bReady,
+				version: g_rgCurrentTradeStatus.version
 			},
 			onSuccess: OnTradeStatusUpdate,
 			onFailure: RequestTradeStatusUpdate
-	} );
-}
+		} );
+	},
 
-function SetItemInTrade( item, slot, xferAmount )
-{
-	CancelTradeStatusPoll();
-
-	var params = {
-				sessionid: g_sessionID,
-				appid: item.appid,
-				contextid: item.contextid,
-				itemid: item.id,
-				slot: slot
-			};
-
-	if ( xferAmount )
-		params.amount = xferAmount;
-
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/additem/', {
-			method: 'post',
-			parameters: params,
-			onComplete: function( transport ) { HandleDropFailure( transport ); }
-	} );
+	UpdateConfirmButtonStatus: function()
+	{
+		if ( g_bConfirmPending )
+		{
+			$('trade_confirm_message').update( 'Waiting for the other party to confirm...' );
+			$('trade_confirmbtn').hide();
+			$('trade_confirm_throbber').show();
+		}
+		else
+		{
+			$('trade_confirmbtn').show();
+			$('trade_confirm_throbber').hide();
+			if ( UserYou.bReady && UserThem.bReady )
+			{
+				$('trade_confirmbtn').addClassName( 'active' );
+				$('trade_confirm_message').update( 'Both parties are ready.' );
+			}
+			else
+			{
+				$('trade_confirmbtn').removeClassName( 'active' );
+				$('trade_confirm_message').update( 'Waiting for both parties to check the ready box.' );
+			}
+		}
+	}
 }
 
 function SetStackableItemInTrade( item, xferAmount )
 {
 	if ( item.is_currency )
-		SetCurrencyInTrade( item, xferAmount );
+		GTradeStateManager.SetCurrencyInTrade( item, xferAmount );
 	else
 		FindSlotAndSetItem( item, xferAmount );
 }
@@ -912,6 +982,11 @@ function ElementCount( obj )
 		return Object.keys( obj ).length;
 }
 
+function RedrawCurrentTradeStatus()
+{
+	RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+}
+
 function RefreshTradeStatus( rgTradeStatus, bForce )
 {
 	if ( rgTradeStatus.newversion || bForce )
@@ -936,8 +1011,8 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 		var cTheirItems = ElementCount( rgTradeStatusForSlots.them.assets );
 		g_cItemsInTrade = cMyItems + cTheirItems;
 		g_cCurrenciesInTrade = rgTradeStatusForSlots.me.currency.length + rgTradeStatusForSlots.them.currency.length;
-		if ( cMyItems > 0 )
-			Tutorial.OnUserAddedItemsToTrade();
+		if ( g_cItemsInTrade > 0 )
+			Tutorial.OnUserAddedItemsToTrade( cMyItems, cTheirItems );
 	}
 	if ( rgTradeStatus.me.ready && !UserYou.bReady || !rgTradeStatus.me.ready && UserYou.bReady )
 	{
@@ -1011,7 +1086,7 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 		if ( ( parseInt( stack.amount ) + parseInt( stack.fee ) ) != currencyUpdate.amount )
 		{
 			UpdateTradeItemStackDisplay( currency, stack, currencyUpdate.amount );
-			if ( !bYourSlots )
+			if ( !bYourSlots && !g_bTradeOffer )
 				HighlightNewlyAddedItem( stack.element );
 		}
 
@@ -1142,12 +1217,12 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 		if ( elNewItem )
 		{
 			PutItemInSlot( elNewItem, elSlot );
-			if ( bItemIsNewToTrade && !bYourSlots )
+			if ( bItemIsNewToTrade && !bYourSlots && !g_bTradeOffer )
 			{
 				HighlightNewlyAddedItem( elNewItem );
 			}
 		}
-		else if ( bStackAmountChanged && !bYourSlots )
+		else if ( bStackAmountChanged && !bYourSlots && !g_bTradeOffer )
 		{
 			HighlightNewlyAddedItem( elCurItem );
 		}
@@ -1447,17 +1522,8 @@ var g_bConfirmPending = false;
 function ToggleReady( bReady )
 {
 	UserYou.bReady = bReady;
-	CancelTradeStatusPoll();
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/toggleready/', {
-		method: 'post',
-		parameters: {
-			sessionid: g_sessionID,
-			ready: bReady,
-			version: g_rgCurrentTradeStatus.version
-		},
-		onSuccess: OnTradeStatusUpdate,
-		onFailure: RequestTradeStatusUpdate
-	} );
+
+	GTradeStateManager.ToggleReady( bReady );
 
 	UpdateReadyButtons();
 	$('notready_tradechanged_message').hide();
@@ -1514,7 +1580,10 @@ function UpdateReadyButtons()
 			}
 			else
 			{
-				strMessage = 'Waiting for someone to make an offer.';
+				if ( g_bTradeOffer )
+					strMessage = 'Waiting for you to offer one or more items.';
+				else
+					strMessage = 'Waiting for someone to make an offer.';
 			}
 
 			$$('#you_cantready .content').each( function( elContent ) {
@@ -1530,17 +1599,37 @@ function UpdateReadyButtons()
 		$('inventory_box').removeClassName('ready');
 	}
 
-	if ( UserThem.bReady )
+	if ( !g_bTradeOffer )
 	{
-		$('them_notready').hide();
-		$('them_ready').show();
-		$('trade_theirs').addClassName('ready');
+		if ( UserThem.bReady )
+		{
+			$('them_notready').hide();
+			$('them_ready').show();
+			$('trade_theirs').addClassName('ready');
+		}
+		else
+		{
+			$('them_notready').show();
+			$('them_ready').hide();
+			$('trade_theirs').removeClassName('ready');
+		}
 	}
 	else
 	{
-		$('them_notready').show();
-		$('them_ready').hide();
-		$('trade_theirs').removeClassName('ready');
+		if ( g_bReadOnly )
+		{
+			//read only is the state where we are vieiwing a trade offer but haven't clicked on the "let's modify" button yet
+			$('trade_yours').addClassName('ready');
+			$('trade_theirs').addClassName('ready');
+		}
+		else if ( UserYou.bReady )
+		{
+			$('trade_theirs').addClassName('ready');
+		}
+		else
+		{
+			$('trade_theirs').removeClassName('ready');
+		}
 	}
 
 	if ( !UserYou.bReady || !UserThem.bReady )
@@ -1548,27 +1637,7 @@ function UpdateReadyButtons()
 		g_bConfirmPending = false;
 	}
 
-	if ( g_bConfirmPending )
-	{
-		$('trade_confirm_message').update( 'Waiting for the other party to confirm...' );
-		$('trade_confirmbtn').hide();
-		$('trade_confirm_throbber').show();
-	}
-	else
-	{
-		$('trade_confirmbtn').show();
-		$('trade_confirm_throbber').hide();
-		if ( UserYou.bReady && UserThem.bReady )
-		{
-			$('trade_confirmbtn').addClassName( 'active' );
-			$('trade_confirm_message').update( 'Both parties are ready.' );
-		}
-		else
-		{
-			$('trade_confirmbtn').removeClassName( 'active' );
-			$('trade_confirm_message').update( 'Waiting for both parties to check the ready box.' );
-		}
-	}
+	GTradeStateManager.UpdateConfirmButtonStatus();
 }
 
 var g_bRequestedCancel = false;
@@ -2464,83 +2533,107 @@ function TransferFocusToChat( event )
 	}
 }
 
-var Tutorial = {
-	bActive: false,
-	iStep: 0,
-	MAX_STEPS: 4,
+function CTutorial( MAX_STEPS )
+{
+	this.bActive = false;
+	this.iStep = 1;
+	this.MAX_STEPS = MAX_STEPS;
+}
 
-	Init: function() {
-		this.bActive = true;
-		this.iStep = 1;
-		this.UpdateStepDisplay();
-	},
+CTutorial.prototype.Init = function() {
+	this.bActive = true;
+	this.UpdateStepDisplay();
+}
 
-	UpdateStepDisplay: function() {
-		for ( var i = 1; i <= this.MAX_STEPS; i++ )
+CTutorial.prototype.UpdateStepDisplay = function() {
+	for ( var i = 1; i <= this.MAX_STEPS; i++ )
+	{
+		var elArrow = $('tutorial_arrow_step' + i );
+		var elStep = $('tutorial_message_step' + i );
+		if ( elArrow )
 		{
-			var elArrow = $('tutorial_arrow_step' + i );
-			var elStep = $('tutorial_message_step' + i );
-			if ( elArrow )
+			if ( this.bActive && i == this.iStep )
 			{
-				if ( this.bActive && i == this.iStep )
-				{
-					elArrow.show();
-					$(elArrow.parentNode).addClassName('activeArrow');
-				}
-				else
-				{
-					elArrow.hide();
-					$(elArrow.parentNode).removeClassName('activeArrow');
-				}
+				elArrow.show();
+				$(elArrow.parentNode).addClassName('activeArrow');
 			}
-
-			if ( elStep )
+			else
 			{
-				if ( i == this.iStep )
-					elStep.show();
-				else
-					elStep.hide();
+				elArrow.hide();
+				$(elArrow.parentNode).removeClassName('activeArrow');
 			}
 		}
-	},
 
-	AdvanceToStep: function( step ) {
-		if ( this.bActive && this.iStep < step )
+		if ( elStep )
 		{
-			this.iStep = step;
-			this.UpdateStepDisplay();
+			if ( i == this.iStep )
+				elStep.show();
+			else
+				elStep.hide();
 		}
-	},
-
-	OnSelectedNonEmptyInventory: function() {
-		this.AdvanceToStep( 2 );
-	},
-
-	OnUserAddedItemsToTrade: function() {
-		this.AdvanceToStep( 3 );
-	},
-
-	OnUserIsReady: function() {
-		this.AdvanceToStep( 4 );
-	},
-
-	EndTutorial: function() {
-		var elHeaderMessage = $('tutorial_header_message');
-		if ( elHeaderMessage && elHeaderMessage.visible() )
-		{
-			new Effect.BlindUp( elHeaderMessage, {duration: 0.25 } );
-		}
-		this.bActive = false;
-		// update step display will hide all step arrows when active is false
-		this.UpdateStepDisplay();
-		this.OnCompletedTutorial();
-	},
-
-	OnCompletedTutorial: function() {
-		SetCookie( 'bCompletedTradeTutorial', 'true', 365 * 10, '/trade/' );
 	}
+};
+
+CTutorial.prototype.AdvanceToStep = function( step ) {
+	if ( this.bActive && this.iStep < step )
+	{
+		this.iStep = step;
+		this.UpdateStepDisplay();
+	}
+};
 
 
+CTutorial.prototype.EndTutorial = function() {
+	var elHeaderMessage = $('tutorial_header_message');
+	if ( elHeaderMessage && elHeaderMessage.visible() )
+	{
+		new Effect.BlindUp( elHeaderMessage, {duration: 0.25 } );
+	}
+	this.bActive = false;
+	// update step display will hide all step arrows when active is false
+	this.UpdateStepDisplay();
+	this.OnCompletedTutorial();
+};
+
+CTutorial.prototype.OnCompletedTutorial = function() {
+	//SetCookie( 'bCompletedTradeTutorial', 'true', 365 * 10, g_bTradeOffer ? '/tradeoffer/' : '/trade/' );
+};
+
+
+CTutorial.prototype.OnSelectedNonEmptyInventory = function( user ) {
+
+};
+
+CTutorial.prototype.OnUserAddedItemsToTrade = function( cMyItems, cTheirItems ) {
+
+};
+
+CTutorial.prototype.OnUserIsReady = function() {
+
+};
+
+function CTradeTutorial()
+{
+	CTutorial.apply( this, [ 4 ] );
+}
+CTradeTutorial.prototype = new CTutorial;
+CTradeTutorial.prototype.constructor = CTradeTutorial;
+
+CTradeTutorial.prototype.OnSelectedNonEmptyInventory = function( user ) {
+	this.AdvanceToStep( 2 );
+};
+
+CTradeTutorial.prototype.OnUserAddedItemsToTrade = function( cMyItems, cTheirItems ) {
+	if ( cMyItems > 0 )
+		this.AdvanceToStep( 3 );
+};
+
+CTradeTutorial.prototype.OnUserIsReady = function() {
+	this.AdvanceToStep( 4 );
+};
+
+CTradeTutorial.prototype.OnCompletedTutorial = function() {
+	SetCookie( 'bCompletedTradeTutorial', 'true', 365 * 10, g_bTradeOffer ? '/tradeoffer/' : '/trade/' );
 };
 
 function SeenSteamGuardWarning() {
@@ -2550,7 +2643,7 @@ function SeenSteamGuardWarning() {
 		new Effect.BlindUp( elHeaderMessage, {duration: 0.25 } );
 	}
 
-	SetCookie( 'bSeenSteamGuardWarning', 'true', 365 * 10, '/trade/' );
+	SetCookie( 'bSeenSteamGuardWarning', 'true', 365 * 10, g_bTradeOffer ? '/tradeoffer/' : '/trade/' );
 }
 
 function SizeWindow()
@@ -2573,7 +2666,8 @@ function SizeWindow()
 		document.body.style.zoom = 1.0;
 	}
 
-	$('log').scrollTop = 10000;
+	if ( !g_bTradeOffer )
+		$('log').scrollTop = 10000;
 }
 
 function TradingUnloaded( e )

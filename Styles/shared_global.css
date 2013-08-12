@@ -64,6 +64,17 @@
 	height: 184px;
 }
 
+.playerAvatar.tiny {
+	width: 22px;
+	height: 22px;
+	padding: 2px;
+}
+.playerAvatar.tiny img {
+	width: 22px;
+	height: 22px;
+	border: none;
+}
+
 .persona, a.persona, .persona a {
 	color:#898989;
 }
@@ -544,4 +555,133 @@ span.popup_menu_pulldown_indicator {
 	background-position: right top;
 
 	right: 0;
+}
+
+/* steam inbox */
+
+
+/* notification box */
+
+#header_notification_area {
+	float: left;
+	margin-right: 3px;
+	margin-top: -6px;
+	margin-left: 8px;
+}
+
+.header_notification_btn {
+	position: relative;
+	height: 29px;
+
+	cursor: pointer;
+}
+
+.header_notification_empty {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_notification_grey.png' );
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 29px;
+}
+
+.header_notification_empty:hover, .header_notification_empty.focus {
+	background-position: center bottom;
+}
+
+.header_notification_green {
+	padding: 0 28px 0 10px;
+
+	background-repeat: repeat-x;
+	background-position: 0 -29px;
+
+	line-height: 29px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.header_notification_green, .header_notification_green .leftcap, .header_notification_green .rightcap {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_notification_green.png' );
+}
+
+.header_notification_green:hover, .header_notification_green.focus {
+	background-position: 0 -87px;
+}
+
+.header_notification_green:hover .leftcap, .header_notification_green.focus .leftcap {
+	background-position: 0 -58px;
+}
+.header_notification_green:hover .rightcap, .header_notification_green.focus .rightcap {
+	background-position: right -58px;
+}
+
+.header_notification_green .leftcap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5px;
+	height: 29px;
+	background-position: left top;
+}
+
+.header_notification_green .rightcap {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+	height: 29px;
+	background-position: right top;
+}
+
+#header_notification_dropdown .popup_menu_item {
+	line-height: 30px;
+	padding: 0 12px 0 12px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #bfbfbf;
+}
+
+#header_notification_dropdown .popup_menu_item.active_inbox_item {
+	color: #70ba24;
+}
+
+.header_notification_dropdown_seperator {
+	margin: 0 7px;
+	height: 1px;
+	background-color: #6b6865;
+}
+
+.notification_icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 16px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_icons_sprite.png' );
+}
+
+.header_notification_comments .notification_icon {
+	background-position: 0 0;
+}
+
+.header_notification_items .notification_icon {
+	background-position: 0 -16px;
+}
+
+.header_notification_invites .notification_icon {
+	background-position: 0 -32px;
+}
+
+.header_notification_gifts .notification_icon {
+	background-position: 0 -48px;
+}
+
+.header_notification_offlinemessages .notification_icon {
+	background-position: 0 -64px;
+}
+
+/* these are shown conditionally so not a big deal that they aren't in the sprite */
+.header_notification_tradeoffers .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_tradeoffers.png' );
 }

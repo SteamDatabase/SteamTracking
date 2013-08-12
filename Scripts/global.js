@@ -900,7 +900,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 
 	var borderpx = bLinkHasBorder ? 1 : 0;
-	var shadowpx = 12;
+	var shadowpx = elemPopup.hasClassName( 'popup_block_new' ) ? 0 : 12;
 	var offsetLeft = 0;
 	if ( align == 'left' )
 	{
@@ -927,12 +927,12 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	if ( valign == 'bottom' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = elemLink.getHeight() - 12;
+		offsetTop = elemLink.getHeight() - shadowpx;
 	}
 	else if ( valign == 'top' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
-		offsetTop = -elemPopup.getHeight() + 12;
+		offsetTop = -elemPopup.getHeight() + shadowpx;
 	}
 	else if ( valign == 'bottomsubmenu' )
 	{

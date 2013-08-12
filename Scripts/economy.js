@@ -1,10 +1,15 @@
 var INVENTORY_PAGE_ITEMS = 16;
 var INVENTORY_PAGE_WIDTH = 416;
 var g_bIsTrading = false;
+var g_bTradeOffer = false;	// implies g_bIsTrading
 var g_bIsInventoryPage = false;
+
+var g_bReadOnly = false;
+
 var g_bWalletTradeUnavailable = false;
 var g_bSellItemOnInventoryLoad = false;
 var g_bShowTradableItemsOnly = false;
+
 var g_ActiveUser = null;
 var ITEM_HOVER_DELAY = 500;
 
@@ -587,9 +592,6 @@ var CInventory = Class.create( {
 
 			var elCurrency = this.BuildItemElement( rgCurrency );
 
-			if ( g_bIsTrading )
-				MakeCurrencyDraggable( elCurrency );
-
 			var elItemHolder = new Element( 'div', {'class': 'itemHolder' } );
 			elItemHolder.appendChild( elCurrency );
 
@@ -620,12 +622,9 @@ var CInventory = Class.create( {
 				elItem = this.BuildUnknownItemElement( itemid );
 			}
 
-			if ( g_bIsTrading )
+			if ( g_bTradeOffer && this.owner == UserThem )
 			{
-				if ( rgItem.is_stackable )
-					MakeCurrencyDraggable( elItem );
-				else
-					MakeItemDraggable( elItem );
+				rgItem.is_their_item = true;
 			}
 
 			var elItemHolder = new Element( 'div', {'class': 'itemHolder' } );
@@ -635,6 +634,26 @@ var CInventory = Class.create( {
 
 			rgItem.element = elItem;
 			rgItem.homeElement = elItemHolder;
+		}
+
+		if ( g_bIsTrading && !g_bReadOnly )
+			this.MakeElementsDraggable();
+	},
+
+	MakeElementsDraggable: function()
+	{
+		for ( var currencyid in this.rgCurrency )
+		{
+			var rgCurrency = this.rgCurrency[currencyid];
+			MakeCurrencyDraggable( rgCurrency.element );
+		}
+		for ( var itemid in this.rgInventory )
+		{
+			var rgItem = this.rgInventory[itemid];
+			if ( rgItem.is_stackable )
+				MakeCurrencyDraggable( rgItem.element );
+			else
+				MakeItemDraggable( rgItem.element );
 		}
 	},
 
@@ -688,7 +707,7 @@ var CInventory = Class.create( {
 
 	BuildItemElement: function( rgItem )
 	{
-		var elItem = new Element( 'div', { title: rgItem.name, id: 'item' + this.appid + '_' + this.contextid + '_' + rgItem.id, 'class': 'item app' + this.appid + ' context' + this.contextid } );
+		var elItem = new Element( 'div', { id: 'item' + this.appid + '_' + this.contextid + '_' + rgItem.id, 'class': 'item app' + this.appid + ' context' + this.contextid } );
 		if ( rgItem.name_color )
 			elItem.style.borderColor = '#' + rgItem.name_color;
 		if ( rgItem.background_color )
@@ -809,13 +828,32 @@ var CInventory = Class.create( {
 
 	LocateAssetElement: function( itemid )
 	{
-		if ( !this.initialized )
-			this.Initialize();
-
-		if ( this.rgInventory && this.rgInventory[itemid] )
-			return this.rgInventory[itemid].element;
+		if ( g_bIsTrading && !g_bTradeOffer && this.owner == UserThem )
+		{
+			// for the other user's inventory in a trade, we create elements on demand
+			var item = this.LocateAsset( itemid );
+			if ( item )
+			{
+				if ( !item.element )
+				{
+					// we create item elements on demand for the other user
+					var element = this.BuildItemElement( item );
+					item.element = element;
+					this.LoadItemImage( element );
+				}
+				return item.element;
+			}
+		}
 		else
-			return this.BuildUnknownItemElement( itemid );
+		{
+			if ( !this.initialized )
+				this.Initialize();
+
+			if ( this.rgInventory && this.rgInventory[itemid] )
+				return this.rgInventory[itemid].element;
+		}
+
+		return this.BuildUnknownItemElement( itemid );
 	},
 
 	LocateCurrency: function( currencyid )
@@ -1003,7 +1041,7 @@ var CInventory = Class.create( {
 
 	GetInventoryPageURL: function()
 	{
-		return UserYou.GetProfileURL() + '/inventory/';
+		return this.owner.GetProfileURL() + '/inventory/';
 	}
 
 });
@@ -1211,40 +1249,6 @@ var CAppwideInventory = Class.create( CInventory, {
 
 });
 
-// foreign inventory extends inventory, represents items held by trade partner
-var CForeignInventory = Class.create( CInventory, {
-
-	LocateAssetElement: function( itemid )
-	{
-		var item = this.LocateAsset( itemid );
-		if ( item )
-		{
-			if ( !item.element )
-			{
-				// we create item elements on demand for the other user
-				var element = this.BuildItemElement( item );
-				item.element = element;
-			}
-			return item.element;
-		}
-		else
-			return this.BuildUnknownItemElement( itemid );
-	},
-
-	BuildItemElement: function( $super, item )
-	{
-		// always load images for trading partner items
-		var element = $super( item );
-		this.LoadItemImage( element );
-		return element;
-	},
-
-	GetInventoryPageURL: function()
-	{
-		return UserThem.GetProfileURL() + '/inventory/';
-	}
-
-});
 
 var CForeignInventoryPending = Class.create( CInventory, {
 
@@ -1308,6 +1312,23 @@ var CUser = Class.create( {
 			this.LoadAppwideInventory( inventory );
 		}
 		return inventory;
+	},
+
+	GetAllLoadedInventories: function()
+	{
+		var rgInventories = [];
+		for ( var appid in this.rgContexts )
+		{
+			var rgAppContexts = this.rgContexts[appid];
+			for ( var contextid in rgAppContexts )
+			{
+				var rgContext = rgAppContexts[contextid];
+				if ( rgContext && rgContext.inventory )
+					rgInventories.push( rgContext.inventory );
+			}
+		}
+
+		return rgInventories;
 	},
 
 	LoadAppwideInventory: function( appwideInventory )
@@ -1478,7 +1499,7 @@ var CUser = Class.create( {
 		return this.nActiveAppId;
 	},
 
-		GetTradePermissions: function( appid, contextid )
+	GetTradePermissions: function( appid, contextid )
 	{
 		/* trade permissions are app-wide, but could be context-specific in the future */
 		var rgContext = this.GetContext( appid, contextid );
@@ -1628,8 +1649,8 @@ CUserYou = Class.create( CUser, {
 
 		this.ShowInventoryIfActive( appid, contextid );
 
-		if ( g_bIsTrading && !g_bTradeOffer )
-			RefreshTradeStatus( g_rgCurrentTradeStatus, true );
+		if ( g_bIsTrading )
+			RedrawCurrentTradeStatus();
 	},
 
 	// an obj with .appid and .contextid
@@ -1643,6 +1664,30 @@ CUserYou = Class.create( CUser, {
 
 });
 UserYou = new CUserYou();
+
+function DisableReadOnlyMode()
+{
+	g_bReadOnly = false;
+	if ( g_bIsTrading )
+	{
+		var rgInventories = UserYou.GetAllLoadedInventories();
+		for ( var i = 0; i < rgInventories.length; i++ )
+		{
+			rgInventories[i].MakeElementsDraggable();
+		}
+
+		if ( g_bTradeOffer )
+		{
+			var rgInventories = UserThem.GetAllLoadedInventories();
+			for ( var i = 0; i < rgInventories.length; i++ )
+			{
+				rgInventories[i].MakeElementsDraggable();
+			}
+		}
+
+		RedrawCurrentTradeStatus();
+	}
+}
 
 function ShowPendingGifts()
 {
