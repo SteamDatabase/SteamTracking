@@ -4813,6 +4813,16 @@
 			"model_player"		"models/weapons/v_knife_flip.mdl"
 			"model_pedestal"		"models/weapons/v_knife_flip_inspect.mdl"
 			"model_world"		"models/weapons/w_knife_flip.mdl"
+			"used_by_classes"
+			{
+				"terrorists"		"1"
+				"counter-terrorists"		"1"
+			}
+			"inventory_image_data"
+			{
+				"camera_angles"		"30.0 -95.0 29.0"
+				"camera_offset"		"9.0 1.0 -1.5"
+			}
 			"paint_data"
 			{
 				"PaintableMaterial0"
