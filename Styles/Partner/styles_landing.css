@@ -526,7 +526,7 @@ p {
 	color: #e7e8e9;
 	font-size: 14px;
 	background-color: #333333;
-	margin: 2px 0;
+	margin: 1px 0;
 	text-decoration: none;
 }
 	.buttonRow.disabled, .buttonRow.disabled .subText {

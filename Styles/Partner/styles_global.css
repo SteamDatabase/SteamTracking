@@ -688,6 +688,11 @@ a.tab, .tab a {
 	padding-bottom: 10px;
 }
 
+.newmodal_content .perf_timing_area
+{
+	width: auto;
+}
+
 .perf_timing_link {
 }
 
