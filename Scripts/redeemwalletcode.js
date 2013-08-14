@@ -185,6 +185,10 @@ function OnValidateWalletCodeFailure( detail )
 				sErrorMessage = 'The wallet code you entered is invalid.';
 				break;
 				
+			case 15:
+				sErrorMessage = '#youraccount_wallet_code_already_redeemed';
+				break;
+
 			default:
 				sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 				break;
