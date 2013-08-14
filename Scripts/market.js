@@ -955,7 +955,7 @@ function InstallMarketActionMenuButtons()
 {
 	for ( var listing in g_rgListingInfo ) {
 		var asset = g_rgListingInfo[listing].asset;
-		if ( typeof g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id].market_actions != 'undefined' )
+		if ( typeof g_rgAssets[asset.appid][asset.contextid][asset.id].market_actions != 'undefined' )
 		{
 			// add the context menu
 			var elActionMenuButton = $J('<a></a>');
