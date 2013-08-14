@@ -3992,7 +3992,7 @@
 				"in game price"
 				{
 					"attribute_class"		"in_game_price"
-					"value"		"3000"
+					"value"		"2900"
 				}
 				"primary clip size"
 				{
@@ -4302,7 +4302,7 @@
 				"primary clip size"
 				{
 					"attribute_class"		"primary_clip_size"
-					"value"		"13"
+					"value"		"12"
 				}
 			}
 			"paint_data"

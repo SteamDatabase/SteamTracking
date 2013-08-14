@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.23826862903c2f4976974b0d7954930e5d5d28a0.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.5ded1e726fecd8a7d213dc2790ae729945eb04a9.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -331,7 +331,7 @@
 				"item_class": "weapon_famas",
 				"item_type_name": "Rifle",
 				"item_name": "FAMAS",
-				"item_description": "A cheap option for cash-strapped players, the FAMAS effectively fills the niche between more expensive rifles and the less-effective SMG.",
+				"item_description": "A cheap option for cash-strapped players, the FAMAS effectively fills the niche between more expensive rifles and the less-effective SMGs.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_famas",
@@ -574,7 +574,7 @@
 				"item_class": "weapon_bizon",
 				"item_type_name": "SMG",
 				"item_name": "PP-Bizon",
-				"item_description": "The Bizon SMG is low-damage, but offers a uniquely designed high-capacity drum magazine that reloads fast.",
+				"item_description": "The Bizon SMG is low-damage, but offers a uniquely designed high-capacity drum magazine that reloads quickly.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_bizon",
@@ -772,7 +772,7 @@
 				"item_class": "weapon_mp9",
 				"item_type_name": "SMG",
 				"item_name": "MP9",
-				"item_description": "Manufactured in Switzerland, the cutting-edge MP9 SMG is an ergonomic polymer weapon favorited by private security firms.",
+				"item_description": "Manufactured in Switzerland, the cutting-edge MP9 SMG is an ergonomic polymer weapon favored by private security firms.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_mp9",
@@ -1153,7 +1153,7 @@
 					{
 						"name": "in game price",
 						"class": "in_game_price",
-						"value": 3000.000000
+						"value": 2900.000000
 					},
 					{
 						"name": "primary clip size",
@@ -1436,7 +1436,7 @@
 					{
 						"name": "primary clip size",
 						"class": "primary_clip_size",
-						"value": 13.000000
+						"value": 12.000000
 					}
 				]
 				
@@ -1917,7 +1917,7 @@
 				"defindex": 1203,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "CSGO Case Key",
+				"item_name": "CS:GO Case Key",
 				"item_description": "This key will open any Valve Series weapon case. Non-Valve Series cases (e.g. The eSports Case) require their own key to open.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -1998,7 +1998,7 @@
 				"defindex": 4001,
 				"item_class": "supply_crate",
 				"item_type_name": "Weapon Case",
-				"item_name": "CSGO Weapon Case",
+				"item_name": "CS:GO Weapon Case",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/weapon_cases\/crate_valve_1",
