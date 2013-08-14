@@ -838,6 +838,17 @@ function HideMenu( elemLink, elemPopup )
 		elemLink.dismissHandler.unregister();
 }
 
+function HideMenuFast( elemLink, elemPopup )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+
+	elemPopup.hide();
+	elemLink.removeClassName( 'focus' );
+	if ( elemLink.dismissHandler )
+		elemLink.dismissHandler.unregister();
+}
+
 function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
 	Event.observe( elemLink, 'mouseover', function(event) { FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder ); } );

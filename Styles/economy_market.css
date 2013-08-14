@@ -313,7 +313,7 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_home_main_listing_table .market_listing_left_cell, .market_home_main_listing_table .market_listing_right_cell {
-	line-height: 74px;
+	line-height: 73px;
 }
 
 .my_listing_section .market_listing_left_cell, .my_listing_section .market_listing_right_cell {
@@ -948,4 +948,40 @@ input.filter_search_box:focus {
 	bottom: 18px;
 	right: 18px;
 	text-align: center;
+}
+
+.market_listing_item_img_container {
+	position: relative;
+	float: left;
+	width: 74px;
+	height: 74px;
+}
+
+.market_actionmenu_button {
+	position: absolute;
+	z-index: 21;
+	right: 6px;
+	bottom: 6px;
+	width: 16px;
+	height: 16px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/info_btn.png' );
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.market_actionmenu_button:hover {
+	background-position: left bottom;
+}
+
+.market_actionmenu_button {
+	display: none;
+}
+
+.market_listing_row:hover .market_actionmenu_button {
+	display: block;
+}
+
+#market_action_popup {
+	z-index: 1000;
 }
