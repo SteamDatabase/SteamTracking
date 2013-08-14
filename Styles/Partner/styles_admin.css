@@ -2229,3 +2229,36 @@ html, body { height:100%; }
 	background-color: #68932f;
 	color: #d2ff96;
 }
+
+#AdminLoadingBG
+{
+	z-index: 900;
+	background-color: #000000;
+	filter: alpha(opacity=60);
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
+	min-width: 800px;
+	position: absolute;
+}
+
+#AdminLoading
+{
+	background-color: #333333;
+	padding: 20px;
+	color: #b2b2b2;
+	position: absolute;
+	z-index: 1000;
+	border-radius: 3px;
+	font-size: 20px;
+	color: white;
+	left: 40%;
+	top: 200px;
+}
+
+#AdminLoading div
+{
+	margin-top: 4px;
+	margin-right: 20px;
+}
