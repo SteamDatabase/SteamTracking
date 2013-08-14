@@ -272,6 +272,18 @@ var kStandardTag_Unmarketable =
 	category_name: 'Misc'
 };
 
+function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
+{
+	// add the context menu
+	var elActionMenuButton = new Element( 'a', {'id': strCompositeId + '_actionmenu_button', class: 'slot_actionmenu_button' } );
+	elActionMenuButton.href = "javascript:void(0)";
+	elItemHolder.appendChild( elActionMenuButton );
+
+	$J(elActionMenuButton).click( function() {
+		HandleTradeActionMenu( elActionMenuButton, elItemHolder.rgItem, owner );
+	} );
+}
+
 var CInventory = Class.create( {
 	owner: null,
 	appid: 0,
@@ -576,8 +588,6 @@ var CInventory = Class.create( {
 
 	BuildInventoryDisplayElements: function()
 	{
-		var strCompositeId = this.appid + '_' + this.contextid;
-
 		for ( var currencyid in this.rgCurrency )
 		{
 			var rgCurrency = this.rgCurrency[currencyid];
@@ -594,8 +604,15 @@ var CInventory = Class.create( {
 
 			var elItemHolder = new Element( 'div', {'class': 'itemHolder' } );
 			elItemHolder.appendChild( elCurrency );
+			elItemHolder.rgItem = elCurrency.rgItem;
 
 			this.rgItemElements.push( elItemHolder );
+
+			var strCompositeId = this.owner.GetSteamId() + '_' + this.appid + '_' + this.contextid;
+			if ( g_bIsTrading )
+			{
+				CreateItemContextMenuButton( elItemHolder, strCompositeId, this.owner );
+			}
 
 			rgCurrency.element = elCurrency;
 			rgCurrency.homeElement = elItemHolder;
@@ -629,8 +646,15 @@ var CInventory = Class.create( {
 
 			var elItemHolder = new Element( 'div', {'class': 'itemHolder' } );
 			elItemHolder.appendChild( elItem );
+			elItemHolder.rgItem = elItem.rgItem;
 
 			this.rgItemElements.push( elItemHolder );
+
+			var strCompositeId = this.owner.GetSteamId() + '_' + this.appid + '_' + this.contextid;
+			if ( g_bIsTrading )
+			{
+				CreateItemContextMenuButton( elItemHolder, strCompositeId, this.owner );
+			}
 
 			rgItem.element = elItem;
 			rgItem.homeElement = elItemHolder;
@@ -701,7 +725,6 @@ var CInventory = Class.create( {
 		}
 
 		oPageBuilder.elPage.appendChild( elItemHolder );
-
 	},
 
 
@@ -3730,6 +3753,71 @@ function HoverTooltipMouseMove( tooltip, event )
 	}
 
 	tooltip.setStyle({ left: newLeft + 'px', top: newTop + 'px' });
+}
+
+function HandleTradeActionMenu( elActionMenuButton, item, user )
+{
+	HideMenuFast( elActionMenuButton, 'trade_action_popup' );
+
+	var bOtherProfileIsPublic = user != null; // TODO: Set this properly
+	var bShowStaticActions = item.marketable || bOtherProfileIsPublic;
+	var bItemHasActions = typeof item.actions != 'undefined';
+	if ( bShowStaticActions )
+		$J('#trade_action_popup_staticactions').show();
+
+	if ( bShowStaticActions && bItemHasActions )
+		$J('#trade_action_popup_itemstaticsep').show();
+	else
+		$J('#trade_action_popup_itemstaticsep').hide();
+
+	if ( item.marketable )
+	{
+		$J('#trade_action_viewinmarket').attr( 'href', 'http://steamcommunity.com/market/listings/' + item.appid + '/' + item.market_hash_name );
+		$J('#trade_action_viewinmarket').show();
+	}
+	else
+	{
+		$J('#trade_action_viewinmarket').hide();
+	}
+
+	if ( bOtherProfileIsPublic )
+	{
+		$J('#trade_action_viewininventory').attr( 'href', user.GetProfileURL() + '/inventory/#' + item.appid + '_' + item.contextid + '_' + item.id );
+		$J('#trade_action_viewininventory').show();
+	}
+	else
+	{
+		$J('#trade_action_viewininventory').hide();
+	}
+
+	if ( bItemHasActions )
+	{
+		var elItemActions = $J('#trade_action_popup_itemactions');
+		elItemActions.empty();
+		for ( var action = 0; action < item.actions.length; action++ )
+		{
+			var rgAction = item.actions[action];
+			var elNewAction = $J( '<a></a>' );
+			elNewAction.addClass( 'popup_menu_item' );
+			elNewAction.attr( 'href', rgAction.link );
+			elNewAction.attr( 'target', '_blank' );
+			elNewAction.text( rgAction.name );
+
+			elNewAction.click( function() {
+				HideMenu( elActionMenuButton, 'trade_action_popup' );
+			} );
+
+			elItemActions.append( elNewAction );
+		}
+
+		elItemActions.show();
+	}
+	else
+	{
+		$J('#trade_action_popup_itemactions').hide();
+	}
+
+	ShowMenu( elActionMenuButton, 'trade_action_popup', 'right' );
 }
 
 

@@ -511,6 +511,8 @@ function FindSlotAndSetItem( item, xferAmount )
 		iSlot = GetCurrentSlot( elItem );
 	}
 
+	item.homeElement.down('.slot_actionmenu_button').hide();
+
 	if ( !BIsInTradeSlot( elItem ) || bStackable )
 	{
 		// commit the update
@@ -526,6 +528,8 @@ function MoveItemToInventory( elItem )
 		CleanupSlot( elItem.parentNode.parentNode );
 	}
 	RevertItem( item );
+
+	item.homeElement.down('.slot_actionmenu_button').show();
 
 	GTradeStateManager.RemoveItemFromTrade( item );
 }
@@ -707,10 +711,17 @@ function CreateSlotElement( id )
 {
 	var elSlot = new Element( 'div', { id: id, 'class': 'itemHolder trade_slot' } );
 	elSlot.appendChild( new Element( 'div', {'class': 'slot_inner' } ) );
+
 	var elAppLogo = new Element( 'div', {'class': 'slot_applogo' } );
 	elAppLogo.style.display = 'none';
 	elAppLogo.appendChild( new Element( 'img', {'class': 'slot_applogo_img' } ) );
 	elSlot.appendChild( elAppLogo );
+
+	var elActionMenuButton = new Element( 'a', {'id': id + '_actionmenu_button', class: 'slot_actionmenu_button' } );
+	elActionMenuButton.style.display = 'none';
+	elActionMenuButton.href = "javascript:void(0)";
+	elSlot.appendChild( elActionMenuButton );
+
 	return elSlot;
 }
 
@@ -801,7 +812,10 @@ function PutItemInSlot( elItem, elSlot )
 {
 	var item = elItem.rgItem;
 	if ( elItem.parentNode )
+	{
+		elItem.parentNode.down('.slot_actionmenu_button').hide();
 		elItem.remove();
+	}
 	elSlot.down('.slot_inner').appendChild( elItem );
 
 	if ( item && item.appid && g_rgAppContextData[item.appid] )
@@ -814,12 +828,23 @@ function PutItemInSlot( elItem, elSlot )
 	{
 		elSlot.down('.slot_applogo').hide();
 	}
+
+	var elActionMenuButton = elSlot.down('.slot_actionmenu_button');
+	elActionMenuButton.show();
+	$J('#' + elActionMenuButton.id).click( function() {
+		HandleTradeActionMenu( elActionMenuButton, item, item.is_their_item ? UserThem : UserYou )
+	} );
+
 	elSlot.hasItem = true;
 }
 
 function CleanupSlot( elSlot )
 {
-	$(elSlot).down('.slot_applogo').hide();
+	$J('#' + elSlot.id).unbind();
+
+	elSlot.down('.slot_applogo').hide();
+	elSlot.down('.slot_actionmenu_button').hide();
+
 	elSlot.hasItem = false;
 }
 
@@ -1189,6 +1214,11 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 
 				if ( elNewItem && elNewItem.parentNode )
 				{
+					if ( elNewItem.parentNode.down('.slot_actionmenu_button') )
+					{
+						elNewItem.parentNode.down('.slot_actionmenu_button').hide();
+					}
+
 					if ( BIsInTradeSlot( elNewItem ) )
 					{
 						CleanupSlot( elNewItem.parentNode.parentNode );

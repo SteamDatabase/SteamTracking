@@ -290,6 +290,18 @@ BuyItemDialog = {
 		if ( typeof oItemImg != 'undefined' )
 			oItemImg.id = oItemImg.id + 'Copy';
 
+		var oItemActionMenuButton = oListingRow.select('.market_actionmenu_button').first();
+		if ( typeof oItemActionMenuButton != 'undefined' )
+		{
+			oItemActionMenuButton.id = oItemActionMenuButton.id + 'Copy';
+			$(oItemActionMenuButton).observe( 'click', function() {
+				var rgAsset = g_rgListingInfo[listingid].asset;
+				HandleMarketActionMenu( oItemActionMenuButton, g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id] );
+
+				return false;
+			} );
+		}
+
 		var oItemName = oListingRow.select('.market_listing_item_name').first();
 		oItemName.id = oItemName.id + 'Copy';
 		oListingTableRows.appendChild( oListingRow );
@@ -937,6 +949,51 @@ function MarketCheckHash()
 		var strAsset = window.location.hash.substr(5);
 		ShowModalContent('http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, false);
 	}
+}
+
+function InstallMarketActionMenuButtons()
+{
+	for ( var listing in g_rgListingInfo ) {
+		var asset = g_rgListingInfo[listing].asset;
+		if ( typeof g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id].market_actions != 'undefined' )
+		{
+			// add the context menu
+			var elActionMenuButton = $J('<a></a>');
+			elActionMenuButton.attr( 'id', 'listing_' + listing + '_actionmenu_button' );
+			elActionMenuButton.addClass( 'market_actionmenu_button' );
+			elActionMenuButton.attr( 'href', 'javascript:void(0)' );
+			$J('#listing_' + listing + '_image').parent().append( elActionMenuButton );
+
+			$J(elActionMenuButton).click( $J.proxy( function( elButton, rgAsset ) {
+				HandleMarketActionMenu( elButton.attr( 'id' ), g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id] );
+			}, null, elActionMenuButton, asset ) );
+		}
+	}
+}
+
+function HandleMarketActionMenu( elActionMenuButton, item )
+{
+	HideMenuFast( elActionMenuButton, 'market_action_popup' );
+
+	var elItemActions = $J('#market_action_popup_itemactions');
+	elItemActions.empty();
+	for ( var action = 0; action < item.market_actions.length; action++ )
+	{
+		var rgAction = item.market_actions[action];
+		var elNewAction = $J( '<a></a>' );
+		elNewAction.addClass( 'popup_menu_item' );
+		elNewAction.attr( 'href', rgAction.link );
+		elNewAction.attr( 'target', '_blank' );
+		elNewAction.text( rgAction.name );
+
+		elNewAction.click( function() {
+			HideMenu( elActionMenuButton, 'market_action_popup' );
+		} );
+
+		elItemActions.append( elNewAction );
+	}
+
+	ShowMenu( elActionMenuButton, 'market_action_popup', 'right' );
 }
 
 Event.observe( document, 'dom:loaded', function() {
