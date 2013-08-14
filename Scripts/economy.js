@@ -3772,7 +3772,8 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 
 	if ( item.marketable )
 	{
-		$J('#trade_action_viewinmarket').attr( 'href', 'http://steamcommunity.com/market/listings/' + item.appid + '/' + item.market_hash_name );
+		var sMarketHashName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
+		$J('#trade_action_viewinmarket').attr( 'href', 'http://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
 		$J('#trade_action_viewinmarket').show();
 	}
 	else
