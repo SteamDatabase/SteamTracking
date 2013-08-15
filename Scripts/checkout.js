@@ -2377,13 +2377,13 @@ function SubmitPaymentInfoForm()
 			
 			if ( $( 'first_name' ).value.length < 1 )
 			{
-				errorString += 'Please enter a first name for the card holder.<br/>';
+				errorString += 'Please enter a first name for your billing information.<br/>';
 				rgBadFields.first_name = true;
 			}
 			
 			if ( $( 'last_name' ).value.length < 1 )
 			{
-				errorString += 'Please enter a last name for the card holder.<br/>';
+				errorString += 'Please enter a last name for your billing information.<br/>';
 				rgBadFields.last_name = true;
 			}
 			
