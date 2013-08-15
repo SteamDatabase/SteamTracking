@@ -45,6 +45,7 @@ body{
 		float: right;
 		text-align: right;
 		margin-right: 25px;
+		white-space: nowrap;
 	}
 
 		#landingHeader .userBox img.avatar {
@@ -58,7 +59,8 @@ body{
 			color: #e5e5e5;
 			display: block;
 			margin-top: 13px;
-			width: 375px;
+			margin-right: 75px;
+
 		}
 
 
@@ -122,29 +124,29 @@ body{
 			border-left: none;
 		}
 
-	#landingNav .navContent {
+	.navContent {
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
 		background-color: #454545 !important;
 		padding: 10px 20px 15px 20px;
 	}
 
-		#landingNav .navContent a {
+		.navContent a {
 			color: #fff;
 			font-size: 13px;
 			display: block;
 			text-decoration: none;
 		}
 
-			#landingNav .navContent a:not(:first-child) {
+			 .navContent a:not(:first-child) {
 				margin-top: 8px;
 			}
 		
-		#landingNav .navContent a:hover {
+		.navContent a:hover {
 			color: #00adee;
 		}
 		
-		#landingNav .navContent > hr {
+		.navContent > hr {
 			margin-top: 10px;
 			margin-bottom: 10px;
 			background-color: #b3b3b3;
@@ -932,31 +934,35 @@ span.icon_star { display: inline-block;}
 		margin-right: 1px;
 	}
 
-	#addPartnerOptions > a:not(:first-child) {
-		border-left: none;
-	}
 
-	#addPartnerOptions .navContent {
+#PublisherSelect
+{
+	display: inline-block;
+	vertical-align: top;
+}
 
-		background-color: #454545 !important;
-		padding: 10px 20px 3px 20px;
-		margin-top: 5px;
-	}
-
-	#addPartnerOptions .navContent a {
-		color: #fff;
-		font-size: 13px;
-		display: block;
+	#PublisherSelect > a {
+		line-height: 36px;
+		font-size: 18px;
+		display: inline-block;
+		vertical-align: top;
+		color: #7c7c7c;
+		font-family: Arial, Tahoma, sans-serif;
 		text-decoration: none;
+		padding: 0 15px;
+		margin: 20px -15px 0 -15px;
 	}
 
-	#addPartnerOptions .navContent a:not(:first-child) {
-		margin-top: 8px;
+	#PublisherSelect > a.hover, #addPartnerOptions > a:hover
+	{
+		color: #adadad;
+		background-color: #454545 !important;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+
 	}
 
-	#addPartnerOptions .navContent a:hover {
-		color: #00adee;
-	}
+
 
 .newDeveloperWelcome {
 
