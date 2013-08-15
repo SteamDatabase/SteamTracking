@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "ValveTestApp260",
-		"gameVersion": "233",
+		"gameVersion": "235",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -1726,9 +1726,9 @@
 				{
 					"name": "KILL_ENEMY_M4A1",
 					"defaultvalue": 0,
-					"displayName": "M4A4 Expert",
+					"displayName": "M4 AR Expert",
 					"hidden": 0,
-					"description": "Kill 1,000 enemies with the M4A4",
+					"description": "Kill 1,000 enemies with an M4 Assault Rifle",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/730/cd2c685b7e02156e6423602868d1ef91515a8f07.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/730/b07067309a39c94df6f71d13020e7443bc709d9a.jpg"
 				},
@@ -2797,9 +2797,9 @@
 				{
 					"name": "KILL_ENEMY_HKP2000",
 					"defaultvalue": 0,
-					"displayName": "P2000 Tactical Expert",
+					"displayName": "P2000/USP Tactical Expert",
 					"hidden": 0,
-					"description": "Kill 100 enemies with the P2000",
+					"description": "Kill 100 enemies with the P2000 or USP",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/730/819a8572e35a624d545db1608c8feff8842e8b45.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/730/ac79d04b1210aee0272ed24e89897625d3b99745.jpg"
 				},
