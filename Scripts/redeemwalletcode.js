@@ -186,7 +186,7 @@ function OnValidateWalletCodeFailure( detail )
 				break;
 				
 			case 15:
-				sErrorMessage = '#youraccount_wallet_code_already_redeemed';
+				sErrorMessage = 'The wallet code you entered has already been redeemed.';
 				break;
 
 			default:
