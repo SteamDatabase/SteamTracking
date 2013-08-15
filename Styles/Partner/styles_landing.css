@@ -197,6 +197,12 @@ body{
 			color: #00adee;
 		}
 
+	#landingWelcome .rightSection {
+		float: right;
+		font-size: 14px;
+		color: #AC966A;
+	}
+
 #landingValveOnly {
 	border-bottom: 2px solid #ca5029;
 	font-size: 25px;
