@@ -362,7 +362,6 @@ function AddApplicationCallback( parameters, transport )
 			FinalizeUiAfterAddedApplication( parameters );
 
 			$( 'editTechnicalData' ).href = g_szBaseURL + '/apps/view/' + appId;
-			$( 'editMarketingData' ).href = g_szBaseURL + '/apps/title/' + appId;
 			$( 'addedBlock' ).style.display = 'inline';
 
 			OnApplicationAdded( parameters, appId );		// AppId has probably been created dynamically, we need to pass it
