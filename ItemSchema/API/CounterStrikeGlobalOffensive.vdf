@@ -1078,17 +1078,17 @@
 		{
 			"icon_path"		"econ/default_generated/weapon_p250_sp_nukestripe_green_heavy"
 		}
-		"1966752"
+		"1966796"
 		{
-			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_light"
+			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_tec9_light"
 		}
-		"1966753"
+		"1966797"
 		{
-			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_medium"
+			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_tec9_medium"
 		}
-		"1966754"
+		"1966798"
 		{
-			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_heavy"
+			"icon_path"		"econ/default_generated/weapon_tec9_sp_nukestripe_green_tec9_heavy"
 		}
 		"1049280"
 		{
@@ -1474,6 +1474,126 @@
 		{
 			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_ddpat_heavy"
 		}
+		"33226800"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_light"
+		}
+		"33226801"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_medium"
+		}
+		"33226802"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_heavy"
+		}
+		"33292336"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_light"
+		}
+		"33292337"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_medium"
+		}
+		"33292338"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_heavy"
+		}
+		"33161264"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_light"
+		}
+		"33161265"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_medium"
+		}
+		"33161266"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_heavy"
+		}
+		"32768048"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_light"
+		}
+		"32768049"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_medium"
+		}
+		"32768050"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_heavy"
+		}
+		"33095728"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_light"
+		}
+		"33095729"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_medium"
+		}
+		"33095730"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_heavy"
+		}
+		"33226904"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_light"
+		}
+		"33226905"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_medium"
+		}
+		"33226906"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_heavy"
+		}
+		"33292440"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_light"
+		}
+		"33292441"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_medium"
+		}
+		"33292442"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_heavy"
+		}
+		"33161368"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_light"
+		}
+		"33161369"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_medium"
+		}
+		"33161370"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_heavy"
+		}
+		"32768152"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_light"
+		}
+		"32768153"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_medium"
+		}
+		"32768154"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_heavy"
+		}
+		"33095832"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_light"
+		}
+		"33095833"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_medium"
+		}
+		"33095834"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_heavy"
+		}
 		"33226912"
 		{
 			"icon_path"		"econ/default_generated/weapon_knife_karambit_so_night_light"
@@ -1533,6 +1653,246 @@
 		"33095842"
 		{
 			"icon_path"		"econ/default_generated/weapon_knife_flip_so_night_heavy"
+		}
+		"33226920"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_light"
+		}
+		"33226921"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_medium"
+		}
+		"33226922"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_heavy"
+		}
+		"33292456"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_light"
+		}
+		"33292457"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_medium"
+		}
+		"33292458"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_heavy"
+		}
+		"33161384"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_light"
+		}
+		"33161385"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_medium"
+		}
+		"33161386"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_heavy"
+		}
+		"32768168"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_light"
+		}
+		"32768169"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_medium"
+		}
+		"32768170"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_heavy"
+		}
+		"33095848"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_light"
+		}
+		"33095849"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_medium"
+		}
+		"33095850"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_heavy"
+		}
+		"33226924"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_light"
+		}
+		"33226925"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_medium"
+		}
+		"33226926"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_heavy"
+		}
+		"33292460"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_light"
+		}
+		"33292461"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_medium"
+		}
+		"33292462"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_heavy"
+		}
+		"33161388"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_light"
+		}
+		"33161389"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_medium"
+		}
+		"33161390"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_heavy"
+		}
+		"32768172"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_light"
+		}
+		"32768173"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_medium"
+		}
+		"32768174"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_heavy"
+		}
+		"33095852"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_light"
+		}
+		"33095853"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_medium"
+		}
+		"33095854"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_heavy"
+		}
+		"33226928"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_light"
+		}
+		"33226929"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_medium"
+		}
+		"33226930"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_heavy"
+		}
+		"33292464"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_light"
+		}
+		"33292465"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_medium"
+		}
+		"33292466"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_heavy"
+		}
+		"33161392"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_light"
+		}
+		"33161393"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_medium"
+		}
+		"33161394"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_heavy"
+		}
+		"32768176"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_light"
+		}
+		"32768177"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_medium"
+		}
+		"32768178"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_heavy"
+		}
+		"33095856"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_light"
+		}
+		"33095857"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_medium"
+		}
+		"33095858"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_heavy"
+		}
+		"33226988"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_light"
+		}
+		"33226989"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_medium"
+		}
+		"33226990"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_heavy"
+		}
+		"33292524"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_light"
+		}
+		"33292525"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_medium"
+		}
+		"33292526"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_heavy"
+		}
+		"33161452"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_light"
+		}
+		"33161453"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_medium"
+		}
+		"33161454"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_heavy"
+		}
+		"32768236"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_light"
+		}
+		"32768237"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_medium"
+		}
+		"32768238"
+		{
+			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_heavy"
+		}
+		"33095916"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_light"
+		}
+		"33095917"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_medium"
+		}
+		"33095918"
+		{
+			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_heavy"
 		}
 		"33227040"
 		{
@@ -1773,366 +2133,6 @@
 		"33096382"
 		{
 			"icon_path"		"econ/default_generated/weapon_knife_flip_sp_dapple_heavy"
-		}
-		"33226800"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_light"
-		}
-		"33226801"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_medium"
-		}
-		"33226802"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_hy_webs_heavy"
-		}
-		"33292336"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_light"
-		}
-		"33292337"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_medium"
-		}
-		"33292338"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_hy_webs_heavy"
-		}
-		"33161264"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_light"
-		}
-		"33161265"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_medium"
-		}
-		"33161266"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_hy_webs_heavy"
-		}
-		"32768048"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_light"
-		}
-		"32768049"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_medium"
-		}
-		"32768050"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_hy_webs_heavy"
-		}
-		"33095728"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_light"
-		}
-		"33095729"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_medium"
-		}
-		"33095730"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_hy_webs_heavy"
-		}
-		"33226920"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_light"
-		}
-		"33226921"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_medium"
-		}
-		"33226922"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_blued_heavy"
-		}
-		"33292456"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_light"
-		}
-		"33292457"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_medium"
-		}
-		"33292458"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_blued_heavy"
-		}
-		"33161384"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_light"
-		}
-		"33161385"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_medium"
-		}
-		"33161386"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_blued_heavy"
-		}
-		"32768168"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_light"
-		}
-		"32768169"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_medium"
-		}
-		"32768170"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_blued_heavy"
-		}
-		"33095848"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_light"
-		}
-		"33095849"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_medium"
-		}
-		"33095850"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_blued_heavy"
-		}
-		"33226924"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_light"
-		}
-		"33226925"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_medium"
-		}
-		"33226926"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_forced_heavy"
-		}
-		"33292460"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_light"
-		}
-		"33292461"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_medium"
-		}
-		"33292462"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_forced_heavy"
-		}
-		"33161388"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_light"
-		}
-		"33161389"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_medium"
-		}
-		"33161390"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_forced_heavy"
-		}
-		"32768172"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_light"
-		}
-		"32768173"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_medium"
-		}
-		"32768174"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_forced_heavy"
-		}
-		"33095852"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_light"
-		}
-		"33095853"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_medium"
-		}
-		"33095854"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_forced_heavy"
-		}
-		"33226904"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_light"
-		}
-		"33226905"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_medium"
-		}
-		"33226906"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aa_fade_heavy"
-		}
-		"33292440"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_light"
-		}
-		"33292441"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_medium"
-		}
-		"33292442"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aa_fade_heavy"
-		}
-		"33161368"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_light"
-		}
-		"33161369"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_medium"
-		}
-		"33161370"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aa_fade_heavy"
-		}
-		"32768152"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_light"
-		}
-		"32768153"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_medium"
-		}
-		"32768154"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aa_fade_heavy"
-		}
-		"33095832"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_light"
-		}
-		"33095833"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_medium"
-		}
-		"33095834"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aa_fade_heavy"
-		}
-		"33226928"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_light"
-		}
-		"33226929"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_medium"
-		}
-		"33226930"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_aq_oiled_heavy"
-		}
-		"33292464"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_light"
-		}
-		"33292465"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_medium"
-		}
-		"33292466"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_aq_oiled_heavy"
-		}
-		"33161392"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_light"
-		}
-		"33161393"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_medium"
-		}
-		"33161394"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_aq_oiled_heavy"
-		}
-		"32768176"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_light"
-		}
-		"32768177"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_medium"
-		}
-		"32768178"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_aq_oiled_heavy"
-		}
-		"33095856"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_light"
-		}
-		"33095857"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_medium"
-		}
-		"33095858"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_aq_oiled_heavy"
-		}
-		"33226988"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_light"
-		}
-		"33226989"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_medium"
-		}
-		"33226990"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_karambit_am_zebra_heavy"
-		}
-		"33292524"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_light"
-		}
-		"33292525"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_medium"
-		}
-		"33292526"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_m9_bayonet_am_zebra_heavy"
-		}
-		"33161452"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_light"
-		}
-		"33161453"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_medium"
-		}
-		"33161454"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_gut_am_zebra_heavy"
-		}
-		"32768236"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_light"
-		}
-		"32768237"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_medium"
-		}
-		"32768238"
-		{
-			"icon_path"		"econ/default_generated/weapon_bayonet_am_zebra_heavy"
-		}
-		"33095916"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_light"
-		}
-		"33095917"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_medium"
-		}
-		"33095918"
-		{
-			"icon_path"		"econ/default_generated/weapon_knife_flip_am_zebra_heavy"
 		}
 	}
 	"prefabs"
