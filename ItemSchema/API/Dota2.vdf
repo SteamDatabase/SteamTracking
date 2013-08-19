@@ -94951,7 +94951,6 @@
 			"item_description"		"#DOTA_Item_League_PremierLeague_Desc"
 			"item_name"		"#DOTA_Item_League_PremierLeague"
 			"item_rarity"		"uncommon"
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"tool"
 			{
 				"type"		"league_view_pass"
@@ -96052,7 +96051,6 @@
 			"image_inventory"		"econ/leagues/subscriptions_premierleague4"
 			"item_description"		"#DOTA_Item_Desc_The_Premier_League_Season_4"
 			"item_name"		"#DOTA_Item_The_Premier_League_Season_4"
-			"item_type_name"		"#DOTA_WearableType_League_Pass"
 			"tool"
 			{
 				"type"		"league_view_pass"
