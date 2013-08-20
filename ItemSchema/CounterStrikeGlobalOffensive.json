@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.3d905c3e77877dbfd01d5189ff36ee058b130bf9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.208b9128dddff36bc20d5bc5fa065f1142a41404.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2743,8 +2743,8 @@
 				"attribute_class": "minutes_played",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Time Logged: %s1 minutes",
-				"description_format": "value_is_additive",
+				"description_string": "Time Logged: %s1",
+				"description_format": "value_is_mins_as_hours",
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
