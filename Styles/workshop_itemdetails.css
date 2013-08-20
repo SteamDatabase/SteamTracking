@@ -57,6 +57,17 @@
 	border: 1px solid #ff9900;
 }
 
+.downloadedByNotification
+{
+	font-size: 1.125em;
+	color: #ffffff;
+	text-align: left;
+	padding: 15px;
+	margin-top: 10px;
+	background-color: #CA7900;
+	border: 1px solid #ff9900;
+}
+
 .workshopLegalAgreementNotification a
 {
 	text-decoration: underline;
