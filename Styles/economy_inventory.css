@@ -269,6 +269,7 @@ a.games_list_tab:hover {
 .econ_tag_filter_category {
 	float: left;
 	margin-right: 18px;
+	margin-bottom: 12px;
 }
 
 .econ_tag_filter_category_label {

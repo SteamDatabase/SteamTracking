@@ -748,18 +748,33 @@ function InitEconomyHovers( strEconomyCSS, strEconomyJS )
 				fnOneTimeEconomySetup = null;
 			}
 
+			var strURL = null;
 			var appid = rgItemKey[0];
-			var contextid = rgItemKey[1];
-			var assetid = rgItemKey[2];
-			var strURL = 'economy/itemhover/' + appid + '/' + contextid + '/' + assetid;
-			strURL += '?content_only=1&omit_owner=1&l=english';
-			if ( rgItemKey.length == 4 && rgItemKey[3] )
+
+			if ( appid == 'classinfo' )
 			{
-				var strOwner = rgItemKey[3];
-				if ( strOwner.indexOf( 'id:' ) == 0 )
-					strURL += '&o_url=' + strOwner.substr( 3 );
-				else
-					strURL += '&o=' + strOwner;
+				// class info style
+				appid = rgItemKey[1];
+				var classid = rgItemKey[2];
+				var instanceid = ( rgItemKey.length > 3 ? rgItemKey[3] : 0 );
+				strURL = 'economy/itemclasshover/' + appid + '/' + classid + '/' + instanceid;
+				strURL += '?content_only=1&l=english';
+			}
+			else
+			{
+				// real asset
+				var contextid = rgItemKey[1];
+				var assetid = rgItemKey[2];
+				var strURL = 'economy/itemhover/' + appid + '/' + contextid + '/' + assetid;
+				strURL += '?content_only=1&omit_owner=1&l=english';
+				if ( rgItemKey.length == 4 && rgItemKey[3] )
+				{
+					var strOwner = rgItemKey[3];
+					if ( strOwner.indexOf( 'id:' ) == 0 )
+						strURL += '&o_url=' + strOwner.substr( 3 );
+					else
+						strURL += '&o=' + strOwner;
+				}
 			}
 			return new CDelayedAJAXData( strURL, 100 );
 		}

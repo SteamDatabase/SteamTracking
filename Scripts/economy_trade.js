@@ -71,7 +71,7 @@ function BeginTrading( bShowTutorial )
 	// default to the last used inventory
 	var oCookieParams = ReadInventoryCookie( GetCookie( 'strTradeLastInventoryContext' ) );
 	if ( BValidateHashParams( oCookieParams ) )
-		TradePageSelectInventory( g_bTradeOffer ? UserThem : UserYou, oCookieParams.appid, oCookieParams.contextid );
+		TradePageSelectInventory( UserYou, oCookieParams.appid, oCookieParams.contextid );
 }
 
 
@@ -2685,8 +2685,8 @@ function SizeWindow()
 	}
 	
 	var widthZoom = document.viewport.getWidth() / 976;
-	var heightZoom = document.viewport.getHeight() / 995;
-	if ( widthZoom <= 0.92 || heightZoom <= 0.92 )
+	var heightZoom = document.viewport.getHeight() / ( $(document.body).getHeight() + 16 );
+	if ( widthZoom <= 0.99 || heightZoom <= 0.99 )
 	{
 		var flZoom = widthZoom < heightZoom ? widthZoom : heightZoom;
 		document.body.style.zoom = flZoom > 0.55 ? flZoom : 0.55;
