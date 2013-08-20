@@ -493,35 +493,41 @@ function ShowAddToCollection( id, appID )
 		var parent_collections = json['parent_collections'];
 
 		// create a set we can quickly look at
-		var publishedFileDetails = parent_collections['publishedfiledetails'];
-		for ( var i = 0; i < publishedFileDetails.length; ++i )
+		if ( 'publishedfiledetails' in parent_collections )
 		{
-			var details = publishedFileDetails[i];
-			set_parent_collections[details['publishedfileid']] = 'in_collection';
+			var publishedFileDetails = parent_collections['publishedfiledetails'];
+			for ( var i = 0; i < publishedFileDetails.length; ++i )
+			{
+				var details = publishedFileDetails[i];
+				set_parent_collections[details['publishedfileid']] = 'in_collection';
+			}
 		}
 
 		// now create the list
-		publishedFileDetails = all_collections['publishedfiledetails'];
-		for ( var i = 0; i < publishedFileDetails.length; ++i )
+		if ( 'publishedfiledetails' in all_collections )
 		{
-			var details = publishedFileDetails[i];
-			var publishedFileID = details['publishedfileid'];
-			// don't allow the current item if it is a collection
-			if ( details['result'] != 1 || publishedFileID == id )
+			var publishedFileDetails = all_collections['publishedfiledetails'];
+			for ( var i = 0; i < publishedFileDetails.length; ++i )
 			{
-				continue;
+				var details = publishedFileDetails[i];
+				var publishedFileID = details['publishedfileid'];
+				// don't allow the current item if it is a collection
+				if ( details['result'] != 1 || publishedFileID == id )
+				{
+					continue;
+				}
+				var $container = $J('<div/>', {'class': 'add_to_collection_dialog_container'} );
+				var $input = $J('<input/>', {'type' : 'checkbox', 'class': 'add_to_collection_dialog_checkbox', 'name' : 'collections[' + publishedFileID + ']', 'id' : publishedFileID } );
+				if ( set_parent_collections[publishedFileID] === "in_collection" )
+				{
+					$input.prop( 'checked', true );
+				}
+				$container.append( $input );
+				var $title = ( $J('<label/>', {'class': 'add_to_collection_dialog_title', 'for' : publishedFileID } ).append( details['title'] ) );
+				$container.append( $title );
+				$dialogContents.append( $container );
+				numAdded++;
 			}
-			var $container = $J('<div/>', {'class': 'add_to_collection_dialog_container'} );
-			var $input = $J('<input/>', {'type' : 'checkbox', 'class': 'add_to_collection_dialog_checkbox', 'name' : 'collections[' + publishedFileID + ']', 'id' : publishedFileID } );
-			if ( set_parent_collections[publishedFileID] === "in_collection" )
-			{
-				$input.prop( 'checked', true );
-			}
-			$container.append( $input );
-			var $title = ( $J('<label/>', {'class': 'add_to_collection_dialog_title', 'for' : publishedFileID } ).append( details['title'] ) );
-			$container.append( $title );
-			$dialogContents.append( $container );
-			numAdded++;
 		}
 		if ( numAdded == 0 )
 		{
