@@ -69,19 +69,6 @@
 	color: #ffffff;
 }
 
-.video_download_options a.download_btn {
-	float: right;
-	margin-left: 10px;
-}
-
-.video_download_options .video_download_label {
-	display: block;
-	float: right;
-	color: #b0aeac;
-	font-size: 11px;
-	text-transform: uppercase;
-}
-
 a.download_btn {
 	display: block;
 	height: 37px;
@@ -118,16 +105,6 @@ a.download_btn .download_btn_right {
 	right: 0px;
 	width: 4px;
 	background-position: right;
-}
-
-
-
-.video_info_bar .video_download_options {
-	 float: right;
-}
-
-.video_info_bar.three_lines .video_download_options {
-	padding: 4px 0px;
 }
 
 #video_strip {
