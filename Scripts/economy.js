@@ -552,7 +552,8 @@ var CInventory = Class.create( {
 
 				var elTagDiv = new Element( 'div', { 'class' : 'econ_tag_filter_container' } );
 
-				var sCheckboxName =  'tag_filter_' + this.appid + '_' + sCategoryName + '_' + sInternalName;
+				var sCheckboxName =  'tag_filter_' + ( this.owner && this.owner != UserYou ? 'them_' : '' );
+				sCheckboxName += this.appid + '_' + this.contextid + '_' + sCategoryName + '_' + sInternalName;
 				var elTagFilter = new Element( 'input', { 'class' : 'econ_tag_filter_checkbox', 'type' : 'checkbox', 'name' : sCheckboxName, 'id' : sCheckboxName, 'tag_name' : sInternalName } );
 				var elTagLabel = new Element( 'label', { 'class' : 'econ_tag_filter_label', 'for' : sCheckboxName } );
 

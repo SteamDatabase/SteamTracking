@@ -148,7 +148,7 @@ a.btn_grey_grey_outer_bevel:hover
 	box-shadow: 		2px 2px 5px rgba(0,0,0,0.75) inset, -2px -2px 5px rgba(150,150,150,1) inset;
 }
 
-.btn_grey_grey, a.btn_grey_grey, .btn_grey_black, a.btn_grey_black {
+.btn_grey_grey, a.btn_grey_grey, .btn_grey_black, a.btn_grey_black, .btn_black, a.btn_black {
 	border-radius: 2px;
 	display: inline-block;
 	color: #828282;
@@ -167,7 +167,11 @@ a.btn_grey_grey_outer_bevel:hover
 	background-color: #1a1a1a;
 }
 
-.btn_grey_grey_outer_bevel:hover, .btn_grey_grey:hover, .btn_grey_black:hover {
+.btn_black {
+	background-color: #000000;
+}
+
+.btn_grey_grey_outer_bevel:hover, .btn_grey_grey:hover, .btn_grey_black:hover, .btn_black:hover {
 	background-color: #97C0E3;
 	color: #000;
 	text-decoration: none;

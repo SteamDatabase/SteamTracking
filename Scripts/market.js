@@ -982,7 +982,7 @@ function HandleMarketActionMenu( elActionMenuButton, item )
 		var rgAction = item.market_actions[action];
 		var elNewAction = $J( '<a></a>' );
 		elNewAction.addClass( 'popup_menu_item' );
-		elNewAction.attr( 'href', rgAction.link );
+		elNewAction.attr( 'href', rgAction.link.replace("%assetid%", item.id) );
 
 		if ( rgAction.link.substr( 0, 6 ) != "steam:" )
 		{

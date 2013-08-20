@@ -371,7 +371,7 @@ function ShowAliasPopup(e)
 
 function ShowFriendSelect( title, fnOnSelect )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>', 'Cancel' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 
@@ -386,7 +386,7 @@ function ShowFriendSelect( title, fnOnSelect )
 		$ListElement.find( 'a' ).remove();
 		$ListElement.find( '[data-miniprofile]').each( function() {
 			var $El = $J(this);
-			$El.click( function() { fnOnSelect( $El.data('miniprofile') ); } );
+			$El.click( function() { fnOnSelect( $El.data('miniprofile') ); Modal.Dismiss(); } );
 		} );
 
 		var $Content = Modal.GetContent().find( '.newmodal_content');
@@ -398,8 +398,72 @@ function ShowFriendSelect( title, fnOnSelect )
 	});
 }
 
-function SendTradeOffer( unAccountID )
+function StartTradeOffer( unAccountID )
 {
-	window.location = 'http://steamcommunity.com/tradeoffer/new/?partner=' + unAccountID;
+	ShowTradeOffer( 'new', { partner: unAccountID } );
+}
+
+function ShowTradeOffer( tradeOfferID, rgParams )
+{
+	var strParams = '';
+	if ( rgParams )
+		strParams = '?' + $J.param( rgParams );
+
+	var strKey = ( tradeOfferID == 'new' ? 'NewTradeOffer' + rgParams['partner'] : 'TradeOffer' + tradeOfferID );
+
+	var winOffer = window.open( 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=948,width=1028,resize=yes,scrollbars=yes' );
+
+	winOffer.focus();
+}
+
+function CancelTradeOffer( tradeOfferID )
+{
+	ShowConfirmDialog(
+		'Cancel Trade Offer',
+		'Are you sure you want to cancel this trade offer?',
+		'Yes',
+		'No'
+	).done( function() {
+		ActOnTradeOffer( tradeOfferID, 'cancel', 'Trade Offer Canceled', 'Cancel Trade Offer' );
+	} );
+}
+
+function DeclineTradeOffer( tradeOfferID )
+{
+	ShowConfirmDialog(
+		'Decline Trade',
+		'Are you sure you want to decline this trade offer?  You can also modify the items and send a counter offer.',
+		'Decline Trade',
+		null,
+		'Make a Counter Offer'
+	).done( function( strButton ) {
+		console.log( strButton );
+		if ( strButton == 'OK' )
+			ActOnTradeOffer( tradeOfferID, 'decline', 'Trade Declined', 'Decline Trade' );
+		else
+			ShowTradeOffer( tradeOfferID, {counteroffer: 1} );
+	} );
+}
+
+function ActOnTradeOffer( tradeOfferID, strAction, strCompletedBanner, strActionDisplayName )
+{
+	var $TradeOffer = $J('#tradeofferid_' + tradeOfferID);
+	$TradeOffer.find( '.tradeoffer_footer_actions').hide();
+
+	return $J.ajax( {
+		url: 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strAction,
+		data: { sessionid: g_sessionID },
+		type: 'POST'
+	}).done( function( data ) {
+		$TradeOffer.find( '.tradeoffer_items_ctn').removeClass( 'active' ).addClass( 'inactive' );
+		var $Banner = $J('<div/>', {'class': 'tradeoffer_items_banner' } );
+		$Banner.text( strCompletedBanner );
+		$TradeOffer.find( '.tradeoffer_items_rule').replaceWith( $Banner );
+
+		RefreshNotificationArea();
+	}).fail( function() {
+		ShowAlertDialog( strActionDisplayName, 'There was an error modifying this trade offer.  Please try again later.' );
+		$TradeOffer.find( '.tradeoffer_footer_actions').show();
+	});
 }
 

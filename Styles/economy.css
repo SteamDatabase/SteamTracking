@@ -322,8 +322,24 @@ a.item_action:hover {
 	padding: 0 14px;
 }
 
+.filter_right_controls {
+	float: right;
+	width: 200px;
+}
+
+.filter_tag_button_ctn {
+	white-space: nowrap;
+	padding-top: 4px;
+}
+
+.filter_ctn.inventory_filters .filter_tag_button_ctn {
+	float: left;
+	padding-top: 5px;
+}
+
 .filter_control_ctn {
 	position: relative;
+	float: left;
 }
 
 #filter_clear_btn {
@@ -340,7 +356,15 @@ a.item_action:hover {
 }
 
 #filter_control {
+	width: 200px;
+}
+
+.filter_ctn.inventory_filters #filter_control {
 	width: 416px;
+}
+
+.filter_ctn {
+	margin-bottom: 12px;
 }
 
 input.filter_search_box {
@@ -349,6 +373,7 @@ input.filter_search_box {
 	font-size: 12px;
 	outline: none;
 	border: 1px solid #292929;
+	background-color: #101010;
 }
 
 input.filter_search_box::-webkit-input-placeholder {
@@ -363,7 +388,8 @@ input.filter_search_box:-moz-placeholder {
 
 .filter_tag_options {
 	border: 1px solid #292929;
-	padding: 11px;
+	padding: 12px;
+	padding-bottom: 0;
 	display: inline-block;
 }
 

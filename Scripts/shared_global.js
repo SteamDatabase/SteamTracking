@@ -1,5 +1,5 @@
 
-function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton )
+function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -7,15 +7,28 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 		strCancelButton = 'Cancel';
 
 	var deferred = new jQuery.Deferred();
-	var fnOK = function() { deferred.resolve(); };
+	var fnOK = function() { deferred.resolve( 'OK' ); };
+	var fnSecondary = function() { deferred.resolve( 'SECONDARY' ); };
 	var fnCancel = function() { deferred.reject(); };
+
+	var rgButtons = [];
 
 	var $OKButton = _BuildDialogButton( strOKButton, true );
 	$OKButton.click( fnOK );
+	rgButtons.push( $OKButton );
+
+	if ( strSecondaryActionButton )
+	{
+		var $SecondaryActionButton = _BuildDialogButton( strSecondaryActionButton, false, {strClassName: ' btn_darkblue_white_innerfade btn_medium' } );
+		$SecondaryActionButton.click( fnSecondary );
+		rgButtons.push( $SecondaryActionButton );
+	}
+
 	var $CancelButton = _BuildDialogButton( strCancelButton );
 	$CancelButton.click( fnCancel );
+	rgButtons.push( $CancelButton );
 
-	var Modal = _BuildDialog( strTitle, strDescription, [ $OKButton, $CancelButton ], fnCancel );
+	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 
@@ -187,9 +200,15 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	return Modal;
 }
 
-function _BuildDialogButton( strText, bActive )
+function _BuildDialogButton( strText, bActive, rgOptions )
 {
+	if ( !rgOptions )
+		rgOptions = {};
+
 	var strClassName = bActive ? 'btn_green_white_innerfade btn_medium' : 'btn_grey_white_innerfade btn_medium';
+	if ( rgOptions.strClassName )
+		strClassName = rgOptions.strClassName;
+
 	var elButtonLabel = $J( '<span/>' ).text( strText );
 	var elButton = $J('<div/>', {'class': strClassName } ).append( elButtonLabel );
 	return elButton;
@@ -494,6 +513,26 @@ function InitMiniprofileHovers()
 	window.BindSingleMiniprofileHover = rgCallbacks.fnBindSingleHover;
 }
 
+function _RegisterAJAXHoverHideFunction( fnHide )
+{
+	if ( typeof g_rgfnHideAJAXHover == 'undefined' )
+	{
+		g_rgfnHideAJAXHover = [];
+		$J(window).blur( HideAJAXHovers );
+	}
+
+	g_rgfnHideAJAXHover.push( fnHide );
+}
+
+function HideAJAXHovers()
+{
+	if ( typeof g_rgfnHideAJAXHover != 'undefined' )
+	{
+		for ( var i = 0; i < g_rgfnHideAJAXHover.length; i++ )
+			g_rgfnHideAJAXHover[i]();
+	}
+}
+
 function BindAJAXHovers( $Hover, $HoverContent, oParams )
 {
 	var fnDataFactory = oParams.fnDataFactory;
@@ -602,6 +641,9 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 	}
 
 	fnBindAllHoverElements();
+
+	// register this hover so HideAJAXHovers() can hide it when invoked
+	_RegisterAJAXHoverHideFunction( fnCancelHover );
 
 	$J(document).ajaxComplete( function( event, xhr, settings ) {
 		// skip any ajax calls we generated ourselves
