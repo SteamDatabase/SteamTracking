@@ -983,7 +983,12 @@ function HandleMarketActionMenu( elActionMenuButton, item )
 		var elNewAction = $J( '<a></a>' );
 		elNewAction.addClass( 'popup_menu_item' );
 		elNewAction.attr( 'href', rgAction.link );
-		elNewAction.attr( 'target', '_blank' );
+
+		if ( rgAction.link.substr( 0, 6 ) != "steam:" )
+		{
+			elNewAction.attr( 'target', '_blank' );
+		}
+
 		elNewAction.text( rgAction.name );
 
 		elNewAction.click( function() {
