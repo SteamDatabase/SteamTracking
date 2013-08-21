@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.19d319790a9ac886d632481ed10fddb72de9e97f.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a68d7c3d8dc2bd50b22ed794d149b3acc762b1cf.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -65208,7 +65208,7 @@
 				"name": "The Steel Sixpack",
 				"defindex": 30062,
 				"item_class": "tf_wearable",
-				"item_type_name": "Armor",
+				"item_type_name": "Cosmetic Armor",
 				"item_name": "Steel Sixpack",
 				"item_description": "This wrought-iron cuirass has been exactingly molded from the imaginary muscles you wish you had.",
 				"proper_name": true,
@@ -65337,7 +65337,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Hardy Laurel",
-				"item_description": "This bundle of spray painted sticks signified that you were a philosopher king in primitive cultures like Ancient Rome and present-day Canada.",
+				"item_description": "This bundle of spray painted sticks signified that you were a philosopher king in primitive cultures like Ancient Rome and present-day Canada. (Equips Romevision in Mann vs. Machine mode.)",
 				"proper_name": true,
 				"item_slot": "head",
 				"model_player": "models\/workshop\/player\/items\/all_class\/tw2_roman_wreath\/tw2_roman_wreath_scout.mdl",
@@ -65365,6 +65365,11 @@
 						"name": "cannot trade",
 						"class": "cannot_trade",
 						"value": 1.000000
+					},
+					{
+						"name": "vision opt in flags",
+						"class": "vision_opt_in_flags",
+						"value": 4.000000
 					}
 				]
 				
@@ -65629,7 +65634,7 @@
 				"name": "The Dark Age Defender",
 				"defindex": 30073,
 				"item_class": "tf_wearable",
-				"item_type_name": "Armor",
+				"item_type_name": "Cosmetic Armor",
 				"item_name": "Dark Age Defender",
 				"item_description": "This knight's armor will repel anything someone from the 12th century might throw at you, be it a rock, a sword, a thatched cottage or a Merlin.",
 				"proper_name": true,
@@ -66503,7 +66508,7 @@
 				"name": "Das Metalmeatencasen",
 				"defindex": 30098,
 				"item_class": "tf_wearable",
-				"item_type_name": "Armor",
+				"item_type_name": "Cosmetic Armor",
 				"item_name": "Das Metalmeatencasen",
 				"item_description": "\"There is strength in your steel breast-blouse. Your chest meat is at ease.\" (Description translated from German.)",
 				"proper_name": false,
@@ -67429,7 +67434,7 @@
 				"name": "The Shogun's Shoulder Guard",
 				"defindex": 30126,
 				"item_class": "tf_wearable",
-				"item_type_name": "Armor",
+				"item_type_name": "Cosmetic Armor",
 				"item_name": "Shogun's Shoulder Guard",
 				"item_description": "\"The next time some bleeding heart cries on your shoulder about the state of the environment, he can slam his tear ducts into the Shogun. This shoulder is CLOSED!\"",
 				"proper_name": true,
@@ -68024,6 +68029,671 @@
 				},
 				"used_by_classes": [
 					"Soldier"
+				]
+				
+			},
+			{
+				"name": "tw_demobot_armor",
+				"defindex": 30143,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Demobot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/tw_demobot_armor\/tw_demobot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/tw_demobot_armor\/tw_demobot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_demobot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_demobot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "tw_demobot_helmet",
+				"defindex": 30144,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Demobot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/tw_demobot_helmet\/tw_demobot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/tw_demobot_helmet\/tw_demobot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_demobot_helmet.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_demobot_helmet_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				
+			},
+			{
+				"name": "tw_engineerbot_armor",
+				"defindex": 30145,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Engineerbot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/tw_engineerbot_armor\/tw_engineerbot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/tw_engineerbot_armor\/tw_engineerbot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_engineerbot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_engineerbot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "tw_engineerbot_helmet",
+				"defindex": 30146,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Engineerbot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/engineer\/tw_engineerbot_helmet\/tw_engineerbot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/tw_engineerbot_helmet\/tw_engineerbot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_engineerbot_helmet.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_engineerbot_helmet_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				
+			},
+			{
+				"name": "tw_heavybot_armor",
+				"defindex": 30147,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Heavybot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/tw_heavybot_armor\/tw_heavybot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/tw_heavybot_armor\/tw_heavybot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_heavybot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_heavybot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "tw_heavybot_helmet",
+				"defindex": 30148,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Heavybot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/heavy\/tw_heavybot_helmet\/tw_heavybot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/tw_heavybot_helmet\/tw_heavybot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_heavybot_helmet.5e779a6bb436c7172fa45e54950bb26c282dd44c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_heavybot_helmet_large.cd91f1f80ba8c42de38b3676719a4ef7fc6ea158.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				
+			},
+			{
+				"name": "tw_medibot_chariot",
+				"defindex": 30149,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Medicbot Chariot",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/tw_medibot_chariot\/tw_medibot_chariot.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/tw_medibot_chariot\/tw_medibot_chariot",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_medibot_chariot.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_medibot_chariot_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "tw_medibot_hat",
+				"defindex": 30150,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Medicbot Hat",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/tw_medibot_hat\/tw_medibot_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/tw_medibot_hat\/tw_medibot_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_medibot_hat.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_medibot_hat_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				
+			},
+			{
+				"name": "tw_pyrobot_armor",
+				"defindex": 30151,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Pyrobot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/tw_pyrobot_armor\/tw_pyrobot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/tw_pyrobot_armor\/tw_pyrobot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_pyrobot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_pyrobot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "tw_pyrobot_helmet",
+				"defindex": 30152,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pyrobot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/tw_pyrobot_helmet\/tw_pyrobot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/tw_pyrobot_helmet\/tw_pyrobot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_pyrobot_helmet.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_pyrobot_helmet_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
+			},
+			{
+				"name": "tw_scoutbot_armor",
+				"defindex": 30153,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Scoutbot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/tw_scoutbot_armor\/tw_scoutbot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/tw_scoutbot_armor\/tw_scoutbot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_scoutbot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_scoutbot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "tw_scoutbot_hat",
+				"defindex": 30154,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Scoutbot Hat",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/scout\/tw_scoutbot_hat\/tw_scoutbot_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/tw_scoutbot_hat\/tw_scoutbot_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_scoutbot_hat.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_scoutbot_hat_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				
+			},
+			{
+				"name": "tw_sniperbot_armor",
+				"defindex": 30155,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Sniperbot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/tw_sniperbot_armor\/tw_sniperbot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/tw_sniperbot_armor\/tw_sniperbot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sniperbot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sniperbot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "tw_sniperbot_helmet",
+				"defindex": 30156,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Sniperbot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/tw_sniperbot_helmet\/tw_sniperbot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/tw_sniperbot_helmet\/tw_sniperbot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sniperbot_helmet.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sniperbot_helmet_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				
+			},
+			{
+				"name": "tw_soldierbot_armor",
+				"defindex": 30157,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Soldierbot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/tw_soldierbot_armor\/tw_soldierbot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/tw_soldierbot_armor\/tw_soldierbot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_soldierbot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_soldierbot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "tw_soldierbot_helmet",
+				"defindex": 30158,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Soldierbot Helmet",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/soldier\/tw_soldierbot_helmet\/tw_soldierbot_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/tw_soldierbot_helmet\/tw_soldierbot_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_soldierbot_helmet.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_soldierbot_helmet_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				
+			},
+			{
+				"name": "tw_spybot_armor",
+				"defindex": 30159,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Spybot Armor",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/tw_spybot_armor\/tw_spybot_armor.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/tw_spybot_armor\/tw_spybot_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_spybot_armor.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_spybot_armor_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "tw_spybot_hood",
+				"defindex": 30160,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Spybot Hood",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/spy\/tw_spybot_hood\/tw_spybot_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/tw_spybot_hood\/tw_spybot_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_spybot_hood.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_spybot_hood_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				
+			},
+			{
+				"name": "tw_sentrybuster",
+				"defindex": 30161,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "Sentrybuster",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/tw_sentrybuster\/tw_sentrybuster.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/tw_sentrybuster\/tw_sentrybuster",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sentrybuster.f74e5b197235fb2b777e1c2c86ad4885837202ff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw_sentrybuster_large.3270f04e176c9804eef65c8cd4bbfc896658f954.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
 				]
 				
 			}

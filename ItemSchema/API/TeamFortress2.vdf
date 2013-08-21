@@ -40611,6 +40611,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"vision opt in flags"
+				{
+					"attribute_class"		"vision_opt_in_flags"
+					"value"		"4"
+				}
+			}
 		}
 		"30066"
 		{
@@ -40965,7 +40973,7 @@
 			"name"		"The Heavy-Weight Champ"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_ChampionshipBelt"
+			"item_type_name"		"#TF_Wearable_ChampionshipBelt"
 			"item_name"		"#TF_jul13_heavy_weight_belt"
 			"item_description"		"#TF_jul13_heavy_weight_belt_Desc"
 			"equip_region"		"heavy_hip"
@@ -41141,7 +41149,7 @@
 			"name"		"El Muchacho"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Poncho"
+			"item_type_name"		"#TF_Wearable_Poncho"
 			"item_name"		"#TF_jul13_el_muchacho"
 			"item_description"		"#TF_jul13_el_muchacho_Desc"
 			"equip_region"		"shirt"
@@ -41293,7 +41301,7 @@
 			"name"		"Das Hazmattenhatten"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_SafetyApparatus"
+			"item_type_name"		"#TF_Wearable_SafetyApparatus"
 			"item_name"		"#TF_jul13_positive_pressure_veil"
 			"item_description"		"#TF_jul13_positive_pressure_veil_Desc"
 			"equip_region"		"face"
@@ -41313,7 +41321,7 @@
 			"name"		"Das Feelinbeterbager"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Supplies"
+			"item_type_name"		"#TF_Wearable_Supplies"
 			"item_name"		"#TF_jul13_emergency_supplies"
 			"item_description"		"#TF_jul13_emergency_supplies_Desc"
 			"equip_region"		"medic_hip"
@@ -41393,7 +41401,7 @@
 			"name"		"The Birdman of Australiacatraz"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_bushmans_blazer"
 			"item_description"		"#TF_jul13_bushmans_blazer_Desc"
 			"equip_region"		"shirt"
@@ -41435,7 +41443,7 @@
 			"name"		"The Falconer"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Glove"
+			"item_type_name"		"#TF_Wearable_Glove"
 			"item_name"		"#TF_jul13_falconer_punch"
 			"item_description"		"#TF_jul13_falconer_punch_Desc"
 			"equip_region"		"arms"
@@ -41515,7 +41523,7 @@
 			"name"		"The Tartan Spartan"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Helmet"
+			"item_type_name"		"#TF_Wearable_Helmet"
 			"item_name"		"#TF_jul13_trojan_helmet"
 			"item_description"		"#TF_jul13_trojan_helmet_Desc"
 			"equip_region"		"hat"
@@ -41557,7 +41565,7 @@
 			"name"		"The Borscht Belt"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Bandolier"
+			"item_type_name"		"#TF_Wearable_Bandolier"
 			"item_name"		"#TF_jul13_bagdolier"
 			"item_description"		"#TF_jul13_bagdolier_Desc"
 			"equip_region"		"heavy_bullets"
@@ -41593,7 +41601,7 @@
 			"name"		"The Whiskey Bib"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_PuffyShirt"
+			"item_type_name"		"#TF_Wearable_PuffyShirt"
 			"item_name"		"#TF_jul13_gallant_gael"
 			"item_description"		"#TF_jul13_gallant_gael_Desc"
 			"equip_region"		"shirt"
@@ -41614,7 +41622,7 @@
 			"name"		"The Stormin' Norman"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Helmet"
+			"item_type_name"		"#TF_Wearable_Helmet"
 			"item_name"		"#TF_jul13_stormn_normn"
 			"item_description"		"#TF_jul13_stormn_normn_Desc"
 			"equip_region"		"hat"
@@ -41636,7 +41644,7 @@
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
 			"item_name"		"#TF_jul13_king_pants"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_description"		"#TF_jul13_king_pants_Desc"
 			"equip_region"		"engineer_pants"
 			"image_inventory"		"backpack/workshop/player/items/engineer/jul13_king_pants/jul13_king_pants"
@@ -41744,7 +41752,7 @@
 			"name"		"The Whirly Warrior"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Helmet"
+			"item_type_name"		"#TF_Wearable_Helmet"
 			"item_name"		"#TF_jul13_helicopter_helmet"
 			"item_description"		"#TF_jul13_helicopter_helmet_Desc"
 			"equip_region"		"whole_head"
@@ -41839,7 +41847,7 @@
 			"name"		"The Bear Necessities"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_SpiritAnimal"
+			"item_type_name"		"#TF_Wearable_SpiritAnimal"
 			"item_name"		"#TF_jul13_bear_necessitys"
 			"item_description"		"#TF_jul13_bear_necessitys_Desc"
 			"equip_region"		"hat"
@@ -41876,7 +41884,7 @@
 			"name"		"The Gaelic Garb"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_gaelic_garb"
 			"item_description"		"#TF_jul13_gaelic_garb_Desc"
 			"equip_region"		"shirt"
@@ -41978,7 +41986,7 @@
 			"name"		"The Hornblower"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_generals_attire"
 			"item_description"		"#TF_jul13_generals_attire_Desc"
 			"equip_region"		"soldier_coat"
@@ -42015,7 +42023,7 @@
 			"name"		"The Brawling Buccaneer"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_gangplank_garment"
 			"item_description"		"#TF_jul13_gangplank_garment_Desc"
 			"equip_region"		"soldier_coat"
@@ -42036,7 +42044,7 @@
 			"name"		"The Blood Banker"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_blood_banker"
 			"item_description"		"#TF_jul13_blood_banker_Desc"
 			"equip_region"		"shirt"
@@ -42057,7 +42065,7 @@
 			"name"		"The After Dark"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_classy_royale"
 			"item_description"		"#TF_jul13_classy_royale_Desc"
 			"equip_region"		"shirt"
@@ -42160,7 +42168,7 @@
 			"name"		"The Bolshevik Biker"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_border_armor"
 			"item_description"		"#TF_jul13_border_armor_Desc"
 			"equip_region"		"shirt"
@@ -42177,7 +42185,7 @@
 			"name"		"The Pampered Pyro"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Towel"
+			"item_type_name"		"#TF_Wearable_Towel"
 			"item_name"		"#TF_jul13_pyro_towel"
 			"item_description"		"#TF_jul13_pyro_towel_Desc"
 			"equip_region"		"hat"
@@ -42198,7 +42206,7 @@
 			"name"		"The Virtual Viewfinder"
 			"prefab"		"no_craft hat"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name" "#TF_Wearable_Headset"
+			"item_type_name"		"#TF_Wearable_Headset"
 			"item_name"		"#TF_jul13_se_headset"
 			"item_description"		"#TF_jul13_se_headset_Desc"
 			"equip_region"		"hat"
@@ -42263,7 +42271,7 @@
 			"name"		"The Founding Father"
 			"prefab"		"no_craft misc"
 			"first_sale_date"		"2013/07/10"
-			"item_type_name"	"TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_dandy_yankee"
 			"item_description"		"#TF_jul13_dandy_yankee_Desc"
 			"equip_region"		"shirt"
@@ -42274,6 +42282,300 @@
 			{
 				"soldier"		"1"
 			}
+		}
+		"30143"
+		{
+			"name"		"tw_demobot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_demobot_armor"
+			"item_description"		"#TF_tw_demobot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/demo/tw_demobot_armor/tw_demobot_armor"
+			"model_player"		"models/workshop/player/items/demo/tw_demobot_armor/tw_demobot_armor.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30144"
+		{
+			"name"		"tw_demobot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_demobot_helmet"
+			"item_description"		"#TF_tw_demobot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/tw_demobot_helmet/tw_demobot_helmet"
+			"model_player"		"models/workshop/player/items/demo/tw_demobot_helmet/tw_demobot_helmet.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30145"
+		{
+			"name"		"tw_engineerbot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_engineerbot_armor"
+			"item_description"		"#TF_tw_engineerbot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/tw_engineerbot_armor/tw_engineerbot_armor"
+			"model_player"		"models/workshop/player/items/engineer/tw_engineerbot_armor/tw_engineerbot_armor.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30146"
+		{
+			"name"		"tw_engineerbot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_engineerbot_helmet"
+			"item_description"		"#TF_tw_engineerbot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/engineer/tw_engineerbot_helmet/tw_engineerbot_helmet"
+			"model_player"		"models/workshop/player/items/engineer/tw_engineerbot_helmet/tw_engineerbot_helmet.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30147"
+		{
+			"name"		"tw_heavybot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_heavybot_armor"
+			"item_description"		"#TF_tw_heavybot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/tw_heavybot_armor/tw_heavybot_armor"
+			"model_player"		"models/workshop/player/items/heavy/tw_heavybot_armor/tw_heavybot_armor.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30148"
+		{
+			"name"		"tw_heavybot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_heavybot_helmet"
+			"item_description"		"#TF_tw_heavybot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/tw_heavybot_helmet/tw_heavybot_helmet"
+			"model_player"		"models/workshop/player/items/heavy/tw_heavybot_helmet/tw_heavybot_helmet.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30149"
+		{
+			"name"		"tw_medibot_chariot"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_medibot_chariot"
+			"item_description"		"#TF_tw_medibot_chariot_Desc"
+			"equip_region"		"feet"
+			"image_inventory"		"backpack/workshop/player/items/medic/tw_medibot_chariot/tw_medibot_chariot"
+			"model_player"		"models/workshop/player/items/medic/tw_medibot_chariot/tw_medibot_chariot.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30150"
+		{
+			"name"		"tw_medibot_hat"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_medibot_hat"
+			"item_description"		"#TF_tw_medibot_hat_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/medic/tw_medibot_hat/tw_medibot_hat"
+			"model_player"		"models/workshop/player/items/medic/tw_medibot_hat/tw_medibot_hat.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30151"
+		{
+			"name"		"tw_pyrobot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_pyrobot_armor"
+			"item_description"		"#TF_tw_pyrobot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/pyro/tw_pyrobot_armor/tw_pyrobot_armor"
+			"model_player"		"models/workshop/player/items/pyro/tw_pyrobot_armor/tw_pyrobot_armor.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30152"
+		{
+			"name"		"tw_pyrobot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_pyrobot_helmet"
+			"item_description"		"#TF_tw_pyrobot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/pyro/tw_pyrobot_helmet/tw_pyrobot_helmet"
+			"model_player"		"models/workshop/player/items/pyro/tw_pyrobot_helmet/tw_pyrobot_helmet.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30153"
+		{
+			"name"		"tw_scoutbot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_scoutbot_armor"
+			"item_description"		"#TF_tw_scoutbot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/scout/tw_scoutbot_armor/tw_scoutbot_armor"
+			"model_player"		"models/workshop/player/items/scout/tw_scoutbot_armor/tw_scoutbot_armor.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30154"
+		{
+			"name"		"tw_scoutbot_hat"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_scoutbot_hat"
+			"item_description"		"#TF_tw_scoutbot_hat_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/scout/tw_scoutbot_hat/tw_scoutbot_hat"
+			"model_player"		"models/workshop/player/items/scout/tw_scoutbot_hat/tw_scoutbot_hat.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30155"
+		{
+			"name"		"tw_sniperbot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_sniperbot_armor"
+			"item_description"		"#TF_tw_sniperbot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/sniper/tw_sniperbot_armor/tw_sniperbot_armor"
+			"model_player"		"models/workshop/player/items/sniper/tw_sniperbot_armor/tw_sniperbot_armor.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30156"
+		{
+			"name"		"tw_sniperbot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_sniperbot_helmet"
+			"item_description"		"#TF_tw_sniperbot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/sniper/tw_sniperbot_helmet/tw_sniperbot_helmet"
+			"model_player"		"models/workshop/player/items/sniper/tw_sniperbot_helmet/tw_sniperbot_helmet.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30157"
+		{
+			"name"		"tw_soldierbot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_soldierbot_armor"
+			"item_description"		"#TF_tw_soldierbot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/soldier/tw_soldierbot_armor/tw_soldierbot_armor"
+			"model_player"		"models/workshop/player/items/soldier/tw_soldierbot_armor/tw_soldierbot_armor.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30158"
+		{
+			"name"		"tw_soldierbot_helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_soldierbot_helmet"
+			"item_description"		"#TF_tw_soldierbot_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/tw_soldierbot_helmet/tw_soldierbot_helmet"
+			"model_player"		"models/workshop/player/items/soldier/tw_soldierbot_helmet/tw_soldierbot_helmet.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30159"
+		{
+			"name"		"tw_spybot_armor"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Armor"
+			"item_name"		"#TF_tw_spybot_armor"
+			"item_description"		"#TF_tw_spybot_armor_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/spy/tw_spybot_armor/tw_spybot_armor"
+			"model_player"		"models/workshop/player/items/spy/tw_spybot_armor/tw_spybot_armor.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30160"
+		{
+			"name"		"tw_spybot_hood"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_tw_spybot_hood"
+			"item_description"		"#TF_tw_spybot_hood_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/spy/tw_spybot_hood/tw_spybot_hood"
+			"model_player"		"models/workshop/player/items/spy/tw_spybot_hood/tw_spybot_hood.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"vision_filter_flags" "4"
+		}
+		"30161"
+		{
+			"name"		"tw_sentrybuster"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_tw_sentrybuster"
+			"item_description"		"#TF_tw_sentrybuster_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/demo/tw_sentrybuster/tw_sentrybuster"
+			"model_player"		"models/workshop/player/items/demo/tw_sentrybuster/tw_sentrybuster.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+			"vision_filter_flags" "4"
 		}
 
 
