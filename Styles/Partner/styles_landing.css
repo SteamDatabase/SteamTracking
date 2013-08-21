@@ -594,7 +594,7 @@ h2 > span {
 	font-size: 15px;
 }
 
-h2 > span.small {
+h2 > .small {
 	color: #B3B3B3;
 	font-size: 12px;
 }

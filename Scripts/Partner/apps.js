@@ -1,3 +1,4 @@
+// <script type="text/javascript">
 // programmatic name of language the user is editing
 var g_language = '';
 
@@ -3189,3 +3190,23 @@ function OnChangeTagCategoryType( htmlID )
 		$( htmlID + '[external_url_container]' ).hide();
 	}
 }
+
+function UpdateReleaseRequest( nAppId, rgChanges )
+{
+	$J.ajax({
+		url: 'https://partner.steamgames.com/apps/ajaxupdatereleaserequest/' + nAppId,
+		cache: false,
+		type: "POST",
+		data: rgChanges,
+		error: function() {
+			alert("Unknown error. Changes have not been saved.");
+		},
+		success: function( response )
+		{
+			//console.log(response);
+			location.reload();
+		}
+	});
+}
+
+
