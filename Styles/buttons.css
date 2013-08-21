@@ -265,6 +265,10 @@ btn_border_2px > span {
 	padding-left: 20px;
 }
 
+.btn_grey_grey.btn_ico_thumbs_up.no_text, .btn_grey_black.btn_ico_thumbs_up.no_text {
+	padding-left: 15px;
+}
+
 .btn_grey_grey.btn_ico_thumbs_up:hover, .btn_grey_black.btn_ico_thumbs_up:hover {
 	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_hover.png' );
 }

@@ -248,3 +248,47 @@ function SelectContentFilter( url )
 
 	window.location = url;
 }
+
+function PublishedFileVoteUp( id )
+{
+	if ( !$('vote_up_' + id).hasClassName( 'active' ) )
+	{
+		var options = {
+			method: 'post',
+			postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+			onComplete: (function(id){
+				return function(transport)
+				{
+					$('vote_up_' + id).addClassName('active');
+					$('vote_down_' + id).removeClassName('active');
+				}
+			}(id))
+		};
+		new Ajax.Request(
+			'http://steamcommunity.com/sharedfiles/voteup',
+			options
+		);
+	}
+	return false;
+}
+
+function PublishedFileVoteDown( id )
+{
+	var options = {
+		method: 'post',
+		postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+		onComplete: (function(id){
+			return function(transport)
+			{
+				$('vote_up_' + id).removeClassName('active');
+				$('vote_down_' + id).addClassName('active');
+			}
+		}(id))
+	};
+	new Ajax.Request(
+		'http://steamcommunity.com/sharedfiles/votedown',
+		options
+	);
+
+	return false;
+}
