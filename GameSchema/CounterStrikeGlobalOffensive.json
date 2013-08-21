@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "ValveTestApp260",
-		"gameVersion": "235",
+		"gameVersion": "236",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -1411,6 +1411,11 @@
 				},
 				{
 					"name": "total_rounds_map_cs_militia",
+					"defaultvalue": 0,
+					"displayName": ""
+				},
+				{
+					"name": "GI.lesson.csgo_instr_explain_inspect",
 					"defaultvalue": 0,
 					"displayName": ""
 				}
