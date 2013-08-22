@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.208b9128dddff36bc20d5bc5fa065f1142a41404.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.8ee906972dcec2d58050b6df23c9c175e26e4f04.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1565,6 +1565,37 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Five Year Service Coin",
+				"defindex": 874,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "5 Year Veteran Coin",
+				"item_description": "Has been a member of the Counter-Strike community for over 5 years.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/5yearcoin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/5yearcoin.3a0b59365cbb1ff12b7bca1ad61dc2be650e950c.png",
+				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Community Season One Spring 2013",
