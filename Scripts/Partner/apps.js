@@ -1821,19 +1821,18 @@ function SetDrmModule( appid, destRow, drmModule )
 	
 	destRow.insertCell( -1 ).innerHTML = drmModule[ 'buildcrc' ];
 	destRow.insertCell( -1 ).innerHTML = downloadlink;
+
+	// drmtoolp writes modtype
     if ( drmModule[ 'modtype' ] !== undefined )
     {
         destRow.insertCell( -1 ).innerHTML = drmModule[ 'modtype' ];
-        if ( drmModule[ 'flags' ] != 0 )
-        {
-            destRow.insertCell( -1 ).innerHTML = FlagsToString( drmModule[ 'flags' ] );
-        }
     }
     else
     {
-        destRow.insertCell( -1 ).innerHTML = drmModule[ 'path' ];
-        destRow.insertCell( -1 ).innerHTML = FlagsToString( drmModule[ 'flags' ] );
+	    // otherwise must be drmtool
+        destRow.insertCell( -1 ).innerHTML = "(Legacy) Win32 PE";
     }
+    destRow.insertCell( -1 ).innerHTML = FlagsToString( drmModule[ 'flags' ] );
 	destRow.insertCell( -1 ).innerHTML = d.toLocaleString();
 }
 
@@ -2098,14 +2097,6 @@ function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
 	return theClosure;
 }
 
-function ModuleUploadCallback(appid, jsonResponse)
-{
-	var results = jsonResponse.evalJSON(true);
-	
-	StandardCallback( results, 'module_upload_response' );
-	LoadDRM( appid );
-}
-
 function SteamworksDRMCallback(appid, jsonResponse)
 {
 	var results = jsonResponse.evalJSON(true); 
@@ -2293,6 +2284,74 @@ function BuildAppList( filterString, appidSelect, bAddAll )
 			i++;
 		}
 	}
+}
+
+
+//
+// chunked uploads to cross-domain server once we have acquired an upload token
+//
+function startChunkUploads( inputItem, onFinish )
+{
+    return function ( initResults )
+    {
+        // check and fire up the actual upload
+        var blob = inputItem.files[0];
+        // lol, const.
+        var BYTES_PER_CHUNK = 2 * 1024 * 1024; // 2MB chunk sizes.
+        var SIZE = blob.size;
+        var start = 0;
+        var end = start + BYTES_PER_CHUNK;
+        var status = {
+            'pending': Math.ceil( SIZE / BYTES_PER_CHUNK ),
+            'succeeded': 0,
+            'failed': 0,
+            totalUploaded: 0
+        };
+
+        // keep these synchronous for now; the back end server does not take kindly to
+        // multiple outstanding requests
+        while ( start < SIZE ) {
+            end = Math.min( end, SIZE );
+            jQuery.ajax( initResults[ 'location' ], {
+                async: true,
+                accepts: 'application/json',
+                type: 'POST',
+                error: function( jqXHR, textStatus, errorThrown ) {
+                    // handle bogus chrome errors
+                    if ( jqXHR.readyState == 0 ) {
+                        return;
+                    }
+                    jqXHR.bChunkFailed = true;
+                },
+                complete: function( jqXHR, textStatus ) {
+                    var cCurrent = --status.pending;
+                    // because of some bogus chrome errors, we cannot rely on success being called.
+                    if ( jqXHR.bChunkFailed )
+                    {
+                        status.failed++;
+                    }
+                    else
+                    {
+                        status.succeeded++;
+                        status.totalUploaded += ( end - start );
+                    }
+                     // see if we need to fire the "all done" callback
+                    if ( cCurrent == 0 )
+                    {
+                        onFinish( initResults, status );
+                    }
+                },
+                headers: {
+                    'Content-Type': 'application/octet-stream',
+                    'Content-Range': 'bytes ' + start + '-' + end + '/' + SIZE
+                },
+                data: blob.slice( start, end ),
+                processData: false
+            } );
+            start = end;
+            end = start + BYTES_PER_CHUNK;
+        }
+    }
 }
 
 
@@ -3121,7 +3180,6 @@ function SetAppCommunityStatsHidden( appid, statshidden )
 		function(results) { StandardCallback( results, 'community_stats_save_output' ); }
 	);
 }
-
 
 
 function DisplayDivOnClick( button, div )
