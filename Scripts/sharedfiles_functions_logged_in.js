@@ -61,6 +61,9 @@ function CheckVoteResultsJSON( json )
 		case 24:
 			alert( 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
 			return false;
+		case 21:
+			alert( 'You must be logged in to perform that action.' );
+			return false;
 		case 1:
 			return true;
 		default:
