@@ -126,7 +126,7 @@ function CheckForMoreContent()
 
 			currentPage++;
 			var newDiv = new Element ( 'div' );
-			newDiv.innerHTML = transport.responseText;
+			newDiv.update( transport.responseText );
 			$( 'AppHubCards' ).appendChild( newDiv );
 			WaitForContentToLoad( currentPage );
 
@@ -247,6 +247,31 @@ function SelectContentFilter( url )
 	HideMenu( $('filterselect'), $('filterselect_options') );
 
 	window.location = url;
+}
+
+function RequestCurrentUserVotes( publishedFileIDs )
+{
+	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetvotes/', {
+			'publishedfileids' : publishedFileIDs
+		}
+	).done( function( response ) {
+		if ( response.success == 1 )
+		{
+			var votes = response.votes;
+			for ( var i = 0; i < votes.length; ++i )
+			{
+				var vote = votes[i];
+				if ( vote.votesfor )
+				{
+					$('vote_up_' + vote.publishedfileid).addClassName('active');
+				}
+				else if ( vote.votesagainst )
+				{
+					$('vote_down_' + vote.publishedfileid).addClassName('active');
+				}
+			}
+		}
+	} );
 }
 
 function PublishedFileVoteUp( id )
