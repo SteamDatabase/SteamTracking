@@ -2248,6 +2248,22 @@
 				}
 			}
 		}
+		"collectible_untradable"
+		{
+			"prefab"		"collectible"
+			"capabilities"
+			{
+				"can_gift_wrap"		"0"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"		"cannot_trade"
+					"value"		"1"
+				}
+			}
+		}
 		"map_token"
 		{
 			"prefab"		"collectible"
@@ -4939,6 +4955,15 @@
 					"UVScale"		"0.506000"
 				}
 			}
+		}
+		"874"
+		{
+			"name"		"Five Year Service Coin"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_FiveYearService"
+			"item_description"		"#CSGO_CollectibleCoin_FiveYearService_Desc"
+			"image_inventory"		"econ/status_icons/5yearcoin"
+			"model_pedestal"		"models/inventory_items/5_year_coin.mdl"
 		}
 		"1000"
 		{
