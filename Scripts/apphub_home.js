@@ -263,11 +263,13 @@ function RequestCurrentUserVotes( publishedFileIDs )
 				var vote = votes[i];
 				if ( vote.votesfor )
 				{
-					$('vote_up_' + vote.publishedfileid).addClassName('active');
+					if ( $('vote_up_' + vote.publishedfileid) )
+						$('vote_up_' + vote.publishedfileid).addClassName('active');
 				}
 				else if ( vote.votesagainst )
 				{
-					$('vote_down_' + vote.publishedfileid).addClassName('active');
+					if ( $('vote_down_' + vote.publishedfileid) )
+						$('vote_down_' + vote.publishedfileid).addClassName('active');
 				}
 			}
 		}
@@ -294,26 +296,26 @@ function PublishedFileVoteUp( id )
 			options
 		);
 	}
-	return false;
 }
 
 function PublishedFileVoteDown( id )
 {
-	var options = {
-		method: 'post',
-		postBody: 'id=' + id + '&sessionid=' + g_sessionID,
-		onComplete: (function(id){
-			return function(transport)
-			{
-				$('vote_up_' + id).removeClassName('active');
-				$('vote_down_' + id).addClassName('active');
-			}
-		}(id))
-	};
-	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/votedown',
-		options
-	);
-
-	return false;
+	if ( !$('vote_down_' + id).hasClassName( 'active' ) )
+	{
+		var options = {
+			method: 'post',
+			postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+			onComplete: (function(id){
+				return function(transport)
+				{
+					$('vote_up_' + id).removeClassName('active');
+					$('vote_down_' + id).addClassName('active');
+				}
+			}(id))
+		};
+		new Ajax.Request(
+			'http://steamcommunity.com/sharedfiles/votedown',
+			options
+		);
+	}
 }
