@@ -276,6 +276,31 @@ function RequestCurrentUserVotes( publishedFileIDs )
 	} );
 }
 
+function ValidateVoteSuccess( transport )
+{
+	if ( !transport.responseJSON )
+	{
+		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: unknown' );
+	}
+	else if ( transport.responseJSON.success == 21 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+	}
+	else if ( transport.responseJSON.success == 24 )
+	{
+		ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+	}
+	else if ( transport.responseJSON.success == 16 )
+	{
+		ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
+	}
+	else if ( transport.responseJSON.success != 1 )
+	{
+		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + transport.responseJSON.success );
+	}
+	return transport.responseJSON && transport.responseJSON.success == 1;
+}
+
 function PublishedFileVoteUp( id )
 {
 	if ( !$('vote_up_' + id).hasClassName( 'active' ) )
@@ -286,8 +311,11 @@ function PublishedFileVoteUp( id )
 			onComplete: (function(id){
 				return function(transport)
 				{
-					$('vote_up_' + id).addClassName('active');
-					$('vote_down_' + id).removeClassName('active');
+					if ( ValidateVoteSuccess( transport ) )
+					{
+						$('vote_up_' + id).addClassName('active');
+						$('vote_down_' + id).removeClassName('active');
+					}
 				}
 			}(id))
 		};
@@ -308,8 +336,11 @@ function PublishedFileVoteDown( id )
 			onComplete: (function(id){
 				return function(transport)
 				{
-					$('vote_up_' + id).removeClassName('active');
-					$('vote_down_' + id).addClassName('active');
+					if ( ValidateVoteSuccess( transport ) )
+					{
+						$('vote_up_' + id).removeClassName('active');
+						$('vote_down_' + id).addClassName('active');
+					}
 				}
 			}(id))
 		};
