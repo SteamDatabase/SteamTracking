@@ -63249,6 +63249,42 @@
 				
 			},
 			{
+				"name": "SteelSeries Euro Cup",
+				"defindex": 15222,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup",
+				"item_description": "Steelseries Euro Cup is an open tournament where 2 of the top European teams compete for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -71286,7 +71322,7 @@
 				"name": "sithil stash",
 				"defindex": 407,
 				"attribute_class": "sithil_stash",
-				"description_string": "Sithil's Summer Stash %s1",
+				"description_string": "Attrib_SithilStash",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -74188,7 +74224,7 @@
 				"system": "axe_weapon_eyes_wyvernguard_edge",
 				"id": 33,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura 2012"
+				"name": "Champion's Aura"
 			},
 			{
 				"system": "courier_murrissey_the_smeevil_fl",
@@ -74644,7 +74680,7 @@
 				"system": "courier_international_2013",
 				"id": 109,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura 2013"
+				"name": "Attrib_Particle109"
 			},
 			{
 				"system": "courier_otter_dragon_ambient",
