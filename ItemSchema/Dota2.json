@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.28f42903c6485d3a02e7dfea0a33caaa4dcd7785.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.769ff134f6781cc3b6bfb6cbb7bb9a0fc81695e3.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -6819,6 +6819,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -6841,6 +6842,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -6863,6 +6865,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -6885,6 +6888,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -6907,6 +6911,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -6929,6 +6934,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -10584,7 +10590,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Demon Blood Helm",
@@ -13253,8 +13267,8 @@
 				"image_inventory": "econ\/items\/furion\/treant_stump_npc_dota_furion_treant",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/treant_stump_npc_dota_furion_treant.0c8cb08e10c0ad57e6042d8d0aeecbed0766db91.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/treant_stump_npc_dota_furion_treant_large.cdecbc5f29c51bf755fc4712642e2677f4f481f9.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/treant_stump_npc_dota_furion_treant.da653e725694668a7e9f3fc4bb0129e189527148.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/treant_stump_npc_dota_furion_treant_large.d6d045abe063b9bde35eb3be462b47aaf02d41b1.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -14873,7 +14887,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Cold Case Bow",
@@ -15579,7 +15601,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Spiral Staff",
@@ -17003,6 +17033,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 0
+					},
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
 					}
 				]
 				
@@ -17249,6 +17284,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 0
+					},
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
 					}
 				]
 				
@@ -17274,7 +17314,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Wheel of Fortitude",
@@ -17303,6 +17351,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 0
+					},
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
 					}
 				]
 				
@@ -17328,7 +17381,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Radiant Crystal Bracer",
@@ -17447,7 +17508,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Grand Blade of the Demigod",
@@ -17643,7 +17712,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Shuriken of the Reaper",
@@ -17881,7 +17958,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Bloodmist Belt",
@@ -18000,7 +18085,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "sithil stash",
+						"class": "sithil_stash",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Weighted Claive",
@@ -18260,6 +18353,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 0
+					},
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
 					}
 				]
 				
@@ -19580,6 +19678,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 0
+					},
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
 					}
 				]
 				
@@ -19605,7 +19708,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Flail of the Great Elder",
@@ -19628,7 +19739,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Crescent Sickle of the Druid",
@@ -19651,7 +19770,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Poor Armor of the Druid",
@@ -19674,7 +19801,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Shoulder of the Noble",
@@ -19697,7 +19832,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Sange and Yasha",
@@ -19726,7 +19869,15 @@
 				"tool": {
 					"type": "gift",
 					"use_string": "Open Pack"
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Spine Sword",
@@ -19749,7 +19900,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Vice of the West",
@@ -19772,7 +19931,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Mask of the Many-Sighted",
@@ -19795,7 +19962,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Lucky Belly Belt",
@@ -19818,7 +19993,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Champion's Belly Belt",
@@ -19841,7 +20024,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Golden Walrus Whacker",
@@ -19864,7 +20055,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Cloak of the Dawn",
@@ -19887,7 +20086,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Shoulders of the Twelfth Day",
@@ -19910,7 +20117,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Recluse Reef Denizen",
@@ -20747,7 +20962,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Brooch of Death's Bride",
@@ -20770,7 +20993,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "The Soul Reaper",
@@ -20793,7 +21024,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Ghost Orb of the Planeswalker",
@@ -20816,7 +21055,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Heirloom of the Temple Priestess",
@@ -20839,7 +21086,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Hakama of a Thousand Faces",
@@ -21748,7 +22003,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Infectious Amalgamate",
@@ -23587,7 +23850,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Assistant's Respirator",
@@ -23813,7 +24084,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "diretide tag",
+						"class": "diretide_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Crimson Wyvern Skirt",
@@ -26712,8 +26991,8 @@
 				"image_inventory": "econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder.2e61b8f4f04ff5832e0ff184c65e1783ec5363e9.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder_large.ea23f9d3e31f4abac05d8407b5d8c8433fcc74a2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder.6d4497cf5cc07ee667d923ad3b6eedcb1dbfe5ec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/royalguard_shoulder\/royalguard_shoulder_large.c393ba25511cdc0735adbba28b4d46b13578b016.png",
 				"item_set": "drow_sylvan_guard",
 				"capabilities": {
 					"nameable": true,
@@ -28039,8 +28318,8 @@
 				"image_inventory": "econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon.34c98e5098ef5f159216a2ab72803bdd81c1ef11.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon_large.49a9510cfadcb8793d6d6ac9c57b91b6a7b1ab36.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon.e3a929409bc7db380f36ce342e3ffef918d243c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzleset_weapon\/dazzleset_weapon_large.9a41a7670b61a58f2e9f158d3cb3c67bf7f02cf6.png",
 				"item_set": "ancestral_trappings",
 				"capabilities": {
 					"nameable": true,
@@ -29176,7 +29455,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Ember Edge",
@@ -29199,7 +29486,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Boneslayer",
@@ -29222,7 +29517,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Bloodstained Britches",
@@ -29245,7 +29548,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Rotten Stache",
@@ -29268,7 +29579,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Mask of Dark Ferocity",
@@ -29291,7 +29610,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Ignited Scepter",
@@ -29314,7 +29641,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "frostivus tag",
+						"class": "frostivus_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Demonhide Girdle of Apocalyptic Fire",
@@ -31407,7 +31742,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Sange the Backseeker",
@@ -31431,7 +31774,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2012
+					}
+				]
+				
 			},
 			{
 				"name": "Councilor's Mask",
@@ -37649,8 +38000,8 @@
 				"image_inventory": "econ\/items\/dragon_knight\/dragon_shield\/dragon_shield",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/dragon_shield\/dragon_shield.8d4d5e600892b5b12b043b5a50fb8fc5b853c25e.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/dragon_shield\/dragon_shield_large.0ed28568f260fda85270c13cc6b12db53e8d58f8.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/dragon_shield\/dragon_shield.2830768627717f248e5339e6a7f6eb30889696c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dragon_knight\/dragon_shield\/dragon_shield_large.841c57b3d2d5ceb3804e2edc907fd86fb173392a.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -38330,7 +38681,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Vengeancebound Wings",
@@ -38353,7 +38712,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Craniomancer",
@@ -38376,7 +38743,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Aqwanderer Bracers",
@@ -39798,7 +40173,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Possessed Blade",
@@ -39821,7 +40204,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Tribal Megadon Mask",
@@ -39844,7 +40235,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Radiant Claive",
@@ -39867,7 +40266,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Heat",
@@ -39890,7 +40297,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "A Bit of Boat",
@@ -39913,7 +40328,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Crystalline Initio",
@@ -39936,7 +40359,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Corruptor",
@@ -39959,7 +40390,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Spectral Light",
@@ -39982,7 +40421,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Wings of Vincere",
@@ -40990,6 +41437,100 @@
 				}
 			},
 			{
+				"name": "Blade of Shattered Crystals",
+				"defindex": 5225,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Crystal Blade",
+				"item_name": "Blade of Shattered Crystals",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/shattered_crystals_main\/shattered_crystals_main",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blade of Shattered Crystals Off-Hand",
+				"defindex": 5226,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Crystal Blade",
+				"item_name": "Blade of Shattered Crystals Off-Hand",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/shattered_crystals_offhand\/shattered_crystals_offhand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Grizzled Face",
+				"defindex": 5227,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "head",
+				"item_name": "The Ol' Chopper's Grizzled Face",
+				"item_description": "Some folk talk about a crazy man up in them woods, finding and cutting on those what come through. But I know better. I ain't crazy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_head\/the_ol_choppers_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_head\/the_ol_choppers_head.d0bc32939c004503b8bd289e95c3d9eb9f1a34c3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_head\/the_ol_choppers_head_large.73ebf2824e4f24363047788c36fc1cd668af1acc.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Sacred Orb Carapace",
+				"defindex": 5228,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Sacred Orb Carapace",
+				"item_description": "Once in a thousand cyclings of the hive, Nyx grants one of her Assassins the Carapace of the Sacred Orb. It is the most painful of molts...but legend requires great sacrifice.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_back_carapace\/nyx_back_carapace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_back_carapace\/nyx_back_carapace.eacf2810243a5113542ea1b3bf2a2790182b444d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_back_carapace\/nyx_back_carapace_large.fed41a1516566fb0ce94dac8db2231715066a3c1.png",
+				"item_set": "sacred_orb_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Whispering Dead Armor",
 				"defindex": 5229,
 				"item_class": "dota_item_wearable",
@@ -41172,6 +41713,269 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/shoulders_of_entropy\/shoulders_of_entropy.d18f02b80eabb5d3d2c51951386fa7942600a28e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/shoulders_of_entropy\/shoulders_of_entropy_large.702c1ea1cee9b6c615f7366da149d746fde45b94.png",
 				"item_set": "ck_embers_of_entropy",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Sacred Orb Helm",
+				"defindex": 5237,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Sacred Orb Helm",
+				"item_description": "The Nyx Assassin, under the influence of the Sacred Orb, perceives even more of Nyx's bounty: So many targets to reap!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_helmet_carapace\/nyx_helmet_carapace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_helmet_carapace\/nyx_helmet_carapace.945395ec3e7935d163f4a624d51ce31de57362f7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_helmet_carapace\/nyx_helmet_carapace_large.1465e2ae1121e8bb8a76cae9dc024af7ac2d9dab.png",
+				"item_set": "sacred_orb_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Sacred Orb Venom Claws",
+				"defindex": 5238,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Sacred Orb Venom Claws",
+				"item_description": "Against certain foes, the Nyx assassin imbues its blades with a venom that is their only weakness. Praise Nyx that they have even one such vulnerability!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_weapon_carapace\/nyx_weapon_carapace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_weapon_carapace\/nyx_weapon_carapace.fd18b4d4ba6a29416583897cbb353aa277a7900b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_weapon_carapace\/nyx_weapon_carapace_large.36c6baf09f2f6dd811b19c6673dda62fa4eafd3f.png",
+				"item_set": "sacred_orb_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Wolfhound Rifle",
+				"defindex": 5240,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Rifle",
+				"item_name": "Wolfhound Rifle",
+				"item_description": "This intricately crafted lever-action rifle is inspired by the deadly precision of canine predators.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/wolfhound_rifle\/wolfhound_rifle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/wolfhound_rifle\/wolfhound_rifle.ffca4dd9c4c462fa9ab2b3a9cacd30028973a17c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/wolfhound_rifle\/wolfhound_rifle_large.7da89cbc3c92a39d5f57253cb08afa16f5529c97.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Flaming Scepter of Ancestral Luck",
+				"defindex": 5241,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Club",
+				"item_name": "Flaming Scepter of Ancestral Luck",
+				"item_description": "By rights it came to Aggron, and by luck it happened to be on fire!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ogre_magi\/ogre_ancestral_weapon\/ogre_ancestral_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_weapon\/ogre_ancestral_weapon.4228369853f04ee2a772575cf5e01f19539bdb18.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_weapon\/ogre_ancestral_weapon_large.2759143c60b31abafde98b18f6a6348508b696f5.png",
+				"item_set": "ancestral_luck",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bracer and Band of Ancestral Luck",
+				"defindex": 5242,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Bracer and Band of Ancestral Luck",
+				"item_description": "Rare is the ogre that can recall their lineage and lucky is the one with claim to an inheritance.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ogre_magi\/ogre_ancestral_arms\/ogre_ancestral_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_arms\/ogre_ancestral_arms.c24ca7726f11f0580b4b80b076be0cc6cdb901fd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_arms\/ogre_ancestral_arms_large.e72c94535102ed2f9e1ad18f4c2dc2371a97ab0f.png",
+				"item_set": "ancestral_luck",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of Ancestral Luck",
+				"defindex": 5243,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Mantle of Ancestral Luck",
+				"item_description": "The ogres of the elder days were said to be great builders and skilled artisans... by ogre standards.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ogre_magi\/ogre_ancestral_back\/ogre_ancestral_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_back\/ogre_ancestral_back.d107c649efcf2b2de7f40f00c12d101f63acece9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_back\/ogre_ancestral_back_large.7edf6bbda1f61c85ec8a81b6a7f03369e92191e3.png",
+				"item_set": "ancestral_luck",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Belt of Ancestral Luck",
+				"defindex": 5244,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of Ancestral Luck",
+				"item_description": "A sturdy belt, comfortable, even fashionable among ogre-kind, yet in truth Aggron was disappointed that the elder's lockbox in which it was found did not contain a few scraps of moldy food.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ogre_magi\/ogre_ancestral_belt\/ogre_ancestral_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_belt\/ogre_ancestral_belt.dbb539ccbf9597b8451cf8b8d8e5e9e5a65bc18e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_belt\/ogre_ancestral_belt_large.d96fa0f9a24b56944ff26810dc1aef1e0f68c3d1.png",
+				"item_set": "ancestral_luck",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Masks of Ancestral Luck",
+				"defindex": 5245,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Masks",
+				"item_name": "Masks of Ancestral Luck",
+				"item_description": "The names of the twin leaders who once owned these masks have been lost to ignorance.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ogre_magi\/ogre_ancestral_head\/ogre_ancestral_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_head\/ogre_ancestral_head.12d2bf6157cc7201d9028efaa46d8f00542e6c75.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ogre_magi\/ogre_ancestral_head\/ogre_ancestral_head_large.da5c46a39e2bb1a846cd8f486268c82de6699f9c.png",
+				"item_set": "ancestral_luck",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Jewel of the Forest Gloves",
+				"defindex": 5247,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Gloves",
+				"item_name": "Jewel of the Forest Gloves",
+				"item_description": "We all know what Drow herself will never admit: She is the true Jewel of the Forest. And thus these gloves are perfectly fitting. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_gloves\/drow_jeweloftheforest_gloves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_gloves\/drow_jeweloftheforest_gloves.437f0d4827766477832fc6cf53ab13e14b9afb9a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_gloves\/drow_jeweloftheforest_gloves_large.fb2506c043a1898dce06f39dbe3e4d6e9d4de28c.png",
+				"item_set": "jewel_of_the_forest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Jewel of the Forest Pauldrons",
+				"defindex": 5248,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder guards.",
+				"item_name": "Jewel of the Forest Pauldrons",
+				"item_description": "Jewels for a jewel.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_pauldrons\/drow_jeweloftheforest_pauldrons",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_pauldrons\/drow_jeweloftheforest_pauldrons.d6f98db3c7fbd805a8fd65de3060160f087ad594.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_pauldrons\/drow_jeweloftheforest_pauldrons_large.22367fece6d95208e9ff5e815a39e6da017e0fcd.png",
+				"item_set": "jewel_of_the_forest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Jewel of the Forest Boots",
+				"defindex": 5249,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Jewel of the Forest Boots",
+				"item_description": "Their fleet-running beauty gleams and shimmers, deep in the forest shade.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_boots\/drow_jeweloftheforest_boots",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_boots\/drow_jeweloftheforest_boots.2678c7d46e5dbdce62288751a3662cd57cf62ca3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_boots\/drow_jeweloftheforest_boots_large.b279b79db1ed96d6d6e131ae82cbc92aa5b40bc5.png",
+				"item_set": "jewel_of_the_forest",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -41367,6 +42171,294 @@
 				
 			},
 			{
+				"name": "Jewel of the Forest Bow",
+				"defindex": 5257,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Jewel of the Forest Bow",
+				"item_description": "Jewels of the Forest are in fact a fossilized sap, a richly colored amber from woods that were ancient when the drow folk took up residence there.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_bow\/drow_jeweloftheforest_bow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_bow\/drow_jeweloftheforest_bow.87caf0b6ae54ffe10ef69dc0c0029db9f8c7765d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_bow\/drow_jeweloftheforest_bow_large.d3e4ea11734eced250415cbe830fc7fe98e3090a.png",
+				"item_set": "jewel_of_the_forest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Jewel of the Forest Cape",
+				"defindex": 5258,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Jewel of the Forest Cape",
+				"item_description": "A jewel deserves the perfect surrounds to show its stunning beauty to best advantage.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_cape\/drow_jeweloftheforest_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_cape\/drow_jeweloftheforest_cape.59804a9b8113b47f9feb048d05a9367cd1c0b38c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_cape\/drow_jeweloftheforest_cape_large.0febee0f968f1b38abef63b26a313b21a963c715.png",
+				"item_set": "jewel_of_the_forest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Jewel of the Forest Scarf",
+				"defindex": 5259,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Headpiece",
+				"item_name": "Jewel of the Forest Scarf",
+				"item_description": "A brilliant jewel must shade itself at times, lest it be spied by greedy eyes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drow_jeweloftheforest_scarf\/drow_jeweloftheforest_scarf",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_scarf\/drow_jeweloftheforest_scarf.bfc01165374fdf24e836736cc9ace2fcf1755c6f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/drow_jeweloftheforest_scarf\/drow_jeweloftheforest_scarf_large.256f21f25e97a19ffd3198a496793799c2772315.png",
+				"item_set": "jewel_of_the_forest",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Deep Warden's Prized Scimitar",
+				"defindex": 5261,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Deep Warden's Prized Scimitar",
+				"item_description": "No weapon was more prized among the warden's private collection, nor more missed when it vanished.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/deep_warden_scimitar\/deep_warden_scimitar",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_scimitar\/deep_warden_scimitar.f0355b9e70ba30ecc253f37c3e1b4ef86f1edabe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_scimitar\/deep_warden_scimitar_large.49eb9ef8ca505c6c3d38344cf33b4ddfa25ebbae.png",
+				"item_set": "deep_warden_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Deep Warden's Conch Pauldron",
+				"defindex": 5262,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Deep Warden's Conch Pauldron",
+				"item_description": "They say a glow conch can fetch a pretty penny on the black market.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/deep_warden_pauldron\/deep_warden_pauldron",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_pauldron\/deep_warden_pauldron.7701b1e88db104c736b8c0433c8d9484fd373d59.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_pauldron\/deep_warden_pauldron_large.15da9979128799b6224a3e5c851093daef4e4d25.png",
+				"item_set": "deep_warden_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Deep Warden's Tooth Bracer",
+				"defindex": 5263,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Deep Warden's Tooth Bracer",
+				"item_description": "If you're going to go through all the trouble of breaking out of prison, you may as well take a few souvenirs!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/deep_warden_bracer\/deep_warden_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_bracer\/deep_warden_bracer.d35aebe8d1917dfb3346989ae473c8f1aa15fafd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_bracer\/deep_warden_bracer_large.b306a5bca9a1814130a5a68971ec8f26161c47f3.png",
+				"item_set": "deep_warden_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Deep Warden's Darkray Cape",
+				"defindex": 5264,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Deep Warden's Darkray Cape",
+				"item_description": "There's not a lot to a darkray, but you'll find what's there to be pretty durable.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/deep_warden_cape\/deep_warden_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_cape\/deep_warden_cape.5187fa764b63ebaf185bd223544ce4527a3052fa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_cape\/deep_warden_cape_large.7a1d7b501d8e0f395b58961b34cc59ad8c0d983a.png",
+				"item_set": "deep_warden_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Deep Warden's Seized Hood",
+				"defindex": 5265,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Deep Warden's Seized Hood",
+				"item_description": "They say the thief that used to own this hood killed eleven guards before he was finally sent up for air.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slark\/deep_warden_hood\/deep_warden_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_hood\/deep_warden_hood.f4c6d4af5acdd939241058da4b1c928b91c71c03.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/deep_warden_hood\/deep_warden_hood_large.d4f6c9ccd50601ff8b541d32f6778b4ad8fa611b.png",
+				"item_set": "deep_warden_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bladebreaker Armguards",
+				"defindex": 5266,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armguard",
+				"item_name": "Bladebreaker Armguards",
+				"item_description": "Each member of the Bladebreaker Order is equipped with barbs along their wrist, meant to catch and shatter an enemy sword.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmorgloves\/bladearmorgloves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorgloves\/bladearmorgloves.654905b53fa08f7fe60807e4bd9b64c7a7ae4e4d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorgloves\/bladearmorgloves_large.c6e30cfe0ab069b2cd81a555da3024059d12746a.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bladebreaker Hood",
+				"defindex": 5267,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Bladebreaker Hood",
+				"item_description": "The hood is colored to represent the Bladebreaker order.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmorhelm\/bladearmorhelm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorhelm\/bladearmorhelm.4ef1cb91f51ed5b000cab4915692933269d98b43.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorhelm\/bladearmorhelm_large.b8445eeeecf0c85b100d412c8b5ff555e161a9bb.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bladebreaker Dagger - Off-Hand",
+				"defindex": 5268,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Bladebreaker Dagger - Off-Hand",
+				"item_description": "According to the Bladebreaker Order, only those that must will die. The notches atop the hilt are meant to capture and turn enemy swords in the hopes that the disarmed opponent might flee instead of fight.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmoroffhand\/bladearmoroffhand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmoroffhand\/bladearmoroffhand.181986514a15fb5e1c2ca4535ec547dc0c750808.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmoroffhand\/bladearmoroffhand_large.cc4346ea68f2ea6a62eda32de2fad1f12834015e.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bladebreaker Spaulders",
+				"defindex": 5269,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spaulders",
+				"item_name": "Bladebreaker Spaulders",
+				"item_description": "The Bladebreaker Order favors disarming and sparing their opponents over direct combat. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmorshoulder\/bladearmorshoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorshoulder\/bladearmorshoulder.94bf8a1072d7d00d04f6565cc6adea760f0bcb92.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorshoulder\/bladearmorshoulder_large.dad6811e3dbaede07d85c501a48fde4ec8167148.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Sleeves of the Scorching Princess",
 				"defindex": 5270,
 				"item_class": "dota_item_wearable",
@@ -41535,6 +42627,30 @@
 				}
 			},
 			{
+				"name": "Bladebreaker Brush",
+				"defindex": 5277,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Bladebreaker Brush",
+				"item_description": "Balance can be a prickly thing. So is this counterweight.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmortail\/bladearmortail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmortail\/bladearmortail.ea841eefd32447eec2a55195430d62e98a3f7428.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmortail\/bladearmortail_large.504d4145d11179dd21da8ad5714d04ccb0ce44f0.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Cloak of the Northern Wind",
 				"defindex": 5278,
 				"item_class": "dota_item_wearable",
@@ -41564,7 +42680,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
 				"item_name": "Arc of the Northern Wind",
-				"item_description": "The gift of a grateful spirit, this bow honors Lyralei's intervention in the rescue of a doomed forest to which she owned nothing.",
+				"item_description": "The gift of a grateful spirit, this bow honors Lyralei's intervention in the rescue of a doomed forest to which she owed nothing.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/arc_of_the_northern_wind\/arc_of_the_northern_wind",
@@ -41823,6 +42939,270 @@
 				}
 			},
 			{
+				"name": "Bladebreaker Dagger",
+				"defindex": 5290,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Bladebreaker Dagger",
+				"item_description": "According to the Bladebreaker Order, only those that must will die. The notches atop the hilt are meant to capture and turn enemy swords in the hopes that the disarmed opponent might flee instead of fight.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon.1a48434d13cb53f5cc51010dc4fce71bb714fef7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon_large.ba7f1cccb85760a9f966def10c0e64ec99ff2d05.png",
+				"item_set": "blade_armor_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Redmoon Assassin's Secret Armor",
+				"defindex": 5291,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Redmoon Assassin's Secret Armor",
+				"item_description": "When the master of the Redmoon Order offered to indoctrinate Lanaya in its particular mysteries, she hesitated to know more...until she caught a glimpse of this mysterious armor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/redmoon_assassinators_secret_armor\/redmoon_assassinators_secret_armor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_armor\/redmoon_assassinators_secret_armor.4cd9b285b5d2d241b478a5d0c96292e9f8bd48c6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_armor\/redmoon_assassinators_secret_armor_large.f1e5e86b13101a7501f01a32fb9c46541214087a.png",
+				"item_set": "redmoon_assassins_secret",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Redmoon Assassin's Secret Headwear",
+				"defindex": 5292,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Headwear",
+				"item_name": "Redmoon Assassin's Secret Headwear",
+				"item_description": "So keenly tuned are the senses of the Redmoon Order's ancient foes that even a stray hair can betray an assassin's presence.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/redmoon_assassinators_secret_headwear\/redmoon_assassinators_secret_headwear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_headwear\/redmoon_assassinators_secret_headwear.040c6c3a9a42da1384ce5235eaeaf120548d72ba.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_headwear\/redmoon_assassinators_secret_headwear_large.db25de1cc970d73cf283cf21e602a3e0b177668b.png",
+				"item_set": "redmoon_assassins_secret",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Redmoon Assassin's Secret Wraps",
+				"defindex": 5293,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wraps",
+				"item_name": "Redmoon Assassin's Secret Wraps",
+				"item_description": "Lanaya moves in a hushed and secret silence that has never been more mysteriously complete.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps.4ac1574015d5e4cebe64eb5d465ef7a4c17ec87a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps_large.0ac11f189ddc3bae3f5afad0302a1306add3fea2.png",
+				"item_set": "redmoon_assassins_secret",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Cleaver",
+				"defindex": 5294,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cleaver",
+				"item_name": "The Ol' Chopper's Cleaver",
+				"item_description": "It's dull, but it's heavy.  When it's to bone and meat, heavy counts for more.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_cleaver\/the_ol_choppers_cleaver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_cleaver\/the_ol_choppers_cleaver.b4d5b031acad7e6e594f5e7325c120ea5065ea92.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_cleaver\/the_ol_choppers_cleaver_large.b9a2f5526cd07dc33422fa905ec496d095ec9dc1.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Choppin' Arm",
+				"defindex": 5295,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Arm",
+				"item_name": "The Ol' Chopper's Choppin' Arm",
+				"item_description": "This the arm I do me choppin' with!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_shoulder\/the_ol_choppers_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_shoulder\/the_ol_choppers_shoulder.aeb4deb8885cd9b996f1de0d4c3f50831e18d507.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_shoulder\/the_ol_choppers_shoulder_large.7b0dc1d433fa65c336d6837e1a554ea180417a5c.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Chained Wings",
+				"defindex": 5296,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Chained Wings",
+				"item_description": "Let her have you, and she will keep you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/unchained_tormented_wings\/unchained_tormented_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_tormented_wings\/unchained_tormented_wings.cadacf12405bfaaa6643f923b2e54e64f8a22b48.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_tormented_wings\/unchained_tormented_wings_large.070f1c35b44471d792c9a32bd920fecdff18b8e9.png",
+				"item_set": "chained_mistress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Chains",
+				"defindex": 5297,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Chains",
+				"item_name": "The Ol' Chopper's Chains",
+				"item_description": "I once made me a bracelet with a bit of spare ankle, but it kept coming apart. Some chain helped with that.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_arm\/the_ol_choppers_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_arm\/the_ol_choppers_arm.1151c9be33c28b367574aa22956ab1e78292cf0b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_arm\/the_ol_choppers_arm_large.048f31e40d06636c21b2b9b8eb367034db8c91be.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Mantle",
+				"defindex": 5298,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "The Gallows Understudy Mantle",
+				"item_description": "Such a style has never been seen near Xhacatocatl, but the Hound of the Flayed Twins must on occasion roam far from his accustomed lands.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_mantle\/blood_seeker_executioner_mantle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_mantle\/blood_seeker_executioner_mantle.3a6f167819e14e71b7236e6bae00b50d5332c167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_mantle\/blood_seeker_executioner_mantle_large.d013805669d47cf794353593d13a393a93153827.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Meat Jacket",
+				"defindex": 5299,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Jacket",
+				"item_name": "The Ol' Chopper's Meat Jacket",
+				"item_description": "Why go to the trouble of a proper butcherin' if you can't show it off?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_back\/the_ol_choppers_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_back\/the_ol_choppers_back.3eae34a818f1fb3462a0d8352ae83ec295363fce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_back\/the_ol_choppers_back_large.6e069ca4f2fef11ce2167adf8fd968df268976bb.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Hood",
+				"defindex": 5300,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "The Gallows Understudy Hood",
+				"item_description": "In the land where executions are accomplished by gallows, Strygwr shadows his face that the thirst of the Twins that burns in his eyes may go unremarked by suspicious passersby.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_hood\/blood_seeker_executioner_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_hood\/blood_seeker_executioner_hood.04ac7011aada134259636aa1d7a662e50febef07.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_hood\/blood_seeker_executioner_hood_large.a81f87a9fcd3778626e3065eea80c863bcc0f958.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "The One Horn",
 				"defindex": 5301,
 				"item_class": "dota_item_wearable",
@@ -41843,7 +43223,15 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international tag",
+						"value": 2013
+					}
+				]
+				
 			},
 			{
 				"name": "Dreaded Bravo's Scarf",
@@ -41908,6 +43296,150 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/dreaded_bravos_guise\/dreaded_bravos_guise.6f34ef8b87611c41767ddafddee899886f36ee82.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/dreaded_bravos_guise\/dreaded_bravos_guise_large.e98af6232f8878cca087d42934b9c46c2cb2c9ef.png",
 				"item_set": "ta_dreaded_bravo",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Dinner Bringer",
+				"defindex": 5305,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "The Ol' Chopper's Dinner Bringer",
+				"item_description": "Y'know, someone once told me it ain't the hook catching you that really hurts, but when I take it back out.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/the_ol_choppers_hook\/the_ol_choppers_hook",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_hook\/the_ol_choppers_hook.94599d1baaa43a0300d921111db64ea69b2155c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/the_ol_choppers_hook\/the_ol_choppers_hook_large.e1532af2f25413cca47bdc2842227fc8c2683f61.png",
+				"item_set": "ol_chopper",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Back",
+				"defindex": 5306,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "back",
+				"item_name": "The Gallows Understudy Back",
+				"item_description": "Although he wears the garb of a benighted foreign land, Bloodseeker still relies on sacred lines of power to channel the blood he lets.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_collar\/blood_seeker_executioner_collar",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_collar\/blood_seeker_executioner_collar.6eda4cb29be046d0d10d60a1d401aae58ddb4a6b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_collar\/blood_seeker_executioner_collar_large.37b49f5b8949c1067d6af37e4fa1db226dcecf7e.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Gauntlets",
+				"defindex": 5307,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "The Gallows Understudy Gauntlets",
+				"item_description": "Hempen ropes are a crude tool for execution, but Bloodseeker seeks to understand the ways of the backwards lands through which his hunting takes him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_gauntlets\/blood_seeker_executioner_gauntlets",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_gauntlets\/blood_seeker_executioner_gauntlets.703c4f90ac22be3f1e82f7694d63ca669c315223.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_gauntlets\/blood_seeker_executioner_gauntlets_large.31f163a651e582b7268b39683848a3c0a4770302.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Skirt",
+				"defindex": 5308,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Skirt",
+				"item_name": "The Gallows Understudy Skirt",
+				"item_description": "Bloodseeker found many uses for the gallows rope he stole from a corpse's distended neck, in order to study this crude means of execution at his leisure.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_skirt\/blood_seeker_executioner_skirt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_skirt\/blood_seeker_executioner_skirt.d8ce01a7814353bd5829ee7ef7ed9c3e296d48a6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_skirt\/blood_seeker_executioner_skirt_large.a952cfeeb13fbab31ba30188d2e2c41d3b88a2b0.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Blade",
+				"defindex": 5309,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "The Gallows Understudy Blade",
+				"item_description": "It is sometimes necessary, in his travels, to forego his accustomed blades of volcanic glass and fall back on something fashioned by the local smith.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon.f78b9ac4bf9eb1b5b39341c4ac38b67a9825343d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon_large.7c322d4d33c55b098cc099561b6ca977660cdd73.png",
+				"item_set": "the_gallows_understudy_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "The Gallows Understudy Blade - Off-Hand",
+				"defindex": 5310,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Offhand Weapon",
+				"item_name": "The Gallows Understudy Blade - Off-Hand",
+				"item_description": "It is sometimes necessary, in his travels, to forego his accustomed blades of volcanic glass and fall back on something fashioned by the local smith.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_weapon_off\/blood_seeker_executioner_weapon_off",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon_off\/blood_seeker_executioner_weapon_off.267500f823137a1b0ef9142d70bd28ee5d33868d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon_off\/blood_seeker_executioner_weapon_off_large.9a22eec8fe643a8aa5c3c936a6d284b65bf59835.png",
+				"item_set": "the_gallows_understudy_set",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -42347,7 +43879,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Axe",
 				"item_name": "Entropic Axe",
-				"item_description": "Since the moment of the great schism, the dark rider has hunted.  He now rides with blackened iron in his fist-- a battle axe of entropy forged in the chaos between the stars.",
+				"item_description": "Since the moment of the great schism, the dark rider has hunted.  He now rides with blackened iron in his fist--a battle axe of entropy forged in the chaos between the stars.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ\/items\/chaos_knight\/entropic_set\/chaos_knight_entropic_axe",
@@ -42665,6 +44197,29 @@
 				}
 			},
 			{
+				"name": "Gift of the Sea Arms",
+				"defindex": 5343,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "arms",
+				"item_name": "Gift of the Sea Arms",
+				"item_description": "Among the greatest of gifts offered to Morphling, these fines that separate tangible body from ineffable soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/gift_of_the_sea_arms\/gift_of_the_sea_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_arms\/gift_of_the_sea_arms.b368ede46637227c9545edff3531b4a44de2974b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_arms\/gift_of_the_sea_arms_large.3ee377c69584c6e8cef67793e470a87161372eb9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Scree'auk's Talon",
 				"defindex": 5344,
 				"item_class": "dota_item_wearable",
@@ -42770,6 +44325,529 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/admiralsprow\/admiralsprow_helm.b1645e0363582254b9cf7c64dab9dba6c23dacfb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/admiralsprow\/admiralsprow_helm_large.44e942db250cb46703d4e8c1aa4bcc989c169f0a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloak of the Dark Wraith",
+				"defindex": 5350,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Cloak of the Dark Wraith",
+				"item_description": "Mortred's choice of garb is as mysterious as her choice of target.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/dark_wraith_back\/dark_wraith_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_back\/dark_wraith_back.609e9af3db9998f910a3d888e169e1f5f8358dd0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_back\/dark_wraith_back_large.aeb19a0113c9ab034172b272b9b93e20bafdebf4.png",
+				"item_set": "dark_wraith",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Girdle of the Dark Wraith",
+				"defindex": 5351,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Girdle",
+				"item_name": "Girdle of the Dark Wraith",
+				"item_description": "In hushed voices, they whisper of lessons learned in a distant land known as Lordran. What can it mean?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/dark_wraith_belt\/dark_wraith_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_belt\/dark_wraith_belt.c1495faafe4b88ae63a4adbb6c53d30810d5142f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_belt\/dark_wraith_belt_large.dd0b8452fbecd229568f3f864e87dcdbd5a920f4.png",
+				"item_set": "dark_wraith",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Helm of the Dark Wraith",
+				"defindex": 5352,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Helm of the Dark Wraith",
+				"item_description": "A helm as dark as her soul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/dark_wraith_helmet\/dark_wraith_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_helmet\/dark_wraith_helmet.79c65d6d0984a3c6ad7bdb48685d22ec856b7525.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_helmet\/dark_wraith_helmet_large.e86c77276f33262cf414e45d083e1a18ddef727a.png",
+				"item_set": "dark_wraith",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Guard of the Dark Wraith",
+				"defindex": 5353,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder Guard",
+				"item_name": "Guard of the Dark Wraith",
+				"item_description": "Wraithlike, she passes unseen. But should you espy her, you would appreciate the graceful lines of her garb.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/dark_wraith_shoulder\/dark_wraith_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_shoulder\/dark_wraith_shoulder.1d04a09fe5a454fbe1ece9873407fd042ba0df88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_shoulder\/dark_wraith_shoulder_large.bed89daccec875d8e745d77f3328b8f7eb81e332.png",
+				"item_set": "dark_wraith",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blade of the Dark Wraith",
+				"defindex": 5354,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Blade of the Dark Wraith",
+				"item_description": "A reminder that the Dark Wraith's full attention is equivalent to death.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_assassin\/dark_wraith_weapon\/dark_wraith_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_weapon\/dark_wraith_weapon.d5891101645a830644698783256220970922d56b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_assassin\/dark_wraith_weapon\/dark_wraith_weapon_large.319a58fdc333e7a00e69c51a8e3cffb6913eb7cd.png",
+				"item_set": "dark_wraith",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Chained Beauty",
+				"defindex": 5355,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horns and Hair",
+				"item_name": "Chained Beauty",
+				"item_description": "Be vicious, be beautiful.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/unchained_restrained_beauty\/unchained_restrained_beauty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_restrained_beauty\/unchained_restrained_beauty.12878d8e28676faad353505f5803b257fb5bbaa3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_restrained_beauty\/unchained_restrained_beauty_large.3b38126e077b0697477f6ae1602f1ca206e890ff.png",
+				"item_set": "chained_mistress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Gift of the Sea Fin",
+				"defindex": 5356,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Miscellaneous",
+				"item_name": "Gift of the Sea Fin",
+				"item_description": "A fragment of a sea-serpent's tail? A crystalline imprisonment of the sea's energy? Not even the enigmatic Morphling would hazard a guess.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/gift_of_the_sea_fin\/gift_of_the_sea_fin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_fin\/gift_of_the_sea_fin.f779e2eab58f7db5bcc2379447dec645eee39c84.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_fin\/gift_of_the_sea_fin_large.a3efcec2ba0ab6f7b85c7b25eab5c3e9b6eb3e14.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Gift of the Sea Head",
+				"defindex": 5358,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Head piece",
+				"item_name": "Gift of the Sea Head",
+				"item_description": "Crowned with ambition and innate knowledge of the depths, Morphling wears these shimmering scales with eldritch pride.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/gift_of_the_sea_head\/gift_of_the_sea_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_head\/gift_of_the_sea_head.c9a269d4c7576a8b4a62bc4e42ac1863fc64bec1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_head\/gift_of_the_sea_head_large.f5d0334aca0e3557b97f52ba858b98d13d692974.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Chained Spur",
+				"defindex": 5359,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Chained Spur",
+				"item_description": "Delight in pain as they squeal with agony.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/unchained_poisonous_tail\/unchained_poisonous_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_poisonous_tail\/unchained_poisonous_tail.e07a60c34d1d9ad535d588053ea319e063ae9af1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_poisonous_tail\/unchained_poisonous_tail_large.79b2f871d98c678459ebeb5ec24461a6b0f4f05a.png",
+				"item_set": "chained_mistress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Gift of the Sea Shoulders",
+				"defindex": 5360,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder piece",
+				"item_name": "Gift of the Sea Shoulders",
+				"item_description": "Who can say no to such a glorious gift of strength and power?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/gift_of_the_sea_shoulders\/gift_of_the_sea_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_shoulders\/gift_of_the_sea_shoulders.f94cd47fadebc3b1e4bd2f14d45c06d138bb81d1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_shoulders\/gift_of_the_sea_shoulders_large.c8a4342a3597e07534be11115f0a162177d8df26.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Chained Guard",
+				"defindex": 5361,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Chained Guard",
+				"item_description": "A little armor can go a long way.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/queenofpain\/unchained_akashas_guard\/unchained_akashas_guard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_akashas_guard\/unchained_akashas_guard.4d5cd4dc8420268bdbf7adfb548c0c5418890d23.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/queenofpain\/unchained_akashas_guard\/unchained_akashas_guard_large.3770a26a9534d03d904fcfd6f58619ac54cbaebf.png",
+				"item_set": "chained_mistress",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Gift of the Sea Dorsal Wings",
+				"defindex": 5363,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dorsal Fins",
+				"item_name": "Gift of the Sea Dorsal Wings",
+				"item_description": "The sea's first gift was swiftness, imbued in these winglike dorsal fins.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/gift_of_the_sea_top_fin\/gift_of_the_sea_top_fin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_top_fin\/gift_of_the_sea_top_fin.3a1d5535cb403d2359056c7b4ad0fe183e84d31d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/gift_of_the_sea_top_fin\/gift_of_the_sea_top_fin_large.60e1384baddc11d60f7c3535aebfc654810a6c05.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Prestidigitator's Wraps",
+				"defindex": 5364,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Prestidigitator's Wraps",
+				"item_description": "To fool? To trick? To deceive? Never question a sorcerer's whim!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/peculiar_prestidigitator_cape\/peculiar_prestidigitator_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_cape\/peculiar_prestidigitator_cape.a5d9dba50f5d53c15216c5997bd99bb8ab9c6c15.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_cape\/peculiar_prestidigitator_cape_large.64be081f84ae57f4d585f9d241521a22ace956f1.png",
+				"item_set": "peculiar_prestidigitator_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Prestidigitator's Oculus",
+				"defindex": 5365,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Prestidigitator's Oculus",
+				"item_description": "A true trickster can see through the wiliest of ways.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/peculiar_prestidigitator_mask\/peculiar_prestidigitator_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_mask\/peculiar_prestidigitator_mask.def1d520530110b072911dd1b4a1eb700ab63eeb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_mask\/peculiar_prestidigitator_mask_large.9ab9233e8708f116e39855da0d5814bfecd72bb2.png",
+				"item_set": "peculiar_prestidigitator_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Prestidigitator's Shiners",
+				"defindex": 5366,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Prestidigitator's Shiners",
+				"item_description": "Untruth and beguilement are ever a conjurer's allies.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/peculiar_prestidigitator_shoulders\/peculiar_prestidigitator_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_shoulders\/peculiar_prestidigitator_shoulders.3211f25c77e3430002c191b1171458eef4d535f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_shoulders\/peculiar_prestidigitator_shoulders_large.2ddcf26a398462a33b7b41b27d4cd8815cdc77ff.png",
+				"item_set": "peculiar_prestidigitator_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Prestidigitator's Source of Sorcery",
+				"defindex": 5367,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Prestidigitator's Source of Sorcery",
+				"item_description": "Beware he who reaches beyond to the root of duplicity!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/peculiar_prestidigitator_wraps\/peculiar_prestidigitator_wraps",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_wraps\/peculiar_prestidigitator_wraps.2f33c22676e6a5092d44067bd765f38eeb8d09d7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/peculiar_prestidigitator_wraps\/peculiar_prestidigitator_wraps_large.40e4c4838e8d48a7550b9d1ac3bb90f02ce3c6a9.png",
+				"item_set": "peculiar_prestidigitator_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Robes of Malicious Efflorescence",
+				"defindex": 5368,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Robes",
+				"item_name": "Robes of Malicious Efflorescence",
+				"item_description": "A billowing flow of haunted light plays about a dreaded form.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/malicious_belt\/malicious_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_belt\/malicious_belt.e57a9bdbe4c824ccbf4d46082a65a53543fffae8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_belt\/malicious_belt_large.70089c8d5a2c0daf56165257601e84a17889aceb.png",
+				"item_set": "malicious_efflorescence",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blades of Malicious Efflorescence",
+				"defindex": 5369,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Blades of Malicious Efflorescence",
+				"item_description": "Unfolding, unfurling, unyielding, unstoppable.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/malicious_weapon\/malicious_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_weapon\/malicious_weapon.ad867606026b5eddfdc62a85c2119ceca420df4e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_weapon\/malicious_weapon_large.0cd047c92ab250d9ff22295efbc6938bef964094.png",
+				"item_set": "malicious_efflorescence",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Horns of Malicious Efflorescence",
+				"defindex": 5370,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Headpiece",
+				"item_name": "Horns of Malicious Efflorescence",
+				"item_description": "Into the mortal universe pierce the horns of purest strife.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/malicious_head\/malicious_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_head\/malicious_head.09036721ab65cf7cd3fb56c93816fb1e2795cb76.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_head\/malicious_head_large.fdc72e6f97628506f35e9e5287cdd269b7174410.png",
+				"item_set": "malicious_efflorescence",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bracers of Malicious Efflorescence",
+				"defindex": 5371,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Malicious Efflorescence",
+				"item_description": "Of flowing dark and unknown aethers come arms of dangerous beauty.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/malicious_bracers_misc\/malicious_bracers_misc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_bracers_misc\/malicious_bracers_misc.d4f7fee6bb07add4415b1de3f6a00f86add88d2f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_bracers_misc\/malicious_bracers_misc_large.2eff7b2060ad6030c814a2b8ac1f0f3974c85629.png",
+				"item_set": "malicious_efflorescence",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Wings of Malicious Efflorescence",
+				"defindex": 5372,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Wings of Malicious Efflorescence",
+				"item_description": "Charged energies hold tight to a shadowy being.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/malicious_shoulder\/malicious_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_shoulder\/malicious_shoulder.8be6cba10ef672c91b770c375c5c88c840fabe3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_shoulder\/malicious_shoulder_large.98327fff46704eb6ee1d4d4a19f83706f10cda7d.png",
+				"item_set": "malicious_efflorescence",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Figurehead Weapon",
+				"defindex": 5373,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Figurehead Weapon",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -48257,7 +50335,25 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2013
+					},
+					{
+						"name": "set item tint RGB",
+						"class": "set_item_tint_rgb",
+						"value": 1418517
+					},
+					{
+						"name": "attach particle effect",
+						"class": "set_attached_particle",
+						"value": 109
+					}
+				]
+				
 			},
 			{
 				"name": "Team Pennant: Dignitas",
@@ -48345,7 +50441,7 @@
 				"name": "Maximilian the Beetlebear",
 				"defindex": 10191,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
+				"item_type_name": "Courier",
 				"item_name": "Maximilian the Beetlebear",
 				"item_description": "High on the steppes of Druud, stormcrafters are known to press beasts of burden into their service.  Rare though is the stormcrafter who dares try and control the pugnacious steambear.  That the young bear Maximilian now travels unaccompanied is proof that the domestication process did not go well.  For the stormcrafter.",
 				"proper_name": false,
@@ -52182,11 +54278,11 @@
 				
 			},
 			{
-				"name": "Garrad Drywiz and Garactacus",
+				"name": "Garran Drywiz and Garactacus",
 				"defindex": 10287,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "International Courier",
-				"item_name": "Garrad Drywiz and Garactacus",
+				"item_name": "Garran Drywiz and Garactacus",
 				"item_description": "Evil and ill intention are obvious in every gesture of this despicable duo.",
 				"proper_name": false,
 				"item_quality": 3,
@@ -52207,7 +54303,7 @@
 					{
 						"name": "international tag",
 						"class": "international_tag",
-						"value": 2012
+						"value": 2013
 					},
 					{
 						"name": "disallow recycling",
@@ -52484,7 +54580,25 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2013
+					},
+					{
+						"name": "set item tint RGB",
+						"class": "set_item_tint_rgb",
+						"value": 1418517
+					},
+					{
+						"name": "attach particle effect",
+						"class": "set_attached_particle",
+						"value": 109
+					}
+				]
+				
 			},
 			{
 				"name": "Tinkbot",
@@ -52556,6 +54670,51 @@
 				}
 			},
 			{
+				"name": "Waldi the Faithful",
+				"defindex": 10298,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Waldi the Faithful",
+				"item_description": "Orphaned and abandoned on the fringes of the Nightsilver Woods, Waldi was rescued by a reclusive band of rangers and trained in the ways of war. Waldi is often underestimated by his foes, but his unassuming appearance belies his relentless tenacity and unfailing loyalty. He is a worthy courier and companion for the mightiest of warriors, a true dog of duty.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/waldi_the_faithful\/waldi_the_faithful",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/waldi_the_faithful\/waldi_the_faithful.6cba2df956ff30353b3f159a348d525d576c0590.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/waldi_the_faithful\/waldi_the_faithful_large.a68f82cc1f4937b192e4e3af6e13965369bf9395.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Iron Cage",
+				"defindex": 10299,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Iron Cage",
+				"item_description": "Contain and conquer!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_iron_cage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Osky the Ottragon",
 				"defindex": 10300,
 				"item_class": "dota_item_wearable",
@@ -52576,7 +54735,25 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "international tag",
+						"class": "international_tag",
+						"value": 2013
+					},
+					{
+						"name": "set item tint RGB",
+						"class": "set_item_tint_rgb",
+						"value": 1418517
+					},
+					{
+						"name": "attach particle effect",
+						"class": "set_attached_particle",
+						"value": 109
+					}
+				]
+				
 			},
 			{
 				"name": "Treasure of Champions 2013",
@@ -52654,7 +54831,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Lure",
 				"item_name": "Cleft Hawk's Call",
-				"item_description": "One among the many striders of Upland Druud, the timid Cleft Hawk makes its home among the many fissures dotting the plains.  The mating call of a cleft hawk is said to be as grating as it is unbelievably loud.",
+				"item_description": "One among the many striders of Upland Druud, the timid Cleft Hawk makes its home within the many fissures dotting the plains.  The mating call of a Cleft Hawk is said to be as grating as it is unbelievably loud.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/smeevilbird_lure",
@@ -52679,6 +54856,29 @@
 				
 			},
 			{
+				"name": "Ocula the Observer",
+				"defindex": 10304,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ward",
+				"item_name": "Ocula the Observer",
+				"item_description": "With an eye that big, there's no hiding from Ocula!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/wards\/ocula\/ocula_npc_dota_observer_wards",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/ocula\/ocula_npc_dota_observer_wards.7a1eff0e8f70830c0a795f0530e2576f7f46ad78.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/ocula\/ocula_npc_dota_observer_wards_large.7a76afb867aa76b9cb5ac07685a1c9af3cbb3f10.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "ESWC Diamond",
 				"defindex": 10305,
 				"item_class": "dota_item_wearable",
@@ -52691,6 +54891,28 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_eswc_diamond.b1ed423cee555f0eb815ed048eb8c8ea615c2648.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Curiosity",
+				"defindex": 10306,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Curiosity",
+				"item_description": "It cannot be quenched!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_curiosity_hud",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_curiosity_hud.7487af377b9f4233943ecb6180c6c4429e07261b.png",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -52745,18 +54967,18 @@
 				}
 			},
 			{
-				"name": "dragon_scale",
+				"name": "Dragon Scale",
 				"defindex": 10309,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Hud Skin",
-				"item_name": "dragon_scale",
+				"item_name": "Dragon Scale",
 				"item_description": "Live by the sword, die by the dragon.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/huds\/hud_dragon_scale",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_dragon_scale.212c96cb3255cb69b5fec779781fff52a33020bb.png",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -60715,6 +62937,318 @@
 				
 			},
 			{
+				"name": "Seer's Bounty",
+				"defindex": 15214,
+				"item_class": "tool",
+				"item_type_name": "Priceless Treasure",
+				"item_name": "Seer's Bounty",
+				"item_description": "From clouded visions come just rewards.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/gift_fantasy_2013_low",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_low.aa21d5bdc0ac584b7564db89071304e278aa2f1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_low_large.e9457d089823ef3496c559011eb60b2e9768614c.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "gift",
+					"use_string": "Open Gift"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "ignore charge notification",
+						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Diviner's Bounty",
+				"defindex": 15215,
+				"item_class": "tool",
+				"item_type_name": "Priceless Treasure",
+				"item_name": "Diviner's Bounty",
+				"item_description": "Through strong intuition have such potent rewards been found.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/gift_fantasy_2013_middle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_middle.5ac27877d6f7acd24c9146367ff8de8c81329a99.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_middle_large.18ca1b29a0a7652e9083c302d8f4210de2059dfa.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "gift",
+					"use_string": "Open Gift"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "ignore charge notification",
+						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Augur's Bounty",
+				"defindex": 15216,
+				"item_class": "tool",
+				"item_type_name": "Priceless Treasure",
+				"item_name": "Augur's Bounty",
+				"item_description": "The virtues of wisdom yield precious rewards.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/gift_fantasy_2013_high",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_high.b3dad20ae655815201828e461def1117a96b91ba.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_high_large.947b430bb43dde937bf57ca0509209ec6bb08b47.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "gift",
+					"use_string": "Open Gift"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "ignore charge notification",
+						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Prophet's Bounty",
+				"defindex": 15217,
+				"item_class": "tool",
+				"item_type_name": "Priceless Treasure",
+				"item_name": "Prophet's Bounty",
+				"item_description": "By uncanny insight were such wondrous rewards revealed.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/gift_fantasy_2013_veryhigh",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_veryhigh.4af0eead7819439ab618d9da7514e6898eebc39c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/gift_fantasy_2013_veryhigh_large.23abbb84b2c46af22f0068d1a78a70b5ef5fd8a1.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "gift",
+					"use_string": "Open Gift"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "ignore charge notification",
+						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Insomnia49 Dota 2 Cup",
+				"defindex": 15218,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Insomnia49 Dota 2 Cup",
+				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of Â£2,000 or more!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_insomnia49",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Insomnia49 Dota 2 Cup - ADMIN",
+				"defindex": 15219,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Insomnia49 Dota 2 Cup - ADMIN",
+				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of ÃÂ£2,000 or more!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_insomnia49",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 3rd Edition",
+				"defindex": 15220,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 3rd Edition",
+				"item_description": "Netolic Pro League returns with a prize pool of $2000! The tournament will have eight qualified teams compete against eight invited teams!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic3_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 3rd Edition - ADMIN",
+				"defindex": 15221,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 3rd Edition - ADMIN",
+				"item_description": "Netolic Pro League returns with a prize pool of $2000! The tournament will have eight qualified teams compete against eight invited teams!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic3_league",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -63207,15 +65741,7 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				},
-				"attributes": [
-					{
-						"name": "polycount tag",
-						"class": "polycount_tag",
-						"value": 2012
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "The Riftshadow Roamer's Set",
@@ -63244,15 +65770,7 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				},
-				"attributes": [
-					{
-						"name": "polycount tag",
-						"class": "polycount_tag",
-						"value": 2012
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "The Stormcrow's Spirit Set",
@@ -63281,15 +65799,7 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				},
-				"attributes": [
-					{
-						"name": "polycount tag",
-						"class": "polycount_tag",
-						"value": 2012
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "Winter Snowdrop Set",
@@ -66283,8 +68793,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Regalia_of_the_Bonelord_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_bonelord_set.1d643713816e6636ec14856455265862665805ec.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_bonelord_set_large.b988cb787f28e427448752262de13a657152ec83.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_bonelord_set.9dcb846fdc5826294bff69124402bcfeaa0d3bb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_regalia_of_the_bonelord_set_large.48248a39d05c730fe9f61eb4227b629f8968fb8b.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -66863,8 +69373,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Heart_of_the_North_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heart_of_the_north_set.ce4a5d0ff722abd94da06b5876c8fd344ddf3bfd.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heart_of_the_north_set_large.01214c8a9d0a65207d6a3c772ec393fe79a7d15f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heart_of_the_north_set.9755d5d044abeddee5842df3c0d173ae7e28c1a7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heart_of_the_north_set_large.a5963b894f34449cd99cd0bc81ecc1330002a02c.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -67124,8 +69634,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_The_Boreal_Watch_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_boreal_watch_set.3ef8b29e3431c1213b5e6fcb2d2d4fa3456c500d.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_boreal_watch_set_large.15fde6a15c55341a57701f8369378716871f72a8.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_boreal_watch_set.a4f91f4ad8cbc33266565ec577e2ea8e8cc1bb88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_boreal_watch_set_large.a5822b4b993fe9ed12600aefb16a4a0bf7fecc66.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -67459,6 +69969,441 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Sacred Orb Set",
+				"defindex": 20232,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Sacred Orb Set",
+				"item_description": "Includes all items in the 'Sacred Orb' set for Nyx Assassin:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Sacred_Orb_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sacred_orb_set.5128021d1d1138328d704dc4aff4646751510ff2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_sacred_orb_set_large.0445e0e5f970bcda5d4090a31c8f6b16e14e1a12.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Jewel of the Forest Set",
+				"defindex": 20233,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Jewel of the Forest Set",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Jewel_of_the_Forest_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_jewel_of_the_forest_set.56b441b60e9643727062a56e2b5e2d767fca5605.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_jewel_of_the_forest_set_large.6f7854d32782344689ffec2495dc7d6731df6ad8.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Ancestral Luck Set",
+				"defindex": 20234,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Ancestral Luck Set",
+				"item_description": "Includes all of the items in the 'Ancestral Luck' set for Ogre Magi:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Ancestral_Luck_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_ancestral_luck_set.9dbb6903463bd900d0e99b7dc9623a9bded28f18.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_ancestral_luck_set_large.10d9a93f2ed997afa094c11f8123b4ac057a6bde.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Malicious Efflorescence Set",
+				"defindex": 20235,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Malicious Efflorescence Set",
+				"item_description": "Includes all of the items in the \"Malicious Efflorescence\" set for Spectre:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Malicious_Efflorescence_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_malicious_efflorescence_set.2c93c831f071cb8f875708152eb85cd60cefdf0a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_malicious_efflorescence_set_large.1605c6a157fbb6dd7b28baa819a01f294ef54690.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Deep Warden Haul Set",
+				"defindex": 20236,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Deep Warden Haul Set",
+				"item_description": "Includes all of the items in the 'Deep Warden Haul' set for Slark:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Deep_Warden_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_deep_warden_set.ecffe425acf9e8466eb6c4581a54d91beff0093f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_deep_warden_set_large.69a0a0242131c9f389bddd7db76aef9d58f42d4c.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Arms of the Bladebreaker Order Set",
+				"defindex": 20237,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Arms of the Bladebreaker Order Set",
+				"item_description": "Includes all of the items in the 'Arms of the Bladebreaker Order' set for Riki:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Blade_Armor_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blade_armor_set.97c4ae1956b69f9091de2b439d76f384ce8dcb66.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blade_armor_set_large.271675c0cebb1d1968a857e0bc9fd984d17a87e0.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Redmoon Assassin's Secret Set",
+				"defindex": 20238,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Redmoon Assassin's Secret Set",
+				"item_description": "Includes all of the items in the 'Redmoon Assassin's Secret' set for Templar Assassin:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Redmoon_Assassinators_Secret_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_redmoon_assassinators_secret_set.5aaa5e03209dd914a6c68690a8df66f629dbfe90.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_redmoon_assassinators_secret_set_large.fd7f12e2a31c3361da3633a7e7760bced00d36e4.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Ol' Chopper's Set",
+				"defindex": 20239,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Ol' Chopper's Set",
+				"item_description": "This bundle contains all of the items in 'The Ol' Copper's Set' for Pudge:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Ol_Choppers_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_ol_choppers_set.27818dbc0b7ee76ba19bbfda5dd1b22cd27b145b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_ol_choppers_set_large.79e8ff79b64f528d95929a943f8a7b5cca7c14cf.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Gallows Understudy Set",
+				"defindex": 20240,
+				"item_class": "bundle",
+				"item_type_name": "Item Set",
+				"item_name": "The Gallows Understudy Set",
+				"item_description": "Far from the temples of the Flayed Twins, Bloodseeker stumbled upon a land that lauded execution above sacrifice, relying on hempen rope and metal blades instead of black stone and the will of bloodthirsty gods. Yet there was something in their crude approach that appealed to him, and so he spent a season studying the executioners, watching from the crowd that turned out for every morbid spectacle, until he realized that the mob itself was the god to whom they made their sacrifices. With a leer that matched those to be seen on the faces of the enrapt audience, he made his way home to share the lessons he had learned with his own bloody masters of the priestly caste. \r\n\t\r\n\tIncludes all items from the Gallows Understudy Set.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Gallows_Understudy_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_gallows_understudy_set.cf5ea1492c11bba67d76a412f1371b3b151e77e1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_gallows_understudy_set_large.68c1d44d010957ee693c2e460c98f68d5e8a96bb.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Gift of the Sea Set",
+				"defindex": 20241,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Gift of the Sea Set",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Gift_of_the_Sea_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gift_of_the_sea_set.3fd4730d965aa70b1755cb87a4a7788c21bcc030.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gift_of_the_sea_set_large.a6e68a344a4e481856eea4e1604a82a52c1f9cd7.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Gallows Understudy Blade Pack",
+				"defindex": 20242,
+				"item_class": "bundle",
+				"item_type_name": "Paired Weapons",
+				"item_name": "The Gallows Understudy Blade Pack",
+				"item_description": "Pack includes both the main and off-hand Gallows Understudy blades.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon.f78b9ac4bf9eb1b5b39341c4ac38b67a9825343d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/blood_seeker_executioner_weapon\/blood_seeker_executioner_weapon_large.7c322d4d33c55b098cc099561b6ca977660cdd73.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Arms of the Bladebreaker Dagger Pack",
+				"defindex": 20243,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Arms of the Bladebreaker Dagger Pack",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon.1a48434d13cb53f5cc51010dc4fce71bb714fef7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/bladearmorweapon\/bladearmorweapon_large.ba7f1cccb85760a9f966def10c0e64ec99ff2d05.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Chained Mistress Set",
+				"defindex": 20244,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Chained Mistress Set",
+				"item_description": "Includes all of the items in the 'Chained Mistress' set for Queen of Pain:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Chained_Mistress_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_mistress_set.755cb9ee8e326f571f129f6bef3c1a07f6e4fed6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_mistress_set_large.64dbbb9246a935042e7ffc8082113b524fb2dcbb.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Peculiar Prestidigitator Set",
+				"defindex": 20245,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Peculiar Prestidigitator Set",
+				"item_description": "Includes all of the items in the 'Peculiar Prestidigitator' set for Rubick:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Peculiar_Pretidigitator_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_peculiar_pretidigitator_set.f94986c1cbab2887e0e69fa6a1cbc5fb81a26e12.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_peculiar_pretidigitator_set_large.575c319855a65211932eaafcde98bc03485b4170.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Dark Wraith Set",
+				"defindex": 20246,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Dark Wraith Set",
+				"item_description": "Includes all of the items in the \"Dark Wraith\" set for Phantom Assassin:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Dark_Wraith_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_wraith_set.50dbbcbc131e56ecd21a0dffbc30d4e3e6bb83a3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_dark_wraith_set_large.8544b94053997b94019c994c640adee01569a1a5.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -67489,7 +70434,7 @@
 				"attribute_class": "set_attached_particle",
 				"description_string": "Effect: %s1",
 				"description_format": "value_is_particle_index",
-				"effect_type": "neutral",
+				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -67559,7 +70504,7 @@
 				"attribute_class": "set_item_tint_rgb",
 				"description_string": "Color: %s1",
 				"description_format": "value_is_color",
-				"effect_type": "neutral",
+				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -68326,6 +71271,26 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "fantasy challenge tag",
+				"defindex": 406,
+				"attribute_class": "fantasy_challenge_tag",
+				"description_string": "The Compendium Fantasy Challenge %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sithil stash",
+				"defindex": 407,
+				"attribute_class": "sithil_stash",
+				"description_string": "Sithil's Summer Stash %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -68367,6 +71332,19 @@
 					"Ancestors' Edge",
 					"Ancestors' Pauldron",
 					"Ancestors' Vambrace"
+				]
+				
+			},
+			{
+				"item_set": "ancestral_luck",
+				"name": "Ancestral Luck",
+				"store_bundle": "Ancestral Luck Set",
+				"items": [
+					"Flaming Scepter of Ancestral Luck",
+					"Bracer and Band of Ancestral Luck",
+					"Mantle of Ancestral Luck",
+					"Belt of Ancestral Luck",
+					"Masks of Ancestral Luck"
 				]
 				
 			},
@@ -68649,6 +71627,20 @@
 				
 			},
 			{
+				"item_set": "blade_armor_set",
+				"name": "Arms of the Bladebreaker Order",
+				"store_bundle": "Arms of the Bladebreaker Order Set",
+				"items": [
+					"Bladebreaker Hood",
+					"Bladebreaker Armguards",
+					"Bladebreaker Spaulders",
+					"Bladebreaker Brush",
+					"Bladebreaker Dagger",
+					"Bladebreaker Dagger - Off-Hand"
+				]
+				
+			},
+			{
 				"item_set": "blood_seeker_hlotl",
 				"name": "Ritual Garb of the Seeker",
 				"store_bundle": "Ritual Garb of the Seeker Set",
@@ -68829,6 +71821,18 @@
 				
 			},
 			{
+				"item_set": "chained_mistress",
+				"name": "Chained Mistress",
+				"store_bundle": "Chained Mistress Set",
+				"items": [
+					"Chained Beauty",
+					"Chained Wings",
+					"Chained Spur",
+					"Chained Guard"
+				]
+				
+			},
+			{
 				"item_set": "chained_slayers",
 				"name": "Chained Slayers",
 				"items": [
@@ -68969,6 +71973,19 @@
 				
 			},
 			{
+				"item_set": "dark_wraith",
+				"name": "Dark Wraith",
+				"store_bundle": "Dark Wraith Set",
+				"items": [
+					"Cloak of the Dark Wraith",
+					"Girdle of the Dark Wraith",
+					"Helm of the Dark Wraith",
+					"Guard of the Dark Wraith",
+					"Blade of the Dark Wraith"
+				]
+				
+			},
+			{
 				"item_set": "dead_winter",
 				"name": "Dead Winter",
 				"store_bundle": "Dead Winter Set",
@@ -69010,6 +72027,19 @@
 					"Reliquary of Rotting Doom",
 					"Beard of Weeping Scorn",
 					"Pretiosa of Putrescense"
+				]
+				
+			},
+			{
+				"item_set": "deep_warden_set",
+				"name": "Deep Warden's Haul",
+				"store_bundle": "Deep Warden Haul Set",
+				"items": [
+					"Deep Warden's Conch Pauldron",
+					"Deep Warden's Tooth Bracer",
+					"Deep Warden's Darkray Cape",
+					"Deep Warden's Seized Hood",
+					"Deep Warden's Prized Scimitar"
 				]
 				
 			},
@@ -69557,6 +72587,20 @@
 				
 			},
 			{
+				"item_set": "jewel_of_the_forest",
+				"name": "Jewel of the Forest",
+				"store_bundle": "Jewel of the Forest Set",
+				"items": [
+					"Jewel of the Forest Gloves",
+					"Jewel of the Forest Pauldrons",
+					"Jewel of the Forest Boots",
+					"Jewel of the Forest Bow",
+					"Jewel of the Forest Cape",
+					"Jewel of the Forest Scarf"
+				]
+				
+			},
+			{
 				"item_set": "juggernaut_beasts_men",
 				"name": "Aspects of Beast and Man",
 				"store_bundle": "Aspects of Beast and Man Set",
@@ -69740,6 +72784,19 @@
 					"Comb of the Great Grey",
 					"Familiar of the Great Grey",
 					"Form of the Great Grey"
+				]
+				
+			},
+			{
+				"item_set": "malicious_efflorescence",
+				"name": "Malicious Efflorescence",
+				"store_bundle": "Malicious Efflorescence Set",
+				"items": [
+					"Robes of Malicious Efflorescence",
+					"Blades of Malicious Efflorescence",
+					"Horns of Malicious Efflorescence",
+					"Bracers of Malicious Efflorescence",
+					"Wings of Malicious Efflorescence"
 				]
 				
 			},
@@ -69944,6 +73001,19 @@
 				
 			},
 			{
+				"item_set": "ol_chopper",
+				"name": "The Ol' Chopper",
+				"items": [
+					"The Ol' Chopper's Meat Jacket",
+					"The Ol' Chopper's Cleaver",
+					"The Ol' Chopper's Choppin' Arm",
+					"The Ol' Chopper's Chains",
+					"The Ol' Chopper's Dinner Bringer",
+					"The Ol' Chopper's Grizzled Face"
+				]
+				
+			},
+			{
 				"item_set": "omexe_weight",
 				"name": "The Weight of Omexe",
 				"store_bundle": "Weight of Omexe Set",
@@ -70042,6 +73112,18 @@
 					"Excavator's Treasure",
 					"Femur Thrasher",
 					"Skeletal Catch"
+				]
+				
+			},
+			{
+				"item_set": "peculiar_prestidigitator_set",
+				"name": "Peculiar Prestidigitator",
+				"store_bundle": "Peculiar Prestidigitator Set",
+				"items": [
+					"Prestidigitator's Wraps",
+					"Prestidigitator's Oculus",
+					"Prestidigitator's Shiners",
+					"Prestidigitator's Source of Sorcery"
 				]
 				
 			},
@@ -70158,6 +73240,17 @@
 				
 			},
 			{
+				"item_set": "redmoon_assassins_secret",
+				"name": "Redmoon Assassinator's Secret",
+				"store_bundle": "Redmoon Assassin's Secret Set",
+				"items": [
+					"Redmoon Assassin's Secret Armor",
+					"Redmoon Assassin's Secret Headwear",
+					"Redmoon Assassin's Secret Wraps"
+				]
+				
+			},
+			{
 				"item_set": "regalia_of_the_bonelord_set",
 				"name": "Regalia of the Bonelord",
 				"store_bundle": "Regalia of the Bonelord Set",
@@ -70257,6 +73350,17 @@
 					"Sacred Bones Shoulder",
 					"Sacred Bones Spear",
 					"Sacred Bones Chopper"
+				]
+				
+			},
+			{
+				"item_set": "sacred_orb_set",
+				"name": "Sacred Orb",
+				"store_bundle": "Sacred Orb Set",
+				"items": [
+					"Sacred Orb Carapace",
+					"Sacred Orb Helm",
+					"Sacred Orb Venom Claws"
 				]
 				
 			},
@@ -70529,6 +73633,21 @@
 					"Bracers of the Seasoned Hunter",
 					"Rifle of the Great Safari",
 					"Sharpeye's Momentos"
+				]
+				
+			},
+			{
+				"item_set": "the_gallows_understudy_set",
+				"name": "The Gallows Understudy",
+				"store_bundle": "The Gallows Understudy Set",
+				"items": [
+					"The Gallows Understudy Mantle",
+					"The Gallows Understudy Hood",
+					"The Gallows Understudy Back",
+					"The Gallows Understudy Gauntlets",
+					"The Gallows Understudy Skirt",
+					"The Gallows Understudy Blade",
+					"The Gallows Understudy Blade - Off-Hand"
 				]
 				
 			},
@@ -71069,7 +74188,7 @@
 				"system": "axe_weapon_eyes_wyvernguard_edge",
 				"id": 33,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura"
+				"name": "Champion's Aura 2012"
 			},
 			{
 				"system": "courier_murrissey_the_smeevil_fl",
@@ -71525,7 +74644,7 @@
 				"system": "courier_international_2013",
 				"id": 109,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle109"
+				"name": "Champion's Aura 2013"
 			},
 			{
 				"system": "courier_otter_dragon_ambient",
@@ -71586,6 +74705,24 @@
 				"id": 119,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle119"
+			},
+			{
+				"system": "chaos_knight_entropic_helmet",
+				"id": 120,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle120"
+			},
+			{
+				"system": "dragon_knight_dragon_shield_ambient",
+				"id": 121,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle121"
+			},
+			{
+				"system": "juggernaut_blade_generic",
+				"id": 122,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle122"
 			}
 		]
 		,
