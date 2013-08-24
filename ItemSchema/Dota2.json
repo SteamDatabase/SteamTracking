@@ -71322,7 +71322,7 @@
 				"name": "sithil stash",
 				"defindex": 407,
 				"attribute_class": "sithil_stash",
-				"description_string": "Attrib_SithilStash",
+				"description_string": "Sithil's Summer Stash %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -74224,7 +74224,7 @@
 				"system": "axe_weapon_eyes_wyvernguard_edge",
 				"id": 33,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura"
+				"name": "Champion's Aura 2012"
 			},
 			{
 				"system": "courier_murrissey_the_smeevil_fl",
@@ -74680,7 +74680,7 @@
 				"system": "courier_international_2013",
 				"id": 109,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle109"
+				"name": "Champion's Aura 2013"
 			},
 			{
 				"system": "courier_otter_dragon_ambient",
