@@ -72,34 +72,48 @@ function PopulatePackageAppLists( rgIncludedItemIds, rgGiftableItemIds )
 	});
 }
 
+var g_rgstrLastSearch = "";
+var g_nFindPackageTimer = 0;
 function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCollection, grantor )
 {
-	var matchText = $J( "#" + elemAutoCompleteName ).val();
+	if ( g_nFindPackageTimer )
+		window.clearTimeout( g_nFindPackageTimer );
 
-	if ( matchText.length < 3 )
-		return;
+	g_nFindPackageTimer = setTimeout( function() {
+		var matchText = $J( "#" + elemAutoCompleteName ).val();
 
-	var params = {
-		term : matchText
-	};
-	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestpackagejson/', {
-		method: 'post',
-		parameters: params,
-		onSuccess: function( transport ) {
-			var matchingItems = transport.responseJSON || [];
-			var list = $J( "#" + elemListName );
-			list.find("option").remove();
-			for ( var i = 0; i < matchingItems.length; ++i )
-			{
-				var option = matchingItems[i];
-				var name = option['name'];
-				if ( option['notes'] )
-				{
-					name += " [" + option['notes'] + "]";
-				}
-				list.append( $J('<option>', { 'class' : option['cssClass'], value : option['packageid'], text : name } ) );
-			}
+		if ( matchText.length < 3 )
+			return;
+
+		if ( g_rgstrLastSearch != matchText )
+		{
+			g_rgstrLastSearch = matchText;
 		}
+
+		var params = {
+			term : matchText
+		};
+		new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestpackagejson/', {
+			method: 'post',
+			parameters: params,
+			onSuccess: function( transport ) {
+				if ( g_rgstrLastSearch != matchText )
+					return;
+				var matchingItems = transport.responseJSON || [];
+				var list = $J( "#" + elemListName );
+				list.find("option").remove();
+				for ( var i = 0; i < matchingItems.length; ++i )
+				{
+					var option = matchingItems[i];
+					var name = option['name'];
+					if ( option['notes'] )
+					{
+						name += " [" + option['notes'] + "]";
+					}
+					list.append( $J('<option>', { 'class' : option['cssClass'], value : option['packageid'], text : name } ) );
+				}
+			}
+		} );
 	} );
 }
 

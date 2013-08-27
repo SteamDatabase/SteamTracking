@@ -496,6 +496,7 @@ p {
 		padding: 7px 7px 7px 7px;
 		background-color: #333333;
 		display: table-cell;
+		vertical-align: middle;
 		
 	}
 
@@ -505,6 +506,10 @@ p {
 
 	.landingTable tr.released td, .landingTable .tr.released .td {
 		color: #fbb963;
+	}
+
+	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td {
+		color: #A4D007;
 	}
 
 	.landingTable tr.beta td, .landingTable .tr.beta .td {
