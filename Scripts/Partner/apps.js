@@ -2097,6 +2097,14 @@ function AchievementImageUploadCallbackClosure( appid, statid, bitid, gray )
 	return theClosure;
 }
 
+function ModuleUploadCallback(appid, jsonResponse)
+{
+	var results = jsonResponse.evalJSON(true);
+	
+	StandardCallback( results, 'module_upload_response' );
+	LoadDRM( appid );
+}
+
 function SteamworksDRMCallback(appid, jsonResponse)
 {
 	var results = jsonResponse.evalJSON(true); 
