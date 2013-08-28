@@ -5147,6 +5147,30 @@
 			"model_pedestal"		"models/inventory_items/maptoken_library.mdl"
 			"map_name"		"#SFUI_Map_de_library"
 		}
+		"1200"
+		{
+			"name"		"Name Tag"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Tool_Name_Tag"
+			"item_description"		"#CSGO_Tool_Name_Tag_Desc"
+			"image_inventory"		"econ/tools/tag"
+			"tool"
+			{
+				"type"		"name"
+				"usage_capabilities"
+				{
+					"nameable"		"1"
+				}
+			}
+			"attributes"
+			{
+				"always tradable"
+				{
+					"attribute_class"		"always_tradable"
+					"value"		"1"
+				}
+			}
+		}
 		"1203"
 		{
 			"name"		"Weapon Case Key"

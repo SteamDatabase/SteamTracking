@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.8ee906972dcec2d58050b6df23c9c175e26e4f04.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.4e3b1c9f608068c82a81e8526b475e0c01b9419c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1942,6 +1942,43 @@
 					"strange_parts": true,
 					"paintable_unusual": true
 				}
+			},
+			{
+				"name": "Name Tag",
+				"defindex": 1200,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Name Tag",
+				"item_description": "This item will rename a weapon. A custom engraved nameplate will be applied to the weapon and viewable in game.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/tag",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag.62bc0c515952e89a9f0dd68068706b1e4b9ccff4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag_large.62bc0c515952e89a9f0dd68068706b1e4b9ccff4.png",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "name",
+					"usage_capabilities": {
+						"nameable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Weapon Case Key",
