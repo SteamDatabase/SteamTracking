@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.769ff134f6781cc3b6bfb6cbb7bb9a0fc81695e3.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.eb1a6f7290327d7929cd15c425cc78ec48b95a01.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -38104,19 +38104,19 @@
 				}
 			},
 			{
-				"name": "Skull of Xahryx",
+				"name": "Form of the Onyx Grove",
 				"defindex": 5089,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Cap",
-				"item_name": "Skull of Xahryx",
-				"item_description": "As exile stretched and ages crept past, there came once a dark power upon the forest, intent on malice. Long did Sylla grapple with this force, until at last it was no more.",
+				"item_type_name": "True Form",
+				"item_name": "Form of the Onyx Grove",
+				"item_description": "Among the northern pine did Sylla discover the darkness of the Onyx Grove, where creatures both fierce and strange gather to quarrel.  In time, the lone druid adapted his own form to join in the fray.",
 				"proper_name": false,
 				"item_quality": 1,
-				"image_inventory": "econ\/items\/lone_druid\/skull_trophy_cap\/skull_trophy_cap",
+				"image_inventory": "econ\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear_models\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/skull_trophy_cap\/skull_trophy_cap.9e04b83d72f1d3eb7bd5793c6fd5b85cfc6b4e4a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/skull_trophy_cap\/skull_trophy_cap_large.5667c1c3e1c96c330898ad9f8949c25adb3c6ef1.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear_models\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear.f7d18753364cee9fe59a21e04e671ee9b0b32d14.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear_models\/items\/lone_druid\/true_form\/rabid_black_bear\/rabid_black_bear_large.037039e48b613e0f20724818267dff205d9f6a40.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -43022,8 +43022,8 @@
 				"image_inventory": "econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps.4ac1574015d5e4cebe64eb5d465ef7a4c17ec87a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps_large.0ac11f189ddc3bae3f5afad0302a1306add3fea2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps.7549c92438ace1ed24ad571c1575727ef3567025.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/redmoon_assassinators_secret_wraps\/redmoon_assassinators_secret_wraps_large.5ec24c40cdc676ce7733cdca61d94e7490ac8544.png",
 				"item_set": "redmoon_assassins_secret",
 				"capabilities": {
 					"nameable": true,
