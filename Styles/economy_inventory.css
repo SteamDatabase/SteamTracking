@@ -804,7 +804,7 @@ body.migrated_profile_page .inventory_rightnav {
 	margin-right: 0;
 }
 
-.inventory_rightnav a.btn_grey_black, .inventory_rightnav div.btn_medium {
+body.migrated_profile_page .inventory_rightnav a.btn_grey_black {
 	color: white;
 	margin-left: 12px;
 }

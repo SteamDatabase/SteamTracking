@@ -180,16 +180,6 @@ var UserThem = new CUserThem();
 var templActiveApp = new Template( '<img src="#{icon}"> #{name}' );
 var templAllContextName = new Template( 'All #{appname} Items');
 
-function TradePageSelectNoInventory( user )
-{
-	Filter.ApplyFilter( '' );
-	HideTagFilters();
-	$('filter_tag_show').hide();
-	$('filter_tag_hide').hide();
-	$('inventories').childElements().invoke( 'hide' );
-	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'http://cdn.steamcommunity.com/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
-}
-
 function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 {
 	if ( g_bTradeOffer )
@@ -210,9 +200,9 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 
 		// copy the html of the chosen game option to the app select box
 		var oAppDisplay = GetEconomyDisplay( appid, contextid );
-		var rgAppData = user.GetAppData( appid );
+		var rgAppData = g_rgAppContextData[appid];
 
-		var displayName = rgAppData ? rgAppData.name : '';
+		var displayName = rgAppData.name;
 		if ( contextid == 0 )
 		{
 			//displayName = templAllContextName.evaluate( { appname: rgAppData.name } );
@@ -222,14 +212,14 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
 		}
 
-		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'http://cdn.steamcommunity.com/public/images/economy/blank_gameicon.gif', name: displayName } ) );
+		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData.icon, name: displayName } ) );
 
 		$('trade_inventory_unavailable').hide();
 		$('trade_inventory_failed').hide();
 
 		if ( g_ActiveInventory.BIsEmptyInventory() )
 		{
-			var appname = displayName;
+			var appname = rgAppData.name;
 
 			g_ActiveInventory.hide();
 			$('trade_inventory_unavailable').show();
@@ -727,7 +717,7 @@ function CreateSlotElement( id )
 	elAppLogo.appendChild( new Element( 'img', {'class': 'slot_applogo_img' } ) );
 	elSlot.appendChild( elAppLogo );
 
-	var elActionMenuButton = new Element( 'a', {'id': id + '_actionmenu_button', 'class': 'slot_actionmenu_button' } );
+	var elActionMenuButton = new Element( 'a', {'id': id + '_actionmenu_button', class: 'slot_actionmenu_button' } );
 	elActionMenuButton.style.display = 'none';
 	elActionMenuButton.href = "javascript:void(0)";
 	elSlot.appendChild( elActionMenuButton );
@@ -821,9 +811,9 @@ function ReserveSlot( elSlot )
 function PutItemInSlot( elItem, elSlot )
 {
 	var item = elItem.rgItem;
-	if ( elItem.parentNode && elItem.parentNode.nodeType != Node.DOCUMENT_FRAGMENT_NODE /* IE cruft */ )
+	if ( elItem.parentNode )
 	{
-		$(elItem.parentNode).down('.slot_actionmenu_button').hide();
+		elItem.parentNode.down('.slot_actionmenu_button').hide();
 		elItem.remove();
 	}
 	elSlot.down('.slot_inner').appendChild( elItem );
@@ -1224,9 +1214,9 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 
 				if ( elNewItem && elNewItem.parentNode )
 				{
-					if ( $(elNewItem.parentNode).down('.slot_actionmenu_button') )
+					if ( elNewItem.parentNode.down('.slot_actionmenu_button') )
 					{
-						$(elNewItem.parentNode).down('.slot_actionmenu_button').hide();
+						elNewItem.parentNode.down('.slot_actionmenu_button').hide();
 					}
 
 					if ( BIsInTradeSlot( elNewItem ) )

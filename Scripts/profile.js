@@ -398,11 +398,9 @@ function ShowFriendSelect( title, fnOnSelect )
 	});
 }
 
-function StartTradeOffer( unAccountID, rgParams )
+function StartTradeOffer( unAccountID )
 {
-	var params = rgParams || {};
-	params['partner'] = unAccountID;
-	ShowTradeOffer( 'new', params );
+	ShowTradeOffer( 'new', { partner: unAccountID } );
 }
 
 function ShowTradeOffer( tradeOfferID, rgParams )

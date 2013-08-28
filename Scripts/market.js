@@ -370,25 +370,17 @@ BuyItemDialog = {
 		$('market_buynow_dialog_purchase_throbber').fade({ duration: 0.25, from: 0, to: 1 });
 
 		var listingid = this.m_ulListingId;
-
-		$J.ajax( {
-			url: 'https://steamcommunity.com/market/buylisting/' + listingid,
-			type: 'POST',
-			data: {
+		new Ajax.Request( 'http://steamcommunity.com/market/buylisting/' + listingid, {
+			method: 'post',
+			parameters: {
 				sessionid: g_sessionID,
 				currency: g_rgWalletInfo['wallet_currency'],
 				subtotal: this.m_nSubtotal,
 				fee: this.m_nFeeAmount,
 				total: this.m_nTotal
 			},
-			crossDomain: true,
-			xhrFields: { withCredentials: true }
-		} ).done( function ( data ) {
-			BuyItemDialog.OnSuccess( { responseJSON: data } );
-		} ).fail( function( jqxhr ) {
-			// jquery doesn't parse json on fail
-			var data = $J.parseJSON( jqxhr.responseText );
-			BuyItemDialog.OnFailure( { responseJSON: data } );
+			onSuccess: function( transport ) { BuyItemDialog.OnSuccess( transport ); },
+			onFailure: function( transport ) { BuyItemDialog.OnFailure( transport ); }
 		} );
 	},
 
