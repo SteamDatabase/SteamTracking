@@ -490,6 +490,7 @@ input.filter_search_box:-moz-placeholder {
 	background-position: right top;
 }
 
+
 .market_modal_dialog {
 	position: absolute;
 	background: #1D1D1D;
@@ -913,3 +914,4 @@ a.game_button {
 	font-size: 200%;
 	text-align: center;
 }
+

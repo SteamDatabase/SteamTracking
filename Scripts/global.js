@@ -2083,7 +2083,7 @@ CGameSelectorWorkshopGames = Class.create( CGameSelector, {
 			this.elSuggestions.update('');
 			this.bHaveSuggestions = false;
 		}
-	}
+	},
 } );
 
 CGameSelectorOwnedGames = Class.create( CGameSelector, {

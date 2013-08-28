@@ -275,7 +275,7 @@ var kStandardTag_Unmarketable =
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
 	// add the context menu
-	var elActionMenuButton = new Element( 'a', {'id': strCompositeId + '_actionmenu_button', 'class': 'slot_actionmenu_button' } );
+	var elActionMenuButton = new Element( 'a', {'id': strCompositeId + '_actionmenu_button', class: 'slot_actionmenu_button' } );
 	elActionMenuButton.href = "javascript:void(0)";
 	elItemHolder.appendChild( elActionMenuButton );
 
@@ -365,11 +365,11 @@ var CInventory = Class.create( {
 						rgItem.tags.push( kStandardTag_Untradable );
 				}
 
-				if( rgItem.marketable )
+								if( rgItem.marketable )
 					rgItem.tags.push( kStandardTag_Marketable );
 				else
 					rgItem.tags.push( kStandardTag_Unmarketable );
-
+				
 				for( var tagid in rgItem.tags )
 				{
 					var rgTag = rgItem.tags[ tagid ];
@@ -418,11 +418,11 @@ var CInventory = Class.create( {
 						rgCurrency.tags.push( kStandardTag_Untradable );
 				}
 
-				if( rgCurrency.marketable )
+								if( rgCurrency.marketable )
 					rgCurrency.tags.push( kStandardTag_Marketable );
 				else
 					rgCurrency.tags.push( kStandardTag_Unmarketable );
-
+				
 				for( var tagid in rgCurrency.tags )
 				{
 					var rgTag = rgCurrency.tags[ tagid ];
@@ -670,9 +670,7 @@ var CInventory = Class.create( {
 		for ( var currencyid in this.rgCurrency )
 		{
 			var rgCurrency = this.rgCurrency[currencyid];
-
-			if ( rgCurrency.element )
-				MakeCurrencyDraggable( rgCurrency.element );
+			MakeCurrencyDraggable( rgCurrency.element );
 		}
 		for ( var itemid in this.rgInventory )
 		{
@@ -1455,7 +1453,7 @@ var CUser = Class.create( {
 			this.rgContexts[appid] = {};
 			var rgContextIds = [];
 
-			this.rgAppInfo[appid] = rgAppData;
+			this.rgAppInfo[appid] = { trade_permissions: appTradePermissions };
 
 			for ( var contextid in rgAppData.rgContexts )
 			{
@@ -1531,7 +1529,7 @@ var CUser = Class.create( {
 		var rgContext = this.GetContext( appid, contextid );
 		if ( !rgContext )
 		{
-			if ( !this.rgAppInfo[appid] || !this.rgAppInfo[appid].trade_permissions )
+			if ( !this.rgAppInfo[appid] )
 			{
 				// We don't know anything about this app, so we're defaulting to full.
 				// This allows somebody to receive items in a game they don't yet have items for, for example.
@@ -1546,11 +1544,6 @@ var CUser = Class.create( {
 		{
 			return rgContext.trade_permissions;
 		}
-	},
-
-	GetAppData: function( appid )
-	{
-		return this.rgAppInfo[appid];
 	},
 
 	BAllowedToTradeItems: function( appid, contextid )
@@ -1620,9 +1613,9 @@ CUserYou = Class.create( CUser, {
 		if ( g_bIsTrading || g_bShowTradableItemsOnly )
 			params.trading = 1;
 
-		if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
+				if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
 			params.market = 1;
-
+		
 		new Ajax.Request( g_strInventoryLoadURL + appid + '/' + contextid + '/', {
 			method: 'get',
 			parameters: params,
@@ -1768,12 +1761,12 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		// use the asset we wanted to show before we dynamically loaded inventory
 		assetid = g_deferredAsset;
 		g_deferredAsset = null;
-		if ( g_bSellItemOnInventoryLoad )
-		{
-			g_bSellItemOnInventoryLoad = false;
-			bSellNow = true;
-		}
-	}
+					if ( g_bSellItemOnInventoryLoad )
+			{
+				g_bSellItemOnInventoryLoad = false;
+				bSellNow = true;
+			}
+			}
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
 	var lastContextID = g_ActiveInventory ? g_ActiveInventory.contextid : null;
 	if ( lastAppId != appid || contextid != lastContextID )
@@ -1948,11 +1941,11 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		g_ActiveInventory.SelectItem( null, rgItem.element, rgItem );
 		g_ActiveInventory.EnsurePageActiveForItem( rgItem.element );
 
-		if ( bSellNow )
-		{
-			SellCurrentSelection();
-		}
-	}
+					if ( bSellNow )
+			{
+				SellCurrentSelection();
+			}
+			}
 }
 
 function SelectInventoryFromUser( user, appid, contextid, bForceSelect )
@@ -2808,25 +2801,18 @@ SellItemDialog = {
 		$('market_sell_dialog_throbber').show();
 		$('market_sell_dialog_throbber').fade({ duration: 0.25, from: 0, to: 1 });
 
-		$J.ajax( {
-			url: 'https://steamcommunity.com/market/sellitem/',
-			type: 'POST',
-			data: {
-				sessionid: g_sessionID,
-				appid: this.m_item.appid,
-				contextid: this.m_item.contextid,
-				assetid: this.m_item.id,
-				amount: this.m_nConfirmedQuantity,
-				price: this.m_nConfirmedPrice
-			},
-			crossDomain: true,
-			xhrFields: { withCredentials: true }
-		} ).done( function ( data ) {
-			SellItemDialog.OnSuccess( { responseJSON: data } );
-		} ).fail( function( jqxhr ) {
-			// jquery doesn't parse json on fail
-			var data = $J.parseJSON( jqxhr.responseText );
-			SellItemDialog.OnFailure( { responseJSON: data } );
+		new Ajax.Request( 'http://steamcommunity.com/market/sellitem/', {
+				method: 'post',
+				parameters: {
+					sessionid: g_sessionID,
+					appid: this.m_item.appid,
+					contextid: this.m_item.contextid,
+					assetid: this.m_item.id,
+					amount: this.m_nConfirmedQuantity,
+					price: this.m_nConfirmedPrice
+				},
+				onSuccess: function( transport ) { SellItemDialog.OnSuccess( transport ); },
+				onFailure: function( transport ) { SellItemDialog.OnFailure( transport ); }
 		} );
 
 		event.stop();
@@ -2967,6 +2953,7 @@ SellItemDialog = {
 		}
 	}
 }
+
 
 function ShowHover( elem, item )
 {
@@ -3784,14 +3771,10 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 	else
 		$J('#trade_action_popup_itemstaticsep').hide();
 
-	var strLinkPrefix = '';
-	if ( Steam.BIsUserInSteamClient() )
-		strLinkPrefix = 'steam://openurl/';
-
 	if ( item.marketable )
 	{
 		var sMarketHashName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
-		$J('#trade_action_viewinmarket').attr( 'href', strLinkPrefix + 'http://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
+		$J('#trade_action_viewinmarket').attr( 'href', 'http://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
 		$J('#trade_action_viewinmarket').show();
 	}
 	else
@@ -3801,7 +3784,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 
 	if ( bOtherProfileIsPublic )
 	{
-		$J('#trade_action_viewininventory').attr( 'href', strLinkPrefix + user.GetProfileURL() + '/inventory/#' + item.appid + '_' + item.contextid + '_' + item.id );
+		$J('#trade_action_viewininventory').attr( 'href', user.GetProfileURL() + '/inventory/#' + item.appid + '_' + item.contextid + '_' + item.id );
 		$J('#trade_action_viewininventory').show();
 	}
 	else
@@ -3860,7 +3843,7 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 			yaxis: {
 				pad: 1.1,
 				tickOptions:{formatString:strFormatPrefix + '%0.2f' + strFormatSuffix, labelPosition:'start', showMark: false},
-				numberTicks: numYAxisTicks
+				numberTicks: numYAxisTicks,
 			}
 		},
 		grid: {
