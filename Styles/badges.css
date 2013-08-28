@@ -583,11 +583,19 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_friendwithgamecard_msg {
-	margin-top: 4px;
 	color: white;
 	font-size: 12px;
 }
 
+.badge_friendwithgamecard_actions
+{
+	margin-top: 4px;
+}
+
+.badge_friendwithgamecard_actions .btn_medium
+{
+	padding: 4px;
+}
 
 
 .game_card_hover {
