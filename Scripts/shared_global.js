@@ -1,4 +1,63 @@
 
+Steam = {
+	sm_bInitialized: false,
+	sm_bUserInClient: false,
+	sm_bUserInGameOverlay: false,
+	sm_bUserInTenfootBrowser: false,
+
+	BIsUserInSteamClient: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInClient;
+	},
+
+	BIsUserInGameOverlay: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInGameOverlay
+	},
+
+	BIsUserInSteamTenfootBrowser: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInTenfootBrowser;
+	},
+
+	BIsUserInClientOrOverlay: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInClient || Steam.sm_bUserInGameOverlay;
+	},
+
+	Init: function()
+	{
+		var fnCheckAgent = function( strUAMatch, strURLParam )
+		{
+			if ( window.location.href.match( '[?&]' + strURLParam + '=' ) )
+				return true;
+
+			if ( typeof navigator != 'undefined' && navigator.userAgent && navigator.userAgent.indexOf( strUAMatch ) != -1 )
+				return true;
+
+			return false;
+		};
+
+		Steam.sm_bUserInTenfootBrowser = fnCheckAgent( 'Valve Steam Tenfoot', 'force_tenfoot_client_view' );
+		Steam.sm_bUserInGameOverlay = fnCheckAgent( 'Valve Steam GameOverlay', 'force_overlay_view' );
+		Steam.sm_bUserInClient = Steam.sm_bUserInTenfootBrowser || fnCheckAgent( 'Valve Steam Client', 'force_client_view' );
+
+		Steam.sm_bInitialized = true;
+	}
+}
+
 function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
 {
 	if ( !strOKButton )
@@ -819,7 +878,7 @@ function InitEmoticonHovers()
 		fnReadKey: fnReadKey,
 		strSelector: 'img.emoticon',
 		strURLMatch: 'emoticonhover',
-		nDelayBeforeShow: 100,
+		nDelayBeforeShow: 100
 	} );
 
 	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
