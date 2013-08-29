@@ -296,16 +296,8 @@ function ShowWithFade( elem )
 		elem.hiding = false;
 		if ( elem.effect )
 			elem.effect.cancel();
-		
-		if ( Prototype.Browser.IE )
-		{
-			elem.addClassName( 'suppress_shadow' );
-			elem.effect = new Effect.Appear( elem, { duration: 0.2, afterFinish: function() { elem.removeClassName( 'suppress_shadow' ); } } );
-		}
-		else
-		{
-			elem.effect = new Effect.Appear( elem, { duration: 0.2 } );
-		}
+
+		elem.effect = new Effect.Appear( elem, { duration: 0.2 } );
 	}
 }
 
@@ -319,10 +311,6 @@ function HideWithFade( elem )
 			elem.effect.cancel();
 		elem.hiding = true;
 
-		if ( Prototype.Browser.IE )
-		{
-			elem.addClassName( 'suppress_shadow' );
-		}
 		elem.effect = new Effect.Fade( elem, { duration: 0.2 } );
 	}
 }
@@ -446,7 +434,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 
 	var borderpx = bLinkHasBorder ? 1 : 0;
-	var shadowpx = 12;
+	var shadowpx = elemPopup.hasClassName( 'popup_block_new' ) ? 0 : 12;
 	var offsetLeft = 0;
 	if ( align == 'left' )
 	{
@@ -473,12 +461,12 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	if ( valign == 'bottom' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = elemLink.getHeight() - 12;
+		offsetTop = elemLink.getHeight() - shadowpx;
 	}
 	else if ( valign == 'top' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
-		offsetTop = -elemPopup.getHeight() + 12;
+		offsetTop = -elemPopup.getHeight() + shadowpx;
 	}
 	else if ( valign == 'bottomsubmenu' )
 	{
@@ -575,11 +563,8 @@ function HideGameHover( elem, event, divHover )
 	}
 	elem.bWantsHover = false;
 	elem.bReadyForHover = false;
-	
-	if ( Prototype.Browser.IE )
-		divHover.hide();
-	else
-		HideWithFade( divHover );
+
+	HideWithFade( divHover );
 }
 
 function ShowGameHover( elem, divHover, targetContent, params )
@@ -666,12 +651,7 @@ function ShowGameHover( elem, divHover, targetContent, params )
 		hover.target = elem;
 	}
 	
-	if ( Prototype.Browser.IE )
-	{
-		hover.show();
-	}
-	else
-		ShowWithFade( hover );
+	ShowWithFade( hover );
 }
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
