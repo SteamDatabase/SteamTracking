@@ -2113,6 +2113,7 @@ div.hover {
 }
 
 .tab_overlay {
+	display: block;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -2121,7 +2122,7 @@ div.hover {
 	z-index: 100;
 }
 
-.tab_overlay:hover {
+.tab_overlay:hover, .tab_link_overlay:hover {
 	border: 1px solid #8bb9e0;
 }
 
@@ -2194,12 +2195,36 @@ div.hover {
 	border-left: 1px solid #000000;
 }
 
-img.platform_small, img.platform_img {
+span.platform_img {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+}
+
+span.platform_img.steamplay {
+	width: 72px;
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/platforms/platform_steamplay_only.png' );
+}
+
+span.platform_img.win {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/platforms/platform_win.png' );
+}
+
+span.platform_img.mac {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/platforms/platform_mac.png' );
+}
+
+span.platform_img.linux {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/platforms/platform_linux.png' );
+}
+
+img.platform_small, span.platform_img {
 	vertical-align: middle;
 	margin-right: 1px;
 }
 
-.genre_release img.platform_img:last-child {
+.genre_release span.platform_img:last-child {
 	margin-right: 6px;
 }
 
@@ -3299,126 +3324,6 @@ ul.squares li {
 .store_checkbox_button.checked {
 	background-position: left bottom;
 	color: #c1bcb7;
-}
-
-/* notification box */
-#header_notification_area {
-	float: left;
-	margin-right: 3px;
-	margin-top: -6px;
-	margin-left: 8px;
-}
-
-.header_notification_btn {
-	position: relative;
-	height: 29px;
-
-	cursor: pointer;
-}
-
-
-.header_notification_empty {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/btn_notification_grey.png' );
-	background-repeat: no-repeat;
-	background-position: center top;
-	width: 29px;
-}
-
-.header_notification_empty:hover, .header_notification_empty.focus {
-	background-position: center bottom;
-}
-
-.header_notification_green {
-	padding: 0px 28px 0px 10px;
-
-	background-repeat: repeat-x;
-	background-position: 0px -29px;
-
-	line-height: 29px;
-	font-weight: bold;
-	color: #ffffff;
-}
-
-.header_notification_green, .header_notification_green .leftcap, .header_notification_green .rightcap {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/btn_notification_green.png' );
-}
-
-.header_notification_green:hover, .header_notification_green.focus {
-	background-position: 0px -87px;
-}
-
-.header_notification_green:hover .leftcap, .header_notification_green.focus .leftcap {
-	background-position: 0px -58px;
-}
-.header_notification_green:hover .rightcap, .header_notification_green.focus .rightcap {
-	background-position: right -58px;
-}
-
-.header_notification_green .leftcap {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 5px;
-	height: 29px;
-	background-position: left top;
-}
-
-.header_notification_green .rightcap {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 20px;
-	height: 29px;
-	background-position: right top;
-}
-
-#header_notification_dropdown .popup_menu_item {
-	line-height: 30px;
-	padding: 0px 12px 0px 12px;
-	background-repeat: no-repeat;
-	background-position: left center;
-	color: #bfbfbf;
-}
-
-#header_notification_dropdown .popup_menu_item.active_inbox_item {
-	color: #70ba24;
-}
-
-.header_notification_dropdown_seperator {
-	margin: 0px 7px;
-	height: 1px;
-	background-color: #6b6865;
-}
-
-.notification_icon {
-	display: block;
-	float: left;
-	width: 16px;
-	height: 30px;
-	background-repeat: no-repeat;
-	background-position: center;
-	margin-right: 16px;
-}
-
-/* these are in css so they do not load until the drop down is shown */
-.header_notification_comments .notification_icon {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/inbox_comment.png' );
-}
-
-.header_notification_items .notification_icon {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/inbox_item.png' );
-}
-
-.header_notification_invites .notification_icon {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/inbox_invite.png' );
-}
-
-.header_notification_gifts .notification_icon {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/inbox_gift.png' );
-}
-
-.header_notification_offlinemessages .notification_icon {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/inbox_offlinemessages.png' );
 }
 
 #package_header_container {
