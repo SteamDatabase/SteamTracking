@@ -925,6 +925,17 @@ img.game_header_image {
 	padding: 8px;
 }
 
+.game_language_options tr{
+    display: table;
+    border-bottom: 1px solid #626366;
+}
+
+.game_language_options th{
+    font-size: 12px;
+    color: #b0aeac;
+    font-weight: normal;
+}
+
 .details_block {
 	margin-bottom: 16px;
 }
