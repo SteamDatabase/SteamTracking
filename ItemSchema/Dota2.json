@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.eb1a6f7290327d7929cd15c425cc78ec48b95a01.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ac3d41f4860cdd10b65bbf256c8d6236ee295453.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -44858,6 +44858,239 @@
 				}
 			},
 			{
+				"name": "Tails of Resonant Vibrance",
+				"defindex": 5375,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cloak",
+				"item_name": "Tails of Resonant Vibrance",
+				"item_description": "The nether whips and the ether swirls, and yet such beauty eludes those who lack the discipline to pierce the mundane.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/back_sltv_tier1\/back_sltv_tier1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/back_sltv_tier1\/back_sltv_tier1.c15fece215901853789baa5d09a43513ad827ad8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/back_sltv_tier1\/back_sltv_tier1_large.e08359853d0052ff2ac3eee7fd5a6e0525de737e.png",
+				"item_set": "rubick_resonant_vibrance",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"styles": [
+					{
+						"name": "Trailing Tails"
+					},
+					{
+						"name": "Diving Tails"
+					},
+					{
+						"name": "Whipping Tails"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "starladder league tag",
+						"class": "starladder league tag",
+						"value": 7
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 69
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "Hood of Resonant Vibrance",
+				"defindex": 5376,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Hood of Resonant Vibrance",
+				"item_description": "There is little that cannot be understood by one trained to know the powers beyond.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/head_sltv_tier1\/head_sltv_tier1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/head_sltv_tier1\/head_sltv_tier1.c2f4aca1b702dd3f71352a72f13aada40fd1ff1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/head_sltv_tier1\/head_sltv_tier1_large.463be82f0e1c5988a73f1061117ca245dc631380.png",
+				"item_set": "rubick_resonant_vibrance",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"styles": [
+					{
+						"name": "Curious Hood"
+					},
+					{
+						"name": "Knowing Hood"
+					},
+					{
+						"name": "Understanding Hood"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "starladder league tag",
+						"class": "starladder league tag",
+						"value": 7
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 69
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "Shawl of Resonant Vibrance",
+				"defindex": 5377,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shawl",
+				"item_name": "Shawl of Resonant Vibrance",
+				"item_description": "To harness such unpredictable power is a heavy burden. Or so say those who have not yet learned to turn back gravity!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/shoulder_sltv_tier1\/shoulder_sltv_tier1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/shoulder_sltv_tier1\/shoulder_sltv_tier1.aa02dc45bb7bb17e862fe9787de68e23a146ff3e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/shoulder_sltv_tier1\/shoulder_sltv_tier1_large.a76f094f0a47c8ecde25caaa7cf103f8bcb9ac12.png",
+				"item_set": "rubick_resonant_vibrance",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"styles": [
+					{
+						"name": "Gathering Shawl"
+					},
+					{
+						"name": "Converging Shawl"
+					},
+					{
+						"name": "Harnessing Shawl"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "starladder league tag",
+						"class": "starladder league tag",
+						"value": 7
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 69
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "Focus of Resonant Vibrance",
+				"defindex": 5378,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Focus of Resonant Vibrance",
+				"item_description": "To focus and bend the wild, unseen energies to one's whim is a skill few possess!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/rubick\/weapon_sltv_tier1\/weapon_sltv_tier1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/weapon_sltv_tier1\/weapon_sltv_tier1.bedecf32ef0cf904c61f86cd2fa0a0a6c3022f4b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rubick\/weapon_sltv_tier1\/weapon_sltv_tier1_large.75e4e91e2706d3ce9b907d7d86eb05c30f16d720.png",
+				"item_set": "rubick_resonant_vibrance",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"styles": [
+					{
+						"name": "Channeling Focus"
+					},
+					{
+						"name": "Twisting Focus"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "starladder league tag",
+						"class": "starladder league tag",
+						"value": 7
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 69
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -55049,6 +55282,47 @@
 				
 			},
 			{
+				"name": "Nibbles the Wartoise",
+				"defindex": 10313,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nibbles the Wartoise",
+				"item_description": "A veteran of countless battles spanning untold centuries, Nibbles commands the respect and admiration of even the most hardened warrior.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/raidcall_ems_one_turtle\/raidcall_ems_one_turtle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "league id",
+						"class": "",
+						"value": 70
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
 				"name": "LGD's Golden Skipper",
 				"defindex": 10314,
 				"item_class": "dota_item_wearable",
@@ -63110,7 +63384,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Insomnia49 Dota 2 Cup",
-				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of Â£2,000 or more!",
+				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of £2,000 or more!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_insomnia49",
@@ -63146,7 +63420,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Insomnia49 Dota 2 Cup - ADMIN",
-				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of ÃÂ£2,000 or more!",
+				"item_description": "The Insomnia49 Dota 2 tournament will take place at Insomnia49 in Telford, England. The best teams from Great Britain will compete for a share of £2,000 or more!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_insomnia49",
@@ -63260,8 +63534,440 @@
 				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup.55f7ad9e9b20231fdd204670754c9c1f1e7896da.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup_large.8f599263360ff033f7f146ca90b3fc595aa32cf2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Euro Cup - ADMIN",
+				"defindex": 15223,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup - ADMIN",
+				"item_description": "Steelseries Euro Cup is an open tournament where 2 of the top European teams compete for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup.55f7ad9e9b20231fdd204670754c9c1f1e7896da.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup_large.8f599263360ff033f7f146ca90b3fc595aa32cf2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "TriniDota 2 League",
+				"defindex": 15224,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "TriniDota 2 League",
+				"item_description": "The top teams of Trinidad and Tobago compete to be crowned champions!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_trinidota2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
 				"image_url": "",
 				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "TriniDota 2 League - ADMIN",
+				"defindex": 15225,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "TriniDota 2 League - ADMIN",
+				"item_description": "The top teams of Trinidad and Tobago compete to be crowned champions!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_trinidota2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "MLG NA League and Full Sail LAN",
+				"defindex": 15226,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "MLG NA League and Full Sail LAN",
+				"item_description": "The MLG North American Online League will have the best teams in North America vie for a chance to compete for $15,000 at Full Sail University.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgna",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgna.ee545497ccd854b8bdf87c41ab3adbf6f6725ff7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgna_large.70c19e26283e90a5f35582e54fb80e906f378af9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "MLG NA League and Full Sail LAN - ADMIN",
+				"defindex": 15227,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "MLG NA League and Full Sail LAN - ADMIN",
+				"item_description": "The MLG North American Online League will have the best teams in North America vie for a chance to compete for $15,000 at Full Sail University.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgna",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgna.ee545497ccd854b8bdf87c41ab3adbf6f6725ff7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgna_large.70c19e26283e90a5f35582e54fb80e906f378af9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GEST August and September 2013",
+				"defindex": 15228,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "GEST August and September 2013",
+				"item_description": "The Gigabyte E-Sports Tournament will have the winners of 8 GMPGL qualifiers from South-East Asia compete against one another for a cash prize of $1500. The winners then compete against the top Chinese Teams for another $1500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gest_aug_sept",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_aug_sept.2534461de7d9662166a4c706e2011ec509a4e3ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_aug_sept_large.2a1a29c2d47b60cf693ead778eadd30e2889a779.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GEST August and September 2013 - ADMIN",
+				"defindex": 15229,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "GEST August and September 2013 - ADMIN",
+				"item_description": "The Gigabyte E-Sports Tournament will have the winners of 8 GMPGL qualifiers from South-East Asia compete against one another for a cash prize of $1500. The winners then compete against the top Chinese Teams for another $1500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gest_aug_sept",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_aug_sept.2534461de7d9662166a4c706e2011ec509a4e3ca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gest_aug_sept_large.2a1a29c2d47b60cf693ead778eadd30e2889a779.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season 7",
+				"defindex": 15230,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season 7",
+				"item_description": "The new season of the legendary SLTV StarSeries is here! Watch 120 matches and the Kiev Cybersport Arena LAN finals where teams will compete for a total prize pool of $22,500. Caster headliners - v1lat & TobiWan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder7",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7.3200848b04d16d3a54cab1a3f5ccd18c00ea4e7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7_large.c3b30f3b5f162e061d6b1548a2d2b6ea2f0195bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season 7-ADMIN",
+				"defindex": 15231,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "StarSeries Season 7-ADMIN",
+				"item_description": "The new season of the legendary SLTV StarSeries is here! Watch 120 matches and the Kiev Cybersport Arena LAN finals where teams will compete for a total prize pool of $22,500. Caster headliners - v1lat & TobiWan. Includes an exclusive evolving Rubick set from Starladder.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder7",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7.3200848b04d16d3a54cab1a3f5ccd18c00ea4e7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7_large.c3b30f3b5f162e061d6b1548a2d2b6ea2f0195bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Fall 2013",
+				"defindex": 15232,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Fall 2013",
+				"item_description": "In the Fall 2013 season of the RaidCall EMS One, the world's best teams compete for a massive prize fund of $39,000 US. After an online season, the eight best teams get to battle it out at the live event finals. Besides lots of matches, ticket holders also receive our official courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcall_ems_fall2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_ems_fall2013.db4d428d44ea23f4c2e0cfa4ad7ea11af9d3558a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_ems_fall2013_large.832338cfde1e2502fecfb8532f4adb307e4cdaf1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RaidCall EMS One Fall 2013-ADMIN",
+				"defindex": 15233,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "RaidCall EMS One Fall 2013-ADMIN",
+				"item_description": "In the Fall 2013 season of the RaidCall EMS One, the world's best teams compete for a massive prize fund of $39,000 US. After an online season, the eight best teams get to battle it out at the live event finals. Besides lots of matches, ticket holders also receive our official courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcall_ems_fall2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_ems_fall2013.db4d428d44ea23f4c2e0cfa4ad7ea11af9d3558a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcall_ems_fall2013_large.832338cfde1e2502fecfb8532f4adb307e4cdaf1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "StarSeries Season 7 - BUNDLE",
+				"defindex": 15234,
+				"item_class": "tool",
+				"item_type_name": "Tournament",
+				"item_name": "StarSeries Season 7 - BUNDLE",
+				"item_description": "The new season of the legendary SLTV StarSeries is here! Watch 120 matches and the Kiev Cybersport Arena LAN finals where teams will compete for a total prize pool of $22,500. Caster headliners - v1lat & TobiWan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder7",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7.3200848b04d16d3a54cab1a3f5ccd18c00ea4e7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder7_large.c3b30f3b5f162e061d6b1548a2d2b6ea2f0195bf.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -70440,6 +71146,35 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Resonant Vibrance Set",
+				"defindex": 20247,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Resonant Vibrance Set",
+				"item_description": "Includes the Star Series 7 Tournament Ticket as well as all of the items in the 'Resonant Vibrance' set for Rubick that evolve as you watch the tournament:\r\n\t<br><br>\r\n\t- Tails of Resonant Vibrance<br>\r\n\t- Hood of Resonant Vibrance<br>\r\n\t- Shawl of Resonant Vibrance<br>\r\n\t- Focus of Resonant Vibrance<br>\r\n\t<br><br>\r\n\tThe new season of the legendary SLTV StarSeries is here! Watch 120 matches and the Kiev Cybersport Arena LAN finals where teams will compete for a total prize pool of $22,500. Caster headliners - v1lat & TobiWan.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Resonant_Vibrance_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_resonant_vibrance_set.d8a33297737632f6fc771613c942a9cf57b55696.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_resonant_vibrance_set_large.f741dfa222294f841f1e63c8813d45ea4a033c32.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -73373,6 +74108,18 @@
 					"Deep Vault Guardian Headfin",
 					"Deep Vault Guardian Trident",
 					"Deep Vault Guardian Armplates"
+				]
+				
+			},
+			{
+				"item_set": "rubick_resonant_vibrance",
+				"name": "Resonant Vibrance Set",
+				"store_bundle": "Resonant Vibrance Set",
+				"items": [
+					"Tails of Resonant Vibrance",
+					"Hood of Resonant Vibrance",
+					"Shawl of Resonant Vibrance",
+					"Focus of Resonant Vibrance"
 				]
 				
 			},
