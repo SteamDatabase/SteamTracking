@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ac3d41f4860cdd10b65bbf256c8d6236ee295453.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.6826e3ef756535753d982f71706c791f03b20563.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -55293,8 +55293,8 @@
 				"image_inventory": "econ\/items\/courier\/raidcall_ems_one_turtle\/raidcall_ems_one_turtle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/raidcall_ems_one_turtle\/raidcall_ems_one_turtle.bdd2f42cc14a7eec949a3bbccbd049ffc54b4ea1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/raidcall_ems_one_turtle\/raidcall_ems_one_turtle_large.e2590b94459d1b70d92eb413d3536cf4980d3e82.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
