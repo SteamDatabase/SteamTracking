@@ -1941,3 +1941,50 @@ div.early_access_announcements {
 h2.bb_tag + br {
 	display: none;
 }
+
+#EmbedModal textarea {
+	width: 646px; height: 80px;
+	font-size: 13px;
+	line-height: 15px;
+	margin: 0 0 15px 0;
+	background-color: #303030;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #292929;
+	border-bottom: 1px solid #292929;
+	border-radius: 3px;
+	box-shadow: -4px -4px 4px -4px #292929 inset;
+	color: #fff;
+}
+
+#EmbedModal p {
+	margin: 0 0 15px 0;
+	font-size: 13px;
+}
+
+#EmbedModal p.small {
+	margin: 0 0 3px 0;
+	font-size: 11px;
+}
+
+#widget_finished, #widget_create {
+	width: 646px;
+}
+
+#widget_container {
+	margin-bottom: 15px;
+}
+
+#EmbedModal .w_option {
+	border: 1px solid #4a4943;
+	padding: 12px 12px;
+	margin: 1px 0 0 0;
+	background-color: #323232;
+	color: #fff;
+}
+#EmbedModal .w_options {
+	margin-bottom: 15px;
+}
+#EmbedModal .buttoncontainer {
+	text-align: right;
+}
