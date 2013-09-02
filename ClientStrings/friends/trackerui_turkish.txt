@@ -953,7 +953,7 @@
 "[english]friends_trade_you_are_school"	"You cannot trade with %friend% because you are on a School Lab account."
 "friends_trade_they_are_school"	"Okul Laboratuvarı hesabı kullandığı için %friend% ile takas yapamazsınız."
 "[english]friends_trade_they_are_school"	"You cannot trade with %friend% because they are on a School Lab account."
-"group_enterchatroom"	"Grup sohbetine katıl"
+"group_enterchatroom"	"SOHBETE KATIL"
 "[english]group_enterchatroom"	"Enter group chat"
 "Friends_Chat_InviteToPrivateChatRoom_Info"	"%patron% ile özel bir sohbete katılmaya davet edildiniz."
 "[english]Friends_Chat_InviteToPrivateChatRoom_Info"	"You have been invited to join a private chat with %patron%."

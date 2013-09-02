@@ -810,7 +810,7 @@
 "[english]FriendsUI_SoundSystemTitle"	"Select Sound Input"
 "friends_ingametooltip"	"В игре: %game%"
 "[english]friends_ingametooltip"	"In-Game: %game%"
-"friends_pendinginvites"	"%invites% приглашений на рассмотрении"
+"friends_pendinginvites"	"Приглашений на рассмотрении: %invites%"
 "[english]friends_pendinginvites"	"%invites% PENDING"
 "Friends_ViewInvitesOnCommunityPage"	"Открыть список приглашений в сообществе"
 "[english]Friends_ViewInvitesOnCommunityPage"	"View invites on Community"

@@ -535,7 +535,7 @@
 "[english]Friends_NotificationOptions"	"Notification Options"
 "Friends_FriendAliases_Title"	"친구 - %FriendName%"
 "[english]Friends_FriendAliases_Title"	"Friends - %FriendName%"
-"Friends_FriendAliasesInfo"	"다음 순으로 %FriendName% 표시를 합니다:"
+"Friends_FriendAliasesInfo"	"%FriendName% 사용한 이름 목록:"
 "[english]Friends_FriendAliasesInfo"	"You have seen %FriendName% go by these names:"
 "Friends_Settings_TabTitle"	"친구"
 "[english]Friends_Settings_TabTitle"	"Friends"

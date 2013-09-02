@@ -395,7 +395,7 @@
 "[english]vgui_HTMLCopyLink"	"Copy Link Address"
 "vgui_HTMLSearchMatch"	"%findactive% sur %findcount%"
 "[english]vgui_HTMLSearchMatch"	"%findactive% of %findcount%"
-"vgui_HTMLSearchThisPage"	"Rechercher dans cette page"
+"vgui_HTMLSearchThisPage"	"Rechercher :"
 "[english]vgui_HTMLSearchThisPage"	"Search this page"
 "vgui_choosedirectoryname"	"Choisir le nom du répertoire"
 "[english]vgui_choosedirectoryname"	"Choose directory name"
