@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.4e3b1c9f608068c82a81e8526b475e0c01b9419c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.7212e6e8ee4104cddab271a5dd8c7c62cf41d214.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1603,7 +1603,7 @@
 				"item_class": "tool",
 				"item_type_name": "Pass",
 				"item_name": "Operation Payback Pass",
-				"item_description": "Grants access to Operation Payback's featured community maps on Offical Servers. Proceeds are divided among the featured map creators!",
+				"item_description": "The Operation Payback event ran from April 25th to September 2nd, 2013 and rewarded community map makers with over $180,000. This pass no longer grants access to an Operation, but may be redeemed for a commemorative Operation Payback Coin.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/status_icons\/community_support_pass",
@@ -1955,8 +1955,8 @@
 				"image_inventory": "econ\/tools\/tag",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag.62bc0c515952e89a9f0dd68068706b1e4b9ccff4.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag_large.62bc0c515952e89a9f0dd68068706b1e4b9ccff4.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag.26e29f80f07e5dbbd045362895e20b1cb88f0ea3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/tag_large.26e29f80f07e5dbbd045362895e20b1cb88f0ea3.png",
 				"craft_class": "tool",
 				"craft_material_type": "tool",
 				"capabilities": {
