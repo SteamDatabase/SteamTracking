@@ -2304,6 +2304,7 @@
 			"image_inventory_size_h"		"82"
 			"mouse_pressed_sound"		"weapons/m4a1/m4a1_clipout.wav"
 			"drop_sound"		"weapons/m4a1/m4a1_clipint.wav"
+			"model_uid"		"models/weapons/uid.mdl"
 			"inventory_image_data"
 			{
 				"camera_angles"		"2.0 -130.0 0.0"
@@ -2660,6 +2661,7 @@
 			"model_player"		"models/weapons/v_pist_glock18.mdl"
 			"model_world"		"models/weapons/w_pist_glock18.mdl"
 			"model_magazine"		"models/weapons/w_pist_glock18_mag.mdl"
+			"model_uid"		"models/weapons/uid_small.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_glock.vtf"
 			"used_by_classes"
 			{
@@ -2720,6 +2722,7 @@
 			"model_player"		"models/weapons/v_pist_hkp2000.mdl"
 			"model_world"		"models/weapons/w_pist_hkp2000.mdl"
 			"model_magazine"		"models/weapons/w_pist_hkp2000_mag.mdl"
+			"model_uid"		"models/weapons/uid_small.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_hkp2000.vtf"
 			"used_by_classes"
 			{
