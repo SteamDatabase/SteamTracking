@@ -1,0 +1,84 @@
+
+body {
+	background: transparent;
+}
+
+a, a:hover {
+	text-decoration: none;
+
+}
+
+#widget {
+	border: 1px solid #4d4b49;
+	background-color: #262626;
+	width: 614px;
+	height: 136px;
+	padding: 15px;
+	position: relative;
+	margin: 0 auto;
+	background-image: url(http://cdn.store.steampowered.com/public/images/v5/SteamPistonForWidget.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+#widget .game_purchase_action {
+	position: absolute;
+	bottom: -20px;
+	right: 10px;
+}
+
+#widget .header_container {
+	width: 614px;
+}
+
+#widget h1 {
+	font-size: 23px;
+	font-weight: normal;
+}
+
+#widget h1.main_text {
+
+	color: #fefefe;
+
+	font-family: 'Motiva Sans', Arial, Tahoma, sans-serif;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 425px;
+}
+
+#widget h1.tail {
+	display: inline-block;
+}
+
+#widget h1 em {
+	font-weight: normal;
+	font-style: normal;
+	color: #9e9e9e;
+	font-family: 'Motiva Sans Light', Arial, Tahoma, sans-serif;
+}
+
+#widget .capsule {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#widget .desc {
+	margin: 10px 10px 0 0;
+	font-size: 13px;
+	color: #c9c9c9
+}
+
+#widget p.package_contents {
+	color: #9e9e9e;
+}
+
+#widget p.package_contents b {
+	font-weight: normal;
+	color: #8bc53f;
+}
+
+#widget p.package_contents a {
+	color: #b0aeac;
+}
