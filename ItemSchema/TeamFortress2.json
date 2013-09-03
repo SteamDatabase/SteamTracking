@@ -78996,7 +78996,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Helmet",
 				"item_name": "Whirly Warrior",
-				"item_description": "\"To your left, some French buildings. Directly in front of us is the Eiffel Tower, which I about to bring down. This concludes our helicopter tour of France.\"",
+				"item_description": "\"To your left, some French buildings. Directly in front of us is the Eiffel Tower, which I'm about to bring down. This concludes our helicopter tour of France.\"",
 				"proper_name": true,
 				"item_slot": "head",
 				"model_player": "models\/workshop\/player\/items\/soldier\/jul13_helicopter_helmet\/jul13_helicopter_helmet.mdl",
