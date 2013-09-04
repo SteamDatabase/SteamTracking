@@ -2298,7 +2298,7 @@ function BuildAppList( filterString, appidSelect, bAddAll )
 //
 // chunked uploads to cross-domain server once we have acquired an upload token
 //
-function startChunkUploads( inputItem, onFinish )
+function startChunkUploads( inputItem, progressItem, onFinish )
 {
     return function ( initResults )
     {
@@ -2315,6 +2315,9 @@ function startChunkUploads( inputItem, onFinish )
             'failed': 0,
             totalUploaded: 0
         };
+
+        // reset upload bar
+        jQuery( progressItem ).addClass( 'display').val( 0 ).attr( 'max', SIZE );
 
         // keep these synchronous for now; the back end server does not take kindly to
         // multiple outstanding requests
@@ -2342,11 +2345,13 @@ function startChunkUploads( inputItem, onFinish )
                     {
                         status.succeeded++;
                         status.totalUploaded += ( end - start );
+                        jQuery( progressItem ).val( status.totalUploaded );
                     }
                      // see if we need to fire the "all done" callback
                     if ( cCurrent == 0 )
                     {
                         onFinish( initResults, status );
+                        jQuery( progressItem ).removeClass( 'display' );
                     }
                 },
                 headers: {
