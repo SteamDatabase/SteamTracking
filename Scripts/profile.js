@@ -413,7 +413,16 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 
 	var strKey = ( tradeOfferID == 'new' ? 'NewTradeOffer' + rgParams['partner'] : 'TradeOffer' + tradeOfferID );
 
-	var winOffer = window.open( 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=948,width=1028,resize=yes,scrollbars=yes' );
+	var winHeight = 948;
+	if ( Steam.BIsUserInSteamClient() )
+	{
+		// workaround for client break when the popup window is too tall for the screen.  Try and pick a height that will fit here.
+		var nClientChromePX = 92;
+		if ( window.screen.availHeight && window.screen.availHeight - nClientChromePX < winHeight )
+			winHeight = window.screen.availHeight - nClientChromePX;
+	}
+
+	var winOffer = window.open( 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
 
 	winOffer.focus();
 }
