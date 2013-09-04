@@ -1309,7 +1309,6 @@ var CCommentThread = Class.create( {
 		{
 			// initialize check state based on preferences
 			elAutosubscribe.checked = this.m_bSubscribed || GetValueLocalStorage( 'forum_autosubscribe', false );
-			//console.log( 'subscribed? ' + this.m_bSubscribed + ' autosubscribe? ')
 			elAutosubscribe.observe( 'change', this.OnAutosubscribeToggle.bind( this ) );
 		}
 

@@ -345,6 +345,12 @@ function EndDragCurrency( draggable, event )
 		delete draggable.element.drag_reset_image;
 	}
 
+	if ( g_bTradeOffer )
+	{
+		ResetTradeOfferOpacity( $('trade_yours' ) );
+		ResetTradeOfferOpacity( $('trade_theirs' ) );
+	}
+
 	RemoveDroppable( $('inventories' ) );
 }
 

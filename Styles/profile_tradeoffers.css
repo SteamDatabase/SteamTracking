@@ -1,0 +1,227 @@
+
+.tradeoffer {
+	padding-top: 24px;
+	padding-left: 48px;
+
+	margin-bottom: 24px;
+
+	position: relative;
+}
+
+.tradeoffer_partner {
+	position: absolute;
+	left: 0;
+	top: 16px;
+}
+
+.tradeoffer_header {
+	color: #ffffff;
+	font-size: 17px;
+
+	margin-bottom: 12px;
+}
+
+.tradeoffer_message {
+	margin-bottom: 12px;
+}
+
+.tradeoffer_items_ctn {
+	position: relative;
+	background-color: #1d1d1d;
+	border: 1px solid #3d3d3e;
+	border-radius: 5px;
+	padding: 9px;
+}
+
+.tradeoffer_items_ctn .link_overlay {
+	display:  block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.tradeoffer_items_ctn.active {
+	border-top-color: #818181;
+	border-left-color: #5e5e61;
+	border-right-color: #5e5e61;
+	background: -moz-linear-gradient(top, #636366 5%, #4a4a4c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#636366), color-stop(95%,#4a4a4c));background: -webkit-linear-gradient(top, #636366 5%,#4a4a4c 95%);background: -o-linear-gradient(top, #636366 5%,#4a4a4c 95%);background: -ms-linear-gradient(top, #636366 5%,#4a4a4c 95%);background: linear-gradient(to bottom, #636366 5%,#4a4a4c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636366', endColorstr='#4a4a4c',GradientType=0 );}
+
+.tradeoffer_items_ctn.inactive .tradeoffer_items {
+	opacity: 0.3;
+}
+
+.tradeoffer_items {
+	position: relative;
+	padding-left: 36px;
+	min-height: 106px;
+}
+
+
+.tradeoffer_items .tradeoffer_avatar {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.tradeoffer_items_header {
+	font-size: 12px;
+	line-height: 26px;
+	color: #d1d1d1;
+}
+
+.tradeoffer_rule {
+	background-color: #333333;
+	border-top: 1px solid #000000;
+	height: 1px;
+}
+
+.tradeoffer_item_list .trade_item {
+	float: left;
+	background-color: #292929;
+	border: 1px solid #3a3a3a;
+	z-index: 2;
+	position: relative;
+}
+
+.tradeoffer_items.primary .trade_item {
+	width: 96px;
+	height: 96px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+.tradeoffer_items.secondary .trade_item {
+	width: 73px;
+	height: 73px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.trade_item.missing {
+	border-style: dashed;
+}
+
+.trade_item.missing img {
+	opacity: 0.4;
+}
+
+.tradeoffer_item_list {
+	margin-bottom: 4px;
+}
+
+.tradeoffer_items_banner {
+	position: relative;
+	top: -12px;
+	left: -12px;
+	width: 592px;
+
+	box-shadow: 1px 1px 1px #000000;
+
+	height: 35px;
+	line-height: 35px;
+	background-color: #4d4d4d;
+
+	text-align: center;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.tradeoffer_items_banner.accepted {
+	background-color: #5c7e10;
+}
+
+.tradeoffer_items_rule {
+	background: url( 'http://cdn.steamcommunity.com/public/images/economy/tradeoffer_rule.png' ) no-repeat top right;
+	height: 25px;
+	margin-bottom: -3px;
+}
+
+.tradeoffer_footer {
+	color: #686868;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.tradeoffer_footer_actions {
+	float: right;
+}
+
+.new_trade_offer_btn {
+	display: block;
+	text-align: center;
+}
+
+a.right_controls_large_block {
+	display: block;
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.right_controls_large_block div.title {
+	position: relative;
+	color: #e1e1e1;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+.right_controls_large_block:hover div.title {
+	color: #ffffff;
+}
+
+.right_controls_large_block div.secondary {
+	position: relative;
+	font-size: 14px;
+	color: #5491cf;
+}
+
+.right_controls_large_block div.secondary b {
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.right_controls_large_block_active_bg {
+	position: absolute;
+	background: url( 'http://cdn.steamcommunity.com/public/images/economy/tradeoffer_rightcol_selected.png' ) no-repeat;
+	width: 265px;
+	height: 50px;
+
+	right: 0;
+	top: -5px;
+}
+
+.right_controls_secondary_link {
+	display: block;
+	color: #686868;
+	font-size: 14px;
+}
+
+.right_controls_secondary_link.active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.right_controls_secondary_link:hover {
+	color: #ffffff;
+}
+
+.tradeoffer_welcome_ctn {
+	font-size: 20px;
+	text-align: center;
+	padding: 116px 40px;
+	background-color: #1e1e1f;
+}
+
+.tradeoffer_welcome_ctn h2 {
+	margin: 0 0 4px 0;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.tradeoffer_welcome_ctn .content {
+	padding-top: 200px;
+}

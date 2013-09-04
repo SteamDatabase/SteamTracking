@@ -439,7 +439,6 @@ function DeclineTradeOffer( tradeOfferID )
 		null,
 		'Make a Counter Offer'
 	).done( function( strButton ) {
-		console.log( strButton );
 		if ( strButton == 'OK' )
 			ActOnTradeOffer( tradeOfferID, 'decline', 'Trade Declined', 'Decline Trade' );
 		else
