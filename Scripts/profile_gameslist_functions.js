@@ -685,11 +685,8 @@ function GetDefaultScrollSize()
 
 function EnsureLoaded( app )
 {
-	//console.log("checking app " + app['appid']);
-
 	if( LoadedIDs.indexOf( app['appid'] ) == -1 )
 	{
-		//console.log("Loading dirty app " + app['appid']);
 		BuildGameRow( app );
 		LoadedIDs.push( app['appid'] );
 	}
@@ -697,11 +694,8 @@ function EnsureLoaded( app )
 
 function EnsureChangingLoaded( app )
 {
-    //console.log("checking changing " + app['appid']);
-
     if( LoadedChangingIDs.indexOf( app['appid'] ) == -1 )
     {
-        //console.log("Loading dirty changing " + app['appid']);
         BuildChangingGameRow( app );
         LoadedChangingIDs.push( app['appid'] );
     }
@@ -730,8 +724,6 @@ function UpdateChangingGames( updates )
     rgGames.each(function(game, index) {
         if ( summaries.hasOwnProperty( game['appid'] ) )
         {
-            //console.log('Updating changing app ' + game['appid']);
-
             EnsureLoaded( game );
             UpdateGameRow( game, summaries[game['appid']] );
         }
@@ -822,7 +814,6 @@ function ShowConfirmPopup( event, targetElt, onClick )
     var confirmElt = document.getElementById( 'uninstallConfirm' );
     if ( !confirmElt )
     {
-		console.log( 'uninstallConfirm element is missing' );
         RestoreDimButtons();
         return;
     }
