@@ -386,7 +386,7 @@ function ShowFriendSelect( title, fnOnSelect )
 		$ListElement.find( 'a' ).remove();
 		$ListElement.find( '[data-miniprofile]').each( function() {
 			var $El = $J(this);
-			$El.click( function() { fnOnSelect( $El.data('miniprofile') ); Modal.Dismiss(); } );
+			$El.click( function() {  Modal.Dismiss(); fnOnSelect( $El.data('miniprofile') ); } );
 		} );
 
 		var $Content = Modal.GetContent().find( '.newmodal_content');
@@ -457,15 +457,27 @@ function ActOnTradeOffer( tradeOfferID, strAction, strCompletedBanner, strAction
 		data: { sessionid: g_sessionID },
 		type: 'POST'
 	}).done( function( data ) {
-		$TradeOffer.find( '.tradeoffer_items_ctn').removeClass( 'active' ).addClass( 'inactive' );
-		var $Banner = $J('<div/>', {'class': 'tradeoffer_items_banner' } );
-		$Banner.text( strCompletedBanner );
-		$TradeOffer.find( '.tradeoffer_items_rule').replaceWith( $Banner );
+		AddTradeOfferBanner( tradeOfferID, strCompletedBanner, false );
 
 		RefreshNotificationArea();
 	}).fail( function() {
 		ShowAlertDialog( strActionDisplayName, 'There was an error modifying this trade offer.  Please try again later.' );
 		$TradeOffer.find( '.tradeoffer_footer_actions').show();
 	});
+}
+
+function AddTradeOfferBanner( tradeOfferID, strCompletedBanner, bAccepted )
+{
+	var $TradeOffer = $J('#tradeofferid_' + tradeOfferID);
+	$TradeOffer.find( '.tradeoffer_footer_actions').hide();
+	$TradeOffer.find( '.link_overlay' ).hide();
+	$TradeOffer.find( '.tradeoffer_items_ctn').removeClass( 'active' ).addClass( 'inactive' );
+
+	var $Banner = $J('<div/>', {'class': 'tradeoffer_items_banner' } );
+	if ( bAccepted )
+		$Banner.addClass( 'accepted' );
+
+	$Banner.text( strCompletedBanner );
+	$TradeOffer.find( '.tradeoffer_items_rule').replaceWith( $Banner );
 }
 

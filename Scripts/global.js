@@ -839,7 +839,7 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 
 	ShowWithFade( elemPopup );
 	elemLink.addClassName('focus');
-	elemLink.dismissHandler = RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
+	elemLink.dismissHandler = RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); } );
 }
 
 function HideMenu( elemLink, elemPopup )
