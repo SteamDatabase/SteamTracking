@@ -650,6 +650,10 @@ p.pending_gifts_none {
 	font-size: 18px;
 }
 
+#gift_history {
+	padding: 12px;
+}
+
 #newitems {
 	margin-left: -6px;
 	width: 936px;

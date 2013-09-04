@@ -2960,6 +2960,8 @@ h2.stats {
 #AddToCollectionDialog
 {
 	text-align: left;
+	max-height: 500px;
+	overflow-y: auto;
 }
 
 .add_to_collection_dialog_container

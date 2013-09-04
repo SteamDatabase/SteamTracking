@@ -254,17 +254,26 @@ function ShowGiftModalSuccess( strMessage, strDetails )
 	showContentAsModal( 'gift_modal', $('gift_success_modal_content' ) );
 }
 
+g_bGiftHistoryLoaded = false;
 function ShowGiftHistory()
 {
-	if ( $('no_pending_gifts_msg') )
-		new Effect.BlindUp( $('no_pending_gifts_msg'), {duration: 0.25 } );
-	if ( $('gift_history_link') )
-		$('gift_history_link').hide();
-	$('gift_history').show();
+	ShowPendingGifts();
 
-	new Ajax.Updater(
-		'gift_history_content',
-		'http://steamcommunity.com/gifts/0/history/',
-		{ method: 'get' }
-	);
+	if ( $('no_pending_gifts_msg') )
+		$('no_pending_gifts_msg').hide();
+
+	if ( !g_bGiftHistoryLoaded )
+	{
+		g_bGiftHistoryLoaded = true;
+
+		if ( $('gift_history_link') )
+			$('gift_history_link').hide();
+		$('gift_history').show();
+
+		new Ajax.Updater(
+			'gift_history_content',
+			'http://steamcommunity.com/gifts/0/history/',
+			{ method: 'get' }
+		);
+	}
 }

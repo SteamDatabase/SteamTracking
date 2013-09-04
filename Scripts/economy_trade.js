@@ -78,12 +78,19 @@ function BeginTrading( bShowTutorial )
 CUserThem = Class.create( CUser, {
 
 	GetContext: function( appid, contextid ) {
-		// TODO: load trade partner app contexts
-		if ( !this.rgContexts[appid] )
-			this.rgContexts[appid] = {};
-		if ( !this.rgContexts[appid][contextid] )
-			this.rgContexts[appid][contextid] = { inventory: null };
-		return this.rgContexts[appid][contextid];
+		if ( g_bTradeOffer )
+		{
+			return this.rgContexts[appid] && this.rgContexts[appid][contextid];
+		}
+		else
+		{
+			// TODO: load trade partner app contexts
+			if ( !this.rgContexts[appid] )
+				this.rgContexts[appid] = {};
+			if ( !this.rgContexts[appid][contextid] )
+				this.rgContexts[appid][contextid] = { inventory: null };
+			return this.rgContexts[appid][contextid];
+		}
 	},
 
 	loadInventory: function( appid, contextid ) {
@@ -103,12 +110,16 @@ CUserThem = Class.create( CUser, {
 		if ( g_bTradeOffer )
 		{
 			g_strTradePartnerInventoryLoadURL;
-			new Ajax.Request( g_strTradePartnerInventoryLoadURL + appid + '/' + contextid + '/', {
-					method: 'get',
+			new Ajax.Request( g_strTradePartnerInventoryLoadURL, {
+					method: 'post',
 					parameters: {
-						trading: 	1
+						sessionid:	g_sessionID,
+						partner: 	steamid,
+						appid: 	appid,
+						contextid: contextid,
 					},
-					onSuccess: function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); }
+					onSuccess: function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ) },
+					onFailure: function( transport ) { thisClosure.OnInventoryLoadFailed( transport, appid, contextid ) }
 				}
 			);
 		}
@@ -147,23 +158,6 @@ CUserThem = Class.create( CUser, {
 			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
 
 			this.addInventory( inventory );
-			if ( g_bTradeOffer )
-			{
-				var elInventory = inventory.getInventoryElement();
-				elInventory.hide();
-				$('inventories').insert( elInventory );
-
-				var elTags = inventory.getTagContainer();
-				var elTagHolder = $( 'filter_options' );
-				if( elTagHolder && elTags )
-				{
-					elTags.hide();
-					elTagHolder.insert( elTags );
-					elTagHolder.addClassName( 'filter_collapsed' );
-				}
-			}
-
-			this.ShowInventoryIfActive( appid, contextid );
 
 			RedrawCurrentTradeStatus();
 		}
@@ -2695,7 +2689,7 @@ function SizeWindow()
 	}
 	
 	var widthZoom = document.viewport.getWidth() / 976;
-	var heightZoom = document.viewport.getHeight() / ( $(document.body).getHeight() + 16 );
+	var heightZoom = document.viewport.getHeight() / Math.min( $(document.body).getHeight() + 16, 1012 );
 	if ( widthZoom <= 0.99 || heightZoom <= 0.99 )
 	{
 		var flZoom = widthZoom < heightZoom ? widthZoom : heightZoom;

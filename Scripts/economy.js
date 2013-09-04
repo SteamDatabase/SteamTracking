@@ -1569,7 +1569,67 @@ var CUser = Class.create( {
 	{
 		var permissions = this.GetTradePermissions( appid, contextid );
 		return permissions == 'SENDONLY_FULLINVENTORY';
+	},
+
+	OnLoadInventoryComplete: function( transport, appid, contextid )
+	{
+		this.cLoadsInFlight--;
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
+			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
+
+			this.addInventory( inventory );
+			var elInventory = inventory.getInventoryElement();
+			elInventory.hide();
+			$('inventories').insert( elInventory );
+
+			var elTags = inventory.getTagContainer();
+			var elTagHolder = $( 'filter_options' );
+			if( elTagHolder && elTags )
+			{
+				elTags.hide();
+				elTagHolder.insert( elTags );
+				elTagHolder.addClassName( 'filter_collapsed' );
+			}
+		}
+		else
+		{
+			this.OnInventoryLoadFailed( transport, appid, contextid );
+			return;
+		}
+
+		this.ShowInventoryIfActive( appid, contextid );
+
+		if ( g_bIsTrading )
+			RedrawCurrentTradeStatus();
+	},
+
+	OnInventoryLoadFailed: function( transport, appid, contextid )
+	{
+		var elPendingInventory = $('pending_inventory_page') || $('trade_inventory_pending' );
+		var elFailedInventory = $('failed_inventory_page') || $('trade_inventory_failed' );
+		if ( transport.responseJSON && transport.responseJSON.busy )
+		{
+			if ( !elFailedInventory )
+			{
+				// if we don't have the "Failed" div, then just do a an alert
+				alert( 'This inventory is not available at this time.  Please try again later.' );
+			}
+		}
+
+		if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
+		{
+			if ( elPendingInventory && elFailedInventory )
+			{
+				elPendingInventory.hide();
+				elFailedInventory.show();
+			}
+		}
+
+		this.GetContext( appid, contextid ).inventory = null;
 	}
+
 
 });
 
@@ -1630,60 +1690,6 @@ CUserYou = Class.create( CUser, {
 		} );
 	},
 
-	OnLoadInventoryComplete: function( transport, appid, contextid )
-	{
-		this.cLoadsInFlight--;
-		if ( transport.responseJSON && transport.responseJSON.success )
-		{
-			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
-			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
-
-			this.addInventory( inventory );
-			var elInventory = inventory.getInventoryElement();
-			elInventory.hide();
-			$('inventories').insert( elInventory );
-
-			var elTags = inventory.getTagContainer();
-			var elTagHolder = $( 'filter_options' );
-			if( elTagHolder && elTags )
-			{
-				elTags.hide();
-				elTagHolder.insert( elTags );
-				elTagHolder.addClassName( 'filter_collapsed' );
-			}
-		}
-		else
-		{
-			var elPendingInventory = $('pending_inventory_page') || $('trade_inventory_pending' );
-			var elFailedInventory = $('failed_inventory_page') || $('trade_inventory_failed' );
-			if ( transport.responseJSON && transport.responseJSON.busy )
-			{
-				if ( !elFailedInventory )
-				{
-					// if we don't have the "Failed" div, then just do a an alert
-					alert( 'This inventory is not available at this time.  Please try again later.' );
-				}
-			}
-
-			if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
-			{
-				if ( elPendingInventory && elFailedInventory )
-				{
-					elPendingInventory.hide();
-					elFailedInventory.show();
-				}
-			}
-
-			this.GetContext( appid, contextid ).inventory = null;
-			return;
-		}
-
-		this.ShowInventoryIfActive( appid, contextid );
-
-		if ( g_bIsTrading )
-			RedrawCurrentTradeStatus();
-	},
-
 	// an obj with .appid and .contextid
 	GetDefaultInventoryId: function () {
 		return this.oDefaultInventoryId;
@@ -1730,8 +1736,10 @@ function ShowPendingGifts()
 
 
 	var elTab = $('pending_gift_link' );
+	if ( elTab )
+		elTab.addClassName('active');
+
 	$$('.games_list_tabs').first().childElements().invoke( 'removeClassName', 'active')
-	elTab.addClassName('active');
 
 	if ( g_ActiveInventory )
 		g_ActiveInventory.hide();

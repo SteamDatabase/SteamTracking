@@ -854,6 +854,10 @@ a.game_button {
 	height: 38px;
 }
 
+.market_headertip_text {
+	padding-top: 4px;
+}
+
 #market_headertip_itemsold_itemname {
 	font-weight: bold;
 }

@@ -71,7 +71,12 @@ a.hoverunderline:hover {
 	text-decoration: underline;
 }
 
-a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover {
+a.underlinedLink {
+	color: #ebebeb;
+	text-decoration: underline;
+}
+
+a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover, a.underlinedLink:hover {
 	color: #ffffff;
 	text-decoration: underline;
 }
@@ -239,13 +244,13 @@ a.friendBlock {
 	font-weight:bold;
 }
 
-body.flat_page > .perf_timing_link, body.headerless_page > .perf_timing_link {
+body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .perf_timing_area .perf_timing_link {
 	position: absolute;
 	left: 15px;
 	bottom: 15px;
 }
 
-.perf_timing_link {
+.perf_timing_area {
 	display: block;
 	text-align: center;
 	margin-bottom: 14px;

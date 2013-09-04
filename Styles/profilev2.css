@@ -1331,10 +1331,8 @@ body .pagecontent.profile_subpage_column {
 	border-left: 1px solid #000000;
 	border-right: 1px solid #545454;
 	background-color: #262627;
-	padding-top: 12px;
+	padding: 12px;
 
-	padding-left: 12px;
-	padding-right: 12px;
 	width: 926px;
 
 	box-shadow: inset 0 -1px 3px #101010;
