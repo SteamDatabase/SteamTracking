@@ -147,7 +147,7 @@ function BValidateHashParams( oHashParams )
 	if ( oHashParams && oHashParams.appid && g_rgAppContextData[oHashParams.appid] )
 	{
 		if ( oHashParams.contextid && !g_rgAppContextData[oHashParams.appid].rgContexts[oHashParams.contextid] )
-			delete oHashParams.contextid;
+			oHashParams.contextid = APPWIDE_CONTEXT;
 		return true;
 	}
 	return false;
