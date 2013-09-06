@@ -1,6 +1,6 @@
 {
   "id": "13w36b",
-  "time": "2013-09-06T14:31:58+02:00",
+  "time": "2013-09-06T14:57:00+02:00",
   "releaseTime": "2013-09-06T14:31:58+02:00",
   "type": "snapshot",
   "minecraftArguments": "--username ${auth_player_name} --session ${auth_session} --version ${version_name} --gameDir ${game_directory} --assetsDir ${game_assets} --uuid ${auth_uuid}",
