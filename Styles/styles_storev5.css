@@ -2219,12 +2219,12 @@ span.platform_img.linux {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/platforms/platform_linux.png' );
 }
 
-img.platform_small, .platform_img {
+img.platform_small, span.platform_img {
 	vertical-align: middle;
 	margin-right: 1px;
 }
 
-.genre_release .platform_img:last-child {
+.genre_release span.platform_img:last-child {
 	margin-right: 6px;
 }
 
