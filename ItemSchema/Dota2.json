@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.6826e3ef756535753d982f71706c791f03b20563.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.da01e4aa9ff1d123fa5ee3ab2f3ed040afb56450.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -11487,33 +11487,6 @@
 				}
 			},
 			{
-				"name": "Taunt: Sniper's Celebration",
-				"defindex": 4039,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Sniper's Celebration",
-				"item_description": "Celebrate a sweet kill or a big play by showing your excitement to your enemy. He won't mind.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/taunt\/sniper_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
 				"name": "Rattlebite",
 				"defindex": 4040,
 				"item_class": "dota_item_wearable",
@@ -11550,33 +11523,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel.0f48641a86caf311e01b1ae6d3dcacad497c8629.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel_large.99ce9e87209dabcad980b68e1ab46c35ef5e60c7.png",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
-				"name": "Taunt: Playful Snowball",
-				"defindex": 4042,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Playful Snowball",
-				"item_description": "Crystal Maiden throws a snowball!",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/taunt\/cm_snowball_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11645,33 +11591,6 @@
 				}
 			},
 			{
-				"name": "Taunt: Good Day Sir!",
-				"defindex": 4045,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Good Day Sir!",
-				"item_description": "",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/axe\/axe_good_day_sir_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
 				"name": "Taunt: Double-Headed Roar",
 				"defindex": 4046,
 				"item_class": "dota_item_wearable",
@@ -11681,33 +11600,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/twin_headed_dragon\/jakiro_roar_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
-				"name": "Taunt: Icemelter",
-				"defindex": 4047,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Icemelter",
-				"item_description": "Jakiro Icemelt Taunt",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/twin_headed_dragon\/jakiro_icemelt_taunt",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -11835,29 +11727,6 @@
 				
 			},
 			{
-				"name": "Ultimate: Belly Flop",
-				"defindex": 4052,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Alternate Ultimate",
-				"item_name": "Ultimate: Belly Flop",
-				"item_description": "Gives Tidehunter a chance to belly flop when using his ultimate.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Attack: Fish Slap",
 				"defindex": 4053,
 				"item_class": "dota_item_wearable",
@@ -11908,33 +11777,6 @@
 				}
 			},
 			{
-				"name": "Taunt: You!",
-				"defindex": 4055,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: You!",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/taunt\/sniper_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
 				"name": "Taunt: Dive! Dive!",
 				"defindex": 4056,
 				"item_class": "dota_item_wearable",
@@ -11944,33 +11786,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/taunt\/sniper_taunt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
-				"name": "Taunt: Canonical Blast",
-				"defindex": 4057,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Canonical Blast",
-				"item_description": "That *is* his staff and he's excited to have killed you!",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/furion\/taunt_bazooka",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -12029,33 +11844,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor.c56c5c416f304455f5b1b558f82036645bc8cca2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor_large.96e1d095fdb1dace2e89ee583094b72eb2f6ebc5.png",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
-				"name": "Taunt: Face the Juggernaut",
-				"defindex": 4060,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Face the Juggernaut",
-				"item_description": "Invite your enemy to embrace their death in honorable combat.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/juggernaut\/taunt_faceme",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -12209,33 +11997,6 @@
 				}
 			},
 			{
-				"name": "Taunt: Bo Staff Beckon",
-				"defindex": 4066,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Bo Staff Beckon",
-				"item_description": "Nature's Prophet's Bo Staff Beckon",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/furion\/taunt_staff",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
 				"name": "Taunt: Victory Jig",
 				"defindex": 4067,
 				"item_class": "dota_item_wearable",
@@ -12249,33 +12010,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance.3b0d9678a6c0b2a4cd6a90eae5a7c4d786194d3d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance_large.f70b84aea063d2d30955978c92e0ce07a1098a9d.png",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
-			},
-			{
-				"name": "Taunt: Murder Lute",
-				"defindex": 4068,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Murder Lute",
-				"item_description": "Verily Nature's Prophet sings unto thee:  DIE!",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/furion\/taunt_lute",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -12505,33 +12239,6 @@
 					}
 				]
 				
-			},
-			{
-				"name": "Taunt: Kata of Foot and Earth",
-				"defindex": 4077,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Kata of Foot and Earth",
-				"item_description": "Demonstrate your martial skill with this kata.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/juggernaut\/taunt_kick",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
-				}
 			},
 			{
 				"name": "Doubly Braided Beard",
@@ -12864,33 +12571,6 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				}
-			},
-			{
-				"name": "Taunt: Kata of Blade and Sky",
-				"defindex": 4090,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Taunt",
-				"item_name": "Taunt: Kata of Blade and Sky",
-				"item_description": "The strike is not merely a tool to bring death. It is an expression of worth.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/juggernaut\/taunt_mask_lord",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "hero_taunt"
 				}
 			},
 			{
@@ -23585,29 +23265,6 @@
 				}
 			},
 			{
-				"name": "Hood of Defiance",
-				"defindex": 4500,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Hood of Defiance",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Cercus of Whirling Death",
 				"defindex": 4501,
 				"item_class": "dota_item_wearable",
@@ -24204,29 +23861,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/anuxi_molten_fractur\/anuxi_molten_fractur.d9f354fa80b4011368bedfa07c1791d23a605fe4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/anuxi_molten_fractur\/anuxi_molten_fractur_large.dbb15f01c738282fe9a195a1a63a2f45013eed67.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Smashing Brawler's Shirt",
-				"defindex": 4524,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Shirt",
-				"item_name": "Smashing Brawler's Shirt",
-				"item_description": "Oy, better wear this shirt before it's full of holes!",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/bristleback\/smasher_back\/smasher_back",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -28058,29 +27692,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzle_final_graveheart\/dazzle_final_graveheart.430b54d68371a1f4c0b726b4732bb7563ab736dd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dazzle\/dazzle_final_graveheart\/dazzle_final_graveheart_large.3c8d5323630b0b6bd5b4fbaeb4e304fc22bc06db.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Ainidul the Eternal",
-				"defindex": 4675,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "mount",
-				"item_name": "Ainidul the Eternal",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -33938,29 +33549,6 @@
 				}
 			},
 			{
-				"name": "The Widowmaker",
-				"defindex": 4915,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Hammer",
-				"item_name": "The Widowmaker",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Belt of the Conquering Tyrant",
 				"defindex": 4916,
 				"item_class": "dota_item_wearable",
@@ -37778,30 +37366,6 @@
 				}
 			},
 			{
-				"name": "Nightwatchers Belt",
-				"defindex": 5075,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Nightwatchers Belt",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/skywrath_mage\/nightwatch_belt\/nightwatch_belt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"item_set": "nightwatchers_set",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Nightwatchers Bracers",
 				"defindex": 5076,
 				"item_class": "dota_item_wearable",
@@ -37811,30 +37375,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/skywrath_mage\/nightwatch_bracer\/nightwatch_bracer",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"item_set": "nightwatchers_set",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Nightwatchers Helm",
-				"defindex": 5077,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Nightwatchers Helm",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/skywrath_mage\/nightwatch_helm\/nightwatch_helm",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -37874,29 +37414,6 @@
 				}
 			},
 			{
-				"name": "Aduron",
-				"defindex": 5079,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Demon",
-				"item_name": "Aduron",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Wicked Peacemaker",
 				"defindex": 5080,
 				"item_class": "dota_item_wearable",
@@ -37906,29 +37423,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/centaur\/peace_maker\/peace_maker",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Soulhook Bracer",
-				"defindex": 5081,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Bracer",
-				"item_name": "Soulhook Bracer",
-				"item_description": "Lich could not help but notice the efficiency of hooks deployed by certain other heroes. Nor has his enthusiasm for learning new tricks cooled.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/lich\/hook_bracer\/hook_bracer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -37966,29 +37460,6 @@
 				}
 			},
 			{
-				"name": "NightHunters Belt",
-				"defindex": 5083,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "NightHunters Belt",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Crest of the Wyrm Lords",
 				"defindex": 5084,
 				"item_class": "dota_item_wearable",
@@ -38012,57 +37483,11 @@
 				}
 			},
 			{
-				"name": "NightHunters Bracers",
-				"defindex": 5085,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "NightHunters Bracers",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "NightHunters Wings",
 				"defindex": 5086,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "New Item",
 				"item_name": "NightHunters Wings",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "NightHunters Tail",
-				"defindex": 5087,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "NightHunters Tail",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -38127,29 +37552,6 @@
 				}
 			},
 			{
-				"name": "Silver Sweep",
-				"defindex": 5090,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Hair",
-				"item_name": "Silver Sweep",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/mirana\/silver_hair\/silver_hair",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Hecate's Armor",
 				"defindex": 5091,
 				"item_class": "dota_item_wearable",
@@ -38173,29 +37575,6 @@
 				}
 			},
 			{
-				"name": "Hecate's Belts",
-				"defindex": 5092,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "belt",
-				"item_name": "Hecate's Belts",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/death_prophet\/hecate_belt\/hecate_belt",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Hecate's Ghosts",
 				"defindex": 5093,
 				"item_class": "dota_item_wearable",
@@ -38205,29 +37584,6 @@
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/death_prophet\/hecate_ghosts\/hecate_ghosts",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Hecate's Dress",
-				"defindex": 5094,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Dress",
-				"item_name": "Hecate's Dress",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/death_prophet\/hecate_dress\/hecate_dress",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "",
@@ -38449,29 +37805,6 @@
 				}
 			},
 			{
-				"name": "acacia_bow",
-				"defindex": 5104,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Bow",
-				"item_name": "acacia_bow",
-				"item_description": "A bow of thorns.  A weapon of the wind.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/windrunner\/acacia_bow\/acacia_bow",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Cauldron of Xahryx",
 				"defindex": 5105,
 				"item_class": "dota_item_wearable",
@@ -38605,29 +37938,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/reaper_scythe\/reaper_scythe.410da70e907b09cbe91ad0b0cad2f99d950282d5.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/reaper_scythe\/reaper_scythe_large.e33c1913c9fd4a807cf3d11a8cb85a1dba980516.png",
 				"item_set": "axe_redmist_reaper",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Wrathful Helmet",
-				"defindex": 5111,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "helmet",
-				"item_name": "Wrathful Helmet",
-				"item_description": "With Abaddon's expression completely hidden, one can only imagine his features contorted by wrath.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -39991,29 +39301,6 @@
 				}
 			},
 			{
-				"name": "Abaddon's Gryphon",
-				"defindex": 5167,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "mount",
-				"item_name": "Abaddon's Gryphon",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Mace of the Chosen",
 				"defindex": 5168,
 				"item_class": "dota_item_wearable",
@@ -40037,57 +39324,11 @@
 				}
 			},
 			{
-				"name": "Abaddon's Talon Cape",
-				"defindex": 5169,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "cape",
-				"item_name": "Abaddon's Talon Cape",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Abaddon's Raven Shoulders",
 				"defindex": 5170,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "shoulder",
 				"item_name": "Abaddon's Raven Shoulders",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Abaddon's Cowl Down",
-				"defindex": 5171,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "helmet",
-				"item_name": "Abaddon's Cowl Down",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -40960,58 +40201,12 @@
 				}
 			},
 			{
-				"name": "Shadow Armor of the Hypnos",
-				"defindex": 5205,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "armor",
-				"item_name": "Shadow Armor of the Hypnos",
-				"item_description": "Adorned with the Armor of Shadows, Nyx reveals his sacred caste.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Helm of the Hypnos",
 				"defindex": 5206,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "helmet",
 				"item_name": "Helm of the Hypnos",
 				"item_description": "You can't run from your thoughts.  But Nyx wants you to try.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Nightblades of the Hypnos",
-				"defindex": 5207,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Arm Blades",
-				"item_name": "Nightblades of the Hypnos",
-				"item_description": "Nyx is a member of the assassin caste.  The caste of one.  Soon you will be a caste of none.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/testitem_slot_empty",
@@ -41437,29 +40632,6 @@
 				}
 			},
 			{
-				"name": "Blade of Shattered Crystals",
-				"defindex": 5225,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Crystal Blade",
-				"item_name": "Blade of Shattered Crystals",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/antimage\/shattered_crystals_main\/shattered_crystals_main",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Blade of Shattered Crystals Off-Hand",
 				"defindex": 5226,
 				"item_class": "dota_item_wearable",
@@ -41761,6 +40933,29 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_weapon_carapace\/nyx_weapon_carapace.fd18b4d4ba6a29416583897cbb353aa277a7900b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_weapon_carapace\/nyx_weapon_carapace_large.36c6baf09f2f6dd811b19c6673dda62fa4eafd3f.png",
 				"item_set": "sacred_orb_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tidehunter Blink Dagger",
+				"defindex": 5239,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blink Dagger",
+				"item_name": "Tidehunter Blink Dagger",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ\/items\/tidehunter\/blink_dagger_tide_large",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tidehunter\/blink_dagger_tide_large.ed6cd4cbe35083065974efd5863d78fd44d6a571.png",
+				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -43897,29 +43092,6 @@
 				}
 			},
 			{
-				"name": "Old Ironsides Shipbreaker's Hull",
-				"defindex": 5329,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "Hull",
-				"item_name": "Old Ironsides Shipbreaker's Hull",
-				"item_description": "Your ship has come in! A sturdy cuirass of blue steel forged in the likeness of a hull. Designed to smash through the most intractable of defenses.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/kunkka\/old_ironsides\/old_ironsides_torso",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Old Ironsides Pauldrons",
 				"defindex": 5330,
 				"item_class": "dota_item_wearable",
@@ -43956,29 +43128,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/old_ironsides\/old_ironsides_gauntlet.ab04ed1f790e1b8fdc4970a25f81fa078c3d76cb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/old_ironsides\/old_ironsides_gauntlet_large.0e936b1713127de9b8bd7130b3da4ec8e04289d3.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Man O' Cladd Cape",
-				"defindex": 5332,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "cape",
-				"item_name": "Man O' Cladd Cape",
-				"item_description": "An old vessel, but more than seaworthy.  Bury these old bones in the flag of the claddish navy.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/items\/kunkka\/old_ironsides\/old_ironsides_cape",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -44256,29 +43405,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dagon.89609f0f3361eb2e945df7d05b4014922917aecb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dagon_large.5305f858a6b2fb0c23bc438b2bd6efb6c2deee49.png",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Vicious Fang Trophy",
-				"defindex": 5346,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Vicious Fang Trophy",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -44825,29 +43951,6 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_shoulder\/malicious_shoulder.8be6cba10ef672c91b770c375c5c88c840fabe3a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spectre\/malicious_shoulder\/malicious_shoulder_large.98327fff46704eb6ee1d4d4a19f83706f10cda7d.png",
 				"item_set": "malicious_efflorescence",
-				"capabilities": {
-					"nameable": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
-				"name": "Figurehead Weapon",
-				"defindex": 5373,
-				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Figurehead Weapon",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.57f48103eed57e2cfa3d041f979f96a6869c1d22.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.b6957dfef6cc64f6d6553435c0d17895117c5222.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -54937,7 +54040,7 @@
 				"image_inventory": "econ\/huds\/hud_iron_cage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_iron_cage.709da86824d0db1d90851bd533dc2b33dcaa79e2.png",
 				"image_url_large": "",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -55344,6 +54447,46 @@
 					"paintable_unusual": true,
 					"autograph": true
 				}
+			},
+			{
+				"name": "Treasure of Rubiline Sheen",
+				"defindex": 10319,
+				"item_class": "supply_crate",
+				"item_type_name": "Treasure",
+				"item_name": "Treasure of Rubiline Sheen",
+				"item_description": "Sculpted from the finest Rubiline of Riftshadow, the contents are unknown.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/rubiline_crate",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/rubiline_crate.0a82fc087c78a821b70cb2ebe03f60d00a050706.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/rubiline_crate_large.80caf67964a0bdb49c590a7b2fcfd581485989b3.png",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "treasure_chest_35_rubiline"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 35
+					}
+				]
+				
 			},
 			{
 				"name": "Name Tag",
@@ -57549,7 +56692,7 @@
 				"item_class": "tool",
 				"item_type_name": "Relic of Prestige",
 				"item_name": "Bloodstone of the Ancestor",
-				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"item_description": "For those who came before and sang the word, gathering friends as they began their crusade, the light of gratitude swirls within the stone.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/bloodstone1",
@@ -57584,7 +56727,7 @@
 				"item_class": "tool",
 				"item_type_name": "Relic of Prestige",
 				"item_name": "Bloodstone of the Precursor",
-				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"item_description": "For those who came before and sang the word, gathering friends as they began their crusade, the light of gratitude swirls within the stone.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/bloodstone2",
@@ -57619,7 +56762,7 @@
 				"item_class": "tool",
 				"item_type_name": "Relic of Prestige",
 				"item_name": "Bloodstone of the Founder",
-				"item_description": "For those who came before and sang the word and gathering friends began their crusade, the light of gratitude swirls within the stone.",
+				"item_description": "For those who came before and sang the word, gathering friends as they began their crusade, the light of gratitude swirls within the stone.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/bloodstone3",
@@ -63606,8 +62749,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_trinidota2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_trinidota2.35ebb6b92d2b7e2f8f66bffe2193c0ef062766e8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_trinidota2_large.f2ce1e152b7b29a0f7212a2aa3ec488460181769.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -63642,8 +62785,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_trinidota2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_trinidota2.35ebb6b92d2b7e2f8f66bffe2193c0ef062766e8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_trinidota2_large.f2ce1e152b7b29a0f7212a2aa3ec488460181769.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -63986,6 +63129,509 @@
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The National",
+				"defindex": 15235,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The National",
+				"item_description": "The top Russian Dota 2 teams compete for a grand prize of $2,500 and a sponsorship!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_thenational",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_thenational.21b40fecf8171462192b8ba3cbce2d9dbdfec17f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_thenational_large.f07d2d863ba9e643bdce46f85c1ef73ca1ce09af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The National - ADMIN",
+				"defindex": 15236,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The National - ADMIN",
+				"item_description": "The top Russian Dota 2 teams compete for a grand prize of $2,500 and a sponsorship!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_thenational",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_thenational.21b40fecf8171462192b8ba3cbce2d9dbdfec17f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_thenational_large.f07d2d863ba9e643bdce46f85c1ef73ca1ce09af.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Telkom Do Gaming Championships",
+				"defindex": 15237,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Telkom Do Gaming Championships",
+				"item_description": "The best of the best in South Africa meet up to decide who are the 2013 Telkom DGL Champions.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_telkom",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_telkom.d39503847b3dbd9786d4007a839138af817ae402.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_telkom_large.eef31f89fa522d9a91be8d022f9c37de957bf972.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Telkom Do Gaming Championships - ADMIN",
+				"defindex": 15238,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Telkom Do Gaming Championships - ADMIN",
+				"item_description": "The best of the best in South Africa meet up to decide who are the 2013 Telkom DGL Champions.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_telkom",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_telkom.d39503847b3dbd9786d4007a839138af817ae402.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_telkom_large.eef31f89fa522d9a91be8d022f9c37de957bf972.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AEGIS Gaming League",
+				"defindex": 15239,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AEGIS Gaming League",
+				"item_description": "Four top Brazilian teams will participate in a LAN event in Campinas on September 14th and 15th for a prize of R$2,000.00.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ageleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ageleague.6e48374bcab9bc66f876ea57e21f8b197708ddea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ageleague_large.357bd4ad7866d18663eb6af7041ae5f4adb07415.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AEGIS Gaming League - ADMIN",
+				"defindex": 15240,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AEGIS Gaming League - ADMIN",
+				"item_description": "Four top Brazilian teams will participate in a LAN event in Campinas on September 14th and 15th for a prize of R$2,000.00.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ageleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ageleague.6e48374bcab9bc66f876ea57e21f8b197708ddea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ageleague_large.357bd4ad7866d18663eb6af7041ae5f4adb07415.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "NADota Elite League",
+				"defindex": 15241,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "NADota Elite League",
+				"item_description": "The most talented teams in North America compete for 8 weeks culminating in a 4-team double elimination all-star tournament. 50% of ticket profits go straight to the prize pool.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nadotaleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague.9ba5611a28e522ccd5e69ce87230d18e087a35a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague_large.8875003979b31c5963de69cc67f2def12dc2aaa0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "NADota Elite League - ADMIN",
+				"defindex": 15242,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "NADota Elite League - ADMIN",
+				"item_description": "The most talented teams in North America compete for 8 weeks culminating in a 4-team double elimination all-star tournament. 50% of ticket profits go straight to the prize pool.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nadotaleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague.9ba5611a28e522ccd5e69ce87230d18e087a35a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague_large.8875003979b31c5963de69cc67f2def12dc2aaa0.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Defense of the Australians",
+				"defindex": 15243,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Defense of the Australians",
+				"item_description": "Defense of the Australians brings you its second Dota 2 Tournament for Spring 2013 with players from all around Melbourne, Australia coming together to compete.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.e9bc8d9a1d9c6ec7e3080a3bc9ccecdddbd9294a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.95140b9e8ff5a3f5619383c225cd4829b1a51137.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Defense of the Australians - ADMIN",
+				"defindex": 15244,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Defense of the Australians - ADMIN",
+				"item_description": "Defense of the Australians brings you its second Dota 2 Tournament for Spring 2013 with players from all around Melbourne, Australia coming together to compete.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.e9bc8d9a1d9c6ec7e3080a3bc9ccecdddbd9294a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.95140b9e8ff5a3f5619383c225cd4829b1a51137.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sina Cup Supernova Dota 2 Open",
+				"defindex": 15245,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sina Cup Supernova Dota 2 Open",
+				"item_description": "The Sina Cup Supernova Dota 2 puts two top teams from the qualifiers against professional teams across Asia for a total prize pool of 30,000RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sinacup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup.dcc6d03701d56689675757fce5466dfd2bdc1a88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup_large.e3a5cf37d7ebca6ac63fe20960cea12deb2a64b7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sina Cup Supernova Dota 2 Open - ADMIN",
+				"defindex": 15246,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sina Cup Supernova Dota 2 Open - ADMIN",
+				"item_description": "The Sina Cup Supernova Dota 2 puts two top teams from the qualifiers against professional teams across Asia for a total prize pool of 30,000RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sinacup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup.dcc6d03701d56689675757fce5466dfd2bdc1a88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup_large.e3a5cf37d7ebca6ac63fe20960cea12deb2a64b7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SK Trophy",
+				"defindex": 15247,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SK Trophy",
+				"item_description": "Teams compete for $1,000 every other week.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sktrophy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sktrophy.8b724347cc6c50b4b463f784280de9b5f848b0c5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sktrophy_large.76df400252e04d861e32410a6c3332c6de5f2c28.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Ascendant Orb",
+				"defindex": 15249,
+				"item_class": "tool",
+				"item_type_name": "Relic of Prestige",
+				"item_name": "Ascendant Orb",
+				"item_description": "For those that built the foundation, sharing noble battle and honored companionship, the spark of gratitude flares eternal.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/orboflegend",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/orboflegend.7b82ea47579c986fae865969ea0aa255fc7bdcc7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/orboflegend_large.f5454db4ee609c4f8652cf67959c92a2ef13ce3e.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 42
 					}
 				]
 				
@@ -69640,35 +69286,6 @@
 				}
 			},
 			{
-				"name": "Nightwatchers Set",
-				"defindex": 20195,
-				"item_class": "bundle",
-				"item_type_name": "New Item",
-				"item_name": "Nightwatchers Set",
-				"item_description": "This new item has no description.",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/sets\/DOTA_Item_Nightwatchers_Set",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"nameable": true,
-					"usable_gc": true,
-					"usable_out_of_game": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				},
-				"tool": {
-					"type": "item_pack",
-					"use_string": "Open Bundle"
-				}
-			},
-			{
 				"name": "Defense Grid Announcer Pack",
 				"defindex": 20196,
 				"item_class": "bundle",
@@ -72057,7 +71674,7 @@
 				"name": "sithil stash",
 				"defindex": 407,
 				"attribute_class": "sithil_stash",
-				"description_string": "Sithil's Summer Stash %s1",
+				"description_string": "Attrib_SithilStash",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -74971,7 +74588,7 @@
 				"system": "axe_weapon_eyes_wyvernguard_edge",
 				"id": 33,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura 2012"
+				"name": "Champion's Aura"
 			},
 			{
 				"system": "courier_murrissey_the_smeevil_fl",
@@ -75427,7 +75044,7 @@
 				"system": "courier_international_2013",
 				"id": 109,
 				"attach_to_rootbone": false,
-				"name": "Champion's Aura 2013"
+				"name": "Attrib_Particle109"
 			},
 			{
 				"system": "courier_otter_dragon_ambient",
@@ -75506,6 +75123,24 @@
 				"id": 122,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle122"
+			},
+			{
+				"system": "spirit_breaker_ambient_head_fire",
+				"id": 123,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle123"
+			},
+			{
+				"system": "spirit_breaker_ambient_flame",
+				"id": 124,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle124"
+			},
+			{
+				"system": "doom_bringer_ambient",
+				"id": 125,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle125"
 			}
 		]
 		,
