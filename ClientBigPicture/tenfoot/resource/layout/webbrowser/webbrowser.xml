@@ -1,0 +1,64 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/webbrowser/webbrowser.css" />
+		<include src="tenfoot/resource/styles/webbrowser/webbrowser_dialogs.css" />
+	</styles>
+
+	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="NavigateTenfootBack()">
+		<Panel id="MainPage" > <!-- main web browser page -->
+	  	<Panel class="TopBar" selectionpos="0,0" >
+	  		<Panel id="UrlBar" >
+				<Image class="Secure" src="file://{images}/browser/browser_secure.png" />
+				<Image class="Insecure" src="file://{images}/browser/browser_insecure.png" />
+				<Label id="EVCertName" />
+				<TextEntry id="UrlTextEntry" selectionpos="1,0"
+						textinputid="UrlBarTextEntry"
+						textinputdoneactionstring="#Web_UrlGo"
+						textinputclass="AppearFromBottomCenter" />
+			</Panel>
+		  	<Panel id="ControlBar" selectionpos="2,0">
+				  	<Panel id="ControlBar_Buttons">
+						  <Panel id="Spinner" />
+						  <Button id="BackButton" onactivate="BrowserBack()" selectionpos="2,0" 	>
+								<Image src="file://{images}/browser/browser_back.png" />
+							</Button>
+							<Button onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >	  		
+								<Image src="file://{images}/browser/browser_home.png" />
+							</Button>
+							<Button onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
+								<Image src="file://{images}/browser/browser_favorite.png" />
+							</Button>
+					  	<Button id="ForwardButton" onactivate="BrowserForward()" selectionpos="5,0"	>
+								<Image src="file://{images}/browser/browser_forward.png" />
+							</Button>
+						</Panel>
+				</Panel>
+			</Panel>
+			<Panel id="HtmlContainer" selectionpos="0,10">
+			 	<SlideShow id="Html"  selectionpos="0,0" />
+			 	<Image id="BrowserFavoriteAdded" src="file://{images}/browser/favorite_added.png" />
+				<Image class="ReticuleHidden Reticule" id="ReticuleMiddle" src="file://{images}/browser/ReticuleLoading_00039.png" />
+				<Image class="ReticuleHidden Reticule" id="ReticuleOuter" src="file://{images}/browser/browser_reticule_outer.png" />
+				<Panel class="Reticule ReticuleLoading" id="ReticuleLoadingContainer" />
+
+			</Panel>	
+		</Panel>
+		
+		<Panel id="JSAlert" class="JSAlert" > <!-- JS alert/confirm dialog -->
+			<Panel  class="JSAlertPanel" >
+		  		<Label id="JSText"  />
+		  		<Panel class="JSAlertPanelButtons" >
+				  	<Button onactivate="BrowserJSDialogOK()" 	>
+						<Label text="#UI_OK" />
+					</Button>  		
+				  	<Button onactivate="BrowserJSDialogCancel()" 	>
+						<Label text="#UI_Cancel" />
+					</Button>  	
+				</Panel>
+			</Panel>	
+		</Panel>
+		
+		
+	</WebBrowser>
+</root>

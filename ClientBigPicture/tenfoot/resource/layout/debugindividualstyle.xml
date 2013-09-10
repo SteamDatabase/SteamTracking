@@ -1,0 +1,10 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/debugger.css" />
+	</styles>
+	
+	<DebugIndividualStyle>
+		<DebugStyleBlock id="StyleBlock" tabindex="0" />
+		<Label id="StyleLink" class="StyleLink" text="" />
+	</DebugIndividualStyle>	
+</root>

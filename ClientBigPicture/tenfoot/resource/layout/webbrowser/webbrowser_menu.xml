@@ -1,0 +1,35 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/webbrowser/webbrowser.css" />
+	</styles>
+
+	<WebBrowserMoreMenu class="ContextMenu" defaultfocus="EditButton" tabindex="auto" selectionpos="auto" >
+		<Panel id="ContextMenuBody" class="ContextMenuBody" childfocusonhover="true">
+			<Button id="EditButton" onactivate="ContextMenuEvent( BrowserURLEdit() )">
+				<Label text="#Web_Edit" />
+			</Button>
+			<Button onactivate="ContextMenuEvent( BrowserReload() )">
+				<Label text="#Web_Reload" />
+			</Button>
+			<Button id="ZoomButton" onactivate="ContextMenuEvent( BrowserZoom() )">
+				<Label text="#Web_Zoom" />
+			</Button>
+			<Button onactivate="ContextMenuEvent( BrowserCopyURL() )">
+				<Label text="#Web_CopyURL" />
+			</Button>
+			<Button onactivate="ContextMenuEvent( BrowserAddBrowserFavorite() )">
+				<Label text="#Web_AddFavorite" />
+			</Button>
+			<Button onactivate="ContextMenuEvent( BrowserAddTab() )">
+				<Label text="#Web_AddTab" />
+			</Button>
+			<Button onactivate="ContextMenuEvent( BrowserCloseTab() )">
+				<Label text="#Web_CloseTab" />
+			</Button>
+			<Button id="LinkInNewTabButton" onactivate="ContextMenuEvent( BrowserOpenLinkUnderCursorInNewTab() )">
+				<Label text="#Web_OpenInNewTab" />
+			</Button>
+		</Panel>
+	</WebBrowserMoreMenu>
+</root>

@@ -1,0 +1,62 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+		<include src="tenfoot/resource/styles/library/controllerbindings.css" />
+	</styles>
+
+	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_ControllerSaveBindingTitle" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Panel id="SetTitleRegion">
+						<Label id="SetTitleHint" text="#Library_ControllerSetTitle" hittest="false"/>
+						<TextEntry id="BindingTitleEntry"
+							maxchars="256" 
+							textinputid="BindingTitleTextEntry"
+							textinputdoneactionstring="#Friends_AddFriend_OK"
+							textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+						/>
+					</Panel>
+
+					<Panel id="AddDescriptionRegion">
+						<Label id="AddDescriptionHint" text="#Library_ControllerAddDescription" hittest="false" />
+						<TextEntry id="AddDescriptionEntry" 
+							maxchars="4096"
+							textinputid="AddDescriptionTextEntry"
+							textinputdoneactionstring="#Friends_AddFriend_OK"
+							textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+						/>
+					</Panel>
+
+					<DropDown id="VisibilityDropDown" class="VisibilityDropDown">
+						<Label id="Public" text="#Library_ControllerBindingPublic" />
+						<Label id="Private" text="#Library_ControllerBindingPrivate" />
+					</DropDown>
+
+				</Panel>
+				
+				<Panel id="MsgBoxButtons">	
+					<Button id="ButtonOk" class="ButtonOK MsgBoxButton">
+						<Label id="OKButtonText" text="#Library_ControllerSaveConfirm" />
+					</Button>
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton">
+						<Label id="CancelButtonText" text="#Library_ControllerSaveCancel" />
+					</Button>
+				</Panel>
+
+			</Panel>
+			<Panel id="ThrobberRow">
+				<Panel id="ThrobberRowWrapper">
+					<Panel id="Throbber" />
+					<Label id="WorkingText" text="#Library_ControllerSaveWorking" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</TenfootMsgBox>
+</root>

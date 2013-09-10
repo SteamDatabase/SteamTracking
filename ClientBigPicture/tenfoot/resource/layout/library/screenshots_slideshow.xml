@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/library/library_screenshots_slideshow.css" />
+	</styles>
+	
+	<LibraryScreenshotsSlideshow>
+		<SlideShow id="Contents" tabindex="auto"/>
+		<Panel id="SlideShowGlow" />
+		<Panel id="SlideShowDescription" hittest="false">
+			<Panel id="SlideShowTitle">
+				<Label id="ScreenshotsTitle" text="#Library_ScreenshotsSlideshowTitle" />
+				<Label id="ScreenshotsCaption" text="#Library_ScreenshotsCaption" />
+			</Panel>
+			<Panel id="SlideShowSubDescription">
+				<Label id="ScreenshotsTitle2" text="#Library_ScreenshotsSlideshowSubTitle" />
+				<Label id="ScreenshotsTime" text="#Library_ScreenshotTakenOn" />
+				<Label id="ScreenshotUploaded" text="#Library_ScreenshotUploaded" />
+			</Panel>
+		</Panel>
+	</LibraryScreenshotsSlideshow>
+</root>

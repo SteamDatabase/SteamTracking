@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutController tabindex="none" selectionpos="none" hittest="false">
+		<Panel id="Steps" hittest="false" />
+		<Panel id="Status">
+			<Panel class="CenteringPanel">
+				<Panel class="CartThrobber" />
+				<Label id="StatusText" />
+			</Panel>
+		</Panel>
+	</CheckoutController>
+</root>

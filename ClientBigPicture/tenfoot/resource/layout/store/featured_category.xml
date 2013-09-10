@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/store.css" />
+	</styles>
+
+	<StoreFeaturedCategory mousecanactivate="ifparentfocused(Categories)">
+		<Panel id="Images" />
+		<Panel id="Gradient" />
+		<Label id="CategoryName" />
+		<Panel id="Border" />
+	</StoreFeaturedCategory>
+</root>

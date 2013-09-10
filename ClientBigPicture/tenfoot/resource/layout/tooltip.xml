@@ -1,0 +1,9 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+	</styles>
+	
+	<Tooltip>
+		<Label id="Text" />
+	</Tooltip>	
+</root>

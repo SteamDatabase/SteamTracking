@@ -1,0 +1,88 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutReview class="CheckoutStep" tabindex="none" selectionpos="none" defaultfocus="PurchaseButtons" oncancel="NavigateCheckoutBack()">
+		<Panel class="CheckoutTitleRow">
+			<Label id="CheckoutTitle" class="CheckoutTitle" text="#Checkout_Review_Title" />
+			<Panel class="CheckoutProgress">
+				<Label class="CheckoutOtherStep" id="PaymentInfo" text="#Checkout_PaymentStep_Method" />
+					<Image src="file://{images}/store/CheckoutArrow.png" />
+				<Label class="CheckoutThisStep" id="PaymentReviewPurchase" text="#Checkout_PaymentStep_Review" />
+			</Panel>	
+		</Panel>
+		<Panel class="CheckoutBody" tabindex="auto" selectionpos="auto">
+			<Panel class="CheckoutBodyLeftColumn">
+				<Panel class="HorizontalRule" />
+
+				<Panel id="CheckoutReviewLineItems" />
+
+				<Panel id="ReviewTotalSection" class="ReviewTotalSection">
+					<Panel class="ReviewTotalRow">
+						<Label text="#Checkout_Review_Subtotal" />
+						<Label id="ReviewSubTotal" text="" />
+					</Panel>
+					<Panel id="TaxRow" class="ReviewTotalRow">							
+						<Label text="#Checkout_Review_Tax" />
+						<Label id="ReviewTax" text="" />			
+					</Panel>
+					<Panel class="HorizontalRule" />
+					<Panel class="ReviewTotalRow ReviewTotal">
+						<Label text="#Checkout_Review_Total" />
+						<Label id="ReviewTotal" text="" />
+					</Panel>
+					<Label id="IncludesVat" text="#Checkout_Review_VAT" />
+				</Panel>
+			</Panel>
+			<Panel class="VerticalRule" />
+			<Panel id="PurchaseButtons" class="CheckoutBodyRightColumn">
+				<Panel class="HorizontalRule" />
+				<ToggleButton id="AgreeTerms" text="#Checkout_Review_AgreeTerms" />
+				<Panel id="AgreeTermsSeparator" class="HorizontalRule" />
+				<Label id="CreditCardSecurityCodeLabel" class="PaymentMethodHeader" text="#Checkout_Review_SecurityCode" />
+				<TextEntry id="ReviewCreditCardSecurityCode" maxchars="4"
+					textinputid="CheckoutFormTextEntryLeft"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+				/>
+				<Panel id="CreditCardSecurityCodeSeparator" class="HorizontalRule" />
+				<Button class="ProminentButton" onactivate="CompletePurchase()">
+					<Label id="ButtonContinue" text="#Checkout_Review_Purchase" />
+				</Button>
+				<Panel class="HorizontalRule" />
+				<Button onactivate="EditPayment()">
+					<Label text="#Checkout_Review_EditPayment" />
+				</Button>
+				<Panel class="HorizontalRule" />
+				<Panel class="PaymentMethodReviewSection">
+					<Panel class="PaymentMethodReviewRow">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_PaymentMethod" />
+						<Panel class="PaymentMethodReviewRows">
+							<Panel id="PaymentReviewRow1" class="PaymentMethodReviewRow">
+								<Label id="ReviewPaymentMethod1" text="" />
+								<Label id="ReviewPaymentMethodAmount1" text="" />
+							</Panel>
+							<Panel id="PaymentReviewRow2" class="PaymentMethodReviewRow">
+								<Label id="ReviewPaymentMethod2" text="" />
+								<Label id="ReviewPaymentMethodAmount2" text="" />
+							</Panel>
+						</Panel>
+					</Panel>
+					<Panel class="PaymentMethodReviewRow PaymentMethodReviewGap">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_GiftOptions" />
+						<Label id="ReviewGiftOption" text="" />
+					</Panel>
+					<Panel id="AddressRow" class="PaymentMethodReviewRow PaymentMethodReviewGap">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_BillingAddress" />
+						<Label id="ReviewAddress" text="" />
+					</Panel>
+					<Panel id="PhoneRow" class="PaymentMethodReviewRow PaymentMethodReviewGap">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_Phone" />
+						<Label id="ReviewPhone" text="" />
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</CheckoutReview>	
+</root>

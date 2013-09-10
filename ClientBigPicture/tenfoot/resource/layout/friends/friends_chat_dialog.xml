@@ -1,0 +1,40 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+	</styles>
+	<FriendsChatDialog>
+		<Panel id="FriendsMainBodyRightHeader">
+			<AvatarImage id="FriendPanelImage" class="ChatItemAvatar" />
+			<Label id="ChatWithXLabel" text="#Friends_ChatWith_X" class="FriendsMainBodyRightHeaderText" />
+			<Panel id="FriendsMainBodyStatusGroup">
+				<Label id="FriendsMainBodyStatusGroupLeft" text="#Friends_Chat_X_IsTyping" />
+				<Label id="FriendsMainBodyStatusGroupRight" text="#Friends_Chat_LastMessage" />
+			</Panel>
+		</Panel>
+		<Panel id="FriendsMainBodyChatContainer">
+			<Panel id="FriendsMainBodyChatMessages">
+				<Label id="FriendsChatBody" text="#Friends_DontGiveOutPassword" html="true" />
+			</Panel>
+			<Panel id="FriendsVoiceChatControls">
+				<Image src="file://{images}/friends/friends_voicechat_voicelevels.tga" />
+				<VUMeter id="VoiceChatLevels0" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				<Image src="file://{images}/friends/friends_voicechat_audiolevels.tga" />
+				<VUMeter id="VoiceChatLevels1" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				<Label id="OthersVoice" text="#Friends_UsersInVoiceChat_NoOthers" />
+			</Panel>
+		</Panel>
+		<Panel id="FriendsMainBodyInputGroup">
+			<FriendsInputGroupTextEntry id="FriendsMainBodyInputTextArea"
+				textinputid="FriendsInputTextEntry"
+				textinputdoneactionstring="#UI_SendMessage"
+				textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+			/>
+			<Button id="FriendsMainBodyInputSendButton" onactivate="FriendsSendChatMessage();">
+				<Label id="FriendsChatSendButtonLabel" text="#Friends_Chat_Send" />
+			</Button>
+		</Panel>
+		<Label id="RightStickHint" text="#Friends_PressRightStickForURLs" />
+	</FriendsChatDialog>
+</root>

@@ -1,0 +1,376 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+@define paddinghorz: 110px;
+@define buttonwidth: 480px;
+@define buttonheight: 60px;
+@define controlgaphorz: 25px;
+@define controlgapvert: 18px;
+
+@keyframes 'fade-in'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+.WizardPanel
+{
+	opacity: 0.0;
+	animation-name: fade-in;
+	animation-duration: shortduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	width: 100%;
+	height: 100%;
+}
+
+.WizardPanel:descendantfocus
+{
+	// Temp work around for a bug that causes full screen banding on Windows
+	// opacity: 1.0;
+	opacity: 0.99;
+}
+
+.WizardPanel.BehindMessageBox:descendantfocus
+{
+	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+	desaturation: 0.4;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
+.WizardPanel.BehindMessageBox.BehindDaisyWheel:descendantfocus
+{
+	blur: none;
+	desaturation: 0.0;
+	wash-color: #00000000;
+}
+
+#MainBackground
+{
+	flow-children: down;
+}
+
+#TitleBackground
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
+	height: 150px;
+	width: 100%;
+}
+
+#DescriptionBackground
+{
+	width: 100%;
+	height: 100%;
+
+	background-color: gradient( linear, 0% 100%, 100% 0%, from( #001218 ), color-stop( 0.5, #123246 ), to( #001218 ) );
+	background-image: url("file://{images}/login/login_bg.tga");
+	background-repeat: repeat;
+	background-size: auto;
+}
+
+.WizardChildTitle
+{
+	font-size: 96px;
+	font-family: platformfont;
+
+	margin-top: 58px;
+	color: white;
+}
+
+.WizardChildDescription
+{
+	padding-top: 50px;
+	font-size: 44px;
+	font-family: platformfont;
+	font-weight: light;
+	color: #b0b4b7;
+}
+
+#WizardButtons
+{
+	vertical-align: bottom;
+	height: 200px;
+	width: 100%;
+	flow-children: right;
+}
+
+.WizardButton
+{
+	width: buttonwidth;
+	height: buttonheight;
+	padding-left: 8px;
+
+	border-width: 5px;
+	border-style: solid;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+
+	border-color: none;
+
+	background-color: #173a4c;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.WizardButton.GapRight
+{
+	margin-right: controlgaphorz;
+}
+
+.WizardButton.GapBottom
+{
+	margin-bottom: controlgaphorz;
+}
+
+.WizardButton:descendantfocus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	z-index: 100;
+}
+
+.WizardButton:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	z-index: 100;
+}
+
+.WizardButton:disabled:hover
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.WizardButton Label
+{
+	margin-bottom: 4px;
+	padding-top: 5px;
+	color: white;
+	font-size: 27px;
+	font-family: platformfont;
+	border-width: 0px;
+	vertical-align: center;
+}
+
+.WizardButton:focus Label
+{
+	color: black;
+}
+
+
+#ButtonCheckboxNext .TickBox
+{
+	height: 38px;
+	width: 38px;
+	background-color: #001218;
+	vertical-align: center;
+}
+
+.CheckBox:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.CheckBox Label
+{
+	padding-left: 50px;
+}
+
+.WizardLabel
+{
+	font-size: 27px;
+	font-family: platformfont;
+	color: secondary_label;
+	margin-bottom: 2px;
+}
+
+.WizardTextEntry
+{
+	width: buttonwidth;
+	height: buttonheight;
+
+	border-width: 5px;
+	border-style: solid;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+	
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+
+	border-color: ui_common_control_border;
+	background-color: #173a4c;
+	
+	transition-property: box-shadow, transform, border, background-color;
+	transition-duration: 0.23s;
+
+
+	font-size: 32px;
+	font-family: platformfont;
+	color: white;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: inset #00000040 2px 2px 8px 2px;
+}
+.WizardTextEntry.ErrorState
+{
+	background-color: error_bgcolor;
+	color: black;
+	border-color: ui_common_control_border;
+}
+
+.WizardTextEntry.GapRight
+{
+	margin-right: controlgaphorz;
+}
+
+.WizardTextEntry.GapBottom
+{
+	margin-bottom: controlgaphorz;
+}
+
+.WizardTextEntry:descendantfocus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;	
+}
+
+.WizardTextEntry.ErrorState:descendantfocus
+{
+	background-color: error_bgcolor;
+}
+
+.WizardTextEntry:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+}
+
+.WizardTextEntry:disabled:hover
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.WizardErrorLabel
+{
+	font-size: 26px;
+	font-family: platformfont;
+	color: error_color;
+}
+
+.WizardButton:disabled
+{
+	desaturation: 0.0;
+	blur: gaussian( 0.7 );
+	opacity: 0.35;
+	border-color: none;
+	box-shadow: none;
+	animation-name: none;
+}
+
+.WizardButton:disabled Label,.CheckBox:disabled .TickBox
+{
+	color: tcstatictext;
+}
+
+.WizardButton.ButtonHidden
+{
+	visibility: collapse;
+}
+
+#ChildContainer
+{
+	width: 100%;
+	height: 100%;
+}
+
+.WizardChild
+{
+	flow-children: down;
+	padding-left: paddinghorz;
+	padding-right: paddinghorz;
+
+	opacity: 0.0;
+	animation-name: fade-in;
+	animation-duration: shortduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	width: 100%;
+	height: 100%;
+}
+
+.WizardChild.ChildVisible
+{
+	opacity: 1.0;
+}
+
+.InputContainerDown
+{
+	flow-children: down;
+}
+
+.InputContainerDown.GapRight
+{
+	margin-right: controlgaphorz;
+}
+
+.InputContainerDown.GapDown
+{
+	margin-bottom: controlgapvert;
+}
+
+.InputContainerRight
+{
+	flow-children: right;
+}
+
+.InputContainerRight.GapRight
+{
+	margin-right: controlgaphorz;
+}
+
+.InputContainerRight.GapDown
+{
+	margin-bottom: controlgaphorz;
+}
+

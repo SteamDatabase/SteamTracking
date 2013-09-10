@@ -1,0 +1,58 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/login.css" />
+	</styles>
+
+	<RefreshLogin defaultfocus="Password" tabindex="auto" selectionpos="auto">
+		<!-- first child - partially alpha'd panel obscuring the other UI -->
+		<Panel class="RefreshBackground" />
+
+		<!-- second child - fully opaque panel vertically centered with our UI -->
+		<Panel class="RefreshContainer" tabindex="auto" selectionpos="auto">
+			<Label id="reason" /> <!-- set programmatically -->
+			<Panel id="LoginMessageContainer">
+				<Label id="LoginMessage" class="LoginMessage BumpRight" />
+			</Panel>
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
+				<Label class="LoginPrompt" text="#Login_AccountName" />
+				<TextEntry class="LoginRightItem" id="AccountName"
+					tabindex="auto"
+				   	textinputid="AccountNameTextEntry"
+					textinputdoneactionstring="#Login_NextField"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+			</Panel>
+	
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
+				<Label class="LoginPrompt" text="#Login_Password" />
+				<TextEntry class="LoginRightItem" id="Password"
+					tabindex="auto"
+				   	textinputid="PasswordTextEntry"
+					textinputdoneactionstring="#Login_NextField"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+			</Panel>
+		
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
+				<Label class="LoginPrompt" />
+				<Button class="Button" id="Login" tabindex="auto" selectionpos="auto"
+					onactivate="RefreshLogin()">
+					<Label text="#Login_Login" />
+				</Button>
+			</Panel>
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
+				<Label class="LoginPrompt" />
+				<Button class="Button" id="Cancel" tabindex="auto" selectionpos="auto"
+					onactivate="QuitApp()">
+					<Label text="#UI_Cancel" />
+				</Button>
+			</Panel>
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
+				<Label class="LoginPromptSm" text="#Login_RememberPassword" />
+				<Panel class="LoginRightItem">
+					<ToggleButton class="CheckBox" id="SavePassword"/>
+				</Panel>
+			</Panel>
+		</Panel>
+	</RefreshLogin>
+
+</root>

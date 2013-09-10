@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/wizardstyles.css" />
+	</styles>
+
+	<OOBELanguageWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#OOBE_WelcomeTitle" />
+		<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
+		
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+		</Panel>
+	</OOBELanguageWizardChild>
+
+</root>

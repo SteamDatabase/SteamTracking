@@ -1,0 +1,57 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/parental/parental.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryFriendsWhoPlay tabindex="auto" defaultfocus="FriendsWhoPlayLargeBody">
+		<Panel id="FriendsWhoPlayFullWrapper" class="FriendsWhoPlayFullWrapper">
+			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_FriendsWhoPlay" />
+			<Panel id="ParentalOverlay">
+				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
+				<Panel id="FriendsWhoPlayBody" class="FriendsWhoPlayBody HideWhileLocked">
+					<Panel id="FriendsWhoPlaySmallBody" class="FriendsWhoPlaySmallBody">
+						<Panel id="FriendsWhoPlayRowOne" class="FriendsWhoPlayRowOne">
+							<Panel id="FriendWhoPlaysWrapper1" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays1" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper2" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays2" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper3" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays3" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper4" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays4" class="FriendWhoPlays" />
+							</Panel>
+						</Panel>
+						<Panel id="FriendsWhoPlayRowTwo" class="FriendsWhoPlayRowTwo">
+							<Panel id="FriendWhoPlaysWrapper5" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays5" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper6" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays6" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper7" class="FriendWhoPlaysWrapper">
+								<AvatarImage id="FriendWhoPlays7" class="FriendWhoPlays" />
+							</Panel>
+							<Panel id="FriendWhoPlaysWrapper8" class="FriendWhoPlaysWrapper">
+								<Label id="MoreRemainingLabel" class="MoreRemainingLabel" />
+							</Panel>
+						</Panel>
+					</Panel>
+					<Panel id="FriendsWhoPlayLargeBody" class="FriendsWhoPlayLargeBody" selectionposboundary="vertical" childfocusonhover="true">
+						<LibraryFriend id="FriendPanel1" class="FriendPanel" selectionpos="3,0" />
+						<LibraryFriend id="FriendPanel2" class="FriendPanel" selectionpos="3,1" />
+						<LibraryFriend id="FriendPanel3" class="FriendPanel" selectionpos="3,2" />
+						<LibraryFriend id="FriendPanel4" class="FriendPanel" selectionpos="3,3" />
+						<LibraryFriend id="FriendPanel5" class="FriendPanel" selectionpos="3,4" />
+						<LibraryFriend id="FriendPanel6" class="FriendPanel" selectionpos="3,5" />
+						<LibraryFriend id="FriendPanel7" class="FriendPanel" selectionpos="3,6" />
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</LibraryFriendsWhoPlay>
+</root>

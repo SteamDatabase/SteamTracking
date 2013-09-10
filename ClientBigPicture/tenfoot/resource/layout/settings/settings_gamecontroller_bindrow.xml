@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_GameController_BindRow class="SettingsController_BindRow" >
+		<Panel class="SettingsControllerBindRow">
+			<Label id="ActionLabel" class="SettingsCallout SettingsControllerCommand" text="#SettingsController_ControllerAction" />
+			<Label id="ButtonLabel" class="SettingsCallout SettingsControllerButton" text="#SettingsController_ButtonNone" />						
+		</Panel>
+	</SettingsPanel_GameController_BindRow>
+
+</root>

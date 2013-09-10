@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/wizardstyles.css" />
+		<include src="tenfoot/resource/styles/login/createaccount.css" />
+	</styles>
+
+	<CreateAccountFailWizardChild class="WizardChild" defaultfocus="ButtonTryAgain" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#CreateAccount_Fail_Title" />
+		<Label class="WizardChildDescription" text="#CreateAccount_Fail_Description" />
+
+		<Panel id="ErrorContainer">
+			<Label class="WizardChildDescription" id="ErrorLabel" />
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonTryAgain" onactivate="CreateAccountTryAgain()">
+				<Label id="Label" text="#CreateAccount_Fail_TryAgain" />
+			</Button>
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</CreateAccountFailWizardChild>
+
+</root>

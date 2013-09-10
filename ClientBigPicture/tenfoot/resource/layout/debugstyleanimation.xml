@@ -1,0 +1,19 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/debugger.css" />
+	</styles>
+	
+	<DebugStyleAnimation>
+		<Panel class="DebugKeyFrameSection">
+			<Panel class="DebugKeyFrameRow">
+				<Label text="@keyframes '" />
+				<TextEntry id="AnimationName" tabindex="0" undohistory="enabled" />
+				<Label text="'" />
+			</Panel>
+			<Label text="{" />
+			<Panel id="FrameSection" class="DebugPropertySection" tabindex="1" />
+			<Label text="}" />
+		</Panel>
+		<Label id="StyleLink" class="StyleLink" text="" />
+	</DebugStyleAnimation>	
+</root>

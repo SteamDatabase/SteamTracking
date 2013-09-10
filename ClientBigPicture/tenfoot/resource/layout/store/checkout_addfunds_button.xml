@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutAddFundsButton>
+		<Label id="AddFundsText" text="#Checkout_AddFunds_AddAmount" />
+		<Label id="MinRequredText" text="#Checkout_AddFunds_Minimum" />
+	</CheckoutAddFundsButton>	
+</root>

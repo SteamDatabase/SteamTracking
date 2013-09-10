@@ -1,0 +1,37 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/store.css" />
+		<include src="tenfoot/resource/styles/store/browsebycategory.css" />
+	</styles>
+
+	<StoreBrowseByCategoryItem tabindex="auto" selectionpos="auto" class="CapsuleControllerSupportContainer">
+		<Panel class="HeaderImageWrapper">
+			<Image id="HeaderImage" scaling="stretch" />
+			<Panel class="CapsuleControllerSupport" />
+			<Label id="DiscountDescription" />
+			<Panel class="ImageBorder" />
+		</Panel>
+		<Panel class="PriceRow OnlyVisibleOnCarouselFocus">
+			<Label id="DiscountCountdown" />
+			<StorePrice id="ItemPrice" />
+		</Panel>
+		<Panel class="ItemDetails OnlyVisibleOnCarouselFocus">
+			<Label id="ItemName" text="#Store_BrowseByCategory_ItemName" />
+			<Panel class="DetailsIconRow">
+				<Image id="PlatformSteamPlay" src="file://{images}/store/icon_steamplay.png" />
+				<Image id="PlatformWindows" src="file://{images}/store/icon_platform_win.png" />
+				<Image id="PlatformMac" src="file://{images}/store/icon_platform_mac.png" />
+				<Image id="PlatformLinux" src="file://{images}/store/icon_platform_linux.png" />
+			</Panel>
+		</Panel>
+		<Panel class="ReleaseDateRow OnlyVisibleOnCarouselFocus">
+			<Label class="SecondaryLabel" id="ReleaseDate" text="" />
+			<Label class="Metadata" text="#Store_BrowseByCategory_ReleaseDateText" />
+		</Panel>
+		<Panel id="GenreRow" class="GenreRow OnlyVisibleOnCarouselFocus">
+			<Label class="SecondaryLabel" id="GenreLabel" text="#Store_BrowseByCategory_Genre" />
+			<Label class="Metadata" id="Genres" />
+		</Panel>
+	</StoreBrowseByCategoryItem>
+</root>

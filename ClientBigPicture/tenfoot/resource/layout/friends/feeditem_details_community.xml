@@ -1,0 +1,28 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/mainmenu_communitybackground.css" />
+		<include src="tenfoot/resource/styles/friends/community_main.css" />
+	</styles>
+
+	<FriendsFeedListItemCommunity>
+		<Panel class="FriendsFriendListItemCommunityStripTileBkgnd" />
+		<AvatarImage id="FriendPanelImage" class="FriendsFeedItemCommunityAvatar" />
+		<Image id="FriendsFeedItemIcon" />
+		<Panel id="SecondaryItemFrame_app" class="SecondaryItemFrame">
+			<Image id="SecondaryItemIcon" />
+		</Panel>
+		<Panel id="SecondaryItemFrame_group" class="SecondaryItemFrame">
+			<Image id="SecondaryItemIcon" />
+		</Panel>
+		<Panel id="SecondaryItemFrame_group_ogg" class="SecondaryItemFrame">
+			<Image id="SecondaryItemIcon" />
+		</Panel>
+		<Panel id="SecondaryItemFrame_profile" class="SecondaryItemFrame">
+			<Image id="SecondaryItemIcon" />
+		</Panel>
+		<Label id="FeedItemTimestring" class="FeedItemTimestring" />
+		<Label id="FeedItemDescription" class="FeedItemDescription" />
+	</FriendsFeedListItemCommunity>
+</root>

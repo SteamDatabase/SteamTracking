@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/notifications.css" />
+	</styles>
+
+	<Panel class="NotificationRoot">
+		<Panel class="NotificationFrame" />
+		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
+		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+		<Label id="FriendName" class="NotificationTitle" />
+		<Label class="NotificationMessage" text="#Notification_HasSentYouAGift" />
+	</Panel>
+</root>

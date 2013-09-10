@@ -1,0 +1,9 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/webbrowser/webcontroller.css" />
+	</styles>
+
+  <WebController>
+  </WebController>
+</root>

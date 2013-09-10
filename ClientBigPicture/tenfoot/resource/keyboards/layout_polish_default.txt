@@ -1,0 +1,5 @@
+#TextInput_CAPS		ABCDEFGHIJKLMNOPQRSTUVWXYZ?!;\\&_
+#TextInput_LETTERS	abcdefghijklmnopqrstuvwxyz,.:/@-
+#TextInput_NUMBERS	1234567890*+£€$`'"~|={##}%^<>[]\{}()
+#TextInput_SPECIAL	ĄąĆćĘęŁłŃńÓóŚś®™ŹźŻż☺☹☻©⏎
+#TextInput_NUMBERSONLY	1234567890.

@@ -1,0 +1,42 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu_librarybackground.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryMostRecent class="LibraryMostRecent" defaultfocus="MostRecentCarousel" >
+		<Panel id="MostRecentBackgroundWrapper" hittest="false" tabindex="0" selectionpos="0,0" >
+			<Panel id="MostRecentBackground" hittest="false"  class="MostRecentTransitionRightAndOff" tabindex="0" selectionpos="0,0">
+				<Carousel id="MostRecentCarousel" hittest="false"  class="MostRecentCarousel" tabindex="auto" selectionpos="auto"
+					title="#Library_RecentlyPlayed" focus="Center" wrap="false" z-offset="0px" x-offset="0px" focus-z-offset="-500px" focus-x-offset="-145px,-20px"
+					onmoveup="CloseLibrary();" selectionposboundary="vertical" />
+			</Panel>
+		</Panel>
+		<Panel id="LibraryMenuRowWrapper" tabindex="1" selectionpos="0,1">
+			<Panel id="LibraryMenuRow" class="LibraryMenuRow" tabindex="auto" selectionpos="501,0">
+				<Button id="AllMusicButton" class="LibraryButton" onactivate="ShowAllMusic();" tabindex="auto" selectionpos="500,0">
+					<Label id="ViewAllLabelMusic" class="ButtonLabelSmall" text="#Library_ViewAll" />
+					<Label id="ViewAllMusicLabel" class="ButtonLabel" text="#Library_Music" />
+				</Button>
+				
+				<Button id="AllGamesButton" class="LibraryButton" onactivate="ShowLibraryAllGames();" tabindex="auto" selectionpos="501,0">
+					<Label id="ViewAllLabelGames" class="ButtonLabelSmall" text="#Library_ViewAll" />
+					<Label id="ViewAllGamesLabel" class="ButtonLabel" text="#Library_Games" />
+				</Button>
+			 
+
+			<!--	
+				<Button id="AllMoviesButton" class="LibraryButton" onactivate="ShowAllMovies();" tabindex="auto" selectionpos="502,0">
+					<Label id="ViewAllLabelMovies" class="ButtonLabelSmall" text="#Library_ViewAll" />
+					<Label id="ViewAllMoviesLabel" class="ButtonLabel" text="#Library_Movies" />
+				</Button>
+			-->
+			<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="2" selectionpos="1000,0">
+				<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
+			</Button>
+			</Panel>
+
+		</Panel>
+	</LibraryMostRecent>
+</root>

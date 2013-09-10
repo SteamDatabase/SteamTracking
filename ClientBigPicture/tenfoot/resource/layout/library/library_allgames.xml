@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryAllGames onmoveup="CloseAllGames();" defaultfocus="GamesGrid" selectionposboundary="vertical">
+		<Image id="GridBackground" class="GridBackground" />
+		<Panel id="GridUpperRow" class="GridUpperRow" tabindex="auto" selectionpos="0,0">
+			<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />
+			<DropDown id="GamesFilter" class="GamesFilter">
+				<Label id="FilterAllGames" text="#Library_AllGames" />
+				<Label id="FilterRecentlyPlayed" text="#Library_RecentlyPlayedFilter" />
+				<Label id="FilterInstalled" text="#Library_Installed" />
+				<Label id="FilterFavorites" text="#Library_Favorites" />
+				<Label id="FilterController" text="#Library_ControllerSupport" />
+				<Label id="FilterPlatform" text="#Library_Platform" />
+			</DropDown>
+		</Panel>
+		<Panel hittest="false" id="FastScrollWrapper">
+			<Label id="FastScrollLabel" />
+			<Label id="TypeToJumpLabel" />
+		</Panel>
+		<Grid id="GamesGrid" class="GamesGrid" scrolldirection="horizontal" verticalcount="3" horizontalcount="4" selectionpos="0,3" tabindex="auto">
+		</Grid>
+	</LibraryAllGames>
+</root>

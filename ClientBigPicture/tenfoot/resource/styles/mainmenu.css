@@ -1,0 +1,1031 @@
+/*	main menu screen css style */
+
+@define topmostzindex: 1000;
+
+MainMenu
+{
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	width: 1920px;
+	height: 1080px;
+	visibility: visible;
+	
+	font-family: platformfont;
+
+	opacity: 0.0;
+
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: linear;
+
+	transform: translateX( 0px );
+}
+
+.MainMenuVisible
+{
+	opacity: 1.0;
+
+	animation-name: fade-in; 
+	animation-duration: 1.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+.MainMenuVisibleFast
+{
+	animation-duration: 0.2s;
+}
+
+.BehindScreenshotsSlideshow 
+{
+	opacity: 0.0;
+}
+
+MainMenu.SlideAwayToLeft
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+MainMenu.SlideAwayToRight
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+.BehindMessageBox #BodyWrapper
+{
+	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+	desaturation: 0.4;
+	opacity: 1.0;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+
+}
+
+.BehindDaisyWheel #BodyWrapper
+{
+	desaturation: 0.0;
+	opacity: 1.0;
+	blur: none;
+	wash-color: #ffffffff;
+}	
+
+.FriendsInputTextEntry.BehindMessageBox #BodyWrapper
+{
+	desaturation: 0.0;
+	opacity: 1.0;
+	blur: none;
+	wash-color: #ffffffff;
+}
+
+.FriendsInputTextEntry.BehindMessageBox #FriendsMainBodyColumnLeft
+{
+	
+	desaturation: 0.4;
+	opacity: 0.85;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
+.FriendsInputTextEntry.BehindDaisyWheel #BodyWrapper
+{
+	desaturation: 0.0;
+	opacity: 1.0;
+	blur: none;
+	wash-color: #ffffffff;
+}	
+
+MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails,
+MainMenu.BehindMessageBox.CheckoutFormTextEntry,
+MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
+{
+	desaturation: 0.0;
+	opacity: 1.0;
+	blur: none;
+}
+
+
+#BodyWrapper
+{
+	width: 100%;
+	height: 100%;
+
+	opacity-mask: none;
+
+	z-index: 100;
+
+}
+
+.PlayActionModal #BodyWrapper
+{
+	transition-property: opacity-mask !immediate;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+
+	opacity-mask: url( "file://{images}/library/play_action_modal_mask.png" );
+}
+
+#BodyHittestBlocker
+{
+	width: 100%;
+	height: 100%;
+	z-index: top_non_popup_zindex;
+	opacity: 1.0;
+}
+
+ .HomeGlow
+{
+	opacity: 0.6;
+	width: 100%;
+	height: 600px;
+	z-index: -500;
+
+	margin-bottom: 100px;
+	horizontal-align: center;
+	vertical-align: center;
+
+	transition-property: opacity, transform !immediate;
+	transition-delay: 0.1s, 0.0s;
+	transition-duration: 0.35s, 0.35s;
+	transition-timing-function: ease-in-out;
+}
+
+.MenuRowUnfocused.HomeGlow
+{
+	opacity: 0.0;
+	
+	transition-property: opacity, transform !immediate;
+	transition-delay: 0.0s;
+	transition-duration: 0.1s, 0.35s;
+	transition-timing-function: ease-in-out;
+}
+
+MainMenu.StackDepth2 .HomeGlow
+{
+	opacity: 0.0;
+}
+
+MainMenu.StackDepth3 .HomeGlow
+{
+	opacity: 0.0;
+}
+
+@keyframes 'fade-in'
+{
+	/* 0->10 here is basically just to give us a small delay on startup, */
+	/* so everything starts loading and we don't end up with a stutter or  */
+	/* nothing loaded while doing the actual zoom. */
+	0%
+	{
+		opacity: 0.0;
+		desaturation: 1.0;
+		pre-transform-scale2d: 1.0;
+		blur: gaussian( 7, 7, 2 );
+	}
+
+	67%
+	{
+		opacity: 0.0;
+		desaturation: 1.0;
+		pre-transform-scale2d: 1.0;
+		blur: gaussian( 7, 7, 2 );
+	}
+
+	100%
+	{
+		opacity: 1.0;
+		desaturation: 0.0;
+		pre-transform-scale2d: 1.0;
+		blur: none;
+	}
+}
+
+#TopRow
+{
+	margin: 0px;
+	margin-right: 10px;
+	padding: 65px 66px;
+
+	width: 100%;
+	z-index: 2000;
+
+	transition-property: blur, desaturation, opacity, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+
+MainMenu.StackDepth2 #TopRow,
+MainMenu.StackDepth3 #TopRow
+{
+	transform: translate3d( 0%, -50%, 0% );
+}
+
+.TopRowBlurry
+{
+	blur: gaussian( 2.5 );
+	desaturation: 0.15;
+	opacity: 0.70;
+
+	transform: translateZ( -100px ) translateY( -4% );
+}
+
+.TopRowBase Label
+{
+	white-space: nowrap;
+	text-overflow: clip;
+}
+
+.TopRowBase .ShortDesc
+{
+	transition-property: opacity, max-width;
+	transition-duration: 0.15s;
+	transition-delay: 0.0s !immediate;
+	transition-timing-function: linear, ease-out;
+	opacity: 1.0;
+}
+
+.TopRowBase .LongDesc
+{
+	transition-property: opacity, max-width;
+	transition-duration: 0.15s;
+	transition-delay: 0.0s !immediate;
+	transition-timing-function: linear, ease-out;
+
+
+	max-width: 0px;
+	opacity: 0.0;
+}
+
+.CursorVisible .LongDesc
+{	
+	opacity: 0.0;
+}
+
+.CursorVisible .ShortDesc
+{	
+	opacity: 1.0;
+}
+
+
+.TopRowFocused .LongDesc
+{
+	max-width: 300px;
+	opacity: 1.0;
+	text-overflow: ellipsis;
+}
+
+#Clock,#ClockSuffix
+{
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+
+.TopRowFocused #Clock,
+.TopRowFocused #ClockSuffix
+{
+	opacity: 0.0;
+}
+
+.TopRowFocused .ShortDesc
+{
+	opacity: 0.0; 
+}
+
+Button:hover .LongDesc
+{
+	transition-delay: 0.08s !immediate;
+	max-width: 300px;
+	opacity: 1.0;
+}
+
+Button:hover .ShortDesc
+{
+	transition-delay: 0.08s !immediate;
+	opacity: 0.0;
+}
+
+.TopRowBase:descendantfocus .LongDesc
+{
+	transition-delay: 0.08s !immediate;
+	max-width: 400px;
+	opacity: 1.0;
+
+}
+
+
+
+.TopRowBase Button, InboxMenu Button, ParentalButton
+{
+	padding: 8px 8px;
+	box-shadow: #eeeeee00 -5px -5px 6px 10px;
+	border: 5px solid #0d1c2200;
+	color: tcexitrow;
+	background-color: #0d192100;
+
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+
+}
+
+.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
+{
+	transition-duration: 0.4s;
+	transition-property: wash-color;
+	transition-timing-function: ease-out;
+
+	wash-color: ui_primary_color;
+}
+
+.TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
+{
+	transition-duration: 0.3s !immediate;
+	wash-color: ui_common_control_hover; 
+}
+
+.TopRowBase Button:hover, InboxMenu Button:hover, ParentalButton:hover
+{
+	transition-duration: 0.3s !immediate;
+
+	color: tcexitrowhover;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+.TopRowBase Button:focus, InboxMenu Button:focus, ParentalButton:focus
+{
+	transition-duration: 0.3s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.TopRowBase Button.SystemIMButtonFocusDisabled
+{
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -1px -1px 8px 2px;
+}
+
+
+.TopRowBase Button:Focus Image, InboxMenu Button:Focus Image
+{
+	transition-duration: 0.4s !immediate;
+	wash-color: #274855ff; 
+
+	animation-name: image-wash-pulse; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.TopRowBlurry Button:Focus Image
+{
+	animation-name: none;
+}
+
+.TopRowBlurry Button:Focus
+{
+	animation-name: none;
+}
+
+.HiddenButton
+{
+	visibility: collapse;
+}
+
+.VisibleButton
+{
+	visibility: visible;
+	opacity: 1.0;
+
+	animation-name: button-fade-in; 
+	animation-duration: .23s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+@keyframes 'button-fade-in'
+{
+	0%
+	{
+		opacity: 0.1;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+@keyframes 'image-wash-pulse'
+{
+	0%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: gaussian( 0.5 );
+	}
+	
+	48%
+	{
+		wash-color: #2c2c2cff;
+		blur: none;
+	}
+	
+	52%
+	{
+		wash-color: #2c2c2cff;
+		blur: none;
+	}
+	
+	100%
+	{
+		wash-color: animated_icon_wash_color;
+		blur: gaussian( 0.5 );
+	}
+}
+
+@keyframes 'beta-image-wash-pulse'
+{
+	0%
+	{
+		wash-color: #c4c4c4ff;
+		blur: gaussian( 0.5 );
+	}
+
+	48%
+	{
+		wash-color: #ffffffff;
+		blur: none;
+	}
+
+	52%
+	{
+		wash-color: #ffffffff;
+		blur: none;
+	}
+
+	100%
+	{
+		wash-color: #c4c4c4ff;
+		blur: gaussian( 0.5 );
+	}
+}
+
+#AvatarInfoRow
+{
+	flow-children: right;
+	color: tcexitrow;
+	font-size: 36px;
+	padding: 10px;
+	vertical-align: center;
+}
+
+#AvatarInfoRow Button, ParentalButton
+{
+	vertical-align: center;
+}
+
+#DownloadsButton
+{
+	flow-children: right;
+}
+
+#TopRow #SystemIMs
+{
+	flow-children: right;
+	margin-left: 4px;
+}
+
+#TopRow #Inbox
+{
+	flow-children: right;
+	margin-left: 4px;
+	opacity: 0.0;
+}
+
+.IncomingInboxItems #TopRow #Inbox
+{
+	opacity: 1.0;
+}
+
+.SupportMessage #Inbox
+{
+	wash-color: accountwarning;
+}
+
+#NewSupportMessagesButton
+{
+	wash-color: accountwarning;
+}
+
+#Clock, #ClockSuffix
+{
+	vertical-align: center;
+	font-size: 36px;
+	margin-right: 16px;
+	margin-bottom: 2px;
+	color: messagecolorwash;
+}
+
+#Clock
+{
+margin-right: 8px;	
+}
+
+#DownloadsButton Image, #SystemIMs Image, #Inbox Image
+{
+	vertical-align: center;
+}
+
+#DownloadsButton Label, #SystemIMs Label, #Inbox Label, InboxMenu Button Label
+{
+	font-size: 36px;
+	margin-left: 6px;
+	vertical-align: center;
+}
+
+#SettingsButton Label
+{
+	margin-right: 12px;
+}
+
+#BetaButton Label
+{
+	margin-right: 12px;
+}
+
+#Avatar
+{
+	margin-right: 15px;
+	margin-left: 32px;
+}
+	
+#SelfAvatar
+{
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 8px;
+
+	height: 95px;
+	width: 95px;
+
+	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
+	transition-property: box-shadow;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+#SelfAvatar:hover
+{
+	box-shadow: fill #eeeeee60 -4.5px -4.5px 6px 9px;
+}
+
+#SettingsExitRow
+{
+	vertical-align: center;
+	horizontal-align: right;
+	flow-children: right;
+	color: tcexitrow;
+	font-size: 36px;
+	padding: 10px;
+}
+
+#SettingsButton
+{
+	flow-children: right;
+	vertical-align: center;
+}
+
+#BetaButton
+{
+	flow-children: right;
+	visibility: collapse;
+}
+
+
+#Exit
+{
+	flow-children: right;
+	vertical-align: center;
+}
+
+#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton
+{
+	margin-left: 4px;
+	vertical-align: center;
+	padding-left: 4px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+}
+
+	
+.SteamLogo
+{
+	height: 32px;
+	width: 73px;
+	margin-left: 42px;
+	opacity: 0.65;
+}
+
+#MenuRow
+{
+	margin-bottom: 100px;
+	horizontal-align: center;
+	vertical-align: center;
+	font-size: 33;
+	background-color: #00000000;
+	height: 200px;
+	z-index: topmostzindex;
+
+	transform-origin: 0% 0% parent-relative;
+	transition-property: blur, desaturation, opacity, transform, opacity;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;
+
+}
+
+#TopRowContents:descendantfocus
+{
+	z-index: topmostzindex;
+}
+
+#MainRowContents:descendantfocus
+{
+	z-index: topmostzindex;
+}
+
+
+#MenuRowButtons
+{	
+	flow-children: right;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+MainMenu.StackDepth2 #MenuRow
+{
+	blur: gaussian( 1.5 );
+	desaturation: 0.15;
+	opacity: 0.8;
+	wash-color: bgcolorwashlight;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
+}
+
+MainMenu.StackDepth2 .HomeGlow
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
+	opacity: 0.4;
+}
+
+
+MainMenu.StackDepth2 #MenuRow:hover
+{
+	blur: gaussian( 0.5 );
+	desaturation: 0.02;
+	opacity: 0.9;
+	//pre-transform-scale2d: 1.04;
+}
+
+MainMenu.StackDepth3 #MenuRow
+{
+	blur: gaussian( 3.0 );
+	desaturation: 0.15;
+	opacity: 0.60;
+	wash-color: bgcolorwashmedium;
+	transform-origin: 0% 0% parent-relative;
+	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
+}
+
+MainMenu.StackDepth3 .HomeGlow
+{
+	opacity: 0.1;
+	transform-origin: 0% 0% parent-relative;
+	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
+}
+
+
+MainMenu.StackDepth3 #MenuRow:hover
+{
+	blur: gaussian( 2.0 );
+	desaturation: 0.05;
+	opacity: 0.80;
+}
+
+MainMenu #MenuRow.MenuRowHidden
+{
+	opacity: 0.0;
+}
+
+MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( 220px );
+	opacity: 0.0;
+}
+
+.Button
+{
+	horizontal-align: center;
+	vertical-align: center;
+
+	width: 468px;
+	height: 106px;
+
+	margin: 10px 8px ;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414230;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+
+	transform: translatez( -150px );
+
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+}
+
+.Button:active
+{
+	transition-duration: 0.4s;
+}
+
+.Button:hover
+{
+	transition-duration: 0.3s !immediate;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	transform: translatez( -100px );
+}
+
+.ButtonLeft:hover
+{
+	transform: translatex( 5px ) translatez( -125px );
+}
+
+.ButtonRight:hover
+{
+	transform: translatex( -5px ) translatez( -125px );
+}
+
+.Button:parentdisabled:hover
+{
+	transform: translatez( -150px );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	box-shadow: none;
+}
+
+
+.Button:focus
+{
+	transition-duration: 0.4s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
+	
+	transition-duration: 0.3s;
+}
+
+.Button:descendantfocus:hover
+{
+	transform: translateZ( 30px );
+}
+
+.InsideLibrary #LibraryButton, .InsideStore #StoreButton, .InsideCommunity #CommunityButton,
+.StackDepth2 #LibraryButton:active, .StackDepth2 #StoreButton:active, .StackDepth2 #CommunityButton:active,
+.StackDepth3 #LibraryButton:active, .StackDepth3 #StoreButton:active, .StackDepth3 #CommunityButton:active
+{
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+.ButtonLeft:focus
+{
+	transform: translatex( 42px ) translatez( 0px );
+}
+
+.ButtonLeft:focus:hover
+{
+	transform: translateX( 48px ) translateZ( 30px );
+}
+
+.ButtonRight:focus
+{
+	transform: translatex( -42px ) translatez( 0px );
+}
+
+.ButtonRight:focus:hover
+{
+	transform: translateX( -48px ) translateZ( 30px );
+}
+
+.ButtonLabel
+{
+	horizontal-align: center;
+	vertical-align: center;
+	color: tcmainbutton;
+	font-size: 56;
+	font-weight:light;
+
+	transition-property: color;
+}
+
+.Button:focus .ButtonLabel
+{
+	color: tcmainbuttonselected;
+}
+
+.InsideLibrary #LibraryButton .ButtonLabel, .InsideStore #StoreButton .ButtonLabel, .InsideCommunity #CommunityButton .ButtonLabel,
+.StackDepth2 #LibraryButton:active .ButtonLabel, .StackDepth2 #StoreButton:active .ButtonLabel, .StackDepth2 #CommunityButton:active .ButtonLabel,
+.StackDepth3 #LibraryButton:active .ButtonLabel, .StackDepth3 #StoreButton:active .ButtonLabel, .StackDepth3 #CommunityButton:active .ButtonLabel
+
+
+{
+	color: black;
+}
+
+.ScreenSaverMode MainMenu, .GamesRunning MainMenu
+{
+	opacity: 0.0;
+
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 1.4s, 0.3s !immediate;
+	transition-timing-function: linear;
+}
+
+InboxMenu
+{
+	width: 100%;
+	height: 100%;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+
+InboxMenu #Wrapper
+{
+	flow-children: down;
+	margin-left: 56px;
+	margin-top: 180px;
+}
+
+InboxMenu Button
+{
+	margin: 6px;
+	flow-children: right;
+	
+	min-width: 420px;
+}
+
+InboxMenu Label
+{
+	font-family: platformfont;
+}
+
+InboxMenu Button Image, InboxMenu .ButtonLabelWrapper
+{
+	vertical-align: center;
+}
+
+.BehindMessageBox #MenuRow
+{
+	opacity: 0.0;
+}
+
+.BehindMessageBox .HomeGlow
+{
+	opacity: 0.0;
+}
+
+InboxMenu.Destructing
+{
+	opacity: 0.0;
+}
+
+
+
+ParentalButton.Locked
+{
+	wash-color: #444444ff;
+	transition-property: wash-color, color !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+
+#ParentalLockButton
+{
+	flow-children: right;
+	vertical-align: center;
+}
+
+#ParentalLockButton.Locked
+{
+	wash-color: #ffffffff;
+}
+
+#ParentalLockButton #ParentalLockImageLocked
+{
+	opacity: 0.0;
+}
+
+#ParentalLockButton.Locked #ParentalLockImageLocked
+{
+	wash-color: #ff0000ff;
+	opacity: 1.0;
+}
+
+#ParentalLockButton #ParentalLockImageUnlocked
+{
+	wash-color: #00ff00ff;
+	opacity: 1.0;
+}
+
+#ParentalLockButton.Locked #ParentalLockImageUnlocked
+{
+	opacity: 0.0;
+}
+
+#ParentalLockButton #ParentalLockTextLocked
+{
+	visibility: collapse;
+}
+
+#ParentalLockButton.Locked #ParentalLockTextLocked
+{
+	visibility: visible;
+}
+
+#ParentalLockButton #ParentalLockTextUnlocked
+{
+	visibility: visible;
+}
+
+#ParentalLockButton.Locked #ParentalLockTextUnlocked
+{
+	visibility: collapse;
+}
+

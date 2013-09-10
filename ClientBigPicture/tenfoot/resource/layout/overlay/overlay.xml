@@ -1,0 +1,39 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+		<include src="tenfoot/resource/styles/friends/community_main.css" />
+		<include src="tenfoot/resource/styles/overlay/overlay.css" />
+		<include src="tenfoot/resource/styles/friends/friends_profile_details.css" />
+	</styles>
+	
+	<OverlayBasePanel>
+	 	<Panel id="OverlayDashboard" defaultfocus="Achievements" >
+			<Panel id="UpperRow" class="UpperRow">
+				<Panel id="Avatar">
+					<AvatarImage id="SelfAvatar" />
+				</Panel>
+				<Panel id="HeaderLabels">
+					<Label id="GameName" class="GameName" text="" />
+					<Panel id="ClockWrapper">
+						<Label id="Clock" class="Clock" text="" />
+						<Label id="ClockSuffix" class="ClockSuffix" text="" />
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel id="DesktopPanels">
+				<CommunityFriendsStrip id="CommunityFriendsStrip" class="CommunityFriendsStrip" />
+				<Carousel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto" focus="center" wrap="false" onmoveup="GoUpFromFeedStrip();">
+					<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" />
+					<LibraryController id="Controller" class="Controller DetailsDataPanel" />
+					<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" />
+					<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel" />
+					<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
+					<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
+					<LibraryGuides id="Guides" class="Guides DetailsDataPanel" />
+				</Carousel>
+			</Panel>
+			<Panel id="MinimalPanels" />
+		</Panel>
+	</OverlayBasePanel>
+</root>

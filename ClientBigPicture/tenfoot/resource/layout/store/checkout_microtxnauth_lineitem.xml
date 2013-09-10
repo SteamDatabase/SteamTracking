@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutReviewLineItem tabindex="auto" selectionpos="auto">
+		<Panel id="MainRow">
+			<Label id="ItemQuantity" text="#Checkout_MicroTxnAuth_Quantity" />
+			<Label id="ItemName" text="" />
+			<StorePrice id="ItemPrice" ShowDiscount="false" />
+		</Panel>
+		<Panel id="Details">
+			<Label id="RecurringSubscriptionDescription" text="#Checkout_MicroTxnSubscription" />
+		</Panel>
+	</CheckoutReviewLineItem>
+
+</root>

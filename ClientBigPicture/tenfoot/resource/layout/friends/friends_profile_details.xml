@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+		<include src="tenfoot/resource/styles/friends/friends_profile_details.css" />
+	</styles>
+
+	<FriendsProfileDetails defaultfocus="FriendsProfileDetailsActionsList">
+		
+			<Panel id="FriendsProfileDetailsBodyRegion" class="FriendsProfileDetailsBodyRegion">
+				<FriendsProfileDetailsCompositeHeader id="FriendsProfileDetailsCompositeHeader" />
+				<Panel id="FriendsProfileDetailsActionsList" tabindex="auto" selectionpos="auto" childfocusonhover="true">
+				</Panel>
+			</Panel>
+
+	</FriendsProfileDetails>
+</root>

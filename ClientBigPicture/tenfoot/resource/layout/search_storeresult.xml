@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/search.css" />
+	</styles>
+	
+	<SearchStoreResult>
+		<Image id="StoreHeader" />
+		<Panel class="StoreRightColumn">
+			<Label id="StoreResultName" />
+			<Label id="StoreResultPrice" />
+		</Panel>
+	</SearchStoreResult>
+</root>

@@ -1,0 +1,1137 @@
+//
+// Styles for text input
+// for circular look: NE_margin = N_margin/1.4
+//
+
+@define quadgroupsize: 244px;
+@define quadgroupmargin: 435px;
+@define quadgroupmargin2d: 305px;
+
+// item height - width can increase to accomodate content
+@define itemsize: 50px;
+
+// radius of borders - wider items will be non-circular, with circular borders
+// on L/R sides and flat tops/bottoms
+@define borderradius: 25px;
+
+@define itemmargin: 54px;
+
+@define stick_pri_cold_time: 0.0;
+
+// @define stick_pri_select_oct_lo: 0.52359877559829887307710723054658;
+// @define stick_pri_select_oct_hi: 1.0471975511965977461542144610932;
+@define stick_pri_select_oct_lo: 0.32;
+@define stick_pri_select_oct_hi: 1.24;
+
+@define stick_pri_move_scale_x:  0.16;
+@define stick_pri_move_scale_y: -0.16;
+@define stick_pri_select_dist_0: 25;
+@define stick_pri_select_dist_1: 100;
+@define stick_pri_select_ang_0: 0.1;
+
+@define stick_snd_move_scale_x:  0.025;
+@define stick_snd_move_scale_y: -0.025;
+@define stick_snd_select_dist_0:  50;
+@define stick_snd_select_dist_1: 500;
+@define stick_snd_select_ang_0: 17;
+
+@define picked_item_transition_time: 0.1s;
+
+@define settings_transition_time: 0.2s;
+@define language_transition_time: 0.2s;
+@define language_show_time: 0.8s;
+
+TextInputDaisy
+{
+	width: 100%;
+	height: 100%;
+	flow-children: none;
+}
+
+#BodyContainer
+{
+	width: 50%;
+	height: 100%;
+	flow-children: none;
+	margin-top: 75px;
+	opacity: 1.0;
+	background-color: #00000000;
+	color: #d0d0d0ff;
+	font-weight: normal;
+	font-family: platformfont;
+	transform: translateZ( 0px );
+	horizontal-align: center;
+
+	animation-name: textinputdaisy-appear-from-bottom-center;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property: opacity;
+	transition-duration: 0.8s !immediate;
+
+}
+
+.Destructing #BodyContainer
+{
+	transition-duration: 0.2s !immediate;
+
+	opacity: 0.0;
+	animation-duration: 0.25s;
+	animation-direction: reverse;
+}
+
+.HalfWidth #BodyContainer
+{
+
+	width: 948px;
+	height: 1400px;
+}
+
+.DockLeft #BodyContainer
+{
+	horizontal-align: left;
+
+}
+
+.DockRight #BodyContainer
+{
+	horizontal-align: right;
+
+}
+
+
+.AppearFromBottomCenter #BodyContainer
+{	
+	animation-name: textinputdaisy-appear-from-bottom-center;
+}
+
+.ScreenSaverMode #BodyContainer
+{
+	opacity:0;
+}
+
+@keyframes 'textinputdaisy-appear-from-bottom-center'
+{
+	from
+	{
+		opacity: 0.0;
+		pre-transform-scale2d: 0.03;
+		transform: translatex( 0px ) translatey( 370px );
+	}
+	to
+	{
+		opacity: 1.0;
+		transform: translatez( 0px );
+	}
+}
+
+#Legends
+{
+	width: 100%;
+	height: 1080px;
+	flow-children: none;
+	padding-bottom: 40px;
+	background-color: daisy_bg_wash_color;
+}
+
+.NoBackground #Legends
+{
+	background-color: none;
+}
+
+#Wheel
+{
+	width: 750px;
+	height: 700px;
+	flow-children: none;
+	margin-bottom: 210px;
+	margin-right: 120px;
+	margin-left: 120px;
+	margin-top: 20px;
+	horizontal-align: center;
+
+	background-color: daisy_bg_color;
+	background-position: left 167px top 167px;
+	background-repeat: no-repeat;
+	background-size: 55%;
+
+	box-shadow: fill #00000022 -4px -4px 8px 12px;
+	border-radius: 50%;
+}
+
+#Subwheel
+{
+	width: 380px;
+	height: 380px;
+	flow-children: none;
+	margin-top: 150px;
+	horizontal-align: center;
+	background-color: daisy_petal_color;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
+.Autosuggest
+{
+	font-size: 28px;
+}
+
+.Autosuggest.Prefix
+{
+	text-align: right;
+}
+.Autosuggest.Suffix
+{
+	text-align: left;
+	color: friendsingame_solid;
+}
+
+#Autosuggest
+{
+	position: 0px 36% 0px;
+	horizontal-align: center;
+	flow-children: right;
+//	opacity: 0.0;
+}
+
+.DaisyInputTypeABXY.ColdLS #Autosuggest
+{
+	opacity: 1.0;
+}
+
+#Stick_Pri
+{
+//	border-radius: 50%;
+//	border: 2px solid legendbuttonborder;
+	
+	width: 150px;
+	height: 150px;
+
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: none;
+}
+
+#Stick_Pri Image
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#ConfigName
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	visibility: collapse;
+	
+	margin-bottom: 110px;
+	font-size: 32px;
+	line-height: 40px;
+}
+
+#LeftLegend
+{
+	vertical-align: bottom;
+	horizontal-align: left;
+	margin-bottom: 140px;
+	margin-left: 100px;
+	font-size: 21px;
+	line-height: 30px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+}
+
+#RightLegend
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-right: 100px;
+	margin-bottom: 140px;
+	font-size: 21px;
+	line-height: 30px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+}
+
+.TriggerButtonBox
+{
+	border-radius: 6px;
+	width: 43px;
+	height: 34px;
+	text-align: center;
+	box-shadow: #EEEEEE30 -5px -5px 6px 10px;
+	border: 2px solid #00000000;
+}
+
+#LangLegend
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 140px;
+	font-size: 21px;
+	line-height: 30px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+
+}
+
+#LangLegend Image
+{
+	horizontal-align: left;
+	width: 47px;
+	height: 33px;
+	opacity: 0.8;
+	border-radius: 44%;
+	box-shadow: #EEEEEE30 -5px -5px 6px 10px;
+}
+
+
+#Lang_txt
+{
+	margin-left: 60px;
+	text-transform: uppercase;
+	
+	opacity: 1.0;
+	transition-property: opacity !immediate;
+	transition-duration: language_transition_time;
+	transition-timing-function: ease-in;
+}
+
+#Lang_txt.ShowingLanguage
+{
+	transition-delay: language_show_time;
+	opacity: 0.0;
+}
+
+#DPadLegend
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 170px;
+	font-size: 21px;
+	line-height: 30px;
+}
+
+.DaisyInputTypeRS #DPadLegend
+{
+	visibility: collapse;
+}
+
+#DPadLegend Image
+{
+	width: 30px;
+	height: 30px;
+	margin-top: 1px;
+	margin-left: 10px;
+	opacity: 0.7;
+}
+
+#DPad_txt
+{
+	margin-top: 0px;
+	margin-left: 55px;
+	margin-bottom: 32px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+}
+
+#LBLegend
+{
+	vertical-align: bottom;
+	horizontal-align: left;
+	margin-bottom: 200px;
+	margin-left: 80px;
+	font-size: 21px;
+	font-family: "Motiva Sans";
+	font-weight: light;
+	color: tclegendlabel;
+	line-height: 30px;
+	font-weight: normal;
+	width: 100%;
+}
+
+.LB_txt
+{
+	margin-top: 2px;
+	margin-left: 80px;
+	visibility: collapse;
+}
+
+.DaisyInputTypeABXY #LB_txt_ABXY
+{
+	visibility: visible;
+}
+
+.DaisyInputTypeRS #LB_txt_RS
+{
+	visibility: visible;
+}
+
+#LT_txt
+{
+	margin-top: 2px;
+	margin-left: 60px;
+}
+
+.RB_txt
+{
+	margin-top: 2px;
+	margin-right: 80px;
+	visibility: collapse;
+}
+
+.DaisyInputTypeABXY #RB_txt_ABXY
+{
+	visibility: visible;
+}
+
+.DaisyInputTypeRS #RB_txt_RS
+{
+	visibility: visible;
+}
+
+#RT_txt
+{
+	margin-top: 2px;
+	margin-right: 60px;
+}
+
+#LBLegend .TriggerButtonBox
+{
+	padding-left: 20px;
+	width: 63px;
+	border-top-left-radius: 35px 18px;
+	box-shadow: #EEEEEE30 -5px -5px 6px 10px;
+	border: 2px solid #00000000;
+}
+
+#StartLegend
+{
+	vertical-align: top;
+	horizontal-align: right;
+	margin-right: 100px;
+	margin-top: 200px;
+	font-size: 21px;
+	line-height: 30px;
+	visibility: collapse;
+}
+
+#StartLegend Image
+{
+	margin-top: 1px;
+	horizontal-align: right;
+	width: 47px;
+	height: 33px;
+	opacity: 0.8;
+	border-radius: 44%;
+	box-shadow: #EEEEEE30 -5px -5px 6px 10px;
+}
+
+#Start_txt
+{
+	margin-right: 50px;
+}
+
+#MiddleLegendRS
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 30px;
+	flow-children: right;
+
+	font-size: 24px;
+	font-weight: light;
+	line-height: 30px;
+	font-family: "Motiva Sans";
+	padding: 20px;
+
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyInputTypeRS #MiddleLegendRS
+{
+	opacity: 1.0;
+}
+
+.DaisyInputTypeABXY.ColdLS #MiddleLegendRS
+{
+	opacity: 1.0;
+}
+
+.AButtonBox,
+.BButtonBox,
+.XButtonBox,
+.YButtonBox,
+{
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	padding-top: 2px;
+	margin-left: 16px;
+	margin-right: 2px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+.YButtonBox
+{
+	background-color: #b38e1f00;
+}
+.XButtonBox
+{
+	background-color: #19427f00;
+}
+.AButtonBox
+{
+	background-color: #6b900c00;
+}
+.BButtonBox
+{
+	background-color: #a51c0c00;
+}
+
+.AButtonText,
+.BButtonText,
+.XButtonText,
+.YButtonText
+{
+	margin-top: 4px;
+	margin-left: 8px;
+	margin-right: 8px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+}
+
+#RBLegend
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-right: 80px;
+	margin-bottom: 200px;
+	font-size: 21px;
+	line-height: 30px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: tclegendlabel;
+}
+
+#RBLegend .TriggerButtonBox
+{
+	horizontal-align: right;
+	padding-right: 20px;
+	width: 63px;
+	border-top-right-radius: 35px 18px;
+	box-shadow: #EEEEEE30 -5px -5px 6px 10px;
+	border: 2px solid #00000000;
+}
+
+#RightLegend .TriggerButtonBox
+{
+	horizontal-align: right;
+}
+
+#TextInputText
+{
+	horizontal-align: center;
+	vertical-align: top;
+	margin-top: 50px;
+	margin-left: 75px;
+	margin-right: 75px;
+
+	height: 100%;
+	min-height: 94px;
+	height: fit-children;
+	overflow: clip scroll;
+	white-space: normal;
+
+	padding-left: 8px;
+	padding-right: 8px;
+	font-weight: medium;
+	font-size: 22px;
+	line-height: 28px;
+	text-overflow: clip;
+	color: #f2f2f2ff;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #5685a950 ), to( #20204070 ) );
+
+	border-width: 4px;
+	border-color: #364559e0;
+	border-style: solid;
+	border-radius: 4px;
+}
+
+.StickPriLabel
+{
+	vertical-align: center;
+	horizontal-align: center;
+
+	font-size: 32px;
+	line-height: 40px;
+}
+
+TextInputDaisyGroup #Bkgnd
+{
+	width: 100%;
+	height: 100%;
+
+}
+
+TextInputDaisyGroup.SelectionGroup #Bkgnd
+{
+	background-color: #FFFFFF00;
+
+}
+
+.DaisyInputTypeRS TextInputDaisyGroup.SelectionGroup
+{
+	border: 2px solid #FFFFFF00;
+	border-radius: 50%;
+	transform: translatez(1px);
+	pre-transform-scale2d: 1.10;
+	transform: translatez( 10px );
+	background-color: daisy_petal_selection_color;
+}
+
+.Group
+{
+	border-radius: 0%;
+	border: 2px solid #FFFFFF00;
+	flow-children: none;
+
+	width: quadgroupsize;
+	height: quadgroupsize;
+	transform: translatez(0px);
+	transition-property: transform, pre-transform-scale2d, border, background-color;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+	background-color: daisy_petal_color;
+}
+
+
+
+.Group.SelectionGroup
+{
+	border: 2px solid #FFFFFF00;
+	transform: translatez(1px);
+	pre-transform-scale2d: 1.08;
+	transform: translatez( 10px );
+	background-color: daisy_petal_action_color;
+}
+
+#Group_N
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-bottom: quadgroupmargin;
+	opacity-mask: url( "file://{images}/textinput/drop01.tga" );
+}
+
+
+
+#Group_S
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: quadgroupmargin;
+	
+	opacity-mask: url( "file://{images}/textinput/drop05.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Group_W
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-right: quadgroupmargin;
+	
+	opacity-mask: url( "file://{images}/textinput/drop07.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Group_E
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-left: quadgroupmargin;
+	
+	opacity-mask: url( "file://{images}/textinput/drop03.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+
+#Group_NE
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-bottom: quadgroupmargin2d;
+	margin-left: quadgroupmargin2d;
+	
+	opacity-mask: url( "file://{images}/textinput/drop02.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Group_SE
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: quadgroupmargin2d;
+	margin-left: quadgroupmargin2d;
+	
+	opacity-mask: url( "file://{images}/textinput/drop04.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Group_SW
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: quadgroupmargin2d;
+	margin-right: quadgroupmargin2d;
+	
+	opacity-mask: url( "file://{images}/textinput/drop06.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Group_NW
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-bottom: quadgroupmargin2d;
+	margin-right: quadgroupmargin2d;
+	
+	opacity-mask: url( "file://{images}/textinput/drop08.tga" );
+	background-position: left 0px top 0px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#Stick_Snd
+{
+//	border-radius: 50%;
+//	border: 1px solid legendbuttonborder;
+	color: #000000FF;
+	
+	visibility: collapse;
+	width: 45px;
+	height: 41px;
+
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.DaisyInputTypeRS #Stick_Snd
+{
+	visibility: visible;
+	opacity: 0.0;
+}
+
+#Stick_Snd Image
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 5px;
+	
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.StickSndLabel
+{
+	vertical-align: center;
+	horizontal-align: center;
+
+	color: #d0d0d0ff;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;	
+}
+
+.Item
+{
+	min-width: itemsize;
+	padding-left: 4px;
+	padding-right: 4px;
+	height: itemsize;
+}
+
+.Group.SelectionGroup .Item
+{
+	background-color: #00000000;
+	border-radius: borderradius;
+	border: 2px solid;
+}
+
+
+.Group.SelectionGroupRS .Item
+{
+	background-color: #999999ff;
+	border-radius: borderradius;
+	border: 2px solid;
+	border-color: #00000000;
+}
+
+.DaisyInputTypeRS .Item.Picked
+{
+	background-color: #999999ff;
+	
+	transition-property: background-color, box-shadow;
+	transition-duration: picked_item_transition_time;
+	transition-timing-function: ease-in-out;
+	
+	box-shadow: fill #00000022 0px 0px 6px 0px;
+	border-radius: borderradius;
+}
+
+.DaisyInputTypeABXY .Group #Item_N.Item.Picked,
+.DaisyInputTypeABXY .Group #Item_S.Item.Picked,
+.DaisyInputTypeABXY .Group #Item_E.Item.Picked,
+.DaisyInputTypeABXY .Group #Item_W.Item.Picked
+{
+	background-color: #00000000;
+	
+	
+	box-shadow: fill #00000022 0px 0px 6px 0px;
+	border-radius: borderradius;
+	
+	transition-property: background-color, transform !immediate;
+	transition-duration: picked_item_transition_time;
+	transition-timing-function: ease-in-out;
+	
+}
+
+.ItemLabel
+{
+	vertical-align: center;
+	horizontal-align: center;
+	
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+	margin-top: -2px;
+	color: #C0C0C0FF;
+	
+	transition-property: color;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+}
+
+.Group.SelectionGroup .ItemLabel
+{
+	color: #ffffffff;
+}
+
+
+#Item_N
+{
+	horizontal-align: center;
+	vertical-align: top;
+	margin-top: itemmargin;
+}
+
+.DaisyInputTypeABXY #Item_N
+{
+	border: 2px solid #00000000;
+	background-color: #00000000;
+	border-radius: borderradius;
+	
+	transition-property: box-shadow;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyInputTypeABXY.SteamPad #Item_N
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY .Group.SelectionGroup #Item_N
+{
+	background-color: #b38e1fff;
+	box-shadow: #00000055 0px 0px 8px 0px;
+	border-radius: borderradius;
+}
+
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY.RightPad_Up .Group.SelectionGroup #Item_N
+{
+	background-color: #00000000;
+	box-shadow: #ffffff80 0px 0px 2px 0px;
+	border: 2px solid #ffffff80; 
+	border-radius: borderradius;
+}
+
+
+#Item_S
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: itemmargin;
+}
+
+.DaisyInputTypeABXY #Item_S
+{
+	border: 2px solid #00000000;
+	background-color: #00000000;
+	border-radius: borderradius;
+	
+	transition-property: box-shadow;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyInputTypeABXY.SteamPad #Item_S
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+	
+.DaisyInputTypeABXY .Group.SelectionGroup #Item_S
+{
+	background-color: #6b900cff;
+	box-shadow: #00000055 0px 0px 8px 0px;
+	border-radius: borderradius;
+
+}
+
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY.RightPad_Down .Group.SelectionGroup #Item_S
+{
+	background-color: #00000000;
+	box-shadow: #ffffff80 0px 0px 2px 0px;
+	border: 2px solid #ffffff80; 
+	border-radius: borderradius;
+}
+
+
+#Item_W
+{
+	horizontal-align: left;
+	vertical-align: center;
+	margin-left: itemmargin;
+}
+
+.DaisyInputTypeABXY #Item_W
+{
+	background-color: #14356600;
+
+	border: 2px solid #00000000;
+	background-color: #00000000;
+	border-radius: borderradius;
+	
+	transition-property: box-shadow;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyInputTypeABXY.SteamPad #Item_W
+{
+	background-color: #00000000;
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+}
+
+.DaisyInputTypeABXY .Group.SelectionGroup #Item_W
+{
+	background-color: #143566ff;
+	box-shadow: #00000055 0px 0px 8px 0px;
+	border-radius: borderradius;
+}
+
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY.RightPad_Left .Group.SelectionGroup #Item_W
+{
+	background-color: #00000000;
+	box-shadow: #ffffff80 0px 0px 2px 0px;
+	border: 2px solid #ffffff80; 
+	border-radius: borderradius;
+}
+
+
+#Item_E
+{
+	horizontal-align: right;
+	vertical-align: center;
+	margin-right: itemmargin;
+}
+
+.DaisyInputTypeABXY #Item_E
+{
+	background-color: #a51c0c00;
+
+	border: 2px solid #00000000;
+	background-color: #00000000;
+	border-radius: borderradius;
+	
+	transition-property: box-shadow;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyInputTypeABXY.SteamPad #Item_E
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY .Group.SelectionGroup #Item_E
+{
+	background-color: #a51c0cff;
+	box-shadow: #00000055 0px 0px 8px 0px;
+	border-radius: borderradius;
+}
+
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E
+{
+	box-shadow: #ffffff00 0px 0px 2px 0px;
+	background-color: #00000000;
+}
+
+.DaisyInputTypeABXY.RightPad_Right .Group.SelectionGroup #Item_E
+{
+	background-color: #00000000;
+	box-shadow: #ffffff80 0px 0px 2px 0px;
+	border: 2px solid #ffffff80; 
+	border-radius: borderradius;
+}
+
+
+//
+// toplevel daisy settings container
+//
+#TextInputDaisySettings
+{
+	width: 50%;
+	height: 100%;
+
+	opacity: 0.0;
+
+	horizontal-align: center;
+
+	font-size: 32px;
+
+	transition-property: opacity;
+	transition-duration: settings_transition_time;
+	transition-timing-function: ease-in-out;
+}
+
+.DockLeft #TextInputDaisySettings
+{
+	horizontal-align: left;
+
+}
+
+.DockRight #TextInputDaisySettings
+{
+	horizontal-align: right;
+
+}
+
+//
+// we style in the settings and style out the actual daisy
+// with the InSettings class
+//
+.InSettings #TextInputDaisySettings
+{
+	opacity: 1.0;
+}
+
+.InSettings #BodyContainer
+{
+	opacity: 0.5;
+}
+
+//
+// 2nd level container
+//
+#TextInputDaisySettingsContainer
+{
+	background-color: #000000;
+	padding: 100px;
+
+	flow-children: down;
+	vertical-align: center;
+	horizontal-align: center;
+	color: #c8cbccca;
+}
+
+#TextInputDaisySettingsCancel
+{
+	flow-children: right;
+}
+
+.XButtonBox , .XButtonText
+{
+	visibility: collapse;
+}
+
+.WebEntry .AButtonText, .WebEntry  .AButtonBox
+{
+	visibility: visible;
+	color: #75b324ff;
+}
+
+.WebEntry  .AButtonBox
+{
+	box-shadow: #75b32499 -5px -5px 6px 10px;
+	background-color: #5c8d1c66;
+}
+
+.YButtonBox , .YButtonText
+{
+	visibility: collapse;
+}
+
+.CustomYButton .YButtonText, .CustomYButton .YButtonBox
+{
+	visibility: visible;
+}
+
+.WebEntry .AButtonText
+{
+	text-transform: uppercase;
+}
+
+.NoCancel #B_btn,.NoCancel #B_txt
+{
+	visibility: collapse;
+}

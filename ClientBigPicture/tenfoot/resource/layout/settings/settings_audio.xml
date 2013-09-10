@@ -1,0 +1,36 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_Audio class="SettingsSection" defaultfocus="SettingsAudio_MuteAll">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Audio" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+			<ToggleButton tabindex="1.0" class="CheckBox" id="SettingsAudio_MuteAll" text="#SettingsAudio_MuteAll" onactivate="MuteAll()"/>
+			<Panel id="AudioSub" class="FlowDown SettingsRight">
+				<Panel class="HorzSub SettingsRight">
+					<Label class="SettingsCallout" text="#SettingsAudio_Ambient" />
+					<VUMeter writable="true" id="AmbientLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				</Panel>
+				<Panel class="HorzSub SettingsRight">
+					<Label class="SettingsCallout" text="#SettingsAudio_Movies" />
+					<VUMeter writable="true" id="MoviesLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				</Panel>
+				<Panel class="HorzSub SettingsRight">
+					<Label class="SettingsCallout" text="#SettingsAudio_Navigation" />
+					<VUMeter writable="true" id="NavigationLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				</Panel>
+				<Panel /> <!-- good times -->
+			</Panel>
+		</Panel>
+
+	</SettingsPanel_Audio>
+
+</root>

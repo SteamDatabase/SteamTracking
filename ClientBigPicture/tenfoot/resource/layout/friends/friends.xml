@@ -1,0 +1,50 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+	</styles>
+
+	<Friends defaultfocus="FriendsMainBodyFriendsList" oncancel="NavigateTenfootBack()">
+		<Panel id="BodyWrapper">
+
+			<Panel id="FriendsMainBodyColumnsContainer">
+				<Panel id="FriendsMainBodyColumnLeft">
+					<Panel id="FriendsMainBodyLeftHeader">
+						<FriendsSelfHeader id="FriendsMyItem" />
+						<Panel id="FriendsMainBodyLeftHeaderButtons" tabindex="auto" selectionpos="auto">
+							<Button id="FriendsBtnTabFriends" class="FriendsMainBodyHeaderButton CurrentSelection"
+									onactivate="FriendsSetCurrentlyActiveListTabIndex( 0, 2 )"
+									onfocus="FriendsSetCurrentlyActiveListTabIndex( 0, 0 )"
+									>
+								<Label text="#Friends_Tab_Friends" />
+							</Button>
+							<Button id="FriendsBtnTabGroups" class="FriendsMainBodyHeaderButton"
+									onactivate="FriendsSetCurrentlyActiveListTabIndex( 1, 2 )"
+									onfocus="FriendsSetCurrentlyActiveListTabIndex( 1, 0 )"
+									>
+								<Label text="#Friends_Tab_Groups" />
+							</Button>
+						</Panel>
+					</Panel>
+					<Panel id="FriendsMainBodyLeftHeaderUnderline">
+					</Panel>
+					<Panel id="FriendsMainBodyListContainer">
+						<Panel id="FriendsMainBodyFriendsList" class="MainBodyLeftList CurrentSelection" tabindex="auto" selectionpos="auto" analogstickscroll="false">
+						</Panel>
+						<Panel id="FriendsMainBodyGroupsList" class="MainBodyLeftList" tabindex="auto" selectionpos="auto" analogstickscroll="false">
+						</Panel>
+					</Panel>
+				</Panel>
+				<Panel id="FriendsChatDialogContainer">
+					<FriendsChatDialog id="FriendsChatDialog">
+					</FriendsChatDialog>
+					<FriendsChatDialog id="FriendsChatDialogFake">
+					</FriendsChatDialog>
+				</Panel>
+			</Panel>
+
+		</Panel>
+
+	</Friends>
+</root>

@@ -1,0 +1,29 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/library/launcheula.css" />
+	</styles>
+
+	<TenfootMsgBox defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_LaunchEulaTitle" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<HTML id="HTMLEula" embedded="true" />
+				<Label id="EULADetail" text="#Library_LaunchEULA_Detail" />
+				<Panel id="MsgBoxButtons">
+					<Button id="ButtonOK" class="ButtonOK MsgBoxButton">
+						<Label id="OKButtonText" text="#Library_LaunchEULA_Agree"/>
+					</Button>
+
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton">
+						<Label id="CancelButtonText" text="#Library_LaunchEULA_Cancel"/>
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</TenfootMsgBox>
+</root>

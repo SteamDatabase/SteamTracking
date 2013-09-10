@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/storeapp.css" />
+	</styles>
+
+	<StoreAppPackage tabindex="auto" selectionpos="auto">
+		<Image id="HeaderImage" />
+		<Label id="ComingSoon" text="#Store_Available_Date" />
+		<Label id="PackageName" />
+		<Panel class="PackagePriceSystemRow">
+			<Panel class="PackagePlatforms">
+				<Image id="PlatformSteamPlay" src="file://{images}/store/icon_steamplay.png" />
+				<Image id="PlatformWindows" src="file://{images}/store/icon_platform_win.png" />
+				<Image id="PlatformMac" src="file://{images}/store/icon_platform_mac.png" />
+				<Image id="PlatformLinux" src="file://{images}/store/icon_platform_linux.png" />
+			</Panel>
+			<StorePrice id="PackagePrice" />
+		</Panel>
+		<Panel id="ViewPackageSection">
+			<Panel class="HorizontalRule" />
+			<Button id="ViewPackageBtn">
+				<Label id="ViewItem" />
+			</Button>
+		</Panel>
+		<Panel class="HorizontalRule" />
+		<Button id="AddToCartBtn">
+			<Label id="AddToCartLabel" text="#Store_AppPurchaseOptions_AddToCart" />
+		</Button>
+		<Panel class="HorizontalRule" />
+		<Label id="RecurringSubscriptionDescription" />
+		<Label id="AppsInPackageHeader" />
+		<Label id="AppNamesInPackage" />
+	</StoreAppPackage>
+</root>

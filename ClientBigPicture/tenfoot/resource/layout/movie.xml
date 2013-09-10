@@ -1,0 +1,54 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/movie.css" />
+	</styles>
+	
+	<Movie>
+		<MoviePanel id="MoviePanel" />
+
+		<!-- Shown in minimal control ui -->
+		<Panel id="PlayIndicator" />
+		<Label id="ErrorMessage" text="#Panorama_MoviePlaybackError" />
+
+		<Panel id="PlaybackControls">
+			<Label id="PlaybackSpeed" class="PlaybackControl" />
+			<Panel id="Timeline" class="PlaybackControl" >
+				<!-- Add bar for buffered data -->
+				
+				<!-- Wrap progress bar so transforms can be easily used to scale on animation thread -->
+				<Panel class="ProgressBarWrapper">
+					<Panel id="PlaybackProgress" />
+				</Panel>
+			</Panel>
+
+			<Panel id="ControlBarRow" class="PlaybackControl">
+				<Panel id="ControlBar" tabindex="auto" selectionpos="auto" defaultfocus="PlayPause">
+					<Panel class="ControlBarBackground">
+					</Panel>
+					<Panel class="ControlBarButtons" tabindex="auto" selectionpos="auto">
+						<Button id="PreviousTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerPreviousTrackPressed();">
+							<Image src="file://{images}/transport_controls/Icon_PreviousTrack.tga" />
+						</Button>
+						<Button id="Rewind" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerRewind();">
+							<Image src="file://{images}/transport_controls/Icon_RWD.tga" />
+						</Button>
+						<Button id="Stop" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerStopPressed();">
+							<Image src="file://{images}/transport_controls/Icon_Stop.tga" />
+						</Button>
+						<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
+							<Image src="file://{images}/transport_controls/Icon_FFWD.tga" />
+						</Button>
+						<Button id="NextTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerNextTrackPressed();">
+							<Image src="file://{images}/transport_controls/Icon_NextTrack.tga" />
+						</Button>
+						<ToggleButton id="PlayPause" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();">
+							<Image />
+						</ToggleButton>
+					</Panel>
+				</Panel>
+				<VUMeter tabindex="auto" selectionpos="auto" writable="true" id="Volume" class="VoiceBarContainer" numbars="12" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+			</Panel>
+		</Panel>
+	</Movie>	
+</root>

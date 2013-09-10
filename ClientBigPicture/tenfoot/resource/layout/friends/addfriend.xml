@@ -1,0 +1,37 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+	</styles>
+
+	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Friends_AddFriendTitle" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Label id="MsgBoxContents" class="MsgBoxContents" text="#Friends_AddFriendDesc" />
+
+					<TextEntry id="AddFriendTextEntry" 
+						textinputid="FriendsInputTextEntry"
+						textinputdoneactionstring="#Friends_AddFriend_OK"
+						textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+					/>
+				</Panel>
+				
+				<Panel id="MsgBoxButtons">	
+					<Button id="ButtonOk" class="ButtonOK MsgBoxButton">
+						<Label id="OKButtonText" text="#Friends_AddFriend_OK" />
+					</Button>
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton">
+						<Label id="CancelButtonText" text="#Friends_AddFriend_Cancel" />
+					</Button>
+				</Panel>
+
+			</Panel>
+		</Panel>
+	</TenfootMsgBox>
+</root>

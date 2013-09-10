@@ -1,0 +1,26 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu_communitybackground.css" />
+		<include src="tenfoot/resource/styles/friends/community_main.css" />
+	</styles>
+
+	<CommunityFeedStrip>
+		<Panel id="CommunityFeedStripWrapper" tabindex="0" selectionpos="0,0" >
+			<Panel id="CommunityFeedStripWrapperBackground" class="CommunityFeedTransitionRightAndOff" tabindex="0" selectionpos="0,0">
+				<Carousel id="Strip" class="CommunityFeedCarousel" tabindex="auto" selectionpos="auto"
+					focus="Center" wrap="false" z-offset="0px" x-offset="500px" focus-x-offset="180px,500px"
+					onmoveup="GoUpFromFeedStrip();">
+					<Panel id="CarouselTitleContainer">
+						<Panel id="CarouselTitleLarge">
+							<Label id="CarouselTitleOffline" text="#Community_Friends_ActivityFeed"></Label>
+						</Panel>
+						<Panel id="CarouselTitleSmall">
+							<Label id="CarouselTitleMoreOnline" text=" "></Label>
+						</Panel>
+					</Panel>
+				</Carousel>
+			</Panel>
+		</Panel>
+	</CommunityFeedStrip>
+</root>

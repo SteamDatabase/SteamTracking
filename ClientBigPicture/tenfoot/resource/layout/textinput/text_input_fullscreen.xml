@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/textinput/text_input_fullscreen.css" />
+	</styles>
+	
+	<TextInputFullscreen defaultfocus="ImageCarousel">
+		<Panel id="WheelWrapper">
+			<!-- wheel here -->
+		</Panel>
+		<Panel id="FullscreenColumnRight">
+			<Label id="InputDescription" text="#TextInput_EnteredText" />
+			<TextEntry id="EnteredText" />
+		</Panel>
+	</TextInputFullscreen>	
+</root>

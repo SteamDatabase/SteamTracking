@@ -1,0 +1,254 @@
+@define MessageBoxAnimationDuration: 0.4s;
+
+//
+// Styles for tenfoot msg box
+//
+
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
+
+//
+// Animations
+//
+@keyframes 'msg-box-appear'
+{
+	from
+	{
+		opacity: 0.0;
+		transform: translatez( 600px ) translatey( 1080px );
+	}
+
+	to
+	{
+		opacity: 1.0;
+		transform: translatez( 0px );
+	}
+}
+
+@keyframes 'msg-box-disappear'
+{
+	from
+	{
+		opacity: 1.0;
+		transform: translatez( 0px );
+	}
+	
+	to
+	{
+		opacity: 0.0;
+		transform: translatez( 600px ) translatey( 1080px );
+	}
+}
+
+@keyframes 'msgbox-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	}
+
+	to
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+}
+
+//
+// Styles
+//
+TenfootMsgBox, .TenfootMsgBox
+{
+	width: 100%;
+	height: 100%;
+
+	z-index: msgbox_zindex;
+
+	transition-property: opacity, blur, desaturation, transform;
+	transition-duration: 0.3s, 0.3s, 0.3s, 0.4s !immediate;
+	transition-timing-function: linear;
+
+	animation-name: msg-box-appear;
+	animation-duration: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+TenfootMsgBox.Destructing, .TenfootMsgBox.Destructing,
+TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
+{
+	opacity: 0.0;
+	transform: translatez( 600px ) translatey( 1080px );
+}
+
+#MsgBoxBodyRegion, .MsgBoxBodyRegion
+{
+	width: 45%;
+	padding: 30px 40px 40px 40px;
+	background-color: message_box_bg;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+}
+
+.MsgBoxBodyRegionWider
+{ 
+    width: 65%;
+}
+
+#MsgBoxHeader
+{
+	height: 65px;
+
+	font-size: 48px;
+	color: detailsdatalabel;
+	font-family: platformfont;
+	font-weight: light;
+}
+
+#MsgBoxButtonArea
+{
+	width: 100%;
+	flow-children: down;
+}
+
+#MsgBoxDescriptionArea
+{
+	font-size: 32px;
+	font-family: platformfont;
+	min-height: 130px;
+	color: #f2f2f2ff;
+}
+
+#MsgBoxButtons
+{
+	horizontal-align: right;
+	font-size: 42px;
+	font-family: platformfont;
+	color: #ffffffff;
+	margin-top: 40px;
+
+	flow-children: right;
+}
+
+#MsgBoxButtonsVertical
+{
+	horizontal-align: center;
+	font-size: 42px;
+	font-family: platformfont;
+	color: #ffffffff;
+	margin-top: 40px;
+
+	flow-children: down;
+}
+
+
+#MsgBoxButtons Button, #MsgBoxButtonsVertical Button
+{
+	flow-children: right;
+	margin-left: 26px;
+	padding: 4px 8px 4px 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	min-width: 100px;
+
+	color: detailsdatalabelfocus;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #00000000;
+
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
+	transition-duration: 0.25s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+#MsgBoxButtons Button Label, #MsgBoxButtonsVertical Button Label
+{
+	horizontal-align: center;
+	font-size: 30px;
+
+	padding-left: 5px;
+	padding-right: 5px;
+	transition-property: color;
+	transition-duration: 0.25s !immediate;
+	transition-timing-function: ease-in-out;
+
+}
+
+#MsgBoxButtons Button:hover, #MsgBoxButtonsVertical Button:hover
+{
+	background-color: #00000020;
+	pre-transform-scale2d: 1.03;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+#MsgBoxButtons Button:focus, #MsgBoxButtonsVertical Button:focus
+{
+	background-color: #00000020;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	animation-name: msgbox-button-focus; 
+	animation-duration: 1.7s;
+	animation-delay: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	
+}
+
+#MsgBoxButtons Button:disabled
+{
+	opacity: 0.4;
+	pre-transform-scale2d: 1.0;
+	box-shadow: #00000000 -5px -5px 6px 10px;
+	animation-name: none;
+}
+
+#OKButtonKey, #CancelButtonKey
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 3px solid #ffffffff;
+	margin-right: 10px;
+}
+
+#OKButtonKey Label, #CancelButtonKey Label
+{
+	horizontal-align: center;
+	vertical-align: center;
+	margin-top: -8px;
+	font-size: 46px;
+}
+
+.TenfootMsgBox.ScreenSaverMode, TenfootMsgBox.ScreenSaverMode
+{
+	transition-property: opacity;
+	transition-duration: 1.4s, 0.3s !immediate;
+	transition-timing-function: linear;
+
+	opacity: 0.0;
+}
+

@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/store.css" />
+	</styles>
+	
+	<StoreApp class="Stackable" hittest="false" oncancel="StoreRemoveFromStack();">
+		<Panel id="Loading">
+			<Label id="LoadingStatus" />
+		</Panel>
+		<Panel id="Loaded">
+			<StoreSlideshow id="Slideshow" />
+		</Panel>
+	</StoreApp>	
+</root>

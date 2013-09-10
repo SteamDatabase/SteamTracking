@@ -1,0 +1,108 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/mainmenu_storebackground.css" />
+		<include src="tenfoot/resource/styles/mainmenu_systemmessages.css" />
+		<include src="tenfoot/resource/styles/mainmenu_communitybackground.css" />
+	</styles>
+	
+	<MainMenu defaultfocus="StoreButton" oncancel="NavigateTenfootBack()">
+		<Panel id="BodyWrapper">
+
+			<!-- Top row of menu buttons -->
+			<Panel id="TopRow" class="TopRowBase" tabindex="0" selectionpos="5,0" onmovedown="SetInputFocus( MenuRow )">
+				<Panel id="AvatarInfoRow" tabindex="0" selectionpos="0,0">
+					<Panel id="Avatar">
+						<AvatarImage id="SelfAvatar" onmouseactivate="BrowseToSteamURL( SteamIDMyProfile );" />
+					</Panel>
+					<Button id="DownloadsButton" tabindex="0" selectionpos="0,0" onfocus="DownloadsButtonFocused();" onactivate="ShowDownloads();" >
+						<Image src="file://{images}/downloads.png" />
+						<Panel class="ButtonLabelWrapper">
+							<Label class="ShortDesc" text="#MainMenu_ActiveDownloadsShort" />
+							<Label id="DownloadsLongLabel" class="LongDesc" text="#MainMenu_ActiveDownloadsLong" />
+						</Panel>
+					</Button>
+					<Button id="SystemIMs" tabindex="1" selectionpos="1,0" onactivate="DisplaySystemMessages();" onfocus="SystemMessagesButtonFocused();" >
+						<Image src="file://{images}/messages.png" />
+						<Panel class="ButtonLabelWrapper" >
+							<Label class="ShortDesc" text="#MainMenu_SystemIMsShort" />
+							<Label class="LongDesc" text="#MainMenu_SystemIMsLong" />
+						</Panel>
+					</Button>
+					<ParentalButton id="Inbox" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();" onfocus="InboxButtonFocused();" >
+						<Image src="file://{images}/inbox.png" />
+						<Panel class="ButtonLabelWrapper" >
+							<Label class="ShortDesc" text="#MainMenu_InboxShort" />
+							<Label class="LongDesc" text="#MainMenu_InboxLong" />
+						</Panel>
+					</ParentalButton>
+
+				</Panel>
+				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
+					<Label id="Clock" />
+					<Label id="ClockSuffix" />
+					<ParentalButton id="SettingsButton" tabindex="0" selectionpos="10.0,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
+						<Image src="file://{images}/settings.png" />
+						<Label class="LongDesc" text="#MainMenu_Settings" />
+					</ParentalButton>
+					<ParentalButton id="ParentalLockButton" tabindex="2" selectionpos="10.2,0" onactivate="ToggleParentalLock();" >
+						<Panel id="ParentalLockImageOverlay">
+							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
+						</Panel>
+						<Label class="LongDesc" id="ParentalLockTextLocked" text="#Parental_Locked" />
+						<Label class="LongDesc" id="ParentalLockTextUnlocked" text="#Parental_Unlocked" />
+					</ParentalButton>
+					<Button id="Exit" tabindex="3" selectionpos="10.3,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
+						<Image src="file://{images}/exit.png" />
+						<Label class="LongDesc" text="#MainMenu_Exit" />
+					</Button>
+				</Panel>
+			</Panel>
+			
+			<!-- All the contents for backgrounds for the top row, and the real contents to drill into on activation -->
+			<Panel id="TopRowContents" class="TopRowContentsBase" >
+				<Panel id="SystemIMBackgroundWrapper" hittest="false">
+					<Carousel id="SystemIMBackground" class="SystemIMBackgroundTransitionUpAndOff"
+						title="#MainMenu_NewForYouTitle" focus="center" wrap="false" z-offset="-500px" x-offset="-160px,-10px"
+						onmoveup="ShowMainMenuFocusMarketingMessages();" />
+				</Panel>
+
+				<!-- The downloads panel, which is shown only when needed -->
+				<DownloadsPanel id="Downloads" class="DownloadBackgroundTransitionUpAndOff" />		
+					
+
+			</Panel>
+			
+
+	
+			<!-- All the contents for backgrounds for the main nav row, and the real contents to drill into on activation -->
+			<Panel id="MainRowContents" hittest="false">
+
+				<StorePanel id="Store" />
+				<LibraryPanel id="Library" class="LibraryPanel"/>
+				<CommunityMainPanel id="Community" />
+
+				<Image class="HomeButton" src="file://{images}/steam_home.tga" onmouseactivate="ShowMainMenu();" />
+				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->
+			</Panel>
+
+			<!-- The main row of menu buttons in the center of the screen -->
+			<Panel id="MenuRow" tabindex="3" selectionpos="5,5" ondescendantfocus="MainNavRowFocused();" ondescendantblur="MainNavRowBlur();" selectionposboundary="vertical" onmoveup="SetInputFocus( TopRow )">
+				<Panel id="MenuRowButtons">		
+					<ParentalButton id="StoreButton" class="Button ButtonLeft" tabindex="0" selectionpos="1,5" onfocus="StoreButtonFocused();" onactivate="StoreShow();"> 
+						<Label id="StoreLabel" class="ButtonLabel" text="#MainMenu_Store" />
+					</ParentalButton>
+					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="ShowLibrary();"> 
+						<Label id="LibraryLabel" class="ButtonLabel" text="#MainMenu_Library" />
+					</Button>
+					<ParentalButton id="CommunityButton" class="Button ButtonRight" tabindex="2" selectionpos="1.2,5" onfocus="CommunityButtonFocused();" onactivate="CommunityShow();"> 
+						<Label id="CommunityLabel" class="ButtonLabel" text="#MainMenu_Community" />
+					</ParentalButton>
+				</Panel>					
+			</Panel>
+			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
+		</Panel>
+	</MainMenu>	
+</root>

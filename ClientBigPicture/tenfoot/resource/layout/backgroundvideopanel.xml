@@ -1,0 +1,21 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/backgroundvideopanel.css" />
+		<include src="tenfoot/resource/styles/store/holidaysale.css" />
+	</styles>
+	
+	<BackgroundVideoPanel>
+		<Panel id="HolidayBG"></Panel>
+		<Panel id="BackgroundGlobalPanel">
+			<Panel id="BackgroundGlobalL"></Panel>
+			<Panel id="PPWrapper">
+				<Panel id="PPath"></Panel>
+			</Panel>
+			<Panel id="HPWrapper">
+				<Panel id="HObject"></Panel>
+			</Panel>
+		</Panel>
+		<Panel id="BackgroundMovie"></Panel>
+	</BackgroundVideoPanel>
+</root>

@@ -1,0 +1,60 @@
+
+.StreamingActive .StreamingVisible
+{
+	visibility: visible;
+}
+
+.StreamingActive .StreamingHidden
+{
+	visibility: collapse;
+}
+
+.StreamingVisible
+{
+	visibility: collapse;
+}
+
+.StreamingHidden
+{
+	visibility: visible;
+}
+
+.System
+{
+    visibility: collapse;
+}
+
+.SystemCanSuspend
+{
+    visibility: visible;
+}
+
+.SystemCanRestart
+{
+    visibility: visible;
+}
+
+.SystemCanShutdown
+{
+    visibility: visible;
+}
+
+.NotLoggedIn .NotLoggedInHidden
+{
+	visibility: collapse;
+}
+
+.OfflineMode
+{
+	visibility: collapse;
+}
+
+.GoOfflineVisible .OfflineMode.GoOffline
+{
+	visibility: visible;
+}
+
+.GoOnlineVisible .OfflineMode.GoOnline
+{
+	visibility: visible;
+}

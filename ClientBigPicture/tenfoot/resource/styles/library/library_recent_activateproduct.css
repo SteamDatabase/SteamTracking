@@ -1,0 +1,49 @@
+// fade in any prompt/message
+@define activate_product_message_transition_time: 0.3s;
+
+LibraryRecentActivateProductDialog
+{
+	font-size: deffontsize;
+	font-family: platformfont;
+}
+
+LibraryRecentActivateProductDialog .MsgBoxBodyRegion
+{
+	transition-property: transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+LibraryRecentActivateProductDialog.DaisyWheelVisible .MsgBoxBodyRegion
+{
+	transform: translatex( 480px );
+}
+
+#ProductCode
+{
+	margin-bottom: 40px;
+	margin-top: 10px;
+	width: 765px;
+}
+
+#ViewAgreements
+{
+	margin-bottom: 40px;
+	margin-top: 20px;
+	margin-left: 0px;
+}
+
+#ViewAgreements:focus
+{
+	padding: 8px 8px;
+}
+
+TextEntry, Label
+{
+
+	font-size: 27px;
+	padding-top: 6px;
+	font-family: platformfont;
+	transform: translatex( 0px );
+}
+

@@ -1,0 +1,573 @@
+
+@define reticlesetupanimationtime: 0.5s;
+@define mousepanningcursorsize: 99px;
+
+WebBrowser
+{
+	width : 100%;
+	height : 100%;
+	position: 0px 0px 0px;
+	visibility: visible;
+	transform: translatex( 0px );
+	opacity: 1.0;
+	transition-property: opacity, transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+WebBrowser.Hidden
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: translatex( 1920px ) rotateX( 45deg ) translateZ( -1000px );
+	opacity: 0.0;
+}
+
+VerticalScrollBar .ScrollThumb
+{
+	background-color: #ffffffff;
+	transition-property: position;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+VerticalScrollBar
+{
+	width: 6px;
+	margin: 14px, 0px, 14px 24px;
+	margin-top: 18px;
+	border-radius: 2px;
+	height: 955px;
+	background-color: #aeaeae66;
+	box-shadow: #00000033 -3px -3px 6px 6px;
+	horizontal-align: right;
+	vertical-align: top;
+	opacity: 1.0;
+
+	transition-property: opacity;
+
+
+	transition-property: transform;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+HorizontalScrollBar .ScrollThumb
+{
+	background-color: #ffffffff;
+	transition-property: position;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+HorizontalScrollBar 
+{
+	background-color: #aeaeae66;
+	border-radius: 2px;
+	box-shadow: #00000033 -3px -3px 6px 6px;
+	margin: 14px;
+	margin-right: 34px;	
+}
+
+HorizontalScrollBar,VerticalScrollBar
+{
+	opacity : 0.0;
+}
+
+
+.FooterVisible HorizontalScrollBar, .FooterVisible VerticalScrollBar
+{
+	opacity : 1.0;
+}
+
+
+
+#MainPage
+{
+	flow-children: down;
+}
+
+
+
+#HtmlContainer
+{
+	height: fill-parent-flow( 100 );
+	width: 100%;
+	background-color: web_bg_color2;
+}
+
+WebController.UrlBarTextEntry .Html
+{
+	opacity: 0.2;
+}
+
+
+.HTML
+{
+	opacity-mask: url( "file://{images}/browser/browser_mask.png" );
+
+	transition-property: opacity, transform, position;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+
+.HTML.IncrementalZoom
+{
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+}
+
+.HTML:descendantfocus
+{
+	opacity-mask: none;
+}
+
+.ContextMenuVisible .HTML
+{
+	opacity-mask: url( "file://{images}/browser/browser_mask.png" );
+	color: gradient( linear, 0% 0%, 0% 100%, from( #68686880 ), to( #686868ff ) );
+	opacity: 0.4;
+}
+
+.HTML.HTMLContentLoaded:descendantfocus
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( #68686880 ), to( #686868ff ) );
+
+}
+
+.URLEdit .HTML
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( #68686880 ), to( #686868ff ) );
+	opacity: 0.4;
+}
+
+SlideShow
+{
+	width: 100%;
+	height: 100%;
+}
+
+.HTML.SlideshowPanel
+{
+	width: 100%;
+	height: 100%;
+	position: 0px 0px 0px; // use position so it doesn't interfere with the programatic zoom transforms
+}
+
+.HTML.SlideshowPanel.SlideShowLeftOfFocus
+{
+	position: -1920px 0px 0px;
+}
+
+.HTML.SlideshowPanel.SlideShowRightOfFocus
+{
+	position: 1920px 0px 0px;
+}
+
+#HTML
+{
+	transform-origin: 0% 0% parent-relative;
+}
+
+// this class supports the smooth scroll of the html panel
+#HTMLTexture
+{
+	transform-origin: 0% 0% parent-relative;
+	transition-property: position, transform;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+}
+
+
+.Reticule
+{
+	vertical-align: center; 
+	horizontal-align: center;
+	transition-property: opacity, wash-color;
+	transition-duration: 1.0s;
+	transition-timing-function: ease-in-out;
+	visibility: collapse;
+	wash-color: reticule_color;
+}
+
+#ReticuleOuter
+{
+	transition-duration: 0.2s;
+}
+
+.ReticuleVisible
+{
+	opacity : 0.8;
+}
+
+#ReticuleOuter.ReticuleHidden
+{
+	transition-duration: 0.2s;
+	opacity : 0.0;
+}
+
+#ReticuleMiddle.ReticuleHidden
+{
+	opacity : 0.4;
+	wash-color: reticule_color_dim;
+}
+
+.CursorVisible #ReticuleMiddle, .FullScreen #ReticuleMiddle
+{
+	opacity : 0.0;
+}
+
+.CursorVisible #ReticuleOuter, .FullScreen #ReticuleOuter
+{
+	opacity : 0.0;
+}
+
+
+.TopBar
+{
+	background-color: topbarbackground;
+	height: 74px;
+	width: 100%;
+	visibility: visible;
+	padding: 5px;
+	vertical-align: center;
+	box-shadow: fill #00000033 -2px -2px 4px 4px;
+}
+
+.FullScreen .TopBar
+{
+	visibility: collapse;
+}
+
+#ControlBar
+{
+	horizontal-align: center;
+	flow-children: right;
+	height: 100%;
+	width: 100%;
+	visibility: visible;
+	margin: 5px;
+	background-color: none;
+	z-index: -100;
+}
+
+#ControlBar_Buttons
+{
+	horizontal-align: right;
+	flow-children: right;
+	margin : 0px;
+	margin-right: 50px;
+	opacity: 1.0;
+}
+
+.TopBar:descendantfocus #ControlBar_Buttons
+{
+	opacity: 0.0;	
+}
+
+.TopBar:descendantfocus #ControlBar_Buttons:descendantfocus
+{
+	opacity: 1.0;	
+}
+
+#ControlBar Button
+{
+	flow-children: right;
+	horizontal-align: left;
+	border-radius: 4px;
+	margin-top: 9px;
+	margin-left: 4px;
+	margin-right: 4px;
+	border-width: 2px;
+	border-style: solid;
+
+
+	transition-property: border, background-color, color, transform, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+#ControlBar Button Image
+{
+}
+
+
+#ControlBar Button:hover
+{
+	transition-duration: 0.23s !immediate;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	box-shadow: #eeeeee60 -2.5px -2.5px 3px 5px;
+}
+
+#ControlBar Button:hover:disabled
+{
+	box-shadow: none;
+	background-color: none;
+}
+
+@keyframes 'control-button-glow-movement'
+{
+	0%
+	{
+		box-shadow: fill box_shadow_on_color -2.5px -2.5px 9px 4px;
+	}
+
+	8%
+	{
+		box-shadow: fill box_shadow_on_color -2.5px -2.5px 9px 4px;
+	}
+
+	48%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 3px 1px;
+	}
+
+	52%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 3px 1px;
+	}
+
+	100%
+	{
+		box-shadow: fill box_shadow_on_color -2.5px -2.5px 9px 4px;
+	}
+}
+
+#ControlBar Button:focus
+{
+	border-color: #fdfefef0;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+
+	box-shadow: box_shadow_on_color -2.5px -2.5px 9px 4px;
+
+	animation-name: control-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#ControlBar Button:active
+{
+}
+
+#ControlBar Button:disabled Image
+{
+	wash-color: #000000aa;
+}
+
+.WebFooter #MiddleButton
+{
+	color: #ffffff;
+}
+
+#UrlBar
+{
+	border-width: 4px;
+	border-color: url_bar_border;
+	border-style: solid;
+	border-radius: 4px;
+	flow-children: right;
+
+	horizontal-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-top: 6px;
+	margin-right: 30px;
+	margin-left: 100px;
+	margin-bottom: 0px;
+	width: 1000px;
+	background-color: url_bar_bg;
+
+	box-shadow: inset #00000080 2px 2px 8px 2px;
+}
+
+#UrlBar:focus
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+	border-color: #ffffff;
+	color: #333333;
+}
+
+#BrowserFavoriteAdded
+{
+	opacity: 0.0;
+	margin-left: 670px;
+	vertical-align: center;
+}
+
+@keyframes 'ThrobFavoriteAdded'
+{
+	0%
+	{
+		opacity: 0.0;
+		transform: translatey( 800px ) translatez( -40px );
+
+		pre-transform-scale2d: 0.1;
+
+	}
+	
+	40%
+	{
+		opacity: 0.5;
+		pre-transform-scale2d: 0.4;
+	}
+	
+	85%
+	{
+		opacity: 1.0;
+		transform: translatey( -100px ) translatez( 40px );
+		pre-transform-scale2d: 0.8;
+	}
+	
+	100%
+	{
+		opacity: 0.0;
+		transform: translatey( 200px );
+		pre-transform-scale2d: 2.0;
+	}
+}
+
+
+.FavoriteAdded #BrowserFavoriteAdded
+{
+	animation-name: ThrobFavoriteAdded;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+#UrlBar TextEntry, #UrlBar Label
+{
+	font-size: 26.0;
+	text-overflow: clip;
+	overflow: clip;
+	white-space: nowrap;
+	vertical-align: center;
+	font-family: platformfont;
+}
+
+#UrlBar TextEntry
+{
+	color: applabelnofade;
+	padding: 0px 0px 0px 4px;
+	height: 41px;
+	border-color: none;
+	background-color: none;
+	box-shadow: none;
+	width: 100%;
+
+}
+
+.HtmlEVCert #UrlBar TextEntry, .HtmlSecure #UrlBar TextEntry, .HtmlCertError #UrlBar TextEntry
+{
+	padding: 0px 0px 0px 0px;
+}
+
+#UrlBar Label
+{
+	horizontal-align: left;
+	visibility: collapse;
+	color: #84ba3cff;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #84ba3c30 ), to( #84ba3c60 ) );
+
+}
+
+.HtmlEVCert #UrlBar Label
+{
+	visibility: visible;
+	color: #84ba3cff;
+}
+
+.HtmlEVCert #EVCertName
+{
+	margin-right: 5px;
+}
+
+#UrlBar Image
+{
+	padding-right: -10px;
+	vertical-align: center;
+	horizontal-align: left;
+	visibility: collapse;
+
+}
+
+.HtmlSecure #UrlBar .Secure
+{
+	visibility: visible;
+	wash-color: #87c03eff;
+}
+
+.HtmlCertError #UrlBar .Insecure
+{
+	visibility: visible;
+	wash-color: #ff0000ff; 
+}
+
+#MousePanningImage
+{
+	wash-color: #ffffffff; 
+	visibility: visible;
+	width: mousepanningcursorsize;
+	height: mousepanningcursorsize;
+	z-index: 10;
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.MousePanning #MousePanningImage
+{
+	opacity: 1.0;
+}
+
+// 
+//
+// Reticule animation
+//
+//
+#ReticuleLoadingContainer
+{
+	visibility: visible;
+	width: 66px;
+	height: 66px;
+	background-color: #000000ff;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" ) 1.0;
+	background-repeat: no-repeat;
+	opacity: 0.0;
+	background-size: 66px 66px;
+}
+
+.ShowControllerLoadingSpinner #ReticuleLoadingContainer
+{
+	opacity: 1.0;
+}
+
+#Spinner
+{
+	width: 54px;
+	height: 54px;
+	background-color: #000000ff;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" ) 1.0;
+	background-repeat: no-repeat;
+	opacity: 0.0;
+	background-size: 54px 54px;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.SpinnerMovie.ShowControllerLoadingSpinner #ReticuleLoadingContainer, .SpinnerMovie.ShowMouseLoadingSpinner #Spinner
+{
+	background-image: url( "file://{images}/browser/reticle.webm" );
+}
+
+.ShowMouseLoadingSpinner #Spinner
+{
+	opacity: 1.0;
+}

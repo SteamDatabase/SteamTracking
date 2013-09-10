@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/wizardstyles.css" />
+	</styles>
+
+	<WizardPanel class="WizardPanel" oncancel="WizardButtonBack();">
+
+		<Panel id="MainBackground" tabindex="auto" selectionpos="0,1">
+			<Panel id="TitleBackground" />
+			<Panel id="DescriptionBackground" />
+		</Panel>
+
+		<Panel id="ChildContainer" />
+
+	</WizardPanel>
+</root>

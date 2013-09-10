@@ -1,0 +1,87 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/login/loginuser.css" />
+		<include src="tenfoot/resource/styles/login/loginstyles.css" />
+	</styles>
+
+	<LoginUser defaultfocus="AccountNameTextEntry" oncancel="NavigateLoginBack(); NavigateTenfootBack();">
+		<Panel id="TopRow" class="TopRow" selectionpos="0,0">
+			<Image class="Logo" src="file://{images}/steam_logo.tga" />
+			<Panel id="SettingsExitRow" selectionpos="auto">
+				<Button id="SettingsButton" onactivate="ShowSettings( Main );" >
+					<Image src="file://{images}/settings.png" />
+					<Label class="LongDesc" text="#MainMenu_Settings" />
+				</Button>
+				<Button id="Exit" onactivate="ShowQuitDialog();">
+					<Image src="file://{images}/exit.png" />
+					<Label class="LongDesc" text="#MainMenu_Exit" />
+				</Button>
+			</Panel>
+		</Panel>
+
+		<!-- <TextEntry id="TestPanelTextEntry" /> -->
+		
+		<Panel class="Card" tabindex="auto" selectionpos="0,1">
+			<Panel class="UserContainer" >
+				<Panel id="Bezel" class="Bezel">
+					<Image id="LoginImage" class="LoginImage" />
+				</Panel>
+				<Panel id="LoginNamesContainer">
+					<Label id="PersonaNameLabel" text="#Login_UserPersonaName" />
+					<Label id="AccountNameLabel" text="#Login_UserAccountName" />
+				</Panel>
+			</Panel>
+
+			<Label id="MessageAreaLabel" />
+			<Panel class="CredentialsContainer" selectionpos="auto">
+				<TextEntry class="LoginPromptContainer" id="AccountNameTextEntry"
+						textinputid="InnerAccountNameTextEntry"
+						textinputdoneactionstring="#Login_NextField"
+						textinputhidesuggestions="1"
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+					<Label id="TextEntryPrompt" text="#Login_AccountName" />
+				</TextEntry>
+
+				<TextEntry class="LoginPromptContainer" id="PasswordTextEntry"
+						onfocus="PasswordTextEntryFocus();"
+						onblur="PasswordTextEntryBlur();"
+						textinputid="InnerPasswordTextEntry"
+						textinputdoneactionstring="#Login_NextField"
+						textinputhidesuggestions="1"
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+					<Label id="TextEntryPrompt" text="#Login_Password" />
+				</TextEntry>
+	
+				<TextEntry class="LoginPromptContainer" id="SteamGuardTextEntry"
+						textinputid="InnerSteamGuardTextEntry"
+						textinputdoneactionstring="#Login_NextField"
+						textinputhidesuggestions="1"
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+					<Label id="TextEntryPrompt" text="#Login_SteamGuardCode" />
+				 </TextEntry>
+	
+				<Button class="Button LoginPromptContainer" id="LoginButton" onactivate="Login()">
+					<Label id="LoginLabel" text="#Login_Login" />
+				</Button>
+
+				<Button id="ContactSupportButton" class="Button LoginPromptContainer" onactivate="BrowseToSteamURL( SupportNewTicket )">
+					<Label text="#Login_ContactSupport" />
+				</Button>
+
+				<Panel id="More">
+					<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
+						<Label text="#Login_RememberPassword" />
+						<Panel id="SharedBorder" />
+					</ToggleButton>
+
+					<Panel id="GradientDivider" />
+
+					<Button class="Button" id="RemoveUser" >
+						<Label text="#Login_RemoveUser" />
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</LoginUser>
+</root>

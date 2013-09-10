@@ -1,0 +1,24 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/login.css" />
+	</styles>
+
+	<SSA defaultfocus="SSAAccept" tabindex="auto" selectionpos="auto">
+		<Panel class="SSAContainer" selectionpos="auto">
+			<HTML id="SSAHTML" embedded="true" />
+			<Panel class="FlowRight HorzCenter" selectionpos="auto">
+				<Button id="SSAAccept" onactivate="AcceptSSA();" class="Button LittleRoomPlease">
+					<Label class="LongDesc" text="Accept" />
+				</Button>
+				<Button id="SSADecline" onactivate="DeclineSSA();" class="Button LittleRoomPlease">
+					<Label class="LongDesc" text="Decline" />
+				</Button>
+				<!-- <Button id="SSARefresh" onactivate="RefreshSSA();" class="Button LittleRoomPlease">
+					<Label class="LongDesc" text="Refresh" />
+				</Button> -->
+			</Panel>
+		</Panel>
+	</SSA>
+
+</root>

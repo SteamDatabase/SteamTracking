@@ -1,0 +1,32 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/wizardstyles.css" />
+		<include src="tenfoot/resource/styles/login/createaccount.css" />
+	</styles>
+
+	<AgreementsSSAWizardChild class="WizardChild" defaultfocus="AgreementsHTML" tabindex="auto" selectionpos="auto">
+
+		<Label class="WizardChildTitle" id="SSATitle" text="#CreateAccount_SSA_Title" />
+		<Label class="WizardChildTitle" id="PPATitle" text="#CreateAccount_PPA_Title" />
+
+		<Panel class="InputContainerDown GapDown">
+			<HTML id="AgreementsHTML" embedded="true" />
+		</Panel>
+
+		<Button class="WizardButton" id="PPAButton" onactivate="WizardButtonBack()">
+			<Label id="Label" text="#CreateAccount_PPA_ViewSSA" />
+		</Button>
+
+		<Button class="WizardButton" id="SSAButton" onactivate="WizardButtonNext()">
+			<Label id="Label" text="#CreateAccount_SSA_ViewPPA" />
+		</Button>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Done" />
+			</Button>
+		</Panel>
+
+	</AgreementsSSAWizardChild>
+</root>

@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+
+	<LibraryFriend>
+		<AvatarImage id="FriendPanelImage" class="FriendPanelImage" />
+		<Panel id="FriendPanelLabels" class="FriendPanelLabels">
+			<Label id="FriendPersonaName" class="FriendPersonaName" />
+			<Label id="FriendStatus" class="FriendStatus" />
+			<Label id="FriendStatusDetail" class="FriendStatusDetail" />
+		</Panel>
+	</LibraryFriend>	
+</root>

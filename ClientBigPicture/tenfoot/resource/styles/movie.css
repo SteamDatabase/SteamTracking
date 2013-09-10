@@ -1,0 +1,385 @@
+/* styles for the movie player */
+
+// This is really used in intromovie.css, but something is broken in finding animation keyframes in parent css files
+@keyframes 'intro-fade-in'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+@keyframes 'movie-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
+	}
+
+	to
+	{
+		background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
+	}
+}
+
+@keyframes 'control-outer-glow'
+{
+	0%
+	{
+		box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
+	}
+
+	8%
+	{
+		box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
+	}
+
+	48%
+	{
+		box-shadow: box_shadow_on_color -1.0px -1.0px 4px 2px;
+	}
+
+	52%
+	{
+		box-shadow: box_shadow_on_color -1.0px -1.0px 4px 2px;
+	}
+
+	100%
+	{
+		box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
+	}
+}
+
+
+Movie
+{
+}
+
+MoviePanel
+{
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+
+#PlayIndicator
+{
+	width: 40%;
+	height: 40%;
+	align: center center;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.75s;
+	transition-timing-function: ease-in-out;
+}
+
+
+.MoviePaused #PlayIndicator
+{
+	background-image: url( "file://{images}/library/library_play_button.png" );
+	background-position: center;
+	background-repeat: no-repeat;
+
+	opacity: 1.0;
+}
+
+@keyframes 'throbber-appear-delay'
+{
+	from
+	{
+		opacity: 0.0;
+	}
+
+	50%
+	{
+		opacity: 0.0;
+	}
+
+	to
+	{
+		opacity: 1.0;
+	}
+}
+
+.MovieBuffering #PlayIndicator
+{
+	width: 120px;
+	height: 120px;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	background-position: center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+
+	opacity: 1.0;
+
+	animation-name: throbber-appear-delay;
+	animation-duration: 1.0s;
+	animation-timing-function: ease-in-out;
+}
+
+#ErrorMessage
+{
+	width: 80%;
+	font-size: 32px;
+	color: white;
+	align: center center;
+	text-align: center;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.75s;
+	transition-timing-function: ease-in-out;
+}
+
+.MovieError #ErrorMessage
+{
+	opacity: 1.0;
+}
+
+.MovieError #PlayIndicator
+{
+	opacity: 0.0;
+}
+
+
+//
+// Playback controls
+//
+#PlaybackControls
+{
+	align: center bottom;
+	margin-bottom: 5%;
+	flow-children: down;
+}
+
+.PlaybackControl
+{
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.PlaybackControl.Visible
+{
+	opacity: 1.0;
+}
+
+#Timeline
+{
+	width: 577px;
+	height: 20px;
+
+	border: 2px solid black;
+	padding: 2px;
+	margin: 0px 6px 0px 6px;
+	background-color: black;
+	border-radius: 6px;
+
+	animation-name: control-outer-glow;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ProgressBarWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+#PlaybackProgress
+{
+	width: 100%;
+	height: 100%;
+
+	transform-origin: 0% 0% parent-relative;
+	background-color: ui_common_control_bright;
+}
+
+#ControlBarRow
+{
+	// padding to allow glow & scaling of buttons
+	margin-top: 3px;
+	padding: 6px;
+	flow-children: right;
+}
+
+#ControlBar
+{
+//	padding: 6px;
+}
+
+.ControlBarBackground
+{
+	width: 360px;
+	height: 50px;
+	background-color: black;
+	border-radius: 6px;
+
+	animation-name: control-outer-glow;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ControlBarButtons
+{
+	flow-children: right;
+}
+
+.ControlBarButton
+{
+	width: 60px;
+	height: 50px;
+	border: 2px solid #00000000;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.1s;
+	transition-timing-function: linear;
+}
+
+.ControlBarButton:focus
+{
+	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
+	pre-transform-scale2d: 1.1, 1.1;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	border-color: #fdfefef0;
+
+	animation-name: movie-button-focus, main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ControlBarButton Image
+{
+	align: center center;
+}
+
+.ControlBarButton:focus Image
+{
+	wash-color: #000000ff;
+}
+
+#PlayPause .TickBox
+{
+	width: 37px;
+	height: 37px;
+	align: center center;
+	border-color: none;
+	box-shadow: none;
+	background-color: none;
+	background-image: url( "file://{images}/transport_controls/Icon_Pause.tga" );
+}
+
+#PlayPause:selected .TickBox
+{
+	background-image: url( "file://{images}/transport_controls/Icon_Play.tga" );
+}
+
+#PlayPause:descendantfocus .TickBox
+{
+	wash-color: #000000ff;
+	background-color: none;
+}
+
+#PreviousTrack
+{
+	border-radius: 6px 0px 0px 6px;
+}
+
+#PlayPause
+{
+	border-radius: 0px 6px 6px 0px;
+}
+
+#Volume
+{
+	background-color: black;
+	width: 203px;
+	height: 50px;
+	border-radius: 6px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 14px;
+
+	animation-name: control-outer-glow;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#Volume:focus
+{
+	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	border-color: #fdfefef0;
+
+	animation-name: movie-button-focus, main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#Volume Image
+{
+	align: center center;
+}
+
+#Volume:focus Image
+{
+	wash-color:	#000000ff;
+}
+
+#PlaybackSpeed
+{
+	align: center center;
+	font-size: 26px;
+	margin-bottom: 4px;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
+}
+
+#Bar1.VoiceBar { height:  3px; }
+#Bar2.VoiceBar { height:  6px; }
+#Bar3.VoiceBar { height:  9px; }
+#Bar4.VoiceBar { height: 12px; }
+#Bar5.VoiceBar { height: 15px; }
+#Bar6.VoiceBar { height: 18px; }
+#Bar7.VoiceBar { height: 21px; }
+#Bar8.VoiceBar { height: 24px; }
+#Bar9.VoiceBar { height: 27px; }
+#Bar10.VoiceBar { height: 30px; }
+#Bar11.VoiceBar { height: 33px; }
+#Bar12.VoiceBar { height: 36px; }
+
+.VoiceBar
+{
+	margin-left: 4px;
+	margin-right: 4px;
+}

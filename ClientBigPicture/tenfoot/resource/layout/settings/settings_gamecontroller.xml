@@ -1,0 +1,30 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_GameController class="SettingsSection" defaultfocus="ConfigureButton" >
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Controller" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel id="GameControllerContent" class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+			<Panel id="ControllerSub" class="FlowDown SettingsCenterContent">
+				<Panel class="HorzSub SettingsRight SettingsController">
+					<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+				</Panel>
+				<Panel class="HorzSub SettingsRight SettingsController">
+					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+				</Panel>
+				<Button id="ConfigureButton" class="Button SettingsControllerBindingButton" onactivate="ShowBindingDialog();">
+					<Label class="LongDesc" text="#SettingsController_ConfigureController" />
+				</Button>
+			</Panel>
+		</Panel>
+
+	</SettingsPanel_GameController>
+
+</root>

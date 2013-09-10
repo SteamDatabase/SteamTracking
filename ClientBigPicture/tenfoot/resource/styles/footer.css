@@ -1,0 +1,717 @@
+/*	footer css style */
+
+TenfootFooterPanel
+{
+	width: 100%;
+	vertical-align: bottom;
+
+	z-index: footer_zindex;
+}
+
+#A_btn_s.SemiTransparent,
+#B_btn_s.SemiTransparent,
+#X_btn_s.SemiTransparent,
+#Y_btn_s.SemiTransparent
+{
+	opacity: 0.6;
+}
+
+
+.Show.Anim_LT_btn #LT_btn, .Show.Anim_LT_txt #LT_txt,
+.Show.Anim_RT_btn #RT_btn, .Show.Anim_RT_txt #RT_txt,
+.Show.Anim_MID #A_btn, .Show.Anim_MID #A_txt,
+.Show.Anim_MID #B_btn, .Show.Anim_MID #B_txt,
+.Show.Anim_MID #X_btn, .Show.Anim_MID #X_txt,
+.Show.Anim_MID #Y_btn, .Show.Anim_MID #Y_txt,
+.Show.Anim_MID #A_btn_s, .Show.Anim_MID #A_txt_s,
+.Show.Anim_MID #B_btn_s, .Show.Anim_MID #B_txt_s,
+.Show.Anim_MID #X_btn_s, .Show.Anim_MID #X_txt_s,
+.Show.Anim_MID #Y_btn_s, .Show.Anim_MID #Y_txt_s,
+.Show.Anim_MID #SteamPadFlowCenter,
+.Show.Anim_MID #RB_btn, .Show.Anim_MID #RB_txt,
+.Show.Anim_MID #LB_btn, .Show.Anim_MID #LB_txt,
+.Show.Anim_MID #START_btn, .Show.Anim_MID #START_txt,
+.Show.Anim_MID #BACK_btn, .Show.Anim_MID #BACK_txt,
+.Show.Anim_RT_txt #RightLegend .FriendsNotifications,
+.Show.WebFooter.Anim_MID #MiddleLegend, .Show.WebFooter.Anim_RT_txt #RightLegend,
+.FooterDefault
+{
+	animation-name: footer-fade-in; 
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+.Show.Anim_MID #A_btn_s.SemiTransparent,
+.Show.Anim_MID #B_btn_s.SemiTransparent,
+.Show.Anim_MID #X_btn_s.SemiTransparent,
+.Show.Anim_MID #Y_btn_s.SemiTransparent
+{
+	animation-name: footer-fade-in-semi;
+}
+
+
+@keyframes 'footer-fade-in'
+{
+	from
+	{
+		opacity: 0.0;
+		pre-transform-scale2d: 1.0, 0.03;
+	}
+
+	50%
+	{
+		opacity: 0.0;
+		pre-transform-scale2d: 1.0, 0.03;
+	}
+
+	to
+	{
+		opacity: 1.0;
+		pre-transform-scale2d: 1.0;
+	}
+}
+
+@keyframes 'footer-fade-in-semi'
+{
+	from
+	{
+		opacity: 0.0;
+		pre-transform-scale2d: 1.0, 0.03;
+	}
+
+	50%
+	{
+		opacity: 0.0;
+		pre-transform-scale2d: 1.0, 0.03;
+	}
+
+	to
+	{
+		opacity: 0.6;
+		pre-transform-scale2d: 1.0;
+	}
+}
+
+.Hide #LT_btn, .Hide #LT_txt,
+.Hide #RT_btn, .Hide #RT_txt,
+.Hide #A_btn, .Hide #A_txt,
+.Hide #B_btn, .Hide #B_txt,
+.Hide #X_btn, .Hide #X_txt,
+.Hide #Y_btn, .Hide #Y_txt,
+.Hide #A_btn_s, .Hide #A_txt_s,
+.Hide #B_btn_s, .Hide #B_txt_s,
+.Hide #X_btn_s, .Hide #X_txt_s,
+.Hide #Y_btn_s, .Hide #Y_txt_s,
+.Hide #SteamPadFlowCenter,
+.Hide #RB_btn, .Hide #RB_txt,
+.Hide #LB_btn, .Hide #LB_txt,
+.Hide #START_btn, .Hide #START_txt,
+.Hide #BACK_btn, .Hide #BACK_txt,
+.Hide #RightLegend .FriendsNotifications,
+.Hide.WebFooter #MiddleLegend, .Hide.WebFooter #RightLegend,
+.FooterVisible
+{
+	opacity: 0.0;
+	pre-transform-scale2d: 1.0, 0.03;
+}
+
+.Hide.Anim_LT_btn #LT_btn, .Hide.Anim_LT_txt #LT_txt,
+.Hide.Anim_RT_btn #RT_btn, .Hide.Anim_RT_txt #RT_txt,
+.Hide.Anim_MID #A_btn, .Hide.Anim_MID #A_txt,
+.Hide.Anim_MID #B_btn, .Hide.Anim_MID #B_txt,
+.Hide.Anim_MID #X_btn, .Hide.Anim_MID #X_txt,
+.Hide.Anim_MID #Y_btn, .Hide.Anim_MID #Y_txt,
+.Hide.Anim_MID #A_btn_s, .Hide.Anim_MID #A_txt_s,
+.Hide.Anim_MID #B_btn_s, .Hide.Anim_MID #B_txt_s,
+.Hide.Anim_MID #X_btn_s, .Hide.Anim_MID #X_txt_s,
+.Hide.Anim_MID #Y_btn_s, .Hide.Anim_MID #Y_txt_s,
+.Hide.Anim_MID #SteamPadFlowCenter,
+.Hide.Anim_MID #RB_btn, .Hide.Anim_MID #RB_txt,
+.Hide.Anim_MID #LB_btn, .Hide.Anim_MID #LB_txt,
+.Hide.Anim_MID #START_btn, .Hide.Anim_MID #START_txt,
+.Hide.Anim_MID #BACK_btn, .Hide.Anim_MID #BACK_txt,
+.Hide.Anim_RT_txt #RightLegend .FriendsNotifications,
+.Hide.WebFooter.Anim_MID #MiddleLegend, .Hide.WebFooter.Anim_RT_txt #RightLegend,
+.FooterVisible
+{
+	animation-name: footer-fade-in; 
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+}
+
+.Hide.Anim_MID #A_btn_s.SemiTransparent,
+.Hide.Anim_MID #B_btn_s.SemiTransparent,
+.Hide.Anim_MID #X_btn_s.SemiTransparent,
+.Hide.Anim_MID #Y_btn_s.SemiTransparent
+{
+	animation-name: footer-fade-in-semi;
+}
+
+
+#LegendRow
+{
+	opacity: 1.0;
+	width: 100%;
+	height: 123px;
+	margin-left: 99px;
+	margin-right: 99px;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	z-index: 20;
+}
+
+.SteamPad #LegendRow
+{
+	margin-top: 30px;
+}
+
+.LegendButton Label
+{
+	vertical-align: center;
+	font-size: 22px;
+	margin-left: 20px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	color: tclegendlabel;
+}
+
+.LegendButton Label
+{
+	vertical-align: center;
+	margin-right: 20px;
+	margin-top: 2px;
+}
+
+.LegendButton Button Label
+{
+}
+
+
+#LegendRow Panel
+{
+	vertical-align: center;
+	flow-children: right;
+	z-index: 10;
+}
+
+#LegendRow .LegendButtonBox Label
+{
+	horizontal-align: center;
+	vertical-align: center;
+	color: tclegendlabel; 
+	font-family: "Motiva Sans";
+}
+
+#LegendRow .TriggerButtonBox
+{
+	border-radius: 6px;
+	border: 2px solid #00000000;
+	width: 43px;
+	height: 34px;
+	text-align: center;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+
+#FriendsNotificationsCursor
+{
+	visibility: collapse;
+}
+.CursorVisible #FriendsNotificationsCursor
+{
+	visibility: visible;
+}
+
+#FriendsNotificationsGamepad
+{
+	visibility: visible;
+}
+.CursorVisible #FriendsNotificationsGamepad
+{
+	visibility: collapse;
+}
+
+#UnreadChatItems
+{
+	visibility: collapse;
+}
+.UnreadChatItems #UnreadChatItems
+{
+	visibility: visible;
+}
+
+#OngoingVoiceChatOnHold
+{
+	visibility: collapse;
+}
+.OngoingVoiceChatOnHold #OngoingVoiceChatOnHold
+{
+	visibility: visible;
+}
+
+#OngoingVoiceChat
+{
+	visibility: collapse;
+}
+.OngoingVoiceChat #OngoingVoiceChat
+{
+	visibility: visible;
+}
+
+#FriendsNotificationsCursor Image, #FriendsNotificationsGamepad Image
+{
+	width: 48px;
+	height: 48px;
+}
+
+#LegendRow .TriggerButtonText
+{
+}
+
+#LegendRow .RBButtonBox,
+{
+	border-radius: 4px;
+	border: 2px solid #00000000;
+	height: 34px;
+	text-align: center;
+	margin: 0px;
+	margin-left: 8px;
+	padding-right: 20px;
+	width: 63px;
+	border-top-right-radius: 35px 18px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+#LegendRow .LBButtonBox,
+{
+	border-radius: 4px;
+	border: 2px solid #00000000;
+	height: 34px;
+	text-align: center;
+	margin: 0px;
+	margin-left: 8px;
+	padding-left: 20px;
+	width: 63px;
+	border-top-left-radius: 35px 18px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+#LegendRow .AButtonBox,
+#LegendRow .BButtonBox,
+#LegendRow .XButtonBox,
+#LegendRow .YButtonBox,
+{
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	margin: 0px;
+	margin-left: 16px;
+	margin-right: 2px;
+	margin-top: 3px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+.OSX #LegendRow .AButtonBox,
+.OSX #LegendRow .BButtonBox,
+.OSX #LegendRow .XButtonBox,
+.OSX #LegendRow .YButtonBox,
+.OSX #LegendRow .LBButtonBox,
+.OSX #LegendRow .RBButtonText,
+.OSX #LegendRow .TriggerButtonBox
+{
+	padding-top: 3px;
+}
+
+#LegendRow .STARTButtonBox,
+#LegendRow .BACKButtonBox,
+{
+	border-radius: 44%;
+	border: 2px solid #00000000;
+	width: 47px;
+	height: 36px;
+	text-align: center;
+	font-size: 36px;
+	padding-top: -9px;
+	padding-left: 3px;
+	color: #FFFFFF88;
+	margin: 0px;
+	margin-left: 16px;
+	margin-right: 2px;
+	margin-top: 3px;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+.OSX #LegendRow .STARTButtonBox,
+.OSX #LegendRow .BACKButtonBox,
+{
+	font-size: 26px;
+	padding-top: 0px;
+	white-space: nowrap;
+	
+}
+
+
+#LegendRow .BACKButtonBox
+{
+	padding-left: -3px;
+}
+
+#LegendRow .LBButtonText,
+#LegendRow .AButtonText,
+#LegendRow .BButtonText,
+#LegendRow .XButtonText,
+#LegendRow .YButtonText
+#LegendRow .RBButtonText,
+#LegendRow .STARTButtonText,
+#LegendRow .BACKButtonText,
+{
+}
+
+#LegendRow .LegendText
+{
+	margin-left: 8px;
+	margin-right: 8px;
+	vertical-align: center;
+	font-size: 24;
+	font-family: "Motiva Sans";
+	color: tclegendlabel; 
+}
+
+.SteamPad #LegendRow #MiddleLegend .LegendText
+{
+	max-width: 198px;
+	max-height: 60px;
+}
+
+
+#LegendRow #LeftLegend
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+.SteamPad #LegendRow #LeftLegend
+{
+	margin-top: 22px;
+}
+
+#LegendRow #MiddleLegend
+{
+	horizontal-align: center;
+	vertical-align: top;
+	flow-children: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.SteamPad #LegendRow #MiddleLegend
+{
+	horizontal-align: center;
+	vertical-align: top;
+	flow-children: right;
+	margin-top: -10px;
+	padding: 0px;
+	height: 120px;
+}
+
+
+#LegendRow #MiddleLegend #ABXY_Footer_Wrapper
+{
+	visibility: visible;
+	flow-children: right;
+}
+
+#LegendRow #MiddleLegend #SteamPad_ABXY_Footer_Wrapper
+{
+	visibility: collapse;
+}
+
+
+.SteamPad #LegendRow #MiddleLegend #ABXY_Footer_Wrapper
+{
+	visibility: collapse;
+}
+
+.SteamPad #LegendRow #MiddleLegend #SteamPad_ABXY_Footer_Wrapper
+{
+	visibility: visible;
+	height: 120px;
+	width: 600px;
+}
+
+.SteamPad #LBWrapper
+{
+	width: fill-parent-flow( 1.0 );
+}
+
+.SteamPad #RightWrapper
+{
+	width: fill-parent-flow( 1.0 );
+	flow-children: right;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowRight
+{
+	flow-children: right;
+	height: 120px;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowXY
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: none;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
+{
+	height: 76px;
+	width: 76px;
+	background-image: url( "file://{images}/footer/grid.png" );
+}
+
+.HideCenterGrid #SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+.HideCenterGrid #A_btn_s,
+.HideCenterGrid #B_btn_s,
+.HideCenterGrid #X_btn_s,
+.HideCenterGrid #Y_btn_s
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+
+
+.Hide #SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
+{
+	height: 76px;
+	width: 76px;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowAB
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: none;
+}
+
+.SteamPad #A_Wrapper,
+.SteamPad #B_Wrapper,
+.SteamPad #X_Wrapper,
+.SteamPad #Y_Wrapper
+{
+	flow-children: right;
+}
+
+.SteamPad #X_Wrapper,
+.SteamPad #Y_Wrapper
+{
+	horizontal-align: right;
+}
+
+.SteamPad #A_Wrapper,
+.SteamPad #B_Wrapper
+{
+	horizontal-align: left;
+}
+
+.SteamPad #A_Wrapper .AButtonBox,
+.SteamPad #B_Wrapper .BButtonBox,
+.SteamPad #X_Wrapper .XButtonBox,
+.SteamPad #Y_Wrapper .YButtonBox
+{
+	padding-left: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+	min-width: 48px;
+	width: 48px;
+	height: 48px;
+	border-radius: 0px;
+	box-shadow: none;
+
+	font-size: 20px;
+} 
+
+.SteamPad #A_Wrapper
+{
+	vertical-align: bottom;
+}
+ 
+.SteamPad #A_Wrapper .AButtonBox
+{
+	padding-left: -14px;
+	padding-top: 13px;
+	background-image: url( "file://{images}/footer/a_button.png" );
+}
+
+.SteamPad #X_Wrapper
+{
+	vertical-align: bottom;
+}
+ 
+.SteamPad #X_Wrapper .XButtonBox
+{
+	padding-top: 13px;
+	padding-left: 14px;
+	background-image: url( "file://{images}/footer/x_button.png" );
+}
+
+.SteamPad #Y_Wrapper
+{
+	vertical-align: top;
+}
+ 
+.SteamPad #Y_Wrapper .YButtonBox
+{
+	padding-top: 2px;
+	padding-left: 14px;
+	background-image: url( "file://{images}/footer/y_button.png" );
+}
+
+.SteamPad #B_Wrapper
+{
+	vertical-align: top;
+} 
+
+.SteamPad #B_Wrapper .BButtonBox
+{
+	padding-top: 2px;
+	padding-left: -18px;
+	background-image: url( "file://{images}/footer/b_button.png" );
+}
+
+#LegendRow #RightLegend
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	horizontal-align: right;
+	vertical-align: top;
+}
+
+.SteamPad #LegendRow #RightLegend
+{
+	margin-top: 22px;
+}
+
+
+//
+// Cursor visible section
+//
+
+.CursorVisible #LegendRow .TriggerButtonBox,
+.CursorVisible #LegendRow .RBButtonBox,
+.CursorVisible #LegendRow .LBButtonBox,
+.CursorVisible #LegendRow .AButtonBox,
+.CursorVisible #LegendRow .BButtonBox,
+.CursorVisible #LegendRow .XButtonBox,
+.CursorVisible #LegendRow .YButtonBox,
+.CursorVisible #LegendRow .STARTButtonBox,
+.CursorVisible #LegendRow .BACKButtonBox,
+{
+	visibility: collapse;
+}
+
+.CursorVisible #LegendRow .TriggerButtonText,
+.CursorVisible #LegendRow .LBButtonText,
+.CursorVisible #LegendRow .AButtonText,
+.CursorVisible #LegendRow .BButtonText,
+.CursorVisible #LegendRow .XButtonText,
+.CursorVisible #LegendRow .YButtonText,
+.CursorVisible #LegendRow .RBButtonText,
+.CursorVisible #LegendRow .STARTButtonText,
+.CursorVisible #LegendRow .BACKButtonText,
+{
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( #EEEEEE30 ), to( #EEEEEE00 ) );
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 5px;
+	border: 2px solid #4F647200;
+
+	
+	transition-property: color, background-color, border, box-shadow;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.3s;
+}
+
+.CursorVisible #LegendRow .TriggerButtonText:hover,
+.CursorVisible #LegendRow .LBButtonText:hover,
+.CursorVisible #LegendRow .AButtonText:hover,
+.CursorVisible #LegendRow .BButtonText:hover,
+.CursorVisible #LegendRow .XButtonText:hover,
+.CursorVisible #LegendRow .YButtonText:hover,
+.CursorVisible #LegendRow .RBButtonText:hover,
+.CursorVisible #LegendRow .STARTButtonText:hover,
+.CursorVisible #LegendRow .BACKButtonText:hover,
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #6B869900 ), to( #30303000 ) );
+	border: 2px solid #6B869900;
+	color: #FFFFFFFF;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+
+//
+// Web Footer section
+//
+
+.WebFooter #MiddleLegend, .WebFooter #RightLegend, .WebFooterMenu #MiddleLegend
+{
+	background-color: #000000bb;
+
+	padding: 20px;
+	margin: -20px;
+	border-radius: 4px;
+}
+
+.SteamPad.WebFooter #MiddleLegend
+{
+	background-color: #00000000;
+}
+
+.SteamPad.WebFooter #SteamPad_ABXY_Footer_Wrapper
+{
+	background-color: #000000bb;
+	border-radius: 4px;
+	margin: 0px 10px;
+}
+
+
+.SteamPad.WebFooter #LBInnerWrapper,
+.SteamPad.WebFooter #BACKInnerWrapper,
+.SteamPad.WebFooter #STARTInnerWrapper,
+.SteamPad.WebFooter #RBInnerWrapper
+{
+	background-color: #000000bb;
+	border-radius: 4px;
+	padding: 13px 0px;
+	margin: -13px 0px;
+}
+
+

@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+	</styles>
+	
+	<LibraryRecentAddContentDialog class="TenfootMsgBox" oncancel="ButtonCancel()" >
+		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
+			<Button onactivate="ActivateProduct()" >
+				<Label text="#Library_AddContent_Activate" />
+			</Button>
+			<ParentalButton onactivate="BrowseStore()" >
+				<Label text="#Library_AddContent_Store" />
+			</ParentalButton>
+		</Panel>
+	</LibraryRecentAddContentDialog>
+</root>
