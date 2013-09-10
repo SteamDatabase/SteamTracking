@@ -1,0 +1,33 @@
+
+WebController
+{
+	transition-property: opacity, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+
+	opacity: 1.0;
+	transform: translateX( 0px );
+}
+
+WebController.SlideAwayToLeft
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+WebController.SlideAwayToRight
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+.ScreenSaverMode WebController
+{
+	opacity: 0.0;
+
+	transition-property: opacity, transform;
+	transition-duration: 1.4s, 0.3s !immediate;
+	transition-timing-function: linear;
+}

@@ -1,0 +1,68 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_About class="SettingsSection" defaultfocus="SettingsAbout_ClientUpdate">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_About" />
+		</Panel>
+
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+			<Label class="AboutSectionHeading" text="#SettingsAbout_SteamClient" />
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_Built" />
+				<Label class="ResBody" text="#SettingsAbout_BuildDateTime" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_SteamPackage" />
+				<Label class="ResBody" text="#SettingsAbout_SteamPackageVersion" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_SteamAPI" />
+				<Label class="ResBody" text="#SettingsAbout_SteamAPIVersion" />
+			</Panel>
+            <Button id="SettingsAbout_ClientUpdate" onactivate="ShowClientUpdateNews()" class="Button ClientUpdateMargin">
+              <Label class="LongDesc" text="#SettingsAbout_ClientUpdateButton" />
+            </Button>
+			<Label class="AboutSectionHeading" text="#SettingsAbout_SystemInfo" />
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_CPUVendorLabel" />
+				<Label class="ResBody" text="#SettingsAbout_CPUVendor" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_CPUSpeedLabel" />
+				<Label class="ResBody" text="#SettingsAbout_CPUSpeed" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_CPUCoresLabel" />
+				<Label class="ResBody" text="#SettingsAbout_CPUCores" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_RAMLabel" />
+				<Label class="ResBody" text="#SettingsAbout_RAM" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_VideoCardLabel" />
+				<Label class="ResBody" text="#SettingsAbout_VideoCard" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_DriverVersionLabel" />
+				<Label class="ResBody" text="#SettingsAbout_DriverVersion" />
+			</Panel>
+			<Panel id="DriverDate" class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_DriverDateLabel" />
+				<Label class="ResBody" text="#SettingsAbout_DriverDate" />
+			</Panel>
+			<Panel class="AboutInfoWrapper">
+				<Label class="ResLabel" text="#SettingsAbout_VideoRAMLabel" />
+				<Label class="ResBody" text="#SettingsAbout_VideoRAM" />
+			</Panel>
+		</Panel>
+
+	</SettingsPanel_About>
+
+</root>

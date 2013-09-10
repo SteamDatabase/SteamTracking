@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+		<include src="tenfoot/resource/styles/parental/parental.css" />
+	</styles>
+	
+	<ParentalRecentApp class="RecentApp" onactivate="ToggleParentalLock();" >
+		<Panel id="ParentalRecentAppContents" class="AppImage ParentalLibraryItem" >
+			<Label id="ParentalText" class="TopLine" text="#Parental_SelectToEnter" />
+			<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+			<Label id="ParentalText2" class="BottomLine" text="#Parental_MoreGames" />
+		</Panel>
+		<Panel class="RecentNameRow">
+			<Label id="AppName" text="#Parental_Unlock"/>
+		</Panel>
+	</ParentalRecentApp>
+</root>

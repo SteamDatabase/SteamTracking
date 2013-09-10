@@ -1,0 +1,85 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/textinput/text_input.css" />
+	</styles>
+
+	<TextInputDaisy>
+		<Panel id="BodyContainer">
+
+
+			<TextEntry id="TextInputText" />
+
+			<Panel id="Legends">
+
+				<Label id="ConfigName"/>
+
+				<Panel id="LBLegend" class="LegendButton">
+					<Label id="LB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftBumper_Short" />
+					<Label id="LB_txt_ABXY" class="LegendText TriggerButtonText LB_txt" text="#UI_Backspace" />
+					<Label id="LB_txt_RS" class="LegendText TriggerButtonText LB_txt" text="#UI_MoveCaretLeft" />
+				</Panel>
+				<Panel id="RBLegend" class="LegendButton">
+					<Label id="RB_txt_ABXY" class="LegendText TriggerButtonText RB_txt" text="#UI_Spacebar" />
+					<Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
+					<Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
+				</Panel>
+				<Panel id="LeftLegend" class="LegendButton">
+					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftTrigger_Short" />
+					<Label id="LT_txt" class="LegendText TriggerButtonText" />
+				</Panel>
+				<Panel id="RightLegend" class="LegendButton">
+					<Label id="RT_txt" class="LegendText TriggerButtonText" />
+					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightTrigger_Short" />
+				</Panel>
+				<Panel id="DPadLegend" class="LegendButton">
+					<Image src="file://{images}/textinput/gamepad_digital_blank.tga" />
+					<Label id="DPad_txt" class="LegendText TriggerButtonText" text="#UI_MoveCaret" />
+				</Panel>
+				<Panel id="LangLegend" class="LegendButton">
+					<Image src="file://{images}/textinput/textinput_footer_cancel.tga" />
+					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
+				</Panel>
+				<Panel id="StartLegend" class="LegendButton">
+					<Image src="file://{images}/textinput/textinput_footer_start.tga" />
+					<Label id="Start_txt" class="LegendText TriggerButtonText" text="#UI_InputDone" />
+				</Panel>
+
+				<Panel id="MiddleLegendRS" class="LegendButton">
+					<Label id="A_btn" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+					<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
+					<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+					<Label id="B_txt" class="LegendText BButtonText" text="#UI_Cancel" />
+					<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+					<Label id="X_txt" class="LegendText XButtonText" text="" />
+					<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+					<Label id="Y_txt" class="LegendText YButtonText" text="" />
+				</Panel>
+
+			</Panel>
+			
+			<Panel id="Wheel">
+				<Panel id="SubWheel"/>
+				<Panel id="Stick_Pri">
+					<Image src="file://{images}/textinput/textinput_ls.tga" />
+					<Label class="StickPriLabel" text="#UI_LeftStick_Short" />
+				</Panel>
+
+				<Panel id="Autosuggest">
+					<Label id="Autosuggest_Prefix_txt" class="Autosuggest Prefix" text="" />
+					<Label id="Autosuggest_Suffix_txt" class="Autosuggest Suffix" text="" />
+				</Panel>
+
+				<TextInputDaisyGroup id="Group_W" class="Group"/>
+				<TextInputDaisyGroup id="Group_NW" class="Group"/>
+				<TextInputDaisyGroup id="Group_N" class="Group"/>
+				<TextInputDaisyGroup id="Group_NE" class="Group"/>
+				<TextInputDaisyGroup id="Group_E" class="Group"/>
+				<TextInputDaisyGroup id="Group_SE" class="Group"/>
+				<TextInputDaisyGroup id="Group_S" class="Group"/>
+				<TextInputDaisyGroup id="Group_SW" class="Group"/>
+			</Panel>
+
+		</Panel>
+	</TextInputDaisy>
+</root>

@@ -1,0 +1,59 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_Account class="SettingsSection" defaultfocus="SettingsAccount_History">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Account" />
+		</Panel>
+		
+		<Panel class="SettingsBottomPanel">
+			<!-- main panel -->
+			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
+				<Button id="SettingsAccount_History" onactivate="BrowseToSteamURL( StoreAccount )" class="Button">
+					<Label class="LongDesc" text="#SettingsAccount_History" />
+				</Button>
+				<!--<Button class="Button">
+					<Label class="LongDesc" text="#SettingsAccount_Verify" />
+				</Button>
+				<Button class="Button">
+					<Label class="LongDesc" text="#SettingsAccount_ChangePassword" />
+				</Button>
+				<Button class="Button">
+					<Label class="LongDesc" text="#SettingsAccount_ChangeEmail" />
+				</Button>-->
+	
+				<Label class="SettingsLegend" text="#SettingsAccount_Beta" />
+				<Label class="SettingsValue" id="SettingsAccount_Beta" />
+	
+				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" />
+				<Label class="HorzContainerLeft" text="#SettingsAccount_MustSave" />
+		  
+				<ToggleButton class="CheckBox" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM" />
+			</Panel>
+	
+			<!-- right-hand status/info panel -->
+			<Panel class="SettingsContent SettingsRightContent">
+				<Label class="SettingsLegend" text="#SettingsAccount_AccountName" />
+				<Label class="SettingsValue" text="#SettingsAccount_AccountNameText"/>
+	
+				<Label class="SettingsLegend" text="#SettingsAccount_VacStatus" />
+				<Label id="SettingsAccount_VAC" class="SettingsValue" text="#VAC_NoBans"/>
+	
+				<Label class="SettingsLegend" text="#SettingsAccount_ContactEmail" />
+				<Label class="SettingsValue" text="#SettingsAccount_ContactEmailText" />
+	
+				<Label class="SettingsLegend" text="#SettingsAccount_EmailStatus" />
+				<Label class="SettingsValue" id="SettingsAccount_EmailStatus" />
+	
+				<Label class="SettingsLegend" text="#SettingsAccount_SteamGuardStatus" />
+				<Label class="SettingsValue" id="SettingsAccount_SteamGuardStatus" />
+			</Panel>
+		</Panel>
+	
+	</SettingsPanel_Account>
+
+</root>

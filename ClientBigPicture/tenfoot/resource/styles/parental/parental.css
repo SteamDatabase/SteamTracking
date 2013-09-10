@@ -1,0 +1,298 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+
+ParentalUnlockPopup
+{
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+
+.ParentalUnlockPopupBody
+{
+	padding: 10px 5px 10px 5px;
+
+	flow-children: down;
+	horizontal-align: center;
+	vertical-align: center;
+	max-width: 650px;
+
+	opacity: 1.0;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	color: #000000ff;
+	background-color: dialog_bg_color;
+	
+	transition-property: transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.ParentalUnlockPopupBody Label
+{
+	horizontal-align: left;
+	color: #d0d0d0ff;
+	transform: translatex(0px);
+	padding-left: 0px;
+	font-size: deffontsize;
+	font-family: platformfont;
+	text-overflow: ellipsis;
+	max-height: 40px;
+	width: 100%;
+	
+}
+
+.ParentalUnlockPopupBody TextEntry
+{
+	horizontal-align: left;
+	height: 80px;
+	font-size: 60px;
+	width: 100%;
+	background-color: ui_common_control;
+	border-color: ui_common_control_border;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.ParentalUnlockButtons
+{
+	padding-top: 12px;
+}
+
+.DaisyWheelVisible .ParentalUnlockPopupBody
+{
+	transform: translatex( 400px );
+}
+
+.Button:disabled Label
+{
+	color: detailsdatalabel;
+}
+
+TextEntry:disabled,.Button:disabled
+{
+	desaturation: 0.0;
+	blur: gaussian( 0.7 );
+	opacity: 0.40;
+	border-color: none;
+	box-shadow: none;
+	animation-name: none;
+}
+
+.Button
+{
+	padding-left: 8px;
+	border-width: 5px;
+	border-style: solid;
+
+	border-color: none;
+	background-color: ui_common_control2;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.Button:hover
+{
+	z-index: 50;
+	transition-duration: 0.23s !immediate;
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	pre-transform-scale2d: 1.0;
+}
+
+
+.Button:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	border-color: #fdfefef0;
+	z-index: 1000;
+
+	color: #00000099;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+
+ParentalReplacementPanel
+{
+	opacity: 0.0;
+	
+	vertical-align: center;
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+.Locked ParentalReplacementPanel
+{
+	opacity: 1.0;
+}
+
+ParentalReplacementPanel Label
+{
+	font-family: platformfont;
+	margin: 20px 20px 6px 18px;
+	font-size: 40px;
+	color: detailsdatalabel;
+	opacity: 1.0;
+	horizontal-align: left;
+	width: 100%;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transform: translatex( 22px );
+	font-weight: light;
+}
+
+ParentalReplacementPanel Image
+{
+	margin-top: 50px;
+	height: 100px;
+	width: 100px;
+	horizontal-align: center;
+	wash-color: #444444ff;
+}
+
+ParentalReplacementPanel Button
+{
+	width: 100%;
+	margin: 0px 24px 24px 24px;
+	padding: 8px 7px 8px 7px;
+
+	color: detailsdatalabelfocus;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	transition-property: border, background-color, color, box-shadow;
+	transition-timing-function: ease-out;
+
+	vertical-align: bottom;
+}
+
+ParentalReplacementPanel Button Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 28px;
+	font-weight: normal;
+	transform: translatex(-7px);
+	color: detailsdatalabelfocus;
+	transition-property: transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+ParentalReplacementPanel Button:focus Label
+{
+	color: #161718f5;
+	transform: translatex(0px);
+}
+
+ParentalReplacementPanel:descendantfocus Image
+{
+	wash-color: #ffffffff;
+	transition-property: wash-color !immediate;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+ParentalReplacementPanel Button:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+ParentalReplacementPanel Button:focus
+{
+	transition-duration: mediumduration !immediate;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	
+	animation-name: links-and-more-button-focus; 
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.Locked .HideWhileLocked
+{
+	opacity: 0.0;
+	
+	transition-property: opacity, opacity-mask !immediate;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+
+
+#ParentalGridItemContents, #ParentalRecentAppContents
+{
+	flow-children: down;
+	opacity: 0.9;
+	desaturation: 0.1;
+	background-color: dialog_bg_color;
+}
+
+#ParentalGridItemContents Image, #ParentalRecentAppContents Image
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#ParentalGridItemContents Label, #ParentalRecentAppContents Label
+{
+	height: 40px;
+	width: fit-children;
+	font-size: 24px;
+	vertical-align: center;
+	horizontal-align: center;
+	margin-left: 1px;
+	margin-top: -2px;
+
+	color: detailsdatalabel;
+	opacity: 1.0;
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+#ParentalGridItemContents .TopLine, #ParentalRecentAppContents .TopLine
+{
+	margin-top: 15px;
+}
+
+#MostRecentCarousel .RecentApp:descendantfocus #ParentalRecentAppContents Label
+{
+	color: detailsdatalabel;
+	opacity: 1.0;
+}

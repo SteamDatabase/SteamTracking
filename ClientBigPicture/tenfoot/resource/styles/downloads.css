@@ -1,0 +1,1095 @@
+/*	main menu downloads css style */
+
+/* in front of main panel, which has a Z of 1000, and top row, which has a Z of 2000 */
+@define downloadszindex: 3000;
+
+/* text colors */
+@define tcdownloadsbutton: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #abababff ) );
+
+/* transition duration for settings panels to opaque in/out; referred to from code so don't change the name */
+@define DownloadsPanelTransitionDuration: 0.25s;
+
+@define DownloadsPanelBackgroundTransitionDuration: 0.4s;
+
+@define percentbarwidth: 412px;
+
+DownloadsPanel
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Downloads
+{
+	width: 100%;
+	height: 100%;
+	font-size: 60px;
+	margin-left: 0px;
+	font-family: platformfont;
+	font-weight: light;
+	z-index: downloadszindex;
+	color: carousel_title;
+	horizontal-align: right;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, opacity-mask;
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+#Downloads .GridItemImage
+{
+	opacity: 0.85;
+	transition-property: opacity, box-shadow;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+	box-shadow: fill dark_box_shadow_color -3px -3px 6px 6px;
+
+	transition-property: opacity, transform, box-shadow, desaturation, opacity-mask;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+#Downloads:descendantfocus DownloadsGridItem:descendantfocus:hover .GridItemImage, #Downloads:descendantfocus DownloadsGridItem:hover .GridItemImage
+{
+	opacity: 1.0;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+}
+
+#Downloads:descendantfocus DownloadsGridItem:hover
+{
+	pre-transform-scale2d: 1.03;
+}
+
+#Downloads:descendantfocus DownloadsGridItem:descendantfocus:hover
+{
+	pre-transform-scale2d: 1.13;
+}
+
+.BackgroundVisible #Downloads DownloadsGridItem:hover
+{
+	pre-transform-scale2d: 1.0;
+}
+
+
+#Downloads #AppButton
+{
+	opacity: 1.0;
+	transition-property: opacity, pre-transform-scale2d;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+#Downloads DownloadsGridItem:descendantfocus #AppButton
+{
+	opacity: 1.0;
+	transition-property: opacity, pre-transform-scale2d;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+
+#DownloadsContent
+{
+	transition-property: transform, opacity !immediate; 
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.TransitionUpAndOff #DownloadsContent
+{
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
+
+	transition-property: transform, opacity !immediate;
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( 600px ) translateY( -2800px ) translateZ( -420px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
+	desaturation: 0.3;
+	opacity: 0.0;
+
+	animation-name: downloads-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.TransitionDownAndOn.BackgroundVisible #DownloadsContent
+{
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
+
+	transition-property: transform, opacity !immediate;
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( -305px, 360px, 230px );
+	opacity: 1.0;
+
+	animation-name: downloads-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+.TransitionLeftAndOff #DownloadsContent
+{
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
+
+	transition-property: transform, opacity !immediate;
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( -1800px ) translateY( -600px ) translateZ( -10px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
+	desaturation: 0.3;
+	opacity: 0.0;
+
+	animation-name: downloads-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.TransitionUpAndOff SummaryGridItem, .TransitionLeftAndOff SummaryGridItem,
+.TransitionUpAndOff .DownloadGridHeader, .TransitionLeftAndOff .DownloadGridHeader, 
+.TransitionUpAndOff #DownloadsWrapper, .TransitionLeftAndOff #DownloadsWrapper, 
+#Downloads.TransitionUpAndOff, #Downloads.TransitionLeftAndOff
+{
+	opacity: 0.0;
+}
+
+
+
+@keyframes 'downloads-perspective'
+{
+	from
+	{
+		perspective-origin: 60% 50% invert;
+	}
+
+	10%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	15%
+	{
+		perspective-origin: 66% 54% invert;
+	}
+	
+	25%
+	{
+		perspective-origin: 68% 57% invert;
+	}
+
+	50%
+	{
+		perspective-origin: 72% 64% invert;
+	}
+
+	75%
+	{
+		perspective-origin: 66% 55% invert;
+	}
+
+	80%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	to	
+	{
+		perspective-origin: 60% 50% invert;
+	}
+}
+
+
+
+.BackgroundVisible #DownloadsContent
+{
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+
+	desaturation: 0.5;
+	opacity: 0.9;
+	wash-color: bgcolorwashlight;
+
+}
+
+
+
+#Downloads .GridItemImage.BackgroundVisible
+
+{
+	box-shadow: dark_box_shadow_color -6px 0px 12px 16px;
+}
+
+#DownloadsWrapper
+{
+	transition-property: transform, desaturation, opacity, position, blur;
+	transition-duration: DownloadsPanelBackgroundTransitionDuration;
+	transition-timing-function: ease-in;
+
+	perspective: 1000;
+	z-index: -1000.0;
+
+	perspective-origin: 62% 5% invert;
+}
+
+DownloadsPanel:descendantfocus #DownloadsWrapper 
+{
+	perspective-origin: 50% 50%;
+}
+
+
+.BackgroundVisible .DownloadGridHeader, .BackgroundVisible #SummaryGridItem
+{
+	visibility: collapse;
+
+}
+
+
+@keyframes 'library-perspective'
+{
+	from
+	{
+		perspective-origin: 60% 50% invert;
+	}
+
+	10%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	15%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+	
+	25%
+	{
+		perspective-origin: 66% 55% invert;
+	}
+
+	50%
+	{
+		perspective-origin: 68% 60% invert;
+	}
+
+	75%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	80%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	to	
+	{
+		perspective-origin: 60% 50% invert;
+	}
+}
+
+.BackgroundVisible DownloadsGridItem
+{
+	opacity: 0.0;
+}
+
+
+.BackgroundVisible .DownloadingApp1, .BackgroundVisible .DownloadingApp1:hover
+{
+	transform: translate3d( 266px, 0px, -400px );
+	desaturation: 0.2;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 1.0;
+
+}
+
+.BackgroundVisible .DownloadingApp3, .BackgroundVisible .DownloadingApp3:hover
+{
+	transform: translate3d( 656px, 50px, -950px );
+	desaturation: 0.6;
+	wash-color: bgcolorwash;
+	blur: gaussian( 2.0 );
+	opacity: 0.25;
+
+}
+
+.BackgroundVisible .DownloadingApp2, .BackgroundVisible .DownloadingApp2:hover
+{
+	transform: translate3d( 430px, 176px, -670px );
+	blur: gaussian( 1.0 );
+	desaturation: 0.3;
+	visibility: visible;
+	opacity: 0.7;
+	wash-color: bgcolorwash;
+
+}
+
+.BackgroundVisible .GridItemImage
+
+{
+		box-shadow: fill dark_box_shadow_color -3px -3px 6px 6px;
+}
+
+
+.DownloadsContent
+{
+	// add a little padding so the Z-transform does not take a hovered/focused button out of bounds
+	position: 0px 25% 0px;
+	padding: 30px 0px 0px 0px;
+	width: 100%;
+	height: 80%;
+	flow-children: down;
+	
+	transition-property: transform, opacity; 
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+	
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
+}
+
+#Downloads:descendantfocus .DownloadsGrid
+{
+	flow-children: right;
+	animation-name: none;
+	
+	background-image: url( "file://{images}/carousel_bg.png");
+	background-size: 1420px 400px;
+	background-repeat: no-repeat;
+	background-position: 0% 30%;
+}
+
+.DownloadsGrid
+{
+	width: 100%;
+	height: 60%;
+	flow-children: none;
+	padding-top: 30px;
+	
+	background-image: url( "file://{images}/carousel_bg.png");
+	background-size: 400px 400px;
+	background-repeat: no-repeat;
+	background-position: 30% 0%;
+	
+	animation-name: downloads-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: 0.4s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadsGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	width: 80px;
+	height: 100%;
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	background-color: mouse_hover_bg_left;
+}
+
+.DownloadsGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion,
+{
+	width: 80px;
+	height: 100%;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	transition-duration: 0.2s;
+	background-color: mouse_hover_bg_right;
+}
+
+.DownloadsGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .DownloadsGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+.DownloadsGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, .DownloadsGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+}
+
+.LeftMouseScrollRegion
+{
+	background-color: mouse_hover_bg_left;
+	z-index: 100;
+	transform: translatey( -85px );
+}
+
+.RightMouseScrollRegion
+{
+	background-color: mouse_hover_bg_right;
+	z-index: 100;
+	transform: translatey( -85px );
+}
+
+
+
+// all these button styles are cribbed from librarybutton in library.css.
+// i have modified them a bit here... cc
+// they should be refactored into steamstyles perhaps
+Button,ToggleButton
+{
+	horizontal-align: center;
+
+	width: 460px;
+
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	background-color: #00000000;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+DownloadsGridItem:descendantfocus Button,ToggleButton
+{
+	horizontal-align: center;
+
+	width: 460px;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	background-color: simplebutton;
+
+	pre-transform-scale2d: 1.0;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+
+
+DownloadsGridItem:descendantfocus:hover
+{
+	z-index: 50;
+	transition-duration: DownloadsPanelTransitionDuration;
+	pre-transform-scale2d: 1.03;
+}
+
+SummaryGridItem:descendantfocus
+{
+	z-index: 1000;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	opacity: 1.0;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #f2f2f2ff;
+
+}
+
+DownloadsGridItem:descendantfocus Button:hover
+{
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	pre-transform-scale2d: 1.03;
+}
+
+SummaryGridItem:hover
+{
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	background-color: all_games_hover;	
+	pre-transform-scale2d: 0.90;
+}
+
+DownloadsGridItem:descendantfocus:hover
+{
+	z-index: 50;
+	transition-duration: DownloadsPanelTransitionDuration;
+	pre-transform-scale2d: 1.13;
+}
+
+SummaryGridItem:descendantfocus:hover
+{
+	z-index: 50;
+	transition-duration: DownloadsPanelTransitionDuration;
+	pre-transform-scale2d: 1.04;
+}
+
+DownloadsGridItem:descendantfocus:hover Button:hover
+{
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	pre-transform-scale2d: 1.00;
+}
+
+SummaryGridItem:descendantfocus, SummaryGridItem:descendantfocus:hover
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #e5e5e5ff ), to( #b3b3b3ff ) );
+}
+
+
+	
+DownloadsGridItem:descendantfocus
+{
+	pre-transform-scale2d: 1.1;
+	opacity: 1.0;
+	transform: translateY( 10px );
+
+}
+
+DownloadsGridItem:descendantfocus Button
+{
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	z-index: 1000;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.BackgroundVisible .HomeGlow
+{
+	opacity: 1.0;
+	width: 100%;
+	height: 600px;
+	z-index: -500;
+
+	margin-bottom: 100px;
+	horizontal-align: center;
+	vertical-align: center;
+	pre-transform-scale2d: 2.0;
+	transform: translateZ( -250px );
+	transform: translateY( 150px );
+	transition-property: opacity, transform !immediate;
+	transition-delay: 0.0s;
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in-out;
+}
+
+.HomeGlow
+{
+	opacity: 0.0;
+	
+	transition-property: opacity, transform !immediate;
+	transition-delay: 0.0s;
+	transition-duration: 0.1s, 0.35s;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadsContent .Button,ToggleButton
+{
+	height: 48px;
+	margin-bottom: 16px;
+}
+
+
+.DownloadsSection
+{
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadsSection.SectionVisible
+{
+	opacity: 1.0;
+}
+
+
+DownloadsGridItem, SummaryGridItem
+{
+	flow-children: down;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow, opacity, position;
+	transition-timing-function: ease-in-out;
+	transition-duration: DownloadsPanelTransitionDuration;
+
+	opacity: 0.8;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: none;
+}
+
+SummaryGridItem
+{
+	border-color: #3d414230;
+}
+
+DownloadsGridItem
+{
+	width: 500px;
+	opacity: 0.85;
+	padding: 20px;
+	opacity: 0.85;
+}
+
+SummaryGridItem
+{
+	width: 496px;
+	height: 249px;
+	pre-transform-scale2d: 0.87;
+	margin-top: 13px;
+	margin-right: 7px;
+	margin-left: 7px;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	horizontal-align: center;
+	transition-property: pre-transform-scale2d, position;
+	transition-timing-function: ease-in-out;
+	transition-duration: DownloadsPanelTransitionDuration;
+}
+
+
+
+.DownloadLabelWrapper
+{
+	width: 100%;
+	flow-children: right;
+	vertical-align: center;
+}
+
+DownloadsGridItem Label
+{
+	height: 26px;
+	margin-top: 6px;
+	font-size: 22px;
+	font-weight: normal;
+	horizontal-align: right;
+}
+
+SummaryGridItem Label
+{
+	height: 32px;
+	margin-top: 6px;
+	margin-bottom: 2px;
+	font-size: 28px;
+	font-weight: normal;
+	horizontal-align: right;
+	
+}
+
+DownloadsGridItem:descendantfocus .AppTitle, .PercentDownload
+{
+	height: 40px;
+	margin-top: 4px;
+	margin-bottom: 2px;
+	font-size: 32px;
+	font-weight: normal;
+	horizontal-align: right;
+	color: applabelselected;
+	opacity: 1.0;
+}
+
+
+
+DownloadsGridItem Button
+{
+	flow-children: down;
+}
+
+.DownloadSpacer
+{
+	height: 16px;
+	width: 100%;
+}
+
+#DownloadFinishedLabel
+{
+	visibility: collapse;
+	horizontal-align: left;
+	color: applabel;
+	width: 100%;
+	margin-left: -2px;
+}
+
+
+DownloadsGridItem.CompletedDownload:descendantfocus #DownloadFinishedLabel
+{
+	visibility: visible;	
+}
+
+
+DownloadsGridItem.CompletedDownload:descendantfocus .DownloadLabels
+{
+	visibility: collapse;	
+}
+
+DownloadsGridItem:descendantfocus .DownloadLabels
+{
+	visibility: visible;	
+}
+
+
+
+.DownloadLabels
+{
+	width:100%;
+	height: 100%;
+	
+}
+
+DownloadsGridItem .DownloadLabels
+{
+	visibility: collapse;	
+}
+
+.DownloadLabelRow, .DownloadValuesRow
+{
+	flow-children: down;
+	color: applabelsolid;
+}
+
+.DownloadValuesRow
+{
+	width: 230px;
+	horizontal-align: right;
+}
+
+.DownloadLabelRow
+{
+	width: 230px;
+	horizontal-align: left;
+}
+
+DownloadsGridItem .DownloadValuesRow
+{
+	width: 220px;
+	horizontal-align: right;
+}
+
+DownloadsGridItem  .DownloadLabelRow
+{
+	width: 220px;
+	horizontal-align: left;
+}
+
+.DownloadLabelRow Label
+{
+	font-weight: light;
+	opacity: 0.65;
+}
+
+.DownloadValuesRow Label
+{
+	font-weight: normal;
+	horizontal-align: left;
+	width: 100%;
+	color: applabel;
+	text-overflow: clip;
+	white-space: nowrap;
+}
+
+SummaryGridItem:descendantfocus .DownloadValuesRow Label, SummaryGridItem:descendantfocus .DownloadLabelRow Label
+{
+	color: applabelselectedsolid;
+	opacity: 1.0;
+}
+
+
+.DownloadNameAndPercent
+{
+	flow-children: right;
+	width: 100%;
+	color: applabel;
+	background-color: #f2f2f200;
+	opacity: 0.0;
+}
+
+
+DownloadsGridItem:descendantfocus .DownloadNameAndPercent
+{
+	flow-children: right;
+	width: 100%;
+	color: applabel;
+	background-color: #f2f2f2ff;
+	opacity: 1.0;
+}
+
+.PercentDownload
+{
+	horizontal-align: right;
+	margin-right: 4px;
+	visibility: collapse;
+	opacity: 0.0;
+	color: applabelselectedsolid;
+}
+
+DownloadsGridItem:descendantfocus .PercentDownload
+{
+	horizontal-align: right;
+	visibility: visible;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+DownloadsGridItem:descendantfocus .PercentDownload Label
+{
+	horizontal-align: right;
+
+}
+
+.Downloading .PercentDownload
+{
+	visibility: visible;
+}
+
+.PercentDownload Label
+{
+	horizontal-align: right;
+}
+
+
+
+.AppTitle
+{
+	horizontal-align: left;
+	width: 345px;
+	text-overflow: clip;
+	white-space: nowrap;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadGridHeader
+{
+	flow-children: down;
+	horizontal-align: right;
+	vertical-align: top;
+	margin-top: 65px;
+	transition-property: position, transform;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadGridBody1
+{
+	vertical-align: center;
+	horizontal-align: right;
+	position: -10px -10.0px 0.0px;
+	flow-children: down;
+
+	transition-property: position, transform;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.DownloadGridBody2
+{
+	vertical-align: center;
+	horizontal-align: right;
+	font-size: 28px;
+	position: -40px 0.0px 0.0px;
+	flow-children: right;
+
+	transition-property: position, transform;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+#ItemsDownloadingLabel
+{
+	horizontal-align: right;
+	text-align: right;
+	margin-right: 15px;
+	max-width: 660px;
+	text-transform: uppercase;
+}
+
+#ItemsDownloadingLabel2
+{
+	opacity: 0.0;
+}
+
+.ItemsDownloading #ItemsDownloadingLabel
+{
+	opacity: 1.0;
+}
+
+.ItemsDownloading #ItemsDownloadingLabel2
+{
+	opacity: 1.0;
+}
+
+#ItemsPausedLabel
+{
+	horizontal-align: right;
+	text-align: right;
+	margin-right: 18px;
+	text-transform: uppercase;
+	opacity: 0.0;
+}
+
+#ItemsPausedLabel2
+{
+	opacity: 0.0;
+}
+
+.ItemsPaused #ItemsPausedLabel, .ItemsPaused #ItemsPausedLabel2
+{
+	opacity: 1.0;
+	font-size: 32px;
+	margin-top: 6px;
+}
+
+.DownloadBarBackground
+{
+	visibility: collapse;
+	
+	transition-property: position;
+	transition-duration: 0.15s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+.Downloading .DownloadBarBackground
+{
+	visibility: visible;
+}
+
+.DownloadBarBackground
+{
+	width: percentbarwidth;
+	height: 12px;
+	position: 20px 72% 0px;
+	background-color: #00000099;
+	box-shadow: #00000044 -4px -4px 8px 8px;
+	z-index: 3010;
+	
+	transition-property: pre-transform-scale2d;
+	transition-duration: DownloadsPanelTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+DownloadsGridItem:descendantfocus .DownloadBarBackground
+{
+	width: percentbarwidth;
+	height: 12px;
+	position: 20px 72% 0px;
+	background-color: #00000088;
+	box-shadow: box_shadow_on_color -4px -4px 8px 8px;
+	z-index: 3010;
+}
+
+DownloadsGridItem:descendantfocus:hover 
+{
+	pre-transform-scale2d: 0.97;
+}
+
+#Downloads DownloadsGridItem:descendantfocus .GridItemImage
+{
+	box-shadow: inset #00000099 0px 0px 12px 0px;
+	opacity: 1.0;
+}
+
+
+.DownloadBarPercent
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	height: 8px;
+	background-color: #ffffffff;
+	wash-color: ui_primary_color;
+	z-index: 3010;
+}
+
+#AppButtonWrapper
+{
+	height: 270px;
+}
+
+
+@keyframes 'downloads-perspective'
+{
+	from
+	{
+		perspective-origin: 60% 50% invert;
+	}
+
+	10%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	15%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+	
+	25%
+	{
+		perspective-origin: 66% 55% invert;
+	}
+
+	50%
+	{
+		perspective-origin: 68% 60% invert;
+	}
+
+	75%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	80%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	to	
+	{
+		perspective-origin: 60% 50% invert;
+	}
+}

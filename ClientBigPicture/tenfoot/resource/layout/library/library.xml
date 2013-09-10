@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu_librarybackground.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryPanel defaultfocus="LibraryMostRecent" hittest="false" >
+		<LibraryMostRecent id="LibraryMostRecent" class="LibraryMostRecent" hittest="false"/>
+		<Panel id="AppDetailsClose" onmouseactivate="CloseAppDetails( true )" />
+		<LibraryAppDetails id="LibraryAppDetails" class="LibraryAppDetailsSlidOff" />
+		<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames" />
+	</LibraryPanel>
+</root>

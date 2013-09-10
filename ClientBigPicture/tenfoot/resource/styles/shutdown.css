@@ -1,0 +1,42 @@
+Shutdown
+{
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+}
+
+#CenterWrapper
+{
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+#DescriptionLabel
+{
+	text-align: center;
+	width: 75%;
+	font-family: platformfont;
+	font-size: 30px;
+	margin-bottom: 16px;
+	color: tcstatictext;
+	opacity: 1.0;
+}
+
+.ShutdownThrobber
+{
+	opacity: 0.0;
+	width: 54px;
+	height: 54px;
+	margin-bottom: 10px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+.MessageVisible .ShutdownThrobber
+{
+	opacity: 1.0;
+}

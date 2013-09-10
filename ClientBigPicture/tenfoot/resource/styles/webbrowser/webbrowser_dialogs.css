@@ -1,0 +1,183 @@
+
+
+// favorites dialog
+.AddFavorites
+{
+	width: 100%;	
+	height: 100%;	
+
+	background-color: dialog_bg_color;
+	opacity: 0.8;
+	font-size: 18;
+	visibility: collapse;
+}
+
+.AddFavoritesVisible
+{
+	visibility: visible;
+}
+
+.FavoritesPanel
+{
+	position: 40% 40% 0%;
+	width: 500px;
+	height: 250px;	
+	flow-children: down;
+	opacity: 1.0;
+	background-color: dialog_bg_color;
+}
+
+.AddFavorites Label
+{
+	margin: 10px;
+	color: #ffffff8f;
+}
+
+.AddFavorites Button:focus Label
+{
+	color: white;	
+}
+
+.AddFavorites Button
+{
+	flow-children: right;
+	horizontal-align: left;
+	border-radius: 4px;
+	margin-left: 10px;
+	margin-right: 4px;
+
+	background-color: #5198c480;
+}
+
+.AddFavorites Button:hover
+{
+	background-color: #9EB9DF;
+}
+
+.AddFavorites Button:focus
+{
+	background-color: #9ec5de;
+}
+
+.AddFavorites Button:active
+{
+	background-color: #5198c4;
+}
+
+
+
+.FavoritesPanelEntry
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.FavoritesPanelEntry TextEntry
+{
+	width: 300px;
+	height: 30px;
+}
+
+.FavoritesPanelButtons
+{
+	margin-top: 10px;
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.FavoriteTextEntry
+{
+	horizontal-align: left;
+	border-radius: 4px;
+	padding: 5px;
+	width : fill-parent-flow( 100 );
+	color: #CCCDCD;
+	background-color: #343738ff;
+}
+
+#FavoriteNumber
+{
+	margin-left: 20px;
+}
+
+
+// js alert dialog
+.JSAlert
+{
+	width: 100%;	
+	height: 100%;	
+
+	background-color: black;
+	opacity: 0.8;
+	font-size: 18;
+	visibility: collapse;
+}
+
+.JSAlertVisible
+{
+	visibility: visible;
+}
+
+.JSAlertPanel
+{
+	position: 40% 40% 0%;
+	flow-children: down;
+	opacity: 1.0;
+	width: 400px;
+	background-color: dialog_bg_color;
+	margin: 20px;
+}
+
+.JSAlertPanel Label
+{
+	horizontal-align: center; 
+	margin: 10px;
+	color: #ffffff8f;
+}
+
+.JSAlertPanel Button:focus Label
+{
+	color: white;	
+}
+
+.JSAlertPanel Button
+{
+	flow-children: down;
+	border-radius: 4px;
+	margin-left: 10px;
+	margin-right: 4px;
+
+	background-color: ui_common_control;
+}
+
+.JSAlertPanel Button:hover
+{
+	background-color: ui_common_control_hover;
+}
+
+.JSAlertPanel Button:focus
+{
+	background-color: ui_common_control_hover;
+}
+
+.JSAlertPanel Button:active
+{
+	background-color: ui_common_control_hover;
+}
+
+#JSText
+{
+	padding-left: 30px;
+}
+
+.JSAlertPanelButtons
+{
+	horizontal-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	flow-children: right;
+	border-radius: 4px;
+	color: #CCCDCD;
+}
+
+

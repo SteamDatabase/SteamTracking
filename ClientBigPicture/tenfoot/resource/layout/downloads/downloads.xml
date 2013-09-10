@@ -1,0 +1,24 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/downloads.css" />
+	</styles>
+
+	<DownloadsPanel defaultfocus="SummaryGridItem" tabindex="auto" selectionpos="auto">
+		<Panel id="DownloadsWrapper" >
+			<Panel id="DownloadsContent" class="DownloadsContent" >
+				<Carousel id="DownloadsGrid" class="DownloadsGrid" focus="center" onmoveup="ShowMainMenuFocusDownloads();">
+					<Panel class="DownloadGridHeader" >
+						<Panel class="DownloadGridBody1" >
+							<Label id="ItemsDownloadingLabel" text="#Downloads_ItemsDownloading" />
+							<Label id="ItemsPausedLabel" text="#Downloads_ItemsPaused" />
+						</Panel>
+					</Panel>
+					<SummaryGridItem id="SummaryGridItem" />
+				</Carousel>	
+			</Panel>
+		</Panel>
+
+	</DownloadsPanel>
+
+</root>

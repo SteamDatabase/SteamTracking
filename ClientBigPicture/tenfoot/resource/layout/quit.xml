@@ -1,0 +1,45 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/quit.css" />
+	</styles>
+	
+	<QuitDialog class="TenfootMsgBox" onmouseactivate="DismissQuitDialog()">
+		<Panel id="QuitDialogButtonParent" class="ContextMenuBody" tabindex="auto" selectionpos="auto">
+			<Button class="StreamingVisible" onactivate="StopStreaming()" >
+				<Label text="#Quit_StopStreaming" />
+			</Button>
+			<Button class="NotLoggedInHidden StreamingHidden" onactivate="QuitApp()" >
+				<Label text="#Quit_ExitBigPicture" />
+			</Button>
+			<Button class="StreamingHidden" onactivate="ExitSteam()" >
+				<Label text="#Quit_ExitSteam" />
+			</Button>
+			<Button class="NotLoggedInHidden" onactivate="ChangeUser()">
+				<Label text="#Quit_ChangeUser" />
+			</Button>
+
+			<Button class="OfflineMode GoOffline" onactivate="GoOffline()" >
+				<Label text="#Quit_GoOffline" />
+			</Button>
+
+			<Button class="OfflineMode GoOnline" onactivate="GoOnline()" >
+				<Label text="#Quit_GoOnline" />
+			</Button>
+
+			<Panel class="HorizontalRule StreamingHidden" />
+
+			<Button class="System SystemCanShutdown StreamingHidden" onactivate="ShutdownMachine()" >
+				<Label text="#Quit_Shutdown" />
+			</Button>
+			<Button class="System SystemCanRestart StreamingHidden" onactivate="RestartMachine()" >
+				<Label text="#Quit_Restart" />
+			</Button>
+			<Button class="System SystemCanSuspend StreamingHidden" onactivate="SuspendMachine()" >
+				<Label text="#Quit_Sleep" />
+			</Button>
+
+		</Panel>
+	</QuitDialog>
+</root>

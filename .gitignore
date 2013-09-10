@@ -1,5 +1,10 @@
 etags.txt
 apikey.txt
 update.lock
+
 ClientStrings/strings_all.zip
 ClientStrings/extract.sh
+
+ClientBigPicture/tenfoot_all.sh
+ClientBigPicture/extract.sh
+ClientBigPicture/tenfoot/resource/wordlists/

@@ -1,0 +1,204 @@
+@define delete_async_delay: 4.5s;
+@define fade_in_out_time: 0.6s;
+@define frame_margin_bottom: 50px;
+@define frame_margin_top: 20px;
+
+@define frame_margin_overflow_bottom: 40px;
+@define frame_margin_overflow_top: 10px;
+
+.NotificationRoot
+{
+	width: 625px;
+	height: 190px;
+	
+	z-index: notification1_zindex;
+
+	opacity: 0.0;
+	transform: translatey( 250px );
+
+	vertical-align: bottom;
+	horizontal-align: right;
+
+	flow-children: none;
+
+	font-family: platformfont;
+	font-size: 20px;
+	color: #DDDDDDFF;
+	font-weight: normal;
+
+	transition-property: opacity, transform;
+	transition-duration: fade_in_out_time;
+	transition-timing-function: ease-in-out;
+}
+
+.NotificationVisible
+{
+	// Dont use 1.0 here, as having a composition layer is a perf win
+	opacity: 0.99999;
+	transform: translatey( 0px );
+}
+
+.NotificationFading
+{
+	opacity: 0.0;
+	transform: translatey( 250px );
+}
+
+.NotificationFrame
+{
+	width: 100%;
+	height: 100%;
+	margin-left: 13px;
+	margin-right: 107px;
+	margin-bottom: frame_margin_bottom;
+	margin-top: frame_margin_top;
+	z-index: notification1_zindex;
+	
+	border: 4px solid ui_common_control_border;
+	background-color: #2B2B2BFF;
+	box-shadow: #00000044 -4px -4px 6px 8px;
+}
+
+.NotificationTitle
+{
+	width: 100%;
+	height: 34px; 
+	font-weight: bold;
+	z-index: notification2_zindex;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	margin-left: 153px;
+	margin-right: 200px;
+	margin-top: 48px;
+}
+
+.NotificationMessage
+{
+	width: 100%;
+	height: 34px;
+	z-index: notification2_zindex;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	margin-right: 200px;
+	margin-left: 153px;
+	margin-top: 85px;
+}
+
+.NotificationOneLabelBody
+{
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 200px;
+	margin-left: 153px;
+	margin-top: 52px;
+}
+
+.NotificationLargeLabelBody
+{
+	width: 100%;
+	height: 100%;
+	z-index: notification2_zindex;
+	margin-right: 116px;
+	margin-left: 152px;
+	margin-top: 42px;
+}
+
+.HintButton
+{
+	horizontal-align: right;
+	vertical-align: center;
+	margin-right: 120px;
+	margin-bottom: frame_margin_bottom;
+	margin-top: frame_margin_top;
+	z-index: notification2_zindex;
+}
+
+.SteamCog
+{
+	horizontal-align: left;
+	vertical-align: center;
+	margin-top: frame_margin_top;
+	margin-bottom: frame_margin_bottom;
+	z-index: notification2_zindex;
+}
+
+.AvatarImage
+{
+	horizontal-align: left;
+	vertical-align: center;
+	margin-bottom: frame_margin_overflow_bottom;
+	margin-top: frame_margin_overflow_top;
+	z-index: notification2_zindex;
+	margin-left: 11px;
+
+	height: 128px;
+	width: 128px;
+
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 8px;
+	
+	box-shadow: #00000044 -4px -4px 6px 8px;
+}
+
+.Online .NotificationTitle, .Online .NotificationMessage
+{
+	color: friendsonline_solid;
+}
+
+.Offline .NotificationTitle, .Offline .NotificationMessage
+{
+	color: friendsoffline_solid;
+}
+
+.InGame .NotificationTitle, .InGame .NotificationMessage
+{
+	color: friendsingame_solid;
+}
+
+.AchievementImage
+{
+	horizontal-align: left;
+	vertical-align: center;
+	margin-bottom: frame_margin_overflow_bottom;
+	margin-top: frame_margin_overflow_top;
+	z-index: notification2_zindex;
+	margin-left: 11px;
+
+	height: 128px;
+	width: 128px;
+
+	border-style: solid;
+	border-width: 4px;
+	border-radius: 8px;
+	border-color: #404040e0;
+}
+
+.DataContainer
+{
+	flow-children: right;
+	width: 100%;
+	height: 100%; 
+	margin-top: frame_margin_overflow_top;
+	margin-left: 17px;
+	margin-right: 200px;
+	margin-bottom: frame_margin_overflow_bottom;
+	z-index: notification2_zindex;
+}
+
+.ScreenshotImage
+{
+	margin-right: 12px;
+	vertical-align: center;
+	z-index: notification2_zindex;
+}
+
+.ScreenshotText
+{
+	vertical-align: center;
+	z-index: notification2_zindex;
+}
+

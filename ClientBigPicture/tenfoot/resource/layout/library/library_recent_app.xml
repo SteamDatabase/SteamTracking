@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu_librarybackground.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryRecentApp>
+		<Image id="AppImage" class="AppImage" scaling="stretch-to-fit-preserve-aspect" />
+		<Panel class="RecentNameRow">
+			<Label id="AppName" />
+			<Image id="ControllerSupport" />
+		</Panel>
+	</LibraryRecentApp>
+</root>

@@ -1,0 +1,276 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+Join
+{
+	opacity: 0.0;
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+
+	font-family: platformfont;
+
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: shortduration;
+	transition-timing-function: linear;
+	transform: translateX(0px);
+
+	background-image: url("file://{images}/login/login_bg.tga");
+	background-repeat: repeat;
+	background-size: auto;
+}
+
+Join:descendantfocus
+{
+	opacity: 1.0;
+}
+
+#BodyWrapper
+{
+	width: 100%;
+	height: 100%;
+	opacity-mask: none;
+	z-index: 100;
+}
+
+.JoinCarousel
+{
+	width: 3500px;
+	height: 1080px;
+	perspective: 1000;
+
+	position: -790px 0px 0px;
+	animation-name: none;
+	perspective-origin: 50% 50%;
+	pre-transform-scale2d: 1.0;
+	opacity: 1.0;
+	desaturation: 0.0;
+	wash-color: none;
+	overflow: noclip clip;
+
+	transform: translatez(0px);
+	blur: none;
+	flow-children: right;
+	opacity-mask: none;
+}
+
+JoinItem
+{
+	width: 400px;
+	border-radius: 0px;
+	padding-top: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	vertical-align: center;
+
+	pre-transform-scale2d: 0.8;
+
+	transition-property: pre-transform-scale2d, position;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem:focus
+{
+	transform: translatez(0px);
+	opacity: 1.0;
+	desaturation: 0.0;
+	pre-transform-scale2d: 1.0;
+}
+
+JoinItem:focus:hover
+{
+	pre-transform-scale2d: 1.05;
+}
+
+JoinItem .JoinItemContainer
+{
+	margin: 14px;
+
+	width: 100%;
+	flow-children: down;
+	vertical-align: top;
+	padding-top: 55px;
+	padding-bottom: 40px;
+	border-color: #00000000;
+	background-color: #00000000;
+	box-shadow: #00000000 -3px -3px 6px 6px;
+
+	transition-property: background-color, box-shadow, border;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem:focus .JoinItemContainer
+{
+	background-color: bgwithgradienttopleft;
+	pre-transform-scale2d: 1.0;
+	border-color: #3d5666;
+	border-style: solid;
+	border-width: 5px;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+
+	transition-duration: 0.23s !immediate;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+JoinItem .JoinItemImageFrame
+{
+	horizontal-align:center;
+	width: 270px;
+	height: 270px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414230;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem .JoinItemImageFrame:hover
+{
+	transition-duration: 0.25s !immediate;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	pre-transform-scale2d: 1.05;
+}
+
+JoinItem:focus .JoinItemImageFrame
+{
+	border-color: #00000000;
+	background-color: #00000000;
+	box-shadow: #00000000 0px 0px 0px 0px;
+	pre-transform-scale2d: 1.0;
+}
+
+JoinItem:focus .JoinItemImageBezel
+{
+	pre-transform-scale2d: 1.0;
+	border-radius: 27px;
+}
+
+JoinItem .JoinItemImageBezelOn
+{
+	border-width: 0px;
+	border-radius: 24px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
+
+	height: 270px;
+	width: 270px;
+
+	horizontal-align:center;
+	vertical-align:center;
+	pre-transform-scale2d: 0.7;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem .JoinItemImageBezel
+{
+	border-width: 0px;
+
+	width: 257px;
+	height: 257px;
+
+	horizontal-align: center;
+	vertical-align: center;
+	pre-transform-scale2d: 0.8;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem:focus .JoinItemImageBezel
+{
+	width: 270px;
+	height: 270px;
+}
+
+JoinItem:disabled
+{
+	opacity: 0.2;
+}
+
+JoinItem .BezelOutside
+{
+	border-radius: 25px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
+}
+
+JoinItem .BezelInside
+{
+	background-color: #000000;
+	border-width: 0px;
+	border-radius: 16px;
+}
+
+JoinItem:focus .JoinItemImage
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+}
+
+JoinItem .JoinItemImage
+{
+	height: 237px;
+	width: 237px;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 0.85;
+	desaturation: 0.1;
+
+	transition-property: pre-transform-scale2d, opacity;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+JoinItem:focus Label
+{
+	margin-top: 20px;
+	opacity: 1.0;
+	color: applabel;
+	text-overflow: clip;
+}
+
+JoinItem Label
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 16px;
+	margin-bottom: 0px;
+	max-height: 60px;
+	width: 342px;
+	vertical-align: top;
+	horizontal-align: center;
+	background-color: #00000000;
+
+	font-size: 44px;
+	font-weight: bold;
+	font-family: platformfont;
+	text-align: center;
+	text-overflow: clip;
+	white-space: normal;
+
+	opacity: 0.6;
+	color: applabel;
+}

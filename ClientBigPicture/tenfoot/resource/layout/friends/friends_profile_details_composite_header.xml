@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+		<include src="tenfoot/resource/styles/friends/friends_profile_details.css" />
+	</styles>
+
+	<FriendsProfileDetailsCompositeHeader>
+		<AvatarImage id="FriendPanelImage" class="FriendsProfileDetailsCompositeHeaderAvatar" />
+		<Label id="FriendPersonaName" class="FriendsProfileDetailsCompositeHeaderName" />
+		<Label id="FriendStatus" class="FriendsProfileDetailsCompositeHeaderState" />
+		<Label id="FriendStatusDetail" class="FriendsProfileDetailsCompositeHeaderStatusDetail" />
+	</FriendsProfileDetailsCompositeHeader>
+</root>

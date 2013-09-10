@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/downloads.css" />
+	</styles>
+	
+	<DownloadsGridItem>
+		<Panel id="AppButtonWrapper" >
+			<Button id="AppButton" mousecanactivate="iffocused" onmouseactivate="DownloadsActivate()" >
+				<Image id="Image" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+				<Panel class="DownloadNameAndPercent" >
+					<Label id="Title" class="AppTitle" text="" />
+					<Label id="PercentDownload" class="PercentDownload" text="#Downloads_Percent" />
+				</Panel>
+			</Button>
+			<Panel class ="DownloadBarBackground">
+				<Panel id ="DownloadBarPercent" class ="DownloadBarPercent" />
+			</Panel>
+		</Panel>
+		<Panel class ="DownloadSpacer" />
+		<Label id="DownloadFinishedLabel" text="#Downloads_Finished" />
+		<Panel class ="DownloadLabels" >
+			<Panel class="DownloadLabelRow" >
+				<Label text="#Downloads_Amount" />
+				<Label text="#Downloads_TimeRemain" />
+				<Label text="#Downloads_CurrentRate2" />
+			</Panel>
+			<Panel class="DownloadValuesRow" >
+				<Label text="#Downloads_AmountValue" />
+				<Label text="#Downloads_TimeRemainValue" />
+				<Label text="#Downloads_CurrentRateValue" />
+			</Panel>
+		</Panel>		
+	</DownloadsGridItem>
+</root>

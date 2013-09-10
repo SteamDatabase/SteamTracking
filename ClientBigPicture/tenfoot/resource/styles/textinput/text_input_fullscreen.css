@@ -1,0 +1,41 @@
+//
+// Styles for text input full screen dialog
+//
+
+TextInputFullscreen
+{
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #274e66ff ), to( #1d3a4dff ) );
+}
+
+#FullscreenColumnRight
+{
+	width: 50%;
+	horizontal-align: right;
+	vertical-align: center;
+	flow-children: down;
+}
+
+#InputDescription
+{
+	color: white;
+	font-size: 32px;
+}
+
+#EnteredText
+{
+	width: 80%;
+	font-size: 32px;
+}
+
+#EnteredText.Multiline
+{
+	height: 20%;
+}
+
+#WheelWrapper
+{
+
+}

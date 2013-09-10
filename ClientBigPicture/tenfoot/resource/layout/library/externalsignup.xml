@@ -1,0 +1,30 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/library/externalsignup.css" />
+	</styles>
+
+	<ExternalSignupMsgBox defaultfocus="ButtonGo" tabindex="auto" selectionpos="auto">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_ExternalSignupTitle" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Label id="MsgBoxContents" class="MsgBoxContents" text="#Library_ExternalSignupDesc" />
+				</Panel>
+			
+				<Panel id="MsgBoxButtons">	
+					<Button id="ButtonGo" class="ButtonOK MsgBoxButton">
+						<Label id="OKButtonText" text="#Library_GotoExternalSignup" />
+					</Button>
+					<Button id="ButtonCancel" class="ButtonCance MsgBoxButton" onactivate="CancelExternalSignup();">
+						<Label id="CancelButtonText" text="#Library_SkipExternalSignup" />
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</ExternalSignupMsgBox>
+</root>

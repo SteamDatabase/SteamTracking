@@ -159,6 +159,23 @@
 					}
 				}
 				
+				if( Preg_Match( '/"tenfoot_all\.zip\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
+				{
+					$Test = $Test[ 1 ];
+					
+					if( !Array_Key_Exists( 'tenfoot_all.zip', $this->ETags ) || $this->ETags[ 'tenfoot_all.zip' ] !== $Test )
+					{
+						$this->Log( '{lightblue}Downloading new tenfoot_all.zip.' . $Test );
+						
+						$this->ETags[ 'tenfoot_all.zip' ] = $Test;
+						
+						$this->URLsToFetch[ ] = Array(
+							'URL'  => 'http://media.steampowered.com/client/tenfoot_all.zip.' . $Test,
+							'File' => 'ClientBigPicture/tenfoot_all.zip'
+						);
+					}
+				}
+				
 				unset( $Test );
 			}
 			// Unzip it
@@ -177,6 +194,24 @@
 				
 				// Let's break all kinds of things! :(
 				System( 'sh ' . __DIR__ . '/ClientStrings/extract.sh' );
+				
+				return true;
+			}
+			// Unzip it
+			else if( $File === 'ClientBigPicture/tenfoot_all.zip' )
+			{
+				$File = __DIR__ . '/' . $File;
+				
+				File_Put_Contents( $File, $Data );
+				
+				if( SHA1_File( $File ) !== $this->ETags[ 'tenfoot_all.zip' ] )
+				{
+					$this->Log( '{lightred}Checksum mismatch for tenfoot_all.zip' );
+					
+					return false;
+				}
+				
+				System( 'sh ' . __DIR__ . '/ClientBigPicture/extract.sh' );
 				
 				return true;
 			}

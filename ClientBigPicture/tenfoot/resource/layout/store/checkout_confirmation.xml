@@ -1,0 +1,55 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutReview class="CheckoutStep" tabindex="none" selectionpos="none" defaultfocus="GoToLibraryBtn" oncancel="CloseAndShowStore()">
+		<Panel class="CheckoutTitleRow">
+			<Label id="CheckoutTitle" class="CheckoutTitle" text="#Checkout_Confirmation_Title" />
+		</Panel>
+		<Panel class="CheckoutBody">
+			<Panel class="CheckoutBodyLeftColumn">
+				<Label id="PackageAddedDescription" class="ConfirmationTextGap" text="#Checkout_Confirmation_ToAccessGames" />
+				<Label id="FundsAddedDescription" class="ConfirmationTextGap" text="#Checkout_Confirmation_FundsAdded" />
+				<Label id="ConfirmationText" class="ConfirmationTextGap" text="#Checkout_Confirmation_ReceiptText" />
+				<Panel id="ReceiptSection" class="ReceiptSection">
+					<Panel class="ReceiptRow">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Confirmation_AccountName" />
+						<Label id="ReceiptAccount" text="" />
+					</Panel>
+					<Panel class="ReceiptRow">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Confirmation_Total" />
+						<Label id="ReceiptTotal" text="" />
+					</Panel>
+					<Panel class="ReceiptRow">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Confirmation_Code" />
+						<Label id="ReceiptCode" text="" />
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel class="VerticalRule" />
+			<Panel id="PurchaseButtons" class="CheckoutBodyRightColumn" tabindex="auto" selectionpos="auto">
+				<Panel class="HorizontalRule" />
+				<Panel id="ReturnToMicrotransaction" class="CheckoutConfirmationBtnGrouping">
+					<Button onactivate="GoBackToMicroTxnAuth()">
+						<Label text="#Checkout_Confirmation_ReturnTransaction" />
+					</Button>
+					<Panel class="HorizontalRule" />
+				</Panel>
+				<Panel id="GoToLibrarySection" class="CheckoutConfirmationBtnGrouping">
+					<Button id="GoToLibraryBtn" onactivate="CloseAndShowLibrary();">
+						<Label text="#Checkout_Confirmation_GoToLibrary" />
+					</Button>
+					<Panel class="HorizontalRule" />
+				</Panel>
+				<Panel id="ReturnToStoreSection" class="CheckoutConfirmationBtnGrouping">
+					<Button id="ReturnToStoreBtn" onactivate="CloseAndShowStore()">
+						<Label text="#Checkout_Confirmation_ReturnToStore" />
+					</Button>
+					<Panel class="HorizontalRule" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</CheckoutReview>	
+</root>

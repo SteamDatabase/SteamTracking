@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/notifications.css" />
+	</styles>
+
+	<Panel class="NotificationRoot RefreshLoginNotification">
+		<Panel class="NotificationFrame" />
+		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
+		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+		<Label class="NotificationOneLabelBody" text="#Notification_RefreshLogin" />
+	</Panel>
+</root>

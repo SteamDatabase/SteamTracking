@@ -1,0 +1,45 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_Network class="SettingsSection" defaultfocus="AvailableNetworksList">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Network" />
+		</Panel>
+
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+			<Label class="SettingsCallout" text="#SettingsNetwork_Intro" />
+
+			<Panel class="NetworkErrorGroup">
+				<Label class="SettingsLabel" text="#SettingsNetwork_SelectNetwork" />
+				<Label id="NetworkErrorLabel" />
+			</Panel>
+
+			<Panel id="AvailableNetworksList" class="VertContainer" childfocusonhover="true">
+				<!-- instances of SettingsPanel_NetworkListEntry will be programmatically added here -->
+			</Panel>
+			<Panel id="NetworkPassword" class="VertContainer">
+				<Label class="SettingsLabel" text="#SettingsNetwork_NetworkPassword" />
+				<Panel class="HorzContainer">
+					<TextEntry id="NetworkPasswordTextEntry" class="NetworkPasswordTextEntry" 
+						textinputid="NetworkPasswordDaisyWheel" textinputclass="HalfWidth DockRight AppearFromBottomCenter" textinputdoneactionstring="#Login_NextField">
+					</TextEntry>
+					<ToggleButton class="CheckBox" id="ShowPasswordToggle" onactivate="ShowPasswordToggled()" />
+					<Label id="ShowPasswordLabel" text="#SettingsNetwork_ShowPassword" />
+				</Panel>
+			</Panel>
+			<Panel id="ConnectPanel" class="HorzContainer">
+				<Button id="ConnectToNetwork" onactivate="ConnectToNetwork()">
+					<Label id="ConnectToNetworkLabel" text="#SettingsNetwork_Connect"></Label>
+					<Panel id="ConnectToNetworkThrobber" class="NetworkThrobber NetworkThrobberHide" />
+				</Button>
+			</Panel>
+		</Panel>
+
+	</SettingsPanel_Network>
+
+</root>

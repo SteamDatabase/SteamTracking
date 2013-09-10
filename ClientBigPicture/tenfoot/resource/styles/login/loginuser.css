@@ -1,0 +1,701 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+// fade in any prompt/message
+@define login_message_transition_time: 0.3s;
+
+// slide down for steam guard code entry
+@define steamguard_message_transition_time: 0.3s;
+
+LoginUser
+{
+	opacity: 0.0;
+	animation-name: fade-in;
+	animation-duration: shortduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes 'fade-in'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+LoginUser:descendantfocus
+{
+	opacity: 1.0;
+}
+
+.Card
+{
+	flow-children: down;
+	horizontal-align: left;
+	width: 530px;
+	height: 790px;
+
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 130px;
+
+	transform: translatex(698px);
+
+	background-color: message_box_bg;
+	border-radius: 0px;
+	border-color: ui_common_control_border;
+	border-style: solid;
+	border-width: 6px;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+
+.DaisyWheelVisible .Card
+{
+
+	transform: translatex(220px);
+}
+
+.UserContainer
+{
+	horizontal-align: center;
+	flow-children: down;
+	height: fit-children;
+	margin-top: 35px;
+}
+
+.Bezel
+{
+	border-width: 0px;
+	border-radius: 31px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
+
+	height: 380px;
+	width: 380px;
+
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.LoginImage
+{
+	height: 350px;
+	width: 350px;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 1.0;
+	desaturation: 0.2;
+	box-shadow: fill #00000022 -4px -4px 4px 8px;
+	background-color: #000000;
+	border-width: 0px;
+	border-radius: 20px;
+}
+
+#TestPanelTextEntry
+{
+	horizontal-align: center;
+	vertical-align: top;
+	width: 600px;
+}
+
+#TestCommandTextEntry
+{
+	width: 500px;
+}
+
+#TestCommandButton
+{
+	width: 100px;
+}
+
+#LoginNamesContainer
+{
+	width: 100%;
+	height: fit-children;
+	//min-height: 33px;
+	margin-top: 20px;
+	//margin-bottom: 12px;
+	flow-children: down;
+}
+
+#PersonaNameLabel
+{
+	horizontal-align: left;
+	vertical-align: center;
+	margin-left: 12px;
+
+	width: 460px;
+	font-size: 54px;
+	font-weight: bold;
+	font-family: platformfont;
+	text-align: left;
+	//text-overflow: clip;
+	text-overflow: clip;
+	white-space: nowrap;
+
+	opacity: 1.0;
+	color: applabel;
+}
+
+#AccountNameLabel
+{
+	font-size: 34px;
+	font-family: platformfont;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: detailsdatalabel;
+
+	padding-left: 12px;
+	margin-top: 8px;
+}
+
+.ShowMessageArea .UserContainer,.ShowMore .UserContainer
+{
+	margin-top: 0px;
+	margin-bottom: 25px;
+	flow-children: right;
+}
+
+.ShowMessageArea .LoginImage,.ShowMore .LoginImage
+{
+	height: 105px;
+	width: 105px;
+	border-radius: 12px;
+}
+
+.ShowMessageArea .Bezel,.ShowMore .Bezel
+{
+	height: 115px;
+	width: 115px;
+	border-radius: 16px;
+	horizontal-align: left;
+	vertical-align: center;
+}
+
+.ShowMessageArea #LoginNamesContainer,.ShowMore #LoginNamesContainer
+{
+	min-height: 0px;
+	vertical-align: center;
+	padding-left: 10px;
+	margin-top: 0px;
+}
+
+.ShowMessageArea #AccountNameLabel,.ShowMore #AccountNameLabel
+{
+	padding-left: 0px;
+	text-align: left;
+	margin-top: 0px;
+}
+
+.ShowMessageArea #PersonaNameLabel,.ShowMore #PersonaNameLabel
+{
+	font-size: 44px;
+	horizontal-align: left;
+	text-align: left;
+}
+
+.ShowMessageArea .UserContainer,.ShowMore .UserContainer
+{
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+.CredentialsContainer
+{
+	flow-children: down;
+	height: fit-children;
+	vertical-align: bottom;
+}
+
+#TextEntryPrompt
+{
+	horizontal-align: right;
+	vertical-align: center;
+	color: #888888;
+	font-size: 27px;
+	font-family: platformfont;
+	padding-right: 6px;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+
+}
+
+
+#MessageAreaLabel
+{
+	font-size: 34px;
+	font-family: platformfont;
+	color: #bcc0c3;
+	visibility: collapse;
+}
+
+// default to invisible
+#ContactSupportButton, #SteamGuardTextEntry
+{
+	visibility: collapse;
+}
+
+.ShowMessageArea #MessageAreaLabel
+{
+	visibility: visible;
+}
+
+.SteamGuard #SteamGuardTextEntry
+{
+	visibility: visible;
+}
+
+.SteamGuard #AccountNameTextEntry,.SteamGuard #PasswordTextEntry
+{
+	visibility: collapse;
+}
+
+.AccountSuspended #AccountNameTextEntry, .AccountSuspended #PasswordTextEntry, .AccountSuspended #LoginButton
+{
+	visibility: collapse;
+}
+
+.AccountSuspended #ContactSupportButton
+{
+	visibility: visible;
+}
+
+.AnonLogin #AccountNameLabel,.AnonLogin #PersonaNameLabel
+{
+	visibility: collapse;
+}
+
+.AnonLogin.ShowMessageArea #AccountNameLabel,.AnonLogin.ShowMore #AccountNameLabel
+{
+	visibility: visible;
+}
+
+.AccountLogin #AccountNameTextEntry
+{
+	visibility: collapse;
+}
+
+.IpRestricted #AccountNameTextEntry, .IpRestricted #PasswordTextEntry, .IpRestricted #LoginButton
+{
+	visibility: collapse;
+}
+
+.CachedCredentials #PasswordTextEntry
+{
+	visibility: collapse;
+}
+
+.ScreenSaverMode LoginUser
+{
+	opacity: 0.0;
+}
+
+TextEntry
+{
+	font-size: 38px;
+	font-family: platformfont;
+	animation-name: none;
+	vertical-align: center;
+ 	background-color: #173a4c;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+}
+
+.LoginPromptContainer
+{
+	width: 100%;
+	height: 70px;
+	horizontal-align: center;
+	background-color: ui_common_control;
+	border-color: ui_common_control_border;
+	border-width: 5px;
+	border-style: solid;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+
+	margin: 4px 0px 20px 0px;
+	padding: 4px 7px 8px 7px;
+
+	transition-property: border, background-color, color, box-shadow;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.LoginPromptContainer:focus
+{
+
+	transition-duration: 0.4s !immediate;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	
+  animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.LoginPromptContainer:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+}
+
+.LoginPromptContainer:disabled:hover
+{
+	box-shadow: box_shadow_off_color -3px -3px 6px 6px;
+}
+
+.LoginPromptContainer Label
+{
+	text-transform: uppercase;
+	margin-bottom: 4px;
+	padding-top: 5px;
+	color: detailsdatalabel;
+
+	vertical-align: center;
+	
+	font-family: platformfont;
+	font-size: 28px;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-top: 6px;
+	transform: translatex(-7px);
+
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+.LoginPromptContainer:descendantfocus Label
+{
+	color: black;
+	transform: translateX(0px);	
+}
+
+.LoginPromptContainer:disabled Label
+{
+	color: detailsdatalabelfocus;
+}	
+
+#SteamGuardTextEntry
+{
+	visibility: collapse;
+	transition-property: height;
+	transition-duration: steamguard_message_transition_time;
+}
+
+#PasswordTextEntry
+{
+	font-size: 34px;
+}
+
+
+
+#RemoveUser
+{
+	width: 100%;
+	height: 70px;
+	margin: 4px 0px 20px 0px;
+	padding: 8px 7px 8px 7px;
+
+	color: detailsdatalabelfocus;
+	background-color: none;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	transition-property: border, background-color, color, box-shadow;
+	transition-timing-function: ease-out;
+	
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+#RemoveUser:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+}
+
+
+#RemoveUser:disabled:hover
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+#RemoveUser:focus
+{
+	transition-duration: 0.4s !immediate;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+	
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#RemoveUser Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 28px;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-top: 6px;
+	transform: translatex(-7px);
+	color: detailsdatalabel;
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+#RemoveUser:focus Label
+{
+	color: black;
+	transform: translatex(0px);
+}
+
+#RemoveUser:disabled:hover Label
+{
+	color: #bcc0c3;
+	transform: translatex(0px);
+}
+
+
+#GradientDivider
+{
+	height: 6px;
+	width: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #00000000 ), color-stop( 0.5, #3a4a54 ), to( #00000000 ) );
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+// This class gets added when the progress dialog is visible
+.ShowingLoginProgress LoginUser
+{
+	opacity: 0.0;
+	transition-duration: 0.4s;
+}
+
+// tickbox to turn togglebuttons into checkboxes
+.CheckBox
+{
+	height: 70px;
+	width: 100%;
+	margin-bottom: 25px;
+	
+	transition-property: border, background-color, color, box-shadow;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+	
+}
+
+.CheckBox:descendantfocus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;	
+}
+
+.CheckBox .TickBox
+{
+	height: 70px;
+	width: 70px;
+	border-color: ui_common_control_border;
+	border-style: solid;
+	border-radius: 0px;
+	border-width: 6px;
+	vertical-align: center;
+}
+
+.CheckBox:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.CheckBox Label
+{
+	padding-left: 82px;
+	width: 100%;
+	color: detailsdatalabel;
+	font-size: 27px;
+	font-family: platformfont;
+	border-width: 0px;
+	vertical-align: center;
+	
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+.CheckBox:descendantfocus Label
+{
+	transform: translatex(0px);
+}
+
+.CheckBox:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+}
+
+.CheckBox:disabled:hover
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.CheckBox:descendantfocus .TickBox
+{
+	border-color: none;
+}
+
+#SharedBorderContainer
+{
+	width: fit-children;
+	height: 100%;
+}
+
+#SharedBorder
+{
+	border-color: #00000000;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.CheckBox:descendantfocus #SharedBorder
+{
+	border-color: white;
+}
+
+.CheckBox:descendantfocus Label,.CheckBox:focus:hover Label
+{
+	color: black;
+	transform: translatex(0px);
+}
+
+.CheckBox:Selected:focus .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+}
+
+#More
+{
+	flow-children: down;
+	height: fit-children;
+	visibility: collapse;
+}
+
+.ShowMore #More
+{
+	visibility: visible;
+}
+
+.ShowMore #GradientDivider,.ShowMore #RemoveUser
+{
+	visibility: collapse;
+}
+
+.ShowMore.ShowRemoveUser #GradientDivider,.ShowMore.ShowRemoveUser #RemoveUser
+{
+	visibility: visible;
+}
+
+.ShowMore .CredentialsContainer
+{
+	vertical-align: top;
+}
+
+#PasswordTextEntry:disabled, #LoginButton Label:disabled
+{
+	color: applabelsolid;
+}
+
+TextEntry:disabled,.Button:disabled,ToggleButton:disabled
+{
+	desaturation: 0.0;
+	blur: gaussian( 0.7 );
+	opacity: 0.40;
+	border-color: none;
+	box-shadow: none;
+	animation-name: none;
+}
+
+.Button:disabled Label,ToggleButton:disabled,ToggleButton:disabled .TickBox
+{
+	color: #9B9B9B;
+}
+
+HTML
+{
+	// opaque to minimize flash-through of content behind
+	background-color: #2c2c2c;
+	width: 75%;
+	height: 60%;
+	padding-right: 0px;
+	margin: 5px;
+	padding-left: 0px;
+	border-width: 5px;
+	border-color: ui_common_control_border;
+	// room for scroll bar
+}
+
+HTML:focus,HTML:hover
+{
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+}

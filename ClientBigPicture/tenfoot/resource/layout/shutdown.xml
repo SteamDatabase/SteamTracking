@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/shutdown.css" />
+	</styles>
+
+	<Shutdown tabindex="auto" selectionpos="auto">
+		<Panel id="CenterWrapper">
+			<Panel class="ShutdownThrobber" />
+			<Label id="DescriptionLabel" />
+		</Panel>
+	</Shutdown>
+</root>

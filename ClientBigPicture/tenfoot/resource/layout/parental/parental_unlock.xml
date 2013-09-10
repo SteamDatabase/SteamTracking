@@ -1,0 +1,24 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/parental/parental.css" />
+	</styles>
+
+<ParentalUnlockPopup class="TenfootMsgBox" tabindex="auto" selectionpos="auto" defaultfocus="Password">
+	<Panel class="ParentalUnlockPopupBody" tabindex="auto">
+		<Label class="ParentalUnlockLabel" text="#Parental_EnterPIN" />
+		
+		<TextEntry class="ParentalPINEntry" id="Password"
+					textinputid="ParentalPINEntry"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+					undohistory="enabled" />
+					
+	  <Panel class="ParentalUnlockButtons" >
+			<Button id="UnlockButton" class="Button" onactivate="ParentalUnlock()">
+							<Label id="ParentalUnlockLabel" text="#Parental_Unlock" />
+			</Button>
+		</Panel>
+	</Panel>
+</ParentalUnlockPopup>
+</root>

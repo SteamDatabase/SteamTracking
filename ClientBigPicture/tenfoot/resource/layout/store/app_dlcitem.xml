@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/storeapp.css" />
+	</styles>
+	
+	<StoreAppDLCItem defaultfocus="DlcList">
+		<Panel id="DlcImageWrapper">
+			<Image id="DlcHeaderImage" />
+			<StorePrice id="DlcPrice" />
+			<Panel id="DlcImageBorder" />
+		</Panel>
+		<Label id="DlcTitle" />
+	</StoreAppDLCItem>
+</root>

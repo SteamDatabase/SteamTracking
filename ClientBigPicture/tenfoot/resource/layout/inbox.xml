@@ -1,0 +1,52 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+	</styles>
+	
+	<InboxMenu onmouseactivate="CloseInboxMenu();" oncancel="CloseInboxMenu();">
+		<Panel id="Wrapper">
+			<Button id="NewCommentsButton" tabindex="0" selectionpos="0,0" onactivate="ShowNewComments();" >
+				<Image src="file://{images}/comments.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewCommentsLabel" text="#MainMenu_NewComments" />
+				</Panel>
+			</Button>
+			<Button id="NewItemsButton" tabindex="1" selectionpos="0,1" onactivate="ShowNewItems();" >
+				<Image src="file://{images}/items.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewItemsLabel" text="#MainMenu_NewItems" />
+				</Panel>
+			</Button>
+			<Button id="NewInvitesButton" tabindex="2" selectionpos="0,2" onactivate="ShowNewInvites();" >
+				<Image src="file://{images}/invites.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewInvitesLabel" text="#MainMenu_NewInvites" />
+				</Panel>
+			</Button>
+			<Button id="NewGiftsButton" tabindex="3" selectionpos="0,3" onactivate="ShowNewGifts();" >
+				<Image src="file://{images}/gifts.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewGiftsLabel" text="#MainMenu_NewGifts" />
+				</Panel>
+			</Button>
+			<Button id="NewTradeOffersButton" tabindex="4" selectionpos="0,4" onactivate="ShowNewTradeOffers();" >
+				<Image src="file://{images}/trade_offer.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewTradeOffersLabel" text="#MainMenu_NewTradeOffers" />
+				</Panel>
+			</Button>
+			<Button id="NewSupportMessagesButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewSupportMessages();" >
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewSupportMessagesLabel" text="#MainMenu_NewSupportMessages" />
+				</Panel>
+			</Button>
+			<Button id="NewClientUpdateButton" tabindex="6" selectionpos="0,6" onactivate="AllowNewClientUpdate();" >
+				<Image src="file://{images}/icon_steam_update.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewClientUpdateLabel" text="#MainMenu_NewClientUpdate" />
+				</Panel>
+			</Button>
+		</Panel>
+	</InboxMenu>	
+</root>

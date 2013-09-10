@@ -1,0 +1,449 @@
+//
+// Slideshow
+//
+LibraryScreenshotsSlideshow
+{
+	width: 1920px;
+	height: 1080px;
+
+	transition-property:  opacity;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: linear;
+
+	animation-name: msg-box-appear;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+
+	z-index: 1000;
+}
+
+LibraryScreenshotsSlideshow.Destructing
+{
+	opacity: 0.0;
+
+	animation-name: msg-box-disappear;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+LibraryScreenshotsSlideshow #Contents
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ScreenshotsSlideshowHidden
+{
+	opacity: 0.0;
+}
+
+.SlideshowPanel
+{
+	width: 100%;
+	height: 100%;
+	transform: translatex( 0px );
+
+	transition-property: transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.SlideshowPanel.SlideShowLeftOfFocus
+{
+	transform: translatex( -1920px );
+}
+
+.SlideshowPanel.SlideShowRightOfFocus
+{
+	transform: translatex( 1920px );
+}
+
+#SlideShowGlow
+{
+	width: 100%;
+	height: 77px;
+	vertical-align: top;
+	background-image: url( "file://{images}/store/slideshow_glow.png" );
+	background-color: none;
+	transform: translatey( 1200px );
+
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+.ShowDescription #SlideShowGlow
+{
+	transform: translatey( 754px );
+}
+
+#SlideShowDescription
+{
+	width: 100%;
+	height: 250px;
+	vertical-align: bottom;
+	background-color: slideshow_bg_library;
+
+	flow-children: down;
+	transform: translatey( 357px );
+
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+
+	color: #d2d2d2ff;
+	width: 100%;
+}
+
+#SlideShowTitle
+{
+	flow-children: right;
+	margin: 14px 104px 0px 104px;
+}
+
+.ShowDescription #SlideShowDescription
+{
+	transform: translatey( 0px );
+}
+
+#SlideShowSubDescription
+{
+	flow-children: down;
+	margin: -2px 104px 0px 104px;
+	vertical-align: top;
+}
+
+#SlideShowDescription Label
+{
+	font-size: 58px;
+	font-weight: light;
+	max-height: 80px;
+	white-space: nowrap;
+}
+
+#SlideShowSubDescription Label
+{
+	font-size: 21px;
+	line-height: 23px;
+	font-weight: normal;
+	margin-top: 6px;
+	opacity: 0.8;
+
+	white-space: nowrap;
+}
+
+#ScreenshotsCaption
+{
+	margin-top: -8px;
+	font-style: italic;
+	visibility: collapse;
+}
+
+.CaptionVisible #ScreenshotsCaption
+{
+	visibility: visible;
+	color: applabel;
+	opacity: 0.8;
+	font-size: 44px;
+	margin-top: 16px;
+	width: 100%;
+}
+
+#ScreenshotUploaded
+{
+	visibility: collapse;
+}
+
+.SSUploaded #ScreenshotUploaded
+{
+	visibility: visible;
+}
+
+.Slideshow:hover .RightMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	opacity: 1.0;
+}
+
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	opacity: 0.0;
+	width: 80px;
+	height: 100%;
+	z-index: 200;
+	transition-property: background-color, opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0.3s;
+	transition-timing-function: ease-in-out;
+	
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+}
+
+.LeftMouseScrollRegion 
+{
+	background-color: mouse_off_bg_left;
+}
+
+.RightMouseScrollRegion 
+{
+	background-color: mouse_off_bg_right;
+}
+
+SlideShow:hover .RightMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	opacity: 1.0;
+}
+
+
+SlideShow:hover .RightMouseScrollRegion:hover
+{
+	background-color: mouse_active_bg_right;
+	opacity: 1.0;
+}
+
+SlideShow:hover .LeftMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	align: left center;
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	opacity: 1.0;
+}
+
+SlideShow:hover .LeftMouseScrollRegion:hover
+{
+	background-color: mouse_active_bg_left;
+	opacity: 1.0;
+}
+
+SlideShow:hover .LeftMouseScrollRegion.Disabled
+{
+	opacity: 0.0;
+}
+
+SlideShow:hover .RightMouseScrollRegion.Disabled
+{
+	opacity: 0.0;
+}
+
+.UploadScreenshotMsgBox #MsgBoxDescriptionArea
+{
+	flow-children: down;
+}
+
+#AddCommentRegion
+{
+	width: 100%;
+	margin-top: 30px;
+
+	color: #f0f0f0ff;
+}
+
+#AddCommentRegion #AddCommentHint 
+{
+	color: #f0f0f0ff;
+}
+
+
+#AddCommentRegion:descendantfocus #AddCommentHint 
+{
+	color: #222222ff;
+}
+
+#AddCommentHint
+{
+	margin-left: 11px;
+	margin-top: 9px;
+	z-index: 1000;
+
+	transition-property: opacity, color;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+
+	opacity: 0.7;
+}
+
+.HideCommentHint #AddCommentHint
+{
+	opacity: 0.0;
+}
+
+
+#AddCommentRegion TextEntry
+{
+	width: 100%;
+	height: 150px;
+	white-space: normal;
+}
+
+#VisibilityDropDown
+{
+	margin-top: 12px;
+	width: 324px;
+}
+
+.UploadScreenshotMsgBox #MsgBoxButtons
+{
+	margin-top: 20px;
+}
+
+.UploadScreenshotMsgBox #MsgBoxBodyRegion
+{
+	width: 860px;
+
+	transition-property: transform, opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.UploadScreenshotMsgBox.DaisyWheelVisible #MsgBoxBodyRegion
+{
+	transform: translatex( 480px );
+}
+
+#VisibilityDropDownDropDownMenu
+{
+	z-index: msgbox_contextmenu_zindex;
+}
+
+#ThrobberRow, #Throbber
+{
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+#ThrobberRow
+{
+	width: 100%;
+	height: 85px;
+	margin-top: -76px;
+}
+
+
+.UploadInProgress #ThrobberRow
+{
+	opacity: 1.0;
+	flow-children: right;
+
+	margin-right: 60px;
+	horizontal-align: right;
+	vertical-align: bottom;
+
+}
+
+#ThrobberRowWrapper
+{
+	horizontal-align: right;
+	flow-children: right;
+}
+
+#ThrobberRow Label
+{
+	margin-left: 8px;
+	color: #ddddddff;
+	font-size: 40px;
+	vertical-align: center;
+}
+
+#Throbber
+{
+	width: 80px;
+	height: 80px;
+}
+
+.UploadInProgress #Throbber
+{
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+	
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	opacity: 1.0;
+}
+
+#MsgBoxButtonArea
+{
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+.UploadInProgress #MsgBoxButtonArea
+{
+	opacity: 0.0;
+}
+
+
+#SpoilerTag
+{
+	height: 48px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+// tickbox to turn togglebuttons into checkboxes
+#SpoilerTag .TickBox
+{
+	width: 36px;
+	height: 36px;
+	vertical-align: center;
+	background-color: ui_common_control; 
+}
+
+#SpoilerTag:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: ui_common_control;
+}
+
+#SpoilerTag:DescendantFocus .TickBox
+{	
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+}
+
+#SpoilerTag:DescendantFocus:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+}
+
+// and make room for the tickbox
+#SpoilerTag Label
+{
+	padding-left: 46px;
+	padding-top: 4px;
+	color: applabel;
+	width: 100%;
+	text-overflow: clip;
+	white-space: nowrap;
+	font-size: 24px;
+	line-height: 34px;
+}
+
+#SpoilerTag:hover Label
+{
+	color: #ffffffff;
+}
+
+#SpoilerTag:focus Label
+{
+	color: applabel;
+}

@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/store.css" />
+	</styles>
+	
+	<StoreGenres defaultfocus="GenreGrid">
+		<Panel id="Screenshots" />
+		<Panel id="Gradient" />
+		<Label id="GenreName" />
+		<Panel id="Border" />
+	</StoreGenres>
+</root>

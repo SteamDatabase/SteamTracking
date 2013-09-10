@@ -1,0 +1,18 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/keyboard.css" />
+	</styles>
+
+  <Keyboard>
+    <Image id="display" src="file://{images}/keyboard/a.png" />
+    <Panel id="kb" tabindex="auto" selectionpos="auto">
+      <Panel id="firstrow" class="KeyRow" >
+        <Button onactivate="PostCharacter();"><Image src="file://{images}/keyboard/a.png" /></Button>
+        <Button onactivate="PostCharacter();"><Image src="file://{images}/keyboard/b.png" /></Button>
+        <Button onactivate="PostCharacter();"><Image src="file://{images}/keyboard/c.png" /></Button>
+        <Button onactivate="PostCharacter();"><Image src="file://{images}/keyboard/d.png" /></Button>
+      </Panel>
+    </Panel>
+  </Keyboard>
+</root>

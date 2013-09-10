@@ -1,0 +1,59 @@
+//
+// Buttons.
+//
+
+Button, .Button
+{
+	padding: 8px 8px;
+	box-shadow: #eeeeee00 0px 0px 16px 0px;
+	border: 5px solid;
+	color: detailsdatalabel;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: deffontsize;
+	font-family: platformfont;
+	background-color: simplebutton;
+
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+
+Button:hover, .Button:hover
+{
+	transition-duration: 0.23s !immediate;
+
+	color: #ffffffff;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+Button:focus, .Button:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	horizontal-align: left;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: black;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	transform: translatex(7px);
+	padding-left: 0px;
+	padding-right: 14px;
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}

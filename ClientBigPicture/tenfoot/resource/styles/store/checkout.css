@@ -1,0 +1,1694 @@
+/* styles for the store page */
+
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
+
+//
+// Animations
+//
+@keyframes 'links-and-more-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	}
+
+	to
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+}
+
+
+//
+// App section button styles
+//
+CartLineItem, CheckoutGiftRecipientFriend, CheckoutAddFundsButton, Button
+{
+	width: 100%;
+	padding: 8px 7px 8px 7px;
+	margin: 4px 0px; 
+
+	color: detailsdatalabelfocus;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	border-style: solid;
+	border-width: 5px;
+	border-color: none;
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-timing-function: ease-in-out;
+}
+
+CheckoutAddFundsButton Label, Button Label
+{
+	width: 100%;
+	vertical-align: center;
+
+	font-family: platformfont;
+	font-size: 28px;
+	font-weight: bold;
+	transform: translatex(-7px);
+	color: detailsdatalabelfocus;
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+CheckoutAddFundsButton:focus Label, Button:focus Label
+{
+	color: #171717f5;
+	transform: translatex(0px);
+}
+
+Button:disabled Label
+{
+	color: #646a73;
+}
+
+CartLineItem:hover, CheckoutAddFundsButton:hover, Button:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+CheckoutAddFundsButton:hover Label, Button:hover Label
+{
+	transform: translatex(0px);
+}
+
+CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:focus, Button:focus
+{
+	transition-duration: 0.4s !immediate;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	
+	animation-name: links-and-more-button-focus; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ProminentButton
+{
+	width: 100%;
+	padding: 8px 7px 8px 7px;
+	margin: 4px 0px; 
+
+	color: #6c9771ff;
+	background-color: #6c977100;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-timing-function: ease-in-out;
+}
+
+.ProminentButton Label
+{
+	width: 100%;
+	vertical-align: center;
+
+	font-family: platformfont;
+	font-size: 28px;
+	font-weight: bold;
+	transform: translatex(-7px);
+	color: #86be3e;
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+.ProminentButton:focus Label
+{
+	color: #648e2e;
+	transform: translatex(0px);
+}	
+
+.ProminentButton:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #b1e37660 -3px -3px 6px 6px;
+}
+
+.ProminentButton:hover Label
+{
+	transform: translatex(0px);
+}
+
+.ProminentButton:focus
+{
+	color: #9ccd5eff;
+}
+
+.ProminentButton:selected
+{
+	transition-duration: 0.4s !immediate;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #9ccd5eff ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	
+	animation-name: links-and-more-button-focus; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ProminentButton:selected Label
+{
+	color: #648e2e;
+}
+
+
+ToggleButton
+{
+	flow-children: right;
+}
+
+ToggleButton .TickBox
+{
+	width: 50px;
+	height: 49px;
+	vertical-align: center;
+	margin-right: 8px;
+}
+
+ToggleButton:selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+ToggleButton:descendantfocus:selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: white;
+}
+
+ToggleButton Label
+{
+	vertical-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#AgreeTerms
+{
+	width: 100%;
+	padding: 8px 7px 8px 7px;
+	margin: 4px 0px;
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+
+	background-color: none;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+}
+
+#AgreeTerms:focus 
+{
+	transition-duration: 0.2s !immediate;
+	
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	padding-left: 12px;
+	transform: translatex(0px);
+	
+	animation-name: links-and-more-button-focus; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#AgreeTerms Label
+{
+	width: 500px;
+	height: 49px;
+	vertical-align: center;
+	margin-right: 8px;
+	font-size: 22px;
+	line-height: 24px;
+	color: detailsdatalabelfocus;	
+	
+	transform: translatex(-7px);
+	
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;	
+}
+
+#AgreeTerms:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+#AgreeTerms:focus Label
+{
+	color: #161718f5;
+	transform: translatex(0px);
+}
+
+#AgreeTerms:hover Label
+{
+	transform: translatex(0px);
+}
+
+#AgreeTerms .TickBox
+{
+	padding: 0px;
+	transform: translatex(-7px);
+
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+}
+
+#AgreeTerms:focus .TickBox,
+#AgreeTerms:hover .TickBox
+{
+	transform: translatex(0px);
+}
+
+
+//
+// Validation styles
+//
+TextEntry.FailedValidation,
+DropDown.FailedValidation,
+ToggleButton.FailedValidation .TickBox
+{
+	background-color: error_bgcolor;
+	color: #3c3c3cff;
+}
+
+DropDown.FailedValidation
+{
+		background-image: url( "file://{images}/store/Icon_DropDownArrowFocus.png" );
+		background-repeat: no-repeat;
+}
+
+//
+// Controller
+//
+CheckoutController
+{
+	width: 100%;
+	height: 100%;
+
+	transform: translate3d( 0px, 1280px, 100px );
+	opacity: 0.0;
+
+	transition-property: transform, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+CheckoutController.Visible
+{
+	transform: translate3d( 0px, 0px, 0px );
+	opacity: 1.0;
+}
+
+#Steps
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Status
+{
+	flow-children: down;
+	width: 100%;
+	height: 1010px;
+	vertical-align: bottom;
+	background-color: black;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+#Status.Waiting, #Status.Error
+{
+	opacity: 0.6;
+}
+
+#Status.Waiting .CartThrobber
+{
+	width: 180px;
+	height: 180px;
+	horizontal-align: center;
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+#StatusText
+{
+	font-size: 32px;
+	color: white;
+	width: 1000px;
+	text-align: center;
+}
+
+.CenteringPanel
+{
+	align: center center;
+	flow-children: down;
+}
+
+
+//
+// Common Checkout Styles
+//
+.HorizontalRule
+{
+	height: 3px;
+	width: 100%;
+	margin: 10px 22px 10px;
+
+	background-color: rule_color;
+}
+
+.VerticalRule
+{
+	height: 100%;
+	width: 3px;
+	height: 500px;
+	margin-left: 0px;
+	margin-right: 0px;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #21475700 ), color-stop( 0.35, #456673d0 ), color-stop( 0.85, #43626fd0 ), to( #21475700 ) );
+}
+
+.CheckoutTitleRow
+{
+	width: 100%;
+	padding: 10px 210px 10px 105px;
+	flow-children: right;
+	background-color: checkout_title_bg;
+}
+
+#CheckoutWalletSection
+{
+	flow-children: right;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.CheckoutWalletDescription
+{
+	color: #86be3e;
+	font-size: 34px;
+	line-height: 50px;
+	margin-right: 8px;
+}
+
+#WalletBalance
+{
+	color: checkout_title_bg;
+	font-size: 34px;
+	line-height: 50px;
+	font-weight: bold;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #78ab38 ), to( #5e852b ) );
+	border-radius: 8px;
+	padding: 0px 4px;
+}
+
+.CheckoutHeader
+{
+	width: 990px;
+}
+
+.CheckoutTitle
+{
+	font-size: 56px;
+	line-height: 70px;
+	color: applabelsolid;
+	white-space: nowrap;
+	width: 990px;
+	font-weight: bold;
+}
+
+.CheckoutBody
+{
+	width: 100%;
+	height: 100%;
+	padding: 0px 105px 0px 105px;
+	flow-children: right;
+	background-color: checkout_body_bg;
+
+	font-size: 27px;
+	line-height: 30px;
+	color: #e4e4e4;
+}
+
+.CheckoutBodyLeftColumn
+{
+	width: 988px;
+	height: 720px;
+	flow-children: down;
+	padding: 34px;
+}
+
+.CheckoutFormTextEntryLeft .CheckoutBodyLeftColumn
+{
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.5s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+.CheckoutBodyLeftColumn:descendantfocus
+{
+	background-color: checkout_body_descendantfocus_bg;
+}
+
+.CheckoutBodyRightColumn
+{
+	width: 714px;
+	height: 720px;
+	flow-children: down;
+	padding: 34px;
+	padding-bottom: 0px;
+}
+
+.CheckoutFormTextEntry .CheckoutBodyRightColumn
+{
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.5s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+.CheckoutBodyRightColumn:descendantfocus
+{
+	background-color: checkout_body_descendantfocus_bg;
+}
+
+#PaymentMethod 
+{
+	width: 100%;
+}
+
+
+
+//
+// General Checkout Panel Styles
+//
+.CheckoutStep
+{
+	width: 100%;
+	height: 948px;
+	vertical-align: bottom;
+	flow-children: down;
+	background-color: checkout_body_bg;
+
+	// transitions
+	transform: translate3d( 0px, 1280px, 1000px );
+	opacity: 0.0;
+	desaturation: 1.0;
+	wash-color: #0000005f;
+
+	transition-property: transform, opacity, desaturation, wash-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.CheckoutStep.InStoreStack
+{
+	transform: translate3d( 0px, -60px, 0px );
+	opacity: 1.0;
+	desaturation: 0.0;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+.CheckoutStep:descendantfocus
+{
+	transform: translate3d( 0px, 0px, 0px );
+	opacity: 1.0;
+	desaturation: 0.0;
+	wash-color: none;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+.SecondaryLabel
+{
+	color: secondary_label;
+	font-size: 22px;
+}	
+
+//
+// Shopping Cart
+//
+ShoppingCart.CheckoutStep
+{
+	transform: translate3d( 0px, 70px, 0px );
+	opacity: 1.0;
+}
+
+ShoppingCart .CheckoutBody
+{
+	flow-children: none;
+}
+
+.EmptyCartSection
+{
+	width: 100%;
+	height: 100%;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+.EmptyCart .EmptyCartSection
+{
+	opacity: 1.0;
+}
+
+#CartStatus
+{
+	max-width: 1300px;
+	align: center top;
+	margin-top: 300px;
+	
+	color: white;
+	font-size: 32px;
+}
+
+.CartSection
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+.EmptyCart .CartSection
+{
+	opacity: 0.0;
+}
+
+CartLineItem:descendantfocus StorePrice #FinalPrice
+{
+	color: #161718f5;	
+}
+
+Button:focus StorePrice #FinalPrice
+{
+	color: #161718f5;	
+}
+
+
+#CartItemCount
+{
+	font-size: 32px;
+	color: secondary_label;
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-right: 770px;
+	margin-left: 8px;
+}
+
+#LineItems
+{
+	flow-children: down;
+	overflow: squish scroll;
+	height: fill-parent-flow( 1.0 );
+	padding-right: 12px;
+}
+
+CartLineItem
+{
+	width: 100%;
+	min-height: 84px;
+	font-size: 28px;
+	flow-children: down;
+	padding: 8px 0px 0px 0px;
+	margin-left: 12px;
+}
+
+#ItemName
+{
+	color: applabelsolid;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+CartLineItem:focus #ItemName
+{
+	color: #171717f5;
+}
+
+CartLineItem .Loading
+{
+	opacity: 1.0;
+}
+
+.CartLineItemContents
+{
+	width: 100%;
+	flow-children: down;
+
+	transform: translatex( -7px );
+	
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+CartLineItem:descendantfocus .CartLineItemContents
+{
+	transform: translatex( 0px );
+}
+
+.CartItemNamePriceRow
+{
+	width: 100%;
+	flow-children: right;
+	padding: 0px 7px 0px 7px;
+}
+
+#ItemPrice
+{
+	horizontal-align: right;
+}
+
+.CartItemCouponRow
+{
+	width: 100%;
+	flow-children: right;
+	padding: 0px 7px 0px 7px;
+}
+
+#CartItemCouponName
+{
+	color: secondary_label;
+	font-size: 24px;
+	white-space: nowrap;
+}
+
+#CartItemCouponSavings
+{
+	color: secondary_label;
+	font-size: 24px;
+	horizontal-align: right;
+}
+
+#Notes
+{
+	flow-children: down;
+	padding: 0px 7px;
+}
+
+#Notes Label
+{
+	color: secondary_label;
+	font-size: 24px;
+	white-space: nowrap;
+}
+
+#PurchaseNotes
+{
+	flow-children: down;
+}
+
+#PurchaseNotes Label
+{
+	color: secondary_label;
+	font-size: 24px;
+	margin-top: 14px;
+}
+
+
+.CartSubtotalSection
+{
+	width: 100%;
+	padding: 16px;
+	background-color: ui_dark_common_control;
+	flow-children: down;
+	vertical-align: bottom;
+	margin: 12px 0px 0px 0px;
+	color: white;
+	font-size: 26px;
+}
+
+.ShoppingCartNote
+{
+	margin-left: 12px;
+}
+
+.ShoppingCartNote Label
+{
+	color: secondary_label;
+	font-size: 21px;
+	line-height: 26px;
+	font-style: italic;
+}
+
+#CouponTotalRow, #SubtotalRow
+{
+	flow-children: right;
+	width: 100%;
+}
+
+#CouponTotalRow Label
+{
+	font-size: 22px;
+	color: secondary_label;
+}
+
+#CartSubtotal
+{
+	horizontal-align: right;
+}
+
+#CouponTotal
+{
+	horizontal-align: right;
+}
+
+.CartInstructions
+{
+	color: #e4e4e4;
+	font-size: 26px;
+	padding-left: 6px;
+	margin-bottom: 20px;
+}
+
+
+//
+// Verify Email
+//
+.VerifyInstructions
+{
+	font-size: 38px;
+	line-height: 38px;
+	margin: 0px 0px 14px 0px;
+}
+
+#CheckEmail, #Complete
+{
+	flow-children: down;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.EmailVerified #CheckEmail
+{
+	opacity: 0.0;
+}
+
+#Complete
+{
+	opacity: 0.0;
+}
+
+.EmailVerified #Complete
+{
+	opacity: 1.0;
+}
+
+.VerifyHighlighted
+{
+	color: friendsingame_solid;
+	margin: 24px 34px 24px 34px;
+}
+
+
+//
+// Gift Recipient
+//
+CheckoutGiftRecipient
+{
+}
+
+CheckoutGiftRecipient #Loaded
+{
+	flow-children: down;
+}
+
+CheckoutGiftRecipient .CheckoutBodyRightColumn
+{
+	flow-children: none;
+}
+
+.CheckoutGiftReceiptOptionWrapper
+{
+	flow-children: down;
+}
+
+.HowToSendTitle
+{
+	margin-bottom: 12px;
+}
+
+.GiftRecipientOptions
+{
+	height: 100%;
+	flow-children: down;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+.EmailMyGift #EmailMyGiftOptions,
+.SendToFriend #SendToFriendOptions,
+.SendToInventory #SendToInventory
+{
+	opacity: 1.0;
+}
+
+.EmailMyGift #EmailMyGiftBtn,
+.SendToFriend #SendToFriendBtn,
+.SendToInventory #SendToInventoryBtn
+{
+	border-color: none;
+	background-color: ui_common_control;
+	padding-left: 10px;
+
+}
+
+.EmailMyGift #EmailMyGiftBtn:focus,
+.SendToFriend #SendToFriendBtn:focus,
+.SendToInventory #SendToInventoryBtn:focus
+{
+	border-color: #fdfefef0;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+}
+
+.InlineLabel
+{
+	margin-top: 26px;
+}
+
+.InlineLabelInset
+{
+	margin-top: 26px;
+	margin-left: 8px;
+}
+
+.InlineTextEntry
+{
+	margin-bottom: 20px;
+}	
+
+.InlineTextEntryInset
+{
+	margin-bottom: 20px;
+	margin-left: 8px;
+}	
+	
+CheckoutGiftRecipient TextEntry
+{
+	width: 100%;
+	margin-top: 8px;
+}
+
+#SendToFriendsList
+{
+	flow-children: down;
+	overflow: squish scroll;
+	padding-right: 20px;
+	padding-left: 10px;
+	
+	opacity: 1.0;
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+}
+
+CheckoutGiftRecipientFriend
+{
+	flow-children: right;
+}
+
+CheckoutGiftRecipientFriend Label
+{
+	vertical-align: center;
+
+	font-size: 24px;
+	font-weight: normal;
+	transform: none;
+	transition: none;
+}
+
+#SendToFriendName
+{
+	color: detailsdatalabelfocus;
+}
+
+CheckoutGiftRecipientFriend:descendantfocus #SendToFriendName
+{
+	color: #161718f5;
+}
+
+CheckoutGiftRecipientFriend AvatarImage
+{
+	width: 90px;
+	height: 90px;
+
+	border: 4px solid;
+	border-radius: 8px;
+	transform: translatex(-7px);
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+CheckoutGiftRecipientFriend:descendantfocus AvatarImage
+{
+	transform: none;
+}
+
+.SendToFriendText
+{
+	flow-children: down;
+}
+
+#SendToFriendWishes
+{
+	font-size: 24px;
+	color: #618fa2;
+}
+
+#SendToFriendOwns
+{
+	font-size: 24px;
+	color: error_color;
+}
+
+
+
+CartLineItem:focus, Button:focus #SendToFriendOwns, CheckoutGiftRecipientFriend:descendantfocus #SendToFriendOwns
+{
+	color: error_color_focused;
+}
+
+
+.SendToFriendText
+{
+	margin-left: 8px;
+	transform: translatex(-7px);
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+
+CheckoutGiftRecipientFriend:descendantfocus .SendToFriendText
+{
+	transform: translatex(0px);
+}
+
+
+//
+// Gift Note
+//
+CheckoutGiftNote
+{
+}
+
+CheckoutGiftNote #Loaded
+{
+	flow-children: down;
+}
+
+CheckoutGiftNote .CheckoutBodyRightColumn
+{
+	flow-children: down;
+}
+
+.GiftNoteHeader
+{
+	margin: 34px 0px 4px 0px;
+}
+
+.GiftMessageHeaderRow
+{
+	width: 100%;
+	margin: 34px 0px 4px 0px;
+	flow-children: right;
+}
+
+.GiftMsgRemaining
+{
+	horizontal-align: right;
+}
+
+#RecipientName
+{
+	width: 480px;
+}
+
+#GiftMessage
+{
+	height: 150px;
+	width: 100%;
+}
+
+#Sentiment
+{
+	width: 480px;
+}
+
+#SentimentDropDownMenu
+{
+	width: 480px;
+	height: 224px;
+	overflow: squish scroll;
+}
+
+#Signature
+{
+	width: 480px;
+}
+
+
+//
+// Payment Methods
+//
+CheckoutPaymentMethod #Loaded
+{
+	flow-children: down;
+	opacity: 1.0;
+}
+
+CheckoutPaymentMethod .CheckoutBodyLeftColumn
+{
+	flow-children: right;
+}
+
+CheckoutPaymentMethod .CheckoutBodyRightColumn
+{
+	flow-children: down;
+}
+
+CheckoutPaymentMethodFields
+{
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+}
+
+#SecondaryMethod
+{
+	// hack to get around label not wrapping properly because parent is fill-parent-flow so label
+	// desired size pass calculates to 1 line
+	width: 460px;
+}
+
+.PaymentMethodHeader
+{
+	margin: 20px 0px 4px 0px;
+}
+
+#PaymentMethod
+{
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#PaymentMethodDropDownMenu
+{
+	width: 400px;
+	height: 276px;
+	overflow: squish scroll;
+}
+
+#SavePaymentInfo
+{
+	margin-top: 34px;
+}
+
+#MustSavePaymentInfo
+{
+	margin-top: 34px;
+}
+
+#CreditCardFields
+{
+	visibility: visible;
+	flow-children: down;
+	margin-top: -20px;
+}
+
+#CreditCardNumber
+{
+	width: 400px;
+}
+
+.CreditCardExpirationRow
+{
+	flow-children: right;
+}
+
+#CreditCardMonth
+{
+	width: 100px;
+	margin-right: 10px;
+}
+
+#CreditCardMonthDropDownMenu
+{
+	width: 100px;
+	height: 480px;
+	overflow: squish scroll;
+}
+
+#CreditCardYear
+{
+	width: 140px;
+}
+
+#CreditCardYearDropDownMenu
+{
+	width: 140px;
+	height: 480px;
+	overflow: squish scroll;
+}
+
+#CreditCardSecurityCode
+{
+	width: 100px;
+}
+
+#PayPalFields
+{
+	visibility: collapse;
+}
+
+#ClickandBuyFields
+{
+	visibility: collapse;
+}
+
+#ClickandBuyFields Label
+{
+	height: 100%;
+	margin: 20px 0px 4px 0px;
+}
+
+
+#PayPalFields Label
+{
+	margin: 20px 0px 4px 0px;
+}
+
+#NoPaymentDataFields
+{
+	visibility: collapse;
+	padding: 20px 0px 4px 0px;
+}
+
+#WalletLow
+{
+	width: 450px;
+}
+
+
+//
+// Billing Info
+//
+CheckoutBillingInfo .CheckoutBodyLeftColumn
+{
+	flow-children: none;
+}
+
+CheckoutBillingInfo .CheckoutBodyRightColumn
+{
+	flow-children: down;
+}
+
+.BillingInfoHeader
+{
+	margin: 34px 0px 4px 0px;
+}
+
+.CheckoutBillingInfoLeftColumn
+{
+	width: 600px;
+	height: 500px;
+	margin-right: 24px;
+	flow-children: down;
+}
+
+.BillingNameRow
+{
+	flow-children: right;
+}
+
+.BillingFirstNameColumn
+{
+	flow-children: down;
+}
+
+.BillingLastNameColumn
+{
+	margin-left: 24px;
+	flow-children: down;
+}
+
+#FirstName, #LastName
+{
+	width: 290px;
+}
+
+#Address1, #Address2
+{
+	width: 100%;
+}
+
+#Country
+{
+	width: 600px;
+	margin-bottom: 28px;
+}
+
+#CountryDropDownMenu
+{
+	width: 600px;
+	max-height: 340px;
+}
+
+.CheckoutBillingInfoRightColumn
+{
+	width: 250px;
+	height: 500px;
+	position: 624px 0px 0px;
+	flow-children: down;
+}
+
+#City
+{
+	width: 248px;
+}
+
+#StateControls
+{
+	flow-children: down;
+}
+
+#State
+{
+	width: 248px;
+}
+
+#StateDropDownMenu
+{
+	width: 248px;
+	max-height: 400px;
+}
+
+#PostCode
+{
+	width: 248px;
+}
+
+#PhoneNumber
+{
+	width: 248px;
+}
+
+#LiveInCountry
+{
+	width: 700px;
+	margin: 0px 0px 4px 0px;
+	position: 0px 500px 0px;
+}
+
+.PaymentMethodLogos
+{
+	margin-top: 45px;
+	margin-left: 8px;
+	flow-children: down;
+}
+
+#PaymentMethodLogoRows
+{
+	flow-children: down;
+}
+
+.PaymentMethodLogoRow
+{
+	width: 470px;
+	margin-top: 8px;
+	flow-children: right;
+}
+
+.PaymentMethodLogos Image
+{
+	width: 100px;
+	height: 63px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+
+}
+
+
+//
+// Review
+//
+CheckoutReview .CheckoutBodyLeftColumn
+{
+	flow-children: down;
+}
+
+CheckoutReview .CheckoutBodyRightColumn
+{
+	flow-children: down;
+	padding-bottom: 0px;
+}
+
+#CheckoutReviewLineItems
+{
+	flow-children: down;
+}
+
+CheckoutReviewLineItem
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.CartItemNamePriceRow
+{
+	flow-children: right;
+	width: 100%;
+}
+
+
+#RecurringSubscriptionDescription
+{
+	margin: 8px 12px 0px 12px;
+	font-size: 24px;
+	color: #cfb53fff;
+}
+
+#ItemWarning
+{
+	visibility: collapse;
+}
+
+.ReviewTotalSection
+{
+	width: 100%;
+	padding: 20px;
+	background-color: ui_dark_common_control;
+	flow-children: down;
+	vertical-align: bottom;
+	margin-bottom: -34px;
+
+	color: #618fa2;
+	font-size: 22px;
+	text-align: right;
+	width: 100%;
+	text-align: right;
+}
+
+.ReviewTotal
+{
+	color: white;
+	font-size: 30px;
+}
+
+.ReviewTotalRow
+{
+	flow-children: right;
+	horizontal-align: right;
+}
+
+#ReviewSubTotal, #ReviewTax, #ReviewTotal
+{
+	width: 150px;
+	text-align: right;
+}
+
+.PaymentMethodReviewSection
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	padding-top: 0px;
+}
+
+.PaymentMethodReviewRows
+{
+	flow-children: down;
+	font-size: 21px;
+	line-height: 24px;
+	margin-top: 5px;
+}
+
+.PaymentMethodReviewRow
+{
+	width: 100%;
+	flow-children: right;
+}
+
+#ReviewPaymentMethodAmount1, #ReviewPaymentMethodAmount2
+{
+	color: #ffffff;
+	horizontal-align: right;
+}
+
+.PaymentMethodReviewGap
+{
+	margin-top: 12px;
+}
+
+.PaymentMethodReviewHeader
+{
+	width: 200px;
+	text-align: right;
+	font-size: 22px;
+	margin-right: 24px;
+	color: secondary_label;
+}
+
+#ReviewPaymentMethod, #ReviewGiftOption, #ReviewAddress, #ReviewPhone
+{
+	width: 380px;
+	font-size: 22px;
+	line-height: 24px;
+	margin-top: 5px;
+}
+
+#IncludesVat
+{
+	horizontal-align: right;
+}
+
+#ReviewCreditCardSecurityCode
+{
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+
+//
+// Confirmation
+//
+CheckoutConfirmation .CheckoutBodyLeftColumn
+{
+	flow-children: down;
+}
+
+CheckoutConfirmation .CheckoutBodyRightColumn
+{
+	flow-children: down;
+}
+
+.ConfirmationTextGap
+{
+	margin-top: 40px;
+}
+
+.ReceiptSection
+{
+	margin-top: 40px;
+	margin-left: 150px;
+	flow-children: down;
+}
+
+.ReceiptRow
+{
+	width: 750px;
+	flow-children: right;
+}
+
+#ReceiptAccount, #ReceiptTotal, #ReceiptCode
+{
+	width: 450px;
+	horizontal-align: left;
+	margin-left: 30px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.CheckoutConfirmationBtnGrouping
+{
+	flow-children: down;
+}
+
+
+//
+// Add Funds Page
+//
+CheckoutAddFundsButton
+{
+	flow-children: right;
+}
+
+CheckoutAddFundsButton Label
+{
+	width: fit-children;
+}
+
+#MinRequredText
+{
+	horizontal-align: right;
+	font-style: italic;
+	font-weight: normal;
+}
+
+
+//
+//  Checkout progress breadcrumbs
+//
+.CheckoutProgress
+{
+	opacity: 0.0;
+	width: 770px;
+	horizontal-align: left;
+	flow-children: right;
+	margin-left: 42px;
+	margin-top: 24px;
+}	
+
+.CheckoutStep:descendantfocus .CheckoutProgress
+{
+	opacity: 1.0;
+	margin-top: 24px;
+
+}	
+
+.CheckoutThisStep
+{
+	font-size: 21px;
+	color: white;
+
+
+}
+.CheckoutOtherStep
+{
+	font-size: 22px;
+	color: breadcrumb_label;
+}
+
+.CheckoutArrow
+{
+	background-image: url( "file://{images}/store/Icon_CheckoutArrow.png" );
+	margin-top: 8px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+
+DropDownMenu
+{
+	width: 324px;
+	padding: 8px 8px;
+}
+
+
+//
+// Microtransaction auth
+//
+#MicroTxnAuthErrorSection
+{
+	width: 100%;
+	height: 100%;
+}
+
+#MicroTxnAuthErrorSection Label
+{
+	max-width: 1300px;
+	align: center top;
+	margin-top: 300px;
+
+	color: white;
+	font-size: 32px;
+}
+
+CheckoutMicroTxnAuthLineItem
+{
+	flow-children: down;
+	width: 100%;
+}
+
+CheckoutMicroTxnAuthLineItem #MainRow
+{
+	flow-children: right;
+	width: 100%;
+}
+
+#ItemQuantity
+{
+	// use width so each description has equal spacing no matter how long quantity label is
+	width: 100px;
+
+	color: #79abc2;
+	font-size: 24px;
+	line-height: 27px; // vertically aligns text with description & price
+}
+
+.MicroTxnAuthDescription
+{
+	margin-bottom: 8px;
+}

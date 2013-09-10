@@ -1,0 +1,168 @@
+@define letterboxcolor: #000000d0;
+
+#OverlayBasePanel
+{
+	position: 0px 0px 0%;
+	width: 1920px;
+	height: 1080px;
+
+	font-family: platformfont;
+
+	opacity: 1.0;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+
+	transform: translateX( 0px );
+}
+
+#OverlayBasePanel.SlideAwayToLeft
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+#OverlayBasePanel.SlideAwayToRight
+{
+	opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+}
+
+#OverlayDashboard
+{
+	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.BehindMessageBox #OverlayDashboard
+{
+	desaturation: 0.4;
+	opacity: 0.85;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
+#OverlayDashboard.BehindScreenshotsSlideshow
+{
+	opacity: 0.0;
+}
+
+#DesktopPanels, #MinimalPanels
+{
+	width: 100%;
+	height: 100%;
+}
+
+#OverlayBG
+{
+	width: 100%;
+	height: 100%;
+}
+
+ #SelfAvatar 
+{
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 9px;
+
+	height: 95px;
+	width: 95px;
+}
+
+#HeaderLabels
+{
+	margin-left: 120px;
+	flow-children: down;
+	font-family: platformfont;
+
+	max-width: 1200px;
+}
+
+#GameName
+{
+	margin-top: -9px;
+	color: detailsdatalabelfocus;
+	font-size: 56px;
+	width: 100%;
+
+}
+
+#ClockWrapper
+{
+	color: messagecolorwash;
+	margin-top: 12px;
+	flow-children: right;
+}
+
+#ClockWrapper Label
+{
+	color: messagecolorwash;
+	text-align: left;
+	font-size: 36px;
+	line-height: 36px;
+	width: 170px;
+}
+
+#ClockSuffix
+{
+	text-align: right;
+}
+
+#CommunityFriendsStrip
+{
+	opacity: 1.0;
+
+	width: 100%;
+	height: 800px;
+
+	margin-top: 68px;
+	margin-left: 0px;
+}
+
+#OverlayDashboard
+{
+	width: 1920px;
+	height: 1080px;
+}
+
+#UpperRow
+{
+	margin-left: 90px;
+	margin-top: 50px;
+}
+
+#ContentsRow
+{
+	width: 100%;
+	height: 600px;
+	transform: translateY( 400px );
+
+	flow-children: right;
+	opacity: 0.85;
+	desaturation: 0.0;
+	//opacity-mask: url( "file://{images}/upper_row_mask.tga" ) 0.5;
+	
+
+	transition-property: transform, opacity-mask, opacity, desaturation;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+#ContentsRow:descendantfocus
+{
+	width: 100%;
+	height: 600px;
+
+	opacity: 1.0;
+	desaturation: 0.0;	
+	
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
+
+	flow-children: right;
+	transform: translateY( 335px );
+}
+

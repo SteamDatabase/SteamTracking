@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/mainmenu_communitybackground.css" />
+		<include src="tenfoot/resource/styles/friends/community_main.css" />
+	</styles>
+
+	<FriendsFriendListItemCommunity>
+		<Panel class="FriendsFriendListItemCommunityStripTileBkgnd" />
+		<Panel class="FriendsFriendListItemCommunityContainer">
+			<AvatarImage id="FriendPanelImage" class="FriendsFriendListItemCommunityAvatar" />
+			<Panel id="FriendPanelLabels" class="FriendsFriendListItemCommunityLabels">
+				<Label id="FriendPersonaName" class="FriendsFriendListItemCommunityPersonaName" />
+				<Label id="FriendStatus" class="FriendsFriendListItemCommunityStatus" />
+				<Label id="FriendStatusDetail" class="FriendsFriendListItemCommunityStatusDetail" />
+			</Panel>
+		</Panel>
+	</FriendsFriendListItemCommunity>
+</root>

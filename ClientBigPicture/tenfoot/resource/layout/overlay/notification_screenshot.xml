@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/notifications.css" />
+	</styles>
+
+	<Panel class="NotificationRoot">
+		<Panel class="NotificationFrame" />
+		<Panel id="DataContainer" class="DataContainer">
+			<Image id="ScreenshotImage" class="ScreenshotImage" />
+			<Label id="ScreenshotText" class="ScreenshotText" />
+		</Panel>
+		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+	</Panel>
+</root>

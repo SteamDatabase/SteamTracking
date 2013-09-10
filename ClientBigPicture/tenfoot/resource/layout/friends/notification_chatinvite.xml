@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/notifications.css" />
+	</styles>
+
+	<Panel class="NotificationRoot">
+		<Panel class="NotificationFrame" />
+		<AvatarImage id="AvatarImage" class="AvatarImage" />
+		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+		<Label id="FriendName" class="NotificationTitle" />
+		<Label id="MessageText" class="NotificationMessage" text="#Notification_ChatInvite" />
+	</Panel>
+</root>

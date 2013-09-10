@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="tenfoot/resource/styles/friends/friends.css" />
+	</styles>
+
+	<FriendListItemBase>
+		<AvatarImage id="FriendPanelImage" class="FriendsListItemAvatar" onmouseactivate="ShowFriendsProfileDetails();" oncontextmenu="ShowFriendsProfileDetails();" />
+		<Panel id="FriendPanelLabels" class="FriendsListItemPanelLabels">
+			<Label id="FriendPersonaName" class="FriendsListItemPersonaName" />
+			<Label id="FriendStatus" class="FriendsListItemStatus" />
+			<Label id="FriendStatusDetail" class="FriendsListItemStatusDetail" />
+		</Panel>
+		<FriendsIndicatorContainer id="Indicator" />
+	</FriendListItemBase>
+</root>

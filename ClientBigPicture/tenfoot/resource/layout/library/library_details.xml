@@ -1,0 +1,30 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/library/library.css" />
+	</styles>
+	
+	<LibraryAppDetails defaultfocus="PlayAction" >
+		<Panel id="DetailsBackground" class="DetailsBackground">
+			<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/library/library_app_details_bg_wash.png" />
+			<Panel id="BGScreenshotWrapper">
+				<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
+			</Panel>
+		</Panel>
+		<Panel id="UpperRow" class="UpperRow" >
+			<Label id="GameName" class="GameName" text="" />
+			<Label id="GameStatus" class="GameStatus" text="" />
+		</Panel>
+		<Carousel id="ContentsRow" class="ContentsRow" tabindex="0" selectionpos="0,0" focus="center" wrap="false" onmoveup="CloseAppDetails( true );">
+			<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" tabindex="0" selectionpos="0,0" mousecanactivate="iffocused" />
+			<LibraryController id="Controller" class="Controller DetailsDataPanel" tabindex="1" selectionpos="1,0" mousecanactivate="iffocused" /> 
+			<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" tabindex="2" selectionpos="2,0" mousecanactivate="iffocused" />
+			<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" tabindex="3" selectionpos="3,0" mousecanactivate="iffocused" />
+			<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel" tabindex="4" selectionpos="4,0" mousecanactivate="iffocused" />
+			<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" tabindex="5" selectionpos="5,0" mousecanactivate="iffocused" />
+			<LibraryWorkshop id="Workshop" class="Workshop DetailsDataPanel" tabindex="6" selectionpos="6,0" mousecanactivate="iffocused" />
+			<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" tabindex="7" selectionpos="7,0" mousecanactivate="iffocused" />
+			<LibraryGuides id="Guides" class="Guides DetailsDataPanel" tabindex="8" selectionpos="8,0" mousecanactivate="iffocused" />
+		</Carousel>
+	</LibraryAppDetails>
+</root>

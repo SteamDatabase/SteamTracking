@@ -1,0 +1,10 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/debugger.css" />
+	</styles>
+	
+	<DebugInheritedStylesHeader>
+		<Label text="#Debugger_InheritedStyleHeader" />
+		<Label id="ParentWithProperties" class="StyleLink" />
+	</DebugInheritedStylesHeader>	
+</root>

@@ -1,0 +1,49 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/storeapp.css" />
+	</styles>
+
+	<StoreAppPurchaseSection defaultfocus="PurchaseOptionBtn">
+		<Panel class="StoreAppPurchaseSection AppSection">
+			<Panel class="AppSectionWrapper">
+				<Image id="HeaderImage" />
+				<Panel class="AppSectionBody">
+					<Panel class="AppSectionSmallBody">
+					</Panel>
+					<Panel class="AppSectionLargeBody" childfocusonhover="true" tabindex="auto" selectionpos="auto">
+						<Label id="ComingSoon" text="#Store_Available_Date" />
+						<Panel id="DLCInfo">
+							<Label class="DLCLabel" text="#Store_AppPurchaseSection_DLC" />
+							<Label class="DLCRequiresBase" text="#Store_AppPurchaseSection_RequiresBase" />
+						</Panel>
+						<Panel class="PurchaseSectionButtons">
+							<Button id="ViewInLibraryBtn">
+								<Label text="#Store_AppPurchaseSection_ViewInLibrary" />
+							</Button>
+							<Button id="PurchaseOptionsBtn">
+								<Label id="PurchaseOptionsLabel" text="#Store_AppPurchaseSection_Options" />
+								<StorePrice id="PriceButton" />
+							</Button>
+							<Button id="PurchaseContentBtn">
+								<Label text="#Store_AppPurchaseSection_PurchaseDLC" />
+							</Button>
+							<Button id="PurchaseViewBaseBtn">
+								<Label text="#Store_AppPurchaseSection_ViewBaseGame" />
+							</Button>
+							<Button id="PurchaseDemoBtn" onactivate="InstallDemo()">
+								<Label text="#Store_AppPurchaseSection_Demo" />
+							</Button>
+							<Button id="PurchaseWishlistBtn">
+								<Label id="WishListText" text="#Store_AppPurchaseSection_AddToWishlist" />
+								<Panel class="WishListThrobber" />
+							</Button>
+						</Panel>
+						<Label id="RecurringSubscriptionDescription" text="" />
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+		<StorePrice id="PriceOverview" />
+	</StoreAppPurchaseSection>
+</root>

@@ -1,0 +1,166 @@
+//
+// CreateAccount panel
+//
+
+CreateAccountWizard .ScreenSaverMode, CreateAccountWizard .ShowingLoginProgress
+{
+	opacity: 0.0;
+	transition-duration: 0.4s;
+}
+
+//
+// Credentials Child
+//
+
+#RecommendedAccountNames
+{
+	opacity: 0.0;
+}
+
+.RecommendationsVisible #RecommendedAccountNames
+{
+	opacity: 1.0;
+}
+
+#RecommendedList
+{
+	height: 286px;
+	width: 490px;
+	padding: 5px;
+	flow-children: down;
+	background-color: #173a4c;
+	box-shadow: inset #00000040 2px 2px 8px 2px;
+	border-color: ui_common_control_border;
+	border-width: 5px;
+	border-style: solid;
+
+}
+
+#MessageLabel
+{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+
+//
+// Email Child
+//
+
+#PasswordLabelContainer
+{
+	width: buttonwidth;
+}
+
+#StrengthLabel
+{
+	horizontal-align: right;
+}
+
+//
+// Agreements child
+//
+
+#SSAButtonContainer
+{
+	flow-children: down;
+	margin-top: 50px;
+}
+
+#AgreementsLabel
+{
+	margin-bottom: 10px;
+}
+
+//
+// Agreements SSA
+//
+
+#ppa #SSATitle,#ppa #SSAButton,#ssa #PPATitle,#ssa #PPAButton
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+#ssa #SSATitle,#ssa #SSAButton,#ppa #PPATitle,#ppa #PPAButton
+{
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#AgreementsHTML
+{
+	height: 608px;
+	width: 100%;
+}
+
+#AgreementsHTML:descendantfocus
+{
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;	
+}
+
+#AgreementsHTML:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+}
+
+//
+// Creating Account child
+//
+
+CreatingAccountWizardChild #ThrobberContainer
+{
+	margin-top: 260px;
+	horizontal-align: center;
+}
+
+.Throbber
+{
+	opacity: 1.0;
+	width: 130px;
+	height: 130px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+//
+// Create account success
+//
+
+#CredentialsWrapper
+{
+	flow-children: down;
+	margin-top: 70px;
+}
+
+.BigWhiteLabel
+{
+	font-size: 42px;
+	font-family: platformfont;
+	color: white;
+}
+
+CreateAccountSuccessWizardChild #PasswordTextEntry
+{
+	width: 380px;
+	box-shadow: none;
+}
+
+#ShowPasswordButton
+{
+	width: 100px;
+	padding-left: 0px;
+}
+
+#ShowPasswordButton #ShowPasswordLabel
+{
+	horizontal-align: center;
+}

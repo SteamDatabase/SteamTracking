@@ -1,0 +1,1167 @@
+/*	Styles shared across all UI */
+
+@define white: #ffffff;
+@define red: #ff0000;
+@define green: #00ff00;
+@define blue: #0000ff;
+@define black: #000000;
+@define yellow: #ffff00;
+@define purple: #800080;
+@define backgroundgray : #383635ff;
+@define foregroundgray : #A6A4A1ff;
+@define transparent: #00000000;
+@define platformfont: "Motiva Sans";
+@define deffontsize: 22px;
+@define medfontsize: 28px;
+@define largefontsize: 32px;
+
+/* Z layers */
+@define top_non_popup_zindex:      	9999999;
+@define contextmenu_zindex:       	10000100;
+@define msgbox_zindex:            	90000000;
+// dropdowns/context menus inside of a msgbox must have a higher zindex than the msgbox itself
+@define msgbox_contextmenu_zindex:	90000100;	
+
+// must be bigger than message box z-index
+@define footer_zindex:            	90000500;
+
+// must be bigger than message box and footer z-indexes
+@define notification1_zindex:    100000100;
+@define notification2_zindex:    100000200;
+// must be the highest z-index
+@define all_top_zindex:       100000000000;
+
+/* Legend button colors */
+@define legendbuttongrey: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #68686880 ), color-stop( 1.0, #686868ff ) );
+@define legendbuttongreen: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b7c2480 ), color-stop( 1.0, #0b7c24ff ) );
+@define legendbuttonyellow: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ffe97f80 ), color-stop( 1.0, #ffe97fff ) );
+@define legendbuttonred: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ff532880 ), color-stop( 1.0, #ff5328ff ) );
+
+/* Text colors */
+@define tclegendbutton: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
+@define tclegendlabel: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
+@define tcstatictext: gradient( linear, 0% 0%, 0% 100%, from( #8aa5baff ), to( #5382a6ff ) );
+@define legendbuttonborder: #878c8eff;
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2ff ), to( #cbcbcb00 ) );
+@define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
+
+/* Main menu colors */
+@define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #7f8c91ff ), to( #9cacb2ff ) );
+@define tcexitrowhover: gradient( linear, 0% 0%, 0% 100%, from( #b8cbd2ff ), to( #c1d4dcff ) );
+@define tcexitrowfocus: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2cff ), to( #303030ff ) );
+@define tcmainbutton: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #abababff ) );
+@define tcmainbuttonselected: gradient( linear, 0% 0%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cf0 ) );
+@define tcselflabel: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b7c2460 ), color-stop( 1.0, #0b7c24cf ) );
+@define bgcolor: #0d1921ff;
+@define bgcolorwash: #4ea7dea0;
+@define bgcolorwashmedium: #3a9fde60;
+@define bgcolorwashlight: #3a9fde25;
+@define ui_common_control_hover: #99d8ffff;
+
+/* Friends Label Colors */
+@define friendsoffline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #818181ff ), color-stop( 0.85, #818181ff ), to( #818181e0 ) );
+@define friendsoffline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #252525ff ), color-stop( 0.85, #252525ff ), to( #252525e0 ) );
+@define friendsoffline_solid: #666666ff;
+
+@define friendsonline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #6caad9ff ), color-stop( 0.85, #6caad9ff ), to( #5382a600 ) );
+@define friendsonline_lightbg_to: #356285e0;
+@define friendsonline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #3d7199ff ), color-stop( 0.85, #3d7199ff ), to( friendsonline_lightbg_to ) );
+@define friendsonline_solid: #5994c2ff; 
+
+@define friendsingame_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #99cc56ff ), color-stop( 0.85, #99cc56ff ), to( #7aa646e0 ) );
+@define friendsingame_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #628c2aff ), color-stop( 0.85, #628c2aff ), to( #548020e0 ) );
+@define friendsingame_solid: #73a632ff;
+
+/* color used for account warnings - tint of A94847 value from 2' UI */
+@define accountwarning: #D15958FF;
+
+//
+// Blue UI colors for Bigfoot, all in one place to easily find and update them...
+//
+
+
+/* Fancy bg color with faded top right corner */
+@define bgwithgradient: #000000ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #002440ff ), color-stop( 0.46, #072d4a00 ) );
+@define bgwithgradientlogin: #000000ff, gradient( radial, 100% 100%, 1200px -500px, 100% 100%, from( #465e70ff ), color-stop( 0.16, #26598000 ) );
+
+/* Same deal, only the top left corner gets the fade */
+/* radial, centerx centery, offsetx offsety, radiusx radiusy, color stops */
+@define bgwithgradienttopleft: #000000ff, gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b00 ) );					
+
+//settings
+@define simplebutton: #4c7a992f;
+
+//system wide
+@define messagecolorwash: #5492b8ff;
+@define dialog_bg_color: #224661ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #224661 ), color-stop( 0.26, #242424ff ) );
+@define overlay_bg_color: #174b73aa;
+@define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #224661ff ), to( #262626ff ) );
+@define dropdown_box_bg: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), color-stop( 0.5, #224561ff ), to( #2c2c2cff ) );
+//@define box_shadow_on_color: #ffffff88;
+@define box_shadow_on_color: #7ebee599;
+@define box_shadow_off_color: #66a5cc00;
+@define dark_box_shadow_color: #17262e88;
+@define light_box_shadow_color: #66a5cc55;
+@define mouse_off_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f5300 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f53ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #3a789eff ), to( #0d1b2400 ) );
+@define mouse_off_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f3f5300 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f3f53ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #3a789eff ), to( #0d1b2400 ) );
+@define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
+@define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
+@define mainmenu_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
+@define animated_icon_wash_color: #0d4e80ff;
+@define button_hover_color: #1d4052ff;
+
+//checkout
+@define rule_color: gradient( linear, 0% 0%, 100% 0%, from( #213f5700 ), color-stop( 0.35, #455f73d0 ), color-stop( 0.85, #455f73d0 ), to( #213f5700 ) );
+@define checkout_title_bg: #213f57ff;
+@define checkout_body_bg: gradient( linear, 0% 0%, 0% 100%, from( #274b66ff ), to( #1d384dff ) );
+@define checkout_body_descendantfocus_bg: gradient( linear, 0% 0%, 0% 100%, from( #3c5e78ff ), to( #213f5700 ) );
+@define secondary_label: #628aa3ff;
+@define breadcrumb_label: #73a8c9ff;
+@define error_color: #cfb53fff;
+@define error_color_focused: #907e2cff;
+@define error_bgcolor: gradient( linear, 0% 40%, 0% 80%, from( #f2e39dff ), to( #d1be69ff ) );
+
+//library
+@define action_button: gradient( linear, 0% 0%, 0% 100%, from( #458ab566 ), to( #111112ff ) );
+@define link: #2a628cff;
+@define linkbright: #5297ccff;
+@define carousel_title: gradient( linear, 0% 0%, 0% 100%, from( #77b2d9ff ), to( #508ab3ff ) );
+@define ui_primary_color: #5492b8;
+@define ui_common_control: gradient( linear, 0% 0%, 0% 100%, from( #365b78ff ), to( #4b7696ff ) );
+@define ui_common_control2: gradient( linear, 0% 0%, 0% 100%, from( #365b7866 ), to( #4b7696ff ) );
+@define ui_dark_common_control: gradient( linear, 0% 0%, 0% 100%, from( #1a3140ff ), to( #13242eff ) );
+@define ui_common_control_border: #365b78dd;
+@define ui_common_control_border_off: #36668300;
+@define button_box_shadow_on_color: #7ebee566;
+@define slideshow_bg_library: gradient( linear, 0% 0%, 0% 110%, from( #000000dd ), to( #00000080 ) );
+@define all_games_hover: gradient( linear, 0% 0%, 0% 100%, from( #1c1f21ff ), to( #1f3b4dff ) );
+@define action_module: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #162938 ) );
+
+//friends
+@define friendstab: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff ), to( #33506670 ) );
+@define friendstabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a1b5ff ), to( #456c8aff ) );
+@define friendstabcurrenthover: gradient( linear, 0% 0%, 0% 100%, from( #91c8f285 ), to( #456c8a85 ) );
+@define friendstabdivider: #456c8aff; 
+@define friendschatinputbkgnd: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff  ), to( #20324070 ) );
+@define friendschatinputbkgnd_text: gradient( linear, 0% 0%, 0% 100%, from( #5685a850 ), to( #20324070 ) );
+@define chat_window_bg: gradient( linear, -2% 0%, -4% 100%, from( #0b2538ff ), color-stop( 0.5, #0b253800 ), color-stop( 0.6, #0e222e00 ), to( #182d3dcc ) );
+
+
+//store
+@define store_dark_wash: #0e578f77;
+@define store_colorful_focus: gradient( linear, 0% 0%, 0% 100%, from( #ffffff11 ), color-stop(0.35, #00000055 ), to( #000000ee  ) );
+@define ui_common_control_bright: #3885b5;
+@define slideshow_bg: gradient( linear, 0% 0%, 0% 100%, from( #000000aa ), to( #00000055 ) );
+@define image_wash: #4284ad55;
+@define storetab: gradient( linear, 0% 100%, 0% 0%, from( #456f8aff ), to( #33526670 ) );
+@define storetabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a3b5ff ), to( #456f8aff ) );
+@define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a3b585 ), to( #456f8a85 ) );
+@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
+@define applabel: gradient( linear, 0% 96%, 96% 100%, from( #d2d2d2ff ), color-stop( 0.90, #d2d2d2ff ), to( #97989800 ) );
+@define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #d2d2d2ff ), to( #abababff ) );
+@define applabelsolid: #d2d2d2ff;
+@define applabelselected: gradient( linear, 0% 0%, 96% 100%, from( #3c3c3cff ), color-stop( 0.85, #3c3c3cff ), to( #3c3c3c00 ) );
+@define applabelselectedsolid: #3c3c3cff;
+@define applabelselectedfade: gradient( linear, 80% 0%, 96% 0%, from( #3c3c3cff ), to( #3c3c3c00 ) );
+@define applabelselectednofade: gradient( linear, 0% 96%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cff ) );
+@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898ff ) );
+@define storelabel: gradient( linear, 0% 0%, 0% 100%, from( #d6d7d966 ), to( #d6d7d9aa ) );
+@define storelabelfade: gradient( linear, 80% 0%, 100% 0%, from( #d6d7d9ff ), to( #d6d7d900 ) );
+@define store_genre_wash: #0e6a8f77;
+@define store_genre_wash_focus: #4284ad00;
+@define store_details_wash: #113b57dd;
+@define store_main_wash: #427fad55;
+@define store_module: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #1f1f1f ) );
+
+//browser
+@define topbarbuttonbackground:  gradient( linear, 0% 0%, 0% 100%, from( #1b2329ff ), to( #13171aff ) );
+@define topbarbackground:  gradient( linear, 0% 0%, 0% 100%, from( #001e33 ), to( #13171a ) );
+@define webtab: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff ), to( #33506670 ) );
+@define webtabcurrentselection: gradient( linear, 0% 0%, 0% 80%, from( #91c8f2ff ), to( #2e5573ff ) );
+@define webtabcurrenthover: gradient( linear, 0% 0%, 0% 100%, from( #91c8f285 ), to( #456c8a85 ) );
+@define button_wash: #80bbe8ff;
+@define web_bg_color: gradient( linear, 0% 0%, 0% 20%, from( friendstabdivider ), to( #456c8a00 ) );
+@define web_bg_color2: gradient( linear, 0% 0%, 0% 20%, from( #456c8a66 ), to( #456c8a00 ) );
+@define reticule_color: #6ab0e5ff;
+@define reticule_color_dim: #aaaaaaff;
+@define history_ribbon: gradient( linear, 0% 30%, 100% 50%, from( #162938ff ), to( #4c8ebfcc ) );
+@define url_bar_bg: gradient( linear, 0% 0%, 0% 100%, from( #5685a950 ), to( #20314070 ) );
+@define url_bar_border: #2e4659e0;
+
+//daisywheel
+@define daisy_bg_color: #182d3dff;
+@define daisy_petal_color: #1d3547ff;
+@define daisy_bg_wash_color: gradient( linear, 0% 0%, 0% 100%, from( #182d3d00 ), color-stop( 0.30, #182d3dcc ), to( #182d3dff ) );
+@define daisy_petal_selection_color: #021726ff;
+@define daisy_petal_action_color: #2d5370ff;
+
+// ContextMenu - used in code -- dont rename
+@define ContextMenuFadoutTime: 0.2s; 
+
+DropDown
+{
+	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
+	background-repeat: no-repeat;
+	background-position: right 44px 50%;
+
+	font-size: 24px;
+	height: 50px;
+	font-family: platformfont;
+	padding: 4px 8px;
+	z-index: 0;
+	vertical-align: center;
+
+	box-shadow: fill box_shadow_off_color -4.5px -4.5px 18px 9px;
+}
+
+DropDown:focus
+{
+	background-image: url( "file://{images}/store/Icon_DropDownArrowFocus.png" );
+
+	border-style: solid;
+	border-color: #fdfefeff;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+DropDown.DropDownMenuVisible:focus
+{
+	background-color: ui_common_control;
+	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
+	border-color: #40606c;
+	color: applabel;
+}
+
+DropDown Label
+{
+	width: 100%;
+}
+
+DropDownMenu
+{
+	width: 500px;
+	flow-children: down;
+	background-color: dropdown_box_bg;
+	padding: 4px 8px;
+	color: #e1e1e1;
+	font-size: 28px;
+	overflow: squish scroll;
+
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 2px;
+	border-color: ui_common_control_border;
+	box-shadow: inset #00000080 2px 2px 8px 2px;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+DropDownMenu Label
+{
+	width: 100%;
+	padding: 4px 3px 4px 3px;
+	margin: 2px 0px;
+
+	color: detailsdatalabel;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	transform: translatex(-7px);
+	color: detailsdatalabel;
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+DropDownMenu Label:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	transform: translatex(0px);
+}
+
+DropDownMenu Label:focus
+{
+	color: applabelselected;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	transform: translatex(0px);
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+DropDownMenu.DropDownMenuVisible
+{
+	opacity: 1.0;
+	box-shadow: fill #00000066 0px 0px 10px 0px;
+
+	transition-property: box-shadow;
+}
+
+DropDown.DropDownMenuVisible:hover
+
+{
+	box-shadow: box_shadow_on_color -4px -4px 8px 8px;
+}
+
+DropDown.DropDownMenuVisible:focus
+{
+	background-color: ui_common_control;
+	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
+	border-color: ui_common_control_border;
+	color: #e1e1e1;
+	
+	animation-name: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Filter:hover
+{
+	horizontal-align: center;
+	box-shadow: fill box_shadow_on_color -4px -4px 5px 8px;
+	pre-transform-scale2d: 1.05;
+}
+
+
+.Filter, DropDownMenu.DropDownMenuVisible .Filter:hover
+{
+	horizontal-align: center;
+	box-shadow: fill #00000040 0px 0px 10px 0px;
+	
+	transition-property: pre-transform-scale2d, box-shadow;
+	transition-delay: 0.0s;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+
+
+TextEntry,
+DropDown,
+{
+	padding: 4px 8px;
+	color: #e1e1e1;
+	box-shadow: inset #00000080 2px 2px 8px 2px;
+
+	height: 50px;
+	background-color: ui_common_control;
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 2px;
+	border-color: ui_common_control_border;
+
+	transition-property: background-color, border, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+TextEntry:focus
+{
+	background-color: ui_common_control;
+
+	color: #333333;
+
+	border-style: solid;
+	border-color: #fdfefeff;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+TextEntry,
+DropDown,
+ToggleButton .TickBox
+{
+
+	padding: 4px 8px;
+	color: applabelsolid;
+	box-shadow: inset #00000080 2px 2px 8px 2px;
+
+
+	transition-property: background-color, border, box-shadow, color;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+TextEntry:focus,
+DropDown:focus,
+ToggleButton:descendantfocus .TickBox
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+	border-color: #ffffff;
+	color: applabelselectedsolid;
+	text-overflow: clip;
+	white-space: nowrap;
+}
+
+ToggleButton:descendantfocus .TickBox
+{
+	border-color: #ffffffff;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+}
+
+DropDown Label
+{
+	width: 100%;
+	margin-right: 30px;
+}
+
+
+DropDown:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	border-color: #ffffff;
+	color: #333333;
+}
+
+VerticalScrollBar
+{
+	width: 6px;
+	margin: 3px, 0px, 12px 3px;
+	border-radius: 0px;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c230 ), to( #d2d2d230 ) );
+	horizontal-align: right;
+	vertical-align: center;
+
+	// NOTE: The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
+	transition-property: transform;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+VerticalScrollBar .ScrollThumb
+{
+	background-color: #d2d2d2dd;
+
+	// NOTE: The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
+	transition-property: position;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+HorizontalScrollBar
+{
+	height: 6px;
+	margin: 3px;
+	width: 100%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c290 ), to( #d2d2d290 ) );
+	border-radius: 4px;
+	horizontal-align: left;
+	vertical-align: bottom;
+
+	// NOTE: The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
+	transition-property: transform;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+HorizontalScrollBar .ScrollThumb
+{
+	background-color: #d2d2d2dd;
+
+	// NOTE: The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
+	transition-property: position;
+	transition-duration: 0.20s;
+	transition-timing-function: ease-in-out;
+}
+
+
+Tooltip
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( white ), to( #e4e5f0 ) );
+	border-radius: 2.5px;
+	border: 1px solid #767676;
+	box-shadow: #80808090 4px 4px 4px 0px;
+	padding: 4px;
+	max-width: 600px;
+	font-family: platformfont;
+	font-size: 12px;
+
+	color: #111111ff;
+}
+
+.HorizontalRule
+{
+	height: 1px;
+	width: 100%;
+	margin: 1px 22px;
+
+	background-color: gradient( linear, -10% 0%, 110% 0%, from( #11111100 ), color-stop( 0.35, #999999d0 ), color-stop( 0.65, #999999d0 ), to( #11111100 ) );
+}
+
+.VerticalRule
+{
+	height: 100%;
+	width: 1px;
+	margin: 22px 1px;
+
+	background-color: gradient( linear, 0% -10%, 0% 110%, from( #11111100 ), color-stop( 0.35, #999999d0 ), color-stop( 0.65, #999999d0 ), to( #11111100 ) );
+}
+
+@keyframes 'main-button-glow-movement'
+{
+	0%
+	{
+		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+
+	8%
+	{
+		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+
+	48%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	52%
+	{
+		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	100%
+	{
+		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+}
+
+@keyframes 'main-button-glow-movement-small'
+{
+	0%
+	{
+		box-shadow: fill box_shadow_on_color -3px -3px 15px 6px;
+	}
+
+	8%
+	{
+		box-shadow: fill box_shadow_on_color -3px -3px 15px 6px;
+	}
+
+	48%
+	{
+		box-shadow: fill box_shadow_on_color -0.8px -0.8px 6px 1.6px;
+	}
+
+	52%
+	{
+		box-shadow: fill box_shadow_on_color -0.8px -0.8px 6px 1.6px;
+	}
+
+	100%
+	{
+		box-shadow: fill box_shadow_on_color -3px -3px 14px 6px;
+	}
+}
+
+@keyframes 'main-button-glow-movement-no-fill'
+{
+	0%
+	{
+		box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+
+	8%
+	{
+		box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+
+	48%
+	{
+		box-shadow: box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	52%
+	{
+		box-shadow: box_shadow_on_color -1.5px -1.5px 6px 3px;
+	}
+
+	100%
+	{
+		box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	}
+}
+
+//used in the store speicals, etc. browse views for filters/tabs
+@keyframes 'filter-button-glow-movement'
+{
+	0%
+	{
+	box-shadow: fill light_box_shadow_color 3px 16px 40px -32px;
+	}
+
+	8%
+	{
+	box-shadow: fill light_box_shadow_color 3px 16px 40px -32px;
+	}
+
+	48%
+	{
+	box-shadow: fill light_box_shadow_color 0px 13px 60px -26px;
+	}
+
+	52%
+	{
+	box-shadow: fill light_box_shadow_color 0px 13px 60px -26px;
+	}
+
+	100%
+	{
+	box-shadow: fill light_box_shadow_color 3px 16px 40px -32px;
+	}
+}
+
+@keyframes 'quick-blur'
+{
+	0%
+	{
+		blur: none;
+	}
+
+	50%
+	{
+		blur: gaussian( 1.25 );
+	}
+
+	100%
+	{
+		blur: none;
+	}
+}
+
+
+//
+// AvatarImage related styles
+//
+
+AvatarImage.AvatarFriendOffline
+{
+	border-color: friendsoffline_solid;
+}
+
+AvatarImage.AvatarFriendOnline
+{
+	border-color: friendsonline_solid;
+}
+
+
+AvatarImage.AvatarFriendInGame
+{
+	border-color: friendsingame_solid;
+}
+
+
+//
+// HTTP styles used by labels
+//
+
+a
+{
+	color: link;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+b
+{
+	font-weight: bold;
+}
+
+i
+{
+	font-style: italics;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+em
+{
+	font-style: italics;
+}
+
+h1
+{
+    font-weight: bold;
+}
+
+h2
+{
+    font-weight: bold;
+}
+
+
+//
+// VU Meter styles
+//
+.VoiceBarContainer
+{
+	background-color: simplebutton;
+	height: 70px;
+	width: 200px;
+	border-radius: 8px;
+	flow-children: right;
+	border: 5px solid #1c333dff;
+	padding-left: 1px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 14px;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.20s;
+	border-color: none;
+	border-style: solid;
+	border-width: 5px;
+
+}
+
+.DisplayOnlyVoiceBarContainer
+{
+	background-color: #44444400;
+	height: 70px;
+	width: 200px;
+	border-radius: 8px;
+	flow-children: right;
+	border: 5px solid #1c333dff;
+	padding-left: 6px;
+	padding-right: 4px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 14px;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.20s;
+	border-color: none;
+	border-style: solid;
+	border-width: 5px;
+}
+
+FriendsChatDialog .VoiceBarContainer
+{
+	background-color: #44444420;
+	height: 90px;
+	width: 208px;
+	border-radius: 8px;
+	flow-children: right;
+	border: 5px solid #1c333dff;
+	padding-left: 6px;
+	padding-right: 4px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 4px;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.20s;
+	border-color: none;
+	border-style: solid;
+	border-width: 5px;
+
+}
+
+.VoiceBar
+{
+	height: 100%;
+	width: 8px;
+	margin-left: 5px;
+	margin-right: 5px;
+	vertical-align: bottom;
+	background-color: #99999999;
+	opacity: 0.5;
+
+	transition-property: background-color;
+	transition-duration: 0.05s;
+	transition-timing-function: ease-in-out;
+}
+
+.VoiceBarContainer:focus .VoiceBar
+{
+	opacity: 0.9;
+}
+
+
+#Bar1.VoiceBar { height:  5px; }
+#Bar2.VoiceBar { height: 10px; }
+#Bar3.VoiceBar { height: 15px; }
+#Bar4.VoiceBar { height: 20px; }
+#Bar5.VoiceBar { height: 25px; }
+#Bar6.VoiceBar { height: 30px; }
+#Bar7.VoiceBar { height: 35px; }
+#Bar8.VoiceBar { height: 40px; }
+#Bar9.VoiceBar { height: 45px; }
+#Bar10.VoiceBar { height: 50px; }
+
+.VoiceBarActive
+{
+	background-color: ui_primary_color;
+	transition-duration: 0.3s;
+}
+
+// read-write VUs can take focus / be edited
+.VoiceBarContainer:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
+	pre-transform-scale2d: 1.0;
+	border-color: white;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+}
+
+
+// read-write VUs can take focus / be edited
+.VoiceBarContainer:selected
+{
+	pre-transform-scale2d: 1.15;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+
+//
+// Home & Exit Button styles
+//
+
+.HomeButton
+{
+	opacity: 0.0;
+
+	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 3px;
+	border: 2px solid #4F647200;
+	width: 79px;
+	height: 79px;
+	margin-left: 1752px;
+	margin-top: 41px;
+
+	transition-property: opacity, box-shadow, background-color, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.4s;
+}
+
+.CursorVisible .HomeButton
+{
+	opacity: 0.8;
+}
+
+.HomeButton:hover
+{
+	opacity: 1.0;
+	
+	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE00 ), to( #EEEEEE00 ) );
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+.StackDepth1 .HomeButton
+{
+	opacity: 0.0;
+	transform: translatey( -250px );
+}
+
+.ExitButton
+{
+	opacity: 0.0;
+	
+	horizontal-align: right;
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( #EEEEEE30 ), to( #EEEEEE00 ) );
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 3px;
+	border: 2px solid #4F647200;
+	width: 79px;
+	height: 79px;
+	margin-right: 104px;
+	margin-top: 41px;
+	
+	transition-property: opacity, box-shadow, background-color, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.4s;
+}
+
+.CursorVisible .ExitButton
+{
+	opacity: 0.8;
+}
+
+
+.ExitButton:hover
+{
+	opacity: 1.0;
+	
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( #EEEEEE00 ), to( #EEEEEE00 ) );
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+}
+
+.StackDepth1 .ExitButton
+{
+	opacity: 0.0;
+	transform: translatey( -250px );
+}
+
+@keyframes 'links-and-more-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	}
+
+	to
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+}
+
+
+// 
+// ContextMenu
+//
+.ContextMenu
+{
+	width: 100%;
+	height: 100%;
+	transition-property: opacity, transform;
+	transition-duration: ContextMenuFadoutTime;
+	transition-timing-function: ease-in-out;
+	opacity: 1.0;
+
+	z-index: contextmenu_zindex;
+
+
+	visibility: visible;
+}
+
+.ContextMenu.Destructing
+{
+	transform: translatex( 0px );
+	opacity: 0.0;
+}
+
+
+.ContextMenuBody
+{
+	padding: 10px 5px 10px 5px;
+
+	flow-children: down;
+	max-width: 350px;
+
+	opacity: 1.0;
+
+	position: 42% 42% 0px;
+
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	color: #000000ff;
+	background-color: dialog_bg_color;
+}
+
+
+.ContextMenuBodyCentered
+{
+	padding: 10px 5px 10px 5px;
+
+	flow-children: down;
+	horizontal-align: center;
+	vertical-align: center;
+	max-width: 650px;
+
+	opacity: 1.0;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	color: #000000ff;
+	background-color: dialog_bg_color;
+}
+
+
+.CursorVisible .ContextMenuBody
+{
+	margin-bottom: 0px;
+}
+	
+
+.CursorVisible .ContextMenuBodyCentered
+{
+	margin-bottom: 0px;
+}
+	
+
+.ContextMenuBody Button, .ContextMenuBodyCentered Button, .ContextMenuBody ParentalButton, .ContextMenuBodyCentered ParentalButton
+{
+	padding: 8px 8px;
+	box-shadow: #eeeeee00 0px 0px 16px 0px;
+	border: 5px solid;
+	color: tcexitrow;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	min-width: 200px;
+
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+
+.ContextMenuBody Label, .ContextMenuBodyCentered Label
+{
+	horizontal-align: left;
+	color: #d0d0d0ff;
+	transform: translatex(0px);
+	padding-left: 0px;
+	transition-property: color, position, transform;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+	font-size: deffontsize;
+	font-family: platformfont;
+	text-overflow: ellipsis;
+	max-height: 40px;
+	width: 100%;
+
+	padding-right: 14px;
+}
+
+.ContextMenuBody Button:focus Label, .ContextMenuBodyCentered Button:focus Label, .ContextMenuBody ParentalButton:focus Label, .ContextMenuBodyCentered ParentalButton:focus Label
+{
+	horizontal-align: left;
+	color: #171717f5;
+	transform: translatex(7px);
+	padding-left: 0px;
+	padding-right: 14px;
+}
+
+.ContextMenuBody Button:hover, .ContextMenuBodyCentered Button:hover, .ContextMenuBody ParentalButton:hover, .ContextMenuBodyCentered ParentalButton:hover
+{
+	transition-duration: 0.23s !immediate;
+
+	color: tcexitrowhover;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+.ContextMenuBody Button:focus, .ContextMenuBodyCentered Button:focus, .ContextMenuBody ParentalButton:focus, .ContextMenuBodyCentered ParentalButton:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ContextMenuBody ParentalButton.Locked, .ContextMenuBodyCentered ParentalButton.Locked
+{
+	wash-color: #444444ff;
+	color: #ffffffff;
+}
+
+//
+// Standard label styles.
+//
+
+.StdTitle
+{
+	font-size: 54px;
+	padding-top: 6px;
+    padding-bottom: 40px;
+	font-family: platformfont;
+    color: white;
+}
+
+.StdLabel
+{ 
+	font-size: deffontsize;
+	font-family: platformfont;
+    color: tcstatictext;
+}
+
+.StdLabelMed
+{
+	font-size: medfontsize;
+	margin-top: 10px;
+	font-family: platformfont;
+	color: tcstatictext;
+}
+
+.StdLabelLarge
+{ 
+	font-size: largefontsize;
+	font-family: platformfont;
+    color: tclegendlabel;
+}

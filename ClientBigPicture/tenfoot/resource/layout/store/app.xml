@@ -1,0 +1,41 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/storeapp.css" />
+	</styles>
+	
+	<StoreApp class="Stackable" hittest="false" defaultfocus="ImageCarousel">
+		<Panel class="StoreAppContents">
+			<Panel id="DetailsBackground">
+				<StoreScreenshotBG id="ScreenshotBG" />
+			</Panel>
+			<Panel id="Loading">
+				<Label id="LoadingStatus" />
+				<Panel class="Throbber" />
+				<StoreAgeGate id="AgeGate" />
+			</Panel>
+			<Panel id="Loaded" tabindex="auto" selectionpos="auto">
+				<Panel id="TitleRow">
+					<Panel class="TitleSection">
+						<Label class="AppTitle" text="#Store_AppName" />
+						<Label id="AppAvailability" text="#Store_AvailableNow" />
+					</Panel>
+					<Panel id="HighlightedRecommendationSection">
+						<AvatarImage id="FriendRecommendAvatar" />
+						<Image id="FriendRecommendBubble" />
+						<Label id="FriendRecommendationText" />
+					</Panel>
+				</Panel>
+				<Carousel selectionposboundary="vertical" id="ImageCarousel" hittest="false" tabindex="0" selectionpos="0,0" focus="left" focus-offset="105px" wrap="false" drawframe="false"
+					x-offset="342px" focus-x-offset="110px,600px" z-offset="0px" focus-z-offset="-20px, -70px, -100px, -130px, -150px" onmoveup="StoreRemoveFromStack();" />
+				<Carousel id="AppSections" hittest="false" tabindex="1" selectionpos="0,1" focus="edge" focus-offset="105px" wrap="false" drawframe="false" selectionposboundary="vertical" >
+					<StoreAppPurchaseSection id="PurchaseSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
+					<StoreAppDescriptionSection id="DescriptionSection" class="AppSection StoreAppDescriptionSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
+					<StoreAppDetailsSection id="DetailsSection" class="AppSection StoreAppDetailsSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
+					<StoreAppFriendsSection id="FriendsSection" class="AppSection StoreAppFriendsSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
+					<StoreAppReviewsSection id="ReviewsSection" class="AppSection StoreAppReviewsSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
+				</Carousel>
+			</Panel>
+		</Panel>
+	</StoreApp>	
+</root>

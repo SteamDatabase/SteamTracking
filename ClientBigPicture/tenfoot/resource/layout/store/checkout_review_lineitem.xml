@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/store/checkout.css" />
+	</styles>
+	
+	<CheckoutReviewLineItem tabindex="auto" selectionpos="auto">
+		<Panel class="CartItemNamePriceRow">
+			<Label id="ItemName" text="" />
+			<StorePrice id="ItemPrice" ShowDiscount="false" />
+		</Panel>
+		<Label id="RecurringSubscriptionDescription" text="" />
+		<Label id="ItemWarning" text="" />
+	</CheckoutReviewLineItem>	
+</root>

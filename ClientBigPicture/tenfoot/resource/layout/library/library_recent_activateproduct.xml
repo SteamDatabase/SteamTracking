@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/button.css" />
+		<include src="tenfoot/resource/styles/library/library_recent_activateproduct.css" />
+	</styles>
+
+	<LibraryRecentActivateProductDialog class="TenfootMsgBox" onmouseactivate="ActivateCancel()" defaultfocus="ProductCode">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    		<Label class="StdTitle" text="#Library_ActivateProduct_Title" />
+
+    		<Label class="StdLabelLarge" text="#Library_ActivateProduct_Intro" />
+    		<Label class="StdLabelMed" text="#Library_ActivateProduct_CodeLabel" />
+	    	<TextEntry id="ProductCode"
+		       	textinputid="ProductCodeTextEntry"
+    			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+
+    		<Label class="StdLabelLarge" text="#Library_ActivateProduct_AgreementDesc" />
+            <Button id="ViewAgreements" onactivate="ActivateViewAgreements()">
+                <Label text="#UI_ViewAgreements" />
+            </Button>
+
+            <Panel id="MsgBoxButtons">
+                <Button onactivate="ActivateAgree()">
+                    <Label text="#Library_ActivateProduct_Activate" />
+                </Button>
+                <Button onactivate="ActivateCancel()">
+                    <Label text="#UI_Cancel" />
+                </Button>
+            </Panel>        
+        </Panel>
+	</LibraryRecentActivateProductDialog>
+</root>
