@@ -116,7 +116,7 @@
 								</Panel>
 							</Button>
 
-							<Button id="Touch1ButtonOuter" class="BindingButton TouchButtonOuter" selectionpos="1,7" onmoveright="SetInputFocus( R3Button )" onactivate="EditButtonBinding( toouch_button_1 );">
+							<Button id="Touch1ButtonOuter" class="BindingButton TouchButtonOuter" selectionpos="1,7" onmoveright="SetInputFocus( R3Button )" onactivate="EditButtonBinding( touch_button_1 );">
 								<Label id="Touch1ActionName" class="ActionLabel" />
 								<Label id="Touch1ActionMapping" class="ActionMapping" />
 								<Panel id="Touch1Button" class="TouchButton">

@@ -88,7 +88,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxBodyRegion, .MsgBoxBodyRegion
 {
 	width: 45%;
-	padding: 30px 40px 40px 40px;
+	padding: 50px 40px 40px 40px;
 	background-color: message_box_bg;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 
@@ -114,6 +114,8 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	color: detailsdatalabel;
 	font-family: platformfont;
 	font-weight: light;
+	padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 #MsgBoxButtonArea
@@ -127,7 +129,8 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	font-size: 32px;
 	font-family: platformfont;
 	min-height: 130px;
-	color: #f2f2f2ff;
+	color: tcstatictext;
+	margin-top: 10px;
 }
 
 #MsgBoxButtons
@@ -156,7 +159,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtons Button, #MsgBoxButtonsVertical Button
 {
 	flow-children: right;
-	margin-left: 26px;
+	margin-right: 26px;
 	padding: 4px 8px 4px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;

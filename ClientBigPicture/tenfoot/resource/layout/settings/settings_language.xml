@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_Language class="SettingsSection" defaultfocus="LanguageDropdown">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Language" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+
+				<Panel class="HorzContainer">
+					<Label class="SettingsCallout" text="#SettingsLanguage_Intro" />
+				</Panel>
+
+				<Panel class="HorzContainer">
+					<DropDown id="Language" class="Filter" />
+				</Panel>
+		</Panel>
+	</SettingsPanel_Language>
+
+</root>

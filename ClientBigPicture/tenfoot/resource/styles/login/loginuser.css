@@ -83,17 +83,17 @@ LoginUser:descendantfocus
 	horizontal-align: center;
 	flow-children: down;
 	height: fit-children;
-	margin-top: 35px;
+	margin-top: 40px;
 }
 
 .Bezel
 {
 	border-width: 0px;
-	border-radius: 31px;
+	border-radius: 27px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 
-	height: 380px;
-	width: 380px;
+	height: 375px;
+	width: 375px;
 
 	horizontal-align: center;
 	vertical-align: center;
@@ -110,7 +110,7 @@ LoginUser:descendantfocus
 	box-shadow: fill #00000022 -4px -4px 4px 8px;
 	background-color: #000000;
 	border-width: 0px;
-	border-radius: 20px;
+	border-radius: 18px;
 }
 
 #TestPanelTextEntry
@@ -183,14 +183,15 @@ LoginUser:descendantfocus
 {
 	height: 105px;
 	width: 105px;
-	border-radius: 12px;
+	border-radius: 9px;
+	box-shadow: #00000044 0px 0px 04px 0px;
 }
 
 .ShowMessageArea .Bezel,.ShowMore .Bezel
 {
-	height: 115px;
-	width: 115px;
-	border-radius: 16px;
+	height: 117px;
+	width: 117px;
+	border-radius: 12px;
 	horizontal-align: left;
 	vertical-align: center;
 }
@@ -215,6 +216,7 @@ LoginUser:descendantfocus
 	font-size: 44px;
 	horizontal-align: left;
 	text-align: left;
+	margin-left: 0px;
 }
 
 .ShowMessageArea .UserContainer,.ShowMore .UserContainer

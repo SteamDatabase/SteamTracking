@@ -748,13 +748,13 @@ LibraryAppDetails .ContentsRow
 
 ParentalButton.Locked
 {
-	wash-color: #444444ff;
+	wash-color: parental_locked_wash;
 	color: #ffffffff;
 }
 
 .LinksAndMoreButton.Locked
 {
-	wash-color: #666666ff;
+	wash-color: parental_locked_wash;
 }
 
 .LinksAndMoreButton.Locked:focus
@@ -764,7 +764,7 @@ ParentalButton.Locked
 
 .LinksAndMoreButton.Locked Label
 {
-	width: 80%;
+	width: 90%;
 }
 
 .LinksAndMoreButton Image
@@ -2866,6 +2866,7 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 .PlayAction .PlayTimeBody
 {
 	margin: 20px;
+	margin-top: 10px;
 	width: 100%;
 	height: 120px;
 	flow-children: down;
@@ -2891,14 +2892,26 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 
 #LaunchingStatus
 {
+	opacity: 0.0;
 	width: 100%;
-	height: 182px;
+	max-height: 136px;
+	text-align: center;
 	margin: 22px;
-	margin-bottom: -50px;
-	margin-top: 28px;
+	margin-bottom: 20px;
+	margin-top: 0px;
 	font-size: 22px;
-	color: playtimetitle;
+	color: applabelsolid;
 	z-index: 1000;
+	text-align: center;
+
+	transition-property: opacity;
+	transition-duration: 0.25s;
+}
+
+
+.PlayActionFullWrapper:descendantfocus #LaunchingStatus
+{
+	opacity: 1.0;
 }
 
 .PlayAction .PlayTimeValue
@@ -2915,17 +2928,19 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 
 .PlayAction .ButtonBody
 {
-	transition-property: background-color, pre-transform-scale2d, border, opacity !immediate; 
+	transition-property: background-color, pre-transform-scale2d, border, opacity !immediate;
 	transition-duration: 0.18s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0.0s;
+	vertical-align: bottom;
+	margin-bottom: 40px;
 
 	opacity: 0.0;
 }
 
 .PlayAction .ButtonBody
 {
-	margin-top: 95px;
+	margin-top: 0px;
 	horizontal-align: center;
 	opacity: 0.0;
 	border-radius: 50%;
@@ -2934,7 +2949,7 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	border-width: 5px;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( dark_box_shadow_color ), to( ui_primary_color ) );
 	//background-color: ui_dark_common_control;
-	
+
 	box-shadow: button_box_shadow_on_color -6px -6px 12px 12px;
 
 }
@@ -3223,6 +3238,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	width: fit-children;
 	padding: 0px 40px;
 	flow-children: right;
+	margin-left: 130px;
 	font-size: 36;
 	horizontal-align: center;
 	transform: translate3d( 0px, 400px, -100px );
@@ -3273,7 +3289,8 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	flow-children: down;
 
 	margin: 0px -5px;
-	margin-left: 90px;
+	margin-left: 4px;
+	margin-right: 4px;
 	box-shadow: #00000044 -2px -2px 4px 4px;
 
 	border-style: solid;
@@ -3291,7 +3308,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 
 #AddContent
 {
-	margin-left: 20px;
+	margin-left: 16px;
 	width: 90px;
 	height: 90px;
 
@@ -3444,13 +3461,13 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 
 .GamesGrid .AppGridItem .AppImage
 {
-	box-shadow: #00000033 -4px -4px 8px 8px;
+	box-shadow: inset #000000aa 0px 0px 4px 0px;
 	background-color: black;
 }
 
 .AppGridItem:focus .AppImage
 {
-	box-shadow: inset #00000033 0px 0px 4px 0px;
+	box-shadow: #00000033 -4px -4px 8px 8px;
 }
 
 #FastScrollWrapper

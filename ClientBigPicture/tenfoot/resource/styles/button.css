@@ -41,8 +41,6 @@ Button:focus, .Button:focus
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	transform: translatex(7px);
-	padding-left: 0px;
-	padding-right: 14px;
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, transform;
@@ -56,4 +54,11 @@ Button:focus, .Button:focus
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+
+
+Button:focus .Checkbox, .Button:focus .Checkbox
+{
+	transform: translatex( 7px );
 }

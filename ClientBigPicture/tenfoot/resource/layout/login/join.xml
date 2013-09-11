@@ -22,6 +22,7 @@
 			</Panel>
 			<Carousel class="JoinCarousel" id="JoinCarousel" selectionpos="0,1" focus="Center" wrap="false" x-offset="140px" focus-x-offset="140px" >
 			</Carousel>
+			<Image id="JoinGlow" class="JoinGlow" src="file://{images}/homeglow.png" />
 		</Panel>
 	</Join>
 </root>

@@ -1,0 +1,33 @@
+OOBEProgress
+{
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+}
+
+#CenterWrapper
+{
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+.Throbber
+{
+	opacity: 1.0;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 10px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+.SettingsSection
+{
+	font-size: 24px;
+	font-family: platformfont;
+	margin-top: 48px;
+}

@@ -49,6 +49,9 @@
 					<Button id="FavoritesButton" class="FavoritesButton LinksAndMoreButton">
 						<Label id="FavoritesLabel" text="#Library_Details_AddToFavorites" />
 					</Button>
+					<Button id="UnblockedGamesButton" class="UnblockedGamesButton LinksAndMoreButton">
+						<Label id="UnblockedGamesLabel" text="" />
+					</Button>
 					<Button id="CategoryButton" class="CategoryButton LinksAndMoreButton">
 						<Label id="CategoryLabel" text="#Library_Details_SetCategory" />
 					</Button>

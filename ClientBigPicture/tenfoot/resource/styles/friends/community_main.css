@@ -1532,3 +1532,12 @@ FriendsFeedItemMenuActionButton:focus
 	transform: translateY( 370px );
 }
 
+#CommunityFriendsStrip.Locked
+{
+	visibility: collapse;
+}
+
+#CommunityFriendsStrip.Locked #CommunityFriendsStripWrapper
+{
+	visibility: collapse;
+}

@@ -182,7 +182,7 @@ This should take less than a minute."
 "SteamUI_GamesDialog_RightClick_PurchaseGame" "Purchase Game..."
 "SteamUI_GamesDialog_RightClick_PurchaseApplication" "Purchase App..."
 "SteamUI_GamesDialog_RightClick_Purchase" "Purchase..."
-
+"SteamUI_GamesDialog_RightClick_DeviceAuth" "Play Game..."
 "SteamUI_GamesDialog_RightClick_Renew" "Renew..."
 "SteamUI_GamesDialog_RightClick_ViewScreenshots" "View Screenshots"
 "SteamUI_GamesDialog_RightClick_ViewStorePage" "View Store Page"
@@ -213,6 +213,11 @@ This should take less than a minute."
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Launch tool as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Play media as soon as it's ready"
 
+"SteamUI_JoinDialog_SharedLicense_Title" "Shared game library"
+"SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Your shared library is currently in use by %borrower%. Playing now will send %borrower% a notice that it's time to quit."
+"SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "This shared game is currently unavailable. Please try again later or buy this game for your own library."
+
+
 "SteamUI_SetCustomImage_Title" "%gamename% - Set Custom Image"
 "SteamUI_SetCustomImage_ChooseImage" "Choose an image to represent %gamename% in Steam's grid view."
 "SteamUI_SetCustomImage_ImagePrescription" "This file should be a JPEG, PNG, or TGA image approximately 460x215 pixels in size."
@@ -234,7 +239,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_KeyRequestFailed_Title" "Steam - Error"
 "SteamUI_JoinDialog_KeyRequestFailed_Text" "Failed to contact key server"
 
-"SteamUI_JoinDialog_DataRequest_Text" "Completing installation ... %progress%%%"
+"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... %progress%%%"
 "SteamUI_JoinDialog_DataRequestFailed_Title" "Steam - Error"
 "SteamUI_JoinDialog_DataRequestFailed_Text" "The Steam servers are too busy to handle your request for %game%. Error Code (%error%)"
 
@@ -395,7 +400,7 @@ This should take less than a minute."
 "Steam_UpdatingSteamPlatformFiles"		"Updating Steam platform files..."
 "Steam_CheckingForUpdates"			"Checking for updates..."
 "Steam_LaunchingSteam"				"Connecting Steam account: %s1..."
-"Steam_ExitingSteam"				"Exiting ..."
+"Steam_ExitingSteam"				"Exiting..."
 "SteamUI_GamePropertiesContent_RequiresUpdate"  "Requires update"
 "SteamUI_GamePropertiesContent_NotReleased"  "Not Released"
 "SteamUI_GamePropertiesContent_MayRequireUpdate"  "May require update"
@@ -1173,8 +1178,8 @@ This should take less than a minute."
 "Steam_PreloadAppStatus2"	"Preparing %s1 files for install.."
 "Steam_PreloadAppStatus3"	"Preparing %s1 files for install..."
 
-"Steam_PreallocateAppStatus"	"Allocating disk space for %s1 ..."
-"Steam_ValidateAppStatus"	"Discovering existing files for %s1 ..."
+"Steam_PreallocateAppStatus"	"Allocating disk space for %s1..."
+"Steam_ValidateAppStatus"	"Discovering existing files for %s1..."
 
 "Steam_CDKeyAlreadyRegistered_Title"	"Steam - Product Code Error"
 "Steam_CDKeyCafe"			"You are unable to register product keys on this account."
@@ -1626,7 +1631,10 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_PreloadStopping"	"Pre-load stopping..."
 "Steam_GameUninstalling"	"Uninstalling..."
 "Steam_GameReady"		"Ready to play"
-
+"Steam_SharedGameUnavailable"		"Shared game unavailable"
+"Steam_SharedGameDetailAvailable"	"This shared game belongs to %owner%."
+"Steam_SharedGameDetailCurrentlyUnavailable"		"Shoot, %owner%'s shared games are currently in use. "
+"Steam_SharedGameDetailPermanentlyUnavailable"		"This game is not available in shared libraries"
 "Steam_ApplicationReady"		"Ready to launch"
 "Steam_GameRunning"		"Running"
 "Steam_GamePreloadReady" "Pre-load complete; unreleased"
@@ -2071,14 +2079,14 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_Uninstall_ButtonText"		"Delete game caches"
 
 "Steam_Uninstall_Games_Dialog_Title"	"Steam - Uninstall"
-"Steam_Uninstall_Games_Dialog_Text" "Uninstalling %game% ..."
+"Steam_Uninstall_Games_Dialog_Text" "Uninstalling %game%..."
 
 "Steam_Shutdown_Dialog_Title"	"Steam - Shutdown"
-"Steam_Shutdown_Dialog_Text" "Shutting down Steam ..."
-"Steam_Shutdown_Waiting_For_Game" "Waiting for %game% to shut down ..."
-"Steam_Shutdown_Waiting_For_Download" "Stopping download for %game% ..."
-"Steam_Shutdown_Waiting_For_Cloud" "Finishing Steam cloud sync ..."
-"Steam_Shutdown_Waiting_For_Logoff" "Logging off ..."
+"Steam_Shutdown_Dialog_Text" "Shutting down Steam..."
+"Steam_Shutdown_Waiting_For_Game" "Waiting for %game% to shut down..."
+"Steam_Shutdown_Waiting_For_Download" "Stopping download for %game%..."
+"Steam_Shutdown_Waiting_For_Cloud" "Finishing Steam cloud sync..."
+"Steam_Shutdown_Waiting_For_Logoff" "Logging off..."
 "Steam_Shutdown_ForceQuit" "Exit Now"
 
 
@@ -2178,8 +2186,8 @@ You'll need to log out of OSX for the change to take effect."
 "SteamUI_GameExplorer_AddGame_Failure" "Failed adding game to Games Explorer"
 "SteamUI_GameExplorer_AddGame" "Add to Games Explorer"
 "SteamUI_GameExplorer_RemoveGame" "Remove from Games Explorer"
-"SteamUI_ParentalControl_Title" "Windows Parental Control"
-"SteamUI_ParentalControl_Blocked" "Game blocked for current user by Windows Parental Control."
+"SteamUI_PlatformParentalControl_Title" "Windows Parental Control"
+"SteamUI_PlatformParentalControl_Blocked" "Game blocked for current user by Windows Parental Control."
 
 "SteamUI_ShortcutName"			"Name:"
 "SteamUI_ShortcutTarget"			"Target:"
@@ -2633,6 +2641,9 @@ Make one now by emailing a gift to someone you know."
 
 "Steam_GamesDialog_RightClick_AddToFavorites"			"Add to Favorites"
 "Steam_GamesDialog_RightClick_RemoveFromFavorites"	"Remove from Favorites"
+
+"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Add to Family Games"
+"Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Remove from Family Games"
 
 "steam_menu_checkforupdates"						"Check for Steam Client Updates..."
 "steam_checkforupdates_title"						"Steam - Self Updater"
@@ -3093,6 +3104,9 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "SteamUI_OSXAccessibilityText"			"The in-game Steam overlay requires access for assistive devices to be enabled.
 
 To enable to the in-game overlay, open the Universal Access preference pane and check 'Enable access for assistive devices'"
+"SteamUI_OSXAccessibilityText109"			"The in-game Steam overlay requires access for assistive devices to be enabled.
+
+To enable to the in-game overlay, open the Security and Privacy > Privacy preference pane and allow access for Steam."
 
 "SteamUI_OSXAccessibilityLinkText"	"Click here to open the Universal Access preference pane."
 
@@ -3249,6 +3263,7 @@ To enable to the in-game overlay, open the Universal Access preference pane and 
 "steam_library_filter_favorites"	"Favorites"
 "steam_library_filter_addtag"	"Add a New Category..."
 "steam_library_filter_owner" "%owner%'s Games"
+"steam_library_filter_unblocked"		"Family Games"
 "steam_library_unknown_owner" "Other Games"
 
 "steam_downloads_networkusage"	"Current Network Usage"
@@ -3369,6 +3384,8 @@ To enable to the in-game overlay, open the Universal Access preference pane and 
 
 "steam_welcomemessage_help"	"If you need technical support with this game, check out the <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forums</a> or visit <a href=http://support.steampowered.com/>Steam Support</a>."
 
+"steam_welcomemessage_help_nostore"	"If you need technical support with this game, visit <a href=http://support.steampowered.com/>Steam Support</a>."
+
 "steam_hidewelcomemessage"	"Hide This Message"
 "steam_achievement_mostrecent"	"Most Recent"
 "steam_achievement_unlockedsofar" "You have unlocked %achieved_achievements%/%available_achievements% (%achieved_percent%%)"
@@ -3401,6 +3418,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "steam_menu_friends_players" "Players"
 "friends_searchOnline"	"Search members of the Steam Community"
 "steam_send_guestpass"		"Send Guest Pass"
+"steam_stats"		"Stats"
 "steam_links"			"Links"
 "steam_achievements"		"Achievements"
 "steam_ogg"			"Related Groups"
@@ -3441,10 +3459,11 @@ Set a category for this game to help you find it quickly and organize your Libra
 
 "Friends_game_on_PS3"	"%s1 on PlayStation®3"
 
-"tooltip_view_details"		"Detail View "
-"tooltip_view_list"			"List View "
-"tooltip_view_grid"			"Grid View "
-"tooltip_view_fullscreen"	"Big Picture mode "
+"tooltip_view_details"		"Detail View " "tooltip_view_list"			"List View "
+"tooltip_view_grid"			"Grid View " "tooltip_view_fullscreen"	"Big Picture
+mode " "tooltip_sharedlibrary" 	"Playing now will send %borrower% a notice that
+it's time to quit." "tooltip_sharedlibrary2"	"Try playing later, or buy this
+game for your own library to play it now."#Steam_SharedGameUnavailable"
 
 "NoBigPicture_Title"		"Big Picture mode"
 "NoBigPicture_Explanation"	"Steam Big Picture mode is not supported on your platform."
@@ -3540,12 +3559,12 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_Convert_Content_Text" "Steam needs to convert the game content for \"%game%\" to a new, more efficient format. This will require an Internet connection and a few minutes’ time."
 "Steam_Convert_Content_Start" "Ok"
 "Steam_Convert_Content_Cancel" "Cancel"
-"Steam_Convert_Content_Removing_Old" "Checking existing content ..."
+"Steam_Convert_Content_Removing_Old" "Checking existing content..."
 "Steam_Convert_Content_Unpacking_GCF" "Unpacking existing depots..."
-"Steam_Convert_Content_Reconfiguration" "Reconfiguring new content ..."
-"Steam_Convert_Content_Validation" "Converting existing content ... %progress%"
-"Steam_Convert_Content_Preallocation" "Preparing new content ... %progress%"
-"Steam_Convert_Content_Updating" "Updating content ... %progress%"
+"Steam_Convert_Content_Reconfiguration" "Reconfiguring new content..."
+"Steam_Convert_Content_Validation" "Converting existing content... %progress%"
+"Steam_Convert_Content_Preallocation" "Preparing new content... %progress%"
+"Steam_Convert_Content_Updating" "Updating content... %progress%"
 "Steam_Convert_Content_Done" "Conversion complete. Missing content is being downloaded..."
 "Steam_Convert_Content_Error" "Conversion failed (%error%)"
 
@@ -3651,6 +3670,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_AppUpdateError_30"		"unsupported filesystem"
 "Steam_AppUpdateError_31"		"corrupt update files"
 "Steam_AppUpdateError_32"		"downloads disabled"
+"Steam_AppUpdateError_33"		"shared library locked"
 
 
 "steam_subnav_featured"		"Featured"
@@ -3683,11 +3703,65 @@ Set a category for this game to help you find it quickly and organize your Libra
 "SteamUI_Invalid_Account_Name" "Invalid Account Name"
 "SteamUI_Invalid_Email_Address" "Invalid Email Address"
 
+"Steam_DeviceAuth_Play_Button" "Play"
+"Steam_DeviceAuth_Purchase_Locked" "Buy"
+
+"Steam_DeviceAuth_ChooseDialog_Title" "Want to play this game?"
+"Steam_DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user %owner%. Would you like to request access to %owner%'s games on this device?"
+"Steam_DeviceAuth_ChooseDialog_Purchase" "I'd rather buy it..."
+"Steam_DeviceAuth_ChooseDialog_Request" "Request access..."
+"Steam_DeviceAuth_ChooseDialog_Cancel" "Cancel"
+
+
+"Steam_DeviceAuth_RequestDialog_Title" "Family Sharing request"
+"Steam_DeviceAuth_RequestDialog_To" "Hi %owner%,"
+"Steam_DeviceAuth_RequestDialog_From" "Thanks,\n%user%"
+"Steam_DeviceAuth_RequestDialog_Text" "Would you share access to your Steam library on this computer?"
+"Steam_DeviceAuth_RequestDialog_Description" "Please name this computer:"
+"Steam_DeviceAuth_RequestDialog_Cancel" "Cancel"
+"Steam_DeviceAuth_RequestDialog_Send" "Send Request"
+"Steam_DeviceAuth_RequestDialog_SendOK" "We’ve discovered the owner has already authorized this device for game sharing. You’re all set."
+"Steam_DeviceAuth_RequestDialog_SendError" "Failed to send authorization request (%reason%)"
+"Steam_DeviceAuth_RequestDialog_SendPending" "Your email request has been sent. Here’s hoping your wish will be granted soon!"
+
+"SteamUI_ManageDeviceAuth_Title" "Authorized Devices"
+"SteamUI_ManageDeviceAuth_Text" "The following devices are authorized to share your library with other Steam users."
+"SteamUI_ManageDeviceAuth_TokenOwner" "Authorized By"
+"SteamUI_ManageDeviceAuth_TokenDesc" "Device Name"
+"SteamUI_ManageDeviceAuth_LastUsed" "Last accessed"
+"SteamUI_ManageDeviceAuth_UsedBy" "By Steam user"
+"SteamUI_ManageDeviceAuth_Authorize" "Authorize device"
+"SteamUI_ManageDeviceAuth_Deauthorize" "Deauthorize device"
+"SteamUI_ManageDeviceAuth_Empty" "No auhtorized device found"
+"SteamUI_ManageDeviceAuth_Rename" "Rename Device"
+"SteamUI_ManageDeviceAuth_ThisComputer" "This Computer"
+"SteamUI_ManageDeviceAuth_NotAuthorized" "Not authorized yet"
+"SteamUI_ManageDeviceAuth_NotAccessed" "Not accessed yet"
+
+
+"Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices"
+
+
+"Steam_DeviceAuth_Authorized_Notification" "%owner%'s games are now available for you to play on this computer." 
+"Steam_DeviceAuth_Deauthorized_Notification" "%owner% has de-authorzied this computer, some games may be unavailable." 
+"Steam_DeviceAuth_StopPlaying_Notification" "Hey, %owner% needs this shared gamed back! You have %minutes% minutes of playtime remaining..." 
+
+"Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..." 
+
+"Steam_DeviceAuth_Shared_Library_Unavailable" "%owner%'s games are in use" 
+"Steam_DeviceAuth_Shared_Library_In_Use" "Your game library is in use by %borrower%" 
 
 "steam_inbox_tradeoffer"	"1 pending trade offer"
 "steam_inbox_tradeoffers"	"%count% pending trade offers"
 
 "Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
 "Steam_AllowGameLaunch_Title"	"Allow game launch"
+
+"Steam_Parental_UnlockTitle"		"Manage Parental Settings"
+"Steam_Parental_UnlockInstructions"		"Enter your PIN to disable Parental Settings"
+"Steam_Parental_UnlockFailureTitle"		"Unlock Failed"
+"Steam_Parental_UnlockFailure"			"The unlock attempt failed. Please enter the correct PIN and try again."
+"Steam_Parental_GameBlocked_Title"		"Parental Settings"
+"Steam_Parental_GameBlocked"			"This game has been blocked for the current user by parental settings"
 }
 

@@ -112,6 +112,12 @@ UserLeaderboardsPage
 	method	"internal"
 	filter		"community"
 }
+UserRecentlyPlayedPage
+{
+	url		"%community%/profiles/%p1%/games?tab=recent"
+	method		"internal"
+	filter		"community"
+}
 GlobalAchievementStatsPage
 {
 	url		"%community%/stats/%p1%/achievements"

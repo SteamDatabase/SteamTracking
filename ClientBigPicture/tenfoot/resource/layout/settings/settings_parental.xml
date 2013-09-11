@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_Parental class="SettingsSection" >
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="Parental" />
+		</Panel>
+		
+		<Panel class="SettingsBottomPanel">
+			<!-- main panel -->
+			<!-- Buttons get added into this in code -->
+			<Panel id="ButtonPanel" class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="0,0">
+			</Panel>
+	
+		</Panel>
+	
+	</SettingsPanel_Parental>
+
+</root>

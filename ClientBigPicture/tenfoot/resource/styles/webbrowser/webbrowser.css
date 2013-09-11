@@ -270,7 +270,7 @@ SlideShow
 	opacity: 1.0;	
 }
 
-#ControlBar Button
+#ControlBar .ControlBarButton
 {
 	flow-children: right;
 	horizontal-align: left;
@@ -286,19 +286,19 @@ SlideShow
 	transition-timing-function: ease-out;
 }
 
-#ControlBar Button Image
+#ControlBar .ControlBarButton Image
 {
 }
 
 
-#ControlBar Button:hover
+#ControlBar .ControlBarButton:hover
 {
 	transition-duration: 0.23s !immediate;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 	box-shadow: #eeeeee60 -2.5px -2.5px 3px 5px;
 }
 
-#ControlBar Button:hover:disabled
+#ControlBar .ControlBarButton:hover:disabled
 {
 	box-shadow: none;
 	background-color: none;
@@ -332,7 +332,7 @@ SlideShow
 	}
 }
 
-#ControlBar Button:focus
+#ControlBar .ControlBarButton:focus
 {
 	border-color: #fdfefef0;
 
@@ -348,11 +348,16 @@ SlideShow
 	animation-direction: normal;
 }
 
-#ControlBar Button:active
+#ControlBar .ControlBarButton:active
 {
 }
 
-#ControlBar Button:disabled Image
+#ControlBar .ControlBarButton:disabled Image
+{
+	wash-color: #000000aa;
+}
+
+#ControlBar ParentalButton.Locked Image
 {
 	wash-color: #000000aa;
 }
@@ -458,7 +463,11 @@ SlideShow
 	background-color: none;
 	box-shadow: none;
 	width: 100%;
+}
 
+#UrlBar TextEntry:disabled
+{
+	wash-color: parental_locked_wash;
 }
 
 .HtmlEVCert #UrlBar TextEntry, .HtmlSecure #UrlBar TextEntry, .HtmlCertError #UrlBar TextEntry

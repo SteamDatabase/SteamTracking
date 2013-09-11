@@ -13,7 +13,6 @@
 		"left_bumper"		"kb:key_q, Concentration"
 
 		"button_escape"		"kb:key_esc, Menu"
-		"button_steam"		"kb:key_f12, Screenshot"
 		"button_menu"		"kb:key_tab"
 
 		"backside_left"		"kb:key_lcontrol, Crouch"
