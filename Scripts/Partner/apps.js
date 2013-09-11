@@ -3285,7 +3285,7 @@ function UpdateReleaseRequest( nAppId, rgChanges )
 
 var rgUrls = [];
 
-function PublishPending( nAppId, nItemid, bSetPlayable, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, rgPackages )
+function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, rgPackages )
 {
 	rgUrls = []; // Clear any cruft from previous attempts.
 
@@ -3333,26 +3333,26 @@ function PublishPending( nAppId, nItemid, bSetPlayable, bSetReleased, bSetDate, 
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/setreleased/' + nAppId,
-			'data': { 'released' : 'true' },
+			'data': { 'released' : true },
 			'message': 'Setting app released'
 		});
 	}
 
-	if( bSetPlayable )
+	if( NewReleaseState )
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/setappreleasestate/' + nAppId,
-			'data': { 'releasestate': ( bSetPlayable ) ? 'released' : 'unavailable' },
-			'message': 'Setting app playable'
+			'data': { 'releasestate': NewReleaseState },
+			'message': 'Setting app release state to "' + NewReleaseState + '"'
 		});
 	}
 
 
-	if( bSetPlayable || bSetReleased )
+	if( NewReleaseState || bSetReleased )
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/publish/' + nAppId,
-			'data': { 'releasestate': ( bSetPlayable ) ? 'released' : 'unavailable' },
+			'data': { 'releasestate': NewReleaseState },
 			'message': 'Publishing app'
 		});
 	}
