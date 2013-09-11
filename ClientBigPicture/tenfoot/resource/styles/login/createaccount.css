@@ -92,6 +92,7 @@ CreateAccountWizard .ScreenSaverMode, CreateAccountWizard .ShowingLoginProgress
 {
 	height: 608px;
 	width: 100%;
+	opacity: 1.0;
 }
 
 #AgreementsHTML:descendantfocus
@@ -151,12 +152,12 @@ CreatingAccountWizardChild #ThrobberContainer
 CreateAccountSuccessWizardChild #PasswordTextEntry
 {
 	width: 380px;
-	box-shadow: none;
 }
 
 #ShowPasswordButton
 {
 	width: 100px;
+	margin-left: 10px;
 	padding-left: 0px;
 }
 

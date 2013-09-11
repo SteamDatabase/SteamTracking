@@ -1,0 +1,50 @@
+// fade in any prompt/message
+@define activate_product_message_transition_time: 0.3s;
+
+RequestDeviceAuthorizationPanel
+{
+	font-size: deffontsize;
+	font-family: platformfont;
+}
+
+RequestDeviceAuthorizationPanel .MsgBoxBodyRegion
+{
+	transition-property: transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+RequestDeviceAuthorizationPanel.DaisyWheelVisible .MsgBoxBodyRegion
+{
+	transform: translatex( 480px );
+}
+
+#DeviceDescription
+{
+	margin-bottom: 40px;
+	margin-top: 10px;
+	width: 748px;
+}
+
+TextEntry, Label
+{
+
+	font-size: 27px;
+	padding-top: 6px;
+	font-family: platformfont;
+	transform: translatex( 0px );
+}
+
+#MsgBoxButtons Button
+{
+	margin-right: 26px;
+	padding: 4px 8px 4px 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 50%;
+}
+
+#MsgBoxButtons Button Label
+{
+	horizontal-align: left;
+}

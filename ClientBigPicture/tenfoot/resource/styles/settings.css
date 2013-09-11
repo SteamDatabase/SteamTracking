@@ -103,6 +103,11 @@ SettingsPanel.SectionVisible #SettingsContent
 	background-color: bgwithgradient;
 }
 
+.SettingsContained .SettingsHeader
+{
+	visibility: collapse;
+}
+
 .SettingsHeaderLegend
 {
 	font-size: 60px;
@@ -162,6 +167,12 @@ SettingsPanel.SectionVisible #SettingsContent
 	padding-top: 40px;
 }
 
+.SettingsContained .SettingsContent
+{
+	height: fit-children;
+	padding: 0px;
+}
+
 #SettingsInGame_SubControls .SettingsContent
 {
 	padding: 0px;
@@ -171,6 +182,7 @@ SettingsPanel.SectionVisible #SettingsContent
 {
 	flow-children: down;
 }
+
 
 .SettingsContent .Button,.CheckBox,ToggleButton
 {
@@ -303,11 +315,6 @@ Label.SettingsStatic
 	horizontal-align: left;
 }
 
-.SettingsCenterContent
-{
-	horizontal-align: center;
-}
-
 .SettingsRightContent
 {
 	width: 525px;
@@ -323,6 +330,12 @@ Label.SettingsStatic
 	padding-left: 25px;
 }
 
+.SettingsCenterContentWide
+{
+	width: 950px;
+	horizontal-align: center;
+	padding-left: 25px;
+}
 
 .Button,.CheckBox
 {
@@ -530,6 +543,21 @@ DropDown Label
 	margin-bottom: 20px;
 }
 
+#Settings_Language .SettingsContent
+{
+	padding: 30px;
+}
+
+#Settings_Language .HorzContainer
+{
+	margin-bottom: 20px;
+}
+
+#LanguageDropDownMenu
+{
+	height: 475px;
+}
+
 #Settings_Network .SettingsContent
 {
 	width: 1000px;
@@ -550,6 +578,11 @@ DropDown Label
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+.SettingsContained #AvailableNetworksList
+{
+	height: 25%;
 }
 
 #AvailableNetworksList:descendantfocus
@@ -812,6 +845,11 @@ DropDown Label
 	margin: 14px;
 	margin-left: 0px;
 	color: tcstatictext;
+}
+
+.SettingsContained .SettingsCallout
+{
+	visibility: collapse;
 }
 
 #CurrentResWrapper
@@ -1151,11 +1189,15 @@ KeyboardShortcut .Graphic
 	font-weight: bold;
 }
 
-.SettingsControllerBindRow
+.SettingsController_BindRow
 {
 	flow-children: right;
 
 	width: 1000px;
+	margin: 5px;
+	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
 }
 
 .SettingsController_BindRow:focus
@@ -1170,9 +1212,7 @@ KeyboardShortcut .Graphic
 	border-radius: 2px;
 	border-radius: 2px;
 
-	margin-right: 18px;
-	margin-top: -5px;
-	margin-bottom: -5px;
+
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
@@ -1522,4 +1562,213 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 {
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.SettingsManageDevices_Header
+{
+	font-size: 32px;	
+	flow-children: right;
+}
+
+.SettingsManageDevices_List
+{
+	height: 200px;
+	flow-children: down;
+	overflow: clip scroll;
+}
+
+.SettingsManageDevices_ColumnItem
+{
+	width: 32px;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+.SettingsManageDevices_ColumnName
+{
+	width: 240px;
+	font-size: 24px;
+	margin-left: 23px;
+	margin-top: 20px;
+}
+
+.SettingsManageDevices_ColumnTime
+{
+	width: 250px;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-left: 8px;
+}
+
+.SettingsManageDevices_ColumnUser
+{
+	width: 300px;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-left: 8px;
+}
+
+.SettingsManageDevices_ColumnItemContent
+{
+	width: 32px;
+	margin-right: 8px;
+	font-size: 24px;
+	text-align: right;
+	color: applabelsolid;
+}
+
+.SettingsManageDevices_ColumnNameContent
+{
+	width: 240px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.SettingsManageDevices_ColumnTimeContent
+{
+	width: 250px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.SettingsManageDevices_ColumnUserContent
+{
+	width: 300px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.SettingsController_BindRow:focus .SettingsManageDevices_ColumnItemContent,.SettingsController_BindRow:focus .SettingsManageDevices_ColumnNameContent, .SettingsController_BindRow:focus .SettingsManageDevices_ColumnTimeContent, .SettingsController_BindRow:focus .SettingsManageDevices_ColumnUserContent
+{
+	color:black;
+}
+
+.AuthButton
+{
+	horizontal-align: left;
+	margin-top: 20px;
+	width: fit-children;
+	padding-right: 20px;
+}
+
+
+.AuthButton:focus .LongDesc
+{
+color: black;
+}
+
+
+//
+// Remote Clients
+//
+
+.SettingsRemoteClientsInstructions
+{
+	margin-top: 40px;
+	color: #abb4b9;
+}
+
+.SettingsRemoteClientSection
+{
+	margin-top: 2px;
+	flow-children: down;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e384c ), color-stop( 0.5, #134059 ), to( #113b50 ) );
+}
+
+.SettingsRemoteClientsColumnDevice
+{
+	width: 312px;
+}
+
+.SettingsRemoteClientsColumnStatus
+{
+	width: 676px;
+}
+
+.SettingsRemoteClientsHeader
+{
+	margin: 8px 8px 0px 8px;
+	flow-children: right;
+	color: #029fda;
+}
+
+#SettingsRemoteClientList
+{
+	padding: 8px;
+	flow-children: down;
+	height: 500px;
+	overflow: clip scroll;
+}
+
+
+// clean up with other styles in settings
+SettingsPanelRemoteClientListing
+{
+	horizontal-align: center;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 2px;
+	border-color: #3d414200;
+
+	background-color: simplebutton;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+SettingsPanelRemoteClientListing:hover
+{
+	z-index: 50;
+	transition-duration: 0.23s !immediate;
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	pre-transform-scale2d: 1.0;
+}
+
+SettingsPanelRemoteClientListing:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	z-index: 1000;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
+}
+
+SettingsPanelRemoteClientListing
+{
+	flow-children: right;
+	background-color: transparent;
+	width: fit-children;
+	color: white;
+	margin-right: 8px;
+}
+
+SettingsPanelRemoteClientListing:descendantfocus
+{
+	color: black;
+}
+
+SettingsPanelRemoteClientListing #Status
+{
+	color: #a1b3bd;
 }

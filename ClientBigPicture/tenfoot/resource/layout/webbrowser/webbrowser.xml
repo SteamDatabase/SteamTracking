@@ -7,32 +7,32 @@
 
 	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="NavigateTenfootBack()">
 		<Panel id="MainPage" > <!-- main web browser page -->
-	  	<Panel class="TopBar" selectionpos="0,0" >
-	  		<Panel id="UrlBar" >
-				<Image class="Secure" src="file://{images}/browser/browser_secure.png" />
-				<Image class="Insecure" src="file://{images}/browser/browser_insecure.png" />
-				<Label id="EVCertName" />
-				<TextEntry id="UrlTextEntry" selectionpos="1,0"
-						textinputid="UrlBarTextEntry"
-						textinputdoneactionstring="#Web_UrlGo"
-						textinputclass="AppearFromBottomCenter" />
-			</Panel>
-		  	<Panel id="ControlBar" selectionpos="2,0">
-				  	<Panel id="ControlBar_Buttons">
-						  <Panel id="Spinner" />
-						  <Button id="BackButton" onactivate="BrowserBack()" selectionpos="2,0" 	>
-								<Image src="file://{images}/browser/browser_back.png" />
-							</Button>
-							<Button onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >	  		
-								<Image src="file://{images}/browser/browser_home.png" />
-							</Button>
-							<Button onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
-								<Image src="file://{images}/browser/browser_favorite.png" />
-							</Button>
-					  	<Button id="ForwardButton" onactivate="BrowserForward()" selectionpos="5,0"	>
-								<Image src="file://{images}/browser/browser_forward.png" />
-							</Button>
-						</Panel>
+			<Panel class="TopBar" selectionpos="0,0" >
+				<Panel id="UrlBar" >
+					<Image class="Secure" src="file://{images}/browser/browser_secure.png" />
+					<Image class="Insecure" src="file://{images}/browser/browser_insecure.png" />
+					<Label id="EVCertName" />
+					<TextEntry id="UrlTextEntry" selectionpos="1,0"
+							textinputid="UrlBarTextEntry"
+							textinputdoneactionstring="#Web_UrlGo"
+							textinputclass="AppearFromBottomCenter" />
+				</Panel>
+				<Panel id="ControlBar" selectionpos="2,0">
+					<Panel id="ControlBar_Buttons">
+						<Panel id="Spinner" />
+						<Button id="BackButton" class="ControlBarButton" onactivate="BrowserBack()" selectionpos="2,0" 	>
+							<Image src="file://{images}/browser/browser_back.png" />
+						</Button>
+						<ParentalButton class="ControlBarButton" onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >
+							<Image src="file://{images}/browser/browser_home.png" />
+						</ParentalButton>
+						<ParentalButton class="ControlBarButton" onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
+							<Image src="file://{images}/browser/browser_favorite.png" />
+						</ParentalButton>
+						<Button id="ForwardButton" class="ControlBarButton" onactivate="BrowserForward()" selectionpos="5,0"	>
+							<Image src="file://{images}/browser/browser_forward.png" />
+						</Button>
+					</Panel>
 				</Panel>
 			</Panel>
 			<Panel id="HtmlContainer" selectionpos="0,10">

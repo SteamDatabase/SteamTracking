@@ -1,4 +1,4 @@
-//
+	//
 // Styles for text input full screen dialog
 //
 
@@ -21,13 +21,19 @@ TextInputFullscreen
 #InputDescription
 {
 	color: white;
-	font-size: 32px;
+	font-size: 28px;
+	font-family: platformfont;
+	margin-bottom: 4px;
+	
 }
 
 #EnteredText
 {
 	width: 80%;
-	font-size: 32px;
+	font-size: 28px;
+	line-height: 36px;
+	padding-top: -2px;
+	font-family: platformfont;
 }
 
 #EnteredText.Multiline

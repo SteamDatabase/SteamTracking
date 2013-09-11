@@ -1,0 +1,12 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/oobe/oobe.css" />
+	</styles>
+
+	<OOBEProgress tabindex="auto" selectionpos="auto">
+		<Panel id="CenterWrapper">
+			<Panel class="Throbber" />
+		</Panel>
+	</OOBEProgress>
+</root>

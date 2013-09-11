@@ -3,7 +3,7 @@
 // this style is pretty close to the main menu button color.. combine?
 //@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #cfd0d0 ), to( #979898 ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
-@define storeoverviewcolor: #666464;
+@define storeoverviewcolor: #8c8989;
 @define AppSectionTransitionDuration: 0.25s;
 @define SlideshowFocusTransitionDuration: 0.3s;
 

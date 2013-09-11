@@ -63,6 +63,12 @@
 	wash-color: #00000000;
 }
 
+.WizardPanel.ScreenSaverMode, .WizardPanel.ShowingProgress
+{
+	opacity: 0.0;
+	transition-duration: 0.4s;
+}
+
 #MainBackground
 {
 	flow-children: down;
@@ -71,6 +77,9 @@
 #TitleBackground
 {
 	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
+	background-image: url("file://{images}/store/slideshow_glow.png");
+	background-repeat: no-repeat no-repeat;
+	background-position: left 0px top 75px;
 	height: 150px;
 	width: 100%;
 }
@@ -80,10 +89,9 @@
 	width: 100%;
 	height: 100%;
 
-	background-color: gradient( linear, 0% 100%, 100% 0%, from( #001218 ), color-stop( 0.5, #123246 ), to( #001218 ) );
-	background-image: url("file://{images}/login/login_bg.tga");
-	background-repeat: repeat;
+	background-color: none;
 	background-size: auto;
+	background-position: left 0px top -150px;
 }
 
 .WizardChildTitle
@@ -129,6 +137,7 @@
 
 	background-color: #173a4c;
 
+	transition-property: background-color;
 	pre-transform-scale2d: 1.0;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
@@ -297,7 +306,7 @@
 {
 	desaturation: 0.0;
 	blur: gaussian( 0.7 );
-	opacity: 0.35;
+	opacity: 0.45;
 	border-color: none;
 	box-shadow: none;
 	animation-name: none;
@@ -374,3 +383,13 @@
 	margin-bottom: controlgaphorz;
 }
 
+#ssa, #ppa
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
+	background-image: url("file://{images}/store/slideshow_glow.png");
+	background-repeat: no-repeat no-repeat;
+	background-position: left 0px top 75px;
+	width: 100%;
+	
+	transition-property: background-color, opacity;
+}

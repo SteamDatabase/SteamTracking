@@ -1,7 +1,8 @@
 /*	Styles shared across all UI */
 
 @define white: #ffffff;
-@define red: #ff0000;
+@define red: #ad4543;
+@define darkred: #712d2c;
 @define green: #00ff00;
 @define blue: #0000ff;
 @define black: #000000;
@@ -202,6 +203,9 @@
 
 // ContextMenu - used in code -- dont rename
 @define ContextMenuFadoutTime: 0.2s; 
+
+// Parental - used for locked controls
+@define parental_locked_wash: #888888FF;
 
 DropDown
 {
@@ -1125,10 +1129,34 @@ FriendsChatDialog .VoiceBarContainer
 	animation-direction: normal;
 }
 
+.ContextMenuBody ParentalButton
+{
+	flow-children: right;
+}
+
 .ContextMenuBody ParentalButton.Locked, .ContextMenuBodyCentered ParentalButton.Locked
 {
-	wash-color: #444444ff;
+	wash-color: parental_locked_wash;
 	color: #ffffffff;
+}
+
+.ContextMenuBody ParentalButton.Locked Label
+{
+	width: 90%;
+}
+
+.ContextMenuBody ParentalButton Image
+{
+	vertical-align: center;
+	horizontal-align: right;
+	height: 34px;
+	width: 34px;
+	opacity: 0.0;
+}
+
+.ContextMenuBody ParentalButton.Locked Image
+{
+	opacity: 1.0;
 }
 
 //
@@ -1138,10 +1166,10 @@ FriendsChatDialog .VoiceBarContainer
 .StdTitle
 {
 	font-size: 54px;
-	padding-top: 6px;
-    padding-bottom: 40px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	font-family: platformfont;
-    color: white;
+	color: detailsdatalabel;
 }
 
 .StdLabel

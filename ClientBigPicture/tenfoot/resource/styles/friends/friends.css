@@ -1276,7 +1276,8 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 
 .FriendsOptionWrapper DropDown
 {
-	width: 355px;
+	width: 328px;
+	height: 54px;
 	transition-property: pre-transform-scale2d;
 	transition-duration: 0.2s;
 	border-width: 5px;
@@ -1299,18 +1300,18 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 {
 	margin-left: 0px;
 	margin-right: 30px;
+	margin-top: 4px;
 }
 
 #MsgBoxButtonArea DropDown:focus Label
 {
-	margin-top: 2px;
 	color: #333333;
 }
 
 DropDownMenu.DropDownMenuVisible
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 355px;
+	width: 328px;
 }
 
 .FriendsActionsMsgBox #MsgBoxButtons
@@ -1370,6 +1371,7 @@ DropDownMenu
 #MsgBoxButtons Button Label
 {
 	horizontal-align: left;
+	text-transform: none;
 }
 
 

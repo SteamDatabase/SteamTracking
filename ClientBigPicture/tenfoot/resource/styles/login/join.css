@@ -1,5 +1,5 @@
 @define shortduration: 0.25s;
-@define shortmedduration: 0.3s;
+@define shortmedduration: 0.25s;
 @define mediumduration: 0.4s;
 @define longduration: 1.7s;
 
@@ -20,9 +20,7 @@ Join
 	transition-timing-function: linear;
 	transform: translateX(0px);
 
-	background-image: url("file://{images}/login/login_bg.tga");
-	background-repeat: repeat;
-	background-size: auto;
+
 }
 
 Join:descendantfocus
@@ -41,10 +39,36 @@ Join:descendantfocus
 .JoinCarousel
 {
 	width: 3500px;
-	height: 1080px;
+	height: 700px;
 	perspective: 1000;
 
-	position: -790px 0px 0px;
+	position: -790px 200px -55px;
+	animation-name: none;
+	perspective-origin: 50% 50%;
+	pre-transform-scale2d: 1.0;
+	opacity: 0.6;
+	desaturation: 0.0;
+	wash-color: bgcolorwashlight;
+	overflow: noclip clip;
+
+	transform: translatez(0px);
+	blur: none;
+	flow-children: right;
+	opacity-mask: none;
+
+	transition-property: opacity, opacity-mask, transform, position;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+.JoinCarousel:descendantfocus
+{
+	width: 3500px;
+	perspective: 1000;
+
+	position: -790px 200px 0px;
 	animation-name: none;
 	perspective-origin: 50% 50%;
 	pre-transform-scale2d: 1.0;
@@ -59,20 +83,22 @@ Join:descendantfocus
 	opacity-mask: none;
 }
 
+
 JoinItem
 {
-	width: 400px;
+	width: 390px;
+	height: 600px;
 	border-radius: 0px;
-	padding-top: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding-top: 40px;
+	margin-left: 15px;
+	margin-right: 15px;
 	vertical-align: center;
 
 	pre-transform-scale2d: 0.8;
 
 	transition-property: pre-transform-scale2d, position;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
@@ -93,44 +119,48 @@ JoinItem .JoinItemContainer
 {
 	margin: 14px;
 
+	opacity: 0.85;
 	width: 100%;
+	height: 465px;
 	flow-children: down;
 	vertical-align: top;
-	padding-top: 55px;
-	padding-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 10px;
 	border-color: #00000000;
 	background-color: #00000000;
 	box-shadow: #00000000 -3px -3px 6px 6px;
 
-	transition-property: background-color, box-shadow, border;
+	transition-property: background-color, box-shadow, opacity, transform, border;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
 JoinItem:focus .JoinItemContainer
 {
-	background-color: bgwithgradienttopleft;
+	background-color: message_box_bg;
 	pre-transform-scale2d: 1.0;
 	border-color: #3d5666;
 	border-style: solid;
 	border-width: 5px;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	transform: translateY( 35px );
+	opacity: 1.0;
 
 	transition-duration: 0.23s !immediate;
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
 JoinItem .JoinItemImageFrame
 {
-	horizontal-align:center;
-	width: 270px;
-	height: 270px;
+	horizontal-align: center;
+	width: 267px;
+	height: 267px;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414230;
@@ -138,7 +168,7 @@ JoinItem .JoinItemImageFrame
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
@@ -160,7 +190,7 @@ JoinItem:focus .JoinItemImageFrame
 JoinItem:focus .JoinItemImageBezel
 {
 	pre-transform-scale2d: 1.0;
-	border-radius: 27px;
+	border-radius: 22px;
 }
 
 JoinItem .JoinItemImageBezelOn
@@ -178,7 +208,7 @@ JoinItem .JoinItemImageBezelOn
 
 	transition-property: pre-transform-scale2d;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
@@ -195,14 +225,14 @@ JoinItem .JoinItemImageBezel
 
 	transition-property: pre-transform-scale2d;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
 JoinItem:focus .JoinItemImageBezel
 {
-	width: 270px;
-	height: 270px;
+	width: 255px;
+	height: 255px;
 }
 
 JoinItem:disabled
@@ -219,7 +249,6 @@ JoinItem .BezelOutside
 JoinItem .BezelInside
 {
 	background-color: #000000;
-	border-width: 0px;
 	border-radius: 16px;
 }
 
@@ -240,37 +269,62 @@ JoinItem .JoinItemImage
 
 	transition-property: pre-transform-scale2d, opacity;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 }
 
 JoinItem:focus Label
 {
-	margin-top: 20px;
 	opacity: 1.0;
-	color: applabel;
-	text-overflow: clip;
+	color: applabelsolid;
+	max-height: 96px;
+	transform: translateY( 12px );
 }
 
 JoinItem Label
 {
 	margin-left: 10px;
+	color: applabelsolid;
 	margin-right: 10px;
-	margin-top: 16px;
+	margin-top: 12px;
 	margin-bottom: 0px;
-	max-height: 60px;
+	max-height: 54px;
+	line-height: 48px;
 	width: 342px;
 	vertical-align: top;
 	horizontal-align: center;
 	background-color: #00000000;
 
-	font-size: 44px;
+	font-size: 40px;
 	font-weight: bold;
 	font-family: platformfont;
 	text-align: center;
 	text-overflow: clip;
 	white-space: normal;
 
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in;
+	transition-duration: 0.25s;
 	opacity: 0.6;
 	color: applabel;
 }
+
+ .JoinGlow
+{
+	transform: translateZ( -70px );
+
+	opacity: 0.65;
+	width: 100%;
+	height: 600px;
+	z-index: -500;
+
+	margin-bottom: 40px;
+	horizontal-align: center;
+	vertical-align: center;
+
+	transition-property: opacity, transform !immediate;
+	transition-delay: 0.1s, 0.0s;
+	transition-duration: 0.35s, 0.35s;
+	transition-timing-function: ease-in;
+}
+

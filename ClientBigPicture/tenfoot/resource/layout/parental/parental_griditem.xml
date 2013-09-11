@@ -6,13 +6,12 @@
 	</styles>
 	
 	<ParentalGridItem class="AppGridItem Ready" onactivate="ToggleParentalLock();" >
-		<Panel id="ParentalGridItemContents" class="AppImage ParentalLibraryItem" >
-			<Label id="ParentalText" class="TopLine" text="#Parental_SelectToEnter" />
-			<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+		<Panel id="ParentalGridItemContents" class="GridAppImageParentalLibraryItem" >
+			<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_lg.png" />
 			<Label id="ParentalText2" class="BottomLine" text="#Parental_MoreGames" />
 		</Panel>
-		<Panel class="GridItemNameRow">
-			<Label id="AppLabel" text="#Parental_Unlock" />
+		<Panel class="RecentNameRow">
+			<Label id="AppName" text="#Parental_SelectToEnter"/>
 		</Panel>
 	</ParentalGridItem>
 </root>

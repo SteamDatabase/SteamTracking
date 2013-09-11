@@ -104,7 +104,8 @@
 	text-align: left;
 	font-size: 36px;
 	line-height: 36px;
-	width: 170px;
+	max-width: 178px;
+	min-width: 160px;
 }
 
 #ClockSuffix

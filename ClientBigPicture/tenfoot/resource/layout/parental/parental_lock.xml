@@ -1,0 +1,20 @@
+<root>
+	<styles>		
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/parental/parental.css" />
+	</styles>
+
+	<ParentalLockPopup class="TenfootMsgBox" tabindex="auto" selectionpos="auto" defaultfocus="LockButton">
+
+		<Panel class="ParentalUnlockPopupBody" tabindex="auto">
+			<Label class="StdTitle" text="#Parental_LockTitle" />
+			<Label class="StdLabel" text="#Parental_LockPrompt" />
+			<Panel class="ParentalLockButtons" >
+				<Button id="LockButton" class="Button" onactivate="ParentalLock()">
+					<Label id="ParentalLockButtonLabel" text="#Parental_Lock2" />
+				</Button>
+			</Panel>
+		</Panel>
+	</ParentalLockPopup>
+</root>

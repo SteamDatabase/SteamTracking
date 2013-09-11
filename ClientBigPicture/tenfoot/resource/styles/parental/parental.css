@@ -15,12 +15,12 @@ ParentalUnlockPopup
 
 .ParentalUnlockPopupBody
 {
-	padding: 10px 5px 10px 5px;
+	padding: 20px 40px 50px 40px;
 
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
-	max-width: 650px;
+	max-width: 550px;
 
 	opacity: 1.0;
 
@@ -31,37 +31,68 @@ ParentalUnlockPopup
 
 	color: #000000ff;
 	background-color: dialog_bg_color;
-	
+
 	transition-property: transform;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 }
 
-.ParentalUnlockPopupBody Label
+
+.ParentalUnlockPopupBody Button Label
 {
 	horizontal-align: left;
 	color: #d0d0d0ff;
 	transform: translatex(0px);
 	padding-left: 0px;
+	margin-top: 2px;
 	font-size: deffontsize;
 	font-family: platformfont;
 	text-overflow: ellipsis;
-	max-height: 40px;
-	width: 100%;
-	
+	width: 80%;
+
 }
+
+.ParentalUnlockPopupBody Button:focus Label
+{
+	color: black;
+}
+
 
 .ParentalUnlockPopupBody TextEntry
 {
 	horizontal-align: left;
-	height: 80px;
-	font-size: 60px;
-	width: 100%;
+	height: 40px;
+	font-size: 24px;
+	padding-top: -4px;
+	width: 80%;
 	background-color: ui_common_control;
 	border-color: ui_common_control_border;
 	border-width: 5px;
 	border-style: solid;
+	margin-top: 10px;
 }
+
+.ParentalUnlockPopupBody TextEntry:focus
+{
+	horizontal-align: left;
+	height: 40px;
+	font-size: 24px;
+	padding-top: -4px;
+	border-width: 5px;
+	margin-top: 10px;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	color: #161718f5;
+	border-style: solid;
+	border-color: #fdfefeff;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
 
 .ParentalUnlockButtons
 {
@@ -93,6 +124,8 @@ TextEntry:disabled,.Button:disabled
 	padding-left: 8px;
 	border-width: 5px;
 	border-style: solid;
+	height: 40px;
+	margin-top: 10px;
 
 	border-color: none;
 	background-color: ui_common_control2;
@@ -151,7 +184,6 @@ ParentalReplacementPanel
 ParentalReplacementPanel Label
 {
 	font-family: platformfont;
-	margin: 20px 20px 6px 18px;
 	font-size: 40px;
 	color: detailsdatalabel;
 	opacity: 1.0;
@@ -170,7 +202,7 @@ ParentalReplacementPanel Image
 	height: 100px;
 	width: 100px;
 	horizontal-align: center;
-	wash-color: #444444ff;
+	wash-color: parental_locked_wash;
 }
 
 ParentalReplacementPanel Button
@@ -253,18 +285,36 @@ ParentalReplacementPanel Button:focus
 
 
 
-#ParentalGridItemContents, #ParentalRecentAppContents
+#ParentalGridItemContents, #ParentalRecentAppContents, #GridParentalRecentAppContents
 {
 	flow-children: down;
 	opacity: 0.9;
 	desaturation: 0.1;
 	background-color: dialog_bg_color;
+	box-shadow: inset #00000044 0px 0px 4px 0px;
+
 }
 
-#ParentalGridItemContents Image, #ParentalRecentAppContents Image
+#ParentalRecentAppContents
+{
+	width: 507px;
+	height: 237px;
+	vertical-align: center;
+	horizontal-align: center;
+	margin: 4px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+
+
+#ParentalGridItemContents Image, #ParentalRecentAppContents Image, .GridAppImageParentalLibraryItem
 {
 	vertical-align: center;
 	horizontal-align: center;
+	margin: 4px;
+	margin-top: 45px;
 }
 
 #ParentalGridItemContents Label, #ParentalRecentAppContents Label
@@ -272,13 +322,14 @@ ParentalReplacementPanel Button:focus
 	height: 40px;
 	width: fit-children;
 	font-size: 24px;
+	font-weight: light;
 	vertical-align: center;
 	horizontal-align: center;
 	margin-left: 1px;
 	margin-top: -2px;
 
 	color: detailsdatalabel;
-	opacity: 1.0;
+	opacity: 0.0;
 
 	transition-property: color, opacity;
 	transition-duration: shortduration;
@@ -291,8 +342,49 @@ ParentalReplacementPanel Button:focus
 	margin-top: 15px;
 }
 
+
+.GamesGrid .AppGridItem #ParentalUnlock .AppImage
+
+#MostRecentCarousel .RecentApp #ParentalRecentAppContents .TopLine
+{
+	visibility: collapse;
+}
+
 #MostRecentCarousel .RecentApp:descendantfocus #ParentalRecentAppContents Label
 {
-	color: detailsdatalabel;
 	opacity: 1.0;
+	color: detailsdatalabel;
+}
+
+.GamesGrid .AppGridItem:descendantfocus #ParentalRecentAppContents Label
+{
+	opacity: 1.0;
+}
+
+.GamesGrid .AppGridItem:descendantfocus #ParentalGridItemContents Label
+{
+	opacity: 1.0;
+}
+
+.StdTitle
+{
+	font-size: 54px;
+	padding-top: 6px;
+	padding-bottom: 30px;
+	font-family: platformfont;
+	color: white;
+}
+
+#GridParentalRecentAppContents
+{
+	margin: 4px;
+	width: 460px;
+	height: 215px;
+}
+
+.GridAppImageParentalLibraryItem
+{
+	margin: 4px;
+	width: 450px;
+	height: 210px;
 }

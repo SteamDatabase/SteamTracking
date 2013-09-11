@@ -51,8 +51,14 @@
 							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
 						</Panel>
-						<Label class="LongDesc" id="ParentalLockTextLocked" text="#Parental_Locked" />
-						<Label class="LongDesc" id="ParentalLockTextUnlocked" text="#Parental_Unlocked" />
+						<Panel class="ParentalLockButtonLabels">
+							<Label class="SmDesc" id="ParentalLockTextLockedPrefix" text="#Parental_CurrentMode" />
+							<Label class="LongDesc" id="ParentalLockTextLocked" text="#Parental_Locked" />	
+							<Label class="SmDesc" id="ParentalLockTextLockedSuffex1" text="#Parental_SelectToEnter" />
+							<Label class="SmDesc" id="ParentalLockTextLockedPrefix" text="#Parental_CurrentMode" />
+							<Label class="LongDesc" id="ParentalLockTextUnlocked" text="#Parental_Unlocked" />
+							<Label class="SmDesc" id="ParentalLockTextLockedSuffex2" text="#Parental_SelectToLock" />
+						</Panel>
 					</ParentalButton>
 					<Button id="Exit" tabindex="3" selectionpos="10.3,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
 						<Image src="file://{images}/exit.png" />

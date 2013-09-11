@@ -1,0 +1,31 @@
+<root>
+	<styles>
+		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="tenfoot/resource/styles/button.css" />
+		<include src="tenfoot/resource/styles/library/request_device_authorization.css" />
+	</styles>
+
+	<RequestDeviceAuthorizationPanel class="TenfootMsgBox" onmouseactivate="CancelDialog()" defaultfocus="ProductCode">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    	<Label class="StdTitle" text="#DeviceAuth_RequestDialog_Title" />
+
+			<Label class="StdLabelMed" text="#DeviceAuth_RequestDialog_Description" />
+			   <TextEntry id="DeviceDescription"
+		       	textinputid="DeviceDescriptionTextEntry"
+    				textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+
+    	<Label class="StdLabelLarge" text="#DeviceAuth_RequestDialog_Text" />
+
+    	<Label class="StdLabelLarge" text="#DeviceAuth_RequestDialog_From" />
+      <Panel id="MsgBoxButtons">
+      	<Button id="SendRequest" onactivate="RequestAuthorization()">
+        	<Label text="#DeviceAuth_RequestDialog_Send" />	
+        </Button>
+        <Button onactivate="CancelDialog()">
+        	<Label text="#WizardButton_Cancel" />
+        </Button>
+    	</Panel>        
+  	</Panel>
+	</RequestDeviceAuthorizationPanel>
+</root>
