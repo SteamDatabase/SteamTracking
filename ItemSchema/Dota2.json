@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.da01e4aa9ff1d123fa5ee3ab2f3ed040afb56450.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.729220a484ca035f39ec447d4530594125510b4e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -54489,6 +54489,51 @@
 				
 			},
 			{
+				"name": "Dim Forest",
+				"defindex": 10322,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Dim Forest",
+				"item_description": "What lies forgotten among the leaves and logs?",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_weplay",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_weplay.51e30498f0ceeb668a0bcd7b822f8beff4a4b376.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_weplay_large.50f370ae758dad42da1309112e75482f1685c680.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Woodchopper",
+				"defindex": 10323,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Woodchopper",
+				"item_description": "Most would say a log's a log, but when you live downstream from an enchanted forest a log can be so much more!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/weplay_beaver\/weplay_beaver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/weplay_beaver\/weplay_beaver.4d2b5d9fae3a61309611e400734e01865ed7a5dd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/weplay_beaver\/weplay_beaver_large.91db661f402c9583166fda5620ddab0b8cb88fba.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 15000,
 				"item_class": "tool",
@@ -63355,7 +63400,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "NADota Elite League",
-				"item_description": "The most talented teams in North America compete for 8 weeks culminating in a 4-team double elimination all-star tournament. 50% of ticket profits go straight to the prize pool.",
+				"item_description": "The most talented players in North America compete for 8 weeks culminating in a 4-team double elimination all-star tournament. 50% of ticket profits go straight to the prize pool.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_nadotaleague",
@@ -63632,6 +63677,294 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 42
+					}
+				]
+				
+			},
+			{
+				"name": "WePlay.TV Dota 2 League - Season 2",
+				"defindex": 15250,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WePlay.TV Dota 2 League - Season 2",
+				"item_description": "WePlay.TV is back for Season 2! This Fall, twenty of Western Dota's finest will compete for $25,000 in cash prizes with commentary in 6+ languages, including English commentary by Beyond the Summit. Comes with exclusive \"Justin Beaver\" courier and WePlay.TV HUD in-game skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_weplays2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_weplays2.678b34b99546464c5400e939a01d2984f3fef071.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_weplays2_large.bb2b6d5fb45893a83718a3e3aa8700e84704d756.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WePlay.TV Dota 2 League - Season 2 ADMIN",
+				"defindex": 15251,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WePlay.TV Dota 2 League - Season 2 ADMIN",
+				"item_description": "WePlay.TV is back for Season 2! This Fall, twenty of Western Dota's finest will compete for $25,000 in cash prizes with commentary in 6+ languages, including English commentary by Beyond the Summit. Comes with exclusive \"Justin Beaver\" courier and WePlay.TV HUD in-game skin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_weplays2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_weplays2.678b34b99546464c5400e939a01d2984f3fef071.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_weplays2_large.bb2b6d5fb45893a83718a3e3aa8700e84704d756.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "2013 National Electronic Sports Tournament",
+				"defindex": 15252,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "2013 National Electronic Sports Tournament",
+				"item_description": "The National Electronic Sports Tournament (NEST) is hosted by the Center of National Sports and Chinese Sports Newspaper Agency. It is sponsored by the Hangzhou Wahaha Group CO.,LTD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nest.5c141739f3a27a174b85faf329e6529e33ec88c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nest_large.e4db1ee36aa9623f4e97de44a8f3e76f6f2aa346.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "2013 National Electronic Sports Tournament - ADMIN",
+				"defindex": 15253,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "2013 National Electronic Sports Tournament - ADMIN",
+				"item_description": "The National Electronic Sports Tournament (NEST) is hosted by the Center of National Sports and Chinese Sports Newspaper Agency. It is sponsored by the Hangzhou Wahaha Group CO.,LTD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nest.5c141739f3a27a174b85faf329e6529e33ec88c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nest_large.e4db1ee36aa9623f4e97de44a8f3e76f6f2aa346.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Nexon Sponsorship League",
+				"defindex": 15254,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Sponsorship League",
+				"item_description": "The Nexon Sponsorship League is the first of its kind and will feature the best teams vying for a chance to be sponsored by Nexon. Starting in Sept 2013, the NSL will span three seasons with a total of KRW 300 million($267,153 USD) worth of sponsorship funding.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship.cc1f832c35e4d5eb915a44ae14255fa7c63ef454.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship_large.9a6bcf3c224ea3e260d42e238866137792cd430d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Nexon Sponsorship League - ADMIN",
+				"defindex": 15255,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Sponsorship League - ADMIN",
+				"item_description": "The Nexon Sponsorship League is the first of its kind and will feature the best teams vying for a chance to be sponsored by Nexon. Starting in Sept 2013, the NSL will span three seasons with a total of KRW 300 million($267,153 USD) worth of sponsorship funding.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship.cc1f832c35e4d5eb915a44ae14255fa7c63ef454.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship_large.9a6bcf3c224ea3e260d42e238866137792cd430d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WPC-ACE Dota 2 League",
+				"defindex": 15256,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WPC-ACE Dota 2 League",
+				"item_description": "The World E-Sports Professional Classic is a brand new international event supported by Shanghai Sports Federation and Jingrui Properties Group.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_wpcace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_wpcace.dc0a4e7cb1f6f47b900a097a594b855f6171c0b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_wpcace_large.b94bff7b54b910d60227325601c2f97b1916f7a8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WPC-ACE Dota 2 League - ADMIN",
+				"defindex": 15257,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WPC-ACE Dota 2 League - ADMIN",
+				"item_description": "The World E-Sports Professional Classic is a brand new international event supported by Shanghai Sports Federation and Jingrui Properties Group.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_wpcace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_wpcace.dc0a4e7cb1f6f47b900a097a594b855f6171c0b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_wpcace_large.b94bff7b54b910d60227325601c2f97b1916f7a8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
 					}
 				]
 				
