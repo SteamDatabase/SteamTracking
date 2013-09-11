@@ -1105,6 +1105,10 @@ img.movie_thumb {
 	
 }
 
+.blotter_workshopitem_description img {
+	max-width: 638px;
+}
+
 /* blotter collections */
 
 .blotter_workshopcollection

@@ -416,3 +416,21 @@ function OpenBooster( appid, itemid )
 	});
 }
 
+function ShowBoosterEligibility()
+{
+	var $Content = $J('<div class="group_invite_throbber"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>');
+
+	var Modal = ShowAlertDialog( 'Booster Pack Eligibility', $Content );
+
+	$J.get( g_strProfileURL + '/ajaxgetboostereligibility/' )
+		.done( function( html ) {
+			g_$BoosterModalContent = $J(html);
+			$Content.replaceWith( g_$BoosterModalContent );
+			Modal.AdjustSizing();
+		})
+		.fail( function() {
+			Modal.Dismiss();
+			ShowAlertDialog( 'Booster Pack Eligibility', 'There was a problem checking your booster pack eligibility.  Please try again later.' );
+		});
+}
+

@@ -1,6 +1,5 @@
 
 .profile_badges_header {
-	padding-top: 32px;
 	margin-bottom: 16px;
 
 	line-height: 30px;
@@ -686,6 +685,7 @@ img.gamecard {
 	border-color: #1a1819 #515153 #515153 #1a1819;
 	background-color: #1d1e20;
 	padding: 20px;
+	margin-bottom: 24px;
 }
 
 .profile_xp_block_left {
@@ -759,4 +759,14 @@ img.gamecard {
 	width: 280px;
 	text-align: center;
 	float: left;
+}
+
+.booster_eligibility_results {
+	max-width: 456px;
+}
+
+.booster_eligibility_results p, .booster_eligibility_results ul {
+	margin-top: 0;
+	margin-bottom: 12px;
+	line-height: 17px;
 }

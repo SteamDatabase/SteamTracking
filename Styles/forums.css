@@ -97,7 +97,6 @@ textarea.forumtopic_reply_textarea {
 	padding-right: 15px;
 	padding-left: 5px;
 	cursor: pointer;
-
 }
 
 .forum_topic.locked {
@@ -140,6 +139,12 @@ textarea.forumtopic_reply_textarea {
 
 .forum_topic .forum_topic_name a:hover {
 	text-decoration: none;
+}
+
+.forum_topic.selected_for_bulk {
+	border: 1px solid #529cde;
+	padding-left: 4px;
+	padding-right: 14px;
 }
 
 .forum_topic_icon {
@@ -1014,4 +1019,33 @@ table.forum_auditlog tr.audit_row_secondary {
 
 .manage_actions_buttons .btn_medium {
 	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.bulk_actions_toggle_btn {
+	margin-bottom: 17px;
+}
+
+.bulk_tools_icon {
+	height: 16px;
+	width: 16px;
+	margin-right: 4px;
+	vertical-align: text-top;
+}
+
+.merge_topic_dialog {
+	max-width: 400px;
+}
+
+.merge_topic_dialog_content, .merge_topic_target_list {
+	margin-bottom: 6px;
+}
+
+.merge_topic_target_list {
+	padding-left: 12px;
+}
+
+.merge_topic_together_option {
+	margin-bottom: 6px;
+	font-style: italic;
 }
