@@ -1112,3 +1112,26 @@ span.icon_star { display: inline-block;}
 	color: #888888;
 	
 }
+
+.greencheck {
+	background-color: #8bb006;
+	color: #e7e8e9;
+	padding: 5px 5px 5px 5px;
+	line-height: 16px;
+	font-size: 16px;
+	vertical-align: top;
+	margin: 4px 0;
+}
+
+#app_notes {
+	width: 275px;
+	height: 140px;
+}
+
+.text_green {
+	color: #A4D007 !important;
+}
+
+.text_orange {
+	color: #e76e34 !important;
+}
