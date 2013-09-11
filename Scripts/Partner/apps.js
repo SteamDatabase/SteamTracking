@@ -3274,10 +3274,159 @@ function UpdateReleaseRequest( nAppId, rgChanges )
 		},
 		success: function( response )
 		{
-			//console.log(response);
-			location.reload();
+			if( response.success == 1 ) {
+				location.reload();
+			} else {
+				alert("Update failed (Error code: " + response.success);
+			}
 		}
 	});
+}
+
+var rgUrls = [];
+
+function PublishPending( nAppId, nItemid, bSetPlayable, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, rgPackages )
+{
+	rgUrls = []; // Clear any cruft from previous attempts.
+
+	rgUrls.push( {
+		'url': 'https://partner.steamgames.com/packages/publishpackage/',
+		'data': { 'packages': rgPackages },
+		'message': 'Publishing cost vdfs for packages ' + rgPackages.join(', ')
+	});
+
+	rgUrls.push( {
+		'url': 'https://partner.steamgames.com/store/ajaxpublishpackages/',
+		'data': { 'packages': rgPackages, 'visible': 1 },
+		'message': 'Publishing store packages for ' + rgPackages.join(', ')
+	});
+
+	$J.each(rgPackages, function(i, j){
+		if( bAddToMaster )
+		{
+			rgUrls.push( {
+				'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
+				'data' : {
+					'packageIdSrc' : j,
+					'packageIdDst' : 61,
+					'message': 'Adding package '+j+' to Steam master sub'
+				}
+			} );
+		}
+
+		if( bAddToPress )
+		{
+			rgUrls.push( {
+				'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
+				'data' : {
+					'packageIdSrc' : j,
+					'packageIdDst' : 62,
+					'message': 'Adding package '+j+' to press master sub'
+				}
+			} );
+		}
+	});
+
+
+
+	if( bSetReleased )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/apps/setreleased/' + nAppId,
+			'data': { 'released' : 'true' },
+			'message': 'Setting app released'
+		});
+	}
+
+	if( bSetPlayable )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/apps/setappreleasestate/' + nAppId,
+			'data': { 'releasestate': ( bSetPlayable ) ? 'released' : 'unavailable' },
+			'message': 'Setting app playable'
+		});
+	}
+
+
+	if( bSetPlayable || bSetReleased )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/apps/publish/' + nAppId,
+			'data': { 'releasestate': ( bSetPlayable ) ? 'released' : 'unavailable' },
+			'message': 'Publishing app'
+		});
+	}
+
+	if( bPublishStoreApp )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/admin/game/setreleased/' + nItemid,
+			'data': { 'json': true },
+			'message': 'Setting store page visible'
+		});
+
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/admin/game/publish/' + nItemid,
+			'data': { 'json': true },
+			'message': 'Publishing store page'
+		});
+	}
+
+	PublishActionNext();
+
+}
+
+function PublishActionNext()
+{
+	// Note that we're only using the first iteration of this loop, we simply
+	// yse each to get the key
+
+	var rgRequest = rgUrls.shift();
+
+	if( !rgRequest )
+	{
+		$J('#publish_status').hide();
+		$J('#release_details_container').hide();
+		$J('#publish_success').show();
+
+		return;
+	}
+
+	var url = rgRequest['url'];
+	var data = rgRequest['data'];
+	var message = rgRequest['message'];
+	$J('#publish_status_message').text(message);
+	$J('#publish_status_log').append( $J( '<span>' + message + '</span><br>' ) );
+
+	jQuery.ajax({
+		dataType: "json",
+		url: url,
+		type: 'POST',
+		data: data,
+		success: function(data)
+		{
+			$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>' ) );
+			if( !data['success'] )
+			{
+				console.log("Failed:");
+				console.log('<p><b>' + data.message + '</b></p>');
+				$J('#publish_status_log').show();
+				$J('#publish_status').hide();
+			} else
+				PublishActionNext();
+
+
+		},
+		error: function( response )
+		{
+			console.log(response);
+			$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p>') );
+			$J('#publish_status_log').show();
+			$J('#publish_status').hide();
+			$J('#publish_button').show();
+		}
+	});
+
 }
 
 
