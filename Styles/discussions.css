@@ -516,3 +516,28 @@ a.recent_game_discussion.last
 .recent_game_discussion_count {
 	color: #939393;
 }
+
+.moderator_list_group {
+	width: 898px;
+	margin-bottom: 18px;
+}
+
+.moderator_list_group p {
+	line-height: 18px;
+	margin-top: 0;
+}
+
+.moderator_list {
+	padding-top: 12px;
+}
+
+.moderator_list .friendBlock {
+	position: relative;
+	float: left;
+	width: 290px;
+	margin-right: 8px;
+}
+
+.moderator_list .friendBlock:nth-child(3n) {
+	margin-right: 0;
+}

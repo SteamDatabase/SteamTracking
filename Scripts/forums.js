@@ -423,6 +423,36 @@ function Forum_MoveTopic( gidTopic )
 		g_rgForumTopics[ gidTopic ].MoveTopic();
 }
 
+function Forum_MergeTopic( gidTopic )
+{
+	if ( g_rgForumTopics[ gidTopic ] )
+	{
+		var Topic = g_rgForumTopics[ gidTopic ];
+		Forum_MergeTopicDialog( Topic.GetActionURL( 'mergetopics' ), Topic.m_rgForumData, [ gidTopic ] )
+			.done( function( transport ) {
+
+				// the transport is from prototype
+				var strNewURL = Topic.m_rgForumData['forum_url'];
+				if ( transport && transport.responseJSON && transport.responseJSON.newtopic )
+					strNewURL = transport.responseJSON.newtopic;
+
+				if ( strNewURL )
+				{
+					ShowConfirmDialog(
+						'Merge Topics',
+						'The selected topics have been merged into a single topic.',
+						'Go to the merged topic',
+						'Return to topic list'
+					).done( function() {
+						window.location = strNewURL;
+					}).fail( function() {
+						window.location = Topic.m_rgForumData['forum_url'];
+					});
+				}
+			});
+	}
+}
+
 function Forum_SubscribeToTopic( gidTopic )
 {
 	if ( g_rgForumTopics[ gidTopic ] )
@@ -850,139 +880,10 @@ CForumTopic = Class.create( {
 
 	MoveTopic: function()
 	{
-		var form = $('forum_movetopic_form');
+		Forum_MoveTopics( this.GetActionURL( 'movetopic' ), this.m_rgForumData, [ this.m_gidForumTopic ])
+			.done( this.OnMoveTopicSuccess.bind(this) )
+			.fail( this.OnModeratorActionFailed.bind(this) );
 
-		// blank out the text area if the user is making a new report
-		form.elements['gidforumtopic'].value = this.m_gidForumTopic;
-
-		this.SetMoveTopicClan( this.m_rgForumData['owner'], null );
-
-		if ( $('associate_game' ) && $('game_select_suggestions_ctn') && $('game_select_suggestions') && !$('associate_game').m_bInitialized )
-		{
-			var elAssociateGame = $('associate_game');
-			elAssociateGame.m_bInitialized = true;
-			new CGameSelector( $('associate_game'), $('game_select_suggestions_ctn'), $('game_select_suggestions'), this.OnMoveTopicSelectGame.bind(this) );
-		}
-
-		if ( !$('submit_move_topic_button').m_bBound )
-		{
-			$('submit_move_topic_button').observe( 'click', this.SubmitMoveTopic.bind(this) );
-			$('submit_move_topic_button').m_bBound = true;
-		}
-
-		if ( $('forum_movetopic_globaldestinations') && !$('forum_movetopic_globaldestinations').m_bBound )
-		{
-			$('forum_movetopic_globaldestinations').observe( 'click', this.SetMoveTopicClan.bind( this, false, 753 ) );
-			$('forum_movetopic_globaldestinations').m_bBound = true;
-		}
-
-		showContentAsModal( 'forum_modal', $('forum_movetopic_modal_content') );
-	},
-
-	SetMoveTopicClan: function( clanidowner, appidowner )
-	{
-		var form = $('forum_movetopic_form');
-		var rgReloadParams = null;
-		if ( clanidowner )
-		{
-			if ( form.elements['destination_clanidowner'].value != clanidowner )
-			{
-				form.elements['destination_clanidowner'].value = clanidowner;
-				form.elements['destination_appidowner'].value = '';
-				rgReloadParams = { destination_clanid: clanidowner };
-			}
-		}
-		else if ( appidowner )
-		{
-			if ( form.elements['destination_appidowner'].value != appidowner )
-			{
-				form.elements['destination_clanidowner'].value = '';
-				form.elements['destination_appidowner'].value = appidowner;
-				rgReloadParams = { destination_appid: appidowner };
-			}
-		}
-
-		if ( rgReloadParams )
-		{
-			$(form.elements['destination_gidforum']).hide();
-			$('forum_movetopic_destination_throbber').show();
-			$('forum_movetopic_destinationclan') && $('forum_movetopic_destinationclan').update('&nbsp;');
-			$('forum_movetopic_destination_unavailable').hide();
-
-			new Ajax.Request( this.GetActionURL( 'gettopicdestinations' ), {
-				method: 'get',
-				parameters: this.ParametersWithDefaults( rgReloadParams ),
-				onSuccess: this.OnMoveTopicDestinations.bind( this, clanidowner, appidowner ),
-				onFailure: this.OnMoveTopicDestinationsFailed.bind( this, clanidowner, appidowner )
-			} );
-		}
-	},
-
-	OnMoveTopicSelectGame: function( GameSelector, rgAppData )
-	{
-		$('associate_game').value='';
-
-		this.SetMoveTopicClan( false, rgAppData.appid );
-	},
-
-	SubmitMoveTopic: function()
-	{
-		var form = $('forum_movetopic_form');
-		new Ajax.Request( this.GetActionURL( 'movetopic' ), {
-			method: 'post',
-			parameters: this.ParametersWithDefaults( form.serialize( true ) ),
-			onSuccess: this.OnMoveTopicSuccess.bind(this),
-			onFailure: this.OnModeratorActionFailed.bind(this)
-		});
-	},
-
-	OnMoveTopicDestinations: function( clanidowner, appidowner, transport )
-	{
-		var form = $('forum_movetopic_form');
-		if ( ( !clanidowner || form.elements['destination_clanidowner'].value == clanidowner ) &&
-			( !appidowner || form.elements['destination_appidowner'].value == appidowner ) )
-		{
-			$('forum_movetopic_destination_throbber').hide();
-			var elSelect = $(form.elements['destination_gidforum']);
-			elSelect.update('');
-			var rgForums = transport.responseJSON.rgForums;
-			if ( rgForums && rgForums.length > 0 )
-			{
-				for ( var i = 0; i < rgForums.length; i++ )
-				{
-					var rgForum = rgForums[i];
-					var elOption = new Element( 'option', { value: rgForum.gidforum } );
-					elOption.update( rgForum.name.escapeHTML() );
-					elSelect.appendChild( elOption );
-				}
-			}
-			else
-			{
-				this.OnMoveTopicDestinationsFailed( clanidowner, appidowner, transport );
-				return;
-			}
-
-			var elName = $('forum_movetopic_destinationclan');
-			if ( elName )
-				elName.update( transport.responseJSON.strName );
-
-			elSelect.show();
-			elSelect.focus();
-			$('submit_move_topic_button').show();
-		}
-	},
-
-	OnMoveTopicDestinationsFailed: function( clanidowner, appidowner, transport )
-	{
-		var form = $('forum_movetopic_form');
-		if ( ( !clanidowner || form.elements['destination_clanidowner'].value == clanidowner ) &&
-			( !appidowner || form.elements['destination_appidowner'].value == appidowner ) )
-		{
-			$('forum_movetopic_destination_throbber').hide();
-			$(form.elements['destination_gidforum']).hide();
-			$('forum_movetopic_destination_unavailable').show();
-			$('submit_move_topic_button').hide();
-		}
 	},
 
 	OnMoveTopicSuccess: function( transport )
@@ -1261,25 +1162,394 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 
 });
 
+function Forum_RecordPotentialMergeTarget( rgForumData, gidTopic, strTitle )
+{
+	var rgTargets = _Forum_GetPotentialMergeTargets();
+	for ( var i=0; i < rgTargets.length; i++ )
+	{
+		if ( rgTargets[i].gidTopic == gidTopic )
+		{
+			rgTargets.splice( i, 1 );
+			break;
+		}
+	}
+	rgTargets.unshift( { unClanIDOwner: rgForumData.owner, gidForum: rgForumData.gidforum, gidTopic: gidTopic, strTitle: strTitle } );
+	_Forum_UpdatePotentialMergeTargets( rgTargets );
+}
+
+function _Forum_GetPotentialMergeTargets()
+{
+	var strForumMergeTargets = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
+	var rgForumMergeTargets = V_ParseJSON( strForumMergeTargets );
+	if ( !rgForumMergeTargets || !rgForumMergeTargets.length )
+		rgForumMergeTargets = [];
+
+	return rgForumMergeTargets;
+}
+
+function _Forum_UpdatePotentialMergeTargets( rgTargets )
+{
+	rgTargets.splice( 10 );	//max we will track
+	SetValueLocalStorage( 'rgForumMergeTargets', V_ToJSON( rgTargets ) );
+}
+
+var g_rgRedirectTimeOptions = [
+	{value: 0, label: 'No redirect' },
+	{value: 1, label: '1 hour' },
+	{value: 24, label: '1 day' },
+	{value: 168, label: '1 week' },
+	{value: 720, label: '1 month' },
+	{value: -1, label: 'Permanent' }
+];
+function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bResolveReports )
+{
+	var $DialogContent = $J('<div/>', {'class': 'merge_topic_dialog'} );
+	var $MergeForm = $J('<form/>' );
+	$DialogContent.append( $MergeForm );
+
+	$MergeForm.append( $J('<div/>', {'class': 'merge_topic_dialog_content' }).text( rgForumTopics.length > 1 ? 'Select a recently viewed topic to merge the selected topics into:' : 'Select a recently viewed topic to merge this topic into:' ) );
+
+	var $List = $J('<div/>', {'class': 'merge_topic_target_list' } );
+	$MergeForm.append( $List );
+
+	var strMoreInstructions = 'If the topic you\'d like to merge to isn\'t listed here, you can <%1$s>browse for the topic you want<%2$s> in a new window.  This list will be automatically updated when you return.'.replace( /%1\$s/, 'a class="whiteLink" href="' + rgForumData.forum_url + '" target="_blank"').replace( /%2\$s/, '/a' );
+	$MergeForm.append( $J('<div/>', {'class': 'merge_topic_dialog_content' }).html( strMoreInstructions ) );
+
+	// redirect section
+	var $Expiry = $J('<div/>', {'class': 'merge_topic_dialog_content' });
+	var $Select = $J('<select/>', {name: 'redirect_expiry_hours', style: 'width: 240px;' } );
+	for ( var i = 0; i < g_rgRedirectTimeOptions.length; i++ )
+	{
+		var rgOpt = g_rgRedirectTimeOptions[i];
+		$Select.append( $J('<option/>', {value: rgOpt.value }).text( rgOpt.label) );
+	}
+	$Expiry.append( 'Leave redirect for: ', $Select );
+	$MergeForm.append( $Expiry );
+
+	// merge target list
+	var fnMakeMergeOption = function( unClanIDOwner, gidForum, gidTopic, strLabel ) {
+		var $Item = $J('<div/>', {'class': 'ellipsis'} );
+		var id = 'merge_target_' + gidTopic;
+		// use html5 data, jquery data disappears when the modal is dismissed
+		var $Radio = $J('<input/>', {type: 'radio', name: 'merge_target', value: gidTopic, id: id,
+			'data-unclanidowner': unClanIDOwner, 'data-gidforum': gidForum } );
+		var $Label = $J('<label/>', {'for': id }).text( strLabel );
+		$Item.append( $Radio, $Label );
+		return $Item;
+	}
+
+	var oSelectedTopics = {};
+	for( var i = 0; i< rgForumTopics.length; i++ )
+		oSelectedTopics[rgForumTopics[i]] = true;
+
+	var fnPopulateMergeOptions = function() {
+		$List.html('');
+		if ( rgForumTopics.length > 1 )
+		{
+			var $MergeTogether = fnMakeMergeOption( 0, 0, 0, 'Merge the selected topics together' );
+			$MergeTogether.addClass( 'merge_topic_together_option');
+			$List.append( $MergeTogether );
+		}
+		var rgMergeTargets = _Forum_GetPotentialMergeTargets();
+		for ( var i = 0; i < rgMergeTargets.length; i++ )
+		{
+			var rgTarget = rgMergeTargets[i];
+			// skip it if it's one of the ones we're merging
+			if ( oSelectedTopics[ rgTarget.gidTopic] )
+				continue;
+
+			$List.append( fnMakeMergeOption( rgTarget.unClanIDOwner, rgTarget.gidForum, rgTarget.gidTopic, rgTarget.strTitle ) );
+		}
+	}
+	fnPopulateMergeOptions();
+
+	var strInitialMergeTargetsJSON = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
+	var nTimeoutCheckMergeTargets = window.setInterval( function() {
+		var strMergeTargetsJSON = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
+		if ( strMergeTargetsJSON != strInitialMergeTargetsJSON )
+		{
+			var strSelectedOption = $List.find( 'input:checked').val();
+			fnPopulateMergeOptions();
+			strInitialMergeTargetsJSON = strMergeTargetsJSON;
+
+			// restore whatever they had selected before we reloaded (if it's still there )
+			if ( typeof strSelectedOption != 'undefined' )
+				$List.find( 'input[value="' + strSelectedOption + '"]').prop( 'checked', true );
+		}
+	}, 200 );
+
+
+	var deferred = $J.Deferred();
+
+	var Modal = ShowConfirmDialog( 'Merge Topics', $DialogContent, 'Merge Topics' );
+	//Modal.fail( function() { Deferred.reject(); } );
+	Modal.done( function() {
+		var params = {};
+		params['sessionid'] = g_sessionID;
+		params['gidforumtopic_list'] = V_ToJSON( rgForumTopics );
+		params['source_forum_name'] = rgForumData.forum_display_name;
+		params['redirect_expiry_hours'] = $Select.val();
+		if ( bResolveReports )
+			params['resolve_reports'] = 1;
+
+		var $SelectedTarget = $List.find( 'input:checked' );
+		if ( !$SelectedTarget.length )
+			return;
+
+		// not having a value implies our "merge together" option
+		if ( $SelectedTarget.val() )
+		{
+			params['destination_clanidowner'] = $SelectedTarget.data( 'unclanidowner' );
+			params['destination_gidforum'] = $SelectedTarget.data( 'gidforum' );
+			params['destination_gidtopic'] = $SelectedTarget.val();
+		}
+
+		new Ajax.Request( strActionURL, {
+			method: 'post',
+			parameters: params,
+			onSuccess: deferred.resolve.bind( deferred ),
+			onFailure: deferred.reject.bind( deferred )
+		});
+	}).always( function() {
+		window.clearInterval( nTimeoutCheckMergeTargets );
+	});
+
+	return deferred;
+}
+
+function Forum_MoveTopics( strActionURL, rgForumData, rgForumTopics, bResolveReports )
+{
+	var form = $('forum_movetopic_form');
+
+	// blank out the text area if the user is making a new report
+	form.elements['gidforumtopic_list'].value = V_ToJSON( rgForumTopics );
+	form.elements['source_forum_name'].value = rgForumData.forum_display_name;
+
+	var deferred = new jQuery.Deferred();
+
+	Forum_SetMoveTopicClan( rgForumData['owner'], null );
+
+	if ( $('associate_game' ) && $('game_select_suggestions_ctn') && $('game_select_suggestions') && !$('associate_game').m_bInitialized )
+	{
+		var elAssociateGame = $('associate_game');
+		elAssociateGame.m_bInitialized = true;
+		new CGameSelector( $('associate_game'), $('game_select_suggestions_ctn'), $('game_select_suggestions'), Forum_OnMoveTopicSelectGame );
+	}
+
+
+	var fnSubmitMoveTopic = function() {
+		var params = form.serialize( true );
+		params['sessionid'] = g_sessionID;
+		if ( bResolveReports )
+			params['resolve_reports'] = 1;
+
+		var elSelect = form.elements['destination_gidforum'];
+
+		new Ajax.Request( strActionURL, {
+			method: 'post',
+			parameters: params,
+			onSuccess: deferred.resolve.bind( deferred ),
+			onFailure: deferred.reject.bind( deferred )
+		});
+	};
+
+	if ( !$('submit_move_topic_button').m_bBound )
+	{
+		$('submit_move_topic_button').observe( 'click', fnSubmitMoveTopic );
+		$('submit_move_topic_button').m_bBound = true;
+	}
+
+	if ( $('forum_movetopic_globaldestinations') && !$('forum_movetopic_globaldestinations').m_bBound )
+	{
+		$('forum_movetopic_globaldestinations').observe( 'click', Forum_SetMoveTopicClan.bind( null, false, 753 ) );
+		$('forum_movetopic_globaldestinations').m_bBound = true;
+	}
+
+	showContentAsModal( 'forum_modal', $('forum_movetopic_modal_content') );
+
+	return deferred;
+}
+
+
+function Forum_SetMoveTopicClan( clanidowner, appidowner )
+{
+	var form = $('forum_movetopic_form');
+	var rgReloadParams = null;
+	if ( clanidowner )
+	{
+		if ( form.elements['destination_clanidowner'].value != clanidowner )
+		{
+			form.elements['destination_clanidowner'].value = clanidowner;
+			form.elements['destination_appidowner'].value = '';
+			rgReloadParams = { destination_clanid: clanidowner };
+		}
+	}
+	else if ( appidowner )
+	{
+		if ( form.elements['destination_appidowner'].value != appidowner )
+		{
+			form.elements['destination_clanidowner'].value = '';
+			form.elements['destination_appidowner'].value = appidowner;
+			rgReloadParams = { destination_appid: appidowner };
+		}
+	}
+
+	if ( rgReloadParams )
+	{
+		$(form.elements['destination_gidforum']).hide();
+		$('forum_movetopic_destination_throbber').show();
+		$('forum_movetopic_destinationclan') && $('forum_movetopic_destinationclan').update('&nbsp;');
+		$('forum_movetopic_destination_unavailable').hide();
+		rgReloadParams['sessionid'] = g_sessionID;
+
+		new Ajax.Request( 'http://steamcommunity.com/forum/0/General/gettopicdestinations/', {
+			method: 'get',
+			parameters: rgReloadParams,
+			onSuccess: Forum_OnMoveTopicDestinations.bind( null, clanidowner, appidowner ),
+			onFailure: Forum_OnMoveTopicDestinationsFailed.bind( null, clanidowner, appidowner )
+		} );
+	}
+}
+
+function Forum_OnMoveTopicSelectGame( GameSelector, rgAppData )
+{
+	$('associate_game').value='';
+
+	Forum_SetMoveTopicClan( false, rgAppData.appid );
+}
+
+function Forum_OnMoveTopicDestinations( clanidowner, appidowner, transport )
+{
+	var form = $('forum_movetopic_form');
+	if ( ( !clanidowner || form.elements['destination_clanidowner'].value == clanidowner ) &&
+		( !appidowner || form.elements['destination_appidowner'].value == appidowner ) )
+	{
+		$('forum_movetopic_destination_throbber').hide();
+		var $Select = $J(form.elements['destination_gidforum']);
+		$Select.html('');
+		var rgForums = transport.responseJSON.rgForums;
+		if ( rgForums && rgForums.length > 0 )
+		{
+			for ( var i = 0; i < rgForums.length; i++ )
+			{
+				var rgForum = rgForums[i];
+				var $Option = $J( '<option/>', { value: rgForum.gidforum } );
+				$Option.text( rgForum.name );
+				$Select.append( $Option );
+			}
+		}
+		else
+		{
+			Forum_OnMoveTopicDestinationsFailed( clanidowner, appidowner, transport );
+			return;
+		}
+
+		var elName = $('forum_movetopic_destinationclan');
+		if ( elName )
+			elName.update( transport.responseJSON.strName );
+
+		$Select.show();
+		$Select.focus();
+		$('submit_move_topic_button').show();
+	}
+}
+
+function Forum_OnMoveTopicDestinationsFailed( clanidowner, appidowner, transport )
+{
+	var form = $('forum_movetopic_form');
+	if ( ( !clanidowner || form.elements['destination_clanidowner'].value == clanidowner ) &&
+		( !appidowner || form.elements['destination_appidowner'].value == appidowner ) )
+	{
+		$('forum_movetopic_destination_throbber').hide();
+		$(form.elements['destination_gidforum']).hide();
+		$('forum_movetopic_destination_unavailable').show();
+		$('submit_move_topic_button').hide();
+	}
+}
+
+function OnForumTopicClick( element, url )
+{
+	if ( $J(element).children( '.forum_topic_checkbox' ).length )
+	{
+		//moderation mode
+		var $Checkbox = $J(element).find( '.forum_topic_checkbox_input');
+		$Checkbox.prop( 'checked', function( i, val ) { return !val; } );
+		$Checkbox.change();
+	}
+	else
+		window.location = url;
+}
+
 function InitializeForumBulkActions( strName )
 {
 	var $ForumArea = $J('#forum_' + strName + '_area' );
 	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
+	var $BtnEnable = $J('#forum_' + strName + '_bulk_enable');
+	var $BtnDisable = $J('#forum_' + strName + '_bulk_disable');
+
+	var $BtnDelete = $J('#forum_' + strName + '_bulk_delete');
+	var $BtnUnDelete = $J('#forum_' + strName + '_bulk_undelete');
+
+	var $BtnLock = $J('#forum_' + strName + '_bulk_lock');
+	var $BtnUnLock = $J('#forum_' + strName + '_bulk_unlock');
+
+	var $BtnMove = $J('#forum_' + strName + '_bulk_move');
+	var $BtnMerge = $J('#forum_' + strName + '_bulk_merge');
 
 	if ( !$ForumActions.length )
 		return;
 
+	var bEnabled = false;
+
 	var fnShowControlsIfCheckboxChecked = function ()
 	{
 		var $CheckedBoxes = $ForumArea.find( '.forum_topic_checkbox_input:checked' );
+
+		$BtnUnDelete.hide();
+		$BtnDelete.show();
+		$BtnUnLock.hide();
+		$BtnLock.show();
+		$BtnMove.show();
+		$BtnMerge.show();
+
 		if ( $CheckedBoxes.length > 0 )
-			$ForumActions.slideDown( 'fast' );
+		{
+			var $CheckedTopics = $CheckedBoxes.parents( '.forum_topic' );
+			var cDeletedTopics = $CheckedTopics.filter( '.deleted' ).length;
+			var cLockedTopics = $CheckedTopics.filter( '.locked' ).length;
+			if ( cDeletedTopics == $CheckedBoxes.length )
+			{
+				$BtnUnDelete.show();
+				$BtnDelete.hide();
+			}
+
+			if ( cDeletedTopics > 0 )
+			{
+				// really only undelete will work on deleted topics
+				$BtnMove.hide();
+				$BtnMerge.hide();
+				$BtnLock.hide();
+			}
+			else if ( cLockedTopics == $CheckedBoxes.length )
+			{
+				$BtnUnLock.show();
+				$BtnLock.hide();
+			}
+
+			$ForumActions.find('.manage_actions_buttons').fadeTo( 'fast', 1.0 );
+		}
 		else
-			$ForumActions.slideUp( 'fast' );
+		{
+			$ForumActions.find('.manage_actions_buttons').fadeTo( 'fast', 0.3 );
+		}
 	}
 
 	var fnAddCheckboxes = function() {
-		var $ForumTopics = $ForumArea.find( '.forum_topic' );
+
+		if ( !bEnabled )
+			return;
+
+		var $ForumTopics = $ForumArea.find( '.forum_topic:not(.moved)' );
 
 		$ForumTopics.each( function() {
 			var $ForumTopic = $J(this);
@@ -1289,7 +1559,13 @@ function InitializeForumBulkActions( strName )
 				var $Checkbox = $J('<input/>', {'type': 'checkbox', 'class': 'forum_topic_checkbox_input' } );
 				$Checkbox.data( 'gidForumTopic', gidForumTopic );
 
-				$Checkbox.click( fnShowControlsIfCheckboxChecked );
+				$Checkbox.change( function() {
+					fnShowControlsIfCheckboxChecked();
+					if ( $Checkbox.prop('checked') )
+						$ForumTopic.addClass( 'selected_for_bulk' );
+					else
+						$ForumTopic.removeClass( 'selected_for_bulk' );
+				} );
 
 				var $Wrapper = $J('<div/>', {'class': 'forum_topic_checkbox' } );
 				$Wrapper.html( '&nbsp;' );
@@ -1304,7 +1580,24 @@ function InitializeForumBulkActions( strName )
 		fnShowControlsIfCheckboxChecked();
 	};
 
-	fnAddCheckboxes();
+
+	$BtnEnable.click( function() {
+		bEnabled = true;
+		$ForumActions.slideDown( 'fast' );
+		fnAddCheckboxes();
+
+		$BtnEnable.hide();
+		$BtnDisable.show();
+	});
+	$BtnDisable.click( function() {
+		bEnabled = false;
+		$ForumActions.slideUp( 'fast' );
+		$ForumArea.find( '.forum_topic').removeClass('selected_for_bulk');
+		$ForumArea.find( '.forum_topic').children( '.forum_topic_checkbox').detach();
+
+		$BtnEnable.show();
+		$BtnDisable.hide();
+	});
 
 	//prototype AJAX
 	Ajax.Responders.register( { onComplete: fnAddCheckboxes } );
@@ -1322,28 +1615,62 @@ function GatherForumTopicGIDs( $ForumArea )
 
 function ForumBulkDelete( strName, bUndelete )
 {
-	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
-
 	BulkModerate( strName, 'deleted', !bUndelete)
 		.done( function( data ) {
 			if ( bUndelete )
-				ShowAlertDialog( 'Undelete Threads', 'The selected threads have been restored.' );
+				ShowAlertDialog( 'Undelete', 'The selected topics have been restored.' );
 			else
-				ShowAlertDialog( 'Delete Threads', 'The selected threads have been deleted.' );
+				ShowAlertDialog( 'Delete', 'The selected topics have been deleted.' );
 		});
 }
 
 function ForumBulkLock( strName, bUnlock )
 {
-	var $ForumActions = $J('#forum_' + strName + '_bulk_actions' );
-
 	BulkModerate( strName, 'locked', !bUnlock)
 		.done( function( data ) {
 			if ( bUnlock )
-				ShowAlertDialog( 'Unlock Threads', 'The selected threads have been unlocked.' );
+				ShowAlertDialog( 'Unlock', 'The selected topics have been unlocked.' );
 			else
-				ShowAlertDialog( 'Lock Threads', 'The selected threads have been locked.' );
+				ShowAlertDialog( 'Lock', 'The selected topics have been locked.' );
 		});
+}
+
+function ForumBulkMove( strName )
+{
+	BulkModerate( strName, 'movetopic' )
+		.done( function( transport ) {
+			// the transport is from prototype
+			ShowAlertDialog( 'Move...', 'The selected topics have been moved to the new forum.' );
+		});
+}
+
+function ForumBulkMerge( strName )
+{
+	BulkModerate( strName, 'mergetopics' )
+		.done( function( transport ) {
+			// the transport is from prototype
+			var strNewURL = '';
+			if ( transport && transport.responseJSON && transport.responseJSON.newtopic )
+				strNewURL = transport.responseJSON.newtopic;
+
+			if ( strNewURL )
+			{
+				ShowConfirmDialog(
+					'Merge Topics',
+					'The selected topics have been merged into a single topic.',
+					'Go to the merged topic',
+					'OK'
+				).done( function() {
+						window.location = strNewURL;
+					});
+			}
+			else
+			{
+				// don't have a URL?
+				ShowAlertDialog('Merge Topics',
+					'The selected topics have been merged into a single topic.' );
+			}
+		} );
 }
 
 
@@ -1355,26 +1682,38 @@ function BulkModerate( strName, flag, value )
 	var rgForumTopicGIDs = GatherForumTopicGIDs( $ForumArea );
 	if ( rgForumTopicGIDs.length == 0 )
 	{
-		ShowAlertDialog( 'Error', 'No topics selected.' );
 		return $J.Deferred();
 	}
 	var bResolveReports = $J('#forum_' + strName + '_bulk_resolve_reports').prop('checked');
 
-	var strURL = Forum.GetActionURL( 'moderatetopic' );
-	var rgParams = {
-		sessionid: g_sessionID,
-		action: 'setflag',
-		flag: flag,
-		value: value,
-		gidforumtopic_list: V_ToJSON( rgForumTopicGIDs ),
-		resolve_reports: (bResolveReports ? '1' : '')
+	if ( flag == 'movetopic' )
+	{
+		deferred = Forum_MoveTopics( Forum.GetActionURL( 'movetopic' ), Forum.m_rgForumData, rgForumTopicGIDs, bResolveReports );
+		deferred.always( function() { hideModal( 'forum_modal' ); } );	//hide the old crufty modal
 	}
-
-	return $J.ajax(	strURL, {
+	else if ( flag == 'mergetopics' )
+	{
+		deferred = Forum_MergeTopicDialog( Forum.GetActionURL( 'mergetopics' ), Forum.m_rgForumData, rgForumTopicGIDs, bResolveReports );
+	}
+	else
+	{
+		var strURL = Forum.GetActionURL( 'moderatetopic' );
+		var rgParams = {
+			sessionid: g_sessionID,
+			action: 'setflag',
+			flag: flag,
+			value: value,
+			gidforumtopic_list: V_ToJSON( rgForumTopicGIDs ),
+			resolve_reports: (bResolveReports ? '1' : '')
+		}
+		var deferred =  $J.ajax( strURL, {
 			data: rgParams,
 			type: 'POST'
-	}).fail( function() {
-		ShowAlertDialog( 'Error', 'There was an error while proccessing part of your request.  Please verify that you got the expected results.' );
+		});
+	}
+
+	return deferred.fail( function() {
+		ShowAlertDialog( 'Error', 'There was an error while proccessing all or part of your request.  Please verify that you got the expected results.' );
 	}).always( function() {
 		Forum.ReloadCurrentPage();
 	});

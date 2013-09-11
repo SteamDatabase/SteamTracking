@@ -363,7 +363,7 @@ a.readmore_link {
 	margin: 0;
 }
 
-.grouppage_content_area h2, a.large_title {
+.grouppage_content_area h2, a.large_title, h2.large_title {
 	color: #529cde;
 	font-size: 24px;
 	font-weight:normal;
