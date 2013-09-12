@@ -8192,4 +8192,252 @@
 			"type_name"		"KillEaterEventType_Kills"
 		}
 	}
+	"recipes"
+	{
+		"0"
+		{
+			"name"		"#RT_MP_A"
+			"n_A"		"#RI_R1p"
+			"desc_inputs"		"#RDI_AB"
+			"desc_outputs"		"#RDO_AB"
+			"di_A"		"10"
+			"di_B"		"#RI_R1p"
+			"do_A"		"1"
+			"do_B"		"#RI_R2"
+			"all_same_class"		"0"
+			"always_known"		"1"
+			"premium_only"		"0"
+			"disabled"		"0"
+			"input_items"
+			{
+				"10"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*rarity"
+							"operator"		"string=="
+							"value"		"common"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*match_set_rarity"
+							"operator"		"string=="
+							"value"		"uncommon"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"category"		"crafting"
+			"filter"		"-3"
+		}
+		"1"
+		{
+			"name"		"#RT_MP_A"
+			"n_A"		"#RI_R2p"
+			"desc_inputs"		"#RDI_AB"
+			"desc_outputs"		"#RDO_AB"
+			"di_A"		"10"
+			"di_B"		"#RI_R2p"
+			"do_A"		"1"
+			"do_B"		"#RI_R3"
+			"all_same_class"		"0"
+			"always_known"		"1"
+			"premium_only"		"0"
+			"disabled"		"0"
+			"input_items"
+			{
+				"10"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*rarity"
+							"operator"		"string=="
+							"value"		"uncommon"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*match_set_rarity"
+							"operator"		"string=="
+							"value"		"rare"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"category"		"crafting"
+			"filter"		"-3"
+		}
+		"2"
+		{
+			"name"		"#RT_MP_A"
+			"n_A"		"#RI_R3p"
+			"desc_inputs"		"#RDI_AB"
+			"desc_outputs"		"#RDO_AB"
+			"di_A"		"10"
+			"di_B"		"#RI_R3p"
+			"do_A"		"1"
+			"do_B"		"#RI_R4"
+			"all_same_class"		"0"
+			"always_known"		"1"
+			"premium_only"		"0"
+			"disabled"		"0"
+			"input_items"
+			{
+				"10"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*rarity"
+							"operator"		"string=="
+							"value"		"rare"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*match_set_rarity"
+							"operator"		"string=="
+							"value"		"mythical"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"category"		"crafting"
+			"filter"		"-3"
+		}
+		"3"
+		{
+			"name"		"#RT_MP_A"
+			"n_A"		"#RI_R4p"
+			"desc_inputs"		"#RDI_AB"
+			"desc_outputs"		"#RDO_AB"
+			"di_A"		"10"
+			"di_B"		"#RI_R4p"
+			"do_A"		"1"
+			"do_B"		"#RI_R5"
+			"all_same_class"		"0"
+			"always_known"		"1"
+			"premium_only"		"0"
+			"disabled"		"0"
+			"input_items"
+			{
+				"10"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*rarity"
+							"operator"		"string=="
+							"value"		"mythical"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*match_set_rarity"
+							"operator"		"string=="
+							"value"		"legendary"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"category"		"crafting"
+			"filter"		"-3"
+		}
+		"4"
+		{
+			"name"		"#RT_MP_A"
+			"n_A"		"#RI_R5p"
+			"desc_inputs"		"#RDI_AB"
+			"desc_outputs"		"#RDO_AB"
+			"di_A"		"10"
+			"di_B"		"#RI_R5p"
+			"do_A"		"1"
+			"do_B"		"#RI_R6"
+			"all_same_class"		"0"
+			"always_known"		"1"
+			"premium_only"		"0"
+			"disabled"		"0"
+			"input_items"
+			{
+				"10"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*rarity"
+							"operator"		"string=="
+							"value"		"legendary"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"		"*match_set_rarity"
+							"operator"		"string=="
+							"value"		"ancient"
+							"required"		"1"
+						}
+					}
+				}
+			}
+			"category"		"crafting"
+			"filter"		"-3"
+		}
+	}
 }

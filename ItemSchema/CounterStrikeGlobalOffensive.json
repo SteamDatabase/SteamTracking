@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.a259436de7f012965878b3b1392039385eadb86d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.240c5d5d528677aa5a9c535bf3c89981016e753f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -120,6 +120,10 @@
 			{
 				"origin": 21,
 				"name": "Tournament Drop"
+			},
+			{
+				"origin": 22,
+				"name": "Stock Item"
 			}
 		]
 		,
