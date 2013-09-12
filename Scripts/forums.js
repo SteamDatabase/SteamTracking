@@ -100,6 +100,7 @@ var CForum = Class.create( {
 		$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 		$(strPrefix + '_footerpagebtn_next') && $(strPrefix + '_footerpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 
+		this.InitTooltips();
 		this.UpdatePagingDisplay();
 	},
 
@@ -271,6 +272,7 @@ var CForum = Class.create( {
 			ScrollToIfNotInView($('forum_' + this.m_strName + '_area' ), 40 );
 
 			this.UpdatePagingDisplay();
+			this.InitTooltips();
 		}
 	},
 
@@ -347,6 +349,18 @@ var CForum = Class.create( {
 			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
 
 		elPageLinks.insert( el );
+	},
+
+	InitTooltips: function()
+	{
+		$J('.forum_topic[data-tooltip-content]').tooltip( {
+			'location':'bottom',
+			trackMouse: true,
+			'tooltipClass': 'forum_topic_tooltip',
+			offsetY: 6,
+			fadeSpeed: 0,
+			trackMouseCentered: false
+		});
 	},
 
 	SubscribeToForum: function()
@@ -1467,17 +1481,15 @@ function Forum_OnMoveTopicDestinationsFailed( clanidowner, appidowner, transport
 	}
 }
 
-function OnForumTopicClick( element, url )
+function BulkModeTopicClick( element )
 {
 	if ( $J(element).children( '.forum_topic_checkbox' ).length )
 	{
 		//moderation mode
 		var $Checkbox = $J(element).find( '.forum_topic_checkbox_input');
-		$Checkbox.prop( 'checked', function( i, val ) { return !val; } );
-		$Checkbox.change();
+		return false;
 	}
-	else
-		window.location = url;
+	return true;
 }
 
 function InitializeForumBulkActions( strName )
@@ -1553,7 +1565,7 @@ function InitializeForumBulkActions( strName )
 
 		$ForumTopics.each( function() {
 			var $ForumTopic = $J(this);
-			if ( !$ForumTopic.children( '.forum_topic_checkbox' ).length )
+			if ( !$ForumTopic.hasClass( 'bulk_edit_mode' ) )
 			{
 				var gidForumTopic = this.getAttribute( 'data-gidforumtopic' );
 				var $Checkbox = $J('<input/>', {'type': 'checkbox', 'class': 'forum_topic_checkbox_input' } );
@@ -1570,10 +1582,20 @@ function InitializeForumBulkActions( strName )
 				var $Wrapper = $J('<div/>', {'class': 'forum_topic_checkbox' } );
 				$Wrapper.html( '&nbsp;' );
 				$Wrapper.prepend( $Checkbox );
-				// prevent misclicks from going to the topic page
-				$Wrapper.click( function( event ) { event.stopPropagation(); } );
+
+				$ForumTopic.find( 'a.forum_topic_overlay').on( 'click', function( event ) {
+					// only on left click, otherwise we let middle clicks open in tabs, etc
+					if ( typeof event.originalEvent.button == 'undefined' || event.originalEvent.button == 0 )
+					{
+						$Checkbox.prop( 'checked', function( i, val ) { return !val; } );
+						$Checkbox.change();
+						event.preventDefault();
+					}
+				} );
 
 				$ForumTopic.prepend( $Wrapper );
+				$ForumTopic.addClass( 'bulk_edit_mode' );
+
 			}
 		});
 
@@ -1592,8 +1614,9 @@ function InitializeForumBulkActions( strName )
 	$BtnDisable.click( function() {
 		bEnabled = false;
 		$ForumActions.slideUp( 'fast' );
-		$ForumArea.find( '.forum_topic').removeClass('selected_for_bulk');
+		$ForumArea.find( '.forum_topic').removeClass('selected_for_bulk').removeClass( 'bulk_edit_mode');
 		$ForumArea.find( '.forum_topic').children( '.forum_topic_checkbox').detach();
+		$ForumArea.find( '.forum_topic a.forum_topic_overlay').off( 'click' );
 
 		$BtnEnable.show();
 		$BtnDisable.hide();
