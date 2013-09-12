@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.7212e6e8ee4104cddab271a5dd8c7c62cf41d214.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.a259436de7f012965878b3b1392039385eadb86d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1437,6 +1437,53 @@
 						"name": "primary clip size",
 						"class": "primary_clip_size",
 						"value": 12.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Recipe Trade Up",
+				"defindex": 62,
+				"item_class": "tool",
+				"item_type_name": "Contract",
+				"item_name": "Arms Deal Collection Contract",
+				"item_description": "In exchange for 10 Arms Deal Collection items of identical quality, you will receive a single Arms Deal Collection item of a quality one higher than the items you provided.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/crafting_contract",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/crafting_contract.90033737f28881892367fa0d98b7457aad3a99e7.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "recipe",
+					"usage_capabilities": {
+						"recipe": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "always tradable",
+						"class": "always_tradable",
+						"value": 1.000000
+					},
+					{
+						"name": "recipe filter",
+						"class": "recipe_filter",
+						"value": -3.000000
+					},
+					{
+						"name": "preferred sort",
+						"class": "preferred_sort",
+						"value": 4.000000
 					}
 				]
 				
@@ -2963,6 +3010,26 @@
 				"name": "secondary default clip size",
 				"defindex": 94,
 				"attribute_class": "secondary_default_clip_size",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "recipe filter",
+				"defindex": 95,
+				"attribute_class": "recipe_filter",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "preferred sort",
+				"defindex": 107,
+				"attribute_class": "preferred_sort",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
 				"effect_type": "neutral",

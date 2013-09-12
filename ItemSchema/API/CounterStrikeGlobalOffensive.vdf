@@ -2206,6 +2206,28 @@
 				}
 			}
 		}
+		"recipe"
+		{
+			"prefab"		"csgo_tool"
+			"item_type_name"		"#CSGO_Type_recipe"
+			"image_inventory"		"econ/tools/crafting_contract"
+			"tool"
+			{
+				"type"		"recipe"
+				"usage_capabilities"
+				{
+					"recipe"		"1"
+				}
+			}
+			"attributes"
+			{
+				"always tradable"
+				{
+					"attribute_class"		"always_tradable"
+					"value"		"1"
+				}
+			}
+		}
 		"collectible"
 		{
 			"item_class"		"collectible_item"
@@ -4792,6 +4814,27 @@
 			"baseitem"		"1"
 			"item_sub_position"		"secondary0"
 		}
+		"62"
+		{
+			"name"		"Recipe Trade Up"
+			"prefab"		"recipe"
+			"baseitem"		"1"
+			"item_name"		"#CSGO_Recipe_TradeUp"
+			"item_description"		"#CSGO_Recipe_TradeUp_Desc"
+			"attributes"
+			{
+				"recipe filter"
+				{
+					"attribute_class"		"recipe_filter"
+					"value"		"-3"
+				}
+				"preferred sort"
+				{
+					"attribute_class"		"preferred_sort"
+					"value"		"4"
+				}
+			}
+		}
 		"500"
 		{
 			"name"		"weapon_bayonet"
@@ -6247,6 +6290,30 @@
 		{
 			"name"		"secondary default clip size"
 			"attribute_class"		"secondary_default_clip_size"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"95"
+		{
+			"name"		"recipe filter"
+			"attribute_class"		"recipe_filter"
+			"min_value"		"0"
+			"max_value"		"0"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"107"
+		{
+			"name"		"preferred sort"
+			"attribute_class"		"preferred_sort"
 			"min_value"		"0"
 			"max_value"		"0"
 			"group"		"only_on_unique"
