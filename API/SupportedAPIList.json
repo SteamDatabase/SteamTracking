@@ -4510,26 +4510,6 @@
 						
 					},
 					{
-						"name": "AcceptTradeOffer",
-						"version": 1,
-						"httpmethod": "POST",
-						"description": "Accept a trade offer someone sent to us",
-						"parameters": [
-							{
-								"name": "key",
-								"type": "string",
-								"optional": false,
-								"description": "Access key"
-							},
-							{
-								"name": "tradeofferid",
-								"type": "uint64",
-								"optional": true
-							}
-						]
-						
-					},
-					{
 						"name": "DeclineTradeOffer",
 						"version": 1,
 						"httpmethod": "POST",
