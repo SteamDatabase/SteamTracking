@@ -508,7 +508,7 @@ p {
 		color: #fbb963;
 	}
 
-	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td {
+	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease {
 		color: #A4D007;
 	}
 
