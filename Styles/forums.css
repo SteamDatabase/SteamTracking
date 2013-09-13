@@ -1078,6 +1078,8 @@ table.forum_auditlog tr.audit_row_secondary {
 	overflow: hidden;
 	word-wrap: break-word;
 
+	text-align: left;
+
 }
 
 .topic_hover_row {

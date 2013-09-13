@@ -2408,10 +2408,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background-color: #3c3c3d;
 }
 
-.trendingdiscussions .forum_topic.unread .forum_topic_name a  {
+.trendingdiscussions .forum_topic.unread .forum_topic_name  {
 	color: #529cde;
 }
-.trendingdiscussions .forum_topic .forum_topic_name a {
+.trendingdiscussions .forum_topic .forum_topic_name {
 	color: #427eb3;
 }
 

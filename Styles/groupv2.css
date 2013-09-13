@@ -630,10 +630,10 @@ a.subtle:hover {
 	background-color: #3c3c3d;
 }
 
-.group_overview_discussions .forum_topic.unread .forum_topic_name a  {
+.group_overview_discussions .forum_topic.unread .forum_topic_name  {
 	color: #529cde;
 }
-.group_overview_discussions .forum_topic .forum_topic_name a {
+.group_overview_discussions .forum_topic .forum_topic_name {
 	color: #427eb3;
 }
 

@@ -146,7 +146,7 @@ function LoadTrendingTopics()
 	{
 		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>')
 		g_bTrendingTopicsLoading = true;
-		new Ajax.Updater( elTrendingTopics, g_strGroupURL + '/trendingtopics', {method: 'get'} );
+		new Ajax.Updater( elTrendingTopics, g_strGroupURL + '/trendingtopics', {method: 'get', onSuccess: function() { Forum_InitTooltips.defer(); } } );
 	}
 }
 
