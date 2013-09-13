@@ -44,6 +44,18 @@ function Forum_CancelEvent( event )
 		event.cancelBubble = true;
 }
 
+function Forum_InitTooltips()
+{
+	$J('.forum_topic[data-tooltip-content]').tooltip( {
+		'location':'bottom',
+		trackMouse: true,
+		'tooltipClass': 'forum_topic_tooltip',
+		offsetY: 6,
+		fadeSpeed: 0,
+		trackMouseCentered: false
+	});
+}
+
 var g_rgForums = {};
 function InitializeForum( name, rgForumData, url )
 {
@@ -100,7 +112,7 @@ var CForum = Class.create( {
 		$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 		$(strPrefix + '_footerpagebtn_next') && $(strPrefix + '_footerpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
 
-		this.InitTooltips();
+		Forum_InitTooltips();
 		this.UpdatePagingDisplay();
 	},
 
@@ -272,7 +284,7 @@ var CForum = Class.create( {
 			ScrollToIfNotInView($('forum_' + this.m_strName + '_area' ), 40 );
 
 			this.UpdatePagingDisplay();
-			this.InitTooltips();
+			Forum_InitTooltips();
 		}
 	},
 
@@ -349,18 +361,6 @@ var CForum = Class.create( {
 			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
 
 		elPageLinks.insert( el );
-	},
-
-	InitTooltips: function()
-	{
-		$J('.forum_topic[data-tooltip-content]').tooltip( {
-			'location':'bottom',
-			trackMouse: true,
-			'tooltipClass': 'forum_topic_tooltip',
-			offsetY: 6,
-			fadeSpeed: 0,
-			trackMouseCentered: false
-		});
 	},
 
 	SubscribeToForum: function()
