@@ -3732,7 +3732,7 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "SteamUI_ManageDeviceAuth_UsedBy" "By Steam user"
 "SteamUI_ManageDeviceAuth_Authorize" "Authorize device"
 "SteamUI_ManageDeviceAuth_Deauthorize" "Deauthorize device"
-"SteamUI_ManageDeviceAuth_Empty" "No auhtorized device found"
+"SteamUI_ManageDeviceAuth_Empty" "No authorized device found"
 "SteamUI_ManageDeviceAuth_Rename" "Rename Device"
 "SteamUI_ManageDeviceAuth_ThisComputer" "This Computer"
 "SteamUI_ManageDeviceAuth_NotAuthorized" "Not authorized yet"
@@ -3744,7 +3744,7 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 
 "Steam_DeviceAuth_Authorized_Notification" "%owner%'s games are now available for you to play on this computer." 
 "Steam_DeviceAuth_Deauthorized_Notification" "%owner% has de-authorzied this computer, some games may be unavailable." 
-"Steam_DeviceAuth_StopPlaying_Notification" "Hey, %owner% needs this shared gamed back! You have %minutes% minutes of playtime remaining..." 
+"Steam_DeviceAuth_StopPlaying_Notification" "Hey, %owner% needs this shared game back! You have %minutes% minutes of playtime remaining..." 
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..." 
 
