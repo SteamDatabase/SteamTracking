@@ -1093,6 +1093,10 @@ span.icon_star { display: inline-block;}
 	color: #808285;
 }
 
+.sectionTitle_small a {
+	color: inherit;
+}
+
 .noAppsBox {
 	background-color: #1f1f1f;
 	min-height: 150px;
@@ -1134,4 +1138,8 @@ span.icon_star { display: inline-block;}
 
 .text_orange {
 	color: #e76e34 !important;
+}
+
+.ttip {
+	cursor: pointer;
 }
