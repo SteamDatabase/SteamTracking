@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.729220a484ca035f39ec447d4530594125510b4e.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8e63045fe335242e65f6e23230fd9498b142b0cf.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -23871,19 +23871,42 @@
 				}
 			},
 			{
-				"name": "Brawler's Hard Helm",
-				"defindex": 4525,
+				"name": "End of Order",
+				"defindex": 4524,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Helm",
-				"item_name": "Brawler's Hard Helm",
-				"item_description": "He always was a hard-head. Now he's even harder.",
+				"item_name": "End of Order",
+				"item_description": "Be grateful that you cannot gaze upon the seething chaos that churns beneath this helm.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/bristleback\/onizaphk_brawler_head\/onizaphk_brawler_head",
+				"image_inventory": "econ\/items\/chaos_knight\/end_of_order\/end_of_order",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order.5b6875ce5482402a5f64226df08fd5cf9a6d25ed.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order_large.f27387a2acb46742c63f3468a224d221856c6364.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Last Judgment",
+				"defindex": 4525,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Last Judgment",
+				"item_description": "When Doom passes Judgment, there is never any doubt as to its validity.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/last_judgement\/last_judgement",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/last_judgement\/last_judgement.7b3e2f3a7d50aa86c4d21af536fbb2ef1abef98e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/last_judgement\/last_judgement_large.9edf702e00a1f5b18e7d2ba50a3d78b65fef89e2.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -37366,11 +37389,11 @@
 				}
 			},
 			{
-				"name": "Nightwatchers Bracers",
+				"name": "Nightwatcher's Bracers",
 				"defindex": 5076,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "New Item",
-				"item_name": "Nightwatchers Bracers",
+				"item_type_name": "Bracers",
+				"item_name": "Nightwatcher's Bracers",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -44192,6 +44215,259 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Izoku",
+				"defindex": 5387,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Izoku",
+				"item_description": "Juggernaut never weeps for what he has lost. Implacable, he purges his grief in pursuit of honor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/izoku\/izoku",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/izoku\/izoku.61a110f4576c4626cf2cb8c700ea65284c003f7d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/izoku\/izoku_large.95b54a29b92165ceae722049805582c1fe488897.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Diffusal Lance",
+				"defindex": 5388,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Lance",
+				"item_name": "Diffusal Lance",
+				"item_description": "One lance is especially prized by all of Azwraith's phantoms.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/diffusal_lance\/diffusal_lance",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/diffusal_lance\/diffusal_lance.4f6c127c5d16a6d6f35ac047a602bac3ae95c3c1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/diffusal_lance\/diffusal_lance_large.6f4c7cd0682ce2ed4a3d153bc6b1d1a0fc2c770d.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Enchanted Manglewood Staff",
+				"defindex": 5389,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Enchanted Manglewood Staff",
+				"item_description": "A limb hewn from the gnarliest tree in the Manglewood Forest.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/enchanted_manglewood_staff\/enchanted_manglewood_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/enchanted_manglewood_staff\/enchanted_manglewood_staff.e0c4060adc1f31e942a61ead56905fc80c160146.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/enchanted_manglewood_staff\/enchanted_manglewood_staff_large.326468740583c945482a37a9854005601f05ba03.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mistral Braid",
+				"defindex": 5390,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Headband",
+				"item_name": "Mistral Braid",
+				"item_description": "The wind that gently tousles her locks, gives unmatched flight to Windrunner's arrows.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/mistral_braid\/mistral_braid",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/mistral_braid\/mistral_braid.3cc4febbc5dbf49b0bc3ef9a181002da4449e2c8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/windrunner\/mistral_braid\/mistral_braid_large.1bdfe374cb6d9e6fbb5a0afc7c68af69bc22c6d6.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Arc of Manta - Off-Hand",
+				"defindex": 5395,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Arc of Manta - Off-Hand",
+				"item_description": "A blade incised with runes that sow confusion and discord among the enemy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/arc_of_manta__offhand\/arc_of_manta__offhand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta__offhand\/arc_of_manta__offhand.ca8d88bb564a103f4268ff170959f93dc2dd2be0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta__offhand\/arc_of_manta__offhand_large.13683432e6db431952c6b6fa7a615515bbc3b4ca.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Arc of Manta",
+				"defindex": 5396,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Arc of Manta",
+				"item_description": "A blade incised with runes that sow confusion and discord among the enemy.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/arc_of_manta\/arc_of_manta",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta\/arc_of_manta.5cb9f62e86d9a0faa21a3700daab4a7520712bca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta\/arc_of_manta_large.787ce0252efaab09a387e3f3a8abbcb77d5d879a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Star of Silence",
+				"defindex": 5397,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Star of Silence",
+				"item_description": " Forged of the ore at a dead star's heart, in a corner of the universe that has never known sound.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/silencer\/star_of_silence\/star_of_silence",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/star_of_silence\/star_of_silence.3d2a20d8cf37d0e862c355f21295147183553279.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/star_of_silence\/star_of_silence_large.f6c8ee4534307531bd0b837f6a43ef7c22e01da6.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mistblade",
+				"defindex": 5398,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Mistblade",
+				"item_description": "Forged in the Font of Avernus, and filled with a dark thirst.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/mistblade\/mistblade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/mistblade\/mistblade.7138190fbfc9c3bfcd5d32a46e0adb20bd39d9de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/mistblade\/mistblade_large.3224b94f855aeb1968e7fe8cbfdc6252b8001d87.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Luminous Edge",
+				"defindex": 5404,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Luminous Edge",
+				"item_description": "Much like Sven himself, a blade with a code of its own, which cares not what other swords may be doing.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sven\/radiant_cutter\/radiant_cutter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sven\/radiant_cutter\/radiant_cutter.02b00eff1d92e52eb4e4f3d99d48392da79cab09.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sven\/radiant_cutter\/radiant_cutter_large.be895625f1396bf7b6418eb5280aa4ace0473193.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Style of the Occult Protector",
+				"defindex": 5405,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair Tie",
+				"item_name": "Style of the Occult Protector",
+				"item_description": "A fashion for those who vow to protect the mysteries.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/style_of_the_occult_protector\/style_of_the_occult_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/style_of_the_occult_protector\/style_of_the_occult_protector.8b3256eb859a783cbd2ab765d14baf23715216d2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lanaya\/style_of_the_occult_protector\/style_of_the_occult_protector_large.43f63db41b394bf3249488365122e9851ef31860.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Obsidian Golem",
+				"defindex": 5411,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Golem",
+				"item_name": "Obsidian Golem",
+				"item_description": "A very cool golem may be forged in fire.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/golem\/obsidian_golem\/obsidian_golem_npc_dota_warlock_golem",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/golem\/obsidian_golem\/obsidian_golem_npc_dota_warlock_golem.442640930568bdfeeb40a9ce4ed452854eed1138.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/golem\/obsidian_golem\/obsidian_golem_npc_dota_warlock_golem_large.ce1a972c2bf5e8fb595abda7cc3c09f695435ee3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
 			},
 			{
 				"name": "Free Trial Premium Upgrade",
@@ -51279,7 +51555,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Treasure",
 				"item_name": "Quirt's Summer Stash",
-				"item_description": "That disreputable scoundrel Quirt has lost a chest of plundered loot! You will need <font color='#9da1a9'>Quirt's Summer Key<\/font> to open the chest. You can pick one up at the DOTA 2 Store. Beware! At the end of <font color='#9da1a9'>September 15, 2013<\/font> this chest will crumble into useless dust. This chest contains one of several mysterious new items.",
+				"item_description": "That disreputable scoundrel Quirt has lost a chest of plundered loot! You will need <font color='#9da1a9'>Quirt's Summer Key<\/font> to open the chest. You can pick one up at the DOTA 2 Store. Beware! At the end of <font color='#9da1a9'>September 16, 2013<\/font> this chest will crumble into useless dust. This chest contains one of several mysterious new items.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/quirts_summer_crate_2013",
@@ -54532,6 +54808,46 @@
 					"paintable_unusual": true,
 					"autograph": true
 				}
+			},
+			{
+				"name": "Emerald Polycount Collection",
+				"defindex": 10325,
+				"item_class": "supply_crate",
+				"item_type_name": "Treasure",
+				"item_name": "Emerald Polycount Collection",
+				"item_description": "All of the items within were crafted by artists of the Polycount community.  You can view the process by which these items were designed, as well as learn to create your own items at http:\/\/www.polycount.com",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/treasure_chest_emerald_polycount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_chest_emerald_polycount.51e3752bc9ddd895469971ba5fd147957ea1ef87.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_chest_emerald_polycount_large.ec518b8453432bdc1bbc477580fe488317d6232d.png",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "treasure_chest_36_emerald_polycount"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 36
+					}
+				]
+				
 			},
 			{
 				"name": "Name Tag",
@@ -63970,6 +64286,43 @@
 				
 			},
 			{
+				"name": "Treasure Key of Rubiline Sheen",
+				"defindex": 15258,
+				"item_class": "tool",
+				"item_type_name": "Treasure Key",
+				"item_name": "Treasure Key of Rubiline Sheen",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure of Rubiline Sheen<\/font>.\r\n\tDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/rubiline_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/rubiline_key.a18b2ea5a2f70bcbd023d4e3c24ed0b97a21e007.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/rubiline_key_large.ad309faee37a7a4ee1091799cf8d0a357083301a.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "treasure_chest_35_rubiline",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -71125,6 +71478,35 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Arcs of Manta Pack",
+				"defindex": 20251,
+				"item_class": "bundle",
+				"item_type_name": "Paired Weapons",
+				"item_name": "Arcs of Manta Pack",
+				"item_description": "Pack includes both the main and off-hand Arc of Manta.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/arc_of_manta\/arc_of_manta",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta\/arc_of_manta.5cb9f62e86d9a0faa21a3700daab4a7520712bca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/arc_of_manta\/arc_of_manta_large.787ce0252efaab09a387e3f3a8abbcb77d5d879a.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -75474,6 +75856,54 @@
 				"id": 125,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle125"
+			},
+			{
+				"system": "chaos_knight_horse_ambient",
+				"id": 126,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle126"
+			},
+			{
+				"system": "chaos_knight_ambient_tail",
+				"id": 127,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle127"
+			},
+			{
+				"system": "chaos_knight_ambient_helmet",
+				"id": 128,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle128"
+			},
+			{
+				"system": "courier_trail_ruby",
+				"id": 129,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle129"
+			},
+			{
+				"system": "chaos_knight_ambient_helmet_end_of_order",
+				"id": 130,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle130"
+			},
+			{
+				"system": "phantom_lancer_diffusal_lance",
+				"id": 131,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle131"
+			},
+			{
+				"system": "chaos_knight_feet_effects",
+				"id": 132,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle132"
+			},
+			{
+				"system": "chaos_knight_horse_ambient_parent",
+				"id": 133,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle133"
 			}
 		]
 		,
