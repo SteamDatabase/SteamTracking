@@ -142,7 +142,7 @@
 		
 		"left_shoulder"		"1"			
 
-		"cosmetic_axe"	"1"				
+		"belt_misc"	"1"					
 
 		"disconnected_floating_item"	"1"
 		"zombie_body"		"1"
@@ -11788,6 +11788,11 @@
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"				"14"
+				}
+				"max pipebombs decreased"
+				{
+					"attribute_class"	"add_max_pipebombs"
+					"value" "-6"
 				}
 				"cannot pick up intelligence"
 				{
@@ -33002,7 +33007,7 @@
 			"image_inventory"	"backpack/player/items/all_class/pumpkin_lantern_engineer"
 			"item_type_name"	"#TF_Wearable_Lantern"
 			"propername" "1"
-			"equip_region"	"engineer_pocket"
+			"equip_region"	"belt_misc"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/pumpkin_lantern_scout.mdl"
@@ -38223,7 +38228,7 @@
 			"item_name"	"#TF_FortuneHunter"
 			"item_description"	"#TF_FortuneHunter_Desc"
 			"propername"	"1"
-			"equip_region"	"cosmetic_axe"
+			"equip_region"	"belt_misc"
 			"image_inventory"	"backpack/player/items/all_class/tomb_pick_demo"
 			"model_player_per_class"	
 			{
@@ -61945,6 +61950,7 @@
 			{
 				"The Amputator"			"1"
 				"The Crusader's Crossbow"	"1"
+				"Berliner's Bucket Helm"	"1"
 			}
 			"store_bundle" "Medieval Medic Bundle"
 		}
@@ -61956,6 +61962,7 @@
 				"The Brass Beast"		"1"
 				"The Buffalo Steak Sandvich"	"1"
 				"Warrior's Spirit"		"1"
+				"Big Chief"			"1"
 			}
 			"store_bundle" "Hibernating Bear Bundle"
 		}
@@ -61966,6 +61973,7 @@
 			{
 				"The Ullapool Caber"		"1"
 				"The Loch-n-Load"		"1"
+				"Scotch Bonnet"		"1"
 			}
 			"store_bundle" "Expert's Ordnance Bundle"
 		}
