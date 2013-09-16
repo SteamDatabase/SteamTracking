@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8e63045fe335242e65f6e23230fd9498b142b0cf.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.4b3717b8a0ea8c78d36ccc27b13705d0048681a5.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -57016,7 +57016,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "Quirt's Summer Key",
-				"item_description": "Used to open locked <font color='#9da1a9'>Quirt's Summer Stash<\/font>.\r\n\tDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"item_description": "Used to open locked <font color='#9da1a9'>Treasure Chests<\/font>.\r\n\tDouble click or right-click the key in your backpack and select the chest you want to open.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/quirts_summer_key_2013",
@@ -57033,7 +57033,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "quirts_summer_2013",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -63794,8 +63793,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.e9bc8d9a1d9c6ec7e3080a3bc9ccecdddbd9294a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.95140b9e8ff5a3f5619383c225cd4829b1a51137.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.f9c2be1d6e0a765339c6ce320fdc29bb857e01ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.d9a8760233317dd19b39fd8ce4970a9db0226a77.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -63830,8 +63829,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.e9bc8d9a1d9c6ec7e3080a3bc9ccecdddbd9294a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.95140b9e8ff5a3f5619383c225cd4829b1a51137.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians.f9c2be1d6e0a765339c6ce320fdc29bb857e01ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians_large.d9a8760233317dd19b39fd8ce4970a9db0226a77.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -76746,99 +76745,6 @@
 					}
 				]
 				
-			}
-		]
-		,
-		"kill_eater_ranks": [
-			{
-				"level": 0,
-				"required_score": 10,
-				"name": "Strange"
-			},
-			{
-				"level": 1,
-				"required_score": 25,
-				"name": "Unremarkable"
-			},
-			{
-				"level": 2,
-				"required_score": 50,
-				"name": "Blooded"
-			},
-			{
-				"level": 3,
-				"required_score": 75,
-				"name": "Menacing"
-			},
-			{
-				"level": 4,
-				"required_score": 100,
-				"name": "Uncharitable"
-			},
-			{
-				"level": 5,
-				"required_score": 150,
-				"name": "Dangerous"
-			},
-			{
-				"level": 6,
-				"required_score": 200,
-				"name": "Notably Dangerous"
-			},
-			{
-				"level": 7,
-				"required_score": 250,
-				"name": "Lethal"
-			},
-			{
-				"level": 8,
-				"required_score": 300,
-				"name": "Spectacularly Lethal"
-			},
-			{
-				"level": 9,
-				"required_score": 350,
-				"name": "Blood-Drenched"
-			},
-			{
-				"level": 10,
-				"required_score": 400,
-				"name": "Gore-Spattered"
-			},
-			{
-				"level": 11,
-				"required_score": 450,
-				"name": "Wicked Nasty"
-			},
-			{
-				"level": 12,
-				"required_score": 500,
-				"name": "Positively Inhumane"
-			},
-			{
-				"level": 13,
-				"required_score": 600,
-				"name": "Face-Melting"
-			},
-			{
-				"level": 14,
-				"required_score": 700,
-				"name": "Rage-Inducing"
-			},
-			{
-				"level": 15,
-				"required_score": 800,
-				"name": "Match-Ending"
-			},
-			{
-				"level": 16,
-				"required_score": 900,
-				"name": "Imba"
-			},
-			{
-				"level": 17,
-				"required_score": 1000,
-				"name": "Utterly Broken"
 			}
 		]
 		,
