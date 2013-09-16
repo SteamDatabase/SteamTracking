@@ -15,7 +15,8 @@ function CreateAccount()
 	new Ajax.Request('https://store.steampowered.com/join/verifycaptcha/',
 	  {
 	    method:'get',
-	    parameters: { captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value ,  count : iAjaxCalls },
+	    parameters: { captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value,
+					  email: $('email').value, count : iAjaxCalls },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
 	        
@@ -23,16 +24,16 @@ function CreateAccount()
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
 	      	  //alert(e);
-	      	  	      	  return FinishFormVerification( false );
+	      	  	      	  return FinishFormVerification( false, false  );
 	      	}
 	      	
-	      	return FinishFormVerification( result.bCaptchaMatches );
+	      	return FinishFormVerification( result.bCaptchaMatches, result.bEmailAvail );
 		  }
 		  
-		  		  return FinishFormVerification( false );
+		  		  return FinishFormVerification( false, false );
 	    },
 	    onFailure: function(){
-	      	      return FinishFormVerification( false ); 
+	      	      return FinishFormVerification( false, false ); 
 	    }
 	  });
 }
@@ -53,44 +54,12 @@ function FetchGETVariables()
     return vars;
 }
 
-function CheckForDuplicateEmailAndCreateAccount()
-{
-	++iAjaxCalls;
-	new Ajax.Request('https://store.steampowered.com/join/checkemailavail/',
-	  {
-	    method:'get',
-	    parameters: { email: document.getElementById('email').value, count : iAjaxCalls },
-	    onSuccess: function(transport){
-	      if ( transport.responseText ){
-	        
-	        try {
-	      	  var result = transport.responseText.evalJSON(true);
-	      	} catch ( e ) {
-	      			      	  	ReallyCreateAccount();
-	      	  	return;
-	      	}
-
-	      	if ( result && result.bAvailable )
-	      	{
-	      	  ReallyCreateAccount();
-	      	}
-	      	else
-	      	{
-      	  	  $('cart_area').style.display = 'none';
-      	  	  $('email_used_area').style.display = 'block';
-      	  	  Effect.ScrollTo( 'email_used_area' );
-	      	}
-	      }
-	    }
-	  });
-}
-
 function CreateAccountAnyway()
 {
 	ReallyCreateAccount();
 }
 
-function FinishFormVerification( bCaptchaIsValid )
+function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 {
 		var errorString = '';
 
@@ -239,7 +208,16 @@ function FinishFormVerification( bCaptchaIsValid )
 	}
 	else
 	{
-		CheckForDuplicateEmailAndCreateAccount();
+		if ( bEmailIsAvailable )
+		{
+			ReallyCreateAccount();
+		}
+		else
+		{
+			$('cart_area').style.display = 'none';
+			$('email_used_area').style.display = 'block';
+			Effect.ScrollTo( 'email_used_area' );
+		}
 	}
 }
 
