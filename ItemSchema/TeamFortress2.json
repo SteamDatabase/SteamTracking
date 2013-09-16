@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.b7114eca524eda6273691f1edce8b92a288b0052.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2d002c7dac8af83de6145754048040d6053cc6bc.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -9398,6 +9398,11 @@
 						"value": 14.000000
 					},
 					{
+						"name": "max pipebombs decreased",
+						"class": "add_max_pipebombs",
+						"value": -6.000000
+					},
+					{
 						"name": "cannot pick up intelligence",
 						"class": "cannot_pick_up_intelligence",
 						"value": 1.000000
@@ -10793,6 +10798,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/berliners_bucket_helm.2c1288625a8ab4c16e3c804a6649254b1a9325ca.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/berliners_bucket_helm_large.bac9cb56cea857df0c78998d81a4ffa0a2567a94.png",
 				"drop_type": "drop",
+				"item_set": "medieval_medic",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -10938,6 +10944,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_scotchbonnet.2fa99937841c1a4ede4806b9d039c4d07f42fd14.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_scotchbonnet_large.d301d6d63fd3963069a954a9dd705bba54a53399.png",
 				"drop_type": "drop",
+				"item_set": "experts_ordnance",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -11089,6 +11096,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_big_chief.21b3362a88450aaf42d2848170db7b14067a1dae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_big_chief_large.d3dddc9d237f84aaab0cc65db1fddeee801952e1.png",
 				"drop_type": "none",
+				"item_set": "hibernating_bear",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86347,7 +86355,8 @@
 				"store_bundle": "Expert's Ordnance Bundle",
 				"items": [
 					"The Ullapool Caber",
-					"The Loch-n-Load"
+					"The Loch-n-Load",
+					"Scotch Bonnet"
 				]
 				
 			},
@@ -86400,7 +86409,8 @@
 				"items": [
 					"The Brass Beast",
 					"The Buffalo Steak Sandvich",
-					"Warrior's Spirit"
+					"Warrior's Spirit",
+					"Big Chief"
 				]
 				
 			},
@@ -86454,7 +86464,8 @@
 				"store_bundle": "Medieval Medic Bundle",
 				"items": [
 					"The Amputator",
-					"The Crusader's Crossbow"
+					"The Crusader's Crossbow",
+					"Berliner's Bucket Helm"
 				]
 				
 			},
