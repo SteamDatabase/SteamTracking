@@ -3289,43 +3289,81 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 {
 	rgUrls = []; // Clear any cruft from previous attempts.
 
-	rgUrls.push( {
-		'url': 'https://partner.steamgames.com/packages/publishpackage/',
-		'data': { 'packages': rgPackages },
-		'message': 'Publishing cost vdfs for packages ' + rgPackages.join(', ')
-	});
+	if( rgPackages.length > 0 )
+	{
 
-	rgUrls.push( {
-		'url': 'https://partner.steamgames.com/store/ajaxpublishpackages/',
-		'data': { 'packages': rgPackages, 'visible': 1 },
-		'message': 'Publishing store packages for ' + rgPackages.join(', ')
-	});
-
-	$J.each(rgPackages, function(i, j){
-		if( bAddToMaster )
-		{
-			rgUrls.push( {
-				'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
-				'data' : {
-					'packageIdSrc' : j,
-					'packageIdDst' : 61,
+		$J.each(rgPackages, function(i, j){
+			if( bAddToMaster )
+			{
+				rgUrls.push( {
+					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
+					'data' : {
+						'packageIdSrc' : j,
+						'packageIdDst' : 61,
+					},
 					'message': 'Adding package '+j+' to Steam master sub'
-				}
-			} );
-		}
+				} );
+			}
 
-		if( bAddToPress )
-		{
-			rgUrls.push( {
-				'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
-				'data' : {
-					'packageIdSrc' : j,
-					'packageIdDst' : 62,
+			if( bAddToPress )
+			{
+				rgUrls.push( {
+					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
+					'data' : {
+						'packageIdSrc' : j,
+						'packageIdDst' : 62,
+					},
 					'message': 'Adding package '+j+' to press master sub'
-				}
-			} );
-		}
-	});
+				} );
+			}
+
+			if( bSetDate )
+			{
+				d = new Date();
+
+				appData = {
+					'releases': {
+						0: {
+							'show_coming_soon': null,
+							'include_in_new_lists': true
+						}
+					}
+				};
+
+				dateData = {};
+				dateData['releases/0/steam_release_date'] = {};
+				dateData['releases/0/steam_release_date']['year'] = d.getFullYear();
+				dateData['releases/0/steam_release_date']['month'] = d.getMonth() + 1;
+				dateData['releases/0/steam_release_date']['day'] = d.getDate();
+				dateData['releases/0/steam_release_date']['hour'] = d.getHours();
+				dateData['releases/0/steam_release_date']['minute'] = d.getMinutes();
+
+
+				rgUrls.push( {
+					'url': 'https://partner.steamgames.com/store/packagesave/' + j,
+					'data': {
+						'dates': dateData,
+						'app': appData,
+						'json': true
+					},
+					'message': 'Setting release date on ' + j
+				} );
+			}
+		});
+
+
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/packages/publishpackage/',
+			'data': { 'packages': rgPackages },
+			'message': 'Publishing cost vdfs for packages ' + rgPackages.join(', ')
+		});
+
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/store/ajaxpublishpackages/',
+			'data': { 'packages': rgPackages, 'visible': 1 },
+			'message': 'Publishing store packages for ' + rgPackages.join(', ')
+		});
+	}
 
 
 
@@ -3333,7 +3371,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/setreleased/' + nAppId,
-			'data': { 'released' : true },
+			'data': { 'released' : 'true' },
 			'message': 'Setting app released'
 		});
 	}
@@ -3347,8 +3385,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 		});
 	}
 
-
-	if( NewReleaseState || bSetReleased )
+	if( NewReleaseState || bSetReleased || bSetDate )
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/publish/' + nAppId,
@@ -3361,7 +3398,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/admin/game/setreleased/' + nItemid,
-			'data': { 'json': true },
+			'data': { 'json': true, 'setdate': bSetDate },
 			'message': 'Setting store page visible'
 		});
 
