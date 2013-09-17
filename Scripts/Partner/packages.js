@@ -119,7 +119,6 @@ function GetFinalPrice( finalPrice, currency )
 
 function GetRequiredCurrencyBlock( id, reqCurrencies, initValues, isDiscount, isDisabled )
 {
-	var reqLen = reqCurrencies.length;
 	var strRequiredCurrency = '';
 
 	var initialCosts = null;
@@ -128,15 +127,18 @@ function GetRequiredCurrencyBlock( id, reqCurrencies, initValues, isDiscount, is
 		initialCosts = GetInitialCosts();
 	}
 	
-	for ( var i = 0; i < reqLen; i++ )
-	{	
-		var currency = reqCurrencies[i];
+	for ( var currency in reqCurrencies )
+	{
 		var discount = '';
 		if ( initValues != null && initValues[currency] != null )
 			discount = initValues[currency];
 		
 		var label = GetLabelForCurrencyCode( currency );
-
+		if ( reqCurrencies[currency].required == 0 )
+		{
+			label += "<span class=\"CurrencyNotRequired\">*</span>";
+		}
+		
 		var disabledTag = isDisabled ? 'disabled="disabled"' : '';
 		var innerHtml = templ_CurrencyInput.evaluate( {id: id + "[" + currency + "]", value: discount, label: label, disabled: disabledTag } );
 		if ( initialCosts && initialCosts.base && initialCosts.base[ currency ] )
@@ -149,6 +151,7 @@ function GetRequiredCurrencyBlock( id, reqCurrencies, initValues, isDiscount, is
 		strRequiredCurrency += '<div class="tightformrow">' + innerHtml + '</div>';
 		strRequiredCurrency += '<div style="clear: both;"></div>';
 	}
+	
 	return strRequiredCurrency;
 }
 

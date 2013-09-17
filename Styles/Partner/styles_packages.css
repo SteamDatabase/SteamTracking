@@ -204,3 +204,7 @@ input.disabled {
 	height: 1px;
 }
 
+span.CurrencyNotRequired {
+	color: #00adee;
+	padding-left: 3px;
+}
