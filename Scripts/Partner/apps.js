@@ -3285,7 +3285,19 @@ function UpdateReleaseRequest( nAppId, rgChanges )
 
 var rgUrls = [];
 
-function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, rgPackages )
+function CreatePHPDateFromObject( d )
+{
+	dateData = {}
+	dateData['year'] = d.getFullYear();
+	dateData['month'] = d.getMonth() + 1; // :spazhorror:
+	dateData['day'] = d.getDate();
+	dateData['hour'] = d.getHours();
+	dateData['minute'] = d.getMinutes();
+
+	return dateData;
+}
+
+function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, nLaunchDiscount, rgPackages )
 {
 	rgUrls = []; // Clear any cruft from previous attempts.
 
@@ -3330,14 +3342,9 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 					}
 				};
 
-				dateData = {};
-				dateData['releases/0/steam_release_date'] = {};
-				dateData['releases/0/steam_release_date']['year'] = d.getFullYear();
-				dateData['releases/0/steam_release_date']['month'] = d.getMonth() + 1;
-				dateData['releases/0/steam_release_date']['day'] = d.getDate();
-				dateData['releases/0/steam_release_date']['hour'] = d.getHours();
-				dateData['releases/0/steam_release_date']['minute'] = d.getMinutes();
-
+				dateData = {
+					'releases/0/steam_release_date' : CreatePHPDateFromObject(d)
+				};
 
 				rgUrls.push( {
 					'url': 'https://partner.steamgames.com/store/packagesave/' + j,
@@ -3351,6 +3358,28 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 			}
 		});
 
+		if( nLaunchDiscount > 0 )
+		{
+			startDate = new Date();
+			endDate = new Date();
+			endDate.setDate(startDate.getDate()+7);
+
+			rgUrls.push( {
+				'url': 'https://partner.steamgames.com/packages/processmultiplediscounts/',
+				'data': {
+					'packages': rgPackages,
+					'name': 'Launch discount',
+					'action': 'create',
+					//'description': 'Auto-created launch discount',
+					'descriptionPreset': '#discount_desc_preset_special',
+					'percent': nLaunchDiscount,
+					'startDate': CreatePHPDateFromObject(startDate),
+					'endDate': CreatePHPDateFromObject(endDate),
+					'json': true
+				},
+				'message': 'Adding ' + nLaunchDiscount + '% launch discount to packages ' + rgPackages.join(', ')
+			});
+		}
 
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/packages/publishpackage/',
@@ -3446,7 +3475,7 @@ function PublishActionNext()
 			if( !data['success'] )
 			{
 				console.log("Failed:");
-				console.log('<p><b>' + data.message + '</b></p>');
+				console.log(data.message);
 				$J('#publish_status_log').show();
 				$J('#publish_status').hide();
 			} else
