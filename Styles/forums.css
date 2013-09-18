@@ -643,6 +643,7 @@ a.forum_comment_action:hover {
 .forum_searchresult_reply {
 	position: relative;
 	cursor: pointer;
+	display: block;
 
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/forum_searchresult_replybg.png' );
 	background-repeat: no-repeat;
@@ -659,7 +660,6 @@ a.forum_comment_action:hover {
 .forum_searchresult_reply_inner {
 	font-size: 12px;
 	color: #a1a1a1;
-	font-style: italic;
 	line-height: 20px;
 
 	padding: 8px;
@@ -1094,4 +1094,41 @@ table.forum_auditlog tr.audit_row_secondary {
 
 .topic_hover_text {
 	color: #dcdcdc;
+}
+
+.post_searchresult {
+	margin-bottom: 24px;
+}
+
+.post_searchresult .searchresult_forumname {
+	padding: 2px;
+}
+
+.searchresult_inreplyto {
+	word-wrap: break-word;
+	padding: 2px;
+}
+
+.post_searchresult_simplereply {
+	margin-top: 4px;
+	padding: 6px 6px 6px 20px;
+	cursor: pointer;
+	background-color: #262627;
+	border: 1px solid #3d3d3e;
+}
+
+.post_searchresult_simplereply:hover {
+	border-color: #529cde;
+}
+
+.searchresult_timestamp {
+	float: right;
+}
+
+.searchresult_forum_link {
+	color: #529cde;
+}
+
+a.searchresult_forum_link:hover {
+	text-decoration: underline;
 }
