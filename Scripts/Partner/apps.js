@@ -2179,8 +2179,8 @@ function PrepareApp( appid, section )
 						StandardCallback( results, 'appOutput' );
 						if ( results[ 'success' ] )
 						{
-							$('publishHidden').style.display = '';
-                            $('publishbtn').style.display = 'block';
+							$('publishHidden').show();
+                            $('publishbtn').show();
 						}
 					}
 				);
