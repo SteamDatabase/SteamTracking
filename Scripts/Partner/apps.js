@@ -332,7 +332,6 @@ function RequestTenMoreMinidumps( errorid )
 //
 function MigrateTargetFixup( migrateSelect )
 {
-
 	if ( migrateSelect == null )
 	{
 		return;
@@ -346,14 +345,16 @@ function MigrateTargetFixup( migrateSelect )
 	} 
 }
 
-
-function AppMigrate( appidSrc, bForce, bMergeLite, selector )
+function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
 {
-	var appidDest = selector.options[ selector.selectedIndex ].value;
-	
-	if ( appidDest == -1 )
+	if ( isNaN( appidDest ) )
 	{
-		alert( "Please select a game first." );
+		alert( 'Destination app is not valid! ' + appidDest );
+		return;
+	}
+
+	if ( !confirm( "Are you sure you want to migrate from appid: " + appidSrc + " to appid: " + appidDest + "?") )
+	{
 		return;
 	}
 
@@ -366,8 +367,23 @@ function AppMigrate( appidSrc, bForce, bMergeLite, selector )
 		{
 			StandardCallback( results, 'migrateOutput' );
 		}
-		);
+	);
 }
+
+function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector )
+{
+	var appidDest = selector.options[ selector.selectedIndex ].value;
+	
+	if ( appidDest == -1 )
+	{
+		alert( "Please select a game first." );
+		return;
+	}
+
+	AppMigrate( appidSrc, appidDest, bForce, bMergeLite );
+}
+
+
 
 
 function PerformNewAchievement( appid )
@@ -1933,29 +1949,6 @@ function SetDedicatedGameServers( appid, gamedir, versions, message )
 		);
 }
 
-
-//
-// handler that runs when the app filter string changes. Rebuilds the
-// app listbox based on the filter string. Used only in the errors
-// templates.
-// 
-function FilterAppErrorList( appid )
-{
-	var filter = "";
-	
-	var elt = document.getElementById( 'filterApps' );
-
-	if ( null != elt )
-	{
-		filter = elt.value;
-	}
-
-	BuildAppList( filter, appid, true );
-}
-
-
-
-
 function GetSelectValue( name )
 {
 	var selectElem = document.getElementById( name );
@@ -2249,51 +2242,6 @@ function RevertApp( appid, section )
 					}
 				);
 }
-
-
-
-//
-// This routine builds the app listbox.
-// 
-// Coupled to g_rgApps, a global which is emitted server side into the template.
-//
-function BuildAppList( filterString, appidSelect, bAddAll )
-{
-	filterString = filterString.toLowerCase();
-
-	var appSelect = document.getElementById( 'appSelect' );
-	appSelect.options.length = 0;
-
-	var i = 0;
-
-	// Add the all games option, if appropriate
-	if ( bAddAll && filterString.length == 0 )
-	{
-		appSelect.options[i] = new Option( "[All]", 0 );
-		appSelect.options[i].id = "opt0";
-		if ( appidSelect == 0 )
-		{
-			appSelect.options[i].selected = true;
-		}
-		i++;
-	}
-	
-	for ( appid in g_rgApps )
-	{
-		lc = g_rgApps[appid].toString().toLowerCase();
-		if ( filterString.length == 0 || lc.indexOf( filterString ) != -1 )
-		{
-			appSelect.options[i] = new Option( g_rgApps[appid], appid );
-			appSelect.options[i].id = "opt" + appid;
-			if ( appid == appidSelect )
-			{
-				appSelect.options[i].selected = true;
-			}
-			i++;
-		}
-	}
-}
-
 
 //
 // chunked uploads to cross-domain server once we have acquired an upload token
