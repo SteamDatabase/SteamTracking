@@ -1162,3 +1162,18 @@ span.icon_star { display: inline-block;}
 .ttip {
 	cursor: pointer;
 }
+
+.tr.warning1 .td {
+	background-color: #886A08 !important;
+}
+
+.tr.warning2 .td{
+	background-color: #600000 !important;
+}
+
+.tr.checkerboard1 .td{
+	background-color: #202020 !important;
+}
+
+.tr.checkerboard2 .td{
+	background-color: #000000 !important;
