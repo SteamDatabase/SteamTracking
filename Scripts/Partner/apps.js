@@ -3321,8 +3321,8 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 					//'description': 'Auto-created launch discount',
 					'descriptionPreset': '#discount_desc_preset_special',
 					'percent': nLaunchDiscount,
-					'startDate': CreatePHPDateFromObject(startDate),
-					'endDate': CreatePHPDateFromObject(endDate),
+					'startdate': CreatePHPDateFromObject(startDate),
+					'enddate': CreatePHPDateFromObject(endDate),
 					'json': true
 				},
 				'message': 'Adding ' + nLaunchDiscount + '% launch discount to packages ' + rgPackages.join(', ')
