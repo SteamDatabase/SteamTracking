@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2d002c7dac8af83de6145754048040d6053cc6bc.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.e039566314a3492e9894eec4552e2dfc63d07da5.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -76207,12 +76207,14 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_head.cd2c910b0e041f65407986f380dd00f25a9f02c0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_head_large.a36a6f46fdc72143630e37c7c1a2d3a2ee1c0275.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76234,11 +76236,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76260,12 +76257,14 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_robe.2508992066e2530014f792cae98ec28cdba75444.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_cheetah_robe_large.597f8a4e8b0afedf408a559dc81395565ec0f8c8.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76287,11 +76286,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76313,11 +76307,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_pants.d01b89e56653719f59d66ae62fd8a2bcf9344820.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_pants_large.cd64c670c8052d06b3b0fd27a1c3a002c58f66eb.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76339,11 +76335,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76365,11 +76356,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_armor.847d154448350bca06a914034316acb7fe9ab2e0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_armor_large.6093b939ac498b2a3b91d990abc9cd5c06038429.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76391,11 +76384,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76417,12 +76405,14 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm.55fd485f87684f228135c4e7b1be65d3c91274d0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm_large.115dcf83d88ca2bd90b4c66d3176578b6c5a6f32.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76444,11 +76434,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76470,11 +76455,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_hood.400fefffb75aed051f43ba005d4add98c56eaa85.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_demo_hood_large.efd411eaa99310e2f81211f4f4579462b4bc177e.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76496,11 +76483,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					}
 				]
 				
@@ -76522,11 +76504,13 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath.dc7aa052b14a75f3920faac81778e638e0b44784.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath_large.0dc050f1589653e4363de098c63b8a07065f0952.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -76544,11 +76528,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64.000000
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
 					},
 					{
 						"name": "vision opt in flags",

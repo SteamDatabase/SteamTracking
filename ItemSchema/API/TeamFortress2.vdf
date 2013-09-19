@@ -40485,7 +40485,7 @@
 		"30059"
 		{
 			"name"		"The Beastly Bonnet"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"item_name"		"#TF_tw2_cheetah_head"
 			"item_description"		"#TF_tw2_cheetah_head_Desc"
 			"equip_region"		"whole_head"
@@ -40501,6 +40501,7 @@
 			"image_inventory"		"backpack/workshop/player/items/scout/tw2_cheetah_head/tw2_cheetah_head"
 			"capabilities"
 			{
+				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/tw2_cheetah_head/tw2_cheetah_head.mdl"
@@ -40512,7 +40513,7 @@
 		"30060"
 		{
 			"name"		"The Cheet Sheet"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_tw2_cheetah_robe"
 			"item_description"		"#TF_tw2_cheetah_robe_Desc"
@@ -40528,6 +40529,7 @@
 			"image_inventory"		"backpack/workshop/player/items/scout/tw2_cheetah_robe/tw2_cheetah_robe"
 			"capabilities"
 			{
+				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/tw2_cheetah_robe/tw2_cheetah_robe.mdl"
@@ -40539,7 +40541,11 @@
 		"30061"
 		{
 			"name"		"The Tartantaloons"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_tw2_demo_pants"
 			"item_description"		"#TF_tw2_demo_pants_Desc"
@@ -40555,7 +40561,11 @@
 		"30062"
 		{
 			"name"		"The Steel Sixpack"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
 			"item_type_name"		"#TF_Wearable_Armor"
 			"item_name"		"#TF_tw2_greek_armor"
 			"item_description"		"#TF_tw2_greek_armor_Desc"
@@ -40578,7 +40588,7 @@
 		"30063"
 		{
 			"name"		"The Centurion"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"item_name"		"#TF_tw2_greek_helm"
 			"item_description"		"#TF_tw2_greek_helm_Desc"
 			"equip_region"		"hat"
@@ -40586,6 +40596,7 @@
 			"image_inventory"		"backpack/workshop/player/items/pyro/tw2_greek_helm/tw2_greek_helm"
 			"capabilities"
 			{
+				"can_craft_count"		"1"
 				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/tw2_greek_helm/tw2_greek_helm.mdl"
@@ -40597,7 +40608,11 @@
 		"30064"
 		{
 			"name"		"The Tartan Shade"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
 			"item_name"		"#TF_tw2_demo_hood"
 			"item_description"		"#TF_tw2_demo_hood_Desc"
 			"equip_region"		"whole_head"
@@ -40612,7 +40627,11 @@
 		"30065"
 		{
 			"name"		"The Hardy Laurel"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
 			"item_name"		"#TF_tw2_roman_wreath"
 			"item_description"		"#TF_tw2_roman_wreath_Desc"
 			"equip_region"		"hat"
