@@ -1177,3 +1177,8 @@ span.icon_star { display: inline-block;}
 
 .tr.checkerboard2 .td{
 	background-color: #000000 !important;
+}
+
+.pricing_was, .oldPrice {
+	font-size: 10px;
+}
