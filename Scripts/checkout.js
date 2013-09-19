@@ -798,9 +798,6 @@ function OnInitializeTransactionFailure( detail, result )
 				case 55:
 					error_text = 'This card number is not valid for the payment method you selected.';
 					break;
-				case 56:
-					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
-					break;
 				default:
 					break;
 			}
@@ -1337,9 +1334,6 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				break;
 			case 1:
 				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
-				break;
-			case 56:
-				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 				break;
 		}	
 		
