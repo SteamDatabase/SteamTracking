@@ -701,6 +701,7 @@ function OnInitializeTransactionSuccess( result )
 		else if ( result.paymentmethod == 4 || result.paymentmethod == 3 
 					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11					|| result.paymentmethod == 12 
 					|| result.paymentmethod == 14 
+					|| result.paymentmethod == 33 
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 31 )
@@ -1111,6 +1112,17 @@ function OnGetFinalPriceSuccess( result )
 					
 					// change the button to do something else
 					$('purchase_button_bottom').href = "javascript:CreateQiwiInvoiceAndFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"' );";
+				}				
+				else if ( method.value == 'beeline' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Beeline transactions are authorized through the Beeline website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Beeline';
+
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Beeline customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Beeline transactions are authorized through the Beeline website.  Click the button below to open a new web browser to initiate the transaction.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
 				}				
 				else if ( method.value == 'mopay' )
 				{
@@ -1909,7 +1921,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
-			|| method.value == 'molpoints' )
+			|| method.value == 'molpoints' || method.value == 'beeline' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2331,7 +2343,7 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
-			|| method.value == 'molpoints' )
+			|| method.value == 'molpoints' || method.value == 'beeline' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2676,6 +2688,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'qiwi' && providerPaymentMethod == 14 )
 			{
 				$('payment_method_review_text').innerHTML = 'QIWI Wallet';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'beeline' && providerPaymentMethod == 33 )
+			{
+				$('payment_method_review_text').innerHTML = 'Beeline';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mopay' && providerPaymentMethod == 17 )
@@ -3076,6 +3093,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail )
 			case 11:
 			case 12:
 			case 14:
+			case 33:
 			case 17:
 			case 18:
 			case 19:
