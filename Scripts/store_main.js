@@ -1029,6 +1029,7 @@ var GraphicalCountdown = Class.create( Countdown, {
 
 	render: function( remainDays, remainHours, remainMinutes, remainSeconds )
 	{
+		remainHours += remainDays * 24;
 		this.setImage( 'hours_tens', Math.floor( remainHours / 10 ) );
 		this.setImage( 'hours_units', remainHours % 10 );
 		this.setImage( 'minutes_tens', Math.floor( remainMinutes / 10 ) );
