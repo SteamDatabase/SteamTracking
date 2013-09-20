@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.327f03cd54d3b1805da808d1fff7db4dee87ac88.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.710b0d95b518f11ff015c507d729950b1179ee7f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -77374,6 +77374,12 @@
 				"id": 135,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle135"
+			},
+			{
+				"system": "natures_prophet_outcast_ambient",
+				"id": 136,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle136"
 			}
 		]
 		,
