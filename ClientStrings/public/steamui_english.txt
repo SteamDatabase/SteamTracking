@@ -3737,6 +3737,7 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "SteamUI_ManageDeviceAuth_ThisComputer" "This Computer"
 "SteamUI_ManageDeviceAuth_NotAuthorized" "Not authorized yet"
 "SteamUI_ManageDeviceAuth_NotAccessed" "Not accessed yet"
+"SteamUI_ManageDeviceAuth_Name_Device" "Enter a name for this computer:"
 
 
 "Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices"
