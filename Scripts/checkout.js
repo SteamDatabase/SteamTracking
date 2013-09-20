@@ -1342,6 +1342,10 @@ function OnGetFinalPriceFailure( eErrorDetail )
 						error_text = 'This purchase cannot be completed because the amount charged through Sofort must be at least 0,10 EUR.  Please select another payment method for your purchase and try again.';
 						break;
 
+					case 'beeline':
+						error_text = 'This purchase cannot be completed because the amount charged through Beeline must be at least 10 RUB.  Please select another payment method for your purchase and try again.';
+						break;
+
 					default:
 						error_text = 'This purchase cannot be completed because the amount is not allowed by the payment method.  Please select another payment method for your purchase and try again.';
 						break;
