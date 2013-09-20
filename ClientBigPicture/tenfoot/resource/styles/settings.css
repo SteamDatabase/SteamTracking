@@ -1192,9 +1192,8 @@ KeyboardShortcut .Graphic
 .SettingsController_BindRow
 {
 	flow-children: right;
-
+	height: 80px;
 	width: 1000px;
-	margin: 5px;
 	padding: 5px;
 	border-style: solid;
 	border-width: 5px;
@@ -1572,9 +1571,10 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_List
 {
-	height: 200px;
+	height: 500px;
 	flow-children: down;
 	overflow: clip scroll;
+	background-color: simplebutton;
 }
 
 .SettingsManageDevices_ColumnItem
@@ -1588,13 +1588,13 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 {
 	width: 240px;
 	font-size: 24px;
-	margin-left: 23px;
+	margin-left: 18px;
 	margin-top: 20px;
 }
 
 .SettingsManageDevices_ColumnTime
 {
-	width: 250px;
+	width: 260px;
 	font-size: 24px;
 	margin-top: 20px;
 	margin-left: 8px;
@@ -1627,7 +1627,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnTimeContent
 {
-	width: 250px;
+	width: 260px;
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;

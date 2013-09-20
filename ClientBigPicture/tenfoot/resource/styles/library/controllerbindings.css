@@ -83,7 +83,7 @@ ControllerBindings #MsgBoxHeader
 ControllerBindings .MsgBoxSubTitle
 {
 	margin-top: 0px;
-	font-size: 28px;
+	font-size: 22px;
 
 	margin-top: -4px;
 }

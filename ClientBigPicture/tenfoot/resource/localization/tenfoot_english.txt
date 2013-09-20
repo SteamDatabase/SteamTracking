@@ -848,6 +848,7 @@
 	"Library_Details_Guides"	"GUIDES"
 	"Library_Details_Play"		"PLAY"
 	"Library_Details_Controller"	"CONTROLLERS"
+	"Library_Details_SharingStatus" "SHARED BY"
 	
 	"Library_Details_ComingSoon"	"COMING SOON"
 	"Library_Details_Preload"	"PRELOAD"
@@ -1431,7 +1432,7 @@
 	"Web_DeleteFavorite_Text" "Do you want to delete this favorite?"
 	"Web_RecentLabel"	"RECENT"
 	"Web_FrequentLabel"	"FREQUENT"
-	"Web_OpenInNewTab" "Open in new tab"
+	"Web_OpenInNewTab" "Open in New Tab"
 	"Web_FullScreen_Exit" "EXIT FULLSCREEN"
 	"Web_FullScreen_PlayPause" "PLAY/PAUSE"
 	"Web_FormSubmit" "SUBMIT"
@@ -1498,14 +1499,12 @@
 	"OOBE_NetworkSettings_Title"		"Network Settings"
 	"OOBE_NetworkSettings_Description"	"Configure your network settings"
 	
-	"DeviceAuth_Shared_Library_Currently_Unavailable" "Shoot, {s:owner}'s shared games are currently in use. 
-	
-Try playing later, or buy this game for your own library to play it now."
+	"DeviceAuth_Shared_Library_Currently_Unavailable" "{s:owner}'s shared library is in use"
 	"DeviceAuth_Shared_Library_Permanently_Unavailable" "This game is not available in shared libraries"
 	"DeviceAuth_Shared_Library_InUse" "Your shared library is currently in use by {s:user}. 
 	
 Playing now will send {s:user} a notice that it's time to quit."
-	"DeviceAuth_Shared_Library_Available" "This shared game belongs to {s:owner}."
+	"DeviceAuth_Shared_Library_Available" "Shared by {s:owner}"
 	
 	"DeviceAuth_ChooseDialog_Title" "Want to play this game?"
 	"DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user {s:owner}. Would you like to request access to {s:owner}'s games on this device?"
@@ -1536,9 +1535,11 @@ Playing now will send {s:user} a notice that it's time to quit."
 	"Settings_ManageDevices_This_Computer" "This computer"
 	"Settings_ManageDevices_Not_Authorized" "Not yet authorized"
 	"Settings_ManageDevices_Not_Accessed" "Not yet accessed"
-	"Settings_ManageDevices_Authorize" "AUTHORIZE DEVICE"
-	"Settings_ManageDevices_Remove" "REMOVE AUTHORIZATION"
-	"Settings_ManageDeviceAuth_Text" 	"The following devices are authorized to share your library with other Steam users. The local computer is always listed so you may authorize it."
+	"Settings_ManageDevices_Authorize" "AUTHORIZE THIS DEVICE"
+	"Settings_ManageDevices_Remove" "DEAUTHORIZE THIS DEVICE"
+	
+	
+	"Settings_ManageDeviceAuth_Text" 	"To grant others access to your Steam library on this device, authorize it below. You may also revoke access from any previously authorized devices in this list."
 	"Settings_ManageDevices_Title" "Family Sharing & Devices"
 	"Settings_ManageDevices_Authorization_Failed" "Device authorization failed ({s:reason})"
 	"Settings_ManageDevices_Deauthorization_Failed" "Device deauthorization failed ({s:reason})"
