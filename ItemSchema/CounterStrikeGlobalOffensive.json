@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.240c5d5d528677aa5a9c535bf3c89981016e753f.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.76c9ce5d0360b13cd5f6c588d3ab5cc11fc141a3.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1450,8 +1450,8 @@
 				"defindex": 62,
 				"item_class": "tool",
 				"item_type_name": "Contract",
-				"item_name": "Arms Deal Collection Contract",
-				"item_description": "In exchange for 10 Arms Deal Collection items of identical quality, you will receive a single Arms Deal Collection item of a quality one higher than the items you provided.",
+				"item_name": "Trade Up Contract",
+				"item_description": "In exchange for 10 items from the same Collection and of identical quality, you will receive a single item from that Collection of a quality one higher than the items you provided.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/crafting_contract",
@@ -1724,6 +1724,11 @@
 						"value": 0.000000
 					},
 					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					},
+					{
 						"name": "upgrade threshold",
 						"class": "upgrade_threshold",
 						"value": 600.000000
@@ -1732,11 +1737,6 @@
 						"name": "upgrade definition index",
 						"class": "upgrade_definition_index",
 						"value": 1002.000000
-					},
-					{
-						"name": "minutes played",
-						"class": "minutes_played",
-						"value": 1.000000
 					}
 				]
 				
@@ -1746,7 +1746,7 @@
 				"defindex": 1002,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "Silver Operation Payback Challenge Coin",
+				"item_name": "Silver Operation Payback Coin",
 				"item_description": "Participated in Operation Payback for 10 hours to support community map makers.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -1775,6 +1775,11 @@
 						"value": 0.000000
 					},
 					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					},
+					{
 						"name": "upgrade threshold",
 						"class": "upgrade_threshold",
 						"value": 3000.000000
@@ -1783,11 +1788,6 @@
 						"name": "upgrade definition index",
 						"class": "upgrade_definition_index",
 						"value": 1003.000000
-					},
-					{
-						"name": "minutes played",
-						"class": "minutes_played",
-						"value": 1.000000
 					}
 				]
 				
@@ -1797,7 +1797,7 @@
 				"defindex": 1003,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "Gold Operation Payback Challenge Coin",
+				"item_name": "Gold Operation Payback Coin",
 				"item_description": "Participated in Operation Payback for 50 hours to support community map makers.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -1995,6 +1995,497 @@
 				}
 			},
 			{
+				"name": "Community Season Two Autumn 2013",
+				"defindex": 1012,
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Bravo Pass",
+				"item_description": "Grants access to Operation Bravo, which consists of access to community maps, exclusive items, and a record of your competitive stats.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_bravo_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_pass.58ad5aad887dc5e7dceb7eb0313920b1dbb8b026.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 1.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1013.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Two Autumn 2013 Coin 1",
+				"defindex": 1013,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Bravo Challenge Coin",
+				"item_description": "Participated in Operation Bravo.\nPlay in Operation Bravo and win Operation Bravo Competitive Matches to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_bravo_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_bronze.423c03f9a10e656199eb220ab585bda15e019cd3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_bronze_large.dee145f744d8b4543ec1d82d1ebe8861943ff345.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 1.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0.000000
+					},
+					{
+						"name": "upgrade threshold",
+						"class": "upgrade_threshold",
+						"value": 600.000000
+					},
+					{
+						"name": "upgrade threshold wins",
+						"class": "upgrade_threshold_wins",
+						"value": 5.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1014.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Two Autumn 2013 Coin 2",
+				"defindex": 1014,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Bravo Coin",
+				"item_description": "Participated in Operation Bravo.\nPlay in Operation Bravo and win Operation Bravo Competitive Matches to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_bravo_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_silver.fd4dd5ae124e8daaf33e2eafefa4a0c4234c23ab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_silver_large.b2afe8c1c24279a6aa89ecb7451f6e0e3fb8c63a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 1.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0.000000
+					},
+					{
+						"name": "upgrade threshold",
+						"class": "upgrade_threshold",
+						"value": 1800.000000
+					},
+					{
+						"name": "upgrade threshold wins",
+						"class": "upgrade_threshold_wins",
+						"value": 15.000000
+					},
+					{
+						"name": "upgrade definition index",
+						"class": "upgrade_definition_index",
+						"value": 1015.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Two Autumn 2013 Coin 3",
+				"defindex": 1015,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Bravo Coin",
+				"item_description": "Participated in Operation Bravo.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_bravo_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_gold.8fc5c4ea00e4d562a9dcc04e92a17b934f99968f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_bravo_gold_large.c4ba24ca6e1c3ff9a068dc559241fa70d06c8b5f.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					},
+					{
+						"name": "season access",
+						"class": "season_access",
+						"value": 1.000000
+					},
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1.000000
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0.000000
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Map Token Agency",
+				"defindex": 1016,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Agency Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_agency",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_agency.65d3dd7018bc13c8e33cc017e87b699d969e80c8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_agency_large.3df49ae569ebeda542370484d43ea82fe3c417ab.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Ali",
+				"defindex": 1017,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Ali Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_ali",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_ali.835559c0b48444a16c9635cc907080c03e822e17.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_ali_large.23b6a2769f39adaa5195a9b75ea21ed9ebc1b873.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Cache",
+				"defindex": 1018,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Cache Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_cache.7f8d32417fbc010b0dc9060774ee77c195cf7a07.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_cache_large.38c5e234510a2654dab07d76f268242c348f4a81.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Chinatown",
+				"defindex": 1019,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Chinatown Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_chinatown",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_chinatown.318b115c1ef4b22b0878618f99d7593e4158bd7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_chinatown_large.b93da9ce466fefce0bdeb90c53b4033374d367e3.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Gwalior",
+				"defindex": 1020,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Gwalior Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_gwalior",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_gwalior.3b6b864f12785d567d4d2bc6442a72947eb9018b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_gwalior_large.c7d6ece0b2b2cdebe191ffda4be583054f8de39c.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Ruins",
+				"defindex": 1021,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Ruins Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_ruins",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_ruins.c2439e771076d3d6170a8eb717fb762837079bdb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_ruins_large.439d055d909356637eeead00a4d0f258cffc067d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
+				"name": "Map Token Siege",
+				"defindex": 1022,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Siege Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/maptoken_siege",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_siege.284c81f5ebf3700c1bc0a7f62da6c173eeddb6bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/maptoken_siege_large.9eba6680ae255f4e43b04a3da3bdd25fca5f4975.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				}
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 1200,
 				"item_class": "tool",
@@ -2173,6 +2664,38 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 2.000000
+					}
+				]
+				
+			},
+			{
+				"name": "crate_operation_ii",
+				"defindex": 4003,
+				"item_class": "supply_crate",
+				"item_type_name": "Weapon Case",
+				"item_name": "Operation Bravo Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_operation_ii",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_operation_ii.7d2fd8b52730c7d6716b6120f4cf9e31380b31a6.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate"
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 3.000000
 					}
 				]
 				
@@ -2862,7 +3385,7 @@
 				"attribute_class": "minutes_played",
 				"min_value": 0.000000,
 				"max_value": 0.000000,
-				"description_string": "Time Logged: %s1",
+				"description_string": "Operation Time Logged: %s1",
 				"description_format": "value_is_mins_as_hours",
 				"effect_type": "positive",
 				"hidden": false,
@@ -3028,6 +3551,98 @@
 				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "competitive kills",
+				"defindex": 97,
+				"attribute_class": "competitive_kills",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive 3k",
+				"defindex": 98,
+				"attribute_class": "competitive_3k",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive 4k",
+				"defindex": 99,
+				"attribute_class": "competitive_4k",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive 5k",
+				"defindex": 101,
+				"attribute_class": "competitive_5k",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive hsp",
+				"defindex": 102,
+				"attribute_class": "competitive_hsp",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "competitive wins",
+				"defindex": 103,
+				"attribute_class": "competitive_wins",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive mvps",
+				"defindex": 104,
+				"attribute_class": "competitive_mvps",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "competitive minutes played",
+				"defindex": 105,
+				"attribute_class": "competitive_minutes_played",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "match wins",
+				"defindex": 106,
+				"attribute_class": "match_wins",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"description_string": "Competitive Wins in Operation Maps: %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
 				"stored_as_integer": true
 			},
 			{
@@ -3038,7 +3653,17 @@
 				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
+			},
+			{
+				"name": "upgrade threshold wins",
+				"defindex": 108,
+				"attribute_class": "upgrade_threshold_wins",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -3066,6 +3691,51 @@
 					"weapon_m4a1",
 					"weapon_ak47",
 					"weapon_tec9"
+				]
+				
+			},
+			{
+				"item_set": "set_bravo_i",
+				"name": "The Bravo Collection",
+				"items": [
+					"weapon_sg556",
+					"weapon_elite",
+					"weapon_nova",
+					"weapon_galilar",
+					"weapon_ump45",
+					"weapon_g3sg1",
+					"weapon_usp_silencer",
+					"weapon_m4a1",
+					"weapon_mac10",
+					"weapon_m4a1_silencer",
+					"weapon_p90",
+					"weapon_hkp2000",
+					"weapon_awp",
+					"weapon_ak47",
+					"weapon_deagle"
+				]
+				
+			},
+			{
+				"item_set": "set_bravo_ii",
+				"name": "The Alpha Collection",
+				"items": [
+					"weapon_mp9",
+					"weapon_m249",
+					"weapon_xm1014",
+					"weapon_tec9",
+					"weapon_mp7",
+					"weapon_fiveseven",
+					"weapon_ssg08",
+					"weapon_negev",
+					"weapon_sawedoff",
+					"weapon_p250",
+					"weapon_glock",
+					"weapon_aug",
+					"weapon_mag7",
+					"weapon_bizon",
+					"weapon_famas",
+					"weapon_scar20"
 				]
 				
 			},
@@ -3121,11 +3791,13 @@
 					"weapon_bizon",
 					"weapon_xm1014",
 					"weapon_mac10",
+					"weapon_hkp2000",
 					"weapon_p250",
 					"weapon_nova",
 					"weapon_bizon",
 					"weapon_nova",
 					"weapon_xm1014",
+					"weapon_m4a1",
 					"weapon_scar20"
 				]
 				
