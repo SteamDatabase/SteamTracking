@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.7aa02e7a8c99f5bf85f76c86f9f1a175f71ff0c1.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.327f03cd54d3b1805da808d1fff7db4dee87ac88.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -77368,6 +77368,12 @@
 				"id": 134,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle134"
+			},
+			{
+				"system": "natures_prophet_enchanted_ambient",
+				"id": 135,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle135"
 			}
 		]
 		,
