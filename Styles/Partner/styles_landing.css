@@ -1112,9 +1112,33 @@ span.icon_star { display: inline-block;}
 	color: #808285;
 }
 
-.sectionTitle_small a {
-	color: inherit;
+	.sectionTitle_small a {
+		color: inherit;
+	}
+
+	.sectionTitle_small.platform {
+		margin-left: 25px;
+		line-height: 25px;
+		font-size: 11px;
+		vertical-align: top;
+		width: 100px;
+		display: inline-block;
+	}
+
+.platform_holder {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 25px;
 }
+
+	.platform_holder img {
+		vertical-align: top;
+	}
+
+	.platform_holder a {
+		color: #b2b2b2;
+		vertical-align: top;
+	}
 
 .noAppsBox {
 	background-color: #1f1f1f;
