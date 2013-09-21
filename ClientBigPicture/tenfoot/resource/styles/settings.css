@@ -1234,10 +1234,60 @@ KeyboardShortcut .Graphic
 	padding: 10px 0px 10px 0px;
 }
 
+
 .EditBind .SettingsControllerCommand
 {
 	padding: 15px -5px 0px 5px; 
 }
+
+.EditBind.SettingsGameControllerBindRow .SettingsControllerCommand
+{
+	padding: 15px -5px 0px 0px; 
+}
+
+
+.SettingsGameController_BindRow
+{
+	flow-children: right;
+	width: 1000px;
+}
+
+.SettingsGameControllerBindRow:focus
+{
+	transition-duration: 0.25s !immediate;
+	transform: translateX( 0px );
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: #161718f5;
+	border-radius: 2px;
+	border-radius: 2px;
+
+	margin-right: 18px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+
+	animation-name: links-and-more-button-focus;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.SettingsGameControllerBindRow.EditBind:focus
+{
+	background-color: none;
+	border-color: none;
+	border-width: 0px;
+	animation-name: none;
+	margin: -25px 28px -25px 0px;
+	padding: 10px 0px 10px 0px;
+}
+
 
 .SettingsBindingsVisibile #GameControllerContent
 {
@@ -1272,7 +1322,6 @@ SettingsPanel_GameController_Binding
 {
 	margin-left: 5px;
 }
-
 
 .EditBind #ButtonLabel
 {
