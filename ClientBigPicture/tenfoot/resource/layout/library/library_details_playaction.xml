@@ -24,12 +24,18 @@
 						<Label id="ControllerSupportHeader" class="PlayTimeTitle" text="#Library_Details_ControllerSupport" />
 						<Label id="ControllerSupportValue" class="PlayTimeValue" />
 					</Panel>
+					<Panel id="SharingRow" class="PlayTimeRow">
+						<Label id="SharingHeader" class="PlayTimeTitle" />
+						<Label id="SharingValue" class="PlayTimeValue" />
+					</Panel>
 				</Panel>
 				<Label id="LaunchingStatus" />
 				<Panel id="ButtonBody" class="ButtonBody" onactivate="LaunchGame();">
-					<Panel id="ButtonGlow" class="ButtonGlow" />
-					<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.png" />
-					<Panel id="Working" />
+					<Panel class="ButtonEdge">
+						<Panel id="ButtonGlow" class="ButtonGlow" />
+						<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.png" />
+						<Panel id="Working" />
+					</Panel>
 				</Panel>
 			</Panel>
 			<Panel id="ControllerSupportCorner">

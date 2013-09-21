@@ -849,6 +849,7 @@
 	"Library_Details_Play"		"PLAY"
 	"Library_Details_Controller"	"CONTROLLERS"
 	"Library_Details_SharingStatus" "SHARED BY"
+	"Library_Details_SharingInUse"	"IN USE BY"
 	
 	"Library_Details_ComingSoon"	"COMING SOON"
 	"Library_Details_Preload"	"PRELOAD"
@@ -1498,13 +1499,6 @@
 	"OOBE_LanguageSelect"			"First things first: What language should we use?"
 	"OOBE_NetworkSettings_Title"		"Network Settings"
 	"OOBE_NetworkSettings_Description"	"Configure your network settings"
-	
-	"DeviceAuth_Shared_Library_Currently_Unavailable" "{s:owner}'s shared library is in use"
-	"DeviceAuth_Shared_Library_Permanently_Unavailable" "This game is not available in shared libraries"
-	"DeviceAuth_Shared_Library_InUse" "Your shared library is currently in use by {s:user}. 
-	
-Playing now will send {s:user} a notice that it's time to quit."
-	"DeviceAuth_Shared_Library_Available" "Shared by {s:owner}"
 	
 	"DeviceAuth_ChooseDialog_Title" "Want to play this game?"
 	"DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user {s:owner}. Would you like to request access to {s:owner}'s games on this device?"

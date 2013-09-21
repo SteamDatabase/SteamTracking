@@ -3318,12 +3318,17 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_lastplayedcolumn"	"Last played"
 "Steam_SizeOnDiskColumn"	"Size on disk"
 
-"steam_details_lastplayedheader" "Last played %last_played_date%"
-"steam_details_lastlaunchedheader" "Last launched %last_played_date%"
-"steam_details_totalplaytimeheader_minutes" "%minutes% minutes played"
-"steam_details_totalplaytimeheader_hours" "%hours% hours played"
-"steam_details_totalusetimeheader_minutes" "%minutes% minutes of use"
-"steam_details_totalusetimeheader_hours" "%hours% hours of use"
+"steam_details_lastplayedheader" "Last played"
+"steam_details_lastlaunchedheader" "Last launched"
+"steam_details_totalplaytime_minutes" "%minutes% minutes"
+"steam_details_totalplaytime_hours" "%hours% hours"
+"steam_details_totalplaytimeheader" "You've played"
+"steam_details_totallaunchtimeheader" "Used for"
+"steam_details_sharedbyheader" "Shared by"
+"steam_details_sharedinuseheader" "Library in use by"
+"steam_details_sharedbyname" "%share_user%"
+"steam_details_sharedbyinuse" "%share_user%, but in use"
+
 "steam_details_achievementsheader" "%achieved_achievements%/%available_achievements% achievements"
 "steam_friendsplayingnow"	"You have %friendsplayingnow% Friends playing %gamename% right now!"
 "steam_friendplayingnow"	"You have %friendsplayingnow% Friend playing %gamename% right now!"
@@ -3748,9 +3753,6 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_DeviceAuth_StopPlaying_Notification" "Hey, %owner% needs this shared game back! You have %minutes% minutes of playtime remaining..." 
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..." 
-
-"Steam_DeviceAuth_Shared_Library_Unavailable" "%owner%'s games are in use" 
-"Steam_DeviceAuth_Shared_Library_In_Use" "Your game library is in use by %borrower%" 
 
 "steam_inbox_tradeoffer"	"1 pending trade offer"
 "steam_inbox_tradeoffers"	"%count% pending trade offers"

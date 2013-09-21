@@ -260,7 +260,7 @@ LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover .AppImage
 {
-	box-shadow: box_shadow_on_color -4.5px -4.5px 6px 9px;
+	box-shadow: fill box_shadow_on_color -4.5px -4.5px 6px 9px;
 	opacity: 1.0;
 	desaturation: 0.0;
 }
@@ -2865,10 +2865,9 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 
 .PlayAction .PlayTimeBody
 {
-	margin: 20px;
-	margin-top: 10px;
+	margin: 20px 20px 0px 20px;
 	width: 100%;
-	height: 120px;
+	max-height: 200px;
 	flow-children: down;
 }
 
@@ -2894,16 +2893,15 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	opacity: 0.0;
 	width: 100%;
-	max-height: 136px;
+	max-height: 112px;
 	text-align: center;
 	margin: 22px;
-	margin-bottom: 20px;
-	margin-top: 0px;
+	margin-bottom: -40px;
+	margin-top: 18px;
 	font-size: 22px;
 	color: applabelsolid;
 	z-index: 1000;
-	text-align: center;
-
+	
 	transition-property: opacity;
 	transition-duration: 0.25s;
 }
@@ -2925,38 +2923,43 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	opacity: 1.0;
 } 
 
-
 .PlayAction .ButtonBody
 {
-	transition-property: background-color, pre-transform-scale2d, border, opacity !immediate;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 0.0;
+	padding: 14px;
+
+	transition-property: pre-transform-scale2d;
 	transition-duration: 0.18s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0.0s;
-	vertical-align: bottom;
-	margin-bottom: 40px;
-
-	opacity: 0.0;
 }
 
-.PlayAction .ButtonBody
+
+.PlayAction .ButtonEdge
 {
-	margin-top: 0px;
-	horizontal-align: center;
-	opacity: 0.0;
 	border-radius: 50%;
 	border-style: solid;
 	border-color: #FFFFFFFF;
 	border-width: 5px;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( dark_box_shadow_color ), to( ui_primary_color ) );
-	//background-color: ui_dark_common_control;
-
 	box-shadow: button_box_shadow_on_color -6px -6px 12px 12px;
+	align: center center;
 
+	transition-property: background-color, border, opacity !immediate;
+	transition-duration: 0.18s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
 }
 
 .PlayAction .ButtonBody:hover
 {
-	pre-transform-scale2d: 1.1;	
+	pre-transform-scale2d: 1.1;
+}
+
+.PlayAction .ButtonEdge:hover
+{
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( dark_box_shadow_color ), to( applabelsolid ) );
 	box-shadow: button_box_shadow_on_color -9px -9px 12px 18px; 
 
@@ -2966,6 +2969,11 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 .PlayAction .ButtonBodyDisabled:hover
 {
     pre-transform-scale2d: 1.0;
+}
+
+.PlayAction .ButtonBodyDisabled .ButtonEdge,
+.PlayAction .ButtonBodyDisabled:hover .ButtonEdge
+{
     background-color: ui_common_control2;
     box-shadow: none;
     desaturation: 0.5;
