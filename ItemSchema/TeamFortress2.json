@@ -47889,8 +47889,8 @@
 				"image_inventory": "backpack\/crafting\/tw2_bundle",
 				"min_ilevel": 50,
 				"max_ilevel": 50,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle.04aab3dd7d6cd78c25f0607444f6b92aeef0e7aa.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle_large.f397b45a623f9ef4f41dbd576e158adae22bb127.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle.a69a8592acba5d1f237f8e15ebc77cc019d8e9ee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle_large.04761c3d39629635ee0b315f1e3b45a7f9f9831e.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
