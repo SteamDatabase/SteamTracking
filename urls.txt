@@ -127,7 +127,7 @@ Scripts/Partner/newsadmin.js|https://partner.steamgames.com/public/javascript/ne
 Styles/TF2/header.css|http://www.teamfortress.com/header.css?_=*TIMENOW*
 Styles/TF2/blog.css|http://www.teamfortress.com/blog.css?_=*TIMENOW*
 Styles/Portal/main.css|http://www.thinkwithportals.com/css/main.css?_=*TIMENOW*
-Styles/Dota2/style.css|http://blog.dota2.com/wp-content/themes/dota2/style.css
+#Styles/Dota2/style.css|http://blog.dota2.com/wp-content/themes/dota2/style.css
 Styles/SourceFilmmaker/main.css|http://www.sourcefilmmaker.com/main.css?_=*TIMENOW*
 
 # Client Manifest
