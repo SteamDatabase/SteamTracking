@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.e039566314a3492e9894eec4552e2dfc63d07da5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.48dd90f0412cb861af4f4b611b044c4f1470fc9d.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -47877,6 +47877,30 @@
 				
 			},
 			{
+				"name": "The Byzantine Bundle",
+				"defindex": 2124,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "The Byzantine Bundle",
+				"item_description": "Why does the Roman Empire fall? So it can get back up again, courtesy of these era-appropriate duds (including the Romevision-creating Hardy Laurel).",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/tw2_bundle",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle.04aab3dd7d6cd78c25f0607444f6b92aeef0e7aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_bundle_large.f397b45a623f9ef4f41dbd576e158adae22bb127.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				}
+			},
+			{
 				"name": "Craft Bar Level 1",
 				"defindex": 5000,
 				"item_class": "craft_item",
@@ -73777,13 +73801,13 @@
 				
 			},
 			{
-				"name": "Bolted Bombardier",
+				"name": "The Bolted Bombardier",
 				"defindex": 30011,
 				"item_class": "tf_wearable",
 				"item_type_name": "Facial Hair",
 				"item_name": "Bolted Bombardier",
 				"item_description": "Remember that time you met the wisest robot in the world? And tore his beard off and stole his stupid pipe? Because the police are here and they want to talk to you.",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/demo\/robo_demo_beard_bombardier\/robo_demo_beard_bombardier.mdl",
 				"item_quality": 6,

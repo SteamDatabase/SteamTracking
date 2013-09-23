@@ -32171,7 +32171,7 @@
 			"name"	"The Bearded Bombardier"
 			"first_sale_date"	"2012/11/27"
 			"prefab"	"misc"
-			"equip_region"	"face"
+			"equip_region"	"beard"
 			"item_name"	"#TF_DemoBeardPipe"
 			"item_type_name"	"#TF_Wearable_FacialHair"
 			"item_description"	"#TF_DemoBeardPipe_Desc"
@@ -39257,7 +39257,7 @@
 		}
 		"30011"
 		{
-			"name"		"Bolted Bombardier"
+			"name"		"The Bolted Bombardier"
 			"prefab"		"no_craft misc"
 			"capabilities"
 			{
@@ -39265,8 +39265,9 @@
 			}
 			"item_name"		"#TF_robo_demo_beard_bombardier"
 			"item_description"		"#TF_robo_demo_beard_bombardier_Desc"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"item_type_name"		"#TF_Wearable_FacialHair"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_beard_bombardier/robo_demo_beard_bombardier"
 			"capabilities"
 			{
@@ -40486,6 +40487,7 @@
 		{
 			"name"		"The Beastly Bonnet"
 			"prefab"		"hat"
+			"first_sale_date"		"2013/09/20"
 			"item_name"		"#TF_tw2_cheetah_head"
 			"item_description"		"#TF_tw2_cheetah_head_Desc"
 			"equip_region"		"whole_head"
@@ -40514,6 +40516,7 @@
 		{
 			"name"		"The Cheet Sheet"
 			"prefab"		"misc"
+			"first_sale_date"		"2013/09/20"
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_tw2_cheetah_robe"
 			"item_description"		"#TF_tw2_cheetah_robe_Desc"
@@ -40542,6 +40545,7 @@
 		{
 			"name"		"The Tartantaloons"
 			"prefab"		"misc"
+			"first_sale_date"		"2013/09/20"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -40562,6 +40566,7 @@
 		{
 			"name"		"The Steel Sixpack"
 			"prefab"		"misc"
+			"first_sale_date"		"2013/09/20"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -40589,6 +40594,7 @@
 		{
 			"name"		"The Centurion"
 			"prefab"		"hat"
+			"first_sale_date"		"2013/09/20"
 			"item_name"		"#TF_tw2_greek_helm"
 			"item_description"		"#TF_tw2_greek_helm_Desc"
 			"equip_region"		"hat"
@@ -40609,6 +40615,7 @@
 		{
 			"name"		"The Tartan Shade"
 			"prefab"		"hat"
+			"first_sale_date"		"2013/09/20"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -40628,6 +40635,7 @@
 		{
 			"name"		"The Hardy Laurel"
 			"prefab"		"hat"
+			"first_sale_date"		"2013/09/20"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -51269,6 +51277,46 @@
 			"max_ilevel"	"50"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"2124"
+		{
+			"name" "The Byzantine Bundle"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2013/09/19"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"The Beastly Bonnet"	"1"
+				"The Cheet Sheet"		"1"
+				"The Tartantaloons"		"1"
+				"The Steel Sixpack"		"1"
+				"The Centurion"			"1"
+				"The Tartan Shade"		"1"
+				"The Hardy Laurel"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_Byzantine"
+			"item_description"	"#TF_Bundle_Byzantine_Desc"
+			"image_inventory"	"backpack/crafting/tw2_bundle"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
 		}
 
 
