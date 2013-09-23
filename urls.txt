@@ -174,9 +174,7 @@ Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Repos/people.html|http://valvesoftware.com/company/people.html
 
 Repos/styles_livingroom.css|http://cdn.store.steampowered.com/public/css/promo/styles_livingroom.css?_=*TIMENOW*
-Repos/01_planet_image.jpg|http://cdn.store.steampowered.com/public/images/promo/livingroom/01_planet_image.jpg?_=*TIMENOW*
-Repos/02_planet_image.jpg|http://cdn.store.steampowered.com/public/images/promo/livingroom/02_planet_image.jpg?_=*TIMENOW*
-Repos/03_planet_image.jpg|http://cdn.store.steampowered.com/public/images/promo/livingroom/03_planet_image.jpg?_=*TIMENOW*
+Repos/styles_livingroom_steamos.css|cdn.store.steampowered.com/public/css/promo/styles_livingroom.css?_=*TIMENOW*&day=atCJhXa17i
 
 # Minecraft
 Minecraft/versions.json|http://s3.amazonaws.com/Minecraft.Download/versions/versions.json
