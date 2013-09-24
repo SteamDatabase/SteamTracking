@@ -10,13 +10,16 @@ function BeginTradeOffer( nTradeOfferID, bShowTutorial )
 
 
 	// set up the textarea for the note and events to advance tutorial when note is added
-	new CAutoSizingTextArea( $('trade_offer_note'), 82 );
-	var fnCheckNote =  function() {
-		if ( this.value.length > 0 )
-			Tutorial.OnUserEnteredNote();
-	};
-	$J('#trade_offer_note').change( fnCheckNote );
-	$J('#trade_offer_note').keyup( fnCheckNote );
+	if ( $('trade_offer_note') )
+	{
+		new CAutoSizingTextArea( $('trade_offer_note'), 82 );
+		var fnCheckNote =  function() {
+			if ( this.value.length > 0 )
+				Tutorial.OnUserEnteredNote();
+		};
+		$J('#trade_offer_note').change( fnCheckNote );
+		$J('#trade_offer_note').keyup( fnCheckNote );
+	}
 
 	if ( nTradeOfferID )
 	{
@@ -29,7 +32,7 @@ function BeginTradeOffer( nTradeOfferID, bShowTutorial )
 		$('you_notready').addClassName('short');
 		$('you_ready').addClassName('short');
 
-		$('tradeoffer_addmessage').hide();
+		$('tradeoffer_addmessage') && $('tradeoffer_addmessage').hide();
 	}
 
 	BeginTrading( bShowTutorial );
@@ -382,8 +385,8 @@ CTradeOfferStateManager = {
 
 			$('btn_decline_trade_offer').hide();
 
-			$('tradeoffer_includedmessage').hide();
-			$('tradeoffer_addmessage').show();
+			$('tradeoffer_includedmessage') && $('tradeoffer_includedmessage').hide();
+			$('tradeoffer_addmessage') && $('tradeoffer_addmessage').show();
 
 			DisableReadOnlyMode();	// will make items draggable again
 		}
@@ -429,7 +432,7 @@ CTradeOfferStateManager = {
 			var rgParams = {
 				sessionid: g_sessionID,
 				partner: g_ulTradePartnerSteamID,
-				tradeoffermessage: $('trade_offer_note').value,
+				tradeoffermessage: $('trade_offer_note') ? $('trade_offer_note').value : '',
 				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus )
 			};
 
@@ -533,7 +536,12 @@ CTradeOfferTutorial.prototype.OnSelectedNonEmptyInventory = function( user ) {
 
 CTradeOfferTutorial.prototype.OnUserAddedItemsToTrade = function( cMyItems, cTheirItems ) {
 	if ( cTheirItems > 0 && cMyItems > 0 )
-		this.AdvanceToStep( 3 );
+	{
+		if ( $('trade_offer_note') )
+			this.AdvanceToStep( 3 );
+		else
+			this.AdvanceToStep( 4 );	//skip note
+	}
 	else if ( cMyItems > 0 )
 		this.AdvanceToStep( 2 );
 };
