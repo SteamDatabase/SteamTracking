@@ -295,6 +295,12 @@ select.hourselect,  select.minuteselect {
 	margin-left: 256px;
 }
 
+	.specialannouncementarea {
+		background-color: #2f2f2f;
+		padding: 12px;
+		margin-bottom: 10px;
+	}
+
 .widetoolbtn {
 	background-image:url('../images/admin_btn_default.jpg');
 	background-repeat:no-repeat;
@@ -2180,20 +2186,6 @@ html, body { height:100%; }
 .movie_error.error .movie_error_text
 {
 	margin-top: 40px;
-}
-
-.waiting_dialog_container
-{
-	line-height: 32px;
-}
-
-.waiting_dialog_throbber
-{
-	width: 32px;
-	height: 32px;
-	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
-	margin-right: 5px;
-	float: left;
 }
 
 .progress_container
