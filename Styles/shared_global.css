@@ -489,6 +489,70 @@ span.popup_menu_pulldown_indicator {
 	width: 100%;
 }
 
+.newmodal_prompt_textarea {
+	height: 396px;
+}
+
+.newmodal_prompt_with_textarea {
+	display: inline-block;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 500px;
+}
+
+.gray_bevel input, .gray_bevel textarea {
+	border: none;
+	outline: none;
+	background-color: #565658;
+	font-size: 13px;
+	color: #BFBFBF;
+}
+
+.gray_bevel.fullwidth {
+	display: block;
+}
+
+.gray_bevel.fullwidth.for_text_input input, .gray_bevel.fullwidth textarea {
+	width: 100%;
+}
+
+input.gray_bevel {
+	height: 20px;
+}
+
+textarea.gray_bevel, .gray_bevel textarea {
+	resize: none;
+}
+
+select.gray_bevel {
+	background-color: #565658;
+	border-radius: 3px;
+	border: 1px solid #262627;
+	box-shadow: 1px 1px 0px #39393a;
+	color: #BFBFBF;
+
+	margin-bottom: 6px;
+	outline: none;
+
+	padding: 0px;
+	line-height: 27px;
+	height: 27px;
+	font-size: 14px;
+}
+
+.waiting_dialog_container
+{
+	line-height: 32px;
+}
+
+.waiting_dialog_throbber
+{
+	width: 32px;
+	height: 32px;
+	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
+	margin-right: 5px;
+	float: left;
+}
 
 .emoticon_hover {
 	position: absolute;

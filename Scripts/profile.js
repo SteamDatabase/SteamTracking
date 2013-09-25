@@ -461,9 +461,11 @@ function ActOnTradeOffer( tradeOfferID, strAction, strCompletedBanner, strAction
 	$TradeOffer.find( '.tradeoffer_footer_actions').hide();
 
 	return $J.ajax( {
-		url: 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strAction,
+		url: 'https://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strAction,
 		data: { sessionid: g_sessionID },
-		type: 'POST'
+		type: 'POST',
+		crossDomain: true,
+		xhrFields: { withCredentials: true }
 	}).done( function( data ) {
 		AddTradeOfferBanner( tradeOfferID, strCompletedBanner, false );
 

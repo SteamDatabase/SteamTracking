@@ -225,6 +225,26 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 	return Modal;
 }
 
+function ShowBlockingWaitDialog( strTitle, strDescription )
+{
+	var deferred = new jQuery.Deferred();
+	var fnOK = function() { deferred.resolve(); };
+
+	var container = $J('<div/>', {'class': 'waiting_dialog_container'} );
+	var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
+	container.append( throbber );
+	container.append( strDescription );
+
+	var Modal = _BuildDialog( strTitle, container, [], fnOK );
+	deferred.always( function() { Modal.Dismiss(); } );
+	Modal.Show();
+
+	// attach the deferred's events to the modal
+	deferred.promise( Modal );
+
+	return Modal;
+}
+
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );

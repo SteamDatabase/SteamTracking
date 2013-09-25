@@ -447,7 +447,13 @@ CTradeOfferStateManager = {
 			}
 
 			return $J.ajax(
-				{ url: 'http://steamcommunity.com/tradeoffer/new/send', data: rgParams, type: 'POST' }
+				{
+					url: 'https://steamcommunity.com/tradeoffer/new/send',
+					data: rgParams,
+					type: 'POST',
+					crossDomain: true,
+					xhrFields: { withCredentials: true }
+				}
 			).done( function( data ) {
 				ShowAlertDialog(
 					'Trade Offer Sent',
@@ -470,7 +476,13 @@ CTradeOfferStateManager = {
 			};
 
 			return $J.ajax(
-				{ url: 'http://steamcommunity.com/tradeoffer/' + nTradeOfferID + '/accept', data: rgParams, type: 'POST' }
+				{
+					url: 'https://steamcommunity.com/tradeoffer/' + nTradeOfferID + '/accept',
+					data: rgParams,
+					type: 'POST',
+					crossDomain: true,
+					xhrFields: { withCredentials: true }
+				}
 			).done( function( data ) {
 
 				try {
@@ -510,7 +522,13 @@ CTradeOfferStateManager = {
 		};
 
 		$J.ajax(
-			{ url: 'http://steamcommunity.com/tradeoffer/' + this.m_nTradeOfferID + '/decline', data: rgParams, type: 'POST' }
+			{
+				url: 'https://steamcommunity.com/tradeoffer/' + this.m_nTradeOfferID + '/decline',
+				data: rgParams,
+				type: 'POST',
+				crossDomain: true,
+				xhrFields: { withCredentials: true }
+			}
 		).done( function( data ) {
 			EndTradeOffer();
 		}).fail( function() {
