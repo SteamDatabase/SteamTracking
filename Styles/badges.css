@@ -666,6 +666,11 @@ img.gamecard {
 	margin-right: 15px;
 }
 
+.badge_progress_task .quest_icon {
+	max-width: 48px;
+	max-height: 48px;
+}
+
 .badge_detail_tasks .badge_task .badge_task_name {
 	padding-top: 6px;
 }
