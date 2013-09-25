@@ -1175,6 +1175,12 @@ span.icon_star { display: inline-block;}
 	height: 140px;
 }
 
+#app_notes_for_partner {
+	width: 275px;
+	height: 140px;
+}
+
+
 .text_green {
 	color: #A4D007 !important;
 }

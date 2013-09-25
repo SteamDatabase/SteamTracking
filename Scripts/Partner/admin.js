@@ -2771,4 +2771,24 @@ function v_trim( str )
 	}
 }
 
+function RejectAppReleaseRequest( appid )
+{
+	var dialog = ShowPromptWithTextAreaDialog( 'Notes to send to the partner', '', null, null, 1000 );
+
+	dialog.done( function( data ) {
+		data = v_trim( data );
+		if ( data.length < 1 )
+		{
+			ShowAlertDialog( 'Error', 'Please enter in some notes for the partner telling them what they need to do before their app can be released.' );
+			return;
+		}
+		$J.post( 'https://partner.steamgames.com/admin/ajaxrejectappreleaserequest', {
+				'appid' : appid,
+				'notes_for_partner' : data
+			}
+		).done( function( json ) {
+				top.location.reload();
+			} );
+	} );
+}
 
