@@ -3265,6 +3265,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_library_filter_owner" "%owner%'s Games"
 "steam_library_filter_unblocked"		"Family Games"
 "steam_library_unknown_owner" "Other Games"
+"steam_library_filter_mygames" "My Games"
 
 "steam_downloads_networkusage"	"Current Network Usage"
 "steam_downloads_downloadrate"	"Download Rate "
@@ -3741,8 +3742,9 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "SteamUI_ManageDeviceAuth_Rename" "Rename Device"
 "SteamUI_ManageDeviceAuth_ThisComputer" "This Computer"
 "SteamUI_ManageDeviceAuth_NotAuthorized" "Not authorized yet"
-"SteamUI_ManageDeviceAuth_NotAccessed" "Not accessed yet"
+"SteamUI_ManageDeviceAuth_NotAccessed" "Authorized, not used yet"
 "SteamUI_ManageDeviceAuth_Name_Device" "Enter a name for this computer:"
+"SteamUI_ManageDeviceAuth_Get_Devices_Failed" "Failed to get authorized devices (%reason%)"
 
 
 "Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices"
