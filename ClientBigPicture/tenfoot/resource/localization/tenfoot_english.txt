@@ -1533,7 +1533,7 @@
 	"Settings_ManageDevices_Remove" "DEAUTHORIZE THIS DEVICE"
 	
 	
-	"Settings_ManageDeviceAuth_Text" 	"To grant others access to your Steam library on this device, authorize it below. You may also revoke access from any previously authorized devices in this list."
+	"Settings_ManageDeviceAuth_Text" 	"To grant others access to your Steam library on this device*, authorize it below. You may also revoke access from any previously authorized devices in this list."
 	"Settings_ManageDevices_Title" "Family Sharing & Devices"
 	"Settings_ManageDevices_Authorization_Failed" "Device authorization failed ({s:reason})"
 	"Settings_ManageDevices_Deauthorization_Failed" "Device deauthorization failed ({s:reason})"
