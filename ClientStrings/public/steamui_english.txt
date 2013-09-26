@@ -1751,13 +1751,15 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_Game_DLC_NotInstalled"	"Not installed"
 
 
-"Steam_Game_FreeWeekend"		"Free Weekend"
-"Steam_Game_Retail"				"Retail"
+"Steam_Game_FreeWeekend"			"Free Weekend"
+"Steam_Game_Retail"						"Retail"
+"Steam_Game_AuthorizeDevice"		"Authorized Device"
 "Steam_Game_Complimentary"		"Complimentary"
 "Steam_Game_HardwarePromo"		"Hardware Promo"
 "Steam_Game_SteamStore"			"Steam Store"
 "Steam_Game_SteamStorePage"		"Store Page"
 "Steam_Game_GameHub"			"Community Hub"
+
 "Steam_Game_RecommendGame"		"Recommend..."
 
 "Steam_Automatic_Updates"		"Automatic updates"
@@ -3731,7 +3733,12 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_DeviceAuth_RequestDialog_SendPending" "Your email request has been sent. Here’s hoping your wish will be granted soon!"
 
 "SteamUI_ManageDeviceAuth_Title" "Authorized Devices"
-"SteamUI_ManageDeviceAuth_Text" "The following devices are authorized to share your library with other Steam users."
+
+
+
+
+
+"SteamUI_ManageDeviceAuth_Text" "To grant others access to your Steam library on this device*, authorize it below. You may also revoke access from any previously authorized devices in this list."
 "SteamUI_ManageDeviceAuth_TokenOwner" "Authorized By"
 "SteamUI_ManageDeviceAuth_TokenDesc" "Device Name"
 "SteamUI_ManageDeviceAuth_LastUsed" "Last accessed"
