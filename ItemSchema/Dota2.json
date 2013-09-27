@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.a90c8f3883fba555ae861d98d854e39c95dfbffa.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.384a238faf0c7cd6942cb3d24d77c1d3fc73344d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -65805,6 +65805,366 @@
 					"usage_capabilities": {
 						"decodable": true
 					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Megalodon Cup Season 1",
+				"defindex": 15274,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Megalodon Cup Season 1",
+				"item_description": "The Megalodon Cup features the top 8 teams from Brazil competing for a total prize of R$1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_megalodon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_megalodon.3d2e8620b3bdba68e8e7c7545d879b45d05db2af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_megalodon_large.60af9666533a71a31fbeba0e2c3608d254e80b0c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Megalodon Cup Season 1 - ADMIN",
+				"defindex": 15275,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Megalodon Cup Season 1 - ADMIN",
+				"item_description": "The Megalodon Cup features the top 8 teams from Brazil competing for a total prize of R$1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_megalodon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_megalodon.3d2e8620b3bdba68e8e7c7545d879b45d05db2af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_megalodon_large.60af9666533a71a31fbeba0e2c3608d254e80b0c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rising Stars Dota League",
+				"defindex": 15276,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rising Stars Dota League",
+				"item_description": "Rising Stars is a tournament featuring 16 total teams. 8 teams are invited (4 from Brazil and 4 from South America) and 8 more from a qualifier). The top 4 teams for 2 groups of 8 teams will compete for a total prize of $500.00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_risingstars",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_risingstars.50013826c3afcc4f5f91e2e1473f8bbfc122d654.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_risingstars_large.694fa7e33ed3916c1c17d2252f505a6b004b710e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rising Stars Dota League - ADMIN",
+				"defindex": 15277,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rising Stars Dota League - ADMIN",
+				"item_description": "Rising Stars is a tournament featuring 16 total teams. 8 teams are invited (4 from Brazil and 4 from South America) and 8 more from a qualifier). The top 4 teams for 2 groups of 8 teams will compete for a total prize of $500.00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_risingstars",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_risingstars.50013826c3afcc4f5f91e2e1473f8bbfc122d654.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_risingstars_large.694fa7e33ed3916c1c17d2252f505a6b004b710e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota 2 Beginner's Challenge",
+				"defindex": 15278,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AMD Dota 2 Beginner's Challenge",
+				"item_description": "Nexon presents the AMD Dota 2 Beginnerâs Challenge league, a series of weekly online tournaments open for amateur teams in Korea. Each team competes weekly to win prizes sponsored by AMD! The event will begin on Oct 5, 2013 and run for three months including the grand finals at each monthâs end.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amdbeginner",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amdbeginner.9cefcc8d0cf874a47ee1ab8b9c39985722f261b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amdbeginner_large.6d1e72da535e33239b6fdfe0a57fcf2c5ca5da3f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota 2 Beginner's Challenge - ADMIN",
+				"defindex": 15279,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AMD Dota 2 Beginner's Challenge - ADMIN",
+				"item_description": "Nexon presents the AMD Dota 2 BeginnerÃ¢ÂÂs Challenge league, a series of weekly online tournaments open for amateur teams in Korea. Each team competes weekly to win prizes sponsored by AMD! The event will begin on Oct 5, 2013 and run for three months including the grand finals at each monthÃ¢ÂÂs end.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amdbeginner",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amdbeginner.9cefcc8d0cf874a47ee1ab8b9c39985722f261b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_amdbeginner_large.6d1e72da535e33239b6fdfe0a57fcf2c5ca5da3f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fengyun Tournament",
+				"defindex": 15280,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fengyun Tournament",
+				"item_description": "This year's Fengyun Tournament features grassroots teams competing against top Asian Dota 2 powerhouses for a prize pool of 100,000 RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fengyun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fengyun.03d889da3a6b9424839573318edea743c3024720.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fengyun_large.c220f7d1382f64f067d3a525d22de9371ef3ef87.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fengyun Tournament - ADMIN",
+				"defindex": 15281,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fengyun Tournament - ADMIN",
+				"item_description": "This year's Fengyun Tournament features grassroots teams competing against top Asian Dota 2 powerhouses for a prize pool of 100,000 RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fengyun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fengyun.03d889da3a6b9424839573318edea743c3024720.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fengyun_large.c220f7d1382f64f067d3a525d22de9371ef3ef87.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Electronic Sports Prime Dota 2 Cup",
+				"defindex": 15282,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Electronic Sports Prime Dota 2 Cup",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Electronic Sports Prime Dota 2 Cup - ADMIN",
+				"defindex": 15283,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Electronic Sports Prime Dota 2 Cup - ADMIN",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
