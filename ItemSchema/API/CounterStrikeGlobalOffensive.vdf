@@ -406,6 +406,18 @@
 		{
 			"icon_path"		"econ/default_generated/weapon_elite_cu_season_elites_bravo_heavy"
 		}
+		"196620"
+		{
+			"icon_path"		"econ/default_generated/weapon_fiveseven_so_red_light"
+		}
+		"196621"
+		{
+			"icon_path"		"econ/default_generated/weapon_fiveseven_so_red_medium"
+		}
+		"196622"
+		{
+			"icon_path"		"econ/default_generated/weapon_fiveseven_so_red_heavy"
+		}
 		"197212"
 		{
 			"icon_path"		"econ/default_generated/weapon_fiveseven_so_jungle_light"
@@ -6960,6 +6972,22 @@
 			"ignore_weapon_size_scale"		"0"
 			"view_model_exponent_override_size"		"256"
 		}
+		"3"
+		{
+			"name"		"so_red"
+			"description_string"		"#PaintKit_so_red"
+			"description_tag"		"#PaintKit_so_red_Tag"
+			"wear_default"		"0.120000"
+			"style"		"1"
+			"color0"		"32 32 32"
+			"color1"		"106 11 11"
+			"color2"		"32 32 32"
+			"color3"		"32 32 32"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.300000"
+			"phongexponent"		"255"
+			"phongintensity"		"80"
+		}
 		"5"
 		{
 			"name"		"hy_ddpat"
@@ -8974,6 +9002,7 @@
 	}
 	"paint_kits_rarity"
 	{
+		"so_red"		"uncommon"
 		"hy_ddpat"		"common"
 		"hy_arctic"		"uncommon"
 		"hy_desert"		"common"
@@ -9223,6 +9252,7 @@
 			{
 				"[so_caramel]weapon_ump45"		"1"
 				"[so_tornado]weapon_sg556"		"1"
+				"[so_red]weapon_fiveseven"		"1"
 				"[an_navy]weapon_negev"		"1"
 				"[an_red]weapon_aug"		"1"
 				"[aa_fade]weapon_glock"		"1"
