@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.76c9ce5d0360b13cd5f6c588d3ab5cc11fc141a3.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.67a247f51db095286d1c6eba200f8aaa22c7b270.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3674,6 +3674,7 @@
 				"items": [
 					"weapon_ump45",
 					"weapon_sg556",
+					"weapon_fiveseven",
 					"weapon_negev",
 					"weapon_aug",
 					"weapon_glock",
