@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.00b615b9e5517d71f284ab181fdd9d13b401230c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.a90c8f3883fba555ae861d98d854e39c95dfbffa.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -23882,8 +23882,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/end_of_order\/end_of_order",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order.5b6875ce5482402a5f64226df08fd5cf9a6d25ed.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order_large.f27387a2acb46742c63f3468a224d221856c6364.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order.353de93f3e5285ae4419cbc26fe8d6b99e541808.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order_large.c81c1f57df5a8a235dde14b10eba4ce14a6fefe7.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -45241,6 +45241,282 @@
 				}
 			},
 			{
+				"name": "Kraken's Bane",
+				"defindex": 5419,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Harpoon",
+				"item_name": "Kraken's Bane",
+				"item_description": "Created to cleanse the sea of its greatest scourge, this fearsome harpoon is now used against those who once dared wield it.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tidehunter\/krakens_bane\/krakens_bane",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tidehunter\/krakens_bane\/krakens_bane.8f702305ca34ec2205007bf71807cb20aa751fa6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tidehunter\/krakens_bane\/krakens_bane_large.ab3cb457c0e7854c40624e7d5295b259644eda8f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Laments of the Dead",
+				"defindex": 5420,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Laments of the Dead",
+				"item_description": "Forged by a necromantic smith, on whose anvil tortured souls were hammered into obedience, it is Rotund'jere's pleasure to make sure this deadly scythe fulfills its only wish: to reap the souls of the living.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead.a22fab5105180fa2140c264bec0a7c627b11bad2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead_large.084b79c69228163cd4a3d2fcc24cd266dfc74d8b.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Grievous Grapnel",
+				"defindex": 5421,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "Grievous Grapnel",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel.d195f68eec6d21f33dbbc31af742cdf90fd9a8b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel_large.a54d85545d4d085e7d0394080bd3248932b4e986.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ashborn Horns",
+				"defindex": 5422,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Ashborn Horns",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/ashborn_horns\/ashborn_horns",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pugna\/ashborn_horns\/ashborn_horns.9e2ee5f51b4884f6c4fead46d62e80e2e43e296d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/pugna\/ashborn_horns\/ashborn_horns_large.0eda65d6a33c109a0deb8425abd4096765c5dc43.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Staff of Infernal Chaos",
+				"defindex": 5424,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Staff of Infernal Chaos",
+				"item_description": "A Dreadwood staff  engraved with hellish runes to confine a spirit from the Outer Hells inside it. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos.d586c2ba0d085d1ec56d92b7b52a10e656df6097.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos_large.39273eb09087b6bf8d6552c552791df9b9a74d24.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Frozen Stein of the Bar Brawler",
+				"defindex": 5425,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Stein",
+				"item_name": "Frozen Stein of the Bar Brawler",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler.cb78af707a399436f810076de68a8176e027e70f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler_large.94d76b2ba5985c983061943b87b7f7173fddd271.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shattered Axe of the Vanquished",
+				"defindex": 5426,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Shattered Axe of the Vanquished",
+				"item_description": "Bradwarden has never treated an enemy lightly, but the skull that shattered this blade instilled in him an even deeper sense of respect.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished.157dddd6edff5555c6f15f93a086013ccdca7f2a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished_large.a0d0fa3614bdaed6e2e4fa0161bee05376ebf390.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Plunder of the High Seas",
+				"defindex": 5427,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Plunder of the High Seas",
+				"item_description": "Pillage with plunder!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/admirals_treasury\/admirals_treasury",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/admirals_treasury\/admirals_treasury.365100c2141853a116721c6bee16764dd574a729.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/admirals_treasury\/admirals_treasury_large.dc8c1823031acc53da286988f7e07b4986ecbb8f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Meadow's Mercy",
+				"defindex": 5428,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Meadow's Mercy",
+				"item_description": "Though the forest itself may be neutral, this spear will bring a swift end to those who dare disturb the creatures who call it home.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/meadows_mercy\/meadows_mercy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/meadows_mercy\/meadows_mercy.442c73dc3b0a47342e324eba2e03e68c6e171cca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/meadows_mercy\/meadows_mercy_large.4be10086d7460c2c9f53349bf304be14bb3cab35.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Eye of Niuhi",
+				"defindex": 5429,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Eye of Niuhi",
+				"item_description": "Engrained within the beaten blade of the fisherman who first slew him lies the eye of Niuhi, a monster from the deep, long defeated but not forgotten. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi.eb90877b89f8d32f0c0430119472ad83ce21eaae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi_large.4d755762632a080f29fe2b1023dee0f9b64b8773.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shadow Brand",
+				"defindex": 5430,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Shadow Brand",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/shadow_brand\/shadow_brand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/shadow_brand\/shadow_brand.26b6b62740edbacf7c4cc64074192721e6968415.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/shadow_brand\/shadow_brand_large.77482c8bab1a7620c3b6d60a81d6c77bcc1af494.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Trident of the Deep One",
+				"defindex": 5436,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Trident",
+				"item_name": "Trident of the Deep One",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one.759a9eae4d58da4a9c66552b85c2e088a0be94fb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one_large.8375ae68a3c21b847e00dc398bbf0cd830ed6ecd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -55574,8 +55850,8 @@
 				"image_inventory": "econ\/items\/courier\/arneyb_rabbit\/arneyb_rabbit",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/arneyb_rabbit\/arneyb_rabbit.ae4c79c3f5ca0459d9778aaa4638abeed775b848.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/arneyb_rabbit\/arneyb_rabbit_large.4989171e48fd2e1b1c2315bd2d92f09e079bb5c8.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -55728,6 +56004,52 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 36
+					}
+				]
+				
+			},
+			{
+				"name": "Baekho",
+				"defindex": 10347,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Baekho Courier",
+				"item_name": "Baekho",
+				"item_description": "From the west, the White Tiger came, as the leaves grew golden in the Fall and the first touch of frost cut like steel through the mountain air. Strength and bravery are Baekho's gifts, delivered with a growl alongside your items.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/baekho\/baekho",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho.c752baeea05bbd9ff13d2accf485a11cfee51161.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho_large.fbdd47d5fe77acf3bb35d679995eb637caed2ddd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "nexon sponsorship league tag",
+						"class": "nexon sponsorship league tag",
+						"value": 1
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 80
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
 					}
 				]
 				
@@ -63065,7 +63387,7 @@
 				"item_class": "tool",
 				"item_type_name": "League",
 				"item_name": "AMD Dota2 Premier League Season 2",
-				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
+				"item_description": "The highly anticipated AMD Premier League Season Two is back. Watch as SEAÂs finest teams; Orange, Zenith, Mufc, Vici Gaming and more compete for a total prize pool of $5000. This one month of intense action will be brought to you by DotaTalk and powered by AMD.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_amd_premier_league_s2",
@@ -65065,7 +65387,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Nexon Sponsorship League",
-				"item_description": "Nexon returns with its new NSL, Nexon Sponsorship League. Starting in Sep 28, 2013, NSL will span three seasons with a total of KRW 300 million(USD 270k) worth of sponsorship funding. Watch the top team matches of Season 1.",
+				"item_description": "Starting in Sep 28th 2013, the Nexon Sponsorship League will span three seasons with a total of KRW 300 million(USD 270k) worth of sponsorship funding. Watch the top team matches of Season 1.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship",
@@ -65446,6 +65768,43 @@
 				"tool": {
 					"type": "league_view_pass",
 					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Emerald Polycount Key",
+				"defindex": 15265,
+				"item_class": "tool",
+				"item_type_name": "Treasure Key",
+				"item_name": "Emerald Polycount Key",
+				"item_description": "Used to open locked <font color='#9da1a9'>Emerald Polycount Collection<\/font>.\r\n\tDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/treasure_key_emerald_polycount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount.747d849b426f782055ac852860fdc33bcbfe2e95.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount_large.eabf0fc9bd45465d8658cd068487c268b770e9e2.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "treasure_chest_36_emerald_polycount",
+					"usage_capabilities": {
+						"decodable": true
+					}
 				},
 				"attributes": [
 					{
@@ -72443,9 +72802,9 @@
 				"name": "Gift of the Sea Set",
 				"defindex": 20241,
 				"item_class": "bundle",
-				"item_type_name": "New Item",
+				"item_type_name": "Bundle",
 				"item_name": "Gift of the Sea Set",
-				"item_description": "This new item has no description.",
+				"item_description": "Includes all of the items in the 'Gift of the Sea' set for Morphling:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Gift_of_the_Sea_Set",
@@ -72859,6 +73218,35 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_natures_outcast_set.f16e70f8d3fd16730307b95d1bb8fba55dc45e05.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_natures_outcast_set_large.3d88831636006b1b995a93fe818ca6256f19cf91.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Baekho & Nexon Sponsorship League Bundle",
+				"defindex": 20259,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Baekho & Nexon Sponsorship League Bundle",
+				"item_description": "Includes access to the Nexon Sponsorship League and Baekho!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/baekho\/baekho",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho.c752baeea05bbd9ff13d2accf485a11cfee51161.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho_large.fbdd47d5fe77acf3bb35d679995eb637caed2ddd.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -73760,6 +74148,26 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "low level purchase",
+				"defindex": 408,
+				"attribute_class": "low_level_purchase",
+				"description_string": "Attrib_LowLevelPurchase",
+				"description_format": "value_is_additive",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "nexon sponsorship league tag",
+				"defindex": 409,
+				"attribute_class": "nexon sponsorship league tag",
+				"description_string": "Nexon Sponsorship League",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -74043,6 +74451,18 @@
 					"Heavy Steel Belt",
 					"Heavy Steel Axe",
 					"Proof of Courage"
+				]
+				
+			},
+			{
+				"item_set": "axe_redconqueror",
+				"name": "The Red Conqueror Set",
+				"store_bundle": "The Red Conqueror Set",
+				"items": [
+					"Axe of the Red Conqueror",
+					"Helm of the Red Conqueror",
+					"Pauldron of the Red Conqueror",
+					"Tassets of the Red Conqueror"
 				]
 				
 			},
@@ -77380,6 +77800,18 @@
 				"id": 136,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle136"
+			},
+			{
+				"system": "courier_trail_polycount_01",
+				"id": 138,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle138"
+			},
+			{
+				"system": "chaos_knight_shadow_brand_weapon",
+				"id": 139,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle139"
 			}
 		]
 		,
