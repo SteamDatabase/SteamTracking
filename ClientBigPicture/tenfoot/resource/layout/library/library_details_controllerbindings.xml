@@ -43,13 +43,13 @@
 							<Button id="P1Button" class="BindingButton" selectionpos="0,2" onactivate="EditPadBinding( p1 );">
 								<Label id="P1ActionName" class="ActionLabel" />
 								<Panel id="P1ActionMappingWrapper" class="PActionMappingWrapper">
-									<Image src="http://{controller_config}/images/stick.png" />
+									<Image src="file://{images}/library/stick.png" />
 									<Label id="P1ActionMapping" class="ActionMapping" />
-									<Image src="http://{controller_config}/images/outer.png" class="OuterImage" />
+									<Image src="file://{images}/library/outer.png" class="OuterImage" />
 									<Label id="P1OuterMapping" class="ActionMapping OuterLabel" />
-									<Image src="http://{controller_config}/images/click.png" class="ClickImage" />
+									<Image src="file://{images}/library/click.png" class="ClickImage" />
 									<Label id="P1ClickMapping" class="ActionMapping ClickLabel" />
-									<Image src="http://{controller_config}/images/double.png" class="DoubleImage" />
+									<Image src="file://{images}/library/double.png" class="DoubleImage" />
 									<Label id="P1DoubleMapping" class="ActionMapping DoubleLabel" />
 								</Panel>
 							</Button>
@@ -82,13 +82,13 @@
 							<Button id="P2Button" class="BindingButton BindingButtonRight" selectionpos="1,2" onactivate="EditPadBinding( p2 );">
 								<Label id="P2ActionName" class="ActionLabel" />
 								<Panel id="P2ActionMappingWrapper" class="PActionMappingWrapper">
-									<Image src="http://{controller_config}/images/stick.png" />
+									<Image src="file://{images}/library/stick.png" />
 									<Label id="P2ActionMapping" class="ActionMapping" />
-									<Image src="http://{controller_config}/images/outer.png" class="OuterImage" />
+									<Image src="file://{images}/library/outer.png" class="OuterImage" />
 									<Label id="P2OuterMapping" class="ActionMapping OuterLabel"  />
-									<Image src="http://{controller_config}/images/click.png" class="ClickImage" />
+									<Image src="file://{images}/library/click.png" class="ClickImage" />
 									<Label id="P2ClickMapping" class="ActionMapping ClickLabel" />
-									<Image src="http://{controller_config}/images/double.png" class="DoubleImage" />
+									<Image src="file://{images}/library/double.png" class="DoubleImage" />
 									<Label id="P2DoubleMapping" class="ActionMapping DoubleLabel" />
 								</Panel>
 							</Button>
@@ -202,7 +202,7 @@
 						<Panel id="OuterRingModifier" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
 							<Panel id="OuterRingModifierLabelWrapper" class="LabelWrapper">
 								<Label id="PadStyleLabel" text="#Library_Details_OuterRingModifier" class="PadSettingLabel" />
-								<Image src="http://{controller_config}/images/outer.png" />
+								<Image src="file://{images}/library/outer.png" />
 							</Panel>
 							<DropDown id="OuterRingModifierDropDown">
 								<Label id="none" text="#Library_Details_ControllerModifierNone" />
@@ -214,14 +214,14 @@
 						<Panel id="PadClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
 							<Panel id="PadClickLabelWrapper" class="LabelWrapper">
 								<Label id="PadClickLabel" text="#Library_Details_PadClick" class="PadSettingLabel" />
-								<Image src="http://{controller_config}/images/click.png" />
+								<Image src="file://{images}/library/click.png" />
 							</Panel>
 							<Button id="PadClickBindingButton" onactivate="EditPadDirectionBinding( click );"><Label id="PadClickBindingLabel" /></Button>
 						</Panel>
 						<Panel id="PadDoubleClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
 							<Panel id="PadDoubleClickLabelWrapper" class="LabelWrapper">
 								<Label id="PadDoubleClickLabel" text="#Library_Details_PadDoubleClick" class="PadSettingLabel" />
-								<Image src="http://{controller_config}/images/double.png" />
+								<Image src="file://{images}/library/double.png" />
 							</Panel>
 							<Button id="PadDoubleClickBindingButton" onactivate="EditPadDirectionBinding( double_tap );" ><Label id="PadDoubleClickBindingLabel" /></Button>
 						</Panel>
