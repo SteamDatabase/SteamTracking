@@ -694,7 +694,7 @@ ControllerBindings Button:focus #Author
 
 ControllerBindings #MsgBoxButtonArea
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller.png" ); 
+	background-image: url( "file://{images}/library/alpha_controller.png" ); 
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -735,82 +735,82 @@ ControllerBindings.SelectMode .MsgBoxHeader
 
 #BindingCallouts.left_bumper 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_left_bumper.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_left_bumper.png" );
 }
 
 #BindingCallouts.left_trigger 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_left_trigger.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_left_trigger.png" );
 }
 
 #BindingCallouts.backside_left 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_backside_left.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_backside_left.png" );
 }
 
 #BindingCallouts.right_bumper 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_right_bumper.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_right_bumper.png" );
 }
 
 #BindingCallouts.right_trigger 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_right_trigger.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_right_trigger.png" );
 }
 
 #BindingCallouts.backside_right 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_backside_right.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_backside_right.png" );
 }
 
 #BindingCallouts.button_0 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_button_0.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_0.png" );
 }
 
 #BindingCallouts.button_1 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_button_1.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_1.png" );
 }
 
 #BindingCallouts.button_2 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_button_2.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_2.png" );
 }
 
 #BindingCallouts.button_3 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_button_3.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_3.png" );
 }
 
 #BindingCallouts.touch_button_0 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller.png" );
+	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
 #BindingCallouts.touch_button_1 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller.png" );
+	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
 #BindingCallouts.touch_button_2 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller.png" );
+	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
 #BindingCallouts.touch_button_3 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller.png" );
+	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
 #BindingCallouts.p1 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_p1.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_p1.png" );
 }
 
 #BindingCallouts.p2 
 {
-	background-image: url( "http://{controller_config}/images/alpha_controller_callout_p2.png" );
+	background-image: url( "file://{images}/library/alpha_controller_callout_p2.png" );
 }
 
 
@@ -842,7 +842,7 @@ ControllerBindings #RepeatRegion
 	padding-top: 15px;
 	padding-bottom: 10px;
 
-	background-image: url( "http://{controller_config}/images/alpha_controller_lines.png" ); 
+	background-image: url( "file://{images}/library/alpha_controller_lines.png" ); 
 	background-position: center center;
 	background-repeat: no-repeat;
 
