@@ -3259,8 +3259,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
 					'data' : {
 						'packageIdSrc' : j,
-						'packageIdDst' : 61,
-					},
+						'packageIdDst' : 61					},
 					'message': 'Adding package '+j+' to Steam master sub'
 				} );
 			}
@@ -3271,8 +3270,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
 					'data' : {
 						'packageIdSrc' : j,
-						'packageIdDst' : 62,
-					},
+						'packageIdDst' : 62					},
 					'message': 'Adding package '+j+' to press master sub'
 				} );
 			}
