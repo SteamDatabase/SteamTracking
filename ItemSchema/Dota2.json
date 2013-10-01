@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.da906073d6f8b2b6878e0c26973fb89aea2b7054.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.f02cc9618b2cf21b0454dc02a8cf73ba5e8a66aa.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -44485,6 +44485,52 @@
 				}
 			},
 			{
+				"name": "WETA Placeholder 1 Axe",
+				"defindex": 5385,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 1 Axe",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 2 Butterfly",
+				"defindex": 5386,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 2 Butterfly",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Izoku",
 				"defindex": 5387,
 				"item_class": "dota_item_wearable",
@@ -45506,6 +45552,52 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one.759a9eae4d58da4a9c66552b85c2e088a0be94fb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one_large.8375ae68a3c21b847e00dc398bbf0cd830ed6ecd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 3 Demon Edge",
+				"defindex": 5471,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 3 Demon Edge",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 4 Vanguard Shield",
+				"defindex": 5472,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 4 Vanguard Shield",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
