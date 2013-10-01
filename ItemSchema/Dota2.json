@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.384a238faf0c7cd6942cb3d24d77c1d3fc73344d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.da906073d6f8b2b6878e0c26973fb89aea2b7054.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -45338,7 +45338,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Staff",
 				"item_name": "Staff of Infernal Chaos",
-				"item_description": "A Dreadwood staff  engraved with hellish runes to confine a spirit from the Outer Hells inside it. \r\n\t",
+				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos",
@@ -45384,7 +45384,6 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "weapon",
 				"item_name": "Shattered Axe of the Vanquished",
-				"item_description": "Bradwarden has never treated an enemy lightly, but the skull that shattered this blade instilled in him an even deeper sense of respect.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished",
@@ -51291,7 +51290,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51332,7 +51331,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51597,7 +51596,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51678,7 +51677,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51719,7 +51718,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51760,7 +51759,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51801,7 +51800,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51842,7 +51841,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51883,7 +51882,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51924,7 +51923,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51965,7 +51964,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52006,7 +52005,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52047,7 +52046,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52088,7 +52087,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52129,7 +52128,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52170,7 +52169,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52211,7 +52210,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52252,7 +52251,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52293,7 +52292,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52334,7 +52333,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52375,7 +52374,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52416,7 +52415,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52457,7 +52456,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52498,7 +52497,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52539,7 +52538,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52580,7 +52579,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52661,7 +52660,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52754,7 +52753,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52795,7 +52794,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52836,7 +52835,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52877,7 +52876,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52918,7 +52917,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52959,7 +52958,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53000,7 +52999,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53041,7 +53040,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53082,7 +53081,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53123,7 +53122,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53164,7 +53163,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53205,7 +53204,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53246,7 +53245,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53287,7 +53286,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53328,7 +53327,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53369,7 +53368,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53410,7 +53409,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53451,7 +53450,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53492,7 +53491,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53533,7 +53532,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53574,7 +53573,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53615,7 +53614,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53656,7 +53655,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53697,7 +53696,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53738,7 +53737,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53779,7 +53778,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53820,7 +53819,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53861,7 +53860,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53902,7 +53901,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53943,7 +53942,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53984,7 +53983,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54025,7 +54024,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54066,7 +54065,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54107,7 +54106,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54148,7 +54147,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54189,7 +54188,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54230,7 +54229,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54271,7 +54270,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54312,7 +54311,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54353,7 +54352,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54394,7 +54393,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54435,7 +54434,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54476,7 +54475,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54517,7 +54516,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54558,7 +54557,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54599,7 +54598,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54640,7 +54639,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54756,7 +54755,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54797,7 +54796,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54838,7 +54837,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54879,7 +54878,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54920,7 +54919,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54997,7 +54996,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55038,7 +55037,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55079,7 +55078,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55120,7 +55119,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55161,7 +55160,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55202,7 +55201,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -65805,6 +65804,294 @@
 					"usage_capabilities": {
 						"decodable": true
 					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Serbian Weekly Dota Cup",
+				"defindex": 15266,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Serbian Weekly Dota Cup",
+				"item_description": "A weekly Serbian tournament including all Balkan countries where top teams compete for a prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_serbianleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_serbianleague.82520b8ad7f4baffecd8dc79e3454b8e97de6b5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_serbianleague_large.105df15d56c9bd0c47ed25f40e148cf6252128c2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Serbian Weekly Dota Cup - ADMIN",
+				"defindex": 15267,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Serbian Weekly Dota Cup - ADMIN",
+				"item_description": "A weekly Serbian tournament including all Balkan countries where top teams compete for a prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_serbianleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_serbianleague.82520b8ad7f4baffecd8dc79e3454b8e97de6b5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_serbianleague_large.105df15d56c9bd0c47ed25f40e148cf6252128c2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Copa Latinoamerica Plantronics Gaming LPD",
+				"defindex": 15268,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Copa Latinoamerica Plantronics Gaming LPD",
+				"item_description": "8 Latin American teams from a qualifier willl be competing to bring their best team to represent them in this tournament. Sponsored by Plantronics.Inc and LPD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_latinoamerica",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_latinoamerica.74c27f33c8500e1b35b978e29c943818256bd3f3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_latinoamerica_large.97712992283964bfe4427e66480a043e8f0702ae.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Copa Latinoamerica Plantronics Gaming LPD - ADMIN",
+				"defindex": 15269,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Copa Latinoamerica Plantronics Gaming LPD - ADMIN",
+				"item_description": "8 Latin American teams from a qualifier willl be competing to bring their best team to represent them in this tournament. Sponsored by Plantronics.Inc and LPD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_latinoamerica",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_latinoamerica.74c27f33c8500e1b35b978e29c943818256bd3f3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_latinoamerica_large.97712992283964bfe4427e66480a043e8f0702ae.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SCD Tide's Wrath Season 3",
+				"defindex": 15270,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SCD Tide's Wrath Season 3",
+				"item_description": "The third season of the open registration Australian and New Zealand Dota 2 Tournament \"Tide's Wrath\" is upon us. Southern Cross Dota, a news organisation for Dota 2 in Australia and New Zealand is running the third series of an event successfully run in Australia - Tide's Wrath!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_scdseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_scdseason3.917291a8de9f91d9b97b2a5a3421ea25dd222195.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_scdseason3_large.514a25be5d382149d0024fad98dddf37b8b5e1f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SCD Tide's Wrath Season 3 - ADMIN",
+				"defindex": 15271,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SCD Tide's Wrath Season 3 - ADMIN",
+				"item_description": "The third season of the open registration Australian and New Zealand Dota 2 Tournament \"Tide's Wrath\" is upon us. Southern Cross Dota, a news organisation for Dota 2 in Australia and New Zealand is running the third series of an event successfully run in Australia - Tide's Wrath!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_scdseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_scdseason3.917291a8de9f91d9b97b2a5a3421ea25dd222195.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_scdseason3_large.514a25be5d382149d0024fad98dddf37b8b5e1f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LigaBEL - ADMIN",
+				"defindex": 15272,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "LigaBEL - ADMIN",
+				"item_description": "A Brazlian tournament featuring 16 of the best national teams competing for a prize of R$ 500,00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ligabel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ligabel.30038b6c1b35132ea9a91ab0db0be979aa6cdce1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ligabel_large.511d749afa27447ba373aa4b0786180bccb8618d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LigaBEL",
+				"defindex": 15273,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "LigaBEL",
+				"item_description": "A Brazlian tournament featuring 16 of the best national teams competing for a prize of R$ 500,00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ligabel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ligabel.30038b6c1b35132ea9a91ab0db0be979aa6cdce1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ligabel_large.511d749afa27447ba373aa4b0786180bccb8618d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
 				},
 				"attributes": [
 					{
@@ -78172,6 +78459,12 @@
 				"id": 139,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle139"
+			},
+			{
+				"system": "sniper_hare_hunt_shoulder",
+				"id": 140,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle140"
 			}
 		]
 		,
