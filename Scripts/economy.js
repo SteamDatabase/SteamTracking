@@ -3975,3 +3975,34 @@ function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, 
 	return false;
 }
 
+function ReportTradeScam( steamIDTarget, strPersonaName )
+{
+	var $Dialog = $J('<div/>');
+	$Dialog.append( $J('<div/>', {'class': 'trade_scam_report_label' }).html( 'Use this to report %s to Steam Support for an attempted scam.<br><br>Please provide a brief description:'.replace( /%s/, strPersonaName ) ) );
+	var $TextArea = $J('<textarea/>', {'rows': 3, 'cols': 26 })
+	$Dialog.append( $J('<div/>', {'class': 'gray_bevel fullwidth' }).append( $TextArea ) );
+	var Modal = ShowConfirmDialog( 'Report Scam', $Dialog, 'Report Scam').done( function() {
+		if ( !$TextArea.val() )
+		{
+			ShowAlertDialog( 'Report Scam', 'A description is required.' );
+			return;
+		}
+
+		var rgParams = {
+			json: 1,
+			abuseID: steamIDTarget,
+			sessionid: g_sessionID,
+			abuseType: 'Trade Scam',
+			abuseDescription: $TextArea.val()
+		};
+
+		$J.post( 'http://steamcommunity.com/actions/ReportAbuse/', rgParams).done( function() {
+			ShowAlertDialog( 'Thank You!', 'Your report has been submitted and will be reviewed by Steam Support.' );
+		}).fail( function() {
+			ShowAlertDialog( 'Report Scam', 'There was a problem saving your report.  Please try again later.' );
+		});
+	} );
+
+	$TextArea.focus();
+}
+

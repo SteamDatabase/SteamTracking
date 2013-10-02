@@ -427,6 +427,7 @@ CModal.prototype.Show = function()
 	this.m_$Content.find('img').load( this.m_fnSizing );
 
 	this.m_bVisible = true;
+	CModal.s_ActiveModal = this;
 }
 
 CModal.prototype.Dismiss = function()
@@ -453,6 +454,9 @@ CModal.prototype.Dismiss = function()
 		this.m_$Content.remove();
 		this.m_$Content = null;
 	}
+
+	if ( CModal.s_ActiveModal == this )
+		CModal.s_ActiveModal = null;
 }
 
 /* static */
@@ -475,6 +479,13 @@ CModal.HideModalBackground = function()
 		CModal.s_$Background.stop();	// stop running animations
 		CModal.s_$Background.fadeOut( 200, 0 );
 	}
+}
+
+CModal.s_ActiveModal = null;
+CModal.DismissActiveModal = function()
+{
+	if ( CModal.s_ActiveModal )
+		CModal.s_ActiveModal.Dismiss();
 }
 
 // this will set the right headers for a cross-domain request to community
