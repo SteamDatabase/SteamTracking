@@ -12,7 +12,7 @@
 		private $URLsToFetch = Array( );
 		
 		private $Options = Array(
-			CURLOPT_USERAGENT      => '',
+			CURLOPT_USERAGENT      => 'SteamDB',
 			CURLOPT_HEADER         => 1,
 			CURLOPT_AUTOREFERER    => 0,
 			CURLOPT_RETURNTRANSFER => 1,
@@ -235,6 +235,20 @@
 				
 				unset( $DataJSON, $Version, $ID );
 			}
+			// Beautify JSON
+			else if( $File === 'Repos/trademarks_eu.json' )
+			{
+				$DataJSON = JSON_Decode( $Data, true );
+				
+				if( !isset( $DataJSON[ 'items' ] ) )
+				{
+					return false;
+				}
+				
+				$Data = JSON_Encode( $DataJSON[ 'items' ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+				
+				unset( $DataJSON );
+			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
@@ -392,7 +406,9 @@
 			$Slave = cURL_Init( );
 			$File  = $URL[ 'File' ];
 			
-			$this->Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
+			$Options = $this->Options;
+			
+			$Options[ CURLOPT_URL ] = $this->GenerateURL( $URL[ 'URL' ] );
 			
 			$this->Requests[ (int)$Slave ] = $File;
 			
@@ -401,7 +417,7 @@
 				// If we have an ETag saved, add If-None-Match header
 				if( Array_Key_Exists( $File, $this->ETags ) )
 				{
-					$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
+					$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-None-Match: ' . $this->ETags[ $File ] );
 				}
 				// Otherwise, check if the file exists
 				else
@@ -414,16 +430,19 @@
 					
 					if( File_Exists( $File ) )
 					{
-						$this->Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
-					}
-					else
-					{
-						unset( $this->Options[ CURLOPT_HTTPHEADER ] );
+						$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
 					}
 				}
 			}
 			
-			cURL_SetOpt_Array( $Slave, $this->Options );
+			// European trademarks search
+			if( $URL[ 'URL' ] === 'http://esearch.oami.europa.eu/copla/ctmsearch/json' )
+			{
+				$Options[ CURLOPT_POST ] = true;
+				$Options[ CURLOPT_POSTFIELDS ] = 'start=0&rows=100&criterion_1=ApplicantIdentifier&term_1=207863&sortField=ApplicationNumber&sortOrder=desc';
+			}
+			
+			cURL_SetOpt_Array( $Slave, $Options );
 			
 			cURL_Multi_Add_Handle( $Master, $Slave );
 			

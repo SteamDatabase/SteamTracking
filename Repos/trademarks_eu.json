@@ -1,0 +1,958 @@
+[
+    {
+        "controller": "trademark",
+        "name": "HALF-LIFE 3",
+        "number": "012180394",
+        "numberToShow": "012180394",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "29/09/2013",
+        "designationdate": "",
+        "registrationdate": "",
+        "nice": "9, 41",
+        "status": "Application under examination",
+        "applicantsreference": "ALM13-4832EM",
+        "basis": "CTM",
+        "publishedsection": "",
+        "publisheddate": "",
+        "publishedurl": "",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES"
+    },
+    {
+        "controller": "trademark",
+        "name": "Not a word mark",
+        "number": "011945961",
+        "numberToShow": "011945961",
+        "type": "Figurative",
+        "imageurl": "http://preprod.oami.europa.eu/trademark/thumbnail/EM500000011945961",
+        "filingdate": "01/07/2013",
+        "designationdate": "",
+        "registrationdate": "",
+        "nice": "9, 16, 28, 41, 42",
+        "status": "Application published",
+        "applicantsreference": "ALM13-3369EM",
+        "basis": "CTM",
+        "publishedsection": "A.1",
+        "publisheddate": "19/08/2013",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/011945961/2013_155",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011945961/2013_155",
+                "sectionpub": "A.1",
+                "namebulletin": "2013/155",
+                "datebulletin": "19/08/2013"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "Not a word mark",
+        "number": "011794773",
+        "numberToShow": "011794773",
+        "type": "Figurative",
+        "imageurl": "http://preprod.oami.europa.eu/trademark/thumbnail/EM500000011794773",
+        "filingdate": "06/05/2013",
+        "designationdate": "",
+        "registrationdate": "",
+        "nice": "9, 25, 35, 41",
+        "status": "Application under examination",
+        "applicantsreference": "ALM13-2327EM",
+        "basis": "CTM",
+        "publishedsection": "",
+        "publisheddate": "",
+        "publishedurl": "",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES"
+    },
+    {
+        "controller": "trademark",
+        "name": "STEAM",
+        "number": "011727534",
+        "numberToShow": "011727534",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "10/04/2013",
+        "designationdate": "",
+        "registrationdate": "05/09/2013",
+        "nice": "9, 35, 41, 42, 45",
+        "status": "Registered",
+        "applicantsreference": "ALM13-1918EM",
+        "basis": "CTM",
+        "publishedsection": "B.1",
+        "publisheddate": "09/09/2013",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/011727534/2013_170",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011727534/2013_099",
+                "sectionpub": "A.1",
+                "namebulletin": "2013/099",
+                "datebulletin": "29/05/2013"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011727534/2013_170",
+                "sectionpub": "B.1",
+                "namebulletin": "2013/170",
+                "datebulletin": "09/09/2013"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "Not a word mark",
+        "number": "011314581",
+        "numberToShow": "011314581",
+        "type": "Figurative",
+        "imageurl": "http://preprod.oami.europa.eu/trademark/thumbnail/EM500000011314581",
+        "filingdate": "02/11/2012",
+        "designationdate": "",
+        "registrationdate": "12/07/2013",
+        "nice": "9, 35, 41, 42",
+        "status": "Registered",
+        "applicantsreference": "ALM12-5946EM",
+        "basis": "CTM",
+        "publishedsection": "B.1",
+        "publisheddate": "16/07/2013",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/011314581/2013_132",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011314581/2013_064",
+                "sectionpub": "A.1",
+                "namebulletin": "2013/064",
+                "datebulletin": "04/04/2013"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011314581/2013_132",
+                "sectionpub": "B.1",
+                "namebulletin": "2013/132",
+                "datebulletin": "16/07/2013"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DOTA2",
+        "number": "009769522",
+        "numberToShow": "009769522",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "28/02/2011",
+        "designationdate": "",
+        "registrationdate": "",
+        "nice": "9, 16, 41",
+        "status": "Application published",
+        "applicantsreference": "MXB/2036063.00045",
+        "basis": "CTM",
+        "publishedsection": "A.1",
+        "publisheddate": "04/04/2011",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/009769522/2011_065",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "47758",
+        "representativename": "K&amp;L GATES LLP",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009769522/2011_065",
+                "sectionpub": "A.1",
+                "namebulletin": "2011/065",
+                "datebulletin": "04/04/2011"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DOTA",
+        "number": "009645482",
+        "numberToShow": "009645482",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "07/01/2011",
+        "designationdate": "",
+        "registrationdate": "03/06/2012",
+        "nice": "9",
+        "status": "Registered",
+        "applicantsreference": "ALM11-4002EM-KLG",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "03/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009645482/2011_027",
+                "sectionpub": "A.1",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009645482/2012_105",
+                "sectionpub": "B.1",
+                "namebulletin": "2012/105",
+                "datebulletin": "06/06/2012"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/124",
+                "datebulletin": "03/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "PORTAL",
+        "number": "009395138",
+        "numberToShow": "009395138",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "22/09/2010",
+        "designationdate": "",
+        "registrationdate": "30/06/2011",
+        "nice": "9, 16, 41",
+        "status": "Registered",
+        "applicantsreference": "MXB/2036063.00040",
+        "basis": "CTM",
+        "publishedsection": "B.1",
+        "publisheddate": "04/07/2011",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/009395138/2011_123",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "47758",
+        "representativename": "K&amp;L GATES LLP",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009395138/2011_057",
+                "sectionpub": "A.1",
+                "namebulletin": "2011/057",
+                "datebulletin": "23/03/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009395138/2011_123",
+                "sectionpub": "B.1",
+                "namebulletin": "2011/123",
+                "datebulletin": "04/07/2011"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DOTA",
+        "number": "009395088",
+        "numberToShow": "009395088",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "22/09/2010",
+        "designationdate": "",
+        "registrationdate": "13/06/2012",
+        "nice": "9, 16, 41",
+        "status": "Registered",
+        "applicantsreference": "MXB/2036063.00040",
+        "basis": "CTM",
+        "publishedsection": "C.1.3",
+        "publisheddate": "09/02/2011",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "47758",
+        "representativename": "K&amp;L GATES LLP",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009395088/2010_208",
+                "sectionpub": "A.1",
+                "namebulletin": "2010/208",
+                "datebulletin": "05/11/2010"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DEFENSE OF THE ANCIENTS",
+        "number": "009310491",
+        "numberToShow": "009310491",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "12/08/2010",
+        "designationdate": "",
+        "registrationdate": "14/07/2012",
+        "nice": "9, 16, 38, 41",
+        "status": "Registered",
+        "applicantsreference": "ALM12-4080EM",
+        "basis": "CTM",
+        "publishedsection": "B.2",
+        "publisheddate": "17/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/009310491/2012_134",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310491/2010_191",
+                "sectionpub": "A.1",
+                "namebulletin": "2010/191",
+                "datebulletin": "11/10/2010"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310491/2012_134",
+                "sectionpub": "B.2",
+                "namebulletin": "2012/134",
+                "datebulletin": "17/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DOTA-ALLSTARS",
+        "number": "009310467",
+        "numberToShow": "009310467",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "12/08/2010",
+        "designationdate": "",
+        "registrationdate": "12/07/2012",
+        "nice": "9, 16, 38, 41",
+        "status": "Registered",
+        "applicantsreference": "ALM12-4082EM",
+        "basis": "CTM",
+        "publishedsection": "B.2",
+        "publisheddate": "17/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/009310467/2012_134",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310467/2010_191",
+                "sectionpub": "A.1",
+                "namebulletin": "2010/191",
+                "datebulletin": "11/10/2010"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310467/2012_134",
+                "sectionpub": "B.2",
+                "namebulletin": "2012/134",
+                "datebulletin": "17/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DOTA",
+        "number": "009310434",
+        "numberToShow": "009310434",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "12/08/2010",
+        "designationdate": "",
+        "registrationdate": "12/07/2012",
+        "nice": "9, 16, 38, 41",
+        "status": "Registered",
+        "applicantsreference": "ALM12-4081EM",
+        "basis": "CTM",
+        "publishedsection": "B.2",
+        "publisheddate": "16/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/009310434/2012_133",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310434/2010_191",
+                "sectionpub": "A.1",
+                "namebulletin": "2010/191",
+                "datebulletin": "11/10/2010"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/009310434/2012_133",
+                "sectionpub": "B.2",
+                "namebulletin": "2012/133",
+                "datebulletin": "16/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "COUNTER-STRIKE",
+        "number": "004310652",
+        "numberToShow": "004310652",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "25/02/2005",
+        "designationdate": "",
+        "registrationdate": "21/03/2006",
+        "nice": "16, 28, 41",
+        "status": "Registered",
+        "applicantsreference": "3030680R0",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "28/06/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10580",
+        "representativename": "GEVERS",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310652/2005_038",
+                "sectionpub": "A.1",
+                "namebulletin": "2005/038",
+                "datebulletin": "19/09/2005"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310652/2006_016",
+                "sectionpub": "B.2",
+                "namebulletin": "2006/016",
+                "datebulletin": "17/04/2006"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310652/2008_018",
+                "sectionpub": "B.4.2",
+                "namebulletin": "2008/018",
+                "datebulletin": "05/05/2008"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/121",
+                "datebulletin": "28/06/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "HALF-LIFE",
+        "number": "004310645",
+        "numberToShow": "004310645",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "25/02/2005",
+        "designationdate": "",
+        "registrationdate": "28/08/2007",
+        "nice": "28, 41, 42",
+        "status": "Registered",
+        "applicantsreference": "3030676R0",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "28/06/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10580",
+        "representativename": "GEVERS",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310645/2007_008",
+                "sectionpub": "A.1",
+                "namebulletin": "2007/008",
+                "datebulletin": "26/02/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310645/2007_048",
+                "sectionpub": "B.1",
+                "namebulletin": "2007/048",
+                "datebulletin": "03/09/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/121",
+                "datebulletin": "28/06/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "STEAM",
+        "number": "004310629",
+        "numberToShow": "004310629",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "25/02/2005",
+        "designationdate": "",
+        "registrationdate": "22/03/2006",
+        "nice": "9, 28, 41",
+        "status": "Registered",
+        "applicantsreference": "3030675R0",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "28/06/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10580",
+        "representativename": "GEVERS",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310629/2005_038",
+                "sectionpub": "A.1",
+                "namebulletin": "2005/038",
+                "datebulletin": "19/09/2005"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310629/2006_016",
+                "sectionpub": "B.2",
+                "namebulletin": "2006/016",
+                "datebulletin": "17/04/2006"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310629/2007_025",
+                "sectionpub": "B.4.2",
+                "namebulletin": "2007/025",
+                "datebulletin": "18/06/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/121",
+                "datebulletin": "28/06/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "SOURCE",
+        "number": "004310603",
+        "numberToShow": "004310603",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "25/02/2005",
+        "designationdate": "",
+        "registrationdate": "13/09/2006",
+        "nice": "9, 28, 41",
+        "status": "Registered",
+        "applicantsreference": "3030674RO",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "28/06/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10580",
+        "representativename": "GEVERS",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310603/2006_008",
+                "sectionpub": "A.1",
+                "namebulletin": "2006/008",
+                "datebulletin": "20/02/2006"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/004310603/2006_039",
+                "sectionpub": "B.2",
+                "namebulletin": "2006/039",
+                "datebulletin": "25/09/2006"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006587730/2012_121",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/121",
+                "datebulletin": "28/06/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "VALVE SOURCE",
+        "number": "003154713",
+        "numberToShow": "003154713",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "06/05/2003",
+        "designationdate": "",
+        "registrationdate": "04/08/2004",
+        "nice": "9",
+        "status": "Registered",
+        "applicantsreference": "ALM13-1854EM",
+        "basis": "CTM",
+        "publishedsection": "D.1",
+        "publisheddate": "17/04/2013",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/003154713/2013_072",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/003154713/2004_005",
+                "sectionpub": "A.1",
+                "namebulletin": "2004/005",
+                "datebulletin": "02/02/2004"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/003154713/2004_038",
+                "sectionpub": "B.2",
+                "namebulletin": "2004/038",
+                "datebulletin": "20/09/2004"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001178139/2007_027",
+                "sectionpub": "C.1.1",
+                "namebulletin": "2007/027",
+                "datebulletin": "25/06/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001181703/2007_029",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2007/029",
+                "datebulletin": "02/07/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/121",
+                "datebulletin": "28/06/2012"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_007385050/2013_069",
+                "sectionpub": "C.2.2",
+                "namebulletin": "2013/069",
+                "datebulletin": "12/04/2013"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/003154713/2013_072",
+                "sectionpub": "D.1",
+                "namebulletin": "2013/072",
+                "datebulletin": "17/04/2013"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "DAY OF DEFEAT",
+        "number": "002615094",
+        "numberToShow": "002615094",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "14/03/2002",
+        "designationdate": "",
+        "registrationdate": "26/06/2003",
+        "nice": "9, 28, 41",
+        "status": "Registered",
+        "applicantsreference": "300161R0",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "03/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002615094/2002_092",
+                "sectionpub": "A.1",
+                "namebulletin": "2002/092",
+                "datebulletin": "18/11/2002"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002615094/2003_064",
+                "sectionpub": "B.1",
+                "namebulletin": "2003/064",
+                "datebulletin": "04/08/2003"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001178139/2007_027",
+                "sectionpub": "C.1.1",
+                "namebulletin": "2007/027",
+                "datebulletin": "25/06/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001181703/2007_029",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2007/029",
+                "datebulletin": "02/07/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006074887/2011_222",
+                "sectionpub": "C.2.2",
+                "namebulletin": "2011/222",
+                "datebulletin": "23/11/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002615094/2011_227",
+                "sectionpub": "D.1",
+                "namebulletin": "2011/227",
+                "datebulletin": "30/11/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/124",
+                "datebulletin": "03/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "COUNTER-STRIKE",
+        "number": "002474625",
+        "numberToShow": "002474625",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "21/11/2001",
+        "designationdate": "",
+        "registrationdate": "27/01/2003",
+        "nice": "9, 28, 41",
+        "status": "Registered",
+        "applicantsreference": "301152",
+        "basis": "CTM",
+        "publishedsection": "C.2.1",
+        "publisheddate": "03/07/2012",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10513",
+        "representativename": "CASALONGA ET ASSOCIES",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002474625/2002_056",
+                "sectionpub": "A.1",
+                "namebulletin": "2002/056",
+                "datebulletin": "15/07/2002"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002474625/2003_022",
+                "sectionpub": "B.1",
+                "namebulletin": "2003/022",
+                "datebulletin": "10/03/2003"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001178139/2007_027",
+                "sectionpub": "C.1.1",
+                "namebulletin": "2007/027",
+                "datebulletin": "25/06/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001181703/2007_029",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2007/029",
+                "datebulletin": "02/07/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005480093/2011_053",
+                "sectionpub": "C.2.2",
+                "namebulletin": "2011/053",
+                "datebulletin": "17/03/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/002474625/2011_111",
+                "sectionpub": "D.1",
+                "namebulletin": "2011/111",
+                "datebulletin": "15/06/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_006603628/2012_124",
+                "sectionpub": "C.2.1",
+                "namebulletin": "2012/124",
+                "datebulletin": "03/07/2012"
+            }
+        ]
+    },
+    {
+        "controller": "trademark",
+        "name": "HALF-LIFE",
+        "number": "000691006",
+        "numberToShow": "000691006",
+        "type": "Word",
+        "imageurl": "",
+        "filingdate": "27/11/1997",
+        "designationdate": "",
+        "registrationdate": "25/05/1999",
+        "nice": "9, 16",
+        "status": "Registered",
+        "applicantsreference": "HA 1271/97/14.1 EX",
+        "basis": "CTM",
+        "publishedsection": "C.1.3",
+        "publisheddate": "09/02/2011",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+        "applicantid": "207863",
+        "applicantname": "Valve Corporation",
+        "representativeid": "10005",
+        "representativename": "HERRERO &amp; ASOCIADOS",
+        "publications": [
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/000691006/1998_080",
+                "sectionpub": "A.1",
+                "namebulletin": "1998/080",
+                "datebulletin": "19/10/1998"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/000691006/1999_067",
+                "sectionpub": "B.1",
+                "namebulletin": "1999/067",
+                "datebulletin": "23/08/1999"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_000602873/2007_012",
+                "sectionpub": "C.1.1",
+                "namebulletin": "2007/012",
+                "datebulletin": "26/03/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_001176133/2007_025",
+                "sectionpub": "C.1.1",
+                "namebulletin": "2007/025",
+                "datebulletin": "18/06/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/000691006/2007_067",
+                "sectionpub": "D.1",
+                "namebulletin": "2007/067",
+                "datebulletin": "17/12/2007"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005376564/2011_023",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/023",
+                "datebulletin": "03/02/2011"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/T_005391902/2011_027",
+                "sectionpub": "C.1.3",
+                "namebulletin": "2011/027",
+                "datebulletin": "09/02/2011"
+            }
+        ]
+    }
+]
