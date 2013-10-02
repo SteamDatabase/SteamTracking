@@ -396,6 +396,15 @@ a.showcase_stat:hover .label {
 	margin-left: 26px;
 }
 
+.showcase_badges_icons .showcase_badge.openslot {
+	margin-left: 22px;
+}
+
+
+.showcase_badges_icons .showcase_openslot_placeholder {
+	line-height: 80px;
+}
+
 
 .showcase_badges_icons .showcase_badge, .showcase_badges_icons .showcase_badge img {
 	width: 80px;

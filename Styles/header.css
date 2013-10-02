@@ -755,6 +755,7 @@ div#headerSearch {
 #reportAbuseModalContents {
 	font-size: 14px;
 	color: #B0B0B0;
+	width: 500px;
 }
 
 .reportAbuseModalRule {
@@ -788,6 +789,15 @@ div#headerSearch {
 	margin-bottom: 10px;
 	padding: 4px 6px;
 	background-color: #565658;
+}
+
+.abuseOptions {
+	margin-bottom: 12px;
+}
+
+.abuseOption {
+	float: left;
+	width: 250px;
 }
 
 .reportAbuseButtons {

@@ -122,9 +122,8 @@ function SetShowcaseConfig( eShowcase, iSlot, params )
 	return $J.post( g_rgProfileData['url'] + 'ajaxsetshowcaseconfig', rgParams );
 }
 
-function PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, rgSlot )
+function ShowcaseGatherSlots( eShowcase )
 {
-	// read the slot metadata embedded in the page
 	var rgSlots = {};
 	$J(g_rgShowcasePreviews[eShowcase]).find('[data-slotjson]').each( function() {
 		var json = this.getAttribute( 'data-slotjson' );
@@ -134,8 +133,21 @@ function PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, rgSlot )
 			rgSlots[ SlotData.slot ] = SlotData;
 		}
 	});
+	return rgSlots;
+}
+
+function PreviewShowcaseConfigWithSlotChange( eShowcase, iSlot, rgSlot )
+{
+	// read the slot metadata embedded in the page
+	var rgSlots = ShowcaseGatherSlots( eShowcase );
 	rgSlots[iSlot] = rgSlot;
 	PreviewShowcaseConfig( eShowcase, rgSlots );
+}
+
+function ShowcaseSetStyle( eShowcase, eShowcaseStyle )
+{
+	// PreviewShowcaseConfig will read the style
+	PreviewShowcaseConfig( eShowcase, ShowcaseGatherSlots( eShowcase ) );
 }
 
 /* params should be object of appid, publishedfileid, etc */
@@ -145,6 +157,11 @@ function PreviewShowcaseConfig( eShowcase, rgSlotData )
 	rgParams.customization_type = eShowcase;
 	rgParams.sessionid = g_sessionID;
 	rgParams.slot_data = V_ToJSON( rgSlotData );
+
+	// if this showcase has styles, include that in the preview
+	var $StyleSelect = $J('#showcase_style_' + eShowcase );
+	if ( $StyleSelect.length )
+		rgParams.customization_style = $StyleSelect.val();
 
 	$J.post( g_rgProfileData['url'] + 'ajaxpreviewshowcase', rgParams)
 	.done( function( data ) {
@@ -357,6 +374,24 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 
 }
 
+function ShowcaseBadgePicker( elSlot, eShowcaseType, iSlot )
+{
+	ShowSelectBadgeDialog( function( Badge ) {
+		var rgSlot;
+		if ( Badge.appid )
+		{
+			rgSlot = {appid: Badge.appid, badgeid: Badge.item_type, border_color: Badge.border_color };
+		}
+		else
+		{
+			rgSlot = { appid: '', badgeid: '', border_color: '' };
+			if ( !Badge.is_blank_badge )
+				rgSlot.badgeid = Badge.badgeid;
+		}
+		PreviewShowcaseConfigWithSlotChange( eShowcaseType, iSlot, rgSlot );
+	} );
+}
+
 var g_GroupListHTML = null;
 function LoadPlayerGroupList( fnCallback )
 {
@@ -531,6 +566,11 @@ function InitBadges( rgBadges )
 
 function PresentFavoriteBadgeDialog()
 {
+	ShowSelectBadgeDialog( SetCurrentBadge );
+}
+
+function ShowSelectBadgeDialog( fnOnSelect )
+{
 	var $Content = $J('<div/>', {'class': 'group_list_results'} );
 	var Modal = null;	// this will be set later, but we define up here so we can capture in closures
 	var fnOnImageLoad = function() { Modal.AdjustSizing(); };
@@ -547,7 +587,7 @@ function PresentFavoriteBadgeDialog()
 		$Content.append( $Row );
 
 		// use a factory here so we get the present value of Background, but capture the local Modal (not set yet)
-		$Row.click( (function( _Badge ) { return function() { Modal.Dismiss(); SetCurrentBadge( _Badge ); }; } )(Badge) );
+		$Row.click( (function( _Badge ) { return function() { Modal.Dismiss(); fnOnSelect( _Badge ); }; } )(Badge) );
 	}
 	Modal = ShowDialog( 'Choose a badge to feature', $Content );
 }

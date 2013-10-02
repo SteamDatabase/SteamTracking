@@ -30,18 +30,6 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 
 
 
-function toggleAbuse()
-{
-	abuseDiv = document.getElementById( 'reporter' );
-	if ( abuseDiv.style.display != 'block' )
-	{
-		abuseDiv.style.display = 'block';
-	}
-	else
-	{
-		abuseDiv.style.display = 'none';
-	}
-}
 
 function RefreshNotificationArea()
 {
@@ -69,14 +57,25 @@ function vIE()
 	return (navigator.appName=='Microsoft Internet Explorer') ? parseFloat( ( new RegExp( "MSIE ([0-9]{1,}[.0-9]{0,})" ) ).exec( navigator.userAgent )[1] ) : -1;
 }
 
-function checkAbuseSub()
+function checkAbuseSub( elForm )
 {
-	if ( !document.getElementById( 'contentType2' ).checked && !document.getElementById( 'contentType3' ).checked && !document.getElementById( 'contentType4' ).checked && !document.getElementById( 'contentType13' ).checked  )
+	if ( !elForm.elements['abuseType'].value  )
 	{
 		alert( 'Please select a reason for reporting abuse' );
 		return false;
 	}
-	document.getElementById( 'abuseForm' ).submit();
+
+	CModal.DismissActiveModal();
+
+	var params = $J(elForm).serializeArray();
+	params.push( {name: 'json', value: 1} );
+
+	$J.post( 'http://steamcommunity.com/actions/ReportAbuse/', params).done( function() {
+		ShowAlertDialog( 'Thank You!', 'Thank you for reporting offensive content and helping to keep the Steam Community clean and friendly.' );
+	}).fail( function() {
+		ShowAlertDialog( 'Report Violation', 'There was a problem saving your report.  Please try again later.' );
+	});
+	return false;
 }
 
 

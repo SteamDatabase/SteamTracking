@@ -41,6 +41,10 @@
 	width: 250px;
 }
 
+.showcase_style_select_ctn {
+	margin-bottom: 4px;
+}
+
 .showcase_slot.openslot {
 	border: 2px dashed #5491CF;
 	border-radius: 5px;

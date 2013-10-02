@@ -143,7 +143,7 @@ function DeclineTradeOffer()
 function DismissTradeOfferWindow()
 {
 	var bConfirm = false;
-	if ( ( g_cItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) &&
+	if ( ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) &&
 		GTradeStateManager.m_eTradeOfferState != CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
 	{
 		var strConfirmMessage = 'Are you sure you want to cancel this trade offer?  Any changes will not be saved.';

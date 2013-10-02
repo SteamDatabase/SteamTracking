@@ -7,6 +7,7 @@ var g_bWalletBalanceWouldBeOverMax = false;
 var g_nItemsFromContextWithNoPermissionToReceive = 0;
 var GTradeStateManager = null;
 var Tutorial = null;
+var g_bWarnOnReady = false;
 
 function BeginTrading( bShowTutorial )
 {
@@ -869,7 +870,8 @@ var g_iNextLogPos = 0;
 
 var g_timerTradePoll = null;
 var g_rgLastFullTradeStatus = null;
-var g_cItemsInTrade = 0;
+var g_cMyItemsInTrade = 0;
+var g_cTheirItemsInTrade = 0;
 var g_cCurrenciesInTrade = 0;
 
 function RequestTradeStatusUpdate()
@@ -1042,12 +1044,11 @@ function RefreshTradeStatus( rgTradeStatus, bForce )
 		if ( rgTradeStatus.newversion )
 			g_rgLastFullTradeStatus = rgTradeStatus;
 
-		var cMyItems = ElementCount( rgTradeStatusForSlots.me.assets );
-		var cTheirItems = ElementCount( rgTradeStatusForSlots.them.assets );
-		g_cItemsInTrade = cMyItems + cTheirItems;
+		g_cMyItemsInTrade = ElementCount( rgTradeStatusForSlots.me.assets );
+		g_cTheirItemsInTrade = ElementCount( rgTradeStatusForSlots.them.assets );
 		g_cCurrenciesInTrade = rgTradeStatusForSlots.me.currency.length + rgTradeStatusForSlots.them.currency.length;
-		if ( g_cItemsInTrade > 0 )
-			Tutorial.OnUserAddedItemsToTrade( cMyItems, cTheirItems );
+		if ( g_cMyItemsInTrade + g_cTheirItemsInTrade > 0 )
+			Tutorial.OnUserAddedItemsToTrade( g_cMyItemsInTrade, g_cTheirItemsInTrade );
 	}
 	if ( rgTradeStatus.me.ready && !UserYou.bReady || !rgTradeStatus.me.ready && UserYou.bReady )
 	{
@@ -1561,12 +1562,62 @@ var g_bConfirmPending = false;
 
 function ToggleReady( bReady )
 {
-	UserYou.bReady = bReady;
+	var fnReady = function() {
+		UserYou.bReady = bReady;
 
-	GTradeStateManager.ToggleReady( bReady );
+		GTradeStateManager.ToggleReady( bReady );
 
-	UpdateReadyButtons();
-	$('notready_tradechanged_message').hide();
+		UpdateReadyButtons();
+		$('notready_tradechanged_message').hide();
+	};
+
+		if ( bReady && ( g_bWarnOnReady || g_cTheirItemsInTrade == 0 ) )
+	{
+		var strWarning = '';
+		var strButton = '';
+		var strTitle = 'This trade appears suspicious';
+		if ( g_cTheirItemsInTrade == 0 )
+		{
+			if ( g_bTradeOffer && GTradeStateManager.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW )
+			{
+				strTitle =  'Warning';
+				strWarning = 'You have not selected any items for %s to offer in exchange for yours.  If %s accepts this trade, you will lose the items you\'ve offered but will not receive any items.';
+			}
+			else
+			{
+				strWarning = '%s has not offered any items in the trade.  When this trade is completed, you will not receive anything.  If %s has promised you Steam Wallet funds, CD-Keys, or other items outside the trade window, they may be attempting to scam you.';
+			}
+
+			strWarning += '<br><br>' + 'Please confirm that you are giving your items away, and expect nothing in return.';
+			strButton = 'Yes, this is a gift';
+		}
+		else
+		{
+			strWarning = 'Upon completion of this trade, you will only receive the following items:';
+			strWarning += '<ul class="trade_warning_item_list">';
+			var rgAssets = g_rgCurrentTradeStatus.them.assets;
+			for ( var i = 0; i < rgAssets.length; i++ )
+			{
+				var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
+				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
+				if ( rgItem )
+					strWarning += rgItem.name + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+				else
+					strWarning += 'Unknown Item';
+				// afarnsworthTODO: fraud warnings!
+				strWarning += '</li>';
+			}
+			strWarning += '</ul>';
+			strWarning += '<span class="trade_warning_bold">You will not receive any other items or money.  If %s has promised you any other items, Steam Wallet funds, or CD-Keys outside the trade window, they may be attempting to scam you.</span>';
+			strButton = 'Yes, I trust %s'.replace( /%s/, g_strTradePartnerPersonaName );
+		}
+		var elWarning = $J('<div/>', {'class': 'trade_warn_dialog_content' }).html( strWarning.replace( /%s/g, g_strTradePartnerPersonaName ) );
+		ShowConfirmDialog( strTitle, elWarning, strButton ).done( fnReady );
+	}
+	else
+	{
+		fnReady();
+	}
 }
 
 var g_bConfirmInFlight = false;
@@ -1606,7 +1657,7 @@ function UpdateReadyButtons()
 	else
 	{
 		var badOffer = g_bWalletBalanceWouldBeOverMax || g_nItemsFromContextWithNoPermissionToReceive > 0;
-		if ( !badOffer && ( g_cItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) )
+		if ( !badOffer && ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) )
 		{
 			$('you_cantready').hide();
 			$('you_notready').show();
