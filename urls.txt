@@ -172,6 +172,7 @@ Repos/index.html|http://repo.steampowered.com/
 Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/
 Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Repos/people.html|http://valvesoftware.com/company/people.html
+Repos/trademarks_eu.json|http://esearch.oami.europa.eu/copla/ctmsearch/json
 
 # Minecraft
 Minecraft/versions.json|http://s3.amazonaws.com/Minecraft.Download/versions/versions.json
