@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.48dd90f0412cb861af4f4b611b044c4f1470fc9d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.06cb9925789a81fdef97412d6b866453af049a5d.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -43528,6 +43528,50 @@
 				
 			},
 			{
+				"name": "The Grandmaster",
+				"defindex": 1067,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Grandmaster",
+				"item_description": "Own the same novelty chess hat worn by Garry Kasparov when he beat Deep Blue to death using his world-famous Thai boxing moves.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/all_class\/chess_scout_red.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/chess_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chess_hat.ed0f248b2781eef19054c220431c7f84b85f06e7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chess_hat_large.68b605e9711c5d377e4c96cb681300382c68cbf7.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
 				"name": "World Traveler",
 				"defindex": 1899,
 				"item_class": "tf_wearable",
@@ -47825,11 +47869,11 @@
 				
 			},
 			{
-				"name": "Mysterious Promo 10",
+				"name": "Team Fortress Chess Promo",
 				"defindex": 2122,
 				"item_class": "bundle",
 				"item_type_name": "Item Bundle",
-				"item_name": "Mysterious Promo 10",
+				"item_name": "Team Fortress Chess Promo",
 				"item_description": "",
 				"proper_name": false,
 				"model_player": null,
@@ -47846,7 +47890,15 @@
 					"can_card_upgrade": true,
 					"can_strangify": true,
 					"can_consume": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1.000000
+					}
+				]
+				
 			},
 			{
 				"name": "Map Token Bundle 5",
@@ -53509,6 +53561,92 @@
 						"name": "strangifier target",
 						"class": "strangifier_target",
 						"value": 588.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Fall 2013 Acorns Crate",
+				"defindex": 5708,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Fall 2013 Acorns Crate",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/fall_crate_acorns",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_acorns.ba530e8ec1f311e57d8c275ed26c4149607f8520.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_acorns_large.feac6e0dc5f231d3877e4d9a2a0b6a658f18ec2d.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "fall2013"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 72.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Fall 2013 Gourd Crate",
+				"defindex": 5709,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Fall 2013 Gourd Crate",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/fall_crate_gourd",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd.8b7e2eb2653e0f5b6f5744af9f56c0f9a9689f29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd_large.72042c0965a513b4d1516c9cee03c24ea99c1d0c.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "fall2013"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 73.000000
 					}
 				]
 				
