@@ -3232,6 +3232,7 @@ function UpdateReleaseRequest( nAppId, rgChanges )
 }
 
 var rgUrls = [];
+var nFailureCount = 0;
 
 function CreatePHPDateFromObject( d )
 {
@@ -3388,12 +3389,13 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 
 }
 
-function PublishActionNext()
+function PublishActionNext( rgRequest )
 {
 	// Note that we're only using the first iteration of this loop, we simply
 	// yse each to get the key
 
-	var rgRequest = rgUrls.shift();
+	if( !rgRequest )
+		rgRequest = rgUrls.shift();
 
 	if( !rgRequest )
 	{
@@ -3420,10 +3422,17 @@ function PublishActionNext()
 			$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>' ) );
 			if( !data['success'] )
 			{
-				console.log("Failed:");
-				console.log(data.message);
-				$J('#publish_status_log').show();
-				$J('#publish_status').hide();
+				if( nFailureCount > 3 )
+				{
+					console.log("Failed:");
+					console.log(data.message);
+					$J('#publish_status_log').show();
+					$J('#publish_status').hide();
+				} else {
+					nFailureCount++;
+					$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>Retrying...<br>' ) );
+					PublishActionNext( rgRequest );
+				}
 			} else
 				PublishActionNext();
 
@@ -3431,11 +3440,18 @@ function PublishActionNext()
 		},
 		error: function( response )
 		{
-			console.log(response);
-			$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p>') );
-			$J('#publish_status_log').show();
-			$J('#publish_status').hide();
-			$J('#publish_button').show();
+			if( nFailureCount > 3 )
+			{
+				console.log(response);
+				$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p>') );
+				$J('#publish_status_log').show();
+				$J('#publish_status').hide();
+				$J('#publish_button').show();
+			} else {
+				nFailureCount++;
+				$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error. Retrying...</b></p>') );
+				PublishActionNext( rgRequest );
+			}
 		}
 	});
 
