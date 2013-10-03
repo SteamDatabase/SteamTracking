@@ -59,7 +59,7 @@ function vIE()
 
 function checkAbuseSub( elForm )
 {
-	if ( !elForm.elements['abuseType'].value  )
+	if ( !$J(elForm).find('input[name=abuseType]:checked').length )
 	{
 		alert( 'Please select a reason for reporting abuse' );
 		return false;
