@@ -1595,7 +1595,7 @@ function ToggleReady( bReady )
 		{
 			strWarning = 'Upon completion of this trade, you will only receive the following items:';
 			strWarning += '<ul class="trade_warning_item_list">';
-			var rgAssets = g_rgCurrentTradeStatus.them.assets;
+			var rgAssets = g_bTradeOffer ? g_rgCurrentTradeStatus.them.assets : g_rgLastFullTradeStatus.them.assets;
 			for ( var i = 0; i < rgAssets.length; i++ )
 			{
 				var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
