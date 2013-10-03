@@ -3372,9 +3372,13 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 
 	if( bPublishStoreApp )
 	{
+		// PHP will interpret bSetDate=false as string false which is true....
+		var strSetDate = bSetDate ? 1 : 0;
+		var strComingSoon = ( NewReleaseState == "prerelease" ) ? 1 : 0
+
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/admin/game/setreleased/' + nItemid,
-			'data': { 'json': true, 'setdate': bSetDate },
+			'data': { 'json': true, 'setdate': strSetDate, 'comingsoon': strComingSoon },
 			'message': 'Setting store page visible'
 		});
 
