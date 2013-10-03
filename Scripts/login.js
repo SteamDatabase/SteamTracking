@@ -63,6 +63,10 @@ function DoLogin()
 	var form = document.forms['logon'];
 	if ( g_bLoginInFlight || form.elements['username'].value.length == 0 || form.elements['password'].value.length == 0 )
 		return;
+
+	var username = form.elements['username'].value;
+	username = username.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
+
 	g_bLoginInFlight = true;
 	$('login_btn_signin').hide();
 	$('login_btn_wait').show();
@@ -87,12 +91,16 @@ function OnRSAKeyResponse( transport )
 		var form = document.forms['logon'];
 
 		var pubKey = RSA.getPublicKey( results.publickey_mod, results.publickey_exp );
-		var encryptedPassword = RSA.encrypt( form.elements['password'].value, pubKey );
+		var username = form.elements['username'].value;
+		username = username.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
+		var password = form.elements['password'].value;
+		password = password.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
+		var encryptedPassword = RSA.encrypt( password, pubKey );
 		new Ajax.Request( 'https://store.steampowered.com/login/dologin/',
 		{
 			method: 'post',
 			parameters: {
-				username: form.elements['username'].value,
+				username: username,
 				password: encryptedPassword,
 				emailauth: form.elements['emailauth'].value,
 				loginfriendlyname: form.elements['loginfriendlyname'].value,
