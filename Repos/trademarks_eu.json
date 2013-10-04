@@ -1,28 +1,6 @@
 [
     {
         "controller": "trademark",
-        "name": "HALF-LIFE 3",
-        "number": "012180394",
-        "numberToShow": "012180394",
-        "type": "Word",
-        "imageurl": "",
-        "filingdate": "29/09/2013",
-        "designationdate": "",
-        "registrationdate": "",
-        "nice": "9, 41",
-        "status": "Application under examination",
-        "applicantsreference": "ALM13-4832EM",
-        "basis": "CTM",
-        "publishedsection": "",
-        "publisheddate": "",
-        "publishedurl": "",
-        "applicantid": "207863",
-        "applicantname": "Valve Corporation",
-        "representativeid": "10513",
-        "representativename": "CASALONGA ET ASSOCIES"
-    },
-    {
-        "controller": "trademark",
         "name": "Not a word mark",
         "number": "011945961",
         "numberToShow": "011945961",
