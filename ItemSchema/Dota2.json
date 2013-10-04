@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.f02cc9618b2cf21b0454dc02a8cf73ba5e8a66aa.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7271744a87d0c10cad7ab706a0e112debf41838c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -66532,6 +66532,150 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Road to the Asian Cyber Games 2013 - Indian Qualifier",
+				"defindex": 15284,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Road to the Asian Cyber Games 2013 - Indian Qualifier",
+				"item_description": "The top 8 Indian teams will qualify to compete in the finals where the winner will earn a spot to compete in Singapore at the Asian Cyber Games 2013!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_bestofthebest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_bestofthebest.efdbe124b6373379f1b071a4fceebff83fe7314d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_bestofthebest_large.d3c93f1a40e1683e5fd142bfed4168a390ee4b48.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Road to the Asian Cyber Games 2013 - Indian Qualifier - ADMIN",
+				"defindex": 15285,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Road to the Asian Cyber Games 2013 - Indian Qualifier - ADMIN",
+				"item_description": "The top 8 Indian teams will qualify to compete in the finals where the winner will earn a spot to compete in Singapore at the Asian Cyber Games 2013!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_bestofthebest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_bestofthebest.efdbe124b6373379f1b071a4fceebff83fe7314d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_bestofthebest_large.d3c93f1a40e1683e5fd142bfed4168a390ee4b48.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "South Ural League Season 2",
+				"defindex": 15286,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Ural League Season 2",
+				"item_description": "Teams compete in an online competition to earn a spot in the top 16 teams which compete in a LAN finals.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_southuralleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague.adedb90340e6812255f02de3f141e46ef9bdb6f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague_large.1c2ea31bddd2c9bfd10e59e7c5d915b0e5403c13.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "South Ural League Season 2 - ADMIN",
+				"defindex": 15287,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Ural League Season 2 - ADMIN",
+				"item_description": "Teams compete in an online competition to earn a spot in the top 16 teams which compete in a LAN finals.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_southuralleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague.adedb90340e6812255f02de3f141e46ef9bdb6f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague_large.1c2ea31bddd2c9bfd10e59e7c5d915b0e5403c13.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
