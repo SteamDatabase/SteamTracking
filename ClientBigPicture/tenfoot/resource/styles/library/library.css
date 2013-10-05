@@ -2867,7 +2867,7 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	margin: 20px 20px 0px 20px;
 	width: 100%;
-	max-height: 200px;
+	height: 200px;
 	flow-children: down;
 }
 
@@ -2893,15 +2893,13 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	opacity: 0.0;
 	width: 100%;
-	max-height: 112px;
+	height: 200px;
 	text-align: center;
-	margin: 22px;
-	margin-bottom: -40px;
-	margin-top: 18px;
+	margin: 20px 20px 0px 20px;
 	font-size: 22px;
 	color: applabelsolid;
 	z-index: 1000;
-	
+
 	transition-property: opacity;
 	transition-duration: 0.25s;
 }
