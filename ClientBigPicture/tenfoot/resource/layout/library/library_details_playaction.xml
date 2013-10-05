@@ -20,10 +20,6 @@
 						<Label id="SteamCloud" class="SteamCloud PlayTimeTitle" text="#Library_Details_SteamCloud" />
 						<Label id="SteamCloudValue" class="SteamCloudValue PlayTimeValue" />
 					</Panel>
-					<Panel class="PlayTimeRow">
-						<Label id="ControllerSupportHeader" class="PlayTimeTitle" text="#Library_Details_ControllerSupport" />
-						<Label id="ControllerSupportValue" class="PlayTimeValue" />
-					</Panel>
 					<Panel id="SharingRow" class="PlayTimeRow">
 						<Label id="SharingHeader" class="PlayTimeTitle" />
 						<Label id="SharingValue" class="PlayTimeValue" />

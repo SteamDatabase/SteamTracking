@@ -211,7 +211,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 
 #FriendsMainBodyLeftHeader
 {
-	height: 104px;
+	height: 112px;
 	width: 100%;
 	flow-children: right;
 	margin-right: friendsverticalscrollpad;
@@ -221,7 +221,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 {
 	height: 94px;
 	margin-bottom: 12px;
-	margin-top: 0px;
+	margin-top: 12px;
 	width: 100%;
 	flow-children: right;
 }
@@ -290,7 +290,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 #FriendsMainBodyChatContainer
 {
 	width: 100%;
-	height: 678px;
+	height: 670px;
 	flow-children: down;
 	margin-bottom: 9px;
 	border-radius: 4px;
@@ -923,9 +923,10 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	flow-children: down;
 	overflow: clip scroll;
 
+	padding-top: 6px;
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );	
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 
 .MainBodyLeftList
