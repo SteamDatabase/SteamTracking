@@ -3237,11 +3237,11 @@ var nFailureCount = 0;
 function CreatePHPDateFromObject( d )
 {
 	dateData = {}
-	dateData['year'] = d.getFullYear();
-	dateData['month'] = d.getMonth() + 1; // :spazhorror:
-	dateData['day'] = d.getDate();
-	dateData['hour'] = d.getHours();
-	dateData['minute'] = d.getMinutes();
+	dateData['year'] = d.getUTCFullYear();
+	dateData['month'] = d.getUTCMonth() + 1; // :spazhorror:
+	dateData['day'] = d.getUTCDate();
+	dateData['hour'] = d.getUTCHours();
+	dateData['minute'] = d.getUTCMinutes();
 
 	return dateData;
 }
@@ -3290,7 +3290,7 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 				};
 
 				dateData = {
-					'releases/0/steam_release_date' : CreatePHPDateFromObject(d)
+					'releases/0/steam_release_date' : d.getTime() / 1000
 				};
 
 				rgUrls.push( {
@@ -3320,8 +3320,8 @@ function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDat
 					//'description': 'Auto-created launch discount',
 					'descriptionPreset': '#discount_desc_preset_special',
 					'percent': nLaunchDiscount,
-					'startdate': CreatePHPDateFromObject(startDate),
-					'enddate': CreatePHPDateFromObject(endDate),
+					'startdate': startDate.getTime() / 1000,
+					'enddate': endDate.getTime() / 1000,
 					'json': true
 				},
 				'message': 'Adding ' + nLaunchDiscount + '% launch discount to packages ' + rgPackages.join(', ')
