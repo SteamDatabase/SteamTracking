@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7271744a87d0c10cad7ab706a0e112debf41838c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.f2a32e97fea1b9524bcdd32e350f1910686a4583.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -14907,7 +14907,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_lightleather_bracer.fc89e265e00e41c071c600380827df38ec22c040.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_lightleather_bracer_large.09713476de9e49b6f43fda97597aeb3b544414ae.png",
-				"item_set": "bounty_hunter_hardened",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36256,6 +36255,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axeweapon_conq\/axeweapon_conq.0704612827ffe83b9f59a1940fab3a0fb5e1150d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axeweapon_conq\/axeweapon_conq_large.7f5651ad241c7c7c482f492a648c2c76200f9fde.png",
+				"item_set": "axe_redconqueror",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36279,6 +36279,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axehelm_conq\/axehelm_conq.d6f8ccee10b9a585766a963035ac29c155bd08a9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axehelm_conq\/axehelm_conq_large.40ad0b4cee451b729476930e01c141aab5732f00.png",
+				"item_set": "axe_redconqueror",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36302,6 +36303,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axearmor_conq\/axearmor_conq.3e5cfc06fe38be00893ca79364f50b97d5462a61.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axearmor_conq\/axearmor_conq_large.179a4eebc93c3ec21302700aa6931aa586467aa0.png",
+				"item_set": "axe_redconqueror",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -36325,6 +36327,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axebelt_conq\/axebelt_conq.743d4e53eb8bfedc72c8aec09cdc9daba40643d3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axebelt_conq\/axebelt_conq_large.3c0296127eb6750c5a9c4aecb889d34ccee3d487.png",
+				"item_set": "axe_redconqueror",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -44485,6 +44488,102 @@
 				}
 			},
 			{
+				"name": "Viridus Crusher",
+				"defindex": 5381,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Viridus Crusher",
+				"item_description": "A weapon that makes sense only in the Chapels of Claszureme. And even then, only barely.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon.86c5906c838f3d161d0632972f17fc870253509f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon_large.fe6db505c6a47de10f1dbc0b530c15d23ff2c29e.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Claw",
+				"defindex": 5382,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers and Hand Armor",
+				"item_name": "Viridus Claw",
+				"item_description": "If you wish to grasp the finer points of Dhreg Cult dogma, you must wear the proper gear for rending the tracts into ribbons.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_claw\/viridus_claw",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_claw\/viridus_claw.8376300c33a9f89c24ea0ae63d9308e1ffb50471.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_claw\/viridus_claw_large.c79ee257c9407caf863aa99387e7e72b52bf5ca1.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Leggings",
+				"defindex": 5383,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Leggings and Girdpiece",
+				"item_name": "Viridus Leggings",
+				"item_description": "Girded in madness, these leggings defy meaning.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings.9e79a19eff27dac3891408c913e3b2ee328cefd0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings_large.e4e8866b83872826916ec0f4f3ea68a6ff337935.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Spine",
+				"defindex": 5384,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spine Spikes and Bicep Guards",
+				"item_name": "Viridus Spine",
+				"item_description": "A surfeit of arcane certainty may lead to exquisite eruptions. While painful, these excrescences mark one who has mastered the ultimate lore.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_spine\/viridus_spine",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_spine\/viridus_spine.6973839383b277424a01c104871f46849cafdf91.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/faceless_void\/viridus_spine\/viridus_spine_large.f6056d947b2f013b5b8044ca8cb0cb48286e1bc6.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "WETA Placeholder 1 Axe",
 				"defindex": 5385,
 				"item_class": "dota_item_wearable",
@@ -45539,6 +45638,126 @@
 				}
 			},
 			{
+				"name": "Hare Hunt Rifle",
+				"defindex": 5431,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Rifle",
+				"item_name": "Hare Hunt Rifle",
+				"item_description": "Overkill for a rabbit hunt? You haven't seen these particular rabbits.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle.d8ae193e4e64729d17ba8a7f315c3a21d77860e0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle_large.780ff0ab6dd7469f28e0c951945c75d03326bfad.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Sleeves",
+				"defindex": 5432,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeves",
+				"item_name": "Hare Hunt Sleeves",
+				"item_description": "Richly ornate protection for Sniper's forearms when he creeps through shady cover, as snipers do.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves.83cb509445132a7f6c6014298727abd853309424.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves_large.73882e315bdf82d6a523b7bc39cc271240f70c18.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Shoulders",
+				"defindex": 5433,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Hare Hunt Shoulders",
+				"item_description": "What's that? I can't hear you. There's a lit fuse hissing in my ear.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders.9e5909e9dcad2a737fd15b63c07ece1fffc011ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders_large.6948d48ffd64b6feaaf1fff481c750c62e2c04dd.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Cape",
+				"defindex": 5434,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Hare Hunt Cape",
+				"item_description": "A cape as golden as the autumn woods through which he stalks his tremulous prey.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape.8cc38679ec76c957cde6295eb2d907429060b939.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape_large.932aed3f4ef0090a973183824c883973bff1de6f.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Hat",
+				"defindex": 5435,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hare Hunt Hat",
+				"item_description": "A furry woodland pelt is a perfect pate protector. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat.658445c53273446313a9b15bde8d5d4d7f34eeb4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat_large.ea833b660780d70c503bd2d7a440056c2ccc3bc7.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Trident of the Deep One",
 				"defindex": 5436,
 				"item_class": "dota_item_wearable",
@@ -45552,6 +45771,558 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one.759a9eae4d58da4a9c66552b85c2e088a0be94fb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one_large.8375ae68a3c21b847e00dc398bbf0cd830ed6ecd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Arms",
+				"defindex": 5442,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Arm Shields",
+				"item_name": "Ancient Armor Arms",
+				"item_description": "Water finds its perfect form in Morphling's grip.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms.3a8c90807a3dd8621c0ec24c9c5658d73290b045.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms_large.eb08234ff49645fb23b4b6254fd4f645e27bbfe2.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Back",
+				"defindex": 5443,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Back Shield",
+				"item_name": "Ancient Armor Back",
+				"item_description": "A shield that barely skims the surface of Morphling's power.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back.e3f70f1952fd6bfa15efebc012229d11ae33dae8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back_large.a5d354a7b8c8d5484213736be55a1383cbcf9310.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Breastplates",
+				"defindex": 5444,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Breastplates",
+				"item_name": "Ancient Armor Breastplates",
+				"item_description": "Injury added to insult, there is nothing worse than being struck full on by Morphling when he wears these plates.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates.78f9f1518dd84c5842566140c7383e291840f88a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates_large.11c74f69a245c093bc7112a208616b22c7d491e7.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Helmet",
+				"defindex": 5445,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Ancient Armor Helmet",
+				"item_description": "Watery thoughts can scarcely be contained.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head.b4ef08153dcb85f8a60b080c2284ffeda45e1b99.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head_large.95681a825bf322329ccab42c7ec772985dbf6ba9.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Shoulder Shields",
+				"defindex": 5446,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder Shields",
+				"item_name": "Ancient Armor Shoulder Shields",
+				"item_description": "The elements align themselves to enhance an ancient strength.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders.f2d76e31b7ec5c3e23151ddbebee1b581eab427b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders_large.d3e8242458980bd6ef8160caa0380fe6d63223e9.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tail of Fury",
+				"defindex": 5449,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Tail of Fury",
+				"item_description": "Poets will tell the tale of the great fury of Barathrum.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_tail\/fury_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_tail\/fury_tail.129768c42201420f111773ac3f090e2172969096.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_tail\/fury_tail_large.7b8ed421f38f25e55facaf7a2f227f531fd9552c.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bracers of Fury",
+				"defindex": 5450,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Fury",
+				"item_description": "These arm  guards protect against the occasional wayward strike of your own flail.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_arms\/fury_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_arms\/fury_arms.6cf9294f692abbd5b5fafbd67f532837e4529110.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_arms\/fury_arms_large.e796e82b28a7da52498a15ebff44f7cdb796421a.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Belt of Fury",
+				"defindex": 5451,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of Fury",
+				"item_description": "Proving pants are superfluous, if your belt is this powerful.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_belt\/fury_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_belt\/fury_belt.ca40a602e12bb3dd2097eb212fa8339fb7c59656.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_belt\/fury_belt_large.45c78dbc5f24c41ad5dea4055443426e4c1f7dda.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mask of Fury",
+				"defindex": 5452,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horned Mask",
+				"item_name": "Mask of Fury",
+				"item_description": "Your face is masked but your fury won't be.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_head\/fury_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_head\/fury_head.75c3665a3e5a7eeefb9a9fbc8495cb7e2799377f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_head\/fury_head_large.7492ea0abe6fda5139ed30c76bc176a6ac2c9f62.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pauldrons of Fury",
+				"defindex": 5453,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Pauldrons of Fury",
+				"item_description": "Upon your broad shoulders, the weight of the war rests.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders.035d1cd60a7e1c5fe0c691a20e185e09227f2e29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders_large.6fd58fd6676a14e2ff07b91283efb70c51458cac.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Spirit Crusher",
+				"defindex": 5454,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Spirit Crusher",
+				"item_description": "Your enemy's spirits will be crushed by the sight of this dread weapon.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon.f625cf95b4d3dfa62c8c3dbe2947cf9df860c900.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon_large.112d54ab748eed6fc5afb0a1e7a73e30ecced061.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hand of Hell's Ambassador",
+				"defindex": 5459,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demon Arm",
+				"item_name": "Hand of Hell's Ambassador",
+				"item_description": "Enemies cower when he raises this horrific hand, but friends merely return the greeting.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_arm\/hell_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_arm\/hell_arm.016726d65a9902f1daba51b0e830eb46b5b72ec7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_arm\/hell_arm_large.991fc87867958634952d907466ea3af3923c1c7d.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of Hell's Ambassador",
+				"defindex": 5460,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape and Collar",
+				"item_name": "Mantle of Hell's Ambassador",
+				"item_description": "Suggestive of the robes of office of some infernal dignitary, the cape was an honorific bestowed on Lion by a grateful demon populace.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_cape\/hell_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_cape\/hell_cape.1418a405ad5e1d86ae96a34248bc236a387da45d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_cape\/hell_cape_large.8c09af1e6a77e5248f0bf85dfacbe98e2bc0c19f.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Epaulets of Hell's Ambassador",
+				"defindex": 5461,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder guards.",
+				"item_name": "Epaulets of Hell's Ambassador",
+				"item_description": "Shoulderpieces too evil to reside in Hell a moment longer. Lion was only too happy to spare them from the Pit.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_shoulders\/hell_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_shoulders\/hell_shoulders.1913caaa951cdab60109bfb617b77ad019975a54.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_shoulders\/hell_shoulders_large.e199ada95aa8fe54debbce4a7d91d90d9e000d12.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Strifemaul of Hell's Ambassador",
+				"defindex": 5462,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Strifemaul of Hell's Ambassador",
+				"item_description": "He who speaks for Hell may carry the Strifemaul to further emphasize the important points of his argument.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_weapon\/hell_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_weapon\/hell_weapon.f5bdad75c7bd59b7dbb270a2f4f81601f43286d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/lion\/hell_weapon\/hell_weapon_large.af8b98a0f52ff247d7022cb7c733d124634bfe5c.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Foraged Cap",
+				"defindex": 5463,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cap",
+				"item_name": "Admiral's Foraged Cap",
+				"item_description": "A cap found washed up on a Keenish shore, shortly before Kunkka's arrival there.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap.f1d2574b2a019396fb3d346a9b9520e3fccdbc42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap_large.9404f5e699648891333ec5b7ab5b23e66ff89900.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Stash",
+				"defindex": 5464,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Admiral's Stash",
+				"item_description": "The keys that hang from this belt are said to unlock the gates of the Keen capital, the prisons of his fleet, countless treasure chests that lie inside the hull of his majestic ship \"Mighty Leviathan\" ... and terrifying secrets that lie deep at the bottom of the sea. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt.4c163d26ce83780cd5cc6259eb52547c8765a1a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt_large.a94f68d9e7c1e92ab45cca59894bf4e9e1faaa3e.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Gauntlets",
+				"defindex": 5465,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Gauntlets",
+				"item_name": "Claddish Gauntlets",
+				"item_description": "The only piece of equipment left on Kunkka after he washed up on a Keen shore. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets.7b45245a2c6d839bd623bedf0fee9c87509c8126.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets_large.90db68a1f6a267a1e5c112997e36140bddda300a.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Guard",
+				"defindex": 5466,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder guards.",
+				"item_name": "Claddish Guard",
+				"item_description": "A high collar keeps salty waters and harsh weather from marring Kunkka's visage, while heavy shoulder-plates have deflected many a tooth and claw belonging to such abominations as lurk in the murky waters. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders.8fecb40a36b6091b74319c1dec68e3c96b65c84b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders_large.fdb4adb276886bb1bb2a4b078364b6d1011d4623.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Hightops",
+				"defindex": 5467,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoes",
+				"item_name": "Claddish Hightops",
+				"item_description": "These steel toe-guards are effective at fending off sea monsters, as well as punishing booties of lazy Keen sailors. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes.f615d4d0c82d7bf2820e1f7c0e75cb57ee6960d1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes_large.520f0a101904441ce369e4b21135cd744253156c.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Neptunian Sabre",
+				"defindex": 5468,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sabre",
+				"item_name": "Neptunian Sabre",
+				"item_description": "It is said that Kunkka compelled Keen artisans to make this sabre from the salvage of vanquished Cataract Demons that were washed upon the shores of Keen homelands. It is speculated that he split the sea in half with it to locate Maelrawn the Tentacular and sever one of Its tentacles as a testament of his triumph against the Demons of Cataract. Wielding it with brute force and sea-hardened will, he now splits apart his enemies in torrents of sea blue and crimson red. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre.3e3062c84b601fbaa15dc53c8eb9a8907e50cbae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre_large.387d50209b2592023c3fedbf7f6f794d92c926ad.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Salty Shawl",
+				"defindex": 5469,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Admiral's Salty Shawl",
+				"item_description": "A cape made from the skin of a Cataract Demon, and dyed in the colors of the Claddish Navy, Kunkka wears it to fend off any wicked creature that dares lunge at him. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl.1b3b416d435539a9a10a2c48d523a78802c8132a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl_large.adf9a71883ef2ddee526f55bfdb8bcd200b9198f.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ye Olde Pipe",
+				"defindex": 5470,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pipe",
+				"item_name": "Ye Olde Pipe",
+				"item_description": "An old pipe Kunkka plucked from a tidepool after being shipwrecked, the old seadog claims it brings him fortune and good luck, and thus never ever takes it from his scurvy-ridden mouth. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe.db3664105f837cd401d9262c6bdecdd429d0cbce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe_large.d1c558955c276069afbc8ccd0788a2a49725feea.png",
+				"item_set": "armaments_of_leviathan",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -55454,7 +56225,7 @@
 				"image_inventory": "econ\/huds\/hud_iron_cage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_iron_cage.709da86824d0db1d90851bd533dc2b33dcaa79e2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_iron_cage.1d63d61d1dd95bc4ed83eb526bbd04fd6c1dbab4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_iron_cage_large.debbaec1be8b9f1ec5884ac83aee056adefd39d6.png",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -56100,6 +56871,72 @@
 				
 			},
 			{
+				"name": "Golden Treasures",
+				"defindex": 10327,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Golden Treasures",
+				"item_description": "Riches are won on the battlefield.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_golden_treasures",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_golden_treasures.7df8277cf4b71277690412fae227c2df3ed6ec29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_golden_treasures_large.ef2cfae87209de54ebcbf2115d6f75c14c66eb10.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tremor",
+				"defindex": 10333,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Tremor",
+				"item_description": "War rattles every foundation.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_quake",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_quake.3410992998362143ffe6632a3c2027e3e507b55f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_quake_large.ab4f87131dce1bb99c6493ea0cb25cc38d34b96b.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Omen",
+				"defindex": 10336,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Omen",
+				"item_description": "Ill tidings come unbidden.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_od",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_od.ac7caf46261835101c50869e89c1b31a6e78aeec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_od_large.015c20425260aa6851a97221fcf7089edc7803a8.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Baekho",
 				"defindex": 10347,
 				"item_class": "dota_item_wearable",
@@ -56131,6 +56968,52 @@
 						"name": "league id",
 						"class": "",
 						"value": 80
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
+					}
+				]
+				
+			},
+			{
+				"name": "Scuttling Scotty",
+				"defindex": 10350,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Scuttling Scotty",
+				"item_description": "Separated from his flock in an ice storm, the adventurous young pengling Scotty wandered the Blueheart Glacier, starving and alone, until he found himself rescued by a certain young Ice Maiden. Crystal Maiden nursed him back to health with love and fishy treats. Swearing to return her kindness, Scotty swore off adventuring, and now he has no urge other than to carry supplies and treats to those in need.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/scuttling_scotty_penguin\/scuttling_scotty_penguin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "netolic pro league tag",
+						"class": "netolic pro league tag",
+						"value": 4
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 97
 					},
 					{
 						"name": "kill eater",
@@ -63859,7 +64742,7 @@
 				"item_class": "tool",
 				"item_type_name": "Gift",
 				"item_name": "Lockless Luckbox",
-				"item_description": "Don't bother looking for your keys, because this chest doesn't need one! Free with any purchase for a limited time, our Lucky Lockless Chest contains one of a number of prized possessions that may be found only inside of it. So save your keys for a chest that needs them. You already got lucky!",
+				"item_description": "Don't bother looking for your keys, because this chest doesn't need one! Our Lucky Lockless Chest contains one of a number of prized possessions that may be found only inside of it. So save your keys for a chest that needs them. You already got lucky!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/gift_lockless_luckbox",
@@ -65881,8 +66764,8 @@
 				"image_inventory": "econ\/tools\/treasure_key_emerald_polycount",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount.747d849b426f782055ac852860fdc33bcbfe2e95.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount_large.eabf0fc9bd45465d8658cd068487c268b770e9e2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount.49841a362769e4622df2bfba56b05db59d3f5254.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/treasure_key_emerald_polycount_large.b1e3cf4f003c325483e926a6d38f92bb7cf8a7e4.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -66676,6 +67559,150 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague.adedb90340e6812255f02de3f141e46ef9bdb6f0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_southuralleague_large.1c2ea31bddd2c9bfd10e59e7c5d915b0e5403c13.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CEVO Season 3",
+				"defindex": 15288,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CEVO Season 3",
+				"item_description": "CEVO DOTA 2 Season 3 is an event that is open to both amateur and professional players in North America. Teams compete in a 8 week regular season followed by a double-elimination playoff bracket where they compete for cash prizes and a chance to advance to higher skill divisions in future seasons.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cevoseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cevoseason3.db474d1838f93bd3c37a9c90034a4ea70fd6d558.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cevoseason3_large.3e785790208526b2a80d59ba1fe502ec540d45f1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CEVO Season 3 - ADMIN",
+				"defindex": 15289,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CEVO Season 3 - ADMIN",
+				"item_description": "CEVO DOTA 2 Season 3 is an event that is open to both amateur and professional players in North America. Teams compete in a 8 week regular season followed by a double-elimination playoff bracket where they compete for cash prizes and a chance to advance to higher skill divisions in future seasons.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cevoseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cevoseason3.db474d1838f93bd3c37a9c90034a4ea70fd6d558.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_cevoseason3_large.3e785790208526b2a80d59ba1fe502ec540d45f1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 4",
+				"defindex": 15292,
+				"item_class": "tool",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 4",
+				"item_description": "Netolic Pro League 4 brings the action once again inviting the best teams out there to fight over the glory, pride and prize money! Includes a pretty cool courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4.6fde10065bebfa26a7ae5b27472d08952c4595aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4_large.f0b9fb170eeaf471e9760e71b82d9ca9529384ee.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 4 - Admin",
+				"defindex": 15293,
+				"item_class": "tool",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 4 - Admin",
+				"item_description": "Netolic Pro League 4 brings the action once again inviting the best teams out there to fight over the glory, pride and prize money! Includes a pretty cool courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4.6fde10065bebfa26a7ae5b27472d08952c4595aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4_large.f0b9fb170eeaf471e9760e71b82d9ca9529384ee.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -74117,6 +75144,64 @@
 				}
 			},
 			{
+				"name": "The Hare Hunt Set",
+				"defindex": 20256,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Hare Hunt Set",
+				"item_description": "Includes all of the items in the \"Hare Hunt\" set for Sniper:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Hare_Hunt_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_hare_hunt_set.647001bbbb54ca2555ca764d9006c9439850c393.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_hare_hunt_set_large.77f136d0fbeb47db71ab9940d2575928517a65fc.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Barathrum's Fury Set",
+				"defindex": 20258,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Barathrum's Fury Set",
+				"item_description": "Includes all of the items in the 'Barathrum's Fury' set for Spirit Breaker:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Barathrums_Fury_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_barathrums_fury_set.ea7393743be70e08033a8d5a34c9659a3dccf145.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_barathrums_fury_set_large.1fada2ac64fb3a39d626d3240f53ad2134d9a695.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "Baekho & Nexon Sponsorship League Bundle",
 				"defindex": 20259,
 				"item_class": "bundle",
@@ -74130,6 +75215,122 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho.c752baeea05bbd9ff13d2accf485a11cfee51161.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/baekho\/baekho_large.fbdd47d5fe77acf3bb35d679995eb637caed2ddd.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Ancient Armor Set",
+				"defindex": 20260,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Ancient Armor Set",
+				"item_description": "Includes all of the items in the 'Ancient Armor' set for Morphling:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Ancient_Armor_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_ancient_armor_set.46298e5abe287f76440b800025dc2a677d35c197.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_ancient_armor_set_large.4ff15ff6ab06e596c75cf8ef601b3e6aef402a68.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Armaments of Leviathan Set",
+				"defindex": 20267,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Armaments of Leviathan Set",
+				"item_description": "Includes all of the items in the 'Armaments of Leviathan' set for Kunkka:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Armaments_of_Leviathan_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_armaments_of_leviathan_set.eab248325a79113f46e175cc0f6186f96cbba471.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_armaments_of_leviathan_set_large.f66c35ddf5f5daf3dfe998402af36bb9fd2d87d3.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Hell's Ambassador Set",
+				"defindex": 20268,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Hell's Ambassador Set",
+				"item_description": "Includes all of the items in the 'Hell's Ambassador' set for Lion:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Hells_Ambassador_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hells_ambassador_set.957b32a6f75a15400eabe0fe87e6e2d86208af4d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hells_ambassador_set_large.79916e821fd4ad59f84d756f50e0356269ede40d.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Viridi Inanitas Set",
+				"defindex": 20269,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Viridi Inanitas Set",
+				"item_description": "Includes all of the items in the 'Viridi Inanitas' set for Faceless Void:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Viridi_Inanitas_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_viridi_inanitas_set.ca566769694fed0032138d11c96625ffe2ee2842.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_viridi_inanitas_set_large.2a0c1a34dafe32adf056fbd4fed0cef880440d0f.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -75051,6 +76252,16 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "netolic pro league tag",
+				"defindex": 410,
+				"attribute_class": "netolic pro league tag",
+				"description_string": "Netolic Pro League %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -75118,6 +76329,19 @@
 					"Ancestral Arm Wrap",
 					"Ancestral Dress",
 					"Ancestral Medicine Stick"
+				]
+				
+			},
+			{
+				"item_set": "ancient_armor",
+				"name": "Ancient Armor",
+				"store_bundle": "Ancient Armor Set",
+				"items": [
+					"Ancient Armor Arms",
+					"Ancient Armor Back",
+					"Ancient Armor Breastplates",
+					"Ancient Armor Helmet",
+					"Ancient Armor Shoulder Shields"
 				]
 				
 			},
@@ -75212,6 +76436,22 @@
 					"Arctic Hunter's Hood",
 					"Arctic Hunter's Snack",
 					"Arctic Hunter's Glove"
+				]
+				
+			},
+			{
+				"item_set": "armaments_of_leviathan",
+				"name": "Armaments of Leviathan",
+				"store_bundle": "Armaments of Leviathan Set",
+				"items": [
+					"Admiral's Foraged Cap",
+					"Admiral's Stash",
+					"Claddish Gauntlets",
+					"Claddish Guard",
+					"Claddish Hightops",
+					"Neptunian Sabre",
+					"Admiral's Salty Shawl",
+					"Ye Olde Pipe"
 				]
 				
 			},
@@ -75371,6 +76611,20 @@
 					"Saberhorn's Pauldron",
 					"Saberhorn's Belt",
 					"Saberhorn's Heavy Chopper"
+				]
+				
+			},
+			{
+				"item_set": "barathrums_fury",
+				"name": "Barathrum's Fury",
+				"store_bundle": "Barathrum's Fury Set",
+				"items": [
+					"Tail of Fury",
+					"Bracers of Fury",
+					"Belt of Fury",
+					"Mask of Fury",
+					"Pauldrons of Fury",
+					"Spirit Crusher"
 				]
 				
 			},
@@ -76309,6 +77563,31 @@
 					"Robe of the Hidden Talent",
 					"Shoulders of the Hidden Talent",
 					"Glaive of the Hidden Talent"
+				]
+				
+			},
+			{
+				"item_set": "hare_hunt",
+				"name": "The Hare Hunt",
+				"store_bundle": "The Hare Hunt Set",
+				"items": [
+					"Hare Hunt Hat",
+					"Hare Hunt Rifle",
+					"Hare Hunt Sleeves",
+					"Hare Hunt Shoulders",
+					"Hare Hunt Cape"
+				]
+				
+			},
+			{
+				"item_set": "hells_ambassador",
+				"name": "Hell's Ambassador",
+				"store_bundle": "Hell's Ambassador Set",
+				"items": [
+					"Hand of Hell's Ambassador",
+					"Mantle of Hell's Ambassador",
+					"Epaulets of Hell's Ambassador",
+					"Strifemaul of Hell's Ambassador"
 				]
 				
 			},
@@ -77564,30 +78843,6 @@
 				
 			},
 			{
-				"item_set": "tidehunter_pirate_slayer",
-				"name": "The Pirate's Booty",
-				"store_bundle": "The Pirate's Booty Set",
-				"items": [
-					"Pirate Slayer's Bracer",
-					"Pirate Slayer's Tricorn",
-					"Pirate Slayer's Black Flag",
-					"Pirate Slayer's Cutlass"
-				]
-				
-			},
-			{
-				"item_set": "tidehunter_punisher",
-				"name": "The Paleogeneous Punisher",
-				"store_bundle": "The Paleogeneous Punisher Set",
-				"items": [
-					"Cerebral Support",
-					"Excavator's Treasure",
-					"Femur Thrasher",
-					"Skeletal Catch"
-				]
-				
-			},
-			{
 				"item_set": "tribal_stone",
 				"name": "The Tribal Stone",
 				"store_bundle": "Tribal Stone Set",
@@ -77681,6 +78936,18 @@
 					"Claw of the Haruspex",
 					"Cloak of the Haruspex",
 					"Gilded Mark of the Haruspex"
+				]
+				
+			},
+			{
+				"item_set": "viridi_inanitas",
+				"name": "Viridi Inanitas",
+				"store_bundle": "Viridi Inanitas Set",
+				"items": [
+					"Viridus Crusher",
+					"Viridus Claw",
+					"Viridus Leggings",
+					"Viridus Spine"
 				]
 				
 			},
@@ -78701,6 +79968,30 @@
 				"id": 140,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle140"
+			},
+			{
+				"system": "sniper_hare_hunt_hat",
+				"id": 141,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle141"
+			},
+			{
+				"system": "kunkka_leviation_pipe",
+				"id": 142,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle142"
+			},
+			{
+				"system": "lion_hell_weapon",
+				"id": 143,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle143"
+			},
+			{
+				"system": "faceless_void_weapon_glow",
+				"id": 144,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle144"
 			}
 		]
 		,
