@@ -750,6 +750,13 @@ select.gray_bevel {
 	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_tradeoffers.png' );
 }
 
+.header_notification_asyncgame .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_async_game.png' );
+}
+
+.header_notification_asyncgameinvite .notification_icon {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_async_game_invite.png' );
+}
 
 
 #header_parental_area {
@@ -772,6 +779,11 @@ select.gray_bevel {
 }
 
 .header_parental_locked:hover, .header_parental_locked.focus {
+	background-color: #70BA24;
+}
+
+.header_parental_unlocked:hover, .header_parental_unlocked:focus {
+	background-color: #c64c4b;
 }
 
 .header_parental_unlocked {
@@ -781,5 +793,5 @@ select.gray_bevel {
 
 .header_parental_locked {
 	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_parental_locked.png' );
-	background-color: #70BA24;
+	background-color: #5b9724;
 }

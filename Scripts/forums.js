@@ -1164,14 +1164,23 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 	},
 
 
-	DeleteComment: function( $super, gidComment )
+	DeleteComment: function( $super, gidComment, bUndelete )
 	{
-		Forum_ConfirmAction(
-			'Are you sure you want to delete this post?',
-			'',
-			$super.bind( this, gidComment ),
-			'Delete'
-		);
+		var fnOnConfirm = $super.bind( this, gidComment, bUndelete );
+		if ( !bUndelete )
+		{
+			Forum_ConfirmAction(
+				'Are you sure you want to delete this post?',
+				'',
+				fnOnConfirm,
+				'Delete'
+			);
+		}
+		else
+		{
+			// no confirmation for undeleting
+			fnOnConfirm();
+		}
 	}
 
 });

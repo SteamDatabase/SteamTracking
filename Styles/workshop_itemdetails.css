@@ -1221,7 +1221,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .workshopItemTitle
 {
-	padding-top: 5px;
+	padding-top: 20px;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -1234,7 +1234,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItemDetails
 {
-	margin-left: 120px;
+	margin-left: 110px;
+	margin-right: 10px;
 }
 
 .workshopItemAuthor
