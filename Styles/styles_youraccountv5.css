@@ -343,16 +343,6 @@
 	background-origin: content-box;
 }
 
-.redeem_wallet_background_eur
-{
-	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_eur.jpg');
-}
-
-.redeem_wallet_background_gbp
-{
-	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_gbp.jpg');
-}
-
 .redeem_wallet_receipt
 {
 	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_complete.jpg');
