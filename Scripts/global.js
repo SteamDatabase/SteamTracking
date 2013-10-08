@@ -1399,7 +1399,7 @@ var CCommentThread = Class.create( {
 		return false;
 	},
 
-	DeleteComment: function( gidComment )
+	DeleteComment: function( gidComment, bUndelete )
 	{
 		if ( this.m_bLoading )
 			return;
@@ -1408,6 +1408,9 @@ var CCommentThread = Class.create( {
 			gidcomment: gidComment,
 			start: this.m_cPageSize * this.m_iCurrentPage
 		} );
+
+		if ( bUndelete )
+			params.undelete = 1;
 
 		this.m_bLoading = true;
 		new Ajax.Request( this.GetActionURL( 'delete' ), {
@@ -1872,6 +1875,11 @@ CCommentThread.DeleteComment = function( id, gidcomment )
 {
 	if ( g_rgCommentThreads[id] )
 		g_rgCommentThreads[id].DeleteComment( gidcomment );
+};
+CCommentThread.UnDeleteComment = function( id, gidcomment )
+{
+	if ( g_rgCommentThreads[id] )
+		g_rgCommentThreads[id].DeleteComment( gidcomment, true );
 };
 // static accessor
 CCommentThread.EditComment = function( id, gidcomment )
