@@ -572,7 +572,14 @@ p {
 		color: #7cb8e4;
 		font-size: 11px;
 	}
-
+	
+	.buttonRow .subText .betaLink {
+		color:#99CCFF;
+		font-size: 12px;
+	}
+	.buttonRow .subText .betaLink:hover {
+		color:#ffffff;
+	}
 
 
 .greyBox {
