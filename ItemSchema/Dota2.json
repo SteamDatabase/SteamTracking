@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.f2a32e97fea1b9524bcdd32e350f1910686a4583.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.67851d3f43247212958c3f9af346793e4bf124c5.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -67703,6 +67703,366 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4.6fde10065bebfa26a7ae5b27472d08952c4595aa.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic4_large.f0b9fb170eeaf471e9760e71b82d9ca9529384ee.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DotaTalk SteelSeries Oceania Cup",
+				"defindex": 15294,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DotaTalk SteelSeries Oceania Cup",
+				"item_description": "Australian and New Zealand Dota 2 teams compete for SteelSeries Na'Vi gear worth over $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesoceania",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesoceania.a2be025859008bb64bbe26ff3ecd984a4cf3e446.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesoceania_large.ca17bf53e9b047869edc41f5bb71c6cac0ce369c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DotaTalk SteelSeries Oceania Cup - ADMIN",
+				"defindex": 15295,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DotaTalk SteelSeries Oceania Cup - ADMIN",
+				"item_description": "Australian and New Zealand Dota 2 teams compete for SteelSeries Na'Vi gear worth over $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesoceania",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesoceania.a2be025859008bb64bbe26ff3ecd984a4cf3e446.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesoceania_large.ca17bf53e9b047869edc41f5bb71c6cac0ce369c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Southeast Asian Cup Season 3",
+				"defindex": 15296,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Southeast Asian Cup Season 3",
+				"item_description": "This tournament is open to all teams in Southeast-Asia where the 2 top teams will compete for a prize pool of $1000 and 5 Steelseries Siberia Elite Headsets!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriessea3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriessea3.2de76dd5314794beed625e1738dcf1840e16c646.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriessea3_large.af06b1584c5c94e2325eb547ed677c5b9c763613.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Southeast Asian Cup Season 3 - ADMIN",
+				"defindex": 15297,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Southeast Asian Cup Season 3 - ADMIN",
+				"item_description": "This tournament is open to all teams in Southeast-Asia where the 2 top teams will compete for a prize pool of $1000 and 5 Steelseries Siberia Elite Headsets!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriessea3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriessea3.2de76dd5314794beed625e1738dcf1840e16c646.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriessea3_large.af06b1584c5c94e2325eb547ed677c5b9c763613.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 2",
+				"defindex": 15298,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 2",
+				"item_description": "SteelSeries Euro Cup is back for Season 2! This tournament is open to all teams in Europe where it will have the top 2 teams competing for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2.858371056788d08c69b9b3faf4d89fbfe2634e6d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2_large.a271283034aa48f4db0d8386ce658cb47b7d18bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 2 - ADMIN",
+				"defindex": 15299,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 2 - ADMIN",
+				"item_description": "SteelSeries Euro Cup is back for Season 2! This tournament is open to all teams in Europe where it will have the top 2 teams competing for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2.858371056788d08c69b9b3faf4d89fbfe2634e6d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2_large.a271283034aa48f4db0d8386ce658cb47b7d18bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sunday Evening Cup Series",
+				"defindex": 15300,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series",
+				"item_description": "The Sunday Evening Cup Series (SECS) began in December 2009 and is the longest running Dota tournament series to date. SECS provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs.cbe3f48fd597fdcc718a1dda124f0420b434efb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs_large.0638ee8c6717a26786625c651d92ce389b9a4e1c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sunday Evening Cup Series - ADMIN",
+				"defindex": 15301,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series - ADMIN",
+				"item_description": "The Sunday Evening Cup Series (SECS) began in December 2009 and is the longest running Dota tournament series to date. SECS provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs.cbe3f48fd597fdcc718a1dda124f0420b434efb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs_large.0638ee8c6717a26786625c651d92ce389b9a4e1c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WH Overgaming Challenge 2",
+				"defindex": 15302,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WH Overgaming Challenge 2",
+				"item_description": "The WH Challenge 2 is the last tournament in the WH League Season 2. After this, 8 team will compete for a R$1000 grand prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_whovergaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WH Overgaming Challenge 2 - ADMIN",
+				"defindex": 15303,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WH Overgaming Challenge 2 - ADMIN",
+				"item_description": "The WH Challenge 2 is the last tournament in the WH League Season 2. After this, 8 team will compete for a R$1000 grand prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_whovergaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
