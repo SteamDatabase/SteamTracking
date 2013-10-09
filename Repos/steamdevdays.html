@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Steam Developer Days</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+       
+        <div id="content_container">
+            <div id="logo">
+                <a onclick="changePage('event');"><img src="http://media.steampowered.com/apps/steamdevdays/images/logo.png"/></a>
+            </div>
+            <div id="navigation">
+                <a id="event" ><span>EVENT INFO</span></a>
+                <a id="location" ><span>LOCATION</span></a>
+                <a id="hotel" ><span>HOTEL INFO</span></a>
+                <a id="register"><span>REGISTER NOW</span></a>
+                <a id="faq" ><span>FAQ</span></a>
+            </div>
+            
+            <div style="clear:both;"></div>
+            <div id="top_border"></div>
+            <div id="content_event" class="content">
+                <div class="content_section">
+                    <p><span class="sdd">Steam Dev Days</span> is a two-day game developer’s conference where professionals can meet in a relaxed, off the record environment. Developers will share their design and industry expertise, participate in roundtable discussions and attend lectures by industry veterans on topics ranging from game economies to VR, Linux/OpenGL, user-generated content and more. Developers will also have direct access to Valve’s Steam Team, and will be given a chance to test-drive and provide feedback on Steam OS, prototype Steam Machines and Steam Controllers.</p>
+ 
+                    <p>We’ll continue to update this site with session and speaker information as the event nears.</p>
+                </div>
+                
+            </div>
+            <div id="content_location" class="content">
+                <div class="content_section">
+                    <img class="convention_location" src="http://media.steampowered.com/apps/steamdevdays/images/convention_location.jpg"/>
+                    <div class="location_name right">Washington State Convention Center</div>
+                    <div class="location_address right">
+                        800 Convention Place
+                        Seattle, WA 98101
+                    </div>
+                    <p class="right">Located right in the heart of downtown Seattle, the Center features on-site parking and a variety of eateries—all within easy walking distance of the city’s best shops, sights, hotels, and restaurants.</p>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+             
+            <div id="content_hotel" class="content" style="height: 921px;">
+                <div class="content_section">
+                    <p id="hotel_intro">The Sheraton Seattle Hotel and The Westin Seattle are providing discounted group rates for Steam Dev Days attendees. Please book before <span class="bold">December 23rd</span> to take advantage of this discount. <a id="show_map">(SEE MAP)</a></p>
+                </div> 
+                <div class="content_section hotels">
+                    <!-- Sherton Hotel -->
+                    <img class="convention_location" src="http://media.steampowered.com/apps/steamdevdays/images/sheraton.jpg"/>
+                    <div class="location_name right">Sheraton Seattle Hotel</div>
+                    <div class="location_address right">
+                        1400 Sixth Avenue
+                        Seattle, WA 98101
+                    </div>
+                    <p class="right"><a href="https://www.starwoodmeeting.com/StarGroupsWeb/booking/reservation?id=1310088120&key=5D02D">Sheraton Seattle Hotel</a> is a contemporary urban retreat in the heart of downtown Seattle. Sheraton Seattle is a high style, high-speed hotel and meeting destination for business travelers, groups, and vacationers. Discover a vibrant destination with innovative hospitality and warm Seattle personality that inspires you to work, play, relax, and connect in the Emerald City.</p>
+                    <div style="clear:both;"></div>
+                </div>    
+                <div class="content_section hotels">
+                     <!-- Westin Seattle Hotel -->
+                    <img class="convention_location" src="http://media.steampowered.com/apps/steamdevdays/images/westin.jpg"/>
+                    <div class="location_name right">The Westin Seattle</div>
+                    <div class="location_address right">
+                        1900 Fifth Avenue
+                        Seattle, WA 98101
+                    </div>
+
+                    <p class="right"><a href="https://www.starwoodmeeting.com/StarGroupsWeb/booking/reservation?id=1310077887&key=EE2DD">The Westin Seattle</a> is a AAA Four Diamond award-winning, downtown Seattle hotel. 891 smoke-free guest rooms and suites feature panoramic views of the Puget Sound, Space Needle, Cascade Mountains, and Seattle’s cityscape and will leave you feeling rested and recharged.</p>
+                    <div style="clear:both;"></div>
+                </div>
+                <!-- map -->
+                <div class="content_section" style="padding: 0px !important;">
+                    <div id="map_container" style="display:none;">
+                        <img id="map" src="http://media.steampowered.com/apps/steamdevdays/images/map.png" />
+                        <img id="close_button" src="http://media.steampowered.com/apps/steamdevdays/images/close.png" />
+                    </div>
+                </div> 
+
+            </div>
+             
+            <div id="content_register" class="content">
+                <div class="content_section">
+                    <p class="registration_intro">Registrations are being handled through <span class="bold">eventbrite.com.</span><br/> To register, type in the code you were emailed below:</p>
+                    <input id="registration_code"></input>
+                    <a href="http://steamdevdays.eventbrite.com/?discount=" id="submit_button"><span>ENTER</span></a>
+                    <p class="registration_details">Please note that a per-registrant fee of <span class="bold">$95 (USD)</span> will be required to confirm your reservations. Space at this event is limited—your invitation guarantees your place until <span class="bold">October 25th</span>, but after that time registration availability will be on a first-come-<br/>first-served basis.</p>
+                    <p class="registration_details">For more information on registrations, please visit the <a onclick="changePage('faq');">FAQ.</a></p>
+                    <div style="clear:both;"></div>
+                </div> 
+            </div>   
+                
+            <div id="content_faq" class="content">
+                <div class="content_section">
+                    
+                    <h3>About Steam Dev Days</h3>
+
+                    <div class="question">What is Steam Dev Days?</div>
+                    <div class="answer" style="width:681px;">Steam Dev Days is a two-day game developer's conference for video game professionals to meet in a relaxed, off the record environment and share their design and industry expertise, participate in roundtable discussions  and attend lectures by industry veterans on topics ranging from game economies to VR, Linux/OpenGL, user-generated content and more. Developers will also have direct access to Valve's Steam Team, and will be given a chance to test-drive and provide feedback on SteamOS, prototype Steam Machines and Steam Controllers.</div>
+                    
+                    <div class="question">When will the Steam Dev Days schedule be posted?</div>
+                    <div class="answer">Sessions, speakers and schedule will be announced soon. <br/>We’ll update the website when this information is available.</div>
+               
+                    <div class="question">What hours will sessions be held?</div>
+                    <div class="answer">From 9am to 6pm Pacific Time.</div>
+             
+                    <div class="question">Can I volunteer?</div>
+                    <div class="answer">We are not currently accepting applications for volunteers.</div>
+                
+                    <div class="question">Will there be free WiFi?</div>
+                    <div class="answer">YES!  WiFi will be available in the Convention Center.</div>
+                    
+                    <div class="question">I missed a session, will they be archived?</div>
+                    <div class="answer">Yes, sessions will be recorded and available for your reference.</div>
+                
+                    <h3>Registration</h3>
+                    <div class="question">Where can I register as press/media?</div>
+                    <div class="answer">This is an off the record event.</div>
+                
+                    <div class="question">What is the cost of registration?</div>
+                    <div class="answer">A per-registrant fee of $95(USD) is required to register.</div>
+                
+                    <div class="question">I’d like to be host a session at Steam Dev Days…<br/>how do I go about doing this?</div>
+                    <div class="answer">Please let us know what topic you’d like to present by reaching out <br/>to us at <a href="mailto:SteamDevDays@valvesoftware.com">SteamDevDays@valvesoftware.com</a></div>
+                
+                    <div class="question">I’ve registered.  When & how do I receive my registration packet?</div>
+                    <div class="answer">Registration packets will be mailed out around mid-December.</div>
+                
+                    <div class="question">I have a new email or have moved since registering.  <br/>How do I update my information?</div>
+                    <div class="answer">Changes to registration information can be made through Eventbrite <a href="http://steamdevdays.eventbrite.com ">http://steamdevdays.eventbrite.com </a>.</div>
+                
+                    <div class="question">My plans have changed and I cannot attend.  How do I cancel?</div>
+                    <div class="answer">If you need to cancel your registration you may do so for a full refund, until Friday, December 6th, 2013. You can request a refund through Eventbrite (<a href="http://steamdevdays.eventbrite.com">http://steamdevdays.eventbrite.com</a>).  </div>
+                
+                    <h3>Travel & Hotel</h3>
+                    <div class="question">What Hotels are available for booking? How do I get the group discount <br/>on my hotel room?</div>
+                    <div class="answer">To receive the group rate, make reservations online. For the Westin <a href="https://www.starwoodmeeting.com/StarGroupsWeb/booking/reservation?id=1310077887&key=EE2DD">click here</a>. For the Sheraton <a href="https://www.starwoodmeeting.com/StarGroupsWeb/booking/reservation?id=1310088120&key=5D02D">click here</a>.</div>
+                
+                    <div class="question">What airport should I fly to?</div>
+                    <div class="answer">The Seattle Tacoma International Airport. The airport code is SEA.</div>
+                
+                    <div class="question">I’m from outside the United States, will I need a VISA?</div>
+                    <div class="answer">Yes, you may need a VISA.</div>
+                
+                    <h3>Other</h3>
+                    <div class="question">Where can I park?</div>
+                    <div class="answer">There are many parking garages for Washington State Convention Center. <br/>A full list of suggested garages can be found at <a href="http://www.wsctc.com/about_us/event_parking.aspx">www.wsctc.com/about_us/event_parking.aspx</a>.</div>
+
+                    <div class="question">Who can I email if my question isn’t answered here?</div>
+                    <div class="answer">You can email <a href="mailto:SteamDevDays@valvesoftware.com">SteamDevDays@valvesoftware.com</a>.</div>                   
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+            
+        </div> <!-- end content container -->
+        <div style="clear:both;"></div>
+        <footer>
+            <p>© Valve Corporation. All rights reserved. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporatoin in the US and other countries.</p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <!-- // <script src="js/main.js"></script> -->
+
+        <script>
+            
+            // on load hide all content blocks except one
+            $( document ).ready(function() {
+                
+                
+                var page = getCurrentPage();
+                highlightCurrentPage();
+
+                // hide all but current page
+                $( '.content' ).each( function(){
+                    if($(this).attr('id').indexOf(page) == -1 ){
+                        $(this).hide();
+                    }
+                });
+
+                // faqs
+                $('.question').each(function() {
+                    $(this).prepend($('<div class="q">').text("Q:"));
+                });
+
+                $('.answer').each(function() {
+                    $(this).prepend($('<div class="a">').text("A:"));
+                });
+
+                // hide/show content
+                $( "#navigation a" ).click(function() {
+                    changePage( $(this).attr('id') );
+                });
+
+                // toggle map
+                $( "#close_button" ).click(function() {
+                    $( '#map_container' ).slideUp( 1, function () {    
+                        $( '.hotels' ).slideDown(600);
+                    });
+                });
+
+                $( "#show_map" ).click(function() {
+                    $( '.hotels' ).slideUp( 1, function () {    
+                        $( '#map_container' ).slideDown(600);
+                    });
+                });
+
+
+            });
+            
+            // add registration code to link
+            $( document ).ready(function() {
+                $( "#registration_code" ).change(function() {
+                    var registrationCode = $('#registration_code').val().trim();
+                    var registrationUrl = 'http://steamdevdays.eventbrite.com/?discount=' + registrationCode;
+                    $( '#submit_button' ).attr("href", registrationUrl);
+                });
+            });
+
+            $("#registration_code").keyup(function(){
+                $(this).change();
+            });
+
+            function changePage( page ){
+                var currentPage = getCurrentPage();
+                
+                if( currentPage == page ){
+                    return false;
+                }
+
+                var pageid = '#' + page;
+                var contentDivId = '#content_' + page;
+                
+                if( history.pushState != null ){
+                    window.history.pushState('object or string', 'Title', '?p='+ page); 
+                    $( '.content:visible' ).slideUp( 1, function () {    
+                        $( contentDivId ).slideDown(600);
+                    });
+                }   
+                else{
+                    window.location = "?p=" + page;
+                }
+                
+
+                highlightCurrentPage();
+            }
+
+            function highlightCurrentPage(){
+                var page = getCurrentPage();
+
+                $( '.navigation_current_page' ).each( function(){
+                    $( '.navigation_current_page' ).removeClass('navigation_current_page')
+                });
+
+                var currentPageId = '#' + page;
+                $( currentPageId ).addClass('navigation_current_page');
+            }
+
+            function getCurrentPage(){
+                var page='event';
+                if( location.search == "?p=register" ){
+                    page = 'register';
+                }
+                else if( location.search == "?p=hotel" ){
+                    page = 'hotel';
+                }
+                else if( location.search == "?p=location" ){
+                    page = 'location';
+                }
+                else if( location.search == "?p=faq" ){
+                    page = 'faq';
+                }
+                return page;
+            }
+
+        </script>       
+
+    </body>
+</html>
