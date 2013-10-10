@@ -1237,7 +1237,7 @@ a.blotter_comment_thread_showall span
 	display: block;
 }
 
-.blotter_single_item_detail .blotter_control_container, .blotter_single_item_detail .hr {
+.blotter_single_item_detail .hr {
 	display: none;
 }
 
