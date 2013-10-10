@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.67851d3f43247212958c3f9af346793e4bf124c5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c639828549718aeb3275bf48c3e24f569afd4d0c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -68063,6 +68063,150 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Logitech G - Free to Play",
+				"defindex": 15304,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play",
+				"item_description": "LAN Centers all over India compete in Dota 2 for a total prize of 25,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Logitech G - Free to Play - ADMIN",
+				"defindex": 15305,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play - ADMIN",
+				"item_description": "LAN Centers all over India compete in Dota 2 for a total prize of 25,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Champions League",
+				"defindex": 15306,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Champions League",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2cl.1cdc849ef38015c4bf7c78c5da2ef1b021e2de06.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2cl_large.4fa3e841c86f950e4f672a4a644e90c411fb8542.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Champions League - ADMIN",
+				"defindex": 15307,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Champions League - ADMIN",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2cl.1cdc849ef38015c4bf7c78c5da2ef1b021e2de06.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2cl_large.4fa3e841c86f950e4f672a4a644e90c411fb8542.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
