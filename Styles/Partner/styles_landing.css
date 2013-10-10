@@ -1077,6 +1077,26 @@ span.icon_star { display: inline-block;}
 		color: #82a6d7;
 		font-weight: normal;
 	}
+	
+.section .descriptor {
+	color: #888888;
+	margin-bottom: 6px;
+	display: block;
+}
+
+.section>.legend {
+	color: #888888;
+	margin-bottom: 8px;
+	display: block;
+	font-size: 12px;
+}
+
+.section .grayRule {
+	margin-bottom: 4px;
+	margin-top: 2px;
+	border-top:	1px solid #666666;
+}
+
 
 #publish_status_message {
 	line-height: 32px;
