@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.bfb7a9bd57fbd156eec76c914f5adb0688c2ca81.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.f6ca8e8fdc0b44a185b7177c6193d2d4f501f480.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1292,6 +1292,11 @@
 					{
 						"name": "inaccuracy fire",
 						"class": "innacuracy_fire",
+						"value": 12.000000
+					},
+					{
+						"name": "inaccuracy fire alt",
+						"class": "innacuracy_fire_alt",
 						"value": 7.000000
 					},
 					{
@@ -1405,12 +1410,12 @@
 					{
 						"name": "inaccuracy fire",
 						"class": "inaccuracy_fire",
-						"value": 60.150002
+						"value": 71.000000
 					},
 					{
 						"name": "inaccuracy fire alt",
 						"class": "inaccuracy_fire_alt",
-						"value": 30.150000
+						"value": 52.000000
 					},
 					{
 						"name": "inaccuracy move",

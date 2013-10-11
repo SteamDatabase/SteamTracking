@@ -4531,6 +4531,11 @@
 				"inaccuracy fire"
 				{
 					"attribute_class"		"innacuracy_fire"
+					"value"		"12.000000"
+				}
+				"inaccuracy fire alt"
+				{
+					"attribute_class"		"innacuracy_fire_alt"
 					"value"		"7.000000"
 				}
 				"inaccuracy move"
@@ -4671,12 +4676,12 @@
 				"inaccuracy fire"
 				{
 					"attribute_class"		"inaccuracy_fire"
-					"value"		"60.150002"
+					"value"		"71.000000"
 				}
 				"inaccuracy fire alt"
 				{
 					"attribute_class"		"inaccuracy_fire_alt"
-					"value"		"30.150000"
+					"value"		"52.000000"
 				}
 				"inaccuracy move"
 				{
@@ -5416,6 +5421,19 @@
 			"model_pedestal"		"models/inventory_items/payback_bronze_01.mdl"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"600"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1002"
+				}
+			}
 		}
 		"1002"
 		{
@@ -5427,6 +5445,19 @@
 			"model_pedestal"		"models/inventory_items/payback_silver_01.mdl"
 			"min_ilevel"		"2"
 			"max_ilevel"		"2"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"3000"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1003"
+				}
+			}
 		}
 		"1003"
 		{
@@ -5551,6 +5582,24 @@
 			"model_pedestal"		"models/inventory_items/bravo_bronze_01.mdl"
 			"min_ilevel"		"1"
 			"max_ilevel"		"1"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"600"
+				}
+				"upgrade threshold wins"
+				{
+					"attribute_class"		"upgrade_threshold_wins"
+					"value"		"5"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1014"
+				}
+			}
 		}
 		"1014"
 		{
@@ -5562,6 +5611,24 @@
 			"model_pedestal"		"models/inventory_items/bravo_silver_01.mdl"
 			"min_ilevel"		"2"
 			"max_ilevel"		"2"
+			"attributes"
+			{
+				"upgrade threshold"
+				{
+					"attribute_class"		"upgrade_threshold"
+					"value"		"1800"
+				}
+				"upgrade threshold wins"
+				{
+					"attribute_class"		"upgrade_threshold_wins"
+					"value"		"15"
+				}
+				"upgrade definition index"
+				{
+					"attribute_class"		"upgrade_definition_index"
+					"value"		"1015"
+				}
+			}
 		}
 		"1015"
 		{
