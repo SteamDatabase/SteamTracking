@@ -8733,6 +8733,7 @@
 			"tags"
 			{
 				"can_deal_damage"			"1"
+				"can_deal_taunt_damage"		"1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
@@ -8768,6 +8769,7 @@
 			{
 				"can_deal_damage"			"1"
 				"can_deal_critical_damage"	"1"
+				"can_deal_taunt_damage"		"1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
@@ -37267,6 +37269,8 @@
 			"tags"
 			{
 				"can_deal_damage"		"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
 				"can_deal_gib_damage"	"1"
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
@@ -40987,7 +40991,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_scout_varsity/jul13_scout_varsity.mdl"
 			"used_by_classes"
@@ -41016,7 +41020,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_the_cunningmann/jul13_the_cunningmann.mdl"
 			"used_by_classes"
@@ -41045,7 +41049,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_greased_lightning/jul13_greased_lightning.mdl"
 			"used_by_classes"
@@ -41065,7 +41069,7 @@
 			"image_inventory"		"backpack/workshop/player/items/heavy/jul13_red_army_robin/jul13_red_army_robin"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_red_army_robin/jul13_red_army_robin.mdl"
 			"propername"		"1"
@@ -41088,7 +41092,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_heavy_weight_belt/jul13_heavy_weight_belt.mdl"
 			"used_by_classes"
@@ -41109,7 +41113,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_unfamiliar_tarboosh/jul13_unfamiliar_tarboosh.mdl"
 			"used_by_classes"
@@ -41129,7 +41133,7 @@
 			"image_inventory"		"backpack/workshop/player/items/demo/jul13_pillagers_barrel/jul13_pillagers_barrel"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_pillagers_barrel/jul13_pillagers_barrel.mdl"
 			"propername"		"1"
@@ -41150,7 +41154,7 @@
 			"image_inventory"		"backpack/workshop/player/items/scout/jul13_koolboy/jul13_koolboy"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_koolboy/jul13_koolboy.mdl"
 			"propername"		"1"
@@ -41173,7 +41177,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_skater_boy/jul13_skater_boy.mdl"
 			"used_by_classes"
@@ -41195,7 +41199,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player_per_class"
 			{
@@ -41234,7 +41238,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/engineer/jul13_scrap_reserve/jul13_scrap_reserve.mdl"
 			"used_by_classes"
@@ -41256,7 +41260,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/engineer/jul13_thirst_quencher/jul13_thirst_quencher.mdl"
 			"used_by_classes"
@@ -41284,7 +41288,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_el_muchacho/jul13_el_muchacho.mdl"
 			"used_by_classes"
@@ -41321,7 +41325,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_furious_fryup/jul13_furious_fryup.mdl"
 			"used_by_classes"
@@ -41343,7 +41347,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_hot_rag/jul13_hot_rag.mdl"
 			"used_by_classes"
@@ -41372,7 +41376,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_soot_suit/jul13_soot_suit.mdl"
 			"used_by_classes"
@@ -41393,7 +41397,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_bee_keeper/jul13_bee_keeper.mdl"
 			"used_by_classes"
@@ -41414,7 +41418,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_katyusha/jul13_katyusha.mdl"
 			"used_by_classes"
@@ -41435,7 +41439,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_positive_pressure_veil/jul13_positive_pressure_veil.mdl"
 			"used_by_classes"
@@ -41456,7 +41460,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_emergency_supplies/jul13_emergency_supplies.mdl"
 			"used_by_classes"
@@ -41476,7 +41480,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_secret_state_surgeon/jul13_secret_state_surgeon.mdl"
 			"used_by_classes"
@@ -41496,7 +41500,7 @@
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_heavy_defender/jul13_heavy_defender"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_heavy_defender/jul13_heavy_defender.mdl"
 			"used_by_classes"
@@ -41522,7 +41526,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/engineer/jul13_king_hair/jul13_king_hair.mdl"
 			"used_by_classes"
@@ -41544,7 +41548,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/sniper/jul13_bushmans_blazer/jul13_bushmans_blazer.mdl"
 			"used_by_classes"
@@ -41566,7 +41570,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/sniper/jul13_cameleon/jul13_cameleon.mdl"
 			"used_by_classes"
@@ -41588,7 +41592,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/sniper/jul13_falconer_punch/jul13_falconer_punch.mdl"
 			"used_by_classes"
@@ -41609,7 +41613,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player_per_class"
 			{
@@ -41649,7 +41653,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_blam_o_shanter/jul13_blam_o_shanter.mdl"
 			"used_by_classes"
@@ -41671,7 +41675,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_trojan_helmet/jul13_trojan_helmet.mdl"
 			"used_by_classes"
@@ -41693,7 +41697,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_scotsmans_golfbag/jul13_scotsmans_golfbag.mdl"
 			"used_by_classes"
@@ -41715,7 +41719,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_bagdolier/jul13_bagdolier.mdl"
 			"used_by_classes"
@@ -41734,7 +41738,7 @@
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_bro_plate/jul13_bro_plate"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_bro_plate/jul13_bro_plate.mdl"
 			"used_by_classes"
@@ -41756,7 +41760,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_gallant_gael/jul13_gallant_gael.mdl"
 			"used_by_classes"
@@ -41778,7 +41782,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_stormn_normn/jul13_stormn_normn.mdl"
 			"used_by_classes"
@@ -41800,7 +41804,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/engineer/jul13_king_pants/jul13_king_pants.mdl"
 			"used_by_classes"
@@ -41828,7 +41832,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_the_presidential/jul13_the_presidential.mdl"
 			"used_by_classes"
@@ -41848,7 +41852,7 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_soldier_eagle/jul13_soldier_eagle"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_soldier_eagle/jul13_soldier_eagle.mdl"
 			"propername"		"1"
@@ -41877,7 +41881,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_the_caribbean_conqueror/jul13_the_caribbean_conqueror.mdl"
 			"used_by_classes"
@@ -41897,7 +41901,7 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_colonial_clogs/jul13_colonial_clogs"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_colonial_clogs/jul13_colonial_clogs.mdl"
 			"propername"		"1"
@@ -41920,7 +41924,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_helicopter_helmet/jul13_helicopter_helmet.mdl"
 			"used_by_classes"
@@ -41948,7 +41952,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_soldier_fedora/jul13_soldier_fedora.mdl"
 			"used_by_classes"
@@ -41976,7 +41980,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_ol_jack/jul13_ol_jack.mdl"
 			"used_by_classes"
@@ -41997,7 +42001,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_madmans_mop/jul13_madmans_mop.mdl"
 			"used_by_classes"
@@ -42017,7 +42021,7 @@
 			"image_inventory"		"backpack/workshop/player/items/heavy/jul13_bear_necessitys/jul13_bear_necessitys"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_bear_necessitys/jul13_bear_necessitys.mdl"
 			"propername"		"1"
@@ -42039,7 +42043,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/spy/jul13_harmburg/jul13_harmburg.mdl"
 			"used_by_classes"
@@ -42067,7 +42071,7 @@
 			"image_inventory"		"backpack/workshop/player/items/demo/jul13_gaelic_garb/jul13_gaelic_garb"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/demo/jul13_gaelic_garb/jul13_gaelic_garb.mdl"
 			"used_by_classes"
@@ -42089,7 +42093,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/spy/jul13_rogues_brogues/jul13_rogues_brogues.mdl"
 			"used_by_classes"
@@ -42111,7 +42115,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_shoguns_guard/jul13_shoguns_guard.mdl"
 			"used_by_classes"
@@ -42131,7 +42135,7 @@
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_class_act/jul13_class_act"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_class_act/jul13_class_act.mdl"
 			"used_by_classes"
@@ -42152,7 +42156,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/spy/jul13_double_clue/jul13_double_clue.mdl"
 			"used_by_classes"
@@ -42174,7 +42178,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_generals_attire/jul13_generals_attire.mdl"
 			"used_by_classes"
@@ -42194,7 +42198,7 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_lt_bites/jul13_lt_bites"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_lt_bites/jul13_lt_bites.mdl"
 			"used_by_classes"
@@ -42216,7 +42220,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_gangplank_garment/jul13_gangplank_garment.mdl"
 			"used_by_classes"
@@ -42238,7 +42242,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/spy/jul13_blood_banker/jul13_blood_banker.mdl"
 			"used_by_classes"
@@ -42258,7 +42262,7 @@
 			"image_inventory"		"backpack/workshop/player/items/spy/jul13_classy_royale/jul13_classy_royale"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/spy/jul13_classy_royale/jul13_classy_royale.mdl"
 			"propername"		"1"
@@ -42281,7 +42285,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_scout_vestjacket/jul13_scout_vestjacket.mdl"
 			"used_by_classes"
@@ -42308,7 +42312,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/sniper/jul13_sniper_souwester/jul13_sniper_souwester.mdl"
 			"used_by_classes"
@@ -42328,7 +42332,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_montys_menace/jul13_montys_menace.mdl"
 			"used_by_classes"
@@ -42349,7 +42353,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/medic/jul13_uncivil_servant/jul13_uncivil_servant.mdl"
 			"used_by_classes"
@@ -42369,7 +42373,7 @@
 			"image_inventory"		"backpack/workshop/player/items/heavy/jul13_border_armor/jul13_border_armor"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_border_armor/jul13_border_armor.mdl"
 			"propername"		"1"
@@ -42392,7 +42396,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/jul13_pyro_towel/jul13_pyro_towel.mdl"
 			"used_by_classes"
@@ -42422,7 +42426,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player_per_class"
 			{
@@ -42461,7 +42465,7 @@
 			"image_inventory"		"backpack/workshop/player/items/heavy/jul13_honchos_heavy_reader/jul13_honchos_heavy_reader"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/heavy/jul13_honchos_heavy_reader/jul13_honchos_heavy_reader.mdl"
 			"propername"		"1"
@@ -42482,7 +42486,7 @@
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_dandy_yankee/jul13_dandy_yankee"
 			"capabilities"
 			{
-				"can_craft_count"	"1"
+				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/jul13_dandy_yankee/jul13_dandy_yankee.mdl"
 			"propername"		"1"
@@ -42506,7 +42510,7 @@
 			{
 				"demoman"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30144"
 		{
@@ -42522,7 +42526,7 @@
 			{
 				"demoman"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30145"
 		{
@@ -42539,7 +42543,7 @@
 			{
 				"engineer"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30146"
 		{
@@ -42555,7 +42559,7 @@
 			{
 				"engineer"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30147"
 		{
@@ -42572,7 +42576,7 @@
 			{
 				"heavy"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30148"
 		{
@@ -42588,7 +42592,7 @@
 			{
 				"heavy"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30149"
 		{
@@ -42605,7 +42609,7 @@
 			{
 				"medic"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30150"
 		{
@@ -42621,7 +42625,7 @@
 			{
 				"medic"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30151"
 		{
@@ -42638,7 +42642,7 @@
 			{
 				"pyro"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30152"
 		{
@@ -42654,7 +42658,7 @@
 			{
 				"pyro"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30153"
 		{
@@ -42671,7 +42675,7 @@
 			{
 				"scout"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30154"
 		{
@@ -42687,7 +42691,7 @@
 			{
 				"scout"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30155"
 		{
@@ -42704,7 +42708,7 @@
 			{
 				"sniper"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30156"
 		{
@@ -42720,7 +42724,7 @@
 			{
 				"sniper"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30157"
 		{
@@ -42737,7 +42741,7 @@
 			{
 				"soldier"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30158"
 		{
@@ -42753,7 +42757,7 @@
 			{
 				"soldier"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30159"
 		{
@@ -42770,7 +42774,7 @@
 			{
 				"spy"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30160"
 		{
@@ -42786,7 +42790,7 @@
 			{
 				"spy"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
 		}
 		"30161"
 		{
@@ -42802,7 +42806,590 @@
 			{
 				"demoman"		"1"
 			}
-			"vision_filter_flags" "4"
+			"vision_filter_flags"		"4"
+		}
+		"30162"
+		{
+			"name"		"The Bone Dome"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_air_raider"
+			"item_description"		"#TF_fall2013_air_raider_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"backpack"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_air_raider/fall2013_air_raider"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/fall2013_air_raider/fall2013_air_raider.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30163"
+		{
+			"name"		"The Air Raider"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Hat"
+			"item_name"		"#TF_fall2013_fire_bird"
+			"item_description"		"#TF_fall2013_fire_bird_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_fire_bird/fall2013_fire_bird"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/fall2013_fire_bird/fall2013_fire_bird.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30164"
+		{
+			"name"		"The Viking Braider"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_the_braided_pride"
+			"item_description"		"#TF_fall2013_the_braided_pride_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_the_braided_pride/fall2013_the_braided_pride"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"soldier"		"models/workshop/player/items/all_class/fall2013_the_braided_pride/fall2013_the_braided_pride_soldier.mdl"
+				"heavy"		"models/workshop/player/items/all_class/fall2013_the_braided_pride/fall2013_the_braided_pride_heavy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_the_braided_pride/fall2013_the_braided_pride_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"soldier"		"1"
+				"heavy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30165"
+		{
+			"name"		"The Cuban Bristle Crisis"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_the_cuban_coverup"
+			"item_description"		"#TF_fall2013_the_cuban_coverup_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/heavy/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/fall2013_the_cuban_coverup/fall2013_the_cuban_coverup.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30167"
+		{
+			"name"		"The Beep Boy"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_ElectronicDevice"
+			"item_name"		"#TF_fall2013_beep_boy"
+			"item_description"		"#TF_fall2013_beep_boy_Desc"
+			"equip_region"		"engineer_belt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_beep_boy/fall2013_beep_boy"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/fall2013_beep_boy/fall2013_beep_boy.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30168"
+		{
+			"name"		"The Special Eyes"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Glasses"
+			"item_name"		"#TF_fall2013_the_special_eyes"
+			"item_description"		"#TF_fall2013_the_special_eyes_Desc"
+			"equip_region"		"glasses"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_the_special_eyes/fall2013_the_special_eyes"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/fall2013_the_special_eyes/fall2013_the_special_eyes.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30169"
+		{
+			"name"		"Trickster's Turnout Gear"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"item_name"		"#TF_fall2013_the_insidious_incinerator"
+			"item_description"		"#TF_fall2013_the_insidious_incinerator_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_the_insidious_incinerator/fall2013_the_insidious_incinerator"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/fall2013_the_insidious_incinerator/fall2013_the_insidious_incinerator.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30170"
+		{
+			"name"		"The Chronomancer"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_kyoto_rider"
+			"item_description"		"#TF_fall2013_kyoto_rider_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/sniper/fall2013_kyoto_rider/fall2013_kyoto_rider"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/fall2013_kyoto_rider/fall2013_kyoto_rider.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30171"
+		{
+			"name"		"The Medical Mystery"
+			"prefab"		"misc"
+			"item_name"		"#TF_fall2013_aichi_investigator"
+			"item_description"		"#TF_fall2013_aichi_investigator_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/fall2013_aichi_investigator/fall2013_aichi_investigator"
+			"model_player"		"models/workshop/player/items/medic/fall2013_aichi_investigator/fall2013_aichi_investigator.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+		}
+		"30172"
+		{
+			"name"		"The Gold Digger"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_the_gold_digger"
+			"item_description"		"#TF_fall2013_the_gold_digger_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_the_gold_digger/fall2013_the_gold_digger"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/fall2013_the_gold_digger/fall2013_the_gold_digger.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30173"
+		{
+			"name"		"Brim-Full Of Bullets"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_brimfull_of_bullets"
+			"item_description"		"#TF_fall2013_brimfull_of_bullets_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/sniper/fall2013_brimfull_of_bullets/fall2013_brimfull_of_bullets"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/fall2013_brimfull_of_bullets/fall2013_brimfull_of_bullets.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30175"
+		{
+			"name"		"The Cotton Head"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_the_cotton_head"
+			"item_description"		"#TF_fall2013_the_cotton_head_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_the_cotton_head/fall2013_the_cotton_head"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/fall2013_the_cotton_head/fall2013_the_cotton_head.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30176"
+		{
+			"name"		"Pop-eyes"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_popeyes"
+			"item_description"		"#TF_fall2013_popeyes_Desc"
+			"equip_region"		"lenses"
+			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_popeyes/fall2013_popeyes"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/fall2013_popeyes/fall2013_popeyes.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30177"
+		{
+			"name"		"Hong Kong Cone"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_hong_kong_cone"
+			"item_description"		"#TF_fall2013_hong_kong_cone_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/fall2013_hong_kong_cone/fall2013_hong_kong_cone_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30178"
+		{
+			"name"		"Weight Room Warmer"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_weight_room_warmer"
+			"item_description"		"#TF_fall2013_weight_room_warmer_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/fall2013_weight_room_warmer/fall2013_weight_room_warmer"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/fall2013_weight_room_warmer/fall2013_weight_room_warmer.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30179"
+		{
+			"name"		"The Hurt Locher"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_eod_suit"
+			"item_description"		"#TF_fall2013_eod_suit_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/fall2013_eod_suit/fall2013_eod_suit"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/fall2013_eod_suit/fall2013_eod_suit.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30180"
+		{
+			"name"		"Pirate Bandana"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_pirate_bandana"
+			"item_description"		"#TF_fall2013_pirate_bandana_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/fall2013_pirate_bandana/fall2013_pirate_bandana"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/fall2013_pirate_bandana/fall2013_pirate_bandana.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30181"
+		{
+			"name"		"Li'l Snaggletooth"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_PocketBuddy"
+			"item_name"		"#TF_fall2013_lil_snaggletooth"
+			"item_description"		"#TF_fall2013_lil_snaggletooth_Desc"
+			"equip_region"		"sniper_pocket"
+			"image_inventory"		"backpack/workshop/player/items/sniper/fall2013_lil_snaggletooth/fall2013_lil_snaggletooth"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/fall2013_lil_snaggletooth/fall2013_lil_snaggletooth.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30182"
+		{
+			"name"		"L'homme Burglerre"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_superthief"
+			"item_description"		"#TF_fall2013_superthief_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/spy/fall2013_superthief/fall2013_superthief"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/fall2013_superthief/fall2013_superthief.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30183"
+		{
+			"name"		"Escapist"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_escapist"
+			"item_description"		"#TF_fall2013_escapist_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/spy/fall2013_escapist/fall2013_escapist"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/fall2013_escapist/fall2013_escapist.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30185"
+		{
+			"name"		"The Flapjack"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_neo_tokyo_runner"
+			"item_description"		"#TF_fall2013_neo_tokyo_runner_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/fall2013_neo_tokyo_runner/fall2013_neo_tokyo_runner"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/fall2013_neo_tokyo_runner/fall2013_neo_tokyo_runner.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30186"
+		{
+			"name"		"A Brush with Death"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_fall2013_medic_wc_beard"
+			"item_description"		"#TF_fall2013_medic_wc_beard_Desc"
+			"equip_region"		"beard"
+			"image_inventory"		"backpack/workshop/player/items/medic/fall2013_medic_wc_beard/fall2013_medic_wc_beard"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/fall2013_medic_wc_beard/fall2013_medic_wc_beard.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30187"
+		{
+			"name"		"The Slick Cut"
+			"prefab"		"hat"
+			"first_sale_date"		"2013/10/09"
+			"item_name"		"#TF_fall2013_medic_wc_hair"
+			"item_description"		"#TF_fall2013_medic_wc_hair_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/fall2013_medic_wc_hair/fall2013_medic_wc_hair"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/fall2013_medic_wc_hair/fall2013_medic_wc_hair.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30189"
+		{
+			"name"		"The Frenchman's Formals"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_spy_fancycoat"
+			"item_description"		"#TF_fall2013_spy_fancycoat_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/fall2013_spy_fancycoat/fall2013_spy_fancycoat"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/fall2013_spy_fancycoat/fall2013_spy_fancycoat.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30190"
+		{
+			"name"		"The Ward"
+			"prefab"		"misc"
+			"first_sale_date"		"2013/10/09"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_fall2013_medic_wc_coat"
+			"item_description"		"#TF_fall2013_medic_wc_coat_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/fall2013_medic_wc_coat/fall2013_medic_wc_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/fall2013_medic_wc_coat/fall2013_medic_wc_coat.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
 		}
 
 
@@ -54595,7 +55182,7 @@
 				"usage"
 				{
 				}
-				"restriction"	"fall2013"
+				"restriction"	"fall2013_acorns"
 			}
 			"capabilities"
 			{
@@ -54613,6 +55200,11 @@
 			"max_ilevel"	"13"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5710"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
@@ -54629,7 +55221,7 @@
 				"usage"
 				{
 				}
-				"restriction"	"fall2013"
+				"restriction"	"fall2013_gourd"
 			}
 			"capabilities"
 			{
@@ -54647,9 +55239,42 @@
 			"max_ilevel"	"13"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5711"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
+		}
+
+		"5710"
+		{
+			"name"	"Fall 2013 Acorns Key" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2013/10/10"
+			"tool"
+			{
+				"restriction"	"fall2013_acorns"
+			}
+			"item_name"		"#TF_Fall2013Key_Acorns"
+			"item_description"	"#TF_Fall2013Key_Acorns_Desc"
+			"image_inventory"	"backpack/crafting/fall_acorn_key"
+		}
+
+		"5711"
+		{
+			"name"	"Fall 2013 Gourd Key" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2013/10/10"
+			"tool"
+			{
+				"restriction"	"fall2013_gourd"
+			}
+			"item_name"		"#TF_Fall2013Key_Gourd"
+			"item_description"	"#TF_Fall2013Key_Gourd_Desc"
+			"image_inventory"	"backpack/crafting/fall_gourd_key"
 		}
 	
 		"5999"				
@@ -63224,6 +63849,45 @@
 			"The Buccaneer's Bicorne"		"1"
 			"The Soviet Gentleman"		"1"
 		}
+		"fall_2013_crate_contents_acorns"
+		{
+			"The Viking Braider"		"1"
+			"The Flapjack"		"1"
+			"The Gold Digger"		"1"
+			"Pop-eyes"		"1"
+			"Weight Room Warmer"		"1"
+			"The Special Eyes"		"1"
+			"The Chronomancer"		"1"
+			"Pirate Bandana"		"1"
+			"Brim-Full Of Bullets"		"1"
+			"Li'l Snaggletooth"		"1"
+			"Escapist"		"1"
+			"L'homme Burglerre"		"1"
+			"The Ward"		"1"
+		}
+		"fall_2013_crate_contents_gourd"
+		{
+			"The Beep Boy"		"1"
+			"The Cuban Bristle Crisis"		"1"
+			"A Brush with Death"		"1"
+			"Trickster's Turnout Gear"		"1"
+			"Hong Kong Cone"		"1"
+			"The Hurt Locher"		"1"
+			"The Bone Dome"		"1"
+			"The Air Raider"		"1"
+			"The Medical Mystery"		"1"
+			"The Cotton Head"		"1"
+			"The Slick Cut"		"1"
+			"The Frenchman's Formals"		"1"
+		}
+		"fall_2013_crate_list_acorns"
+		{
+			"fall_2013_crate_contents_acorns"		"1"
+		}
+		"fall_2013_crate_list_gourd"
+		{
+			"fall_2013_crate_contents_gourd"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -63297,6 +63961,8 @@
 		"jul_2013_crate_list_08"	"69"	
 		"supply_crate_loot_list_60"	"60"	
 		"supply_crate_loot_list_71"	"71"	
+		"fall_2013_crate_list_acorns"	"72"	
+		"fall_2013_crate_list_gourd"	"73"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"

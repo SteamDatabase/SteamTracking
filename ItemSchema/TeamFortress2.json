@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.06cb9925789a81fdef97412d6b866453af049a5d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.e388e08e03856295f69bd7591965476f881fb4eb.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -18060,6 +18060,7 @@
 				"item_class": "tf_weapon_sword",
 				"item_type_name": "Golf Club",
 				"item_name": "Nessie's Nine Iron",
+				"item_description": "This weapon has a large melee range.\nGives increased speed and health\nwith every head you take.",
 				"proper_name": false,
 				"item_slot": "melee",
 				"model_player": "models\/weapons\/c_models\/c_golfclub\/c_golfclub.mdl",
@@ -53571,7 +53572,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Fall 2013 Acorns Crate",
-				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "Contains Gold Star approved Community Items\nfrom the Fall 2013 event.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -53593,7 +53594,7 @@
 				},
 				"tool": {
 					"type": "",
-					"restriction": "fall2013"
+					"restriction": "fall2013_acorns"
 				},
 				"used_by_classes": [
 
@@ -53604,6 +53605,11 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 72.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5710.000000
 					}
 				]
 				
@@ -53614,15 +53620,15 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Fall 2013 Gourd Crate",
-				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "Contains Gold Star approved Community Items\nfrom the Fall 2013 event.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
 				"image_inventory": "backpack\/crafting\/fall_crate_gourd",
 				"min_ilevel": 13,
 				"max_ilevel": 13,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd.8b7e2eb2653e0f5b6f5744af9f56c0f9a9689f29.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd_large.72042c0965a513b4d1516c9cee03c24ea99c1d0c.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd.0d9f58cbdc25d5477e5f061f7ea34fdbbe26e248.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_crate_gourd_large.e8a2f833ceeb2ff67fae0374dd3be5554e1c341d.png",
 				"craft_class": "supply_crate",
 				"craft_material_type": "supply_crate",
 				"capabilities": {
@@ -53636,7 +53642,7 @@
 				},
 				"tool": {
 					"type": "",
-					"restriction": "fall2013"
+					"restriction": "fall2013_gourd"
 				},
 				"used_by_classes": [
 
@@ -53647,7 +53653,92 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 73.000000
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5711.000000
 					}
+				]
+				
+			},
+			{
+				"name": "Fall 2013 Acorns Key",
+				"defindex": 5710,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Fall 2013 Acorns Crate Key",
+				"item_description": "Used to unlock a Fall 2013 Acorns Crate.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/fall_acorn_key",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_acorn_key.f0eaef2cb81ac6b4f938853c39b42e84d9f249c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_acorn_key_large.c5890086daaeb5d9f4fe815a02549c19f1c3d4d2.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "fall2013_acorns",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Fall 2013 Gourd Key",
+				"defindex": 5711,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Fall 2013 Gourd Crate Key",
+				"item_description": "Used to unlock a Fall 2013 Gourd Crate.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/fall_gourd_key",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_gourd_key.f4399d3213ee050b75f974cffc191187badcc475.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall_gourd_key_large.5cbbfc3e5fcd6602304dfbce0e34f30533bbefd3.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "fall2013_gourd",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+
 				]
 				
 			},
@@ -81273,6 +81364,1249 @@
 				},
 				"used_by_classes": [
 					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Bone Dome",
+				"defindex": 30162,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bone Dome",
+				"item_description": "Comes with a visor capable of shielding your eyes from the harsh glare of people running away from you on fire.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/fall2013_air_raider\/fall2013_air_raider.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/fall2013_air_raider\/fall2013_air_raider",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_air_raider.d954c6b968316c561054b9c88b6592e3b9dcaf88.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_air_raider_large.1d553090f75ce9a585c9599b58133b060754641d.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Air Raider",
+				"defindex": 30163,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Air Raider",
+				"item_description": "Designed specifically for hotshot pilots, this mask only distributes oxygen if you're doing a cool barrel roll into the Danger Zone.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/fall2013_fire_bird\/fall2013_fire_bird.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/fall2013_fire_bird\/fall2013_fire_bird",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_fire_bird.cd0f8898c8120a54411c57c7b75fd3345db18198.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_fire_bird_large.3d5ab47e31c589d26be12c2f0e957dc1bc55b1b7.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Viking Braider",
+				"defindex": 30164,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Viking Braider",
+				"item_description": "O.G. Vikings know: Braid before blade, son.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/fall2013_the_braided_pride\/fall2013_the_braided_pride_soldier.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/fall2013_the_braided_pride\/fall2013_the_braided_pride",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_braided_pride.49ff668af8773fb95973401b8303429e18fee2b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_braided_pride_large.3a7b7b1a8160f7dacfef9b9d2f89c4852560b54d.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier",
+					"Heavy",
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Cuban Bristle Crisis",
+				"defindex": 30165,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Cuban Bristle Crisis",
+				"item_description": "Dress up like Cuban celeb Fidel Castro, inventor of the Castromatic, a self-casting fishing pole that swept the nation in the 60s.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/fall2013_the_cuban_coverup\/fall2013_the_cuban_coverup.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/fall2013_the_cuban_coverup\/fall2013_the_cuban_coverup",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cuban_coverup.9cfe5a10731d9d688fff930cf2ca9d921c85d8cd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cuban_coverup_large.bd90aeea3ef5236c8c11fb6300dad12a4ffc51a3.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Beep Boy",
+				"defindex": 30167,
+				"item_class": "tf_wearable",
+				"item_type_name": "Electronic Device",
+				"item_name": "Beep Boy",
+				"item_description": "His facial expressions are synced to yours! Teach this Beep Boy how to be a Beep Man using nothing but the raw musky magnetism of your face.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/fall2013_beep_boy\/fall2013_beep_boy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/fall2013_beep_boy\/fall2013_beep_boy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_beep_boy.d2097696e8ba3ae985d13fac3f9073693e815df0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_beep_boy_large.7f28739eb082a4e7d464464e8c18899bef53ca59.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Special Eyes",
+				"defindex": 30168,
+				"item_class": "tf_wearable",
+				"item_type_name": "Glasses",
+				"item_name": "Special Eyes",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/fall2013_the_special_eyes\/fall2013_the_special_eyes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/fall2013_the_special_eyes\/fall2013_the_special_eyes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_special_eyes.6d09ae121d0a006e7e1a2350e3b2611b1db3cdff.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_special_eyes_large.5ab439716957d2a8684d781c368bcea3c45a55e3.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Trickster's Turnout Gear",
+				"defindex": 30169,
+				"item_class": "tf_wearable",
+				"item_type_name": "Coat",
+				"item_name": "Trickster's Turnout Gear",
+				"item_description": "Trick your enemies into forgetting who set them on fire in the first place with this trustworthy-looking fireman's jacket.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/fall2013_the_insidious_incinerator\/fall2013_the_insidious_incinerator.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/fall2013_the_insidious_incinerator\/fall2013_the_insidious_incinerator",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_insidious_incinerator.67825428ffe963b7d4982e32b730687d73a80409.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_insidious_incinerator_large.6bd754d473af5810207276ba9a42a9e3665c7133.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Chronomancer",
+				"defindex": 30170,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Chronomancer",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/fall2013_kyoto_rider\/fall2013_kyoto_rider.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/fall2013_kyoto_rider\/fall2013_kyoto_rider",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_kyoto_rider.58752b93337bdf40d98036b069604fc462886152.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_kyoto_rider_large.e7dffe6e448479f777ffe88f6a1a772d285e1515.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Medical Mystery",
+				"defindex": 30171,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Medical Mystery",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/fall2013_aichi_investigator\/fall2013_aichi_investigator.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/fall2013_aichi_investigator\/fall2013_aichi_investigator",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_aichi_investigator.b8721a0b9cffeeaa7ada6e2cb68fe555acabf417.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_aichi_investigator_large.df0147cc9334e8f1b14b8f787c5350ac1b94fd3c.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Gold Digger",
+				"defindex": 30172,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Gold Digger",
+				"item_description": "Dag nab it before it's all sold out!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/fall2013_the_gold_digger\/fall2013_the_gold_digger.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/fall2013_the_gold_digger\/fall2013_the_gold_digger",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_gold_digger.e6a464cae28da88bb29908d1d57ca3b3ff4238d4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_gold_digger_large.dd8efd247114b19d84d043676f12d8d040d91598.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Brim-Full Of Bullets",
+				"defindex": 30173,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Brim-Full Of Bullets",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/sniper\/fall2013_brimfull_of_bullets\/fall2013_brimfull_of_bullets.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/fall2013_brimfull_of_bullets\/fall2013_brimfull_of_bullets",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_brimfull_of_bullets.22cce184bb43d36a93bdcbfe73411b850002ce5d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_brimfull_of_bullets_large.63d9be1e75fdec2f9898a842b0e8a521842903c7.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Cotton Head",
+				"defindex": 30175,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Cotton Head",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/pyro\/fall2013_the_cotton_head\/fall2013_the_cotton_head.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/fall2013_the_cotton_head\/fall2013_the_cotton_head",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cotton_head.70d4c0987876e4150c80311a295b72ae8b201427.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cotton_head_large.3ed4d952c18c8c46b921967ce50d0a1ae307de7a.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Pop-eyes",
+				"defindex": 30176,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Pop-eyes",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/fall2013_popeyes\/fall2013_popeyes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/fall2013_popeyes\/fall2013_popeyes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_popeyes.1670475e4477a043ec06555f4fff3ab577f499de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_popeyes_large.950481f471d77d4b4367317a2e38b10b75769303.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Hong Kong Cone",
+				"defindex": 30177,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hong Kong Cone",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/all_class\/fall2013_hong_kong_cone\/fall2013_hong_kong_cone_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/fall2013_hong_kong_cone\/fall2013_hong_kong_cone",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_hong_kong_cone.f1a30e855407bf18b9ad2f308a27bb063a545c85.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_hong_kong_cone_large.8ae8976dbef7cce1b0b84d937ef38f49b73c9bb9.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Weight Room Warmer",
+				"defindex": 30178,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Weight Room Warmer",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/fall2013_weight_room_warmer\/fall2013_weight_room_warmer.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/fall2013_weight_room_warmer\/fall2013_weight_room_warmer",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_weight_room_warmer.59fa685de8dd30a43be3cb4f46475622e8cfe66d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_weight_room_warmer_large.6602769d909649d5e3e45bd0ebfc583894f7717f.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Hurt Locher",
+				"defindex": 30179,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Hurt Locher",
+				"item_description": "Everyone likes to watch their enemies blow up. But if you're close enough to  get a really good look, you'll blow up too. It is life's greatest tragedy.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/fall2013_eod_suit\/fall2013_eod_suit.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/fall2013_eod_suit\/fall2013_eod_suit",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_eod_suit.0268afbca66c186a92175d7dafd352462e382570.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_eod_suit_large.ea48e1b3d973742eda9bcf20b9dc8e51dd3ffa04.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Pirate Bandana",
+				"defindex": 30180,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Pirate Bandana",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/demo\/fall2013_pirate_bandana\/fall2013_pirate_bandana.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/fall2013_pirate_bandana\/fall2013_pirate_bandana",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_pirate_bandana.0e8436e83807af59239cc84ab314bd53497803a8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_pirate_bandana_large.b7084a3cbe0e6b2c10a25f19e24a4db4c0bf3843.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Li'l Snaggletooth",
+				"defindex": 30181,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pocket Buddy",
+				"item_name": "Li'l Snaggletooth",
+				"item_description": "'When I grow up, I want to be a hat.' -Li'l Snaggletooth",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/fall2013_lil_snaggletooth\/fall2013_lil_snaggletooth.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/fall2013_lil_snaggletooth\/fall2013_lil_snaggletooth",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_lil_snaggletooth.de698908bf4a58cf107afa483a3683f95e835b6c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_lil_snaggletooth_large.c0e99440579d4c3a90d56d9abf096917536d41e3.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "L'homme Burglerre",
+				"defindex": 30182,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "L'homme Burglerre",
+				"item_description": "French for 'The Thief of Hamburgers.'",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/spy\/fall2013_superthief\/fall2013_superthief.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/fall2013_superthief\/fall2013_superthief",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_superthief.aa317618e57e0e212cf3cc1f68498b7d29c11d82.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_superthief_large.59a114a4339d11b62a66186a76971a30be0f5f40.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Escapist",
+				"defindex": 30183,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Escapist",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/fall2013_escapist\/fall2013_escapist.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/fall2013_escapist\/fall2013_escapist",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_escapist.6c23ddffab5330b1b0cf4d7490427cdafa79817f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_escapist_large.45ff26ac2b0ba6322a32eea744b1ff98915ab403.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Flapjack",
+				"defindex": 30185,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Flapjack",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/fall2013_neo_tokyo_runner\/fall2013_neo_tokyo_runner.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/fall2013_neo_tokyo_runner\/fall2013_neo_tokyo_runner",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_neo_tokyo_runner.b3c3f4c29bfdb60bcfc3998e19ab6071c6a9a618.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_neo_tokyo_runner_large.a0ec101504ca2eee83eacdc763ae2bf6c62d859a.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "A Brush with Death",
+				"defindex": 30186,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "A Brush with Death",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/fall2013_medic_wc_beard\/fall2013_medic_wc_beard.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/fall2013_medic_wc_beard\/fall2013_medic_wc_beard",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_beard.8a6c70ef3347a310d05b30ef3e8dc01172a536c3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_beard_large.8640573e16dcb3ac7b0610659d810684570df800.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Slick Cut",
+				"defindex": 30187,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Slick Cut",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/workshop\/player\/items\/medic\/fall2013_medic_wc_hair\/fall2013_medic_wc_hair.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/fall2013_medic_wc_hair\/fall2013_medic_wc_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_hair.b746ec52eb1b795643b2377af37172288a0f7eb5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_hair_large.53e2d0469f4ca81190414f5cc1d4faea26ce4440.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Frenchman's Formals",
+				"defindex": 30189,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Frenchman's Formals",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/fall2013_spy_fancycoat\/fall2013_spy_fancycoat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/fall2013_spy_fancycoat\/fall2013_spy_fancycoat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_spy_fancycoat.460ff0097877e8b73cf1eb6347b7fda8897d7a27.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_spy_fancycoat_large.56ba9be76a139c48bb99d26910f4ae19299e6d16.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64.000000
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64.000000
+					}
+				]
+				
+			},
+			{
+				"name": "The Ward",
+				"defindex": 30190,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Ward",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/fall2013_medic_wc_coat\/fall2013_medic_wc_coat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/fall2013_medic_wc_coat\/fall2013_medic_wc_coat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_coat.b2308e76e32db5d74b337cdeb82f6632bb824755.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_medic_wc_coat_large.ef63ec5a21c5485d6b366f385ac10a1fed2cc49e.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
 				]
 				,
 				"attributes": [
