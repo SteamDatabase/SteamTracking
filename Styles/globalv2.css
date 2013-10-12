@@ -533,19 +533,8 @@ a.commentthread_allcommentslink:hover {
 	text-align: right;
 }
 
-.btn_post {
-	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAIAAADDbMD2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpijgwNZmJkZETCTEDAiCYGEccUY4SqhcsBBBgAXvcBa6BpU4MAAAAASUVORK5CYII= );
-	background-repeat: repeat-x;
-	background-color: #6e6a69;
-	height: 20px;
-	line-height: 20px;
-	border-radius: 3px;
-	color: #D6D7D8;
-	text-transform: uppercase;
-	padding: 0px 25px;
-	font-size: 11px;
-	display: inline-block;
-	cursor: pointer;
+.commentthread_workshop_authorbadge {
+	color: #e9d528;
 }
 
 span.bb_spoiler {
