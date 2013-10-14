@@ -16,13 +16,20 @@ input {
 }
 
 .forum_newtopic_area {
-	padding-bottom: 22px;
+	padding-bottom: 14px;
 }
 
 .forum_newtopic_box, .forum_formarea_box {
 	background-color: #2e2e2f;
 	border: 1px solid #373738;
 	padding: 14px 11px 14px 11px;
+	margin-bottom: 8px;
+}
+
+.forum_newtopic_textcontrols {
+
+	margin-bottom: 13px;
+	text-align: right;
 }
 
 .forum_newtopic_box {
@@ -42,6 +49,12 @@ input {
 
 .forum_newtopic_box textarea.gray_bevel {
 	overflow: hidden;
+}
+
+.forum_newtopic_error {
+	padding-top: 8px;
+	padding-right: 4px;
+	color: #ff0000;
 }
 
 /* override a workshop.css style */
@@ -79,6 +92,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_newtopic_action {
+	min-height: 32px;
 	text-align: right;
 }
 
@@ -1104,6 +1118,19 @@ table.forum_auditlog tr.audit_row_secondary {
 	padding: 2px;
 }
 
+.searchresult_author {
+	position: relative;
+	padding: 2px 0 2px 48px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.searchresult_author .playerAvatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
 .searchresult_inreplyto {
 	word-wrap: break-word;
 	padding: 2px;
@@ -1123,6 +1150,7 @@ table.forum_auditlog tr.audit_row_secondary {
 
 .searchresult_timestamp {
 	float: right;
+	margin-left: 6px;
 }
 
 .searchresult_forum_link {
@@ -1131,4 +1159,116 @@ table.forum_auditlog tr.audit_row_secondary {
 
 a.searchresult_forum_link:hover {
 	text-decoration: underline;
+}
+
+.forum_topic_tradeoffer_area {
+
+}
+
+.forum_topic_tradeoffer_area .playerAvatar {
+	float: left;
+	margin: -4px 8px -4px 0;
+}
+
+.forum_topic_tradeoffer_accepting {
+	padding-top: 7px;
+	line-height: 18px;
+}
+
+.forum_topic_tradeoffer_button_ctn {
+	margin-left: 16px;
+	float: right;
+	text-align: right;
+}
+
+.btn_tradetopic_close {
+}
+
+.btn_tradetopic_close img {
+	vertical-align: text-top;
+}
+
+
+.subforum_select_area, .forum_newtopic_infomessage {
+	background-color: #212121;
+	border-radius: 3px;
+	padding: 8px;
+	margin-bottom: 13px;
+}
+
+.subforum_select_area {
+
+	text-align: right;
+	white-space: nowrap;
+
+}
+
+.subforum_radios_label, .subforum_radio_ctn {
+	display: inline-block;
+	height: 37px;
+	overflow: hidden;
+}
+
+.subforum_radios_label {
+	line-height: 22px;
+}
+
+.subforum_radio_ctn {
+	position: relative;
+	padding-left: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	max-width: 200px;
+	text-align: left;
+
+	margin-left: 8px;
+
+}
+
+.subforum_radio_ctn input {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+.subforum_radio_name {
+	color: #5491cf;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.subforum_radio_topics {
+	color: #969696;
+	font-size: 12px;
+}
+
+select.subforum_select_control {
+	color: #5491cf;
+	font-size: 14px;
+}
+
+.forum_newtopic_infomessage {
+	color: #969696;
+}
+
+.forum_newtopic_infomessage b {
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.forum_newtopic_info_rule {
+	margin: 10px 0;
+	background-color: #434343;
+	height: 1px;
+}
+
+.forum_newtopic_info_trade_closebuttondemo {
+	float: right;
+	margin-left: 12px;
 }
