@@ -265,6 +265,10 @@ body{
 		margin-top: 0;
 		padding-top: 0;
 	}
+	
+	.landingLeftCol>.section {
+		margin-bottom: 36px;
+	}
 
 .landingRightCol {
 	float: right;
@@ -517,6 +521,10 @@ p {
 		vertical-align: middle;
 		
 	}
+	
+	.landingTable .td.readOnly {
+		background-color: #1A1A1A;
+	}
 
 		.landingTable td span, .landingTable .td span {
 			color: #939597;
@@ -558,7 +566,13 @@ p {
 	background-color: #333333;
 	margin: 1px 0;
 	text-decoration: none;
+	border: 1px solid #3a3a3a;
 }
+
+	.buttonRow:hover {
+		background-color: #3D3E3E;
+		border: 1px solid #444444;
+	}
 	.buttonRow.disabled, .buttonRow.disabled .subText {
 		color: #555555;
 	}
@@ -620,7 +634,8 @@ p {
 
 h2 > span {
 	color: #666666;
-	font-size: 15px;
+	font-size: 12px;
+	vertical-align: top;
 }
 
 h2 > .small {
