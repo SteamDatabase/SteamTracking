@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c639828549718aeb3275bf48c3e24f569afd4d0c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.5bbab2d1b74f60b221972ed31a30f46f74760e61.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -29456,7 +29456,7 @@
 				"name": "Hellstrider",
 				"defindex": 4744,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "mount",
+				"item_type_name": "Warhorse",
 				"item_name": "Hellstrider",
 				"item_description": "Where rides the knight, only chaos remains.",
 				"proper_name": false,
@@ -46369,6 +46369,126 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blade of Burning Turmoil",
+				"defindex": 5518,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Blade of Burning Turmoil",
+				"item_description": "Forged in the heat of a dying star.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade.981eaf206c4d5a4663fad7258f8069927b6909a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade_large.30ba5c2a9f37d85815fbbb5287a2041999f5df7c.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Horns of Burning Turmoil",
+				"defindex": 5519,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Horns of Burning Turmoil",
+				"item_description": "From realms beyond mortal knowledge rides forth a heaving darkness.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm.fcbdc1d0a7ff24e41ce4be2d9b67c13ddf813f0f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm_large.9f5b0cd04d015445ae4841a2106f7f4f0ee875e3.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Enmity",
+				"defindex": 5520,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Warhorse",
+				"item_name": "Enmity",
+				"item_description": "Its strides are hatred, its bray a judgment, its gallop the march of destruction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount.688e7c2eec3cc41afe03ddbd8e1540659c1d825a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount_large.ef7fc58e6069da9b29f6fdbc8acb615a09841efc.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shield of Burning Turmoil",
+				"defindex": 5521,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Shield of Burning Turmoil",
+				"item_description": "Cooled in the black nether between worlds, its core still bends and burns.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield.b37322b1c24d5b4d8cfda3cd9e4577d7ff9459af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield_large.b615b59e047296d7205c6b3ad7b6e2306c10813a.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of Burning Turmoil",
+				"defindex": 5522,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Mantle of Burning Turmoil",
+				"item_description": "Within the astral turmoil, heat bends and matter swirls.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder.b8629438cffe98891e0171de4ac9bce9e3c1d571.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder_large.414d8425f8943fa7ac20a62ae9c50250712bfb6a.png",
+				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -68230,6 +68350,186 @@
 				
 			},
 			{
+				"name": "HyperX D2L Season 4",
+				"defindex": 15308,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "HyperX D2L Season 4",
+				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world'ÂÂs best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar'ÂÂs Palace in Las Vegas!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2l_s4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2l_s4.ee57663b8f08fc913cac4c2a808fc5da1778e118.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2l_s4_large.fad57000c2a235c11693d2ac82ab8faa37d983ac.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "HyperX D2L Season 4 - ADMIN",
+				"defindex": 15309,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "HyperX D2L Season 4 - ADMIN",
+				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world's best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar'Âs Palace in Las Vegas!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2l_s4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2l_s4.ee57663b8f08fc913cac4c2a808fc5da1778e118.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2l_s4_large.fad57000c2a235c11693d2ac82ab8faa37d983ac.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Dota 2 League: Code A",
+				"defindex": 15310,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Dota 2 League: Code A",
+				"item_description": "Rising teams across China gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge Asian elite teams. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_codea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Dota 2 League: Code A - ADMIN",
+				"defindex": 15311,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Dota 2 League: Code A - ADMIN",
+				"item_description": "Rising teams across China gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge Asian elite teams. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_codea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ESP Dota 2 Cup",
+				"defindex": 15312,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ESP Dota 2 Cup",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Of Ebony and Ivory Set",
 				"defindex": 20000,
 				"item_class": "bundle",
@@ -75849,6 +76149,35 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Arms of Burning Turmoil Set",
+				"defindex": 20272,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Arms of Burning Turmoil Set",
+				"item_description": "Includes all the items in the Arms of Burning Turmoil set and access to the Electronic Sports Prime Dota 2 Cup.<br><br>\r\n\t\r\n\t- Blade of Burning Turmoil<br>\r\n\t- Horns of Burning Turmoil<br>\r\n\t- Shield of Burning Turmoil<br>\r\n\t- Mantle of Burning Turmoil<br>\r\n\t- Enmity<br>\r\n\t- ESP Dota 2 Cup access<br>\r\n\t<br>",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Arms_of_Burning_Turmoil",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil.e26cfebeb32e6bb115de4c69dbe13af94594f6dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil_large.c17eca7bf4f7fcce87ec6d701ca82362ddbefd40.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -77368,6 +77697,18 @@
 				"items": [
 					"Chained Snatcher",
 					"Chained Chopper"
+				]
+				
+			},
+			{
+				"item_set": "chaos_knight_mephistopheles",
+				"name": "Arms of Burning Turmoil",
+				"items": [
+					"Blade of Burning Turmoil",
+					"Horns of Burning Turmoil",
+					"Enmity",
+					"Shield of Burning Turmoil",
+					"Mantle of Burning Turmoil"
 				]
 				
 			},
