@@ -207,6 +207,12 @@ CTradeOfferStateManager = {
 	m_nTradeOfferID: 0,
 	m_eTradeOfferState: 0,	/* TRADE_OFFER_STATE_NEW */
 	m_bChangesMade: false,
+	m_rgTradeOfferCreateParams: {},
+
+	SetTradeOfferCreateParams: function( rgParams )
+	{
+		$J.extend( this.m_rgTradeOfferCreateParams, rgParams );
+	},
 
 	RemoveItemFromTrade: function( item )
 	{
@@ -435,6 +441,9 @@ CTradeOfferStateManager = {
 				tradeoffermessage: $('trade_offer_note') ? $('trade_offer_note').value : '',
 				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus )
 			};
+
+			if ( this.m_rgTradeOfferCreateParams )
+				rgParams['trade_offer_create_params'] = V_ToJSON( this.m_rgTradeOfferCreateParams );
 
 			if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW )
 			{

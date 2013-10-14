@@ -75,6 +75,8 @@ var CForum = Class.create( {
 	m_cMaxPages: 0,
 	m_bLoading: false,
 	m_bSubmittingTopic: false,
+	m_bNewTopicFormDisplayed: false,
+	m_rgCreateTopicFlags: null,
 
 
 	initialize: function( name, rgForumData, url )
@@ -118,16 +120,85 @@ var CForum = Class.create( {
 
 	DisplayNewTopicForm: function()
 	{
-		if ( !$('forum_' + this.m_strName + '_newtopic_area').visible() )
-			new Effect.BlindDown( 'forum_' + this.m_strName + '_newtopic_area', { duration: 0.25 } );
+		if ( !this.m_bNewTopicFormDisplayed )
+		{
+			if( !$('forum_' + this.m_strName + '_newtopic_area').visible() )
+				new Effect.BlindDown( 'forum_' + this.m_strName + '_newtopic_area', { duration: 0.25 } );
+
+			var $Form = $J('#forum_' + this.m_strName + '_newtopic_form');
+
+			if ( $Form.length )
+			{
+				var _this = this;
+				$Form.find( '[name=subforum]' ).change( function() { _this.UpdateCreateTopicFormDisplay(); } );
+
+				if ( !this.m_rgCreateTopicFlags )
+				{
+					new Ajax.Request( this.GetActionURL( 'getcreatetopicflags' ), {
+						method: 'get',
+						onSuccess: function( transport ) { _this.m_rgCreateTopicFlags = transport.responseJSON || {}; _this.UpdateCreateTopicFormDisplay(); },
+						onFailure: function( transport ) { _this.m_rgCreateTopicFlags = {}; _this.UpdateCreateTopicFormDisplay(); }
+					});
+				}
+			}
+
+			this.m_bNewTopicFormDisplayed = true;
+		}
+	},
+
+	UpdateCreateTopicFormDisplay: function()
+	{
+		var strForumType = this.m_rgForumData.type;
+
+		var elForm = $('forum_' + this.m_strName + '_newtopic_form');
+		var elSubforumSelect = elForm.elements['subforum'];
+		if ( elSubforumSelect )
+		{
+			// see if they've selected a different type
+			if ( elSubforumSelect.length )
+			{
+				// radio buttons
+				for ( var i=0; i < elSubforumSelect.length; i++ )
+				{
+					if ( elSubforumSelect[i].checked )
+					{
+						strForumType = elSubforumSelect[i].value.replace( /_.*$/, '' );
+						break;
+					}
+				}
+			}
+			else if ( elSubforumSelect.value )
+			{
+				strForumType = elSubforumSelect.value.replace( /_.*$/, '' );
+			}
+		}
+
+		var elInfoMessage = $('forum_' + this.m_strName + '_newtopic_info' );
+		if ( this.m_rgCreateTopicFlags !== null && strForumType == 'Trading' )
+		{
+			var strMessage = 'If your inventory privacy is public, community members will be able to send you trade offers from this topic.';
+			if ( this.m_rgCreateTopicFlags.inventory_public )
+				strMessage = '<b>Your inventory privacy is set to Public</b>.  This means community members can send you trade offers from this topic.  If your inventory privacy is set to anything other than Public, you cannot receive Community trade offers.';
+			else if ( typeof this.m_rgCreateTopicFlags.inventory_public != 'undefined' )
+				strMessage = '<b>Your inventory privacy is <u>not</u> Public</b>.  This means community members will not be able to send you trade offers from this topic.  If your inventory privacy was Public, community members would be able to send you trade offers from this topic.';
+
+			strMessage += '<div class="forum_newtopic_info_rule"></div>';
+			strMessage += '<img class="forum_newtopic_info_trade_closebuttondemo" src="http://cdn.steamcommunity.com/public/images/skin_1/forum_img_closetopic.png">';
+			strMessage += 'When you are done receiving trade offers or have completed the trade, you can close this topic and disallow trade offers from here.';
+			strMessage += '<div style="clear: both;"></div>';
+
+			elInfoMessage.update( strMessage );
+
+			elInfoMessage.show();
+		}
+		else
+		{
+			elInfoMessage.hide();
+		}
 	},
 
 	OnTextInput: function( elTextArea )
 	{
-		if ( elTextArea.value.length > 0 )
-			$('forum_' + this.m_strName + '_submit_container').show();
-		else
-			$('forum_' + this.m_strName + '_submit_container').hide();
 	},
 
 	NewTopic: function()
@@ -149,11 +220,7 @@ var CForum = Class.create( {
 					method: 'post',
 					parameters: form.serialize(),
 					onSuccess: this.OnNewTopicSuccess.bind( this ),
-					onFailure: this.OnNewTopicFailure.bind( this ),
-					onComplete: function() {
-						$('forum_' + strName + '_submit_container').show();
-						$('forum_' + strName + '_submit_throbber_container').hide();
-					}
+					onFailure: this.OnNewTopicFailure.bind( this )
 			} );
 		}
 
@@ -163,12 +230,12 @@ var CForum = Class.create( {
 	OnNewTopicSuccess: function( transport )
 	{
 		this.m_bSubmittingTopic = false;
-		new Effect.BlindUp( 'forum_' + this.m_strName + '_newtopic_area', { duration: 0.25 } );
-		var form = $('forum_' + this.m_strName + '_newtopic_form' );
-		form.elements['topic'].value = '';
-		form.elements['text'].value = '';
+		var rgJSON = transport.responseJSON || {};
 
-		this.OnResponseRenderTopics( transport, true );
+		if ( rgJSON.topic_url )
+		{
+			window.location = rgJSON.topic_url;
+		}
 	},
 
 	OnNewTopicFailure: function( transport )
@@ -176,7 +243,10 @@ var CForum = Class.create( {
 		this.m_bSubmittingTopic = false;
 		var rgJSON = transport.responseJSON || {};
 		$('forum_' + this.m_strName + '_newtopic_error' ).update( 'There was an error creating a new topic: ' + ( rgJSON.error ? rgJSON.error : rgJSON.success ) );
-		$('forum_' + this.m_strName + '_newtopic_error' ).show();
+		new Effect.Appear( $('forum_' + this.m_strName + '_newtopic_error' ), { duration: 0.5 } );
+
+		$('forum_' + strName + '_submit_container').show();
+		$('forum_' + strName + '_submit_throbber_container').hide();
 	},
 
 	GetActionURL: function( action )
@@ -689,6 +759,14 @@ function Forum_ShowForumAudits( gidForumTopic, gidObject )
 	{
 		g_rgForumTopics[ gidForumTopic ].ShowAudits( gidObject );
 	}
+}
+
+function Forum_CloseTradingTopic( gidForumTopic )
+{
+	ShowConfirmDialog( 'Close this topic', 'Marking this topic as "Closed" will prevent any more replies or trade offers on it.  Once it is closed, you will not be able to take any more actions on it.', 'Close this topic')
+	.done( function() {
+		Forum_SetTopicFlag( gidForumTopic, 'locked', true );
+	})
 }
 
 
@@ -1749,5 +1827,15 @@ function BulkModerate( strName, flag, value )
 	}).always( function() {
 		Forum.ReloadCurrentPage();
 	});
+}
+
+
+function StartTradeOfferForTradingTopic( unAccountID, unClanIDOwner, gidTopic )
+{
+	var params = {};
+	params['partner'] = unAccountID;
+	params['forum_owner'] = unClanIDOwner;
+	params['forum_topic'] = gidTopic;
+	ShowTradeOffer( 'new', params );
 }
 
