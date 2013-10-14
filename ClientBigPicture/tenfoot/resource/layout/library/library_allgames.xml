@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/library/library.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
 	<LibraryAllGames onmoveup="CloseAllGames();" defaultfocus="GamesGrid" selectionposboundary="vertical">

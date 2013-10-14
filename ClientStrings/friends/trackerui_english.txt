@@ -583,6 +583,9 @@
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"You must have had Steam Guard enabled for at least %days% days before you can participate in a trade."
 "friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
 "friends_trade_you_recently_reset_password"	"You recently forgot and then reset your Steam account's password. You will not be able to trade until about five days after the most recent password reset."
+"friends_trade_you_recently_reset_password_long" "You recently forgot and then reset your Steam account's password after multiple months of account inactivity. In order to protect the items in your inventory, you will be unable to trade for %days% more days."
+"friends_trade_you_recently_reset_password_short" "You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for %days% more days."
+"friends_trade_you_recently_reset_password_oneday" "You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for one more day."
 "friends_trade_their_account_cannot_trade"	"%friend% is not available to trade. More information will be shown to %friend% if they invite you to trade."
 
 "friends_trade_they_are_trading"	"You cannot trade with %friend% because they are currently trading with someone else."

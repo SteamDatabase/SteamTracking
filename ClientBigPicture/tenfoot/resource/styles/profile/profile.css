@@ -1,0 +1,140 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+@keyframes 'profilecontent-perspective'
+{
+	from
+	{
+		perspective-origin: 60% 50% invert;
+	}
+
+	10%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	15%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+	
+	25%
+	{
+		perspective-origin: 66% 55% invert;
+	}
+
+	50%
+	{
+		perspective-origin: 68% 60% invert;
+	}
+
+	75%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	80%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	to	
+	{
+		perspective-origin: 60% 50% invert;
+	}
+}
+
+ProfilePanel
+{
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.0;
+
+	perspective-origin: 62% 5% invert;
+	
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+}
+
+ProfilePanel.ProfileVisible
+{
+	opacity: 1.0;
+	
+}
+
+ProfilePanel.ProfileInvisible
+{
+	opacity: 0.0;
+}
+
+ProfilePanel #ProfileContent
+{
+	width: 100%;
+	height: 100%;
+
+	perspective: 1000;
+	animation-name: profilecontent-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 64px, 600px, 330px );
+
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+
+}
+
+ProfilePanel:descendantfocus #ProfileContent
+{
+	transform: translatex( 0px );
+	animation-name: none;
+}
+
+
+ProfilePanel.ProfileVisible:descendantfocus
+{
+	transform: translate3d( 0px, 132px, 0px );
+}
+
+ProfilePanel .ProfileBackground
+{
+	width: 75%;
+	height: 75%;
+	
+	position: 12.5% 12.5% 0%;
+
+	pre-transform-scale2d: 1.33333;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+}
+
+.ProfilePanel.ProfileVisible:descendantfocus .ProfileBackground
+{
+	opacity: 1.0;
+}
+
+.ProfilePanel.ProfileVisible #UpperRow
+{
+	width: 100%;
+	height: 122px;
+	margin-top: 70px;
+	margin-left: 100px;
+	margin-right: 100px;
+
+}
+

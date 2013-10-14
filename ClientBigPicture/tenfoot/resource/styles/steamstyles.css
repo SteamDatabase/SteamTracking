@@ -83,7 +83,7 @@
 
 
 /* Fancy bg color with faded top right corner */
-@define bgwithgradient: #000000ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #002440ff ), color-stop( 0.46, #072d4a00 ) );
+@define bgwithgradient: #000000ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #002440ff ), color-stop( 0.46, #072d4a55 ), color-stop( 0.86, #072d4a00 ) );
 @define bgwithgradientlogin: #000000ff, gradient( radial, 100% 100%, 1200px -500px, 100% 100%, from( #465e70ff ), color-stop( 0.16, #26598000 ) );
 
 /* Same deal, only the top left corner gets the fade */
@@ -92,6 +92,7 @@
 
 //settings
 @define simplebutton: #4c7a992f;
+@define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #00101cff  ), to( #000d1600 ) );
 
 //system wide
 @define messagecolorwash: #5492b8ff;
@@ -370,7 +371,8 @@ DropDown.DropDownMenuVisible:focus
 {
 	horizontal-align: center;
 	box-shadow: fill #00000040 0px 0px 10px 0px;
-	
+	vertical-align: top;
+
 	transition-property: pre-transform-scale2d, box-shadow;
 	transition-delay: 0.0s;
 	transition-duration: 0.2s;
@@ -763,6 +765,7 @@ h2
 	padding-bottom: 5px;
 	padding-top: 5px;
 	margin: 14px;
+	margin-left: 0px;
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: 0.20s;
 	border-color: none;

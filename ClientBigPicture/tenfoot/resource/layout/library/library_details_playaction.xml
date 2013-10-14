@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/library/library.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	<LibraryPlayAction defaultfocus="ButtonBody">
 		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper">
@@ -24,12 +24,17 @@
 						<Label id="SharingHeader" class="PlayTimeTitle" />
 						<Label id="SharingValue" class="PlayTimeValue" />
 					</Panel>
+					<Panel id="StreamFromRow" class="PlayTimeRow">
+						<Label id="StreamFrom" class="LastPlayed PlayTimeTitle" text="#Library_Details_StreamFrom" />
+						<Label id="StreamFromValue" class="LastPlayedValue PlayTimeValue" />
+					</Panel> 
 				</Panel>
 				<Label id="LaunchingStatus" />
 				<Panel id="ButtonBody" class="ButtonBody" onactivate="LaunchGame();">
+					<Image id="Stream" class="StreamGlow" src="file://{images}/library/library_stream_button_edges.tga" />
 					<Panel class="ButtonEdge">
 						<Panel id="ButtonGlow" class="ButtonGlow" />
-						<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.png" />
+						<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.tga" />
 						<Panel id="Working" />
 					</Panel>
 				</Panel>

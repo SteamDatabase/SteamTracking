@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_TimeZone class="SettingsSection" defaultfocus="Continents">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_TimeZone" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+
+				<Panel class="HorzContainer">
+					<Label class="SettingsCallout" text="#SettingsTimeZone_Intro" />
+				</Panel>
+
+				<Panel class="VertContainer">					
+					<Label class="SettingsLabel" text="#SettingsTimeZone_Continent" />
+					<DropDown id="Continents" class="TimeZoneDropDown" />
+
+					<Label class="SettingsLabel" text="#SettingsTimeZone_Country" />
+					<DropDown id="Countries" class="TimeZoneDropDown" />
+
+					<Label class="SettingsLabel" text="#SettingsTimeZone_Region" />
+					<DropDown id="Regions" class="TimeZoneDropDown" />
+				</Panel>
+		</Panel>
+	</SettingsPanel_TimeZone>
+
+</root>

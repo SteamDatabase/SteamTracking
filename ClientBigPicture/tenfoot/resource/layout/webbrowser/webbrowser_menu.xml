@@ -1,7 +1,7 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/webbrowser/webbrowser.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/webbrowser/webbrowser.css" />
 	</styles>
 
 	<WebBrowserMoreMenu class="ContextMenu" defaultfocus="EditButton" tabindex="auto" selectionpos="auto" >

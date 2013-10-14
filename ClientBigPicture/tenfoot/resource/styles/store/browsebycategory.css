@@ -544,9 +544,11 @@ StoreBrowseByCategoryItem:descendantfocus .OnlyVisibleOnCarouselFocus
 #ItemName
 {
 	width: 460px;
-	color: white;
+	color: applabelsolid;
 	font-size: 36px;
 	white-space: normal;
+	font-family: platformfont;
+	font-weight: bold;
 }
 
 .DetailsIconRow

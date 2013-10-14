@@ -1,7 +1,7 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/consolepanel.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/consolepanel.css" />
 	</styles>
 
 	<ConsolePanel maxchars="80000" >

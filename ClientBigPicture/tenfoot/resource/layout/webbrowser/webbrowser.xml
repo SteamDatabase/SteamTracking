@@ -1,8 +1,8 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/webbrowser/webbrowser.css" />
-		<include src="tenfoot/resource/styles/webbrowser/webbrowser_dialogs.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/webbrowser/webbrowser.css" />
+		<include src="file://{resources}/styles/webbrowser/webbrowser_dialogs.css" />
 	</styles>
 
 	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="NavigateTenfootBack()">
@@ -43,22 +43,7 @@
 				<Panel class="Reticule ReticuleLoading" id="ReticuleLoadingContainer" />
 
 			</Panel>	
-		</Panel>
-		
-		<Panel id="JSAlert" class="JSAlert" > <!-- JS alert/confirm dialog -->
-			<Panel  class="JSAlertPanel" >
-		  		<Label id="JSText"  />
-		  		<Panel class="JSAlertPanelButtons" >
-				  	<Button onactivate="BrowserJSDialogOK()" 	>
-						<Label text="#UI_OK" />
-					</Button>  		
-				  	<Button onactivate="BrowserJSDialogCancel()" 	>
-						<Label text="#UI_Cancel" />
-					</Button>  	
-				</Panel>
-			</Panel>	
-		</Panel>
-		
+		</Panel>		
 		
 	</WebBrowser>
 </root>

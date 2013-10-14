@@ -3269,13 +3269,13 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_library_unknown_owner" "Other Games"
 "steam_library_filter_mygames" "My Games"
 
-"steam_downloads_networkusage"	"Current Network Usage"
-"steam_downloads_downloadrate"	"Download Rate "
+"steam_downloads_networkusage"	"Network Usage"
+"steam_downloads_downloadrate"	"Current"
 
 "steam_downloads_thissession"	"This Session"
-"steam_downloads_peakdownloadrate"	"Peak Download Rate "
+"steam_downloads_peakdownloadrate"	"Peak"
 "steam_downloads_peakuploadrate"	"Peak Upload Rate "
-"steam_downloads_totaldownloaded"	"Total Downloaded "
+"steam_downloads_totaldownloaded"	"Total"
 "steam_downloads_pause"	"Pause"
 "steam_downloads_resume"	"Resume"
 "steam_downloads_pauseall"	"Pause All"
@@ -3732,6 +3732,9 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_DeviceAuth_RequestDialog_SendError" "Failed to send authorization request (%reason%)"
 "Steam_DeviceAuth_RequestDialog_SendPending" "Your email request has been sent. Here’s hoping your wish will be granted soon!"
 
+"Steam_DeviceAuth_StoppedSharedGame_Title" "Shared Library Warning"
+"Steam_DeviceAuth_StoppedSharedGame_Text" "Steam terminated \"%game%\" because %owner% is currtently using this game library."
+
 "SteamUI_ManageDeviceAuth_Title" "Authorized Devices"
 
 
@@ -3775,5 +3778,12 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_Parental_UnlockFailure"			"The unlock attempt failed. Please enter the correct PIN and try again."
 "Steam_Parental_GameBlocked_Title"		"Parental Settings"
 "Steam_Parental_GameBlocked"			"This game has been blocked for the current user by parental settings"
+
+"steam_inbox_asyncgame"			"1 new turn waiting"
+"steam_inbox_asyncgames"		"%count% new turns waiting"
+
+"steam_inbox_asyncgameinvite"	"1 new game invite"
+"steam_inbox_asyncgameinvites"	"%count% new game invites"
+
 }
 

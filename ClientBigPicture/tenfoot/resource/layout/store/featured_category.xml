@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/store/store.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/store.css" />
 	</styles>
 
 	<StoreFeaturedCategory mousecanactivate="ifparentfocused(Categories)">

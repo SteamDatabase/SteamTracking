@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/settings.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
 	<SettingsPanel_NetworkListEntry class="AvailableNetwork AvailableNetworkNotSelected HorzContainer" onactivate="NetworkListEntrySelected()">

@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/settings.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
 	<SettingsPanel_GameController class="SettingsSection" defaultfocus="ConfigureButton" >
@@ -11,8 +11,8 @@
 		</Panel>
 		
 		<!-- main panel -->
-		<Panel id="GameControllerContent" class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
-			<Panel id="ControllerSub" class="FlowDown SettingsCenterContent">
+		<Panel id="GameControllerContent" class="SettingsContent" tabindex="auto" selectionpos="auto">
+			<Panel id="ControllerSub" class="FlowDown">
 				<Panel class="HorzSub SettingsRight SettingsController">
 					<Panel class="SettingsCallout SettingsGameControllerIcon"  />
 				</Panel>

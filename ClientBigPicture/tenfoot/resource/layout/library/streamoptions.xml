@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/streamoptions.css" />
+	</styles>
+
+	<TenfootMsgBox class="TenfootMsgBox" tabindex="auto" selectionpos="auto">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_StreamSources" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxButtonsVertical">	
+				</Panel>
+			</Panel>
+		</Panel>
+	</TenfootMsgBox>
+</root>

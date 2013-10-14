@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/login.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/login.css" />
 	</styles>
 
 	<LoginProgress defaultfocus="Cancel" tabindex="auto" selectionpos="auto">

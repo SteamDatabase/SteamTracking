@@ -1,6 +1,6 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/debugger.css" />
+		<include src="file://{resources}/styles/debugger.css" />
 	</styles>
 	
 	<Debugger>

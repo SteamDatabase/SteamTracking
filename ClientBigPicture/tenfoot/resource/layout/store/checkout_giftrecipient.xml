@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/store/checkout.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/checkout.css" />
 	</styles>
 	
 	<CheckoutGiftRecipient class="CheckoutStep" tabindex="none" selectionpos="none" defaultfocus="EmailMyGiftBtn" oncancel="NavigateCheckoutBack()">

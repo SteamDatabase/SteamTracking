@@ -1,9 +1,9 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu.css" />
-		<include src="tenfoot/resource/styles/friends/friends.css" />
-		<include src="tenfoot/resource/styles/friends/community_main.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/friends/community_main.css" />
 	</styles>
 
 	<FriendsProfileDetailsActionButton>

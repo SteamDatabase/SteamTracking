@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/downloads.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/downloads.css" />
 	</styles>
 
 	<DownloadsPanel defaultfocus="SummaryGridItem" tabindex="auto" selectionpos="auto">

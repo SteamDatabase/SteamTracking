@@ -1,8 +1,8 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/store/store.css" />
-		<include src="tenfoot/resource/styles/store/browsebycategory.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/store.css" />
+		<include src="file://{resources}/styles/store/browsebycategory.css" />
 	</styles>
 
 	<StoreBrowseByCategoryItem tabindex="auto" selectionpos="auto" class="CapsuleControllerSupportContainer">

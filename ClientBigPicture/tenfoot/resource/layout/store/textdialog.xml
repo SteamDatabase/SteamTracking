@@ -1,8 +1,8 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
-		<include src="tenfoot/resource/styles/store/textdialog.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/store/textdialog.css" />
 	</styles>
 	
 	<StoreTextDialog defaultfocus="Body" oncancel="ButtonCancel()" >

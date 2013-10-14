@@ -773,17 +773,20 @@ CartLineItem:descendantfocus .CartLineItemContents
 	font-size: 26px;
 }
 
-.ShoppingCartNote
+.ShoppingCartNote, .ShoppingCartNote:hover
+
 {
 	margin-left: 12px;
+	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 }
 
-.ShoppingCartNote Label
+.ShoppingCartNote Label, .ShoppingCartNote:hover Label
 {
 	color: secondary_label;
 	font-size: 21px;
 	line-height: 26px;
 	font-style: italic;
+	transform: translatex(0px);
 }
 
 #CouponTotalRow, #SubtotalRow

@@ -315,7 +315,7 @@ MainMenu.StackDepth3 #TopRow
 	text-transform: uppercase;
 	font-size: 18px;
 	margin-top: 0px;
-	margin-bottom: -1px;
+	margin-bottom: -2px;
 	font-weight: medium;
 
 	transition-property: opacity, max-width;
@@ -349,7 +349,7 @@ MainMenu.StackDepth3 #TopRow
 	opacity: 0.0; 
 }
 
-Button:hover .LongDesc
+Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels
 {
 	transition-delay: 0.08s !immediate;
 	max-width: 300px;
@@ -373,7 +373,6 @@ Button:hover .ShortDesc
 
 .TopRowBase Button, InboxMenu Button, ParentalButton
 {
-	padding: 8px 8px;
 	box-shadow: #eeeeee00 -5px -5px 6px 10px;
 	border: 5px solid #0d1c2200;
 	color: tcexitrow;
@@ -385,9 +384,10 @@ Button:hover .ShortDesc
 
 }
 
-ParentalButton
+
+.TopRowBase Button, InboxMenu Button
 {
-		padding: 0px 0px;
+		padding: 8px 8px;
 }
 
 .TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
@@ -421,6 +421,7 @@ ParentalButton
 	border-style: solid;
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
+	padding: 8px 8px;
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
@@ -605,6 +606,7 @@ ParentalButton
 {
 	flow-children: right;
 	margin-left: 4px;
+	padding: 8px;
 	opacity: 0.0;
 }
 
@@ -646,12 +648,8 @@ margin-right: 8px;
 {
 	font-size: 36px;
 	margin-left: 6px;
+	margin-right: 6px;
 	vertical-align: center;
-}
-
-#SettingsButton Label
-{
-	margin-right: 12px;
 }
 
 #BetaButton Label
@@ -920,7 +918,12 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	transform: translateZ( 30px );
 }
 
-.InsideLibrary #LibraryButton, .InsideStore #StoreButton, .InsideCommunity #CommunityButton,
+#ProfileLabel
+{
+	text-transform: uppercase;
+}
+
+.InsideLibrary #LibraryButton, .InsideStore #StoreButton, .InsideCommunity #CommunityButton, .InsideProfile #ProfileButton,
 .StackDepth2 #LibraryButton:active, .StackDepth2 #StoreButton:active, .StackDepth2 #CommunityButton:active,
 .StackDepth3 #LibraryButton:active, .StackDepth3 #StoreButton:active, .StackDepth3 #CommunityButton:active
 {
@@ -967,11 +970,9 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	color: tcmainbuttonselected;
 }
 
-.InsideLibrary #LibraryButton .ButtonLabel, .InsideStore #StoreButton .ButtonLabel, .InsideCommunity #CommunityButton .ButtonLabel,
+.InsideLibrary #LibraryButton .ButtonLabel, .InsideStore #StoreButton .ButtonLabel, .InsideCommunity #CommunityButton .ButtonLabel, .InsideProfile #ProfileButton .ButtonLabel,
 .StackDepth2 #LibraryButton:active .ButtonLabel, .StackDepth2 #StoreButton:active .ButtonLabel, .StackDepth2 #CommunityButton:active .ButtonLabel,
 .StackDepth3 #LibraryButton:active .ButtonLabel, .StackDepth3 #StoreButton:active .ButtonLabel, .StackDepth3 #CommunityButton:active .ButtonLabel
-
-
 {
 	color: black;
 }
@@ -983,6 +984,11 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
+}
+
+.GamesRunning MainMenu
+{
+	transition-duration: 0.3s, 0.3s !immediate;
 }
 
 InboxMenu

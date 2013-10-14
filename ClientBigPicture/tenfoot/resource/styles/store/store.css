@@ -6,8 +6,13 @@
 @define category_screenshot_switch_delay: 2.5;
 @define FeaturedCategoryFocusHeight: 215px;
 @define FeaturedCategoryScale: 0.813793;
-@define FeaturedCapsuleTextHeight: 38px;
+@define FeaturedCapsuleTextHeight: 32px;
 @define FeaturedCapsuleTextPadding: 20px;
+
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
 
 //
 // Loading related
@@ -218,6 +223,62 @@ Carousel:descendantfocus .RightMouseScrollRegion
 {
 	width: 100%;
 	height: 100%;
+}
+
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+
+{
+	width: 80px;
+	height: 100%;
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	background-color: mouse_hover_bg_left;
+}
+
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+#GenreGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion,
+{
+	width: 80px;
+	height: 100%;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	transition-duration: 0.2s;
+	background-color: mouse_hover_bg_right;
+}
+
+#GenreGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
+{
+		background-color: mouse_active_bg_right;
+}
+
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
 }
 
 #FeaturedCapsules
@@ -688,6 +749,7 @@ StoreFeaturedCategory Label
 	width: 100%;
 	font-size: FeaturedCapsuleTextHeight;
 	text-transform: uppercase;
+	font-weight: bold;
 	padding-bottom: FeaturedCapsuleTextPadding;
 
 	horizontal-align: center;
@@ -1014,6 +1076,7 @@ StoreGenres:descendantfocus
 {
 	font-size: 56px;
 	line-height: 70px;
+	margin-top: -32px;
 	white-space: nowrap;
 	color: carousel_title;
 	text-transform: uppercase;
@@ -1040,7 +1103,7 @@ StoreGenrePreview
 	box-shadow: fill #00000066 0px 0px 4px 0px;
 	pre-transform-scale2d: 0.90;
 
-	transition-property: pre-transform-scale2d, box-shadow, desaturation, background-color, wash-color;
+	transition-property: pre-transform-scale2d, box-shadow, desaturation, position, background-color, wash-color;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 }
@@ -1125,13 +1188,14 @@ StoreGenrePreview #GenreName
 	padding-top: 85px;
 	padding-bottom: 10px;
 
-	color: applabel;
+	color: applabelsolid;
 	font-size: 40px;
 	line-height: 50px;
 	font-family: platformfont;
 	font-weight: normal;
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: bold;
 	font-family: platformfont;
 
 	pre-transform-scale2d: 0.8;
@@ -1147,7 +1211,7 @@ StoreGenrePreview:focus #GenreName
 
 	pre-transform-scale2d: 1.0;
 	transform: translatey( 0px );
-	color: applabel;
+	color: white;
 }
 
 StoreGenrePreview:hover #GenreName
@@ -1161,7 +1225,6 @@ StoreGenrePreview:focus:hover #GenreName
 {
 	transform: translatey( 0px );
 	pre-transform-scale2d: 1.0;
-	color: applabel;
 	pre-transform-scale2d: 1.0;
 }
 

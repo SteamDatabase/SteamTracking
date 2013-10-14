@@ -252,7 +252,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 {
 	flow-children: down;
 	width: fill-parent-flow( 1.0 );
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 .AppTitle
@@ -1170,7 +1170,7 @@ h1, h2
 #DetailsCategories
 {
 	width: 100%;
-	height: 170px;
+	height: 160px;
 	flow-children: right;
 	margin: 4px 22px;
 }
@@ -1323,7 +1323,7 @@ h1, h2
 	background-image: url( "file://{images}/controller_support_full.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-	wash-color: #686667;
+	wash-color: storeoverviewcolor;
 	width: 40px;
 	height: 40px;
 }
@@ -2107,13 +2107,18 @@ StorePackageAppOverview
 {
 	pre-transform-scale2d: 0.75;
 	max-width: 490px;
+	height: 420px;
 	padding: 10px;
 	flow-children: down;
 
-	transition-property: pre-transform-scale2d, position;
+	transform: translateX( -20px ) translateY( -15px );
+	transition-property: pre-transform-scale2d, transform, position;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 }
+
+
+
 
 StorePackageAppOverview.Focused:descendantfocus
 {
@@ -2121,11 +2126,17 @@ StorePackageAppOverview.Focused:descendantfocus
 	//transform: translatey( 0px );
 	//margin-left: -10px;
 	//margin-right: -10px;
+	transform: translateX( -20px );
 }
 
 #AppCarousel:descendantfocus StorePackageAppOverview:descendantfocus:hover
 {
 	pre-transform-scale2d: 1.03;
+}
+
+StorePackageAppOverview.Focused:descendantfocus #ItemName
+{
+	visibility: visible;
 }
 
 .HeaderImageWrapper
@@ -2253,6 +2264,7 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 {
 	width: 100%;
 	color: applabelsolid;
+	font-weight: bold;
 	font-size: 36px;
 	line-height: 40px;
 	max-height: 80px;

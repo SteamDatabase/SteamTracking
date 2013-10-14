@@ -1,6 +1,6 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
 	</styles>
 	
 	<Tooltip>

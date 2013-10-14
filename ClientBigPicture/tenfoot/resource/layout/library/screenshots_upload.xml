@@ -1,9 +1,9 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
-		<include src="tenfoot/resource/styles/library/library_screenshots_slideshow.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/library_screenshots_slideshow.css" />
 	</styles>
 
 	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >

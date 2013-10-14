@@ -1,0 +1,51 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_RemoteClients class="SettingsSection" defaultfocus="AuthorizeLocalDeviceButton" tabindex="auto" selectionpos="auto">
+
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_RemoteClients_Title" />
+		</Panel>
+
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContentWide">
+			<Label text="#Settings_RemoteClients_Description" />
+			<Panel class="SettingsRemoteClientsHeader">
+				<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_DeviceName" />
+				<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_Status" />
+			</Panel>
+			<Panel class="SettingsRemoteClientSection">
+				<Panel id="SettingsRemoteClientList">
+					<!-- code will add buttons for each device here  -->
+				</Panel>	
+
+			</Panel>
+			<Label text="Settings_RemoteClients_Perf_Instructions" />	
+			
+			<Panel class="SettingsContentFlowRight">
+				<Panel class="SettingsContent SettingsColumnarContent" >
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
+					<DropDown id="Resolution" class="Filter" tabindex="auto" selectionpos="0,0">
+					</DropDown>
+					<Panel class="Spacer" />
+					<ToggleButton class="CheckBox" id="SettingsRemoteClients_HardwareAcceleration" text="#Settings_ReomteClients_HardwareAcceleration" />
+				</Panel>
+	
+				<Panel class="SettingsContent SettingsColumnarContent">
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_Framerate" />
+					<DropDown id="Monitor" class="Filter" tabindex="auto" selectionpos="1,0" >
+					</DropDown>
+					<Panel class="Spacer" />
+						<Button id="SettingsRemoteClients_Help" class="Button" >
+							<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
+						</Button>	
+				</Panel>
+			</Panel>
+		</Panel>
+		
+	</SettingsPanel_RemoteClients>
+</root>

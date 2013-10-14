@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/login.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/login.css" />
 	</styles>
 
 	<RefreshLogin defaultfocus="Password" tabindex="auto" selectionpos="auto">
@@ -42,7 +42,7 @@
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
 				<Label class="LoginPrompt" />
 				<Button class="Button" id="Cancel" tabindex="auto" selectionpos="auto"
-					onactivate="QuitApp()">
+					onactivate="CancelLogin()">
 					<Label text="#UI_Cancel" />
 				</Button>
 			</Panel>

@@ -1,4 +1,4 @@
-﻿"tenfoot"
+"tenfoot"
 {
 	"UI_Submit"	"Submit"
 	"UI_Select"	"Select"
@@ -18,6 +18,7 @@
 	"UI_Done"	"DONE"
 	"UI_Yes"	"YES"
 	"UI_No"		"NO"
+	"UI_Alert"		"Alert"
 
 	"UI_Backspace"	"BACKSPACE"
 	"UI_Spacebar"	"SPACE"
@@ -134,6 +135,7 @@
 	"MainMenu_Primary"	"STEAM"
 	"MainMenu_Store"	"STORE"
 	"MainMenu_Community"	"COMMUNITY"
+	"MainMenu_Profile"	"{s:personaname}"
 	"MainMenu_Main"	"MAIN"
 	"MainMenu_ActiveDownloadsShort"	"{d:downloads}"
 	"MainMenu_ActiveDownloadsLong" "{d:downloads} DOWNLOAD"
@@ -153,6 +155,12 @@
 	"MainMenu_NewGiftsSingular"	"{d:giftcount} new gift"
 	"MainMenu_NewTradeOffers"	"{d:tradeoffercount} pending trade offers"
 	"MainMenu_NewTradeOffersSingular"	"{d:tradeoffercount} pending trade offer"
+	"MainMenu_NewAsyncGames"			"{d:asyncgamescount} new turns waiting"
+	"MainMenu_NewAsyncGamesSingular"	"{d:asyncgamescount} new turn waiting"
+	"MainMenu_NewAsyncGameInvites"			"{d:asyncgameinvitescount} new game invites"
+	"MainMenu_NewAsyncGameInvitesSingular"	"{d:asyncgameinvitescount} new game invite"
+
+
 	"MainMenu_NewSupportMessages"	"1 message from Steam Support"
 	"MainMenu_NewClientUpdate"	"New Steam update available"
 
@@ -292,6 +300,15 @@
 	"Steam_AccountAlreadyLoggedInNeedShutdown"		"Your account '{s:accountname}' is currently in use at another machine.\nYou'll need to shut down Steam on your other computer in order to log in here."
 	"Steam_AccountAlreadyLoggedInNeedPassword"		"This account is currently logged in elsewhere.\nRe-enter your password to login on this computer."
 	"Steam_ErrorLoginFailed" "Login to Steam failed.\nEither the specified account does not exist, or the password was wrong.\nPlease check your account name and password and try again."
+	"Steam_LoggedInElsewhere_Title"	"Steam - Logged In Elsewhere"
+	"Steam_LoggedInElsewhere_Reconnect"  "Reconnect to Steam"
+	"Steam_LoggedInElsewhere_ChangeUser" "Change User"
+	"Steam_AccountLocked_Info"		"This computer was deauthorized. You must enter a new Steam Guard code to re-authorize it."
+	"Steam_Login_ErrorTitle" 		"Steam - Error"
+	"Steam_OfflineMode_NoPersonalInfoError_Title"	"Steam - Offline Mode"
+	"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam requires you to have your account credentials cached locally to enter Offline Mode. Since you don't have the 'Save account credentials on this computer' option enabled, you currently have no cached information. Do you wish to re-enable caching account credentials locally, so you can go Offline?"
+	"Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Enable saving account credentials"
+	"Steam_ErrorOffline"	"This operation cannot be completed while Steam is in Offline Mode."
 
 	"Shutdown_WaitingForGame"		"Waiting for {s:game} to shut down..."
 	"Shutdown_WaitingForDownload"	"Stopping download for {s:game}..."
@@ -315,6 +332,7 @@
 	"Settings_Voice"				"Voice"
 	"Settings_InGame"				"In-Game"
 	"Settings_Cloud"				"Downloads & Cloud"
+	"Settings_RemoteClients"		"In-Home Streaming"
 
 	"Settings_Select"				"SELECT"
 	"Settings_Back"					"BACK"
@@ -378,7 +396,7 @@
 	"SettingsAccount_UserCantSetBeta" 		"{s:electedbeta} (Only the user who installed Steam can change Beta participation.)"
 	"VAC_NoBans"	"In good standing"
 	"VAC_BannedFromServers"	"Banned from some secure servers because of a cheating infraction."
-	"SettingsAccount_StartBPM"			 	"Start Steam in Big Picture Mode"
+	"SettingsAccount_StartBPM"			 	"Start Steam in Big Picture mode"
 
 	// Settings, friends screen
 	"SettingsFriends_Avatar"				"Avatar and profile name"
@@ -412,7 +430,7 @@
 	"SettingsDisplay_NonPrimaryMonitorWarning"	"{s:selectedmonitor} is not your primary monitor.  Since games can only run on your primary monitor Steam will adjust it automatically when entering and exiting Big Picture.\n\nAre you sure you want to proceed?"
 
 	// Settings, language
-	"SettingsLanguage_Intro"				"Please select the language you wish Steam to use:"
+	"SettingsLanguage_Intro"				"Please select the language you wish Steam to use"
 	"SettingsLanguage_Change_Title"			"Change Language"
 	"SettingsLanguage_Change_Description"	"Restart Steam with this language?"
 
@@ -516,6 +534,7 @@
 	"SettingsController_CommitCancel"						"No thanks."
 	"SettingsController_NoneDetected"						"No controller detected."
 	"SettingsController_XInputController"				"XInput compatible controller"
+	"SettingsController_ResetButtons"						"RESET"
 
 	"Settings_ComingSoon"					"This feature is not ready yet, but it will be coming soon!"
 
@@ -931,6 +950,9 @@
 	"Library_Details_ControllerDoneEditing"		"SAVE"
 	"Library_Details_SelectYourBindingFor"		"SELECT BINDING FOR"
 	"Library_Details_SaveBindingDescription"	"DONE"
+	"Library_Details_MoreWaysToPlay"			"MORE WAYS TO PLAY"
+	"Library_Details_StreamFrom"				"STREAM FROM"
+
 	"Library_ControllerSaveBindingTitle"		"Save Bindings"
 	"Library_ControllerSetTitle"			"Set Title"
 	"Library_ControllerAddDescription"		"Add Description"
@@ -1063,6 +1085,9 @@
 	"Library_CloudSyncFailed_Title"		"Steam Cloud Error"
 	"Library_CloudSyncFailed_Detail"	"Steam was unable to sync your files for {s:gamename} with the Steam Cloud.\n\nIf you have launched this application from another computer, your application settings and/or progress may not be in sync with what is stored in the Cloud. If you launch the application now, you may lose those changes or progress."
 	"Library_CloudSyncFailed_LaunchAnyway"	"LAUNCH ANYWAY"
+	"Library_StreamingSource_Installed"		"(Installed)"
+	"Library_StreamingSource_ThisMachine"	"This machine"
+	"Library_StreamSources"					"Stream Sources"
 
 	"Activate_SubscriptionSuccess_Headline" "Activation Successful!"
 	"Activate_SubscriptionSuccess" "Your product activation code has successfully been activated. This product or products are now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
@@ -1120,6 +1145,8 @@
 	"Notification_ScreenshotTaken"		"Screenshot taken!"
 	"Notification_MultipleScreenshotsTaken"	"{d:numscreenshots} screenshots taken!"
 	"Notification_RefreshLogin"				"This account is logged in elsewhere."
+	"Notification_RemoteClientConnected"	"Connected to {s:machine}"
+	"Notification_RemoteClientDisconnected"	"Disconnected from {s:machine}"
 
 	"Friends_GroupEvent_NowStarting"	"has event starting"
 	"Friends_GroupEvent_NewEventScheduled"	"has scheduled an event"
@@ -1520,6 +1547,9 @@
 	"DeviceAuth_Deauthorized_Notification" "{s:owner} has revoked sharing here. Some games may now be unavailable." 
 	"DeviceAuth_StopPlaying_Notification" "Hey, {s:owner} needs this shared gamed back! You have {s:minutes} minutes of playtime remaining..." 
 	"DeviceAuth_SharedLibraryAvaliable_Notification" "Hooray, {s:owner}'s shared games are now available for you to play..." 
+	
+	"DeviceAuth_StoppedSharedGame_Title" "Shared Library Warning"
+	"DeviceAuth_StoppedSharedGame_Text" "Steam terminated \"{s:game}\" because {s:owner} is currtently using this game library."
 		
 	"Settings_ManageDevices_Item" " "
 	"Settings_ManageDevices_Name" "DEVICE NAME"
@@ -1533,14 +1563,28 @@
 	"Settings_ManageDevices_Remove" "DEAUTHORIZE THIS DEVICE"
 	
 	
-	"Settings_ManageDeviceAuth_Text" 	"To grant others access to your Steam library on this device*, authorize it below. You may also revoke access from any previously authorized devices in this list."
+	"Settings_ManageDeviceAuth_Text" 	"To grant others access to your Steam library on this device,* authorize it below. You may also revoke access from any previously authorized devices in this list."
 	"Settings_ManageDevices_Title" "Family Sharing & Devices"
 	"Settings_ManageDevices_Authorization_Failed" "Device authorization failed ({s:reason})"
 	"Settings_ManageDevices_Deauthorization_Failed" "Device deauthorization failed ({s:reason})"
 	"Settings_ManageDevices_Get_Devices_Failed" "Failed to get authorized devices ({s:reason})"
 
-	"SettingsAccount_ManageDeviceAuth" "Manage Family Sharing & Devices"
+	"SettingsAccount_ManageDeviceAuth" "Manage Family Sharing & devices"
 
+	"Settings_RemoteClients_Title" "In-Home Streaming"		
+	"Settings_RemoteClients_Description" "You can stream gameplay from the following devices detected on your local network. To connect, simply log into this same Steam account on another local device."
+	"Settings_RemoteClients_DeviceName" "DEVICE NAME"
+	"Settings_RemoteClients_Status" "STATUS"
+	"Settings_RemoteClients_Perf_Instructions" "To improve in-home streaming performance, try reducing your game's resolution or adjusting the following local settings."
+	"Settings_RemoteClients_Bandwidth" 	"Limit bandwidth to"
+	"Settings_RemoteClients_Framerate"	"Limit framerate to"
+	"Settings_ReomteClients_HardwareAcceleration" "Disable hardware acceleration"
+	"Settings_RemoteClients_StreamingSupport"	"View Support info"
+
+	"Settings_RemoteClients_Connected" "Connected"
+	"Settings_RemoteClients_Disconnected" "Not Connected"
+	
+	
 	
 	"Steam_AllowGameLaunch_Info"	"Allow {s:gamename} to launch with optional command line \"{s:arguments}\" ?\nIf you did not request this launch then click Cancel"
 	"Steam_AllowGameLaunch_Title"	"Allow game launch"
@@ -1564,4 +1608,18 @@
 	"Parental_AddToUnblockedGames"	"Add to Family Games"
 	"Parental_RemoveFromUnblockedGames"	"Remove from Family Games"
 	"Parent_Mode"	"Parents only!"
+
+	"Settings_TimeZone"	"Time Zone"
+	"SettingsTimeZone_Intro"	"Set the current time zone for this device"
+	"SettingsTimeZone_Continent"	"Continent"
+	"SettingsTimeZone_Country"	"Country"
+	"SettingsTimeZone_Region"	"Region"
+	"SettingsTimeZone_Apply"	"APPLY"
+
+	"OOBE_TimeZoneSettings_Title"	"Time Zone"
+	"OOBE_TimeZoneSettings_Description"	"Set the current time zone for this device"
+
+	"Settings_SteamOS"	"Interface"
+	"SettingsSteamOS_EnableDesktop" "Enable access to the Linux desktop"
+	
 }

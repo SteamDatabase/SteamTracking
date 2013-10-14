@@ -1,9 +1,9 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/parental/parental.css" />
-		<include src="tenfoot/resource/styles/library/library.css" />
-		<include src="tenfoot/resource/styles/textinput/text_input.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/parental/parental.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/textinput/text_input.css" />
 	</styles>
 
 	<LibraryWorkshop defaultfocus="BrowseWorkshop">

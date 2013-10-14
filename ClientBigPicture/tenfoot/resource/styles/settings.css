@@ -7,7 +7,7 @@
 @define tcsettingsbutton: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #abababff ) );
 
 /* transition duration for settings panels to opaque in/out; referred to from code so don't change the name */
-@define SettingsPanelTransitionDuration: 0.4s;
+@define SettingsPanelTransitionDuration: 0.23s;
 
 @define bgcolorwash: #395d73ff;
 //@define bgcolorwash: #ff00ffff;
@@ -39,17 +39,17 @@ SettingsPanel
 	pre-transform-scale2d: 1.38;
 	transform: translateY(-1080px );
 
-	transition-property: opacity;
+	transition-property: opacity, opacity-mask;
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: ease-in-out;
 
 	opacity: 0.0;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
-	background-color: #000000ff;
-	background-image: url("file://{images}/mainmenu_bg_2.png");
-
+	background-color: settingsbackgroundgradient;
 	z-index: settingszindex;
 	color: tcstatictext;
+	background-color: settingsbackgroundgradient;
 
 	transition-property: opacity, pre-transform-scale2d, transform;
 	transition-duration: .3s;
@@ -80,15 +80,23 @@ SettingsPanel
 	opacity: 1.0;
 	pre-transform-scale2d: 1.0;
 	transform: translateY( 0px );
+	opacity-mask: none;
 }
 
 #SettingsContent
 {
 	opacity: 1.0;
 
+	padding-left: 300px;
 	transition-property: opacity;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
+	flow-children: right;
+}
+
+.SettingsContentFlowRight
+{
+	flow-children: right;
 }
 
 SettingsPanel.SectionVisible #SettingsContent
@@ -98,10 +106,16 @@ SettingsPanel.SectionVisible #SettingsContent
 
 .SettingsHeader
 {
+	background-image: url("file://{images}/store/slideshow_glow.png");
+	background-repeat: no-repeat no-repeat;
+	background-position: left 0px top 75px;
+	height: 180px;
 	width: 100%;
-	height: 15%;
-	background-color: bgwithgradient;
+
+
 }
+
+
 
 .SettingsContained .SettingsHeader
 {
@@ -110,11 +124,20 @@ SettingsPanel.SectionVisible #SettingsContent
 
 .SettingsHeaderLegend
 {
-	font-size: 60px;
-	font-weight: light;
-	horizontal-align: center;
-	vertical-align: center;
+	font-size: 96px;
+	font-family: platformfont;
+	margin-left: 300px;
+	margin-top: 59px;
+	color: white;
 }
+
+.SettingsHeaderBackground
+{
+	background-color: bgwithgradient;
+	height: 150px;
+	width: 100%;
+}
+
 
 .LongDesc
 {
@@ -124,7 +147,7 @@ SettingsPanel.SectionVisible #SettingsContent
 	transform: translateX( 7px );
 	transition-property: transform;
 	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
+	transition-duration: 0.23s;
 	padding-top: 4px;
 	font-size: 24px;
 }
@@ -146,12 +169,12 @@ SettingsPanel.SectionVisible #SettingsContent
 .SettingsMainContent
 {
 	// add a little padding so the Z-transform does not take a hovered/focused button out of bounds
-	horizontal-align: center;
-	position: 0px 15% 0px;
-	padding: 30px 0px 0px 0px;
+	position: 0px 150px 0px;
+	padding-top: 40px;
 	width: 100%;
 	height: 80%;
-	flow-children: down;
+	horizontal-align: left;
+	flow-children: right;
 }
 
 // class for subpanels (left, right, or center) in settings subscreens
@@ -159,11 +182,10 @@ SettingsPanel.SectionVisible #SettingsContent
 {
 	// add a little padding so the Z-transform does not take a hovered/focused button out of bounds
 	padding: 30px 0px 0px 0px;
-	width: 525px;
 	height: 80%;
 	flow-children: down;
 	padding-left: 0px;
-	padding-right: 50px;
+	padding-right: 25px;
 	padding-top: 40px;
 }
 
@@ -234,9 +256,12 @@ ToggleButton .TickBox
 // they should be refactored into steamstyles perhaps
 Button,ToggleButton,.CheckBox,RadioButton
 {
-	horizontal-align: center;
+	horizontal-align: left;
 
 	width: 475px;
+	height: 48px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 
 	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
 
@@ -261,13 +286,17 @@ RadioButton
 
 .CheckBox
 {
-	background-color: none;
+	background-color: simplebutton;
 }
 
 .SettingsLeftContent Button,.CheckBox,RadioButton
 {
 	width: 475px;
-	horizontal-align: center;
+}
+
+#SettingsSteamOS_EnableDesktop
+{
+	width: 475px;
 }
 
 Button:hover,ToggleButton:hover,RadioButton:hover
@@ -313,28 +342,55 @@ Label.SettingsStatic
 .SettingsLeftContent
 {
 	horizontal-align: left;
+	vertical-align: top;
+	width: 500px;
+}
+
+.SettingsColumnarContent
+{
+	horizontal-align: left;
+	vertical-align: top;
+	width: 500px;
+	margin-right: 50px;
+	padding-top: 20px;
+}
+
+.SettingsMainRightContent
+{
+	width: 525px;
+	horizontal-align: left;
+	padding-right: 40px;
+	margin-left: 50px;
 }
 
 .SettingsRightContent
 {
 	width: 525px;
-	margin-left: 545px;
+	margin-left: 550px;
 	horizontal-align: left;
 	padding-right: 40px;
 }
 
+#Settings_Voice .SettingsRightContent
+{
+	margin-top: 33px;
+	}
+
+
+
 .SettingsCenterContent
 {
-	width: 655px;
-	horizontal-align: center;
-	padding-left: 25px;
+	width: 1200px;
+	horizontal-align: left;
+	padding-left: 300px;
 }
 
 .SettingsCenterContentWide
 {
-	width: 950px;
-	horizontal-align: center;
-	padding-left: 25px;
+	width: 1200px;
+	horizontal-align: left;
+	margin-left: 300px;
+	flow-children: down;
 }
 
 .Button,.CheckBox
@@ -381,26 +437,32 @@ Label.SettingsStatic
 	border-color: #ffffff;
 }
 
-
 // and make room for the tickbox
-.CheckBox Label
+.CheckBox Label, RadioButton Label
 {
-	padding-left: 46px;
+	padding-left: 52px;
 	padding-top: 6px;
-	color: applabel;
+	color: detailsdatalabel;
 	width: 100%;
 	text-overflow: clip;
 	white-space: nowrap;
+	
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
 }
 
-.CheckBox:hover Label
+.CheckBox:hover Label, RadioButton:hover Label
 {
 	color: #ffffffff;
+	transform: translatex(0px);
 }
 
-.CheckBox:focus Label
+.CheckBox:focus Label, RadioButton:focus Label
 {
 	color: #000000ff;
+	transform: translatex(0px);
 }
 
 .SettingsSection
@@ -411,11 +473,12 @@ Label.SettingsStatic
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: ease-in-out;
 	flow-children: down;
+	background-color: settingsbackgroundgradient;
 }
 
 .SettingsBottomPanel
 {
-	margin-left: 500px;
+	margin-left: 300px;
 }
 
 .SettingsSection.SectionVisible
@@ -426,7 +489,7 @@ Label.SettingsStatic
 #SettingsFriends_AvatarContainer
 {
 	flow-children: right;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 	margin-top: 8px;
 }
 
@@ -512,15 +575,16 @@ DropDown Label
 
 #Settings_About .SettingsContent
 {
-	width: 800px;
+	width: 1200px;
 	padding: 30px;
+	padding-left: 300px;
 }
 
 .AboutSectionHeading
 {
-	horizontal-align: center;
+	horizontal-align: left;
 	margin: 20px 0px 20px 0px;
-	font-size: 30px;
+	font-size: 36px;
 
 	color: tcstatictext;
 }
@@ -534,8 +598,9 @@ DropDown Label
 
 #Settings_Display .SettingsContent
 {
-	width: 800px;
+	width: 1200px;
 	padding: 30px;
+	padding-left: 300px;
 }
 
 #Settings_Display .VertContainer
@@ -543,9 +608,15 @@ DropDown Label
 	margin-bottom: 20px;
 }
 
+#Settings_TimeZone .VertContainer
+{
+	margin-bottom: 20px;
+}
+
 #Settings_Language .SettingsContent
 {
 	padding: 30px;
+	padding-left: 300px;
 }
 
 #Settings_Language .HorzContainer
@@ -558,10 +629,36 @@ DropDown Label
 	height: 475px;
 }
 
+#ContinentsDropDownMenu,#CountriesDropDownMenu,#RegionsDropDownMenu
+{
+	height: 475px;
+}
+
+.TimeZoneDropDown
+{
+	margin-bottom: 20px;
+}
+
+.OOBE #ApplyButton
+{
+	visibility: collapse;
+}
+
+.OOBE .SettingsSection
+{
+	background-color: #00000000;
+}
+
+#ApplyButton
+{
+	margin-top: 50px;
+}
+
 #Settings_Network .SettingsContent
 {
-	width: 1000px;
+	width: 1500px;
 	padding: 30px;
+	padding-left: 300px;
 }
 
 #AvailableNetworksList
@@ -812,9 +909,9 @@ DropDown Label
 
 .ResLabel
 {
-	width: 375px;
+	width: 300px;
 	color: tcstatictext;
-	text-align: right;
+	text-align: left;
 	padding-right: 20px;
 }
 
@@ -868,7 +965,7 @@ DropDown Label
 {
 	flow-children: right;
 	vertical-align: top;
-	horizontal-align: center;
+	horizontal-align: left;
 }
 
 .HorzContainerLeft
@@ -891,7 +988,7 @@ DropDown Label
 	flow-children: right;
 	vertical-align: center;
 	// leave room for content to grow
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .HorzSub Image,.HorzSub Button,.HorzSub .CheckBox,.HorzSub Label,.HorzSub KeyboardShortcut
@@ -899,6 +996,7 @@ DropDown Label
 	vertical-align: center;
 	wash-color: none;
 	margin-right: 2px;
+	margin-left: 0px;
 }
 
 DropDownMenu
@@ -1004,36 +1102,18 @@ DropDownMenu
 	background-position: 50% 50%;
 }
 
-// and make room for the circle
-.RadioButton Label
-{
-	padding-left: 46px;
-	padding-top: 6px;
-	color: detailsdatalabel;
-}
-
-.RadioButton:hover Label
-{
-	color: #ffffffff;
-}
-
-.RadioButton:focus Label
-{
-	color: #000000ff;
-}
 
 KeyboardShortcut,.KeyboardShortcut
 {
 	flow-children: right;
 	margin-top: 8px;
-	margin-right: 6px;
 	margin-bottom: 26px;
-	padding: 8px;
+	padding: 7px;
 	background-color: simplebutton;
 	transition-property: pre-transform-scale2d,color,background-color;
 	transition-duration: 0.2s;
 	color: detailsdatalabel;
-	width: 475px;
+	width: 500px;
 	border-width: 5px;
 	border-radius: 2px;
 	border-style: solid;
@@ -1078,6 +1158,7 @@ KeyboardShortcut:selected
 }
 
 
+
 #ScreenshotKey
 {
 	width: 475px;
@@ -1110,12 +1191,13 @@ KeyboardShortcut .Graphic
 
 .SettingsRight
 {
-	horizontal-align: right;
+	horizontal-align: left;
+
 }
 
 #AudioSub VUMeter
 {
-	margin-right: 0px;
+	margin-right: 20px;
 }
 
 .SettingsGameControllerIcon
@@ -1125,7 +1207,7 @@ KeyboardShortcut .Graphic
 	margin: 80px 0px 0px 0px;
 	background-repeat: space;
 	background-image: url("file://{images}/settings/controller_icon.png");
-	horizontal-align: center;
+	horizontal-align: left;
 	vertical-align: center;
 }
 
@@ -1149,18 +1231,19 @@ KeyboardShortcut .Graphic
 
 .SettingsController
 {
-	width: 850px;
+	width: 1200px;
+
 }
 
 #GameControllerContent
 {
-	width: 1050px;
-	padding-right: 100px;
+	width: 1400px;
+	margin-left: 300px;
 }
 
 .SettingsControllerName
 {
-	horizontal-align: center;
+	horizontal-align: left;
 	vertical-align: center;
 	margin-bottom: 48px;
 }
@@ -1178,8 +1261,8 @@ KeyboardShortcut .Graphic
 #SettingsControllerLeft
 {
 	width: 428px;
-	margin-left: 180px;
-	margin-right: 180px;
+	margin-left: 200px;
+	margin-right: 140px;
 }
 
 #SettingsContollerHeaderRow
@@ -1192,8 +1275,9 @@ KeyboardShortcut .Graphic
 .SettingsController_BindRow
 {
 	flow-children: right;
-	height: 80px;
-	width: 1000px;
+
+	width: 1200px;
+	margin: 5px;
 	padding: 5px;
 	border-style: solid;
 	border-width: 5px;
@@ -1614,13 +1698,15 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_Header
 {
-	font-size: 32px;	
+	font-size: 32px;
 	flow-children: right;
+	margin-top: 20px;
 }
 
 .SettingsManageDevices_List
 {
 	height: 500px;
+	width: 1200px;
 	flow-children: down;
 	overflow: clip scroll;
 	background-color: simplebutton;
@@ -1628,33 +1714,48 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnItem
 {
-	width: 32px;
+	width: 48px;
 	font-size: 24px;
 	margin-top: 20px;
 }
 
 .SettingsManageDevices_ColumnName
 {
-	width: 240px;
+
 	font-size: 24px;
-	margin-left: 18px;
+	margin-left: 4px;
 	margin-top: 20px;
+	color: tcstatictext;
 }
+
+
+#Settings_ManageDevices .SettingsManageDevices_ColumnName
+{
+	width: 352px;
+}
+
+#Settings_RemoteClients .SettingsManageDevices_ColumnName
+{
+	width: 536px;
+}
+
 
 .SettingsManageDevices_ColumnTime
 {
-	width: 260px;
+	width: 400px;
 	font-size: 24px;
 	margin-top: 20px;
 	margin-left: 8px;
+	color: tcstatictext;
 }
 
 .SettingsManageDevices_ColumnUser
 {
-	width: 300px;
+	width: 400px;
 	font-size: 24px;
 	margin-top: 20px;
 	margin-left: 8px;
+	color: tcstatictext;
 }
 
 .SettingsManageDevices_ColumnItemContent
@@ -1668,7 +1769,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnNameContent
 {
-	width: 240px;
+	width: 350px;
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;
@@ -1676,7 +1777,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnTimeContent
 {
-	width: 260px;
+	width: 400px;
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;
@@ -1684,7 +1785,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnUserContent
 {
-	width: 300px;
+	width: 400px;
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;
@@ -1722,14 +1823,16 @@ color: black;
 
 .SettingsRemoteClientSection
 {
-	margin-top: 2px;
 	flow-children: down;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e384c ), color-stop( 0.5, #134059 ), to( #113b50 ) );
+	width: 1025px;
+	height: 250px;
+	margin-bottom: 20px;
+	background-color: simplebutton;
 }
 
 .SettingsRemoteClientsColumnDevice
 {
-	width: 312px;
+	width: 538px;
 }
 
 .SettingsRemoteClientsColumnStatus
@@ -1742,20 +1845,38 @@ color: black;
 	margin: 8px 8px 0px 8px;
 	flow-children: right;
 	color: #029fda;
+	width: 1200px;
 }
 
 #SettingsRemoteClientList
 {
+	height: fill-parent-flow( 1.0 );
+	width: 100%;
 	padding: 8px;
 	flow-children: down;
-	height: 500px;
 	overflow: clip scroll;
+}
+
+SettingsPanel_RemoteClients.Loading #SettingsRemoteClientList
+{
+	width: 120px;
+	height: 120px;
+	align: center center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
 }
 
 
 // clean up with other styles in settings
 SettingsPanelRemoteClientListing
 {
+	flow-children: right;
+	background-color: transparent;
+	width: fit-children;
+	color: white;
+	margin-right: 8px;
 	horizontal-align: center;
 
 	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
@@ -1765,12 +1886,15 @@ SettingsPanelRemoteClientListing
 	border-radius: 2px;
 	border-color: #3d414200;
 
-	background-color: simplebutton;
-
 	pre-transform-scale2d: 1.0;
 
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-property: border, blur, background-color,  transform, pre-transform-scale2d, box-shadow;
 	transition-timing-function: ease-out;
+}
+
+SettingsPanel_RemoteClients.Loading SettingsPanelRemoteClientListing
+{
+	visibility: collapse;
 }
 
 SettingsPanelRemoteClientListing:hover
@@ -1803,15 +1927,6 @@ SettingsPanelRemoteClientListing:focus
 	animation-direction: normal;
 }
 
-SettingsPanelRemoteClientListing
-{
-	flow-children: right;
-	background-color: transparent;
-	width: fit-children;
-	color: white;
-	margin-right: 8px;
-}
-
 SettingsPanelRemoteClientListing:descendantfocus
 {
 	color: black;
@@ -1820,4 +1935,34 @@ SettingsPanelRemoteClientListing:descendantfocus
 SettingsPanelRemoteClientListing #Status
 {
 	color: #a1b3bd;
+}
+
+.TimeZoneLabel
+{
+	margin-bottom: 10px;
+}
+
+.SteamOSButton
+{
+	visibility: collapse;
+}
+
+.SteamOS .SteamOSButton
+{
+	visibility: visible;
+}
+
+.NonSteamOSButton
+{
+	visibility: visible;
+}
+
+.SteamOS .NonSteamOSButton
+{
+	visibility: collapse;
+}
+
+.Spacer
+{
+	height: 20px;
 }

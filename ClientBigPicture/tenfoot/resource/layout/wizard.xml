@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
 	</styles>
 
 	<WizardPanel class="WizardPanel" oncancel="WizardButtonBack();">
