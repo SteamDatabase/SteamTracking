@@ -1,10 +1,10 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu.css" />
-		<include src="tenfoot/resource/styles/button.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
-		<include src="tenfoot/resource/styles/library/choose_purchase_or_authorization.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/choose_purchase_or_authorization.css" />
 		
 	</styles>
 

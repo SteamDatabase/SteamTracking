@@ -1,8 +1,8 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/login/join.css" />
-		<include src="tenfoot/resource/styles/login/loginstyles.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/login/join.css" />
+		<include src="file://{resources}/styles/login/loginstyles.css" />
 	</styles>
 
 	<Join>

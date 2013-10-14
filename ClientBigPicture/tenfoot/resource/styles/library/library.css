@@ -170,7 +170,6 @@ LibraryPanel
 {
 	transition-property: transform, position, opacity !immediate; 
 	transition-duration: mediumduration;
-	transition-delay: mediumduration;
 	transition-timing-function: linear;
 	transition-delay: 0s;
 
@@ -181,7 +180,6 @@ LibraryPanel
 {
 	transition-property: transform, position, opacity !immediate; 
 	transition-duration: mediumduration;
-	transition-delay: mediumduration;
 	transition-timing-function: linear;
 	transition-delay: 0s;
 
@@ -2863,12 +2861,22 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	opacity: 1.0;
 }
 
+.PlayTimeBody
+{
+	visibility: visible;
+}
+
 .PlayAction .PlayTimeBody
 {
 	margin: 20px 20px 0px 20px;
 	width: 100%;
 	height: 200px;
 	flow-children: down;
+}
+
+.Working .PlayTimeBody
+{
+	visibility: collapse;
 }
 
 .PlayAction .PlayTimeRow
@@ -2899,11 +2907,16 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	font-size: 22px;
 	color: applabelsolid;
 	z-index: 1000;
+	visibility: collapse;
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
 }
 
+.Working #LaunchingStatus
+{
+	visibility: visible;
+}
 
 .PlayActionFullWrapper:descendantfocus #LaunchingStatus
 {
@@ -2927,14 +2940,36 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	vertical-align: center;
 	opacity: 0.0;
 	padding: 14px;
+	margin: 4px;
+	wash-color: none;
 
-	transition-property: pre-transform-scale2d;
+	transition-property: pre-transform-scale2d, wash-color;
 	transition-duration: 0.18s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0.0s;
 }
 
 
+.PlayAction .StreamGlow
+{
+	opacity: 0.0;
+
+}
+
+.PlayAction.Streaming .StreamGlow
+{
+	width: 232px;
+	height: 162px;
+	opacity: 1.0;
+	wash-color: #2f4d64ff;
+
+	animation-name: stream-wash-pulse;
+	animation-duration: 6.8s;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
 .PlayAction .ButtonEdge
 {
 	border-radius: 50%;
@@ -2954,6 +2989,7 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 .PlayAction .ButtonBody:hover
 {
 	pre-transform-scale2d: 1.1;
+
 }
 
 .PlayAction .ButtonEdge:hover
@@ -3011,6 +3047,15 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	animation-direction: normal, normal;
 }
 
+#StreamFromRow
+{
+	visibility: collapse;
+}
+
+.Streaming #StreamFromRow
+{
+	visibility: visible;
+}
 
 @keyframes 'play-button-initialize'
 {
@@ -3052,7 +3097,8 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 
 .PlayAction .ButtonImage
 {
-	opacity: 0.8;
+	opacity: 0.9
+	;
 	
 	transition-property: opacity;	
 	transition-duration: shortmedduration;
@@ -4129,4 +4175,36 @@ KeyboardShortcut Image
 	//border-color: #FFFFFF00;
 	//box-shadow: #00000000 -6px -6px 12px 12px;
 	//background-color: none;
+}
+
+@keyframes 'stream-wash-pulse'
+{
+	0%
+	{
+		wash-color: #2f4d64ff;
+		blur: none;
+	}
+	32%	
+	{
+		wash-color: #2f4d64ff;
+		blur: none;
+	}
+	
+	50%
+	{
+		wash-color: #4e87aaff;
+		blur: gaussian( 1.5 );
+	}	
+	
+	56%
+	{
+		wash-color: #2f4d64ff;
+		blur: none;
+	}
+	
+	100%
+	{
+		wash-color: #2f4d64ff;
+		blur: none;
+	}
 }

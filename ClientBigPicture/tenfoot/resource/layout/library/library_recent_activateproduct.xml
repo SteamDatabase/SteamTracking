@@ -1,9 +1,9 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
-		<include src="tenfoot/resource/styles/button.css" />
-		<include src="tenfoot/resource/styles/library/library_recent_activateproduct.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library_recent_activateproduct.css" />
 	</styles>
 
 	<LibraryRecentActivateProductDialog class="TenfootMsgBox" onmouseactivate="ActivateCancel()" defaultfocus="ProductCode">

@@ -1,7 +1,7 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
 	</styles>
 	
 	<InboxMenu onmouseactivate="CloseInboxMenu();" oncancel="CloseInboxMenu();">
@@ -36,12 +36,24 @@
 					<Label id="NewTradeOffersLabel" text="#MainMenu_NewTradeOffers" />
 				</Panel>
 			</Button>
-			<Button id="NewSupportMessagesButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewSupportMessages();" >
+			<Button id="NewAsyncGamesButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewAsyncGames();" >
+				<Image src="file://{images}/async_game.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewAsyncGamesLabel" text="#MainMenu_NewAsyncGames" />
+				</Panel>
+			</Button>
+			<Button id="NewAsyncGameInvitesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewAsyncGameInvites();" >
+				<Image src="file://{images}/async_game_invite.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewAsyncGameInvitesLabel" text="#MainMenu_NewAsyncGameInvites" />
+				</Panel>
+			</Button>					
+			<Button id="NewSupportMessagesButton" tabindex="7" selectionpos="0,7" onactivate="ShowNewSupportMessages();" >
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewSupportMessagesLabel" text="#MainMenu_NewSupportMessages" />
 				</Panel>
 			</Button>
-			<Button id="NewClientUpdateButton" tabindex="6" selectionpos="0,6" onactivate="AllowNewClientUpdate();" >
+			<Button id="NewClientUpdateButton" tabindex="8" selectionpos="0,8" onactivate="AllowNewClientUpdate();" >
 				<Image src="file://{images}/icon_steam_update.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewClientUpdateLabel" text="#MainMenu_NewClientUpdate" />

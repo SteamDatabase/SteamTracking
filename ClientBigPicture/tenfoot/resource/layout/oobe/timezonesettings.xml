@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/oobe/oobe.css" />
+	</styles>
+
+	<OOBETimeZoneSettingsWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#OOBE_TimeZoneSettings_Title" />
+		<Label class="WizardChildDescription" text="#OOBE_TimeZoneSettings_Description" />
+
+		<Panel id="SettingsContainer">
+			<SettingsPanel_TimeZone id="SettingsPanel_TimeZone" class="SettingsSection SectionVisible SettingsContained" defaultfocus="Continents" />
+		</Panel>
+		
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="RegionSelected()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+		</Panel>
+	</OOBETimeZoneSettingsWizardChild>
+
+</root>

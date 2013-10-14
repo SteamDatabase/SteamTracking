@@ -58,3 +58,13 @@
 {
 	visibility: visible;
 }
+
+.SteamOS .ExitButtons
+{
+	visibility: collapse;
+}
+
+.SteamOS.SteamOS_EnableDesktop #QuitBigPicture
+{
+	visibility: visible;
+}

@@ -1,10 +1,10 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/library/library.css" />
-		<include src="tenfoot/resource/styles/friends/community_main.css" />
-		<include src="tenfoot/resource/styles/overlay/overlay.css" />
-		<include src="tenfoot/resource/styles/friends/friends_profile_details.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/friends/community_main.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
+		<include src="file://{resources}/styles/friends/friends_profile_details.css" />
 	</styles>
 	
 	<OverlayBasePanel>

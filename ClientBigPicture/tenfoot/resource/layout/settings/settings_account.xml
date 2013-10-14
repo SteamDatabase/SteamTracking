@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/settings.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
 	<SettingsPanel_Account class="SettingsSection" defaultfocus="SettingsAccount_History">
@@ -35,7 +35,6 @@
 				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" />
 				<Label class="HorzContainerLeft" text="#SettingsAccount_MustSave" />
 		  
-				<ToggleButton class="CheckBox" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM" />
 			</Panel>
 	
 			<!-- right-hand status/info panel -->

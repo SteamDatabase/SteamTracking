@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/store/storeapp.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 	
 	<StoreAppFriendsSection defaultfocus="FriendsExanded" >

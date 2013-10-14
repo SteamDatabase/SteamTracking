@@ -1,8 +1,8 @@
 <root>
 	<styles>		
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/backgroundvideopanel.css" />
-		<include src="tenfoot/resource/styles/store/holidaysale.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/backgroundvideopanel.css" />
+		<include src="file://{resources}/styles/store/holidaysale.css" />
 	</styles>
 	
 	<BackgroundVideoPanel>

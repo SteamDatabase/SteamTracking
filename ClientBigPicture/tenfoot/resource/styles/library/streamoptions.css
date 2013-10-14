@@ -1,0 +1,36 @@
+#MsgBoxButtonsVertical
+{
+	width: 100%;
+	margin-top: 0px;
+}
+
+.MsgBoxButton
+{
+	width: 100%;
+}
+
+StreamingSourceOptions #MsgBoxButtonArea Button Label.StreamingSourceInstalled
+{
+	horizontal-align: right;
+}
+
+StreamingSourceOptions #MsgBoxButtonArea Button Label.StreamingSourceName
+{
+	horizontal-align: left;
+}
+
+#MsgBoxBodyRegion
+{
+	width: 700px;
+}
+
+#MsgBoxHeader
+{
+	height: 60px;
+}
+
+
+#MsgBoxButtons
+{
+	margin-top: 25px;
+}

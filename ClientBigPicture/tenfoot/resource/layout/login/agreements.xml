@@ -1,8 +1,8 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/wizardstyles.css" />
-		<include src="tenfoot/resource/styles/login/createaccount.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/createaccount.css" />
 	</styles>
 
 	<AgreementsWizardChild class="WizardChild" defaultfocus="ButtonNext" tabindex="auto" selectionpos="auto">

@@ -1,10 +1,10 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
-		<include src="tenfoot/resource/styles/library/library.css" />
-		<include src="tenfoot/resource/styles/library/controllerbindings.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/library/controllerbindings.css" />
 	</styles>
 
 	<VKBMouse selectionpos="0,0" defaultfocus="kb_key_esc" >

@@ -1,7 +1,7 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/msgbox.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
 	</styles>
 	
 	<LibraryRecentAddContentDialog class="TenfootMsgBox" oncancel="ButtonCancel()" >
@@ -9,7 +9,7 @@
 			<Button onactivate="ActivateProduct()" >
 				<Label text="#Library_AddContent_Activate" />
 			</Button>
-			<ParentalButton onactivate="BrowseStore()" >
+			<ParentalButton id="BrowseStoreButton" onactivate="BrowseStore()" >
 				<Label text="#Library_AddContent_Store" />
 			</ParentalButton>
 		</Panel>

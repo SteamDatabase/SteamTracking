@@ -1,8 +1,8 @@
 <root>
 	<styles>
-		<include src="tenfoot/resource/styles/steamstyles.css" />
-		<include src="tenfoot/resource/styles/mainmenu_communitybackground.css" />
-		<include src="tenfoot/resource/styles/friends/community_main.css" />
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu_communitybackground.css" />
+		<include src="file://{resources}/styles/friends/community_main.css" />
 	</styles>
 
 	<CommunityMainPanel defaultfocus="CommunityFriendsStrip" >
