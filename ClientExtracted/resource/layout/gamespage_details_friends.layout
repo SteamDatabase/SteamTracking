@@ -1,0 +1,118 @@
+"resource/layout/gamespage_details_friends.layout"
+{
+	controls
+	{
+		friendsdetails { controlname="CGamesPage_Details_Friends" style="friendsdetails" }
+		
+		headerlabel { controlname="Label" style="gamedetails-headerlabel" labeltext="#Steam_Friends" }
+		listplayingnow	{ controlname="CGamesPage_Details_Friends_List" }
+		listplayever	{ controlname="CGamesPage_Details_Friends_List" }
+
+		viewall { controlname="Button" style="viewallbutton" labeltext="#Steam_ViewAllFriends" command="OpenFriendsDialog" }
+	}
+
+	colors
+	{
+		GameDetailsFriends.ExtraVerticalSpacing=75	
+	}
+
+	styles
+	{
+		friendsdetails
+		{
+			bgcolor=BackgroundStart
+		}
+
+		infolabel
+		{
+			font-size=16
+			textcolor=Label
+		}	
+		
+		friendlabelmore
+		{
+			inset="-3 0 0 0"
+			font-size=18
+			textcolor="Text2"
+			font-family=basefont
+		     	render_bg
+		     	{
+			        // background fill
+			        0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonface2, propertysheetbg )"
+		                
+			        // lines around
+			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonface2 )"  // top
+			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonface2 )"  // bottom
+			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonface2 )"  // left
+			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonface2 )"  // right
+		
+			        // single pixel fills in the corners
+			        5="fill( x0 + 1, y0 + 2, x0 + 4, y0 + 3, buttonface2 )"
+			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonface2 )"
+			        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, buttonface2 )"
+			        8="fill( x1 - 5, y1 - 2, x1 - 4, y1 - 1, ButtonFace2 )"
+			11="fill( x0, y0 + 2, x0 + 1, y0 + 3, ButtonBorderDisabled2 )"
+			12="fill( x1 - 4, y0 + 2, x1 - 3, y0 + 3, ButtonBorderDisabled2 )"
+			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
+			14="fill( x1 - 4, y1 - 2, x1 - 3, y1 - 1, ButtonBorderDisabled2 )"
+			15="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled2 )"
+			16="fill( x1 - 5, y0 + 1, x1 - 4, y0 + 2, ButtonBorderDisabled2 )"
+			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
+			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonBorderDisabled2 )"
+			        
+    			}
+    		}   
+    		   
+		friendlabelmore:hover
+		{
+			inset="-3 0 0 0"
+			font-size=18
+			textcolor="Text"
+			font-family=basefont
+		    	 render_bg
+		    	 {
+		      	  	// background fill
+		       		0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonfaceactive, propertysheetbg )"
+		                
+			        // lines around
+			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonborderactive )"  // top
+			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonborderactive )"  // bottom
+			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonborderactive )"  // left
+			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonborderactive )"  // right
+		
+			        // single pixel fills in the corners
+			        5="fill( x0 + 1, y0 + 2, x0 + 2, y0 + 3, buttonborderactive )"
+			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonborderactive )"
+			        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, buttonborderactive )"
+			        8="fill( x1 - 5, y1 - 2, x1 - 4, y1 - 1, buttonborderactive )"
+			11="fill( x0, y0 + 2, x0 + 1, y0 + 3, ButtonFace2 )"
+			12="fill( x1 - 4, y0 + 2, x1 - 3, y0 + 3, ButtonFace2 )"
+			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+			14="fill( x1 - 4, y1 - 2, x1 - 3, y1 - 1, ButtonFace2 )"
+			15="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonFace2 )"
+			16="fill( x1 - 5, y0 + 1, x1 - 4, y0 + 2, ButtonFace2 )"
+			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonFace2 )"
+    			}
+    		}     
+	}
+
+	layout
+	{
+		region { name=body margin=10 width=max height=max }
+		place { region=body control=headerlabel width=max }
+		
+		place 
+		{ 
+			region=body
+			y=25 
+			width=max
+			height=72
+			control=listplayingnow,listplayever
+			dir=down
+			spacing=0
+			margin=0
+		}
+		place {	region=body control=viewall align=bottom margin-bottom=5 }
+	}
+}

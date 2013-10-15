@@ -1,0 +1,205 @@
+"InstallScript"
+{
+	"Registry"
+	{
+		"HKEY_LOCAL_MACHINE\\Software\\Activision"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\AGEIA Technologies"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\ALTAR"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\ALTAR games"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Ascaron Entertainment"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Aspyr"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Atari"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\BioWare"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Bohemia Interactive Studio"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\CAPCOM"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Codemasters"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Core Design"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Crystal Dynamics"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Cyanide"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\DMA Design"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\DMA Design Ltd"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\DreamCatcher"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\EgoSoftware"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Eidos"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Eidos Interactive"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Eugen Systems"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Empire Interactive"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Firaxis Games"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Firefly Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Full Spectrum Warrior 2"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Frogwares"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\GSC Game World"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\HD Publishing"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Human Head Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\id"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Iocaine Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Ion Storm"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Iron Lore"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Lionhead Studios Ltd"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Looking Glass Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\LucasArts"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\DirectPlay\\Applications"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Mindware Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Mithis"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Muzzy Lane Software"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Pandemic Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\PeopleCanFly"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Pyro"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Pyro Studios"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Reality Pump"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Reflexive Entertainment"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Remedy Entertainment"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Red Storm Entertainment"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Rockstar Games"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\SEGA"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Shadowgrounds Survivor Demo"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Sports Interactive Ltd"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\SSSI"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Strategy First"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Techland"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\The Adventure Company"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\The Creative Assembly"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\THQ"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Turbine"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Ubisoft"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Unreal Technology"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Valve"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\ValuSoft"
+		{
+		}
+		"HKEY_LOCAL_MACHINE\\Software\\Vigil Blood Bitterness"
+		{
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"9e4eb88946c9bd62ff5d0ae40d80dcd54949dbdd184bfc0dabc5f79999fc01363b7f1001014c1eb04ee54da831b441fb1398739837a8ec30e60f80adb05f08fc08a014db19b8a6a40b6ddf99eb74c187eb9a135c17755c475fff3de408bbf305dbd980a89b0a206d594eae8dd7b7372335d70335b2f70c252790f744a2401e49"
+}

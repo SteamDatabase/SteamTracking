@@ -7,9 +7,17 @@
 		private $AppStart;
 		private $CurrentTime;
 		private $UseCache = true;
+		private $ExtractAndFix = false;
 		private $ETags = Array( );
 		private $Requests = Array( );
 		private $URLsToFetch = Array( );
+		
+		private $ClientArchives = Array(
+			'resources_all.zip',
+			'tenfoot_all.zip',
+			'public_all.zip',
+			'strings_all.zip'
+		);
 		
 		private $Options = Array(
 			CURLOPT_USERAGENT      => 'SteamDB',
@@ -109,6 +117,14 @@
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			
 			File_Put_Contents( 'etags.txt', JSON_Encode( $this->ETags ) );
+			
+			if( $this->ExtractAndFix )
+			{
+				$this->Log( '{lightcyan}Extracting archives and fixing encodings' );
+				
+				// Let's break all kinds of things! :(
+				System( 'sh ' . __DIR__ . '/ClientExtracted/extract.sh' );
+			}
 		}
 		
 		private function GenerateURL( $URL )
@@ -139,81 +155,30 @@
 				
 				unset( $DataJSON );
 			}
-			// Get strings_all.zip file name from beta manifest
+			// Get archives from beta manifest
 			else if( $File === 'ClientManifest/steam_client_publicbeta_win32.manifest' )
 			{
-				if( Preg_Match( '/"strings_all\.zip\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
+				foreach( $this->ClientArchives as $Archive )
 				{
-					$Test = $Test[ 1 ];
-					
-					if( !Array_Key_Exists( 'strings_all.zip', $this->ETags ) || $this->ETags[ 'strings_all.zip' ] !== $Test )
+					if( Preg_Match( '/"' . Str_Replace( '.', '\.', $Archive ) . '\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
 					{
-						$this->Log( '{lightblue}Downloading new strings_all.zip.' . $Test );
+						$Test = $Test[ 1 ];
 						
-						$this->ETags[ 'strings_all.zip' ] = $Test;
-						
-						$this->URLsToFetch[ ] = Array(
-							'URL'  => 'http://media.steampowered.com/client/strings_all.zip.' . $Test,
-							'File' => 'ClientStrings/strings_all.zip'
-						);
-					}
-				}
-				
-				if( Preg_Match( '/"tenfoot_all\.zip\.([a-f0-9]{40})"/m', $Data, $Test ) === 1 )
-				{
-					$Test = $Test[ 1 ];
-					
-					if( !Array_Key_Exists( 'tenfoot_all.zip', $this->ETags ) || $this->ETags[ 'tenfoot_all.zip' ] !== $Test )
-					{
-						$this->Log( '{lightblue}Downloading new tenfoot_all.zip.' . $Test );
-						
-						$this->ETags[ 'tenfoot_all.zip' ] = $Test;
-						
-						$this->URLsToFetch[ ] = Array(
-							'URL'  => 'http://media.steampowered.com/client/tenfoot_all.zip.' . $Test,
-							'File' => 'ClientBigPicture/tenfoot_all.zip'
-						);
+						if( !Array_Key_Exists( $Archive, $this->ETags ) || $this->ETags[ $Archive ] !== $Test )
+						{
+							$this->Log( '{lightblue}Downloading new ' . $Archive . ' - checksum: ' . $Test );
+							
+							$this->ETags[ $Archive ] = $Test;
+							
+							$this->URLsToFetch[ ] = Array(
+								'URL'  => 'http://media.steampowered.com/client/' . $Archive . '.' . $Test,
+								'File' => 'ClientExtracted/' . $Archive
+							);
+						}
 					}
 				}
 				
 				unset( $Test );
-			}
-			// Unzip it
-			else if( $File === 'ClientStrings/strings_all.zip' )
-			{
-				$File = __DIR__ . '/' . $File;
-				
-				File_Put_Contents( $File, $Data );
-				
-				if( SHA1_File( $File ) !== $this->ETags[ 'strings_all.zip' ] )
-				{
-					$this->Log( '{lightred}Checksum mismatch for strings_all.zip' );
-					
-					return false;
-				}
-				
-				// Let's break all kinds of things! :(
-				System( 'sh ' . __DIR__ . '/ClientStrings/extract.sh' );
-				
-				return true;
-			}
-			// Unzip it
-			else if( $File === 'ClientBigPicture/tenfoot_all.zip' )
-			{
-				$File = __DIR__ . '/' . $File;
-				
-				File_Put_Contents( $File, $Data );
-				
-				if( SHA1_File( $File ) !== $this->ETags[ 'tenfoot_all.zip' ] )
-				{
-					$this->Log( '{lightred}Checksum mismatch for tenfoot_all.zip' );
-					
-					return false;
-				}
-				
-				System( 'sh ' . __DIR__ . '/ClientBigPicture/extract.sh' );
-				
-				return true;
 			}
 			// Minecraft versions file
 			else if( $File === 'Minecraft/versions.json' )
@@ -248,6 +213,26 @@
 				$Data = JSON_Encode( $DataJSON[ 'items' ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
 				
 				unset( $DataJSON );
+			}
+			// Unzip it
+			else if( SubStr( $File, -4 ) === '.zip' )
+			{
+				$File = __DIR__ . '/' . $File;
+				
+				File_Put_Contents( $File, $Data );
+				
+				$Archive = SubStr( StrrChr( $File, '/' ), 1 );
+				
+				if( SHA1_File( $File ) !== $this->ETags[ $Archive ] )
+				{
+					$this->Log( '{lightred}Checksum mismatch for ' . $Archive );
+					
+					return false;
+				}
+				
+				$this->ExtractAndFix = true;
+				
+				return true;
 			}
 			
 			// Stupid store CDN keeps switching subdomains between resources

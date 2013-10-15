@@ -1,0 +1,36 @@
+"resource/layout/htmlimebar.layout"
+{
+	controls
+	{
+		IMEEntry { controlname=TextEntry default=1 unicode=1 tabposition=1 style="IMEEntry" }
+		Close { controlname=Button command="Close" style="CloseButtonSm" }
+	}
+
+	styles
+	{
+		IMEEntry
+		{
+			// vary font size for legibility in CJK languages
+			font-size=18
+		}
+		CloseButtonSm
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/win32_win_close"
+		}
+		CloseButtonSm:hover
+		{
+			render_bg {}
+			image="graphics/win32_win_close_hover"
+		}
+	}
+		
+	layout
+	{
+		place { control="IMEEntry" width=320 height=max align=left y=0 margin-right=3 margin-left=3 margin-top=2 margin-bottom=2}
+		place { control="Close" align=right height=24 width=22 margin-right=5 margin-top=6 }
+
+	}
+}

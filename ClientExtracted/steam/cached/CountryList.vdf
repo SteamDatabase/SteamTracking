@@ -1,0 +1,835 @@
+taxrates
+{
+	taxes
+	{
+		"AT"		"20"
+		"BE"		"21"
+		"BG"		"20"
+		"CY"		"15"
+		"CZ"		"19"
+		"DK"		"25"
+		"EE"		"18"
+		"FI"		"22"
+		"FR"		"19.6"
+		"DE"		"19"
+		"GR"		"19"
+		"HU"		"20"
+		"IE"		"21"
+		"IT"		"20"
+		"LV"		"18"
+		"LT"		"18"
+		"LU"		"15"
+		"MT"		"18"
+		"NL"		"19"
+		"PL"		"22"
+		"PT"		"20"
+		"RO"		"19"
+		"SK"		"19"
+		"SI"		"20"
+		"ES"		"16"
+		"SE"		"25"
+		"GB"		"17.5"
+	}
+
+	isocountrycodes
+	{ // These last two sections must have the exact same country names...
+		"United States"			"US"
+		"Afghanistan"			"AF"
+		"Aland Islands"			"AX"
+		"Albania"				"AL"
+		"Algeria"				"DZ"
+		"American Samoa"		"AS"
+		"Andorra"				"AD"
+		"Angola"				"AO"
+		"Anguilla"				"AI"
+		"Antarctica"			"AQ"
+		"Antigua and Barbuda"	"AG"
+		"Argentina"				"AR"
+		"Armenia"				"AM"
+		"Aruba"					"AW"
+		"Australia"				"AU"
+		"Austria"				"AT"
+		"Azerbaijan"			"AZ"
+		"Bahamas"				"BS"
+		"Bahrain"				"BH"
+		"Bangladesh"			"BD"
+		"Barbados"				"BB"
+		"Belarus"				"BY"
+		"Belgium"				"BE"
+		"Belize"				"BZ"
+		"Benin"					"BJ"
+		"Bermuda"				"BM"
+		"Bhutan"				"BT"
+		"Bolivia"				"BO"
+		"Bosnia and Herzegovina" "BA"
+		"Botswana"				"BW"
+		"Bouvet Island"			"BV"
+		"Brazil"				"BR"
+		"British Indian Ocean Territory" "IO"
+		"Brunei Darussalam"		"BN"
+		"Bulgaria"				"BG"
+		"Burkina Faso"			"BF"
+		"Burundi"				"BI"
+		"Cambodia"				"KH"
+		"Cameroon"				"CM"
+		"Canada"				"CA"
+		"Cape Verde"			"CV"
+		"Cayman Islands"		"KY"
+		"Central African Republic"	"CF"
+		"Chad"					"TD"
+		"Chile"					"CL"
+		"China"					"CN"
+		"Christmas Island"		"CX"
+		"Cocos (Keeling) Islands"	"CC"
+		"Colombia"				"CO"
+		"Comoros"				"KM"
+		"Congo"					"CG"
+		"Congo, the Democratic Republic of the"	"CD"
+		"Cook Islands"			"CK"
+		"Costa Rica"			"CR"
+		"Cote d'Ivoire"			"CI"
+		"Croatia"				"HR"
+		"Cyprus"				"CY"
+		"Czech Republic"		"CZ"
+		"Denmark"				"DK"
+		"Djibouti"				"DJ"
+		"Dominica"				"DM"
+		"Dominican Republic"	"DO"
+		"Ecuador"				"EC"
+		"Egypt"					"EG"
+		"El Salvador"			"SV"
+		"Equatorial Guinea"		"GQ"
+		"Eritrea"				"ER"
+		"Estonia"				"EE"
+		"Ethiopia"				"ET"
+		"Falkland Islands (Malvinas)"		"FK"
+		"Faroe Islands"			"FO"
+		"Fiji"					"FJ"
+		"Finland"				"FI"
+		"France"				"FR"
+		"French Guiana"			"GF"
+		"French Polynesia"		"PF"
+		"French Southern Territories"	"TF"
+		"Gabon"					"GA"
+		"Gambia"				"GM"
+		"Georgia"				"GE"
+		"Germany"				"DE"
+		"Ghana"					"GH"
+		"Gibraltar"				"GI"
+		"Greece"				"GR"
+		"Greenland"				"GL"
+		"Grenada"				"GD"
+		"Guadeloupe"			"GP"
+		"Guam"					"GU"
+		"Guatemala"				"GT"
+		"Guinea"				"GN"
+		"Guinea-Bissau"			"GW"
+		"Guernsey"			"GG"
+		"Guyana"				"GY"
+		"Haiti"					"HT"
+		"Heard and Mc Donald Islands"	"HM"
+		"Holy See(Vatican City State)"	"VA"
+		"Honduras"				"HN"
+		"Hong Kong"				"HK"
+		"Hungary"				"HU"
+		"Iceland"				"IS"
+		"India"					"IN"
+		"Indonesia"				"ID"
+		"Ireland"				"IE"
+		"Isle of Man"			"IM"
+		"Israel"				"IL"
+		"Italy"					"IT"
+		"Jamaica"				"JM"
+		"Japan"					"JP"
+		"Jersey"				"JE"
+		"Jordan"				"JO"
+		"Kazakhstan"			"KZ"
+		"Kenya"					"KE"
+		"Kiribati"				"KI"
+		"Korea, Republic of"	"KR"
+		"Kuwait"				"KW"
+		"Kyrgyzstan"			"KG"
+		"Lao People's Democratic Republic"	"LA"
+		"Latvia"				"LV"
+		"Lebanon"				"LB"
+		"Lesotho"				"LS"
+		"Liberia"				"LR"
+		"Liechtenstein"			"LI"
+		"Lithuania"				"LT"
+		"Luxembourg"			"LU"
+		"Macau"					"MO"
+		"Macedonia, the former Yugoslav Republic of"	"MK"
+		"Madagascar"			"MG"
+		"Malawi"				"MW"
+		"Malaysia"				"MY"
+		"Maldives"				"MV"
+		"Mali"					"ML"
+		"Malta"					"MT"
+		"Marshall Islands"		"MH"
+		"Martinique"			"MQ"
+		"Mauritania"			"MR"
+		"Mauritius"				"MU"
+		"Mayotte"				"YT"
+		"Mexico"				"MX"
+		"Micronesia, Federated States of"	"FM"
+		"Moldova, Republic of"	"MD"
+		"Monaco"				"MC"
+		"Mongolia"				"MN"
+		"Montserrat"			"MS"
+		"Morocco"				"MA"
+		"Mozambique"			"MZ"
+		"Namibia"				"NA"
+		"Nauru"					"NR"
+		"Nepal"					"NP"
+		"Netherlands"			"NL"
+		"Netherlands Antilles"	"AN"
+		"New Caledonia"			"NC"
+		"New Zealand"			"NZ"
+		"Nicaragua"				"NI"
+		"Niger"					"NE"
+		"Nigeria"				"NG"
+		"Niue"					"NU"
+		"Norfolk Island"		"NF"
+		"Northern Mariana Islands"	"MP"
+		"Norway"				"NO"
+		"Oman"					"OM"
+		"Pakistan"				"PK"
+		"Palau"					"PW"
+		"Palestinian Territory, Occupied"		"PS"
+		"Panama"				"PA"
+		"Papua New Guinea"		"PG"
+		"Paraguay"				"PY"
+		"Peru"					"PE"
+		"Philippines"			"PH"
+		"Pitcairn"				"PN"
+		"Poland"				"PL"
+		"Portugal"				"PT"
+		"Puerto Rico"			"PR"
+		"Qatar"					"QA"
+		"Reunion"				"RE"
+		"Romania"				"RO"
+		"Russian Federation"	"RU"
+		"Rwanda"				"RW"
+		"Saint Helena"				"SH"
+		"Saint Kitts and Nevis"	"KN"
+		"Saint Lucia"			"LC"
+		"Saint Pierre and Miquelon"			"PM"
+		"Saint Vincent and the Grenadines"			"VC"
+		"Samoa"					"WS"
+		"San Marino"			"SM"
+		"Sao Tome and Principe"	"ST"
+		"Saudi Arabia"			"SA"
+		"Senegal"				"SN"
+		"Serbia and Montenegro"		"CS"
+		"Seychelles"			"SC"
+		"Sierra Leone"			"SL"
+		"Singapore"				"SG"
+		"Slovakia"				"SK"
+		"Slovenia"				"SI"
+		"Solomon Islands"		"SB"
+		"Somalia"				"SO"
+		"South Africa"			"ZA"
+		"South Georgia and the South Sandwich Islands"			"GS"
+		"Spain"					"ES"
+		"Sri Lanka"				"LK"
+		"Suriname"				"SR"
+		"Svalbard and Jan Mayen"			"SJ"
+		"Swaziland"				"SZ"
+		"Sweden"				"SE"
+		"Switzerland"			"CH"
+		"Taiwan"				"TW"
+		"Tajikistan"			"TJ"
+		"Tanzania, United Republic of"				"TZ"
+		"Thailand"				"TH"
+		"Timor-Leste"			"TL"
+		"Togo"					"TG"
+		"Tokelau"				"TK"
+		"Tonga"					"TO"
+		"Trinidad and Tobago"	"TT"
+		"Tunisia"				"TN"
+		"Turkey"				"TR"
+		"Turkmenistan"			"TM"
+		"Turks and Caicos Islands"	"TC"
+		"Tuvalu"				"TV"
+		"Uganda"				"UG"
+		"Ukraine"				"UA"
+		"United Arab Emirates"	"AE"
+		"United Kingdom"		"GB"
+		"United States"			"US"
+		"United States Minor Outlying Islands"	"UM"
+		"Uruguay"				"UY"
+		"Uzbekistan"			"UZ"
+		"Vanuatu"				"VU"
+		"Venezuela"				"VE"
+		"Viet Nam"				"VN"
+		"Virgin Islands, British"	"VG"
+		"Virgin Islands, U.S."	"VI"
+		"Wallis and Futuna"		"WF"
+		"Western Sahara"		"EH"
+		"Yemen"					"YE"
+		"Zambia"				"ZM"
+		"Zimbabwe"				"ZW"
+	}
+	
+	distributors
+	{
+		1
+		{
+			territory "46"
+			gamecode ""
+			purchasecountries "AZ BY KZ KG MD RU TJ TM UA"
+			denypurchasecountries ""
+			launchcountries "AZ BY KZ KG MD RU TJ TM UA"
+			applydate "1154390400" // 8/1/06
+		}
+		2
+		{
+			territory "45"
+			gamecode  "42"
+			purchasecountries "TH"
+			launchcountries "TH"
+			applydate "1199145600" // 1/1/08
+		}
+		5
+		{
+			gamecode	"26"
+			territory	"61"
+			region		"3"
+			purchasecountries "MY SG PH VN ID KH BN TH"
+			launchcountries "MY SG PH VN ID KH BN TH"
+			applydate "1199145600" // 1/1/08
+		}
+		6
+		{
+			gamecode	"35"
+			territory	"61"
+			region		"3"
+			purchasecountries "VN ID KH BN"
+			launchcountries "VN ID KH BN"
+			applydate "1199145600" // 1/1/08
+		}
+		7
+		{
+			gamecode	"34"
+			territory	"61"
+			purchasecountries "MY SG PH VN ID KH BN TH"
+			launchcountries "MY SG PH VN ID KH BN TH"
+			applydate "1199145600" // 1/1/08
+		}
+		8
+		{
+			gamecode	"153"
+			territory	"61"
+			purchasecountries "PH VN ID KH BN TH"
+			launchcountries "PH VN ID KH BN TH"
+			applydate "1199145600" // 1/1/08
+		}
+		9
+		{
+			territory	"43"
+			purchasecountries "JP"
+			launchcountries "JP"
+			applydate "1199145600" // 1/1/08
+		}
+		10
+		{
+			gamecode	"9"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08 HL2 Game of the Year Intercontinental
+		}
+		11
+		{
+			territory	"42"
+			purchasecountries "TW"
+			launchcountries "TW"
+			applydate "1199145600" // 1/1/08
+		}
+		12
+		{
+			territory	"55"
+			purchasecountries "MY SG PH VN ID KH BN TH MM IN"
+			launchcountries "MY SG PH VN ID KH BN TH MM IN"
+			applydate "1199145600" // 1/1/08
+		}
+		13
+		{
+			territory	"61"
+			purchasecountries "PH VN ID KH BN"
+			launchcountries "PH VN ID KH BN"
+			applydate "1199145600" // 1/1/08
+		}
+		14
+		{
+			territory	"53"
+			purchasecountries "EG"
+			launchcountries "EG"
+			applydate "1199145600" // 1/1/08
+		}
+		15
+		{
+			territory	"44"
+			purchasecountries "IN"
+			launchcountries "IN"
+			applydate "1199145600" // 1/1/08
+		}
+		16
+		{
+			gamecode	"43"
+			territory	"50"
+			purchasecountries "HK SG PH MO"
+			launchcountries "HK SG PH MO"
+			applydate "1199145600" // 1/1/08
+		}
+		17
+		{
+			gamecode	"5"
+			territory	"10"
+			purchasecountries "CN"
+			launchcountries "CN"
+			applydate "1199145600" // 1/1/08
+		}
+		18
+		{
+			gamecode	"25"
+			territory	"21"
+			purchasecountries "CN"
+			launchcountries "CN"
+			applydate "1201520400" // 1/28/08 for GTI Racer/EClub
+		}
+		19
+		{
+			gamecode	"25"
+			territory	"22"
+			purchasecountries "CN"
+			launchcountries "CN"
+			applydate "1201520400" // 1/28/08 for Xpand Rally/EClub
+		}
+		20
+		{
+			gamecode	"50"
+			purchasecountries "CN"
+			launchcountries "CN"
+			applydate "1201520400" // 1/28/08 for China OB SKUs, and any future game that uses gamecode 50
+		}
+		21
+		{
+			gamecode	"52"
+			territory	"2"
+			purchasecountries "KR"
+			launchcountries "KR"
+			applydate "1201520400" // 1/28/08 for Korea OB SKUs
+		}
+		22
+		{
+			gamecode	"47"
+			territory	"2"
+			purchasecountries "KR"
+			launchcountries "KR"
+			applydate "1201520400" // 1/28/08 for Korea OB SKUs
+		}
+		23
+		{
+			gamecode	"46"
+			territory	"2"
+			purchasecountries "KR"
+			launchcountries "KR"
+			applydate "1201520400" // 1/28/08 for Korea OB SKUs
+		}
+		24
+		{
+			gamecode	"1"
+			territory	"26"
+			purchasecountries "CN MO"
+			launchcountries "CN MO"
+			applydate "1206136800" // 3/21/08 for CZ China
+		}
+		25
+		{
+			gamecode	"53"
+			territory	"47"
+			purchasecountries "CZ SK"
+			launchcountries "CZ SK"
+			applydate "1209945600" // 5/05/08 for Gumboy Tournament for Czech Republic
+		}
+		26
+		{
+			gamecode	"10"
+			territory	"249"
+			purchasecountries "RO CZ HU LV PL SK BG"
+			launchcountries "RO CZ HU LV PL SK BG"
+			applydate "1214870400" // 7/01/08 for ComputerGames RO
+		}
+		27
+		{
+			gamecode	"55"
+			territory	"2"
+			purchasecountries "KR"
+			launchcountries "KR"
+			applydate "1201520400" // 1/28/08 for Korea L4D SKUs
+		}
+		28
+		{
+			gamecode	"55"
+			territory	"61"
+			purchasecountries "VN ID KH BN TH"
+			launchcountries "VN ID KH BN TH"
+			applydate "1199145600" // 1/1/08 for L4D E-Club In/Cam/Bru/Vietnam/Thailand
+		}
+		29
+		{
+			gamecode	"60"
+			territory	"33"
+			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			applydate "1199145600" // 1/1/08 Empire: TW for Russian
+		}
+		30
+		{
+			gamecode	"60"
+			territory	"28"
+			purchasecountries "TH"
+			launchcountries "TH"
+			applydate "1199145600" // 1/1/08 Empire: TW for Thailand
+		}
+		31
+		{
+			gamecode	"60"
+			territory	"79"
+			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			applydate "1199145600" // 1/1/08 Empire: TW for Russian
+		}
+		32
+		{
+			gamecode "67"
+			denypurchasecountries "JP"
+			applydate "1236542400" // The Last Remnament (US) not available in Japan
+		}
+		33
+		{
+			gamecode	"77"
+			territory	"100"
+			purchasecountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
+			launchcountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
+			applydate "1199145600" // 1/1/08 All Aspect Warfare for Russia
+		}
+		34
+		{
+			gamecode	"78"
+			territory	"100"
+			purchasecountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
+			launchcountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
+			applydate "1199145600" // 1/1/08 Angle of Attack for Russia
+		}
+		35
+		{
+			gamecode 	"75"
+			territory	"47"
+			purchasecountries "RU RO PL HU CZ"
+			launchcountries "RU RO PL HU CZ"
+			applydate "1255118400" // Rogue Warrior Cenega/1C countries
+		}
+		36
+		{
+			gamecode 	"75"
+			territory	"48"
+			purchasecountries "RU RO PL HU CZ"
+			launchcountries "RU RO PL HU CZ"
+			applydate "1255118400" // Rogue Warrior Cenega/1C countries
+		}
+		37
+		{
+			gamecode 	"75"
+			territory	"49"
+			purchasecountries "RU RO PL HU CZ"
+			launchcountries "RU RO PL HU CZ"
+			applydate "1255118400" // Rogue Warrior Cenega/1C countries
+		}
+		38
+		{
+			gamecode 	"75"
+			territory	"97"
+			purchasecountries "RU RO PL HU CZ"
+			launchcountries "RU RO PL HU CZ"
+			applydate "1255118400" // Rogue Warrior Cenega/1C countries
+		}
+		39
+		{
+			gamecode 	"75"
+			territory	"33"
+			purchasecountries "RU RO PL HU CZ"
+			launchcountries "RU RO PL HU CZ"
+			applydate "1255118400" // Rogue Warrior Cenega/1C countries
+		}
+		40
+		{
+			gamecode	"12"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08  CSS Intercontinental
+		}
+		41
+		{
+			gamecode	"18"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08  HL2 EP1 Intercontinental
+		}
+		42
+		{
+			gamecode	"43"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08  OrangeBox Intercontinental
+		}
+		43
+		{
+			gamecode	"55"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08  L4d Intercontinental
+		}
+		44
+		{
+			gamecode	"84"
+			territory	"50"
+			purchasecountries "HK MO"
+			launchcountries "HK MO"
+			applydate "1199145600" // 1/1/08  L4d2 Intercontinental
+		}
+		45
+		{
+			gamecode	"87"
+			territory	"65"
+			purchasecountries "IN"
+			launchcountries "IN"
+			applydate "1199145600" // 1/1/08  Cricket Rev India
+		}
+		46
+		{
+			gamecode	"87"
+			territory	"103"
+			purchasecountries "PK"
+			launchcountries "PK"
+			applydate "1199145600" // 1/1/08  Cricket Rev Pakistan
+		}
+		47
+		{
+			gamecode	"1"
+			territory	"249"
+			purchasecountries "RO CZ HU LV PL SK BG"
+			launchcountries "RO CZ HU LV PL SK BG"
+			applydate "1214870400" // 7/01/08 for ComputerGames RO
+		}
+		48
+		{
+			gamecode	"14"
+			territory	"249"
+			purchasecountries "RO CZ HU LV PL SK BG"
+			launchcountries "RO CZ HU LV PL SK BG"
+			applydate "1214870400" // 7/01/08 for ComputerGames RO
+		}
+		49
+		{
+			gamecode	"12"
+			territory	"249"
+			purchasecountries "RO CZ HU LV PL SK BG"
+			launchcountries "RO CZ HU LV PL SK BG"
+			applydate "1214870400" // 7/01/08 for ComputerGames RO
+		}
+		50
+		{
+			gamecode	"42"
+			territory	"249"
+			purchasecountries "RO CZ HU LV PL SK BG"
+			launchcountries "RO CZ HU LV PL SK BG"
+			applydate "1214870400" // 7/01/08 for ComputerGames RO
+		}
+		51
+		{
+			gamecode	"94"
+			territory	"33"
+			purchasecountries "AZ BY KZ KG MD RU TJ TM UA"
+			launchcountries "AZ BY KZ KG MD RU TJ TM UA"
+			applydate "1214870400" // 7/01/08 for Just Cause 2 - Russia
+		}
+		52
+		{
+			gamecode	"88"
+			territory	"33"
+			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UA UZ"
+			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UA UZ"
+			applydate "1214870400" // 7/01/08 for Serious Sam HD: First Encounter - Russia
+		}
+		53
+		{
+			gamecode	"94"
+			territory	"49"
+			purchasecountries "CZ PL SK"
+			launchcountries "CZ PL SK"
+			applydate "1214870400" // 7/01/08 for Just Cause 2 - Poland/Czech/Slovakia
+		}
+		54
+		{
+			gamecode	"94"
+			territory	"47"
+			purchasecountries "CZ PL SK"
+			launchcountries "CZ PL SK"
+			applydate "1214870400" // 7/01/08 for Just Cause 2 - Poland/Czech/Slovakia
+		}
+		55
+		{
+			gamecode	"105"
+			territory	"33"
+			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
+			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
+			applydate "1214870400" // 7/01/08 Mount and Blade Warband - Russia and surrounding territories
+		}
+		56
+		{
+			gamecode	"84"
+			territory	"118"
+			purchasecountries "PH"
+			launchcountries "PH"
+			applydate "1214870400" // 7/01/08 Left 4 Dead 2 - Philippines only
+		}
+		57
+		{
+			gamecode	"114"
+			territory	"33"
+			purchasecountries "RU AM AZ BY GE KZ KG TJ MD TM UZ UA"
+			launchcountries "RU AM AZ BY GE KZ KG TJ MD TM UZ UA"
+			applydate "1214870400" // 7/01/08 RUSE - Russian only
+		}
+		58
+		{
+			gamecode	"114"
+			territory	"47"
+			purchasecountries "CZ CS SK"
+			launchcountries "CZ CS SK"
+			applydate "1214870400" // 7/01/08 RUSE - Czech only
+		}
+		59
+		{
+			gamecode	"115"
+			territory	"18"
+			purchasecountries "BS PA BZ CR SV GT HN NI VE CO GY SR GF BR PE BO PY UY AR CL EC MX"
+			launchcountries "BS PA BZ CR SV GT HN NI VE CO GY SR GF BR PE BO PY UY AR CL EC MX"
+			applydate "1214870400" // 7/01/08 Fallout: New Vegas - Latin America only
+		}
+		60
+		{
+			gamecode	"115"
+			territory	"78"
+			purchasecountries "KR HK TW SG"
+			launchcountries "KR HK TW SG"
+			applydate "1214870400" // 7/01/08 Fallout: New Vegas - Select Asian Countries
+		}
+		61
+		{
+			gamecode	"118"
+			territory	"33"
+			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
+			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
+			applydate "1214870400" // 7/01/08 The Ball - RU
+		}
+		62
+		{
+			gamecode	"124"
+			territory	"33"
+			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
+			applydate "1199145600" // 1/1/08 Shogun 2 for Russian
+		}
+		63
+		{
+			gamecode	"178"
+			territory	"78"
+			purchasecountries "KR HK TW SG IN MY"
+			launchcountries "KR HK TW SG IN MY"
+			applydate "1214870400" // 7/01/08 Brink - Select Asian Countries
+		}
+		64
+		{
+			gamecode	"178"
+			territory	"33"
+			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UZ UA"
+			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UZ UA"
+			applydate "1214870400" // 7/01/08 Brink- Russian Territory keys
+		}
+		65
+		{
+			gamecode	"178"
+			territory	"49"
+			purchasecountries "PL"
+			launchcountries "PL"
+			applydate "1214870400" // 7/01/08 Brink: Polish Keys
+		}
+		66
+		{
+			gamecode	"178"
+			territory	"47"
+			purchasecountries "CZ SK"
+			launchcountries "CZ SK"
+			applydate "1214870400" // 7/01/08 Brink: Czech and Slovak Keys
+		}
+		67
+		{
+			gamecode	"178"
+			territory	"48"
+			purchasecountries "HU"
+			launchcountries "HU"
+			applydate "1214870400" // 7/01/08 Brink: Hungarian Keys
+		}
+		68
+		{
+			gamecode "65"
+			denypurchasecountries "JP"
+			applydate "1236542400" // The Last Remnament (EU) not available in Japan
+		}
+		69
+		{
+			gamecode "560"
+			territory	"49"
+			purchasecountries "PL"
+			launchcountries "PL"
+			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel Polish keys
+		}
+		70
+		{
+			gamecode "560"
+			territory	"47"
+			purchasecountries "CZ SK"
+			launchcountries "CZ SK"
+			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel Czech/Slovakia keys
+		}
+		71
+		{
+			gamecode "560"
+			territory	"33"
+			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA"
+			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA"
+			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel RU/CIS keys
+		}
+		72
+		{
+			gamecode "924"
+			territory	"100"
+			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA LT LV EE"
+			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA LT LV EE"
+			applydate "1214870400" // 7/01/08 SR3 Akella RU/CIS keys
+		}
+	}				  
+					  
+	states			  
+	{				  
+		"WA"					"8.9"
+		// note that adding in new states here won't work, code would have to be changed
+	}
+}

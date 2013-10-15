@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>STEAM - receipt for your credit card transaction</title>
+
+<style TYPE="text/css">
+
+BODY {
+	margin:8px 25% 0 5%;
+	font-family:Arial,Verdana,Helvetica;
+	font-size:10pt;
+}
+h1 {
+	font-weight:bold;
+	font-size:11pt;
+	line-height:14pt;
+	text-transform:uppercase;
+	margin-bottom:0px;
+}
+TD {
+	font-family:Arial,Verdana,Helvetica;
+	font-size:10pt;
+	padding-right:24px;
+}
+HR {
+	height:1px;
+	color:black;
+}
+</style>
+
+
+</head>
+
+
+<body OnLoad="window.print()">
+<h1><img src="http://storefront.steampowered.com/v/img/email/STEAM_mail.jpg" alt="STEAM" align="absmiddle">
+<br>
+Steam - Receipt for credit card purchase</h1>
+<br>
+Thank you for your recent purchase on Steam. It is recommended that you keep this information in a safe place. It can be used as proof-of-purchase in the future.
+
+<br><br>
+<hr noshade size="1">
+
+<table>
+
+<tr><td>Steam account name:</td><td><b> %%accountname%% </b></td></tr>
+<tr><td>Contact email address:</td><td><b> %%email%% </b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td>Card-holder name:</td><td><b> %%cardholdername%% </b></td></tr>
+<tr><td>Card type:</td><td><b> %%cardtype%% </b></td></tr>
+<tr><td>Last 4 digits:</td><td><b> %%cardlastfourdigits%% </b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+%%lineitemhtml%%
+<tr><td>Tax:</td><td><b> %%taxamount%% </b></td></tr>
+<tr><td>Shipping:</td><td><b> %%shippingamount%% </b></td></tr>
+<tr><td>Total:</td><td><b> %%pricetotal%% USD</b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td>Transaction date:</td><td><b> %%transdate%% </b></td></tr>
+<tr><td>Transaction time:</td><td><b> %%transtime%% </b></td></tr>
+<tr><td>Confirmation code:</td><td><b> %%confirmationcode%% </b></td></tr>
+
+</table>
+
+<hr noshade size="1">
+<br>
+<br><b>Thank you for your purchase!</b><br>
+<br><br>
+
+</body>
+</html>

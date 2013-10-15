@@ -1,0 +1,70 @@
+"resource/layout/subpaneloptionsdownloads.layout"
+{
+	controls
+	{
+		ThrottleRatesLabel { controlname=label	labeltext=#Steam_ThrottleRatesLabel	}
+		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1		}
+		PingRateInfo {	controlname=label	labeltext=#Steam_ServerBrowserPingRateInfo wrap=1		}
+		RegionLabel {	controlname=label	labeltext=#Steam_RegionLabel		}
+		RegionInfoLabel {	controlname=label labeltext=#Steam_RegionInfo wrap=1		}
+		ManageInstalledappsLabel { controlname=label labeltext=#SteamUI_ContentMgr_ManageInstalledAppsInfo }
+				
+		ThrottleRates
+		{
+			controlname=combobox
+		}	
+		
+		PingRateCombo
+		{
+			controlname=combobox
+		}
+		
+		DownloadRegionCombo
+		{
+			controlname=combobox
+		}
+		
+		ManageInstalledApps
+		{
+			controlname=button
+			labeltext = #SteamUI_ContentMgr_ManageInstalledApps
+			command=ManageInstalledApps
+		}
+				
+		
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+	}
+	
+	layout
+	{
+		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+		
+		place { controls="RegionLabel" region=box margin-top=10 dir=down }
+		place { controls="DownloadRegionCombo" region=box start=RegionLabel margin-top=10 width=230 dir=down }
+		place { controls="RegionInfoLabel" region=box start=DownloadRegionCombo margin-top=10 width=230 dir=down }
+		place { controls="PingRateLabel" region=box start=RegionInfoLabel margin-top=20 width=230 dir=down }
+		place { controls="PingRateCombo" region=box start=PingRateLabel margin-top=10 width=230 dir=down height=25 }
+		place { controls="PingRateInfo" region=box start=PingRateCombo margin-top=10 width=230 dir=down }		
+		
+		place { controls="ManageInstalledApps" region=box start=PingRateInfo margin-top=40 width=230 height=25 dir=down }
+		place { controls="ManageInstalledappsLabel" region=box start=ManageInstalledApps margin-top=10 width=230 dir=down }
+				
+		place { controls="ThrottleRatesLabel" region=box start=ContentDownloadsLabel dir=down margin-left=250 margin-top=10 }
+		place { controls="ThrottleRates" region=box start=ThrottleRatesLabel dir=down width=230 margin-top=10 }
+		
+
+			
+			
+	}
+}

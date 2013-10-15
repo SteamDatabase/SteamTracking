@@ -3058,7 +3058,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 					)
 				)
 				{
-					error_text = 'Your credit card transaction was rejected.<br/><br/>Some Brazilian banks may reject purchases with international credit cards when purchasing in foreign stores that offer prices in Reais.  We suggest you try the transaction again, selecting the domestic version of your card type or another payment method of your preference.';
+					error_text = 'Your credit card transaction was rejected.<br/><br/>Some Brazilian banks may reject purchases with international credit cards when purchasing in foreign stores that offer prices in Reais.  We suggest you try the transaction again, selecting the national version of your card type or another payment method of your preference.';
 				}
 				else
 				{

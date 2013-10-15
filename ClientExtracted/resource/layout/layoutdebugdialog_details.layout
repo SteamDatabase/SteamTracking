@@ -1,0 +1,21 @@
+"resource/layout/layoutdebugdialog_details.layout"
+{
+	controls
+	{
+		style_label { controlname="Label" labelText="Style keys" } 
+		style_list { controlname="Label" labelText="no selected control" }
+
+		parent_label { controlname="Label" labelText="Parents" } 
+		parent_list { controlname="Label" labelText="no selected control" }
+	}
+	
+	layout
+	{
+		place { control="style_label" x=6 y=8 width=170 }
+		place { control="parent_label" x=176 y=8 width=170 }
+		
+		place { control="parent_list" x=180 y=30 width=160 }
+		place { control="style_list" x=10 y=30 width=160 }
+	}
+
+}

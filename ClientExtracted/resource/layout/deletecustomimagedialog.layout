@@ -1,0 +1,32 @@
+"resource/layout/deletecustomimagedialog.layout"
+{
+	controls
+	{
+		DeleteCustomImageDialog { controlname="Frame" title="#SteamUI_DeleteCustomImage_Title" style="DeleteCustomImageDialog" }
+
+		ConfirmText { controlname="Label" labeltext="#SteamUI_DeleteCustomImage_Confirm" wrap=1 }
+
+		Continue { controlname="Button" tabposition=1 labeltext="#SteamUI_DeleteCustomImage_Continue" }
+		Cancel { controlname="Button" tabposition=2 labeltext="#SteamUI_DeleteCustomImage_Cancel" }
+	}
+	
+	styles
+	{
+		DeleteCustomImageDialog
+		{
+			minimum-width = 300
+			minimum-height = 186
+		}
+
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=40 margin=10 }
+
+		place { control="ConfirmText" width=max y=40 margin=15 }
+		place { control="Continue,Cancel" region="bottom" align=right spacing=5 }
+		
+	}
+
+}

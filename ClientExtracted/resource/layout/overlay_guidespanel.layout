@@ -1,0 +1,54 @@
+"resource/layout/overlay_guidespanel.layout"
+{
+	controls
+	{
+		GuidesDetailPanel 
+		{ 
+			controlname="COverlay_Details_Guides_Panel" 
+			style=detailsbox
+		}
+		TitleText { controlname="label" labeltext="#Overlay_Guides_Panel_Title" style=detailsboxtitle }
+		NumGuidesText { controlname="label" labeltext="#Overlay_Guides_Panel_NumGuides"  style=highlight }
+
+		ViewGuides { controlname="Button" labeltext="#Overlay_View_Guides" command="viewguides" }
+	}
+	
+	colors
+	{
+
+	}	
+	
+	styles
+	{
+
+		Button
+		{
+			font-size=13
+			font-family=basefont
+			font-weight=400
+			inset=2
+		}
+
+		PreviewImage
+		{
+		}
+
+
+		highlight
+		{
+			textcolor=text
+		}
+	}
+	
+	layout
+	{
+		region { name=title margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=100 }
+		region { name=actions y=165  margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=124 }
+		place { control="TitleText" region=title }
+		place { control="NumGuidesText" region=title y=40 }
+
+		place { region=box control=*guideitem y=70 x=0 width=max height=40 margin-left=10 margin-right=10 dir=down spacing=2 }
+
+		place { control="ViewGuides" region="actions" align=bottom  margin-bottom=4}
+	}
+}

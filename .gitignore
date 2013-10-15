@@ -2,6 +2,15 @@ etags.txt
 apikey.txt
 update.lock
 
+*.wav
+
+ClientExtracted/extract.sh
+ClientExtracted/public_all.zip
+ClientExtracted/strings_all.zip
+ClientExtracted/tenfoot_all.zip
+ClientExtracted/resources_all.zip
+ClientExtracted/tenfoot/resource/wordlists/
+
 ClientStrings/strings_all.zip
 ClientStrings/extract.sh
 

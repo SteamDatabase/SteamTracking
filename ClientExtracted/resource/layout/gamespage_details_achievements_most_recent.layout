@@ -1,0 +1,105 @@
+"resource/layout/gamespage_details_achievements_most_recent.layout"
+{
+	controls
+	{
+		mostrecent_area { controlname="CAchievementsMostRecentPanel" style="mostrecent" }
+
+		mostrecent_label { controlname="Label" style="mostrecent_label" labeltext="#steam_achievement_mostrecent" } 
+		mostrecent_background { controlname="Label" style=achievementimagebg zpos="0" labeltext="" mouseinputenabled=0 }
+		mostrecent_image { controlname="ImagePanel" zpos=-1 style="mostrecent_image" }
+		mostrecent_name { controlname="Label" style="mostrecent_name" labeltext="" }
+		mostrecent_unlockedsofar { controlname="Label" style="mostrecent_unlockedsofar" labeltext="#steam_achievement_unlockedsofar" }
+
+		progressbackground { controlname="ImagePanel" style="progressbackground" }
+		progressbarimage { controlname="ImagePanel" style="progressbarimage" }
+
+	}
+	colors
+	{
+		// ProgressBarMarings must be the combined left+right margin of the actual bar from it's container
+		GameDetailsAchievements.ProgressBarMargins "8"
+		
+		Tooltip.Anchor=Parent
+	}
+	styles
+	{
+		mostrecent
+		{
+			minimum-height="118"
+		}
+
+		achievementimagebg
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+      		image="graphics/achievementbg_recent"    
+     		
+		}
+
+		mostrecent_label
+		{
+			font-size=17
+			textcolor="Text"
+			font-weight=400
+		}
+		
+		mostrecent_name
+		{
+			font-size=16
+			textcolor="Text"
+		}
+
+		mostrecent_unlockedsofar
+		{
+			font-size=15
+		}
+
+		progressbackground
+		{
+			bgcolor=none
+			render_bg
+			{
+			// lines around
+			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
+			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
+			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
+			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
+	
+			// single pixel fills in the corners
+			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
+			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
+			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
+			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
+			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+		}
+
+		progressbarimage
+		{
+			bgcolor="Label"
+			render_bg = {}
+		}
+	}
+
+	layout
+	{
+		region { name=body margin=0 width=max height=max }
+
+		place { region=body control=mostrecent_label x=82 y=8 width=max }
+		place { region=body control=mostrecent_name x=82 y=25 width=max }
+		place { region=body control=mostrecent_unlockedsofar x=82 y=44 width=max }
+
+		place { region=body control=mostrecent_background x=2 y=2 width=80 height=80 }
+		place { region=body control=mostrecent_image x=5 y=10 width=64 height=64 }
+
+		place { region=body control=progressbackground y=92 width=max height=18 }
+		place { region=body control=progressbarimage y=96 height=10 margin-left=4 margin-right=4 }
+	}
+}

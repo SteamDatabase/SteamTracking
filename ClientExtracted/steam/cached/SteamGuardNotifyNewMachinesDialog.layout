@@ -1,0 +1,76 @@
+"steam/cached/SteamGuardNotifyNewMachinesDialog.layout"
+{
+	controls
+	{
+		SteamGuardNotifyNewMachinesDialog
+		{
+		  title			"#SteamUI_SteamGuardNotifyNewMachinesTitle"
+		  wide			"500"
+		  tall			"360"
+		}
+
+		CloseButton
+		{
+		  ControlName 	"Button"
+		  labelText		"#SteamUI_SteamGuardNotifyNewMachines_CloseButton"
+		  Command			"Close"
+		}
+
+		PanicButton
+		{
+		  ControlName 	"Button"
+		  labelText		"#SteamUI_SteamGuardNotifyNewMachines_PanicButton"
+		  Command		"Panic"
+		}
+
+		Explain
+		{
+		  ControlName		"Label"
+		  labelText		"#SteamUI_SteamGuardNotifyNewMachinesDetails"
+		  wrap			"1"
+		}
+
+		Details
+		{
+		  ControlName		"RichText"
+		  labelText		""
+		  wrap			"1"
+		}
+
+		ExplainButtons
+		{
+		  ControlName		"Label"
+		  labelText		"#SteamUI_SteamGuardNotifyNewMachinesExplainButtons"
+		  wrap			"1"
+		}
+
+		support_infolink
+		{
+		ControlName		"URLLabel"
+		labelText		"#SteamUI_SteamGuardNotifyNewMachines_info_link"
+		"urltext" "#SteamUI_SteamGuardNotifyNewMachines_info_url"
+		style=soft
+		}
+
+	}
+
+	styles
+	{
+		Button
+		{
+		minimum-width=80
+		}
+	}
+
+	layout
+	{
+		place { control=support_infolink region=bottomrow align=left spacing=8 margin-left=24 }
+		region { name="bottomrow" align=bottom height=36 }
+		place { control="PanicButton" region=bottomrow align=right spacing=8 margin-right=150 }
+		place { control="CloseButton" region=bottomrow align=right spacing=8 margin-right=24 }
+		place { control=Explain x=20 y=34 width=460 margin-right=20 height=60 }
+		place { control=Details x=20 y=100 width=460 margin-right=20 height=120 }
+		place { control=ExplainButtons x=20 y=240 width=460 margin-right=20 height=60 }
+	}
+}
+

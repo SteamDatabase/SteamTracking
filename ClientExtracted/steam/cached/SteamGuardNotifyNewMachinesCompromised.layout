@@ -1,0 +1,59 @@
+"steam/cached/SteamGuardNotifyNewMachinesCompromised.layout"
+{
+	controls
+	{
+		SteamGuardNotifyNewMachinesCompromisedDialog
+		{
+		  title			"#SteamUI_SteamGuardCompromised_Title"
+		  wide			"500"
+		  tall			"360"
+		}
+
+		PanicButton
+		{
+		  ControlName 	"Button"
+		  labelText		"#SteamUI_SteamGuardCompromised_ChangePasswordButton"
+		  Command		"ChangePasswordNow"
+		}
+
+		Explain
+		{
+		  ControlName		"Label"
+		  labelText		"#SteamUI_SteamGuardCompromised_Explain"
+		  wrap			"1"
+		}
+
+		ExplainActions
+		{
+		  ControlName		"Label"
+		  labelText		"#SteamUI_SteamGuardCompromised_ExplainActions"
+		  wrap			"1"
+		}
+
+		ExplainPasswords
+		{
+		  ControlName		"Label"
+		  labelText		"#SteamUI_SteamGuardCompromised_ExplainPasswords"
+		  wrap			"1"
+		}
+
+	}
+
+	styles
+	{
+		Button
+		{
+		minimum-width=80
+		}
+	}
+
+	layout
+	{
+		region { name="bottomrow" align=bottom height=36 }
+		place { control="PanicButton" region=bottomrow align=right spacing=8 margin-right=30 }
+		place { control=Explain x=20 y=44 width=460 margin-right=20 height=80 }
+		place { control=ExplainActions x=20 y=120 width=380 margin-left=20 height=120 }
+		place { control=ExplainPasswords region=bottomrow width=280 align=left margin-left=20 height=34 }
+	}
+}
+

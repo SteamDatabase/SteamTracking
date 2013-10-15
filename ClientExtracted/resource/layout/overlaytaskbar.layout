@@ -1,0 +1,98 @@
+"resource/layout/overlaytaskbar.layout"
+{
+	controls
+	{
+		TaskbarPanel
+		{
+			controlname="EditablePanel"
+		}
+		SettingsButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_Settings"
+			style=taskbar
+		}
+		WebBrowserButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_WebBrowser"
+			style=taskbar
+		}
+
+		SteamLogo	
+		{ 
+			controlname="ImagePanel" zpos=1 image="resource/steam_logo_big"
+			scaleimage=1
+		}
+		
+		view_friends
+		{
+			ControlName=URLLabel
+			labelText="#Steam_ViewFriends"
+			command="OpenFriendsDialog"
+			
+			style="view_friends"
+			textAlignment=east
+		}
+		online_friends
+		{
+			ControlName=Label
+			labelText="#Steam_OnlineFriends"
+			style="online_friends"
+			textAlignment=east
+		}	
+	}
+	
+	styles
+	{
+		taskbar
+		{
+			font-size=16
+			font-weight=700
+			font-family=basefont
+			font-style=uppercase
+			textcolor=Label
+		}
+		
+		taskbar:hover
+		{
+			textcolor=Text
+		}
+		
+		view_friends
+		{
+			textcolor="Text"
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			font-style=regular,uppercase
+		}
+		view_friends:Hover
+		{
+			 textcolor="textHover"
+		}
+
+		online_friends
+		{
+			textcolor="label2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-style=regular
+		}		
+	}
+	
+	layout
+	{
+		region 	{name=bottom align=bottom width=max height=100 }
+		
+		place { control="TaskbarPanel" region="bottom" width=max height=64 margin-bottom=37 }
+		place { control="SteamLogo"  x=0 y=10 width=200 height=120 }
+		place { controls="WebBrowserButton,SettingsButton,ScreenshotsButton" x=225 dir=right height=32 spacing=30 align=bottom margin-bottom=20 }	
+
+		place { control="FriendPanel" height=48 width=48 align=right margin-right=6 margin-top=4 }
+		place { control="view_friends" height=12 y=12 align=right dir=right margin-right=60 }
+		place { control="online_friends" height=12 y=26 align=right dir=right margin-right=60 }
+	}	
+}

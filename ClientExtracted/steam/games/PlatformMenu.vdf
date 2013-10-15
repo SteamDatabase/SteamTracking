@@ -1,0 +1,33 @@
+// this file defines the contents of the platform menu
+"Platform"
+{
+	"Menu"
+	{
+		"Games"
+		{
+			"dll"		"steamui"
+			"interface"	"SteamUIGames001"
+			"MenuName"	"#Steam_Games"
+			"SteamApp"  "1"
+		}
+		"Friends"
+		{
+			"dll"		"bin/friendsui"
+			"interface"	"VGuiModuleTracker001"
+			"MenuName"	"#App_Friends"
+		}
+		"Servers"
+		{
+			"dll"		"bin/serverbrowser"
+			"interface"	"VGuiModuleServerBrowser001"
+			"MenuName"	"#App_Servers"
+		}
+		"Settings"
+		{
+			"dll"		"steamui"
+			"interface" "VGuiModuleSettings001"
+			"MenuName"  "#App_Settings"
+			"SteamApp"  "1"
+		}
+	}
+}

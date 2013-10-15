@@ -1,0 +1,37 @@
+"Steam/SubPanelWelcomeCreateNewAccountFinished.res"
+{
+	"HelpImage"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"		"HelpImage"
+		"image"		"public/steam_welcome_tooltray"
+		"xpos"		"113"
+		"ypos"		"134"
+		"wide"		"256"
+		"tall"		"128"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+	}
+	"InfoText"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"InfoText"
+		"xpos"		"48"
+		"ypos"		"30"
+		"wide"		"360"
+		"tall"		"92"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"labelText"		"#WelcomeAccountCreateComplete"
+		"textAlignment"		"north-west"
+		"dulltext"		"1"
+		"brighttext"		"0"
+		"wrap"		"1"
+	}
+}

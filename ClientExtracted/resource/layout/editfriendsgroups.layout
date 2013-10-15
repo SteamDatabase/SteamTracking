@@ -1,0 +1,21 @@
+"resource/layout/editfriendsgroups.layout"
+{
+	controls
+	{
+		Description {controlname=Label labelText="#friends_group_edit_categories" wrap=1 } 
+		TextEntry { controlname=TextEntry tabposition=1 maxchars=32 unicode=1 }
+		AddTagButton { controlname=Button style="button" tabposition=2 default=1 }
+	}
+	
+	layout
+	{
+		region { name="main" x=16 y=4 width=max height=max margin-bottom=0 }
+		
+		place { control="Description" width=428 height=72 x=18 y=2 }
+		
+		place { control=TagChecks region=main y=78 width=446 height=140 margin-left=0 margin-right=15 }
+			
+		place { control="TextEntry" width=240 y=100 }
+		place { control="TextEntry,AddTagButton" y=228 region=main height=24 spacing=10 margin=2 width=max margin-right=16 }
+	}
+}

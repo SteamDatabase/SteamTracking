@@ -1,0 +1,27 @@
+"resource/layout/debugstats.layout"
+{
+	controls
+	{
+		// the container
+		KVStatsTree	{	controlname="KeyValuesTree"	}
+		DebugStatsChart	{	controlname="ChartPanel"	}
+		AddDebugStatAbs	{ controlname="Button" }
+		AddDebugStatRate	{ controlname="Button" }
+		RemoveDebugStat	{ controlname="Button" }
+		
+	}
+	
+	styles
+	{
+	}
+
+	layout
+	{
+		place { control="KVStatsTree" x=0 y=24 width=240 height=max margin-bottom=32 }
+		place { control="DebugStatsChart" x=240 y=24 width=max height=max margin=1 }
+		place { control="AddDebugStatAbs" align=bottom margin-left=4 margin-bottom=4 }
+		place { control="AddDebugStatRate" align=bottom margin-left=72 margin-bottom=4 }
+		place { control="RemoveDebugStat" align=bottom margin-left=180 margin-bottom=4 }
+
+	}
+}

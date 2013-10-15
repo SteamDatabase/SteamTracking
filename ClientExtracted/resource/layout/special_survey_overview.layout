@@ -1,0 +1,18 @@
+"resource/layout/special_survey_overview.layout"
+{
+	controls
+	{
+		WelcomeText
+		{
+			controlname="Label"
+			labeltext="#SteamUI_SpecialSurvey_Welcome"
+			wrap=1
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-left=20 margin-right=20 margin-top=20 margin-bottom=20 }
+		place { region=box controls=WelcomeText x=0 y=0 width=max height=max  }
+	}
+}

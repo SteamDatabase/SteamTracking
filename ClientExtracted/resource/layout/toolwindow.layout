@@ -1,0 +1,105 @@
+"resource/layout/toolwindow.layout"
+{
+	controls
+	{
+		// the container
+		ToolWindowSheet	{	controlname="PropertySheet" }
+	} 
+	
+		
+	styles
+	{
+		ToolWindow
+		{			
+			bgcolor="none"
+			render_bg
+			{
+				0="gradient( x0, y0 -1, x1, y1, ClientBG, DialogBG )"
+				1="image( x0, y0, x1, y1, graphics/clienttexture2)"
+				2="gradient( x0 + 8, y0 + 34, x1 - 8, y1, dialogbg, DialogBG )"
+			  	2="gradient( x0 + 8, y0 + 50, x1 - 8, y1, dialogbg, DialogBG )" [$OSX]
+			}
+		}
+		
+		
+		Button
+	  {     
+	  	textcolor="0 0 0 0" // don't render the + as text
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1 - 1, y1 - 1, propertysheetbg )"
+				1="image(x0 + 6, y0 + 7, x1, y1 - 1, graphics/new_tab)"	
+			}
+	  }
+	  
+	  Button:hover
+		{     
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1 - 1, y1 - 1, buttonfaceactive )"	
+				1="image(x0 + 6, y0 + 7, x1, y1 - 1, graphics/new_tab)"				
+			}
+		}
+
+	  
+	  MenuButton
+	  { 
+	  	padding-right=4
+		 	bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1 - 1, y1 - 1, propertysheetbg )"
+			}
+	  }
+	  
+	  TabMenuButtonFlash
+	  { 
+	   	bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1 - 1, y1 - 1, PropertySheet.FlashTabColor )"
+			}
+	  }
+	  
+	  TabMenuItemFlash
+	  {
+	  	textcolor="PropertySheet.FlashTabColor"
+	  }
+	  
+	 	PageTab
+		{
+			font-size=14
+			font-style=regular
+    }
+    
+	  PageTab:hover
+	  {
+			font-size=14
+			font-style=regular
+		}
+  
+		PageTab:selected:hover
+		{
+			font-size=14
+			font-style=regular
+		}
+	    
+		PageTab:selected
+		{
+			font-size=14
+			font-style=regular
+	  }
+    
+	}
+
+	layout
+	{
+		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=5 margin-right=2 spacing=-5 }
+		place [!$OSX] { control="ToolWindowSheet" x=8 y=8 height=max width=max margin-right=8 }
+		place [$OSX] { control="ToolWindowSheet" x=8 y=23 height=max width=max margin-right=8 }
+	}
+}

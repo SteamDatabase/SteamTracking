@@ -1,0 +1,217 @@
+"resource/layout/friendpanel.layout"
+{
+	controls
+	{
+		AvatarImage
+		{
+		}
+	
+		AvatarOverlayImage
+		{
+			zpos=2
+		}
+		
+		// clan officer image
+		ClanStatusImage
+		{
+		}
+		
+		// speaker icons for voice chat, still procedurally controlled		
+		MultiUserChatStatusImage
+		{
+		}
+		
+		NameLabel
+		{
+			style="namestyle"
+		}
+
+		// the (1) next to the name when multiple friends have the same name
+		FriendsNameInstanceLabel
+		{
+			style="NameInstanceStyle"
+		}
+
+		MobileStatusImage
+		{
+			style="MobileStatusStyle"
+			tooltiptext="#Friends_MobileStatus_Tooltip"
+		}
+
+		BigPictureStatusImage
+		{
+			style="BigPictureStatusStyle"
+			tooltiptext="#Friends_BigPictureStatus_Tooltip"
+		}
+
+		WebStatusImage
+		{
+			style="WebStatusStyle"
+			tooltiptext="#Friends_WebStatus_Tooltip"
+		}
+
+		StatusLabel
+		{
+			style="statusStyle"
+		}
+		
+		GameLabel
+		{
+			style="statusStyle"
+		}
+		
+		// the little drop-down arrow
+		MenuButton
+		{
+			style="menuButtonStyle"
+		}
+		
+		// used at the top of the friends list for the current user
+		ControlPanelLink
+		{
+			style="controlPanelLinkStyle"
+		}
+		
+		// used in the invite-to-game dialog for when in a game		
+		InviteToGameButton
+		{
+		}
+		
+		AcceptLink { style="inviteLinkStyle" }
+		IgnoreLink { style="inviteLinkStyle" }
+		BlockLink { style="inviteLinkStyle" }
+	}
+	
+	colors
+	{
+	focus4="50 64 84 255"
+	}
+	styles
+	{
+		CFriendPanel:selected //avatar view
+		{
+			render_bg {
+				0="gradient_horizontal( x0 + 2, y0 + 4 , x1-1, y1, focus3, none  )"  //top
+				1="gradient_horizontal( x0, y0 + 5 , x1, y1-1, focus3, none  )"  //fill
+				2="gradient_horizontal( x0 + 2, y1-1 , x1-1, y1, focus3, none  )"  //btm
+				3="fill( x0 - 1, y0 + 7, x0, y1 - 3, focus3 )"  //left
+				//single-pixel fills
+				4="fill( x0, y0 + 5, x0 + 1, y0 + 6, focus4 )"  
+				5="fill( x0, y1 - 2, x0 + 1, y1 - 1, focus4 )"  
+			}	
+		}
+		
+		SelfPanel:hover
+		{
+			render_bg
+			{
+			}
+		}
+
+	
+		namestyle
+		{
+			font-family=basefont
+			font-size=14
+		}
+		
+		nameInstanceStyle
+		{
+			font-family=basefont
+			textcolor="label"
+			font-size=14
+		}
+		
+		menuButtonStyle
+		{
+			minimum-width=14
+			padding-top=3
+			padding-bottom=4
+			padding-right=5
+			padding-left=6
+		}
+		
+		menuButtonStyle:hover
+		{
+
+			render_bg {
+			
+			//background
+			0="fill( x0 + 5, y0 + 1 , x1 - 4, y1 - 2, buttonfaceactive )"
+			//lines around
+			1="fill(x0 + 4, y0 + 2, x0 + 5, y1 - 3, buttonfaceactive )"  //left
+			2="fill(x1 - 4, y0 + 2, x1 - 3, y1 - 3, buttonfaceactive )"  //right
+			}
+		}
+		
+		controlPanelLinkStyle
+		{
+			font-family=basefont
+			font-size=14
+		}
+		controlPanelLinkStyle:hover
+		{
+			font-family=basefont
+			font-size=14
+		}
+		statusStyle
+		{
+			font-family=basefont
+			font-size=14
+		}
+		
+		inviteLinkStyle
+		{
+			font-style=""
+			textcolor=Text2
+		}
+	
+		inviteLinkStyle:hover
+		{
+			textcolor=White
+			font-style=underline
+		}
+		
+		WebStatusStyle
+		{
+			image="graphics/icon_status_web"
+			padding-left=4
+		}
+	
+		BigPictureStatusStyle
+		{
+			image="graphics/icon_status_bigpic"
+			padding-left=4
+		}
+		
+		MobileStatusStyle
+		{
+			image="graphics/icon_status_mobile"
+			padding-left=4
+		}
+	}
+	
+	
+	layout
+	{
+		place {	control="AvatarOverlayImage"	x=2 y=5 width=40 height=40		}
+		place {	control="AvatarImage"			x=6 y=9 width=32 height=32		}
+		place {	control="Clanstatusimage"			x=20  width=15 }
+		place { control="ClanStatusImage,NameLabel,FriendsNameInstanceLabel,MenuButton" x=50 y=7  }
+
+		place { control="StatusLabel,BigPictureStatusImage,MobileStatusImage,WebStatusImage" x=50 y=19 }
+		place { control="GameLabel" x=50 y=31 }
+
+		// these controls are shown for friendship requests
+		place { control="AcceptLink,IgnoreLink,BlockLink"	x=50 y=31 spacing=8 }
+		
+		// this control is shown in the invite-to-game dialog in the overlay
+		place { control="InviteToGameButton" align=right y=4 padding-right=6 margin-right=20 }
+		
+		place { control="ControlPanelLink" x=50 y=31 }
+
+		place { control="SuggestedImage,SuggestedLabel" x=50 y=19 spacing=4 }
+		place { control="SuggestedInvite,SuggestedIgnore" x=50 y=31 spacing=8 }
+	}
+
+}

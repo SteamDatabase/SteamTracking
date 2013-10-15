@@ -1,0 +1,185 @@
+"resource/layout/gamespage_grid_chrome.layout"
+{
+	controls
+	{
+		"chromeborder"
+		{
+			ControlName					Panel
+			style						ChromeBorderItem
+			mouseinputenabled			0
+		}
+		
+		
+		"launch"
+		{
+			zpos="1"
+			// this control's text and command will be clobbered by code based on the installation state
+			ControlName					URLLabel
+			labelText					"#steam_launch"
+			style						CUILaunchButton
+			command						launch
+		}
+		
+				
+		"divider"
+		{
+			zpos="1"
+			// 
+			ControlName					Label
+			labelText					"|"
+			style						GridNavDivider
+
+		}
+		
+		"details"
+		{
+			zpos="1"
+			ControlName					URLLabel
+			labelText					"#steam_details"
+			style						CUIDetailsButton
+			command						details
+		}
+	}
+
+	styles
+	{
+		ChromeBorderItem
+		{
+			
+			render
+			{
+				// bgfill
+				
+				0="gradient( x0 + 12 , y1 - 47, x1 - 18, y1 - 20, buttonface2, dialogbg )"		
+	
+				// lines around
+				1="fill( x0 + 13, y0 + 2, x1 - 19, y0 + 3, ButtonBorderActive )"  // top
+       			2="fill( x0 + 13, y1 - 20, x1 - 19, y1 - 19, ButtonBorderActive )"  // bottom
+        			3="fill( x1 - 18 , y1 - 46, x1 - 17, y1 - 21, ButtonBorderActive )"  //right
+        			4="fill( x0 + 11, y1 - 46, x0 + 12, y1 - 21, ButtonBorderActive )" //left
+        			
+        			5="fill( x0 + 12, y0 + 3, x0 + 13, y0 + 4, ButtonBorderFocus )"
+			   	6="fill( x1 - 19, y0 + 3, x1 - 18, y0 + 4, ButtonBorderFocus )"
+			   	7="fill( x0 + 12, y1 - 21, x0 + 13, y1 - 20, ButtonBorderFocus )"
+			   	8="fill( x1 - 19, y1 - 21, x1 - 18, y1 - 20, ButtonBorderActive )"
+			   	9="fill( x0 + 11, y0 + 3, x0 + 12, y0 + 4, ButtonFace2)"
+				10="fill( x1 - 18 , y0 + 3, x1 - 17, y0 + 4, ButtonFace2 )"
+				11="fill( x0 + 11, y1 - 21, x0 + 12, y1 - 20, ButtonFace2 )"
+				12="fill( x1 - 19, y1 - 20, x1 - 18, y1 - 19, ButtonFace2 )"
+				13="fill( x0 + 12, y0 + 2, x0 + 13, y0 + 3, ButtonFace2 )"
+				14="fill( x1 - 19, y0 + 2, x1 - 18, y0 + 3, ButtonFace2 )"
+				15="fill( x0 + 12, y1 - 20, x0 + 13, y1 - 19, ButtonFace2 )"
+				16="fill( x1 - 18, y1 - 21, x1 - 17, y1 - 20, ButtonFace2 )"
+
+     		 }			
+		}	
+
+
+		GridNavDivider
+		{
+			textcolor="divider"
+			bgcolor="none"
+			font-family=basefont
+			font-weight=700
+			inset="1 1 0 0 "
+			// modified font size
+			font-size=15	
+		}
+		
+		CUILaunchButton
+		{   
+
+
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      textcolor="Text"
+      font-style=uppercase
+      bgcolor=none   
+      padding-left=23
+      padding-top=1
+      render
+      {
+       	1="image( x0, y0 + 1, x1, y1, graphics/icon_play )"
+      }
+      
+		}
+		
+		CUILaunchButton:Hover
+		{   
+
+
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      textcolor="white"
+      font-style=uppercase
+      padding-top=1
+      bgcolor=none   
+      
+      render
+      {
+       	1="image( x0, y0 + 1, x1, y1, graphics/icon_play_hover )"
+      }
+		}
+	
+			CUIDetailsButton
+		{   
+
+
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      textcolor="Text"
+      font-style=uppercase
+      bgcolor=none   
+      padding-left=22
+      padding-top=1
+      
+      render
+      {
+       	1="image( x0, y0 + 1, x1, y1, graphics/icon_details )"
+      }
+      
+		}
+		
+		CUIDetailsButton:Hover
+		{   
+
+
+      font-family=basefont
+      font-size=16
+      font-weight=400
+      textcolor="white"
+      font-style=uppercase
+      bgcolor=none   
+      padding-top=1
+      render
+      {
+       	1="image( x0, y0 + 1, x1, y1, graphics/icon_details_hover )"
+      }
+		}
+	
+
+		"GameItem_Updating CUINavButton:hover"
+		{
+			textcolor="Text"
+		}
+	}
+
+	
+	layout
+	{
+		region { name="actions" align=bottom width=max height=50 x=0 y=210 margin-bottom=0}
+		
+		place
+		{
+			control=chromeborder	region=actions			x=0 y=0 width=max height=max
+		}
+
+		place
+		{
+			control="launch,divider,details"	region="actions"		align=top-center spacing=7 margin-bottom=18 margin-left=0 margin-top=8
+		}
+	}
+}

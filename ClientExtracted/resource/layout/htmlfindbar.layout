@@ -1,0 +1,69 @@
+"resource/layout/htmlfindbar.layout"
+{
+	controls
+	{
+		FindEntry { controlname=TextEntry default=1 unicode=1 tabposition=1 style="FindEntry" }
+		FindCount { controlname=Label labeltext="#vgui_HTMLSearchMatch" }
+		Close { controlname=Button command="Close" style="CloseButtonSm" }
+		Next { controlname=Button command="next" style="NextButtonSm" }
+		Previous { controlname=Button command="previous" style="PrevButtonSm" }
+		SearchThisPage { controlname=Label labeltext="#vgui_HTMLSearchThisPage" style="" }
+	}
+
+	styles
+	{
+		FindEntry
+		{
+			
+		}
+		CloseButtonSm
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/win32_win_close"
+		}
+		CloseButtonSm:hover
+		{
+			render_bg {}
+			image="graphics/win32_win_close_hover"
+		}
+		NextButtonSm
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/find_icon_down"
+		}
+		NextButtonSm:hover
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/find_icon_down_hover"
+		}
+		PrevButtonSm
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/find_icon_up"
+		}
+		PrevButtonSm:hover
+		{
+			bgcolor=none
+			inset="0 0 0 0"
+			render_bg={}
+			image="graphics/find_icon_up_hover"
+		}
+	}
+		
+	layout
+	{
+		place { control="FindEntry" width=180 align=left y=6 margin-right=26 margin-left=98 }
+		place { control="FindCount" width=70 align=right y=6 margin-right=40 margin-left=6 margin-top=5 }
+		place { control="Next,Previous,Close" align=right height=24 width=22 margin-right=5 margin-top=6 }
+		place { control="SearchThisPage" align=left height=22 width=94 margin-left=8 margin-top=8}
+
+	}
+}

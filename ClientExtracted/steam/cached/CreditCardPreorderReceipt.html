@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>STEAM - receipt for your preorder</title>
+
+<style TYPE="text/css">
+
+BODY {
+	margin:8px 25% 0 5%;
+	font-family:Arial,Verdana,Helvetica;
+	font-size:10pt;
+}
+h1 {
+	font-weight:bold;
+	font-size:11pt;
+	line-height:14pt;
+	text-transform:uppercase;
+	margin-bottom:0px;
+}
+TD {
+	font-family:Arial,Verdana,Helvetica;
+	font-size:10pt;
+	padding-right:24px;
+}
+HR {
+	height:1px;
+	color:black;
+}
+</style>
+
+
+</head>
+
+
+<body OnLoad="window.print()">
+<h1><img src="http://steampowered.com/img/steam_logo_onwhite.gif" height="36" width="67" alt="STEAM" align="absmiddle"> Steam - Receipt for credit card purchase</h1>
+<br>
+Thank you for placing a preorder for %%subscription%% on Steam. <b>Your credit card will not be charged until %%subscription%% is officially released.</b> At that time, a full credit card transaction receipt will be sent to you.
+It is recommended that you keep this information in a safe place. It can be used as proof-of-purchase in the future.
+
+<br><br>
+<hr noshade size="1">
+
+<table>
+
+<tr><td>Steam account name:</td><td><b> %%accountname%% </b></td></tr>
+<tr><td>Contact email address:</td><td><b> %%email%% </b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td>Card-holder name:</td><td><b> %%cardholdername%% </b></td></tr>
+<tr><td>Card type:</td><td><b> %%cardtype%% </b></td></tr>
+<tr><td>Last 4 digits:</td><td><b> %%cardlastfourdigits%% </b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td colspan="2">Upon release, the above card will be charged for the following:</td></tr>
+<tr><td>Product name:</td><td><b> %%subscription%% </b></td></tr>
+<tr><td>Price:</td><td><b> %%pricewithouttax%% </b></td></tr>
+<tr><td>Tax:</td><td><b> %%taxamount%% </b></td></tr>
+<tr><td>Total:</td><td><b> %%pricetotal%% U.S. dollars</b></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td>Preorder confirmation code:</td><td><b> %%confirmationcode%% </b></td></tr>
+
+</table>
+
+<hr noshade size="1">
+<br>
+<br><b>Thank you for your purchase!</b><br>
+<br><br>
+
+</body>
+</html>
