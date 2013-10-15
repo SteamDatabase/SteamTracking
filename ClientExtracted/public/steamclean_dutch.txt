@@ -1,0 +1,14 @@
+"Language" "dutch"
+"Tokens"
+{
+"SteamClean_Title"	"Steam verwijderen?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Steam heeft nog spelcontent opgeslagen in %@. Wil je dat Steam deze content nu verwijdert?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Bestanden verwijderen"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Bestanden houden"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Weergeven in zoeker"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

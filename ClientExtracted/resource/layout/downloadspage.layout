@@ -1,0 +1,26 @@
+"resource/layout/downloadspage.layout"
+{
+	controls
+	{
+		// the container
+		"DownloadsPage"
+		{
+			"ControlName"		"CDownloadsPage"
+		}
+	
+		"panel_list"
+		{
+			style=ListPanel
+		}
+	}
+	
+	styles
+	{
+	}
+
+	layout
+	{
+		place { control="panel_list" width=max height=max margin=1 }
+
+	}
+}

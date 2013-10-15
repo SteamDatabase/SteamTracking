@@ -1,0 +1,14 @@
+"Language" "korean"
+"Tokens"
+{
+"SteamClean_Title"	"스팀을 삭제하시겠습니까?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"%@에 저장된 게임 콘텐츠가 있습니다. 삭제하시겠습니까?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"파일 삭제"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"파일 보존"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"파인더에 표시"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

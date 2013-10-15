@@ -1,0 +1,79 @@
+"controller_mappings"
+{
+	"buttons"
+	{
+		"button_0"		"kb:key_o, Objective"
+		"button_1"		"kb:key_u, Skills"
+		"button_2"		"mouse:scroll_down, Next Weapon"
+		"button_3"		"mouse:scroll_up, Dual Weilding"
+
+		"right_trigger" 	"mouse:left_button, Fire/Activate"
+		"left_trigger"		"mouse:right_button, Aim"
+		"right_bumper"		"kb:key_g, Dynamite"
+		"left_bumper"		"kb:key_q, Concentration"
+
+		"button_escape"		"kb:key_esc, Menu"
+		"button_menu"		"kb:key_tab"
+
+		"backside_left"		"kb:key_lcontrol, Crouch"
+		"backside_right"	"kb:key_f, Melee"
+		
+	}
+
+	"touchscreen"
+	{
+		"touch_button_0"			"kb:key_1, Long"
+		"touch_button_1"			"kb:key_2, Slot 2"
+		"touch_button_2"			"kb:key_3, Slot 3"
+		"touch_button_3"			"kb:key_4, Slot 4"
+	}
+
+	"pads"
+	{
+		"left_stick_up"		""
+		"left_stick_right"	""
+		"left_stick_down"	""
+		"left_stick_left"	""
+		"left_stick_click"	""
+
+		"left_north"		"kb:key_w, Move Forward"
+		"left_northeast"	""
+		"left_east"		"kb:key_d, Move Right"
+		"left_southeast"	""
+		"left_south"		"kb:key_s, Move Backward"
+		"left_southwest"	""
+		"left_west"		"kb:key_a, Move Left"
+		"left_northwest"	""
+
+		"left_double_tap"	""
+		"left_outer_edge"	"kb:key_lshift, Run"
+		"left_click"		"kb:key_space, Jump"
+
+		"right_north"		"kb:key_up"
+		"right_northeast"	""
+		"right_east"		"kb:key_right"
+		"right_southeast"	""
+		"right_south"		"kb:key_down"
+		"right_southwest"	""
+		"right_west"		"kb:key_left"
+		"right_northwest"	""
+	
+		"right_double_tap"	"kb:key_r, Reload"
+		"right_outer_edge"	""
+		"right_click"		"kb:key_e, Use or Pickup"
+
+		// Extra descriptions for pads as a whole rather than just individual directions
+		pad_rollup_descriptions
+		{
+			"left_pad"	"Movement"
+			"right_pad"	"Look"
+		}
+	}
+
+	"settings"
+	{
+	}
+}
+
+	
+

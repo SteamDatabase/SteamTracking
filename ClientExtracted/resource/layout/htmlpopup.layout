@@ -1,0 +1,139 @@
+"resource/layout/htmlpopup.layout"
+{
+	controls
+	{
+		HTMLPopup { controlname="HTMLPopup" frametitle="" }
+		htmlpopupchild	{ controlname="HTML" zpos=1 }
+		URLBar		{ controlname="TextEntry" style="TextEntryURL" enabled=false }
+		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }
+		StatusText { controlname="Label" }
+		
+		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage"  }
+		StopButton	{ controlname="Button"  command="WebStop" labeltext="" style="StopButton" }
+		ReloadButton	{ controlname="Button" command="WebReload" labeltext="" style="ReloadButton" }
+		ForwardButton	{ controlname="Button" command="WebForward" labeltext="" style="ForwardButtonSm" }
+		BackButton	{ controlname="Button" command="WebBack" style="BackButtonSm" }
+		PageLoadThrobber { controlname="ImagePanel" image="graphics/rampDown_4" }
+	}
+	
+	styles
+	{
+		BackButtonSm
+		{
+		bgcolor=none
+		inset="0 0 0 0"
+		render_bg={}
+		image="steam/cached/icon_button_back_sm"
+		}
+		BackButtonSm:hover
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_over_sm"
+		}
+		BackButtonSm:active
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_down_sm"
+		}
+		BackButtonSm:disabled
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_disabled_sm"
+		}
+		ForwardButtonSm
+		{
+		bgcolor=none
+		inset="-1 0 0 0"
+		render_bg={}
+		image="steam/cached/icon_button_forward_sm"
+		}
+		
+		ForwardButtonSm:hover
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_over_sm"
+		}
+		ForwardButtonSm:active
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_down_sm"
+		}
+		ForwardButtonSm:disabled
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_disabled_sm"
+		}
+		
+		TextEntryURL
+		{
+		font-family=basefont
+		font-size=14
+		textcolor="text2"
+		font-weight=400
+		bgcolor="none"
+		selectedtextcolor="TextEntrySelected"
+		selectedbgcolor="TextSelectedBG"
+		shadowtextcolor="Text"	// this is the cursor color
+		inset-left=2
+		inset-top=-1		
+		}
+		
+		TextEntryURL:Hover
+		{
+		textcolor="text"
+		}
+			
+		LabelEVCert
+		{
+		font-family=basefont
+		font-size=14
+		textcolor="darkclientbg"
+		font-weight=400
+		bgcolor="html.secureurl"
+		inset-left=4
+		inset-right=4
+		inset-top=-1		
+		}
+		
+		URLStatusImage
+		{
+		bgcolor=none
+		inset="0 0 0 0"
+		render_bg={}
+		image="graphics/html_lock_disabled"
+		scaling=fit
+		}
+
+		URLBarSecure
+		{
+		textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+		textcolor="html.insecureurl"
+		}
+	}
+	
+	layout
+	{
+		place { control="htmlpopupchild"  	width=max height=max margin-top=60 margin-left=8 margin-right=8 margin-bottom=26 }
+		place { control="StatusText" align=bottom height=24 margin-left=9 margin-bottom=1 }
+		place { control="PageLoadThrobber" align=right margin-top=28 margin-right=10 width=20 height=20 }	
+	
+		place { control="BackButton,ForwardButton,ReloadButton,StopButton,URLStatusImage,EVCert,URLBar" x=0 y=28 height=22 width=max spacing=5 margin-right=10 }
+
+
+	}
+	
+}
+

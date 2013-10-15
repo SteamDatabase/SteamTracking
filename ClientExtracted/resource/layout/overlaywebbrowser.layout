@@ -1,0 +1,170 @@
+"steam/cached/overlaywebbrowser.layout"
+{
+	controls
+	{
+		WebBrowser { controlname="COverlayWebBrowser" frametitle="#Overlay_WebBrowserTitle" }
+		HTMLField	{ controlname="HTML" zpos=1 }
+		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage"  }
+		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }
+		URLBar		{ controlname="TextEntry" style="TextEntryURL" }
+		StatusText { controlname="Label" }
+		
+		HomeButton	{ controlname="Button" command="WebHome" labeltext="" style="HomeButton" }
+		StopButton	{ controlname="Button"  command="WebStop" labeltext="" style="StopButton" }
+		ReloadButton	{ controlname="Button" command="WebReload" labeltext="" style="ReloadButton" }
+		ForwardButton	{ controlname="Button" command="WebForward" labeltext="" style="ForwardButtonSm" }
+		BackButton	{ controlname="Button" command="WebBack" style="BackButtonSm" }
+		
+		PageLoadThrobber { controlname="ImagePanel" image="graphics/rampDown_4" }
+	}
+	
+	styles
+	{
+		BackButtonSm
+		{
+		bgcolor=none
+		inset="0 0 0 0"
+		render_bg={}
+		image="steam/cached/icon_button_back_sm"
+		}
+		BackButtonSm:hover
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_over_sm"
+		}
+		BackButtonSm:active
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_down_sm"
+		}
+		BackButtonSm:disabled
+		{
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_back_disabled_sm"
+		}
+		ForwardButtonSm
+		{
+		bgcolor=none
+		inset="-1 0 0 0"
+		render_bg={}
+		image="steam/cached/icon_button_forward_sm"
+		}
+		
+		ForwardButtonSm:hover
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_over_sm"
+		}
+		ForwardButtonSm:active
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_down_sm"
+		}
+		ForwardButtonSm:disabled
+		{
+		inset="-1 0 0 0"
+		bgcolor=none
+		render_bg={}
+		image="steam/cached/icon_button_forward_disabled_sm"
+		}
+		
+		
+		TextEntryURL
+		{
+		font-family=basefont
+		font-size=14
+		textcolor="text2"
+		font-weight=400
+		bgcolor="none"
+		selectedtextcolor="TextEntrySelected"
+		selectedbgcolor="TextSelectedBG"
+		shadowtextcolor="Text"	// this is the cursor color
+		inset-left=4
+		inset-top=-1
+		
+			render
+		      {
+		        // lines around
+		        0="fill( x0, y0 + 1, x0 + 1, y1 - 1, ButtonBorder )"
+		        	
+		        1="gradient_horizontal( x0 + 1, y0, x1 - 1, y0 + 1, ButtonBorder, none )" 
+		        2="gradient_horizontal( x0 + 1, y1 - 1, x1 - 1, y1, ButtonBorder, none )"
+		        
+		        // single pixel fills in the corners
+		        3="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
+		        4="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
+		      }     	
+		}
+		
+		TextEntryURL:Hover
+		{
+		textcolor="text"
+			
+			render
+		      {
+		        // lines around
+		        0="fill( x0, y0 + 1, x0 + 1, y1 - 1, ButtonBorderFocus )"
+		        	
+		        1="gradient_horizontal( x0 + 1, y0, x1 - 1, y0 + 1, ButtonBorderFocus, none )" 
+		        2="gradient_horizontal( x0 + 1, y1 - 1, x1 - 1, y1, ButtonBorderFocus, none )"
+		        
+		        // single pixel fills in the corners
+		        3="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
+		        4="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
+		      }   			
+		}
+
+		TextEntryURL:Disabled
+		{
+		textcolor="textdisabled"
+		}
+		
+		LabelEVCert
+		{
+		font-family=basefont
+		font-size=14
+		textcolor="darkclientbg"
+		bgcolor="html.secureurl"
+		inset-left=4
+		inset-right=4
+		inset-top=-1		
+		}
+			
+		URLStatusImage
+		{
+		bgcolor=none
+		inset="0 0 0 0"
+		render_bg={}
+		image="graphics/html_lock_disabled"
+ 		scaling=panel
+ 		}
+
+		URLBarSecure
+		{
+		textcolor="html.secureurl"
+		}
+
+		URLBarBrokenSecure
+		{
+		textcolor="html.insecureurl"
+		}
+	}
+	
+	layout
+	{
+		place { control="HTMLField"  	width=max height=max margin-top=40 margin-left=8 margin-right=8 margin-bottom=26 }
+		place { control="StatusText" align=bottom height=24 margin-left=9 margin-bottom=1 }
+		place { control="PageLoadThrobber" align=right margin-top=8 margin-right=10 width=20 height=20 }	
+		
+		place { control="BackButton,ForwardButton,ReloadButton,StopButton,HomeButton,URLStatusImage,EVCert,URLBar" x=0 y=8 height=24 width=max spacing=5 margin-right=10 }
+	}
+	
+}
+

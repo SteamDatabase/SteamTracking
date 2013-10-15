@@ -1,0 +1,14 @@
+"Language" "hungarian"
+"Tokens"
+{
+"SteamClean_Title"	"Steam törlése?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"A Steam még mindig tárol játéktartalmat a(z) %@ helyen. Szeretnéd, hogy a Steam ezeket most törölje?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Fájlok törlése"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Fájlok megtartása"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Megjelenítés a keresőben"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

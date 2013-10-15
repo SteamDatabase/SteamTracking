@@ -1,0 +1,96 @@
+"resource/layout/gamespage_grid_loadfailed.layout"
+{
+	controls
+	{
+		"background"
+		{
+			ControlName						"ImagePanel"
+			style							"GGPlaceholderBG"
+			scaling							"fit"
+			zpos							"1"
+			// image resource of this control will be set programmatically
+		}
+
+		"noappimage_border"
+		{
+			ControlName						"ImagePanel"
+			style							"GamesGridIconBorder"
+			zpos							"2"
+		}	
+		
+		"noappimage"
+		{
+			ControlName						"ImagePanel"
+			style							"GamesGridIcon"
+			zpos							"3"
+		}
+				
+		"appname"
+		{
+			ControlName						"Label"
+			style							"GamesGridPlaceholder"
+			textalignment					"center"
+			zpos							"4"
+			// labeltext of this control will be set programmatically
+		}
+		
+	}
+
+	styles
+	{
+		GamesGridPlaceholder
+		{
+			font-size=18
+			font-family=basefont
+			textcolor=text
+		}
+
+		GamesGridIconBorder
+		{
+			bgcolor="none"
+			inset="0 0 0 0"
+		     render
+		     {
+		       	1="image( x0, y0, x1, y1, steam/cached/icon_game_frame )"
+		     }
+		}
+					
+		GGPlaceholderBG
+		{
+			bgcolor=none
+		}
+
+		"GameItem_installed GamesGridPlaceholder"
+		{
+			textcolor="Text"
+		}
+	}
+
+	layout
+	{
+		region
+		{
+			name=icon_region width=max height=max 
+		}
+		
+		place
+		{
+			control = "background"		width=max height=max
+		}
+		place
+		{
+			control = "appname"  		margin=12 width=max align=center margin-top=14
+		}
+		place
+		{
+			control = "noappimage_border"	region="icon_region"	x=0 y=0 width=34 height=34 margin-top=48 align=top-center 
+		}
+		place
+		{
+			control = "noappimage"	region="icon_region" x=0 y=0 width=32 height=32 margin-top=49 align=top-center
+		}
+
+	}
+}
+
+

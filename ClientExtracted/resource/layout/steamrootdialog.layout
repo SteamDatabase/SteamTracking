@@ -1,0 +1,697 @@
+"resource/layout/steamrootdialog.layout"
+{
+	controls
+	{
+		"ImageLogo"
+		{
+		"ControlName" 	"Label"
+		style="ClientLogo"
+		zpos=-5
+		}
+	
+		
+		"New"
+		{
+		"ControlName" 	"URLLabel"
+		style="new_label"
+		"URLText"		"http://store.steampowered.com/uiupdate"
+		zpos=-2
+		}
+		
+		"UINavigatorPanel"
+		{
+			"ControlName"		"CUINavigatorPanel"
+			zpos=-2
+		}	
+		
+		"UIStatusPanel"
+		{
+			"ControlName"		"CUIStatusPanel"
+			zpos=-2
+		}	
+		
+		"MenuBar"
+		{
+			"ControlName"		"MenuBar"
+			style=RootMenu
+		}
+		
+		SupportAlert
+		{
+			ControlName=Button
+			labelText="#Steam_SupportAlert"
+			style="support_alert"
+			textAlignment=center
+			command="OpenSupportAlertWindow"
+		}	
+
+		ParentalLockButton
+		{
+			ControlName=ToggleButton
+			style="parental_lock_button"
+			labelText=""
+			text=""
+			command="ParentalLock"
+		}
+		
+		InboxButton
+		{
+			ControlName=MenuButton
+			style="inbox_button"
+			textAlignment=west
+		}	
+		
+		add_game
+		{
+			"ControlName"		"MenuButton"
+			labelText="#steam_client_add_game"
+			style="AddGameButton"
+		}
+		
+		frame_title
+		{
+			ControlName=Label
+	
+			style="ClientTitle"
+			"textAlignment"   "west"
+			"textAlignment"   "center" [$OSX]
+		}
+		
+		account_url
+		{
+			"ControlName"		"MenuButton"
+			"fieldName"		"account_url"
+			"labelText"		"#Steam_Account_Name"
+			style="AccountURLStyle"
+		}
+		
+		account_balance_seperator
+		{
+			"ControlName"	"Label"
+			"fieldName"		"account_balance_seperator"
+			"labelText"		"|"
+			style="online_friends"
+		}
+		
+		account_balance
+		{
+			"ControlName"	"URLLabel"
+			"fieldName"		"account_balance"
+			"labelText"		""
+			"URLText"		"steam://url/StoreAccount/"
+			style="URLLabelSimple"
+		}
+		
+		
+		universe_label
+		{
+			ControlName=Label
+			labelText=#Steam_Universe_Internal
+		}
+
+		view_friends
+		{
+			ControlName=URLLabel
+			labelText="#Steam_ViewFriends"
+			"URLText"	"steam://open/friends"
+			style="view_friends"
+			textAlignment=east
+		}
+		online_friends
+		{
+			ControlName=Label
+			labelText="#Steam_OnlineFriends"
+			style="online_friends"
+			textAlignment=east
+			zpos=-1
+		}
+	}
+	
+	styles
+	{    		
+		
+		ClientLogo
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/piston"
+			inset="0 -20 0 0"
+		}
+		
+		new_label	
+		{			
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button"
+			inset="0 0 0 0"
+		}
+		
+		new_label:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover"
+			inset="0 0 0 0"
+		}
+
+		new_label_german
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_german"
+			inset="0 0 0 0"
+		}
+
+		new_label_german:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_german"
+			inset="0 0 0 0"
+		}
+
+		new_label_french
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_french"
+			inset="0 0 0 0"
+		}
+
+		new_label_french:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_french"
+			inset="0 0 0 0"
+		}
+		
+		new_label_italian
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_italian"
+			inset="0 0 0 0"
+		}
+
+		new_label_italian:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_italian"
+			inset="0 0 0 0"
+		}
+		
+		new_label_spanish
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_spanish"
+			inset="0 0 0 0"
+		}
+
+		new_label_spanish:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_spanish"
+			inset="0 0 0 0"
+		}
+		
+		new_label_danish
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_danish"
+			inset="0 0 0 0"
+		}
+
+		new_label_danish:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_danish"
+			inset="0 0 0 0"
+		}
+		
+		new_label_norwegian
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_norwegian"
+			inset="0 0 0 0"
+		}
+
+		new_label_norwegian:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_norwegian"
+			inset="0 0 0 0"
+		}
+		
+		new_label_swedish
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_swedish"
+			inset="0 0 0 0"
+		}
+
+		new_label_swedish:hover
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/new_button_hover_swedish"
+			inset="0 0 0 0"
+		}
+		
+		RootMenu
+		{
+			bgcolor="none"
+		}
+
+		AddGameButton
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="labelfocus"
+			padding-right=30
+			padding-left=17
+			font-style=uppercase
+			render_bg
+			{
+				0="image( x0 + 2, y0 + 7, x1, y1, graphics/icon_collapse )"
+			}
+		}
+		
+		AddGameButton:hover
+		{
+			textcolor="white"
+			render_bg
+			{
+				0="image( x0 + 2, y0 + 7, x1, y1, graphics/icon_collapse_over )"
+			}
+		}	
+		
+
+
+		CSteamRootDialog
+		{
+			bgcolor=none
+
+			render_bg
+			{
+				// top area and graphic
+				0="gradient( x0, y0, x1, y0+175, ClientBG, DialogBG )"
+				2="image( x0, y0, x1, y0+175, graphics/clienttexture2)"
+
+				3="fill( x0, y0+175, x0+20, y1-76, DialogBG )"			
+				4="fill( x1-20, y0+175, x1, y1-76, DialogBG )"			
+
+				// fill in the bottom area
+				5="fill( x0, y1 - 76, x1, y1, DialogBG )"
+			}
+		}		
+
+	
+		ClientTitle [!$OSX]
+		{
+			textcolor=none		
+		}
+
+		ClientTitle [$OSX]
+		{
+			font-family=basefont
+			font-size=15
+      		font-weight=400
+      		textcolor="textdisabled"
+      		bgcolor="none"
+      		inset="0 6 0 0"
+		}
+
+		ClientTitle:FrameFocus [$OSX]
+		{
+			font-family=basefont
+   			font-size=15
+   			font-weight=400
+   			textcolor="texthover"
+   			bgcolor="none"
+   			inset="0 6 0 0"
+		}
+
+		FrameTitle
+		{
+			font-family=basefont
+			font-size=15
+			font-weight=400
+			textcolor="Label"
+			bgcolor="none"
+			render_bg
+			{
+				1="gradient( x0, y0 - 4, x1, y1 + 18, TitleBar, none )"
+				1="gradient( x0, y0, x1, y1 + 18, TitleBar, none )" [$OSX]
+			}
+		}
+				
+		FrameTitle:framefocus
+		{
+			font-family=basefont
+			font-size=15
+			font-weight=400
+			textcolor="Label"
+			bgcolor="none"
+			textcolor="Text"
+		
+			render_bg
+			{
+				1="gradient( x0, y0 - 4, x1, y1 + 18, titlebarfocus, none )"
+				1="gradient( x0, y0, x1, y1 + 18, titlebarfocus, none )" [$OSX]
+			}
+		}
+		
+		view_friends [!$OSX]
+		{
+			textcolor="LabelFocus"
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			font-style=regular,uppercase
+			padding-top=6
+			padding-left=24
+			padding-bottom=30
+		}
+
+		view_friends [$OSX]
+		{
+			textcolor="LabelFocus"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-weight=400
+			font-style=regular,uppercase
+			padding-top=6
+			padding-left=24
+			padding-bottom=30
+
+		}
+
+		view_friends:Hover
+		{
+			 textcolor="white"
+		}
+
+		view_friends:disabled
+		{
+			textcolor="TextDisabled"
+		}
+
+		online_friends [!$OSX]
+		{
+			textcolor="label2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=14
+			font-style=regular
+		}
+
+		online_friends [$OSX]
+		{
+			textcolor="label2"
+			bgcolor="none"
+			font-family=basefont
+			font-size=13
+			font-style=regular
+		}
+
+		online_friends:disabled
+		{
+			textcolor="TextDisabled"
+		}
+
+		support_alert
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=1000
+			font-style=none
+			textcolor=white
+			padding-left=50
+			padding-right=50
+			padding-top=6
+			inset="-8 -3 8 0"
+			render {}
+			render_bg {
+				0="fill( x0, y0, x1, y1+1, support_flag_red )"
+				1="image( x0, y0, x0, y1, graphics/support_flag_left )"
+				2="image( x1, y0, x1, y1, graphics/support_flag_right )"
+				3="image_scale( x0+3, y0, x1, y0+3, graphics/support_flag_top )"
+				4="image_scale( x0+3, y1, x1, y1+3, graphics/support_flag_bottom )"
+			}
+		}
+		
+		support_alert:hover
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=1000
+			font-style=none
+			textcolor=white
+			padding-left=50
+			padding-right=50
+			padding-top=6
+			inset="-8 -3 8 0"
+			render {}
+			render_bg {
+				0="gradient( x0, y0, x1, y1+1, support_hover_red1, support_hover_red2 )"
+				1="image( x0, y0, x0, y1, graphics/support_flag_left_hover )"
+				2="image( x1, y0, x1, y1, graphics/support_flag_right_hover )"
+				3="image_scale( x0+3, y0, x1, y0+3, graphics/support_flag_top_hover )"
+				4="image_scale( x0+3, y1, x1, y1+3, graphics/support_flag_bottom_hover )"
+			}
+		}
+
+		parental_lock_button
+		{
+			padding-left=0
+			padding-right=2
+			image="resource/unlocked_acct"
+			render {}
+			render_bg {
+				0="gradient( x0, y0, x1, y1+1, parental_lock_inactive1, parental_lock_inactive2 )"
+			}
+		}
+
+		parental_lock_button:selected
+		{
+			padding-left=0
+			padding-right=2
+			image="resource/locked_acct"
+			render_bg {
+				0="gradient( x0, y0, x1, y1+1, parental_lock_active1, parental_lock_active2 )"
+			}			
+		}
+
+		inbox_button
+		{
+			font-family=basefont
+			font-size=14
+			font-weight=1000
+			font-style=none
+			textcolor=white
+			padding-left=2
+			padding-right=10
+			padding-top=6
+			
+			inset="-8 -3 8 0"
+			render {}
+			render_bg {
+				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
+				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
+				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
+			}
+		}
+
+		inbox_button:hover
+		{
+			render_bg {
+				0="gradient( x0, y0, x1, y1+1, inbox_inactive_hover1, inbox_inactive_hover2  )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
+				2="image( x0, y0, x0, y1, graphics/flag_inactive_left_hover )"
+				3="image( x1, y0, x1, y1, graphics/flag_inactive_right_hover )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top_hover )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom_hover )"
+			}
+		}
+
+		inbox_button:selected
+		{
+			render_bg {
+				0="gradient( x0, y0, x1, y1, inbox_inactive_hover1, inbox_inactive_hover2  )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
+				2="image( x0, y0, x0, y1, graphics/flag_inactive_left_hover )"
+				3="image( x1, y0, x1, y1, graphics/flag_inactive_right_hover )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top_hover )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom_hover )"
+			}
+		}
+
+		inbox_button:disabled
+		{
+			render_bg {
+				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
+				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
+				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
+			}
+		}	
+
+		inbox_button_active
+		{
+			inset="0 -3 8 0"
+			render_bg {
+				0="fill( x0, y0, x1, y1, inbox_active )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
+				2="image( x0, y0, x0, y1, graphics/flag_left )"
+				3="image( x1, y0, x1, y1, graphics/flag_right )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom )"
+			}
+		}
+
+		inbox_button_active:hover
+		{
+			inset="0 -3 8 0"
+			render_bg {
+				0="gradient( x0, y0, x1, y1, inbox_active_hover1, inbox_active_hover2  )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
+				2="image( x0, y0, x0, y1, graphics/flag_left_hover )"
+				3="image( x1, y0, x1, y1, graphics/flag_right_hover )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top_hover )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom_hover )"
+			}
+		}
+		inbox_button_active:selected
+		{
+			inset="0 -3 8 0"
+			render_bg {
+				0="gradient( x0, y0, x1, y1, inbox_active_hover1, inbox_active_hover2  )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
+				2="image( x0, y0, x0, y1, graphics/flag_left_hover )"
+				3="image( x1, y0, x1, y1, graphics/flag_right_hover )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top_hover )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom_hover )"
+			}
+		}
+
+		inbox_button_active:disabled
+		{
+			render_bg {
+				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
+				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
+				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
+				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
+				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
+				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
+			}
+		}	
+
+		
+		inboxmenuitem
+		{
+			textcolor=inbox_inactive_text
+		}
+		
+		inboxmenuitem_active
+		{
+			textcolor=inbox_active_text
+		}
+		
+		AccountURLStyle
+		{
+		  padding-top=-4
+		}
+		
+		AccountURLStyle:hover
+		{
+			textcolor=white
+		}
+		
+		AccountURLStyle:selected
+		{
+			textcolor=white
+		}
+
+		AccountURLStyle:disabled
+		{
+			textcolor="TextDisabled"
+		}
+	}
+	
+	colors
+	{
+		support_flag_red "169 72 71 255"
+		
+		support_hover_red1 "193 94 93 255"
+		support_hover_red2 "156 64 63 255"
+		
+		inbox_active_text "140 179 36 255"
+		inbox_inactive_text "191 191 191 255"
+
+		inbox_active "92 126 16 255"
+		inbox_active_hover1 "129 176 25 255"
+		inbox_active_hover2 "104 142 19 255"
+
+		inbox_inactive "38 38 37 255"
+		inbox_inactive_hover1 "92 89 86 255"
+		inbox_inactive_hover2 "77 75 72 255"
+
+		parental_lock_active1 "112 186 36 255"
+		parental_lock_active2 "74 72 70 255"		
+
+		parental_lock_inactive1 "169 72 71 255"
+		parental_lock_inactive2 "74 72 70 255"
+	}
+	
+	layout
+	{
+		place [!$OSX] { control="New" width=0 height=0 y=0 width=max align=right margin-right=56}
+		place [$OSX]  { control="New" width=0 height=0 y=0 width=max align=right margin-right=-20}
+		
+		place { control="UINavigatorPanel" width=max height=max margin-right=1 margin-left=1 margin-bottom=40 margin-top=22 }
+		
+		place { control="UIStatusPanel" width=max height=40 align=bottom  margin-bottom=18 }
+		
+		place [!$OSX] { control="MenuBar" align=top margin-top=2 margin-left=2 }
+			
+		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=83 spacing=7 }	
+		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=15 spacing=7 }
+		
+		place { control="InboxButton" align=right end-right="account_balance" margin-top=1 margin-right=20 height=26 }
+		place { control="ParentalLockButton" align=right end-right="InboxButton" margin-top=1 margin-right=10 height=26 }
+		place { control="SupportAlert" align=right end-right="ParentalLockButton" margin-top=1 margin-right=10 height=26 }
+
+		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=7 margin-right=6 spacing=-5 }
+
+		region { name=bottom align=bottom width=max height=75 }
+		
+		place [!$OSX] { control="ImageLogo" align=right x=650 y=0 width=340 height=133 margin-top=0 margin-right=0}
+		place [$OSX] { control="ImageLogo" align=right x=650 y=0 width=340 height=133 margin-top=0 margin-right=0}	
+		
+		place { control="add_game" x=14 y=16 region=bottom height=30}
+
+		place { control="FriendPanel" height=48 width=48 region=bottom align=right margin-right=2 margin-top=16 }
+		place { control="view_friends" height=62 y=12 region=bottom align=right dir=right margin-right=56 }
+		place { control="online_friends" height=12 y=38 region=bottom align=right dir=right margin-right=56 }
+	
+ 		// the title bar is missing, so increase the size of the grip
+		place { control="frame_captiongrip" margin=2 width=max height=104 }
+	}
+}

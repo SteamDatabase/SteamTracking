@@ -1,0 +1,29 @@
+"resource/layout/updatecontrollerfirmware.layout"
+{
+	controls
+	{
+		UpdateControllerFirmwareDialog { controlname="Frame" title="#SteamUI_UpdateControllerFirmware_Title" style="UpdateControllerFirmwareDialog" }
+
+		ConfirmText { controlname="Label" labeltext="#SteamUI_UpdateControllerFirmware_Body" wrap=1 }
+
+		Continue { controlname="Button" tabposition=1 labeltext="#SteamUI_UpdateControllerFirmware_Next" }
+	}
+	
+	styles
+	{
+		UpdateControllerFirmwareDialog
+		{
+			minimum-width = 400
+			minimum-height = 220
+		}
+
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=40 margin=10 }
+
+		place { control="ConfirmText" width=max y=40 margin=15 }
+		place { control="Continue" region="bottom" align=right spacing=5 }
+	}
+}

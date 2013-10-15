@@ -1,0 +1,39 @@
+﻿"Language" "english" 
+"Tokens" 
+{ 
+"Steam_TellTale_EmailPrompt"	"Telltale, the publisher of %subscription%, would like to stay in touch with you. Please enter your email address below to sign up for Telltale's newsletter, which includes new game announcements, behind-the-scenes peeks into the development process, comics, cooking and advice columns, and the occasional special offer. You'll be glad you did!"
+
+"Steam_Football2K9_EmailPrompt"	"SEGA, the publisher of %subscription%, would like to offer you a special discount at Subside Sports as thanks for your purchase. Please enter your email address below to receive your 10% off voucher good towards any product available at Subside Sports' online store."
+
+"Steam_TwoTribes_EmailPrompt"	"If you want to stay in touch with Two Tribes you can subscribe to our newsletter. Simply fill in your e-mail address and we'll provide you with regular updates about all the cool games that we make!"
+
+
+"charity_title" "Sid Meier's Civilization V"
+
+"charity_imagetext" "Giving back"
+
+"charity_header" "2K Games is donating a total of $250,000 to four education-based charities, and users' choices will determine how the money is dispersed. We'll tally up customers' votes and disperse the funds as you have directed. We also welcome The NVIDIA Foundation, who are joining us in this initiative by donating an additional $20,000 to the program."
+
+"charity_choice"	"Which charity would you like to support?"
+
+"charity_asia"		"Central Asia Institute"
+"charity_asia_details"	"Central Asia Institute promotes and supports community-based education, especially for girls, in Pakistan and Afghanistan. We have helped establish over 150 schools and have provided education opportunities for 64,000 students. For more information about Central Asia Institute or Pennies for Peace, please call us at 406-585-7841 or visit www.ikat.org. The Central Asia Institute and Pennies for Peace names are used with its permission, which in no way constitutes an endorsement, expressed or implied, of any product, service, company or individual."
+
+"charity_schools"	"Building Schools for Africa"
+"charity_schools_details" "Building Schools for Africa is a small humanitarian organization that believes that the best way to help people to become independent of poverty, disease and exploitation is through education. We build schools with clean water and toilet and tools and seed to grow food in rural Cameroon where farming families earn about $1 per week. We can provide all this for just $20,000 per school and because we pay all our own expenses, every penny that we raise is spent on building schools with absolutely no deductions. Thanks for your help."
+
+"charity_read"		"Room to Read®"
+"charity_read_details"	"Room to Read® seeks to transform the lives of millions of children in the developing world by focusing on literacy and gender equality in education. Working in collaboration with local communities, partner organizations and governments, we develop literacy skills and a habit of reading among primary school children and ensure girls have the skills and support needed to complete their secondary education. Learn more at www.roomtoread.org."
+
+"charity_scholarship"	"Scholarship America®"
+"charity_scholarship_details"	"Scholarship America® is a national education service organization that mobilizes support for students getting into and graduating from college. We have three core programs that help us achieve our mission: Dollars for Scholars®, Scholarship Management Services®, and Dreamkeepers. Scholarship America has distributed more than $2 billion in scholarship assistance to more than 1.7 million students since 1958. More information is available at www.scholarshipamerica.org."
+
+"charity_footer"	"Voting closes at 11:59PM EST on December 31, 2010. One vote per user. Not valid in all territories. For more information on The NVIDIA Foundation visit "
+"charity_footer_link"	"http://www.nvidia.com/object/corporate_community.html"
+
+"charity_launchgame"	"Launch game"
+
+
+
+
+}

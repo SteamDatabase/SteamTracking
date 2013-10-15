@@ -1,0 +1,17 @@
+﻿"Language" "english"
+
+"Tokens" 
+
+{ 
+
+SteamClean_Title "Excluindo o Steam?"
+
+SteamClean_Message "O Steam ainda tem conteúdo de jogos armazenado em %@.  Deseja que o Steam exclua-os agora?"
+
+SteamClean_Delete "Excluir arquivos"
+
+SteamClean_Keep "Manter arquivos"
+
+SteamClean_ShowInFinder "Mostrar no Finder"
+
+}

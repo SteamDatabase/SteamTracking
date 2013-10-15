@@ -1,0 +1,542 @@
+"resource/layout/ugcdownloadpanel.layout"
+{
+	controls
+	{
+		// this just sets the height
+		ugcdownloadpanel	{	tall="160"	}
+
+		// black fill, used on the background
+		bgimage1	{ controlname="ImagePanel"	zpos="-1"	style="panelBgColorActive" }
+		workshopminibanner { controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }
+
+		// top row
+		namelabel	{ controlname="Label"	labelText="#steam_subscribed_files" style="ModuleHeading" }
+		dashlabel	{ controlname="Label"	labelText="" }
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_updating" style=ModuleHeading2 }
+		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2}
+		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label}
+		pauseresumebutton	{ controlname="Button" style="SmPauseButton" tooltiptext="#steam_downloads_pause" }
+
+		// second row
+		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
+		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" }
+		downloadfileslabel { controlname="Label" labelText="#steam_subscribed_files_complete" style="Label2" }
+		downloadfilesfield { controlname="Label" labeltext="%download_files_totals%" style="label" }
+
+		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="HideOnCompletion" }
+		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="HideOnCompletion" }
+
+		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="HideOnCompletion" }
+
+
+		// right pane
+		graphpanel		{ controlname="GraphPanel"	style="infoGraphic" group="HideOnCompletion" }
+		graphdownloadrate	{ controlname="Label"	labelText="#steam_downloads_currentrate" zpos="1" style="test" group="HideOnCompletion" }
+		
+		//
+		viewmodsbutton { controlname="Button" labelText="#steam_downloads_view_on_workshop" style=ViewModsButton command=ViewMods }
+	}
+
+	colors
+	{
+
+	}
+
+	styles
+	{
+
+		links
+		{
+			font-size=14
+			font-style=normal
+			textcolor="text"
+			font-family=basefont
+			font-style="uppercase"
+			padding-left=10
+			padding-top=0
+			padding-bottom=0
+		}
+
+		links:hover
+		{
+			font-size=14
+			font-style=normal
+			textcolor="white"
+			font-family=basefont
+			font-style="uppercase"
+			padding-left=10
+			padding-top=0
+			padding-bottom=0
+		}
+
+		rightcolumnlink:hover
+		{
+			textcolor=TextHover
+		}
+
+
+		infoGraphic
+		{
+			bgcolor		"none"
+			textcolor	"highlight5"
+			inset="0 3 3 3"
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0 + 2, x1 - 1, y1 - 1, Black )"
+
+				// lines around
+				1="fill( x0, y0 + 1, x1 - 2, y0 + 2, black )"  // top
+				2="fill( x0 + 1, y1 - 1, x1 - 1, y1, none  )"  // bottom
+				3="fill( x0 - 1, y0 + 2, x0, y1 - 2, black )"  // left
+				4="fill( x1 - 1, y0 + 1, x1, y1 - 1, none )"  // right
+
+				// single pixel fills in the corners
+				5="fill( x0 - 1, y0 + 1, x0, y0 + 2, clientbg )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, backgroundstartopaque )"
+				7="fill( x0, y1 - 2, x0 + 1, y1 - 1, black )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, backgroundstartopaque )"
+			}
+		}
+
+		label2
+		{
+			bgcolor			none
+			font-size		"14"
+			textcolor		"label2"
+			padding-top		"0"
+			font-style="uppercase"
+		}
+
+		ModuleHeading
+		{
+			font-family	basefont
+			bgcolor="none"
+			font-size	"18"
+			textcolor	"text"
+			padding-top	"0"
+			font-weight	"700"
+		}
+
+		ModuleHeading2
+		{
+			font-family	basefont
+			bgcolor="none"
+			font-size	"18"
+			textcolor	"label"
+			padding-top	"0"
+			font-weight	"400"
+		}
+
+		panelBgColorActive
+		{
+			bgcolor="clientbg"
+		}
+
+
+		test
+		{
+			font-family		"Arial"
+			font-size="14"
+			font-style="uppercase"
+			padding-left	"10"
+			padding-right	"20"
+			render_bg
+			{
+				0="fill ( x0, y0 + 1, x1 , y1, Backgroundstart )"
+				// lines around
+				1="fill( x1, y0, x1 + 2, y1, darkclientbg )"
+
+				2="fill( x0, y1, x1, y1 + 2, darkclientbg )"
+				// corner
+				3="fill( x1, y1 , x1 + 1, y1 + 1, darkclientbg )"
+
+			}
+		}
+
+		SmPauseButton
+		{
+
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="Text"
+			font-style=uppercase
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause )"
+			}
+		}
+
+		SmPauseButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="TextHover"
+			font-style=uppercase
+			bgcolor=none
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause_hover )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+		}
+
+		SmResumeButton
+		{
+
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="Text"
+			font-style=uppercase
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
+
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install  )"
+			}
+		}
+
+		SmResumeButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="TextHover"
+			font-style=uppercase
+			bgcolor=none
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+		}
+
+		SmRemoveButton
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="Text"
+			font-style=uppercase
+			bgcolor=none
+			render_bg
+			{
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
+
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close )"
+			}
+		}
+
+		SmRemoveButton:Hover
+		{
+			inset="30 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="TextHover"
+			font-style=uppercase
+			bgcolor=none
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close_hover )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}
+		}
+
+
+
+		SlimProgressBar
+		{
+			render_bg
+			{
+				0="fill( x0, y0, x1, y1, black )"
+			}
+			render
+			{
+			}
+		}
+
+		
+		ViewModsButton
+		{   
+
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="Text"
+			font-style="uppercase"
+			bgcolor=none
+
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_workshop )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		
+			}	
+		}
+	
+		ViewModsButton:Hover
+		{   
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="TextHover"
+			font-style=uppercase
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_workshop_hover )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			}	
+		}
+		
+		ViewModsButton:Disabled
+		{   
+			inset="23 0 0 0"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="LabelDisabled"
+			font-style=uppercase
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_workshop )"
+			}
+			render_bg
+			{
+				// background fill
+				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled )"
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
+				11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
+				12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
+				13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
+				14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
+				15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
+				16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
+				17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
+				18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+			}
+		}
+	}
+
+
+	layout
+	{
+		region	{ name="top" width="1262" height=40 }
+		region	{ name="mid" width="1262" y=22 height=160 }
+		region	{ name="bottom" width="1262" y=95 height=60 width=400 }
+
+		place	{ control="bgimage1" width=max height="max" }
+
+		// top section
+		place { control="namelabel" region="top" margin-top=12	 margin-left=20 }
+		place { control="updatetypelabel" region="top" margin-top=11 align=right	region=top margin-right=16 spacing=15 }
+		place { control="pauseresumebutton" region="bottom" x=492 region=bottom spacing=10 margin-right=16 margin-top=27 width=28 align=right}
+
+		// fill in the middle section
+		place { control="gameimage" region="mid" margin-left=20 margin-top=19 width=184 height=69 }
+		place { control="workshopminibanner" region="mid" margin-left=20 margin-top=88 width=184  }
+		place { control="GraphPanel" region="mid" x=470 width="max" width="35" height="70" margin-top=18 margin-right=14 }
+		place { control="graphdownloadrate" region="mid" x=469 margin-top=18 height=30 }
+		place { control="viewmodsbutton" region="mid" x=222 align=top margin-top=23 spacing=6 width=150 }
+		place { control="downloadtotallabel,downloadtotalfield" region="mid" x=222 align=top margin-top=59 spacing=6 }
+		place { control="downloadfileslabel,downloadfilesfield" region="mid" x=222 align=top margin-top=79 spacing=6 }
+		place { control="starttimelabel,starttimefield" region="mid" dir="right" align=top spacing=6 margin-top=100 x=222 }
+		place { control="timeremaininglabel,timeremainingfield" region="mid" x=222 align=top margin-top=120 spacing=6 }
+		place { control="downloadprogressbar" region="mid" x=222 width="232" height="2" align=top margin-top=48 }
+	}
+}

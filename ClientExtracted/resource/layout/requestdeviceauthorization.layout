@@ -1,0 +1,36 @@
+"resource/layout/choosepurchaseorauthorization.layout"
+{
+	controls
+	{
+	  DialogTitle { controlname=label labeltext=#Steam_DeviceAuth_RequestDialog_Title style=BigLable }
+	  DialogText { controlname=label labeltext=#Steam_DeviceAuth_RequestDialog_Text wrap=1 }
+	  ToLabel { controlname=label labeltext=#Steam_DeviceAuth_RequestDialog_To }
+	  FromLabel { controlname=label labeltext=#Steam_DeviceAuth_RequestDialog_From }
+	  DescriptionLabel { controlname=label labeltext=#Steam_DeviceAuth_RequestDialog_Description }
+		DescriptionEntry { controlname=textentry }
+		SendButton { controlname=button labeltext=#Steam_DeviceAuth_RequestDialog_Send command=SendRequest }
+		CancelButton { controlname=button labeltext=#Steam_DeviceAuth_RequestDialog_Cancel command=Close }
+	}
+	
+	styles
+	{
+		BigLable
+		{
+			textcolor=Text
+			font-size=18
+		}	
+	}
+		
+	layout
+	{
+		place { control="DialogTitle" y=32 x=16 height=24 width=360 }
+		place { control="ToLabel" y=64 x=16 height=24 width=360 }
+		place { control="FromLabel" y=136 x=16 height=24 width=360 }
+		place { control="DialogText" y=90 x=16 height=96 width=350 }
+		place { control="DescriptionLabel" y=180 x=16 height=24 width=360 }
+		place { control="DescriptionEntry" y=200 x=16 height=24 width=350 }
+		place { control="SendButton" y=280 x=16 height=24 width=164}
+		place { control="CancelButton" y=280 x=200 height=24 width=164 }
+		
+	}
+}

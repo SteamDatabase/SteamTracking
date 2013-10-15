@@ -1,0 +1,46 @@
+"resource/layout/parentalunlockdialog.layout"
+{
+	controls
+	{
+		ParentalUnlockDialog { controlname="Frame" title="#steam_parental_unlocktitle" style="ParentalUnlockDialog" }
+
+		Instructions { controlname="Label" labeltext="#steam_parental_unlockinstructions" wrap=1 }
+
+		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
+		
+		OK { controlname="Button" tabposition=2 command="DoParentalUnlock" labeltext="#PropertyDialog_OK" default=1 }
+		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
+	}
+	
+	styles
+	{
+		ParentalUnlockDialog
+		{
+			minimum-width = 400
+			minimum-height = 250
+		}
+
+		Password
+		{
+			minimum-height=50
+			font-size=40
+		}
+
+	}
+	
+	layout
+	{
+		region { name="top" width=max height=150 margin=10 margin-top=40}
+		region { name="middle" width=max height=150 y=100 margin=10 }
+		region { name="bottom" width=max align=bottom height=40 margin=10 }
+
+		place { control="Instructions" region="top" align=center width=max }
+
+		place { control="Password" region="middle" align=left width=max }
+		
+		// bottom: OK/cancel
+		place { control="OK,Cancel" region="bottom" align=right spacing=5 }
+	}
+
+}
+

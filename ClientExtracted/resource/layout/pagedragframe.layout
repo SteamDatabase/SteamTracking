@@ -1,0 +1,33 @@
+"resource/layout/pagedragframe.layout"
+{
+	controls
+	{
+		DragPropertySheet { controlname="PropertySheet" }
+	}
+	
+	styles
+	{
+		PageDragFrame
+		{			
+			bgcolor="DialogBG"
+			render_bg
+			{
+				0="image( x0, y0, x1, y1, graphics/clienttexture2)"
+			}
+		}
+		
+		PageDragPanel
+		{
+			bgcolor="DialogBG"
+			render_bg
+			{
+				0="gradient( x0, y0, x1, y1, DialogBG, ClientBG )"
+			}
+		}
+	}
+		
+	layout
+	{
+	  place { control="DragPropertySheet" x=8 y=8 width=max height=max margin-right=8 margin-bottom=8 }
+	}
+}

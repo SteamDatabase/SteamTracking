@@ -1,0 +1,14 @@
+"Language" "portuguese"
+"Tokens"
+{
+"SteamClean_Title"	"Eliminar Steam?"
+"[english]SteamClean_Title"	"Deleting Steam?"
+"SteamClean_Message"	"Ainda existem conteúdos de jogo armazenados em %@ na plataforma Steam. Pretende que a plataforma Steam os elimine?"
+"[english]SteamClean_Message"	"Steamstill has game content stored in %@.  Do you want Steam to delete them now?"
+"SteamClean_Delete"	"Eliminar ficheiros"
+"[english]SteamClean_Delete"	"Delete files"
+"SteamClean_Keep"	"Guardar ficheiros"
+"[english]SteamClean_Keep"	"Keep files"
+"SteamClean_ShowInFinder"	"Mostrar no Localizador"
+"[english]SteamClean_ShowInFinder"	"Show in Finder"
+}

@@ -1,0 +1,2835 @@
+"cellmap"
+{
+	"edge_costs"
+	{
+		// These are multipliers, to make an edge cost 50% more than
+		// usual, set the multiplier to 1.5
+		"LocalCostForCrossingAtlantic"				10
+		"LocalCostForCrossingPacific"				10
+		"LocalCostBetweenEuropeAndAfrica"			4
+		"LocalCostBetweenNorthAndSouthAmerica"		10
+		"LocalCostBetweenAustraliaAndAsia"			6
+		"LocalCostBetweenAustraliaAndNewZealand"	4
+		"LocalCostBetweenIsraelAndEurope"			8
+		"LocalCostOneWayCellEdge"					25
+		"LocalCostAUSBetweenRegions"				1
+		"LocalCostAUSFromRegionToISP"				1
+		"LocalCostAUSFromISPToRegion"				2
+	}
+	"cells"
+	{
+		// #0 DEFAULT - if client gets an error or they report an
+		// unknown cell ID. Placed in WA just for the heck of it
+		0
+		{
+			"name"	"default"
+			"region"	"global"
+			"edges"
+			{
+				0 { "dest"	31 }
+			}
+		}
+
+		// #1 IL
+		1
+		{
+			"name" "US - Chicago"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	79  }
+				1 { "dest"	80  }
+				2 { "dest"	2  }
+				3 { "dest"	95  }
+				4 { "dest"	77  }
+				5 { "dest"	49  }
+				6 { "dest"	76  }
+				7 { "dest"	20  }
+			}
+		}
+
+		// #2 NY
+		2
+		{
+			"name" "US - New York"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	63  }
+				1 { "dest"	83  }
+				2 { "dest"	82  }
+				3 { "dest"	1  }
+				4
+				{ 
+					"dest"	81 
+					"cost"	LocalCostOneWayCellEdge
+				}				
+				5 { "dest"	 3  }
+			}
+		}
+
+		// #3 .. (West Atlantic)
+		3
+		{
+			"name" "West Atlantic"
+			"transit"	1
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	 2  }
+				1 
+				{ 
+					"dest"	13 
+					"cost"	LocalCostForCrossingAtlantic
+				}
+			}
+		}
+		
+		// #4 UK
+		4
+		{
+			"name" "UK - London"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	85 }
+				1 { "dest"	69 }
+				2 { "dest"	14 }
+				3 { "dest"	15 }
+				4 { "dest"	13 }
+			}
+		}
+
+		// #5 DE
+		5
+		{
+			"name" "Germany - Frankfurt"
+			"region"	"europe"
+			"edges"
+			{
+	
+				0 { "dest"	87 }
+				1 { "dest"	90 }
+				2 { "dest"	91 }
+				3 { "dest"	15 }
+				4 { "dest"	14 }
+				5 { "dest"	88 }
+				6 { "dest"	129 }
+			}
+		}
+
+		// #6 DEPRECATED - was Israel/Iceland.
+		// For obvious reasons this just now points clients
+		// to those new cells.
+		6
+		{
+			"name" "6 - Deprecated"
+			"deprecated" 1
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	 29 }
+				1 { "dest"	 30 }
+			}
+		}
+
+		// #7 Russia - Central region (Moscow)
+		7
+		{
+			"name" "Russia - Central"
+			"region"	"russia"
+			"edges"
+			{
+				0 { "dest"	66 }
+				1 { "dest"	39 }
+			}
+		}
+
+		// #8 Korea
+		8
+		{
+			"name" "South Korea"
+			"region"	"korea"
+			"edges"
+			{
+				0 { "dest"	32 }
+				1
+				{ 
+					"dest"	46 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				2
+				{ 
+					"dest"	47 
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}
+
+		// #9 Taiwan
+		9
+		{
+			"name" "Taiwan"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	32 }
+				1 { "dest"	33 }
+				2 { "dest"	35 }
+			}
+		}
+
+		// #10 CA
+		10
+		{
+			"name" "US - San Jose"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	75 }
+				1 { "dest"	64 }
+				2 { "dest"	31 }
+				3 { "dest"	18 }
+				4 { "dest"	49 }
+			}
+		}
+
+		// #11 Phoenix
+		11
+		{
+			"name" "US - Phoenix"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	64 }
+				1 { "dest"	65 }
+			}
+		}
+
+		// #12 FL
+		12
+		{
+			"name" "US - Miami"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	50  }
+				1 
+				{ 
+					"dest"	23 
+					"cost"	LocalCostOneWayCellEdge
+				}				
+			}
+		}
+
+		// #13 .. (East Atlantic)
+		13
+		{
+			"name" "East Atlantic"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	 3 
+					"cost"	LocalCostForCrossingAtlantic
+				}
+				1 { "dest"	 4  }
+			}
+		}
+
+		// #14 Paris
+		14
+		{
+			"name" "France - Paris"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	 4  }
+				1 { "dest"	 5  }
+				2 { "dest"	86  }
+				3 { "dest"	88  }
+				4 { "dest"	37  }
+				5 { "dest"	40  }
+				6 { "dest"	96  }
+			}
+		}
+
+		// #15 Netherlands
+		15
+		{
+			"name" "Netherlands"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	 4  }
+				1 { "dest"	 5  }
+				2 { "dest"	86  }
+				3 { "dest"	87  }
+				4 { "dest"	129  }
+			}
+		}
+
+		// #16 Romania
+		16
+		{
+			"name" "Romania"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	93  }
+				1 { "dest"	43  }
+			}
+		}
+
+		// #17 .. (West Pacific)
+		17
+		{
+			"name" "West Pacific"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	18 
+					"cost"	LocalCostForCrossingPacific  
+				}
+				1 
+				{ 
+					"dest"	32 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+				2 
+				{ 
+					"dest"	35 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+				3 
+				{ 
+					"dest"	52
+					"cost"	LocalCostOneWayCellEdge 
+				}
+			}
+		}
+
+		// #18 .. (East Pacific)
+		18
+		{
+			"name" "East Pacific"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 { "dest"	10  }
+				1 
+				{ 
+					"dest"	17 
+					"cost"	LocalCostForCrossingPacific 
+				}
+			}
+		}
+
+		// #19 .. (Hop from Asia to Australia)
+		19
+		{
+			"name" "Asia To Australia"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 { "dest"	52  }
+				1 { "dest"	55  }
+				2 { "dest"	35  }
+			}
+		}
+
+		// #20 .. Canada - Toronto
+		20
+		{
+			"name" "Canada - Toronto"
+			"region"	"north america"
+			"edges"
+			{
+				0 { "dest"	 81  }
+				1 { "dest"	 1  }
+				2 { "dest"	 94  }
+			}
+		}
+
+		// #21 .. Australia DEPRECATED
+		// For old clients in cell 21 "cost"	push them to 27/28
+		// One-way: they have no edges pointing back to this cell.
+		21
+		{
+			"name" "Australia deprecated"
+			"deprecated"	1
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	52  }
+			}
+		}
+
+		// #22 .. New Zealand
+		22
+		{
+			"name" "New Zealand"
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	107  }
+				1 { "dest"	108 }
+				2 { "dest"	109  }
+				3 { "dest"	110  }
+				4 { "dest"	111  }
+				5 { "dest"	112  }
+				6 { "dest"	113  }
+				7 { "dest"	17  }
+				8 
+				{ 
+					"dest"	52 
+					"cost"	LocalCostBetweenAustraliaAndNewZealand 
+				}
+			}
+		}
+
+		// #23 .. (Hop from North America to South America)
+		23
+		{
+			"name" "NA to SA"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	12 
+					"cost"	LocalCostBetweenNorthAndSouthAmerica 
+				}
+				1 
+				{ 
+					"dest"	25 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+			}
+		}
+
+		// #24 .. (Hop from Europe to Africa)
+		24
+		{
+			"name" "Europe to Africa"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 { "dest"	96  }
+				1 
+				{ 
+					"dest"	26 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+			}
+		}
+
+		// #25 .. Brazil
+		25
+		{
+			"name" "Brazil"
+			"region"	"south america"
+			"edges"
+			{
+				0 { "dest"	23 }
+				1 { "dest"	116 }
+			}
+		}
+
+		// #26 .. South Africa JHB
+		26
+		{
+			"name" "South Africa - Johannesburg"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	97 }
+				1 { "dest"	99 }
+				2 { "dest"	101 }
+				3 
+				{ 
+					"dest"	24 
+					"cost"	LocalCostBetweenEuropeAndAfrica 
+				}
+			}
+		}
+
+		// #27 .. Australia NSW TELSTRA
+		27
+		{
+			"name" "Australia - NSW (Telstra)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}
+
+		// #28 .. Australia NSW Internode
+		28
+		{
+			"name" "Australia - NSW (Internode)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+				1 { "dest"	59  }
+			}
+		}
+
+		// #29 Iceland
+		29
+		{
+			"name" "Iceland & Greenland"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	41  }
+			}
+		}
+
+		// #30 Israel
+		30
+		{
+			"name" "Israel"
+			"region"	"middle east"
+			"edges"
+			{
+				0 { "dest"	 123  }
+				1 { "dest"	 126  }
+			}
+		}
+
+		// #31 WA
+		31
+		{
+			"name" "US - Seattle"
+			"region"	"seattle"
+			"edges"
+			{
+				0 { "dest"	10  }
+				1 { "dest"	106  }				
+				2
+				{ 
+					"dest"	94
+					"cost"	LocalCostOneWayCellEdge
+				}	
+				// LAN Event cells - we need edges to these somewhere so they show
+				// up in the list. 	
+				3
+				{ 
+					"dest"	102
+					"cost"	LocalCostOneWayCellEdge
+				}				
+				4
+				{ 
+					"dest"	103
+					"cost"	LocalCostOneWayCellEdge
+				}				
+				5
+				{ 
+					"dest"	104
+					"cost"	LocalCostOneWayCellEdge
+				}							
+			}
+		}
+
+		// #32 Japan
+		32
+		{
+			"name" "Japan"
+			"region"	"japan"
+			"edges"
+			{
+				0
+				{ 
+					"dest"	8
+					"cost"	LocalCostOneWayCellEdge
+				}				
+				1 { "dest"	17  }
+				2 { "dest"	35  }
+				3
+				{ 
+					"dest"	9 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				4
+				{ 
+					"dest"	33 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				5
+				{ 
+					"dest"	47 
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}
+
+		// #33 China - Hong Kong
+		33
+		{
+			"name" "China - Hong Kong"
+			"region"	"china"
+			"edges"
+			{
+				0 { "dest"	32  }
+				1 { "dest"	35  }
+				2 { "dest"	9  }
+				3 { "dest"	47  }
+				4 { "dest"	48  }
+			}
+		}
+
+		// #34 Thailand
+		34
+		{
+			"name" "Thailand"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35  }
+			}
+		}
+
+		// #35 Singapore
+		35
+		{
+			"name" "Singapore"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	17  }
+				1 
+				{ 
+					"dest"	19  
+					"cost"	LocalCostBetweenAustraliaAndAsia
+				}
+				2 { "dest"	32  }
+				3 { "dest"	34  }
+				4 { "dest"	45  }
+				5
+				{ 
+					"dest"	33 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				6
+				{ 
+					"dest"	44 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				7
+				{ 
+					"dest"	36 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				8
+				{
+					"dest"	9
+					"cost"	LocalCostOneWayCellEdge
+				}		
+				9
+				{
+					"dest"	70
+					"cost"	LocalCostOneWayCellEdge
+				}	
+				10 { "dest"	71 }										
+				11 { "dest"	72 }	
+			}
+		}
+
+		// #36 India
+		36
+		{
+			"name" "India"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35  }
+				1 { "dest"	128  }
+				2 { "dest"	127  }
+			}
+		}
+
+		// #37 Italy
+		37
+		{
+			"name" "Italy"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	88  }
+				1 { "dest"	14  }			
+				2 { "dest"	96  }
+			}
+		}
+
+		// #38 Poland
+		38
+		{
+			"name" "Poland"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	90  }
+				1
+				{ 
+					"dest"	73
+					"cost"	LocalCostOneWayCellEdge
+				}				
+			}
+		}
+
+		// #39 Russia - Ural Region
+		39
+		{
+			"name" "Russia - Urals"
+			"region"	"russia"
+			"edges"
+			{
+				0 { "dest"	7  }
+				1 { "dest"	62  }
+			}
+		}
+
+		// #40 Spain
+		40
+		{
+			"name" "Spain & Portugal"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	14  }
+				1 { "dest"	96  }
+			}
+		}
+
+		// #41 Denmark
+		41
+		{
+			"name" "Denmark"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	89  }
+				1 { "dest"	66  }
+				2 { "dest"	67  }
+				3
+				{ 
+					"dest"	29
+					"cost"	LocalCostOneWayCellEdge
+				}					
+			}
+		}
+		
+		// #42 Czech
+		42
+		{
+			"name" "Czech Republic"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	90 }
+				1 { "dest"	91  }
+				2 { "dest"	93  }
+			}
+		}
+
+		// #43 Greece 
+		43
+		{
+			"name" "Greece"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	16  }
+				1 { "dest"	37  }
+			}
+		}
+
+		// #44 Indonesia 
+		44
+		{
+			"name" "Indonesia"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35  }
+			}
+		}
+
+		// #45 Philippines 
+		45
+		{
+			"name" "Philippines"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35  }
+				1 { "dest"	33 }
+			}
+		}
+
+		// #46 China - Beijing 
+		46
+		{
+			"name" "China - Beijing"
+			"region"	"china"
+			"edges"
+			{
+				0 { "dest"	8  }
+				1 { "dest"	47  }
+				2 { "dest"	48  }
+			}
+		}
+
+		// #47 China - Shanghai 
+		47
+		{
+			"name" "China - Shanghai"
+			"region"	"china"
+			"edges"
+			{
+				0 { "dest"	8  }
+				1 { "dest"	32  }
+				2 { "dest"	33  }
+				3 { "dest"	46  }
+				4 { "dest"	48  }
+			}
+		}
+
+		// #48 China - Chengdu 
+		48
+		{
+			"name" "China - Chengdu"
+			"region"	"china"
+			"edges"
+			{
+				0 { "dest"	33  }
+				1 { "dest"	46  }
+				2 { "dest"	47  }	
+			}
+		}
+
+		// #49 Denver
+		49
+		{
+			"name" "US - Denver"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	1 }
+				1 { "dest"	10  }
+			}
+		}
+
+		// #50 Atlanta
+		50
+		{
+			"name" "US - Atlanta"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	63 }
+				1 { "dest"	84 }
+				2 { "dest"	65  }
+				3 { "dest"	78  }
+				4 { "dest"	12  }
+			}
+		}
+		// #51 AUS Queensland
+		51
+		{
+			"name" "Australia - QLD"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				1
+				{ 
+					"dest"	122  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+			}
+		}
+		// #52 AUS NSW
+		52
+		{
+			"name" "Australia - NSW"
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	17  }
+				1 
+				{ 
+					"dest"	19 
+					"cost"	LocalCostBetweenAustraliaAndAsia 
+				}
+				2 
+				{ 
+					"dest"	22 
+					"cost"	LocalCostBetweenAustraliaAndNewZealand 
+				}
+				3 
+				{ 
+					"dest"	53  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				4 
+				{ 
+					"dest"	54  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				5 
+				{ 
+					"dest"	27  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				6 
+				{ 
+					"dest"	28  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				7 
+				{ 
+					"dest"	56  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				8 
+				{ 
+					"dest"	51  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+			}
+		}
+		// #53 AUS VIC
+		53
+		{
+			"name" "Australia - VIC"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				1 
+				{ 
+					"dest"	54  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				2 
+				{ 
+					"dest"	57  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				3
+				{ 
+					"dest"	121  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+			}
+		}
+		// #54 AUS SA
+		54
+		{
+			"name" "Australia - SA"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				1 
+				{ 
+					"dest"	53  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				2 
+				{ 
+					"dest"	55  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				3 
+				{ 
+					"dest"	58  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				4 
+				{ 
+					"dest"	59  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+			}
+		}
+		// #55 AUS WA
+		55
+		{
+			"name" "Australia - WA"
+			"region"	"australasia"
+			"edges"
+			{
+				0
+				{ 
+					"dest"	19 
+					"cost"	LocalCostBetweenAustraliaAndAsia 
+				}
+				1 
+				{ 
+					"dest"	54  
+					"cost"	LocalCostAUSBetweenRegions
+				}
+				2 
+				{ 
+					"dest"	60  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				3 
+				{ 
+					"dest"	61  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+				4
+				{ 
+					"dest"	120  
+					"cost"	LocalCostAUSFromRegionToISP
+				}
+			}
+		}
+		// #56 AUS NSW (3FL)
+		56
+		{
+			"name" "Australia - NSW (3FL)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	52  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+				1 {  "dest"	60  }
+			}
+		}
+		// #57 AUS VIC (Gamespace)
+		57
+		{
+			"name" "Australia - VIC (Gamespace)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	53  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}
+		// #58 AUS SA (Adam Internet)
+		58
+		{
+			"name" "Australia - SA (Adam Internet)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	54  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}
+		// #59 AUS SA (Internode)
+		59
+		{
+			"name" "Australia - SA (Internode)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	54  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+				1 { "dest"	28  }
+			}
+		}
+		// #60 AUS WA (3FL)
+		60
+		{
+			"name" "Australia - WA (3FL)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	55  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+				1 { "dest"	56 }
+			}
+		}
+		// #61 AUS WA (EGN)
+		61
+		{
+			"name" "Australia - WA (EGN)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	55  
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}
+		// #62 Russia - Siberia
+		62
+		{
+			"name" "Russia - Siberia"
+			"region"	"russia"
+			"edges"
+			{
+				0 { "dest"	39 }
+			}
+		}
+		// #63 US - Washington, DC
+		63
+		{
+			"name" "US - Washington, DC"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	2 }
+				1 { "dest"	83 }
+				2 { "dest"	80 }
+				3 { "dest"	84 }
+				4 { "dest"	50 }
+				4 { "dest"	105 }
+			}
+		}
+		// #64 US - Los Angeles
+		64
+		{
+			"name" "US - Los Angeles"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	10 }
+				1 { "dest"	74 }
+				2 { "dest"	65 }
+				3 { "dest"	11 }
+				4
+				{ 
+					"dest"	114
+					"cost"	LocalCostOneWayCellEdge
+				}					
+			}
+		}
+		// #65 US - Dallas
+		65
+		{
+			"name" "US - Dallas"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	78 }
+				1 { "dest"	50 }
+				2 { "dest"	64 }
+				3 { "dest"	11 }
+			}
+		}
+		// #66 Sweden
+		66
+		{
+			"name" "Sweden"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	41 }
+				1
+				{ 
+					"dest"	68
+					"cost"	LocalCostOneWayCellEdge
+				}	
+				2
+				{ 
+					"dest"	7
+					"cost"	LocalCostOneWayCellEdge
+				}									
+			}
+		}
+		// #67 Norway
+		67
+		{
+			"name" "Norway"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	41 }
+			}
+		}
+		// #68 Finland
+		68
+		{
+			"name" "Finland"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	66 }
+			}
+		}
+		// #69 Ireland
+		69
+		{
+			"name" "Ireland"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	4 }
+			}
+		}
+		// #70 Cambodia
+		70
+		{
+			"name" "Cambodia"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35 }
+			}
+		}
+		// #71 Vietnam
+		71
+		{
+			"name" "Vietnam"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35 }
+			}
+		}
+		// #72 Malaysia
+		72
+		{
+			"name" "Malaysia"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	35 }
+			}
+		}		
+		// #73 Ukraine
+		73
+		{
+			"name" "Ukraine"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	7 }
+				1 { "dest"	93 }
+				2 { "dest"	38 }
+			}
+		}		
+		// #74 San Diego
+		74
+		{
+			"name" "US - San Diego"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	64 }
+				1 { "dest"	23 }
+			}
+		}			
+		// #75 Sacramento
+		75
+		{
+			"name" "US - Sacramento"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	10 }
+			}
+		}			
+		// #76 Minneapolis
+		76
+		{
+			"name" "US - Minneapolis"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	1 }
+			}
+		}			
+		// #77 US - St. Lous
+		77
+		{
+			"name" "US - St. Louis"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	1 }
+			}
+		}			
+		// #78 Houston
+		78
+		{
+			"name" "US - Houston"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	65 }
+				1 { "dest"	50 }
+				2 
+				{ 
+					"dest"	23
+					"cost"	LocalCostOneWayCellEdge
+				}					
+			}
+		}			
+		// #79 Detroit
+		79
+		{
+			"name" "US - Detroit"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	1 }
+			}
+		}			
+		// #80 Pittsburgh
+		80
+		{
+			"name" "US - Pittsburgh"
+			"region"	"usa"
+			"edges"
+			{
+				1 { "dest"	63 }
+				2 { "dest"	1 }
+			}
+		}			
+		// #81 Montreal
+		81
+		{
+			"name" "Canada - Montreal"
+			"region"	"north america"
+			"edges"
+			{
+				0 { "dest"	20 }
+				1 { "dest"	2 }
+			}
+		}			
+		// #82 Boston
+		82
+		{
+			"name" "US - Boston"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	2 }
+			}
+		}			
+		// #83 Philly
+		83
+		{
+			"name" "US - Philadelphia"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	2 }
+				1 { "dest"	63 }
+			}
+		}			
+		// #84 Charlotte, VA
+		84
+		{
+			"name" "US - Charlotte"
+			"region"	"usa"
+			"edges"
+			{
+				0 { "dest"	63 }
+				1 { "dest"	50 }
+			}
+		}			
+		// #85 Manchester
+		85
+		{
+			"name" "UK - Manchester"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	4 }
+			}
+		}			
+		// #86 Brussels
+		86
+		{
+			"name" "Belgium"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	15 }
+				1 { "dest"	14 }
+			}
+		}			
+		// #87 Dusseldorf
+		87
+		{
+			"name" "Germany - Dusseldorf"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	89 }
+				1 { "dest"	5 }
+				2 { "dest"	15 }
+				3 { "dest"	90 }
+			}
+		}			
+		// #88 Zurich
+		88
+		{
+			"name" "Switzerland"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	5 }
+				1 { "dest"	37 }
+				2 { "dest"	14 }
+			}
+		}			
+		// #89 Hamburg
+		89
+		{
+			"name" "Germany - Hamburg"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	87 }
+				1 { "dest"	90 }
+				2 { "dest"	41 }
+			}
+		}			
+		// #90 Berlin
+		90
+		{
+			"name" "Germany - Berlin"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	89 }
+				1 { "dest"	91 }
+				2 { "dest"	42 }
+				3 { "dest"	92 }
+				4 { "dest"	5 }
+				5 
+				{ 
+					"dest"	38 
+					"cost"	LocalCostOneWayCellEdge
+				}			
+			}
+		}			
+		// #91 Munich
+		91
+		{
+			"name" "Germany - Munich"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	90 }
+				1 { "dest"	5 }
+				2 { "dest"	42 }
+				3 { "dest"	92}
+			}
+		}			
+		// #92 Vienna
+		92
+		{
+			"name" "Austria"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	90 }
+				1 { "dest"	91 }
+				2 { "dest"	93 }
+			}
+		}			
+		// #93 Budapest
+		93
+		{
+			"name" "Hungary"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	42 }
+				1 { "dest"	92 }
+				2 { "dest"	16 }
+				3 
+				{ 
+					"dest"	73 
+					"cost"	LocalCostOneWayCellEdge
+				}					
+			}
+		}		
+		// #94 Vancouver
+		94
+		{
+			"name" "Canada - Vancouver"
+			"region"	"north america"
+			"edges"
+			{
+				0 { "dest"	31 }
+				1 { "dest"	20 }
+			}
+		}
+		// #95 Columbus
+		95
+		{
+			"name" "US - Columbus"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	1 }
+			}
+		}
+		// #96 Marseille
+		96
+		{
+			"name" "France - Marseille"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	40 }
+				1 { "dest"	14 }
+				2 { "dest"	37 }
+				3 
+				{ 
+					"dest"	24 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				4 
+				{ 
+					"dest"	123 
+					"cost"	LocalCostOneWayCellEdge
+				}								
+			}
+		}			
+		// #97 ZA Cape Town
+		97
+		{
+			"name" "South Africa - Cape Town"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	26 }
+				1 { "dest"	98 }
+				2 { "dest"	100 }
+				3 { "dest"	13 }
+			}
+		}						
+		// #98 ZA CPT MWEB
+		98
+		{
+			"name" "South Africa - Cape Town (MWEB)"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	99 }
+				1 { "dest"	97 
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}						
+		// #99 ZA JHB MWEB
+		99
+		{
+			"name" "South Africa - Johannesburg (MWEB)"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	98 }
+				1 { "dest"	26 
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}						
+		// #100 ZA CPT WebAfrica
+		100
+		{
+			"name" "South Africa - Cape Town (Web Africa)"
+			"region"	"africa"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	97 
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}						
+		// #101 ZA JHB IS Gaming
+		101
+		{
+			"name" "South Africa - Johannesburg (IS Gaming)"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	26 
+					"cost"	LocalCostAUSFromISPToRegion
+				}
+			}
+		}	
+		// #102 LAN Event - US
+		102
+		{
+			"name" "LAN Event (USA)"
+			"region"	"usa"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	2
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}
+		
+		// #103 LAN Event - Europe
+		103
+		{
+			"name" "LAN Event (Europe)"
+			"region"	"europe"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	4
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}
+				
+		// #104 LAN Event - Asia					
+		104
+		{
+			"name" "LAN Event (Asia)"
+			"region"	"asia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	32
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}
+		// #105 US Virginia - Comcast
+		105
+		{
+			"name" "US - Washington, DC (Comcast)"
+			"region"	"usa"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	63
+				}
+			}
+		}	
+		// #106 US Seattle - Comcast		
+		106
+		{
+			"name" "US - Seattle (Comcast)"
+			"region"	"usa"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	31
+				}
+			}
+		}	
+		// #107 New Zealand - Helix	
+		107
+		{
+			"name" "New Zealand (Helix)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}				
+		// #108 New Zealand - Orcon
+		108
+		{
+			"name" "New Zealand (Orcon)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}			
+		// #109 New Zealand - Slingshot	
+		109
+		{
+			"name" "New Zealand (Slingshot)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}			
+		// #110 New Zealand - Snap
+		110
+		{
+			"name" "New Zealand (snap!)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}			
+		// #111 New Zealand - TelstraClear
+		111
+		{
+			"name" "New Zealand (TelstraClear)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}			
+		// #112 New Zealand - InSPire.net.nz
+		112
+		{
+			// this is not a typo
+			"name" "New Zealand (InSPire)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}		
+		// #113 New Zealand - Xnet
+		113
+		{
+			"name" "New Zealand (Xnet)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	22
+					"cost"	"LocalCostAUSFromISPToRegion"
+				}
+			}
+		}		
+		// #114 hop from MX to US
+		114
+		{
+			"name" "MX to US"
+			"transit"	1
+			"region"	"global"
+			"edges"
+			{
+				0 
+				{ 
+					"dest"	64
+					"cost"	"LocalCostBetweenNorthAndSouthAmerica"
+				}
+				1 
+				{ 
+					"dest"	115
+					"cost"	"LocalCostOneWayCellEdge"
+				}
+			}
+		}
+		// #115 mexico
+		115
+		{
+			"name" "Mexico"
+			"region"	"north america"
+			"edges"
+			{
+				0 { "dest"	114 }
+			}
+		}
+		// #116 Argentina
+		116
+		{
+			"name" "Argentina"
+			"region"	"south america"
+			"edges"
+			{
+				0 { "dest"	25 }
+				1 { "dest"	117 }
+			}
+		}
+		// #117 Chile
+		117
+		{
+			"name" "Chile"
+			"region"	"south america"
+			"edges"
+			{
+				0 { "dest"	116 }
+				0 { "dest"	118 }
+			}
+		}
+		// #118 Peru
+		118
+		{
+			"name" "Peru"
+			"region"	"south america"
+			"edges"
+			{
+				0 { "dest"	117 }
+				0 { "dest"	23 }
+			}
+		}
+		// #119 Venezuela
+		119
+		{
+			"name" "Venezuela"
+			"region"	"south america"
+			"edges"
+			{
+				0 { "dest"	23 }
+			}
+		}
+		// #120 Australia - WAIX
+		120
+		{
+			"name" "Australia - WA (WAIX)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	55 }
+			}
+		}
+		// #121 AUS VIC-IX
+		121
+		{
+			"name" "Australia - VIC (VIC-IX)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	53 }
+			}
+		}
+		// #122 
+		122
+		{
+			"name" "Australia - QLD (QLD-IX)"
+			"region"	"australasia"
+			"edges"
+			{
+				0 { "dest"	51 }
+			}
+		}
+		123
+		{
+			"name" "Europe to Middle East"
+			"region"	"global"
+			"transit"	"1"
+			"edges"
+			{
+				0 { "dest"	96 }
+				1 
+				{ 
+					"dest"	124
+					"cost"	LocalCostOneWayCellEdge
+				}
+				2 
+				{ 
+					"dest"	30
+					"cost"	LocalCostOneWayCellEdge
+				}
+				3 
+				{ 
+					"dest"	125
+					"cost"	LocalCostOneWayCellEdge
+				}
+			}
+		}		
+		124
+		{
+			"name" "Turkey"
+			"region"	"middle east"
+			"edges"
+			{
+				0 { "dest"	123 }
+			}
+		}
+		125
+		{
+			"name" "Egypt"
+			"region"	"middle east"
+			"edges"
+			{
+				0 { "dest"	123 }
+				1 { "dest"	126 }
+			}
+		}
+		126
+		{
+			"name" "Saudi Arabia"
+			"region"	"middle east"
+			"edges"
+			{
+				0 { "dest"	127 }
+				1 { "dest"	125 }
+				2 { "dest"	30 }
+			}
+		}
+		127
+		{
+			"name" "United Arab Emirates"
+			"region"	"middle east"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	126 }
+			}
+		}
+		128
+		{
+			"name" "Pakistan"
+			"region"	"asia"
+			"edges"
+			{
+				0 { "dest"	36 }
+			}
+		}
+		129
+		{
+			"name" "Luxembourg"
+			"region"	"europe"
+			"edges"
+			{
+				0 { "dest"	15 }
+				1 { "dest"	5 }
+			}
+		}
+
+	}
+	"countries"
+	{
+		//"Afghanistan"	
+		"AF"	39
+		
+		//"Aland Islands"	
+		"AX"	0
+		
+		//"Albania"		
+		"AL"	43
+		
+		//"Algeria"		
+		"DZ"	14
+		
+		//"American Samoa"
+		"AS"	10
+		
+		//"Andorra"		
+		"AD"	40
+		
+		//"Angola"		
+		"AO"	0
+		
+		//"Anguilla"		
+		"AI"	0
+		
+		//"Antarctica"	
+		"AQ"	0
+		
+		//"Antigua and Barbuda"
+		"AG"	0
+		
+		//"Argentina"		
+		"AR"	25
+		
+		//"Armenia"		
+		"AM"	30
+		
+		//"Aruba"			
+		"AW"	0
+		
+		//"Australia"		
+		"AU"	52
+		
+		//"Austria"		
+		"AT"	92
+		
+		//"Azerbaijan"	
+		"AZ"	30
+		
+		//"Bahamas"		
+		"BS"	12
+		
+		//"Bahrain"		
+		"BH"	30
+		
+		//"Bangladesh"	
+		"BD"	36
+		
+		//"Barbados"		
+		"BB"	12
+		
+		//"Belarus"		
+		"BY"	38
+		
+		//"Belgium"		
+		"BE"	86
+		
+		//"Belize"		
+		"BZ"	12
+		
+		//"Benin"			
+		"BJ"	30
+		
+		//"Bermuda"		
+		"BM"	12
+		
+		//"Bhutan"		
+		"BT"	36
+		
+		//"Bolivia"		
+		"BO"	25
+		
+		//"Bosnia and Herzegovina"	
+		"BA"	92
+		
+		//"Botswana"		
+		"BW"	26
+		
+		//"Bouvet Island"	
+		"BV"	0
+		
+		//"Brazil"		
+		"BR"	25
+		
+		//"British Indian Ocean Territory"
+		"IO"	36
+		
+		//"Brunei Darussalam"		
+		"BN"	30
+		
+		//"Bulgaria"						
+		"BG"	43
+		
+		//"Burkina Faso"					
+		"BF"	26
+		
+		//"Burundi"						
+		"BI"	0
+		
+		//"Cambodia"						
+		"KH"	70
+		
+		//"Cameroon"						
+		"CM"	26
+		
+		//"Canada"						
+		"CA"	20
+		
+		//"Cape Verde"					
+		"CV"	0
+		
+		//"Cayman Islands"				
+		"KY"	12
+		
+		//"Central African Republic"			
+		"CF"	26
+		
+		//"Chad"							
+		"TD"	26
+		
+		//"Chile"							
+		"CL"	25
+		
+		//"China"							
+		"CN"	47
+		
+		//"Christmas Island"				
+		"CX"	0
+		
+		//"Cocos (Keeling) Islands"			
+		"CC"	0
+		
+		//"Colombia"						
+		"CO"	25
+		
+		//"Comoros"						
+		"KM"	0
+		
+		//"Congo"							
+		"CG"	14
+		
+		//"Congo	the Democratic Republic of the"			
+		"CD"	14
+		
+		//"Cook Islands"					
+		"CK"	0
+		
+		//"Costa Rica"					
+		"CR"	25
+		
+		//"Cote d'Ivoire"					
+		"CI"	14
+		
+		//"Croatia"						
+		"HR"	42
+		
+		//"Cyprus"						
+		"CY"	43
+		
+		//"Czech Republic"				
+		"CZ"	42
+		
+		//"Denmark"						
+		"DK"	41
+		
+		//"Djibouti"						
+		"DJ"	26
+		
+		//"Dominica"						
+		"DM"	12
+		
+		//"Dominican Republic"			
+		"DO"	12
+		
+		//"Ecuador"						
+		"EC"	25
+		
+		//"Egypt"							
+		"EG"	37
+		
+		//"El Salvador"					
+		"SV"	12
+		
+		//"Equatorial Guinea"				
+		"GQ"	0
+		
+		//"Eritrea"						
+		"ER"	0
+		
+		//"Estonia"						
+		"EE"	41
+		
+		//"Ethiopia"						
+		"ET"	30
+		
+		//"Falkland Islands (Malvinas)"
+		"FK"	25
+		
+		//"Faroe Islands"					
+		"FO"	0
+		
+		//"Fiji"							
+		"FJ"	0
+		
+		//"Finland"						
+		"FI"	68
+		
+		//"France"						
+		"FR"	14
+		
+		//"French Guiana"					
+		"GF"	0
+		
+		//"French Polynesia"				
+		"PF"	0
+		
+		//"French Southern Territories"
+		"TF"	0
+		
+		//"Gabon"							
+		"GA"	26
+		
+		//"Gambia"						
+		"GM"	0
+		
+		//"Georgia"						
+		"GE"	30
+		
+		//"Germany"						
+		"DE"	5
+		
+		//"Ghana"							
+		"GH"	14
+		
+		//"Gibraltar"						
+		"GI"	14
+		
+		//"Greece"						
+		"GR"	43
+		
+		//"Greenland"						
+		"GL"	29
+		
+		//"Grenada"						
+		"GD"	0
+		
+		//"Guadeloupe"					
+		"GP"	0
+		
+		//"Guam"							
+		"GU"	0
+		
+		//"Guatemala"						
+		"GT"	12
+		
+		//"Guinea"						
+		"GN"	0
+		
+		//"Guinea-Bissau"					
+		"GW"	0
+		
+		//"Guernsey"					
+		"GG"	4
+		
+		//"Guyana"						
+		"GY"	0
+		
+		//"Haiti"							
+		"HT"	12
+		
+		//"Heard and Mc Donald Islands"			
+		"HM"	0
+		
+		//"Holy See(Vatican City State)"			
+		"VA"	37
+		
+		//"Honduras"						
+		"HN"	12
+		
+		//"Hong Kong"						
+		"HK"	33
+		
+		//"Hungary"						
+		"HU"	93
+		
+		//"Iceland"						
+		"IS"	29
+		
+		//"India"							
+		"IN"	36
+		
+		//"Indonesia"						
+		"ID"	44
+		
+		//"Iraq"							
+		"IQ"	30
+		
+		//"Iran"							
+		"IR"	30
+		
+		//"Ireland"						
+		"IE"	69
+		
+		//"Isle of Man"					
+		"IM"	4
+		
+		//"Israel"						
+		"IL"	30
+		
+		//"Italy"							
+		"IT"	37
+		
+		//"Jamaica"						
+		"JM"	12
+		
+		//"Japan"							
+		"JP"	32
+		
+		//"Jersey"						
+		"JE"	4
+		
+		//"Jordan"						
+		"JO"	30
+		
+		//"Kazakhstan"					
+		"KZ"	39
+		
+		//"Kenya"							
+		"KE"	14
+		
+		//"Kiribati"						
+		"KI"	0
+		
+		//"Korea	Republic of"			
+		"KR"	8
+		
+		//"Kuwait"						
+		"KW"	30
+		
+		//"Kyrgyzstan"					
+		"KG"	39
+		
+		//"Lao People's Democratic Republic"			
+		"LA"	34
+		
+		//"Latvia"						
+		"LV"	38
+		
+		//"Lebanon"						
+		"LB"	30
+		
+		//"Lesotho"						
+		"LS"	0
+		
+		//"Liberia"						
+		"LR"	24
+		
+		//"Liechtenstein"					
+		"LI"	88
+		
+		//"Lithuania"						
+		"LT"	38
+		
+		//"Luxembourg"					
+		"LU"	88
+		
+		//"Macau"							
+		"MO"	33
+		
+		//"Macedonia, the former Yugoslav Republic of"			
+		"MK"	43
+		
+		//"Madagascar"					
+		"MG"	26
+		
+		//"Malawi"						
+		"MW"	0
+		
+		//"Malaysia"						
+		"MY"	72
+		
+		//"Maldives"						
+		"MV"	0
+		
+		//"Mali"							
+		"ML"	0
+		
+		//"Malta"							
+		"MT"	37
+		
+		//"Marshall Islands"				
+		"MH"	0
+		
+		//"Martinique"					
+		"MQ"	0
+		
+		//"Mauritania"					
+		"MR"	0
+		
+		//"Mauritius"						
+		"MU"	0
+		
+		//"Mayotte"						
+		"YT"	0
+		
+		//"Mexico"						
+		"MX"	74
+		
+		//"Micronesia, Federated States of"			
+		"FM"	0
+		
+		//"Moldova, Republic of"			
+		"MD"	16
+		
+		//"Monaco"						
+		"MC"	37
+		
+		//"Mongolia"						
+		"MN"	46
+		
+		//"Montserrat"					
+		"MS"	0
+		
+		//"Morocco"						
+		"MA"	40
+		
+		//"Mozambique"					
+		"MZ"	26
+		
+		//"Myanmar"						
+		"MM"	34
+		
+		//"Namibia"						
+		"NA"	26
+		
+		//"Nauru"							
+		"NR"	0
+		
+		//"Nepal"							
+		"NP"	36
+		
+		//"Netherlands"					
+		"NL"	15
+		
+		//"Netherlands Antilles"			
+		"AN"	0
+		
+		//"New Caledonia"					
+		"NC"	0
+		
+		//"New Zealand"					
+		"NZ"	22
+		
+		//"Nicaragua"						
+		"NI"	12
+		
+		//"Niger"							
+		"NE"	14
+		
+		//"Nigeria"						
+		"NG"	14
+		
+		//"Niue"							
+		"NU"	0
+		
+		//"Norfolk Island"				
+		"NF"	0
+		
+		//"Northern Mariana Islands"			
+		"MP"	0
+		
+		//"Norway"						
+		"NO"	67
+		
+		//"Oman"							
+		"OM"	30
+		
+		//"Pakistan"						
+		"PK"	36
+		
+		//"Palau"							
+		"PW"	0
+		
+		//"Palestinian Territory, Occupied"				
+		"PS"	30
+		
+		//"Panama"						
+		"PA"	12
+		
+		//"Papua New Guinea"				
+		"PG"	28
+		
+		//"Paraguay"						
+		"PY"	25
+		
+		//"Peru"							
+		"PE"	11
+		
+		//"Philippines"					
+		"PH"	45
+		
+		//"Pitcairn"						
+		"PN"	0
+		
+		//"Poland"						
+		"PL"	38
+		
+		//"Portugal"						
+		"PT"	40
+		
+		//"Puerto Rico"					
+		"PR"	12
+		
+		//"Qatar"							
+		"QA"	30
+		
+		//"Reunion"						
+		"RE"	0
+		
+		//"Romania"						
+		"RO"	16
+		
+		//"Russian Federation"			
+		"RU"	7
+		
+		//"Rwanda"						
+		"RW"	14
+		
+		//"Saint Helena"						
+		"SH"	0
+		
+		//"Saint Kitts and Nevis"			
+		"KN"	0
+		
+		//"Saint Lucia"					
+		"LC"	0
+		
+		//"Saint Pierre and Miquelon"					
+		"PM"	0
+		
+		//"Saint Vincent and the Grenadines"	
+		"VC"	0
+		
+		//"Samoa"							
+		"WS"	0
+		
+		//"San Marino"					
+		"SM"	0
+		
+		//"Sao Tome and Principe"			
+		"ST"	0
+		
+		//"Saudi Arabia"					
+		"SA"	30
+		
+		//"Senegal"						
+		"SN"	14
+		
+		//"Serbia and Montenegro"				
+		"CS"	42
+		
+		//"Seychelles"					
+		"SC"	0
+		
+		//"Sierra Leone"					
+		"SL"	0
+		
+		//"Singapore"						
+		"SG"	35
+		
+		//"Slovakia"						
+		"SK"	37
+		
+		//"Slovenia"						
+		"SI"	42
+		
+		//"Solomon Islands"				
+		"SB"	0
+		
+		//"Somalia"						
+		"SO"	30
+		
+		//"South Africa"					
+		"ZA"	26
+		
+		//"South Georgia and the South Sandwich Islands"	
+		"GS"	0
+		
+		//"Spain"							
+		"ES"	40
+		
+		//"Sri Lanka"						
+		"LK"	36
+		
+		//"Suriname"						
+		"SR"	0
+		
+		//"Svalbard and Jan Mayen"
+		"SJ"	0
+		
+		//"Swaziland"				
+		"SZ"	26
+		
+		//"Sweden"						
+		"SE"	41
+		
+		//"Switzerland"					
+		"CH"	88
+		
+		//"Taiwan	Province of China"
+		"TW"	9
+		
+		//"Tajikistan"					
+		"TJ"	39
+		
+		//"Tanzania	United Republic of"
+		"TZ"	0
+		
+		//"Thailand"						
+		"TH"	34
+		
+		//"Timor-Leste"					
+		"TL"	0
+		
+		//"Togo"							
+		"TG"	0
+		
+		//"Tokelau"						
+		"TK"	0
+		
+		//"Tonga"							
+		"TO"	0
+		
+		//"Trinidad and Tobago"			
+		"TT"	0
+		
+		//"Tunisia"						
+		"TN"	0
+		
+		//"Turkey"						
+		"TR"	43
+		
+		//"Turkmenistan"					
+		"TM"	39
+		
+		//"Turks and Caicos Islands"			
+		"TC"	0
+		
+		//"Tuvalu"						
+		"TV"	0
+		
+		//"Uganda"						
+		"UG"	0
+		
+		//"Ukraine"						
+		"UA"	73
+		
+		//"United Arab Emirates"			
+		"AE"	30
+		
+		//"United Kingdom"				
+		"GB"	4
+		
+		//"United States"					
+		"US"	10
+		
+		//"United States Minor Outlying Islands"			
+		"UM"	0
+		
+		//"Uruguay"						
+		"UY"	0
+		
+		//"Uzbekistan"					
+		"UZ"	39
+		
+		//"Vanuatu"						
+		"VU"	0
+		
+		//"Venezuela"						
+		"VE"	0
+		
+		//"Viet Nam"						
+		"VN"	71
+		
+		//"Virgin Islands	British"
+		"VG"	0
+		
+		//"Virgin Islands	U.S."			
+		"VI"	0
+		
+		//"Wallis and Futuna"				
+		"WF"	0
+		
+		//"Western Sahara"				
+		"EH"	0
+		
+		//"Yemen"							
+		"YE"	0
+		
+		//"Zambia"						
+		"ZM"	26
+		
+		//"Zimbabwe"						
+		"ZW"	26
+	}
+	"states"
+	{
+		// ALABAMA
+		"AL"	50
+
+		// ALASKA
+		"AK"	31
+
+		// ARIZONA
+		"AZ"	11
+
+		// ARKANSAS
+		"AR"	50
+
+		// CALIFORNIA
+		"CA"	10
+
+		// COLORADO
+		"CO"	49
+
+		// CONNECTICUT
+		"CT"	2
+
+		// DELAWARE
+		"DE"	2
+
+		// DISTRICT OF COLUMBIA
+		"DC"	63
+
+		// FLORIDA
+		"FL"	12
+
+		// GEORGIA
+		"GA"	50
+
+		// HAWAII
+		"HI"	10
+
+		// IDAHO
+		"ID"	31
+
+		// ILLINOIS
+		"IL"	1
+
+		// INDIANA
+		"IN"	1
+
+		// IOWA
+		"IA"	77
+
+		// KANSAS
+		"KS"	65
+
+		// KENTUCKY
+		"KY"	50
+
+		// LOUISIANA
+		"LA"	50
+
+		// MAINE
+		"ME"	82
+
+		// MARYLAND
+		"MD"	63
+
+		// MASSACHUSETTS
+		"MA"	82
+
+		// MICHIGAN
+		"MI"	79
+
+		// MINNESOTA
+		"MN"	76
+
+		// MISSISSIPPI
+		"MS"	50
+
+		// MISSOURI
+		"MO"	77
+
+		// MONTANA
+		"MT"	31
+		
+		// NEBRASKA
+		"NE"	77
+
+		// NEVADA
+		"NV"	64
+
+		// NEW HAMPSHIRE
+		"NH"	2
+
+		// NEW JERSEY
+		"NJ"	2
+
+		// NEW MEXICO
+		"NM"	11
+
+		// NEW YORK
+		"NY"	2
+
+		// NORTH CAROLINA
+		"NC"	84
+
+		// NORTH DAKOTA
+		"ND"	76
+
+		// OHIO
+		"OH"	80
+
+		// OKLAHOMA
+		"OK"	65
+
+		// OREGON
+		"OR"	31
+
+		// PENNSYLVANIA
+		"PA"	83
+
+		// RHODE ISLAND
+		"RI"	82
+
+		// SOUTH CAROLINA
+		"SC"	50
+
+		// SOUTH DAKOTA
+		"SD"	76
+
+		// TENNESSEE
+		"TN"	50
+
+		// TEXAS
+		"TX"	65
+
+		// UTAH
+		"UT"	49
+
+		// VERMONT
+		"VT"	2
+
+		// VIRGINIA
+		"VA"	63
+
+		// WASHINGTON
+		"WA"	31
+
+		// WEST VIRGINIA
+		"WV"	2
+
+		// WISCONSIN
+		"WI"	1
+
+		// WYOMING
+		"WY"	49
+	}
+}

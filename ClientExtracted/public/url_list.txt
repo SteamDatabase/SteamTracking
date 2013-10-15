@@ -1,0 +1,644 @@
+CommunityFrontPage
+{
+	url			"%community%"
+	method		"internal"
+	filter		"community"
+}
+CommunityHome
+{
+	url			"%community%/home"
+	method		"internal"
+	filter		"community"
+}
+GameHub
+{
+	url			"%community%/app/%p1%/"
+	method		"internal"
+	filter		"community"
+}
+GameHubGuides
+{
+	url			"%community%/app/%p1%/guides/"
+	method		"internal"
+	filter		"community"
+}
+GameHubDiscussions
+{
+	url			"%community%/app/%p1%/discussions/"
+	method		"internal"
+	filter		"community"
+}
+SteamIDPage
+{
+	url			"%community%/profiles/%p1%/"
+	method		"internal"
+	filter		"community"
+}
+SteamIDBadgePage
+{
+	url			"%community%/%mystuff%/badges/"
+	method		"internal"
+	filter		"profile"
+}
+SteamDiscussions
+{
+	url			"%community%/discussions/"
+	method		"internal"
+	filter		"community"
+}
+SteamIDLoginPage
+{
+	url			"%community%/actions/InitializeSession?steamid=%steamID%&onetimepassword=%p1%&language=%language%"
+	method		"internal"
+	filter		"community"
+}
+SteamIDMyProfile
+{
+	url			"%community%/%mystuff%/"
+	method		"internal"
+	filter		"profile"
+}
+SteamIDControlPage
+{
+	url			"%community%/%mystuff%/home"
+	method		"internal"
+	filter		"profile"
+}
+SteamIDFriendsPage
+{
+	url			"%community%/%mystuff%/home/"
+	method		"internal"
+	filter		"friends"
+}
+SteamIDFriendsList
+{
+	url			"%community%/%mystuff%/friends/"
+	method		"internal"
+	filter		"friends"
+}
+SteamIDGroupsPage
+{
+	url			"%community%/%mystuff%/groups/"
+	method		"internal"
+	filter		"profile"
+}
+SteamIDStatsPage
+{
+	url		"%community%/%mystuff%/stats/appid/%p1%"
+	method		"internal"
+	filter		"profile"
+}
+SteamIDAchievementsPage
+{
+	url		"%community%/%mystuff%/stats/appid/%p1%/achievements"
+	method		"internal"
+	filter		"profile"
+}
+UserStatsPage
+{
+	url		"%community%/profiles/%p1%/stats/appid/%p2%"
+	method		"internal"
+	filter		"community"
+}
+UserAchievementsPage
+{
+	url		"%community%/profiles/%p1%/stats/appid/%p2%/achievements"
+	method		"internal"
+	filter		"community"
+}
+UserLeaderboardsPage
+{
+	url		"%community%/profiles/%p1%/stats/appid/%p2%/leaderboards"
+	method	"internal"
+	filter		"community"
+}
+UserRecentlyPlayedPage
+{
+	url		"%community%/profiles/%p1%/games?tab=recent"
+	method		"internal"
+	filter		"community"
+}
+GlobalAchievementStatsPage
+{
+	url		"%community%/stats/%p1%/achievements"
+	method		"internal"
+	filter		"community"
+}
+GlobalLeaderboardsPage
+{
+	url		"%community%/stats/%p1%/leaderboards"
+	method	"internal"
+	filter		"community"
+}
+SteamIDInvitesPage
+{
+	url			"%community%/%mystuff%/home/invites/"
+	method		"internal"
+	filter		"profile"
+}
+SteamIDEditPage
+{
+	url			"%community%/%mystuff%/edit"
+	method		"internal"
+	filter		"profile"
+}
+MinimalProfileEdit
+{
+	url			"%community%/%mystuff%/minimaledit"
+	method		"internal"
+	filter		"profile"
+}
+GroupSteamIDPage
+{
+	url			"%community%/gid/%p1%"
+	method		"internal"
+	filter		"community"
+}
+GroupEventsPage
+{
+	url			"%community%/gid/%p1%/events"
+	method		"internal"
+	filter		"community"
+}
+GroupSteamIDAdmin
+{
+	url			"%community%/gid/%p1%/edit"
+	method		"internal"
+	filter		"community"
+}
+GroupMembersPage
+{
+	url			"%community%/gid/%p1%/members"
+	method		"internal"
+	filter		"community"
+}
+OfficialGameGroupPage
+{
+	url			"%community%/ogg/%p1%"
+	method		"internal"
+	filter		"community"
+}
+LeaveGroupPage
+{
+	// just goes to the control panel for now (%p1% is the group steamid if we change it)
+	url			"%community%/%mystuff%/groups/"
+	method		"internal"
+	filter		"community"
+}
+ChatBanListAdmin
+{
+	url			"%community%/gid/%p1%/chatBanManage"
+	method		"internal"
+	filter		"community"
+}
+
+SupportFrontPage
+{
+	url			"http://support.steampowered.com/"
+	method		"external"
+}
+SupportNewTicket
+{
+	url			"https://support.steampowered.com/newticket.php"
+	method		"external"
+}
+DownloadsSupportInfo
+{
+	// this needs to be updated when we have the real page
+	url			"http://support.steampowered.com/"
+	method		"external"
+}
+
+// store pages not moved in yet
+StoreFrontPage
+{
+	url			"%store%"
+	method		"internal"
+	filter		"store"
+}
+
+StoreChildPage
+{
+	url	"%store%/%p1%/"
+	method	"internal"
+	filter	"store"
+}
+
+StoreRecommendationsPage
+{
+	url			"%store%/recommended/"
+	method		"internal"
+	filter		"store"
+}
+
+StorePublisherPage
+{
+	url		"%store%/publisher/%p1%/"
+	method		"internal"
+	filter		"store"
+}
+
+StoreAppPage
+{
+	url		"%store%/app/%p1%/"
+	method		"internal"
+	filter		"store"
+}
+
+// StoreAppPage is used in few places directly, create a custom URL
+StoreAppPageAddToCart
+{
+	url		"%store%/app/%p1%/?addtocart=%p2%"
+	method		"internal"
+	filter		"store"
+}
+
+StoreDlcPage
+{
+	url		"%store%/dlc/%p1%/"
+	method		"internal"
+	filter		"store"
+}
+
+StoreSubPage
+{
+	url		"%store%/sub/%p1%/"
+	method		"internal"
+	filter		"store"
+}
+
+StoreMediaSearchPage
+{
+	url		"%store%/search/?category1=999"
+	method		"internal"
+	filter		"store"
+}
+
+StoreGameSearchPage
+{
+	url		"%store%/search/"
+	method		"internal"
+	filter		"store"
+}
+
+StoreAddFundsPage
+{
+	url		"%store%/steamaccount/addfunds/"
+	method		"internal"
+	filter		"store"
+}
+
+StoreAddFundsMicroTxnPage
+{
+	url		"%store%/steamaccount/addfunds/?microtxn=%p1%"
+	method		"internal"
+	filter		"store"
+}
+
+StoreAddCachedPmtMethodPage
+{
+	url		"%store%/checkout/?purchasetype=updatebillinginfo&microtxn=%p1%"
+	method		"internal"
+	filter		"store"
+}
+
+PSNAccountSetupPage
+{
+	url		"%store%/psn/beginsetup"
+	method	"internal"
+	filter		"store"
+}
+
+GiftActivationPage
+{
+	url			"%community%/actions/RedeemGift"
+	method		"other"
+	filter		"store"
+}
+
+AppNewsPage
+{
+	url			"%news%/?appids=%p1%"
+	method		"internal"
+	filter		"news"
+}
+
+SteamClientNewsPage
+{
+	url			"http://storefront.steampowered.com/platform/update_history/index.php"
+	method		"internal"
+	filter		"news"
+}
+
+SteamClientBetaNewsPage
+{
+	url			"http://steamcommunity.com/groups/SteamClientBeta/announcements?client_view=1"
+	method		"internal"
+	filter		"news"
+}
+
+SteamClientBetaBugReports
+{
+	url			"http://steamcommunity.com/groups/SteamClientBeta/discussions/0/"
+	method		"internal"
+	filter		"community"
+}
+
+NewsHomePage
+{
+	url			"%news%"
+	method		"internal"
+	filter		"news"
+}
+
+LegalInformation
+{
+	url			"http://www.valvesoftware.com/legal.htm"
+	method		"internal"
+}
+
+SSA
+{
+	url			"http://store.steampowered.com/subscriber_agreement/"
+	method		"internal"
+}
+
+PrivacyPolicy
+{
+	url			"http://www.valvesoftware.com/privacy.htm"
+	method		"internal"
+}
+
+CommunitySearchFriends
+{
+	url		"%community%/actions/SearchFriends"
+	method		"internal"
+	filter		"friends"
+}
+
+CommunitySearchForFriend
+{
+	url		"%community%/actions/SearchFriends/?p=1&K=%p1%"
+	method	"internal"
+	filter	"friends"
+}
+
+StoreAccount
+{
+	//link from client chrome to user's store account info
+	url		"%storehttps%/account/"
+	method	"internal"
+	filter	"profile"
+}
+
+CommunityGroupSearch
+{
+	url		"%community%/actions/Search?T=ClanAccount&K=%p1%"
+	method		"internal"
+	filter		"community"
+}
+CommunityFriendsThatPlay
+{
+	url		"%community%/%mystuff%/friendsthatplay/%p1%"
+	method		"internal"
+	filter		"friends"
+}
+RecentlyPlayedWith
+{
+	url		"%community%/%mystuff%/friends/coplay"
+	method		"internal"
+	filter		"friends"
+}
+CurrentlyPlayedWith
+{
+	url		"%community%/%mystuff%/friends/players"
+	method		"internal"
+	filter		"friends"
+}
+BlockedPlayers
+{
+	url		"%community%/%mystuff%/friends/blocked"
+	method		"internal"
+	filter		"friends"
+}
+RecommendGame
+{
+	url		"%store%/recommended/recommendgame/%p1%"
+	method		"internal"
+	filter		"store"
+}
+RecommendedByFriends
+{
+	url		"%store%/recommended/byfriends/%p1%"
+	method	"internal"
+	filter		"store"
+}
+CommunityRecommendations
+{
+	url		"%community%/%mystuff%/recommended/"
+	method	"internal"
+	filter	"community"
+}
+CommunityWorkshop
+{
+	url		"%community%/%mystuff%/myworkshopfiles/"
+	method		"internal"
+	filter	"community"
+}
+CommunityScreenshots
+{
+	url		"%community%/%mystuff%/screenshots/"
+	method		"internal"
+	filter	"community"
+}
+CommunitySingleScreenshot
+{
+	url		"%community%/%mystuff%/screenshot/%p1%"
+	method		"internal"
+	filter	"community"
+}
+CommunityGameScreenshots
+{
+	url		"%community%/%mystuff%/screenshots/?tab=library&view=filter&filter=app_%p1%"
+	method		"internal"
+	filter	"community"
+}
+CommunityVideos
+{
+	url		"%community%/%mystuff%/videos/"
+	method		"internal"
+	filter	"community"
+}
+JoinTrade
+{
+	url		"%community%/trade/%p1%"
+	method		"trade"
+	filter		"trading"
+}
+CommunityInventory
+{
+	url			"%community%/%mystuff%/inventory/"
+	method		"internal"
+	filter		"profile"
+}
+FacebookProfilePage
+{
+	url			"http://www.facebook.com/profile.php?id=%p1%"
+	method		"external"
+	filter		"profile"
+}
+SupportMessages
+{
+	url			"%storehttps%/account/supportmessages/"
+	method		"internal"
+}
+EducationPage
+{
+	url			"http://learningwithportals.com/client/"
+	method		"internal"
+}
+EducationPageStore
+{
+	url			"http://learningwithportals.com/client/"
+	method		"internal"
+}
+EducationPageCommunity
+{
+	url			"http://learningwithportals.com/profiles/"
+	method		"internal"
+}
+EducationPageNews
+{
+	url			"http://learningwithportals.com/news/"
+	method		"internal"
+}
+CommunityFilePage
+{
+	url		"%community%/sharedfiles/filedetails/?id=%p1%"
+	method		"internal"
+	filter		"community"
+}
+SteamIDCommunityFilesPage
+{
+	url		"%community%/profiles/%p1%/mysharedfiles/?appid=%p2%"
+	method		"internal"
+	filter		"community"
+}
+SteamWorkshopPage
+{
+	url		"%community%/workshop/browse?appid=%p1%"
+	method		"internal"
+	filter		"community"
+}
+SteamWorkshopUpdatedSubscriptions
+{
+	url		"%community%/workshop/browse?appid=%p1%&browsesort=mysubscriptions&browsefilter=mysubscriptions&p=1&sortmethod=lastupdated"
+	method		"internal"
+	filter		"community"
+}
+SteamWorkshop
+{
+	url		"%community%/workshop/"
+	method		"internal"
+	filter		"community"
+}
+SteamGreenlight
+{
+	url		"%community%/greenlight/"
+	method		"internal"
+	filter		"community"
+}
+SteamMarketplace
+{
+	url		"%community%/market/"
+	method		"internal"
+	filter		"community"
+}
+ManageGiftsPage
+{
+	url		"%community%/%mystuff%/inventory/#pending_gifts"
+	method		"internal"
+	filter		"profile"
+}
+PendingGift
+{
+	url		"%community%/gifts/"
+	method		"internal"
+	filter		"profile"
+}
+AckGiftEmail
+{
+	url		"%storehttps%/account/ackgift/%p1%"
+	method		"internal"
+	filter		"profile"
+}
+CommentNotifications
+{
+	url		"%community%/%mystuff%/commentnotifications/"
+	method	"internal"
+	filter		"profile"
+}
+RedeemWalletVoucher
+{
+	url		"%store%/account/redeemwalletcode/"
+	method		"internal"
+	filter		"store"
+}
+SupportMessages
+{
+	url		"%store%/account/supportmessages/"
+	method		"internal"
+}
+RedeemWalletVoucherCode
+{
+	url		"%store%/account/redeemwalletcode/?code=%p1%"
+	method		"internal"
+	filter		"store"
+}
+ActivityFeed10ft
+{
+	url		"%community%/%mystuff%/blotterjson?version=10ft_v0001"
+	method	"internal"
+	filter	"community"
+}
+UserWishlist
+{
+	url		"%community%/%mystuff%/wishlist"
+	method	"internal"
+	filter	"profile"
+}
+StoreStats
+{
+	url		"%store%/stats"
+	method	"internal"
+	filter	"store"
+}
+TradeOffers
+{
+	url		"%community%/%mystuff%/tradeoffers"
+	method	"internal"
+	filter	"trading"
+}
+MarketEligibilityCheck
+{
+	url		"%community%/market/eligibilitycheck"
+	method	"internal"
+	filter	"profile"
+}
+ParentalBlocked
+{
+	url		"http://learningwithportals.com/client/"
+	method	"internal"
+}
+AsyncGames
+{
+	url		"%community%/%mystuff%/gamenotifications#waiting"
+	method	"internal"
+	filter	"profile"
+}
+AsyncGameInvites
+{
+	url		"%community%/%mystuff%/gamenotifications#invites"
+	method	"internal"
+	filter	"profile"
+}

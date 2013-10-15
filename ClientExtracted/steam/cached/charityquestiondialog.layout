@@ -1,0 +1,112 @@
+"steam/cached/charityquestiondialog.layout"
+{
+	controls
+	{
+		charityquestiondialog { title="#charity_title" wide=500 tall=600 }
+
+		bgimage { controlname=ImagePanel style="bgimagestyle" zpos=-2 }
+
+		headerimage {controlname=ImagePanel image="steam/cached/giving_header" zpos=-1 }
+		headerovertext { controlname=Label labelText="#charity_imagetext" style=headertextstyle zpos=0 }
+		headertext {controlname=Label labelText="#charity_header" wrap=1 zpos=1 } 
+		headerchoice {controlname=Label labelText="#charity_choice" wrap=0 style=choicestyle } 
+		radio1 {controlname=RadioButton labelText="#charity_asia" wrap=0 tabposition=1 subtabposition=1 } 
+		radio2 {controlname=RadioButton labelText="#charity_schools" wrap=0 tabposition=1 subtabposition=2 } 
+		radio3 {controlname=RadioButton labelText="#charity_read" wrap=0 tabposition=1 subtabposition=3 } 
+		radio4 {controlname=RadioButton labelText="#charity_scholarship" wrap=0 tabposition=1 subtabposition=4 } 
+		detailstext {controlname=Label labelText="" wrap=1 } 
+		footertext {controlname=Label labelText="#charity_footer" wrap=1 } 
+		footerlink {controlname=URLLabel labelText="#charity_footer_link" URLText="#charity_footer_link" wrap=0 }
+		
+		launchbutton { controlname=Button labelText="#charity_launchgame" command="OK" style=launchbuttonstyle tabposition=2 }
+		BottomDivider { controlname=divider }	
+	}
+	
+	styles
+	{
+		bgimagestyle
+		{
+			bgcolor=none
+			render {}
+			render_bg
+			{
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, none, propertysheetbg )"
+			}
+		}
+		
+		choicestyle
+		{
+			font-size=22
+			textcolor=text
+		}
+		
+		headertextstyle
+		{
+			textcolor=white
+			font-style="outerglow"
+			font-size=36
+			font-outerglow-offset=2
+			font-outerglow-color=dialogbg
+			font-outerglow-filtersize=5
+		}
+		
+		launchbuttonstyle
+		{
+			padding-left=4
+			padding-right=24
+		}
+		
+		RadioButton
+	    {
+			font-family=basefont
+			font-size=18
+			font-weight=400
+			textcolor="Label"
+			render_bg {}
+			image="graphics/RadUnselStd"
+			bgcolor=none
+	    }     
+  
+	    RadioButton:selected
+	    {
+			render_bg {}
+			image="graphics/radSelStd"  
+	    }
+	    
+	    RadioButton:focus
+	    {
+			textcolor="Texthover"
+			bgcolor=none
+			image="graphics/radSelFocus"
+	    }
+	
+	    RadioButton:selected:focus
+	    {
+			textcolor="Texthover"  
+			bgcolor=none
+			image="graphics/radSelFocus"
+	    }
+    
+	}
+	
+	layout
+	{
+		place { controls="bgimage" width=max height=max margin=10 margin-bottom=50 margin-top=24 }
+
+		place { controls="headerovertext" margin-top=50 margin-left=30 }
+	
+		place { margin=20 margin-top=30 dir=down spacing=4 controls="headerimage" width=max }
+		
+		place { margin=40 margin-top=120 margin-right=80 dir=down spacing=4 controls="headertext,headerchoice,radio1,radio2,radio3,radio4" width=max }
+		
+		place { margin=68 margin-top=355 margin-right=70 dir=down spacing=4 controls="detailstext" width=max }
+				
+		place { margin=40 margin-bottom=65 margin-right=75 dir=down controls="footertext,footerlink" align=bottom width=max }
+		
+		region { name="buttonrow" align=bottom width=max height=40 }
+		
+		place { margin=35 controls="BottomDivider" y=450 width=max }
+		
+		place { controls="launchbutton" region="buttonrow" align=right margin-right=10 height=24 }
+	}
+}
