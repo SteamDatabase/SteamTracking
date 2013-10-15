@@ -3,6 +3,7 @@ apikey.txt
 update.lock
 
 *.wav
+*.tmp
 
 ClientExtracted/extract.sh
 ClientExtracted/public_all.zip
@@ -10,3 +11,4 @@ ClientExtracted/strings_all.zip
 ClientExtracted/tenfoot_all.zip
 ClientExtracted/resources_all.zip
 ClientExtracted/tenfoot/resource/wordlists/
+ClientExtracted/steam/drivercheck/
