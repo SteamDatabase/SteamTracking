@@ -1,0 +1,13 @@
+* text eol=lf
+
+*.dat binary
+*.dic binary
+*.doc binary
+*.gif binary
+*.ico binary
+*.png binary
+*.tga binary
+*.ttf binary
+*.wav binary
+*.zip binary
+
