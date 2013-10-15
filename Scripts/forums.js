@@ -1568,15 +1568,30 @@ function Forum_OnMoveTopicDestinationsFailed( clanidowner, appidowner, transport
 	}
 }
 
-function BulkModeTopicClick( element )
+function V_CountKeys( obj )
 {
-	if ( $J(element).children( '.forum_topic_checkbox' ).length )
+	if ( Object.keys )
+		return Object.keys(obj).length;
+	else
 	{
-		//moderation mode
-		var $Checkbox = $J(element).find( '.forum_topic_checkbox_input');
-		return false;
+		var c = 0;
+		for ( var x in obj )
+			c++;
+		return c;
 	}
-	return true;
+}
+
+function V_Keys( obj )
+{
+	if ( Object.keys )
+		return Object.keys( obj );
+	else
+	{
+		var rgResults = [];
+		for ( var x in obj )
+			rgResults.push( x );
+		return rgResults;
+	}
 }
 
 function InitializeForumBulkActions( strName )
@@ -1595,10 +1610,16 @@ function InitializeForumBulkActions( strName )
 	var $BtnMove = $J('#forum_' + strName + '_bulk_move');
 	var $BtnMerge = $J('#forum_' + strName + '_bulk_merge');
 
+	var $OtherPagesWarning = $J('#forum_' + strName + '_bulk_otherpages').hide();
+	var $OtherPagesCount = $J('#forum_' + strName + '_bulk_otherpage_count');
+	var $OtherPagesClear = $J('#forum_' + strName + '_bulk_otherpage_clear');
+
 	if ( !$ForumActions.length )
 		return;
 
 	var bEnabled = false;
+	var rgAllSelectedTopics = {};
+	var cTopicsCheckedOnOtherPages = 0;
 
 	var fnShowControlsIfCheckboxChecked = function ()
 	{
@@ -1611,7 +1632,27 @@ function InitializeForumBulkActions( strName )
 		$BtnMove.show();
 		$BtnMerge.show();
 
-		if ( $CheckedBoxes.length > 0 )
+		if ( cTopicsCheckedOnOtherPages > 0 )
+		{
+			$OtherPagesWarning.show();
+			$OtherPagesCount.text( cTopicsCheckedOnOtherPages );
+			if ( cTopicsCheckedOnOtherPages == 1 )
+			{
+				$OtherPagesWarning.children( '.bulk_otherpages_single' ).show();
+				$OtherPagesWarning.children( '.bulk_otherpages_multi' ).hide();
+			}
+			else
+			{
+				$OtherPagesWarning.children( '.bulk_otherpages_single' ).hide();
+				$OtherPagesWarning.children( '.bulk_otherpages_multi' ).show();
+			}
+		}
+		else
+		{
+			$OtherPagesWarning.hide();
+		}
+
+		if ( $CheckedBoxes.length > 0 || cTopicsCheckedOnOtherPages )
 		{
 			var $CheckedTopics = $CheckedBoxes.parents( '.forum_topic' );
 			var cDeletedTopics = $CheckedTopics.filter( '.deleted' ).length;
@@ -1649,6 +1690,7 @@ function InitializeForumBulkActions( strName )
 			return;
 
 		var $ForumTopics = $ForumArea.find( '.forum_topic:not(.moved)' );
+		cTopicsCheckedOnOtherPages = V_CountKeys( rgAllSelectedTopics );
 
 		$ForumTopics.each( function() {
 			var $ForumTopic = $J(this);
@@ -1661,10 +1703,24 @@ function InitializeForumBulkActions( strName )
 				$Checkbox.change( function() {
 					fnShowControlsIfCheckboxChecked();
 					if ( $Checkbox.prop('checked') )
+					{
 						$ForumTopic.addClass( 'selected_for_bulk' );
+						rgAllSelectedTopics[gidForumTopic] = true;
+					}
 					else
+					{
 						$ForumTopic.removeClass( 'selected_for_bulk' );
+						delete rgAllSelectedTopics[gidForumTopic];
+					}
 				} );
+
+
+				if ( rgAllSelectedTopics[gidForumTopic] )
+				{
+					cTopicsCheckedOnOtherPages--;
+					$Checkbox.prop( 'checked', true );
+					$Checkbox.change();
+				}
 
 				var $Wrapper = $J('<div/>', {'class': 'forum_topic_checkbox' } );
 				$Wrapper.html( '&nbsp;' );
@@ -1689,6 +1745,17 @@ function InitializeForumBulkActions( strName )
 		fnShowControlsIfCheckboxChecked();
 	};
 
+	var fnClearAllSelections = function() {
+		rgAllSelectedTopics = {};
+		cTopicsCheckedOnOtherPages = 0;
+		$ForumArea.find( '.forum_topic_checkbox_input:checked').each( function() {
+			$J(this).prop( 'checked', false ).change();
+		} );
+		fnShowControlsIfCheckboxChecked();
+	};
+
+	$OtherPagesClear.click( fnClearAllSelections );
+
 
 	$BtnEnable.click( function() {
 		bEnabled = true;
@@ -1709,23 +1776,22 @@ function InitializeForumBulkActions( strName )
 		$BtnDisable.hide();
 	});
 
+	$BtnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ) ); } );
+	$BtnUnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ), true ); } );
+
+	$BtnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ) ); } );
+	$BtnUnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ), true ); } );
+
+	$BtnMove.click( function() { ForumBulkMove( strName, V_Keys( rgAllSelectedTopics ) ).done( fnClearAllSelections ); } );
+	$BtnMerge.click( function() { ForumBulkMerge( strName, V_Keys( rgAllSelectedTopics ) ).done( fnClearAllSelections ); } );
+
 	//prototype AJAX
 	Ajax.Responders.register( { onComplete: fnAddCheckboxes } );
 }
 
-function GatherForumTopicGIDs( $ForumArea )
+function ForumBulkDelete( strName, rgForumTopicGIDs, bUndelete )
 {
-	var rgForumTopicGIDs = [];
-	$ForumArea.find( '.forum_topic_checkbox_input:checked').each( function() {
-		rgForumTopicGIDs.push( $J(this).data('gidForumTopic' ) );
-	});
-
-	return rgForumTopicGIDs;
-}
-
-function ForumBulkDelete( strName, bUndelete )
-{
-	BulkModerate( strName, 'deleted', !bUndelete)
+	BulkModerate( strName, rgForumTopicGIDs, 'deleted', !bUndelete)
 		.done( function( data ) {
 			if ( bUndelete )
 				ShowAlertDialog( 'Undelete', 'The selected topics have been restored.' );
@@ -1734,9 +1800,9 @@ function ForumBulkDelete( strName, bUndelete )
 		});
 }
 
-function ForumBulkLock( strName, bUnlock )
+function ForumBulkLock( strName, rgForumTopicGIDs, bUnlock )
 {
-	BulkModerate( strName, 'locked', !bUnlock)
+	BulkModerate( strName, rgForumTopicGIDs, 'locked', !bUnlock)
 		.done( function( data ) {
 			if ( bUnlock )
 				ShowAlertDialog( 'Unlock', 'The selected topics have been unlocked.' );
@@ -1745,18 +1811,18 @@ function ForumBulkLock( strName, bUnlock )
 		});
 }
 
-function ForumBulkMove( strName )
+function ForumBulkMove( strName, rgForumTopicGIDs )
 {
-	BulkModerate( strName, 'movetopic' )
+	return BulkModerate( strName, rgForumTopicGIDs, 'movetopic' )
 		.done( function( transport ) {
 			// the transport is from prototype
 			ShowAlertDialog( 'Move...', 'The selected topics have been moved to the new forum.' );
 		});
 }
 
-function ForumBulkMerge( strName )
+function ForumBulkMerge( strName, rgForumTopicGIDs )
 {
-	BulkModerate( strName, 'mergetopics' )
+	return BulkModerate( strName, rgForumTopicGIDs, 'mergetopics' )
 		.done( function( transport ) {
 			// the transport is from prototype
 			var strNewURL = '';
@@ -1784,12 +1850,11 @@ function ForumBulkMerge( strName )
 }
 
 
-function BulkModerate( strName, flag, value )
+function BulkModerate( strName, rgForumTopicGIDs, flag, value )
 {
 	var Forum = g_rgForums[strName];
 	var $ForumArea = $J('#forum_' + strName + '_area' );
 
-	var rgForumTopicGIDs = GatherForumTopicGIDs( $ForumArea );
 	if ( rgForumTopicGIDs.length == 0 )
 	{
 		return $J.Deferred();
