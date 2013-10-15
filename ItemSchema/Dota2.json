@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.5bbab2d1b74f60b221972ed31a30f46f74760e61.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.4170a9dd3d10e9b8331be41a5eddb90676907d6b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -46390,8 +46390,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade.981eaf206c4d5a4663fad7258f8069927b6909a5.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade_large.30ba5c2a9f37d85815fbbb5287a2041999f5df7c.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade.dbe0ab216cd77043fa071e701ec99286d028527a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade_large.4ba7856e76620e5095bab1b4a36b646e7b973005.png",
 				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
@@ -46414,8 +46414,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm.fcbdc1d0a7ff24e41ce4be2d9b67c13ddf813f0f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm_large.9f5b0cd04d015445ae4841a2106f7f4f0ee875e3.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm.2c95c5bad4cc2c6e6c7a66cfda8d3eb8767156b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm_large.d84a3cac87569d5532e3a93aa8f2ff0833ec1580.png",
 				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
@@ -46438,8 +46438,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount.688e7c2eec3cc41afe03ddbd8e1540659c1d825a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount_large.ef7fc58e6069da9b29f6fdbc8acb615a09841efc.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount.d48adf7e79169b8240f7d7ab52ae44f233f36e3f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount_large.b69e2eb63b82a782c788441e5dd0c48669118448.png",
 				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
@@ -46462,8 +46462,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield.b37322b1c24d5b4d8cfda3cd9e4577d7ff9459af.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield_large.b615b59e047296d7205c6b3ad7b6e2306c10813a.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield.807bc5ce864cbe99c78687b4166068b4570e3b3f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield_large.cde934e3ac54d6759cd80416e98f52127683a14e.png",
 				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
@@ -46486,8 +46486,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder.b8629438cffe98891e0171de4ac9bce9e3c1d571.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder_large.414d8425f8943fa7ac20a62ae9c50250712bfb6a.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder.cdb89a5be22b70830f4799b648dc175692aefaa8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder_large.79e1fe9d043ce124537e753fdc3f161bd8a33d49.png",
 				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
@@ -76162,8 +76162,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Arms_of_Burning_Turmoil",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil.e26cfebeb32e6bb115de4c69dbe13af94594f6dc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil_large.c17eca7bf4f7fcce87ec6d701ca82362ddbefd40.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil.d7503ac5552b01bfbfcbd367be8a52aa87a9562b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil_large.32d81cdb3b9dd2eb31934b1b9ab699e13ae842cd.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
