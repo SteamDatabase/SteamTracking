@@ -116,7 +116,7 @@
 			}
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			
-			File_Put_Contents( 'etags.txt', JSON_Encode( $this->ETags ) );
+			File_Put_Contents( 'etags.txt', JSON_Encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
 			
 			if( $this->ExtractAndFix )
 			{

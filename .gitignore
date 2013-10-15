@@ -10,10 +10,3 @@ ClientExtracted/strings_all.zip
 ClientExtracted/tenfoot_all.zip
 ClientExtracted/resources_all.zip
 ClientExtracted/tenfoot/resource/wordlists/
-
-ClientStrings/strings_all.zip
-ClientStrings/extract.sh
-
-ClientBigPicture/tenfoot_all.zip
-ClientBigPicture/extract.sh
-ClientBigPicture/tenfoot/resource/wordlists/
