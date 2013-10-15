@@ -1272,3 +1272,16 @@ select.subforum_select_control {
 	float: right;
 	margin-left: 12px;
 }
+
+.manage_actions_otherpage_warning {
+	margin: 4px 0;
+	padding: 4px;
+	border: 1px solid #cccc33;
+	background-color: #444422;
+	color: #cccccc;
+}
+
+.manage_actions_otherpage_clearlink {
+	text-decoration: underline;
+	cursor: pointer;
+}
