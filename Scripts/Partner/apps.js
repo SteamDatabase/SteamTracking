@@ -2053,12 +2053,32 @@ function ImageUploadCallback(jsonResponse)
 	}	
 }
 
+function AsyncNotificationsLocCallbackClosure( appid )
+{
+	theClosure = function( jsonResponse )
+	{
+		// the json is wrapped in a <pre> tag, so we must unwrap it.
+		var div = new Element("div");
+		div.innerHTML = jsonResponse;
+		var results = div.childElements()[0].innerHTML.evalJSON(true);
+
+		// poke in results
+		StandardCallback( results, 'loc_upload_response' );
+		return false;
+	};
+
+	return theClosure;
+}
+
 function AchievementLocCallbackClosure( appid )
 {
 	theClosure = function( jsonResponse )
 		{
-			var results = jsonResponse.evalJSON(true);
-			
+			// the json is wrapped in a <pre> tag, so we must unwrap it.
+			var div = new Element("div");
+			div.innerHTML = jsonResponse;
+			var results = div.childElements()[0].innerHTML.evalJSON(true);
+
 			// poke in results
 			StandardCallback( results, 'loc_upload_response' );
 			return false;
@@ -2304,7 +2324,7 @@ function startChunkUploads( inputItem, progressItem, onFinish )
                 },
                 headers: {
                     'Content-Type': 'application/octet-stream',
-                    'Content-Range': 'bytes ' + start + '-' + end + '/' + SIZE
+                    'Content-Range': 'bytes ' + start + '-' + ( end - 1 ) + '/' + SIZE
                 },
                 data: blob.slice( start, end ),
                 processData: false
@@ -3246,8 +3266,32 @@ function CreatePHPDateFromObject( d )
 	return dateData;
 }
 
-function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, nLaunchDiscount, rgPackages )
+//function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, nLaunchDiscount, rgPackages )
+function PublishPending( rgOptions )
 {
+	console.log(rgOptions);
+	// Unbox and setup locals
+	rgPackages = ( rgOptions.package ) ? rgOptions.package : [];
+	bSetDate = ( rgOptions.set_date == "1" ) ? true : false;
+	bSetReleased = ( rgOptions.set_released  == "1" ) ? true : false;
+	nLaunchDiscount = ( rgOptions.set_discount  == "1" ) ? rgOptions.discount_percent : 0;
+	NewReleaseState = rgOptions.release_state;
+
+	//console.log(rgPackages);
+	//return;
+
+	nAppId = rgOptions.appid;
+	nItemid = rgOptions.itemid;
+
+	// Assumptions
+	if( NewReleaseState == 'released')
+	{
+		bAddToMaster = true;
+		bAddToPress = true;
+	}
+
+	bPublishStoreApp = true;
+
 	rgUrls = []; // Clear any cruft from previous attempts.
 
 	if( rgPackages.length > 0 )
@@ -3423,19 +3467,20 @@ function PublishActionNext( rgRequest )
 		data: data,
 		success: function(data)
 		{
-			$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>' ) );
+			if( data.message )
+				$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>' ) );
+
 			if( !data['success'] )
 			{
-				if( nFailureCount > 3 )
+				if( nFailureCount++ > 3 )
 				{
 					console.log("Failed:");
-					console.log(data.message);
+					console.log(data);
 					$J('#publish_status_log').show();
 					$J('#publish_status').hide();
 				} else {
-					nFailureCount++;
-					$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>Retrying...<br>' ) );
-					PublishActionNext( rgRequest );
+					$J('#publish_status_log').append(  $J( 'Retrying...<br>' ) );
+					setTimeout( PublishActionNext, 5000, rgRequest );
 				}
 			} else
 				PublishActionNext();
@@ -3444,7 +3489,7 @@ function PublishActionNext( rgRequest )
 		},
 		error: function( response )
 		{
-			if( nFailureCount > 3 )
+			if( nFailureCount++ > 3 )
 			{
 				console.log(response);
 				$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p>') );
@@ -3452,9 +3497,9 @@ function PublishActionNext( rgRequest )
 				$J('#publish_status').hide();
 				$J('#publish_button').show();
 			} else {
-				nFailureCount++;
+
 				$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error. Retrying...</b></p>') );
-				PublishActionNext( rgRequest );
+				setTimeout( PublishActionNext, 5000, rgRequest );
 			}
 		}
 	});
