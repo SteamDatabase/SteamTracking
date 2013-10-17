@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.710b0d95b518f11ff015c507d729950b1179ee7f.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.ed32dd9fb665959cab5fe77903275e678487c7ee.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -11521,8 +11521,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Beautiful_Snowangel",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel.b846923b409d3e633d2649b538b02365c63de0b9.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel_large.5f7a45d94bb4c9b84ea1d4daa4d75b1191d8c2ae.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel.8a5e97772ee8f5fd13bf17eec13928130fbf29ba.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_beautiful_snowangel_large.575d064497099ccd4408678a21d2ebf8e0f96200.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11548,8 +11548,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Come_and_Get_It",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it.62bd83467db1b998969ebc3b3b97ffb43f2945cb.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it_large.1795c7c0674927c8874862d1ae72f6106d3fc3bb.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it.bb57dea50cff183d7a81efe7d7e9a96cc467dc75.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_come_and_get_it_large.6032860181280d3d21a1bf9a02dc82a27d254b09.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11575,8 +11575,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Spider_Shuffle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle.e460be6682281fc3ca12bf67dc9d39a23d8d8c6a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle_large.45e6ac6fc1b82232c467d6c23b5a6dc8d622fc2b.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle.58621334164e50a5e045adf3b10183051d57210c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_spider_shuffle_large.b7f93f180aec9c2c52de9e04f8cec52e08e93bcb.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11677,11 +11677,11 @@
 				"item_description": "Did your enemy make a sound?\r\n\t\r\n\tEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/taunts\/DOTA_Item_whats_that",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Keep_an_Ear_Out",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_whats_that.ae176830b020473a19a440e37f4daeea67156a91.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_whats_that_large.789a93ddb6e4cff20dacd1fde8fa80c76bdcfdee.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_keep_an_ear_out.12ed55d6c333a61686a6a2700e6f4b713bcfbf47.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_keep_an_ear_out_large.522a7bed367aa2b9c1dae83e05568efd87fee0a6.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11758,11 +11758,11 @@
 				"item_description": "Draw the eye of the ancestors upon your victory!\r\n\t\r\n\tEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_The_Jig",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Celebration_of_Death",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_jig.d55503b6a00240bbe90a1f653ae56add49348bac.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_jig_large.f114ae7fa3c9a03543ca403d0ce25f06d64c6407.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_celebration_of_death.c0d8202caa82af354cb3a22c209f066838bcff83.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_celebration_of_death_large.aa1827fedd0174cf27dc9c75177ff0d2d068b740.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11815,8 +11815,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Shredding_the_Lute_Invisible",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible.c0b59369cb1e218a5525706cd7b2cd74f906b80e.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible_large.270711005b3d7296b6fa2ab2e873c3a81cb1db37.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible.65924bf4a0e27ee8a7d53aff948029e398b2759e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shredding_the_lute_invisible_large.20567d485fe5c6126df6d19778a0c67b9a6f39ac.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -11842,8 +11842,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_For_Death_and_Honor",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor.0ac397c05b91aad20f87f943f435da3f50ae5e13.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor_large.a3da37a7114f011bccc1e3ec6dbb355022c3c9ea.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor.59cc0fbc6f929c55bc192130a40785a2afa231b7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_for_death_and_honor_large.57afee97ae5f0dde34e45185005c741a6a186f94.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -12005,11 +12005,11 @@
 				"item_description": "Who knew he could dance?\r\n\t\r\n\tEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Vaudville_Victory_Dance",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Victory_Jig",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance.acf33fbb2616d0d96ca4087da270a3c4d0fb74f0.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_vaudville_victory_dance_large.600cfbba0515b5a2bfa6dbe5718209323ba6bd9b.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_victory_jig.64efd6709531ae40a4dbb75aeab9f08d17ca14a6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_victory_jig_large.a1adb69817db9e702b1df06561de293b224fc9f9.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -14907,7 +14907,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_lightleather_bracer.fc89e265e00e41c071c600380827df38ec22c040.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_lightleather_bracer_large.09713476de9e49b6f43fda97597aeb3b544414ae.png",
-				"item_set": "bounty_hunter_hardened",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -23882,8 +23881,8 @@
 				"image_inventory": "econ\/items\/chaos_knight\/end_of_order\/end_of_order",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order.b59d9682dd199c8da44da8c5adac936c0a1f6616.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order_large.265059e7994c66119ebcf1c0a3daba79ab9c18f0.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order.353de93f3e5285ae4419cbc26fe8d6b99e541808.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/end_of_order\/end_of_order_large.c81c1f57df5a8a235dde14b10eba4ce14a6fefe7.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -29457,7 +29456,7 @@
 				"name": "Hellstrider",
 				"defindex": 4744,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "mount",
+				"item_type_name": "Warhorse",
 				"item_name": "Hellstrider",
 				"item_description": "Where rides the knight, only chaos remains.",
 				"proper_name": false,
@@ -35450,8 +35449,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Sharp_Blade",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade.91c357e84d50676fc04b111daee3ddd96c77f879.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade_large.5990e29401f483bc5ddb3685a7a526369b4e8620.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade.bcc4dd718c9225120c73ef9616fe0e9468db0406.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_sharp_blade_large.8abccc1497ceb7a119a996dd7a3d6d7290abfc46.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -35501,8 +35500,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_The_Magic_Ends_Here",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_magic_ends_here.a48b9a45d97bc69459bbbe6a38524c8e59acfc77.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_magic_ends_here_large.e51f4362504490b66a2a7814ef1456272c9b145b.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_magic_ends_here.e8a55369bc2ec90824a7214231c84c642da073be.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_the_magic_ends_here_large.e941db4334fdc835ea1d065e579b040c1de9483d.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -35525,11 +35524,11 @@
 				"item_description": "Watch as Pudge \"Shakes his Money Maker\" while his foes cannot look away!\r\n\t\r\n\tEquip the item and bind a key to the 'Taunt Item' button to use.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt__Shake_Your_Money_Maker",
+				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Shake_Your_Money_Maker",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt__shake_your_money_maker.c46e3a41983563f7d400096677703d412c5c4c93.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt__shake_your_money_maker_large.43739e13721713bae017e552fa5e9f0af8eb0c35.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shake_your_money_maker.25cd4831a45517d9ff9bde9ac330093f0b55977c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_shake_your_money_maker_large.671d25fbc430b4c795e2c635cfd78a37fd72263e.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -35555,8 +35554,8 @@
 				"image_inventory": "econ\/taunts\/DOTA_Item_Taunt_Get_Burned",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_get_burned.9f4f9e83837d56f39ca6f00eb374b5cf3f9373f2.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_get_burned_large.202935ac1b031cd405147d1ae86dc5a06afae696.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_get_burned.619f39492413a23a403aa62623a462cabfdb1c36.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/taunts\/dota_item_taunt_get_burned_large.00e94c71e10ab45fb6f1fb60b5a158fe874a7b2b.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -39340,8 +39339,8 @@
 				"image_inventory": "econ\/items\/lion\/stone_hand\/stone_hand",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/stone_hand\/stone_hand.4a4721da3c394f1f1b0734a27cb907a30fb756bc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/stone_hand\/stone_hand_large.e0ee35e6a78fedef93333706251bccc65a3abfd2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/stone_hand\/stone_hand.14cc18d4eb7ee746de51341265e81a45d6ee50a4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/stone_hand\/stone_hand_large.1c4d1d38055f9f98f3cc31956b9d26a202be2575.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -40043,11 +40042,11 @@
 				"item_description": "No foe shall stand against the true form!",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw",
+				"image_inventory": "econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw_models\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw.5c8c532c75f585fc10c82c624e76256d16598291.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw_large.ccf0f27e3ac1a90d701fc4c85f382980dcdf13a1.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw_models\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw.a22d32071b65e661c572ff282b4c5b7f52993fbd.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw_models\/items\/lone_druid\/true_form\/form_of_the_atniw\/form_of_the_atniw_large.28729851b8c4189d6d97b0a233c75c62c302b0ea.png",
 				"item_set": "ld_antiws_fury",
 				"capabilities": {
 					"nameable": true,
@@ -44485,6 +44484,148 @@
 				}
 			},
 			{
+				"name": "Viridus Crusher",
+				"defindex": 5381,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Viridus Crusher",
+				"item_description": "A weapon that makes sense only in the Chapels of Claszureme. And even then, only barely.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon.86c5906c838f3d161d0632972f17fc870253509f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_weapon\/viridus_weapon_large.fe6db505c6a47de10f1dbc0b530c15d23ff2c29e.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Claw",
+				"defindex": 5382,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers and Hand Armor",
+				"item_name": "Viridus Claw",
+				"item_description": "If you wish to grasp the finer points of Dhreg Cult dogma, you must wear the proper gear for rending the tracts into ribbons.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_claw\/viridus_claw",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_claw\/viridus_claw.8376300c33a9f89c24ea0ae63d9308e1ffb50471.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_claw\/viridus_claw_large.c79ee257c9407caf863aa99387e7e72b52bf5ca1.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Leggings",
+				"defindex": 5383,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Leggings and Girdpiece",
+				"item_name": "Viridus Leggings",
+				"item_description": "Girded in madness, these leggings defy meaning.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings.9e79a19eff27dac3891408c913e3b2ee328cefd0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_leggings\/viridus_leggings_large.e4e8866b83872826916ec0f4f3ea68a6ff337935.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Viridus Spine",
+				"defindex": 5384,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spine Spikes and Bicep Guards",
+				"item_name": "Viridus Spine",
+				"item_description": "A surfeit of arcane certainty may lead to exquisite eruptions. While painful, these excrescences mark one who has mastered the ultimate lore.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/faceless_void\/viridus_spine\/viridus_spine",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_spine\/viridus_spine.6973839383b277424a01c104871f46849cafdf91.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/faceless_void\/viridus_spine\/viridus_spine_large.f6056d947b2f013b5b8044ca8cb0cb48286e1bc6.png",
+				"item_set": "viridi_inanitas",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 1 Axe",
+				"defindex": 5385,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 1 Axe",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 2 Butterfly",
+				"defindex": 5386,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 2 Butterfly",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Izoku",
 				"defindex": 5387,
 				"item_class": "dota_item_wearable",
@@ -45231,6 +45372,1119 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/furion\/natures_outcast_bracer01\/natures_outcast_bracer01.523315f1f7773d8738986a5a1484b61af4d9f081.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/furion\/natures_outcast_bracer01\/natures_outcast_bracer01_large.f5e5c41b618d375607ce158166e8322f5c4d2102.png",
 				"item_set": "natures_outcast",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Kraken's Bane",
+				"defindex": 5419,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Harpoon",
+				"item_name": "Kraken's Bane",
+				"item_description": "Created to cleanse the sea of its greatest scourge, this fearsome harpoon is now used against those who once dared wield it.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tidehunter\/krakens_bane\/krakens_bane",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tidehunter\/krakens_bane\/krakens_bane.8f702305ca34ec2205007bf71807cb20aa751fa6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tidehunter\/krakens_bane\/krakens_bane_large.ab3cb457c0e7854c40624e7d5295b259644eda8f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Laments of the Dead",
+				"defindex": 5420,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Laments of the Dead",
+				"item_description": "Forged by a necromantic smith, on whose anvil tortured souls were hammered into obedience, it is Rotund'jere's pleasure to make sure this deadly scythe fulfills its only wish: to reap the souls of the living.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead.a22fab5105180fa2140c264bec0a7c627b11bad2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/necrolyte\/laments_for_the_dead\/laments_for_the_dead_large.084b79c69228163cd4a3d2fcc24cd266dfc74d8b.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Grievous Grapnel",
+				"defindex": 5421,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "Grievous Grapnel",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel.d195f68eec6d21f33dbbc31af742cdf90fd9a8b6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/pudge\/grievous_grapnel\/grievous_grapnel_large.a54d85545d4d085e7d0394080bd3248932b4e986.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ashborn Horns",
+				"defindex": 5422,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Ashborn Horns",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/ashborn_horns\/ashborn_horns",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/pugna\/ashborn_horns\/ashborn_horns.9e2ee5f51b4884f6c4fead46d62e80e2e43e296d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/pugna\/ashborn_horns\/ashborn_horns_large.0eda65d6a33c109a0deb8425abd4096765c5dc43.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Staff of Infernal Chaos",
+				"defindex": 5424,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Staff of Infernal Chaos",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos.d586c2ba0d085d1ec56d92b7b52a10e656df6097.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/warlock\/staff_of_infernal_chaos\/staff_of_infernal_chaos_large.39273eb09087b6bf8d6552c552791df9b9a74d24.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Frozen Stein of the Bar Brawler",
+				"defindex": 5425,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Stein",
+				"item_name": "Frozen Stein of the Bar Brawler",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler.cb78af707a399436f810076de68a8176e027e70f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/tuskarr\/frozen_stein_of_the_bar_brawler\/frozen_stein_of_the_bar_brawler_large.94d76b2ba5985c983061943b87b7f7173fddd271.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shattered Axe of the Vanquished",
+				"defindex": 5426,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Shattered Axe of the Vanquished",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished.157dddd6edff5555c6f15f93a086013ccdca7f2a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/centaur\/shattered_axe_of_the_vanquished\/shattered_axe_of_the_vanquished_large.a0d0fa3614bdaed6e2e4fa0161bee05376ebf390.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Plunder of the High Seas",
+				"defindex": 5427,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Plunder of the High Seas",
+				"item_description": "Pillage with plunder!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/admirals_treasury\/admirals_treasury",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/admirals_treasury\/admirals_treasury.365100c2141853a116721c6bee16764dd574a729.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/admirals_treasury\/admirals_treasury_large.dc8c1823031acc53da286988f7e07b4986ecbb8f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Meadow's Mercy",
+				"defindex": 5428,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Meadow's Mercy",
+				"item_description": "Though the forest itself may be neutral, this spear will bring a swift end to those who dare disturb the creatures who call it home.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/meadows_mercy\/meadows_mercy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/enchantress\/meadows_mercy\/meadows_mercy.442c73dc3b0a47342e324eba2e03e68c6e171cca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/enchantress\/meadows_mercy\/meadows_mercy_large.4be10086d7460c2c9f53349bf304be14bb3cab35.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Eye of Niuhi",
+				"defindex": 5429,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Eye of Niuhi",
+				"item_description": "Engrained within the beaten blade of the fisherman who first slew him lies the eye of Niuhi, a monster from the deep, long defeated but not forgotten. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi.eb90877b89f8d32f0c0430119472ad83ce21eaae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/phantom_lancer\/eye_of_niuhi\/eye_of_niuhi_large.4d755762632a080f29fe2b1023dee0f9b64b8773.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shadow Brand",
+				"defindex": 5430,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Shadow Brand",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/shadow_brand\/shadow_brand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/shadow_brand\/shadow_brand.26b6b62740edbacf7c4cc64074192721e6968415.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/shadow_brand\/shadow_brand_large.77482c8bab1a7620c3b6d60a81d6c77bcc1af494.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Rifle",
+				"defindex": 5431,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Rifle",
+				"item_name": "Hare Hunt Rifle",
+				"item_description": "Overkill for a rabbit hunt? You haven't seen these particular rabbits.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle.d8ae193e4e64729d17ba8a7f315c3a21d77860e0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_rifle\/hare_hunt_rifle_large.780ff0ab6dd7469f28e0c951945c75d03326bfad.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Sleeves",
+				"defindex": 5432,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeves",
+				"item_name": "Hare Hunt Sleeves",
+				"item_description": "Richly ornate protection for Sniper's forearms when he creeps through shady cover, as snipers do.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves.83cb509445132a7f6c6014298727abd853309424.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_sleeves\/hare_hunt_sleeves_large.73882e315bdf82d6a523b7bc39cc271240f70c18.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Shoulders",
+				"defindex": 5433,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Hare Hunt Shoulders",
+				"item_description": "What's that? I can't hear you. There's a lit fuse hissing in my ear.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders.9e5909e9dcad2a737fd15b63c07ece1fffc011ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_shoulders\/hare_hunt_shoulders_large.6948d48ffd64b6feaaf1fff481c750c62e2c04dd.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Cape",
+				"defindex": 5434,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Hare Hunt Cape",
+				"item_description": "A cape as golden as the autumn woods through which he stalks his tremulous prey.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape.8cc38679ec76c957cde6295eb2d907429060b939.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_cape\/hare_hunt_cape_large.932aed3f4ef0090a973183824c883973bff1de6f.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hare Hunt Hat",
+				"defindex": 5435,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hare Hunt Hat",
+				"item_description": "A furry woodland pelt is a perfect pate protector. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat.658445c53273446313a9b15bde8d5d4d7f34eeb4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/sniper\/hare_hunt_hat\/hare_hunt_hat_large.ea833b660780d70c503bd2d7a440056c2ccc3bc7.png",
+				"item_set": "hare_hunt",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Trident of the Deep One",
+				"defindex": 5436,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Trident",
+				"item_name": "Trident of the Deep One",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one.759a9eae4d58da4a9c66552b85c2e088a0be94fb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/slardar\/trident_of_the_deep_one\/trident_of_the_deep_one_large.8375ae68a3c21b847e00dc398bbf0cd830ed6ecd.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Arms",
+				"defindex": 5442,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Arm Shields",
+				"item_name": "Ancient Armor Arms",
+				"item_description": "Water finds its perfect form in Morphling's grip.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms.3a8c90807a3dd8621c0ec24c9c5658d73290b045.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_arms\/ancient_armor_arms_large.eb08234ff49645fb23b4b6254fd4f645e27bbfe2.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Back",
+				"defindex": 5443,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Back Shield",
+				"item_name": "Ancient Armor Back",
+				"item_description": "A shield that barely skims the surface of Morphling's power.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back.e3f70f1952fd6bfa15efebc012229d11ae33dae8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_back\/ancient_armor_back_large.a5d354a7b8c8d5484213736be55a1383cbcf9310.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Breastplates",
+				"defindex": 5444,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Breastplates",
+				"item_name": "Ancient Armor Breastplates",
+				"item_description": "Injury added to insult, there is nothing worse than being struck full on by Morphling when he wears these plates.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates.78f9f1518dd84c5842566140c7383e291840f88a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_breastplates\/ancient_armor_breastplates_large.11c74f69a245c093bc7112a208616b22c7d491e7.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Helmet",
+				"defindex": 5445,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Ancient Armor Helmet",
+				"item_description": "Watery thoughts can scarcely be contained.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head.b4ef08153dcb85f8a60b080c2284ffeda45e1b99.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_head\/ancient_armor_head_large.95681a825bf322329ccab42c7ec772985dbf6ba9.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ancient Armor Shoulder Shields",
+				"defindex": 5446,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder Shields",
+				"item_name": "Ancient Armor Shoulder Shields",
+				"item_description": "The elements align themselves to enhance an ancient strength.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders.f2d76e31b7ec5c3e23151ddbebee1b581eab427b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders_large.d3e8242458980bd6ef8160caa0380fe6d63223e9.png",
+				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tail of Fury",
+				"defindex": 5449,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Tail of Fury",
+				"item_description": "Poets will tell the tale of the great fury of Barathrum.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_tail\/fury_tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_tail\/fury_tail.129768c42201420f111773ac3f090e2172969096.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_tail\/fury_tail_large.7b8ed421f38f25e55facaf7a2f227f531fd9552c.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Bracers of Fury",
+				"defindex": 5450,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Fury",
+				"item_description": "These arm  guards protect against the occasional wayward strike of your own flail.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_arms\/fury_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_arms\/fury_arms.6cf9294f692abbd5b5fafbd67f532837e4529110.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_arms\/fury_arms_large.e796e82b28a7da52498a15ebff44f7cdb796421a.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Belt of Fury",
+				"defindex": 5451,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of Fury",
+				"item_description": "Proving pants are superfluous, if your belt is this powerful.  ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_belt\/fury_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_belt\/fury_belt.ca40a602e12bb3dd2097eb212fa8339fb7c59656.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_belt\/fury_belt_large.45c78dbc5f24c41ad5dea4055443426e4c1f7dda.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mask of Fury",
+				"defindex": 5452,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horned Mask",
+				"item_name": "Mask of Fury",
+				"item_description": "Your face is masked but your fury won't be.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_head\/fury_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_head\/fury_head.75c3665a3e5a7eeefb9a9fbc8495cb7e2799377f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_head\/fury_head_large.7492ea0abe6fda5139ed30c76bc176a6ac2c9f62.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pauldrons of Fury",
+				"defindex": 5453,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Pauldrons of Fury",
+				"item_description": "Upon your broad shoulders, the weight of the war rests.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders.035d1cd60a7e1c5fe0c691a20e185e09227f2e29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_shoulders\/fury_shoulders_large.6fd58fd6676a14e2ff07b91283efb70c51458cac.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Spirit Crusher",
+				"defindex": 5454,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Spirit Crusher",
+				"item_description": "Your enemy's spirits will be crushed by the sight of this dread weapon.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon.f625cf95b4d3dfa62c8c3dbe2947cf9df860c900.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/spirit_breaker\/fury_weapon\/fury_weapon_large.112d54ab748eed6fc5afb0a1e7a73e30ecced061.png",
+				"item_set": "barathrums_fury",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Hand of Hell's Ambassador",
+				"defindex": 5459,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demon Arm",
+				"item_name": "Hand of Hell's Ambassador",
+				"item_description": "Enemies cower when he raises this horrific hand, but friends merely return the greeting.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_arm\/hell_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_arm\/hell_arm.016726d65a9902f1daba51b0e830eb46b5b72ec7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_arm\/hell_arm_large.991fc87867958634952d907466ea3af3923c1c7d.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of Hell's Ambassador",
+				"defindex": 5460,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape and Collar",
+				"item_name": "Mantle of Hell's Ambassador",
+				"item_description": "Suggestive of the robes of office of some infernal dignitary, the cape was an honorific bestowed on Lion by a grateful demon populace.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_cape\/hell_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_cape\/hell_cape.1418a405ad5e1d86ae96a34248bc236a387da45d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_cape\/hell_cape_large.8c09af1e6a77e5248f0bf85dfacbe98e2bc0c19f.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Epaulets of Hell's Ambassador",
+				"defindex": 5461,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder guards.",
+				"item_name": "Epaulets of Hell's Ambassador",
+				"item_description": "Shoulderpieces too evil to reside in Hell a moment longer. Lion was only too happy to spare them from the Pit.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_shoulders\/hell_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_shoulders\/hell_shoulders.1913caaa951cdab60109bfb617b77ad019975a54.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_shoulders\/hell_shoulders_large.e199ada95aa8fe54debbce4a7d91d90d9e000d12.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Strifemaul of Hell's Ambassador",
+				"defindex": 5462,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Strifemaul of Hell's Ambassador",
+				"item_description": "He who speaks for Hell may carry the Strifemaul to further emphasize the important points of his argument.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lion\/hell_weapon\/hell_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_weapon\/hell_weapon.f5bdad75c7bd59b7dbb270a2f4f81601f43286d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/lion\/hell_weapon\/hell_weapon_large.af8b98a0f52ff247d7022cb7c733d124634bfe5c.png",
+				"item_set": "hells_ambassador",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Foraged Cap",
+				"defindex": 5463,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cap",
+				"item_name": "Admiral's Foraged Cap",
+				"item_description": "A cap found washed up on a Keenish shore, shortly before Kunkka's arrival there.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap.f1d2574b2a019396fb3d346a9b9520e3fccdbc42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_admiral_cap\/arm_lev_admiral_cap_large.9404f5e699648891333ec5b7ab5b23e66ff89900.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Stash",
+				"defindex": 5464,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Admiral's Stash",
+				"item_description": "The keys that hang from this belt are said to unlock the gates of the Keen capital, the prisons of his fleet, countless treasure chests that lie inside the hull of his majestic ship \"Mighty Leviathan\" ... and terrifying secrets that lie deep at the bottom of the sea. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt.4c163d26ce83780cd5cc6259eb52547c8765a1a5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_stash_belt\/arm_lev_stash_belt_large.a94f68d9e7c1e92ab45cca59894bf4e9e1faaa3e.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Gauntlets",
+				"defindex": 5465,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Gauntlets",
+				"item_name": "Claddish Gauntlets",
+				"item_description": "The only piece of equipment left on Kunkka after he washed up on a Keen shore. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets.7b45245a2c6d839bd623bedf0fee9c87509c8126.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_gauntlets\/arm_lev_claddish_gauntlets_large.90db68a1f6a267a1e5c112997e36140bddda300a.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Guard",
+				"defindex": 5466,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulder guards.",
+				"item_name": "Claddish Guard",
+				"item_description": "A high collar keeps salty waters and harsh weather from marring Kunkka's visage, while heavy shoulder-plates have deflected many a tooth and claw belonging to such abominations as lurk in the murky waters. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders.8fecb40a36b6091b74319c1dec68e3c96b65c84b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoulders\/arm_lev_claddish_shoulders_large.fdb4adb276886bb1bb2a4b078364b6d1011d4623.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Claddish Hightops",
+				"defindex": 5467,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoes",
+				"item_name": "Claddish Hightops",
+				"item_description": "These steel toe-guards are effective at fending off sea monsters, as well as punishing booties of lazy Keen sailors. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes.f615d4d0c82d7bf2820e1f7c0e75cb57ee6960d1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_claddish_shoes\/arm_lev_claddish_shoes_large.520f0a101904441ce369e4b21135cd744253156c.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Neptunian Sabre",
+				"defindex": 5468,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sabre",
+				"item_name": "Neptunian Sabre",
+				"item_description": "It is said that Kunkka compelled Keen artisans to make this sabre from the salvage of vanquished Cataract Demons that were washed upon the shores of Keen homelands. It is speculated that he split the sea in half with it to locate Maelrawn the Tentacular and sever one of Its tentacles as a testament of his triumph against the Demons of Cataract. Wielding it with brute force and sea-hardened will, he now splits apart his enemies in torrents of sea blue and crimson red. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre.3e3062c84b601fbaa15dc53c8eb9a8907e50cbae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_neptunian_sabre\/arm_lev_neptunian_sabre_large.387d50209b2592023c3fedbf7f6f794d92c926ad.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Admiral's Salty Shawl",
+				"defindex": 5469,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Admiral's Salty Shawl",
+				"item_description": "A cape made from the skin of a Cataract Demon, and dyed in the colors of the Claddish Navy, Kunkka wears it to fend off any wicked creature that dares lunge at him. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl.1b3b416d435539a9a10a2c48d523a78802c8132a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_admiral_shawl\/arm_lev_admiral_shawl_large.adf9a71883ef2ddee526f55bfdb8bcd200b9198f.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Ye Olde Pipe",
+				"defindex": 5470,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pipe",
+				"item_name": "Ye Olde Pipe",
+				"item_description": "An old pipe Kunkka plucked from a tidepool after being shipwrecked, the old seadog claims it brings him fortune and good luck, and thus never ever takes it from his scurvy-ridden mouth. \r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe.db3664105f837cd401d9262c6bdecdd429d0cbce.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/kunkka\/arm_lev_pipe\/arm_lev_pipe_large.d1c558955c276069afbc8ccd0788a2a49725feea.png",
+				"item_set": "armaments_of_leviathan",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 3 Demon Edge",
+				"defindex": 5471,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 3 Demon Edge",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "WETA Placeholder 4 Vanguard Shield",
+				"defindex": 5472,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "WETA Placeholder 4 Vanguard Shield",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blade of Burning Turmoil",
+				"defindex": 5518,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Blade of Burning Turmoil",
+				"item_description": "Forged in the heat of a dying star.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade.dbe0ab216cd77043fa071e701ec99286d028527a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_blade\/ck_esp_blade_large.4ba7856e76620e5095bab1b4a36b646e7b973005.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Horns of Burning Turmoil",
+				"defindex": 5519,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Horns of Burning Turmoil",
+				"item_description": "From realms beyond mortal knowledge rides forth a heaving darkness.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm.2c95c5bad4cc2c6e6c7a66cfda8d3eb8767156b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_helm\/ck_esp_helm_large.d84a3cac87569d5532e3a93aa8f2ff0833ec1580.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Enmity",
+				"defindex": 5520,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Warhorse",
+				"item_name": "Enmity",
+				"item_description": "Its strides are hatred, its bray a judgment, its gallop the march of destruction.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount.d48adf7e79169b8240f7d7ab52ae44f233f36e3f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_mount\/ck_esp_mount_large.b69e2eb63b82a782c788441e5dd0c48669118448.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shield of Burning Turmoil",
+				"defindex": 5521,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Shield of Burning Turmoil",
+				"item_description": "Cooled in the black nether between worlds, its core still bends and burns.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield.807bc5ce864cbe99c78687b4166068b4570e3b3f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_shield\/ck_esp_shield_large.cde934e3ac54d6759cd80416e98f52127683a14e.png",
+				"item_set": "chaos_knight_mephistopheles",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of Burning Turmoil",
+				"defindex": 5522,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Mantle of Burning Turmoil",
+				"item_description": "Within the astral turmoil, heat bends and matter swirls.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder.cdb89a5be22b70830f4799b648dc175692aefaa8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/chaos_knight\/ck_esp_shoulder\/ck_esp_shoulder_large.79e1fe9d043ce124537e753fdc3f161bd8a33d49.png",
+				"item_set": "chaos_knight_mephistopheles",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -51015,7 +52269,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51056,7 +52310,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51321,7 +52575,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51402,7 +52656,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51443,7 +52697,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51484,7 +52738,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51525,7 +52779,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51566,7 +52820,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51607,7 +52861,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51648,7 +52902,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51689,7 +52943,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51730,7 +52984,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51771,7 +53025,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51812,7 +53066,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51853,7 +53107,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51894,7 +53148,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51935,7 +53189,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -51976,7 +53230,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52017,7 +53271,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52058,7 +53312,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52099,7 +53353,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52140,7 +53394,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52181,7 +53435,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52222,7 +53476,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52263,7 +53517,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52304,7 +53558,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52385,7 +53639,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52478,7 +53732,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52519,7 +53773,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52560,7 +53814,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52601,7 +53855,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52642,7 +53896,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52683,7 +53937,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52724,7 +53978,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52765,7 +54019,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52806,7 +54060,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52847,7 +54101,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52888,7 +54142,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52929,7 +54183,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -52970,7 +54224,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53011,7 +54265,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53052,7 +54306,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53093,7 +54347,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53134,7 +54388,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53175,7 +54429,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53216,7 +54470,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53257,7 +54511,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53298,7 +54552,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53339,7 +54593,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53380,7 +54634,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53421,7 +54675,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53462,7 +54716,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53503,7 +54757,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53544,7 +54798,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53585,7 +54839,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53626,7 +54880,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53667,7 +54921,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53708,7 +54962,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53749,7 +55003,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53790,7 +55044,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53831,7 +55085,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53872,7 +55126,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53913,7 +55167,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53954,7 +55208,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -53995,7 +55249,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54036,7 +55290,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54077,7 +55331,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54118,7 +55372,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54159,7 +55413,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54200,7 +55454,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54241,7 +55495,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54282,7 +55536,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54323,7 +55577,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54364,7 +55618,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54480,7 +55734,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54521,7 +55775,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54562,7 +55816,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54603,7 +55857,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54644,7 +55898,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54721,7 +55975,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54762,7 +56016,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54803,7 +56057,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54844,7 +56098,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54885,7 +56139,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -54926,7 +56180,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "Use on Compendium"
+					"use_string": "StampPlayerCard"
 				},
 				"attributes": [
 					{
@@ -55087,7 +56341,7 @@
 				"image_inventory": "econ\/huds\/hud_iron_cage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_iron_cage.709da86824d0db1d90851bd533dc2b33dcaa79e2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_iron_cage.1d63d61d1dd95bc4ed83eb526bbd04fd6c1dbab4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_iron_cage_large.debbaec1be8b9f1ec5884ac83aee056adefd39d6.png",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -55728,6 +56982,118 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 36
+					}
+				]
+				
+			},
+			{
+				"name": "Golden Treasures",
+				"defindex": 10327,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Golden Treasures",
+				"item_description": "Riches are won on the battlefield.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_golden_treasures",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_golden_treasures.7df8277cf4b71277690412fae227c2df3ed6ec29.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_golden_treasures_large.ef2cfae87209de54ebcbf2115d6f75c14c66eb10.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tremor",
+				"defindex": 10333,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Tremor",
+				"item_description": "War rattles every foundation.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_quake",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_quake.3410992998362143ffe6632a3c2027e3e507b55f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_quake_large.ab4f87131dce1bb99c6493ea0cb25cc38d34b96b.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Omen",
+				"defindex": 10336,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Omen",
+				"item_description": "Ill tidings come unbidden.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_od",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_od.ac7caf46261835101c50869e89c1b31a6e78aeec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/huds\/hud_od_large.015c20425260aa6851a97221fcf7089edc7803a8.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Scuttling Scotty",
+				"defindex": 10350,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Scuttling Scotty",
+				"item_description": "Separated from his flock in an ice storm, the adventurous young pengling Scotty wandered the Blueheart Glacier, starving and alone, until he found himself rescued by a certain young Ice Maiden. Crystal Maiden nursed him back to health with love and fishy treats. Swearing to return her kindness, Scotty swore off adventuring, and now he has no urge other than to carry supplies and treats to those in need.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/scuttling_scotty_penguin\/scuttling_scotty_penguin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/courier\/scuttling_scotty_penguin\/scuttling_scotty_penguin.f55c5a16592df9492f4493994d93291d5472e8e1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/items\/courier\/scuttling_scotty_penguin\/scuttling_scotty_penguin_large.347101519f494590937f6fdb77cf5b2da624886f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "netolic pro league tag",
+						"class": "netolic pro league tag",
+						"value": 4
+					},
+					{
+						"name": "league id",
+						"class": "",
+						"value": 97
+					},
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 33
 					}
 				]
 				
@@ -63446,7 +64812,7 @@
 				"item_class": "tool",
 				"item_type_name": "Gift",
 				"item_name": "Lockless Luckbox",
-				"item_description": "Don't bother looking for your keys, because this chest doesn't need one! Free with any purchase for a limited time, our Lucky Lockless Chest contains one of a number of prized possessions that may be found only inside of it. So save your keys for a chest that needs them. You already got lucky!",
+				"item_description": "Don't bother looking for your keys, because this chest doesn't need one! Our Lucky Lockless Chest contains one of a number of prized possessions that may be found only inside of it. So save your keys for a chest that needs them. You already got lucky!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/gift_lockless_luckbox",
@@ -65065,7 +66431,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Nexon Sponsorship League",
-				"item_description": "Nexon returns with its new NSL, Nexon Sponsorship League. Starting in Sep 28, 2013, NSL will span three seasons with a total of KRW 300 million(USD 270k) worth of sponsorship funding. Watch the top team matches of Season 1. Ticket holders will receive our official courier, Baekho!",
+				"item_description": "Starting in Sep 28th 2013, the Nexon Sponsorship League will span three seasons with a total of KRW 300 million(USD 270k) worth of sponsorship funding. Watch the top team matches of Season 1.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship",
@@ -65143,8 +66509,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_wpcace",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace.73afa9b60bbaeb7174bbc83e74ae99d31d7ba549.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace_large.09b7fa840028d6755e9369c127bf07cec7c27729.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace.4e00729c04d8078d55baa72c4c68c0f89448a66e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace_large.8805ac289be172c79bb1809f4be9c55814f13bcd.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -65179,8 +66545,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_wpcace",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace.73afa9b60bbaeb7174bbc83e74ae99d31d7ba549.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace_large.09b7fa840028d6755e9369c127bf07cec7c27729.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace.4e00729c04d8078d55baa72c4c68c0f89448a66e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_wpcace_large.8805ac289be172c79bb1809f4be9c55814f13bcd.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -65246,7 +66612,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Perfect World Dota Academy",
-				"item_description": "Featuring various kinds of instructive matches including guides to heroes, mechanics and tactics. Perfect World Dota Academy offers a perfect route for beginners to learn Dota. Also, the academy periodically broadcast exciting activities held by Perfect World. Entrance to this tutorial-competition show is completely free for Dota players of the world.",
+				"item_description": "Featuring various kinds of instructive matches including guides to heroes, mechanics and tactics. Perfect World Dota Academy offers a perfect route for beginners to learn Dota. Also, the academy periodically broadcasts exciting activities held by Perfect World.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dotaacademy",
@@ -65282,7 +66648,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Perfect World Dota Academy - ADMIN",
-				"item_description": "Featuring various kinds of instructive matches including guides to heroes, mechanics and tactics. Perfect World Dota Academy offers a perfect route for beginners to learn Dota. Also, the academy periodically broadcast exciting activities held by Perfect World. Entrance to this tutorial-competition show is completely free for Dota players of the world.",
+				"item_description": "Featuring various kinds of instructive matches including guides to heroes, mechanics and tactics. Perfect World Dota Academy offers a perfect route for beginners to learn Dota. Also, the academy periodically broadcasts exciting activities held by Perfect World.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dotaacademy",
@@ -65434,6 +66800,2095 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cybergamer.f0d935de0618b3748f97ceb0a12ad82ae24e6617.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cybergamer_large.63b0662ecc200879141844a83b00f5631dc6cd91.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Emerald Polycount Key",
+				"defindex": 15265,
+				"item_class": "tool",
+				"item_type_name": "Treasure Key",
+				"item_name": "Emerald Polycount Key",
+				"item_description": "Used to open locked <font color='#9da1a9'>Emerald Polycount Collection<\/font>.\r\n\tDouble click or right-click the key in your backpack and select the chest you want to open.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/treasure_key_emerald_polycount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/treasure_key_emerald_polycount.49841a362769e4622df2bfba56b05db59d3f5254.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/tools\/treasure_key_emerald_polycount_large.b1e3cf4f003c325483e926a6d38f92bb7cf8a7e4.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "treasure_chest_36_emerald_polycount",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Serbian Weekly Dota Cup",
+				"defindex": 15266,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Serbian Weekly Dota Cup",
+				"item_description": "A weekly Serbian tournament including all Balkan countries where top teams compete for a prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_serbianleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_serbianleague.82520b8ad7f4baffecd8dc79e3454b8e97de6b5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_serbianleague_large.105df15d56c9bd0c47ed25f40e148cf6252128c2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Serbian Weekly Dota Cup - ADMIN",
+				"defindex": 15267,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Serbian Weekly Dota Cup - ADMIN",
+				"item_description": "A weekly Serbian tournament including all Balkan countries where top teams compete for a prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_serbianleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_serbianleague.82520b8ad7f4baffecd8dc79e3454b8e97de6b5f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_serbianleague_large.105df15d56c9bd0c47ed25f40e148cf6252128c2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Copa Latinoamerica Plantronics Gaming LPD",
+				"defindex": 15268,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Copa Latinoamerica Plantronics Gaming LPD",
+				"item_description": "8 Latin American teams from a qualifier willl be competing to bring their best team to represent them in this tournament. Sponsored by Plantronics.Inc and LPD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_latinoamerica",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_latinoamerica.74c27f33c8500e1b35b978e29c943818256bd3f3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_latinoamerica_large.97712992283964bfe4427e66480a043e8f0702ae.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Copa Latinoamerica Plantronics Gaming LPD - ADMIN",
+				"defindex": 15269,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Copa Latinoamerica Plantronics Gaming LPD - ADMIN",
+				"item_description": "8 Latin American teams from a qualifier willl be competing to bring their best team to represent them in this tournament. Sponsored by Plantronics.Inc and LPD.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_latinoamerica",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_latinoamerica.74c27f33c8500e1b35b978e29c943818256bd3f3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_latinoamerica_large.97712992283964bfe4427e66480a043e8f0702ae.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SCD Tide's Wrath Season 3",
+				"defindex": 15270,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SCD Tide's Wrath Season 3",
+				"item_description": "The third season of the open registration Australian and New Zealand Dota 2 Tournament \"Tide's Wrath\" is upon us. Southern Cross Dota, a news organisation for Dota 2 in Australia and New Zealand is running the third series of an event successfully run in Australia - Tide's Wrath!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_scdseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_scdseason3.917291a8de9f91d9b97b2a5a3421ea25dd222195.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_scdseason3_large.514a25be5d382149d0024fad98dddf37b8b5e1f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SCD Tide's Wrath Season 3 - ADMIN",
+				"defindex": 15271,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SCD Tide's Wrath Season 3 - ADMIN",
+				"item_description": "The third season of the open registration Australian and New Zealand Dota 2 Tournament \"Tide's Wrath\" is upon us. Southern Cross Dota, a news organisation for Dota 2 in Australia and New Zealand is running the third series of an event successfully run in Australia - Tide's Wrath!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_scdseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_scdseason3.917291a8de9f91d9b97b2a5a3421ea25dd222195.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_scdseason3_large.514a25be5d382149d0024fad98dddf37b8b5e1f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LigaBEL - ADMIN",
+				"defindex": 15272,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "LigaBEL - ADMIN",
+				"item_description": "A Brazlian tournament featuring 16 of the best national teams competing for a prize of R$ 500,00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ligabel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ligabel.30038b6c1b35132ea9a91ab0db0be979aa6cdce1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ligabel_large.511d749afa27447ba373aa4b0786180bccb8618d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LigaBEL",
+				"defindex": 15273,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "LigaBEL",
+				"item_description": "A Brazlian tournament featuring 16 of the best national teams competing for a prize of R$ 500,00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ligabel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ligabel.30038b6c1b35132ea9a91ab0db0be979aa6cdce1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ligabel_large.511d749afa27447ba373aa4b0786180bccb8618d.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Megalodon Cup Season 1",
+				"defindex": 15274,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Megalodon Cup Season 1",
+				"item_description": "The Megalodon Cup features the top 8 teams from Brazil competing for a total prize of R$1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_megalodon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_megalodon.3d2e8620b3bdba68e8e7c7545d879b45d05db2af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_megalodon_large.60af9666533a71a31fbeba0e2c3608d254e80b0c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Megalodon Cup Season 1 - ADMIN",
+				"defindex": 15275,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Megalodon Cup Season 1 - ADMIN",
+				"item_description": "The Megalodon Cup features the top 8 teams from Brazil competing for a total prize of R$1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_megalodon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_megalodon.3d2e8620b3bdba68e8e7c7545d879b45d05db2af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_megalodon_large.60af9666533a71a31fbeba0e2c3608d254e80b0c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rising Stars Dota League",
+				"defindex": 15276,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rising Stars Dota League",
+				"item_description": "Rising Stars is a tournament featuring 16 total teams. 8 teams are invited (4 from Brazil and 4 from South America) and 8 more from a qualifier). The top 4 teams for 2 groups of 8 teams will compete for a total prize of $500.00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_risingstars",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_risingstars.50013826c3afcc4f5f91e2e1473f8bbfc122d654.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_risingstars_large.694fa7e33ed3916c1c17d2252f505a6b004b710e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Rising Stars Dota League - ADMIN",
+				"defindex": 15277,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Rising Stars Dota League - ADMIN",
+				"item_description": "Rising Stars is a tournament featuring 16 total teams. 8 teams are invited (4 from Brazil and 4 from South America) and 8 more from a qualifier). The top 4 teams for 2 groups of 8 teams will compete for a total prize of $500.00!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_risingstars",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_risingstars.50013826c3afcc4f5f91e2e1473f8bbfc122d654.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_risingstars_large.694fa7e33ed3916c1c17d2252f505a6b004b710e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota 2 Beginner's Challenge",
+				"defindex": 15278,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AMD Dota 2 Beginner's Challenge",
+				"item_description": "Nexon presents the AMD Dota 2 Beginnerâs Challenge league, a series of weekly online tournaments open for amateur teams in Korea. Each team competes weekly to win prizes sponsored by AMD! The event will begin on Oct 5, 2013 and run for three months including the grand finals at each monthâs end.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amdbeginner",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amdbeginner.9cefcc8d0cf874a47ee1ab8b9c39985722f261b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amdbeginner_large.6d1e72da535e33239b6fdfe0a57fcf2c5ca5da3f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AMD Dota 2 Beginner's Challenge - ADMIN",
+				"defindex": 15279,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "AMD Dota 2 Beginner's Challenge - ADMIN",
+				"item_description": "Nexon presents the AMD Dota 2 BeginnerÃ¢ÂÂs Challenge league, a series of weekly online tournaments open for amateur teams in Korea. Each team competes weekly to win prizes sponsored by AMD! The event will begin on Oct 5, 2013 and run for three months including the grand finals at each monthÃ¢ÂÂs end.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_amdbeginner",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amdbeginner.9cefcc8d0cf874a47ee1ab8b9c39985722f261b8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_amdbeginner_large.6d1e72da535e33239b6fdfe0a57fcf2c5ca5da3f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fengyun Tournament",
+				"defindex": 15280,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fengyun Tournament",
+				"item_description": "This year's Fengyun Tournament features grassroots teams competing against top Asian Dota 2 powerhouses for a prize pool of 100,000 RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fengyun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fengyun.03d889da3a6b9424839573318edea743c3024720.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fengyun_large.c220f7d1382f64f067d3a525d22de9371ef3ef87.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fengyun Tournament - ADMIN",
+				"defindex": 15281,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fengyun Tournament - ADMIN",
+				"item_description": "This year's Fengyun Tournament features grassroots teams competing against top Asian Dota 2 powerhouses for a prize pool of 100,000 RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fengyun",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fengyun.03d889da3a6b9424839573318edea743c3024720.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fengyun_large.c220f7d1382f64f067d3a525d22de9371ef3ef87.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Electronic Sports Prime Dota 2 Cup",
+				"defindex": 15282,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Electronic Sports Prime Dota 2 Cup",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Electronic Sports Prime Dota 2 Cup - ADMIN",
+				"defindex": 15283,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Electronic Sports Prime Dota 2 Cup - ADMIN",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Road to the Asian Cyber Games 2013 - Indian Qualifier",
+				"defindex": 15284,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Road to the Asian Cyber Games 2013 - Indian Qualifier",
+				"item_description": "The top 8 Indian teams will qualify to compete in the finals where the winner will earn a spot to compete in Singapore at the Asian Cyber Games 2013!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_bestofthebest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_bestofthebest.efdbe124b6373379f1b071a4fceebff83fe7314d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_bestofthebest_large.d3c93f1a40e1683e5fd142bfed4168a390ee4b48.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Road to the Asian Cyber Games 2013 - Indian Qualifier - ADMIN",
+				"defindex": 15285,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Road to the Asian Cyber Games 2013 - Indian Qualifier - ADMIN",
+				"item_description": "The top 8 Indian teams will qualify to compete in the finals where the winner will earn a spot to compete in Singapore at the Asian Cyber Games 2013!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_bestofthebest",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_bestofthebest.efdbe124b6373379f1b071a4fceebff83fe7314d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_bestofthebest_large.d3c93f1a40e1683e5fd142bfed4168a390ee4b48.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "South Ural League Season 2",
+				"defindex": 15286,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Ural League Season 2",
+				"item_description": "Teams compete in an online competition to earn a spot in the top 16 teams which compete in a LAN finals.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_southuralleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_southuralleague.adedb90340e6812255f02de3f141e46ef9bdb6f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_southuralleague_large.1c2ea31bddd2c9bfd10e59e7c5d915b0e5403c13.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "South Ural League Season 2 - ADMIN",
+				"defindex": 15287,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Ural League Season 2 - ADMIN",
+				"item_description": "Teams compete in an online competition to earn a spot in the top 16 teams which compete in a LAN finals.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_southuralleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_southuralleague.adedb90340e6812255f02de3f141e46ef9bdb6f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_southuralleague_large.1c2ea31bddd2c9bfd10e59e7c5d915b0e5403c13.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CEVO Season 3",
+				"defindex": 15288,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CEVO Season 3",
+				"item_description": "CEVO DOTA 2 Season 3 is an event that is open to both amateur and professional players in North America. Teams compete in a 8 week regular season followed by a double-elimination playoff bracket where they compete for cash prizes and a chance to advance to higher skill divisions in future seasons.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cevoseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cevoseason3.db474d1838f93bd3c37a9c90034a4ea70fd6d558.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cevoseason3_large.3e785790208526b2a80d59ba1fe502ec540d45f1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "CEVO Season 3 - ADMIN",
+				"defindex": 15289,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CEVO Season 3 - ADMIN",
+				"item_description": "CEVO DOTA 2 Season 3 is an event that is open to both amateur and professional players in North America. Teams compete in a 8 week regular season followed by a double-elimination playoff bracket where they compete for cash prizes and a chance to advance to higher skill divisions in future seasons.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_cevoseason3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cevoseason3.db474d1838f93bd3c37a9c90034a4ea70fd6d558.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_cevoseason3_large.3e785790208526b2a80d59ba1fe502ec540d45f1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Hungarian Premier League",
+				"defindex": 15290,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League",
+				"item_description": "32 qualifying teams and 4 invited teams compete in to earn a spot in the playoffs and try to claim victory in the fifth season of the Hungarian Premier League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungaryleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungaryleague.d77121c02730bbc34f6c2f05930cb63da451b528.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungaryleague_large.a614e32d071bd59a73ccd91d6d7020267ea2ef97.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Hungarian Premier League - ADMIN",
+				"defindex": 15291,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League - ADMIN",
+				"item_description": "32 qualifying teams and 4 invited teams compete in to earn a spot in the playoffs and try to claim victory in the fifth season of the Hungarian Premier League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungaryleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungaryleague.d77121c02730bbc34f6c2f05930cb63da451b528.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungaryleague_large.a614e32d071bd59a73ccd91d6d7020267ea2ef97.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 4",
+				"defindex": 15292,
+				"item_class": "tool",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 4",
+				"item_description": "Netolic Pro League 4 brings the action once again inviting the best teams out there to fight over the glory, pride and prize money! Includes a pretty cool courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_netolic4.6fde10065bebfa26a7ae5b27472d08952c4595aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_netolic4_large.f0b9fb170eeaf471e9760e71b82d9ca9529384ee.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Netolic Pro League 4 - Admin",
+				"defindex": 15293,
+				"item_class": "tool",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 4 - Admin",
+				"item_description": "Netolic Pro League 4 brings the action once again inviting the best teams out there to fight over the glory, pride and prize money! Includes a pretty cool courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_netolic4.6fde10065bebfa26a7ae5b27472d08952c4595aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_netolic4_large.f0b9fb170eeaf471e9760e71b82d9ca9529384ee.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DotaTalk SteelSeries Oceania Cup",
+				"defindex": 15294,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DotaTalk SteelSeries Oceania Cup",
+				"item_description": "Australian and New Zealand Dota 2 teams compete for SteelSeries Na'Vi gear worth over $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesoceania",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesoceania.a2be025859008bb64bbe26ff3ecd984a4cf3e446.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesoceania_large.ca17bf53e9b047869edc41f5bb71c6cac0ce369c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DotaTalk SteelSeries Oceania Cup - ADMIN",
+				"defindex": 15295,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "DotaTalk SteelSeries Oceania Cup - ADMIN",
+				"item_description": "Australian and New Zealand Dota 2 teams compete for SteelSeries Na'Vi gear worth over $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesoceania",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesoceania.a2be025859008bb64bbe26ff3ecd984a4cf3e446.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesoceania_large.ca17bf53e9b047869edc41f5bb71c6cac0ce369c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Southeast Asian Cup Season 3",
+				"defindex": 15296,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Southeast Asian Cup Season 3",
+				"item_description": "This tournament is open to all teams in Southeast-Asia where the 2 top teams will compete for a prize pool of $1000 and 5 Steelseries Siberia Elite Headsets!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriessea3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriessea3.2de76dd5314794beed625e1738dcf1840e16c646.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriessea3_large.af06b1584c5c94e2325eb547ed677c5b9c763613.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Southeast Asian Cup Season 3 - ADMIN",
+				"defindex": 15297,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Southeast Asian Cup Season 3 - ADMIN",
+				"item_description": "This tournament is open to all teams in Southeast-Asia where the 2 top teams will compete for a prize pool of $1000 and 5 Steelseries Siberia Elite Headsets!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriessea3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriessea3.2de76dd5314794beed625e1738dcf1840e16c646.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriessea3_large.af06b1584c5c94e2325eb547ed677c5b9c763613.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 2",
+				"defindex": 15298,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 2",
+				"item_description": "SteelSeries Euro Cup is back for Season 2! This tournament is open to all teams in Europe where it will have the top 2 teams competing for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2.858371056788d08c69b9b3faf4d89fbfe2634e6d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2_large.a271283034aa48f4db0d8386ce658cb47b7d18bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 2 - ADMIN",
+				"defindex": 15299,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 2 - ADMIN",
+				"item_description": "SteelSeries Euro Cup is back for Season 2! This tournament is open to all teams in Europe where it will have the top 2 teams competing for a prize pool of $1000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2.858371056788d08c69b9b3faf4d89fbfe2634e6d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelserieseurocup2_large.a271283034aa48f4db0d8386ce658cb47b7d18bf.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sunday Evening Cup Series",
+				"defindex": 15300,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series",
+				"item_description": "The Sunday Evening Cup Series (SECS) began in December 2009 and is the longest running Dota tournament series to date. SECS provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_secs.cbe3f48fd597fdcc718a1dda124f0420b434efb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_secs_large.0638ee8c6717a26786625c651d92ce389b9a4e1c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Sunday Evening Cup Series - ADMIN",
+				"defindex": 15301,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series - ADMIN",
+				"item_description": "The Sunday Evening Cup Series (SECS) began in December 2009 and is the longest running Dota tournament series to date. SECS provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_secs.cbe3f48fd597fdcc718a1dda124f0420b434efb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_secs_large.0638ee8c6717a26786625c651d92ce389b9a4e1c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WH Overgaming Challenge 2",
+				"defindex": 15302,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WH Overgaming Challenge 2",
+				"item_description": "The WH Challenge 2 is the last tournament in the WH League Season 2. After this, 8 team will compete for a R$1000 grand prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_whovergaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WH Overgaming Challenge 2 - ADMIN",
+				"defindex": 15303,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WH Overgaming Challenge 2 - ADMIN",
+				"item_description": "The WH Challenge 2 is the last tournament in the WH League Season 2. After this, 8 team will compete for a R$1000 grand prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_whovergaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Logitech G - Free to Play",
+				"defindex": 15304,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play",
+				"item_description": "LAN Centers all over India compete in Dota 2 for a total prize of 25,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_logitechg.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_logitechg_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Logitech G - Free to Play - ADMIN",
+				"defindex": 15305,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play - ADMIN",
+				"item_description": "LAN Centers all over India compete in Dota 2 for a total prize of 25,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_logitechg.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_logitechg_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Champions League",
+				"defindex": 15306,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Champions League",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2cl.1cdc849ef38015c4bf7c78c5da2ef1b021e2de06.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2cl_large.4fa3e841c86f950e4f672a4a644e90c411fb8542.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Champions League - ADMIN",
+				"defindex": 15307,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Champions League - ADMIN",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2cl.1cdc849ef38015c4bf7c78c5da2ef1b021e2de06.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2cl_large.4fa3e841c86f950e4f672a4a644e90c411fb8542.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "HyperX D2L Season 4",
+				"defindex": 15308,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "HyperX D2L Season 4",
+				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world'ÂÂs best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar'ÂÂs Palace in Las Vegas!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2l_s4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2l_s4.ee57663b8f08fc913cac4c2a808fc5da1778e118.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2l_s4_large.fad57000c2a235c11693d2ac82ab8faa37d983ac.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "HyperX D2L Season 4 - ADMIN",
+				"defindex": 15309,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "HyperX D2L Season 4 - ADMIN",
+				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world's best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar'Âs Palace in Las Vegas!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2l_s4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2l_s4.ee57663b8f08fc913cac4c2a808fc5da1778e118.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_d2l_s4_large.fad57000c2a235c11693d2ac82ab8faa37d983ac.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Dota 2 League: Code A",
+				"defindex": 15310,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Dota 2 League: Code A",
+				"item_description": "Rising teams across China gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge Asian elite teams. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_codea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Dota 2 League: Code A - ADMIN",
+				"defindex": 15311,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Dota 2 League: Code A - ADMIN",
+				"item_description": "Rising teams across China gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge Asian elite teams. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_codea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ESP Dota 2 Cup",
+				"defindex": 15312,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ESP Dota 2 Cup",
+				"item_description": "Six invited teams and two qualifier teams face off for glory and $2,000 USD. Featuring Dignitas, Liquid, Rattlesnake.int, Evil Geniuses, Fnatic, and Menace!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espdcup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Techlabs Cup Grand Final",
+				"defindex": 15313,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Techlabs Cup Grand Final",
+				"item_description": "Techlabs Cup Grand Final in Moscow on November 16-17 where teams compete for a total prize pool of $25,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_techlabs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_techlabs.baafabbc9bd7419035ea5e95492826813bdf2b66.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_techlabs_large.2cb679d640de8e5b1395da5d451873ac04da3d6b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Techlabs Cup Grand Final - ADMIN",
+				"defindex": 15314,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Techlabs Cup Grand Final - ADMIN",
+				"item_description": "Techlabs Cup Grand Final in Moscow on November 16-17 where teams compete for a total prize pool of $25,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_techlabs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_techlabs.baafabbc9bd7419035ea5e95492826813bdf2b66.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_techlabs_large.2cb679d640de8e5b1395da5d451873ac04da3d6b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 by Ozone Gaming",
+				"defindex": 15315,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 by Ozone Gaming",
+				"item_description": "8 Brazilian teams battle for glory and R$4,000.00 in gaming equipment from Ozone Gaming.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ozone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ozone.74bb6a98900a569c9f4b64651c49598802e5352f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ozone_large.37b7e5ad821c421f57706c51b5977ddf29667585.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 by Ozone Gaming - ADMIN",
+				"defindex": 15316,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 by Ozone Gaming - ADMIN",
+				"item_description": "8 Brazilian teams battle for glory and R$4,000.00 in gaming equipment from Ozone Gaming.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ozone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ozone.74bb6a98900a569c9f4b64651c49598802e5352f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ozone_large.37b7e5ad821c421f57706c51b5977ddf29667585.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "European Elite League",
+				"defindex": 15317,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League",
+				"item_description": "The most talented players in Europe compete in the classic league format for eight weeks, culminating in a 4-team double elimination best-of-three all-star tournament for a 1,500 Euro prize pool. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_europeanelite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_europeanelite.f4370d0e354d2f5dc34cd1b9d3879c53be19a66b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_europeanelite_large.710de55ee56d972d1484781b755ac4fdacd08fdc.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "European Elite League - ADMIN",
+				"defindex": 15318,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League - ADMIN",
+				"item_description": "The most talented players in Europe compete in the classic league format for eight weeks, culminating in a 4-team double elimination best-of-three all-star tournament for a 1,500 Euro prize pool. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_europeanelite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_europeanelite.f4370d0e354d2f5dc34cd1b9d3879c53be19a66b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_europeanelite_large.710de55ee56d972d1484781b755ac4fdacd08fdc.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fragbite Masters",
+				"defindex": 15319,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fragbite Masters",
+				"item_description": "32 teams compete in the Fragbite Masters which is an online tournament with a $30,900 prize pool for Dota 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fragbitemasters",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fragbitemasters.fe294c5f6c0d29e1d42d32f208e1cf12afe00306.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fragbitemasters_large.fdb9233f0e3c8ce7441fce71e9d16f912a8200c1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fragbite Masters - ADMIN",
+				"defindex": 15320,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fragbite Masters - ADMIN",
+				"item_description": "32 teams compete in the Fragbite Masters which is an online tournament with a $30,900 prize pool for Dota 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fragbitemasters",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fragbitemasters.fe294c5f6c0d29e1d42d32f208e1cf12afe00306.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_fragbitemasters_large.fdb9233f0e3c8ce7441fce71e9d16f912a8200c1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Malaysia Cup - October",
+				"defindex": 15321,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Malaysia Cup - October",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesmalaysia",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia.a13c48ae476a91d1706cd0657e478ad1cda2b9fe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia_large.9f99482054199bacb7bee0eb00a85341c3891b0b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Malaysia Cup - October - ADMIN",
+				"defindex": 15322,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Malaysia Cup - October - ADMIN",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesmalaysia",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia.a13c48ae476a91d1706cd0657e478ad1cda2b9fe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia_large.9f99482054199bacb7bee0eb00a85341c3891b0b.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -72443,9 +75898,9 @@
 				"name": "Gift of the Sea Set",
 				"defindex": 20241,
 				"item_class": "bundle",
-				"item_type_name": "New Item",
+				"item_type_name": "Bundle",
 				"item_name": "Gift of the Sea Set",
-				"item_description": "This new item has no description.",
+				"item_description": "Includes all of the items in the 'Gift of the Sea' set for Morphling:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Gift_of_the_Sea_Set",
@@ -72859,6 +76314,209 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_natures_outcast_set.f16e70f8d3fd16730307b95d1bb8fba55dc45e05.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_natures_outcast_set_large.3d88831636006b1b995a93fe818ca6256f19cf91.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Hare Hunt Set",
+				"defindex": 20256,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Hare Hunt Set",
+				"item_description": "Includes all of the items in the \"Hare Hunt\" set for Sniper:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Hare_Hunt_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_hare_hunt_set.647001bbbb54ca2555ca764d9006c9439850c393.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_the_hare_hunt_set_large.77f136d0fbeb47db71ab9940d2575928517a65fc.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Barathrum's Fury Set",
+				"defindex": 20258,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Barathrum's Fury Set",
+				"item_description": "Includes all of the items in the 'Barathrum's Fury' set for Spirit Breaker:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Barathrums_Fury_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_barathrums_fury_set.ea7393743be70e08033a8d5a34c9659a3dccf145.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_barathrums_fury_set_large.1fada2ac64fb3a39d626d3240f53ad2134d9a695.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Ancient Armor Set",
+				"defindex": 20260,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Ancient Armor Set",
+				"item_description": "Includes all of the items in the 'Ancient Armor' set for Morphling:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Ancient_Armor_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_ancient_armor_set.46298e5abe287f76440b800025dc2a677d35c197.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_ancient_armor_set_large.4ff15ff6ab06e596c75cf8ef601b3e6aef402a68.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Armaments of Leviathan Set",
+				"defindex": 20267,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Armaments of Leviathan Set",
+				"item_description": "Includes all of the items in the 'Armaments of Leviathan' set for Kunkka:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Armaments_of_Leviathan_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_armaments_of_leviathan_set.eab248325a79113f46e175cc0f6186f96cbba471.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_armaments_of_leviathan_set_large.f66c35ddf5f5daf3dfe998402af36bb9fd2d87d3.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Hell's Ambassador Set",
+				"defindex": 20268,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Hell's Ambassador Set",
+				"item_description": "Includes all of the items in the 'Hell's Ambassador' set for Lion:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Hells_Ambassador_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_hells_ambassador_set.957b32a6f75a15400eabe0fe87e6e2d86208af4d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_hells_ambassador_set_large.79916e821fd4ad59f84d756f50e0356269ede40d.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Viridi Inanitas Set",
+				"defindex": 20269,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Viridi Inanitas Set",
+				"item_description": "Includes all of the items in the 'Viridi Inanitas' set for Faceless Void:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Viridi_Inanitas_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_viridi_inanitas_set.ca566769694fed0032138d11c96625ffe2ee2842.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_viridi_inanitas_set_large.2a0c1a34dafe32adf056fbd4fed0cef880440d0f.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Arms of Burning Turmoil Set",
+				"defindex": 20272,
+				"item_class": "bundle",
+				"item_type_name": "New Item",
+				"item_name": "Arms of Burning Turmoil Set",
+				"item_description": "Includes all the items in the Arms of Burning Turmoil set and access to the Electronic Sports Prime Dota 2 Cup.<br><br>\r\n\t\r\n\t- Blade of Burning Turmoil<br>\r\n\t- Horns of Burning Turmoil<br>\r\n\t- Shield of Burning Turmoil<br>\r\n\t- Mantle of Burning Turmoil<br>\r\n\t- Enmity<br>\r\n\t- ESP Dota 2 Cup access<br>\r\n\t<br>",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Arms_of_Burning_Turmoil",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil.d7503ac5552b01bfbfcbd367be8a52aa87a9562b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_arms_of_burning_turmoil_large.32d81cdb3b9dd2eb31934b1b9ab699e13ae842cd.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -73760,6 +77418,16 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "netolic pro league tag",
+				"defindex": 410,
+				"attribute_class": "netolic pro league tag",
+				"description_string": "Netolic Pro League %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -73827,6 +77495,19 @@
 					"Ancestral Arm Wrap",
 					"Ancestral Dress",
 					"Ancestral Medicine Stick"
+				]
+				
+			},
+			{
+				"item_set": "ancient_armor",
+				"name": "Ancient Armor",
+				"store_bundle": "Ancient Armor Set",
+				"items": [
+					"Ancient Armor Arms",
+					"Ancient Armor Back",
+					"Ancient Armor Breastplates",
+					"Ancient Armor Helmet",
+					"Ancient Armor Shoulder Shields"
 				]
 				
 			},
@@ -73921,6 +77602,22 @@
 					"Arctic Hunter's Hood",
 					"Arctic Hunter's Snack",
 					"Arctic Hunter's Glove"
+				]
+				
+			},
+			{
+				"item_set": "armaments_of_leviathan",
+				"name": "Armaments of Leviathan",
+				"store_bundle": "Armaments of Leviathan Set",
+				"items": [
+					"Admiral's Foraged Cap",
+					"Admiral's Stash",
+					"Claddish Gauntlets",
+					"Claddish Guard",
+					"Claddish Hightops",
+					"Neptunian Sabre",
+					"Admiral's Salty Shawl",
+					"Ye Olde Pipe"
 				]
 				
 			},
@@ -74068,6 +77765,20 @@
 					"Saberhorn's Pauldron",
 					"Saberhorn's Belt",
 					"Saberhorn's Heavy Chopper"
+				]
+				
+			},
+			{
+				"item_set": "barathrums_fury",
+				"name": "Barathrum's Fury",
+				"store_bundle": "Barathrum's Fury Set",
+				"items": [
+					"Tail of Fury",
+					"Bracers of Fury",
+					"Belt of Fury",
+					"Mask of Fury",
+					"Pauldrons of Fury",
+					"Spirit Crusher"
 				]
 				
 			},
@@ -74307,6 +78018,18 @@
 				"items": [
 					"Chained Snatcher",
 					"Chained Chopper"
+				]
+				
+			},
+			{
+				"item_set": "chaos_knight_mephistopheles",
+				"name": "Arms of Burning Turmoil",
+				"items": [
+					"Blade of Burning Turmoil",
+					"Horns of Burning Turmoil",
+					"Enmity",
+					"Shield of Burning Turmoil",
+					"Mantle of Burning Turmoil"
 				]
 				
 			},
@@ -75006,6 +78729,31 @@
 					"Robe of the Hidden Talent",
 					"Shoulders of the Hidden Talent",
 					"Glaive of the Hidden Talent"
+				]
+				
+			},
+			{
+				"item_set": "hare_hunt",
+				"name": "The Hare Hunt",
+				"store_bundle": "The Hare Hunt Set",
+				"items": [
+					"Hare Hunt Hat",
+					"Hare Hunt Rifle",
+					"Hare Hunt Sleeves",
+					"Hare Hunt Shoulders",
+					"Hare Hunt Cape"
+				]
+				
+			},
+			{
+				"item_set": "hells_ambassador",
+				"name": "Hell's Ambassador",
+				"store_bundle": "Hell's Ambassador Set",
+				"items": [
+					"Hand of Hell's Ambassador",
+					"Mantle of Hell's Ambassador",
+					"Epaulets of Hell's Ambassador",
+					"Strifemaul of Hell's Ambassador"
 				]
 				
 			},
@@ -76261,30 +80009,6 @@
 				
 			},
 			{
-				"item_set": "tidehunter_pirate_slayer",
-				"name": "The Pirate's Booty",
-				"store_bundle": "The Pirate's Booty Set",
-				"items": [
-					"Pirate Slayer's Bracer",
-					"Pirate Slayer's Tricorn",
-					"Pirate Slayer's Black Flag",
-					"Pirate Slayer's Cutlass"
-				]
-				
-			},
-			{
-				"item_set": "tidehunter_punisher",
-				"name": "The Paleogeneous Punisher",
-				"store_bundle": "The Paleogeneous Punisher Set",
-				"items": [
-					"Cerebral Support",
-					"Excavator's Treasure",
-					"Femur Thrasher",
-					"Skeletal Catch"
-				]
-				
-			},
-			{
 				"item_set": "tribal_stone",
 				"name": "The Tribal Stone",
 				"store_bundle": "Tribal Stone Set",
@@ -76378,6 +80102,18 @@
 					"Claw of the Haruspex",
 					"Cloak of the Haruspex",
 					"Gilded Mark of the Haruspex"
+				]
+				
+			},
+			{
+				"item_set": "viridi_inanitas",
+				"name": "Viridi Inanitas",
+				"store_bundle": "Viridi Inanitas Set",
+				"items": [
+					"Viridus Crusher",
+					"Viridus Claw",
+					"Viridus Leggings",
+					"Viridus Spine"
 				]
 				
 			},
@@ -77380,6 +81116,54 @@
 				"id": 136,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle136"
+			},
+			{
+				"system": "courier_trail_polycount_01",
+				"id": 138,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle138"
+			},
+			{
+				"system": "chaos_knight_shadow_brand_weapon",
+				"id": 139,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle139"
+			},
+			{
+				"system": "sniper_hare_hunt_shoulder",
+				"id": 140,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle140"
+			},
+			{
+				"system": "sniper_hare_hunt_hat",
+				"id": 141,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle141"
+			},
+			{
+				"system": "kunkka_leviation_pipe",
+				"id": 142,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle142"
+			},
+			{
+				"system": "lion_hell_weapon",
+				"id": 143,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle143"
+			},
+			{
+				"system": "faceless_void_weapon_glow",
+				"id": 144,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle144"
+			},
+			{
+				"system": "lion_stone_hand",
+				"id": 145,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle145"
 			}
 		]
 		,
