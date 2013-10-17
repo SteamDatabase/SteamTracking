@@ -13,8 +13,12 @@ body
 
 .apphub_HomeHeader
 {
-    width: 948px;
 	margin-bottom: 8px;
+}
+
+.apphub_HomeHeaderContent
+{
+	width: 948px;
 }
 
 .apphub_Cards
@@ -80,10 +84,10 @@ body
 
 .apphub_NoMoreContent
 {
-	width: 1100px;
+	min-width: 948px;
 	height: 229px;
 	color: #c4c4c4;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/apphubs/bg_hubbottom.png' );
+	background: url( 'http://cdn.steamcommunity.com/public/images/apphubs/bg_hubbottom.png' ) no-repeat center top;
 }
 
 .apphub_NoMoreContentText1
@@ -198,6 +202,7 @@ body
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border: 1px solid #364050;
 	height: 46px;
+	width: 946px;
 }
 
 .apphub_SectionFilterLabel
