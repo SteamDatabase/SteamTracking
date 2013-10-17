@@ -1512,6 +1512,9 @@ function UpdateEventLog( events )
 
 			break;
 		case 7:
+			if ( g_bSuppressChat )
+				break;
+
 			if ( bTheirAction )
 				strEvent = '<span class="playerchatname">' + g_strTradePartnerPersonaName + '</span>: ';
 			else

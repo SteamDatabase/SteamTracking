@@ -2431,6 +2431,40 @@
 				
 			},
 			{
+				"name": "IEconItems_260",
+				"methods": [
+					{
+						"name": "GetPlayerItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							}
+						]
+						
+					},
+					{
+						"name": "GetSchema",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to return the names in. Defaults to returning string keys."
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IEconItems_440",
 				"methods": [
 					{
@@ -3864,6 +3898,52 @@
 			},
 			{
 				"name": "ITFPromos_247200",
+				"methods": [
+					{
+						"name": "GetItemID",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					},
+					{
+						"name": "GrantItem",
+						"version": 1,
+						"httpmethod": "POST",
+						"parameters": [
+							{
+								"name": "steamid",
+								"type": "uint64",
+								"optional": false,
+								"description": "The Steam ID to fetch items for"
+							},
+							{
+								"name": "PromoID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The promo ID to grant an item for"
+							}
+						]
+						
+					}
+				]
+				
+			},
+			{
+				"name": "ITFPromos_260",
 				"methods": [
 					{
 						"name": "GetItemID",

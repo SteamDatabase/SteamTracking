@@ -131,6 +131,13 @@
 	color: #b2b2b2;
 }
 
+
+.commentnotification.deleted .commentnotification_title {
+	font-style: italic;
+	font-weight: normal;
+	color: #b4b4b4;
+}
+
 .commentnotification_col {
 	float: right;
 	line-height: 48px;

@@ -1232,6 +1232,11 @@ a.blotter_comment_thread_showall span
 	display: none;
 }
 
+/* Hide the "View all comments" button on the single blotter item page */
+.blotter_single_item_detail .blotter_viewallcomments_container .btn_ico_comments {
+	display: none;
+}
+
 .blotter_single_item_detail .blotter_comment_thread .commentthread_footer
 {
 	display: block;
