@@ -168,13 +168,19 @@
 {
 }
 
+.apphub_HeaderBottomBG_ctn
+{
+	position: relative;
+	min-width: 948px;
+}
+
 .apphub_HeaderBottomBG
 {
 	position: absolute;
-	left: -52px;
-	width: 1051px;
+	left: 0;
+	right: 0;
 	height: 239px;
-	background-image:url('http://cdn.steamcommunity.com/public/shared/images/apphubs/bg_filter_blue.png');
+	background: url('http://cdn.steamcommunity.com/public/shared/images/apphubs/bg_filter_blue.png') no-repeat top center;
 	z-index: -1;
 }
 

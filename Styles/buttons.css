@@ -361,3 +361,7 @@ btn_border_2px > span {
 	opacity: 0.45;
 	cursor: default;
 }
+
+.btn_disabled:hover {
+	text-decoration: none;
+}

@@ -88,9 +88,11 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	rgButtons.push( $CancelButton );
 
 	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel );
-	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 
+	_BindOnEnterKeyPressForDialog( deferred, fnOK );
+
+	deferred.always( function() { Modal.Dismiss(); } );
 	// attach the deferred's events to the modal
 	deferred.promise( Modal );
 
@@ -111,6 +113,8 @@ function ShowAlertDialog( strTitle, strDescription, strOKButton )
 	var Modal = _BuildDialog( strTitle, strDescription, [ $OKButton ], fnOK );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
+
+	_BindOnEnterKeyPressForDialog( deferred, fnOK );
 
 	// attach the deferred's events to the modal
 	deferred.promise( Modal );
@@ -245,6 +249,16 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 	return Modal;
 }
 
+function _BindOnEnterKeyPressForDialog( deferred, fnOnEnter )
+{
+	var fnOnKeyUp = function( event ) {
+		if ( event.which == 13 )
+			fnOnEnter();
+	};
+	$J(document).on( 'keyup.SharedConfirmDialog', fnOnKeyUp );
+	deferred.always( function() { $J(document).off( 'keyup.SharedConfirmDialog' ); } );
+}
+
 function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalParams )
 {
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
@@ -324,6 +338,7 @@ function CModal( $Content, rgParams )
 
 	var _modal = this;
 	this.m_fnBackgroundClick = function() { if ( _modal.m_bDismissOnBackgroundClick ) { _modal.Dismiss(); } };
+	this.m_fnOnEscapeKeyPress = function( event ) { if ( event.which == 27 ) _modal.m_fnBackgroundClick(); };
 	this.m_fnSizing = function() { _modal.AdjustSizing(); };
 
 	/* make sure the content is parented correctly */
@@ -417,7 +432,8 @@ CModal.prototype.Show = function()
 	{
 		$J(window).on( 'resize', null, this.m_fnSizing );
 	}
-	CModal.s_$Background.on( 'click', null, this.m_fnBackgroundClick );
+	CModal.s_$Background.on( 'click.CModal', this.m_fnBackgroundClick );
+	$J(document).on( 'keyup.CModal', this.m_fnOnEscapeKeyPress );
 
 	this.AdjustSizing();
 
@@ -443,7 +459,8 @@ CModal.prototype.Dismiss = function()
 	{
 		$J(window).off( 'resize', null, this.m_fnSizing );
 	}
-	CModal.s_$Background.off( 'click', null, this.m_fnBackgroundClick );
+	CModal.s_$Background.off( 'click.CModal', this.m_fnBackgroundClick );
+	$J(document).off( 'keyup.CModal', this.m_fnOnEscapeKeyPress );
 	CModal.HideModalBackground();
 
 	if ( this.m_fnOnDismiss )

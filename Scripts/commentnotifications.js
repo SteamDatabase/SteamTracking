@@ -24,6 +24,11 @@ function CommentNotificationClick( el )
 		elFriend.hide();
 }
 
+function CommentNotificationIndexFromID( el )
+{
+	return parseInt( el.id.replace( /^commentnotification_/, '' ) );
+}
+
 g_bMarkAllReadInFlight = false;
 function MarkAllRead()
 {
@@ -99,7 +104,7 @@ function ApplyCommentNotificationFilters()
 	for ( var id=0; id < g_rgCommentNotifications.length; id++ )
 	{
 		var el = $('commentnotification_' + id );
-		var bShow = fnFilter( g_rgCommentNotifications[id] );
+		var bShow = !g_rgCommentNotifications[id].is_removed && fnFilter( g_rgCommentNotifications[id] );
 
 		if ( bAnyTypeFilters && bShow )
 			bShow = oCheckboxStates[ g_rgCommentNotifications[id].type ];
@@ -286,5 +291,21 @@ var NotificationPaging = {
 		elPageLinks.insert( el );
 	}
 };
+
+function RemoveCommentNotification( elLink, strCommentThreadType, steamidOwner, gidFeature, gidFeature2 )
+{
+	var strURL = 'http://steamcommunity.com/comment/' + strCommentThreadType + '/removenotification/' + steamidOwner + '/' + gidFeature;
+	if ( gidFeature2 && gidFeature2 != -1 )
+		strURL += '?feature2=' + gidFeature2;
+	$J.post( strURL, {sessionid: g_sessionID} )
+	.done( function() {
+		RefreshNotificationArea();
+		var index = CommentNotificationIndexFromID( elLink );
+		g_rgCommentNotifications[index].is_removed = true;
+		ApplyCommentNotificationFilters();
+	}).fail( function() {
+		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.' );
+	});
+}
 
 

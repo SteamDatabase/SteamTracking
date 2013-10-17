@@ -123,7 +123,7 @@ function AddFriend( bRespondingToInvite )
 
 	$J.post(
 		'http://steamcommunity.com/actions/AddFriendAjax',
-		{sessionID: g_sessionID, steamid: steamid }
+		{sessionID: g_sessionID, steamid: steamid, accept_invite: bRespondingToInvite ? 1 : 0 }
 	).done( function() {
 		if ( !bRespondingToInvite )
 		{

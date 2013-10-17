@@ -770,19 +770,22 @@ select.gray_bevel {
 	position: relative;
 	height: 29px;
 
-	cursor: pointer;
-	
 	background-position: center center;
 	background-repeat: no-repeat;
 
 	padding: 0 28px 0 10px;
 }
 
-.header_parental_locked:hover, .header_parental_locked.focus {
+#header_parental_link.header_parental_btn
+{
+	cursor: pointer;
+}
+
+#header_parental_link.header_parental_locked:hover, .header_parental_locked.focus {
 	background-color: #70BA24;
 }
 
-.header_parental_unlocked:hover, .header_parental_unlocked:focus {
+#header_parental_link.header_parental_unlocked:hover, .header_parental_unlocked:focus {
 	background-color: #c64c4b;
 }
 
