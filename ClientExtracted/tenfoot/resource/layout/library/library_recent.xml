@@ -15,23 +15,12 @@
 		</Panel>
 		<Panel id="LibraryMenuRowWrapper" tabindex="1" selectionpos="0,1">
 			<Panel id="LibraryMenuRow" class="LibraryMenuRow" tabindex="auto" selectionpos="501,0">
-				<Button id="MusicLibraryButton" class="LibraryButton" onactivate="ShowMusicLibrary();" tabindex="auto" selectionpos="500,0">
-					<Label id="ViewAllLabelMusic" class="ButtonLabelSmall" text="#Library_ViewAll" />
-					<Label id="ViewMusicLibraryLabel" class="ButtonLabel" text="#Library_Music" />
-				</Button>
 				
 				<Button id="AllGamesButton" class="LibraryButton" onactivate="ShowLibraryAllGames();" tabindex="auto" selectionpos="501,0">
 					<Label id="ViewAllLabelGames" class="ButtonLabelSmall" text="#Library_ViewAll" />
 					<Label id="ViewAllGamesLabel" class="ButtonLabel" text="#Library_Games" />
 				</Button>
 			 
-
-			<!--	
-				<Button id="AllMoviesButton" class="LibraryButton" onactivate="ShowAllMovies();" tabindex="auto" selectionpos="502,0">
-					<Label id="ViewAllLabelMovies" class="ButtonLabelSmall" text="#Library_ViewAll" />
-					<Label id="ViewAllMoviesLabel" class="ButtonLabel" text="#Library_Movies" />
-				</Button>
-			-->
 			<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="2" selectionpos="1000,0">
 				<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
 			</Button>

@@ -40,8 +40,8 @@
 				<Button id="RemoteClientsButton" class="Button" onactivate="ShowSettings( RemoteClients );">
 					<Label class="LongDesc" text="#Settings_RemoteClients" />
 				</Button>
-				<Button id="SteamOSSettingsButton" class="Button" onactivate="ShowSettings( SteamOS );">
-					<Label class="LongDesc" text="#Settings_SteamOS" />
+				<Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
+					<Label class="LongDesc" text="#Settings_Interface" />
 				</Button>
 				<Button id="LanguageSettingsButton" class="Button" onactivate="ShowSettings( Language );">
 					<Label class="LongDesc" text="#Settings_Language" />

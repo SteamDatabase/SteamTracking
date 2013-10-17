@@ -305,7 +305,8 @@ MainMenu.StackDepth3 #TopRow
 	transition-delay: 0.0s !immediate;
 	transition-timing-function: linear, ease-out;
 }
-#ParentalLockButton .SmDesc
+
+#ParentalLockButton .SmDesc, #GoOnlineButton .SmDesc
 {
 
 	line-height: 18px;
@@ -324,7 +325,7 @@ MainMenu.StackDepth3 #TopRow
 	transition-timing-function: linear, ease-out;
 }
 
-#ParentalLockButton:focus .SmDesc
+#ParentalLockButton:focus .SmDesc, #GoOnlineButton .SmDesc
 {
 	opacity: 1.0;
 	visibility: visible;
@@ -349,7 +350,7 @@ MainMenu.StackDepth3 #TopRow
 	opacity: 0.0; 
 }
 
-Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels
+Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels, #GoOnlineButton:hover .GoOnlineButtonLabels
 {
 	transition-delay: 0.08s !immediate;
 	max-width: 300px;
@@ -713,13 +714,13 @@ margin-right: 8px;
 	vertical-align: center;
 }
 
-#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image
+#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image
 {
 	vertical-align: center;
 	horizontal-align: center;
 }
 
-#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton
+#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label
 {
 	margin-left: 4px;
 	vertical-align: center;
@@ -1045,14 +1046,14 @@ InboxMenu.Destructing
 
 
 
-#ParentalLockButton
+#ParentalLockButton, #GoOnlineButton
 {
 	flow-children: right;
 	vertical-align: center;
 	padding: 8px;
 }
 
-.ParentalLockButtonLabels
+.ParentalLockButtonLabels, .GoOnlineButtonLabels
 {
 	flow-children: down;
 	vertical-align: center;
@@ -1062,7 +1063,7 @@ InboxMenu.Destructing
 	opacity: 0.0;
 }
 
-.TopRowBase .ParentalLockButtonLabels
+.TopRowBase .ParentalLockButtonLabels, .TopRowBase .GoOnlineButtonLabels
 {
 	opacity: 0.0;
 	transition-property: opacity, max-width;
@@ -1072,14 +1073,14 @@ InboxMenu.Destructing
 	max-width: 0px;
 }
 
-.TopRowFocused .ParentalLockButtonLabels
+.TopRowFocused .ParentalLockButtonLabels, .TopRowFocused .GoOnlineButtonLabels
 {
 	opacity: 1.0;
 	visibility: visible;
 	max-width: 400px;
 }
 
-#ParentalLockButton:focus .ParentalLockButtonLabels
+#ParentalLockButton:focus .ParentalLockButtonLabels, #GoOnlineButton:focus .GoOnlineButtonLabels
 {
 	opacity: 1.0;
 	visibility: visible;
@@ -1243,4 +1244,16 @@ ParentalButton.Locked
 {
 	visibility: collapse;
 	opacity: 0.0;
+}
+
+#GoOnlineButton #SmDesc1, #GoOnlineButton #SmDesc2
+{
+	visibility: visible;
+	opacity: 0.0;
+}
+
+#GoOnlineButton:focus #SmDesc1, #GoOnlineButton:focus #SmDesc2
+{
+	visibility: visible;
+	opacity: 1.0;
 }

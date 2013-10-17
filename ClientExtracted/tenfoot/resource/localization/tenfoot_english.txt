@@ -1,4 +1,4 @@
-"tenfoot"
+﻿"tenfoot"
 {
 	"UI_Submit"	"Submit"
 	"UI_Select"	"Select"
@@ -1609,6 +1609,18 @@
 	"Parental_RemoveFromUnblockedGames"	"Remove from Family Games"
 	"Parent_Mode"	"Parents only!"
 
+	"GoOnline_Header"			"YOU ARE IN"
+	"GoOnline_CurrentMode"		"OFFLINE MODE"
+	"GoOnline_Footer"			"SELECT TO GO ONLINE"
+
+	"GoOnline_Prompt_Title"		"Steam - Go Online"
+	"GoOnline_Prompt_Info"		"Do you want to go back online? This will require Steam to restart."
+	"GoOnline_Prompt_YesButton"	"Restart and go online"
+
+	"GoOffline_Prompt_Title"	"Steam - Go Offline"
+	"GoOffline_Prompt_Info"		"Do you want to go to offline mode? This will require Steam to restart."
+	"GoOffline_Prompt_YesButton"	"Restart in Offline Mode"
+
 	"Settings_TimeZone"	"Time Zone"
 	"SettingsTimeZone_Intro"	"Set the current time zone for this device"
 	"SettingsTimeZone_Continent"	"Continent"
@@ -1619,7 +1631,7 @@
 	"OOBE_TimeZoneSettings_Title"	"Time Zone"
 	"OOBE_TimeZoneSettings_Description"	"Set the current time zone for this device"
 
-	"Settings_SteamOS"	"Interface"
+	"Settings_Interface"	"Interface"
 	"SettingsSteamOS_EnableDesktop" "Enable access to the Linux desktop"
 	
 }
