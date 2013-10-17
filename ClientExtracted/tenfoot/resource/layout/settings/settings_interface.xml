@@ -1,0 +1,26 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_Interface class="SettingsSection" defaultfocus="Continents">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Interface" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+
+				<Panel class="VertContainer">
+					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleSteamOSDesktop()"/>
+					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM" />
+				</Panel>
+				
+				
+		</Panel>
+	</SettingsPanel_Interface>
+
+</root>
