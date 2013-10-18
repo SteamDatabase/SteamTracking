@@ -544,11 +544,32 @@ var CInventory = Class.create( {
 			elTagCategoryLabel.update( rgCategory.name );
 			elTagCategory.appendChild( elTagCategoryLabel );
 
+			var rgCategoryTags = [];
 			for( var sInternalName in rgCategory.tags )
 			{
-				if( typeof sInternalName != "string" )
+				if( !rgCategory.tags.hasOwnProperty( sInternalName ) )
 					continue;
+
 				var rgTag = rgCategory.tags[ sInternalName ];
+				rgTag.internal_name = sInternalName
+				rgCategoryTags.push( rgTag );
+			}
+
+			rgCategoryTags.sort( function( a, b ) {
+				var aName = a.name.toUpperCase();
+				var bName = b.name.toUpperCase();
+				if ( aName < bName ) return -1;
+				if ( aName > bName ) return 1;
+				return 0;
+			} );
+
+			for( var index in rgCategoryTags )
+			{
+				if( !rgCategoryTags.hasOwnProperty( index ) )
+					continue;
+
+				var rgTag = rgCategoryTags[ index ];
+				var sInternalName = rgTag.internal_name;
 
 				var elTagDiv = new Element( 'div', { 'class' : 'econ_tag_filter_container' } );
 
