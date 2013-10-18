@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.4170a9dd3d10e9b8331be41a5eddb90676907d6b.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8a8e57c59ad4dac1a44d48c0fd7d20488054bcdd.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -52273,7 +52273,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52314,7 +52314,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52579,7 +52579,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52660,7 +52660,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52701,7 +52701,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52742,7 +52742,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52783,7 +52783,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52824,7 +52824,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52865,7 +52865,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52906,7 +52906,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52947,7 +52947,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -52988,7 +52988,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53029,7 +53029,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53070,7 +53070,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53111,7 +53111,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53152,7 +53152,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53193,7 +53193,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53234,7 +53234,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53275,7 +53275,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53316,7 +53316,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53357,7 +53357,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53398,7 +53398,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53439,7 +53439,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53480,7 +53480,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53521,7 +53521,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53562,7 +53562,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53643,7 +53643,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53736,7 +53736,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53777,7 +53777,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53818,7 +53818,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53859,7 +53859,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53900,7 +53900,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53941,7 +53941,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -53982,7 +53982,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54023,7 +54023,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54064,7 +54064,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54105,7 +54105,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54146,7 +54146,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54187,7 +54187,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54228,7 +54228,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54269,7 +54269,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54310,7 +54310,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54351,7 +54351,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54392,7 +54392,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54433,7 +54433,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54474,7 +54474,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54515,7 +54515,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54556,7 +54556,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54597,7 +54597,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54638,7 +54638,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54679,7 +54679,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54720,7 +54720,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54761,7 +54761,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54802,7 +54802,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54843,7 +54843,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54884,7 +54884,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54925,7 +54925,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -54966,7 +54966,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55007,7 +55007,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55048,7 +55048,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55089,7 +55089,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55130,7 +55130,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55171,7 +55171,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55212,7 +55212,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55253,7 +55253,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55294,7 +55294,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55335,7 +55335,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55376,7 +55376,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55417,7 +55417,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55458,7 +55458,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55499,7 +55499,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55540,7 +55540,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55581,7 +55581,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55622,7 +55622,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55738,7 +55738,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55779,7 +55779,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55820,7 +55820,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55861,7 +55861,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55902,7 +55902,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -55979,7 +55979,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -56020,7 +56020,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -56061,7 +56061,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -56102,7 +56102,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -56143,7 +56143,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -56184,7 +56184,7 @@
 				},
 				"tool": {
 					"type": "player_card",
-					"use_string": "StampPlayerCard"
+					"use_string": "Use on Compendium"
 				},
 				"attributes": [
 					{
@@ -67774,6 +67774,78 @@
 				
 			},
 			{
+				"name": "Hungarian Premier League",
+				"defindex": 15290,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League",
+				"item_description": "32 qualifying teams and 4 invited teams compete in to earn a spot in the playoffs and try to claim victory in the fifth season of the Hungarian Premier League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungaryleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungaryleague.d77121c02730bbc34f6c2f05930cb63da451b528.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungaryleague_large.a614e32d071bd59a73ccd91d6d7020267ea2ef97.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Hungarian Premier League - ADMIN",
+				"defindex": 15291,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League - ADMIN",
+				"item_description": "32 qualifying teams and 4 invited teams compete in to earn a spot in the playoffs and try to claim victory in the fifth season of the Hungarian Premier League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungaryleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungaryleague.d77121c02730bbc34f6c2f05930cb63da451b528.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungaryleague_large.a614e32d071bd59a73ccd91d6d7020267ea2ef97.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Netolic Pro League 4",
 				"defindex": 15292,
 				"item_class": "tool",
@@ -68507,6 +68579,366 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup.06be8f3c773c130a01ccfecd2aa1e8cb8628b8a1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espdcup_large.86db0c413e8144f19224a8f06046e2e69e09ff54.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Techlabs Cup Grand Final",
+				"defindex": 15313,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Techlabs Cup Grand Final",
+				"item_description": "Techlabs Cup Grand Final in Moscow on November 16-17 where teams compete for a total prize pool of $25,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_techlabs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_techlabs.baafabbc9bd7419035ea5e95492826813bdf2b66.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_techlabs_large.2cb679d640de8e5b1395da5d451873ac04da3d6b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Techlabs Cup Grand Final - ADMIN",
+				"defindex": 15314,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Techlabs Cup Grand Final - ADMIN",
+				"item_description": "Techlabs Cup Grand Final in Moscow on November 16-17 where teams compete for a total prize pool of $25,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_techlabs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_techlabs.baafabbc9bd7419035ea5e95492826813bdf2b66.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_techlabs_large.2cb679d640de8e5b1395da5d451873ac04da3d6b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 by Ozone Gaming",
+				"defindex": 15315,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 by Ozone Gaming",
+				"item_description": "8 Brazilian teams battle for glory and R$4,000.00 in gaming equipment from Ozone Gaming.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ozone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ozone.74bb6a98900a569c9f4b64651c49598802e5352f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ozone_large.37b7e5ad821c421f57706c51b5977ddf29667585.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 by Ozone Gaming - ADMIN",
+				"defindex": 15316,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 by Ozone Gaming - ADMIN",
+				"item_description": "8 Brazilian teams battle for glory and R$4,000.00 in gaming equipment from Ozone Gaming.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ozone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ozone.74bb6a98900a569c9f4b64651c49598802e5352f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ozone_large.37b7e5ad821c421f57706c51b5977ddf29667585.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "European Elite League",
+				"defindex": 15317,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League",
+				"item_description": "The most talented players in Europe compete in the classic league format for eight weeks, culminating in a 4-team double elimination best-of-three all-star tournament for a 1,500 Euro prize pool. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_europeanelite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_europeanelite.f4370d0e354d2f5dc34cd1b9d3879c53be19a66b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_europeanelite_large.710de55ee56d972d1484781b755ac4fdacd08fdc.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "European Elite League - ADMIN",
+				"defindex": 15318,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League - ADMIN",
+				"item_description": "The most talented players in Europe compete in the classic league format for eight weeks, culminating in a 4-team double elimination best-of-three all-star tournament for a 1,500 Euro prize pool. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_europeanelite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_europeanelite.f4370d0e354d2f5dc34cd1b9d3879c53be19a66b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_europeanelite_large.710de55ee56d972d1484781b755ac4fdacd08fdc.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fragbite Masters",
+				"defindex": 15319,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fragbite Masters",
+				"item_description": "32 teams compete in the Fragbite Masters which is an online tournament with a $30,900 prize pool for Dota 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fragbitemasters",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fragbitemasters.fe294c5f6c0d29e1d42d32f208e1cf12afe00306.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fragbitemasters_large.fdb9233f0e3c8ce7441fce71e9d16f912a8200c1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Fragbite Masters - ADMIN",
+				"defindex": 15320,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Fragbite Masters - ADMIN",
+				"item_description": "32 teams compete in the Fragbite Masters which is an online tournament with a $30,900 prize pool for Dota 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_fragbitemasters",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fragbitemasters.fe294c5f6c0d29e1d42d32f208e1cf12afe00306.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fragbitemasters_large.fdb9233f0e3c8ce7441fce71e9d16f912a8200c1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Malaysia Cup - October",
+				"defindex": 15321,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Malaysia Cup - October",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesmalaysia",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia.a13c48ae476a91d1706cd0657e478ad1cda2b9fe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia_large.9f99482054199bacb7bee0eb00a85341c3891b0b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "SteelSeries Malaysia Cup - October - ADMIN",
+				"defindex": 15322,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Malaysia Cup - October - ADMIN",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelseriesmalaysia",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia.a13c48ae476a91d1706cd0657e478ad1cda2b9fe.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia_large.9f99482054199bacb7bee0eb00a85341c3891b0b.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
