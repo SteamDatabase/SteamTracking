@@ -33123,6 +33123,7 @@
 		{
 			"name"	"The Lacking Moral Fiber Mask"
 			"prefab"	"hat"
+			"first_sale_date"	"2013/10/18"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -33142,6 +33143,7 @@
 		{
 			"name"	"The Whale Bone Charm"
 			"prefab"	"misc"
+			"first_sale_date"	"2013/10/18"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -33168,7 +33170,7 @@
 				"engineer" "1"
 				"pyro" "1"
 			}
-		}	
+		}
 		"874"
 		{
 			"name"	"The King of Scotland Cape"
