@@ -1,9 +1,15 @@
 { 
   "latest": {
-    "snapshot": "13w42a",
+    "snapshot": "13w42b",
     "release": "1.6.4"
   },
   "versions": [
+    {
+      "id": "13w42b",
+      "time": "2013-10-18T18:34:08+02:00",
+      "releaseTime": "2013-10-18T18:34:08+02:00",
+      "type": "snapshot"
+    },
     {
       "id": "13w42a",
       "time": "2013-10-17T20:33:05+02:00",
