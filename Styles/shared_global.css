@@ -768,33 +768,32 @@ select.gray_bevel {
 
 .header_parental_btn {
 	position: relative;
-	height: 29px;
+	top: -1px;
+	height: 30px;
 
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_parent.png' );
 	background-position: center center;
 	background-repeat: no-repeat;
 
-	padding: 0 28px 0 10px;
+	padding: 0 30px 0 10px;
 }
 
-#header_parental_link.header_parental_btn
-{
+#header_parental_link.header_parental_btn {
 	cursor: pointer;
 }
 
 #header_parental_link.header_parental_locked:hover, .header_parental_locked.focus {
-	background-color: #70BA24;
+	background-position: 0 -86px;
 }
 
 #header_parental_link.header_parental_unlocked:hover, .header_parental_unlocked:focus {
-	background-color: #c64c4b;
+	background-position: 0 -28px;
 }
 
 .header_parental_unlocked {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_parental_unlocked.png' );
-	background-color: #A94847;
+	background-position: 0 1px;
 }
 
 .header_parental_locked {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_parental_locked.png' );
-	background-color: #5b9724;
+	background-position: 0 -57px;
 }

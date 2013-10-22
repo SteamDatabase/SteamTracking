@@ -475,18 +475,29 @@ function RegisterForumTopicCommentThread( gidTopic, CommentThread )
 
 function Forum_DeleteTopic( gidTopic )
 {
-	Forum_ConfirmAction(
-		'Are you sure you want to delete this thread?',
+	ShowConfirmDialog('Delete Thread ',
+		'Are you sure you want to delete this thread? ' +
 		'This action can only be undone by a moderator.',
-		Forum_DoDeleteTopic.bind( null, gidTopic ),
 		'Delete Thread'
-	);
+	).done( function() {
+		Forum_DoDeleteTopic( gidTopic );
+	});
 }
 
 function Forum_DoDeleteTopic( gidTopic )
 {
 	if ( g_rgForumTopics[ gidTopic ] )
 		g_rgForumTopics[ gidTopic ].Delete();
+}
+
+function Forum_PurgeTopic( gidTopic )
+{
+	ShowConfirmDialog('Permanently Delete ',
+		'Are you sure you want to permanently delete this topic?  This cannot be undone.',
+		'Permanently Delete'
+	).done( function() {
+		Forum_SetTopicFlag( gidTopic, 'purge', true );
+	});
 }
 
 function Forum_SetTopicFlag( gidTopic, flag, value )
@@ -892,10 +903,14 @@ CForumTopic = Class.create( {
 
 		this.m_bAJAXInFlight = true;
 
+		var fnOnSuccess = function() { window.location.reload(); };
+		if ( flag == 'purge' )
+			fnOnSuccess = this.RedirectToTopicListPage.bind(this);
+
 		new Ajax.Request( this.GetActionURL( 'moderatetopic' ), {
 			method: 'post',
 			parameters: this.ParametersWithDefaults( { action: 'setflag', flag: flag, value: value } ),
-			onSuccess: function() { window.location.reload() },
+			onSuccess: fnOnSuccess,
 			onFailure: this.OnModeratorActionFailed.bind(this)
 		});
 	},
@@ -1610,6 +1625,8 @@ function InitializeForumBulkActions( strName )
 	var $BtnMove = $J('#forum_' + strName + '_bulk_move');
 	var $BtnMerge = $J('#forum_' + strName + '_bulk_merge');
 
+	var $BtnPurge = $J('#forum_' + strName + '_bulk_purge');
+
 	var $OtherPagesWarning = $J('#forum_' + strName + '_bulk_otherpages').hide();
 	var $OtherPagesCount = $J('#forum_' + strName + '_bulk_otherpage_count');
 	var $OtherPagesClear = $J('#forum_' + strName + '_bulk_otherpage_clear');
@@ -1621,16 +1638,15 @@ function InitializeForumBulkActions( strName )
 	var rgAllSelectedTopics = {};
 	var cTopicsCheckedOnOtherPages = 0;
 
+	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge ).add( $BtnPurge );
+	var $BtnHideDefault = $J().add( $BtnUnDelete ).add( $BtnUnLock );
+
 	var fnShowControlsIfCheckboxChecked = function ()
 	{
 		var $CheckedBoxes = $ForumArea.find( '.forum_topic_checkbox_input:checked' );
 
-		$BtnUnDelete.hide();
-		$BtnDelete.show();
-		$BtnUnLock.hide();
-		$BtnLock.show();
-		$BtnMove.show();
-		$BtnMerge.show();
+		$BtnShowDefault.show();
+		$BtnHideDefault.hide();
 
 		if ( cTopicsCheckedOnOtherPages > 0 )
 		{
@@ -1655,25 +1671,49 @@ function InitializeForumBulkActions( strName )
 		if ( $CheckedBoxes.length > 0 || cTopicsCheckedOnOtherPages )
 		{
 			var $CheckedTopics = $CheckedBoxes.parents( '.forum_topic' );
-			var cDeletedTopics = $CheckedTopics.filter( '.deleted' ).length;
-			var cLockedTopics = $CheckedTopics.filter( '.locked' ).length;
-			if ( cDeletedTopics == $CheckedBoxes.length )
+			var cTotalTopics = 0;
+			var cDeletedTopics = 0;//$CheckedTopics.filter( '.deleted' ).length;
+			var cLockedTopics = 0;//$CheckedTopics.filter( '.locked' ).length;
+			var cMovedTopics = 0;
+
+			for ( var gidTopic in rgAllSelectedTopics )
 			{
-				$BtnUnDelete.show();
-				$BtnDelete.hide();
+				cTotalTopics++;
+				if ( rgAllSelectedTopics[gidTopic].deleted )
+					cDeletedTopics++;
+				if ( rgAllSelectedTopics[gidTopic].locked )
+					cLockedTopics++;
+				if ( rgAllSelectedTopics[gidTopic].moved )
+					cMovedTopics++;
 			}
 
-			if ( cDeletedTopics > 0 )
+			if ( cMovedTopics )
 			{
-				// really only undelete will work on deleted topics
-				$BtnMove.hide();
-				$BtnMerge.hide();
-				$BtnLock.hide();
+				// you can only purge moved topics - remove all other commands
+				$BtnShowDefault.hide();
+				$BtnPurge.show();
 			}
-			else if ( cLockedTopics == $CheckedBoxes.length )
+			else
 			{
-				$BtnUnLock.show();
-				$BtnLock.hide();
+
+				if ( cDeletedTopics == cTotalTopics )
+				{
+					$BtnUnDelete.show();
+					$BtnDelete.hide();
+				}
+
+				if ( cDeletedTopics > 0 )
+				{
+					// really only undelete will work on deleted topics
+					$BtnMove.hide();
+					$BtnMerge.hide();
+					$BtnLock.hide();
+				}
+				else if ( cLockedTopics == cTotalTopics )
+				{
+					$BtnUnLock.show();
+					$BtnLock.hide();
+				}
 			}
 
 			$ForumActions.find('.manage_actions_buttons').fadeTo( 'fast', 1.0 );
@@ -1689,35 +1729,43 @@ function InitializeForumBulkActions( strName )
 		if ( !bEnabled )
 			return;
 
-		var $ForumTopics = $ForumArea.find( '.forum_topic:not(.moved)' );
+		// only include moved threads if the user can purge.  purging is the only thing you can do with a moved topic.
+		var $ForumTopics = $ForumArea.find( $BtnPurge.length ? '.forum_topic' : '.forum_topic:not(.moved)' );
 		cTopicsCheckedOnOtherPages = V_CountKeys( rgAllSelectedTopics );
 
 		$ForumTopics.each( function() {
 			var $ForumTopic = $J(this);
+
+			var gidForumTopic = this.getAttribute( 'data-gidforumtopic' );
+			if ( rgAllSelectedTopics[gidForumTopic] )
+				cTopicsCheckedOnOtherPages--;
+
 			if ( !$ForumTopic.hasClass( 'bulk_edit_mode' ) )
 			{
-				var gidForumTopic = this.getAttribute( 'data-gidforumtopic' );
 				var $Checkbox = $J('<input/>', {'type': 'checkbox', 'class': 'forum_topic_checkbox_input' } );
 				$Checkbox.data( 'gidForumTopic', gidForumTopic );
 
 				$Checkbox.change( function() {
-					fnShowControlsIfCheckboxChecked();
 					if ( $Checkbox.prop('checked') )
 					{
 						$ForumTopic.addClass( 'selected_for_bulk' );
-						rgAllSelectedTopics[gidForumTopic] = true;
+						rgAllSelectedTopics[gidForumTopic] = {
+							deleted: $ForumTopic.hasClass( 'deleted' ),
+							locked: $ForumTopic.hasClass( 'locked' ),
+							moved: $ForumTopic.hasClass( 'moved' ),
+						};
 					}
 					else
 					{
 						$ForumTopic.removeClass( 'selected_for_bulk' );
 						delete rgAllSelectedTopics[gidForumTopic];
 					}
+					fnShowControlsIfCheckboxChecked();
 				} );
 
-
+				// restore the checked state
 				if ( rgAllSelectedTopics[gidForumTopic] )
 				{
-					cTopicsCheckedOnOtherPages--;
 					$Checkbox.prop( 'checked', true );
 					$Checkbox.change();
 				}
@@ -1785,6 +1833,8 @@ function InitializeForumBulkActions( strName )
 	$BtnMove.click( function() { ForumBulkMove( strName, V_Keys( rgAllSelectedTopics ) ).done( fnClearAllSelections ); } );
 	$BtnMerge.click( function() { ForumBulkMerge( strName, V_Keys( rgAllSelectedTopics ) ).done( fnClearAllSelections ); } );
 
+	$BtnPurge.click( function() { ForumBulkPurge( strName, V_Keys( rgAllSelectedTopics ), fnClearAllSelections ); } );
+
 	//prototype AJAX
 	Ajax.Responders.register( { onComplete: fnAddCheckboxes } );
 }
@@ -1847,6 +1897,20 @@ function ForumBulkMerge( strName, rgForumTopicGIDs )
 					'The selected topics have been merged into a single topic.' );
 			}
 		} );
+}
+
+function ForumBulkPurge( strName, rgForumTopicGIDs, fnOnComplete )
+{
+	ShowConfirmDialog('Permanently Delete ',
+		'Are you sure you want to permanently delete this topic?  This cannot be undone.',
+		'Permanently Delete'
+	).done ( function() {
+		BulkModerate( strName, rgForumTopicGIDs, 'purge', true )
+		.done( function( data ) {
+			ShowAlertDialog( 'Permanently Delete', 'The selected topics have been permanently deleted.' );
+			fnOnComplete();
+		});
+	});
 }
 
 
