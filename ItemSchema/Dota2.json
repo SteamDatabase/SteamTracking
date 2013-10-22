@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.28bc78b64c14ceb5d95f0414790805ad028b89b8.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.262201a559ffeed8f221c0a26dac9479475c2e14.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -46392,6 +46392,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/leg_gaurds_of_kogu\/leg_gaurds_of_kogu.2e6fd8814f4f804a4e6a8f4d663c2a46fd7bd2a3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/leg_gaurds_of_kogu\/leg_gaurds_of_kogu_large.b37bec1ac31fa7c345dc2df3d8a3162c6139bbc6.png",
+				"item_set": "juggernaut_kogu_warrior",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46415,6 +46416,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/scowl_of_kogu\/scowl_of_kogu.bcd2f3a895dda357dfa651382c6eb788dceff64d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/scowl_of_kogu\/scowl_of_kogu_large.79d6151e0b90b929649da00d18cff2d98575f9b6.png",
+				"item_set": "juggernaut_kogu_warrior",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46438,6 +46440,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/the_discipline_of_kogu\/the_discipline_of_kogu.248aab08150af01c2c86cdb23a6e85689b9e22c5.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/the_discipline_of_kogu\/the_discipline_of_kogu_large.ebc3c351ff9ddcd249eca7871a40ad4458a2da46.png",
+				"item_set": "juggernaut_kogu_warrior",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46461,6 +46464,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/armor_of_kogu\/armor_of_kogu.d9b5c321c0ffa1b136ca1e9a908a933de18d1542.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/armor_of_kogu\/armor_of_kogu_large.2dedb24b49694f2fe0b2dbe9038e0b7826467c78.png",
+				"item_set": "juggernaut_kogu_warrior",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46484,6 +46488,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/bracers_of_kogu\/bracers_of_kogu.5faddefa95a43a2986ab59fa20a8292d495c7bf4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/bracers_of_kogu\/bracers_of_kogu_large.ceaaad03b718f76acf2a8171acab55172b762188.png",
+				"item_set": "juggernaut_kogu_warrior",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46507,6 +46512,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_shield\/arcane_shield.4104b8e32c46cae8e0c1d935909c60588947b46a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_shield\/arcane_shield_large.88e8ac1ddf32ff2b0ca12017c20d80d552d67249.png",
+				"item_set": "invoker_mnemonus_arcanus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46530,6 +46536,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_fist\/arcane_fist.e5f8753521bb3c0a4668cdc47007490664327a89.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_fist\/arcane_fist_large.0a56fe63c575dd68591bd6a5174dccde1b3ce4e3.png",
+				"item_set": "invoker_mnemonus_arcanus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46553,6 +46560,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_sight\/arcane_sight.4cdd6f9458c58da42a64604a34e01aae1a6f4b06.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_sight\/arcane_sight_large.f7713fca7397f0b3c2faff7be23671ec43fb7f81.png",
+				"item_set": "invoker_mnemonus_arcanus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46576,6 +46584,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_drapings\/arcane_drapings.6a1f716bacd46e77887a1872bcf3ea94099d24bd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/invoker\/arcane_drapings\/arcane_drapings_large.fbb9eb18613ed758f91661e6ca8390164f41b38c.png",
+				"item_set": "invoker_mnemonus_arcanus",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46599,6 +46608,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/curse_of_the_highborn\/curse_of_the_highborn.d89df7836db8ee78b213cf84bb34b9e7d28e735e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/curse_of_the_highborn\/curse_of_the_highborn_large.73192e35a2332e6de0373de1e1237c37fe3db584.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46622,6 +46632,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_bracers\/eki_bukaw_bracers.dd5edf3d9d5fb62c3e0d7625252d191d0533b072.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_bracers\/eki_bukaw_bracers_large.b8686754e181330b7a490722f1f8464c3456e758.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46645,6 +46656,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/records_of_the_eki_bukaw\/records_of_the_eki_bukaw.2730594b6d679cd37490893598f4f5cc748a5b34.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/records_of_the_eki_bukaw\/records_of_the_eki_bukaw_large.f42bbf5eae8da7e85ddb7ced9d4a284354848eaa.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46668,6 +46680,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_wand__offhand\/eki_bukaw_wand__offhand.3dfd8962e24e5ec69fd8596b3e99f5e8466745d6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_wand__offhand\/eki_bukaw_wand__offhand_large.6ecb25bfd5949ca7b39b19e8dcbabc83a8002677.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46691,6 +46704,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_wand\/eki_bukaw_wand.5c9e3a1c98f78c9cd0681e7a8c06fb507eab2138.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/eki_bukaw_wand\/eki_bukaw_wand_large.0154e5140c17a7cc08aea1ff2d58973d2c15a02f.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46714,6 +46728,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/belt_of_scarlet_claws\/belt_of_scarlet_claws.c67e69acfb3159f5dec7695a4830cda221c33381.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/belt_of_scarlet_claws\/belt_of_scarlet_claws_large.9a7d3d4b379f886cec563dbe8c6b1203113bf8c9.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46737,6 +46752,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/scarlet_ravens_gauntlets\/scarlet_ravens_gauntlets.cdc9cd4f8d79b9b6bc36a97b999f6ae0bfb69331.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/scarlet_ravens_gauntlets\/scarlet_ravens_gauntlets_large.6c3fa656f5b7339d3667ee85675d93981400d969.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46760,6 +46776,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46783,6 +46800,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/necklace_of_scarlet_claws\/necklace_of_scarlet_claws.98c061ef1d91865b8dbb8ea7ab284a34765f4c61.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/necklace_of_scarlet_claws\/necklace_of_scarlet_claws_large.85a70d14bcdd72ee3f4995d1b7c99984d3324bae.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46806,6 +46824,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/talon_of_the_scarlet_raven\/talon_of_the_scarlet_raven.0476460ff66a068923e5c00f73c83207889a88ea.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/talon_of_the_scarlet_raven\/talon_of_the_scarlet_raven_large.d704b2f98c10990854137f0b2041e2f4031d932b.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46829,6 +46848,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/coat_of_the_scarlet_raven\/coat_of_the_scarlet_raven.91f38feee7bcddc921d493fc7d2f39ef50ce1e65.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/coat_of_the_scarlet_raven\/coat_of_the_scarlet_raven_large.358084226ddb2c0c3aa326f7b42803069c2824a7.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46852,6 +46872,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/hood_of_the_scarlet_raven\/hood_of_the_scarlet_raven.dbe7239704209da2c529469051ff01dd3a41baaf.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/hood_of_the_scarlet_raven\/hood_of_the_scarlet_raven_large.c9da0c895b75dee130d2a06301021c7378c2ba4d.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46875,6 +46896,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/talon_of_the_scarlet_raven__offhand\/talon_of_the_scarlet_raven__offhand.d1759a9f2a2114d02f7215474ba11c2ea4c03a4c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/blood_seeker\/talon_of_the_scarlet_raven__offhand\/talon_of_the_scarlet_raven__offhand_large.d1dd3ab119678e8c918597eb3729fa4cad6d75df.png",
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46898,6 +46920,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_abdominal_plate\/nephropid_abdominal_plate.59e8a2180ffe9ab3ba17c0efaf51552a2385a6a5.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_abdominal_plate\/nephropid_abdominal_plate_large.bfab9bb516d79e811268e274bdbc4591cbc3588e.png",
+				"item_set": "broodmother_nephropod_plate",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46921,6 +46944,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_cuirass\/nephropid_cuirass.db77de03a15fa3ceff3f4b8aea8e24381bbd4377.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_cuirass\/nephropid_cuirass_large.613b659e5bea68e0ab03d3a7a0b789029db1cb7a.png",
+				"item_set": "broodmother_nephropod_plate",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46944,6 +46968,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_kalkriese\/nephropid_kalkriese.dd8e50b2eaf90b672eef225c9bcfa83a58326228.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_kalkriese\/nephropid_kalkriese_large.a7f653569748d19ff0e00c2cde58eaa4f5737875.png",
+				"item_set": "broodmother_nephropod_plate",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46967,6 +46992,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_ocrea\/nephropid_ocrea.5fcb9f0da92f890b2d5300823f09421b2e86d10c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/broodmother\/nephropid_ocrea\/nephropid_ocrea_large.63f1aae375937dbb00292eb402abe37ba5266890.png",
+				"item_set": "broodmother_nephropod_plate",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47110,6 +47136,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/thorns_of_the_highborn\/thorns_of_the_highborn.698c4a20a932d6de3be523dbe43211ec78c17a81.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/thorns_of_the_highborn\/thorns_of_the_highborn_large.b4da6017545bbe99c72bb9cc21770e759ce5c70c.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47133,6 +47160,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn\/wrath_of_the_highborn.a56cde8fa4cebd93e7e871b2252b716079fe8c09.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn\/wrath_of_the_highborn_large.ac60db506a8c350567d339cfd9d1832a065fe72b.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47156,6 +47184,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn__offhand\/wrath_of_the_highborn__offhand.bbda02ef55b2a92be948c27d47e3b92aa4d99ad9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn__offhand\/wrath_of_the_highborn__offhand_large.ea43af69cf8025fb721a4a2531528845be6b52de.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47179,6 +47208,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/burden_of_the_highborn\/burden_of_the_highborn.65e66bde9b57d0a0a3ed3a9665b5323360e06f57.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/burden_of_the_highborn\/burden_of_the_highborn_large.17c148fe1e269779a541c9df8d3e4379ad0245c3.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47202,6 +47232,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/tail_of_the_highborn\/tail_of_the_highborn.32d179c16372ebc716b1521e6c948120d5e7f987.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/tail_of_the_highborn\/tail_of_the_highborn_large.d4d4cf975d87c1febc06fee2f6c89e98d239f296.png",
+				"item_set": "riki_highborn_reckoning",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47225,6 +47256,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/cloth_of_the_clergy_ascetic\/cloth_of_the_clergy_ascetic.9b8c0d61ce5c76a3895049e5bd563bab6c08d812.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/cloth_of_the_clergy_ascetic\/cloth_of_the_clergy_ascetic_large.1cdd3dfca946a01fedc1734a184c058ec49d2ee9.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47248,6 +47280,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/reprieve_of_the_clergy_ascetic__offhand\/reprieve_of_the_clergy_ascetic__offhand.733e1c4f894f91868baa982ed0383577b061b63d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/reprieve_of_the_clergy_ascetic__offhand\/reprieve_of_the_clergy_ascetic__offhand_large.9a8ddd0358cc2d20e6fb375391db3a55a414cf99.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47271,6 +47304,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/adornment_of_the_clergy_ascetic\/adornment_of_the_clergy_ascetic.79167c919a19f152b07ebdcf4ab78490a0e856a8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/adornment_of_the_clergy_ascetic\/adornment_of_the_clergy_ascetic_large.93e57f00f9ad53aacd4f676ac8f5a78f1c72d787.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47294,6 +47328,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/reprieve_of_the_clergy_ascetic\/reprieve_of_the_clergy_ascetic.4023896456ab69966451527fb4c754e9ea13d252.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/reprieve_of_the_clergy_ascetic\/reprieve_of_the_clergy_ascetic_large.55f4758795ff0bbf9e0b004cd2b795a468e65376.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47317,6 +47352,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/guard_of_the_clergy_ascetic\/guard_of_the_clergy_ascetic.1504f960ea24a4ae93b462dd9112a60b8d048627.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/guard_of_the_clergy_ascetic\/guard_of_the_clergy_ascetic_large.e19e3aab19f36882b8566e60b6dff260b0dcc5a2.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47340,6 +47376,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/hood_of_the_clergy_ascetic\/hood_of_the_clergy_ascetic.53e13eb9591eed032b557f902940ec5cd488dd84.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/hood_of_the_clergy_ascetic\/hood_of_the_clergy_ascetic_large.0ebe69105342916240ebccae4936a076b78cc26e.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47363,6 +47400,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/bracers_of_the_silent_guardian\/bracers_of_the_silent_guardian.b48905a9a17fb93d3749c1e57f52739608237d2a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/bracers_of_the_silent_guardian\/bracers_of_the_silent_guardian_large.dd32c01202123ca7577171cebd76e1c4885fe16b.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47386,6 +47424,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/shift_of_the_silent_guardian\/shift_of_the_silent_guardian.82d377d793299ff5ffc91b32e40cf7bae223c903.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/shift_of_the_silent_guardian\/shift_of_the_silent_guardian_large.efd66df71918806c4f11b3f3557a8f74d3b16546.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47409,6 +47448,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/shield_of_the_silent_guardian\/shield_of_the_silent_guardian.2cd237678f74c43f84a8fccbf26022303cfa1cbb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/shield_of_the_silent_guardian\/shield_of_the_silent_guardian_large.adc2ba77aa4f310bbbbafc612d37d7080c7b83ef.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47432,6 +47472,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/pauldron_of_the_silent_guardian\/pauldron_of_the_silent_guardian.35c06bf2eb2d456d3cea90b5a69e6cd50382dffc.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/pauldron_of_the_silent_guardian\/pauldron_of_the_silent_guardian_large.e210957870ebba0a8653fdfbe7ccf0abbd328333.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47455,6 +47496,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/blade_of_the_silent_guardian\/blade_of_the_silent_guardian.ef505674266f9c8cdf8eb126e21a6457257f06e6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/blade_of_the_silent_guardian\/blade_of_the_silent_guardian_large.f858d5bb6646913f70de1f4b7762e7ca732450f4.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47526,6 +47568,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/helm_of_the_silent_guardian\/helm_of_the_silent_guardian.1094388cae780ac979f7707fcd574486ac5041c3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/silencer\/helm_of_the_silent_guardian\/helm_of_the_silent_guardian_large.9e4778dc2fa77c44cdc9aedb7383593c54586dcb.png",
+				"item_set": "silencer_guardian_of_silence",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47549,6 +47592,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/visage_of_eki_bukaw\/visage_of_eki_bukaw.a04ed147e7a12738b44b20d0ad78915265351266.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/shadowshaman\/visage_of_eki_bukaw\/visage_of_eki_bukaw_large.3ca1123229126ad467b6c369fec4a45dada4f3c1.png",
+				"item_set": "shadowshaman_eki_implements",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47572,6 +47616,7 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_clergy_ascetic\/bracers_of_the_clergy_ascetic.8a1a212cc0dec0206ca79dbff77c612362a411e6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_clergy_ascetic\/bracers_of_the_clergy_ascetic_large.1afbfd5af6345ed9ce101a3ffed86382ec6b2367.png",
+				"item_set": "antimage_clergy_ascetic",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -79142,6 +79187,21 @@
 				
 			},
 			{
+				"item_set": "antimage_clergy_ascetic",
+				"name": "The Clergy Ascetic",
+				"store_bundle": "The Clergy Ascetic Set",
+				"items": [
+					"Cloth of the Clergy Ascetic",
+					"Adornment of the Clergy Ascetic",
+					"Reprieve of the Clergy Ascetic",
+					"Guard of the Clergy Ascetic",
+					"Reprieve of the Clergy Ascetic - Off-Hand",
+					"Hood of the Clergy Ascetic",
+					"Bracers of the Clergy Ascetic"
+				]
+				
+			},
+			{
 				"item_set": "antimage_mage_slayer",
 				"name": "The Mage Slayer",
 				"items": [
@@ -79452,6 +79512,21 @@
 				
 			},
 			{
+				"item_set": "bloodseeker_ardor_ofth_scarlet_raven",
+				"name": "Ardor of the Scarlet Raven",
+				"store_bundle": "Ardor of the Scarlet Raven Set",
+				"items": [
+					"Belt of the Scarlet Raven",
+					"Gauntlets of the Scarlet Raven",
+					"Talon of the Scarlet Raven",
+					"Coat of the Scarlet Raven",
+					"Hood of the Scarlet Raven",
+					"Talon of the Scarlet Raven - Off-Hand",
+					"Necklace of Scarlet Raven"
+				]
+				
+			},
+			{
 				"item_set": "bloodseeker_blood_covenant",
 				"name": "Wrath of the Blood Covenant",
 				"store_bundle": "Wrath of the Blood Covenant Set",
@@ -79592,8 +79667,19 @@
 				
 			},
 			{
+				"item_set": "broodmother_nephropod_plate",
+				"name": "Steelweb of Pytheos",
+				"items": [
+					"Steelweb Shell",
+					"Steelweb Cuirass",
+					"Steelweb Countenance",
+					"Steelweb Sheaths"
+				]
+				
+			},
+			{
 				"item_set": "broodmother_web_of_thorns",
-				"name": "DOTA_Set_Web_of_Thorns",
+				"name": "Web of Thorns",
 				"store_bundle": "Web of Thorns Set",
 				"items": [
 					"Thorned Abdomen of Malice",
@@ -80470,6 +80556,18 @@
 				
 			},
 			{
+				"item_set": "invoker_mnemonus_arcanus",
+				"name": "Mnemonus Arcanus",
+				"store_bundle": "Mnemonus Arcanus Set",
+				"items": [
+					"Arcane Shield",
+					"Arcane Fist",
+					"Arcane Sight",
+					"Arcane Drapings"
+				]
+				
+			},
+			{
 				"item_set": "jewel_of_the_forest",
 				"name": "Jewel of the Forest",
 				"store_bundle": "Jewel of the Forest Set",
@@ -80540,6 +80638,18 @@
 					"Kimono of the Ebony Tower",
 					"Bracers of the Ebony Tower",
 					"Defender of the Ivory Isles"
+				]
+				
+			},
+			{
+				"item_set": "juggernaut_kogu_warrior",
+				"name": "Arms of the Gwimyeon Warrior",
+				"items": [
+					"Juljae Sword",
+					"Bracers of the Gwimyeon Warrior",
+					"Faulds of the Gwimyeon Warrior",
+					"Gwimyeon ",
+					"Pauldrons of the Gwimyeon Warrior"
 				]
 				
 			},
@@ -81188,6 +81298,20 @@
 				
 			},
 			{
+				"item_set": "riki_highborn_reckoning",
+				"name": "Highborn Reckoning",
+				"store_bundle": "Highborn Reckoning Set",
+				"items": [
+					"Thorns of the Highborn",
+					"Curse of the Highborn",
+					"Wrath of the Highborn",
+					"Burden of the Highborn",
+					"Temper of the Highborn - Off-Hand",
+					"Whisk of the Highborn"
+				]
+				
+			},
+			{
 				"item_set": "riki_sange_and_yasha",
 				"name": "Riki's Sange and Yasha",
 				"items": [
@@ -81325,6 +81449,20 @@
 				
 			},
 			{
+				"item_set": "shadowshaman_eki_implements",
+				"name": "Eki Spiritual Implements",
+				"store_bundle": "Eki Spiritual Implements Set",
+				"items": [
+					"Eki Bukaw Bracers",
+					"Records of the Eki Bukaw",
+					"Eki Bukaw Wand - Off-Hand",
+					"Eki Bukaw Wand",
+					"Fiery Ward of Eki Bukaw",
+					"Visage of Eki Bukaw"
+				]
+				
+			},
+			{
 				"item_set": "shinobi",
 				"name": "The Subtle Demon",
 				"store_bundle": "The Subtle Demon Set",
@@ -81335,6 +81473,20 @@
 					"Whip of the Subtle Demon",
 					"Mark of the Subtle Demon",
 					"Blade of the Subtle Demon - Off-Hand"
+				]
+				
+			},
+			{
+				"item_set": "silencer_guardian_of_silence",
+				"name": "Guardian of Silence",
+				"store_bundle": "Guardian of Silence Set",
+				"items": [
+					"Bracers of the Silent Guardian",
+					"Shift of the Silent Guardian",
+					"Shield of the Silent Guardian",
+					"Pauldron of the Silent Guardian",
+					"Blade of the Silent Guardian",
+					"Helm of the Silent Guardian"
 				]
 				
 			},
