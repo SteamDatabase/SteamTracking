@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.262201a559ffeed8f221c0a26dac9479475c2e14.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.0ab71a9d98e089c02722700831a12f45e127b5ae.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -58259,7 +58259,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Ward",
 				"item_name": "Celestial Observatory",
-				"item_description": "This ancient ward has stood gaurd nearly as long as the stars themselves.",
+				"item_description": "This ancient ward has stood watch nearly as long as the stars themselves.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/wards\/celestial_observatory\/celestial_observatory_npc_dota_observer_wards",
@@ -69529,7 +69529,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Dota 2 Champions League",
-				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 6.25% of all ticket sales will be added to the prize pool!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
@@ -69565,7 +69565,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Dota 2 Champions League - ADMIN",
-				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 25% of all ticket sales will be added to the prize pool!",
+				"item_description": "The Champions League will feature 12 teams from Europe and North America fighting for $50,000! 6.25% of all ticket sales will be added to the prize pool!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_d2cl",
@@ -70113,6 +70113,78 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia.a13c48ae476a91d1706cd0657e478ad1cda2b9fe.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelseriesmalaysia_large.9f99482054199bacb7bee0eb00a85341c3891b0b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Nexon Invitational Super Match",
+				"defindex": 15324,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Invitational Super Match",
+				"item_description": "Nexon features eight of the best international teams and four from Korea facing off in an epic series of showdowns in Seoul, Korea. Produced and broadcast by OnGameNet, this all-star event will run from October 28 till November 25, 2013.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_supermatch",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch.cb5594d6d801a875336f7dd19f870be40f7f3054.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch_large.85516a04b00f4200d6b905e52bd1ab0cb0c1fc2f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Nexon Invitational Super Match - ADMIN",
+				"defindex": 15325,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Invitational Super Match - ADMIN",
+				"item_description": "Nexon features eight of the best international teams and four from Korea facing off in an epic series of showdowns in Seoul, Korea. Produced and broadcast by OnGameNet, this all-star event will run from October 28 till November 25, 2013.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_supermatch",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch.cb5594d6d801a875336f7dd19f870be40f7f3054.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch_large.85516a04b00f4200d6b905e52bd1ab0cb0c1fc2f.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -79078,6 +79150,14 @@
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": false
+			},
+			{
+				"name": "purgatory expires after date",
+				"defindex": 411,
+				"attribute_class": "purgatory expires after date",
+				"effect_type": "value_is_game_time",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
