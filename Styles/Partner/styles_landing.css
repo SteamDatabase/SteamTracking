@@ -763,6 +763,12 @@ h2.bright {
 		-webkit-box-sizing: border-box;
 	}
 
+	input.inlineLabelNoSize, select.inlineLabelNoSize, div.inputLabelContentNoSize{
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+
 	.landingLeftCol .inputLabelContent {
 		width: 550px;
 	}
@@ -1399,4 +1405,25 @@ input.datepicker {
 
 .alertText {
 	color: #FBB963;
+}
+
+.modalv3 {
+	padding: 8px;
+	color: #b2b2b2;
+
+	width: 500px;
+
+}
+
+.modalv3 h1, .modalv3 h2 {
+	color: #fff;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.modalv3 .hr {
+	background-color: #4c4c4c;
+	height: 1px;
+	clear: both;
+	margin: 8px 0;
 }
