@@ -869,6 +869,24 @@ a.tab, .tab a {
 	background: #111922;
 }
 
+/* diffing */
+.diff_insert
+{
+	background: #e6ffe6;
+	color: #00cc00;
+}
+
+.diff_delete
+{
+	background: #ffe6e6;
+	color: #cc0000;
+}
+
+.diff_equal
+{
+
+}
+
 /* bbcode toolbar styles */
 .BBCodeTemplateBlock {
 	float: left;

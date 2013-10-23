@@ -1396,3 +1396,7 @@ input.datepicker {
 	border-top: 1px solid #6b8805;
 	padding: 15px;
 }
+
+.alertText {
+	color: #FBB963;
+}
