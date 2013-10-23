@@ -6,21 +6,86 @@
 		"DownloadsPage"
 		{
 			"ControlName"		"CDownloadsPage"
+			Style=DownloadsPageStyle
+		}
+		
+		"downloadsummarypanel"
+		{
+			"ControlName"	"DownloadSummaryPanel"
 		}
 	
 		"panel_list"
 		{
-			style=ListPanel
+			"ControlName"	"SectionedListPanel"
+			Style=ListPanelStyle
 		}
+				
 	}
 	
 	styles
 	{
+		SectionedListPanelCollapser
+		{
+			inset = "0 0 0 -2"
+			bgcolor=ButtonBorderDisabled
+		}
+		SectionHeaderStyle
+		{
+			inset = "0 2 0 0"
+			font-style="uppercase"
+			margin-bottom=0
+			render_bg 
+			{	
+				// background gradient
+				0="gradient_horizontal( x0 - 2, y0, x1, y1, ButtonBorderDisabled, none )"
+			}
+			render
+			{
+				
+			}
+		}
+		DownloadsPageStyle
+		{
+			bgcolor=dialogbg
+			render
+			{
+				// lines around
+				0="fill( x0 + 1, y0, x1 - 1, y0+1, ButtonBorderDisabled )"  // top
+				0="fill( x0, y0 + 1, x0+1, y1 - 1, ButtonBorderDisabled )"  // left
+				0="fill( x1 - 1, y0 + 1, x1, y1 - 1, ButtonBorderDisabled )"  // right
+				0="fill( x0 + 1, y1-1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
+			}			
+		}
+		ListPanelStyle
+		{
+			inset = "0 0 0 0"
+			bgcolor=clientbg
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="Text"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="Focus"
+			shadowtextcolor="TextDisabled"	// the color of disabled line items		
+			render
+			{
+				//gradient to obscure content at bottom of scrolling region 
+				0="gradient( x0+1, y1 - 18, x1 - 15, y1-3, none, almostblack )"
+				1="fill( x0+1, y1 - 4, x1 - 15, y1-1, almostblack )"
+			}
+			render_bg 
+			{	
+				// background gradient
+				0="gradient( x0, y0, x1, y0 + 149, dialogbg, AlmostBlack )"
+				1="fill( x0, y0 + 149, x1, y1, AlmostBlack )" 
+			}
+		}	
 	}
 
 	layout
 	{
-		place { control="panel_list" width=max height=max margin=1 }
+		region { name=main x=0 y=0 margin=5 }
+		place { control="downloadsummarypanel,panel_list" dir=down region=main width=max height=max spacing=0 }
 
 	}
 }

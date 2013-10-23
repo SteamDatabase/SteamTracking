@@ -1,0 +1,85 @@
+"resource/layout/subpaneloptionsingame.layout"
+{
+	controls
+	{
+		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
+		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
+		HotKeySelector {	ControlName=HotKeyEntry	}
+		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
+		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsDescription" wrap=1  }
+		HotKeySelectorLabel {	ControlName=Label labelText="#Overlay_SettingsHotKeyLabel" }
+		ScreenshotLabel {	ControlName=Label labelText="#Overlay_SettingsScreenshotHotKeyLabel"	}
+		ScreenshotActionLabel 	{	ControlName=Label	labelText="#Overlay_SettingsScreenshotActionLabel" }
+		ScreenshotNotifyCheck { ControlName=CheckButton labelText="#Friends_DisplayNotification" style=checkbox }
+		ScreenshotPlaySoundCheck { ControlName=CheckButton labelText="#Friends_PlayASound" }
+		ScreenshotSaveUncompressedCheck { ControlName=CheckButton labelText="#Overlay_SaveUncompressed" }
+	
+		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
+		
+		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
+		OverlayHomePage { ControlName=TextEntry }
+	
+		Divider1 { ControlName=Divider	}
+		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight		}
+		PingRateInfo {	controlname=label	labeltext=#Steam_ServerBrowserPingRateInfo wrap=1		}		
+		PingRateCombo
+		{
+			controlname=combobox
+		}		
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+		
+		checkbox
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+		region { name=top region=box margin-top=10 }
+		region { name=topleft region=top y=100 width=210 }
+		region { name=topright region=top x=250 y=100 }
+		
+		region { name=bottom region=box y=280 }
+		
+		place { controls=TitleLabel region=top }
+		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
+		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 }
+	
+		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
+		
+		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=5 start=HotKeySelector margin-top=20 width=max region=topleft }
+			
+		place { controls=ScreenshotLabel region=topright }
+		place { controls=ScreenshotHotKeySelector,SetScreenshotFolderButton 
+			dir=down 
+			start=ScreenshotLabel
+			margin-top=4
+			spacing=5
+			width=max
+			height=22
+			region=topright }
+		place { control=ScreenshotActionLabel region=topright start=SetScreenshotFolderButton dir=down margin-top=10 }
+		place { controls=ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down start=ScreenshotActionLabel
+			margin-top=4 height=22 width=max region=topright }
+		
+		place { control=Divider1 region=bottom width=max }
+		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=10 width=max dir=down }
+		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=10 width=210 dir=down height=25 }
+		place { controls="PingRateInfo" region=bottom start=PingRateCombo margin-top=10 width=250 dir=down }				
+			
+	}
+}

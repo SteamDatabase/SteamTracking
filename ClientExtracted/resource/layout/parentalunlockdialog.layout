@@ -4,7 +4,7 @@
 	{
 		ParentalUnlockDialog { controlname="Frame" title="#steam_parental_unlocktitle" style="ParentalUnlockDialog" }
 
-		Instructions { controlname="Label" labeltext="#steam_parental_unlockinstructions" wrap=1 }
+		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_unlockinstructions" wrap=1 }
 
 		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
 		
@@ -24,6 +24,11 @@
 		{
 			minimum-height=50
 			font-size=40
+		}
+
+		Hey
+		{
+			font-size=18
 		}
 
 	}

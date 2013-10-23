@@ -3,44 +3,57 @@
 	controls
 	{
 		// this just sets the height
-		appdownloadpanel	{	tall="110"	}
-			
-		// black fill, used on the background
-		bgimage1	{ controlname="ImagePanel"	zpos="-1"	style="panelBgColorActive" }
+		appdownloadpanel	{	tall="110"	style=panelStyle }
+
+		// image
+		gameimage		{ controlname="ImagePanel"	 style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
 		
-		// top row
+		// left-mid column
 		namelabel	{ controlname="Label"	labelText="%name%" style="ModuleHeading" }
 		dashlabel	{ controlname="Label"	labelText=""	}
-		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_updating" style=ModuleHeading2 }
-		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2}
-		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label}
-		pauseresumebutton	{ controlname="Button" style="SmPauseButton" tooltiptext="#steam_downloads_pause" }
-		
-		// second row
-		gameimage		{ controlname="ImagePanel"	wide="184" tall="69"}		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
-		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
-		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" style="label" }
-	
-		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="HideOnCompletion" }
-		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="HideOnCompletion" }
-		
-		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="HideOnCompletion" style="SlimProgressBar" }
-		
-
-		
-		// button row
 		launchbutton		{ controlname="Button"	style="DetailsLaunchButton"	labelText="#Steam_LaunchGame" zpos="1" }
-		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
+		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="ShowWhileDownloading" style="SlimProgressBar" }
 		librarylink		{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_showinlibrary" }
+
+		// right-mid column
+		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" group="HideOnCompletion" }
+		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" style="label" group="HideOnCompletion" }
+		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2  group="ShowWhileDownloading"}
+		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label  group="ShowWhileDownloading"}
+		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="ShowWhileDownloading" }
+		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="ShowWhileDownloading" }
+
+		// right column
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 }
+		removefromqueuebutton	{ controlname="Button" style="SmRemoveButton" tooltiptext="#steam_downloads_remove" }
+		topofqueuebutton	{ controlname="Button" style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
+		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
+
+	
+		
 	}
 	
 	colors
 	{
-
+		dark_blue_grad = "12 27 38 255"
+		light_blue_grad = "32 72 102 255"
 	}
 	
 	styles
 	{
+		panelStyle
+		{
+			bgcolor=clientbg
+			
+		}
+		
+		panelStyleHighlight
+		{
+			render_bg
+			{
+				0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
+			}			
+		}
 
 		links
 		{
@@ -61,7 +74,7 @@
 			textcolor="white"
 			font-family=basefont
 			font-style="uppercase"
-			padding-left=10
+			padding-left=0
 			padding-top=0
 			padding-bottom=0
 		}
@@ -104,32 +117,45 @@
 		
 		panelBgColorActive
 		{
-		bgcolor=		"clientbg"
-	
+			bgcolor=		"clientbg"
 		}
 
-	
-		test
-		{
-			font-family		"Arial"
-			font-size="14"
-			font-style="uppercase"
-			padding-left	"10"
-			padding-right	"20"
+				
+				
+				
+		gameImagePanel
+		{   
+			inset="0 0 0 0"
 			render_bg
 			{
-				0="fill ( x0, y0 + 1, x1 , y1, Backgroundstart )"
-				// lines around
-				1="fill( x1, y0, x1 + 2, y1, darkclientbg )"
-
-				2="fill( x0, y1, x1, y1 + 2, darkclientbg )"
-				// corner
-			 	3="fill( x1, y1 , x1 + 1, y1 + 1, darkclientbg )"
+			}
+			render
+			{
 				
 			}
 		}
+		
+		gameImagePanelHighlight
+		{   
+			inset="0 0 0 0"
+			render_bg
+			{
+				// Insert glowy image here?
 				
-				
+				// bottom
+				0="gradient( x0+8, y1 - 8, x1 - 8, y1, light_blue_grad, none )"
+				// top
+				1="gradient( x0 + 8, y0, x1 - 8, y0 + 8, none, light_blue_grad )"
+				// left
+				2="gradient_horizontal( x0, y0 + 8, x0 + 8, y1 - 8, none, light_blue_grad )"
+				// right
+				3="gradient_horizontal( x1 - 8, y0 + 8, x1, y1 - 8, light_blue_grad, none )"				
+			}
+			render
+			{
+			}
+		}		
+						
 		DetailsLaunchButton
 		{   
 
@@ -247,7 +273,10 @@
 			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 			}
 		}
-		SmPauseButton
+
+		
+				
+		topOfQueueButton
 		{   
 		
 			inset="30 0 0 0"
@@ -257,190 +286,33 @@
 			textcolor="Text"
 			font-style=uppercase
 			bgcolor=none
-			render_bg 
-			{
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause )"
-			}
-		}
-		
-		SmPauseButton:Hover
-		{   
-			inset="30 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
-			bgcolor=none   
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause_hover )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
 
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   				
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}	
-		}
-		
-		SmResumeButton
-		{   
-		
-			inset="30 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Text"
-			font-style=uppercase
-			bgcolor=none
-		     render_bg 
-			{
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-						
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install  )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_topofqueue )"
 			}
-		}
-		
-		SmResumeButton:Hover
-		{   
-			inset="30 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
-			bgcolor=none   
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   				
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}	
-		}
+		}			
 		
 		SmRemoveButton
 		{   
 		
-			inset="30 0 0 0"
+			inset="0 0 0 0"
 			font-family=basefont
 			font-size=16
 			font-weight=400
 			textcolor="Text"
 			font-style=uppercase
 			bgcolor=none
-		     render_bg 
-			{
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-						
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
+
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close )"
+				1="image( x0 + 5, y0 + 4, x1, y1, graphics/icon_close )"
 			}
 		}
 		
 		SmRemoveButton:Hover
 		{   
-			inset="30 0 0 0"
+			inset="0 0 0 0"
 			font-family=basefont
 			font-size=16
 			font-weight=400
@@ -449,32 +321,9 @@
 			bgcolor=none   
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close_hover )"
+				1="image( x0 + 5, y0 + 4, x1, y1, graphics/icon_close_hover )"
 			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
 
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   				
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}	
 		}
 		
 		
@@ -488,7 +337,6 @@
 			render
 			{
 			}    
-			tall=2
 		}
 	}
 
@@ -497,29 +345,29 @@
 	{
 		region	{ name="bottom" width="1262" y=75 height=60 width=400 }
 		
-		region { name="column1" x=0 width=184 }
-		region { name="column2" x=210 width=290 }
+		region { name="column1" x=0 width=200 }
+		region { name="column2" x=210 width=max }
 		region { name="column3" x=500 width=max }
 		region { name="column4" x=700 width=max overflow=allow-horizontal }
 		
-		place	{ control="bgimage1" width=max height="max" }
-
 		// left column
-		place { control="gameimage" region="column1" margin-left=20 margin-top=20 width=max height=69 }
+		place { control="gameimage" region="column1" margin-left=0 margin-top=16 width=200 height=85 }
 		
 		// left-mid column
-		place { control="namelabel" region="column2" margin-top=22 margin-left=0 }
-		place { control="launchbutton" region=column2 y=47 width=150 }
-		place { control="downloadprogressbar" region=column2 y=76 spacing=10 height=3 width=150 }
-		place { control="librarylink" region=column2 y=82 margin-left=0 }
+		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }
+		place { control="launchbutton" region=column2 start=namelabel dir=down margin-top=10 width=150 }
+		place { control="downloadprogressbar" region=column2 start=launchbutton margin-top=5 dir=down spacing=10 height=3 width=150 }
+		place { control="librarylink" region=column2 start=downloadprogressbar dir=down margin-top=5 margin-left=0 }
 
 		// right-mid column
-		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=24 spacing=6 }
-		place { control="starttimelabel,starttimefield" region="column3" dir="right" align=top spacing=6 margin-top=48 x=0 }
-		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=74 spacing=6 }
+		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=43 spacing=6 }
+		place { control="starttimelabel,starttimefield" region="column3" dir="right" align=top spacing=6 margin-top=63 x=0 }
+		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=83 spacing=6 }
 				
 		// right column
-		place { control="updatetypelabel,pauseresumebutton,newslink" region="column4" dir=down spacing=10 margin-top=22 align=right	region=top margin-right=16 }
+		place { control="updatetypelabel" region="column4" dir=down spacing=10 margin-top=22 align=right	region=top margin-right=16 }
+		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=45 align=right	region=top margin-right=16 }
+		place { control="newslink" region="column4" dir=down spacing=10 margin-top=72 align=right	region=top margin-right=16 }
 
 		// put the buttons along the bottom
 		
