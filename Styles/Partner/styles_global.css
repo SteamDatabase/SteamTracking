@@ -47,6 +47,10 @@ h2, .title2 {
 	font-size: 10px;
 }
 
+h2 .valveOnly {
+	vertical-align: middle;
+}
+
 h3 {
 	font-size: 1.6em; 
 	font-weight: bold; 
