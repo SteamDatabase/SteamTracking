@@ -3,10 +3,11 @@
 	controls
 	{
 		// this just sets the height
-		ugcdownloadpanel	{	tall="160"	}
+		appsubscriptionsdownloadpanel {	tall="145" }
+		ugcdownloadpanel {	style="panelStyle" }
 
 		// black fill, used on the background
-		bgimage1	{ controlname="ImagePanel"	zpos="-1"	style="panelBgColorActive" }
+
 		workshopminibanner { controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }
 
 		// top row
@@ -30,20 +31,33 @@
 
 
 		// right pane
-		graphpanel		{ controlname="GraphPanel"	style="infoGraphic" group="HideOnCompletion" }
-		graphdownloadrate	{ controlname="Label"	labelText="#steam_downloads_currentrate" zpos="1" style="test" group="HideOnCompletion" }
+		graphdownloadrate	{ controlname="Label"	labelText="#steam_downloads_currentrate" zpos="1" style="label2" group="HideOnCompletion" }
 		
 		//
 		viewmodsbutton { controlname="Button" labelText="#steam_downloads_view_on_workshop" style=ViewModsButton command=ViewMods }
 	}
 
+	
 	colors
 	{
-
+		dark_blue_grad = "12 27 38 255"
+		light_blue_grad = "32 72 102 255"
 	}
 
 	styles
 	{
+		panelStyle
+		{
+			bgcolor=clientbg
+			
+		}	
+		panelStyleHighlight
+		{
+			render_bg
+			{
+				0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
+			}			
+		}
 
 		links
 		{
@@ -72,31 +86,6 @@
 		rightcolumnlink:hover
 		{
 			textcolor=TextHover
-		}
-
-
-		infoGraphic
-		{
-			bgcolor		"none"
-			textcolor	"highlight5"
-			inset="0 3 3 3"
-			render_bg
-			{
-				// background fill
-				0="fill( x0, y0 + 2, x1 - 1, y1 - 1, Black )"
-
-				// lines around
-				1="fill( x0, y0 + 1, x1 - 2, y0 + 2, black )"  // top
-				2="fill( x0 + 1, y1 - 1, x1 - 1, y1, none  )"  // bottom
-				3="fill( x0 - 1, y0 + 2, x0, y1 - 2, black )"  // left
-				4="fill( x1 - 1, y0 + 1, x1, y1 - 1, none )"  // right
-
-				// single pixel fills in the corners
-				5="fill( x0 - 1, y0 + 1, x0, y0 + 2, clientbg )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, backgroundstartopaque )"
-				7="fill( x0, y1 - 2, x0 + 1, y1 - 1, black )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, backgroundstartopaque )"
-			}
 		}
 
 		label2
@@ -134,24 +123,13 @@
 		}
 
 
-		test
+		graphdownloadrate
 		{
 			font-family		"Arial"
 			font-size="14"
 			font-style="uppercase"
-			padding-left	"10"
-			padding-right	"20"
-			render_bg
-			{
-				0="fill ( x0, y0 + 1, x1 , y1, Backgroundstart )"
-				// lines around
-				1="fill( x1, y0, x1 + 2, y1, darkclientbg )"
-
-				2="fill( x0, y1, x1, y1 + 2, darkclientbg )"
-				// corner
-				3="fill( x1, y1 , x1 + 1, y1 + 1, darkclientbg )"
-
-			}
+			//padding-left	"10"
+			//padding-right	"20"
 		}
 
 		SmPauseButton
@@ -164,27 +142,7 @@
 			textcolor="Text"
 			font-style=uppercase
 			bgcolor=none
-			render_bg
-			{
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
+
 			render
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause )"
@@ -204,30 +162,6 @@
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_pause_hover )"
 			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 		}
 
 		SmResumeButton
@@ -240,28 +174,6 @@
 			textcolor="Text"
 			font-style=uppercase
 			bgcolor=none
-			render_bg
-			{
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 			render
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install  )"
@@ -281,30 +193,6 @@
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_hover )"
 			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 		}
 
 		SmRemoveButton
@@ -316,28 +204,6 @@
 			textcolor="Text"
 			font-style=uppercase
 			bgcolor=none
-			render_bg
-			{
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 			render
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close )"
@@ -357,33 +223,7 @@
 			{
 				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_close_hover )"
 			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-			}
 		}
-
-
 
 		SlimProgressBar
 		{
@@ -517,26 +357,26 @@
 	layout
 	{
 		region	{ name="top" width="1262" height=40 }
-		region	{ name="mid" width="1262" y=22 height=160 }
-		region	{ name="bottom" width="1262" y=95 height=60 width=400 }
+		region	{ name="mid" width="1262" margin-top=2 height=140 }
+		region 	{ name="column3" x=500 margin-top=2 width=max }
+		region	{ name="bottom" width="1262" y=55 height=60 width=400 }
 
-		place	{ control="bgimage1" width=max height="max" }
 
 		// top section
-		place { control="namelabel" region="top" margin-top=12	 margin-left=20 }
 		place { control="updatetypelabel" region="top" margin-top=11 align=right	region=top margin-right=16 spacing=15 }
 		place { control="pauseresumebutton" region="bottom" x=492 region=bottom spacing=10 margin-right=16 margin-top=27 width=28 align=right}
 
 		// fill in the middle section
-		place { control="gameimage" region="mid" margin-left=20 margin-top=19 width=184 height=69 }
-		place { control="workshopminibanner" region="mid" margin-left=20 margin-top=88 width=184  }
-		place { control="GraphPanel" region="mid" x=470 width="max" width="35" height="70" margin-top=18 margin-right=14 }
-		place { control="graphdownloadrate" region="mid" x=469 margin-top=18 height=30 }
-		place { control="viewmodsbutton" region="mid" x=222 align=top margin-top=23 spacing=6 width=150 }
-		place { control="downloadtotallabel,downloadtotalfield" region="mid" x=222 align=top margin-top=59 spacing=6 }
-		place { control="downloadfileslabel,downloadfilesfield" region="mid" x=222 align=top margin-top=79 spacing=6 }
-		place { control="starttimelabel,starttimefield" region="mid" dir="right" align=top spacing=6 margin-top=100 x=222 }
-		place { control="timeremaininglabel,timeremainingfield" region="mid" x=222 align=top margin-top=120 spacing=6 }
-		place { control="downloadprogressbar" region="mid" x=222 width="232" height="2" align=top margin-top=48 }
+		place { control="namelabel" region="mid" x=222 margin-top=12 }
+		place { control="gameimage" region="mid" margin-left=20 margin-top=12 width=184 height=69 }
+		place { control="workshopminibanner" region="mid" margin-left=20 margin-top=82 width=184  }
+		place { control="viewmodsbutton" region="mid" x=222 align=top margin-top=38 spacing=6 width=150 }
+		place { control="downloadprogressbar" region="mid" width="232" x=222 height="3" align=top margin-top=67 }
+		place { control="graphdownloadrate" region="mid" x=222 align=top margin-top=74  }
+		
+		place { control="downloadtotallabel,downloadtotalfield" region="column3" align=top margin-top=38 spacing=6 }
+		place { control="downloadfileslabel,downloadfilesfield" region="column3" align=top margin-top=56 spacing=6 }
+		place { control="starttimelabel,starttimefield" region="column3" dir="right" align=top spacing=6 margin-top=74  }
+		place { control="timeremaininglabel,timeremainingfield" region="column3" align=top margin-top=92 spacing=6 }
 	}
 }

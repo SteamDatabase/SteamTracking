@@ -4,17 +4,20 @@
 	{
 		// These are multipliers, to make an edge cost 50% more than
 		// usual, set the multiplier to 1.5
-		"LocalCostForCrossingAtlantic"				10
-		"LocalCostForCrossingPacific"				10
+		"LocalCostForCrossingAtlantic"				5
+		"LocalCostForCrossingPacific"				5
 		"LocalCostBetweenEuropeAndAfrica"			4
 		"LocalCostBetweenNorthAndSouthAmerica"		10
-		"LocalCostBetweenAustraliaAndAsia"			6
+		"LocalCostBetweenAustraliaAndAsia"			9
+		"LocalCostJapanToKorea"			14
 		"LocalCostBetweenAustraliaAndNewZealand"	4
 		"LocalCostBetweenIsraelAndEurope"			8
+		"LocalCostIndiaToSingapore"			4
 		"LocalCostOneWayCellEdge"					25
 		"LocalCostAUSBetweenRegions"				1
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
+		"LocalCostToLeaveChina"							2
 	}
 	"cells"
 	{
@@ -97,6 +100,11 @@
 				2 { "dest"	14 }
 				3 { "dest"	15 }
 				4 { "dest"	13 }
+				5
+				{ 
+					"dest"	24 
+					"cost"	LocalCostOneWayCellEdge
+				}				
 			}
 		}
 
@@ -152,13 +160,12 @@
 			"region"	"korea"
 			"edges"
 			{
-				0 { "dest"	32 }
-				1
+				0
 				{ 
 					"dest"	46 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				2
+				1
 				{ 
 					"dest"	47 
 					"cost"	LocalCostOneWayCellEdge
@@ -416,20 +423,30 @@
 			}
 		}
 
-		// #24 .. (Hop from Europe to Africa)
+		// #24 .. (West Africa to UK)
 		24
 		{
-			"name" "Europe to Africa"
+			"name" "West Africa to UK"
 			"transit"	1
 			"region"	"global"
 			"edges"
 			{
-				0 { "dest"	96  }
+				0 { "dest"	4  }
 				1 
 				{ 
-					"dest"	26 
+					"dest"	97 
 					"cost"	LocalCostOneWayCellEdge 
 				}
+				2 
+				{ 
+					"dest"	131 
+					"cost"	LocalCostOneWayCellEdge 
+				}
+				3 
+				{ 
+					"dest"	132 
+					"cost"	LocalCostOneWayCellEdge 
+				}								
 			}
 		}
 
@@ -437,7 +454,7 @@
 		25
 		{
 			"name" "Brazil"
-			"region"	"south america"
+			"region"	"brazil"
 			"edges"
 			{
 				0 { "dest"	23 }
@@ -455,11 +472,7 @@
 				0 { "dest"	97 }
 				1 { "dest"	99 }
 				2 { "dest"	101 }
-				3 
-				{ 
-					"dest"	24 
-					"cost"	LocalCostBetweenEuropeAndAfrica 
-				}
+				3 { "dest"	123 }
 			}
 		}
 
@@ -561,21 +574,20 @@
 				0
 				{ 
 					"dest"	8
-					"cost"	LocalCostOneWayCellEdge
+					"cost"	LocalCostJapanToKorea
 				}				
 				1 { "dest"	17  }
-				2 { "dest"	35  }
-				3
+				2
 				{ 
 					"dest"	9 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				4
+				3
 				{ 
 					"dest"	33 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				5
+				4
 				{ 
 					"dest"	47 
 					"cost"	LocalCostOneWayCellEdge
@@ -590,11 +602,13 @@
 			"region"	"china"
 			"edges"
 			{
-				0 { "dest"	32  }
-				1 { "dest"	35  }
-				2 { "dest"	9  }
-				3 { "dest"	47  }
-				4 { "dest"	48  }
+				0 
+				{ 
+					"dest"	35  
+					"cost"	LocalCostToLeaveChina
+				}
+				1 { "dest"	47  }
+				2 { "dest"	48  }
 			}
 		}
 
@@ -602,7 +616,7 @@
 		34
 		{
 			"name" "Thailand"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35  }
@@ -613,7 +627,7 @@
 		35
 		{
 			"name" "Singapore"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	17  }
@@ -622,36 +636,41 @@
 					"dest"	19  
 					"cost"	LocalCostBetweenAustraliaAndAsia
 				}
-				2 { "dest"	32  }
-				3 { "dest"	34  }
-				4 { "dest"	45  }
-				5
+				2
 				{ 
 					"dest"	33 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				6
+				3
 				{ 
 					"dest"	44 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				7
+				4
 				{ 
 					"dest"	36 
 					"cost"	LocalCostOneWayCellEdge
 				}
-				8
+				5
 				{
 					"dest"	9
 					"cost"	LocalCostOneWayCellEdge
 				}		
-				9
+				6
 				{
 					"dest"	70
 					"cost"	LocalCostOneWayCellEdge
 				}	
-				10 { "dest"	71 }										
-				11 { "dest"	72 }	
+				10
+				{
+					"dest"	71
+					"cost"	LocalCostOneWayCellEdge
+				}												
+				11
+				{
+					"dest"	72
+					"cost"	LocalCostOneWayCellEdge
+				}					
 			}
 		}
 
@@ -659,10 +678,14 @@
 		36
 		{
 			"name" "India"
-			"region"	"asia"
+			"region"	"india"
 			"edges"
 			{
-				0 { "dest"	35  }
+				0 
+				{ 
+					"dest"	35  
+					"cost"	LocalCostIndiaToSingapore
+				}
 				1 { "dest"	128  }
 				2 { "dest"	127  }
 			}
@@ -768,7 +791,7 @@
 		44
 		{
 			"name" "Indonesia"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35  }
@@ -779,7 +802,7 @@
 		45
 		{
 			"name" "Philippines"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35  }
@@ -794,9 +817,8 @@
 			"region"	"china"
 			"edges"
 			{
-				0 { "dest"	8  }
-				1 { "dest"	47  }
-				2 { "dest"	48  }
+				0 { "dest"	47  }
+				1 { "dest"	48  }
 			}
 		}
 
@@ -807,11 +829,12 @@
 			"region"	"china"
 			"edges"
 			{
-				0 { "dest"	8  }
-				1 { "dest"	32  }
-				2 { "dest"	33  }
-				3 { "dest"	46  }
-				4 { "dest"	48  }
+				0
+				{ 
+					"dest"	33
+				}
+				1 { "dest"	46  }
+				2 { "dest"	48  }
 			}
 		}
 
@@ -822,9 +845,8 @@
 			"region"	"china"
 			"edges"
 			{
-				0 { "dest"	33  }
-				1 { "dest"	46  }
-				2 { "dest"	47  }	
+				0 { "dest"	46  }
+				1 { "dest"	47  }	
 			}
 		}
 
@@ -1217,7 +1239,7 @@
 		70
 		{
 			"name" "Cambodia"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35 }
@@ -1227,7 +1249,7 @@
 		71
 		{
 			"name" "Vietnam"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35 }
@@ -1237,7 +1259,7 @@
 		72
 		{
 			"name" "Malaysia"
-			"region"	"asia"
+			"region"	"southeast asia"
 			"edges"
 			{
 				0 { "dest"	35 }
@@ -1526,11 +1548,6 @@
 				0 { "dest"	40 }
 				1 { "dest"	14 }
 				2 { "dest"	37 }
-				3 
-				{ 
-					"dest"	24 
-					"cost"	LocalCostOneWayCellEdge
-				}
 				4 
 				{ 
 					"dest"	123 
@@ -1548,7 +1565,7 @@
 				0 { "dest"	26 }
 				1 { "dest"	98 }
 				2 { "dest"	100 }
-				3 { "dest"	13 }
+				3 { "dest"	24 }
 			}
 		}						
 		// #98 ZA CPT MWEB
@@ -1898,6 +1915,16 @@
 					"dest"	125
 					"cost"	LocalCostOneWayCellEdge
 				}
+				3 
+				{ 
+					"dest"	130
+					"cost"	LocalCostOneWayCellEdge
+				}
+				3 
+				{ 
+					"dest"	26
+					"cost"	LocalCostOneWayCellEdge
+				}								
 			}
 		}		
 		124
@@ -1906,7 +1933,8 @@
 			"region"	"middle east"
 			"edges"
 			{
-				0 { "dest"	123 }
+				0 { "dest"	92 }
+				1 { "dest"	123 }
 			}
 		}
 		125
@@ -1959,21 +1987,48 @@
 				1 { "dest"	5 }
 			}
 		}
-
+		130
+		{
+			"name" "West Africa"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	24 }
+			}
+		}	
+		131
+		{
+			"name" "East Africa"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	123 }
+			}
+		}			
+		132
+		{
+			"name" "Northwest Africa"
+			"region"	"africa"
+			"edges"
+			{
+				0 { "dest"	24 }
+				1 { "dest"	123 }
+			}
+		}				
 	}
 	"countries"
 	{
 		//"Afghanistan"	
-		"AF"	39
-		
-		//"Aland Islands"	
-		"AX"	0
-		
+		"AF"	128
+			
 		//"Albania"		
 		"AL"	43
 		
+		//"Aland Islands"
+		"AX"	66
+		
 		//"Algeria"		
-		"DZ"	14
+		"DZ"	132
 		
 		//"American Samoa"
 		"AS"	10
@@ -1982,25 +2037,25 @@
 		"AD"	40
 		
 		//"Angola"		
-		"AO"	0
+		"AO"	130
 		
 		//"Anguilla"		
-		"AI"	0
+		"AI"	12
 		
 		//"Antarctica"	
 		"AQ"	0
 		
 		//"Antigua and Barbuda"
-		"AG"	0
+		"AG"	12
 		
 		//"Argentina"		
-		"AR"	25
+		"AR"	116
 		
 		//"Armenia"		
-		"AM"	30
+		"AM"	124
 		
 		//"Aruba"			
-		"AW"	0
+		"AW"	12
 		
 		//"Australia"		
 		"AU"	52
@@ -2009,7 +2064,7 @@
 		"AT"	92
 		
 		//"Azerbaijan"	
-		"AZ"	30
+		"AZ"	124
 		
 		//"Bahamas"		
 		"BS"	12
@@ -2033,7 +2088,7 @@
 		"BZ"	12
 		
 		//"Benin"			
-		"BJ"	30
+		"BJ"	130
 		
 		//"Bermuda"		
 		"BM"	12
@@ -2042,7 +2097,7 @@
 		"BT"	36
 		
 		//"Bolivia"		
-		"BO"	25
+		"BO"	118
 		
 		//"Bosnia and Herzegovina"	
 		"BA"	92
@@ -2051,7 +2106,7 @@
 		"BW"	26
 		
 		//"Bouvet Island"	
-		"BV"	0
+		"BV"	26
 		
 		//"Brazil"		
 		"BR"	25
@@ -2060,73 +2115,76 @@
 		"IO"	36
 		
 		//"Brunei Darussalam"		
-		"BN"	30
+		"BN"	44
 		
 		//"Bulgaria"						
 		"BG"	43
 		
 		//"Burkina Faso"					
-		"BF"	26
+		"BF"	130
 		
 		//"Burundi"						
-		"BI"	0
+		"BI"	131
 		
 		//"Cambodia"						
 		"KH"	70
 		
 		//"Cameroon"						
-		"CM"	26
+		"CM"	130
 		
 		//"Canada"						
 		"CA"	20
 		
 		//"Cape Verde"					
-		"CV"	0
+		"CV"	130
 		
 		//"Cayman Islands"				
 		"KY"	12
 		
 		//"Central African Republic"			
-		"CF"	26
+		"CF"	130
 		
 		//"Chad"							
-		"TD"	26
+		"TD"	132
 		
 		//"Chile"							
-		"CL"	25
+		"CL"	117
 		
 		//"China"							
 		"CN"	47
 		
 		//"Christmas Island"				
-		"CX"	0
+		"CX"	35
 		
 		//"Cocos (Keeling) Islands"			
-		"CC"	0
+		"CC"	35
 		
 		//"Colombia"						
-		"CO"	25
+		"CO"	119
 		
 		//"Comoros"						
-		"KM"	0
+		"KM"	131
 		
 		//"Congo"							
-		"CG"	14
+		"CG"	130
 		
 		//"Congo	the Democratic Republic of the"			
-		"CD"	14
+		"CD"	130
 		
 		//"Cook Islands"					
 		"CK"	0
 		
 		//"Costa Rica"					
-		"CR"	25
+		"CR"	12
 		
 		//"Cote d'Ivoire"					
-		"CI"	14
+		"CI"	130
 		
 		//"Croatia"						
 		"HR"	42
+		
+		//"Curacao"
+		"CW"	12
 		
 		//"Cyprus"						
 		"CY"	43
@@ -2138,7 +2196,7 @@
 		"DK"	41
 		
 		//"Djibouti"						
-		"DJ"	26
+		"DJ"	131
 		
 		//"Dominica"						
 		"DM"	12
@@ -2147,7 +2205,7 @@
 		"DO"	12
 		
 		//"Ecuador"						
-		"EC"	25
+		"EC"	118
 		
 		//"Egypt"							
 		"EG"	37
@@ -2156,25 +2214,25 @@
 		"SV"	12
 		
 		//"Equatorial Guinea"				
-		"GQ"	0
+		"GQ"	130
 		
 		//"Eritrea"						
-		"ER"	0
+		"ER"	131
 		
 		//"Estonia"						
 		"EE"	41
 		
 		//"Ethiopia"						
-		"ET"	30
+		"ET"	131
 		
 		//"Falkland Islands (Malvinas)"
-		"FK"	25
+		"FK"	12
 		
 		//"Faroe Islands"					
-		"FO"	0
+		"FO"	29
 		
 		//"Fiji"							
-		"FJ"	0
+		"FJ"	10
 		
 		//"Finland"						
 		"FI"	68
@@ -2183,28 +2241,28 @@
 		"FR"	14
 		
 		//"French Guiana"					
-		"GF"	0
+		"GF"	12
 		
 		//"French Polynesia"				
-		"PF"	0
+		"PF"	10
 		
 		//"French Southern Territories"
 		"TF"	0
 		
 		//"Gabon"							
-		"GA"	26
+		"GA"	130
 		
 		//"Gambia"						
-		"GM"	0
+		"GM"	130
 		
 		//"Georgia"						
-		"GE"	30
+		"GE"	124
 		
 		//"Germany"						
 		"DE"	5
 		
 		//"Ghana"							
-		"GH"	14
+		"GH"	130
 		
 		//"Gibraltar"						
 		"GI"	14
@@ -2216,28 +2274,28 @@
 		"GL"	29
 		
 		//"Grenada"						
-		"GD"	0
+		"GD"	12
 		
 		//"Guadeloupe"					
-		"GP"	0
+		"GP"	12
 		
 		//"Guam"							
-		"GU"	0
+		"GU"	10
 		
 		//"Guatemala"						
 		"GT"	12
 		
 		//"Guinea"						
-		"GN"	0
+		"GN"	130
 		
 		//"Guinea-Bissau"					
-		"GW"	0
+		"GW"	130
 		
 		//"Guernsey"					
 		"GG"	4
 		
 		//"Guyana"						
-		"GY"	0
+		"GY"	12
 		
 		//"Haiti"							
 		"HT"	12
@@ -2267,10 +2325,10 @@
 		"ID"	44
 		
 		//"Iraq"							
-		"IQ"	30
+		"IQ"	127
 		
 		//"Iran"							
-		"IR"	30
+		"IR"	127
 		
 		//"Ireland"						
 		"IE"	69
@@ -2300,7 +2358,7 @@
 		"KZ"	39
 		
 		//"Kenya"							
-		"KE"	14
+		"KE"	131
 		
 		//"Kiribati"						
 		"KI"	0
@@ -2309,7 +2367,7 @@
 		"KR"	8
 		
 		//"Kuwait"						
-		"KW"	30
+		"KW"	127
 		
 		//"Kyrgyzstan"					
 		"KG"	39
@@ -2318,25 +2376,28 @@
 		"LA"	34
 		
 		//"Latvia"						
-		"LV"	38
+		"LV"	66
 		
 		//"Lebanon"						
 		"LB"	30
 		
 		//"Lesotho"						
-		"LS"	0
+		"LS"	26
 		
 		//"Liberia"						
-		"LR"	24
+		"LR"	130
+		
+		//"Libya"
+		"LY"	132
 		
 		//"Liechtenstein"					
 		"LI"	88
 		
 		//"Lithuania"						
-		"LT"	38
+		"LT"	66
 		
 		//"Luxembourg"					
-		"LU"	88
+		"LU"	129
 		
 		//"Macau"							
 		"MO"	33
@@ -2345,19 +2406,19 @@
 		"MK"	43
 		
 		//"Madagascar"					
-		"MG"	26
+		"MG"	131
 		
 		//"Malawi"						
-		"MW"	0
+		"MW"	131
 		
 		//"Malaysia"						
 		"MY"	72
 		
 		//"Maldives"						
-		"MV"	0
+		"MV"	36
 		
 		//"Mali"							
-		"ML"	0
+		"ML"	130
 		
 		//"Malta"							
 		"MT"	37
@@ -2366,19 +2427,19 @@
 		"MH"	0
 		
 		//"Martinique"					
-		"MQ"	0
+		"MQ"	12
 		
 		//"Mauritania"					
-		"MR"	0
+		"MR"	130
 		
 		//"Mauritius"						
-		"MU"	0
+		"MU"	131
 		
 		//"Mayotte"						
-		"YT"	0
+		"YT"	131
 		
 		//"Mexico"						
-		"MX"	74
+		"MX"	115
 		
 		//"Micronesia, Federated States of"			
 		"FM"	0
@@ -2393,19 +2454,19 @@
 		"MN"	46
 		
 		//"Montserrat"					
-		"MS"	0
+		"MS"	12
 		
 		//"Morocco"						
-		"MA"	40
+		"MA"	132
 		
 		//"Mozambique"					
-		"MZ"	26
+		"MZ"	131
 		
 		//"Myanmar"						
 		"MM"	34
 		
 		//"Namibia"						
-		"NA"	26
+		"NA"	130
 		
 		//"Nauru"							
 		"NR"	0
@@ -2417,10 +2478,10 @@
 		"NL"	15
 		
 		//"Netherlands Antilles"			
-		"AN"	0
+		"AN"	12
 		
 		//"New Caledonia"					
-		"NC"	0
+		"NC"	10
 		
 		//"New Zealand"					
 		"NZ"	22
@@ -2429,10 +2490,10 @@
 		"NI"	12
 		
 		//"Niger"							
-		"NE"	14
+		"NE"	130
 		
 		//"Nigeria"						
-		"NG"	14
+		"NG"	130
 		
 		//"Niue"							
 		"NU"	0
@@ -2441,16 +2502,16 @@
 		"NF"	0
 		
 		//"Northern Mariana Islands"			
-		"MP"	0
+		"MP"	10
 		
 		//"Norway"						
 		"NO"	67
 		
 		//"Oman"							
-		"OM"	30
+		"OM"	127
 		
 		//"Pakistan"						
-		"PK"	36
+		"PK"	128
 		
 		//"Palau"							
 		"PW"	0
@@ -2465,10 +2526,10 @@
 		"PG"	28
 		
 		//"Paraguay"						
-		"PY"	25
+		"PY"	116
 		
 		//"Peru"							
-		"PE"	11
+		"PE"	118
 		
 		//"Philippines"					
 		"PH"	45
@@ -2486,10 +2547,10 @@
 		"PR"	12
 		
 		//"Qatar"							
-		"QA"	30
+		"QA"	127
 		
 		//"Reunion"						
-		"RE"	0
+		"RE"	131
 		
 		//"Romania"						
 		"RO"	16
@@ -2498,52 +2559,55 @@
 		"RU"	7
 		
 		//"Rwanda"						
-		"RW"	14
+		"RW"	131
 		
 		//"Saint Helena"						
-		"SH"	0
+		"SH"	12
 		
 		//"Saint Kitts and Nevis"			
-		"KN"	0
+		"KN"	12
 		
 		//"Saint Lucia"					
-		"LC"	0
+		"LC"	12
 		
 		//"Saint Pierre and Miquelon"					
-		"PM"	0
+		"PM"	12
 		
 		//"Saint Vincent and the Grenadines"	
-		"VC"	0
+		"VC"	12
 		
 		//"Samoa"							
-		"WS"	0
+		"WS"	10
 		
 		//"San Marino"					
-		"SM"	0
+		"SM"	37
 		
 		//"Sao Tome and Principe"			
-		"ST"	0
+		"ST"	12
 		
 		//"Saudi Arabia"					
-		"SA"	30
+		"SA"	126
 		
 		//"Senegal"						
-		"SN"	14
+		"SN"	130
 		
-		//"Serbia and Montenegro"				
-		"CS"	42
+		//"Serbia"				
+		"RS"	42
+		
+		//"Montenegro"
+		"ME"	42
 		
 		//"Seychelles"					
-		"SC"	0
+		"SC"	131
 		
 		//"Sierra Leone"					
-		"SL"	0
+		"SL"	130
 		
 		//"Singapore"						
 		"SG"	35
 		
 		//"Slovakia"						
-		"SK"	37
+		"SK"	92
 		
 		//"Slovenia"						
 		"SI"	42
@@ -2552,7 +2616,7 @@
 		"SB"	0
 		
 		//"Somalia"						
-		"SO"	30
+		"SO"	131
 		
 		//"South Africa"					
 		"ZA"	26
@@ -2567,19 +2631,25 @@
 		"LK"	36
 		
 		//"Suriname"						
-		"SR"	0
+		"SR"	12
+		
+		//"Sudan"
+		"SD"	131
 		
 		//"Svalbard and Jan Mayen"
-		"SJ"	0
+		"SJ"	66
 		
 		//"Swaziland"				
 		"SZ"	26
 		
 		//"Sweden"						
-		"SE"	41
+		"SE"	66
 		
 		//"Switzerland"					
 		"CH"	88
+		
+		//"Syria"
+		"SY"	30
 		
 		//"Taiwan	Province of China"
 		"TW"	9
@@ -2588,16 +2658,16 @@
 		"TJ"	39
 		
 		//"Tanzania	United Republic of"
-		"TZ"	0
+		"TZ"	131
 		
 		//"Thailand"						
 		"TH"	34
 		
 		//"Timor-Leste"					
-		"TL"	0
+		"TL"	35
 		
 		//"Togo"							
-		"TG"	0
+		"TG"	130
 		
 		//"Tokelau"						
 		"TK"	0
@@ -2606,31 +2676,31 @@
 		"TO"	0
 		
 		//"Trinidad and Tobago"			
-		"TT"	0
+		"TT"	12
 		
 		//"Tunisia"						
-		"TN"	0
+		"TN"	132
 		
 		//"Turkey"						
-		"TR"	43
+		"TR"	124
 		
 		//"Turkmenistan"					
 		"TM"	39
 		
 		//"Turks and Caicos Islands"			
-		"TC"	0
+		"TC"	12
 		
 		//"Tuvalu"						
 		"TV"	0
 		
 		//"Uganda"						
-		"UG"	0
+		"UG"	131
 		
 		//"Ukraine"						
 		"UA"	73
 		
 		//"United Arab Emirates"			
-		"AE"	30
+		"AE"	127
 		
 		//"United Kingdom"				
 		"GB"	4
@@ -2642,7 +2712,7 @@
 		"UM"	0
 		
 		//"Uruguay"						
-		"UY"	0
+		"UY"	116
 		
 		//"Uzbekistan"					
 		"UZ"	39
@@ -2651,28 +2721,28 @@
 		"VU"	0
 		
 		//"Venezuela"						
-		"VE"	0
+		"VE"	119
 		
 		//"Viet Nam"						
 		"VN"	71
 		
 		//"Virgin Islands	British"
-		"VG"	0
+		"VG"	12
 		
 		//"Virgin Islands	U.S."			
-		"VI"	0
+		"VI"	12
 		
 		//"Wallis and Futuna"				
 		"WF"	0
 		
 		//"Western Sahara"				
-		"EH"	0
+		"EH"	130
 		
 		//"Yemen"							
-		"YE"	0
+		"YE"	125
 		
 		//"Zambia"						
-		"ZM"	26
+		"ZM"	131
 		
 		//"Zimbabwe"						
 		"ZW"	26
@@ -2701,7 +2771,7 @@
 		"CT"	2
 
 		// DELAWARE
-		"DE"	2
+		"DE"	63
 
 		// DISTRICT OF COLUMBIA
 		"DC"	63

@@ -51,6 +51,7 @@
 			style="parental_lock_button"
 			labelText=""
 			text=""
+			tooltiptext="#SteamUI_PlatformParentalControl_Tip"
 			command="ParentalLock"
 		}
 		
@@ -473,26 +474,7 @@
 			}
 		}
 
-		parental_lock_button
-		{
-			padding-left=0
-			padding-right=2
-			image="resource/unlocked_acct"
-			render {}
-			render_bg {
-				0="gradient( x0, y0, x1, y1+1, parental_lock_inactive1, parental_lock_inactive2 )"
-			}
-		}
 
-		parental_lock_button:selected
-		{
-			padding-left=0
-			padding-right=2
-			image="resource/locked_acct"
-			render_bg {
-				0="gradient( x0, y0, x1, y1+1, parental_lock_active1, parental_lock_active2 )"
-			}			
-		}
 
 		inbox_button
 		{
@@ -501,107 +483,402 @@
 			font-weight=1000
 			font-style=none
 			textcolor=white
-			padding-left=2
-			padding-right=10
+			padding-left=0
+			padding-right=0
 			padding-top=6
-			
-			inset="-8 -3 8 0"
+
+			inset="8 -3 8 0"
 			render {}
-			render_bg {
-				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
-				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
-				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
-			}
+			render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+				
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+			}	
 		}
 
 		inbox_button:hover
 		{
-			render_bg {
-				0="gradient( x0, y0, x1, y1+1, inbox_inactive_hover1, inbox_inactive_hover2  )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
-				2="image( x0, y0, x0, y1, graphics/flag_inactive_left_hover )"
-				3="image( x1, y0, x1, y1, graphics/flag_inactive_right_hover )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top_hover )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom_hover )"
-			}
+
+			render {}
+			render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+			}	
 		}
 
 		inbox_button:selected
 		{
-			render_bg {
-				0="gradient( x0, y0, x1, y1, inbox_inactive_hover1, inbox_inactive_hover2  )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
-				2="image( x0, y0, x0, y1, graphics/flag_inactive_left_hover )"
-				3="image( x1, y0, x1, y1, graphics/flag_inactive_right_hover )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top_hover )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom_hover )"
-			}
+			render {}
+			render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+			}	
 		}
 
 		inbox_button:disabled
 		{
-			render_bg {
-				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification_inactive )"
-				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
-				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
-			}
+		textcolor=labeldisabled
+			padding-left=0
+			padding-right=0
+			padding-top=6
+
+			inset="8 -3 8 0"
+			render {}
+					render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, disabledborder )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, disabledborder )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, disabledborder )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, disabledborder )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, disabledborder )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive_disabled )"
+			}	
 		}	
 
 		inbox_button_active
 		{
-			inset="0 -3 8 0"
-			render_bg {
-				0="fill( x0, y0, x1, y1, inbox_active )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
-				2="image( x0, y0, x0, y1, graphics/flag_left )"
-				3="image( x1, y0, x1, y1, graphics/flag_right )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom )"
-			}
+			padding-left=3
+			padding-right=10
+			padding-top=6
+			inset="2 -3 8 0"
+			render {}
+			render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+			}	
 		}
+		
+
 
 		inbox_button_active:hover
 		{
-			inset="0 -3 8 0"
-			render_bg {
-				0="gradient( x0, y0, x1, y1, inbox_active_hover1, inbox_active_hover2  )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
-				2="image( x0, y0, x0, y1, graphics/flag_left_hover )"
-				3="image( x1, y0, x1, y1, graphics/flag_right_hover )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top_hover )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom_hover )"
-			}
+			padding-left=3
+			padding-right=10
+			padding-top=6
+			inset="2 -3 8 0"
+			render {}
+						render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, buttonface2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+			}	
 		}
 		inbox_button_active:selected
 		{
-			inset="0 -3 8 0"
-			render_bg {
-				0="gradient( x0, y0, x1, y1, inbox_active_hover1, inbox_active_hover2  )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
-				2="image( x0, y0, x0, y1, graphics/flag_left_hover )"
-				3="image( x1, y0, x1, y1, graphics/flag_right_hover )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_top_hover )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_bottom_hover )"
-			}
+			padding-left=3
+			padding-right=10
+			padding-top=6
+			inset="2 -3 8 0"
+			render {}
+						render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+			}	
 		}
 
 		inbox_button_active:disabled
 		{
-			render_bg {
-				0="fill( x0, y0, x1, y1+1, inbox_inactive )"
-				1="image( x1-20, y0+6, x1, y1, graphics/inbox_notification )"
-				2="image( x0, y0, x0, y1, graphics/flag_inactive_left )"
-				3="image( x1, y0, x1, y1, graphics/flag_inactive_right )"
-				4="image_scale( x0+3, y0, x1, y0+3, graphics/flag_inactive_top )"
-				5="image_scale( x0+3, y1, x1, y1+3, graphics/flag_inactive_bottom )"
-			}
+			padding-left=3
+			padding-right=10
+			padding-top=6
+			inset="2 -3 8 0"
+			render {}
+						render_bg
+			{
+				// background fill
+				
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, disabledborder )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, disabledborder )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, disabledborder )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, disabledborder )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, disabledborder )"
+				
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_disabled )"
+			}	
 		}	
+		
+		parental_lock_button
+		{
+			padding-left=3
+			padding-right=7
+			image="resource/unlocked_acct"
+			render {}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_inactive1 )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_inactive1 )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_inactive1 )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_inactive1 )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_inactive5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_inactive5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_inactive5 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_inactive4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_inactive5 )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, parental_lock_inactive4 )"
+			}	
+		}
+
+		parental_lock_button:hover
+		{
+			padding-left=3
+			padding-right=7
+			image="resource/unlocked_acct"
+			render {}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, buttonface2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_inactive1 )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_inactive1 )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_inactive1 )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_inactive1 )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_inactive5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_inactive5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_inactive5 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_inactive4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_inactive5 )"
+				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, parental_lock_inactive4 )"
+			}	
+			
+		}
+
+		parental_lock_button:selected
+		{
+			padding-left=3
+			padding-right=7
+			image="resource/locked_acct"
+			render {}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, parental_lock_active2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_active1 )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_active1 )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_active1 )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_active1 )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_active5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_active5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_active4 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_active4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_active5 )"
+				12="fill( x0 + 1, y1 + 2, x0 + 2, y1 + 3, parental_lock_active5 )"
+			}	
+			
+		}
+
+
+		parental_lock_button:selected:hover
+		{
+			padding-left=3
+			padding-right=7
+			image="resource/locked_acct"
+			render {}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, buttonface2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_active1 )"  // top
+				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_active1 )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_active1 )"  // left
+				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_active1 )"  // right		
+
+				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_active5 )"
+				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_active5 )"
+
+				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_active4 )"
+				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_active4 )"
+				
+				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
+				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
+				
+				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_active5 )"
+				12="fill( x0 + 1, y1 + 2, x0 + 2, y1 + 3, parental_lock_active5 )"
+			}	
+			
+		}
+
+
+
+
+
+
 
 		
 		inboxmenuitem
@@ -650,14 +927,29 @@
 		inbox_active_hover2 "104 142 19 255"
 
 		inbox_inactive "38 38 37 255"
+		inbox_inactive2 "51 49 48 255"	
+		inbox_inactive3 "74 71 70 255"
+		inbox_inactive4 "122 145 71 255"
+		inbox_inactive5 "74 102 29"
 		inbox_inactive_hover1 "92 89 86 255"
 		inbox_inactive_hover2 "77 75 72 255"
 
-		parental_lock_active1 "112 186 36 255"
-		parental_lock_active2 "74 72 70 255"		
+		parental_lock_active1 "92 126 16 255"
+		parental_lock_active2 "51 49 48 255"	
+		parental_lock_active3 "74 71 70 255"
+		parental_lock_active4 "122 145 71 255"
+		parental_lock_active5 "85 102 47 255"	
+
 
 		parental_lock_inactive1 "169 72 71 255"
-		parental_lock_inactive2 "74 72 70 255"
+		parental_lock_inactive2 "51 49 48 255"	
+		parental_lock_inactive3 "74 71 70 255"
+		parental_lock_inactive4 "146 72 71 255"
+		parental_lock_inactive5 "103 48 47 255"	
+
+		backdrop "21 20 18 255"
+		
+		disabledborder "65 63 61 255"
 	}
 	
 	layout
