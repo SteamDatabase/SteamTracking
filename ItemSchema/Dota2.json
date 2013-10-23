@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.1e8579fc39c09ae212cb23a959dbd781ef34c474.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.10a9cbdb9adf869df8654433e849b64b9d58e4d2.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -70131,6 +70131,41 @@
 						"name": "disallow recycling",
 						"class": "disallow_recycling",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gem of Taegeuk",
+				"defindex": 15323,
+				"item_class": "tool",
+				"item_type_name": "Relic of Prestige",
+				"item_name": "Gem of Taegeuk",
+				"item_description": "For those who raised the first flags, joining their fellows on the fields of battle, the whispers of gratitude echo upon the wind.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/samtaegeuk",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/samtaegeuk.a1102381dcc06e08676bceb1af7cc303e9492b15.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/samtaegeuk_large.0c9672253d394d68d199782619c7d2c569ad7162.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater",
+						"class": "kill_eater",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 42
 					}
 				]
 				
