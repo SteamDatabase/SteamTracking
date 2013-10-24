@@ -44,11 +44,11 @@ ParentalUnlockPopup
 	color: #d0d0d0ff;
 	transform: translatex(0px);
 	padding-left: 0px;
+	padding-right: 8px;
 	margin-top: 2px;
 	font-size: deffontsize;
 	font-family: platformfont;
 	text-overflow: ellipsis;
-	width: 80%;
 
 }
 
@@ -94,9 +94,11 @@ ParentalUnlockPopup
 }
 
 
-.ParentalUnlockButtons
+
+.ParentalUnlockButtons, .ParentalLockButtons
 {
 	padding-top: 12px;
+	horizontal-align: right;
 }
 
 .DaisyWheelVisible .ParentalUnlockPopupBody
@@ -126,6 +128,8 @@ TextEntry:disabled,.Button:disabled
 	border-style: solid;
 	height: 40px;
 	margin-top: 10px;
+	width: fit-children;
+	horizontal-align: right;
 
 	border-color: none;
 	background-color: ui_common_control2;

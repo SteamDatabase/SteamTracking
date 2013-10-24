@@ -96,9 +96,9 @@
 
 //system wide
 @define messagecolorwash: #5492b8ff;
-@define dialog_bg_color: #224661ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #224661 ), color-stop( 0.26, #242424ff ) );
+@define dialog_bg_color: #2d5680ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #2d5680 ), color-stop( 0.26, #242424ff ) );
 @define overlay_bg_color: #174b73aa;
-@define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #224661ff ), to( #262626ff ) );
+@define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #2d5680ff ), to( #242424ff ) );
 @define dropdown_box_bg: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), color-stop( 0.5, #224561ff ), to( #2c2c2cff ) );
 //@define box_shadow_on_color: #ffffff88;
 @define box_shadow_on_color: #7ebee599;
@@ -165,9 +165,11 @@
 @define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a3b585 ), to( #456f8a85 ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
 @define applabel: gradient( linear, 0% 96%, 96% 100%, from( #d2d2d2ff ), color-stop( 0.90, #d2d2d2ff ), to( #97989800 ) );
+@define musicapplabel: gradient( linear, 0% 86%, 86% 900%, from( #d2d2d2ff ), color-stop( 0.80, #d2d2d2ff ), to( #97989800 ) );
 @define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #d2d2d2ff ), to( #abababff ) );
 @define applabelsolid: #d2d2d2ff;
 @define applabelselected: gradient( linear, 0% 0%, 96% 100%, from( #3c3c3cff ), color-stop( 0.85, #3c3c3cff ), to( #3c3c3c00 ) );
+@define musicapplabelselected: gradient( linear, 0% 0%, 86% 90%, from( #3c3c3cff ), color-stop( 0.75, #3c3c3cff ), to( #3c3c3c00 ) );
 @define applabelselectedsolid: #3c3c3cff;
 @define applabelselectedfade: gradient( linear, 80% 0%, 96% 0%, from( #3c3c3cff ), to( #3c3c3c00 ) );
 @define applabelselectednofade: gradient( linear, 0% 96%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cff ) );
@@ -343,6 +345,7 @@ DropDown.DropDownMenuVisible:focus
 	background-color: ui_common_control;
 	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
 	border-color: ui_common_control_border;
+	box-shadow: box_shadow_off_color -4px -4px 8px 8px;
 	color: #e1e1e1;
 	
 	animation-name: none;
@@ -363,7 +366,7 @@ DropDown.DropDownMenuVisible:focus
 {
 	horizontal-align: center;
 	box-shadow: fill box_shadow_on_color -4px -4px 5px 8px;
-	pre-transform-scale2d: 1.05;
+
 }
 
 
@@ -373,7 +376,7 @@ DropDown.DropDownMenuVisible:focus
 	box-shadow: fill #00000040 0px 0px 10px 0px;
 	vertical-align: top;
 
-	transition-property: pre-transform-scale2d, box-shadow;
+	transition-property: box-shadow;
 	transition-delay: 0.0s;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
@@ -465,7 +468,7 @@ DropDown:focus
 VerticalScrollBar
 {
 	width: 6px;
-	margin: 3px, 0px, 12px 3px;
+	margin: 3px, 6px, 6px 3px;
 	border-radius: 0px;
 	height: 100%;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c230 ), to( #d2d2d230 ) );
@@ -535,7 +538,7 @@ Tooltip
 
 .HorizontalRule
 {
-	height: 1px;
+	height: 4px;
 	width: 100%;
 	margin: 1px 22px;
 
@@ -830,9 +833,34 @@ FriendsChatDialog .VoiceBarContainer
 	transition-timing-function: ease-in-out;
 }
 
+.SliderContainer
+{
+	height: 50px;
+	width: 456px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.Slider
+{
+	height: 100%;
+	width: 17px;
+	margin-left: 0px;
+	margin-right: 0px;
+	vertical-align: bottom;
+	background-color: #aaaaaaff;
+	opacity: 0.5;
+
+	transition-property: background-color;
+	transition-duration: 0.05s;
+	transition-timing-function: ease-in-out;
+}
+
 .VoiceBarContainer:focus .VoiceBar
 {
-	opacity: 0.9;
+	opacity: 1.0;
 }
 
 
@@ -851,6 +879,7 @@ FriendsChatDialog .VoiceBarContainer
 {
 	background-color: ui_primary_color;
 	transition-duration: 0.3s;
+	opacity: 1.0;
 }
 
 // read-write VUs can take focus / be edited

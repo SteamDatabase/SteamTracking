@@ -222,7 +222,7 @@ ToggleButton .TickBox
 .SettingsLegend
 {
 	color: tcstatictext;
-	margin-top: 8px;
+	margin-top: 6px;
 
 }
 
@@ -343,7 +343,9 @@ Label.SettingsStatic
 {
 	horizontal-align: left;
 	vertical-align: top;
+	flow-children: down;
 	width: 500px;
+	height: 770px;
 }
 
 .SettingsColumnarContent
@@ -366,6 +368,8 @@ Label.SettingsStatic
 .SettingsRightContent
 {
 	width: 525px;
+	height: 770px;
+	flow-children: down;
 	margin-left: 550px;
 	horizontal-align: left;
 	padding-right: 40px;
@@ -468,6 +472,7 @@ Label.SettingsStatic
 .SettingsSection
 {
 	opacity: 0.0;
+	height: 100%;
 
 	transition-property: opacity;
 	transition-duration: SettingsPanelTransitionDuration;
@@ -479,6 +484,7 @@ Label.SettingsStatic
 .SettingsBottomPanel
 {
 	margin-left: 300px;
+	height: 770px;
 }
 
 .SettingsSection.SectionVisible
@@ -959,6 +965,21 @@ DropDown Label
 #CurrentResWrapper .SettingsCallout
 {
 	margin: 0px;
+}
+
+.SteamOS #ResolutionArea
+{
+	visibility: collapse;
+}
+
+#UnderscanArea
+{
+	visibility: collapse;
+}
+
+.SteamOS #UnderscanArea
+{
+	visibility: visible;
 }
 
 .HorzContainer
@@ -1965,4 +1986,87 @@ SettingsPanelRemoteClientListing #Status
 .Spacer
 {
 	height: 20px;
+}
+
+/* CSS for check for updates steam client button in About dialog */
+#SettingsInterface_SteamClientChecking
+{
+	visibility: collapse;
+}
+
+/* hide check label if chekcing or downloading or have update*/
+.SteamClientChecking #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientPending #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientDownloading #SettingsInterface_SteamClientCheckForUpdatesLabel
+{
+	visibility: collapse;
+}
+
+.SteamClientChecking #SettingsInterface_SteamClientChecking
+{
+	visibility: visible;
+}
+
+/* hide restart button if we don't have a pending restart */
+#SettingsInterface_SteamClientPending
+{
+	visibility: collapse;
+}
+
+.SteamClientPending #SettingsInterface_SteamClientPending
+{
+	visibility: visible;
+}
+
+/* hide downloading label if we aren't downloading */
+#SettingsInterface_SteamClientDownloading
+{
+	visibility: collapse;
+}
+
+.SteamClientDownloading #SettingsInterface_SteamClientDownloading
+{
+	visibility: visible;
+}
+
+#CheckForUpdatesWrapper
+{
+	flow-children: down;
+	height: 60px;
+}
+
+
+/* Hide the news button for client updates if not logged in, it won't work */
+.NotLoggedIn #SettingsAbout_ClientUpdate
+{
+	visibility: collapse;
+}
+
+.BetaFilter
+{
+	margin-top: 8px;
+	margin-left: 0px;
+}
+
+.ClientInfoSectionHeader
+{
+	margin-top: 82px;
+}
+
+.NotLoggedIn .ClientBetaOptIn
+{
+	visibility: collapse;
+}
+
+SettingsPanel_Display.Underscan
+{
+	visibility: collapse;	
+}
+
+.SteamOS SettingsPanel_Display.Underscan
+{
+	visibility: visible;
+	
+	background-image: url( "file://{images}/settings/underscan1.png" ), url( "file://{images}/settings/underscan2.png" ), url( "file://{images}/settings/underscan3.png" ), url( "file://{images}/settings/underscan4.png" );
+	background-repeat: no-repeat;
+	background-position: left top, right top, right bottom, left bottom;
+	background-size: 100px 100px;
 }

@@ -34,7 +34,7 @@
 						<Image src="file://{images}/inbox.png" />
 						<Panel class="ButtonLabelWrapper" >
 							<Label class="ShortDesc" text="#MainMenu_InboxShort" />
-							<Label class="LongDesc" text="#MainMenu_InboxLong" />
+							<Label class="LongDescSm" text="#MainMenu_InboxLong" />
 						</Panel>
 					</ParentalButton>
 
@@ -42,11 +42,11 @@
 				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
 					<Label id="Clock" />
 					<Label id="ClockSuffix" />
-					<ParentalButton id="SettingsButton" tabindex="0" selectionpos="10.0,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
+					<ParentalButton id="SettingsButton" tabindex="0" selectionpos="10.3,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
 						<Image src="file://{images}/settings.png" />
 						<Label class="LongDesc" text="#MainMenu_Settings" />
 					</ParentalButton>
-					<ParentalButton id="ParentalLockButton" tabindex="2" selectionpos="10.2,0" onfocus="ParentalLockButtonFocused();" onactivate="ToggleParentalLock();" >
+					<ParentalButton id="ParentalLockButton" tabindex="2" selectionpos="10.5,0" onfocus="ParentalLockButtonFocused();" onactivate="ToggleParentalLock();" >
 						<Panel id="ParentalLockImageOverlay">
 							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
@@ -60,7 +60,7 @@
 							<Label class="SmDesc" id="ParentalLockTextLockedSuffex2" text="#Parental_SelectToLock" />
 						</Panel>
 					</ParentalButton>
-					<Button id="GoOnlineButton" tabindex="3" selectionpos="10.3,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
+					<Button id="GoOnlineButton" tabindex="3" selectionpos="10.6,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
 						<Image src="file://{images}/offline.png" />
 						<Panel class="GoOnlineButtonLabels">
 							<Label class="SmDesc" id="SmDesc1" text="#GoOnline_Header" />
@@ -68,7 +68,7 @@
 							<Label class="SmDesc" id="SmDesc2" text="#GoOnline_Footer" />
 						</Panel>
 					</Button>
-					<Button id="Exit" tabindex="4" selectionpos="10.4,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
+					<Button id="Exit" tabindex="4" selectionpos="10.7,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
 						<Image src="file://{images}/exit.png" />
 						<Label class="LongDesc" text="#MainMenu_Exit" />
 					</Button>

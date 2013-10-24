@@ -29,12 +29,10 @@
 					<Label class="LongDesc" text="#SettingsAccount_ChangeEmail" />
 				</Button>-->
 	
-				<Label class="SettingsLegend" text="#SettingsAccount_Beta" />
-				<Label class="SettingsValue" id="SettingsAccount_Beta" />
+
 	
 				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" />
-				<Label class="HorzContainerLeft" text="#SettingsAccount_MustSave" />
-		  
+
 			</Panel>
 	
 			<!-- right-hand status/info panel -->
