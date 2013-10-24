@@ -1,17 +1,17 @@
 "win32"
 {
-	"version"		"1382569776"
+	"version"		"1382654526"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.792f1e661607a68c6cfcc8b4dda0c32fd1cb7e46"
-		"checksum"		"792f1e661607a68c6cfcc8b4dda0c32fd1cb7e46"
-		"size"		"5104833"
+		"file"		"strings_all.zip.4a183860c8138bbaf9e6dbaddef797f914f74fb3"
+		"checksum"		"4a183860c8138bbaf9e6dbaddef797f914f74fb3"
+		"size"		"5168590"
 	}
 	"resources_all"
 	{
-		"file"		"resources_all.zip.1cb4024273361f0d3d750ce5708b40f7126d411f"
-		"checksum"		"1cb4024273361f0d3d750ce5708b40f7126d411f"
-		"size"		"9413389"
+		"file"		"resources_all.zip.a0f133b96d244000c7a72221b9c5816a932b7fdb"
+		"checksum"		"a0f133b96d244000c7a72221b9c5816a932b7fdb"
+		"size"		"9778445"
 	}
 	"tenfoot_all"
 	{
@@ -45,20 +45,20 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.0f8145ecd2187464a0cf1d9b48399460e3acd699"
-		"checksum"		"0f8145ecd2187464a0cf1d9b48399460e3acd699"
+		"file"		"public_all.zip.c318203e8a99dcea9b0dbc2668b40ee4d830b063"
+		"checksum"		"c318203e8a99dcea9b0dbc2668b40ee4d830b063"
 		"size"		"1214917"
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.6555a75a7b7f82e1e0877bab8b22f1b665f7765b"
-		"checksum"		"6555a75a7b7f82e1e0877bab8b22f1b665f7765b"
-		"size"		"22263600"
+		"file"		"bins_win32.zip.c9687d41af6fca57fc1ca68576c3aec207874b66"
+		"checksum"		"c9687d41af6fca57fc1ca68576c3aec207874b66"
+		"size"		"22265154"
 	}
 	"webkit_win32"
 	{
-		"file"		"webkit_win32.zip.79b2f135fe8cf5da2fa5ec1f04c54849be74a5f9"
-		"checksum"		"79b2f135fe8cf5da2fa5ec1f04c54849be74a5f9"
+		"file"		"webkit_win32.zip.0defbbe58842f9e67bb6fac3bbd35d5aa6938dd4"
+		"checksum"		"0defbbe58842f9e67bb6fac3bbd35d5aa6938dd4"
 		"size"		"14150492"
 	}
 	"gamesforwindows_win32"
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.358dcd71df45053e415fbf0cfea2fdc1af32ba17"
-		"checksum"		"358dcd71df45053e415fbf0cfea2fdc1af32ba17"
-		"size"		"842308"
+		"file"		"steam_win32.zip.2186600b4215755094e948bb139f17cbc2a9443d"
+		"checksum"		"2186600b4215755094e948bb139f17cbc2a9443d"
+		"size"		"842300"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"7b234422a89c171452711f06d768902f38a83afe794f685b12e0c2229d15690774d22c04dcfd4f82d3331896e5403ad8ce2a5f2bfcc76700f9c2b4abc949d989bc41da964f43b7ddacf44619e3443e3fe0204a468ba3e78de68fe48f9c18a6ae8f5d19d8285035bdd6fca8ac1862ba574166e777b20c8d04ba3da435c994f5ad"
+	"win32"		"bca9d064ba3b345b89012e3f945c1eb023d2b97eb32cbb0899287723dc19d4ae7ab41ce94a384c5f657e30ef036bc47b66c4fd9946272db6fd049fe1ad6fc10473f352b8705acc649df978535bb69b0faf84e8ec794aca099f02665d35bf596c73e2a3e341fe0eddd84ac33631d882cd8debf20a6d1758d6a98fa63a103fe6d3"
 }
