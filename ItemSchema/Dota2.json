@@ -79190,7 +79190,7 @@
 				"name": "purgatory expires after date",
 				"defindex": 411,
 				"attribute_class": "purgatory expires after date",
-				"effect_type": "value_is_game_time",
+				"effect_type": "break",
 				"hidden": true,
 				"stored_as_integer": true
 			}
