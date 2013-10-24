@@ -888,6 +888,38 @@
 	padding: 0px 4px;
 }
 
+/* diffing */
+
+.editGuideChangesDesc
+{
+	padding: 5px;
+	padding-left: 10px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.editGuideShowChanges
+{
+	font-size: 14px;
+	line-height: 20px;
+	width: 628px;
+	background-color: #333333;
+	border: solid 1px #262627;
+	border-radius: 3px;
+	padding: 10px;
+	color: #bfbfbf;
+}
+
+.editGuide_diff_insert
+{
+	color: #00cc00;
+}
+
+.editGuide_diff_delete
+{
+	color: #cc0000;
+}
+
 /* integrated guide */
 .integrated_guide
 {
