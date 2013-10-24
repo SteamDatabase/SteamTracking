@@ -4,65 +4,77 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_About class="SettingsSection" defaultfocus="SettingsAbout_ClientUpdate">
+	<SettingsPanel_About class="SettingsSection" defaultfocus="SettingsInterface_SteamClientCheckForUpdates">
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_About" />
 		</Panel>
 
 		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
-			<Label class="AboutSectionHeading" text="#SettingsAbout_SteamClient" />
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_Built" />
-				<Label class="ResBody" text="#SettingsAbout_BuildDateTime" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_SteamPackage" />
-				<Label class="ResBody" text="#SettingsAbout_SteamPackageVersion" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_SteamAPI" />
-				<Label class="ResBody" text="#SettingsAbout_SteamAPIVersion" />
-			</Panel>
-            <Button id="SettingsAbout_ClientUpdate" onactivate="ShowClientUpdateNews()" class="Button ClientUpdateMargin">
-              <Label class="LongDesc" text="#SettingsAbout_ClientUpdateButton" />
-            </Button>
-			<Label class="AboutSectionHeading" text="#SettingsAbout_SystemInfo" />
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_CPUVendorLabel" />
-				<Label class="ResBody" text="#SettingsAbout_CPUVendor" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_CPUSpeedLabel" />
-				<Label class="ResBody" text="#SettingsAbout_CPUSpeed" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_CPUCoresLabel" />
-				<Label class="ResBody" text="#SettingsAbout_CPUCores" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_RAMLabel" />
-				<Label class="ResBody" text="#SettingsAbout_RAM" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_VideoCardLabel" />
-				<Label class="ResBody" text="#SettingsAbout_VideoCard" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_DriverVersionLabel" />
-				<Label class="ResBody" text="#SettingsAbout_DriverVersion" />
-			</Panel>
-			<Panel id="DriverDate" class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_DriverDateLabel" />
-				<Label class="ResBody" text="#SettingsAbout_DriverDate" />
-			</Panel>
-			<Panel class="AboutInfoWrapper">
-				<Label class="ResLabel" text="#SettingsAbout_VideoRAMLabel" />
-				<Label class="ResBody" text="#SettingsAbout_VideoRAM" />
-			</Panel>
-		</Panel>
+		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
+	
+		<Panel class="SettingsLeftContent" tabindex="auto" selectionpos="auto">
 
+		<Label class="SettingsLegend" text="#SettingsInterface_SteamClientUpdateDesc" />
+			<Button class="Button ResBody" id="SettingsInterface_SteamClientCheckForUpdates" onactivate="CheckForSteamClientUpdate();" tabindex="auto" selectionpos="auto">
+				<Label class="LongDesc" id="SettingsInterface_SteamClientCheckForUpdatesLabel" text="SettingsInterface_SteamClientCheckForUpdates" />
+				<Label class="LongDesc" id="SettingsInterface_SteamClientChecking" text="#SettingsInterface_SteamClientChecking"  />
+				<Label class="LongDesc" id="SettingsInterface_SteamClientDownloading" text="#SettingsInterface_SteamClientUpdateDownloading"  />
+			</Button>
+			<Button class="Button ResBody" id="SettingsInterface_SteamClientPending"  onactivate="RestartDuetoUpdate();">
+				<Label class="LongDesc" text="#SettingsInterface_SteamClientUpdatePending"  />
+			</Button>
+			<Button id="SettingsAbout_ClientUpdate" onactivate="ShowClientUpdateNews()" class="Button ClientUpdateMargin" >
+      	<Label class="LongDesc" text="#SettingsAbout_ClientUpdateButton" />
+			</Button>
+			
+				<Label class="SettingsLegend ClientBetaOptIn" text="#SettingsAbout_BetaParticipation" />	
+				<ToggleButton class="CheckBox ClientBetaOptIn" id="SettingsAbout_BetaOption" text="#SettingsAbout_BetaOption" />
+				
+				<Label class="ClientInfoSectionHeader" text="#SettingsAbout_Built" />
+				<Label class="SettingsValue" text="#SettingsAbout_BuildDateTime" />
+
+
+				<Label class="SettingsLegend" text="#SettingsAbout_SteamPackage" />
+				<Label class="SettingsValue" text="#SettingsAbout_SteamPackageVersion" />
+
+
+				<Label class="SettingsLegend" text="#SettingsAbout_SteamAPI" />
+				<Label class="SettingsValue" text="#SettingsAbout_SteamAPIVersion" />
+			
+		</Panel>	
+		
+		<Panel class="SettingsRightContent" tabindex="auto" selectionpos="auto">
+
+				<Label class="SettingsLegend" text="#SettingsAbout_CPUVendorLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_CPUVendor" />
+
+
+				<Label class="SettingsLegend" text="#SettingsAbout_CPUSpeedLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_CPUSpeed" />
+
+
+				<Label class="SettingsLegend" text="#SettingsAbout_CPUCoresLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_CPUCores" />
+
+				<Label class="SettingsLegend" text="#SettingsAbout_RAMLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_RAM" />
+
+				<Label class="SettingsLegend" text="#SettingsAbout_VideoCardLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_VideoCard" />
+
+				<Label class="SettingsLegend" text="#SettingsAbout_DriverVersionLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_DriverVersion" />
+			
+
+				<Label class="SettingsLegend" text="#SettingsAbout_DriverDateLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_DriverDate" />
+
+				<Label class="ResLabel" text="#SettingsAbout_VideoRAMLabel" />
+				<Label class="SettingsValue" text="#SettingsAbout_VideoRAM" />
+
+		</Panel>
+	</Panel>	
 	</SettingsPanel_About>
 
 </root>

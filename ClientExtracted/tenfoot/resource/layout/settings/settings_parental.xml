@@ -7,7 +7,7 @@
 	<SettingsPanel_Parental class="SettingsSection" >
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="Parental" />
+			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
 		</Panel>
 		
 		<Panel class="SettingsBottomPanel">

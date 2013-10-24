@@ -2819,7 +2819,10 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
+	
 }
+
+
 
 #ControllerSupportCorner
 {
@@ -2949,27 +2952,6 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	transition-delay: 0.0s;
 }
 
-
-.PlayAction .StreamGlow
-{
-	opacity: 0.0;
-
-}
-
-.PlayAction.Streaming .StreamGlow
-{
-	width: 232px;
-	height: 162px;
-	opacity: 1.0;
-	wash-color: #2f4d64ff;
-
-	animation-name: stream-wash-pulse;
-	animation-duration: 6.8s;
-	animation-delay: mediumduration;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 .PlayAction .ButtonEdge
 {
 	border-radius: 50%;
@@ -4177,34 +4159,83 @@ KeyboardShortcut Image
 	//background-color: none;
 }
 
-@keyframes 'stream-wash-pulse'
+.ButtonBodyWrapper
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.PlayWrapper
+{
+	width: 467px;
+	height: 220px;
+	vertical-align: bottom;
+}
+
+.PlayAction .StreamAnimator2, .PlayAction .StreamAnimator3
+{
+	opacity: 0.0;
+
+}
+
+.PlayAction.Streaming .StreamAnimator2 
+{
+	opacity: 0.7;
+	width: 1868px;
+	height: 108px;
+
+	vertical-align: center;
+	background-image: url( "file://{images}/library/stream2.png"  );
+	background-repeat: repeat no-repeat;
+	background-size: 1868px 100%;
+	overflow: noclip;
+
+	animation-name: stream-activity;
+	animation-duration: 18s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.PlayAction.Streaming .StreamAnimator3
+{
+	opacity: 1.0;
+	width: 1868px;
+	height: 220px;
+
+	vertical-align: bottom;
+	background-image: url( "file://{images}/library/stream2b.png"  );
+	background-repeat: repeat no-repeat;
+	background-size: 1868px 100%;
+	overflow: noclip;
+
+	animation-name: stream-activity;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes 'stream-activity'
 {
 	0%
 	{
-		wash-color: #2f4d64ff;
-		blur: none;
-	}
-	32%	
-	{
-		wash-color: #2f4d64ff;
-		blur: none;
-	}
-	
-	50%
-	{
-		wash-color: #4e87aaff;
-		blur: gaussian( 1.5 );
-	}	
-	
-	56%
-	{
-		wash-color: #2f4d64ff;
-		blur: none;
+		position: -934px 0px 0px;
 	}
 	
 	100%
 	{
-		wash-color: #2f4d64ff;
-		blur: none;
+		position: 0px 0px 0px;
+	}
+}
+
+@keyframes 'cross-stream-activity'
+{
+	0%
+	{
+		position: 0px 0px 0px;
+	}
+	
+	100%
+	{
+		position: -934px 0px 0px;
 	}
 }

@@ -9,54 +9,54 @@
 			<Button id="NewCommentsButton" tabindex="0" selectionpos="0,0" onactivate="ShowNewComments();" >
 				<Image src="file://{images}/comments.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewCommentsLabel" text="#MainMenu_NewComments" />
+					<Label id="NewCommentsLabel" class="LongDescSm" text="#MainMenu_NewComments" />
 				</Panel>
 			</Button>
 			<Button id="NewItemsButton" tabindex="1" selectionpos="0,1" onactivate="ShowNewItems();" >
 				<Image src="file://{images}/items.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewItemsLabel" text="#MainMenu_NewItems" />
+					<Label id="NewItemsLabel" class="LongDescSm" text="#MainMenu_NewItems" />
 				</Panel>
 			</Button>
 			<Button id="NewInvitesButton" tabindex="2" selectionpos="0,2" onactivate="ShowNewInvites();" >
 				<Image src="file://{images}/invites.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewInvitesLabel" text="#MainMenu_NewInvites" />
+					<Label id="NewInvitesLabel" class="LongDescSm" text="#MainMenu_NewInvites" />
 				</Panel>
 			</Button>
 			<Button id="NewGiftsButton" tabindex="3" selectionpos="0,3" onactivate="ShowNewGifts();" >
 				<Image src="file://{images}/gifts.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewGiftsLabel" text="#MainMenu_NewGifts" />
+					<Label id="NewGiftsLabel" class="LongDescSm" text="#MainMenu_NewGifts" />
 				</Panel>
 			</Button>
 			<Button id="NewTradeOffersButton" tabindex="4" selectionpos="0,4" onactivate="ShowNewTradeOffers();" >
 				<Image src="file://{images}/trade_offer.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewTradeOffersLabel" text="#MainMenu_NewTradeOffers" />
+					<Label id="NewTradeOffersLabel" class="LongDescSm" text="#MainMenu_NewTradeOffers" />
 				</Panel>
 			</Button>
 			<Button id="NewAsyncGamesButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewAsyncGames();" >
 				<Image src="file://{images}/async_game.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewAsyncGamesLabel" text="#MainMenu_NewAsyncGames" />
+					<Label id="NewAsyncGamesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGames" />
 				</Panel>
 			</Button>
 			<Button id="NewAsyncGameInvitesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewAsyncGameInvites();" >
 				<Image src="file://{images}/async_game_invite.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewAsyncGameInvitesLabel" text="#MainMenu_NewAsyncGameInvites" />
+					<Label id="NewAsyncGameInvitesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGameInvites" />
 				</Panel>
 			</Button>					
 			<Button id="NewSupportMessagesButton" tabindex="7" selectionpos="0,7" onactivate="ShowNewSupportMessages();" >
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewSupportMessagesLabel" text="#MainMenu_NewSupportMessages" />
+					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
 				</Panel>
 			</Button>
 			<Button id="NewClientUpdateButton" tabindex="8" selectionpos="0,8" onactivate="AllowNewClientUpdate();" >
 				<Image src="file://{images}/icon_steam_update.png" />
 				<Panel class="ButtonLabelWrapper">
-					<Label id="NewClientUpdateLabel" text="#MainMenu_NewClientUpdate" />
+					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
 				</Panel>
 			</Button>
 		</Panel>

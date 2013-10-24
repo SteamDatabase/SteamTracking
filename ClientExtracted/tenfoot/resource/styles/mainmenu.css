@@ -127,7 +127,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 .PlayActionModal #BodyWrapper
 {
 	transition-property: opacity-mask !immediate;
-	transition-duration: 0.25s;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 
 	opacity-mask: url( "file://{images}/library/play_action_modal_mask.png" );
@@ -222,7 +222,7 @@ MainMenu.StackDepth3 .HomeGlow
 	transition-property: blur, desaturation, opacity, transform !immediate;
 
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
+	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 
 }
@@ -253,16 +253,16 @@ MainMenu.StackDepth3 #TopRow
 {
 	transition-property: opacity, max-width;
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
+	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 	opacity: 1.0;
 }
 
 .TopRowBase .LongDesc
 {
-	transition-property: opacity, max-width;
+	transition-property: max-width, opacity;
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
+	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 
 
@@ -283,7 +283,7 @@ MainMenu.StackDepth3 #TopRow
 
 .TopRowFocused .LongDesc
 {
-	max-width: 300px;
+	max-width: 310px;
 	opacity: 1.0;
 	text-overflow: ellipsis;
 }
@@ -292,18 +292,14 @@ MainMenu.StackDepth3 #TopRow
 {
 
 	opacity: 0.0;
-	transition-property: opacity, max-width;
+	transition-property: opacity, transform, max-width;
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
+	transition-delay: 0.08s;
+	transition-timing-function: ease-out;
 }
 .TopRowFocused .SmDesc
 {
 	opacity: 1.0;
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
 }
 
 #ParentalLockButton .SmDesc, #GoOnlineButton .SmDesc
@@ -312,17 +308,13 @@ MainMenu.StackDepth3 #TopRow
 	line-height: 18px;
 	opacity: 0.0;
 
-	text-overflow: ellipsis;
+	text-overflow: clip;
 	text-transform: uppercase;
 	font-size: 18px;
 	margin-top: 0px;
 	margin-bottom: -2px;
 	font-weight: medium;
 
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
 }
 
 #ParentalLockButton:focus .SmDesc, #GoOnlineButton .SmDesc
@@ -352,34 +344,39 @@ MainMenu.StackDepth3 #TopRow
 
 Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels, #GoOnlineButton:hover .GoOnlineButtonLabels
 {
-	transition-delay: 0.08s !immediate;
-	max-width: 300px;
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-property: opacity, max-width;
+	max-width: 310px;
 	opacity: 1.0;
 }
 
 Button:hover .ShortDesc
 {
-	transition-delay: 0.08s !immediate;
+	transition-delay: 0.08s;
 	opacity: 0.0;
 }
 
 .TopRowBase:descendantfocus .LongDesc
 {
-	transition-delay: 0.00s !immediate;
+	transition-delay: 0.08s;
 	opacity: 1.0;
 
 }
 
-
+.LongDescSm
+{
+	font-size: 28px;
+	}
 
 .TopRowBase Button, InboxMenu Button, ParentalButton
 {
-	box-shadow: #eeeeee00 -5px -5px 6px 10px;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
 	border: 5px solid #0d1c2200;
 	color: tcexitrow;
 	background-color: #0d192100;
 
-	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-property: border, blur, background-color, color, transform, max-width, box-shadow;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
@@ -388,7 +385,7 @@ Button:hover .ShortDesc
 
 .TopRowBase Button, InboxMenu Button
 {
-		padding: 8px 8px;
+	padding: 8px 8px;
 }
 
 .TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
@@ -402,13 +399,13 @@ Button:hover .ShortDesc
 
 .TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
 {
-	transition-duration: 0.3s !immediate;
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
 	wash-color: ui_common_control_hover; 
 }
 
 .TopRowBase Button:hover, InboxMenu Button:hover, ParentalButton:hover
 {
-	transition-duration: 0.3s !immediate;
 
 	color: tcexitrowhover;
 	box-shadow: #eeeeee60 -5px -5px 6px 10px;
@@ -416,8 +413,8 @@ Button:hover .ShortDesc
 
 .TopRowBase Button:focus, InboxMenu Button:focus, ParentalButton:focus
 {
-	transition-duration: 0.3s !immediate;
-
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
@@ -427,7 +424,7 @@ Button:hover .ShortDesc
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
-	transition-property: blur, background-color, color, transform;
+	transition-property: blur, background-color, color, max-width, transform;
 
 	transform: translatez( 0px );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
@@ -650,6 +647,7 @@ margin-right: 8px;
 	font-size: 36px;
 	margin-left: 6px;
 	margin-right: 6px;
+
 	vertical-align: center;
 }
 
@@ -694,6 +692,18 @@ margin-right: 8px;
 	padding: 10px;
 }
 
+.ExitRowCursorButton
+{
+	flow-children: right;
+	vertical-align: center;
+	visibility: collapse;
+}
+
+.ExitRowCursorVisible .ExitRowCursorButton
+{
+	visibility: visible;
+}
+
 #SettingsButton
 {
 	flow-children: right;
@@ -714,13 +724,13 @@ margin-right: 8px;
 	vertical-align: center;
 }
 
-#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image
+#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .ExitRowCursorButton Image
 {
 	vertical-align: center;
 	horizontal-align: center;
 }
 
-#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label
+#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label, .ExitRowCursorButton Label
 {
 	margin-left: 4px;
 	vertical-align: center;
@@ -862,12 +872,12 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .Button:active
 {
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 }
 
 .Button:hover
 {
-	transition-duration: 0.3s !immediate;
+	transition-duration: 0.3s;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 	transform: translatez( -100px );
@@ -893,7 +903,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .Button:focus
 {
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.3s;
 
 	border-width: 5px;
 	border-style: solid;
@@ -1005,14 +1015,15 @@ InboxMenu #Wrapper
 {
 	flow-children: down;
 	margin-left: 56px;
-	margin-top: 180px;
+	padding: 10px;
+	margin-top: 170px;
 }
 
 InboxMenu Button
 {
-	margin: 6px;
+	margin: 0px;
 	flow-children: right;
-	
+
 	min-width: 420px;
 }
 
@@ -1061,32 +1072,33 @@ InboxMenu.Destructing
 	height: 88px;
 	max-width: 0px;
 	opacity: 0.0;
+
+	transition-property: opacity, max-width;
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
+	transition-timing-function: ease-out;
 }
 
 .TopRowBase .ParentalLockButtonLabels, .TopRowBase .GoOnlineButtonLabels
 {
-	opacity: 0.0;
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
-	max-width: 0px;
+
 }
 
 .TopRowFocused .ParentalLockButtonLabels, .TopRowFocused .GoOnlineButtonLabels
 {
 	opacity: 1.0;
 	visibility: visible;
+	transition-delay: 0.08s;
 	max-width: 400px;
 }
 
 #ParentalLockButton:focus .ParentalLockButtonLabels, #GoOnlineButton:focus .GoOnlineButtonLabels
 {
-	opacity: 1.0;
-	visibility: visible;
 	transition-property: opacity, max-width;
+	visibility: visible;
+	opacity: 1.0;
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
+	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 	max-width: 400px;
 }
@@ -1097,7 +1109,7 @@ InboxMenu.Destructing
 	visibility: visible;
 	transition-property: opacity, max-width;
 	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
+	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 	max-width: 400px;
 }
@@ -1119,11 +1131,11 @@ InboxMenu.Destructing
 #ParentalLockButton:focus #ParentalLockImageUnlocked
 {
 	wash-color: red;
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.3s;
 
 	animation-name: unlocked-image-wash-pulse; 
 	animation-duration: 1.7s;
-	animation-delay: 0.4s;
+	animation-delay: 0.3s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -1171,10 +1183,9 @@ InboxMenu.Destructing
 
 .TopRowBase Button:Focus Image, InboxMenu Button:Focus Image, #ParentalLockButton.Locked:Focus #ParentalLockImageLocked
 {
-	transition-duration: 0.4s !immediate;
-	wash-color: #274855ff; 
+	wash-color: #274855ff;
 
-	animation-name: image-wash-pulse; 
+	animation-name: image-wash-pulse;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
 	animation-timing-function: ease-in-out;
@@ -1196,7 +1207,7 @@ ParentalButton.Locked
 
 #ParentalLockButton.Locked #ParentalLockImageLocked
 {
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.3s;
 	wash-color: ui_primary_color;
 	opacity: 1.0;
 
@@ -1221,26 +1232,26 @@ ParentalButton.Locked
 	visibility: collapse;
 }
 
-#ParentalLockButton:focus #ParentalLockTextLockedSuffex1
+#ParentalLockButton:focus #ParentalLockTextLockedSuffex1, #ParentalLockButton:hover #ParentalLockTextLockedSuffex1
 {
 	visibility: collapse;
 	opacity: 0.0;
 }
 
 
-#ParentalLockButton:focus #ParentalLockTextLockedSuffex2
+#ParentalLockButton:focus #ParentalLockTextLockedSuffex2, #ParentalLockButton:hover #ParentalLockTextLockedSuffex2
 {
 	visibility: visible;
 	opacity: 1.0;
 }
 
-#ParentalLockButton.Locked:focus #ParentalLockTextLockedSuffex1
+#ParentalLockButton.Locked:focus #ParentalLockTextLockedSuffex1, #ParentalLockButton.Locked:hover #ParentalLockTextLockedSuffex1
 {
 	visibility: visible;
 	opacity: 1.0;
 }
 
-#ParentalLockButton.Locked:focus #ParentalLockTextLockedSuffex2
+#ParentalLockButton.Locked:focus #ParentalLockTextLockedSuffex2, #ParentalLockButton.Locked:hover #ParentalLockTextLockedSuffex2
 {
 	visibility: collapse;
 	opacity: 0.0;
@@ -1248,11 +1259,54 @@ ParentalButton.Locked
 
 #GoOnlineButton #SmDesc1, #GoOnlineButton #SmDesc2
 {
-	visibility: visible;
+	visibility: collapse;
 	opacity: 0.0;
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	transition-property: max-width, opacity;
 }
 
-#GoOnlineButton:focus #SmDesc1, #GoOnlineButton:focus #SmDesc2
+.GoOnlineButtonLabels
+{
+	transform: translateY( 16px );
+	color: tcexitrow;
+}
+
+#GoOnlineButton:focus .GoOnlineButtonLabels
+{
+	transform: translateY( 0px );
+	color: tcexitrowfocus;
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#GoOnlineButton:hover .GoOnlineButtonLabels
+{
+	transform: translateY( 0px );	
+	color: tcexitrowhover;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	transition-delay: 0.08s;
+}
+
+
+#GoOnlineButton:hover #SmDesc1, #GoOnlineButton:hover #SmDesc2
+{
+	transform: translateY( 0px );	
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#GoOnlineButton:focus .GoOnlineButtonLabels, #GoOnlineButton:focus #SmDesc1, #GoOnlineButton:focus #SmDesc2
+{
+	color: tcexitrowfocus;
+	visibility: visible;
+	opacity: 1.0;
+}
+
+
+#ParentalLockButton:hover .SmDesc, #GoOnlineButton:hover .SmDesc
 {
 	visibility: visible;
 	opacity: 1.0;

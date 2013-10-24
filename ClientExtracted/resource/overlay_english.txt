@@ -185,7 +185,7 @@
 "Overlay_View_CommunityDiscussions" "View Discussions"
 "Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% active discussions"
 
-"Overlay_SaveUncompressed" "Save an uncompressed copy outside of Steam"
+"Overlay_SaveUncompressed" "Save an uncompressed copy"
 "Overlay_SetScreenshotFolder" "Select external screenshots folder"
 
 
