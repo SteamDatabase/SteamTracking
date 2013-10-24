@@ -59,14 +59,16 @@ function StandardCallback( results, elementName )
 		{
 			message = results[ 'message' ];
 		}
-		
-		for ( i = 0; i < message.length; i++ )
+		if( message )
 		{
-			// poke in results
-			eltSpan = document.createElement( 'span' );
-			eltSpan.innerHTML = message[ i ];
-			elt.appendChild( eltSpan );
-			elt.appendChild( document.createElement( 'br' ) );
+			for ( i = 0; i < message.length; i++ )
+			{
+				// poke in results
+				eltSpan = document.createElement( 'span' );
+				eltSpan.innerHTML = message[ i ];
+				elt.appendChild( eltSpan );
+				elt.appendChild( document.createElement( 'br' ) );
+			}
 		}
 
 		// set style based on returned success code
