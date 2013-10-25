@@ -660,7 +660,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, buttonface2 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, inbox_active2 )"
 
 				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
 				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
@@ -789,7 +789,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, buttonface2 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"
 
 				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_inactive1 )"  // top
 				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_inactive1 )"  // bottom
@@ -852,7 +852,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, buttonface2 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, inbox_active2 )"
 
 				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_active1 )"  // top
 				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_active1 )"  // bottom
@@ -923,27 +923,22 @@
 		inbox_inactive_text "191 191 191 255"
 
 		inbox_active "92 126 16 255"
-		inbox_active_hover1 "129 176 25 255"
-		inbox_active_hover2 "104 142 19 255"
-
+		inbox_active2 "121 166 21 255"
+		inbox_active4 "122 145 71 255"
+		inbox_active5 "85 102 47 255"	
+		
 		inbox_inactive "38 38 37 255"
-		inbox_inactive2 "51 49 48 255"	
-		inbox_inactive3 "74 71 70 255"
+		inbox_inactive2 "142 194 12 255"	
 		inbox_inactive4 "122 145 71 255"
 		inbox_inactive5 "74 102 29"
-		inbox_inactive_hover1 "92 89 86 255"
-		inbox_inactive_hover2 "77 75 72 255"
 
 		parental_lock_active1 "92 126 16 255"
 		parental_lock_active2 "51 49 48 255"	
-		parental_lock_active3 "74 71 70 255"
 		parental_lock_active4 "122 145 71 255"
 		parental_lock_active5 "85 102 47 255"	
 
-
-		parental_lock_inactive1 "169 72 71 255"
-		parental_lock_inactive2 "51 49 48 255"	
-		parental_lock_inactive3 "74 71 70 255"
+		parental_lock_inactive1 "154 49 48 255"
+		parental_lock_inactive2 "189 79 79 255"	
 		parental_lock_inactive4 "146 72 71 255"
 		parental_lock_inactive5 "103 48 47 255"	
 

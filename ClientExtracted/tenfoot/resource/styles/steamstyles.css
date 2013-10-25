@@ -51,7 +51,7 @@
 @define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #7f8c91ff ), to( #9cacb2ff ) );
 @define tcexitrowhover: gradient( linear, 0% 0%, 0% 100%, from( #b8cbd2ff ), to( #c1d4dcff ) );
 @define tcexitrowfocus: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2cff ), to( #303030ff ) );
-@define tcmainbutton: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #abababff ) );
+@define tcmainbutton: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #abababff ) );
 @define tcmainbuttonselected: gradient( linear, 0% 0%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cf0 ) );
 @define tcselflabel: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b7c2460 ), color-stop( 1.0, #0b7c24cf ) );
 @define bgcolor: #0d1921ff;
@@ -96,6 +96,8 @@
 
 //system wide
 @define messagecolorwash: #5492b8ff;
+@define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #5492b8ff ), color-stop( 0.90, #5492b8ff ), to( #5492b800 ) );
+
 @define dialog_bg_color: #2d5680ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #2d5680 ), color-stop( 0.26, #242424ff ) );
 @define overlay_bg_color: #174b73aa;
 @define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #2d5680ff ), to( #242424ff ) );
@@ -163,17 +165,17 @@
 @define storetab: gradient( linear, 0% 100%, 0% 0%, from( #456f8aff ), to( #33526670 ) );
 @define storetabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a3b5ff ), to( #456f8aff ) );
 @define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a3b585 ), to( #456f8a85 ) );
-@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
-@define applabel: gradient( linear, 0% 96%, 96% 100%, from( #d2d2d2ff ), color-stop( 0.90, #d2d2d2ff ), to( #97989800 ) );
-@define musicapplabel: gradient( linear, 0% 86%, 86% 900%, from( #d2d2d2ff ), color-stop( 0.80, #d2d2d2ff ), to( #97989800 ) );
-@define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #d2d2d2ff ), to( #abababff ) );
-@define applabelsolid: #d2d2d2ff;
-@define applabelselected: gradient( linear, 0% 0%, 96% 100%, from( #3c3c3cff ), color-stop( 0.85, #3c3c3cff ), to( #3c3c3c00 ) );
+@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #979898 ) );
+@define applabel: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f2ff ), color-stop( 0.90, #f2f2f2ff ), to( #97989800 ) );
+@define musicapplabel: gradient( linear, 0% 86%, 86% 900%, from( #f2f2f2ff ), color-stop( 0.80, #f2f2f2ff ), to( #97989800 ) );
+@define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #f2f2f2ff ), to( #abababff ) );
+@define applabelsolid: #f2f2f2ff;
+@define applabelselected: gradient( linear, 0% 96%, 96% 100%, from( #3c3c3cff ), color-stop( 0.90, #3c3c3cff ), to( #3c3c3c00 ) );
 @define musicapplabelselected: gradient( linear, 0% 0%, 86% 90%, from( #3c3c3cff ), color-stop( 0.75, #3c3c3cff ), to( #3c3c3c00 ) );
 @define applabelselectedsolid: #3c3c3cff;
 @define applabelselectedfade: gradient( linear, 80% 0%, 96% 0%, from( #3c3c3cff ), to( #3c3c3c00 ) );
 @define applabelselectednofade: gradient( linear, 0% 96%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cff ) );
-@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898ff ) );
+@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #979898ff ) );
 @define storelabel: gradient( linear, 0% 0%, 0% 100%, from( #d6d7d966 ), to( #d6d7d9aa ) );
 @define storelabelfade: gradient( linear, 80% 0%, 100% 0%, from( #d6d7d9ff ), to( #d6d7d900 ) );
 @define store_genre_wash: #0e6a8f77;
@@ -288,7 +290,7 @@ DropDownMenu Label
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
-
+	box-shadow: fill box_shadow_off_color -4.5px -4.5px 18px 9px;
 
 	font-family: platformfont;
 	font-size: 24px;
@@ -471,7 +473,7 @@ VerticalScrollBar
 	margin: 3px, 6px, 6px 3px;
 	border-radius: 0px;
 	height: 100%;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c230 ), to( #d2d2d230 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c230 ), to( #f2f2f230 ) );
 	horizontal-align: right;
 	vertical-align: center;
 
@@ -484,7 +486,7 @@ VerticalScrollBar
 
 VerticalScrollBar .ScrollThumb
 {
-	background-color: #d2d2d2dd;
+	background-color: #f2f2f2dd;
 
 	// NOTE: The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
@@ -498,7 +500,7 @@ HorizontalScrollBar
 	height: 6px;
 	margin: 3px;
 	width: 100%;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c290 ), to( #d2d2d290 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c290 ), to( #f2f2f290 ) );
 	border-radius: 4px;
 	horizontal-align: left;
 	vertical-align: bottom;
@@ -512,7 +514,7 @@ HorizontalScrollBar
 
 HorizontalScrollBar .ScrollThumb
 {
-	background-color: #d2d2d2dd;
+	background-color: #f2f2f2dd;
 
 	// NOTE: The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev

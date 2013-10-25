@@ -29,7 +29,15 @@
 				<Label text="#Downloads_AmountValue" />
 				<Label text="#Downloads_TimeRemainValue" />
 				<Label text="#Downloads_CurrentRateValue" />
-			</Panel>
+			</Panel>			
 		</Panel>		
+		<Panel class ="DownloadQueuedLabels" >
+			<Panel class="DownloadLabelRow" >
+				<Label text="#Downloads_QueuedAmount" />
+			</Panel>
+			<Panel class="DownloadValuesRow" >
+				<Label text="#Downloads_QueuedAmountValue" />
+			</Panel>			
+		</Panel>			
 	</DownloadsGridItem>
 </root>

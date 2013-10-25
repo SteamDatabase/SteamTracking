@@ -13,7 +13,7 @@
 		dashlabel	{ controlname="Label"	labelText=""	}
 		launchbutton		{ controlname="Button"	style="DetailsLaunchButton"	labelText="#Steam_LaunchGame" zpos="1" }
 		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="ShowWhileDownloading" style="SlimProgressBar" }
-		librarylink		{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_showinlibrary" }
+		settingslink		{ controlname="URLlabel"	style="settingslink" }
 
 		// right-mid column
 		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" group="HideOnCompletion" }
@@ -78,6 +78,28 @@
 			padding-top=0
 			padding-bottom=0
 		}
+		
+		settingslink
+		{
+			font-size=14
+			font-style=normal
+			textcolor="text"
+			font-family=basefont
+			padding-left=0
+			padding-top=0
+			padding-bottom=0
+		}
+		
+		settingslink:hover
+		{
+			font-size=14
+			font-style=normal
+			textcolor="white"
+			font-family=basefont
+			padding-left=0
+			padding-top=0
+			padding-bottom=0
+		}		
 
 		rightcolumnlink:hover
 		{
@@ -357,7 +379,7 @@
 		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }
 		place { control="launchbutton" region=column2 start=namelabel dir=down margin-top=10 width=150 }
 		place { control="downloadprogressbar" region=column2 start=launchbutton margin-top=5 dir=down spacing=10 height=3 width=150 }
-		place { control="librarylink" region=column2 start=downloadprogressbar dir=down margin-top=5 margin-left=0 }
+		place { control="settingslink" region=column2 start=downloadprogressbar dir=down margin-top=5 margin-left=0 }
 
 		// right-mid column
 		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=43 spacing=6 }
@@ -366,11 +388,10 @@
 				
 		// right column
 		place { control="updatetypelabel" region="column4" dir=down spacing=10 margin-top=22 align=right	region=top margin-right=16 }
-		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=45 align=right	region=top margin-right=16 }
-		place { control="newslink" region="column4" dir=down spacing=10 margin-top=72 align=right	region=top margin-right=16 }
+		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=50 align=right	region=top margin-right=16 }
+		place { control="newslink" region="column4" dir=down spacing=10 margin-top=80 align=right	region=top margin-right=16 }
 
 		// put the buttons along the bottom
-		
 		
 	}
 }
