@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.10a9cbdb9adf869df8654433e849b64b9d58e4d2.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.671badf74eae1712e93d2497696ed8c760752291.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -67490,20 +67490,7 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				},
-				"attributes": [
-					{
-						"name": "kill eater",
-						"class": "kill_eater",
-						"value": 0
-					},
-					{
-						"name": "kill eater score type",
-						"class": "kill_eater_score_type",
-						"value": 42
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "WePlay.TV Dota 2 League - Season 2",
@@ -70155,20 +70142,7 @@
 					"strange_parts": true,
 					"paintable_unusual": true,
 					"autograph": true
-				},
-				"attributes": [
-					{
-						"name": "kill eater",
-						"class": "kill_eater",
-						"value": 0
-					},
-					{
-						"name": "kill eater score type",
-						"class": "kill_eater_score_type",
-						"value": 42
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "Nexon Invitational Super Match",

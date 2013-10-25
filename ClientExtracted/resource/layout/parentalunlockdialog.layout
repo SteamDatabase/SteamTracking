@@ -5,8 +5,12 @@
 		ParentalUnlockDialog { controlname="Frame" title="#steam_parental_unlocktitle" style="ParentalUnlockDialog" }
 
 		Instructions { controlname="Label" style="Hey" labeltext="#steam_parental_unlockinstructions" wrap=1 }
+		
+		Instructions2 { controlname="Label" style="Hey2" labeltext="#steam_parental_unlockinstructions2" wrap=1 }
 
 		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
+		
+		KeyImage { controlname="Label" style="Key" zpos=-4 }
 		
 		OK { controlname="Button" tabposition=2 command="DoParentalUnlock" labeltext="#PropertyDialog_OK" default=1 }
 		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
@@ -22,29 +26,51 @@
 
 		Password
 		{
+
 			minimum-height=50
 			font-size=40
+			bgcolor="none"
+
 		}
 
 		Hey
 		{
 			font-size=18
+			textcolor="213 214 215 255"
+		}
+		
+		Hey2
+		{
+			font-size=16
+			textcolor="213 214 215 212"
+		}
+		
+		Key
+		{
+			bgcolor=none
+			render_bg={}
+			image="graphics/keybg"
+			inset="20 20 0 0"
 		}
 
 	}
 	
 	layout
 	{
-		region { name="top" width=max height=150 margin=10 margin-top=40}
-		region { name="middle" width=max height=150 y=100 margin=10 }
+		region { name="top" width=max height=260 margin=10 margin-top=40 }
+
 		region { name="bottom" width=max align=bottom height=40 margin=10 }
 
-		place { control="Instructions" region="top" align=center width=max }
+		place { control="KeyImage" region="top" align=left x=85 y=0 width=max height=max margin-top=-30 margin-right=0}
 
-		place { control="Password" region="middle" align=left width=max }
+	
+		place { control="Instructions" region="top" align=center y=10 width=max }
+		place { control="Instructions2" region="top" align=center y=34 width=max }
+
+		place { control="Password" margin-top="75" region="top" margin-left=156 width=70 }
 		
 		// bottom: OK/cancel
-		place { control="OK,Cancel" region="bottom" align=right spacing=5 }
+		place { control="OK,Cancel" region="bottom" align=right spacing=5}
 	}
 
 }
