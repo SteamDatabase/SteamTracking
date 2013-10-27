@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.671badf74eae1712e93d2497696ed8c760752291.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d9e6fd085eb64a479b95e719d9267430f625f121.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -51421,8 +51421,8 @@
 				"image_inventory": "econ\/announcer\/announcer_death_prophet",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet.843e6b0d16a5a802845d7dfc84b51d395123def4.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet_large.da85bf63d89b704ca7b10f263dc772749b1951a1.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet.f2b3ffe2877bbc7cc1d7fd0cb4ad74836a0c93a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet_large.623dab5f1796014d005d757fd64b6262543ee89c.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
