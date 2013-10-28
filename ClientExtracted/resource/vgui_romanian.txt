@@ -361,7 +361,7 @@
 "[english]FileOpenDialog_NewFolder_InputTitle"	"New Folder"
 "FileOpenDialog_NewFolderPrompt"	"Nume:"
 "[english]FileOpenDialog_NewFolderPrompt"	"Name:"
-"FileOpenDialog_NewFolder_DefaultName"	"Director nou"
+"FileOpenDialog_NewFolder_DefaultName"	"Folder nou"
 "[english]FileOpenDialog_NewFolder_DefaultName"	"New Folder"
 "vgui_Webkit_error_title"	"Eroare"
 "[english]vgui_Webkit_error_title"	"Error"

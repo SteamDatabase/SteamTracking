@@ -77,7 +77,7 @@
 "[english]Overlay_Friends_ViewNews"	"View All News"
 "Overlay_Achievement_Title"	"Osiągnięcia / %percent%%"
 "[english]Overlay_Achievement_Title"	"Achievements / %percent%%"
-"Overlay_Achievement_Progress"	"Liczba zdobytych osiągnięć: %earned% (z %total% łącznie)"
+"Overlay_Achievement_Progress"	"Zdobyte osiągnięcia: %earned% z %total%"
 "[english]Overlay_Achievement_Progress"	"You've earned %earned% out of %total% achievements"
 "Overlay_Achievement_Recent"	"Niedawno zdobyte"
 "[english]Overlay_Achievement_Recent"	"Most Recent"

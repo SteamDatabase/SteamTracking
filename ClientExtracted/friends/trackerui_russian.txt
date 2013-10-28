@@ -862,7 +862,7 @@
 "[english]friends_trade_invite_sent"	"A request to trade has been sent to %friend%"
 "friends_trade_invite_sent_waiting"	"Ожидание ответа…"
 "[english]friends_trade_invite_sent_waiting"	"Waiting for response..."
-"friends_trade_declined"	"%friend% отклонил ваш запрос на обмен."
+"friends_trade_declined"	"Ваше предложение обмена было отклонено %friend%."
 "[english]friends_trade_declined"	"%friend% has declined your trade request."
 "friends_trade_you_are_banned"	"Вы не можете обмениваться с %friend% из-за блокировки в системе обмена."
 "[english]friends_trade_you_are_banned"	"You cannot trade with %friend% because you have a trade ban."

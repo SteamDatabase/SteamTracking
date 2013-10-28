@@ -149,7 +149,7 @@
 "[english]Overlay_MicroTxnAuth_Header_Name"	"Name"
 "Overlay_MicroTxnAuth_Header_Price"	"Цена"
 "[english]Overlay_MicroTxnAuth_Header_Price"	"Price"
-"Overlay_MicroTxnAuth_header_Quantity"	"Количество"
+"Overlay_MicroTxnAuth_header_Quantity"	"Брой"
 "[english]Overlay_MicroTxnAuth_header_Quantity"	"Qty"
 "Overlay_MicroTxnAuth_Balance"	"%balance%"
 "[english]Overlay_MicroTxnAuth_Balance"	"%balance%"

@@ -456,7 +456,7 @@
 "[english]Store_ScreenshotDescription"	"{s:appname} Screenshots"
 "Store_SlideshowDescription"	"{s:item_name}"
 "[english]Store_SlideshowDescription"	"{s:item_name}"
-"Store_GenreTitle"	"ΚΑΤΗΓΟΡΙΕΣ"
+"Store_GenreTitle"	"ΕΙΔΗ"
 "[english]Store_GenreTitle"	"Genres"
 "Store_FullAppDescriptionTitle"	"Περιγραφή"
 "[english]Store_FullAppDescriptionTitle"	"Description"

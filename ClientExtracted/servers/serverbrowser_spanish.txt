@@ -277,7 +277,7 @@
 "[english]VAC_ConnectionRefusedByServer"	"The server denied your connection because it is running in VAC (Valve Anti-Cheat) secure mode.\n\nThis Steam account has been banned from secure servers due to a cheating infraction."
 "VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
 "[english]VAC_BanSupportURL"	"http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=370"
-"VAC_SecureServerToolTip"	"Sistema antitrampas de Valve - Modo seguro"
+"VAC_SecureServerToolTip"	"Sistema antitrampas de Valve (modo seguro)"
 "[english]VAC_SecureServerToolTip"	"Valve Anti-Cheat - Secure"
 "VAC_BannedFromServerToolTip"	"No puedes conectarte a este servidor seguro"
 "[english]VAC_BannedFromServerToolTip"	"You cannot connect to this secure server"

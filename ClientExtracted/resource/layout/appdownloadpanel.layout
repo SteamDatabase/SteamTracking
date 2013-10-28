@@ -16,12 +16,15 @@
 		settingslink		{ controlname="URLlabel"	style="settingslink" }
 
 		// right-mid column
-		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" group="HideOnCompletion" }
-		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" style="label" group="HideOnCompletion" }
+		downloadtotallabel	{ controlname="Label"	labelText="#steam_downloads_gamesize_update" style="label2" }
+		downloadtotalfield	{ controlname="Label"	labelText="%download_totals%" style="label" style="label" }
 		starttimelabel	{ controlname="Label"	labelText="#steam_downloads_initiated" style=Label2  group="ShowWhileDownloading"}
 		starttimefield	{ controlname="Label"	labelText="%time_started%" style=Label  group="ShowWhileDownloading"}
 		timeremaininglabel	{ controlname="Label"	labelText="#steam_downloads_timeremaining" style="label2" group="ShowWhileDownloading" }
 		timeremainingfield	{ controlname="Label"	labelText="%time_remaining%"  style="label" group="ShowWhileDownloading" }
+		timecompletedlabel	{ controlname="Label"	labelText="#steam_downloads_timecompleted" style="label2" group="ShowWhenComplete" }
+		timecompletedfield	{ controlname="Label"	labelText="%time_completed%"  style="label" group="ShowWhenComplete" }
+		
 
 		// right column
 		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 }
@@ -384,6 +387,7 @@
 		// right-mid column
 		place { control="downloadtotallabel,downloadtotalfield" region="column3" x=0 align=top margin-top=43 spacing=6 }
 		place { control="starttimelabel,starttimefield" region="column3" dir="right" align=top spacing=6 margin-top=63 x=0 }
+		place { control="timecompletedlabel,timecompletedfield" region="column3" x=0 align=top margin-top=63 spacing=6 }
 		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=83 spacing=6 }
 				
 		// right column

@@ -293,7 +293,7 @@
 "[english]Overlay_MicroTxnSubscriptionDays"	"day(s)"
 "Overlay_SaveUncompressed"	"Ukládat nekomprimovanou kopii mimo službu Steam"
 "[english]Overlay_SaveUncompressed"	"Save an uncompressed copy outside of Steam"
-"Overlay_SetScreenshotFolder"	"Zvolit externí složku pro snímky"
+"Overlay_SetScreenshotFolder"	"Zvolit externí složku pro snímky obrazovky"
 "[english]Overlay_SetScreenshotFolder"	"Select external screenshots folder"
 "Overlay_SetScreenshotFolder_NoDriveRoot"	"Nesmíte zvolit kořenový adresář disku"
 "[english]Overlay_SetScreenshotFolder_NoDriveRoot"	"You may not select the root of a drive"

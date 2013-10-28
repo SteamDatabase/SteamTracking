@@ -347,7 +347,7 @@
 "[english]FileOpenDialog_Col_Type"	"Type"
 "FileOpenDialog_Col_DateModified"	"Změněno"
 "[english]FileOpenDialog_Col_DateModified"	"Date Modified"
-"FileOpenDialog_Col_DateCreated"	"Datum vytvoření"
+"FileOpenDialog_Col_DateCreated"	"Vytvořeno"
 "[english]FileOpenDialog_Col_DateCreated"	"Date Created"
 "FileOpenDialog_Col_Attributes"	"Vlastnosti"
 "[english]FileOpenDialog_Col_Attributes"	"Attributes"

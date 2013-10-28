@@ -123,7 +123,7 @@
 "[english]Overlay_CDKeyNotification_Hotkey"	"Press %hotkey% to close this message"
 "Overlay_CDKeyNotification_Title"	"%gamename% 序列号"
 "[english]Overlay_CDKeyNotification_Title"	"%gamename% CD key"
-"Overlay_DontNotifyAgain"	"有关此类消息请勿再次通知"
+"Overlay_DontNotifyAgain"	"有关此类消息请勿再次提醒"
 "[english]Overlay_DontNotifyAgain"	"Don't notify me about this again"
 "Overlay_CDKeyDialog_NameColumn"	"物品"
 "[english]Overlay_CDKeyDialog_NameColumn"	"Item"

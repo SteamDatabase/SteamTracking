@@ -41,7 +41,7 @@
 "[english]PropertyDialog_OK"	"OK"
 "PropertyDialog_Cancel"	"ยกเลิก"
 "[english]PropertyDialog_Cancel"	"Cancel"
-"PropertyDialog_Apply"	"ใช้"
+"PropertyDialog_Apply"	"นำไปใช้"
 "[english]PropertyDialog_Apply"	"Apply"
 "QueryBox_Cancel"	"ยกเลิก"
 "[english]QueryBox_Cancel"	"Cancel"

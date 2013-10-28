@@ -271,7 +271,7 @@
 "[english]Overlay_Guides_Panel_NumGuides"	"%num_guides% available"
 "Overlay_CommunityHub_Panel_Title"	"Central"
 "[english]Overlay_CommunityHub_Panel_Title"	"Community Hub"
-"Overlay_View_CommunityHub"	"Ver Central da Comunidade"
+"Overlay_View_CommunityHub"	"Central da Comunidade"
 "[english]Overlay_View_CommunityHub"	"View Community Hub"
 "Overlay_CommunityHub_Panel_NumContributions"	"%num_contributions% contribuições da comunidade"
 "[english]Overlay_CommunityHub_Panel_NumContributions"	"%num_contributions% Community Contributions"

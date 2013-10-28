@@ -2,6 +2,7 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/oobe/oobe.css" />
 	</styles>
 
 	<OOBELanguageWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">

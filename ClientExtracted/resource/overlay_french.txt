@@ -161,7 +161,7 @@
 "[english]Overlay_AccessibilityNotification_Message"	"This feature requires Universal Access turned on from System Preferences."
 "Overlay_MicroTxnCancelDlgTitle"	"Annuler la Transaction"
 "[english]Overlay_MicroTxnCancelDlgTitle"	"Cancel Transaction"
-"Overlay_MicroTxnCancelDlgText"	"Êtes-vous sûr de vouloir annuler cette transaction ?"
+"Overlay_MicroTxnCancelDlgText"	"Voulez-vous vraiment annuler cette transaction ?"
 "[english]Overlay_MicroTxnCancelDlgText"	"Are you sure you would like to cancel this transaction?"
 "Overlay_MicroTxnCancelDlgOK"	"Annuler Transaction"
 "[english]Overlay_MicroTxnCancelDlgOK"	"Cancel Transaction"
