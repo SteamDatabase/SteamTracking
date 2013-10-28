@@ -145,7 +145,7 @@
 "[english]ServerBrowser_JoinWhenSlotIsFree"	"You will join the server as soon as a player slot is free."
 "ServerBrowser_AlertWhenSlotIsFree"	"当此服务器有空余的玩家位置的时候，你将会被提醒。"
 "[english]ServerBrowser_AlertWhenSlotIsFree"	"You will be alerted when a player slot is free on the server."
-"ServerBrowser_CouldNotConnectServerFull"	"无法连接 - 服务器已经人满。"
+"ServerBrowser_CouldNotConnectServerFull"	"无法连接 - 服务器已满。"
 "[english]ServerBrowser_CouldNotConnectServerFull"	"Could not connect - server is full."
 "ServerBrowser_ServerNotResponding"	"服务器没有响应。"
 "[english]ServerBrowser_ServerNotResponding"	"Server is not responding."

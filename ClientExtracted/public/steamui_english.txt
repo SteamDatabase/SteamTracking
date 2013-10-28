@@ -3329,6 +3329,7 @@ To enable to the in-game overlay, open the Security and Privacy > Privacy prefer
 "steam_downloads_gamesize_download"	"Downloaded "
 "steam_downloads_updateacquired"	"Amount of current update acquired "
 "steam_downloads_timeremaining"	"Time Remaining "
+"steam_downloads_timecompleted"	"Time Completed "
 "steam_downloads_sessiontotal"	"Session Total "
 "steam_downloads_currentrate"	"%download_rate% - Current Rate"
 

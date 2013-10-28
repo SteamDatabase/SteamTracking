@@ -73,7 +73,8 @@
 	
 		"throttling_value"
 		{
-			"ControlName"	    "Label"
+			"ControlName"	    "URLLabel"
+			"URLText"		"steam://settings/downloads"
 			"labelText"	    "%throttle_value%"
 			style="throttleValue"
 			group = "ShowWhenThrottled"

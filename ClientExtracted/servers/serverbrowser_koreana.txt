@@ -7,7 +7,7 @@
 "[english]ServerBrowser_Filter"	"Filter"
 "ServerBrowser_All"	"<모두>"
 "[english]ServerBrowser_All"	"<All>"
-"ServerBrowser_World"	"전 세계"
+"ServerBrowser_World"	"전세계"
 "[english]ServerBrowser_World"	"World"
 "ServerBrowser_US_East"	"미국 동부"
 "[english]ServerBrowser_US_East"	"US - East"

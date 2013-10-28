@@ -237,7 +237,7 @@
 "[english]Overlay_Screenshots_Size_Original"	" (%selected_ss_size_original% on disk)"
 "Overlay_Taskbar_Workshop"	"Workshop"
 "[english]Overlay_Taskbar_Workshop"	"Workshop"
-"Overlay_SettingsHomepageLabel"	"Startside leser"
+"Overlay_SettingsHomepageLabel"	"Nettleserens startside"
 "[english]Overlay_SettingsHomepageLabel"	"Browser Home Page"
 "Overlay_Taskbar_GameHub"	"Samfunnssentral"
 "[english]Overlay_Taskbar_GameHub"	"Community Hub"

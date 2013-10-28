@@ -31,3 +31,8 @@ OOBEProgress
 	font-family: platformfont;
 	margin-top: 48px;
 }
+
+#SettingsContainer
+{
+	height: 600px;
+}

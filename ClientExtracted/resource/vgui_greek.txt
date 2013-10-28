@@ -395,7 +395,7 @@
 "[english]vgui_HTMLCopyLink"	"Copy Link Address"
 "vgui_HTMLSearchMatch"	"%findactive% από %findcount%"
 "[english]vgui_HTMLSearchMatch"	"%findactive% of %findcount%"
-"vgui_HTMLSearchThisPage"	"Αναζήτηση στη σελίδα"
+"vgui_HTMLSearchThisPage"	"Αναζήτηση"
 "[english]vgui_HTMLSearchThisPage"	"Search this page"
 "vgui_choosedirectoryname"	"Επιλογή φακέλου"
 "[english]vgui_choosedirectoryname"	"Choose directory name"

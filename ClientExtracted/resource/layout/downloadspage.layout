@@ -33,7 +33,6 @@
 		{
 			inset = "0 2 0 0"
 			font-style="uppercase"
-			margin-bottom=0
 			render_bg 
 			{	
 				// background gradient

@@ -121,7 +121,7 @@
 "[english]Overlay_CDKeyNotification_CDKey"	"%cdkey%"
 "Overlay_CDKeyNotification_Hotkey"	"Zum Schließen %hotkey% drücken."
 "[english]Overlay_CDKeyNotification_Hotkey"	"Press %hotkey% to close this message"
-"Overlay_CDKeyNotification_Title"	"%gamename% CD-Code"
+"Overlay_CDKeyNotification_Title"	"%gamename% CD-Key"
 "[english]Overlay_CDKeyNotification_Title"	"%gamename% CD key"
 "Overlay_DontNotifyAgain"	"Darüber nicht mehr benachrichtigen"
 "[english]Overlay_DontNotifyAgain"	"Don't notify me about this again"

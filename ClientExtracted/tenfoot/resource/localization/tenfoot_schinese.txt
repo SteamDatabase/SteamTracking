@@ -830,7 +830,7 @@
 "[english]Library_Details_Achievements_SoClose"	"SO CLOSE..."
 "Library_Details_Achievements_MoreUnachieved"	"更多未解锁的成就"
 "[english]Library_Details_Achievements_MoreUnachieved"	"MORE UNACHIEVED"
-"Library_Details_YouvePlayed"	"您玩过"
+"Library_Details_YouvePlayed"	"您已玩了"
 "[english]Library_Details_YouvePlayed"	"YOU'VE PLAYED"
 "Library_Details_LastPlayed"	"最后运行日期"
 "[english]Library_Details_LastPlayed"	"LAST PLAYED"

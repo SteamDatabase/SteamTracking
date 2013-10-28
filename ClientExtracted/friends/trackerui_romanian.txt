@@ -1023,5 +1023,11 @@
 "[english]Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
 "friends_trade_you_are_using_new_device"	"Te-ai autentificat de pe un nou dispozitiv. Pentru a-ți proteja obiectele din inventar, nu vei mai putea să schimbi de pe acest dispozitiv pentru %days% zile."
 "[english]friends_trade_you_are_using_new_device"	"You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %days% days."
+"friends_trade_you_recently_reset_password_long"	"Ai uitat și resetat recent parola contului tău Steam după multiple luni de inactivitate a contului. Pentru a proteja obiectele din inventarul tău, nu vei mai putea efectua schimburi timp de încă %days% zile."
+"[english]friends_trade_you_recently_reset_password_long"	"You recently forgot and then reset your Steam account's password after multiple months of account inactivity. In order to protect the items in your inventory, you will be unable to trade for %days% more days."
+"friends_trade_you_recently_reset_password_short"	"Ai uitat și resetat recent parola contului tău Steam. Pentru a proteja obiectele din inventarul tău, nu vei mai putea efectua schimburi timp de încă %days% zile."
+"[english]friends_trade_you_recently_reset_password_short"	"You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for %days% more days."
+"friends_trade_you_recently_reset_password_oneday"	"Ai uitat și resetat recent parola contului tău Steam. Pentru a proteja obiectele din inventarul tău, nu vei mai putea efectua schimburi timp de încă o zi."
+"[english]friends_trade_you_recently_reset_password_oneday"	"You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for one more day."
 }
 }

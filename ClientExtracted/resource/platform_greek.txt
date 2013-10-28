@@ -55,7 +55,7 @@
 "[english]Steam_RefreshLogin_PurchaseSecurity"	"For security reasons, it is required that you re-enter your password to continue."
 "Steam_Login_ErrorTitle"	"Steam - Σφάλμα"
 "[english]Steam_Login_ErrorTitle"	"Steam - Error"
-"Steam_ErrorLoginFailed"	"Η σύνδεση στο Steam απέτυχε.\nΕίτε ο καθορισμένος λογαριασμός δεν υπάρχει, ή ο κωδικός πρόσβασης ήταν λάθος.\nΠαρακαλούμε ελέγξτε το όνομα και τον κωδικό πρόσβασης του λογαριασμού σας και δοκιμάστε ξανά."
+"Steam_ErrorLoginFailed"	"Αποτυχία σύνδεσης στο Steam\nΕίτε ο λογαριασμός δεν υπάρχει ή ο κωδικός είναι λάθος.\nΕλέγξτε το όνομα λογαριασμού και τον κωδικό και προσπαθήστε ξανά."
 "[english]Steam_ErrorLoginFailed"	"Login to Steam failed.\nEither the specified account does not exist, or the password was wrong.\nPlease check your account name and password and try again."
 "Steam_Login_RememberPassword"	"Απομνημόνευση κωδικού πρόσβασης"
 "[english]Steam_Login_RememberPassword"	"Remember my password"

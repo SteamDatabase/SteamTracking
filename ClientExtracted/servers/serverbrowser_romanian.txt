@@ -285,7 +285,7 @@
 "[english]VAC_Secure"	"Secure"
 "VAC_ConnectingToSecureServer"	"Notă: Acest server este securizat VAC.\n\nTrișarea va avea ca urmare ban permanent."
 "[english]VAC_ConnectingToSecureServer"	"Note: This server is VAC-secured.\n\nCheating will result in a permanent ban."
-"VAC_BannedFromServers"	"Ai banat pe anumite servere securizate din cauza unei infracțiuni de trișare."
+"VAC_BannedFromServers"	"Banat pe anumite servere securizate din cauza unei infracțiuni de trișare."
 "[english]VAC_BannedFromServers"	"Banned from some secure servers because of a cheating infraction."
 "VAC_NoBans"	"Fără probleme"
 "[english]VAC_NoBans"	"In good standing"
