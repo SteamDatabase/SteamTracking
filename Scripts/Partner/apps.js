@@ -3279,6 +3279,10 @@ function PublishPending( rgOptions )
 	bSetReleased = ( rgOptions.set_released  == "1" ) ? true : false;
 	nLaunchDiscount = ( rgOptions.set_discount  == "1" ) ? rgOptions.discount_percent : 0;
 	NewReleaseState = rgOptions.release_state;
+	if( rgOptions['primary_pacakge'] < 1 )
+	{
+		return;
+	}
 
 	//console.log(rgPackages);
 	//return;
@@ -3326,12 +3330,13 @@ function PublishPending( rgOptions )
 			if( bSetDate )
 			{
 				d = new Date();
+				var bIsPrimary = rgOptions['primary_package'] == j;
 
 				appData = {
 					'releases': {
 						0: {
 							'show_coming_soon': null,
-							'include_in_new_lists': true
+							'include_in_new_lists': ( bIsPrimary ) ? 1 : 0
 						}
 					}
 				};
