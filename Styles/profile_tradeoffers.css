@@ -194,6 +194,24 @@ a.right_controls_large_block {
 	top: -5px;
 }
 
+.rightcol_controls_secondary_link_ctn {
+	position: relative;
+}
+
+.rightcol_controls_secondary_link_ctn a {
+	position: relative;
+}
+
+.right_controls_secondary_active_bg {
+	position: absolute;
+	background: url( 'http://cdn.steamcommunity.com/public/images/economy/tradeoffer_rightcol_selected_small.png' ) no-repeat;
+	width: 265px;
+	height: 31px;
+
+	right: 0;
+	top: -5px;
+}
+
 .right_controls_secondary_link {
 	display: block;
 	color: #686868;
@@ -202,7 +220,6 @@ a.right_controls_large_block {
 
 .right_controls_secondary_link.active {
 	color: #ffffff;
-	text-decoration: underline;
 }
 
 .right_controls_secondary_link:hover {
@@ -224,4 +241,67 @@ a.right_controls_large_block {
 
 .tradeoffer_welcome_ctn .content {
 	padding-top: 200px;
+}
+
+.tradeoffer_privacy_box {
+	background-color: #1d1d1d;
+	border-radius: 3px;
+	padding: 16px 24px;
+	color: #d6d6d6;
+	margin-bottom: 18px;
+	line-height: 20px;
+}
+
+.tradeoffer_privacy_box h2 {
+	color: #5491cf;
+	font-size: 17px;
+	font-weight: normal;
+	margin: 8px 0;
+	padding: 0;
+	line-height: normal;
+}
+
+.tradeoffer_privacy_box p {
+	margin: 0 0 16px 0;
+}
+
+.tradeoffer_privacy_box p.tradeoffer_privacy_note {
+	color: #686868;
+	font-size: 12px;
+	margin: 32px 0 0 0;
+}
+
+.tradeoffer_privacy_note {
+
+}
+
+.tradeoffer_privacy_note img {
+	vertical-align: top;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+}
+
+.tradeoffer_privacy_secondary {
+	font-size: 13px;
+	color: #8c8885;
+	margin-bottom: 4px;
+}
+
+.tradeoffer_privacy_tradetopiclink {
+	padding-left: 10px;
+}
+
+.tradeoffer_privacy_newurl {
+	padding-top: 8px;
+}
+
+.tradeoffer_privacy_newurl .newurl_button_ctn {
+	float: left;
+	margin-right: 14px;
+	margin-bottom: 14px;	/* to prevent the text from wrapping below */
+}
+
+div.gray_bevel.newurl_updated {
+	border-color: #5491cf;
 }

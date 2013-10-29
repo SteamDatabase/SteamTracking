@@ -15,7 +15,7 @@ var g_bLocalized = false;
 //
 function AppsAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
 {
-	if ( requestMethod == null ) requestMethod = 'get';
+	if ( requestMethod == null ) requestMethod = 'post';
 	new Ajax.Request( requestUrl,
 		{
 			requestHeaders: { 'Accept': 'application/json' },
@@ -188,10 +188,10 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 //
 // Set the economy info
 //
-function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, assetClassVersion, privateMode )
+function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, assetClassVersion, privateMode, hasItemServer )
 {
     AppsAjaxRequest( g_szBaseURL + '/apps/seteconomyinfo/' + appid,
-		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'assetClassVersion': assetClassVersion, 'privateMode' : privateMode },
+		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'assetClassVersion': assetClassVersion, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
 		function( results )
 		{
 			// now reflect results
@@ -1188,7 +1188,8 @@ function EditAchievement( appid, achievement )
 					}
 					
 					noProgressOption.text = "None";
-				}
+				},
+				'get'
 			);
 		
 		// we use a form to contain each localizable field;
@@ -2410,7 +2411,7 @@ function LanguageSelect( appid )
 		function( results )
 		{
 			SetAchievements( appid, results[ 'achievements' ] );
-		}
+		}, 'get'
 		);
 }
 
@@ -2437,7 +2438,7 @@ function LoadAchievements( appid )
 
  			LoadAchievementCounts( appid );
 			SetAchievements( appid, results[ 'achievements' ] );
- 		}
+ 		}, 'get'
 		);
 }
 
@@ -2457,7 +2458,7 @@ function LoadStats( appid )
 		function( results )
 		{
 			SetStats( appid, results );
-		}
+		}, 'get'
 		);
 }
 
@@ -2476,7 +2477,7 @@ function LoadDRM( appid )
 		function( results )
 		{
 			SetDrmModules( appid, results );
-		}
+		}, 'get'
 		);
 }
 
@@ -2504,7 +2505,7 @@ function LoadInstallScript( appid )
 				$('installScriptPopulated').style.display = '';
 				$('appInstallScriptDisplay').innerHTML = results[ 'installscript' ];
 			} 
-		}
+		}, 'get'
 		);
 }
 
@@ -2549,7 +2550,7 @@ function LoadSigningInfo( appid )
 	            }
              
 		    $('signinginfo_display').innerHTML = "";
-		}
+		}, 'get'
 		);
 }
 
@@ -2629,7 +2630,7 @@ function LoadScreens( appid )
 		function( results )
 		{
 			SetScreens( appid, results[ 'screens' ] );
- 		}
+ 		}, 'get'
 		);
 }
 
@@ -2719,7 +2720,7 @@ function LoadAvatars( appid )
 		function( results )
 		{
 			SetAvatars( appid, results[ 'avatars' ] );
-		}
+		}, 'get'
 		);
 }
 
@@ -2797,7 +2798,7 @@ function GetCEGPropStatus( versionset, appid, uniqueid )
 					function(results )
 					{
 						StandardCallback(results, uniqueid) ;
-					}
+					}, 'get'
 					) ;
 }
 
@@ -2914,7 +2915,7 @@ function LoadAchievementCounts( appid )
 					}
 				}
 			}
-		}
+		}, 'get'
 		);
 }
 
@@ -3024,7 +3025,7 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 			}
 			
 			onReceivedEntries( leaderboardid, results['totalEntries'] );
-		}
+		}, 'get'
 		);
 }
 

@@ -355,10 +355,9 @@ span.popup_menu_pulldown_indicator {
 	border-color: #997c52;
 }
 
-.friendPlayerLevel.lvl_100 {
+.friendPlayerLevel.lvl_100, .friendPlayerLevel.lvl_200 {
 	border: none;
 	border-radius: 0;
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_hexagons.png' );
 	background-repeat: no-repeat;
 	background-position: 0 0;
 
@@ -367,34 +366,41 @@ span.popup_menu_pulldown_indicator {
 	height: 32px;
 	width: 32px;
 	line-height: 32px;
-
 }
 
-.friendPlayerLevel.lvl_100.lvl_plus_10 {
+.friendPlayerLevel.lvl_100 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_hexagons.png' );
+}
+
+.friendPlayerLevel.lvl_200 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_shields.png' );
+}
+
+.friendPlayerLevel.lvl_plus_10 {
 	background-position: 0 -32px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_20 {
+.friendPlayerLevel.lvl_plus_20 {
 	background-position: 0 -64px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_30 {
+.friendPlayerLevel.lvl_plus_30 {
 	background-position: 0 -96px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_40 {
+.friendPlayerLevel.lvl_plus_40 {
 	background-position: 0 -128px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_50 {
+.friendPlayerLevel.lvl_plus_50 {
 	background-position: 0 -160px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_60 {
+.friendPlayerLevel.lvl_plus_60 {
 	background-position: 0 -192px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_70 {
+.friendPlayerLevel.lvl_plus_70 {
 	background-position: 0 -224px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_80 {
+.friendPlayerLevel.lvl_plus_80 {
 	background-position: 0 -256px;
 }
-.friendPlayerLevel.lvl_100.lvl_plus_90 {
+.friendPlayerLevel.lvl_plus_90 {
 	background-position: 0 -288px;
 }
 

@@ -252,7 +252,7 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 function _BindOnEnterKeyPressForDialog( deferred, fnOnEnter )
 {
 	var fnOnKeyUp = function( event ) {
-		if ( event.which == 13 )
+		if ( event.which == 13 && ( !event.target || event.target.nodeName != 'TEXTAREA' ) )
 			fnOnEnter();
 	};
 	$J(document).on( 'keyup.SharedConfirmDialog', fnOnKeyUp );

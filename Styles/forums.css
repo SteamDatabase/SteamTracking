@@ -1026,13 +1026,28 @@ table.forum_auditlog tr.audit_row_secondary {
 
 
 .manage_actions_ctn {
-	border: 1px solid #529cde;
-	background-color: #3a3a3a;
+	border: 1px solid #a55b13;
+	border-radius: 4px;
+	box-shadow: 1px 1px 0 0 #39393a;
+	padding: 10px 0;
+
+	background: #1b1b1b;
+	background: rgba(27,27,27,.36);
 	margin-bottom: 17px;
-	padding: 18px 12px;
 
 	color: #8e8e8e;
 	font-size: 12px;
+}
+
+.manage_actions_content {
+	padding: 0 10px;
+}
+
+.manage_actions_rule {
+	background-color: #000000;
+	border-bottom: 1px solid #333333;
+
+	margin: 10px 0;
 }
 
 .manage_actions_instructions {
@@ -1050,7 +1065,6 @@ table.forum_auditlog tr.audit_row_secondary {
 }
 
 .bulk_actions_toggle_btn {
-	margin-bottom: 17px;
 }
 
 .bulk_tools_icon {
@@ -1061,7 +1075,7 @@ table.forum_auditlog tr.audit_row_secondary {
 }
 
 .merge_topic_dialog {
-	max-width: 400px;
+	max-width: 472px;
 }
 
 .merge_topic_dialog_content, .merge_topic_target_list {
@@ -1276,12 +1290,16 @@ select.subforum_select_control {
 .manage_actions_otherpage_warning {
 	margin: 4px 0;
 	padding: 4px;
-	border: 1px solid #cccc33;
-	background-color: #444422;
-	color: #cccccc;
+	border: 1px solid #ff9900;
+	background-color: #CA7900;
+	color: #FFC369;
 }
 
 .manage_actions_otherpage_clearlink {
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+.manage_actions_otherpage_clearlink:hover {
+	color: #ffffff;
 }
