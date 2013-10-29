@@ -90,7 +90,7 @@
 			
 			unset( $Data, $Line );
 			
-			$Tries = 20;
+			$Tries = 5;
 			
 			do
 			{
