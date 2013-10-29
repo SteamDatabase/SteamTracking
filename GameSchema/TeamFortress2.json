@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "Team Fortress 2",
-		"gameVersion": "326",
+		"gameVersion": "327",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -3603,6 +3603,31 @@
 					"name": "koth_harvest_event.accum.iPlayTime",
 					"defaultvalue": 0,
 					"displayName": "koth_harvest_event.accum.iPlayTime"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_WIN_ROUNDS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_HALLOWEEN_HELLTOWER_WIN_ROUNDS_STAT"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_ENVIRONMENTAL_KILLS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_HALLOWEEN_HELLTOWER_ENVIRONMENTAL_KILLS_STAT"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_SKELETON_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_HALLOWEEN_HELLTOWER_SKELETON_GRIND_STAT"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_KILL_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_HALLOWEEN_HELLTOWER_KILL_GRIND_STAT"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS_STAT"
 				}
 			]
 			,
@@ -7638,6 +7663,78 @@
 					"description": "Kill MERASMUS!",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/b8e0b214a945f2b491366223fb9a1201e9aa7b48.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/aad49d1b90be81205e0cbd2e232fa20fe18c3c1e.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_RARE_SPELL",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Hell's Spells",
+					"hidden": 0,
+					"description": "Get and use a rare spell",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/8ff3097b4f6210ac1b6e50371ba82588f339b097.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/b1c9f63abc32e41d24cd72fd7ece942381cd1e72.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_WIN_ROUNDS",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Competitive Spirit",
+					"hidden": 0,
+					"description": "Win 142 rounds",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/53a6397a0a831f1c7a6daca1ef1c003677d46692.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/47c8906e391d099fb86b12e53d7cab9819b3f643.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_ENVIRONMENTAL_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Mine Games",
+					"hidden": 0,
+					"description": "Perform 17 environmental kills in Hell",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/5a96d9265d014fadc5f4a0f0ed6439dbaad5a28c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/02ab21fbd300b7ec2cf75f57d9ea1015f6943503.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_SKELETON_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Skeleton Coup",
+					"hidden": 0,
+					"description": "Kill 99 skeletons",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/36f10cdc752bbe8717f4c7853f0be38ed7b9b9b1.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/7b62dd9e3e26dcb2152f4b7af8b1b330ad333fa8.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_KILL_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Spelling Spree",
+					"hidden": 0,
+					"description": "Use spells to kill 25 players",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/4b68b2cfa2fb5e72a0444a6b95959e80d2fc3c77.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/997c635d20fc2fb5e57567339fddd8c06943e4b9.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_MILESTONE",
+					"defaultvalue": 0,
+					"displayName": "The Mann-tastic Four",
+					"hidden": 0,
+					"description": "Earn 4 of the Helltower achievements",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/3e010afbb8b8097eafb8c79292f74e2629497f43.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/836f04b92e9afd087ae27873f7c151f8ad787916.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_SKULL_ISLAND_REWARD",
+					"defaultvalue": 0,
+					"displayName": "Hat Out of Hell",
+					"hidden": 0,
+					"description": "Get the loot from Skull Island in Hell",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/e00acbeb7357793ac24123c7c2be5525f3bc0a6c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/62f10a4f07c5b6393a399688c93a1643f18b6445.jpg"
+				},
+				{
+					"name": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS",
+					"defaultvalue": 0,
+					"displayName": "Helltower: Hell on Wheels",
+					"hidden": 0,
+					"description": "Send Redmond/Blutarch to Hell 10 times",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c512faf198b0cf975c2868555b06f3b47c68c22f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/66872d260be9b439e7ecfde7dba87b8aca9a9059.jpg"
 				}
 			]
 			
