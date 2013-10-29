@@ -561,6 +561,10 @@ a.badge_row:hover .badge_view_details {
 .badge_card_to_collect_info {
 }
 
+.badge_card_to_collect_links {
+	float: right;
+}
+
 .badge_friendswithgamecards_section {
 	padding-top: 8px;
 	margin-left: 120px;
@@ -652,6 +656,18 @@ img.gamecard {
 	background-position: center top;
 	background-repeat: no-repeat;
 	padding-top: 24px;
+}
+
+.badge_detail_tasks.footer {
+	margin-top: 0;
+	padding: 0;
+	height: 1px;
+	margin-bottom: 14px;
+}
+
+.badge_gamecard_page .badge_detail_tasks {
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .badge_detail_tasks .badge_task {

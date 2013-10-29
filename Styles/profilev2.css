@@ -1262,9 +1262,14 @@ img.workshop_showcase_item_image {
 .profile_small_header_text {
 	position: absolute;
 	left: 120px;
+	right: 30px;
 	top: 40px;
 	color: white;
 	font-size: 14px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .profile_small_header_name {

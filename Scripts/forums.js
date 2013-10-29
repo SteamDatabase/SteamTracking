@@ -742,6 +742,7 @@ function Forum_BanUser( gidTopic, gidComment, accountIDTarget, strTargetName )
 		form.elements['accountidtarget'].value = accountIDTarget;
 		form.elements['targetname'].value = strTargetName;
 		form.elements['ban_reason'].value='';
+		Forum_InitBanLengthOptions( $J(form.elements['ban_length']) );
 		$('forum_banuser_targetname').update( strTargetName );
 		showContentAsModal( 'forum_modal', $('forum_banuser_modal_content') );
 		form.elements['ban_reason'].focus();
@@ -1323,7 +1324,10 @@ function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bReso
 	var $MergeForm = $J('<form/>' );
 	$DialogContent.append( $MergeForm );
 
-	$MergeForm.append( $J('<div/>', {'class': 'merge_topic_dialog_content' }).text( rgForumTopics.length > 1 ? 'Select a recently viewed topic to merge the selected topics into:' : 'Select a recently viewed topic to merge this topic into:' ) );
+	var strMessage = 'Merging topics will move all the posts from one or more topics into another topic.  If there are already posts in the target topic, the new posts will be interleaved by time posted.  This cannot be undone.<br><br>';
+	strMessage += rgForumTopics.length > 1 ? 'Select a recently viewed topic to merge the selected topics into:' : 'Select a recently viewed topic to merge this topic into:';
+
+	$MergeForm.append( $J('<div/>', {'class': 'merge_topic_dialog_content' }).html( strMessage ) );
 
 	var $List = $J('<div/>', {'class': 'merge_topic_target_list' } );
 	$MergeForm.append( $List );
@@ -1339,6 +1343,7 @@ function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bReso
 		var rgOpt = g_rgRedirectTimeOptions[i];
 		$Select.append( $J('<option/>', {value: rgOpt.value }).text( rgOpt.label) );
 	}
+	Forum_InitExpiryOptions( $Select );
 	$Expiry.append( 'Leave redirect for: ', $Select );
 	$MergeForm.append( $Expiry );
 
@@ -1359,12 +1364,15 @@ function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bReso
 		oSelectedTopics[rgForumTopics[i]] = true;
 
 	var fnPopulateMergeOptions = function() {
+		var cTopicsToShow = 5;
 		$List.html('');
 		if ( rgForumTopics.length > 1 )
 		{
-			var $MergeTogether = fnMakeMergeOption( 0, 0, 0, 'Merge the selected topics together' );
+			var $MergeTogether = fnMakeMergeOption( 0, 0, 0, 'Merge the selected topics together into the oldest topic' );
 			$MergeTogether.addClass( 'merge_topic_together_option');
 			$List.append( $MergeTogether );
+			$MergeTogether.children( 'input').prop( 'checked', true );
+			cTopicsToShow--;
 		}
 		var rgMergeTargets = _Forum_GetPotentialMergeTargets();
 		for ( var i = 0; i < rgMergeTargets.length; i++ )
@@ -1375,6 +1383,9 @@ function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bReso
 				continue;
 
 			$List.append( fnMakeMergeOption( rgTarget.unClanIDOwner, rgTarget.gidForum, rgTarget.gidTopic, rgTarget.strTitle ) );
+
+			if ( --cTopicsToShow == 0 )
+				break;
 		}
 	}
 	fnPopulateMergeOptions();
@@ -1440,6 +1451,7 @@ function Forum_MoveTopics( strActionURL, rgForumData, rgForumTopics, bResolveRep
 	// blank out the text area if the user is making a new report
 	form.elements['gidforumtopic_list'].value = V_ToJSON( rgForumTopics );
 	form.elements['source_forum_name'].value = rgForumData.forum_display_name;
+	Forum_InitExpiryOptions( $J( form.elements['redirect_expiry_hours'] ) );
 
 	var deferred = new jQuery.Deferred();
 
@@ -1638,8 +1650,8 @@ function InitializeForumBulkActions( strName )
 	var rgAllSelectedTopics = {};
 	var cTopicsCheckedOnOtherPages = 0;
 
-	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge ).add( $BtnPurge );
-	var $BtnHideDefault = $J().add( $BtnUnDelete ).add( $BtnUnLock );
+	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge );
+	var $BtnHideDefault = $J().add( $BtnUnDelete ).add( $BtnUnLock ).add( $BtnPurge );
 
 	var fnShowControlsIfCheckboxChecked = function ()
 	{
@@ -1708,6 +1720,7 @@ function InitializeForumBulkActions( strName )
 					$BtnMove.hide();
 					$BtnMerge.hide();
 					$BtnLock.hide();
+					$BtnPurge.show();
 				}
 				else if ( cLockedTopics == cTotalTopics )
 				{
@@ -1966,5 +1979,27 @@ function StartTradeOfferForTradingTopic( unAccountID, unClanIDOwner, gidTopic )
 	params['forum_owner'] = unClanIDOwner;
 	params['forum_topic'] = gidTopic;
 	ShowTradeOffer( 'new', params );
+}
+
+function Forum_InitExpiryOptions( $Select )
+{
+	var nLastExpiryChoice = GetValueLocalStorage( 'nForumLastExpiryChoice', 0 );
+	$Select.val( nLastExpiryChoice );
+
+	$Select.ofF( 'change.ForumRememberChoice' );
+	$Select.on( 'change.ForumRememberChoice', function() {
+		SetValueLocalStorage( 'nForumLastExpiryChoice', $Select.val() );
+	});
+}
+
+function Forum_InitBanLengthOptions( $Select )
+{
+	var nLastBanLengthChoice = GetValueLocalStorage( 'nForumLastBanLengthChoice', 0 );
+	$Select.val( nLastBanLengthChoice );
+
+	$Select.off( 'change.ForumRememberChoice' );
+	$Select.on( 'change.ForumRememberChoice', function() {
+		SetValueLocalStorage( 'nForumLastBanLengthChoice', $Select.val() );
+	});
 }
 
