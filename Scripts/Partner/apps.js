@@ -3279,13 +3279,6 @@ function PublishPending( rgOptions )
 	bSetReleased = ( rgOptions.set_released  == "1" ) ? true : false;
 	nLaunchDiscount = ( rgOptions.set_discount  == "1" ) ? rgOptions.discount_percent : 0;
 	NewReleaseState = rgOptions.release_state;
-	if( rgOptions['primary_pacakge'] < 1 )
-	{
-		return;
-	}
-
-	//console.log(rgPackages);
-	//return;
 
 	nAppId = rgOptions.appid;
 	nItemid = rgOptions.itemid;
