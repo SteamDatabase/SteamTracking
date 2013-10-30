@@ -1986,7 +1986,7 @@ function Forum_InitExpiryOptions( $Select )
 	var nLastExpiryChoice = GetValueLocalStorage( 'nForumLastExpiryChoice', 0 );
 	$Select.val( nLastExpiryChoice );
 
-	$Select.ofF( 'change.ForumRememberChoice' );
+	$Select.off( 'change.ForumRememberChoice' );
 	$Select.on( 'change.ForumRememberChoice', function() {
 		SetValueLocalStorage( 'nForumLastExpiryChoice', $Select.val() );
 	});
