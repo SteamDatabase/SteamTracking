@@ -44281,6 +44281,13 @@
 			"item_description"		"#TF_hw2013_rugged_respirator_Desc"
 			"equip_region"		"pyro_head_replacement"
 			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
 			"image_inventory"		"backpack/workshop/player/items/pyro/hw2013_rugged_respirator/hw2013_rugged_respirator"
 			"capabilities"
 			{
