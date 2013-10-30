@@ -1428,3 +1428,7 @@ input.datepicker {
 	clear: both;
 	margin: 8px 0;
 }
+
+.main_capsule {
+	position: relative
+}
