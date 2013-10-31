@@ -44761,7 +44761,11 @@
 			"item_type_name"	"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_heavy_robin"
 			"item_description"		"#TF_hw2013_heavy_robin_Desc"
-			"equip_region"		"whole_head"
+			"equip_region"
+			{
+				"whole_head"		"1"
+				"head_skin"			"1"
+			}
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/hw2013_heavy_robin/hw2013_heavy_robin"
 			"model_player"		"models/workshop/player/items/heavy/hw2013_heavy_robin/hw2013_heavy_robin.mdl"
@@ -75000,7 +75004,7 @@
 			"do_B"	"#TF_PileOfCurses"
 			"always_known"	"1"
 			"premium_only"	"0"
-			"disabled"	"1"
+			"disabled"	"0"
 			"input_items"
 			{
 				"1"

@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.0d64cd013f1bcce6946c73595abae3d53db98c97.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.b39bdab85beb19507fb46cd8722e1e2ff580966d.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -94774,7 +94774,7 @@
 				"name": "medigun charge is resists",
 				"defindex": 473,
 				"attribute_class": "set_charge_type",
-				"description_string": "Special-Attack: Cycle through resist types.\nWhile healing, provides you and your target with a constant 10% resistance to the selected damage type.",
+				"description_string": "Press your reload key to cycle through resist types.\nWhile healing, provides you and your target with a constant 10% resistance to the selected damage type.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
