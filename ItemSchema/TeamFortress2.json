@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.b39bdab85beb19507fb46cd8722e1e2ff580966d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.171f99354ba4e430bb7bf33d42e741005cb9a21b.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -49143,8 +49143,8 @@
 				"image_inventory": "backpack\/player\/items\/crafting\/halloween_2013_bundle",
 				"min_ilevel": 50,
 				"max_ilevel": 50,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_2013_bundle.95cac80035801327f7e2516ed7afa95e84806236.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_2013_bundle_large.abf20705811033ee18373113d348b370eb55dfc8.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_2013_bundle.234881fa18b795d84903a84a64e34a685246bbca.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/halloween_2013_bundle_large.b916e398697e92da8556d3abb3d7506d590f05f8.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -79996,8 +79996,8 @@
 				"image_inventory": "backpack\/workshop\/player\/items\/scout\/jul13_koolboy\/jul13_koolboy",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_koolboy.e08ea246a8597b1f2c99769785ca8a491032e979.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_koolboy_large.94d0dee03ab8962ad6658fe4019f518eb7972761.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_koolboy.6495a12c1f90d062aff1237e13c393f944352372.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_koolboy_large.2d780321b49dbb2e7e446cca855a2aafc613f646.png",
 				"drop_type": "none",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
