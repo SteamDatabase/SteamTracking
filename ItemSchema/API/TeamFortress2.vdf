@@ -43843,7 +43843,7 @@
 		{
 			"name"		"The Baphomet Trotters"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Hooves"
+			"item_type_name"		"#TF_Wearable_Hooves"
 			"item_name"		"#TF_hw2013_scout_demo_faunlegs"
 			"item_description"		"#TF_hw2013_scout_demo_faunlegs_Desc"
 			"equip_region"		"feet"
@@ -43872,7 +43872,7 @@
 		{
 			"name"		"Burny's Boney Bonnet"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_dragon_hood"
 			"item_description"		"#TF_hw2013_dragon_hood_Desc"
 			"equip_region"		"hat"
@@ -43898,7 +43898,7 @@
 		{
 			"name"		"The Crispy Golden Locks"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_golden_crisp_locks"
 			"item_description"		"#TF_hw2013_golden_crisp_locks_Desc"
 			"equip_region"		"hat"
@@ -43921,7 +43921,7 @@
 		{
 			"name"		"The Scorched Skirt"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_scorched_skirt"
 			"item_description"		"#TF_hw2013_scorched_skirt_Desc"
 			"equip_region"		"shirt"
@@ -43937,7 +43937,7 @@
 		{
 			"name"		"The Accursed Apparition"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_wandering_soul"
 			"item_description"		"#TF_hw2013_wandering_soul_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -43979,7 +43979,7 @@
 		{
 			"name"		"The Hound's Hood"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_horrifying_hound_hood"
 			"item_description"		"#TF_hw2013_horrifying_hound_hood_Desc"
 			"equip_region"		"hat"
@@ -44008,7 +44008,7 @@
 		{
 			"name"		"The Terrier Trousers"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_terrifying_terrier_trousers"
 			"item_description"		"#TF_hw2013_terrifying_terrier_trousers_Desc"
 			"propername"		"1"
@@ -44039,7 +44039,7 @@
 		{
 			"name"		"The Horrific Head of Hare"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_bunny_mann"
 			"item_description"		"#TF_hw2013_bunny_mann_Desc"
 			"equip_region"		"hat"
@@ -44067,7 +44067,7 @@
 		{
 			"name"		"The Snaggletoothed Stetson"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_leather_face"
 			"item_description"		"#TF_hw2013_leather_face_Desc"
 			"equip_region"		"hat"
@@ -44102,7 +44102,7 @@
 		{
 			"name"		"Up Pyroscopes"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_EyeStalks"
+			"item_type_name"		"#TF_Wearable_EyeStalks"
 			"item_name"		"#TF_hw2013_per_eye_scopes"
 			"item_description"		"#TF_hw2013_per_eye_scopes_Desc"
 			"equip_region"		"glasses"
@@ -44129,7 +44129,7 @@
 		{
 			"name"		"The One-Way Ticket"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_stiff_buddy"
 			"item_description"		"#TF_hw2013_stiff_buddy_Desc"
 			"equip_region"		"hat"
@@ -44176,7 +44176,7 @@
 		{
 			"name"		"The Birdie Bonnet"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_tricky_chicken"
 			"item_description"		"#TF_hw2013_tricky_chicken_Desc"
 			"equip_region"		"hat"
@@ -44223,7 +44223,7 @@
 		{
 			"name"		"The External Organ"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"item_name"		"#TF_hw2013_dark_orchestra"
 			"item_description"		"#TF_hw2013_dark_orchestra_Desc"
 			"equip_region"		"Back"
@@ -44250,7 +44250,7 @@
 		{
 			"name"		"Ivan The Inedible"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_ivan_the_inedible"
 			"item_description"		"#TF_hw2013_ivan_the_inedible_Desc"
 			"equip_region"		"head_skin"
@@ -44276,7 +44276,7 @@
 		{
 			"name"		"The Rugged Respirator"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_rugged_respirator"
 			"item_description"		"#TF_hw2013_rugged_respirator_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -44303,7 +44303,7 @@
 		{
 			"name"		"The Squid's Lid"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_blackguards_bicorn"
 			"item_description"		"#TF_hw2013_blackguards_bicorn_Desc"
 			"equip_region"		"hat"
@@ -44323,7 +44323,7 @@
 		{
 			"name"		"The Hollowhead"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_hollowhead"
 			"item_description"		"#TF_hw2013_hollowhead_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -44346,7 +44346,7 @@
 		{
 			"name"		"Grub Grenades"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_combat_maggots"
 			"item_description"		"#TF_hw2013_combat_maggots_Desc"
 			"equip_region"		"grenades"
@@ -44372,7 +44372,7 @@
 		{
 			"name"		"The Gothic Guise"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_gothic_guise"
 			"item_description"		"#TF_hw2013_gothic_guise_Desc"
 			"equip_regions"
@@ -44403,7 +44403,7 @@
 		{
 			"name"		"The Grease Monkey"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_grease_monkey"
 			"item_description"		"#TF_hw2013_grease_monkey_Desc"
 			"equip_region"		"face"
@@ -44430,7 +44430,7 @@
 		{
 			"name"		"The Alternative Medicine Mann"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_witching_ward"
 			"item_description"		"#TF_hw2013_witching_ward_Desc"
 			"equip_regions"
@@ -44461,7 +44461,7 @@
 		{
 			"name"		"The Cauterizer's Caudal Appendage"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_dragonbutt"
 			"item_description"		"#TF_hw2013_dragonbutt_Desc"
 			"equip_region"		"pyro_tail"
@@ -44481,7 +44481,7 @@
 		{
 			"name"		"Polly Putrid"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_UndeadPet"
+			"item_type_name"		"#TF_Wearable_UndeadPet"
 			"item_name"		"#TF_hw2013_zombie_parrot"
 			"item_description"		"#TF_hw2013_zombie_parrot_Desc"
 			"equip_region"		"left_shoulder"
@@ -44500,7 +44500,7 @@
 		{
 			"name"		"The Faux Manchu"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_FacialHair"
+			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_hw2013_faux_manchu"
 			"item_description"		"#TF_hw2013_faux_manchu_Desc"
 			"equip_region"		"beard"
@@ -44516,7 +44516,7 @@
 		{
 			"name"		"The Hidden Dragon"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_hidden_dragon"
 			"item_description"		"#TF_hw2013_hidden_dragon_Desc"
 			"equip_region"		"hat"
@@ -44536,7 +44536,7 @@
 		{
 			"name"		"The Lo-Grav Loafers"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_moon_boots"
 			"item_description"		"#TF_hw2013_moon_boots_Desc"
 			"equip_region"		"feet"
@@ -44552,7 +44552,7 @@
 		{
 			"name"		"The Surgeon's Space Suit"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_spacemans_suit"
 			"item_description"		"#TF_hw2013_spacemans_suit_Desc"
 			"equip_region"		"shirt"
@@ -44568,7 +44568,7 @@
 		{
 			"name"		"The Face Plante"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_boston_bandy_mask"
 			"item_description"		"#TF_hw2013_boston_bandy_mask_Desc"
 			"equip_region"		"face"
@@ -44596,7 +44596,7 @@
 		{
 			"name"		"Das Blutliebhaber"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_das_blutliebhaber"
 			"item_description"		"#TF_hw2013_das_blutliebhaber_Desc"
 			"equip_region"		"glasses"
@@ -44622,7 +44622,7 @@
 		{
 			"name"		"The Trepanabotomizer"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_quacks_cureall"
 			"item_description"		"#TF_hw2013_quacks_cureall_Desc"
 			"equip_region"		"hat"
@@ -44645,7 +44645,7 @@
 		{
 			"name"		"The Sackcloth Spook"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_burlap_buddy"
 			"item_description"		"#TF_hw2013_burlap_buddy_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -44684,7 +44684,7 @@
 		{
 			"name"		"The Mucous Membrain"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_mucus_membrane"
 			"item_description"		"#TF_hw2013_mucus_membrane_Desc"
 			"equip_region"
@@ -44704,7 +44704,7 @@
 		{
 			"name"		"Pin Pals"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_volatile_voodoo"
 			"item_description"		"#TF_hw2013_volatile_voodoo_Desc"
 			"equip_region"		"grenades"
@@ -44735,7 +44735,7 @@
 		{
 			"name"		"Medimedes"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_BirdHead"
+			"item_type_name"		"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_medicmedes"
 			"item_description"		"#TF_hw2013_medicmedes_Desc"
 			"equip_region"		"whole_head"
@@ -44758,13 +44758,13 @@
 		{
 			"name"		"The Chicken Kiev"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_BirdHead"
+			"item_type_name"		"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_heavy_robin"
 			"item_description"		"#TF_hw2013_heavy_robin_Desc"
 			"equip_region"
 			{
 				"whole_head"		"1"
-				"head_skin"			"1"
+				"head_skin"		"1"
 			}
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/hw2013_heavy_robin/hw2013_heavy_robin"
@@ -44786,7 +44786,7 @@
 		{
 			"name"		"The Freedom Feathers"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_BirdHead"
+			"item_type_name"		"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_feathered_freedom"
 			"item_description"		"#TF_hw2013_feathered_freedom_Desc"
 			"equip_region"		"whole_head"
@@ -44817,7 +44817,7 @@
 		{
 			"name"		"The Headtaker's Hood"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"			
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_demo_executioner_hood"
 			"item_description"		"#TF_hw2013_demo_executioner_hood_Desc"
 			"equip_region"		"whole_head"
@@ -44844,7 +44844,7 @@
 		{
 			"name"		"The Transylvania Top"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"	
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_demon_fro"
 			"item_description"		"#TF_hw2013_demon_fro_Desc"
 			"equip_region"		"hat"
@@ -44860,7 +44860,7 @@
 		{
 			"name"		"The Candleer"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"	
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_kindlin_candles"
 			"item_description"		"#TF_hw2013_kindlin_candles_Desc"
 			"equip_region"		"grenades"
@@ -44894,7 +44894,7 @@
 		{
 			"name"		"The Horsemann's Hand-Me-Down"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Cape"	
+			"item_type_name"		"#TF_Wearable_Cape"
 			"item_name"		"#TF_hw2013_demo_cape"
 			"item_description"		"#TF_hw2013_demo_cape_Desc"
 			"equip_region"		"Back"
@@ -44910,7 +44910,7 @@
 		{
 			"name"		"Bozo's Bouffant"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"	
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_haha_hairdo"
 			"item_description"		"#TF_hw2013_the_haha_hairdo_Desc"
 			"equip_regions"		"hat"
@@ -44929,7 +44929,7 @@
 		{
 			"name"		"Faun Feet"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Hooves"	
+			"item_type_name"		"#TF_Wearable_Hooves"
 			"item_name"		"#TF_hw2013_the_hell_runner"
 			"item_description"		"#TF_hw2013_the_hell_runner_Desc"
 			"equip_region"		"feet"
@@ -44955,7 +44955,7 @@
 		{
 			"name"		"The Halloweiner"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"	
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_halloweiner"
 			"item_description"		"#TF_hw2013_halloweiner_Desc"
 			"equip_region"		"hat"
@@ -44979,7 +44979,7 @@
 		{
 			"name"		"The Lordly Lapels"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"	
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_ghoulic_extension"
 			"item_description"		"#TF_hw2013_the_ghoulic_extension_Desc"
 			"equip_region"		"demoman_collar"
@@ -44995,7 +44995,7 @@
 		{
 			"name"		"The Cadaver's Capper"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"	
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_soldier_jiangshi_hat"
 			"item_description"		"#TF_hw2013_soldier_jiangshi_hat_Desc"
 			"equip_regions"
@@ -45026,7 +45026,7 @@
 		{
 			"name"		"Guano"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"	
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_the_fire_bat_v2"
 			"item_description"		"#TF_hw2013_the_fire_bat_v2_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -45071,7 +45071,7 @@
 		{
 			"name"		"The Sprinting Cephalopod"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Tentacles"	
+			"item_type_name"		"#TF_Wearable_Tentacles"
 			"item_name"		"#TF_hw2013_running_octopus"
 			"item_description"		"#TF_hw2013_running_octopus_Desc"
 			"equip_region"		"feet"
@@ -45106,7 +45106,7 @@
 		{
 			"name"		"Unidentified Following Object"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"	
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_intergalactic_intruder"
 			"item_description"		"#TF_hw2013_intergalactic_intruder_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -45144,7 +45144,7 @@
 		{
 			"name"		"The Beacon from Beyond"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_the_enlightening_lantern"
 			"item_description"		"#TF_hw2013_the_enlightening_lantern_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -45189,7 +45189,7 @@
 		{
 			"name"		"The Hyperbaric Bowler"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_brain__bowler"
 			"item_description"		"#TF_hw2013_brain__bowler_Desc"
 			"equip_region"		"hat"
@@ -45209,7 +45209,7 @@
 		{
 			"name"		"The Death Support Pack"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_tin_can"
 			"item_description"		"#TF_hw2013_tin_can_Desc"
 			"equip_region"		"grenades"
@@ -45232,7 +45232,7 @@
 		{
 			"name"		"The Carious Chameleon"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_UndeadPet"
+			"item_type_name"		"#TF_Wearable_UndeadPet"
 			"item_name"		"#TF_hw2013_zombie_chameleon"
 			"item_description"		"#TF_hw2013_zombie_chameleon_Desc"
 			"equip_region"		"left_shoulder"
@@ -45259,7 +45259,7 @@
 		{
 			"name"		"The Monster's Stompers"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_dragon_shoes"
 			"item_description"		"#TF_hw2013_dragon_shoes_Desc"
 			"equip_region"		"feet"
@@ -45279,7 +45279,7 @@
 		{
 			"name"		"The Bountiful Bow"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_blood_banker"
 			"item_description"		"#TF_hw2013_blood_banker_Desc"
 			"equip_region"		"shirt"
@@ -45306,7 +45306,7 @@
 		{
 			"name"		"The Candyman's Cap"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_harmburg"
 			"item_description"		"#TF_hw2013_harmburg_Desc"
 			"equip_region"		"hat"
@@ -45333,7 +45333,7 @@
 		{
 			"name"		"The Vicar's Vestments"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_medic_undertaker_vest"
 			"item_description"		"#TF_hw2013_medic_undertaker_vest_Desc"
 			"equip_region"		"shirt"
@@ -45356,7 +45356,7 @@
 		{
 			"name"		"The Hardium Helm"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_rocket_ranger"
 			"item_description"		"#TF_hw2013_rocket_ranger_Desc"
 			"equip_regions"
@@ -45376,7 +45376,7 @@
 		{
 			"name"		"The Jupiter Jumpers"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_jupiter_jumpers"
 			"item_description"		"#TF_hw2013_jupiter_jumpers_Desc"
 			"equip_region"		"feet"
@@ -45392,7 +45392,7 @@
 		{
 			"name"		"The Space Bracers"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_galactic_gauntlets"
 			"item_description"		"#TF_hw2013_galactic_gauntlets_Desc"
 			"equip_region"		"arms"
@@ -45408,7 +45408,7 @@
 		{
 			"name"		"The Handhunter"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"item_name"		"#TF_hw2013_handhunter"
 			"item_description"		"#TF_hw2013_handhunter_Desc"
 			"equip_region"		"Back"
@@ -45435,7 +45435,7 @@
 		{
 			"name"		"The Spellbinder's Bonnet"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_the_crit_wizard"
 			"item_description"		"#TF_hw2013_the_crit_wizard_Desc"
 			"equip_region"		"hat"
@@ -45470,7 +45470,7 @@
 		{
 			"name"		"The Macabre Mask"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_the_creeps_cowl"
 			"item_description"		"#TF_hw2013_the_creeps_cowl_Desc"
 			"equip_regions"
@@ -45501,7 +45501,7 @@
 		{
 			"name"		"The Shaman's Skull"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_shamans_skull"
 			"item_description"		"#TF_hw2013_shamans_skull_Desc"
 			"equip_region"		"hat"
@@ -45521,7 +45521,7 @@
 		{
 			"name"		"The Vicious Visage"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_head_of_the_lake_monster"
 			"item_description"		"#TF_hw2013_head_of_the_lake_monster_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -45548,7 +45548,7 @@
 		{
 			"name"		"The Tuque or Treat"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_pumpkin_top"
 			"item_description"		"#TF_hw2013_pumpkin_top_Desc"
 			"equip_region"		"hat"
@@ -45594,7 +45594,7 @@
 		{
 			"name"		"The Horned Honcho"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_FacialHair"
+			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_hw2013_horned_honcho"
 			"item_description"		"#TF_hw2013_horned_honcho_Desc"
 			"equip_region"		"hat"
@@ -45621,7 +45621,7 @@
 		{
 			"name"		"Lieutenant Bites the Dust"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_UndeadPet"
+			"item_type_name"		"#TF_Wearable_UndeadPet"
 			"item_name"		"#TF_hw2013_zombites"
 			"item_description"		"#TF_hw2013_zombites_Desc"
 			"equip_region"		"soldier_pocket"
@@ -45643,7 +45643,7 @@
 		{
 			"name"		"The Grisly Gumbo"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"item_name"		"#TF_hw2013_gristly_gumbo_pot"
 			"item_description"		"#TF_hw2013_gristly_gumbo_pot_Desc"
 			"equip_region"		"back"
@@ -45670,7 +45670,7 @@
 		{
 			"name"		"The Dark Helm"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_the_dark_helm"
 			"item_description"		"#TF_hw2013_the_dark_helm_Desc"
 			"equip_region"		"whole_head"
@@ -45713,7 +45713,7 @@
 		{
 			"name"		"Archimedes the Undying"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_UndeadPet"			
+			"item_type_name"		"#TF_Wearable_UndeadPet"
 			"item_name"		"#TF_hw2013_zombie_archimedes"
 			"item_description"		"#TF_hw2013_zombie_archimedes_Desc"
 			"equip_region"		"left_shoulder"
@@ -45740,7 +45740,7 @@
 		{
 			"name"		"The Monstrous Mandible"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_orcish_outburst"
 			"item_description"		"#TF_hw2013_orcish_outburst_Desc"
 			"equip_regions"
@@ -45764,7 +45764,7 @@
 		{
 			"name"		"The Shaolin Sash"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_shaolin_sash"
 			"item_description"		"#TF_hw2013_shaolin_sash_Desc"
 			"equip_region"		"soldier_pocket"
@@ -45784,7 +45784,7 @@
 		{
 			"name"		"The Mann-Bird of Aberdeen"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_BirdHead"
+			"item_type_name"		"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_manbird_of_aberdeen"
 			"item_description"		"#TF_hw2013_manbird_of_aberdeen_Desc"
 			"equip_region"		"whole_head"
@@ -45804,7 +45804,7 @@
 		{
 			"name"		"The Foul Cowl"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_foul_cowl"
 			"item_description"		"#TF_hw2013_foul_cowl_Desc"
 			"equip_region"		"Back"
@@ -45820,7 +45820,7 @@
 		{
 			"name"		"Sir Shootsalot"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_BirdHead"
+			"item_type_name"		"#TF_Wearable_BirdHead"
 			"item_name"		"#TF_hw2013_sir_shootsalot"
 			"item_description"		"#TF_hw2013_sir_shootsalot_Desc"
 			"equip_region"		"whole_head"
@@ -45850,7 +45850,7 @@
 		{
 			"name"		"The Corpsemopolitan"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_corpsemopolitan"
 			"item_description"		"#TF_hw2013_corpsemopolitan_Desc"
 			"equip_regions"
@@ -45881,7 +45881,7 @@
 		{
 			"name"		"The Glob"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_glob"
 			"item_description"		"#TF_hw2013_the_glob_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -45908,7 +45908,7 @@
 		{
 			"name"		"The Hallowed Headcase"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_the_halloween_headcase"
 			"item_description"		"#TF_hw2013_the_halloween_headcase_Desc"
 			"equip_region"
@@ -45934,7 +45934,6 @@
 		"30288"
 		{
 			"name"		"Carrion Companion"
-			"item_type_name"	"#TF_Wearable_UndeadPet"
 			"prefab"		"halloween2013 misc"
 			"item_name"		"#TF_hw2013_carrion_cohort"
 			"item_description"		"#TF_hw2013_carrion_cohort_Desc"
@@ -45956,12 +45955,13 @@
 			{
 				"pyro"		"1"
 			}
+			"item_type_name"		"#TF_Wearable_UndeadPet"
 		}
 		"30289"
 		{
 			"name"		"Quoth"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_SpookyCompanion"
+			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_the_caws_of_death"
 			"item_description"		"#TF_hw2013_the_caws_of_death_Desc"
 			"equip_region"		"disconnected_floating_item"
@@ -46006,7 +46006,7 @@
 		{
 			"name"		"PY-40 Incinibot"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_py40_automaton"
 			"item_description"		"#TF_hw2013_py40_automaton_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -46028,7 +46028,7 @@
 		{
 			"name"		"The Parasight"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_the_parasight"
 			"item_description"		"#TF_hw2013_the_parasight_Desc"
 			"equip_region"		"face"
@@ -46055,7 +46055,7 @@
 		{
 			"name"		"Teutonkahmun"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_teutonkahmun"
 			"item_description"		"#TF_hw2013_teutonkahmun_Desc"
 			"equip_regions"
@@ -46078,7 +46078,7 @@
 		{
 			"name"		"The Larval Lid"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_mr_maggot"
 			"item_description"		"#TF_hw2013_mr_maggot_Desc"
 			"equip_region"		"hat"
@@ -46106,7 +46106,7 @@
 		{
 			"name"		"The Manneater"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_the_manneater"
 			"item_description"		"#TF_hw2013_the_manneater_Desc"
 			"equip_regions"
@@ -46157,7 +46157,7 @@
 		{
 			"name"		"The Creature From The Heap"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"item_name"		"#TF_hw2013_the_creature_from_the_heap"
 			"item_description"		"#TF_hw2013_the_creature_from_the_heap_Desc"
 			"equip_region"		"Back"
@@ -46184,7 +46184,7 @@
 		{
 			"name"		"The Magical Mercenary"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_magical_mercenary"
 			"item_description"		"#TF_hw2013_the_magical_mercenary_Desc"
 			"equip_region"		"hat"
@@ -46238,7 +46238,7 @@
 		{
 			"name"		"The Raven's Visage"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Mask"
+			"item_type_name"		"#TF_Wearable_Mask"
 			"item_name"		"#TF_hw2013_visage_of_the_crow"
 			"item_description"		"#TF_hw2013_visage_of_the_crow_Desc"
 			"equip_region"		"face"
@@ -46254,7 +46254,7 @@
 		{
 			"name"		"Ramses' Regalia"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_ramses_regalia"
 			"item_description"		"#TF_hw2013_ramses_regalia_Desc"
 			"equip_regions"
@@ -46273,7 +46273,7 @@
 		{
 			"name"		"The Haunted Hat"
 			"prefab"		"halloween2013 hat"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_hw2013_the_haunted_hat"
 			"item_description"		"#TF_hw2013_the_haunted_hat_Desc"
 			"equip_region"		"hat"
@@ -46328,7 +46328,7 @@
 		{
 			"name"		"Bozo's Brogues"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_rogues_brogues"
 			"item_description"		"#TF_hw2013_rogues_brogues_Desc"
 			"equip_region"		"feet"
@@ -46347,7 +46347,7 @@
 		{
 			"name"		"The Cryptic Keepsake"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Necklace"			
+			"item_type_name"		"#TF_Wearable_Necklace"
 			"item_name"		"#TF_hw2013_all_skull_necklace"
 			"item_description"		"#TF_hw2013_all_skull_necklace_Desc"
 			"equip_region"		"necklace"
@@ -46393,7 +46393,7 @@
 		{
 			"name"		"The Abhorrent Appendages"
 			"prefab"		"halloween2013 misc"
-			"item_type_name"	"#TF_Wearable_Costume"
+			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_the_abhorrent_appendages"
 			"item_description"		"#TF_hw2013_the_abhorrent_appendages_Desc"
 			"equip_region"		"arms"
