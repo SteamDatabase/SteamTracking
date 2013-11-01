@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.5966fe24fc8bbfc0800d8f531d66be47852ea34d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8d9d16fbc73d76a36fba714fad778f7981713efa.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -70898,6 +70898,78 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2.3d38210b97470e6c955faab7a1aa080a3c121644.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2_large.e5efce6974197f2ee2763d624ad128115e92b976.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "MLG $50,000 Dota 2 Championship",
+				"defindex": 15328,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "MLG $50,000 Dota 2 Championship",
+				"item_description": "MLGâs first International Dota 2 competition will feature the worldâs best teams from Europe, China and North America competing for $50,000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.1ecbc06f9f27f25ee69654f868996bbceb6640dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.8a20007ab56f978ce644f2dd602216f668723028.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "MLG $50,000 Dota 2 Championship - ADMIN",
+				"defindex": 15329,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "MLG $50,000 Dota 2 Championship - ADMIN",
+				"item_description": "MLGÃ¢ÂÂs first International Dota 2 competition will feature the worldÃ¢ÂÂs best teams from Europe, China and North America competing for $50,000.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.1ecbc06f9f27f25ee69654f868996bbceb6640dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.8a20007ab56f978ce644f2dd602216f668723028.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
