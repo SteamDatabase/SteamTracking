@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d9e6fd085eb64a479b95e719d9267430f625f121.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.5966fe24fc8bbfc0800d8f531d66be47852ea34d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -15191,8 +15191,8 @@
 				"image_inventory": "econ\/items\/bounty_hunter\/bounty_hunter_blade",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_blade.2f930c787fa23434e0cb9db26aad649fd9ea7408.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_blade_large.ae41d6442768c77cc9b0f4f2d0061b38a2a6182b.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_blade.c17a241bec3e11c8f40ec22ff831ef0640df0c68.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/bounty_hunter_blade_large.9f6e43316eafda7e1d064822215b9ae6f13c255f.png",
 				"item_set": "bounty_hunter_creeper",
 				"capabilities": {
 					"nameable": true,
@@ -44464,6 +44464,30 @@
 				
 			},
 			{
+				"name": "Armour of the Exiled Ronin",
+				"defindex": 5379,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armour",
+				"item_name": "Armour of the Exiled Ronin",
+				"item_description": "Made to endure the harshest of elements, including... blade storms.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/armour_of_the_exiled_ronin\/armour_of_the_exiled_ronin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/armour_of_the_exiled_ronin\/armour_of_the_exiled_ronin.5050d7895de39cf71cf0e92d5f2cd2d7fd20afd4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/armour_of_the_exiled_ronin\/armour_of_the_exiled_ronin_large.8c9dd4655279ad17c5ebb9280598326c72c828d6.png",
+				"item_set": "juggernaaut_exiled_ronin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Storm-Stealer's Whip",
 				"defindex": 5380,
 				"item_class": "dota_item_wearable",
@@ -45781,6 +45805,102 @@
 				}
 			},
 			{
+				"name": "Sturdy Bracers of the Exiled Ronin",
+				"defindex": 5437,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Sturdy Bracers of the Exiled Ronin",
+				"item_description": "To stand strong and steadfast alone against the world.. with no master to guide him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/sturdy_bracers_of_the_exiled_ronin\/sturdy_bracers_of_the_exiled_ronin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/sturdy_bracers_of_the_exiled_ronin\/sturdy_bracers_of_the_exiled_ronin.e4d4467f6666cb41c852337de04026b49a87be8a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/sturdy_bracers_of_the_exiled_ronin\/sturdy_bracers_of_the_exiled_ronin_large.f882c867471427fde9d8af48dc7dc144483a4e82.png",
+				"item_set": "juggernaaut_exiled_ronin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Fire of the Exiled Ronin",
+				"defindex": 5438,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Fire of the Exiled Ronin",
+				"item_description": "The flames of the Ronin burn hot against all who oppose him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/fire_of_the_exiled_ronin\/fire_of_the_exiled_ronin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/fire_of_the_exiled_ronin\/fire_of_the_exiled_ronin.83c06c17022aabd8d8b5e22ff51bc77c5cc6227a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/fire_of_the_exiled_ronin\/fire_of_the_exiled_ronin_large.9e359f6b8d322ee04c9067786b79b8ddf44d431b.png",
+				"item_set": "juggernaaut_exiled_ronin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Burden of the Exiled Ronin",
+				"defindex": 5439,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Burden of the Exiled Ronin",
+				"item_description": "Upon Juggernaut's exile, a mask was bestowed upon his neck that would impart he was indeed a Ronin without a master.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/burden_of_the_exiled_ronin\/burden_of_the_exiled_ronin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/burden_of_the_exiled_ronin\/burden_of_the_exiled_ronin.e4f225c49cf4c2aade26b59b7d4e16db400e28c2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/burden_of_the_exiled_ronin\/burden_of_the_exiled_ronin_large.ea3bf86658fbab61dad371b6ac3f1f82c89e278f.png",
+				"item_set": "juggernaaut_exiled_ronin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Vestments of the Exiled Ronin",
+				"defindex": 5440,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "cape",
+				"item_name": "Vestments of the Exiled Ronin",
+				"item_description": "When one trusty sword is not enough. An exile must always be prepared.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/juggernaut\/vestments_of_the_exiled_ronin\/vestments_of_the_exiled_ronin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/vestments_of_the_exiled_ronin\/vestments_of_the_exiled_ronin.c0a75d66882331bb4b63103d78942113740d4a6b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/vestments_of_the_exiled_ronin\/vestments_of_the_exiled_ronin_large.6ffe64fe9c2dae635c39fd2637937dde523622ba.png",
+				"item_set": "juggernaaut_exiled_ronin",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Ancient Armor Arms",
 				"defindex": 5442,
 				"item_class": "dota_item_wearable",
@@ -45891,6 +46011,30 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders.f2d76e31b7ec5c3e23151ddbebee1b581eab427b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/morphling\/ancient_armor_shoulders\/ancient_armor_shoulders_large.d3e8242458980bd6ef8160caa0380fe6d63223e9.png",
 				"item_set": "ancient_armor",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloud Forged Great Bracers",
+				"defindex": 5448,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Cloud Forged Great Bracers",
+				"item_description": "Solid bracers with a wide surace area designed to block a wide variety of attacks.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_bracers\/cloud_forged_great_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_bracers\/cloud_forged_great_bracers.81300ce2f63ec57414272a78bd45e12411c5372b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_bracers\/cloud_forged_great_bracers_large.88edb441f69725b1daa637dc5d8156c5e498b5f6.png",
+				"item_set": "skywrathmage_cloudforged",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -46043,6 +46187,111 @@
 					"paintable_unusual": true,
 					"autograph": true
 				}
+			},
+			{
+				"name": "Cloud Forged Great Girdle",
+				"defindex": 5455,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Cloud Forged Great Girdle",
+				"item_description": "Strips of cloth gilded with mithril and fastened to a sturdy girdle. The trail of this belt is spoken of among foot soldiers who gaze to the sky above to see Dragonus fly through the clouds.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_girdle\/cloud_forged_great_girdle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_girdle\/cloud_forged_great_girdle.8bbb0dd7c5c3a857427b2ab35bce97a0a771d3d5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_girdle\/cloud_forged_great_girdle_large.707bf3d275a744516e698e8698318caf50e03b38.png",
+				"item_set": "skywrathmage_cloudforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloud Forged Great Helm",
+				"defindex": 5456,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Cloud Forged Great Helm",
+				"item_description": "This ornate helm was once seen worn by royal guards of the nest.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_helm\/cloud_forged_great_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_helm\/cloud_forged_great_helm.c7d4d9aa8140f86fb03e899f013a75e144a7ce24.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_helm\/cloud_forged_great_helm_large.3785ed432fccb51c05f941e75bbefebe607d82e1.png",
+				"item_set": "skywrathmage_cloudforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloud Forged Great Mantle",
+				"defindex": 5457,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Cloud Forged Great Mantle",
+				"item_description": "This mantle dons a masterful shape to deflect blades but its deeper enchantments protect from sorcery as well.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_mantle\/cloud_forged_great_mantle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_mantle\/cloud_forged_great_mantle.0f0962323dcc704606cc4004d2a57dae8915c6a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_mantle\/cloud_forged_great_mantle_large.6cc0999425eea9bf7cf57b3da7329c513dc57a72.png",
+				"item_set": "skywrathmage_cloudforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloud Forged Great Wings",
+				"defindex": 5458,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Cloud Forged Great Wings",
+				"item_description": "Arcane energy resonates across the raven-like feathers of these magic infused wings.\r\n\t\r\n\tChoose from two wing styles!\r\n\tAlso included with this item is an alternate wing color: Cloud Forged White Tipped Great Wings.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_wings\/cloud_forged_great_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_wings\/cloud_forged_great_wings.31fdeb2de70d6f136650939a15156bec57d9e03f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_wings\/cloud_forged_great_wings_large.0eae31e6ae4294e2008b6c85da75bf9879fdc156.png",
+				"item_set": "skywrathmage_cloudforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"styles": [
+					{
+						"name": "Cloud Forged Great Wings"
+					},
+					{
+						"name": "DOTA_Item_Cloud_Forged_White_Tipped_Great_Wings"
+					}
+				]
+				
 			},
 			{
 				"name": "Hand of Hell's Ambassador",
@@ -46489,6 +46738,150 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/bracers_of_kogu\/bracers_of_kogu.5faddefa95a43a2986ab59fa20a8292d495c7bf4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/juggernaut\/bracers_of_kogu\/bracers_of_kogu_large.ceaaad03b718f76acf2a8171acab55172b762188.png",
 				"item_set": "juggernaut_kogu_warrior",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pack of the Blood Stained Sands",
+				"defindex": 5479,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "Pack of the Blood Stained Sands",
+				"item_description": "A necessity for traveling light across a hostile waste which offers nothing in the way of sustenance or shelter.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/pack_of_the_blood_stained_sands\/pack_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pack_of_the_blood_stained_sands\/pack_of_the_blood_stained_sands.6f905a8aeff84a137685ac4094394ee0dd33532e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pack_of_the_blood_stained_sands\/pack_of_the_blood_stained_sands_large.6b93b57e58c88abe75c74a425e934886238e8656.png",
+				"item_set": "bountyhunter_bloodstainedsands",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pads of the Blood Stained Sands",
+				"defindex": 5480,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Pads of the Blood Stained Sands",
+				"item_description": "Relentless sun, scouring winds and the enemy's desperate slashes--these pads are proof against all.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/pads_of_the_blood_stained_sands\/pads_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pads_of_the_blood_stained_sands\/pads_of_the_blood_stained_sands.3155d3b280c647af8e470a3e40f2237fa5cdd749.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pads_of_the_blood_stained_sands\/pads_of_the_blood_stained_sands_large.b5e3ce8daadde8be56b5d7f044c0dcc268e5da22.png",
+				"item_set": "bountyhunter_bloodstainedsands",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cowl of the Blood Stained Sands",
+				"defindex": 5481,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Cowl of the Blood Stained Sands",
+				"item_description": "The hunter hides his face for various reasons, but in the desert wastes the sun is enemy enough.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/cowl_of_the_blood_stained_sands\/cowl_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/cowl_of_the_blood_stained_sands\/cowl_of_the_blood_stained_sands.1d7c6587c0f5238662d79b69a28256fb488e0ca3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/cowl_of_the_blood_stained_sands\/cowl_of_the_blood_stained_sands_large.9bb9812afaa0883dd3008cfcb7524db92ea91440.png",
+				"item_set": "bountyhunter_bloodstainedsands",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Blade of the Blood Stained Sands",
+				"defindex": 5482,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Offhand blade",
+				"item_name": "Blade of the Blood Stained Sands",
+				"item_description": "To keep the sands well-named, this blade waits at the ready.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/blade_of_the_blood_stained_sands\/blade_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/blade_of_the_blood_stained_sands\/blade_of_the_blood_stained_sands.0a5295eae9a280fa77eca61ce6c69bae2cc704e5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/blade_of_the_blood_stained_sands\/blade_of_the_blood_stained_sands_large.90470a3b3305928b5dec2ee2e8c3ba15eb6ef45f.png",
+				"item_set": "bountyhunter_bloodstainedsands",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Shuriken of the Blood Stained Sands",
+				"defindex": 5483,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shuriken",
+				"item_name": "Shuriken of the Blood Stained Sands",
+				"item_description": "Flying edges bite, and the sand is christened anew.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/shuriken_of_the_blood_stained_sands\/shuriken_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/shuriken_of_the_blood_stained_sands\/shuriken_of_the_blood_stained_sands.74eba17c5078b0d9f9dae74cecd95284276ca1be.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/shuriken_of_the_blood_stained_sands\/shuriken_of_the_blood_stained_sands_large.c06980d619606a6407ddf7a4c4bf407fc97af710.png",
+				"item_set": "bountyhunter_bloodstainedsands",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pike of the Blood Stained Sands",
+				"defindex": 5484,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "weapon",
+				"item_name": "Pike of the Blood Stained Sands",
+				"item_description": "Bounty Hunter's pike shares a thirst for blood with the arid sands. Whatever it drops will be drunken greedily.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/pike_of_the_blood_stained_sands\/pike_of_the_blood_stained_sands",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pike_of_the_blood_stained_sands\/pike_of_the_blood_stained_sands.cda6d7bb8e341d4189f0ac97d2c09cba2c442777.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/pike_of_the_blood_stained_sands\/pike_of_the_blood_stained_sands_large.debaa1371a716e0da474e2ee466060ad45f12428.png",
+				"item_set": "bountyhunter_bloodstainedsands",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -47617,6 +48010,222 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_clergy_ascetic\/bracers_of_the_clergy_ascetic.8a1a212cc0dec0206ca79dbff77c612362a411e6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_clergy_ascetic\/bracers_of_the_clergy_ascetic_large.1afbfd5af6345ed9ce101a3ffed86382ec6b2367.png",
 				"item_set": "antimage_clergy_ascetic",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Cloud Forged Great Staff",
+				"defindex": 5551,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Cloud Forged Great Staff",
+				"item_description": "A shard of cloud crystal inlaid with a strip of skywrath gold there is no finer conductor for sorcery than this great staff.\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/cloud_forged_great_staff\/cloud_forged_great_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_staff\/cloud_forged_great_staff.06b37a2edbfad5db4aa8828ff0307066d0893592.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/cloud_forged_great_staff\/cloud_forged_great_staff_large.c5df517be7772dd6c2b3271563fc8aacd688e0dd.png",
+				"item_set": "skywrathmage_cloudforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Armlets of Teardrop Ice",
+				"defindex": 5552,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracer",
+				"item_name": "Armlets of Teardrop Ice",
+				"item_description": "Legends tell of twelve lost gems, teardrops that glow of glacial ice, imbued with a chill so deep that even the desert sands were turned to tundra.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/armlets_of_elemental_ice\/armlets_of_elemental_ice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/armlets_of_elemental_ice\/armlets_of_elemental_ice.30d6c539e43f4a704ab0f35fb129cef182016961.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/armlets_of_elemental_ice\/armlets_of_elemental_ice_large.0d78acb0ccdecd7ac642182058518c7c28015116.png",
+				"item_set": "phantom_lancer_elemental_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Belt of Teardrop Ice",
+				"defindex": 5553,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of Teardrop Ice",
+				"item_description": "The largest of the legendary teardrop gems shines with the glow of eternal glaciers.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/belt_of_elemental_ice\/belt_of_elemental_ice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/belt_of_elemental_ice\/belt_of_elemental_ice.4cabac8263f6a6fe3429eb117c39ab1d16b76419.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/belt_of_elemental_ice\/belt_of_elemental_ice_large.5fce0c7b8011cd744ab7a7fa99153877a19886dd.png",
+				"item_set": "phantom_lancer_elemental_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pauldron of Teardrop Ice",
+				"defindex": 5554,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldron",
+				"item_name": "Pauldron of Teardrop Ice",
+				"item_description": "Of the twelve legendary teardrop gems, eight were shattered, creating a vast tundra where once stood a burning waste.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/shoulder_of_elemental_ice\/shoulder_of_elemental_ice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/shoulder_of_elemental_ice\/shoulder_of_elemental_ice.ae1b3037296d425a2d43addada6864ff8eb8dd0d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/shoulder_of_elemental_ice\/shoulder_of_elemental_ice_large.b0391dd46b3abbeb74b78eec079a1d89e80f9fb4.png",
+				"item_set": "phantom_lancer_elemental_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Spear of Teardrop Ice",
+				"defindex": 5555,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Spear of Teardrop Ice",
+				"item_description": "The two teardrop gems pressed into the haft ensure the spear's icy edge never thaws.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/phantom_lancer\/spear_of_elemental_ice\/spear_of_elemental_ice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/spear_of_elemental_ice\/spear_of_elemental_ice.80c7083c169c3b1b924a4d0ac0cfe9268eec3d17.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/phantom_lancer\/spear_of_elemental_ice\/spear_of_elemental_ice_large.346e5dd8dc58609bebd2a5cb76bf55c9833d312d.png",
+				"item_set": "phantom_lancer_elemental_ice",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Carapace of the Chosen Larva",
+				"defindex": 5567,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Carapace",
+				"item_name": "Carapace of the Chosen Larva",
+				"item_description": "Molted over the course of seven seasons by the slow administration of special alchemicals, this carapace is hardened against both blade and spell.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back.e6bdea25c577bd813ef8e7d74091a40f9af20aa6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back_large.c20d3c705457ae8ae19987b18b50cded7ae15671.png",
+				"item_set": "chosen_larva",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Helmet of the Chosen Larva",
+				"defindex": 5568,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Helmet of the Chosen Larva",
+				"item_description": "Beneath this ornate helmet of hardened chitin rages a mind unlike any other in the insect world--a cold intelligence bent on the destruction of the chosen target.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head.ea94b1239b2049ad2eb8dd3f901f705472d158f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head_large.17b42374a996ae27b8f052afd5962a5bcb7669b8.png",
+				"item_set": "chosen_larva",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Stinger of the Chosen Larva",
+				"defindex": 5569,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Stinger of the Chosen Larva",
+				"item_description": "There are worse deaths than the sting of the chosen larva.  Theoretically.  You do not want this creature to sting you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc.14faf10854252d26580f7765162b17d7f344552a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc_large.3782ee4166e340b7d073951828caf31d8c6b6894.png",
+				"item_set": "chosen_larva",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Pincers of the Chosen Larva",
+				"defindex": 5570,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Claws",
+				"item_name": "Pincers of the Chosen Larva",
+				"item_description": "The only part of this assassin not grown naturally, these steel blades are screwed directly into the tough chitin at the ends of his killing limbs.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon.fda192d0c3f37ddb475c93b7fe264d3aedd14389.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon_large.80f82da42cb2fee1566106694421abd78ca9197f.png",
+				"item_set": "chosen_larva",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -58200,6 +58809,29 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_od.ac7caf46261835101c50869e89c1b31a6e78aeec.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_od_large.015c20425260aa6851a97221fcf7089edc7803a8.png",
 				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Azuremir",
+				"defindex": 10338,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Azuremir",
+				"item_description": "Winding through field and stream, the young dragon Azuremir carries his orbs of soil and stone, ever watchful of the lands around him, and ever helpful to those who call to him.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/azuremircourierfinal\/azuremircourierfinal",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/azuremircourierfinal\/azuremircourierfinal.83275de90d13b5cdf76f4313d455b018601f4648.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/azuremircourierfinal\/azuremircourierfinal_large.c04115ffe204f3248d1cdd7fe985eb9127d11c3e.png",
+				"capabilities": {
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -69666,8 +70298,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_codea",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.c7e37a1c06518e7d7373d99c17d95940dcb06d96.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.9feddeec3b987385c7eb614c3fe9da08dc9fa764.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -69702,8 +70334,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_codea",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.6a48e62a2c8fec4aba2f15c05ca981a41d6171de.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.6d50ae0d49d3bb9647795823303d72c7eed1f302.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea.c7e37a1c06518e7d7373d99c17d95940dcb06d96.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_codea_large.9feddeec3b987385c7eb614c3fe9da08dc9fa764.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -70194,6 +70826,366 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch.cb5594d6d801a875336f7dd19f870be40f7f3054.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch_large.85516a04b00f4200d6b905e52bd1ab0cb0c1fc2f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "NADota Elite League Season 2",
+				"defindex": 15326,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "NADota Elite League Season 2",
+				"item_description": "NADota Elite League returns for its second season! The most talented teams in North America compete in the classic league format for eight weeks, culminating in a 4-team double elimination all-star tournament. $3,000 prize pool, 400+ games guaranteed. Hosted by IXDL. Broadcast by NEO Dota.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nadotaleague2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2.3d38210b97470e6c955faab7a1aa080a3c121644.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2_large.e5efce6974197f2ee2763d624ad128115e92b976.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "NADota Elite League Season 2 - ADMIN",
+				"defindex": 15327,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "NADota Elite League Season 2 - ADMIN",
+				"item_description": "NADota Elite League returns for its second season! The most talented teams in North America compete in the classic league format for eight weeks, culminating in a 4-team double elimination all-star tournament. $3,000 prize pool, 400+ games guaranteed. Hosted by IXDL. Broadcast by NEO Dota.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nadotaleague2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2.3d38210b97470e6c955faab7a1aa080a3c121644.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nadotaleague2_large.e5efce6974197f2ee2763d624ad128115e92b976.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "WH Overgaming Challenge - 2",
+				"defindex": 15331,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "WH Overgaming Challenge - 2",
+				"item_description": "The WH Challenge 2 is the last tournament in the WH League Season 2. After this, 8 team will compete for a R$1000 grand prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_whovergaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming.c53205c0c0087ab46c897a9d5a5a0661b95911ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_whovergaming_large.11361db5fbb00692151782f530e54252d954d8b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Nexon Invitational Super Match_",
+				"defindex": 15332,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Invitational Super Match_",
+				"item_description": "Nexon features eight of the best international teams and four from Korea facing off in an epic series of showdowns in Seoul, Korea. Produced and broadcast by OnGameNet, this all-star event will run from October 28 till November 25, 2013.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_supermatch",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch.cb5594d6d801a875336f7dd19f870be40f7f3054.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_supermatch_large.85516a04b00f4200d6b905e52bd1ab0cb0c1fc2f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ASUS ROG DreamLeague",
+				"defindex": 15333,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ASUS ROG DreamLeague",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Ticket also includes Spirit Breaker set.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhackrog.1d1a430755065d7aea4b1b39cf9da323ee455249.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhackrog_large.e2e7f07c32e773c3263d1854e876dee523c29d1a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ASUS ROG DreamLeague - ADMIN",
+				"defindex": 15334,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ASUS ROG DreamLeague - ADMIN",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Ticket also includes Spirit Breaker set.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhackrog.1d1a430755065d7aea4b1b39cf9da323ee455249.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dreamhackrog_large.e2e7f07c32e773c3263d1854e876dee523c29d1a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Canada Cup Season 2",
+				"defindex": 15335,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Canada Cup Season 2",
+				"item_description": "Dota 2 Canada Cup is back with Season 2. Featuring some of the top talent from North and South America.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2ccs2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2ccs2.9ca1910acfee5ee2ab199d03825cb68ac0917f7d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2ccs2_large.03b79a714df84b99c0e8a45cfae8c52df40d9f85.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Dota 2 Canada Cup Season 2 - ADMIN",
+				"defindex": 15336,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Canada Cup Season 2 - ADMIN",
+				"item_description": "Dota 2 Canada Cup is back with Season 2. Featuring some of the top talent from North and South America.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_d2ccs2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2ccs2.9ca1910acfee5ee2ab199d03825cb68ac0917f7d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_d2ccs2_large.03b79a714df84b99c0e8a45cfae8c52df40d9f85.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "G-League 2013",
+				"defindex": 15337,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "G-League 2013",
+				"item_description": "The G-League returns with qualifying tournaments for Western and Eastern teams. 8 top Chinese teams and 2 top Western teams will compete for a total prize pool of 270,000 RMB ($44,000 USD)!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gleague2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague2013.0822fd5f3b44174dc0e526d785b147188312eb7a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague2013_large.cf2e1561b72f4a2b002b3ef8a3d5e413e75bfd96.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				},
+				"attributes": [
+					{
+						"name": "disallow recycling",
+						"class": "disallow_recycling",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "G-League 2013 - ADMIN",
+				"defindex": 15338,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "G-League 2013 - ADMIN",
+				"item_description": "The G-League returns with qualifying tournaments for Western and Eastern teams. 8 top Chinese teams and 2 top Western teams will compete for a total prize pool of 270,000 RMB ($44,000 USD)!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gleague2013",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague2013.0822fd5f3b44174dc0e526d785b147188312eb7a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gleague2013_large.cf2e1561b72f4a2b002b3ef8a3d5e413e75bfd96.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -77838,6 +78830,35 @@
 				}
 			},
 			{
+				"name": "Hunter of the Blood Stained Sands Set",
+				"defindex": 20270,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Hunter of the Blood Stained Sands Set",
+				"item_description": "Includes all of the items in the 'Hunter of the Blood Stained Sands' set for Bounty Hunter:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Hunter_of_the_Blood_Stained_Sands_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hunter_of_the_blood_stained_sands_set.8655577f64b3d1c18d604d826c8be0bd87088a67.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hunter_of_the_blood_stained_sands_set_large.6c8b644e6529bc5eb4e27ad475b7bad674a272b3.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "Arms of Burning Turmoil Set",
 				"defindex": 20272,
 				"item_class": "bundle",
@@ -78228,6 +79249,151 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn\/wrath_of_the_highborn.a56cde8fa4cebd93e7e871b2252b716079fe8c09.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/rikimaru\/wrath_of_the_highborn\/wrath_of_the_highborn_large.ac60db506a8c350567d339cfd9d1832a065fe72b.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Exiled Ronin Set",
+				"defindex": 20286,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Exiled Ronin Set",
+				"item_description": "Includes all of the items in \"The Exiled Ronin\" set for Juggernaut:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Exiled_Ronin_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_exiled_ronin_set.f1ae4895e82f0e2eb0cda1368ec872149af18356.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_exiled_ronin_set_large.4faa8086df744dee464a77a28376b002b5873c08.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Cloud Forged Battle Gear Set",
+				"defindex": 20287,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Cloud Forged Battle Gear Set",
+				"item_description": "This bundle contains all of the items in the 'Cloud Forged Battle Gear Set' for Skywrath Mage:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Cloud_Forged_Battle_Gear_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_cloud_forged_battle_gear_set.2445063e2b7527b7ce1e1e1ef90a1081c98587aa.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_cloud_forged_battle_gear_set_large.65ff897f885ab8f2633a824a2dd9c93ed77641dd.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Jewels of Teardrop Ice Set",
+				"defindex": 20288,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Jewels of Teardrop Ice Set",
+				"item_description": "Includes all of the items in the 'Jewels of Teardrop Ice' set for Phantom Lancer:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Teardrops_of_Elemental_Ice_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_teardrops_of_elemental_ice_set.e9a4ea161de298cb3bcea3267968ced038604b97.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_teardrops_of_elemental_ice_set_large.c5bbeb415640ab8b9e35e614b83e78f484f6adf6.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Chosen Larva Bundle",
+				"defindex": 20289,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Chosen Larva Bundle",
+				"item_description": "Includes all items in the Chosen Larva Set and access to the WH Overgaming Challenge #2 league.\r\n\t<br><br>\r\n\t- Carapace of the Chosen Larva<br>\r\n\t- Helmet of the Chosen Larva<br>\r\n\t- Stinger of the Chosen Larva<br>\r\n\t- Pincers of the Chosen Larva<br>\r\n\t- WH Overgaming Challenge #2<br><br>",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Chosen_Larva_Bundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_chosen_larva_bundle.196c210d33ed26fd2e3d15422be646ed0932412a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_chosen_larva_bundle_large.cc2502390b3c5b84d1d64b9518d792da216e0973.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Azuremir & Nexon Invitational Super Match Bundle",
+				"defindex": 20290,
+				"item_class": "bundle",
+				"item_type_name": "Dragonspawn Bundle",
+				"item_name": "Azuremir & Nexon Invitational Super Match Bundle",
+				"item_description": "Winding through field and stream, the young dragon Azuremir carries his orbs of soil and stone, ever watchful of the lands around him, and ever helpful to those who call to him.\r\n\t\r\n\tIncludes access to the Nexon Invitational Super Match league.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Azuremir__Nexon_Invitational_Super_Match_Bundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_azuremir__nexon_invitational_super_match_bundle.83275de90d13b5cdf76f4313d455b018601f4648.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_azuremir__nexon_invitational_super_match_bundle_large.c04115ffe204f3248d1cdd7fe985eb9127d11c3e.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -79745,6 +80911,20 @@
 				
 			},
 			{
+				"item_set": "bountyhunter_bloodstainedsands",
+				"name": "Hunter of the Blood Stained Sands",
+				"store_bundle": "Hunter of the Blood Stained Sands Set",
+				"items": [
+					"Pack of the Blood Stained Sands",
+					"Pads of the Blood Stained Sands",
+					"Cowl of the Blood Stained Sands",
+					"Blade of the Blood Stained Sands",
+					"Shuriken of the Blood Stained Sands",
+					"Pike of the Blood Stained Sands"
+				]
+				
+			},
+			{
 				"item_set": "brood_queen",
 				"name": "The Brood Queen",
 				"store_bundle": "The Brood Queen Set",
@@ -79845,6 +81025,18 @@
 					"Blade of the Chiseled Guard",
 					"Pauldron of the Chiseled Guard",
 					"Tassets of the Chiseled Guard"
+				]
+				
+			},
+			{
+				"item_set": "chosen_larva",
+				"name": "Chosen Larva Set",
+				"store_bundle": "Chosen Larva Bundle",
+				"items": [
+					"Carapace of the Chosen Larva",
+					"Helmet of the Chosen Larva",
+					"Stinger of the Chosen Larva",
+					"Pincers of the Chosen Larva"
 				]
 				
 			},
@@ -80671,6 +81863,19 @@
 				
 			},
 			{
+				"item_set": "juggernaaut_exiled_ronin",
+				"name": "The Exiled Ronin",
+				"store_bundle": "The Exiled Ronin Set",
+				"items": [
+					"Sturdy Bracers of the Exiled Ronin",
+					"Fire of the Exiled Ronin",
+					"Burden of the Exiled Ronin",
+					"Armour of the Exiled Ronin",
+					"Vestments of the Exiled Ronin"
+				]
+				
+			},
+			{
 				"item_set": "juggernaut_beasts_men",
 				"name": "Aspects of Beast and Man",
 				"store_bundle": "Aspects of Beast and Man Set",
@@ -81251,6 +82456,18 @@
 				
 			},
 			{
+				"item_set": "phantom_lancer_elemental_ice",
+				"name": "Jewels of Teardrop Ice",
+				"store_bundle": "Jewels of Teardrop Ice Set",
+				"items": [
+					"Armlets of Teardrop Ice",
+					"Belt of Teardrop Ice",
+					"Pauldron of Teardrop Ice",
+					"Spear of Teardrop Ice"
+				]
+				
+			},
+			{
 				"item_set": "phantom_lancer_golden_mane",
 				"name": "Honors of the Golden Mane",
 				"store_bundle": "Honors of the Golden Mane Set",
@@ -81576,6 +82793,20 @@
 					"Pauldron of the Silent Guardian",
 					"Blade of the Silent Guardian",
 					"Helm of the Silent Guardian"
+				]
+				
+			},
+			{
+				"item_set": "skywrathmage_cloudforged",
+				"name": "Cloud Forged Battle Gear",
+				"store_bundle": "Cloud Forged Battle Gear Set",
+				"items": [
+					"Cloud Forged Great Staff",
+					"Cloud Forged Great Bracers",
+					"Cloud Forged Great Girdle",
+					"Cloud Forged Great Helm",
+					"Cloud Forged Great Mantle",
+					"Cloud Forged Great Wings"
 				]
 				
 			},
