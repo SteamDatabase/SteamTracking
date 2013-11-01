@@ -41366,6 +41366,7 @@
 			"image_inventory"		"backpack/workshop/player/items/scout/jul13_koolboy/jul13_koolboy"
 			"capabilities"
 			{
+				"paintable"		"1"
 				"can_craft_count"		"1"
 			}
 			"model_player"		"models/workshop/player/items/scout/jul13_koolboy/jul13_koolboy.mdl"
@@ -57376,7 +57377,7 @@
 		{
 			"name"		"Pile Of Curses"
 			"item_class"	"tf_wearable"
-			"expiration_date"	"2012-11-09 06:00:00"
+			"expiration_date"	"2013-11-12 06:00:00"
 			"tool"
 			{
 				"type"	"gift"
