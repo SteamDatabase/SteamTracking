@@ -134,6 +134,10 @@ background: -moz-linear-gradient(top, #33425a 5%, #282f3d 95%);background: -webk
 	font-size: 16px;
 }
 
+.miniprofile_player .playername .nickname {
+	color: #9b9b9b;
+}
+
 .miniprofile_favorite_badge {
 	position: relative;
 
