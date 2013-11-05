@@ -5817,6 +5817,13 @@
 				}
 			}
 		}
+		"4006"
+		{
+			"item_name"		"#CSGO_crate_dhw13_promo"
+			"name"		"crate_dhw13_promo"
+			"image_inventory"		"econ/weapon_cases/crate_esports_2013"
+			"prefab"		"weapon_case"
+		}
 	}
 	"attributes"
 	{
