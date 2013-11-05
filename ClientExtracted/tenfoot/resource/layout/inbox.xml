@@ -42,12 +42,6 @@
 					<Label id="NewAsyncGamesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGames" />
 				</Panel>
 			</Button>
-			<Button id="NewAsyncGameInvitesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewAsyncGameInvites();" >
-				<Image src="file://{images}/async_game_invite.png" />
-				<Panel class="ButtonLabelWrapper">
-					<Label id="NewAsyncGameInvitesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGameInvites" />
-				</Panel>
-			</Button>					
 			<Button id="NewSupportMessagesButton" tabindex="7" selectionpos="0,7" onactivate="ShowNewSupportMessages();" >
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
@@ -57,6 +51,12 @@
 				<Image src="file://{images}/icon_steam_update.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
+				</Panel>
+			</Button>
+			<Button id="NewSteamOSUpdateButton" tabindex="8" selectionpos="0,8" onactivate="AllowSteamOSUpdate();" >
+				<Image class="SteamOSUpdate" src="file://{images}/icon_steam_update.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewSteamOSUpdateLabel" class="LongDescSm" text="#MainMenu_NewSteamOSUpdate" />
 				</Panel>
 			</Button>
 		</Panel>

@@ -824,6 +824,21 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 }
 
+.DaisyInputTypeABXY.SteamPad .Group #Item_N.Item.Picked,
+.DaisyInputTypeABXY.SteamPad .Group #Item_S.Item.Picked,
+.DaisyInputTypeABXY.SteamPad .Group #Item_E.Item.Picked,
+.DaisyInputTypeABXY.SteamPad .Group #Item_W.Item.Picked
+{
+	background-color: #00000033;
+	border-radius: borderradius;
+
+	box-shadow: fill #00000022 0px 0px 6px 0px;
+	transition-property: background-color, transform !immediate;
+	transition-duration: picked_item_transition_time;
+	transition-timing-function: ease-in-out;
+	
+}
+
 .ItemLabel
 {
 	vertical-align: center;
@@ -843,6 +858,14 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 .Group.SelectionGroup .ItemLabel
 {
 	color: #ffffffff;
+}
+
+.DaisyInputTypeABXY.SteamPad .Group #Item_N.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group #Item_S.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group #Item_E.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group #Item_W.Item.Picked .ItemLabel
+{
+	color: #999999FF;
 }
 
 

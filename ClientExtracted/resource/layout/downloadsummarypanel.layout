@@ -79,6 +79,23 @@
 			style="throttleValue"
 			group = "ShowWhenThrottled"
 		}		
+		
+		"blackout_label"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_autoupdate_window_label"
+			style="throttleLabel"
+			group = "ShowWhenAutoUpdateWindow"
+	    }
+	
+		"blackout_value"
+		{
+			"ControlName"	    "URLLabel"
+			"URLText"		"steam://settings/downloads"
+			"labelText"	    "#steam_downloads_autoupdate_window_value"
+			style="throttleValue"
+			group = "ShowWhenAutoUpdateWindow"
+		}			
 	    
 		graphpanel {	controlname="GraphPanel"	 style="infoGraphic" group="HideOnCompletion"  zpos="-1" }		   
 	}
@@ -354,6 +371,8 @@
 		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing= 4	y=44	align=top	}
 		
 		// throttling info
-		place { region=middle_column control="throttling_label, throttling_value" spacing=4 align=top }
+		place { region=middle_column controls="blackout_label, blackout_value" spacing=4 }
+		place { region=middle_column control="throttling_label" start=blackout_label dir=down margin-top=4 }
+		place { region=middle_column control="throttling_value" start=throttling_label dir=right margin-left=4 }
 	}
 }

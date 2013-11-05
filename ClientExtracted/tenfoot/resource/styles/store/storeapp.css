@@ -1308,6 +1308,11 @@ h1, h2
 #CategoryController, #IconController
 {
 	visibility: collapse;
+	
+
+	transition-duration: AppSectionTransitionDuration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
 }
 
 .FullController #CategoryController,
@@ -1360,6 +1365,15 @@ h1, h2
 	height: 40px;
 }
 
+.SteamPad .FullController #CategoryController,
+.SteamPad .PartialController #CategoryController,
+.SteamPad .FullController #IconController,
+.SteamPad .PartialController #IconController,
+.SteamPad .FullController #CategoryControllerImage,
+.SteamPad .PartialController #CategoryControllerImage
+{
+	visibility: collapse;
+}
 
 //
 // Friends Section

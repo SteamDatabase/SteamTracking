@@ -630,15 +630,14 @@ ParentalBlocked
 	url		"http://learningwithportals.com/client/"
 	method	"internal"
 }
+ParentalSetup
+{
+	url		"%store%/parental/set"
+	method	"internal"
+}
 AsyncGames
 {
-	url		"%community%/%mystuff%/gamenotifications#waiting"
-	method	"internal"
-	filter	"profile"
-}
-AsyncGameInvites
-{
-	url		"%community%/%mystuff%/gamenotifications#invites"
+	url		"%community%/%mystuff%/gamenotifications/"
 	method	"internal"
 	filter	"profile"
 }

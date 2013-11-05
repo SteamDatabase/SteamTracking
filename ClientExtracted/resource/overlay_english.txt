@@ -193,7 +193,10 @@
 "Overlay_SetScreenshotFolder_NoDriveRoot" "You may not select the root of a drive"
 "Overlay_SetScreenshotFolder_InvalidFolder" "You must select a valid screenshots folder"
 
-
+"Overlay_AsyncNotificatoinsRequestedDialog_Title" "Allow notifications?"
+"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Allow notifications"
+"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Disallow"
+"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "This game supports asynchronous gameplay, allowing you to close the game between your turns. Would you like to receive notifications in the Steam client when it is your turn to play?"
 
 }
 }  

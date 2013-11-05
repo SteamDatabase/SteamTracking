@@ -1,4 +1,4 @@
-"tenfoot"
+﻿"tenfoot"
 {
 	"UI_Submit"	"Submit"
 	"UI_Select"	"Select"
@@ -9,6 +9,8 @@
 	"UI_RightTrigger_Short"	"RT"
 	"UI_LeftBumper_Short"	"LB"
 	"UI_RightBumper_Short"	"RB"
+	"UI_LeftBack_Short"	"LP"
+	"UI_RightBack_Short"	"RP"
 	"UI_AButton"	"A"
 	"UI_BButton"	"B"
 	"UI_XButton"	"X"
@@ -123,6 +125,35 @@
 	"Panorama_Lang_Footer_Bulgarian"			"BULGARIAN"
 	"Panorama_Lang_Footer_Turkish"			"TURKISH"
 
+	// selection strings, pre-localized
+	// do not localize these strings!
+	"Panorama_Selection_English"			"English"
+	"Panorama_Selection_Spanish"			"Español (Spanish)"
+	"Panorama_Selection_French"			"Français (French)"
+	"Panorama_Selection_Italian"			"Italiano (Italian)"
+	"Panorama_Selection_German"			"Deutsch (German)"
+	"Panorama_Selection_Greek"			"Ελληνικά (Greek)"
+	"Panorama_Selection_Korean"			"한국어 (Korean)"
+	"Panorama_Selection_Simplified_Chinese"	"简体中文 (Simplified Chinese)"
+	"Panorama_Selection_Traditional_Chinese"	"繁體中文 (Traditional Chinese)"
+	"Panorama_Selection_Russian"		"Русский (Russian)"
+	"Panorama_Selection_Thai"			"ไทย (Thai)"
+	"Panorama_Selection_Japanese"		"日本語 (Japanese)"
+	"Panorama_Selection_Portuguese"		"Português (Portuguese)"
+	"Panorama_Selection_Brazilian"	 "Português-Brasil (Portuguese-Brazil)"
+	"Panorama_Selection_Polish"		"Polski (Polish)"
+	"Panorama_Selection_Danish"		"Dansk (Danish)"
+	"Panorama_Selection_Dutch"			"Nederlands (Dutch)"
+	"Panorama_Selection_Finnish"		"Suomi (Finnish)"
+	"Panorama_Selection_Norwegian"		"Norsk (Norwegian)"
+	"Panorama_Selection_Swedish"		"Svenska (Swedish)"
+	"Panorama_Selection_Czech"		"čeština (Czech)"
+	"Panorama_Selection_Hungarian"		"Magyar (Hungarian)"
+	"Panorama_Selection_Romanian"			"Română (Romanian)"
+	"Panorama_Selection_Bulgarian"			"Български (Bulgarian)"
+	"Panorama_Selection_Turkish"			"Türkçe (Turkish)"
+	"Panorama_Selection_Arabic"			"العربية(Arabic)"
+
 	"Panorama_MoviePlaybackError"		"An error ocurred during playback"
 		
 	"MainMenu_Settings"	"SETTINGS"
@@ -192,9 +223,9 @@
 	"Login_WrongPasswordOnly"		"Please check your password and try again."
 	"Login_IPRestriction"			"This account can't be accessed from this location."	
 	"Login_Connecting"				"Connecting to Steam account {s:AccountName}..."
+	"Login_AccountSuspended_Title" 	"Steam - Contact us"
 	"Login_AccountSuspended"		"Steam Support has suspended this account.\n\nAccounts typically become suspended when accessed by someone else, or a payment dispute is in progress.\n\nPlease contact Steam Support to resolve this issue."
-	"Login_AccountSuspendedSmaller"		"Steam Support has suspended this account. Please contact Steam Support to resolve this issue."
-	"Login_ContactSupport"			"Contact Support"
+	"Login_AccountSuspendedSmaller"		"Steam Support has suspended this account. To resolve this issue, please contact us here:\n\nhttp://support.steampowered.com"
 	"Login_UpdatingPlatform"		"Updating Steam..."
 	"Login_Offline_Title"			"Offline Mode"
 	"Login_Offline"					"You have chosen to use Steam in offline mode.\n\nMany features, such as the Steam Store and Community, will not be available while offline."
@@ -216,6 +247,7 @@
 	"Login_SteamUnreachable_Description" "We're having trouble connecting to the Steam service. Please check your network."
 	"Login_SteamUnreachable_TryAgain" "Try again"
 	"Login_SteamUnreachable_LoginOffline" "Login Offline"
+	"Login_ErrorCouldNotConnect" 	"Could not connect to Steam network.\nThis could be due to a problem with your Internet connection, or with the \nSteam network. Please visit www.steampowered.com for more info."
 
 	"WizardButton_Next"				"Next"
 	"WizardButton_Back"				"Back"
@@ -431,6 +463,7 @@
 	"SettingsDisplay_NonPrimaryMonitor"			"Warning"
 	"SettingsDisplay_NonPrimaryMonitorWarning"	"{s:selectedmonitor} is not your primary monitor.  Since games can only run on your primary monitor Steam will adjust it automatically when entering and exiting Big Picture.\n\nAre you sure you want to proceed?"
 	"SettingsDisplay_Underscan"				"Underscan amount"
+	"SettingsDisplay_Brightness"				"Brightness level"
 
 	// Settings, language
 	"SettingsLanguage_Intro"				"Please select the language you wish Steam to use"
@@ -1090,7 +1123,7 @@
 	"Library_CloudSyncFailed_LaunchAnyway"	"LAUNCH ANYWAY"
 	"Library_StreamingSource_Installed"		"(Installed)"
 	"Library_StreamingSource_ThisMachine"	"This machine"
-	"Library_StreamSources"					"Stream Sources"
+	"Library_StreamSources"					"Local & Streaming Sources"
 
 	"Activate_SubscriptionSuccess_Headline" "Activation Successful!"
 	"Activate_SubscriptionSuccess" "Your product activation code has successfully been activated. This product or products are now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
@@ -1657,6 +1690,29 @@
 	
 	"Overlay_EnterGameText"	"Enter text to send to the game:"
 
-    "RemoteControl_AuthorizeDevice_Title"	"ALLOW REMOTE CONTROL"
-    "RemoteControl_AuthorizeDevice_Text"	"A remote control application is trying to control Steam. Do you want to allow it?"
+	"RemoteControl_AuthorizeDevice_Title"			"ALLOW REMOTE CONTROL"
+	"RemoteControl_AuthorizeDevice_Text"			"{s:devicename} is trying to remote control Steam. Do you want to allow it?"
+	"RemoteControl_AuthorizeUnnamedDevice_Title"	"ALLOW REMOTE CONTROL"
+	"RemoteControl_AuthorizeUnnamedDevice_Text"		"An unknown remote control application is trying to control Steam. Do you want to allow it?"
+
+	"SettingsInterface_SteamOSCheckForUpdatesDesc"	"Last update check {t:s:steamosupdatetime} at {t:t:steamosupdatetime}" 
+	"SettingsInterface_SteamOSCheckForUpdates"	"Check for SteamOS updates"
+	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS version"
+
+	"MainMenu_NewSteamOSUpdate"	"{s:osname} reboot required"
+	"MainMenu_RestartForSteamOSUpdate_Title"	"{s:osname} reboot"
+	"MainMenu_RestartForSteamOSUpdate"	"Please reboot to apply {s:osname} updates. Would you like to restart now?"
+	
+	"Overlay_AsyncNotificatoinsRequestedDialog_Title" "Allow notifications?"
+	"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Allow notifications"
+	"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Disallow"
+	"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "This game supports asynchronous gameplay, allowing you to close the game between your turns. Would you like to receive notifications in the Steam client when it is your turn?"
+
+	"Library_Details_OptIntoBeta" "Select Beta"
+	"Library_Details_EditLaunchCommandLine"	"Set Launch Options"
+	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only."
+	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into"
+	"Library_SelectBeta_Title"	"Select Beta"
+	"Library_EditCommandLine_Title" "Launch Options for {s:gamename}"
+	"Library_SelectBeta_None" "None"
 }

@@ -65,10 +65,6 @@
 					<Label id="LoginLabel" text="#Login_Login" />
 				</Button>
 
-				<Button id="ContactSupportButton" class="Button LoginPromptContainer" onactivate="BrowseToSteamURL( SupportNewTicket )">
-					<Label text="#Login_ContactSupport" />
-				</Button>
-
 				<Panel id="More">
 					<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
 						<Label text="#Login_RememberPassword" />

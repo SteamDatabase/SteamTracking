@@ -442,6 +442,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 
 .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
 {
+	opacity: 1.0;
 	background-image: url( "file://{images}/controller_support_full_storemain.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -449,10 +450,19 @@ StorePanel:descendantfocus #FeaturedCapsules
 
 .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
+	opacity: 1.0;
 	background-image: url( "file://{images}/controller_support_partial_storemain.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+.SteamPad .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport, 
+.SteamPad .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
+.SteamPad .CapsuleControllerSupportContainer:descendantfocus .CapsuleControllerSupport
+{
+	opacity: 0.0;
+}
+
 
 #FeaturedCapsules #StoreImageDiscount
 {

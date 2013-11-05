@@ -167,6 +167,7 @@
 @define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a3b585 ), to( #456f8a85 ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #979898 ) );
 @define applabel: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f2ff ), color-stop( 0.90, #f2f2f2ff ), to( #97989800 ) );
+@define applabelwide: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f2ff ), color-stop( 0.45, #f2f2f2ff ), to( #97989800 ) );
 @define musicapplabel: gradient( linear, 0% 86%, 86% 900%, from( #f2f2f2ff ), color-stop( 0.80, #f2f2f2ff ), to( #97989800 ) );
 @define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #f2f2f2ff ), to( #abababff ) );
 @define applabelsolid: #f2f2f2ff;
@@ -235,11 +236,11 @@ DropDown:focus
 	border-style: solid;
 	border-color: #fdfefeff;
 
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.0s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -848,7 +849,7 @@ FriendsChatDialog .VoiceBarContainer
 .Slider
 {
 	height: 100%;
-	width: 17px;
+	width: 4%;
 	margin-left: 0px;
 	margin-right: 0px;
 	vertical-align: bottom;
@@ -858,6 +859,11 @@ FriendsChatDialog .VoiceBarContainer
 	transition-property: background-color;
 	transition-duration: 0.05s;
 	transition-timing-function: ease-in-out;
+}
+
+.SliderHalf
+{
+	width: 2%;
 }
 
 .VoiceBarContainer:focus .VoiceBar
@@ -1226,4 +1232,90 @@ FriendsChatDialog .VoiceBarContainer
 	font-size: largefontsize;
 	font-family: platformfont;
     color: tclegendlabel;
+}
+
+
+//
+// System Button
+//
+.SystemButton
+{
+	padding: 8px 8px;
+	box-shadow: #eeeeee00 0px 0px 16px 0px;
+	border: 5px solid;
+	color: tcexitrow;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+
+	visibility: collapse;
+}
+
+.SystemButton.PanelVisible
+{
+	visibility: visible;
+}
+
+
+.SystemButton Label
+{
+	horizontal-align: left;
+	color: #d0d0d0ff;
+	transform: translatex(0px);
+	padding-left: 0px;
+	transition-property: color, position, transform;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+	font-size: deffontsize;
+	font-family: platformfont;
+	text-overflow: ellipsis;
+	max-height: 40px;
+	width: 100%;
+
+	padding-right: 14px;
+}
+
+.SystemButton:focus Label
+{
+	horizontal-align: left;
+	color: #171717f5;
+	transform: translatex(7px);
+	padding-left: 0px;
+	padding-right: 14px;
+}
+
+.SystemButton:hover
+{
+	transition-duration: 0.23s !immediate;
+
+	color: tcexitrowhover;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+.SystemButton:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }

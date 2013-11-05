@@ -18,6 +18,7 @@
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
 		"LocalCostToLeaveChina"							2
+		"LocalCostCanadaToUS"								2
 	}
 	"cells"
 	{
@@ -47,7 +48,11 @@
 				4 { "dest"	77  }
 				5 { "dest"	49  }
 				6 { "dest"	76  }
-				7 { "dest"	20  }
+				7 
+				{ 
+					"dest"	20  
+					"cost"	LocalCostOneWayCellEdge
+				}
 			}
 		}
 
@@ -356,12 +361,16 @@
 		20
 		{
 			"name" "Canada - Toronto"
-			"region"	"north america"
+			"region"	"canada"
 			"edges"
 			{
-				0 { "dest"	 81  }
-				1 { "dest"	 1  }
-				2 { "dest"	 94  }
+				0 { "dest"	 135  }
+				1 
+				{ 
+					"dest"	1 
+					"cost"	LocalCostCanadaToUS
+				}
+				2 { "dest"	 136  }
 			}
 		}
 
@@ -1359,11 +1368,15 @@
 		81
 		{
 			"name" "Canada - Montreal"
-			"region"	"north america"
+			"region"	"canada"
 			"edges"
 			{
-				0 { "dest"	20 }
-				1 { "dest"	2 }
+				0 { "dest"	136 }
+				1 
+				{ 
+					"dest"	2 
+					"cost"	LocalCostCanadaToUS
+				}
 			}
 		}			
 		// #82 Boston
@@ -1521,11 +1534,16 @@
 		94
 		{
 			"name" "Canada - Vancouver"
-			"region"	"north america"
+			"region"	"canada"
 			"edges"
 			{
-				0 { "dest"	31 }
-				1 { "dest"	20 }
+				0 
+				{ 
+					"dest"	31 
+					"cost"	LocalCostCanadaToUS
+				}
+				1 { "dest"	133 }
+				1 { "dest"	134 }
 			}
 		}
 		// #95 Columbus
@@ -2014,7 +2032,50 @@
 				0 { "dest"	24 }
 				1 { "dest"	123 }
 			}
+		}		
+		133
+		{
+			"name" "Canada - Edmonton"
+			"region"	"canada"
+			"edges"
+			{
+				0 { "dest"	94 }
+				1 { "dest"	134 }
+				2 { "dest"	135 }
+			}
+		}
+		134
+		{
+			"name" "Canada - Calgary"
+			"region"	"canada"
+			"edges"
+			{
+				0 { "dest"	94 }
+				1 { "dest"	133 }
+				2 { "dest"	135 }
+			}
 		}				
+		135
+		{
+			"name" "Canada - Winnipeg"
+			"region"	"canada"
+			"edges"
+			{
+				0 { "dest"	133 }
+				1 { "dest"	134 }
+				2 { "dest"	20 }
+			}
+		}	
+		136
+		{
+			"name" "Canada - Ottawa"
+			"region"	"canada"
+			"edges"
+			{
+				0 { "dest"	20 }
+				1 { "dest"	81 }
+			}
+		}									
 	}
 	"countries"
 	{

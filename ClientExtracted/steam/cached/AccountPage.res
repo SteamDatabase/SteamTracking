@@ -317,6 +317,29 @@
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 	}
+
+	"ManageParentalButton"
+	{
+		"ControlName"	"Button"
+		"fieldName"		"ManageParentalButton"
+		"xpos"			"20"
+		"ypos"			"222"
+		"wide"			"337"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"5"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_Parental_Manage"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Command"		"ManageParental"
+		"Default"		"0"
+		"selected"		"0"
+	}
+
 	"ChangeUserButton"
 	{
 		"ControlName"		"Button"
@@ -327,7 +350,7 @@
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
-		"visible"		"1"
+		"visible"		"0"
 		"enabled"		"1"
 		"tabPosition"		"4"
 		"paintbackground"		"1"
@@ -344,7 +367,7 @@
 		"ControlName"		"Button"
 		"fieldName"		"ManageDeviceAuthButton"
 		"xpos"		"20"
-		"ypos"		"252"
+		"ypos"		"222"
 		"wide"		"337"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -360,7 +383,7 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	
+
 	"NoPersonalInfoCheck"
 	{
 		"ControlName"		"CheckButton"
