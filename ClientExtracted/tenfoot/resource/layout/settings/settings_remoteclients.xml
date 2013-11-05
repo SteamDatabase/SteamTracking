@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_RemoteClients class="SettingsSection" defaultfocus="AuthorizeLocalDeviceButton" tabindex="auto" selectionpos="auto">
+	<SettingsPanel_RemoteClients class="SettingsSection" defaultfocus="SettingsRemoteClientTable" tabindex="auto" selectionpos="auto">
 
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
@@ -14,17 +14,18 @@
 		<!-- main panel -->
 		<Panel class="SettingsContent SettingsCenterContentWide">
 			<Label text="#Settings_RemoteClients_Description" />
-			<Panel class="SettingsRemoteClientsHeader">
-				<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_DeviceName" />
-				<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_Status" />
+			<Panel id="SettingsRemoteClientTable">
+				<Panel class="SettingsRemoteClientsHeader">
+					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_DeviceName" hittest="false" />
+					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_Status" hittest="false" />
+				</Panel>
+				<Panel class="SettingsRemoteClientSection">
+					<Panel id="SettingsRemoteClientList">
+						<!-- code will add buttons for each device here  -->
+					</Panel>	
+				</Panel>
 			</Panel>
-			<Panel class="SettingsRemoteClientSection">
-				<Panel id="SettingsRemoteClientList">
-					<!-- code will add buttons for each device here  -->
-				</Panel>	
-
-			</Panel>
-			<Label text="Settings_RemoteClients_Perf_Instructions" />	
+			<Label text="#Settings_RemoteClients_Perf_Instructions" />	
 			
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsContent SettingsColumnarContent" >

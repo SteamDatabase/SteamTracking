@@ -257,7 +257,7 @@ LoginUser:descendantfocus
 }
 
 // default to invisible
-#ContactSupportButton, #SteamGuardTextEntry
+#SteamGuardTextEntry
 {
 	visibility: collapse;
 }
@@ -280,11 +280,6 @@ LoginUser:descendantfocus
 .AccountSuspended #AccountNameTextEntry, .AccountSuspended #PasswordTextEntry, .AccountSuspended #LoginButton
 {
 	visibility: collapse;
-}
-
-.AccountSuspended #ContactSupportButton
-{
-	visibility: visible;
 }
 
 .AnonLogin #AccountNameLabel,.AnonLogin #PersonaNameLabel
@@ -681,6 +676,12 @@ TextEntry:disabled,.Button:disabled,ToggleButton:disabled
 .Button:disabled Label,ToggleButton:disabled,ToggleButton:disabled .TickBox
 {
 	color: #9B9B9B;
+}
+
+#TestPanelTextEntry
+{
+	horizontal-align: left;
+	vertical-align: center;
 }
 
 HTML

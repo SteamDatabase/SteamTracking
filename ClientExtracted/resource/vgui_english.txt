@@ -7,6 +7,7 @@
 "TextEntry_Copy"		"Copy"
 "TextEntry_Paste"		"Paste"
 "TextEntry_SelectAll"		"Select all"
+"TextEntry_CopyAllToClipboard"	"Copy all text to clipboard"
 "FileOpenDialog_Open"		"Open"
 "FileOpenDialog_Cancel"		"Cancel"
 "FileOpenDialog_Look_in"	"Look in:"

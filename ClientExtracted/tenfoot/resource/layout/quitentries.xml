@@ -1,0 +1,43 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/quit.css" />
+	</styles>
+	
+	<QuitEntriesPanel tabindex="auto" selectionpos="auto">
+				
+		<Button class="StreamingVisible SystemButton" onactivate="StopStreaming()" >
+			<Label text="#Quit_StopStreaming" />
+		</Button>
+		<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden StreamingHidden ExitButtons" onactivate="QuitApp()" >
+			<Label text="#Quit_ExitBigPicture" />
+		</Button>
+		<Button class="SystemButton StreamingHidden ExitButtons" onactivate="ExitSteam()" >
+			<Label text="#Quit_ExitSteam" />
+		</Button>
+		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()">
+			<Label text="#Quit_ChangeUser" />
+		</Button>
+
+		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" >
+			<Label text="#Quit_GoOffline" />
+		</Button>
+
+		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" >
+			<Label text="#Quit_GoOnline" />
+		</Button>
+
+		<Panel class="HorizontalRule StreamingHidden" />
+
+		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="ShutdownMachine()" >
+			<Label text="#Quit_Shutdown" />
+		</Button>
+		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="RestartMachine()" >
+			<Label text="#Quit_Restart" />
+		</Button>
+		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="SuspendMachine()" >
+			<Label text="#Quit_Sleep" />
+		</Button>
+	</QuitEntriesPanel>
+</root>

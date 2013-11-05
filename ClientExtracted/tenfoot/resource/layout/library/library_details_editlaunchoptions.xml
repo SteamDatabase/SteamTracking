@@ -1,0 +1,28 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<EditAppLaunchOptions class="TenfootMsgBox" defaultfocus="LaunchOptions">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    		<Label class="StdTitle" text="#Library_EditCommandLine_Title" />
+
+    		<Label class="StdLabelMed" text="#Library_EditCommandLine_CodeLabel" />
+	    	<TextEntry id="LaunchOptions"
+		       	textinputid="LaunchOptionsTextEntry"
+    			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+
+            <Panel id="MsgBoxButtons">
+                <Button onactivate="SetAppLaunchOptions();">
+                    <Label text="#UI_OK" />
+                </Button>
+                <Button onactivate="ButtonCancel();">
+                    <Label text="#UI_Cancel" />
+                </Button>
+            </Panel>        
+        </Panel>
+	</EditAppLaunchOptions>
+</root>

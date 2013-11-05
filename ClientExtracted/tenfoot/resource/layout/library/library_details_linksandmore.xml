@@ -59,6 +59,12 @@
 					<Button id="DeleteButton" class="DeleteButton LinksAndMoreButton">
 						<Label id="DeleteLabel" text="#Library_Details_DeleteLocalContent" />
 					</Button>
+					<Button id="BetaButton" class="BetaButton LinksAndMoreButton">
+						<Label id="BetaLabel" text="#Library_Details_OptIntoBeta" />
+					</Button>
+					<Button id="LaunchOptionsButton" class="LaunchOptionsButton LinksAndMoreButton">
+						<Label id="LaunchOptionsLabel" text="#Library_Details_EditLaunchCommandLine" />
+					</Button>
 				</Panel>
 			</Panel>
 		</Panel>

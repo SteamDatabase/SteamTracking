@@ -391,7 +391,7 @@ Label.SettingsStatic
 
 .SettingsCenterContentWide
 {
-	width: 1200px;
+	width: 1125px;
 	horizontal-align: left;
 	margin-left: 300px;
 	flow-children: down;
@@ -546,11 +546,11 @@ TextEntry:focus
 	border-color: white;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 	
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.5s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -749,11 +749,11 @@ DropDown Label
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
 	
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -769,11 +769,11 @@ DropDown Label
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #ccccccff ), to( #999999ff ) );
 	color: #231f20;
 
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 
 }
@@ -972,12 +972,12 @@ DropDown Label
 	visibility: collapse;
 }
 
-#UnderscanArea
+#SteamOSSettingsArea
 {
 	visibility: collapse;
 }
 
-.SteamOS #UnderscanArea
+.SteamOS #SteamOSSettingsArea
 {
 	visibility: visible;
 }
@@ -1018,6 +1018,7 @@ DropDown Label
 	wash-color: none;
 	margin-right: 2px;
 	margin-left: 0px;
+	color: applabelsolid;
 }
 
 DropDownMenu
@@ -1131,13 +1132,14 @@ KeyboardShortcut,.KeyboardShortcut
 	margin-bottom: 26px;
 	padding: 7px;
 	background-color: simplebutton;
-	transition-property: pre-transform-scale2d,color,background-color;
+	transition-property: pre-transform-scale2d,color,background-color,blur;
 	transition-duration: 0.2s;
-	color: detailsdatalabel;
+	color: applabelsolid;
 	width: 500px;
 	border-width: 5px;
 	border-radius: 2px;
 	border-style: solid;
+	box-shadow: box_shadow_off_color -3px -3px 6px 6px;
 }
 
 .HorzSub KeyboardShortcut
@@ -1169,6 +1171,13 @@ KeyboardShortcut:focus
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
 	color: black;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.0s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
 }
 
 KeyboardShortcut:selected
@@ -1188,6 +1197,11 @@ KeyboardShortcut:selected
 #ScreenshotBtn
 {
 	width: fit-children;
+}
+
+#ScreenshotBtn:focus Label
+{
+	color: black;	
 }
 
 
@@ -1320,11 +1334,11 @@ KeyboardShortcut .Graphic
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
-	animation-name: links-and-more-button-focus;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -1375,12 +1389,13 @@ KeyboardShortcut .Graphic
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
-	animation-name: links-and-more-button-focus;
+	animation-name: links-and-more-button-focus, quick-blur; 
 	animation-duration: 1.7s;
-	animation-delay: 0.4s;
+	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
+	
 }
 
 .SettingsGameControllerBindRow.EditBind:focus
@@ -1445,12 +1460,13 @@ SettingsPanel_GameController_Binding
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
-	animation-name: links-and-more-button-focus;
-	animation-duration: 0.5s;
-	animation-delay: 0.1s;
+	animation-name: links-and-more-button-focus, quick-blur; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
+	
 }
 
 
@@ -1842,12 +1858,43 @@ color: black;
 	color: #abb4b9;
 }
 
-.SettingsRemoteClientSection
+#SettingsRemoteClientTable
 {
 	flow-children: down;
 	width: 1025px;
 	height: 250px;
 	margin-bottom: 20px;
+	margin-top: 16px;
+	border-width: 5px;
+	border-radius: 2px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	background-color: dialog_bg_color;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
+}
+
+#SettingsRemoteClientTable:descendantfocus
+{
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
+}
+	
+#SettingsRemoteClientTable:focus
+{
+	border-color: applabelsolid;
+
+	animation-name: main-button-glow-movement, quick-blur;
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.4s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
+}
+
+.SettingsRemoteClientSection
+{
+	flow-children: down;
+	width: 1025px;
+	height: 250px;
 	background-color: simplebutton;
 }
 
@@ -1863,10 +1910,10 @@ color: black;
 
 .SettingsRemoteClientsHeader
 {
-	margin: 8px 8px 0px 8px;
+	margin: -12px 8px 6px 8px;
 	flow-children: right;
 	color: #029fda;
-	width: 1200px;
+	width: 1025px;
 }
 
 #SettingsRemoteClientList
@@ -1876,6 +1923,11 @@ color: black;
 	padding: 8px;
 	flow-children: down;
 	overflow: clip scroll;
+	
+	
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 
 SettingsPanel_RemoteClients.Loading #SettingsRemoteClientList
@@ -1918,13 +1970,6 @@ SettingsPanel_RemoteClients.Loading SettingsPanelRemoteClientListing
 	visibility: collapse;
 }
 
-SettingsPanelRemoteClientListing:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.0;
-}
 
 SettingsPanelRemoteClientListing:focus
 {
@@ -1933,24 +1978,24 @@ SettingsPanelRemoteClientListing:focus
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
+
 	z-index: 1000;
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
 
 	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
+}
+
+SettingsPanelRemoteClientListing:descendantfocus { color: black; box-shadow:
+box_shadow_on_color -5px -5px 6px 10px;
+	
 	animation-name: main-button-glow-movement, quick-blur; 
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
-}
-
-SettingsPanelRemoteClientListing:descendantfocus
-{
-	color: black;
 }
 
 SettingsPanelRemoteClientListing #Status
@@ -2070,3 +2115,14 @@ SettingsPanel_Display.Underscan
 	background-position: left top, right top, right bottom, left bottom;
 	background-size: 100px 100px;
 }
+
+.SteamOSUpdates
+{
+	visibility: collapse;	
+}
+
+.SteamOS .SteamOSUpdates
+{
+	visibility: visible;	
+}
+

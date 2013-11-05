@@ -2864,6 +2864,13 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	opacity: 1.0;
 }
 
+.SteamPad #ControllerSupportPlayAction,
+.SteamPad .FullController:descendantfocus #ControllerSupportPlayAction,
+.SteamPad .PartialController:descendantfocus #ControllerSupportPlayAction
+{
+	opacity: 0.0;
+}
+
 .PlayTimeBody
 {
 	visibility: visible;
@@ -3197,6 +3204,14 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	background-repeat: no-repeat;
 	wash-color: #353535;
 	opacity: 1.0;
+}
+
+.SteamPad .FullController #ControllerSupport,
+.SteamPad .PartialController #ControllerSupport,
+.SteamPad .FullController:focus #ControllerSupport,
+.SteamPad .PartialController:focus #ControllerSupport,
+{
+	opacity: 0.0;	
 }
 
 
@@ -3660,6 +3675,15 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	opacity: 1.0;
 }
 
+.SteamPad .FullController #GridControllerSupport,
+.SteamPad .PartialController #GridControllerSupport,
+.SteamPad .FullController:focus #GridControllerSupport,
+.SteamPad .PartialController:focus #GridControllerSupport,
+{
+	opacity: 0.0;
+}
+
+
 .AppGridItem:hover
 {
 	pre-transform-scale2d: 0.85;
@@ -3807,7 +3831,10 @@ DropDown
 #GamesFilterDropDownMenu Label
 {
 	margin-right: 4px;
+	visibility: visible;
 }
+
+
 
 #FilterPlatform.ShowPlatform
 {
@@ -3815,6 +3842,18 @@ DropDown
 }
 
 #FilterPlatform
+{
+	visibility: collapse;
+}
+
+#FilterController DropDown Label,
+#GamesFilterDropDownMenu #FilterController 
+{
+	visibility: visible;
+}
+
+.SteamPad #FilterController DropDown Label,
+.SteamPad #GamesFilterDropDownMenu #FilterController
 {
 	visibility: collapse;
 }
@@ -4238,4 +4277,23 @@ KeyboardShortcut Image
 	{
 		position: -934px 0px 0px;
 	}
+}
+
+#LaunchOptions
+{
+	margin-top: 20px;
+	font-size: 28px;
+	width: 900px;
+}
+
+#BetaDropDown
+{
+	margin-top: 20px;
+	width: 900px;
+}
+
+#BetaDropDownDropDownMenu
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 775px;
 }

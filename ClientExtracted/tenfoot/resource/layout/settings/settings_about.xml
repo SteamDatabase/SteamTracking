@@ -42,6 +42,13 @@
 				<Label class="SettingsLegend" text="#SettingsAbout_SteamAPI" />
 				<Label class="SettingsValue" text="#SettingsAbout_SteamAPIVersion" />
 			
+
+				<Label class="SettingsLegend SteamOSUpdates" text="#SettingsInterface_SteamOSCheckForUpdatesTitle" />
+				<Label class="SettingsValue SteamOSUpdates" text="#SettingsInterface_SteamOSCheckForUpdatesDesc" />
+				<Button class="Button ResBody SteamOSUpdates"  onactivate="SteamOSCheckForUpdates();" tabindex="auto" selectionpos="auto">
+					<Label class="LongDesc" text="#SettingsInterface_SteamOSCheckForUpdates"  />
+				</Button>
+
 		</Panel>	
 		
 		<Panel class="SettingsRightContent" tabindex="auto" selectionpos="auto">
