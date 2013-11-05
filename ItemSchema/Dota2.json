@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8d9d16fbc73d76a36fba714fad778f7981713efa.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7d0f98383474556c2ce805dc98551508b5929a3c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -46892,6 +46892,121 @@
 				}
 			},
 			{
+				"name": "Cuffs of the Iron Will",
+				"defindex": 5485,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Cuffs of the Iron Will",
+				"item_description": "From planes beyond and essence untold charges a force to end all.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__arms\/spirit_breaker__imperial_crusher__arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__arms\/spirit_breaker__imperial_crusher__arms.a89b6aeb755d328e243c832dbab1f5c269ff9c90.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__arms\/spirit_breaker__imperial_crusher__arms_large.e58bf91d40d093224e01802876e6a8ce02576105.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Strap of the Iron Will",
+				"defindex": 5487,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Strap of the Iron Will",
+				"item_description": "None may challenge the breaker's will.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__belt\/spirit_breaker__imperial_crusher__belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__belt\/spirit_breaker__imperial_crusher__belt.b611146c46744b03b4596a68fbf2a92ac6202d19.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__belt\/spirit_breaker__imperial_crusher__belt_large.2a9d8aa8bb62588dd023eb6b7ec469120ab76604.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Horns of the Iron Will",
+				"defindex": 5488,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Horns",
+				"item_name": "Horns of the Iron Will",
+				"item_description": "Upon otherworldly horns are fiend and foe gored.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__head\/spirit_breaker__imperial_crusher__head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__head\/spirit_breaker__imperial_crusher__head.71f678fc243e57bfad418b8c0812657d0101e2b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__head\/spirit_breaker__imperial_crusher__head_large.4159b43775c73c91b93d46b8d8cbf41bb2b611bf.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Mantle of the Iron Will",
+				"defindex": 5489,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mantle",
+				"item_name": "Mantle of the Iron Will",
+				"item_description": "Against his shoulders does the world shatter.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__shoulder\/spirit_breaker__imperial_crusher__shoulder",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__shoulder\/spirit_breaker__imperial_crusher__shoulder.662451ecaabfad464ca6f1ed40f5ea1ff153916e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__shoulder\/spirit_breaker__imperial_crusher__shoulder_large.daf6eea68ebe4afd5acf4278987ba713a886d188.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Tail of the Iron Will",
+				"defindex": 5490,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Tail of the Iron Will",
+				"item_description": "Sweep from plane to plane.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__tail\/spirit_breaker__imperial_crusher__tail",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__tail\/spirit_breaker__imperial_crusher__tail.282ed3fdce799aa32220b2e42e21603e5b34dc17.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__tail\/spirit_breaker__imperial_crusher__tail_large.ce78a991820dabd90601cf5070e580e104046299.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Arcane Shield",
 				"defindex": 5491,
 				"item_class": "dota_item_wearable",
@@ -48226,6 +48341,29 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon.fda192d0c3f37ddb475c93b7fe264d3aedd14389.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon_large.80f82da42cb2fee1566106694421abd78ca9197f.png",
 				"item_set": "chosen_larva",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Flail of the Iron Will",
+				"defindex": 5577,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Flail",
+				"item_name": "Flail of the Iron Will",
+				"item_description": "Shimmering with an elder power, one swing is enough to dim even the stoutest heart.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__weapon\/spirit_breaker__imperial_crusher__weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__weapon\/spirit_breaker__imperial_crusher__weapon.a28c8bc1ac87a5f4d7eb195e438655c7e9f15fb9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/spirit_breaker\/spirit_breaker__imperial_crusher__weapon\/spirit_breaker__imperial_crusher__weapon_large.f71df5c0eca7d5d076167b384e5a84536757aa51.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -71070,7 +71208,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "ASUS ROG DreamLeague",
-				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Ticket also includes Spirit Breaker set.",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
@@ -71106,7 +71244,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "ASUS ROG DreamLeague - ADMIN",
-				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Ticket also includes Spirit Breaker set.",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
@@ -79480,6 +79618,35 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Vestments of the Iron Will",
+				"defindex": 20291,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Vestments of the Iron Will",
+				"item_description": "Includes all of the items in the 'Vestments of the Iron Will' set for Spirit Breaker:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Imperial_Crusher_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_imperial_crusher_set.8b605c1724e76630d3fd66fa8ceb52d197feb3d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_imperial_crusher_set_large.7328410c3128ac4f3f74ebce3e9ad96ef3cf56b5.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -80402,7 +80569,7 @@
 				"name": "purgatory expires after date",
 				"defindex": 411,
 				"attribute_class": "purgatory expires after date",
-				"effect_type": "break",
+				"effect_type": "value_is_game_time",
 				"hidden": true,
 				"stored_as_integer": true
 			}
