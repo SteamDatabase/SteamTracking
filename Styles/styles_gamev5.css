@@ -305,12 +305,17 @@ img.game_header_image {
 	border-right: 1px solid #a25024;
 	width: 584px;
 	color: #898a8c;
+	background-color: #000000;
 	padding: 4px 15px;
 }
 
 .notice_box_content b {
 	font-weight: normal;
 	color: #f47b20;
+}
+
+.subscription_page_region_restriction {
+	margin-top: 15px;
 }
 
 .game_area_purchase_game {
