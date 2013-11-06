@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.7d0f98383474556c2ce805dc98551508b5929a3c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.664fb8f580c0d4e25600a2feb23aa6272caf450c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -48266,8 +48266,8 @@
 				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back.e6bdea25c577bd813ef8e7d74091a40f9af20aa6.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back_large.c20d3c705457ae8ae19987b18b50cded7ae15671.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back.77bc2218167cfee5de3eb0ef3441c3e459f47b72.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_back\/nyx_dusky_back_large.7041673eff65a98d215f9840ed598d6712c0c462.png",
 				"item_set": "chosen_larva",
 				"capabilities": {
 					"nameable": true,
@@ -48290,8 +48290,8 @@
 				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head.ea94b1239b2049ad2eb8dd3f901f705472d158f9.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head_large.17b42374a996ae27b8f052afd5962a5bcb7669b8.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head.6675144ac1d7024e5a8b7d740df4b73bef8cb07c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_head\/nyx_dusky_head_large.9deeb42585461a9f8b80f16907955b998a378909.png",
 				"item_set": "chosen_larva",
 				"capabilities": {
 					"nameable": true,
@@ -48314,8 +48314,8 @@
 				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc.14faf10854252d26580f7765162b17d7f344552a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc_large.3782ee4166e340b7d073951828caf31d8c6b6894.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc.f00f43f70f6066007f2474d18d902b2223528149.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_misc\/nyx_dusky_misc_large.00532a8341deb00aa681088d891abd6667f9c235.png",
 				"item_set": "chosen_larva",
 				"capabilities": {
 					"nameable": true,
@@ -48338,8 +48338,8 @@
 				"image_inventory": "econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon.fda192d0c3f37ddb475c93b7fe264d3aedd14389.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon_large.80f82da42cb2fee1566106694421abd78ca9197f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon.6da4d6490acd0e8af517e9b8702857694ed807af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/nyx_dusky_weapon\/nyx_dusky_weapon_large.28b84740084e6dd91508fdd292a217bf6e543c06.png",
 				"item_set": "chosen_larva",
 				"capabilities": {
 					"nameable": true,
