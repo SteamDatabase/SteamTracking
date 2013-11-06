@@ -999,7 +999,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for GiroPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the GiroPay website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the GiroPay window before the process is complete.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'In order to complete the purchase via Giropay you will be transported to your bank’s website where you will be asked to enter your online banking PIN and a unique TAN.  If you don’t have both PIN and TAN available to you at the moment, please choose a different payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the GiroPay window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'ideal' )
