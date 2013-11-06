@@ -160,6 +160,12 @@ GroupEventsPage
 	method		"internal"
 	filter		"community"
 }
+GroupAnnouncementPage
+{
+	url			"%community%/gid/%p1%#announcements/detail/%p2%"
+	method		"internal"
+	filter		"community"
+}
 GroupSteamIDAdmin
 {
 	url			"%community%/gid/%p1%/edit"

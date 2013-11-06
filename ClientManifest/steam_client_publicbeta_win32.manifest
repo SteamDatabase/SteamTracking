@@ -1,11 +1,11 @@
 "win32"
 {
-	"version"		"1383690018"
+	"version"		"1383776085"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.c4038f0d6dfc0fd177cc1c9741e367851a0cd00a"
-		"checksum"		"c4038f0d6dfc0fd177cc1c9741e367851a0cd00a"
-		"size"		"5162910"
+		"file"		"strings_all.zip.6d33a7b8c58211455852aa42d238f2280ecbac29"
+		"checksum"		"6d33a7b8c58211455852aa42d238f2280ecbac29"
+		"size"		"5162928"
 	}
 	"resources_all"
 	{
@@ -51,15 +51,15 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.46b05542d27cc22827ed439db221b1467ef94d1a"
-		"checksum"		"46b05542d27cc22827ed439db221b1467ef94d1a"
-		"size"		"22419551"
+		"file"		"bins_win32.zip.7cc18c63f427e2c777c295e7703910b36ba1d056"
+		"checksum"		"7cc18c63f427e2c777c295e7703910b36ba1d056"
+		"size"		"22421193"
 	}
 	"webkit_win32"
 	{
-		"file"		"webkit_win32.zip.79b2f135fe8cf5da2fa5ec1f04c54849be74a5f9"
-		"checksum"		"79b2f135fe8cf5da2fa5ec1f04c54849be74a5f9"
-		"size"		"14150492"
+		"file"		"webkit_win32.zip.0836dd556ebe495bc22019dd2cfeeec32117d3eb"
+		"checksum"		"0836dd556ebe495bc22019dd2cfeeec32117d3eb"
+		"size"		"14150676"
 	}
 	"gamesforwindows_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.891b74732ba10c475bc9e871e589af45a1be29de"
-		"checksum"		"891b74732ba10c475bc9e871e589af45a1be29de"
-		"size"		"842228"
+		"file"		"steam_win32.zip.169b1eef6734357d1aaf750ae5c5c7c88cff53ed"
+		"checksum"		"169b1eef6734357d1aaf750ae5c5c7c88cff53ed"
+		"size"		"842227"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"68caea90bee8d07644e135309fc197271bfe78019f5a01c7c1ae561c092ca4c66b2cc679f102768668c06684554b1a97c37a53136ee5a74d5740aaeb4be5d00e02fd9e9a3d84474775f21888f4c22bb2186a5bccd203ae16e4b2b62542b1448ab509392ca20839b39e1d514b9145089af96d9398ca74e8928972b8241bd213c7"
+	"win32"		"25bce2e646ef6f177fb2ceb688e120082cf2c0f9d56a9c8ea40b85ea1835cd0e22c2250748b33b89e5d0e42b6746e6519b21e606e26e29e153ddff1488797b5c8d6e4c8871de1cd17be3af62f413e18998faceb1c7b7d1fbc653ca1f9af841682c101b7b0167c34e5e5d6f0482a125dda8cae73d5c605d1147701f2698623a66"
 }
