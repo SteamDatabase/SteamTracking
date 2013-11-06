@@ -244,7 +244,7 @@
 .checkout_review_cart_item {
 	border-bottom: 1px solid #000000;
 	position: relative;
-	min-height: 77px;
+	height: 77px;
 	line-height: 16px;
 }
 
@@ -536,7 +536,7 @@
 
 .cart_item {
 	position: relative;
-	min-height: 77px;
+	height: 77px;
 	line-height: 16px;
 }
 .cart_item_img {
