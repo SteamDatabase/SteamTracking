@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.6c4ddf4cf6fe82449ac99786e903cdc0596fe467.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.3f92f546be1f8580ac30d78d5b074ca348160e74.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -1223,6 +1223,11 @@
 						"name": "kill eater score type 2",
 						"class": "kill_eater_score_type_2",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -1320,6 +1325,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -1412,6 +1422,11 @@
 						"name": "hidden secondary max ammo penalty",
 						"class": "mult_maxammo_secondary",
 						"value": 0.5
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -1560,6 +1575,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 50
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -1653,6 +1673,11 @@
 						"name": "max health additive penalty",
 						"class": "add_maxhealth",
 						"value": -15
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -1767,6 +1792,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 50
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -2246,6 +2276,11 @@
 					{
 						"name": "disable fancy class select anim",
 						"class": "disable_fancy_class_select_anim",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -4049,6 +4084,11 @@
 						"name": "mod weapon blocks healing",
 						"class": "weapon_blocks_healing",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -4277,6 +4317,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 6
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -4673,6 +4718,11 @@
 						"name": "clip size penalty",
 						"class": "mult_clipsize",
 						"value": 0.5
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -4734,6 +4784,11 @@
 						"name": "kill eater score type 2",
 						"class": "kill_eater_score_type_2",
 						"value": 0
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -5434,6 +5489,11 @@
 						"name": "lunchbox adds maxhealth bonus",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -5590,6 +5650,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 2
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -6772,6 +6837,14 @@
 				"used_by_classes": [
 					"Spy"
 				]
+				,
+				"attributes": [
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					}
+				]
 				
 			},
 			{
@@ -6803,6 +6876,14 @@
 				},
 				"used_by_classes": [
 					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					}
 				]
 				
 			},
@@ -6954,7 +7035,15 @@
 					"Heavy": "secondary",
 					"Pyro": "secondary",
 					"Engineer": "primary"
-				}
+				},
+				"attributes": [
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Upgradeable TF_WEAPON_SCATTERGUN",
@@ -7966,6 +8055,11 @@
 					{
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -9668,6 +9762,11 @@
 						"name": "decapitate type",
 						"class": "decapitate_type",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -11117,6 +11216,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 3
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -11469,6 +11573,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 2
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -12224,6 +12333,11 @@
 						"name": "max health additive penalty",
 						"class": "add_maxhealth",
 						"value": -15
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -13311,6 +13425,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -13452,6 +13571,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -13504,6 +13628,11 @@
 					{
 						"name": "honorbound",
 						"class": "honorbound",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -15260,6 +15389,11 @@
 						"name": "crit mod disabled",
 						"class": "mult_crit_chance",
 						"value": 0
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -15787,6 +15921,11 @@
 						"name": "deploy time decreased",
 						"class": "mult_deploy_time",
 						"value": 0.85000002384185791
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -16021,6 +16160,11 @@
 					{
 						"name": "cannot trade",
 						"class": "cannot_trade",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -16401,6 +16545,11 @@
 					{
 						"name": "always tradable",
 						"class": "always_tradable",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -17292,6 +17441,11 @@
 						"name": "dmg penalty vs players",
 						"class": "mult_dmg_vs_players",
 						"value": 0.80000001192092896
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -17713,6 +17867,11 @@
 						"name": "max health additive penalty",
 						"class": "add_maxhealth",
 						"value": -25
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -18494,6 +18653,11 @@
 					{
 						"name": "decapitate type",
 						"class": "decapitate_type",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -22781,6 +22945,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -23416,6 +23585,11 @@
 						"name": "crit kill will gib",
 						"class": "crit_kill_will_gib",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -23523,6 +23697,11 @@
 					{
 						"name": "cannot pick up buildings",
 						"class": "cannot_pick_up_buildings",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -23791,6 +23970,11 @@
 						"name": "crit mod disabled",
 						"class": "mult_crit_chance",
 						"value": 0
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -23865,6 +24049,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 2
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -26901,6 +27090,11 @@
 						"name": "kill eater score type 2",
 						"class": "kill_eater_score_type_2",
 						"value": 0
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -29479,6 +29673,14 @@
 				"used_by_classes": [
 					"Spy"
 				]
+				,
+				"attributes": [
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					}
+				]
 				
 			},
 			{
@@ -30094,6 +30296,11 @@
 						"name": "mod flaregun fires pellets with knockback",
 						"class": "set_weapon_mode",
 						"value": 3
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -30151,6 +30358,11 @@
 					{
 						"name": "pyrovision opt in DISPLAY ONLY",
 						"class": "pyrovision_opt_in_display_only",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -31761,6 +31973,11 @@
 					{
 						"name": "self mark for death",
 						"class": "self_mark_for_death",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					}
 				]
@@ -35880,6 +36097,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 3
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -42590,6 +42812,11 @@
 						"value": 50
 					},
 					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					},
+					{
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 4
@@ -42644,6 +42871,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -42695,6 +42927,11 @@
 						"name": "clip size penalty",
 						"class": "mult_clipsize",
 						"value": 0.5
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
 					}
 				]
 				
@@ -42740,6 +42977,11 @@
 					{
 						"name": "disable fancy class select anim",
 						"class": "disable_fancy_class_select_anim",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
 						"value": 1
 					},
 					{
@@ -53446,7 +53688,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "",
 				"item_name": "Pile Of Curses",
-				"item_description": "It looks like there's something in there... IF YOU DARE!\n\nAfter 11\/9\/2012 this pile will disappear.",
+				"item_description": "It looks like there's something in there... IF YOU DARE!\n\nAfter 11\/11\/2013 this pile will disappear.",
 				"proper_name": false,
 				"item_slot": "action",
 				"model_player": null,
@@ -95191,6 +95433,14 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "special taunt",
+				"defindex": 551,
+				"attribute_class": "special_taunt",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			},
 			{
 				"name": "CARD: damage bonus",

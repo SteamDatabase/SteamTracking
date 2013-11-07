@@ -2097,6 +2097,11 @@
 					"attribute_class"	"kill_eater_score_type"
 					"value" 	"50" 
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
 			"drop_sound"		"ui/item_sandwich_pickup.wav"
@@ -2152,6 +2157,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -2214,6 +2224,11 @@
 					"attribute_class"	"mult_clipsize"
 					"value" "0.5"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -2269,6 +2284,11 @@
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -3573,6 +3593,11 @@
 					"attribute_class"	"kill_eater_score_type_2"
 					"value" 			"1"								
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"visuals_red"
 			{
@@ -3717,6 +3742,11 @@
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"	"0.5"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -4009,6 +4039,11 @@
 					"attribute_class"	"add_maxhealth"
 					"value" "-15"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
@@ -4143,6 +4178,11 @@
 				{
 					"attribute_class"	"kill_eater_score_type"
 					"value" 	"50" 
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
@@ -6029,6 +6069,11 @@
 					"attribute_class"	"weapon_blocks_healing"
 					"value" "1"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -6259,6 +6304,11 @@
 				{
 					"attribute_class"	"kill_eater_kill_type"
 					"value"	"6"			
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -6789,6 +6839,11 @@
 				{
 					"attribute_class"	"kill_eater_score_type_2"
 					"value" 	"0"									
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -7501,6 +7556,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 		}
 		"160"
@@ -7694,6 +7754,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"2"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
@@ -7936,6 +8001,8 @@
 				"pyro"		"scenes\player\pyro\low\taunt_hi5_b.vcd"
 			}
 		}
+
+
 		"169"
 		{
 			"name"	"Golden Wrench"
@@ -8669,6 +8736,8 @@
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
+
+
 		"189"
 		{
 			"name"	"Parasite Hat"
@@ -8912,6 +8981,14 @@
 			{
 				"spy"	"1"
 			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
@@ -8947,6 +9024,14 @@
 			"used_by_classes"
 			{
 				"heavy"	"1"
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 		}
 		"196"
@@ -9110,6 +9195,14 @@
 				"pyro" "secondary"
 				"soldier" "secondary"
 				"heavy" "secondary"
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -9415,11 +9508,11 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
-			}
- 			"visuals"
- 			{
+			}			
+			"visuals"
+			{
  				"skin"	"0"
- 			}
+			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
@@ -10192,6 +10285,11 @@
 				"lunchbox adds minicrits"
 				{
 					"attribute_class"	"set_weapon_mode"
+					"value" "1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
 			}
@@ -12028,6 +12126,11 @@
 				{
 					"attribute_class"	"decapitate_type"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -13922,6 +14025,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"3"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -14283,6 +14391,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"2"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
@@ -15000,6 +15113,11 @@
 				{
 					"attribute_class"	"add_maxhealth"
 					"value" "-15"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -16053,6 +16171,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -16241,6 +16364,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value" "1"
         		}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -16305,6 +16433,11 @@
 				{
 					"attribute_class"	"honorbound"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -17497,6 +17630,8 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_pickup.wav"
 		}
+
+
 		"397"
 		{
 			"name"	"Charmer's Chapeau"
@@ -17887,6 +18022,11 @@
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 		}
@@ -18611,6 +18751,11 @@
 					"attribute_class"	"mult_deploy_time"
 					"value"	"0.85"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -18888,6 +19033,11 @@
 				{
 					"attribute_class"	"cannot_trade"
 					"value"				"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -19263,6 +19413,11 @@
 				{
 					"attribute_class"	"always_tradable"
 					"value"				"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
@@ -20217,6 +20372,11 @@
 					"attribute_class"	"mult_dmg_vs_players"
 					"value"	"0.8"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -20644,6 +20804,11 @@
 				{
 					"attribute_class"	"add_maxhealth"
 					"value" "-25"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
@@ -21470,6 +21635,11 @@
 				{
 					"attribute_class"	"decapitate_type"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
@@ -24154,6 +24324,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value" "1"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -25023,6 +25198,11 @@
 					"attribute_class"	"crit_kill_will_gib"
 					"value"	"1"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"hide_bodygroups_deployed_only"	"1"
 			"visuals"
@@ -25180,6 +25360,11 @@
 				"cannot pick up buildings"
 				{
 					"attribute_class"	"cannot_pick_up_buildings"
+					"value" "1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
 			}
@@ -25459,6 +25644,11 @@
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -25541,6 +25731,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"2"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -27885,6 +28080,11 @@
 					"attribute_class"	"kill_eater_score_type_2"
 					"value"				"0"									
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -29161,6 +29361,14 @@
 					"ACT_MELEE_VM_STUN"	"ACT_MELEE_VM_ITEM2_STUN"
 				}
 			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
@@ -29658,6 +29866,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"3"
 				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
 			}
 			"visuals"
 			{
@@ -29733,6 +29946,11 @@
 				{
 					"attribute_class" 	"pyrovision_opt_in_display_only"
 					"value"		  		"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -30912,6 +31130,11 @@
 				{
 					"attribute_class"	"self_mark_for_death"
 					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"visuals"
@@ -33005,6 +33228,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"3"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -44254,7 +44482,7 @@
 			"item_type_name"		"#TF_Wearable_SpookyCompanion"
 			"item_name"		"#TF_hw2013_ivan_the_inedible"
 			"item_description"		"#TF_hw2013_ivan_the_inedible_Desc"
-			"equip_region"		"head_skin"
+			"equip_region"		"disconnected_floating_item"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -58325,7 +58553,6 @@
 			}
 			"holiday_restriction"	"halloween_or_fullmoon"
 		}
-
 		"5713"
 		{
 			"name"	"Halloween 2013 Key" 
@@ -65749,6 +65976,15 @@
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"551"
+		{
+			"name"	"special taunt"
+			"attribute_class"	"special_taunt"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
 		}
 		
 		"1000"
