@@ -933,4 +933,14 @@ function InitEmoticonHovers()
 	window.DismissEmoticonHover = rgCallbacks.fnCancelHover;
 }
 
+function v_trim( str )
+{
+	if ( str.trim )
+		return str.trim();
+	else
+	{
+		return str.replace(/^\s+/, '').replace(/\s+$/, '');
+	}
+}
+
 

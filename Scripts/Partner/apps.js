@@ -3415,6 +3415,15 @@ function PublishPending( rgOptions )
 		});
 	}
 
+	if ( bSetReleased )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/apps/startlaunchmarketing/' + nAppId,
+			'data': {},
+			'message': 'Starting launch marketing'
+		});
+	}
+
 	if( bPublishStoreApp )
 	{
 		// PHP will interpret bSetDate=false as string false which is true....

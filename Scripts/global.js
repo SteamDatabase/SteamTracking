@@ -310,16 +310,6 @@ function SetCookie( strCookieName, strValue, expiryInDays, path )
 	document.cookie = strCookieName + '=' + strValue + '; expires=' + dateExpires.toGMTString() + ';path=' + path;
 }
 
-function v_trim( str )
-{
-	if ( str.trim )
-		return str.trim();
-	else
-	{
-		return str.replace(/^\s+/, '').replace(/\s+$/, '');
-	}
-}
-
 // takes an integer
 function v_numberformat( n )
 {

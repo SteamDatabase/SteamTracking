@@ -147,7 +147,45 @@ function PopulateItemListAJAX( elemAutoCompleteName, elemListName, packageCollec
 		}
 	} );
 }
+function AjaxChangeClusterFilter( strMatchTag, elemListID, clusterName, clusterType, bShowDLC )
+{
+	if( strMatchTag == undefined || strMatchTag.length < 1 )
+		return;
 
+	var params = {
+		tag : strMatchTag,
+		showdlc : bShowDLC,
+		type : clusterType
+	}
+	new Ajax.Request( 'https://partner.steamgames.com/admin/store/gettaggedpackages/', {
+		method: 'post',
+		parameters: params,
+		onSuccess: function( transport ) {
+			var matchingItems = transport.responseJSON || [];
+			var list = $J( "#" + elemListID );
+			list.find("div").remove();
+			for ( var i = 0; i < matchingItems.length; ++i )
+			{
+				var option = matchingItems[i];
+				var name = option['name'];
+
+				var newElement = null;
+				if ( option['packageid'] )
+				{
+					newElement = $J('<div/>', {id: clusterName + '_clusterpackage_' + option['packageid'], 'class': option['cssClass'], text : name } );
+				}
+				else if ( option['itemid'] )
+				{
+					newElement = $J('<div/>', {id: clusterName + '_clusteritem_' + option['itemid'], 'class': option['cssClass'], text : name } );
+				}
+				if ( newElement )
+				{
+					list.append( newElement );
+				}
+			}
+		}
+	} );
+}
 function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterType )
 {
 	var matchText = elemValue;
