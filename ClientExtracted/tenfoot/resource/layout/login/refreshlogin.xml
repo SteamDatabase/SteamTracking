@@ -2,6 +2,7 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/login.css" />
+		<include src="file://{resources}/styles/login/refreshlogin.css" />
 	</styles>
 
 	<RefreshLogin defaultfocus="Password" tabindex="auto" selectionpos="auto">
@@ -26,10 +27,14 @@
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
 				<Label class="LoginPrompt" text="#Login_Password" />
 				<TextEntry class="LoginRightItem" id="Password"
+					capslockwarn="1"
 					tabindex="auto"
 				   	textinputid="PasswordTextEntry"
 					textinputdoneactionstring="#Login_NextField"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter">
+					<Label class="TextEntryPrompt Password" text="#Login_Password" />
+					<Label class="TextEntryPrompt PasswordCapsLock" text="#Login_Password_CapsLock" />
+				</TextEntry>
 			</Panel>
 		
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">

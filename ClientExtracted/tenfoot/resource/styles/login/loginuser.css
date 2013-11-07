@@ -232,22 +232,6 @@ LoginUser:descendantfocus
 	vertical-align: bottom;
 }
 
-#TextEntryPrompt
-{
-	horizontal-align: right;
-	vertical-align: center;
-	color: #888888;
-	font-size: 27px;
-	font-family: platformfont;
-	padding-right: 6px;
-
-	// Linux/Mac bug: border-radius != 0 results in no border - will fix
-	//border-radius: 2px;
-	border-radius: 0px;
-
-}
-
-
 #MessageAreaLabel
 {
 	font-size: 34px;
@@ -411,6 +395,25 @@ TextEntry
 {
 	color: detailsdatalabelfocus;
 }	
+
+Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryPrompt
+{
+	horizontal-align: right;
+	vertical-align: center;
+	color: #888888;
+	font-size: 27px;
+	font-family: platformfont;
+	padding-right: 6px;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+
+}
 
 #SteamGuardTextEntry
 {
@@ -701,4 +704,22 @@ HTML
 HTML:focus,HTML:hover
 {
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+}
+
+// If the password control has focus and caplock is not on
+TextEntry.CapsLock:focus .Password, .PasswordCapsLock
+{
+	opacity: 0.0;
+}
+
+
+// If the password control has focus and caplock is on
+.Password, TextEntry.CapsLock:focus .PasswordCapsLock
+{
+	opacity: 1.0;
+}
+
+.HasInput .Password, .HasInput .PasswordCapsLock, .HasInput .AccountName, .HasInput .SteamGuard
+{
+	opacity: 0.0;
 }
