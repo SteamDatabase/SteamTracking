@@ -3,6 +3,17 @@ div.leaderboard_name {
 	float: none;
 }
 
+span.leaderboard_displayname_hint {
+	font-size: 11px;
+	color: #999999;
+	cursor: default;
+}
+
+div.leaderboard_displayname {
+	float: right;
+	width: 19em;
+}
+
 div.leaderboard_sortmethod {
 	float: right;
 	width: 10em;
@@ -24,6 +35,7 @@ div.leaderboard_info {
 
 div.appLeaderboardsDisplay {
 	max-width: 1024px;
+	min-width: 990px;
 	margin-bottom: 20px;
 }
 

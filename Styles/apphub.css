@@ -798,6 +798,13 @@ a.apphub_more_friends_who_play:hover
 	margin-right: 10px;
 }
 
+.apphub_CardRating.userreviews
+{
+	float: right;
+	min-width: 0px;
+	margin-right: 10px;
+}
+
 .apphub_CardRatingButtons
 {
 	height: 22px;
@@ -1269,4 +1276,99 @@ a.apphub_more_friends_who_play:hover
 	color: #737271;
 	font-size: 11px;
 	padding-bottom: 5px;
+}
+
+/* user reviews */
+
+.apphub_UserReviewCardContent
+{
+	padding: 10px;
+}
+
+.apphub_UserReviewCardStats
+{
+	padding-top: 7px;
+}
+
+/* User reviews app hub block */
+
+.apphub_UserReviewCardContent {
+	position: relative;
+}
+
+.apphub_CardContentMain .UserReviewCardContent_Footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0px;
+}
+
+.apphub_CardContentMain .UserReviewCardContent_Footer .gradient {
+
+	background: -moz-linear-gradient(top,  rgba(27,27,27,0) 0%, rgba(27,27,27,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,27,27,0)), color-stop(100%,rgba(27,27,27,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b1b1b', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+	height: 50px;
+}
+
+.apphub_CardContentMain .hr {
+	height: 2px;
+	background-color: #272f38;
+	margin: 0 0 15px;
+}
+
+.apphub_CardContentMain .UserReviewCardContent_Footer .content {
+	background-color: #1b1b1b;
+	padding: 0 10px;
+}
+
+.apphub_UserReviewCardContent .found_helpful {
+	font-size: 12px;
+	color: #898a8c;
+	margin: 0 0 14px 0;
+}
+
+.apphub_UserReviewCardContent .vote_header {
+	height: 44px;
+	margin-bottom: 13px;
+}
+
+	.apphub_UserReviewCardContent .vote_header .title {
+		font-size: 16px;
+		color: #d6d7d8;
+font-family: 'Motiva Sans', arial, tahoma;
+		padding: 5px 0 0 0;
+	}
+
+	.apphub_UserReviewCardContent .vote_header .hours {
+		font-size: 12px;
+		color: #d6d7d8;
+
+	}
+
+	.apphub_UserReviewCardContent .vote_header .thumb {
+		float: left;
+		margin-right: 10px;
+	}
+
+.apphub_UserReviewCardContent .apphub_CardTextContent {
+	line-height: 20px;
+font-size: 13px;
+color: #cdcac1;
+font-family: 'Motiva Sans', arial, tahoma;
+}
+
+.UserReviewCardContent_Footer .control_block .text {
+	display: inline-block;
+	margin-right: 9px;
+color: #898a8c;
+font-size: 12px;
+}
+
+.btn_ico_thumbs_down.has_text {
+	padding-left: 20px;
 }
