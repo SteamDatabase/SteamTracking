@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.899a8b2fa876f6768a792f12809d793080f33cef.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.48d3ada826108df5f4ad20a5b10d96626d2afe56.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2706,6 +2706,38 @@
 				
 			},
 			{
+				"name": "crate_valve_2",
+				"defindex": 4004,
+				"item_class": "supply_crate",
+				"item_type_name": "Weapon Case",
+				"item_name": "CS:GO Weapon Case 2",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_valve_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_valve_2.75354ea91aae2957b9c1b68596c76f718a79fae5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate"
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 4.000000
+					}
+				]
+				
+			},
+			{
 				"name": "crate_dhw13_promo",
 				"defindex": 4006,
 				"item_class": "supply_crate",
@@ -2713,10 +2745,10 @@
 				"item_name": "DreamHack Winter 2013 Souvenir Package",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/weapon_cases\/crate_esports_2013",
+				"image_inventory": "econ\/weapon_cases\/crate_dhw13_promo",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_esports_2013.c55c4c0b5907549fbad519d22d80189d45ef6522.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_dhw13_promo.0ac6466d2db69a7c32c5661b61e9885a6bf08d39.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true,
@@ -3887,6 +3919,25 @@
 					"weapon_ak47",
 					"weapon_deagle",
 					"weapon_awp"
+				]
+				
+			},
+			{
+				"item_set": "set_weapons_ii",
+				"name": "The Arms Deal 2 Collection",
+				"items": [
+					"weapon_tec9",
+					"weapon_m4a1_silencer",
+					"weapon_famas",
+					"weapon_p250",
+					"weapon_scar20",
+					"weapon_fiveseven",
+					"weapon_mp9",
+					"weapon_nova",
+					"weapon_elite",
+					"weapon_p90",
+					"weapon_usp_silencer",
+					"weapon_ssg08"
 				]
 				
 			}
