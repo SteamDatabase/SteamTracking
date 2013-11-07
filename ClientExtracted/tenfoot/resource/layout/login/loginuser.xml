@@ -40,17 +40,17 @@
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
-					<Label id="TextEntryPrompt" text="#Login_AccountName" />
+					<Label class="TextEntryPrompt AccountName" text="#Login_AccountName" />
 				</TextEntry>
 
 				<TextEntry class="LoginPromptContainer" id="PasswordTextEntry"
-						onfocus="PasswordTextEntryFocus();"
-						onblur="PasswordTextEntryBlur();"
+						capslockwarn="1"
 						textinputid="InnerPasswordTextEntry"
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
-					<Label id="TextEntryPrompt" text="#Login_Password" />
+					<Label class="TextEntryPrompt Password" text="#Login_Password" />
+					<Label class="TextEntryPrompt PasswordCapsLock" text="#Login_Password_CapsLock" />
 				</TextEntry>
 	
 				<TextEntry class="LoginPromptContainer" id="SteamGuardTextEntry"
@@ -58,7 +58,7 @@
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
-					<Label id="TextEntryPrompt" text="#Login_SteamGuardCode" />
+					<Label class="TextEntryPrompt SteamGuard" text="#Login_SteamGuardCode" />
 				 </TextEntry>
 	
 				<Button class="Button LoginPromptContainer" id="LoginButton" onactivate="Login()">
