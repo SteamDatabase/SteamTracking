@@ -19276,6 +19276,8 @@
 			"mouse_pressed_sound"	"ui/item_hat_pickup.wav"
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
+
+
 		"429"
 		{
 			"name"	"Moustachium Bar"
@@ -20601,6 +20603,8 @@
 			"mouse_pressed_sound"	"ui/item_medal_pickup.wav"
 			"drop_sound"		"ui/item_medal_pickup.wav"
 		}
+		
+		
 
 		"457"
 		{
@@ -20654,6 +20658,8 @@
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
 		}
+
+
 		"459"
 		{
 			"name"	"Cosa Nostra Cap"
@@ -20903,7 +20909,8 @@
 				}
 			}
 		}
-
+		
+		
 		"465"
 		{
 			"name"	"Conjurer's Cowl"
@@ -21372,6 +21379,9 @@
 				}
 			}
 		}
+		
+
+		
 		"477"
 		{
 			"name"	"Meet the Medic Heroic Taunt"
@@ -21817,7 +21827,7 @@
 			"drop_sound"		"ui/item_hat_drop.wav"
 		}
 
-
+	
 		"489"
 		{
 			"name"	"Power Up Canteen (MvM)"
@@ -26682,6 +26692,8 @@
 				"pyro" "1"
 			}
 		}
+
+
 		"625"
 		{
 			"name"	"Clan Pride"
@@ -29222,6 +29234,7 @@
 		}
 
 
+
 		"725"
 		{
 			"name"	"Tour of Duty Ticket"
@@ -29372,6 +29385,7 @@
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+
 
 		"729"
 		{
@@ -39136,6 +39150,8 @@
 			"mouse_pressed_sound"	"ui/item_helmet_pickup.wav"
 			"drop_sound"		"ui/item_helmet_drop.wav"
 		}
+
+
 		"1037"
 		{
 			"name"	"Pallet of Crates"
@@ -39269,6 +39285,7 @@
 				}
 			}
 		}
+
 
 		"1067"
 		{
