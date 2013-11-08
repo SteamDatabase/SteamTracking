@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.664fb8f580c0d4e25600a2feb23aa6272caf450c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.567472b9ce45950ac4baee27ea216820f1b9426d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -48374,6 +48374,29 @@
 				}
 			},
 			{
+				"name": "Barrier Shard Axe",
+				"defindex": 5659,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Barrier Shard Axe",
+				"item_description": "Chipped from a glacier off the Barrier, this axe brings out the Tusk's most brutal fighting spirit.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/nexon_glacialshard\/nexon_glacialshard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/nexon_glacialshard\/nexon_glacialshard.1fda5e36657518febdf1c3018e1a3f396af2db74.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/tuskarr\/nexon_glacialshard\/nexon_glacialshard_large.dab6d7162ba20b698d7ff580ee72e8687b3c8b28.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -58978,6 +59001,28 @@
 				}
 			},
 			{
+				"name": "steelseries_bamboo",
+				"defindex": 10342,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "steelseries_bamboo",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_steelseries_bamboo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_steelseries_bamboo.4ce5201bc31aeaec5aadd3dc94f10c3da6ce3153.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_steelseries_bamboo_large.3effe99a4051b80b846283806dca536605147687.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Baekho",
 				"defindex": 10347,
 				"item_class": "dota_item_wearable",
@@ -59091,6 +59136,97 @@
 					}
 				]
 				
+			},
+			{
+				"name": "MLG Stronghold",
+				"defindex": 10356,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "MLG Stronghold",
+				"item_description": "Even the mightiest offensive may fail against firm fortification.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_stronghold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_stronghold.1664319ac76de66fceef9afc95749c972a386155.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/huds\/hud_stronghold_large.6dbd4a02898a9f0a0039dd2c37b7111e092f1df7.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "MLG Scalehound",
+				"defindex": 10357,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Evil Bringer of Wares",
+				"item_name": "MLG Scalehound",
+				"item_description": "Found on the wild meadows of Druud, these vicious beasts are easily trained as beasts of burden and camp watchdogs.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/deathbringer\/deathbringer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathbringer\/deathbringer.33c6b653a916a58d3e85edebd03589ebd17f0274.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/deathbringer\/deathbringer_large.57a24bc7620d9f0c13b12490165feabfaf343816.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Watchful Sotdae",
+				"defindex": 10368,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ward",
+				"item_name": "Watchful Sotdae",
+				"item_description": "Let no vile spirit or foe pass unseen.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/wards\/nexon_sotdaeward\/nexon_sotdaeward_npc_dota_observer_wards",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/nexon_sotdaeward\/nexon_sotdaeward_npc_dota_observer_wards.20e2b5c087312513ccf84de295db0a36a9523319.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/nexon_sotdaeward\/nexon_sotdaeward_npc_dota_observer_wards_large.37666f8984a983874a7d285dc7e7b638506d87c9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "MLG Tethered Sentinel",
+				"defindex": 10370,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spiky Ward",
+				"item_name": "MLG Tethered Sentinel",
+				"item_description": "Ever present, ever watchful.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/wards\/mlgward_yeah5\/mlgward_yeah5_npc_dota_observer_wards",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/mlgward_yeah5\/mlgward_yeah5_npc_dota_observer_wards.c3a2510b92fa08faca55f4ca2373a44ff7017618.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/wards\/mlgward_yeah5\/mlgward_yeah5_npc_dota_observer_wards_large.c6079a3cf48f54c3934a3ff059500911f69f81bc.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
 			},
 			{
 				"name": "Name Tag",
@@ -70430,7 +70566,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "SteelSeries Dota 2 League: Code A",
-				"item_description": "Rising teams across Asia gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge elite teams.",
+				"item_description": "Rising teams across Asia gather together to compete for top ranks in SteelSeries Dota 2 League for prizes plus a chance to challenge elite teams. Includes the Vermilion HUD skin!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_codea",
@@ -71064,14 +71200,14 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "MLG $50,000 Dota 2 Championship",
-				"item_description": "MLGâs first International Dota 2 competition will feature the worldâs best teams from Europe, China and North America competing for $50,000.",
+				"item_description": "Consuming this ticket will make you eligible for item drops while watching any MLG $50,000 Dota 2 Championship game.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.1ecbc06f9f27f25ee69654f868996bbceb6640dc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.8a20007ab56f978ce644f2dd602216f668723028.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.5267e96af907f3cd142253d62aecadc5707f911c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.1872a332a6eb5c3f2770290c8ca55b8e11774cd7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -71100,14 +71236,14 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "MLG $50,000 Dota 2 Championship - ADMIN",
-				"item_description": "MLGÃ¢ÂÂs first International Dota 2 competition will feature the worldÃ¢ÂÂs best teams from Europe, China and North America competing for $50,000.",
+				"item_description": "MLG's first International Dota 2 competition will feature the world's best teams from Europe, China and North America competing for $50,000.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.1ecbc06f9f27f25ee69654f868996bbceb6640dc.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.8a20007ab56f978ce644f2dd602216f668723028.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.5267e96af907f3cd142253d62aecadc5707f911c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.1872a332a6eb5c3f2770290c8ca55b8e11774cd7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -71208,7 +71344,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "ASUS ROG DreamLeague",
-				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. ",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Includes the Vestments of the Iron Will Set.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
@@ -71244,7 +71380,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "ASUS ROG DreamLeague - ADMIN",
-				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool.",
+				"item_description": "ASUS ROG DreamLeague Kick-off season is sponsored by ASUS ROG, ROCCAT & TV6. Starting on November 4th, 6 of the world's best teams will compete in 30 league games and a playoffs at DreamHack Winter 2013 on November 28-30th for a $50,000 prize pool. Includes the Vestments of the Iron Will Set.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamhackrog",
@@ -71417,6 +71553,34 @@
 					}
 				]
 				
+			},
+			{
+				"name": "MLG Columbus 3 Battle Bonus",
+				"defindex": 15347,
+				"item_class": "tool",
+				"item_type_name": "Battle Bonus",
+				"item_name": "MLG Columbus 3 Battle Bonus",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> until the end of MLG Columbus. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/mlg_columbus_battle_bonus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/mlg_columbus_battle_bonus.92d6b434d95858ec302591eee2b6df2c29afbb56.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/mlg_columbus_battle_bonus_large.f7ead6a31d34d7479d1d440f805798dcc70097ed.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "fortunate_soul",
+					"use_string": "Use"
+				}
 			},
 			{
 				"name": "Of Ebony and Ivory Set",
@@ -79053,6 +79217,35 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hunter_of_the_blood_stained_sands_set.8655577f64b3d1c18d604d826c8be0bd87088a67.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_hunter_of_the_blood_stained_sands_set_large.6c8b644e6529bc5eb4e27ad475b7bad674a272b3.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "MLG Championship Bundle",
+				"defindex": 20271,
+				"item_class": "bundle",
+				"item_type_name": "Premium Tournament Bundle",
+				"item_name": "MLG Championship Bundle",
+				"item_description": "MLG's first International Dota 2 competition will feature the world's best teams from Europe, China and North America competing for a growing prize pool starting at $50,000. $2.50 of every purchase will go directly to the MLG Championship Columbus prize pool.<br>Included in this bundle:<br>* Scalehound Courier<br>* Stronghold HUD Skin<br>* Tethered Sentinel Ward<br>* Battle Point Bonus through MLG Columbus (11\/24\/2013)<br>* Eligible for in-game item drops<br>\r\n\t",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.5267e96af907f3cd142253d62aecadc5707f911c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.1872a332a6eb5c3f2770290c8ca55b8e11774cd7.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
