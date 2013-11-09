@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.567472b9ce45950ac4baee27ea216820f1b9426d.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ce0146a3bec6e083755aa4a92d99f69c73dd71fe.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -48397,6 +48397,98 @@
 				}
 			},
 			{
+				"name": "Roshan Hunter Arms",
+				"defindex": 5665,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "arms",
+				"item_name": "Roshan Hunter Arms",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/roshanhunter_ursa_arms\/roshanhunter_ursa_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_arms\/roshanhunter_ursa_arms.1ea3c64f5dcf16f92dca8a6d0ce074bdb93a596a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_arms\/roshanhunter_ursa_arms_large.5674be85edaa15fda0e61d3b45f685d757a64970.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Roshan Hunter Back",
+				"defindex": 5666,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "back",
+				"item_name": "Roshan Hunter Back",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/roshanhunter_ursa_back\/roshanhunter_ursa_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_back\/roshanhunter_ursa_back.33c1e5f0b568e190def4f2d9cd59477756d88d3d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_back\/roshanhunter_ursa_back_large.23ac077578576f78f771a3eb4ae84dc3f099024e.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Roshan Hunter Belt",
+				"defindex": 5667,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Roshan Hunter Belt",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/roshanhunter_ursa_belt\/roshanhunter_ursa_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_belt\/roshanhunter_ursa_belt.cf1e7a979b13056a45038e224f50bdc9614f3664.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_belt\/roshanhunter_ursa_belt_large.baa68460db8bebfcb552f699908d2152d8ac7909.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
+				"name": "Roshan Hunter Head",
+				"defindex": 5668,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "head",
+				"item_name": "Roshan Hunter Head",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/roshanhunter_ursa_head\/roshanhunter_ursa_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_head\/roshanhunter_ursa_head.46962b2de4d0794a254728fc4c5f8fce8764e4ad.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/ursa\/roshanhunter_ursa_head\/roshanhunter_ursa_head_large.504f3f12bae62c0f5e48d6285aa5debb4ddda133.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -79813,11 +79905,11 @@
 				}
 			},
 			{
-				"name": "Vestments of the Iron Will",
+				"name": "Vestments of the Iron Will Set",
 				"defindex": 20291,
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
-				"item_name": "Vestments of the Iron Will",
+				"item_name": "Vestments of the Iron Will Set",
 				"item_description": "Includes all of the items in the 'Vestments of the Iron Will' set for Spirit Breaker:",
 				"proper_name": false,
 				"item_quality": 4,
@@ -79826,6 +79918,35 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_imperial_crusher_set.8b605c1724e76630d3fd66fa8ceb52d197feb3d3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_imperial_crusher_set_large.7328410c3128ac4f3f74ebce3e9ad96ef3cf56b5.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Roshan Hunter & G-League Bundle",
+				"defindex": 20309,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Roshan Hunter & G-League Bundle",
+				"item_description": "Includes all items in the Roshan Hunter's Set and access to the G-League 2013.\r\n\t<br><br>\r\n\t- Roshan Hunter Arms<br>\r\n\t- Roshan Hunter Back<br>\r\n\t- Roshan Hunter Belt<br>\r\n\t- Roshan Hunter Head<br>\r\n\t- G-League 2013<br><br>",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Roshan_Hunter__GLeague_Bundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle.06ac800bd84533baeed371332bc912b332609c2f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle_large.7aad971a0686bfcd7b06afb8a2393114dc5540ef.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
