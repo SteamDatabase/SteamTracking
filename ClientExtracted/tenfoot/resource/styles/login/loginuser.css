@@ -719,7 +719,7 @@ TextEntry.CapsLock:focus .Password, .PasswordCapsLock
 	opacity: 1.0;
 }
 
-.HasInput .Password, .HasInput .PasswordCapsLock, .HasInput .AccountName, .HasInput .SteamGuard
+.HasInput .Password, TextEntry.HasInput:focus .PasswordCapsLock, .HasInput .AccountName, .HasInput .SteamGuard
 {
 	opacity: 0.0;
 }
