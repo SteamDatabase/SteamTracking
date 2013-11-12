@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.6cf7dacff474a1217826c14a6a22be7c84954b1e.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2679a80178d615feb08e922671f246d8478617d1.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -44688,7 +44688,7 @@
 			{
 				"name": "The Grandmaster",
 				"defindex": 1067,
-				"item_class": "tf_wearable",
+				"item_class": "tf_wearable_levelable_item",
 				"item_type_name": "Hat",
 				"item_name": "Grandmaster",
 				"item_description": "Own the same novelty chess hat worn by Garry Kasparov when he beat Deep Blue to death using his world-famous Thai boxing moves.",
@@ -44716,6 +44716,12 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"attributes": [
 					{
 						"name": "kill eater score type",
@@ -74406,6 +74412,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65280
@@ -74449,6 +74460,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74494,6 +74510,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16711680
@@ -74537,6 +74558,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74582,6 +74608,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16776960
@@ -74625,6 +74656,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74670,6 +74706,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65280
@@ -74713,6 +74754,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74758,6 +74804,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16776960
@@ -74801,6 +74852,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74846,6 +74902,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65535
@@ -74889,6 +74950,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -74934,6 +75000,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 13421772
@@ -74977,6 +75048,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75022,6 +75098,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 14540032
@@ -75065,6 +75146,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75110,6 +75196,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 3100495
@@ -75153,6 +75244,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75198,6 +75294,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16737280
@@ -75241,6 +75342,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75286,6 +75392,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 9109759
@@ -75329,6 +75440,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75374,6 +75490,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 12517631
@@ -75417,6 +75538,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75462,6 +75588,11 @@
 				,
 				"attributes": [
 					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 205
@@ -75505,6 +75636,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -75916,7 +76052,7 @@
 				"item_class": "tool",
 				"item_type_name": "Server Enchantment",
 				"item_name": "Enchantment: Eternaween",
-				"item_description": "This server-wide enchantment can be used to enable Halloween\/Full Moon items on a server for a short time.\n\nCasting this enchantment requires consent from the other players on the server.",
+				"item_description": "This server-wide enchantment can be used to enable Halloween\/Full Moon items on a registered server for two hours.\n\nCasting this enchantment will open a vote to gather consent from the other players on the\nserver. This item will be consumed when the server enchantment ends.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
