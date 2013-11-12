@@ -194,6 +194,7 @@
 			"scout_wings"		"1"
 			"heavy_mullet"		"1"			
 			"medic_pipe"		"1"
+			"soldier_legs"		"1"
 		}
 		"shared"
 		{
@@ -1192,6 +1193,14 @@
 			"max_ilevel"		"5"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
 		}
 		"voice_spell_base"
 		{
@@ -2551,7 +2560,6 @@
 			"max_ilevel"	"13"
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
-			"event_desc_footer"	"#Halloween_Unusuals"	
 		}
 		"eventkey"		
 		{
@@ -9534,6 +9542,7 @@
 				"can_extinguish"			"1"
 				"can_deal_posthumous_damage"	"1"
 				"can_deal_critical_damage"	"1"
+				"is_flamethrower" "1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
@@ -39292,6 +39301,7 @@
 			"name"	"The Grandmaster"
 			"prefab"			"no_craft hat"
 			"first_sale_date"	"2013/10/01"
+			"item_class"	"tf_wearable_levelable_item"
 			"item_name"	"#TF_Grandmaster"
 			"item_description"	"#TF_Grandmaster_Desc"
 			"image_inventory"	"backpack/player/items/all_class/chess_hat"
@@ -39319,6 +39329,39 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player_per_class_red"
+						{
+							"scout"		"models/player/items/all_class/chess_scout_red.mdl"
+							"sniper"	"models/player/items/all_class/chess_sniper_red.mdl"
+							"soldier"	"models/player/items/all_class/chess_soldier_red.mdl"
+							"demoman"	"models/player/items/all_class/chess_demoman_red.mdl"
+							"medic"		"models/player/items/all_class/chess_medic_red.mdl"
+							"heavy"		"models/player/items/all_class/chess_heavy_red.mdl"
+							"spy"		"models/player/items/all_class/chess_spy_red.mdl"
+							"engineer"	"models/player/items/all_class/chess_engineer_red.mdl"
+							"pyro"		"models/player/items/all_class/chess_pyro_red.mdl"
+						}
+						"model_player_per_class_blue"
+						{
+							"scout"		"models/player/items/all_class/chess_scout_blue.mdl"
+							"sniper"	"models/player/items/all_class/chess_sniper_blue.mdl"
+							"soldier"	"models/player/items/all_class/chess_soldier_blue.mdl"
+							"demoman"	"models/player/items/all_class/chess_demoman_blue.mdl"
+							"medic"		"models/player/items/all_class/chess_medic_blue.mdl"
+							"heavy"		"models/player/items/all_class/chess_heavy_blue.mdl"
+							"spy"		"models/player/items/all_class/chess_spy_blue.mdl"
+							"engineer"	"models/player/items/all_class/chess_engineer_blue.mdl"
+							"pyro"		"models/player/items/all_class/chess_pyro_blue.mdl"
+						}
+					}
+				}
 			}
 		}
 
@@ -45625,7 +45668,7 @@
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_hw2013_jupiter_jumpers"
 			"item_description"		"#TF_hw2013_jupiter_jumpers_Desc"
-			"equip_region"		"feet"
+			"equip_region"		"soldier_legs"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/soldier/hw2013_jupiter_jumpers/hw2013_jupiter_jumpers"
 			"model_player"		"models/workshop/player/items/soldier/hw2013_jupiter_jumpers/hw2013_jupiter_jumpers.mdl"
@@ -58569,6 +58612,7 @@
 				}
 			}
 			"holiday_restriction"	"halloween_or_fullmoon"
+			"event_desc_footer"	"#Halloween_Unusuals"	
 		}
 		"5713"
 		{
