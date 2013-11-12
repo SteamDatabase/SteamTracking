@@ -2040,7 +2040,7 @@ SettingsPanelRemoteClientListing #Status
 }
 
 /* hide check label if chekcing or downloading or have update*/
-.SteamClientChecking #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientPending #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientDownloading #SettingsInterface_SteamClientCheckForUpdatesLabel
+.SteamClientPending #SettingsInterface_SteamClientCheckForUpdates, .SteamClientChecking #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientDownloading #SettingsInterface_SteamClientCheckForUpdatesLabel
 {
 	visibility: collapse;
 }

@@ -8,7 +8,7 @@
 	<StoreTextDialog defaultfocus="Body" oncancel="ButtonCancel()" >
 		<Panel class="DialogRegion">
 			<Label id="Header" />
-			<Label id="Body" />
+			<Label id="Body" onmoveup="ScrollUp();" onmovedown="ScrollDown();" />
 		</Panel>
 	</StoreTextDialog>
 </root>

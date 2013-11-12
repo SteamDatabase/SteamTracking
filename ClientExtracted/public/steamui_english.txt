@@ -207,6 +207,11 @@ This should take less than a minute."
 "SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Skip the update and play now"
 
+"SteamUI_JoinDialog_UpdateAvailable_Title"				"Update Available"
+"SteamUI_JoinDialog_UpdateAvailable_Text"					"An update for %game% is available. Would you like to launch it now,\n or download the update first?"
+"SteamUI_JoinDialog_UpdateAvailable_LaunchNow"					"Launch Now"
+"SteamUI_JoinDialog_UpdateAvailable_WaitForUpdate"			"Download the Update"
+
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Launch application as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Launch game as soon as it's ready"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Launch demo as soon as it's ready"

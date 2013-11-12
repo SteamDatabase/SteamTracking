@@ -397,7 +397,9 @@
 	"SettingsAbout_ClientUpdateButton"	"View update news"
 	"SettingsAbout_BetaOption"	"Participate in client beta"
 	"SettingsAbout_BetaParticipation"	"Beta participation"
-
+	"SettingsAbout_BetaChange_Title"	"Beta participation"
+	"SettingsAbout_BetaChange_Description"	"To change your beta state you must restart Steam.\n\nRestart now?"
+	
 	// settings, account screen
 	"SettingsAccount_History"			"View account history"
 	"SettingsAccount_Verify"			"Verify email address"
@@ -1262,6 +1264,10 @@
 	"SteamUI_JoinDialog_PreparingToPlay1" 	"Preparing to launch {s:game}."
 	"SteamUI_JoinDialog_PreparingToPlay2" 	"Preparing to launch {s:game}.."
 	"SteamUI_JoinDialog_PreparingToPlay3" 	"Preparing to launch {s:game}..."
+	"JoinDialog_UpdateAvailable_Title"				"Update Available"
+	"JoinDialog_UpdateAvailable_Text"					"An update for {s:game} is available. Would you like to launch it now, or download the update first?"
+	"JoinDialog_UpdateAvailable_LaunchNow"					"Launch Now"
+	"JoinDialog_UpdateAvailable_WaitForUpdate"			"Download the Update"
 	
 	"Steam_AppUpdateError_0"		"no error"
 	"Steam_AppUpdateError_1"		"unknown error"
@@ -1697,7 +1703,7 @@
 
 	"SettingsInterface_SteamOSCheckForUpdatesDesc"	"Last update check {t:s:steamosupdatetime} at {t:t:steamosupdatetime}" 
 	"SettingsInterface_SteamOSCheckForUpdates"	"Check for SteamOS updates"
-	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS version"
+	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS last update check"
 
 	"MainMenu_NewSteamOSUpdate"	"{s:osname} reboot required"
 	"MainMenu_RestartForSteamOSUpdate_Title"	"{s:osname} reboot"
@@ -1708,8 +1714,8 @@
 	"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Disallow"
 	"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "This game supports asynchronous gameplay, allowing you to close the game between your turns. Would you like to receive notifications in the Steam client when it is your turn?"
 
-	"Library_Details_OptIntoBeta" "Select Beta"
-	"Library_Details_EditLaunchCommandLine"	"Set Launch Options"
+	"Library_Details_OptIntoBeta" "Select Beta..."
+	"Library_Details_EditLaunchCommandLine"	"Set Launch Options..."
 	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only."
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into"
 	"Library_SelectBeta_Title"	"Select Beta"
