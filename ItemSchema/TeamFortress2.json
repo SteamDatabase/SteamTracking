@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.2679a80178d615feb08e922671f246d8478617d1.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.4edf8863f30003231541871cb3e13bcc69d28a0a.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -16,7 +16,8 @@
 			"customized": 10,
 			"strange": 11,
 			"completed": 12,
-			"haunted": 13
+			"haunted": 13,
+			"collectors": 14
 		},
 		"qualityNames": {
 			"Normal": "Normal",
@@ -32,7 +33,8 @@
 			"customized": "Customized",
 			"strange": "Strange",
 			"completed": "Completed",
-			"haunted": "Haunted"
+			"haunted": "Haunted",
+			"collectors": "Collector's"
 		},
 		"originNames": [
 			{
@@ -55399,16 +55401,16 @@
 				"defindex": 5713,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "Spooky Key",
-				"item_description": "Used to open Spooky Crates.\nSpooky Crates contain\nHalloween-themed items that are only visible\nduring the Halloween event and full moons.\n\nAfter 11\/11\/2013 this will turn into a normal key.",
+				"item_name": "Mann Co. Supply Crate Key",
+				"item_description": "Used to open locked supply crates.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
-				"image_inventory": "backpack\/player\/items\/crafting\/skeleton_key_02",
+				"image_inventory": "backpack\/player\/items\/crafting\/key",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/skeleton_key_02.c330bcbd0f777f4c517e0d0998815ebb292bd971.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/skeleton_key_02_large.fe725e038cfb51d7a2b43bac57a9932b63dbbbb1.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key.067945a6cae528464e4fa00126f0ef17ee2dc8b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key_large.443e254bfd7c6f54de0842a14df3c2aa72e8b6f0.png",
 				"craft_class": "tool",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -55421,7 +55423,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "halloween_2013",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -76122,6 +76123,80 @@
 			{
 				"name": "Cosmetic Strangifier Recipe 1 Rare",
 				"defindex": 20001,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Chemistry Set",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/construction_kit",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit.1fdb61cd0fa671cb99439512198681a53a52f686.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit_large.44a7be2bcb295a9eb60b540f8c02422e59b50881.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Cosmetic Strangifier Recipe 2",
+				"defindex": 20005,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Chemistry Set",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/construction_kit",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit.1fdb61cd0fa671cb99439512198681a53a52f686.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit_large.44a7be2bcb295a9eb60b540f8c02422e59b50881.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Collector Recipe 1",
+				"defindex": 20006,
 				"item_class": "tool",
 				"item_type_name": "Recipe",
 				"item_name": "Chemistry Set",

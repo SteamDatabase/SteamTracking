@@ -66,6 +66,10 @@
 		{
 			"value" 	"13"
 		}
+		"collectors"
+		{
+			"value" 	"14"
+		}
 	}
 	"colors"
 	{
@@ -58619,13 +58623,9 @@
 			"name"	"Halloween 2013 Key" 
 			"prefab" "eventkey"
 			"first_sale_date"	"2013/10/29"
-			"tool"
-			{
-				"restriction"	"halloween_2013"
-			}
-			"item_name"		"#TF_Halloween2013_Key"
-			"item_description"	"#TF_Halloween2013_Key_Desc"
-			"image_inventory"	"backpack/player/items/crafting/skeleton_key_02"
+			"item_name"		"#TF_Tool_DecoderRing"
+			"item_description"	"#TF_Tool_DecoderRing_Desc"
+			"image_inventory"	"backpack/player/items/crafting/key"
 		}
 		
 		"5999"				
@@ -60882,6 +60882,33 @@
 				}
 			}
 		}
+		
+		"20005"
+		{
+			"name"	"Cosmetic Strangifier Recipe 2"
+			"prefab" "dynamic_recipe_base"
+			"item_name"	"#TF_Cosmetic_Strangifier_Recipe"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+		}
+
+		"20006"
+		{
+			"name"	"Collector Recipe 1"
+			"prefab" "dynamic_recipe_base"
+			"item_name"	"#TF_Cosmetic_Strangifier_Recipe"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+		}
+
 
 
 		
