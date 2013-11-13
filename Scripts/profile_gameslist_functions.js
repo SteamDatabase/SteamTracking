@@ -257,7 +257,7 @@ function BuildGameRow( gameInfo )
 
 		if( tab == 'recent' || tab == 'all')
 		{
-			if( tab == 'recent' && gameInfo['hours'] && gameInfo['hours_forever'])
+			if( tab == 'recent' && gameInfo['hours'] && gameInfo['hours_forever'] && gameInfo['hours'] != '0.0' )
 			{
 				gameInfo['hours_message'] = gameHoursRecentTemplate.evaluate( gameInfo );
 			}

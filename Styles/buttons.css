@@ -365,3 +365,21 @@ btn_border_2px > span {
 .btn_disabled:hover {
 	text-decoration: none;
 }
+
+.packageTagsArrow
+{
+     display: inline-block;
+     width: 15px;
+     height: 16px;
+     background-image:url('http://cdn.steamcommunity.com/public/shared/images/buttons/icon_double_arrows.png');
+}
+
+.packageTagsArrow.Expand
+{
+     background-position: 18px 1px;
+}
+
+.packageTagsArrow.Collapse
+{
+     background-position: 3px 1px;
+}
