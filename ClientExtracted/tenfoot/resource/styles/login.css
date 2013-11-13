@@ -417,6 +417,11 @@ RefreshLogin.Destructing
 
 .RefreshBackground
 {
+	desaturation: 0.4;
+	opacity: 1.0;
+	wash-color: #00000066;
+	background-color: #00000077;
+
 	width: 100%;
 	height: 100%;
 }

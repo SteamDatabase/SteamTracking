@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 
-	<StoreAppPackage tabindex="auto" selectionpos="auto">
+	<StoreAppPackage tabindex="auto" selectionpos="auto" defaultfocus="AddToCartBtn">
 		<Image id="HeaderImage" />
 		<Label id="ComingSoon" text="#Store_Available_Date" />
 		<Label id="PackageName" />
@@ -17,16 +17,17 @@
 			</Panel>
 			<StorePrice id="PackagePrice" />
 		</Panel>
+		
+		<Panel class="HorizontalRule" />
+		<Button id="AddToCartBtn">
+			<Label id="AddToCartLabel" text="#Store_AppPurchaseOptions_AddToCart" />
+		</Button>
 		<Panel id="ViewPackageSection">
 			<Panel class="HorizontalRule" />
 			<Button id="ViewPackageBtn">
 				<Label id="ViewItem" />
 			</Button>
 		</Panel>
-		<Panel class="HorizontalRule" />
-		<Button id="AddToCartBtn">
-			<Label id="AddToCartLabel" text="#Store_AppPurchaseOptions_AddToCart" />
-		</Button>
 		<Panel class="HorizontalRule" />
 		<Label id="RecurringSubscriptionDescription" />
 		<Label id="AppsInPackageHeader" />

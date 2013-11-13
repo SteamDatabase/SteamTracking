@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 
-	<StoreAppPurchaseSection defaultfocus="PurchaseOptionBtn">
+	<StoreAppPurchaseSection>
 		<Panel class="StoreAppPurchaseSection AppSection">
 			<Panel class="AppSectionWrapper">
 				<Image id="HeaderImage" />
@@ -17,7 +17,7 @@
 							<Label class="DLCLabel" text="#Store_AppPurchaseSection_DLC" />
 							<Label class="DLCRequiresBase" text="#Store_AppPurchaseSection_RequiresBase" />
 						</Panel>
-						<Panel class="PurchaseSectionButtons">
+						<Panel childfocusonhover="true" class="PurchaseSectionButtons">
 							<Button id="ViewInLibraryBtn">
 								<Label text="#Store_AppPurchaseSection_ViewInLibrary" />
 							</Button>

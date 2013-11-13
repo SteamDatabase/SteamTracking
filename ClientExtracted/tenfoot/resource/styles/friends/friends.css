@@ -514,9 +514,9 @@ FriendsSelfHeader.InGame Label
 	margin-top: 6px;
 	height: 90px;
 	width: 90px;
-	border-width: 4px;
+	border-width: 3px;
 	border-style: solid;
-	border-radius: 8px;
+	border-radius: 4px;
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
 
 	transition-property: box-shadow;
@@ -535,9 +535,9 @@ FriendsSelfHeader.InGame Label
 	margin-top: 3px;
 	height: 90px;
 	width: 90px;
-	border-width: 4px;
+	border-width: 3px;
 	border-style: solid;
-	border-radius: 8px;
+	border-radius: 4px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
@@ -548,9 +548,9 @@ FriendsSelfHeader.InGame Label
 	margin-bottom: 2px;
 	height: 90px;
 	width: 90px;
-	border-width: 4px;
+	border-width: 3px;
 	border-style: solid;
-	border-radius: 8px;
+	border-radius: 4px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 

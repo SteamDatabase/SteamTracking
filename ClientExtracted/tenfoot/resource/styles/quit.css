@@ -73,3 +73,43 @@
 {
 	visibility: visible;
 }
+
+#MusicControllerPanel:descendantfocus .SystemButton:hover
+{
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#MusicControllerPanel:descendantfocus .SystemButton Label,
+{
+	transform: translateX( -12px );
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+	transition-property: transform;
+}
+
+#MusicControllerPanel:descendantfocus .SystemButton:hover Label,
+{
+	transform: translateX( 2px );
+	color: applabelselected;
+
+}

@@ -9,6 +9,11 @@ AvatarImage
 		pre-transform-scale2d: 1.2;
 }
 
+#OverlayDashboard AvatarImage
+{
+	width: 95px;
+	height: 95px;
+}
 
 FriendsProfileDetails
 {
@@ -78,7 +83,7 @@ FriendsProfileDetails.Destructing
 
 #FriendsProfileDetailsBodyRegion
 {
-	width: 385px;
+	width: 381px;
 
 	vertical-align: bottom;
 	horizontal-align: left;
@@ -216,13 +221,13 @@ FriendsProfileDetailsCompositeHeader.InGame Label
 	margin-right: 94px;
 	margin-left: 94px;
 	margin-bottom: 62px;
-	height: 184px;
-	width: 184px;
+	height: 182px;
+	width: 182px;
 	pre-transform-scale2d: 1.54;
 	horizontal-align: center;
 	border-width: 6px;
 	border-style: solid;
-	border-radius: 12px;
+	border-radius: 6px;
 	transform: translatez( 50px );
 	box-shadow: fill #00000060 0px 0px 12px 0px;
 }

@@ -89,11 +89,11 @@ LoginUser:descendantfocus
 .Bezel
 {
 	border-width: 0px;
-	border-radius: 27px;
+	border-radius: 10px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 
-	height: 375px;
-	width: 375px;
+	height: 371px;
+	width: 371px;
 
 	horizontal-align: center;
 	vertical-align: center;
@@ -110,7 +110,7 @@ LoginUser:descendantfocus
 	box-shadow: fill #00000022 -4px -4px 4px 8px;
 	background-color: #000000;
 	border-width: 0px;
-	border-radius: 18px;
+	border-radius: 6px;
 }
 
 #TestPanelTextEntry
@@ -183,15 +183,15 @@ LoginUser:descendantfocus
 {
 	height: 105px;
 	width: 105px;
-	border-radius: 9px;
+	border-radius: 4px;
 	box-shadow: #00000044 0px 0px 04px 0px;
 }
 
 .ShowMessageArea .Bezel,.ShowMore .Bezel
 {
-	height: 117px;
-	width: 117px;
-	border-radius: 12px;
+	height: 115px;
+	width: 115px;
+	border-radius: 6px;
 	horizontal-align: left;
 	vertical-align: center;
 }
@@ -334,7 +334,8 @@ TextEntry
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
-.LoginPromptContainer:focus
+
+.LoginPromptContainer:hover, .LoginPromptContainer:focus, .LoginPromptContainer:selected:focus, .LoginPromptContainer:hover:selected
 {
 
 	transition-duration: 0.4s !immediate;
@@ -351,12 +352,6 @@ TextEntry
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-}
-
-.LoginPromptContainer:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
 }
 
 .LoginPromptContainer:disabled:hover
@@ -527,12 +522,12 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 {
 	height: 70px;
 	width: 100%;
-	margin-bottom: 25px;
-	
+	margin-bottom: 10px;
+
 	transition-property: border, background-color, color, box-shadow;
 	transition-timing-function: ease-out;
 	transition-duration: 0.23s;
-	
+
 }
 
 .CheckBox:descendantfocus

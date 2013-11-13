@@ -66,6 +66,7 @@
 	box-shadow: inset #000000aa 0px 0px 4px 0px
 	opacity: 0.95;
 	desaturation: 0.1;
+
 }
 
 .LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp .AppImage
@@ -153,6 +154,10 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover .AppImage
 	pre-transform-scale2d: 1.0;	
 }
 
+#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover
+{
+	pre-transform-scale2d: 1.04;	
+}
 
 
 .MostRecentCarousel .RecentApp
@@ -201,7 +206,8 @@ LibraryPanel
 {
 }
 
-.AboveLibraryDetailsView .MostRecentBaseVisible
+.AboveLibraryDetailsView .MostRecentBaseVisible,
+
 {
 	transform: translateY( -8px );
 }
@@ -386,7 +392,8 @@ LibraryMostRecent #CarouselTitle
 }
 */
 
-.LibraryPanel .AboveLibraryDetailsView .MostRecentCarousel
+.LibraryPanel .AboveLibraryDetailsView .MostRecentCarousel,
+.LibraryPanel .AboveMusicLibraryPanel .MostRecentCarousel
 {
 	desaturation: 1.0;
 	opacity: 0.5;
@@ -397,11 +404,12 @@ LibraryMostRecent #CarouselTitle
 }
 
 
-
-.LibraryPanel .AboveLibraryDetailsView #MostRecentBackground
+.LibraryPanel .AboveLibraryDetailsView #MostRecentBackground,
+.LibraryPanel .AboveMusicLibraryPanel #MostRecentBackground
 {
 	transform: translatey( 0px );
 }
+
 
 .LibraryAppDetailsSlideOff
 {
@@ -2912,9 +2920,11 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	opacity: 0.0;
 	width: 100%;
 	height: 200px;
-	text-align: center;
+	text-align: left;
 	margin: 20px 20px 0px 20px;
+	margin-left: 30px;
 	font-size: 22px;
+	font-family: basefont;
 	color: applabelsolid;
 	z-index: 1000;
 	visibility: collapse;
@@ -3498,10 +3508,10 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 
 .GamesGrid
 {
-	margin-top: 140px;
+	margin-top: 130px;
 	padding-left: 85px;
 	padding-right: 200px;
-	padding-top: 30px;
+	padding-top: 40px;
 	padding-bottom: 160px;
 
 	width: 100%;
@@ -3510,7 +3520,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 
 .GamesGrid .AppGridItem .AppImage
 {
-	box-shadow: inset #000000aa 0px 0px 4px 0px;
+	box-shadow: fill #00000033 -4.5px -4.5px 18px 9px;
 	background-color: black;
 }
 
@@ -3836,12 +3846,26 @@ DropDown
 
 
 
-#FilterPlatform.ShowPlatform
+#FilterPlatform.ShowPlatform,
+#GamesFilterDropDownMenu #FilterPlatform.ShowPlatform
 {
 	visibility: visible;	
 }
 
-#FilterPlatform
+#FilterPlatform,
+#GamesFilterDropDownMenu #FilterPlatform
+{
+	visibility: collapse;
+}
+
+#FilterUnblocked.ShowUnblocked,
+#GamesFilterDropDownMenu #FilterUnblocked.ShowUnblocked
+{
+	visibility: visible;
+}
+
+#FilterUnblocked,
+#GamesFilterDropDownMenu #FilterUnblocked
 {
 	visibility: collapse;
 }
@@ -4295,5 +4319,6 @@ KeyboardShortcut Image
 #BetaDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 775px;
+	width: 710px;
+	max-height: 140px;
 }

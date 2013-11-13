@@ -106,6 +106,7 @@
 @define box_shadow_on_color: #7ebee599;
 @define box_shadow_off_color: #66a5cc00;
 @define dark_box_shadow_color: #17262e88;
+@define dark_box_shadow_color_opaque: #17262eff;
 @define light_box_shadow_color: #66a5cc55;
 @define mouse_off_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f5300 ), to( #0d1b2400 ) );
 @define mouse_hover_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f53ff ), to( #0d1b2400 ) );
@@ -1263,7 +1264,7 @@ FriendsChatDialog .VoiceBarContainer
 .SystemButton Label
 {
 	horizontal-align: left;
-	color: #d0d0d0ff;
+	color: applabelsolid;
 	transform: translatex(0px);
 	padding-left: 0px;
 	transition-property: color, position, transform;
@@ -1281,7 +1282,7 @@ FriendsChatDialog .VoiceBarContainer
 .SystemButton:focus Label
 {
 	horizontal-align: left;
-	color: #171717f5;
+	color: applabelselected;
 	transform: translatex(7px);
 	padding-left: 0px;
 	padding-right: 14px;

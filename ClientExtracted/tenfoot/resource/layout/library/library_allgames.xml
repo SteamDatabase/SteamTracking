@@ -15,6 +15,7 @@
 				<Label id="FilterFavorites" text="#Library_Favorites" />
 				<Label id="FilterController" text="#Library_ControllerSupport" />
 				<Label id="FilterPlatform" text="#Library_Platform" />
+				<Label id="FilterUnblocked" text="#Library_UnblockedFilter" />
 			</DropDown>
 		</Panel>
 		<Panel hittest="false" id="FastScrollWrapper">

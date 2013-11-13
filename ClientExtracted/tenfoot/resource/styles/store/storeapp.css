@@ -2439,3 +2439,8 @@ DropDownMenu
 	font-size: 32px;
 	color: white;
 }
+
+.PackagePlatforms
+{
+	flow-children: right;
+	}
