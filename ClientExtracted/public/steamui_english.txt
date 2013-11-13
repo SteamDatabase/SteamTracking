@@ -1862,11 +1862,11 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Content for this media will not be automatically acquired."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Content for this tool will not be automatically acquired."
 
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"This application and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"This application and its updates will be automatically acquired as soon as they are available. Steam will prioritize this application over other downloads."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"This game and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=demo"		"This demo and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"This media and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."
-"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"This tool and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=demo"		"This demo and its updates will be automatically acquired as soon as they are available. Steam will prioritize this demo over other downloads."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"This media and its updates will be automatically acquired as soon as they are available. Steam will prioritize this media over other downloads."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"This tool and its updates will be automatically acquired as soon as they are available. Steam will prioritize this tool over other downloads."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Verify integrity of application cache..."
 "Steam_Game_VerifyGameFiles$appType=game"				"Verify integrity of game cache..."
@@ -2217,7 +2217,6 @@ You'll need to log out of OSX for the change to take effect."
 "SteamUI_GameExplorer_RemoveGame" "Remove from Games Explorer"
 "SteamUI_PlatformParentalControl_Title" "Windows Parental Control"
 "SteamUI_PlatformParentalControl_Blocked" "Game blocked for current user by Windows Parental Control."
-"SteamUI_PlatformParentalControl_Tip" "Select to lock and unlock Parent Mode"
 
 "SteamUI_ShortcutName"			"Name:"
 "SteamUI_ShortcutTarget"			"Target:"
@@ -3801,7 +3800,7 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "SteamUI_ManageDeviceAuth_Get_Devices_Failed" "Failed to get authorized devices (%reason%)"
 
 
-"Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices"
+"Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices..."
 
 
 "Steam_DeviceAuth_Authorized_Notification" "%owner%'s games are now available for you to play on this computer." 
@@ -3827,7 +3826,10 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_Parental_LockTitle"				"Family Options"
 "Steam_Parental_LockInstructions"		"Please confirm you'd like to lock your account and return to Family Mode."
 
-"Steam_Parental_Manage"					"Manage Family Options"
+"SteamUI_ParentalControl_Tip_Locked"	"You are in Family Mode. Select to unlock."
+"SteamUI_ParentalControl_Tip_Unlocked"	"You are in Parent Mode. Select to lock."
+
+"Steam_Parental_Manage"					"Manage Family Options..."
 
 "steam_inbox_asyncgame"			"1 new turn waiting"
 "steam_inbox_asyncgames"		"%count% new turns waiting"

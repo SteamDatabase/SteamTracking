@@ -685,7 +685,7 @@ DropDown Label
 
 .SettingsContained #AvailableNetworksList
 {
-	height: 25%;
+	height: 46%;
 }
 
 #AvailableNetworksList:descendantfocus
@@ -1928,6 +1928,11 @@ color: black;
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+#SettingsRemoteClientTable:descendantfocus #SettingsRemoteClientList
+{
+	background-color: ui_common_control;
 }
 
 SettingsPanel_RemoteClients.Loading #SettingsRemoteClientList

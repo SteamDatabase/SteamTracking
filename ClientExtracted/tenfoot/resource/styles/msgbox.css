@@ -87,10 +87,13 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 
 #MsgBoxBodyRegion, .MsgBoxBodyRegion
 {
-	width: 45%;
+	width: 800px;
 	padding: 50px 40px 40px 40px;
 	background-color: message_box_bg;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	transform: translateX( 0px );
+	transition-property: transform;
+	transition-duration: 0.3s;
 
 	vertical-align: center;
 	horizontal-align: center;
@@ -104,6 +107,11 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 .MsgBoxBodyRegionWider
 { 
     width: 65%;
+}
+
+.DaisyWheelVisible #MsgBoxBodyRegion, .DaisyWheelVisible .MsgBoxBodyRegion
+{
+	transform: translateX( 460px );	
 }
 
 #MsgBoxHeader

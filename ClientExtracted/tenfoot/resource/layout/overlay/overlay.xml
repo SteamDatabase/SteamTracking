@@ -35,5 +35,6 @@
 			</Panel>
 			<Panel id="MinimalPanels" />
 		</Panel>
+		<Panel id="KillSpinner" />
 	</OverlayBasePanel>
 </root>

@@ -372,6 +372,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 .ActualStoreImage
 {
 	width: 616px;
+	margin: 10px;
 	height: 353px;
 	border-width: 5px;
 	border-style: solid;
@@ -426,8 +427,8 @@ StorePanel:descendantfocus #FeaturedCapsules
 	align: right bottom;
 	width: 72px;
 	height: 72px;
-	margin: 0px 5px 5px 0px;
-	
+	margin: 0px 15px 15px 0px;
+
 	opacity: 0.0;
 
 	transition-property: opacity;
@@ -1336,4 +1337,11 @@ StoreGenres.Loaded #Loading
 {
 	opacity: 0.0;
 	transition-duration: 0.0s;
+}
+
+.DiscountPanel
+{
+	transform: translateX( 10px ) translateY( 10px );
+	height: 145px;
+	width: 305px;
 }

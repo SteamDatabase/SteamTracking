@@ -31,6 +31,47 @@
 	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
 }
 
+#OverlayBasePanel.KillModalVisible
+{
+	opacity: 0.4;
+	wash-color: #00000066;
+
+	transition-property: opacity, wash-color; 
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+}
+
+.KillInProgress #OverlayDashboard
+{
+	opacity: 0.0;
+
+	transition-property: opacity; 
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+
+
+}
+
+#KillSpinner
+{
+	visibility: collapse;
+}
+
+.KillInProgress #KillSpinner
+{
+	width: 120px;
+	height: 120px;
+	position: 46% 46% 0%;
+	wash-color: bgcolorwash;
+
+	visibility: visible;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
 #OverlayDashboard
 {
 	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
@@ -63,14 +104,19 @@
 	height: 100%;
 }
 
- #SelfAvatar 
+#OverlayDashboard AvatarImage
+{
+	width: 95px;
+	height: 95px;
+}
+
+#SelfAvatar
 {
 	border-style: solid;
-	border-width: 5px;
-	border-radius: 9px;
-
-	height: 95px;
+	border-width: 3px;
+	border-radius: 4px;
 	width: 95px;
+	height: 95px;
 }
 
 #HeaderLabels
@@ -86,7 +132,9 @@
 {
 	margin-top: -9px;
 	color: detailsdatalabelfocus;
+	font-family: platformfont;
 	font-size: 56px;
+	font-weight: bold;
 	width: 100%;
 
 }
@@ -140,13 +188,13 @@
 {
 	width: 100%;
 	height: 600px;
-	transform: translateY( 400px );
+	transform: translateY( 310px );
 
 	flow-children: right;
-	opacity: 0.85;
+	opacity: 0.80;
 	desaturation: 0.0;
-	//opacity-mask: url( "file://{images}/upper_row_mask.tga" ) 0.5;
-	
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.5;
+
 
 	transition-property: transform, opacity-mask, opacity, desaturation;
 	transition-duration: 0.25s;
@@ -159,11 +207,11 @@
 	height: 600px;
 
 	opacity: 1.0;
-	desaturation: 0.0;	
-	
+	desaturation: 0.0;
+
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
 
 	flow-children: right;
-	transform: translateY( 335px );
+	transform: translateY( 340px ) translateZ( 40px );
 }
 

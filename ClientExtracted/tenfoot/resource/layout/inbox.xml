@@ -5,7 +5,7 @@
 	</styles>
 	
 	<InboxMenu onmouseactivate="CloseInboxMenu();" oncancel="CloseInboxMenu();">
-		<Panel id="Wrapper">
+		<Panel id="Wrapper" childfocusonhover="true">
 			<Button id="NewCommentsButton" tabindex="0" selectionpos="0,0" onactivate="ShowNewComments();" >
 				<Image src="file://{images}/comments.png" />
 				<Panel class="ButtonLabelWrapper">

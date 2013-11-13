@@ -96,15 +96,15 @@ JoinItem
 
 	pre-transform-scale2d: 0.8;
 
-	transition-property: pre-transform-scale2d, position;
+	transition-property: pre-transform-scale2d, transform, position;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in;
+	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
 
 JoinItem:focus
 {
-	transform: translatez(0px);
+	transform: translatey(-30px , translatez(0px);
 	opacity: 1.0;
 	desaturation: 0.0;
 	pre-transform-scale2d: 1.0;
@@ -162,7 +162,7 @@ JoinItem .JoinItemImageFrame
 	width: 267px;
 	height: 267px;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 4px;
 	border-color: #3d414230;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 
@@ -190,7 +190,7 @@ JoinItem:focus .JoinItemImageFrame
 JoinItem:focus .JoinItemImageBezel
 {
 	pre-transform-scale2d: 1.0;
-	border-radius: 22px;
+	border-radius: 8px;
 }
 
 JoinItem .JoinItemImageBezelOn
@@ -216,8 +216,8 @@ JoinItem .JoinItemImageBezel
 {
 	border-width: 0px;
 
-	width: 257px;
-	height: 257px;
+	width: 251px;
+	height: 251px;
 
 	horizontal-align: center;
 	vertical-align: center;
@@ -231,8 +231,8 @@ JoinItem .JoinItemImageBezel
 
 JoinItem:focus .JoinItemImageBezel
 {
-	width: 255px;
-	height: 255px;
+	width: 251px;
+	height: 251px;
 }
 
 JoinItem:disabled
@@ -242,14 +242,14 @@ JoinItem:disabled
 
 JoinItem .BezelOutside
 {
-	border-radius: 25px;
+	border-radius: 10px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 }
 
 JoinItem .BezelInside
 {
 	background-color: #000000;
-	border-radius: 16px;
+	border-radius: 5px;
 }
 
 JoinItem:focus .JoinItemImage

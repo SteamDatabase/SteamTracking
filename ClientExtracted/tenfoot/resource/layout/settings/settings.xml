@@ -12,8 +12,8 @@
 		</Panel>
 		
 		<!-- main settings panel, a big container of buttons -->
-		<Panel id="SettingsContent" class="SettingsMainContent" tabindex="auto" selectionpos="auto">
-			<Panel class="SettingsContent SettingsLeftContent">
+		<Panel id="SettingsContent" class="SettingsMainContent" tabindex="auto" selectionpos="auto" >
+			<Panel class="SettingsContent SettingsLeftContent" childfocusonhover="true">
 				<Button id="AccountSettingsButton" class="Button" onactivate="ShowSettings( Account );">
 					<Label class="LongDesc" text="#Settings_Account" />
 				</Button>
@@ -35,7 +35,7 @@
 				</Button>
 
 			</Panel>	
-			<Panel class="SettingsContent SettingsMainRightContent">
+			<Panel class="SettingsContent SettingsMainRightContent" childfocusonhover="true">
 				<Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
 					<Label class="LongDesc" text="#Settings_InGame" />
 				</Button>
@@ -51,12 +51,11 @@
 				<Button id="NetworkSettingsButton" class="Button" onactivate="ShowSettings( Network );">
 					<Label class="LongDesc" text="#Settings_Network" />
 				</Button>
-
-				<Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
-					<Label class="LongDesc" text="#Settings_TimeZone" />
-				</Button>
 				<Button id="AboutSettingsButton" class="Button" onactivate="ShowSettings( About );">
 					<Label class="LongDesc" text="#Settings_About" />
+				</Button>
+				<Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
+					<Label class="LongDesc" text="#Settings_TimeZone" />
 				</Button>
 				<Button id="VoiceSettingsButton" class="Button" onactivate="ShowSettings( Voice );">
 					<Label class="LongDesc" text="#Settings_Voice" />

@@ -51,7 +51,6 @@
 			style="parental_lock_button"
 			labelText=""
 			text=""
-			tooltiptext="#SteamUI_PlatformParentalControl_Tip"
 			command="ParentalLock"
 		}
 		

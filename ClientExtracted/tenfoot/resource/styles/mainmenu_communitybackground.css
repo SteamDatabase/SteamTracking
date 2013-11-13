@@ -23,7 +23,7 @@
 OverlayBasePanel #CommunityFriendsStrip
 {
 	height: 800px;
-	margin-top: -170px;
+	margin-top: -158px;
 }
 
 #CommunityFeedStrip
@@ -145,8 +145,8 @@ OverlayBasePanel #CommunityFriendsStrip
 .CommunityVisible:descendantfocus .CommunityFriendsStripWrapperBackgroundBaseVisible
 {
 	transform-origin: 0% 0% parent-relative;
-	transform: rotateZ( 0deg ) translate3d( 0px, 150px, 0px );
-	opacity: 1.0;	
+	transform: rotateZ( 0deg ) translate3d( 0px, 200px, 0px );
+	opacity: 1.0;
 }
 OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsStripWrapperBackgroundBaseVisible
 {

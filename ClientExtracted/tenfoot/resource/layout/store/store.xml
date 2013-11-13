@@ -11,13 +11,15 @@
 			<Panel id="StoreBackgroundWrapper" tabindex="0" selectionpos="0,0" hittest="false">
 				<Panel id="StoreBackground" class="StoreBackgroundBaseVisible" hittest="false">
 					<Carousel id="FeaturedCapsules" focus="center" wrap="true" drawframe="false" onmoveup="ShowMainMenu()" selectionposboundary="vertical"
-						x-offset="38px" z-offset="0px" focus-x-offset="100px,200px,300px" focus-z-offset="-100px,-200px,-300px" >
+					x-offset="38px" z-offset="0px" focus-x-offset="100px,200px,300px" focus-z-offset="-100px,-200px,-300px" >
 
 						<Panel id="StoreImage1" class="CapsuleControllerSupportContainer StoreImage StoreImage1">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage1, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+									<Panel id="Discount" class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+									</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -31,7 +33,9 @@
 							<Panel>								
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage2, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -45,8 +49,10 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage3, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
-							</Panel>
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>		
+								</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
 								<Panel id="StorePriceArea">
@@ -59,7 +65,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage4, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -73,7 +81,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage5, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -87,7 +97,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage6, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -101,7 +113,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage7, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -115,7 +129,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage8, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -129,7 +145,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage9, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -143,7 +161,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage10, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -157,7 +177,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage11, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -171,7 +193,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage12, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -185,7 +209,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage13, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -199,7 +225,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage14, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -213,7 +241,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage15, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />
@@ -227,7 +257,9 @@
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage16, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
 								<Panel class="CapsuleControllerSupport" />
-								<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								<Panel class="DiscountPanel">
+										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
+								</Panel>
 							</Panel>
 							<Panel class="FeaturedImageInfo">
 								<Label id="FeaturedImageHeadline" />

@@ -19,7 +19,7 @@
 					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_DeviceName" hittest="false" />
 					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_Status" hittest="false" />
 				</Panel>
-				<Panel class="SettingsRemoteClientSection">
+				<Panel class="SettingsRemoteClientSection" selectionposboundary="vertical">
 					<Panel id="SettingsRemoteClientList">
 						<!-- code will add buttons for each device here  -->
 					</Panel>	

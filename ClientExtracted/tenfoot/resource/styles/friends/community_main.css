@@ -851,7 +851,7 @@ FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 	horizontal-align: center;
 	border-width: 6px;
 	border-style: solid;
-	border-radius: 12px;
+	border-radius: 6px;
 	opacity: 0.85;
 	box-shadow: fill #00000000 0px 0px 0px 0px;
 
@@ -937,7 +937,7 @@ FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 	pre-transform-scale2d: 1.0;
 	border-width: 6px;
 	border-style: solid;
-	border-radius: 12px;
+	border-radius: 6px;
 	opacity: 0.85;
 	desaturation: 0.0;
 
@@ -1524,12 +1524,12 @@ FriendsFeedItemMenuActionButton:focus
 
 #OverlayBasePanel:descendantfocus .CommunityFriendsCarousel:descendantfocus
 {
-	transform: translateY( 450px );
+	transform: translateY( 340px );
 }
 
 #OverlayBasePanel:descendantfocus .CommunityFriendsCarousel
 {
-	transform: translateY( 370px );
+	transform: translateY( 390px );
 }
 
 #CommunityFriendsStrip.Locked
