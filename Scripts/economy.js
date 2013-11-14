@@ -817,6 +817,12 @@ var CInventory = Class.create( {
 		else
 			Event.observe( elLink, 'click', this.SelectItemNoOp ); // no need to bind
 
+		if ( rgItem.fraudwarnings )
+		{
+			var elFraudWarningIcon = new Element( 'div', {'class': 'slot_app_fraudwarning' } );
+			elItem.appendChild( elFraudWarningIcon );			
+		}
+
 		return elItem;
 	},
 
@@ -2187,8 +2193,12 @@ function BuildHover( prefix, item, owner )
 			{
 				for ( var i=0; i < item.fraudwarnings.length; i++ )
 				{
-					var warning = new Element( 'div' );
-					warning.update( item.fraudwarnings[i] );
+					var warning = new Element( 'div', { 'class': 'fraud_warning_box' } );
+					var warningImage = new Element( 'img', { 'class': 'fraud_warning_image', src: 'http://cdn.steamcommunity.com/public/images/sharedfiles/icons/icon_warning.png' } );
+					warning.appendChild( warningImage );
+					var warningText = new Element( 'span' );
+					warningText.update( item.fraudwarnings[i] );
+					warning.appendChild( warningText );
 					elFraudWarnings.appendChild( warning );
 				}
 			}

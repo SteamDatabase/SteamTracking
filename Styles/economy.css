@@ -278,6 +278,10 @@ a.item_action:hover {
 	color: #bd4847;
 }
 
+.fraud_warning_sub_text {
+	color: #767676;
+}
+
 .item_desc_content .fraud_warning {
 	margin-bottom: 9px;
 }
@@ -947,4 +951,25 @@ a.game_button {
 
 .trade_scam_report_label {
 	margin-bottom: 4px;
+}
+
+.slot_app_fraudwarning {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 16px;
+	height: 16px;
+	
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/icons/icon_warning.png');
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.fraud_warning_image {
+	padding-right: 5px;
+}
+
+.fraud_warning_box {
+	border: 1px solid #393939;
+	padding: 5px;
 }
