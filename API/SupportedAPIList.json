@@ -2026,6 +2026,12 @@
 						"httpmethod": "GET",
 						"parameters": [
 							{
+								"name": "leagueid",
+								"type": "uint32",
+								"optional": true,
+								"description": "The ID of the league to get the prize pool of"
+							},
+							{
 								"name": "language",
 								"type": "string",
 								"optional": true,
