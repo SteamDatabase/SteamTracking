@@ -199,6 +199,7 @@
 	height: 77px;
 	z-index: 50;
 	top: -10px;
+	pointer-events: none;
 }
 
 .highlight_flash_player_notice {
@@ -1930,16 +1931,27 @@ div.early_access_announcements {
 
 	.html5_video_overlay .progress_bar_background {
 		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 0px;
+		bottom: 0px;
+		background-color: #595959;
+	}
+
+	.html5_video_overlay .progress_bar_container {
+		position: absolute;
 		top: 2px;
 		left: 2px;
 		right: 2px;
 		bottom: 1px;
-		background-color: #595959;
 	}
 
 	.html5_video_overlay .progress_bar {
-		width: 0%;
-		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 0px;
+		bottom: 0px;
 		background-color: #6f9fc8;
 	}
 
