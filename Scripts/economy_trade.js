@@ -732,7 +732,10 @@ function CreateSlotElement( id )
 	elActionMenuButton.style.display = 'none';
 	elActionMenuButton.href = "javascript:void(0)";
 	elSlot.appendChild( elActionMenuButton );
-
+	
+	var elFraudWarningIcon = new Element( 'div', {'class': 'slot_app_fraudwarning' } );
+	elFraudWarningIcon.style.display = 'none';
+	elSlot.appendChild( elFraudWarningIcon );
 	return elSlot;
 }
 
@@ -834,10 +837,20 @@ function PutItemInSlot( elItem, elSlot )
 		var rgAppData = g_rgAppContextData[item.appid];
 		elSlot.down('.slot_applogo_img').src = rgAppData.icon;
 		elSlot.down('.slot_applogo').show();
+
+		if ( item.id && item.fraudwarnings )
+		{
+			elSlot.down('.slot_app_fraudwarning').show();
+		}
+		else
+		{
+			elSlot.down('.slot_app_fraudwarning').hide();
+		}
 	}
 	else
 	{
 		elSlot.down('.slot_applogo').hide();
+		elSlot.down('.slot_app_fraudwarning').hide();
 	}
 
 	var elActionMenuButton = elSlot.down('.slot_actionmenu_button');
@@ -855,7 +868,7 @@ function CleanupSlot( elSlot )
 
 	elSlot.down('.slot_applogo').hide();
 	elSlot.down('.slot_actionmenu_button').hide();
-
+	elSlot.down('.slot_app_fraudwarning').hide();
 	elSlot.hasItem = false;
 }
 
