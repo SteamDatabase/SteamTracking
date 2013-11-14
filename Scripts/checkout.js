@@ -60,7 +60,7 @@ function PerformPayPalAuthorization()
 		{
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_SessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
@@ -218,7 +218,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			iframe.width = 0;
 			iframe.height = 0;
 			iframe.style.display = 'none';
-			iframe.src = 'steam://openurl_external/https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_SessionID;
+			iframe.src = 'steam://openurl_external/https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl;
 
 			document.body.appendChild(iframe);
 		}
@@ -260,7 +260,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_SessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl );
 		}
 		
 		$('purchase_button_bottom').style.display = 'none';
@@ -284,11 +284,11 @@ function PerformClickAndBuyAuthorization()
 		
 		if ( bVIPStatus == 1 )
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strVIPURL + '&s=' + g_SessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strVIPURL );
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strNonVIPURL + '&s=' + g_SessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strNonVIPURL );
 		}
 		
 		$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the ClickandBuy web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
