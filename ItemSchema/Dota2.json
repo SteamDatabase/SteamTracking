@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.1bb9ad61fbb4e2ec6761e1cc0ca550dc76f49e79.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.3a59d9f38179d99caf52699e180d1f64abf2ffd6.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -76251,14 +76251,14 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "South American Elite League",
-				"item_description": "This new item has no description.",
+				"item_description": "The most talented players in South America compete for $1,000 in the classic in-house league format for six weeks.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_sael",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sael.ea1eccffe39c248c13e77885932bf4403f2e16e4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sael_large.bdaaa30ffb6cac10b50f2fe45cd6b2dec914825b.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -76442,6 +76442,64 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sdl.8e91581194afbf13ca89be9c31f38c4ab377ba7e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sdl_large.5a2947ea2032be86f03a32e900bb49107b6b1ffe.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sina Cup Supernova Dota 2 Open Season 2",
+				"defindex": 15359,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sina Cup Supernova Dota 2 Open Season 2",
+				"item_description": "Sina Cup Supernova Dota 2 Open is back for another season! In addition to the 8 invited teams, 4 teams will advance through qualifiers to compete for a total prize pool of 65,000RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sinacup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup2.80b4b7eda69ff9a5c1ab1f7ea8b6028c95f55fa8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup2_large.c31987908554f3c289de0124580e1ec896668c7a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sina Cup Supernova Dota 2 Open Season 2 - ADMIN",
+				"defindex": 15360,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sina Cup Supernova Dota 2 Open Season 2 - ADMIN",
+				"item_description": "Sina Cup Supernova Dota 2 Open is back for another season! In addition to the 8 invited teams, 4 teams will advance through qualifiers to compete for a total prize pool of 65,000RMB.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sinacup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup2.80b4b7eda69ff9a5c1ab1f7ea8b6028c95f55fa8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sinacup2_large.c31987908554f3c289de0124580e1ec896668c7a.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -85623,7 +85681,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Warrior's Retribution Set",
-				"item_description": "Contains all the items in the \"Warrior's Retribution\" set for Sven.",
+				"item_description": "Contains all the items in the \"Warrior's Retribution\" set for Sven. The Sword and the Helm of the Warrior's Retribution can be leveled up to unlock new styles by winning games and cleaving enemies as Sven.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Warriors_Retribution_Set",
@@ -85705,7 +85763,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Spoils from the Shifting Sorcerer Bundle",
@@ -85735,7 +85801,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Death Charge Set",
@@ -85765,7 +85839,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Roshan Hunter & G-League Bundle",
