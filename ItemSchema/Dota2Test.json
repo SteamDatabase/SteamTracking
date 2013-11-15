@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.6497bfd28c3f639825fd342fbec3fe2e366f0e68.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/205790\/scripts\/items\/items_game.a53b9074bda146e7961d2dcca15c258501e786a2.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -65730,6 +65730,44 @@
 				
 			},
 			{
+				"name": "Platinum Baby Roshan",
+				"defindex": 10374,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Platinum Baby Roshan",
+				"item_description": "A unique and glistening trophy awarded to the deadliest heroes to face Sugar Rush Roshan.",
+				"proper_name": false,
+				"item_quality": 3,
+				"image_inventory": "econ\/courier\/baby_rosh\/babyroshan2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/courier\/baby_rosh\/babyroshan2.e30b33a4cef273e1448d2c85651a53950a28c7e0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/courier\/baby_rosh\/babyroshan2_large.a908300666a008afceee3637d3b68ea5a33db297.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					},
+					{
+						"name": "socket 2",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
 				"name": "Eye of Lyralei",
 				"defindex": 10400,
 				"item_class": "dota_item_wearable",
@@ -75839,8 +75877,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gleague2013",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013.0822fd5f3b44174dc0e526d785b147188312eb7a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013_large.cf2e1561b72f4a2b002b3ef8a3d5e413e75bfd96.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013.1bb5030307b9b7ddb6e22d48d8716c0188f39895.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013_large.a8a3efb645cf690b0d6b6d806d77c06cd5df0d13.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -75868,8 +75906,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gleague2013",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013.0822fd5f3b44174dc0e526d785b147188312eb7a.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013_large.cf2e1561b72f4a2b002b3ef8a3d5e413e75bfd96.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013.1bb5030307b9b7ddb6e22d48d8716c0188f39895.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_gleague2013_large.a8a3efb645cf690b0d6b6d806d77c06cd5df0d13.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -76214,14 +76252,14 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "South American Elite League",
-				"item_description": "This new item has no description.",
+				"item_description": "The most talented players in South America compete for $1,000 in the classic in-house league format for six weeks.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/leagues\/subscriptions_sael",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sael.ea1eccffe39c248c13e77885932bf4403f2e16e4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sael_large.bdaaa30ffb6cac10b50f2fe45cd6b2dec914825b.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -76361,6 +76399,64 @@
 					}
 				]
 				
+			},
+			{
+				"name": "SDL 1",
+				"defindex": 15357,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SDL 1",
+				"item_description": "The SDL features 48 amateur teams competing for a total prize pool of R$500 and Immortal items!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sdl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sdl.8e91581194afbf13ca89be9c31f38c4ab377ba7e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sdl_large.5a2947ea2032be86f03a32e900bb49107b6b1ffe.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "SDL 1 - ADMIN",
+				"defindex": 15358,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SDL 1 - ADMIN",
+				"item_description": "The SDL features 48 amateur teams competing for a total prize pool of R$500 and Immortal items!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sdl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sdl.8e91581194afbf13ca89be9c31f38c4ab377ba7e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sdl_large.5a2947ea2032be86f03a32e900bb49107b6b1ffe.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
 			},
 			{
 				"name": "Artificer's Hammer",
@@ -85528,7 +85624,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Warrior's Retribution Set",
-				"item_description": "Contains all the items in the \"Warrior's Retribution\" set for Sven.",
+				"item_description": "Contains all the items in the \"Warrior's Retribution\" set for Sven. The Sword and the Helm of the Warrior's Retribution can be leveled up to unlock new styles by winning games and cleaving enemies as Sven.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Warriors_Retribution_Set",
@@ -85610,7 +85706,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Spoils from the Shifting Sorcerer Bundle",
@@ -85640,7 +85744,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Death Charge Set",
@@ -85670,7 +85782,15 @@
 				"tool": {
 					"type": "item_pack",
 					"use_string": "Open Bundle"
-				}
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Roshan Hunter & G-League Bundle",
@@ -85684,8 +85804,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Roshan_Hunter__GLeague_Bundle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle.06ac800bd84533baeed371332bc912b332609c2f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle_large.7aad971a0686bfcd7b06afb8a2393114dc5540ef.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle.606238e942265c6c0c7895410f185c92676f01f8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/205790\/icons\/econ\/sets\/dota_item_roshan_hunter__gleague_bundle_large.4e575c5a065acdab06d6b8577a683c61d6aca3b7.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -90748,7 +90868,7 @@
 				"system": "courier_trail_lava",
 				"id": 96,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle96"
+				"name": "Trail of Burning Doom"
 			},
 			{
 				"system": "courier_trapjaw_ambient",
@@ -91145,6 +91265,12 @@
 				"id": 162,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle162"
+			},
+			{
+				"system": "platinum_roshan_ambient",
+				"id": 163,
+				"attach_to_rootbone": false,
+				"name": "Ionic Vapor"
 			}
 		]
 		,
