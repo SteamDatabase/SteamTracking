@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.3a59d9f38179d99caf52699e180d1f64abf2ffd6.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8afa51ade262d897233182ef21df224527ea04d8.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -85030,11 +85030,11 @@
 				}
 			},
 			{
-				"name": "Arms of the Gwimyeon Warrior",
+				"name": "Arms of the Gwimyeon Warrior Set",
 				"defindex": 20281,
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
-				"item_name": "Arms of the Gwimyeon Warrior",
+				"item_name": "Arms of the Gwimyeon Warrior Set",
 				"item_description": "Includes all of the items in the 'Arms of the Gwimyeon Warrior' set for Juggernaut:",
 				"proper_name": false,
 				"item_quality": 4,
@@ -85638,11 +85638,11 @@
 				
 			},
 			{
-				"name": "Garb of the Cruel Magician",
+				"name": "Garb of the Cruel Magician Set",
 				"defindex": 20302,
 				"item_class": "bundle",
 				"item_type_name": "Cruel Pro Gear Bundle",
-				"item_name": "Garb of the Cruel Magician",
+				"item_name": "Garb of the Cruel Magician Set",
 				"item_description": "Your cruelty shall be legendary.<br><br>These Player Items are created in partnership with your favorite player, who receives a portion of every purchase.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -85885,7 +85885,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Stronger than Steel Bundle",
 				"item_name": "Formed Alloy Set",
-				"item_description": "Give ‘em the old one-two!<br><br>These Player Items are created in partnership with your favorite player, who receives a portion of every purchase.",
+				"item_description": "Give âem the old one-two!<br><br>These Player Items are created in partnership with your favorite player, who receives a portion of every purchase.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Formed_Alloy_Set",
@@ -88896,7 +88896,7 @@
 			{
 				"item_set": "kuroky_rubick_set",
 				"name": "Garb of the Cruel Magician",
-				"store_bundle": "Garb of the Cruel Magician",
+				"store_bundle": "Garb of the Cruel Magician Set",
 				"items": [
 					"Hood of the Cruel Magician",
 					"Robe of the Cruel Magician",
@@ -90925,7 +90925,7 @@
 				"system": "courier_trail_lava",
 				"id": 96,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle96"
+				"name": "Trail of Burning Doom"
 			},
 			{
 				"system": "courier_trapjaw_ambient",
@@ -91327,7 +91327,7 @@
 				"system": "platinum_roshan_ambient",
 				"id": 163,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle163"
+				"name": "Ionic Vapor"
 			}
 		]
 		,
