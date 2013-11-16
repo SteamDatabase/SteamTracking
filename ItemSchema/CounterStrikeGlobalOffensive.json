@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.48d3ada826108df5f4ad20a5b10d96626d2afe56.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.683c461aa78715872c9f080494cfa55aaf5d87da.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -30,7 +30,7 @@
 			"strange": "StatTrak™",
 			"completed": "Completed",
 			"haunted": "haunted",
-			"tournament": "tournament"
+			"tournament": "Souvenir"
 		},
 		"originNames": [
 			{
@@ -2551,6 +2551,7 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
+					"restriction": "generic_valve_key",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -2629,7 +2630,8 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "supply_crate"
+					"type": "supply_crate",
+					"restriction": "generic_valve_key"
 				},
 				"attributes": [
 					{
@@ -2694,7 +2696,8 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "supply_crate"
+					"type": "supply_crate",
+					"restriction": "generic_valve_key"
 				},
 				"attributes": [
 					{
@@ -2726,7 +2729,8 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "supply_crate"
+					"type": "supply_crate",
+					"restriction": "generic_valve_key"
 				},
 				"attributes": [
 					{
@@ -2742,7 +2746,7 @@
 				"defindex": 4006,
 				"item_class": "supply_crate",
 				"item_type_name": "Weapon Case",
-				"item_name": "DreamHack Winter 2013 Souvenir Package",
+				"item_name": "DreamHack 2013 Souvenir Package",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/weapon_cases\/crate_dhw13_promo",
@@ -2759,7 +2763,20 @@
 				},
 				"tool": {
 					"type": "supply_crate"
-				}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 6.000000
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 1.000000
+					}
+				]
+				
 			}
 		]
 		,
@@ -3725,6 +3742,286 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 0 id",
+				"defindex": 113,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 0 wear",
+				"defindex": 114,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 0 scale",
+				"defindex": 115,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 0 rotation",
+				"defindex": 116,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 1 id",
+				"defindex": 117,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 1 wear",
+				"defindex": 118,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 1 scale",
+				"defindex": 119,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 1 rotation",
+				"defindex": 120,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 2 id",
+				"defindex": 121,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 2 wear",
+				"defindex": 122,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 2 scale",
+				"defindex": 123,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 2 rotation",
+				"defindex": 124,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 3 id",
+				"defindex": 125,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 3 wear",
+				"defindex": 126,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 3 scale",
+				"defindex": 127,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 3 rotation",
+				"defindex": 128,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 4 id",
+				"defindex": 129,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 4 wear",
+				"defindex": 130,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 4 scale",
+				"defindex": 131,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 4 rotation",
+				"defindex": 132,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 5 id",
+				"defindex": 133,
+				"attribute_class": "sticker_slot_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "sticker slot 5 wear",
+				"defindex": 134,
+				"attribute_class": "sticker_slot_wear",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 5 scale",
+				"defindex": 135,
+				"attribute_class": "sticker_slot_scale",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "sticker slot 5 rotation",
+				"defindex": 136,
+				"attribute_class": "sticker_slot_rotation",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "tournament event id",
+				"defindex": 137,
+				"attribute_class": "tournament_event_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "tournament event stage id",
+				"defindex": 138,
+				"attribute_class": "tournament_event_stage_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "tournament event team0 id",
+				"defindex": 139,
+				"attribute_class": "tournament_event_team_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "tournament event team1 id",
+				"defindex": 140,
+				"attribute_class": "tournament_event_team_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,

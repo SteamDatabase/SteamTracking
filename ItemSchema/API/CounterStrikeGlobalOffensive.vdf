@@ -167,7 +167,7 @@
 		{
 			"value"		"12"
 			"weight"		"0"
-			"hexColor"		"#8650AC"
+			"hexColor"		"#FFD700"
 		}
 	}
 	"colors"
@@ -334,6 +334,54 @@
 	}
 	"alternate_icons"
 	{
+		"1"
+		{
+			"icon_path"		"econ/stickers/dh_gologo1"
+		}
+		"2"
+		{
+			"icon_path"		"econ/stickers/dh_gologo1_holo"
+		}
+		"3"
+		{
+			"icon_path"		"econ/stickers/dh_gologo2"
+		}
+		"4"
+		{
+			"icon_path"		"econ/stickers/dh_gologo2_holo"
+		}
+		"5"
+		{
+			"icon_path"		"econ/stickers/dh_snowflake2"
+		}
+		"6"
+		{
+			"icon_path"		"econ/stickers/dh_snowflake3"
+		}
+		"7"
+		{
+			"icon_path"		"econ/stickers/dh_bears"
+		}
+		"8"
+		{
+			"icon_path"		"econ/stickers/dh_bears_holo"
+		}
+		"9"
+		{
+			"icon_path"		"econ/stickers/dh_mountain"
+		}
+		"10"
+		{
+			"icon_path"		"econ/stickers/dh_mountain_holo"
+		}
+		"11"
+		{
+			"icon_path"		"econ/stickers/dh_snowman"
+		}
+		"12"
+		{
+			"icon_path"		"econ/stickers/dh_snowman_holo"
+		}
 		"65684"
 		{
 			"icon_path"		"econ/default_generated/weapon_deagle_aa_flames_light"
@@ -2569,7 +2617,7 @@
 			"mouse_pressed_sound"		"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
-		"weapon_case"
+		"weapon_case_base"
 		{
 			"item_class"		"supply_crate"
 			"item_type_name"		"#CSGO_Type_WeaponCase"
@@ -2583,7 +2631,6 @@
 			"image_inventory_size_h"		"82"
 			"mouse_pressed_sound"		"physics/plastic/plastic_box_impact_soft1.wav"
 			"drop_sound"		"physics/plastic/plastic_box_impact_hard1.wav"
-			"associated_item"		"1203"
 			"tool"
 			{
 				"type"		"supply_crate"
@@ -2592,6 +2639,11 @@
 			{
 				"decodable"		"1"
 			}
+		}
+		"weapon_case"
+		{
+			"prefab"		"weapon_case_base"
+			"associated_item"		"1203"
 		}
 		"csgo_tool"
 		{
@@ -3063,6 +3115,33 @@
 			"model_world"		"models/weapons/w_pist_deagle.mdl"
 			"model_magazine"		"models/weapons/w_pist_deagle_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_deagle.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_deagle/pist_deagle_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_deagle_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.53443 -3.22857 -1.90564"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_deagle/pist_deagle_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_deagle_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.53443 -0.989865 -1.12229"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_deagle/pist_deagle_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_deagle_decal_c.mdl"
+					"worldmodel_decal_pos"		"2.53443 -0.955564 1.77999"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_deagle/pist_deagle_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_deagle_decal_d.mdl"
+					"worldmodel_decal_pos"		"2.53443 -0.929928 4.8028"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3104,9 +3183,41 @@
 			"image_inventory"		"econ/weapons/base_weapons/weapon_elite"
 			"model_player"		"models/weapons/v_pist_elite.mdl"
 			"model_world"		"models/weapons/w_pist_elite.mdl"
+			"model_dropped"		"models/weapons/w_pist_elite_dropped.mdl"
 			"model_icon"		"models/weapons/w_pist_elite_icon.mdl"
 			"model_magazine"		"models/weapons/w_pist_elite_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_elite.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_elite/pist_elite_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_elite_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.00 1.50 3.30"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_elite/pist_elite_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_elite_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.00 2.80 5.40"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_elite/pist_elite_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_elite_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.0 2.80 -3.40"
+					"worldmodel_decal_end"		"4.0 -2.80 -2.40"
+					"worldmodel_decal_bone"		"ValveBiped.Bip01_L_Hand"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_elite/pist_elite_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_elite_decal_d.mdl"
+					"worldmodel_decal_pos"		"7.5 2.80 -3.40"
+					"worldmodel_decal_end"		"7.5 -2.80 -2.40"
+					"worldmodel_decal_bone"		"ValveBiped.Bip01_L_Hand"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3147,6 +3258,33 @@
 			"model_world"		"models/weapons/w_pist_fiveseven.mdl"
 			"model_magazine"		"models/weapons/w_pist_fiveseven_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_fiveseven.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_fiveseven/pist_fiveseven_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_fiveseven_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.99388 -1.26199 -1.90926"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_fiveseven/pist_fiveseven_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_fiveseven_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.99388 -1.15953 0.562159"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_fiveseven/pist_fiveseven_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_fiveseven_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.99388 -1.15953 3.3738"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_fiveseven/pist_fiveseven_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_fiveseven_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.99388 -3.97353 -2.19972"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3192,6 +3330,33 @@
 			"model_magazine"		"models/weapons/w_pist_glock18_mag.mdl"
 			"model_uid"		"models/weapons/uid_small.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_glock.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_glock18/pist_glock18_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_glock18_decal_a.mdl"
+					"worldmodel_decal_pos"		"1.74152 -1.1069 -2.00371"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_glock18/pist_glock18_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_glock18_decal_b.mdl"
+					"worldmodel_decal_pos"		"1.74152 -0.997365 -0.0349085"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_glock18/pist_glock18_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_glock18_decal_c.mdl"
+					"worldmodel_decal_pos"		"1.74152 -0.997365 2.59865"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_glock18/pist_glock18_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_glock18_decal_d.mdl"
+					"worldmodel_decal_pos"		"1.74152 -3.20111 -2.18992"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3253,6 +3418,33 @@
 			"model_magazine"		"models/weapons/w_pist_hkp2000_mag.mdl"
 			"model_uid"		"models/weapons/uid_small.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_hkp2000.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_hkp2000/pist_hkp2000_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_hkp2000_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.80535 -1.33829 -1.86912"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_hkp2000/pist_hkp2000_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_hkp2000_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.80535 -1.07812 0.305017"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_hkp2000/pist_hkp2000_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_hkp2000_decal_c.mdl"
+					"worldmodel_decal_pos"		"2.80535 -1.01071 2.49434"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_hkp2000/pist_hkp2000_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_hkp2000_decal_d.mdl"
+					"worldmodel_decal_pos"		"2.80535 -3.52435 -2.21698"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3310,6 +3502,33 @@
 			"model_world"		"models/weapons/w_pist_p250.mdl"
 			"model_magazine"		"models/weapons/w_pist_p250_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_p250.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_p250/pist_p250_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_p250_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.15176 -1.13887 -1.69286"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_p250/pist_p250_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_p250_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.15176 -1.13887 0.526864"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_p250/pist_p250_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_p250_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.15176 -1.00962 2.95341"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_p250/pist_p250_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_p250_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.15176 -3.54077 -2.10545"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3354,6 +3573,33 @@
 			"model_world"		"models/weapons/w_pist_tec9.mdl"
 			"model_magazine"		"models/weapons/w_pist_tec9_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_tec9.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_tec9/pist_tec9_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.56948 -1.2587 -1.39832"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_tec9/pist_tec9_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.56948 -1.2587 1.8176"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_tec9/pist_tec9_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.56948 -1.44876 4.78239"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_tec9/pist_tec9_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.56948 -1.23801 7.47212"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3409,6 +3655,33 @@
 			"model_world"		"models/weapons/w_smg_bizon.mdl"
 			"model_magazine"		"models/weapons/w_smg_bizon_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_bizon.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_bizon/smg_bizon_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_bizon_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.72935 -0.869963 -1.26802"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_bizon/smg_bizon_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_bizon_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.72935 -0.9665 2.12768"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_bizon/smg_bizon_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_bizon_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.72935 -0.549397 5.92998"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_bizon/smg_bizon_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_bizon_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.72935 -3.19411 7.76426"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3449,6 +3722,33 @@
 			"model_world"		"models/weapons/w_smg_mac10.mdl"
 			"model_magazine"		"models/weapons/w_smg_mac10_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_mac10.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mac10/smg_mac10_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mac10_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.83975 -0.466896 -3.83529"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mac10/smg_mac10_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mac10_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.83975 -3.5075 -1.68665"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mac10/smg_mac10_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mac10_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.83975 -0.740954 -1.11418"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mac10/smg_mac10_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mac10_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.83975 -0.942943 3.0487"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3488,6 +3788,33 @@
 			"model_world"		"models/weapons/w_smg_mp7.mdl"
 			"model_magazine"		"models/weapons/w_smg_mp7_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_mp7.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp7/smg_mp7_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp7_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.91874 -1.18899 -5.60001"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp7/smg_mp7_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp7_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.91874 -1.48012 -2.12288"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp7/smg_mp7_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp7_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.91874 -5.15067 -2.52061"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp7/smg_mp7_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp7_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.91874 -2.58889 -7.63391"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3527,6 +3854,33 @@
 			"model_world"		"models/weapons/w_smg_mp9.mdl"
 			"model_magazine"		"models/weapons/w_smg_mp9_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_mp9.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp9/smg_mp9_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp9_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.72058 -1.42886 -4.87973"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp9/smg_mp9_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp9_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.72058 -2.22002 -1.71083"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp9/smg_mp9_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp9_decal_c.mdl"
+					"worldmodel_decal_pos"		"2.72058 -1.62016 2.65378"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_mp9/smg_mp9_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_mp9_decal_d.mdl"
+					"worldmodel_decal_pos"		"2.72058 -5.68715 -2.01963"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3573,6 +3927,33 @@
 			"model_world"		"models/weapons/w_smg_p90.mdl"
 			"model_magazine"		"models/weapons/w_smg_p90_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_p90.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_p90/smg_p90_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_p90_decal_a.mdl"
+					"worldmodel_decal_pos"		"5.69832 -1.70705 -7.82337"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_p90/smg_p90_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_p90_decal_b.mdl"
+					"worldmodel_decal_pos"		"5.69832 -2.37658 -0.608743"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_p90/smg_p90_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_p90_decal_c.mdl"
+					"worldmodel_decal_pos"		"5.69832 -1.53075 3.86454"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_p90/smg_p90_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_p90_decal_d.mdl"
+					"worldmodel_decal_pos"		"5.69832 -2.26662 -11.4784"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3628,6 +4009,33 @@
 			"model_world"		"models/weapons/w_smg_ump45.mdl"
 			"model_magazine"		"models/weapons/w_smg_ump45_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_ump45.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_ump45/smg_ump45_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_ump45_decal_a.mdl"
+					"worldmodel_decal_pos"		"5.50499 0.125392 -4.81061"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_ump45/smg_ump45_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_ump45_decal_b.mdl"
+					"worldmodel_decal_pos"		"5.50499 -0.425925 -1.94732"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_ump45/smg_ump45_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_ump45_decal_c.mdl"
+					"worldmodel_decal_pos"		"5.50499 -0.246568 1.68466"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/smg_ump45/smg_ump45_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/smg_ump45_decal_d.mdl"
+					"worldmodel_decal_pos"		"5.50499 0.0477725 5.71236"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3672,6 +4080,33 @@
 			"model_world"		"models/weapons/w_rif_ak47.mdl"
 			"model_magazine"		"models/weapons/w_rif_ak47_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_ak47.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_ak47/rif_ak47_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_ak47_decal_a.mdl"
+					"worldmodel_decal_pos"		"6.43516 -1.26887 -0.743033"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_ak47/rif_ak47_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_ak47_decal_b.mdl"
+					"worldmodel_decal_pos"		"6.43516 -1.47404 3.01389"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_ak47/rif_ak47_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_ak47_decal_c.mdl"
+					"worldmodel_decal_pos"		"6.43516 -1.34147 7.33494"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_ak47/rif_ak47_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_ak47_decal_d.mdl"
+					"worldmodel_decal_pos"		"6.43516 -1.31489 11.8284"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3711,6 +4146,33 @@
 			"model_world"		"models/weapons/w_rif_aug.mdl"
 			"model_magazine"		"models/weapons/w_rif_aug_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_aug.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_aug/rif_aug_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_aug_decal_a.mdl"
+					"worldmodel_decal_pos"		"5.94244 -0.866151 -12.1983"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_aug/rif_aug_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_aug_decal_b.mdl"
+					"worldmodel_decal_pos"		"5.94244 -0.651087 -7.01863"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_aug/rif_aug_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_aug_decal_c.mdl"
+					"worldmodel_decal_pos"		"5.94244 -0.537151 -1.69533"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_aug/rif_aug_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_aug_decal_d.mdl"
+					"worldmodel_decal_pos"		"5.94244 0.0485253 2.80582"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3762,6 +4224,33 @@
 			"model_world"		"models/weapons/w_rif_famas.mdl"
 			"model_magazine"		"models/weapons/w_rif_famas_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_famas.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_famas/rif_famas_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_famas_decal_a.mdl"
+					"worldmodel_decal_pos"		"5.62099 -1.58238 -7.33913"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_famas/rif_famas_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_famas_decal_b.mdl"
+					"worldmodel_decal_pos"		"5.62099 -1.06851 -3.05935"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_famas/rif_famas_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_famas_decal_c.mdl"
+					"worldmodel_decal_pos"		"5.62099 -1.41951 0.954913"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_famas/rif_famas_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_famas_decal_d.mdl"
+					"worldmodel_decal_pos"		"5.62099 -1.36689 4.66046"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3814,6 +4303,33 @@
 			"model_world"		"models/weapons/w_rif_galilar.mdl"
 			"model_magazine"		"models/weapons/w_rif_galilar_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_galilar.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_galilar/rif_galilar_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_galilar_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.56555 -1.10028 0.274424"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_galilar/rif_galilar_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_galilar_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.56555 -1.24267 3.98293"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_galilar/rif_galilar_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_galilar_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.56555 -0.371284 8.53896"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_galilar/rif_galilar_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_galilar_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.56555 -2.11272 -8.68949"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3852,6 +4368,33 @@
 			"model_world"		"models/weapons/w_rif_m4a1.mdl"
 			"model_magazine"		"models/weapons/w_rif_m4a1_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_m4a1.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1/rif_m4a1_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.68044 -1.48398 -1.69485"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1/rif_m4a1_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.68044 -0.142594 1.60586"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1/rif_m4a1_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.68044 -2.99986 3.05251"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1/rif_m4a1_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.68044 -0.615597 -10.4655"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -3895,6 +4438,33 @@
 			"model_world"		"models/weapons/w_rif_sg556.mdl"
 			"model_magazine"		"models/weapons/w_rif_sg556_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_sg556.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_sg556/rif_sg556_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_sg556_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.98088 -0.973739 -1.78859"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_sg556/rif_sg556_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_sg556_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.98088 -0.320671 1.4664"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_sg556/rif_sg556_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_sg556_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.98088 -1.23097 4.69249"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_sg556/rif_sg556_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_sg556_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.98088 2.35159 2.18556"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3933,6 +4503,33 @@
 			"model_world"		"models/weapons/w_snip_awp.mdl"
 			"model_icon"		"models/weapons/w_snip_awp_icon.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_awp.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_awp/snip_awp_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_awp_decal_a.mdl"
+					"worldmodel_decal_pos"		"6.59995 -3.74073 -8.22526"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_awp/snip_awp_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_awp_decal_b.mdl"
+					"worldmodel_decal_pos"		"6.59995 -2.05448 0.438974"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_awp/snip_awp_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_awp_decal_c.mdl"
+					"worldmodel_decal_pos"		"6.59995 -2.45321 5.47063"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_awp/snip_awp_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_awp_decal_d.mdl"
+					"worldmodel_decal_pos"		"6.59995 1.43277 9.50265"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -3998,6 +4595,39 @@
 			"model_world"		"models/weapons/w_snip_g3sg1.mdl"
 			"model_magazine"		"models/weapons/w_snip_g3sg1_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_g3sg1.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_g3sg1/snip_g3sg1_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_g3sg1_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.26159 -1.47014 -13.3375"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_g3sg1/snip_g3sg1_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_g3sg1_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.26159 -1.09835 -9.70334"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_g3sg1/snip_g3sg1_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_g3sg1_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.26159 -0.343464 -4.5291"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_g3sg1/snip_g3sg1_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_g3sg1_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.26159 3.07904 -5.97134"
+				}
+				"4"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_g3sg1/snip_g3sg1_decal_e.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_g3sg1_decal_e.mdl"
+					"worldmodel_decal_pos"		"4.26159 -0.172825 7.0548"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4036,6 +4666,33 @@
 			"model_world"		"models/weapons/w_snip_scar20.mdl"
 			"model_magazine"		"models/weapons/w_snip_scar20_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_scar20.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_scar20/snip_scar20_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_scar20_decal_a.mdl"
+					"worldmodel_decal_pos"		"6.21142 -0.729553 -5.89217"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_scar20/snip_scar20_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_scar20_decal_b.mdl"
+					"worldmodel_decal_pos"		"6.21142 -1.42952 -0.795702"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_scar20/snip_scar20_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_scar20_decal_c.mdl"
+					"worldmodel_decal_pos"		"6.21142 -2.36369 3.14003"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_scar20/snip_scar20_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_scar20_decal_d.mdl"
+					"worldmodel_decal_pos"		"6.21142 0.828503 4.35461"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -4069,6 +4726,33 @@
 			"model_player"		"models/weapons/v_snip_ssg08.mdl"
 			"model_world"		"models/weapons/w_snip_ssg08.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_ssg08.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_ssg08/snip_ssg08_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_ssg08_decal_a.mdl"
+					"worldmodel_decal_pos"		"8.63116 -2.90587 0.500683"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_ssg08/snip_ssg08_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_ssg08_decal_b.mdl"
+					"worldmodel_decal_pos"		"8.63116 -2.62622 4.20457"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_ssg08/snip_ssg08_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_ssg08_decal_c.mdl"
+					"worldmodel_decal_pos"		"8.63116 -4.04614 7.6089"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/snip_ssg08/snip_ssg08_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/snip_ssg08_decal_d.mdl"
+					"worldmodel_decal_pos"		"8.63116 -2.43748 11.1247"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -4129,6 +4813,33 @@
 			"model_world"		"models/weapons/w_shot_mag7.mdl"
 			"model_magazine"		"models/weapons/w_shot_mag7_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_mag7.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_mag7/shot_mag7_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_mag7_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.00839 -0.899957 -3.85738"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_mag7/shot_mag7_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_mag7_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.00839 -1.55638 -1.16337"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_mag7/shot_mag7_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_mag7_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.00839 -0.992867 1.63766"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_mag7/shot_mag7_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_mag7_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.00839 -0.953268 4.99879"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -4174,6 +4885,34 @@
 			"model_player"		"models/weapons/v_shot_nova.mdl"
 			"model_world"		"models/weapons/w_shot_nova.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_nova.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_nova/shot_nova_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_nova_decal_a.mdl"
+					"worldmodel_decal_pos"		"-0.834116 1.96027 -2.80232"
+					"worldmodel_decal_end"		"-0.834116 -3.23734 2.3953"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_nova/shot_nova_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_nova_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.84688 -0.472176 0.0710886"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_nova/shot_nova_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_nova_decal_c.mdl"
+					"worldmodel_decal_pos"		"2.84688 -0.174112 3.68293"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_nova/shot_nova_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_nova_decal_d.mdl"
+					"worldmodel_decal_pos"		"2.84688 -0.0459781 7.01211"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4229,6 +4968,33 @@
 			"model_player"		"models/weapons/v_shot_sawedoff.mdl"
 			"model_world"		"models/weapons/w_shot_sawedoff.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_sawedoff.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_sawedoff/shot_sawedoff_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_sawedoff_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.83262 -0.159466 0.515205"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_sawedoff/shot_sawedoff_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_sawedoff_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.83262 -0.578349 3.14057"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_sawedoff/shot_sawedoff_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_sawedoff_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.83262 0.148002 6.48249"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_sawedoff/shot_sawedoff_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_sawedoff_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.83262 -0.00703843 13.8387"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4275,6 +5041,33 @@
 			"model_player"		"models/weapons/v_shot_xm1014.mdl"
 			"model_world"		"models/weapons/w_shot_xm1014.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_xm1014.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_xm1014/shot_xm1014_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_xm1014_decal_a.mdl"
+					"worldmodel_decal_pos"		"4.07802 -2.0993 0.558244"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_xm1014/shot_xm1014_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_xm1014_decal_b.mdl"
+					"worldmodel_decal_pos"		"4.07802 -1.42846 3.59596"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_xm1014/shot_xm1014_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_xm1014_decal_c.mdl"
+					"worldmodel_decal_pos"		"4.07802 -1.42846 6.83013"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/shot_xm1014/shot_xm1014_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/shot_xm1014_decal_d.mdl"
+					"worldmodel_decal_pos"		"4.07802 -1.63849 10.201"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4329,6 +5122,34 @@
 			"model_player"		"models/weapons/v_mach_m249para.mdl"
 			"model_world"		"models/weapons/w_mach_m249para.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_m249.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_m249para/mach_m249para_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_m249para_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.54733 1.61972 -4.21781"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_m249para/mach_m249para_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_m249para_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.54733 -0.737351 -1.1101"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_m249para/mach_m249para_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_m249para_decal_c.mdl"
+					"worldmodel_decal_pos"		"2.54733 0.422171 2.34458"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_m249para/mach_m249para_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_m249para_decal_d.mdl"
+					"worldmodel_decal_pos"		"1.39755 -2.96088 3.20752"
+					"worldmodel_decal_end"		"1.39755 -2.96088 12.263"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4368,6 +5189,33 @@
 			"model_player"		"models/weapons/v_mach_negev.mdl"
 			"model_world"		"models/weapons/w_mach_negev.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_negev.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_negev/mach_negev_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_negev_decal_a.mdl"
+					"worldmodel_decal_pos"		"2.05443 0.308304 -3.33488"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_negev/mach_negev_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_negev_decal_b.mdl"
+					"worldmodel_decal_pos"		"2.05443 0.0774615 0.03991"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_negev/mach_negev_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_negev_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.41455 -4.0248 5.52676"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/mach_negev/mach_negev_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/mach_negev_decal_d.mdl"
+					"worldmodel_decal_pos"		"1.92214 0.210319 9.16643"
+				}
+			}
 			"used_by_classes"
 			{
 				"terrorists"		"1"
@@ -4511,6 +5359,33 @@
 			"model_icon"		"models/weapons/w_rif_m4a1_s_icon.mdl"
 			"model_magazine"		"models/weapons/w_rif_m4a1_s_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_m4a1_silencer.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1_s/rif_m4a1_s_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_s_decal_a.mdl"
+					"worldmodel_decal_pos"		"5.84555 -0.430558 -2.30653"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1_s/rif_m4a1_s_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_s_decal_b.mdl"
+					"worldmodel_decal_pos"		"5.84555 -3.0645 3.20751"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1_s/rif_m4a1_s_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_s_decal_c.mdl"
+					"worldmodel_decal_pos"		"5.84555 -1.2629 0.385118"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/rif_m4a1_s/rif_m4a1_s_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/rif_m4a1_s_decal_d.mdl"
+					"worldmodel_decal_pos"		"5.84555 0.245251 7.90765"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -4790,6 +5665,33 @@
 			"model_world"		"models/weapons/w_pist_223.mdl"
 			"model_magazine"		"models/weapons/w_pist_223_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_usp_silencer.vtf"
+			"stickers"
+			{
+				"0"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_223/pist_223_decal_a.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_223_decal_a.mdl"
+					"worldmodel_decal_pos"		"3.91123 -3.83728 -2.80839"
+				}
+				"1"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_223/pist_223_decal_b.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_223_decal_b.mdl"
+					"worldmodel_decal_pos"		"3.91123 -0.668155 -2.19396"
+				}
+				"2"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_223/pist_223_decal_c.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_223_decal_c.mdl"
+					"worldmodel_decal_pos"		"3.91123 -0.53261 0.751452"
+				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_223/pist_223_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_223_decal_d.mdl"
+					"worldmodel_decal_pos"		"3.91123 -0.617352 3.43111"
+				}
+			}
 			"used_by_classes"
 			{
 				"counter-terrorists"		"1"
@@ -5884,6 +6786,10 @@
 			"name"		"Weapon Case Key"
 			"prefab"		"weapon_case_key"
 			"image_inventory"		"econ/tools/weapon_case_key"
+			"tool"
+			{
+				"restriction"		"generic_valve_key"
+			}
 		}
 		"1204"
 		{
@@ -5911,6 +6817,10 @@
 			"name"		"crate_valve_1"
 			"image_inventory"		"econ/weapon_cases/crate_valve_1"
 			"prefab"		"weapon_case"
+			"tool"
+			{
+				"restriction"		"generic_valve_key"
+			}
 			"attributes"
 			{
 				"set supply crate series"
@@ -5951,6 +6861,10 @@
 			"name"		"crate_valve_2"
 			"image_inventory"		"econ/weapon_cases/crate_valve_2"
 			"prefab"		"weapon_case"
+			"tool"
+			{
+				"restriction"		"generic_valve_key"
+			}
 			"attributes"
 			{
 				"set supply crate series"
@@ -5967,6 +6881,10 @@
 			"name"		"crate_operation_ii"
 			"image_inventory"		"econ/weapon_cases/crate_operation_ii"
 			"prefab"		"weapon_case"
+			"tool"
+			{
+				"restriction"		"generic_valve_key"
+			}
 			"attributes"
 			{
 				"set supply crate series"
@@ -5982,7 +6900,22 @@
 			"item_name"		"#CSGO_crate_dhw13_promo"
 			"name"		"crate_dhw13_promo"
 			"image_inventory"		"econ/weapon_cases/crate_dhw13_promo"
-			"prefab"		"weapon_case"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"6"
+					"force_gc_to_generate"		"1"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+			}
 		}
 	}
 	"attributes"
@@ -7161,7 +8094,380 @@
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"positive"
+		}
+		"113"
+		{
+			"name"		"sticker slot 0 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"114"
+		{
+			"name"		"sticker slot 0 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
 			"stored_as_integer"		"0"
+		}
+		"115"
+		{
+			"name"		"sticker slot 0 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"116"
+		{
+			"name"		"sticker slot 0 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"117"
+		{
+			"name"		"sticker slot 1 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"118"
+		{
+			"name"		"sticker slot 1 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"119"
+		{
+			"name"		"sticker slot 1 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"120"
+		{
+			"name"		"sticker slot 1 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"121"
+		{
+			"name"		"sticker slot 2 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"122"
+		{
+			"name"		"sticker slot 2 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"123"
+		{
+			"name"		"sticker slot 2 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"124"
+		{
+			"name"		"sticker slot 2 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"125"
+		{
+			"name"		"sticker slot 3 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"126"
+		{
+			"name"		"sticker slot 3 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"127"
+		{
+			"name"		"sticker slot 3 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"128"
+		{
+			"name"		"sticker slot 3 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"129"
+		{
+			"name"		"sticker slot 4 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"130"
+		{
+			"name"		"sticker slot 4 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"131"
+		{
+			"name"		"sticker slot 4 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"132"
+		{
+			"name"		"sticker slot 4 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"133"
+		{
+			"name"		"sticker slot 5 id"
+			"attribute_class"		"sticker_slot_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"134"
+		{
+			"name"		"sticker slot 5 wear"
+			"attribute_class"		"sticker_slot_wear"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"135"
+		{
+			"name"		"sticker slot 5 scale"
+			"attribute_class"		"sticker_slot_scale"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"136"
+		{
+			"name"		"sticker slot 5 rotation"
+			"attribute_class"		"sticker_slot_rotation"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"137"
+		{
+			"name"		"tournament event id"
+			"attribute_class"		"tournament_event_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"138"
+		{
+			"name"		"tournament event stage id"
+			"attribute_class"		"tournament_event_stage_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"139"
+		{
+			"name"		"tournament event team0 id"
+			"attribute_class"		"tournament_event_team_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"140"
+		{
+			"name"		"tournament event team1 id"
+			"attribute_class"		"tournament_event_team_id"
+			"group"		"only_on_unique"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+	}
+	"sticker_kits"
+	{
+		"0"
+		{
+			"name"		"default"
+			"item_name"		"#StickerKit_Default"
+			"description_string"		"#StickerKit_Desc_Default"
+			"sticker_material"		"none"
+		}
+		"1"
+		{
+			"name"		"dh_gologo1"
+			"item_name"		"#StickerKit_dh_gologo1"
+			"description_string"		"#StickerKit_desc_dh_gologo1"
+			"sticker_material"		"dh_gologo1"
+		}
+		"2"
+		{
+			"name"		"dh_gologo1_holo"
+			"item_name"		"#StickerKit_dh_gologo1_holo"
+			"description_string"		"#StickerKit_desc_dh_gologo1_holo"
+			"sticker_material"		"dh_gologo1_holo"
+		}
+		"3"
+		{
+			"name"		"dh_gologo2"
+			"item_name"		"#StickerKit_dh_gologo2"
+			"description_string"		"#StickerKit_desc_dh_gologo2"
+			"sticker_material"		"dh_gologo2"
+		}
+		"4"
+		{
+			"name"		"dh_gologo2_holo"
+			"item_name"		"#StickerKit_dh_gologo2_holo"
+			"description_string"		"#StickerKit_desc_dh_gologo2_holo"
+			"sticker_material"		"dh_gologo2_holo"
+		}
+		"5"
+		{
+			"name"		"dh_snowflake2"
+			"item_name"		"#StickerKit_dh_snowflake2"
+			"description_string"		"#StickerKit_desc_dh_snowflake2"
+			"sticker_material"		"dh_snowflake2"
+		}
+		"6"
+		{
+			"name"		"dh_snowflake3"
+			"item_name"		"#StickerKit_dh_snowflake3"
+			"description_string"		"#StickerKit_desc_dh_snowflake3"
+			"sticker_material"		"dh_snowflake3"
+		}
+		"7"
+		{
+			"name"		"dh_bears"
+			"item_name"		"#StickerKit_dh_bears"
+			"description_string"		"#StickerKit_desc_dh_bears"
+			"sticker_material"		"dh_bears"
+		}
+		"8"
+		{
+			"name"		"dh_bears_holo"
+			"item_name"		"#StickerKit_dh_bears_holo"
+			"description_string"		"#StickerKit_desc_dh_bears_holo"
+			"sticker_material"		"dh_bears_holo"
+		}
+		"9"
+		{
+			"name"		"dh_mountain"
+			"item_name"		"#StickerKit_dh_mountain"
+			"description_string"		"#StickerKit_desc_dh_mountain"
+			"sticker_material"		"dh_mountain"
+		}
+		"10"
+		{
+			"name"		"dh_mountain_holo"
+			"item_name"		"#StickerKit_dh_mountain_holo"
+			"description_string"		"#StickerKit_desc_dh_mountain_holo"
+			"sticker_material"		"dh_mountain_holo"
+		}
+		"11"
+		{
+			"name"		"dh_snowman"
+			"item_name"		"#StickerKit_dh_snowman"
+			"description_string"		"#StickerKit_desc_dh_snowman"
+			"sticker_material"		"dh_snowman"
+		}
+		"12"
+		{
+			"name"		"dh_snowman_holo"
+			"item_name"		"#StickerKit_dh_snowman_holo"
+			"description_string"		"#StickerKit_desc_dh_snowman_holo"
+			"sticker_material"		"dh_snowman_holo"
 		}
 	}
 	"paint_kits"
@@ -9964,6 +11270,7 @@
 		"crate_esports_2013"		"2"
 		"crate_valve_2"		"4"
 		"crate_operation_ii"		"3"
+		"crate_dhw13_promo"		"6"
 	}
 	"item_levels"
 	{
@@ -10062,8 +11369,8 @@
 						"1"
 						{
 							"field"		"*quality"
-							"operator"		"!string=="
-							"value"		"strange"
+							"operator"		"string=="
+							"value"		"unique"
 							"required"		"1"
 						}
 					}
@@ -10118,8 +11425,8 @@
 						"1"
 						{
 							"field"		"*quality"
-							"operator"		"!string=="
-							"value"		"strange"
+							"operator"		"string=="
+							"value"		"unique"
 							"required"		"1"
 						}
 					}
@@ -10174,8 +11481,8 @@
 						"1"
 						{
 							"field"		"*quality"
-							"operator"		"!string=="
-							"value"		"strange"
+							"operator"		"string=="
+							"value"		"unique"
 							"required"		"1"
 						}
 					}
@@ -10230,8 +11537,8 @@
 						"1"
 						{
 							"field"		"*quality"
-							"operator"		"!string=="
-							"value"		"strange"
+							"operator"		"string=="
+							"value"		"unique"
 							"required"		"1"
 						}
 					}
@@ -10286,8 +11593,8 @@
 						"1"
 						{
 							"field"		"*quality"
-							"operator"		"!string=="
-							"value"		"strange"
+							"operator"		"string=="
+							"value"		"unique"
 							"required"		"1"
 						}
 					}
