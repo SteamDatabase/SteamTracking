@@ -23,13 +23,13 @@
 							<Label id="DownloadsLongLabel" class="LongDesc" text="#MainMenu_ActiveDownloadsLong" />
 						</Panel>
 					</Button>
-					<Button id="SystemIMs" tabindex="1" selectionpos="1,0" onactivate="DisplaySystemMessages();" onfocus="SystemMessagesButtonFocused();" >
+					<ParentalButton id="SystemIMs" tabindex="1" selectionpos="1,0" onactivate="DisplaySystemMessages();" onfocus="SystemMessagesButtonFocused();" >
 						<Image src="file://{images}/messages.png" />
 						<Panel class="ButtonLabelWrapper" >
 							<Label class="ShortDesc" text="#MainMenu_SystemIMsShort" />
 							<Label class="LongDesc" text="#MainMenu_SystemIMsLong" />
 						</Panel>
-					</Button>
+					</ParentalButton>
 					<ParentalButton id="Inbox" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();" onfocus="InboxButtonFocused();" >
 						<Image src="file://{images}/inbox.png" />
 						<Panel class="ButtonLabelWrapper" >

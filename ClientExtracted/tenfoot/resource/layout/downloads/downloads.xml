@@ -10,8 +10,8 @@
 				<Carousel id="DownloadsGrid" class="DownloadsGrid" focus="center" onmoveup="ShowMainMenuFocusDownloads();">
 					<Panel class="DownloadGridHeader" >
 						<Panel class="DownloadGridBody1" >
-							<Label id="ItemsDownloadingLabel" text="#Downloads_ItemsDownloading" />
-							<Label id="ItemsPausedLabel" text="#Downloads_ItemsPaused" />
+							<Label id="DownloadStatusLabel" text="#Downloads_Downloading" />
+							<Label id="DownloadDetailsLabel" text="#Downloads_ItemsComplete" />
 						</Panel>
 					</Panel>
 					<SummaryGridItem id="SummaryGridItem" />
