@@ -3836,6 +3836,6 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 
 "steam_inbox_asyncgameinvite"	"1 new game invite"
 "steam_inbox_asyncgameinvites"	"%count% new game invites"
-
+"Steam_ManageAccountSecurity" "Manage Account Security"
 }
 

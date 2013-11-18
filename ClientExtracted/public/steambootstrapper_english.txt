@@ -4,6 +4,7 @@
 SteamBootstrapper_UpdatingSteam				"Updating %appname%..."
 SteamBootstrapper_ElevationPrompt			"%appname% needs to self-update before launching."
 SteamBootstrapper_ReadOnlyInstallOSX		"%appname% is unable to write to its folder. Make sure you're not trying to run from the disk image."
+SteamBootstrapper_RunFromDiskImageOSX		"Please drag %appname% into your Applications folder before launching it."
 SteamBootstrapper_ReadOnlyInstall			"%appname% is unable to write to its folder."
 SteamBootstrapper_InstallDirNotASCII			"%appname% cannot run from a folder path with non-English characters. Please re-install %appname% to the default folder."
 SteamBootstrapper_InsufficientDiskSpace		"%appname% needs %nMegaBytes%MB of free disk space to update."

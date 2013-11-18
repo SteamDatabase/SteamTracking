@@ -954,46 +954,22 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	transition-timing-function: ease-in-out;
 }
 
-#ItemsDownloadingLabel
+#DownloadStatusLabel
 {
 	horizontal-align: right;
 	text-align: right;
 	margin-right: 15px;
 	max-width: 660px;
 	text-transform: uppercase;
+	opacity: 1.0;	
 }
 
-#ItemsDownloadingLabel2
-{
-	opacity: 0.0;
-}
-
-.ItemsDownloading #ItemsDownloadingLabel
-{
-	opacity: 1.0;
-}
-
-.ItemsDownloading #ItemsDownloadingLabel2
-{
-	opacity: 1.0;
-}
-
-#ItemsPausedLabel
+#DownloadDetailsLabel
 {
 	horizontal-align: right;
 	text-align: right;
 	margin-right: 18px;
 	text-transform: uppercase;
-	opacity: 0.0;
-}
-
-#ItemsPausedLabel2
-{
-	opacity: 0.0;
-}
-
-.ItemsPaused #ItemsPausedLabel, .ItemsPaused #ItemsPausedLabel2
-{
 	opacity: 1.0;
 	font-size: 32px;
 	margin-top: 6px;
