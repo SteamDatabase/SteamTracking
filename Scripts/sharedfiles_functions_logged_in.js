@@ -97,7 +97,11 @@ function VoteUp(item_id)
 
 					$('VoteUpBtn').addClassName('toggled');
 					$('VoteDownBtn').removeClassName('toggled');
-					$('VoteLaterBtn').hide();
+					var voteLaterBtn = $('VoteLaterBtn');
+					if ( voteLaterBtn )
+					{
+						voteLaterBtn.hide();
+					}
 
 					var blurb = $('rated_blurb');
 					if( blurb != null )
@@ -149,7 +153,11 @@ function VoteDown(item_id)
 					}
 					$('VoteUpBtn').removeClassName('toggled');
 					$('VoteDownBtn').addClassName('toggled');
-					$('VoteLaterBtn').hide();
+					var voteLaterBtn = $('VoteLaterBtn');
+					if ( voteLaterBtn )
+					{
+						voteLaterBtn.hide();
+					}
 
 					var next = $('voteNext');
 					if( next != null )
