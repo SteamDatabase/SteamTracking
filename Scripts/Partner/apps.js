@@ -3415,15 +3415,6 @@ function PublishPending( rgOptions )
 		});
 	}
 
-	if ( bSetReleased )
-	{
-		rgUrls.push( {
-			'url': 'https://partner.steamgames.com/apps/startlaunchmarketing/' + nAppId,
-			'data': {},
-			'message': 'Starting launch marketing'
-		});
-	}
-
 	if( bPublishStoreApp )
 	{
 		// PHP will interpret bSetDate=false as string false which is true....
@@ -3440,6 +3431,15 @@ function PublishPending( rgOptions )
 			'url': 'https://partner.steamgames.com/admin/game/publish/' + nItemid,
 			'data': { 'json': true },
 			'message': 'Publishing store page'
+		});
+	}
+
+	if ( bSetReleased )
+	{
+		rgUrls.push( {
+			'url': 'https://partner.steamgames.com/apps/startlaunchmarketing/' + nAppId,
+			'data': {},
+			'message': 'Starting launch marketing'
 		});
 	}
 
