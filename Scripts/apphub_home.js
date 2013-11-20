@@ -249,6 +249,13 @@ function SelectContentFilter( url )
 	window.location = url;
 }
 
+function SelectLanguageFilter( language )
+{
+	HideMenu( $('filterlanguage'), $('filterlanguage_options') );
+
+	window.location = window.location.href + ( window.location.href.indexOf( '?' ) == 0 ? "?" : "&" ) + "filterLanguage=" + language;
+}
+
 function RequestCurrentUserVotes( publishedFileIDs )
 {
 	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetvotes/', {

@@ -215,6 +215,11 @@ body
 	font-size: 11px;
 }
 
+.apphub_SectionFilterLabel.language
+{
+	padding-left: 50px;
+}
+
 .apphub_AllContentText
 {
 	position: relative;
@@ -331,7 +336,11 @@ div.filterselect_options {
 	text-transform: uppercase;
 }
 
-div.filterselect #filterselect_arrow {
+div.filterselect_options.language {
+	width: auto;
+}
+
+div.filterselect .filterselect_arrow {
 	position: absolute;
 	right: 0px;
 	top: 2px;

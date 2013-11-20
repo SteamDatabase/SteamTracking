@@ -268,7 +268,7 @@
 	position: relative;
 	padding-top: 16px;
 	margin-left: 10px;
-	font-size: 14px;
+	font-size: 13px;
 	z-index: 10;
 }
 
@@ -1012,6 +1012,7 @@ a.apphub_more_friends_who_play:hover
 {
 	font-size: 10px;
 	padding-left: 32px;
+	color: #555454;
 }
 
 .apphub_CardContentMoreLink a
@@ -1019,7 +1020,7 @@ a.apphub_more_friends_who_play:hover
 	color: #555454;
 }
 
-.apphub_Card.interactable:hover .apphub_CardContentMoreLink a
+.apphub_Card.interactable:hover .apphub_CardContentMoreLink, .apphub_Card.interactable:hover .apphub_CardContentMoreLink a
 {
 	color: #898989;
 }
@@ -1296,6 +1297,18 @@ a.apphub_more_friends_who_play:hover
 	position: relative;
 }
 
+
+.UserReviewCardContent_FlaggedByDeveloper
+{
+	padding-top: 60px;
+	width: 75%;
+	margin: 0px auto;
+	font-style: italic;
+	font-size: 12px;
+	text-align: center;
+	color: #666666;
+}
+
 .apphub_CardContentMain .UserReviewCardContent_Footer {
 	position: absolute;
 	width: 100%;
@@ -1313,6 +1326,14 @@ a.apphub_more_friends_who_play:hover
 	background: linear-gradient(to bottom,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b1b1b', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
 	height: 50px;
+}
+
+.apphub_CardContentMain .UserReviewCardContent_Footer .date_posted
+{
+	font-size: 11px;
+	color: #555555;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 
 .apphub_CardContentMain .hr {
