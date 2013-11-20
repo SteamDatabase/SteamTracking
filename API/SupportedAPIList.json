@@ -4698,33 +4698,6 @@
 					}
 				]
 				
-			},
-			{
-				"name": "IOAuthTokenService",
-				"methods": [
-					{
-						"name": "ImplicitGrantNoPrompt",
-						"version": 1,
-						"httpmethod": "POST",
-						"description": "Grants an implicit OAuth token (grant type 'token') for the specified client ID on behalf of a user without prompting",
-						"parameters": [
-							{
-								"name": "key",
-								"type": "string",
-								"optional": false,
-								"description": "Access key"
-							},
-							{
-								"name": "clientid",
-								"type": "string",
-								"optional": true,
-								"description": "Client ID for which to count the number of issued tokens"
-							}
-						]
-						
-					}
-				]
-				
 			}
 		]
 		
