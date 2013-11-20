@@ -3184,6 +3184,7 @@
 			"model_player"		"models/weapons/v_pist_elite.mdl"
 			"model_world"		"models/weapons/w_pist_elite.mdl"
 			"model_dropped"		"models/weapons/w_pist_elite_dropped.mdl"
+			"model_buymenu"		"models/weapons/w_pist_elite_buymenu.mdl"
 			"model_icon"		"models/weapons/w_pist_elite_icon.mdl"
 			"model_magazine"		"models/weapons/w_pist_elite_mag.mdl"
 			"icon_default_image"		"materials/icons/inventory_icon_weapon_elite.vtf"
@@ -8390,84 +8391,84 @@
 			"name"		"dh_gologo1"
 			"item_name"		"#StickerKit_dh_gologo1"
 			"description_string"		"#StickerKit_desc_dh_gologo1"
-			"sticker_material"		"dh_gologo1"
+			"sticker_material"		"dreamhack/dh_gologo1"
 		}
 		"2"
 		{
 			"name"		"dh_gologo1_holo"
 			"item_name"		"#StickerKit_dh_gologo1_holo"
 			"description_string"		"#StickerKit_desc_dh_gologo1_holo"
-			"sticker_material"		"dh_gologo1_holo"
+			"sticker_material"		"dreamhack/dh_gologo1_holo"
 		}
 		"3"
 		{
 			"name"		"dh_gologo2"
 			"item_name"		"#StickerKit_dh_gologo2"
 			"description_string"		"#StickerKit_desc_dh_gologo2"
-			"sticker_material"		"dh_gologo2"
+			"sticker_material"		"dreamhack/dh_gologo2"
 		}
 		"4"
 		{
 			"name"		"dh_gologo2_holo"
 			"item_name"		"#StickerKit_dh_gologo2_holo"
 			"description_string"		"#StickerKit_desc_dh_gologo2_holo"
-			"sticker_material"		"dh_gologo2_holo"
+			"sticker_material"		"dreamhack/dh_gologo2_holo"
 		}
 		"5"
 		{
 			"name"		"dh_snowflake2"
 			"item_name"		"#StickerKit_dh_snowflake2"
 			"description_string"		"#StickerKit_desc_dh_snowflake2"
-			"sticker_material"		"dh_snowflake2"
+			"sticker_material"		"dreamhack/dh_snowflake2"
 		}
 		"6"
 		{
 			"name"		"dh_snowflake3"
 			"item_name"		"#StickerKit_dh_snowflake3"
 			"description_string"		"#StickerKit_desc_dh_snowflake3"
-			"sticker_material"		"dh_snowflake3"
+			"sticker_material"		"dreamhack/dh_snowflake3"
 		}
 		"7"
 		{
 			"name"		"dh_bears"
 			"item_name"		"#StickerKit_dh_bears"
 			"description_string"		"#StickerKit_desc_dh_bears"
-			"sticker_material"		"dh_bears"
+			"sticker_material"		"dreamhack/dh_bears"
 		}
 		"8"
 		{
 			"name"		"dh_bears_holo"
 			"item_name"		"#StickerKit_dh_bears_holo"
 			"description_string"		"#StickerKit_desc_dh_bears_holo"
-			"sticker_material"		"dh_bears_holo"
+			"sticker_material"		"dreamhack/dh_bears_holo"
 		}
 		"9"
 		{
 			"name"		"dh_mountain"
 			"item_name"		"#StickerKit_dh_mountain"
 			"description_string"		"#StickerKit_desc_dh_mountain"
-			"sticker_material"		"dh_mountain"
+			"sticker_material"		"dreamhack/dh_mountain"
 		}
 		"10"
 		{
 			"name"		"dh_mountain_holo"
 			"item_name"		"#StickerKit_dh_mountain_holo"
 			"description_string"		"#StickerKit_desc_dh_mountain_holo"
-			"sticker_material"		"dh_mountain_holo"
+			"sticker_material"		"dreamhack/dh_mountain_holo"
 		}
 		"11"
 		{
 			"name"		"dh_snowman"
 			"item_name"		"#StickerKit_dh_snowman"
 			"description_string"		"#StickerKit_desc_dh_snowman"
-			"sticker_material"		"dh_snowman"
+			"sticker_material"		"dreamhack/dh_snowman"
 		}
 		"12"
 		{
 			"name"		"dh_snowman_holo"
 			"item_name"		"#StickerKit_dh_snowman_holo"
 			"description_string"		"#StickerKit_desc_dh_snowman_holo"
-			"sticker_material"		"dh_snowman_holo"
+			"sticker_material"		"dreamhack/dh_snowman_holo"
 		}
 	}
 	"paint_kits"
