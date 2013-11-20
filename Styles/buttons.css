@@ -432,6 +432,7 @@ btn_border_2px > span {
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	padding-left: 20px !important;
+	height: 20px;
 }
 
 .btn_ico_thumbs_up.no_text {
