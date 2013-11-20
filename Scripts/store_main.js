@@ -673,7 +673,7 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 }
 
 // unlike wishlists, the "divToHide" is only hidden on success
-function RecommendGame( appid, steamworksappid, comment, divBtn, onSuccessFunc, divToShowError, navref )
+function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, language, divBtn, onSuccessFunc, divToShowError, navref )
 {
 	$(divBtn).hide();
 	var url = 'http://store.steampowered.com/friends/recommendgame';
@@ -682,7 +682,7 @@ function RecommendGame( appid, steamworksappid, comment, divBtn, onSuccessFunc, 
 	
 	new Ajax.Request( url, {
 		method: 'post',
-		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment},
+		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language},
 		onSuccess: function( transport ) {
 			if ( transport.responseJSON.success )
 			{
