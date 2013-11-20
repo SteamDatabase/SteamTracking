@@ -1839,7 +1839,19 @@ function SetDrmModule( appid, destRow, drmModule )
 	var downloadlink = '<a href="'+ drmModule[ 'download' ]+ '">' + drmModule[ 'module' ] + '</a>';
 	
 	destRow.insertCell( -1 ).innerHTML = drmModule[ 'buildcrc' ];
+
 	destRow.insertCell( -1 ).innerHTML = downloadlink;
+
+	if ( drmModule[ 'download_orig' ] !== undefined )
+	{
+		// insert a cell; figure out what to put there
+		var downloadoriglink = 'Not available';
+		if ( drmModule[ 'download_orig' ] )
+		{
+			downloadoriglink = '<a href="'+ drmModule[ 'download_orig' ]+ '">' + drmModule[ 'module' ] + '</a>';
+		}
+		destRow.insertCell( -1).innerHTML = downloadoriglink;
+	}
 
 	// drmtoolp writes modtype
     if ( drmModule[ 'modtype' ] !== undefined )
