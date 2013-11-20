@@ -594,14 +594,10 @@ a.nohover, a.nohover:hover
 
 .blotter_recommendation_content
 {
-	font-style: italic;
-	font-size: 14px;
+	font-size: 13px;
 	padding: 8px;
 	text-align: left;
-	font-family: Georgia, serif;
 
-	max-height: 400px;
-	overflow: auto;
 }
 
 .blotter_recommendation_content img
@@ -1592,4 +1588,73 @@ body.flat_page .pagecontent.bluebg {
 .webchat_description b {
 	color: #ffffff;
 	font-weight: normal;
+}
+
+/* User review */
+.blotter_block {
+	position: relative;
+}
+
+.blotter_block .UserReviewCardContent_Footer {
+
+}
+
+.blotter_recommendation_content .hr {
+	height: 2px;
+	background-color: #272f38;
+	margin: 5px 0px;
+}
+
+.blotter_block .UserReviewCardContent_Footer .content {
+	background-color: #1b1b1b;
+}
+
+.blotter_block .found_helpful {
+	font-size: 12px;
+	color: #898a8c;
+	margin: 0 0 14px 0;
+}
+
+.blotter_block .vote_header {
+	height: 44px;
+	margin-bottom: 13px;
+}
+
+.blotter_block .vote_header .title {
+	font-size: 16px;
+	color: #d6d7d8;
+	font-family: 'Motiva Sans', arial, tahoma;
+	padding: 5px 0 0 0;
+}
+
+.blotter_block .vote_header .hours {
+	font-size: 12px;
+	color: #d6d7d8;
+
+}
+
+.blotter_block .vote_header .thumb {
+	float: left;
+	margin-right: 10px;
+}
+
+.blotter_block .apphub_CardTextContent {
+	line-height: 20px;
+	font-size: 13px;
+	color: #cdcac1;
+	font-family: 'Motiva Sans', arial, tahoma;
+}
+
+.blotter_block .control_block .text {
+	display: inline-block;
+	margin-right: 9px;
+	color: #898a8c;
+	font-size: 12px;
+}
+
+.apphub_UserReviewCardContent .found_helpful {
+	padding: 0 9px 5px 0px;
+	font-size: 12px;
+	color: #898a8c;
+	border-bottom: 1px solid #2e3a4a;
 }
