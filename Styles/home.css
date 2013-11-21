@@ -557,7 +557,7 @@ a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
 .OpenID_HighlightSmall
 {
 	color: #EBEBEB;
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: bold;
 }
 
@@ -571,8 +571,8 @@ a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
 
 .OpenID_Legal
 {
-	margin-top: 300px;
-	font-size:10px;
+	font-size:11px;
+	margin-top: 40px;
 }
 
 .OpenID_Logout

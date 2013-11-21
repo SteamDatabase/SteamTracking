@@ -2,6 +2,7 @@
 body {
 	background-color: #000000;
 	background-image: url('http://cdn.steamcommunity.com/public/images//skin_1/bg_dark.gif');
+	background-repeat: repeat-x;
 }
 
 .modal_box h1 {
@@ -375,4 +376,91 @@ a.auth_button, a.auth_button:hover {
 	margin-top: 12px;
 	border: 0;
 	
+}
+
+.OpenID_MainHeader {
+	background-color: #1c1c1c;
+	width: 950px;
+}
+
+	.OpenID_MainHeader h1{
+		font-size: 24px;
+		color: #ffffff;
+		font-family: 'Motiva Sans Thin', Arial, Tahoma;
+		font-weight: normal;
+		padding: 30px 0px 0px 18px;
+	}
+	
+	.OpenID_MainHeader h2{
+		font-size: 24px;
+		color: #579bda;
+		font-family: 'Motiva Sans Thin', Arial, Tahoma;
+		font-weight: normal;
+		padding: 0px 0px 20px 18px;
+	}
+	
+.OpenID_LowerContents {
+	background-color: #242424;
+	width: 950px;
+	padding: 24px 0 30px 0;
+}
+.OpenID_LowerContents_right {
+	width: 436px;
+	float: left;
+	padding: 0px 18px 0px 18px;
+	border-left: 1px solid #374862;
+}
+	.OpenID_LowerContents_right h2 {
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: normal;
+		font-family: Arial, Tahoma;
+	}
+
+.OpenID_LowerContents_left {
+	width: 436px;
+	float: left;
+	padding: 0px 18px 0px 18px;
+}
+
+.OpenID_loggedInText {
+
+}
+	.OpenID_LowerContents h2 {
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: normal;
+		font-family: Arial, Tahoma;
+		margin-bottom: 10px;
+	}
+	
+.OpenID_UserContainer {
+	background-color: #1c1c1c;
+	border-radius: 3px;
+	padding: 8px;
+}
+	.OpenID_UserName {
+		float: left;
+	}
+	.OpenID_loggedInName {
+		color: #86b5d9;
+		font-size: 14px;
+		display: block;
+		margin-top: 3px;
+	}
+	.OpenID_loggedInAccount {
+	}
+	.playerAvatar {
+		float: left;
+		margin-right: 12px;
+	}
+	
+.OpenID_Logout {
+	float: right;
+	text-decoration:underline;
+	margin-bottom: 35px;
+}
+
+.OpenID_linkLoggedInAccount {
+
 }
