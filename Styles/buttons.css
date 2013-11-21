@@ -460,6 +460,9 @@ btn_border_2px > span {
 	padding-left: 15px  !important;
 	height: 20px;
 }
+	.btn_ico_thumbs_down span:after {
+		content: ' ';
+	}
 
 	.btn_ico_thumbs_down:not(.btn_disabled):hover {
 		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_hover.png' );
