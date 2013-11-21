@@ -1,6 +1,6 @@
 {
   "id": "13w47a",
-  "time": "2013-11-21T16:59:58+01:00",
+  "time": "2013-11-21T17:12:58+01:00",
   "releaseTime": "2013-11-21T16:59:58+01:00",
   "type": "snapshot",
   "minecraftArguments": "--username ${auth_player_name} --version ${version_name} --gameDir ${game_directory} --assetsDir ${game_assets} --uuid ${auth_uuid} --accessToken ${auth_access_token} --userProperties ${user_properties}",
@@ -96,7 +96,18 @@
       }
     },
     {
-      "name": "tv.twitch:twitch:5.9"
+      "name": "tv.twitch:twitch:5.9",
+      "rules": [
+        {
+          "action": "allow"
+        },
+        {
+          "action": "disallow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
     },
     {
       "name": "tv.twitch:twitch-platform:5.9",
@@ -109,7 +120,18 @@
         "exclude": [
           "META-INF/"
         ]
-      }
+      },
+      "rules": [
+        {
+          "action": "allow"
+        },
+        {
+          "action": "disallow",
+          "os": {
+            "name": "linux"
+          }
+        }
+      ]
     },
     {
       "name": "tv.twitch:twitch-external-platform:4.5",
