@@ -420,6 +420,21 @@
 				}
 			}
 		}
+		"mvm_robits"
+		{
+			"item_class"	"craft_item"
+			"item_type_name"	"#TF_Robits_Type"
+			"show_in_armory"	"0"
+			"image_inventory"	"backpack/crafting/mvm_robits_01"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"item_quality"	"unique"
+			"propername" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"mouse_pressed_sound"	"ui/item_metal_scrap_pickup.wav"
+			"drop_sound"		"ui/item_metal_scrap_drop.wav"
+		}
 		"paint_can"
 		{
 			"item_class"	"tool"
@@ -913,8 +928,6 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"hidden"	"1"
-			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_shotgun"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
@@ -1113,7 +1126,6 @@
 		{
 			"item_class"	"craft_item"
 			"craft_material_type"	"craft_material_burned"
-			"expiration_date"	"2012-07-11 01:00:00"
 			"item_type_name"	"#TF_Ash_Type"
 			"show_in_armory"	"0"
 			"image_inventory"	"backpack/crafting/ash"
@@ -1320,6 +1332,46 @@
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"			"ui/item_bottle_drop.wav"
 		}
+		"killstreakifier_base"
+		{
+			"item_class"	"tool"
+			"capabilities"
+			{
+				"can_gift_wrap" 	"1"
+			}
+			"tool"
+			{
+				"type"	"killstreakifier"
+				"usage"
+				{
+					"item_desc_tool_target"	"#ItemDescKillStreakify"
+				}
+				"usage_capabilities"
+				{
+					"can_killstreakify" "1"
+				}
+			}
+			"attributes"
+			{
+				"never craftable"
+				{
+					"attribute_class"	"never_craftable"
+					"value"				"1"
+				}
+			}
+			"show_in_armory"	"0"
+			"item_name"			"#TF_KillStreakifier_Name"
+			"item_description"	"#TF_KillStreakifier_Desc"
+			"item_type_name"	"#TF_KillStreakifierToolA"
+			"image_inventory"	"backpack/crafting/killstreakifier_generic"
+			"image_inventory_size_w" "128"
+			"image_inventory_size_h" "96"
+			"item_quality"		"unique"
+			"min_ilevel"		"5"
+			"max_ilevel"		"5"
+			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
+			"drop_sound"			"ui/item_bottle_drop.wav"
+		}
 
 		"dynamic_recipe_base"
 		{
@@ -1344,8 +1396,19 @@
 			"item_quality"		"unique"
 			"min_ilevel"		"5"
 			"max_ilevel"		"5"
-			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
-			"drop_sound"			"ui/item_cardboard_drop.wav"
+			"mouse_pressed_sound"			"ui/item_cardboard_pickup.wav"
+			"drop_sound"					"ui/item_cardboard_drop.wav"
+			"recipe_partial_complete_sound"	"ui/chem_set_add_element.wav"
+			"recipe_complete_sound"			"ui/chem_set_creation.wav"
+		}
+
+		"mvm_killstreak_recipe_base"
+		{
+			"prefab"				"dynamic_recipe_base"
+			"mouse_pressed_sound"			"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"					"ui/item_heavy_gun_drop.wav"
+			"recipe_partial_complete_sound"	"weapons/sentry_wire_connect.wav"
+			"recipe_complete_sound"			"weapons/drg_wrench_teleport.wav"
 		}
 		
 		"recorder"
@@ -2977,6 +3040,7 @@
 			"name"	"TF_WEAPON_SHOTGUN_SOLDIER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_shotgun"
+			"hidden"	"1"
 			"item_slot"	"secondary"
 			"used_by_classes"
 			{
@@ -2988,6 +3052,7 @@
 			"name"	"TF_WEAPON_SHOTGUN_HWG"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_shotgun"
+			"hidden"	"1"
 			"item_slot"	"secondary"
 			"used_by_classes"
 			{
@@ -2999,6 +3064,7 @@
 			"name"	"TF_WEAPON_SHOTGUN_PYRO"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_shotgun"
+			"hidden"	"1"
 			"item_slot"	"secondary"
 			"used_by_classes"
 			{
@@ -3681,6 +3747,24 @@
 			{
 				"medic"	"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "0"
+						"skin_blu" "1"
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_leechgun/c_leechgun_gold"
+					}
+				}
+			}
 			"attributes"
 			{
 				"heal on hit for rapidfire"
@@ -3708,6 +3792,22 @@
 			"name"	"The Axtinguisher"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve axtinguisher"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_axtinguisher/c_axtinguisher_pyro_gold"
+					}
+				}
+			}
 		}
 		"39"
 		{
@@ -4145,6 +4245,19 @@
 				"sound_burst"	"Weapon_Scatter_Gun_Double.SingleCrit"
 				"muzzle_flash"	"muzzle_bignasty"
 				"tracer_effect"	"bullet_bignasty_tracer01"
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_double_barrel_gold"
+					}
+				}				
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -4677,6 +4790,22 @@
 			"name"	"The Ambassador"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve ambassador"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_ambassador/c_ambassador_gold"
+					}
+				}
+			}
 		}
 		"94"
 		{
@@ -6289,6 +6418,19 @@
 				"sound_melee_burst"	"Weapon_Sword.SwingCrit"
 				"sound_special1"	"Sword.Hit"
 				"sound_special2"	"Sword.Idle"
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore_gold"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -6784,6 +6926,22 @@
 			"name"	"The Frontier Justice"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve frontier_justice"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_frontierjustice/c_frontierjustice_gold"
+					}
+				}
+			}
 		}
 		"142"
 		{
@@ -7988,7 +8146,7 @@
 				"engineer"	"scenes\player\engineer\low\taunt_hi5_start.vcd"
 				"pyro"		"scenes\player\pyro\low\taunt_hi5_start.vcd"
 			}
-			"custom_partner_taunt_a_per_class"
+			"custom_partner_taunt_accept_per_class_1"
 			{
 				"scout"		"scenes\player\scout\low\taunt_hi5_a.vcd"
 				"sniper"	"scenes\player\sniper\low\taunt_hi5_a.vcd"
@@ -8000,7 +8158,7 @@
 				"engineer"	"scenes\player\engineer\low\taunt_hi5_a.vcd"
 				"pyro"		"scenes\player\pyro\low\taunt_hi5_a.vcd"
 			}
-			"custom_partner_taunt_b_per_class"
+			"custom_partner_taunt_accept_per_class_2"
 			{
 				"scout"		"scenes\player\scout\low\taunt_hi5_b.vcd"
 				"sniper"	"scenes\player\sniper\low\taunt_hi5_b.vcd"
@@ -8011,6 +8169,10 @@
 				"spy"		"scenes\player\spy\low\taunt_hi5_b.vcd"
 				"engineer"	"scenes\player\engineer\low\taunt_hi5_b.vcd"
 				"pyro"		"scenes\player\pyro\low\taunt_hi5_b.vcd"
+			}
+			"visuals"
+			{
+				"custom_sound0"		"TFPlayer.HighFive"
 			}
 		}
 
@@ -8993,6 +9155,24 @@
 			{
 				"spy"	"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"v_skin_red"	"8"
+						"v_skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_knife_gold"
+					}
+				}
+			}
 			"attributes"
 			{
 				"special taunt"
@@ -9115,6 +9295,22 @@
 			"used_by_classes"
 			{
 				"engineer"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_wrench_gold"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -9253,6 +9449,22 @@
 			{
 				"scout"	"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_scattergun_gold"
+					}
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
@@ -9290,6 +9502,24 @@
 			{
 				"sniper"	"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"v_skin_red"	"8"
+						"v_skin_blu"	"9"	
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_sniperrifle_gold"
+					}
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
@@ -9326,6 +9556,22 @@
 			"used_by_classes"
 			{
 				"heavy"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_minigun_gold"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -9367,6 +9613,22 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_smg/c_smg_gold"
+					}
+				}
+			}
 		}
 		"204"
 		{
@@ -9441,6 +9703,24 @@
 			{
 				"soldier"	"1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"v_skin_red"	"8"
+						"v_skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_rocketlauncher_gold"
+					}
+				}
+			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
@@ -9481,6 +9761,22 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_grenadelauncher_gold"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -9523,7 +9819,21 @@
 			}			
 			"visuals"
 			{
- 				"skin"	"0"
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"v_skin_red"	"8"
+						"v_skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_stickybomb_launcher_gold"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -9564,6 +9874,22 @@
 			"used_by_classes"
 			{
 				"pyro"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_flamethrower/c_flamethrower_gold"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -9672,6 +9998,22 @@
 			"used_by_classes"
 			{
 				"medic"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"8"
+						"skin_blu"	"9"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/w_models/w_medigun_gold"
+					}
+				}
 			}
 			"attributes"
 			{
@@ -10500,6 +10842,19 @@
 					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_2"
 					"ACT_MP_RELOAD_AIRWALK_END"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_END_2"
 					"ACT_MP_RELOAD_AIRWALK_LOOP"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP_2"
+				}
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_blackbox/c_blackbox_gold"
+					}
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -14028,14 +14383,24 @@
 			}
 			"attributes"
 			{
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.80"
+				}
 				"enables aoe heal"
 				{
 					"attribute_class"	"enables_aoe_heal"
 					"value"	"1"
 				}
-				"lunchbox adds minicrits"
+				"health regen"
 				{
-					"attribute_class"	"set_weapon_mode"
+					"attribute_class"	"add_health_regen"
 					"value"	"3"
 				}
 				"special taunt"
@@ -18685,6 +19050,11 @@
 					"attribute_class"	"mult_dmg"
 					"value" "0.75"
 				}
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value" "0.75"
+				}
 			}
 			"visuals"
 			{
@@ -19107,6 +19477,19 @@
 				"sound_burst"	"Weapon_Tomislav.FireCrit"
 				"sound_special1"	"Weapon_Tomislav.WindUp"
 				"sound_special2"	"Weapon_Tomislav.WindDown"
+				"styles"
+				{
+					"0"
+					{
+					}
+					"1"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"selectable"	"0"
+						"image_inventory"	"backpack/weapons/c_models/c_tomislav/c_tomislav_gold"
+					}
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -30942,20 +31325,10 @@
 			"attach_to_hands" "1"
 			"attributes"
 			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value" "0.70"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value" "0.6"
-				}
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value"	"0.65"
+					"value"	"0.90"
 				}
 				"hype on damage"
 				{
@@ -30965,7 +31338,12 @@
 				"hype resets on jump"
 				{
 					"attribute_class"	"hype_resets_on_jump"
-					"value"	"1"
+					"value"	"25"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.66"
 				}
 			}
 			"visuals"
@@ -39300,6 +39678,363 @@
 		}
 
 
+		"1057"
+		{
+			"name"	"MvM GateBot Light Scout"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_scout_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_scout_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_scout_off.mdl"
+					}
+				}
+			}
+		}
+		"1058"
+		{
+			"name"	"MvM GateBot Light Pyro"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_pyro_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_pyro_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_pyro_off.mdl"
+					}
+				}
+			}
+		}
+		"1059"
+		{
+			"name"	"MvM GateBot Light Medic"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_medic_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_medic_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_medic_off.mdl"
+					}
+				}
+			}
+		}
+		"1060"
+		{
+			"name"	"MvM GateBot Light Heavy"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_heavy_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_heavy_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_heavy_off.mdl"
+					}
+				}
+			}
+		}
+		"1061"
+		{
+			"name"	"MvM GateBot Light Demoman"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_demo_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_demo_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_demo_off.mdl"
+					}
+				}
+			}
+		}
+		"1062"
+		{
+			"name"	"MvM GateBot Light Sniper"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_sniper_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_sniper_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_sniper_off.mdl"
+					}
+				}
+			}
+		}
+		"1063"
+		{
+			"name"	"MvM GateBot Light Soldier"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_soldier_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_soldier_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_soldier_off.mdl"
+					}
+				}
+			}
+		}
+		"1064"
+		{
+			"name"	"MvM GateBot Light Spy"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_spy_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_spy_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_spy_off.mdl"
+					}
+				}
+			}
+		}
+		"1065"
+		{
+			"name"	"MvM GateBot Light Engineer"
+			"first_sale_date"	"2011/12/19"
+			"prefab"	"misc"
+			"item_name"	"#TF_GateBot_Light"
+			"item_description"	"#TF_GateBot_Light_Desc"
+			"image_inventory"	"backpack"
+			"model_player"	"models/bots/gameplay_cosmetic/light_engineer_on.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#style0"
+						"skin_red"	"0"
+						"skin_blu"	"0"
+						"model_player"	"models/bots/gameplay_cosmetic/light_engineer_on.mdl"
+					}
+					"1"
+					{
+						"name"		"#style1"
+						"skin_red"	"1"
+						"skin_blu"	"1"
+						"model_player"	"models/bots/gameplay_cosmetic/light_engineer_off.mdl"
+					}
+				}
+			}
+		}
+		"1066"
+		{
+			"name"	"Tour of Duty Badge Advanced 3"
+			"prefab"		"base_misc"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Badge"
+			"item_name"	"#TF_MvM_Badge_Advanced3"
+			"item_description"	"#TF_MvM_Badge_Advanced3_Desc"
+			"item_slot"	"misc"
+			"equip_region"	"medal"
+			"image_inventory"	"backpack/player/items/mvm_loot/all_class/mvm_badge_shield"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"model_player"	"models/player/items/mvm_loot/all_class/mvm_badge_shield.mdl"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_medal_pickup.wav"
+			"drop_sound"		"ui/item_medal_pickup.wav"
+		}
 		"1067"
 		{
 			"name"	"The Grandmaster"
@@ -39415,7 +40150,73 @@
 			"item_description"	"#TF_SpellBook_Basic_Desc"
 			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
 		}
-
+		"1071"
+		{
+			"name"	"Gold Frying Pan"
+			"item_class"	"saxxy"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_logname"	"golden_fryingpan"
+			"item_iconname"	"golden_fryingpan"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_GoldFryingPan"
+			"item_name"	"#TF_Gold_FryingPan"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_frying_pan/c_frying_pan_gold"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"spy" "1"
+				"engineer" "1"
+			}
+			"attributes"
+			{
+				"turn to gold"
+				{
+					"attribute_class"	"set_turn_to_gold"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "2"
+						"skin_blu" "3"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 
 
 
@@ -50598,6 +51399,318 @@
 			"image_inventory"	"backpack/player/items/all_class/etf2l_highlander_participant_2012"
 			"model_player"		"models/player/items/all_class/etf2l_highlander_participant_2012.mdl"
 		}
+		"8307"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Gold Medal Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Gold"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012_gold"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8308"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Silver Medal Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Silver"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012_silver"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8309"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Bronze Medal Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Bronze"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8310"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8311"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8312"
+		{		
+			"name"				"ETF2L 6v6 Division 3 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division3_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8313"
+		{		
+			"name"				"ETF2L 6v6 Division 4 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division4_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8314"
+		{		
+			"name"				"ETF2L 6v6 Division 5 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division5_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8315"
+		{		
+			"name"				"ETF2L 6v6 Division 6 Group Winner Season 15"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division6_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8316"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8317"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8318"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8319"
+		{		
+			"name"				"ETF2L 6v6 Division 3 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division3_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8320"
+		{		
+			"name"				"ETF2L 6v6 Division 4 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division4_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8321"
+		{		
+			"name"				"ETF2L 6v6 Division 5 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division5_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8322"
+		{		
+			"name"				"ETF2L 6v6 Division 6 Participation Medal Season 15"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division6_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season15"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8323"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Gold Medal Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Gold"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012_gold"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8324"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Silver Medal Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Silver"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012_silver"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8325"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Bronze Medal Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Bronze"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_placement_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_placement_2012.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8326"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8327"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8328"
+		{		
+			"name"				"ETF2L 6v6 Division 3 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division3_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8329"
+		{		
+			"name"				"ETF2L 6v6 Division 4 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division4_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8330"
+		{		
+			"name"				"ETF2L 6v6 Division 5 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division5_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8331"
+		{		
+			"name"				"ETF2L 6v6 Division 6 Group Winner Season 16"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division6_Group_Winner"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_winner_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_winner_2012.mdl"
+		}
+		"8332"
+		{		
+			"name"				"ETF2L 6v6 Premier Division Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premier_Division_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8333"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8334"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8335"
+		{		
+			"name"				"ETF2L 6v6 Division 3 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division3_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8336"
+		{		
+			"name"				"ETF2L 6v6 Division 4 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division4_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8337"
+		{		
+			"name"				"ETF2L 6v6 Division 5 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division5_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
+		"8338"
+		{		
+			"name"				"ETF2L 6v6 Division 6 Participation Medal Season 16"
+			"prefab"			"etf2l_participation_styles tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division6_Participation"
+			"item_description"	"#TF_TournamentMedal_ETF2L_Season16"
+			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
+			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
+		}
 
 
 
@@ -50682,6 +51795,10 @@
 		{
 			"name" "Map Token Egypt"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Egypt"
@@ -50702,6 +51819,10 @@
 		{
 			"name" "Map Token Coldfront"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Coldfront"
@@ -50722,6 +51843,10 @@
 		{
 			"name" "Map Token Fastlane"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Fastlane"
@@ -50742,6 +51867,10 @@
 		{
 			"name" "Map Token Turbine"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Turbine"
@@ -50762,6 +51891,10 @@
 		{
 			"name" "Map Token Steel"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Steel"
@@ -50782,6 +51915,10 @@
 		{
 			"name" "Map Token Junction"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Junction"
@@ -50802,6 +51939,10 @@
 		{
 			"name" "Map Token Watchtower"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Watchtower"
@@ -50822,6 +51963,10 @@
 		{
 			"name" "Map Token Hoodoo"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Hoodoo"
@@ -50842,6 +51987,10 @@
 		{
 			"name" "Map Token Offblast"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Offblast"
@@ -50862,6 +52011,10 @@
 		{
 			"name" "Map Token Yukon"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Yukon"
@@ -50882,6 +52035,10 @@
 		{
 			"name" "Map Token Harvest"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Harvest"
@@ -50902,6 +52059,10 @@
 		{
 			"name" "Map Token Freight"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Freight"
@@ -50922,6 +52083,10 @@
 		{
 			"name" "Map Token Mountain Lab"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_MountainLab"
@@ -50942,6 +52107,10 @@
 		{
 			"name" "Map Token Manor Event"
 			"first_sale_date"	"2010/10/29"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_ManorEvent"
@@ -50962,6 +52131,10 @@
 		{
 			"name" "Map Token Nightfall"
 			"first_sale_date"	"2011/01/17"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Nightfall"
@@ -50982,6 +52155,10 @@
 		{
 			"name" "Map Token Frontier"
 			"first_sale_date"	"2011/02/15"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Frontier"
@@ -51002,6 +52179,10 @@
 		{
 			"name" "Map Token Lakeside"
 			"first_sale_date"	"2011/02/15"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Lakeside"
@@ -51022,6 +52203,10 @@
 		{
 			"name" "Map Token Gullywash"
 			"first_sale_date"	"2011/10/06"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Gullywash"
@@ -51042,6 +52227,10 @@
 		{
 			"name" "Map Token Kong King"
 			"first_sale_date"	"2012/08/08"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_KongKing"
@@ -51062,6 +52251,10 @@
 		{
 			"name" "Map Token Process"
 			"first_sale_date"	"2013/07/13"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Process"
@@ -51082,6 +52275,10 @@
 		{
 			"name" "Map Token Standin"
 			"first_sale_date"	"2013/07/13"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
 			"item_class"	"map_token"
 			"item_type_name"	"#TF_MapToken"
 			"item_name"		"#TF_MapToken_Standin"
@@ -51090,6 +52287,30 @@
 			"show_in_armory"	"1"
 			"armory_desc"		"maptoken"
 			"image_inventory"	"backpack/player/items/all_class/stamp_standin"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1921"
+		{
+			"name" "Map Token Snakewater"
+			"first_sale_date"	"2013/11/20"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Snakewater"
+			"item_description"	"#TF_MapToken_Snakewater_Desc"
+			"map_name"		"#TF_Map_Snakewater"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_snakewater"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"96"
 			"item_quality"		"unique"
@@ -55258,6 +56479,53 @@
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
 		}
+		"2125"
+		{
+			"name" "Map Token Bundle 6"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2013/11/21"
+			"item_class"	"bundle"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"bundle"
+			{
+				"Map Token Egypt"		"1"
+				"Map Token Coldfront"	"1"
+				"Map Token Fastlane"	"1"
+				"Map Token Turbine"		"1"
+				"Map Token Steel"		"1"
+				"Map Token Junction"	"1"
+				"Map Token Watchtower"	"1"
+				"Map Token Hoodoo"		"1"
+				"Map Token Offblast"	"1"
+				"Map Token Yukon"		"1"
+				"Map Token Harvest"		"1"
+				"Map Token Freight"		"1"
+				"Map Token Mountain Lab"		"1"
+				"Map Token Manor Event"			"1"
+				"Map Token Nightfall"			"1"
+				"Map Token Frontier"			"1"
+				"Map Token Lakeside"			"1"
+				"Map Token Gullywash"			"1"
+				"Map Token Kong King"			"1"
+				"Map Token Process"				"1"
+				"Map Token Standin"				"1"
+				"Map Token Snakewater"			"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_MapTokens"
+			"item_description"	"#TF_Bundle_MapTokens_Desc"
+			"image_inventory"	"backpack/player/items/all_class/stamp_collection"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
 		"2126"
 		{
 			"name" "Halloween 2013 Everything Bundle"
@@ -56346,7 +57614,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2010-12-31 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -56713,7 +57980,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2011-07-11 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -56806,7 +58072,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2012-01-01 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -56847,7 +58112,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2012-01-01 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -57092,7 +58356,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2012-07-11 01:00:00"
 			"tool"
 			{
 				"type"	""
@@ -57165,7 +58428,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2012-09-21 06:00:00"
 			"tool"
 			{
 				"type"	""
@@ -57716,7 +58978,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2012-11-09 06:00:00"
 			"tool"
 			{
 				"type"	""
@@ -57790,7 +59051,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2013-01-03 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -57826,7 +59086,6 @@
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
 			"craft_material_type"	"supply_crate"
-			"expiration_date"	"2013-01-03 23:00:00"
 			"tool"
 			{
 				"type"	""
@@ -58525,6 +59784,78 @@
 		}
 		
 
+		
+		"5700"
+		{
+			"name"		"Robits Loot 01"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_01"
+			"item_description"	"#TF_Item_Robits_Loot_01_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_01"
+		}
+		
+		"5701"
+		{
+			"name"		"Robits Loot 02"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_02"
+			"item_description"	"#TF_Item_Robits_Loot_02_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_02"
+		}
+		
+		"5702"
+		{
+			"name"		"Robits Loot 03"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_03"
+			"item_description"	"#TF_Item_Robits_Loot_03_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_03"
+		}
+		
+		"5703"
+		{
+			"name"		"Robits Loot 04"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_04"
+			"item_description"	"#TF_Item_Robits_Loot_04_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_04"
+		}
+		
+		"5704"
+		{
+			"name"		"Robits Loot 05"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_05"
+			"item_description"	"#TF_Item_Robits_Loot_05_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_05"
+		}
+		
+		"5705"
+		{
+			"name"		"Robits Loot 06"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_06"
+			"item_description"	"#TF_Item_Robits_Loot_06_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_06"
+		}
+		
+		"5706"
+		{
+			"name"		"Robits Loot 07"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_07"
+			"item_description"	"#TF_Item_Robits_Loot_07_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_07"
+		}
+		
+		"5707"
+		{
+			"name"		"Robits Loot 08"
+			"prefab"	"mvm_robits"
+			"item_name"	"#TF_Item_Robits_Loot_08"
+			"item_description"	"#TF_Item_Robits_Loot_08_Desc"
+			"image_inventory"	"backpack/crafting/mvm_robits_08"
+		}
 
 		"5708"
 		{
@@ -58599,7 +59930,6 @@
 		{
 			"name"	"Halloween 2013 Crate"					
 			"prefab" "eventcrate"
-			"expiration_date"	"2013-11-12 06:00:00"
 			"tool"
 			{
 				"restriction"	"halloween_2013"
@@ -59965,7 +61295,78 @@
 			"image_inventory"	"backpack/crafting/strange_generic"
 		}
 
-
+		"6523"
+		{
+			"name"	"Killstreakifier"
+			"prefab" "killstreakifier_base"
+			"item_name"			"#TF_KillStreakifier_Name"
+			"item_description"	"#TF_KillStreakifier_Desc"
+			"item_type_name"	"#TF_KillStreakifierToolB"
+			"image_inventory"	"backpack/crafting/professional_grease"		
+			"attributes"
+			{
+				"killstreak tier"
+				{
+					"attribute_class"	"killstreak_tier"
+					"value"	"2"
+				}
+			}
+		}
+		
+		"6524"
+		{
+			"name"	"Strange Filter: Snakewater (Community)"
+			"first_sale_date"	"2013/11/20"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"cp_snakewater_final1"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_snakewater"
+			"item_name"	"#TF_StrangeFilter_CommunityMapSnakewater"
+			"item_description"	"#TF_StrangeFilter_CommunityMapSnakewater_Desc"
+		}
+		
+		"6526"
+		{
+			"name"	"Killstreakifier Rare"
+			"prefab" "killstreakifier_base"
+			"item_name"			"#TF_KillStreakifierRare_Name"
+			"item_description"	"#TF_KillStreakifierRare_Desc"
+			"item_type_name"	"#TF_KillStreakifierToolC"
+			"image_inventory"	"backpack/crafting/professional_grease_rare"
+			"attributes"
+			{
+				"killstreak tier"
+				{
+					"attribute_class"	"killstreak_tier"
+					"value"	"3"
+				}
+			}
+		}
+		
+		"6527"
+		{
+			"name"	"Killstreakifier Basic"
+			"prefab" "killstreakifier_base"
+			"item_type_name"	"#TF_KillStreakifierToolA"
+			"item_name"			"#TF_KillStreakifierBasic_Name"
+			"item_description"	"#TF_KillStreakifierBasic_Desc"
+			"image_inventory"	"backpack/crafting/professional_grease_basic"
+			"attributes"
+			{
+				"killstreak tier"
+				{
+					"attribute_class"	"killstreak_tier"
+					"value"	"1"
+				}
+			}
+		}
+		
 		"8926"
 		{
 			"name"	"Halloween Transmogrifier: Pyro"
@@ -60882,7 +62283,35 @@
 				}
 			}
 		}
+
+		"20002"
+		{
+			"name"	"MvM Killstreak Recipe 1"
+			"prefab" "mvm_killstreak_recipe_base"
+			"item_name"	"#TF_MvM_Killstreak_Recipe_1"
+			"image_inventory"	"backpack/crafting/professional_kit"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+		}
 		
+		"20003"
+		{
+			"name"	"MvM Killstreak Recipe 2"
+			"prefab" "mvm_killstreak_recipe_base"
+			"item_name"	"#TF_MvM_Killstreak_Recipe_2"
+			"image_inventory"	"backpack/crafting/professional_kit_rare"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+		}
+
 		"20005"
 		{
 			"name"	"Cosmetic Strangifier Recipe 2"
@@ -65664,6 +67093,46 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
+		"481"
+		{
+			"name"	"canteen specialist"
+			"attribute_class"	"canteen_specialist"
+			"description_string"	"#Attrib_Canteen_Specialist"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"482"
+		{
+			"name"	"overheal expert"
+			"attribute_class"	"overheal_expert"
+			"description_string"	"#Attrib_Overheal_Expert"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"484"
+		{
+			"name"	"mad milk syringes"
+			"attribute_class"	"mad_milk_syringes"
+			"description_string"	"#Attrib_Medic_MadMilkSyringes"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"488"
+		{
+			"name"	"rocket specialist"
+			"attribute_class"	"rocket_specialist"
+			"description_string"	"#Attrib_Rocket_Specialist"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		"489"
 		{
 			"name"	"SET BONUS: move speed set bonus"
@@ -65712,6 +67181,16 @@
 			"armory_desc"	"on_wearer"
 			"stored_as_integer"	"0"
 		}
+		"493"
+		{
+			"name"	"healing mastery"
+			"attribute_class"	"healing_mastery"
+			"description_string"	"#Attrib_Healing_Mastery"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
 		"494"
 		{
 			"name"	"kill eater 3"
@@ -65747,6 +67226,25 @@
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"1"
+		}
+		"498"
+		{
+			"name" "bot custom jump particle"
+			"attribute_class"	"bot_custom_jump_particle__mvm"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"499"
+		{
+			"name"	"generate rage on heal"
+			"attribute_class"	"generate_rage_on_heal"
+			"description_string"	"#Attrib_RageOnHeal"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 		"500"
 		{
@@ -66028,6 +67526,58 @@
 			"is_set_bonus"	"1"
 			"stored_as_integer"	"1"
 		}
+		"538"
+		{
+			"name"	"righthand pose parameter"
+			"attribute_class"	"righthand_pose_parameter"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"stored_as_integer"	"1"
+		}
+		"539"
+		{
+			"name"	"set throwable type"
+			"attribute_class"	"set_throwable_type"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"stored_as_integer"	"1"
+		}
+		"542"
+		{
+			"name"	"item style override"
+			"attribute_class"	"item_style_override"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
+		"543"
+		{
+			"name"	"paint decal enum"
+			"attribute_class"	"paint_decal_enum"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
+		"544"
+		{
+			"name"	"show paint description"
+			"attribute_class"	"show_paint_description"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
+		"545"
+		{
+			"name"	"bot medic uber health threshold"
+			"attribute_class"	"bot_medic_uber_health_threshold"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"stored_as_integer"	"1"
+		}
+		"546"
+		{
+			"name"	"bot medic uber deploy delay duration"
+			"attribute_class"	"bot_medic_uber_deploy_delay_duration"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
 		"547"
 		{
 			"name"	"single wep deploy time decreased"
@@ -66184,6 +67734,16 @@
 			"stored_as_integer"	"0"		
 			"is_user_generated"	"2"
 		}
+		"1030"
+		{
+			"name"	"Attack not cancel charge"
+			"attribute_class"	"attack_not_cancel_charge__mvm"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+			"is_user_generated"	"1"
+		}
 		
 		"2000"
 		{
@@ -66265,6 +67825,24 @@
 			"attribute_class"		"tool_target_item"
 			"hidden"	"1"
 		}
+		"2013"		
+		{
+			"name"					"killstreak effect"
+			"attribute_class"		"killstreak_effect"
+			"description_string"	"#Attrib_KillStreakEffect"
+			"description_format"	"value_is_killstreakeffect_index"
+			"stored_as_integer"	"0"
+			"effect_type"	"positive"
+		}
+		"2014"		
+		{
+			"name"					"killstreak idleeffect"
+			"attribute_class"		"killstreak_idleeffect"
+			"description_string"	"#Attrib_KillStreakIdleEffect"
+			"description_format"	"value_is_killstreak_idleeffect_index"
+			"stored_as_integer"	"0"
+			"effect_type"	"positive"
+		}
 
 		"2015"
 		{
@@ -66325,6 +67903,51 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
+		}
+		"2022"
+		{
+			"name"					"loot rarity"
+			"attribute_class"		"loot_rarity"
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+			"stored_as_integer"		"1"
+		}
+		"2023"
+		{
+			"name"					"quality text override"
+			"attribute_class"		"quality_text_override"
+			"attribute_type"		"string"
+			"hidden"				"1"
+		}
+		"2024"
+		{
+			"name"					"item name text override"
+			"attribute_class"		"item_name_text_override"
+			"attribute_type"		"string"
+			"hidden"				"1"
+		}
+		"2025"		
+		{
+			"name"					"killstreak tier"
+			"attribute_class"		"killstreak_tier"
+			"description_string"	"#Attrib_KillStreakTier"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+			"stored_as_integer"		"0"
+		}
+		"2026"		
+		{
+			"name"					"wide item level"
+			"attribute_class"		"wide_item_level"
+			"hidden"				"1"
+			"stored_as_integer"		"1"
+		}
+		"2027"
+		{
+			"name"					"is australium item"
+			"attribute_class"		"is_australium_item"
+			"hidden"				"1"
+			"stored_as_integer"		"1"
 		}
 
 
@@ -74547,7 +76170,7 @@
 			"do_B"	"#TF_PileOfAsh"
 			"always_known"	"1"
 			"premium_only"	"0"
-			"disabled"	"0"
+			"disabled"	"1"
 			"input_items"
 			{
 				"1"
@@ -76291,6 +77914,70 @@
 		}
 		
 		
+		"2001"
+		{
+			"system"			"killstreak_eyeglow_1_teamcolor_red"
+		}
+		"22001"
+		{
+			"system"			"killstreak_eyeglow_4_teamcolor_red"
+		}
+		"2002"
+		{
+			"system"			"killstreak_t1_lvl1"
+		}
+		"22002"
+		{
+			"system"			"killstreak_t1_lvl2"
+		}
+		"2003"
+		{
+			"system"			"killstreak_t2_lvl1"
+		}
+		"22003"
+		{
+			"system"			"killstreak_t2_lvl2"
+		}
+		"2004"
+		{
+			"system"			"killstreak_t3_lvl1"
+		}
+		"22004"
+		{
+			"system"			"killstreak_t3_lvl2"
+		}
+		"2005"
+		{
+			"system"			"killstreak_t4_lvl1"
+		}
+		"22005"
+		{
+			"system"			"killstreak_t4_lvl2"
+		}
+		"2006"
+		{
+			"system"			"killstreak_t5_lvl1"
+		}
+		"22006"
+		{
+			"system"			"killstreak_t5_lvl2"
+		}
+		"2007"
+		{
+			"system"			"killstreak_t6_lvl1"
+		}
+		"22007"
+		{
+			"system"			"killstreak_t6_lvl2"
+		}
+		"2008"
+		{
+			"system"			"killstreak_t7_lvl1"
+		}
+		"22008"
+		{
+			"system"			"killstreak_t7_lvl2"
+		}
 	}
 	"armory_data"
 	{
@@ -77410,6 +79097,60 @@
 			}
 		}
 
+		"mvm_mannhattan"
+		{
+			"display_name"	"#TF_MVM_Map_Mannhattan"
+
+			"missions"
+			{
+				"mvm_mannhattan"
+				{
+					"display_name"	"#TF_MVM_Challenge_Mannhattan"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"intermediate"
+				}
+				"mvm_mannhattan_advanced1"
+				{
+					"display_name"	"#TF_MVM_Challenge_Mannhattan1"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"advanced"
+				}
+				"mvm_mannhattan_advanced2"
+				{
+					"display_name"	"#TF_MVM_Challenge_Mannhattan2"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"advanced"
+				}
+			}
+		}
+
+		"mvm_rottenburg"
+		{
+			"display_name"	"#TF_MVM_Map_Rottenburg"
+
+			"missions"
+			{
+				"mvm_rottenburg"
+				{
+					"display_name"	"#TF_MVM_Challenge_Rottenburg"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"intermediate"
+				}
+				"mvm_rottenburg_advanced1"
+				{
+					"display_name"	"#TF_MVM_Challenge_Rottenburg1"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"advanced"
+				}
+				"mvm_rottenburg_advanced2"
+				{
+					"display_name"	"#TF_MVM_Challenge_Rottenburg2"
+					"mode"			"#TF_MVM_Challenge_Invasion"
+					"difficulty"	"advanced"
+				}
+			}
+		}
+
 		"mvm_bigrock"
 		{
 			"display_name"	"#TF_MVM_Map_Bigrock"
@@ -77639,6 +79380,25 @@
 			}
 		}
 
+		"tour_advanced3"
+		{
+			"tour_name"						"#TF_MvM_Tour_Advanced_3"
+			"badge_item_def"				"Tour of Duty Badge Advanced 3"
+			"mission_complete_loot_list"	"mvm_victory_advanced3"
+			"tour_complete_loot_list"		"mvm_victory_badge_leveled_advanced3"
+			"difficulty"					"advanced"
+			"loot_image"				"pve/mvm_loot_image_shield"
+			"is_new"					"1"
+
+			"missions"
+			{
+				"mvm_mannhattan_advanced1"		"1"
+				"mvm_mannhattan_advanced2"		"2"
+				"mvm_rottenburg_advanced1"		"3"
+				"mvm_rottenburg_advanced2"		"4"
+			}
+		}
+
 		"tour_expert1"
 		{
 			"tour_name"						"#TF_MvM_Tour_Expert_1"
@@ -77852,6 +79612,14 @@
 				"strangeprefixtoken"	"#TF_Map_Standin_StrangePrefix"
 				"maptoken"				"Map Token Standin"
 				"authors"				"#cp_standin_final_authors"
+			}
+			"12"
+			{
+				"name"					"cp_snakewater_final1"
+				"localizedname"			"#TF_Map_Snakewater"
+				"strangeprefixtoken"	"#TF_Map_Snakewater_StrangePrefix"
+				"maptoken"				"Map Token Snakewater"
+				"authors"				"#cp_snakewater_final1_authors"
 			}
 		}
 		"koth"

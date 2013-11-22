@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.4edf8863f30003231541871cb3e13bcc69d28a0a.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a6e2568201d82668e9629392005d058833eae53e.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -1262,6 +1262,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Medic"
 				]
@@ -1364,6 +1373,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Pyro"
 				]
@@ -1713,6 +1731,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Scout"
 				]
@@ -2510,6 +2537,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Spy"
 				]
@@ -4290,6 +4326,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Demoman"
 				]
@@ -4701,6 +4746,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Engineer"
 				]
@@ -6836,6 +6890,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Spy"
 				]
@@ -6948,6 +7011,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Engineer"
 				]
@@ -7074,6 +7146,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Scout"
 				]
@@ -7106,6 +7187,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Sniper"
 				]
@@ -7138,6 +7228,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Heavy"
 				]
@@ -7170,6 +7269,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Sniper"
 				]
@@ -7234,6 +7342,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Soldier"
 				]
@@ -7266,6 +7383,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Demoman"
 				]
@@ -7298,6 +7424,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Demoman"
 				]
@@ -7330,6 +7465,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Pyro"
 				]
@@ -7427,6 +7571,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Medic"
 				]
@@ -8194,6 +8347,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Soldier"
 				]
@@ -11210,13 +11372,23 @@
 				,
 				"attributes": [
 					{
+						"name": "provide on active",
+						"class": "provide_on_active",
+						"value": 1
+					},
+					{
+						"name": "damage penalty",
+						"class": "mult_dmg",
+						"value": 0.80000001192092896
+					},
+					{
 						"name": "enables aoe heal",
 						"class": "enables_aoe_heal",
 						"value": 1
 					},
 					{
-						"name": "lunchbox adds minicrits",
-						"class": "set_weapon_mode",
+						"name": "health regen",
+						"class": "add_health_regen",
 						"value": 3
 					},
 					{
@@ -15869,6 +16041,11 @@
 						"name": "damage penalty",
 						"class": "mult_dmg",
 						"value": 0.75
+					},
+					{
+						"name": "rocket jump damage reduction",
+						"class": "rocket_jump_dmg_reduction",
+						"value": 0.75
 					}
 				]
 				
@@ -16202,6 +16379,15 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					},
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Heavy"
 				]
@@ -31792,19 +31978,9 @@
 				,
 				"attributes": [
 					{
-						"name": "damage penalty",
-						"class": "mult_dmg",
-						"value": 0.69999998807907104
-					},
-					{
-						"name": "weapon spread bonus",
-						"class": "mult_spread_scale",
-						"value": 0.60000002384185791
-					},
-					{
 						"name": "move speed penalty",
 						"class": "mult_player_movespeed",
-						"value": 0.64999997615814209
+						"value": 0.89999997615814209
 					},
 					{
 						"name": "hype on damage",
@@ -31814,7 +31990,12 @@
 					{
 						"name": "hype resets on jump",
 						"class": "hype_resets_on_jump",
-						"value": 1
+						"value": 25
+					},
+					{
+						"name": "clip size penalty",
+						"class": "mult_clipsize",
+						"value": 0.6600000262260437
 					}
 				]
 				
@@ -44688,6 +44869,563 @@
 				
 			},
 			{
+				"name": "MvM GateBot Light Scout",
+				"defindex": 1057,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_scout_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Pyro",
+				"defindex": 1058,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_pyro_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Medic",
+				"defindex": 1059,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_medic_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Heavy",
+				"defindex": 1060,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_heavy_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Demoman",
+				"defindex": 1061,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_demo_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Sniper",
+				"defindex": 1062,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_sniper_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Soldier",
+				"defindex": 1063,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_soldier_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Spy",
+				"defindex": 1064,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_spy_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "MvM GateBot Light Engineer",
+				"defindex": 1065,
+				"item_class": "tf_wearable",
+				"item_type_name": "",
+				"item_name": "TF_GateBot_Light",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/bots\/gameplay_cosmetic\/light_engineer_on.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "style0"
+					},
+					{
+						"name": "style1"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Tour of Duty Badge Advanced 3",
+				"defindex": 1066,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Operation Two Cities Badge",
+				"item_description": "Your Mann Up progress through Operation Two Cities is saved on this badge.",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/mvm_loot\/all_class\/mvm_badge_shield.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/mvm_loot\/all_class\/mvm_badge_shield",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_badge_shield.8c5f415fcc54ed5c73eb098b8d1876aa906cb029.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_badge_shield_large.7c4814e2183cb0baa75fa0129f6a65eb30ac99dd.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "The Grandmaster",
 				"defindex": 1067,
 				"item_class": "tf_wearable_levelable_item",
@@ -44854,6 +45592,47 @@
 				
 			},
 			{
+				"name": "Gold Frying Pan",
+				"defindex": 1071,
+				"item_class": "saxxy",
+				"item_type_name": "Golden Frying Pan",
+				"item_name": "Golden Frying Pan",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models\/weapons\/c_models\/c_frying_pan\/c_frying_pan.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_frying_pan\/c_frying_pan_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_frying_pan_gold.5d5707050571a656488b5f3e66444164f32c8b31.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_frying_pan_gold_large.1198945aaa4f8544f7f372d4dfb15228f0b6f9b5.png",
+				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "turn to gold",
+						"class": "set_turn_to_gold",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "World Traveler",
 				"defindex": 1899,
 				"item_class": "tf_wearable",
@@ -44911,6 +45690,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_egypt.7a20820711c48f9dccc82c7937dada693cf67141.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_egypt_large.9c7224999e2950c7ffe5a70e5b599d637b5ec8a1.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -44940,6 +45720,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_coldfront.cb14216058bbb667d4c7ae6999fd788ab390725f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_coldfront_large.b3c9d1be45c8e7904731decfb0a8986b6b0cb26b.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -44969,6 +45750,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_fastlane.fb2d484435678e0185e1a342657e903b6e58c6ad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_fastlane_large.ed13997f9650e3c406489e1cc2b7ecf22031f18c.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -44998,6 +45780,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_turbine.dff967fa904fe699765dadf97a70e7f099e75d8d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_turbine_large.fefefd86eba029035b56bd1c5a4faad4fd43a714.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45027,6 +45810,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_steel.dc7bddf2e8c5bdfad50bc99e278ca304b796b268.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_steel_large.8c97ae89ef4b750b7c9e59d8467ce2adb0f4d4e3.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45056,6 +45840,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_junction.731add1c3e2f80090597975d17cd9c76d6597bd7.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_junction_large.4d72c8a0b8d6eb9bf6d9afdbcabb08f5bd14b1e0.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45085,6 +45870,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_watchtower.58b9eb0c7a8772372e2747c8f510812c837496e4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_watchtower_large.9807b5c3d9d88acfa79318fc2d407934ef0d50db.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45114,6 +45900,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_hoodoo.e549559f62948b9c911c3c63a14be010a9f289f4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_hoodoo_large.ac85a0e51d30f52230a88aeefd8b4408e2bcd5a9.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45143,6 +45930,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_offblast.009445f4506e8e12c1def0b1720f65612e949f8e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_offblast_large.d30730a2aa774ce89d8414b1297416c20526bd6c.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45172,6 +45960,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_yukon.93e71538e015ba9f5e17c51cf9b287baa4993604.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_yukon_large.9c3f446646e87e86a7d2df9075d3d476cb320ffa.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45201,6 +45990,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_harvest.bec158907f922c29b20677464829369b6ad12542.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_harvest_large.76ce00432c9c9d2936f1a3d8c6bcb354744e76b3.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45230,6 +46020,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_freight.84fb69b792b3cf04986ef96fa0800cbb79b7b05b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_freight_large.925c8cc5e2f97d44befa3e533268cd6674e568cd.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45259,6 +46050,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_mountainlab.50349e8790982bceb2978e22520c130214248ef0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_mountainlab_large.b50ea51414ba77184774d7626768758d4e087c27.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45288,6 +46080,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_manor.9f6087831a06aa52818c89452d4eccab530105ef.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_manor_large.7455e27347c6b79cd6e42a277b39844276f7e821.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45317,6 +46110,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_nightfall.57f38e53fcbf7736aaac70afc08e1bc0ea0f83f5.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_nightfall_large.836a74160fa875e532cbcd3ecc749b59debd8f47.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45346,6 +46140,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_frontier.1a9f1c4b06f8360eb9a5ed59dbcb94e734931daa.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_frontier_large.58318fe0ab5e4a20290fd38f492a5475cd96da74.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45375,6 +46170,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_lakeside.f9eb7f1848d9cb4da68a544acfd9ec9821c07e42.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_lakeside_large.d17fd7d865548fab83eda90277ded04dcb7e17af.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45404,6 +46200,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_gullywash.86e8687005ae92c0c3b4eaba6e6a64b5c0f60544.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_gullywash_large.ef8f4107b7d99a1d62c9788cc06a16382bdcd86e.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45433,6 +46230,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_kongking.6c76806a32aae8bcb216c39a75983f8a0257c572.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_kongking_large.0187731a0d56822fe04a17829ee3a3ee774bfc6b.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45462,6 +46260,7 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_process.65abed732695ca282b0d8d93a92a9741cc6f891c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_process_large.f39af0c374592391cea7fe4911f1d70695766b46.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -45491,6 +46290,37 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_standin.3a0e9e2c9446d56349bdf7e32d1d4714e2560516.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_standin_large.f2d84587ba14bc1edcc84f5957da9f706286c8a6.png",
 				"capabilities": {
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Snakewater",
+				"defindex": 1921,
+				"item_class": "map_token",
+				"item_type_name": "Map Stamp",
+				"item_name": "Map Stamp - Snakewater",
+				"item_description": "A Control Point Map\n\nMade by Toivo Sawen\n\nPurchasing this item directly supports the creator of the Snakewater community map.  Show your support today!",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/stamp_snakewater",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_snakewater.eae5ec9a63b1b94955a994aefbc963da1109844f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_snakewater_large.0da40b0a63080e172e6af09ed58d96cb4ffc5493.png",
+				"capabilities": {
+					"can_craft_if_purchased": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -49381,6 +50211,36 @@
 				}
 			},
 			{
+				"name": "Map Token Bundle 6",
+				"defindex": 2125,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Map Stamps Collection",
+				"item_description": "Includes one stamp for each community made map.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/stamp_collection",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_collection.eee58fb79e7aab6089d3eeab0aa6903d5ee1dccc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamp_collection_large.98575cfa328cabd56e340535e044a6db43368415.png",
+				"capabilities": {
+					"can_craft_if_purchased": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
 				"name": "Halloween 2013 Everything Bundle",
 				"defindex": 2126,
 				"item_class": "bundle",
@@ -51097,7 +51957,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Festive Winter Crate",
-				"item_description": "This crate is unusually festive.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "A memento from an age long past, this festive crate can no longer be opened and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -51897,7 +52757,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Refreshing Summer Cooler",
-				"item_description": "This cooler's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "A memento from an age long past, this cooler is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52034,7 +52894,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Naughty Winter Crate",
-				"item_description": "This crate is unusually festive.\nIts contents are unknown and\nnormal keys don't fit the lock.\n\nSome, but not all, of the items in this crate are Strange...",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52078,7 +52938,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Nice Winter Crate",
-				"item_description": "This crate is unusually festive.\nIts contents are unknown and\nnormal keys don't fit the lock.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52392,7 +53252,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Scorched Crate",
-				"item_description": "This crate's contents are unknown and only\nScorched Keys fit the lock.\n\nIt feels strangely warm to the touch.\n\nAfter 7\/11\/2012 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52481,7 +53341,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Fall Crate",
-				"item_description": "This crate's contents are unknown and only\nFall Keys fit the lock.\n\nA sense of community can be felt emanating from the inside.\n\nAfter 9\/20\/2012 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52646,7 +53506,7 @@
 				"item_class": "craft_item",
 				"item_type_name": "Ash",
 				"item_name": "Roasted Goldfish",
-				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nYou can craft this together with any three other burned items, but only until 7\/11\/2012!",
+				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nThis item no longer has any use and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52676,7 +53536,7 @@
 				"item_class": "craft_item",
 				"item_type_name": "Ash",
 				"item_name": "Charred Pocket Lint",
-				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nYou can craft this together with any three other burned items, but only until 7\/11\/2012!",
+				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nThis item no longer has any use and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52706,7 +53566,7 @@
 				"item_class": "craft_item",
 				"item_type_name": "Ash",
 				"item_name": "Smoked Cheese Wheel",
-				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nYou can craft this together with any three other burned items, but only until 7\/11\/2012!",
+				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nThis item no longer has any use and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52736,7 +53596,7 @@
 				"item_class": "craft_item",
 				"item_type_name": "Ash",
 				"item_name": "Burned Banana Peel",
-				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nYou can craft this together with any three other burned items, but only until 7\/11\/2012!",
+				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nThis item no longer has any use and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -52766,7 +53626,7 @@
 				"item_class": "craft_item",
 				"item_type_name": "Ash",
 				"item_name": "Incinerated Barn Door Plank",
-				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nYou can craft this together with any three other burned items, but only until 7\/11\/2012!",
+				"item_description": "The Pyromania Update just got so hot, it burned up all of your mysterious treasures.\n\nThis item no longer has any use and is purely decorative.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -53728,7 +54588,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Eerie Crate",
-				"item_description": "This crate's contents are unknown and only\nEerie Keys fit the lock.\n\nA sinister presence lurks within.\n\nAfter 11\/08\/2012 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -53817,7 +54677,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Naughty Winter Crate 2012",
-				"item_description": "This crate's contents are unknown.\nOnly Naughty Keys fit the lock.\n\nSome, but not all, of the items in this crate are Strange...\nAfter 01\/03\/2013 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -53861,7 +54721,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Nice Winter Crate 2012",
-				"item_description": "This crate's contents are unknown.\nOnly Nice Keys fit the lock.\nAfter 01\/03\/2013 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -55167,6 +56027,238 @@
 				
 			},
 			{
+				"name": "Robits Loot 01",
+				"defindex": 5700,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Pristine Robot Currency Digester",
+				"item_description": "This rare Robot Part can be added to a Killstreak Fabricator in creation of a Professional Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_01.90fc479e691fd7765c9492fb4a6f181c274f9a81.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_01_large.635e3908db2adc43b4005bb3c9701291f74cce37.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 02",
+				"defindex": 5701,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Pristine Robot Brainstorm Bulb",
+				"item_description": "This rare Robot Part can be added to a Killstreak Fabricator in creation of a Professional Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_02.98b0216697e870f6bc6963177331ca46217d806a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_02_large.317f4ec1cac1977fe6e5557416fa003bd2db02c5.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 03",
+				"defindex": 5702,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Reinforced Robot Emotion Detector",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_03",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_03.1cd0667e5017dd62bbd1babc2177a969997d1fcb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_03_large.2f2dfe18ea62a522560539a612c76ac69cbb7932.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 04",
+				"defindex": 5703,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Reinforced Robot Humor Suppression Pump",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_04",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_04.61976ee61344e53961586c18f7a0a8cabd69ae38.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_04_large.e6f95664445775ec2aecc85e527760a117210c9a.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 05",
+				"defindex": 5704,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Reinforced Robot Bomb Stabilizer",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_05",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_05.dc56d867621a3a22adcbe8feb6fe6500305e9176.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_05_large.78b03c5f92388dfc892a34fc7762473d7a0fdf8a.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 06",
+				"defindex": 5705,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Battle-Worn Robot Taunt Processor",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_06",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_06.38805807029f0b631031bcb6062fa2d1a89086ef.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_06_large.cf6e0e48dee7f55477e26691bfe82b26170dfbe7.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 07",
+				"defindex": 5706,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Battle-Worn Robot KB-808",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_07",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_07.26e0e2b5131c0c0020bfbf20df549d902e43345c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_07_large.3cac17add250ebe9ef60e3f19298cb5bc716d880.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Robits Loot 08",
+				"defindex": 5707,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Robits_Type",
+				"item_name": "Battle-Worn Robot Money Furnace",
+				"item_description": "This Robot Part can be added to a Killstreak Fabricator in creation of a Killstreak Kit.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/mvm_robits_08",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_08.c207bc933a28dd09e3361304b376b13c0ac6cc11.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mvm_robits_08_large.f33facbd096e87efac7a29a5c9279b5d6daac42d.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
 				"name": "Fall 2013 Acorns Crate",
 				"defindex": 5708,
 				"item_class": "supply_crate",
@@ -55352,7 +56444,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Spooky Crate",
-				"item_description": "This crate's contents are unknown and only\nSpooky Keys fit the lock.\n\nSpooky Crates contain\nHalloween-themed items that are only visible\nduring the Halloween event and full moons\n\nAfter 11\/11\/2013 this crate will disappear.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -57787,6 +58879,188 @@
 				},
 				"used_by_classes": [
 
+				]
+				
+			},
+			{
+				"name": "Killstreakifier",
+				"defindex": 6523,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolB",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties and a cool sheen to an item.\n",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease.f0bc959ce084fef620505909507a7e6247870823.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_large.98c773682e1eb78c2b190cd2d7a42a6a32fb89e8.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Filter: Snakewater (Community)",
+				"defindex": 6524,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePartRestriction",
+				"item_name": "Strange Filter: Snakewater (Community)",
+				"item_description": "Adding this Strange Filter to a Strange-quality item and selecting one of the stats that it tracks will restrict that stat to only counting events on Snakewater.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_filter_snakewater",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_filter_snakewater.ba52bb798066e835d87aaac75e7e8f443d3bc0c2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_filter_snakewater_large.c0cf6dd221334a6172e581ce355e6e9a93cbbb5d.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part_restriction",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Killstreakifier Rare",
+				"defindex": 6526,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolC",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties and a cool sheen to an item.\nGives the user special effects when on a killstreak.\n",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_rare",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_rare.cecad396db9cf4312ebf1f206253465ed505fb4f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_rare_large.66549b4bdad055e592e8c28da707bceb1bb47883.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 3
+					}
+				]
+				
+			},
+			{
+				"name": "Killstreakifier Basic",
+				"defindex": 6527,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
 				]
 				
 			},
@@ -74377,6 +75651,1940 @@
 				
 			},
 			{
+				"name": "ETF2L 6v6 Premier Division Gold Medal Season 15",
+				"defindex": 8307,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Gold Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Silver Medal Season 15",
+				"defindex": 8308,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Silver Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Bronze Medal Season 15",
+				"defindex": 8309,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Bronze Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Group Winner Season 15",
+				"defindex": 8310,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Group Winner Season 15",
+				"defindex": 8311,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Group Winner Season 15",
+				"defindex": 8312,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Group Winner Season 15",
+				"defindex": 8313,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Group Winner Season 15",
+				"defindex": 8314,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Group Winner Season 15",
+				"defindex": 8315,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Group Winner",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Participation Medal Season 15",
+				"defindex": 8316,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Participation Medal Season 15",
+				"defindex": 8317,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Participation Medal Season 15",
+				"defindex": 8318,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Participation Medal Season 15",
+				"defindex": 8319,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Participation Medal Season 15",
+				"defindex": 8320,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Participation Medal Season 15",
+				"defindex": 8321,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Participation Medal Season 15",
+				"defindex": 8322,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Participation Medal",
+				"item_description": "Season 15",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Gold Medal Season 16",
+				"defindex": 8323,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Gold Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold.9860f2c7153c1e3fc68889f773830d37786b43f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_gold_large.b73bee9bc253cfc526abb6d35bb519ecef2ea59c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Silver Medal Season 16",
+				"defindex": 8324,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Silver Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver.89844b45941f7973534ce105eb56948d007a8723.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_silver_large.233751764d205ebc968cb3aafce11a37ebc79ac4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Bronze Medal Season 16",
+				"defindex": 8325,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Bronze Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_placement_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_placement_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012.30b44e8497ecd8d6d8b972a94f20670cbeddffb0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_placement_2012_large.e4a61f60e2f55607556358f6a7138d963efaccda.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Group Winner Season 16",
+				"defindex": 8326,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Group Winner Season 16",
+				"defindex": 8327,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Group Winner Season 16",
+				"defindex": 8328,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Group Winner Season 16",
+				"defindex": 8329,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Group Winner Season 16",
+				"defindex": 8330,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Group Winner Season 16",
+				"defindex": 8331,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Group Winner",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_winner_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_winner_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012.5636e345bda54bcd03875ce4f7f21cb9bb5495ae.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_winner_2012_large.62288f08517bb833e50ce240c908889609d761d3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Participation Medal Season 16",
+				"defindex": 8332,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Participation Medal Season 16",
+				"defindex": 8333,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Participation Medal Season 16",
+				"defindex": 8334,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Participation Medal Season 16",
+				"defindex": 8335,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Participation Medal Season 16",
+				"defindex": 8336,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Participation Medal Season 16",
+				"defindex": 8337,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Participation Medal Season 16",
+				"defindex": 8338,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Participation Medal",
+				"item_description": "Season 16",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/all_class\/etf2l_sixs_participant_2012.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/all_class\/etf2l_sixs_participant_2012",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012.f1d8be8273354ac2237d80dbdd9227063217f96a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/etf2l_sixs_participant_2012_large.3eba4e2e3174faed14ddea680b6b7250e5cf2788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "ETF2L"
+					},
+					{
+						"name": "Demoman"
+					},
+					{
+						"name": "Engineer"
+					},
+					{
+						"name": "Heavy"
+					},
+					{
+						"name": "Medic"
+					},
+					{
+						"name": "Pyro"
+					},
+					{
+						"name": "Scout"
+					},
+					{
+						"name": "Sniper"
+					},
+					{
+						"name": "Soldier"
+					},
+					{
+						"name": "Spy"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -76135,6 +79343,80 @@
 				"max_ilevel": 5,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit.1fdb61cd0fa671cb99439512198681a53a52f686.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit_large.44a7be2bcb295a9eb60b540f8c02422e59b50881.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "MvM Killstreak Recipe 1",
+				"defindex": 20002,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Fabricator",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_kit",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_kit.e91092b5612133c80fd1c49634c89e60f375e9e6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_kit_large.8a6ce58301a448b098165c6f00e19ccf317a7627.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "MvM Killstreak Recipe 2",
+				"defindex": 20003,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Fabricator",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_kit_rare",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_kit_rare.51ae1c95c9db7e9baee367285187eb0365868433.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_kit_rare_large.d5aa24f69c700c94d2b3305e4b611315fcf07161.png",
 				"craft_class": "tool",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -93839,7 +97121,7 @@
 				"name": "attack projectiles",
 				"defindex": 323,
 				"attribute_class": "attack_projectiles",
-				"description_string": "Bullets destroy rockets and grenades in-flight",
+				"description_string": "Bullets destroy rockets and grenades in-flight.  Increased accuracy and frequency per-level.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -94329,7 +97611,7 @@
 				"name": "generate rage on damage",
 				"defindex": 375,
 				"attribute_class": "generate_rage_on_dmg",
-				"description_string": "+%s1 rage on damage",
+				"description_string": "Generate Rage by dealing damage.  When fully charged, press the Special-Attack key to activate knockback.",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -94549,7 +97831,7 @@
 				"name": "armor piercing",
 				"defindex": 399,
 				"attribute_class": "armor_piercing",
-				"description_string": "Allow backstabs against Giant Robots at %s1% damage",
+				"description_string": "Increase backstab damage against Giant Robots by %s1%",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -94736,7 +98018,7 @@
 				"name": "hype on damage",
 				"defindex": 418,
 				"attribute_class": "hype_on_damage",
-				"description_string": "On Hit: Builds Boost\nRun at up to double speed at maximum Boost",
+				"description_string": "On Hit: Builds Boost\nRun speed increased with Boost",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -94746,7 +98028,7 @@
 				"name": "hype resets on jump",
 				"defindex": 419,
 				"attribute_class": "hype_resets_on_jump",
-				"description_string": "Boost resets on jump",
+				"description_string": "Boost reduced on air jumps",
 				"description_format": "value_is_additive",
 				"effect_type": "negative",
 				"hidden": false,
@@ -95289,6 +98571,46 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "canteen specialist",
+				"defindex": 481,
+				"attribute_class": "canteen_specialist",
+				"description_string": "Share Canteens with your heal target.\n+1 duration, -10 price per point (minimum cost: 5)",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "overheal expert",
+				"defindex": 482,
+				"attribute_class": "overheal_expert",
+				"description_string": "+25% more overheal, +50% longer duration per point.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "mad milk syringes",
+				"defindex": 484,
+				"attribute_class": "mad_milk_syringes",
+				"description_string": "Syringes deliver a highly concentrated dose of Mad Milk.  Duration increases per hit to a max of 4 seconds.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "rocket specialist",
+				"defindex": 488,
+				"attribute_class": "rocket_specialist",
+				"description_string": "+15% rocket speed per point.  On direct hits: rocket does maximum damage, stuns target, and blast radius increased +15% per point.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
 				"name": "SET BONUS: move speed set bonus",
 				"defindex": 489,
 				"attribute_class": "mult_player_movespeed",
@@ -95329,6 +98651,16 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "healing mastery",
+				"defindex": 493,
+				"attribute_class": "healing_mastery",
+				"description_string": "+25% heal rate for patient, +25% faster revive rate, and +25% self heal rate, per point.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
 				"name": "kill eater 3",
 				"defindex": 494,
 				"attribute_class": "kill_eater_3",
@@ -95359,6 +98691,24 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "bot custom jump particle",
+				"defindex": 498,
+				"attribute_class": "bot_custom_jump_particle__mvm",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "generate rage on heal",
+				"defindex": 499,
+				"attribute_class": "generate_rage_on_heal",
+				"description_string": "Build energy by healing teammates.  When fully charged, press the Special-Attack key to deploy a frontal projectile shield.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			},
 			{
 				"name": "custom name attr",
@@ -95614,6 +98964,62 @@
 				"stored_as_integer": true
 			},
 			{
+				"name": "righthand pose parameter",
+				"defindex": 538,
+				"attribute_class": "righthand_pose_parameter",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "set throwable type",
+				"defindex": 539,
+				"attribute_class": "set_throwable_type",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "item style override",
+				"defindex": 542,
+				"attribute_class": "item_style_override",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "paint decal enum",
+				"defindex": 543,
+				"attribute_class": "paint_decal_enum",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "show paint description",
+				"defindex": 544,
+				"attribute_class": "show_paint_description",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "bot medic uber health threshold",
+				"defindex": 545,
+				"attribute_class": "bot_medic_uber_health_threshold",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "bot medic uber deploy delay duration",
+				"defindex": 546,
+				"attribute_class": "bot_medic_uber_deploy_delay_duration",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "single wep deploy time decreased",
 				"defindex": 547,
 				"attribute_class": "mult_single_wep_deploy_time",
@@ -95754,6 +99160,14 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "Attack not cancel charge",
+				"defindex": 1030,
+				"attribute_class": "attack_not_cancel_charge__mvm",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "recipe component defined item 1",
 				"defindex": 2000,
 				"attribute_class": "dynamic_recipe_component_defined_item",
@@ -95870,6 +99284,26 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "killstreak effect",
+				"defindex": 2013,
+				"attribute_class": "killstreak_effect",
+				"description_string": "Killstreaker: %s1",
+				"description_format": "value_is_killstreakeffect_index",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "killstreak idleeffect",
+				"defindex": 2014,
+				"attribute_class": "killstreak_idleeffect",
+				"description_string": "Sheen: %s1",
+				"description_format": "value_is_killstreak_idleeffect_index",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
 				"name": "spellbook page attr id",
 				"defindex": 2015,
 				"attribute_class": "spellbook_page_attr_id",
@@ -95934,6 +99368,56 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "loot rarity",
+				"defindex": 2022,
+				"attribute_class": "loot_rarity",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "quality text override",
+				"defindex": 2023,
+				"attribute_class": "quality_text_override",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item name text override",
+				"defindex": 2024,
+				"attribute_class": "item_name_text_override",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "killstreak tier",
+				"defindex": 2025,
+				"attribute_class": "killstreak_tier",
+				"description_string": "Killstreaks Active",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "wide item level",
+				"defindex": 2026,
+				"attribute_class": "wide_item_level",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "is australium item",
+				"defindex": 2027,
+				"attribute_class": "is_australium_item",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -96914,6 +100398,102 @@
 				"attach_to_rootbone": true,
 				"attachment": "unusual",
 				"name": "Demonflame"
+			},
+			{
+				"system": "killstreak_eyeglow_1_teamcolor_red",
+				"id": 2001,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2001"
+			},
+			{
+				"system": "killstreak_t1_lvl1",
+				"id": 2002,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2002"
+			},
+			{
+				"system": "killstreak_t2_lvl1",
+				"id": 2003,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2003"
+			},
+			{
+				"system": "killstreak_t3_lvl1",
+				"id": 2004,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2004"
+			},
+			{
+				"system": "killstreak_t4_lvl1",
+				"id": 2005,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2005"
+			},
+			{
+				"system": "killstreak_t5_lvl1",
+				"id": 2006,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2006"
+			},
+			{
+				"system": "killstreak_t6_lvl1",
+				"id": 2007,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2007"
+			},
+			{
+				"system": "killstreak_t7_lvl1",
+				"id": 2008,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle2008"
+			},
+			{
+				"system": "killstreak_eyeglow_4_teamcolor_red",
+				"id": 22001,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22001"
+			},
+			{
+				"system": "killstreak_t1_lvl2",
+				"id": 22002,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22002"
+			},
+			{
+				"system": "killstreak_t2_lvl2",
+				"id": 22003,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22003"
+			},
+			{
+				"system": "killstreak_t3_lvl2",
+				"id": 22004,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22004"
+			},
+			{
+				"system": "killstreak_t4_lvl2",
+				"id": 22005,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22005"
+			},
+			{
+				"system": "killstreak_t5_lvl2",
+				"id": 22006,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22006"
+			},
+			{
+				"system": "killstreak_t6_lvl2",
+				"id": 22007,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22007"
+			},
+			{
+				"system": "killstreak_t7_lvl2",
+				"id": 22008,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle22008"
 			}
 		]
 		,
