@@ -628,5 +628,9 @@
 "Friends_WebStatus_Tooltip"		"Online using the Web"
 "Friends_MobileStatus_Tooltip"	"Online using a mobile device"
 "Friends_BigPictureStatus_Tooltip"	"Online using Big Picture"
+
+"friends_newturn_info" "1 new turn waiting for you"
+"friends_newturns_info" "%turns% new turns waiting for you"
+
 } 
 }  
