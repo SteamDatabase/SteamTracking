@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.7020e4009ed45f42610651839200e0c631010841.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.07ea6e0b98fb3603b28ab557e55c2125bc2aff8c.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -44884,7 +44884,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -44921,6 +44921,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -44941,7 +44946,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -44978,6 +44983,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -44998,7 +45008,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45035,6 +45045,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45055,7 +45070,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45092,6 +45107,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45112,7 +45132,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45149,6 +45169,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45169,7 +45194,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45206,6 +45231,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45226,7 +45256,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45263,6 +45293,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45283,7 +45318,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45320,6 +45355,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -45340,7 +45380,7 @@
 				"image_url": "",
 				"image_url_large": "",
 				"drop_type": "drop",
-				"craft_class": "hat",
+				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -45377,6 +45417,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -79285,6 +79330,35 @@
 				"tool": {
 					"type": "tf_event_enable",
 					"use_string": "Cast..."
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Glitched Circuit Board",
+				"defindex": 8938,
+				"item_class": "craft_item",
+				"item_type_name": "TF_Item_GlitchedCircuitBoard_Type",
+				"item_name": "TF_Item_GlitchedCircuitBoard",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 255,
+				"image_inventory": "backpack\/crafting\/glitched_circuit_board",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
 				},
 				"used_by_classes": [
 
