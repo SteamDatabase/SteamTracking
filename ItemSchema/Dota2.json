@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.ef5670e0e237a8506ef20ed6ba0c86e527b5725c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.68aa92fa1bea3efac045b8274c46c043d24f19c9.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -612,11 +612,11 @@
 				}
 			},
 			{
-				"name": "Windrunner's Default Head",
+				"name": "Wind Ranger's Head",
 				"defindex": 21,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "head",
-				"item_name": "Windrunner's Head",
+				"item_name": "Wind Ranger's Head",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -634,11 +634,11 @@
 				}
 			},
 			{
-				"name": "Windrunner's Bow",
+				"name": "Wind Ranger's Bow",
 				"defindex": 22,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
-				"item_name": "Windrunner's Bow",
+				"item_name": "Wind Ranger's Bow",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -656,11 +656,11 @@
 				}
 			},
 			{
-				"name": "Windrunner's Default Shoulderpads",
+				"name": "Wind Ranger's Shoulder Pads",
 				"defindex": 23,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Shoulderpads",
-				"item_name": "Windrunner's Shoulder Pads",
+				"item_name": "Wind Ranger's Shoulder Pads",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -678,11 +678,11 @@
 				}
 			},
 			{
-				"name": "Windrunner's Default Cape",
+				"name": "Wind Ranger's Cape",
 				"defindex": 24,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Cape",
-				"item_name": "Windrunner's Cape",
+				"item_name": "Wind Ranger's Cape",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -700,11 +700,11 @@
 				}
 			},
 			{
-				"name": "Windrunner's Default Quiver",
+				"name": "Wind Ranger's Quiver",
 				"defindex": 25,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Quiver",
-				"item_name": "Windrunner's Quiver",
+				"item_name": "Wind Ranger's Quiver",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -4960,11 +4960,11 @@
 				}
 			},
 			{
-				"name": "Necrolyte's Sickle",
+				"name": "Necrophos's Sickle",
 				"defindex": 211,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mace",
-				"item_name": "Necrolyte's Sickle",
+				"item_name": "Necrophos's Sickle",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -4983,11 +4983,11 @@
 				}
 			},
 			{
-				"name": "Necrolyte's Beard",
+				"name": "Necrophos's Beard",
 				"defindex": 212,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mace",
-				"item_name": "Necrolyte's Beard",
+				"item_name": "Necrophos's Beard",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -5006,11 +5006,11 @@
 				}
 			},
 			{
-				"name": "Necrolyte's Headdress",
+				"name": "Necrophos's Headdress",
 				"defindex": 213,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "head",
-				"item_name": "Necrolyte's Headdress",
+				"item_name": "Necrophos's Headdress",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -5029,11 +5029,11 @@
 				}
 			},
 			{
-				"name": "Necrolyte's Vestments",
+				"name": "Necrophos's Vestments",
 				"defindex": 214,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "shoulder",
-				"item_name": "Necrolyte's Vestments",
+				"item_name": "Necrophos's Vestments",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -10873,6 +10873,29 @@
 				"max_ilevel": 1,
 				"image_url": "",
 				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				}
+			},
+			{
+				"name": "Dazzle's Shoulders",
+				"defindex": 468,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "shoulder",
+				"item_name": "Dazzle's Shoulders",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -23192,7 +23215,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
 				"item_name": "Makeshift Hornwood Bow",
-				"item_description": "A marvel of inventiveness, this makeshift bow proves that Windrunner can kill you without fancy weapons.  In fact, all she needs is a few sticks bound together in the shape of a bow.",
+				"item_description": "A marvel of inventiveness, this makeshift bow proves that Windranger can kill you without fancy weapons.  In fact, all she needs is a few sticks bound together in the shape of a bow.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/makeshifthornwoodbow_v10\/makeshifthornwoodbow_v10",
@@ -24175,7 +24198,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Shoulders",
 				"item_name": "Shoulderpads of the Falcon",
-				"item_description": "Only a diving falcon can hope to avoid Windrunner's arrows.  But this one didn't.",
+				"item_description": "Only a diving falcon can hope to avoid Windranger's arrows.  But this one didn't.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/shoulderpadfalcon\/shoulderpadfalcon",
@@ -25622,7 +25645,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Hair",
 				"item_name": "Zaru'Kina Protector's Hair",
-				"item_description": "A hairstyle common to the Zaru'Kina people of Windrunner's destroyed village.",
+				"item_description": "A hairstyle common to the Zaru'Kina people of Lyralei's destroyed village.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/zarukina_protector_hair\/zarukina_protector_hair",
@@ -26002,7 +26025,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Wings",
 				"item_name": "Gilded Falcon Wings",
-				"item_description": "Like the angvols of old legends, these golden falcon wings speed Windrunner's flight into battle.",
+				"item_description": "Like the angvols of old legends, these golden falcon wings speed Windranger's flight into battle.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/wingsshoulders2\/wingsshoulders2",
@@ -26157,7 +26180,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
 				"item_name": "Bow of the Oyoloe",
-				"item_description": "Once thought to be a mythical beast, Windrunner slew the elusive, green oyoloe, and made a bow from its antlers.",
+				"item_description": "Once thought to be a mythical beast, the Windranger slew the elusive, green oyoloe, and made a bow from its antlers.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/snake_bite\/snake_bite",
@@ -27505,7 +27528,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Quiver",
 				"item_name": "Sparrowhawk Quiver",
-				"item_description": "Proving that every part of the sparrowhawk can be turned into a stylish item for Windrunner to wear, this quiver speaks to the utility of sparrowhawks as a species.",
+				"item_description": "Proving that every part of the sparrowhawk can be turned into a stylish item for Lyralei to wear, this quiver speaks to the utility of sparrowhawks as a species.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/sparrowhawk_quiver\/sparrowhawk_quiver",
@@ -33232,7 +33255,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
 				"item_name": "Featherfall Bow",
-				"item_description": "A colorful bow adorned with tough harpy feathers is just what a feisty girl like windrunner needs for fabulous mega-kills!",
+				"item_description": "A colorful bow adorned with tough harpy feathers is just what a feisty girl like Lyralei needs for fabulous mega-kills!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/anuxi_featherfall_bow\/anuxi_featherfall_bow",
@@ -36824,7 +36847,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Cape",
 				"item_name": "Royal Cape of the Great Grey",
-				"item_description": "Red is the cape that drapes the Lycanthrope's neck, a symbol of the tainted blood that courses through his veins.",
+				"item_description": "Red is the cape that drapes Lycan's neck, a symbol of the tainted blood that courses through his veins.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/lycan\/armor_royal\/armor_royal",
@@ -44573,7 +44596,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Pauldron",
 				"item_name": "Pauldrons of the Northern Wind",
-				"item_description": "Generations from now, the denizens of Njord's Hearth shall know Windrunner by these pauldrons should she ever return to their demesne.",
+				"item_description": "Generations from now, the denizens of Njord's Hearth shall know Windranger by these pauldrons should she ever return to their demesne.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/pauldrons_of_the_northern_wind\/pauldrons_of_the_northern_wind",
@@ -44599,7 +44622,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Quiver",
 				"item_name": "Quiver of the Northern Wind",
-				"item_description": "Held safely in this quiver, Windrunner's arrows defy the threat of cold winds that might cause their sinews to crack.",
+				"item_description": "Held safely in this quiver, Windranger's arrows defy the threat of cold winds that might cause their sinews to crack.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/quiver_of_the_northern_wind\/quiver_of_the_northern_wind",
@@ -47465,7 +47488,7 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Headband",
 				"item_name": "Mistral Braid",
-				"item_description": "The wind that gently tousles her locks, gives unmatched flight to Windrunner's arrows.",
+				"item_description": "The wind that gently tousles her locks, gives unmatched flight to Windranger's arrows.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/items\/windrunner\/mistral_braid\/mistral_braid",
@@ -51924,6 +51947,49 @@
 				}
 			},
 			{
+				"name": "Stinger of Entwined Fate",
+				"defindex": 5566,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Stinger of Entwined Fate",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/weaver\/starl_misc_t1\/starl_misc_t1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_misc_t1\/starl_misc_t1.f78a59053333dce1e1b9cc7491eeaa88e9d865eb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_misc_t1\/starl_misc_t1_large.d833ca69cc237075956e5bea7e4a7c09a8489170.png",
+				"item_set": "weaver_threads",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Pointed Stinger"
+					},
+					{
+						"name": "Sharpened Stinger"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
 				"name": "Carapace of the Chosen Larva",
 				"defindex": 5567,
 				"item_class": "dota_item_wearable",
@@ -54652,6 +54718,606 @@
 				
 			},
 			{
+				"name": "Limbs of Entwined Fate",
+				"defindex": 5676,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Legs",
+				"item_name": "Limbs of Entwined Fate",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/weaver\/starl_legs_t1\/starl_legs_t1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_legs_t1\/starl_legs_t1.510da65cafad3ce028635f494deb11e63475bc80.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_legs_t1\/starl_legs_t1_large.2c51a7e8bcebc3101d657f93b9d6102930a6c909.png",
+				"item_set": "weaver_threads",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Scrambling Limbs"
+					},
+					{
+						"name": "Creeping Limbs"
+					},
+					{
+						"name": "Skittering Limbs"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Caustic Glare",
+				"defindex": 5677,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "head",
+				"item_name": "Caustic Glare",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/caustic_glare\/caustic_glare",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_glare\/caustic_glare.04a3a707f329e908807d1b9b1ba1290057945e36.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_glare\/caustic_glare_large.40a6fea49b37519b519c8edee7a7ddf191c8341e.png",
+				"item_set": "sandking_caustic_consumption",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Caustic Tarsus",
+				"defindex": 5678,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Legs",
+				"item_name": "Caustic Tarsus",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/caustic_tarsus\/caustic_tarsus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_tarsus\/caustic_tarsus.84732f65e1f1a8107298450786d286ee63127571.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_tarsus\/caustic_tarsus_large.4fbbfd48f7a3bc40803b1c5a89c4b7d760afa648.png",
+				"item_set": "sandking_caustic_consumption",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Whiskers of Entwined Fate",
+				"defindex": 5679,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Antennae",
+				"item_name": "Whiskers of Entwined Fate",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/weaver\/starl_head_t1\/starl_head_t1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_head_t1\/starl_head_t1.a694c3b202aa87567c3640e60245179f97464105.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_head_t1\/starl_head_t1_large.83d7efd91af75d0b46ed94369c3e8532d69e60cf.png",
+				"item_set": "weaver_threads",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Delicate Whiskers"
+					},
+					{
+						"name": "Listening Whiskers"
+					},
+					{
+						"name": "Attentive Whiskers"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Crown of Entwined Fate",
+				"defindex": 5680,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Carapace",
+				"item_name": "Crown of Entwined Fate",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/weaver\/starl_back_t1\/starl_back_t1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_back_t1\/starl_back_t1.68be62a5cf9e5d4e4e1f9fc1c1390f570462622e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_back_t1\/starl_back_t1_large.4e5cb85f39b4dd6ad45c9dca1ce05eaf54aecc40.png",
+				"item_set": "weaver_threads",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Condensed Crown"
+					},
+					{
+						"name": "Armored Crown"
+					},
+					{
+						"name": "Chitinous Crown"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Caustic Guard",
+				"defindex": 5681,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Caustic Guard",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/caustic_guard\/caustic_guard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_guard\/caustic_guard.9896c7862e17da54d0e5b4f9f4c3955e36393de0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_guard\/caustic_guard_large.6a703b10ea6dbb0a58feda99e0448bed0ea7eb5f.png",
+				"item_set": "sandking_caustic_consumption",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Feelers of Entwined Fate",
+				"defindex": 5682,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "arms",
+				"item_name": "Feelers of Entwined Fate",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/weaver\/starl_arms_t1\/starl_arms_t1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_arms_t1\/starl_arms_t1.546ed8ffdc213dc1c032e7a831bb16cc30aabc0f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/weaver\/starl_arms_t1\/starl_arms_t1_large.9b61b6167945d88977ef2217cf9affa0df2d7f89.png",
+				"item_set": "weaver_threads",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Gripping Feelers"
+					},
+					{
+						"name": "Capturing Feelers"
+					},
+					{
+						"name": "Grasping Feelers"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Caustic Rack",
+				"defindex": 5683,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Caustic Rack",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/caustic_rack\/caustic_rack",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_rack\/caustic_rack.36143ce5516f3f54e13ef5b72144917838e45b6c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_rack\/caustic_rack_large.17ae7ce2840cd92059f1f0c30303df0d3467a4ef.png",
+				"item_set": "sandking_caustic_consumption",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Caustic Spurs",
+				"defindex": 5684,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Claws",
+				"item_name": "Caustic Spurs",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sand_king\/caustic_spurs\/caustic_spurs",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_spurs\/caustic_spurs.85eb41f94278e39e107ed89fb5580e7265bc6a68.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/sand_king\/caustic_spurs\/caustic_spurs_large.fa0c3b7321f3660caa9b80a6c6edb4896b2b200a.png",
+				"item_set": "sandking_caustic_consumption",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Bastion",
+				"defindex": 5685,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "The Second Disciple's Bastion",
+				"item_description": "Sometimes a bounty does not need to be collected immediately if the hunter believes there is more to gain on a job. Gondar enlists in the army of the infidel in order to obtain sturdy gear and learn the stolen secrets of Soruq that have been bestowed upon the undeserving army.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_bastion\/the_second_disciples_bastion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_bastion\/the_second_disciples_bastion.52ac69535a9be534cce43341049d79997ab7269c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_bastion\/the_second_disciples_bastion_large.aa82e316789342cf4a6a9e0031b6d838c2b3c391.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Veil",
+				"defindex": 5686,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mask",
+				"item_name": "The Second Disciple's Veil",
+				"item_description": "With the power imbued in the veil of the second disciple, Gondar learned a rare and useful technique passed down from his old master. With the sigil of the enchanted blade, the hunter can feel a great power that was nearly lost to the filthy traitor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_veil\/the_second_disciples_veil",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_veil\/the_second_disciples_veil.934b6afcb5a01e70b4e8daaa11d2130c06d14cf9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_veil\/the_second_disciples_veil_large.a050fd2b536e09c4c9aced0ce544da356b8e35dd.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Dagger",
+				"defindex": 5687,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "The Second Disciple's Dagger",
+				"item_description": "Stolen from the betrayer himself, Gondar used this weapon to slit the throat of the deceitful war general and seal the fate of the army founded on infidelity.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_dagger\/the_second_disciples_dagger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_dagger\/the_second_disciples_dagger.22015633c4b90425559da682f1af8457de14c45f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_dagger\/the_second_disciples_dagger_large.9f84ffb5087458df5d24458521c1671286267d2e.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Chakram",
+				"defindex": 5688,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "The Second Disciple's Chakram",
+				"item_description": "Carried upon his back, this weapon serves as both defense and offense on the field of battle.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_chakram\/the_second_disciples_chakram",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_chakram\/the_second_disciples_chakram.953325cb9437dbb9d83422faaa56f1ef759d512a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_chakram\/the_second_disciples_chakram_large.99531d297efa89a89643f89e7679be2cd1a33f53.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Blade",
+				"defindex": 5689,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "The Second Disciple's Blade",
+				"item_description": "This blade, fashioned of salvaged equipment from the battlefield, serves as a reminder to both Gondar and his enemies of what happens to those who betray sacred trusts.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_blade\/the_second_disciples_blade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_blade\/the_second_disciples_blade.f399d7fe2554aed3df612cc3cf469981c035fa9f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_blade\/the_second_disciples_blade_large.4b9556f3dec7bb1e1d68144da5ca811b2f5fefe5.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Darkstar the Mistforged",
+				"defindex": 5690,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Darkstar the Mistforged",
+				"item_description": "This ancestral blade of House Avernus was cast into the Font, to be forged anew. What emerged was an amalgam of steel, and mist, that feasts upon the souls of its foes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/darkstar_the_mistforged\/darkstar_the_mistforged",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/darkstar_the_mistforged\/darkstar_the_mistforged.026ff711375984ae4f13f9a376423f024009b270.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/darkstar_the_mistforged\/darkstar_the_mistforged_large.dccdef5843b4f905549ffc4d2418965b29d36258.png",
+				"item_set": "abaddon_anointed_ruination",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Netherax, Nightmare of the Mist",
+				"defindex": 5691,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Netherax, Nightmare of the Mist",
+				"item_description": "When the Font anointed Abaddon with its power, it also conjured up a creature, equally terrifying, for its champion to ride into battle.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/netherax_nightmare_of_the_mist\/netherax_nightmare_of_the_mist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/netherax_nightmare_of_the_mist\/netherax_nightmare_of_the_mist.7dcba7fcb733b01f2ef823cbfe651473fe00cde1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/netherax_nightmare_of_the_mist\/netherax_nightmare_of_the_mist_large.81b528658e99dcad7bbd53c2e75f9a1ad8c1a8ef.png",
+				"item_set": "abaddon_anointed_ruination",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Mistplates of Ruin",
+				"defindex": 5692,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Mistplates of Ruin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/mistplates_of_ruin\/mistplates_of_ruin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/mistplates_of_ruin\/mistplates_of_ruin.f39999d08353998b50cb837e3079558f0f94ff30.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/mistplates_of_ruin\/mistplates_of_ruin_large.c2e717bd83f2ff44b74a05254c4cda9e06647778.png",
+				"item_set": "abaddon_anointed_ruination",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Tarnhelm of Ruin",
+				"defindex": 5693,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Tarnhelm of Ruin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/tarnhelm_of_ruin\/tarnhelm_of_ruin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/tarnhelm_of_ruin\/tarnhelm_of_ruin.765ff8c1816f5e1441637e9f3185b6bff28cc9a3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/tarnhelm_of_ruin\/tarnhelm_of_ruin_large.c04f4c86024b22a6b5d28850c7c02852513a9769.png",
+				"item_set": "abaddon_anointed_ruination",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Winged Shroud of Ruin",
+				"defindex": 5694,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Winged Shroud of Ruin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/winged_shroud_of_ruin\/winged_shroud_of_ruin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/winged_shroud_of_ruin\/winged_shroud_of_ruin.0326485ba35e5883f56d55dee18b992eee949ca4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/abaddon\/winged_shroud_of_ruin\/winged_shroud_of_ruin_large.12912f9f95826e48a95aa7803b59548d6b702a02.png",
+				"item_set": "abaddon_anointed_ruination",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Second Disciple's Satchel",
+				"defindex": 5695,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "The Second Disciple's Satchel",
+				"item_description": "Gondar carries his important materials and implements in his satchel, always prepared for future hunts.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bounty_hunter\/the_second_disciples_satchel\/the_second_disciples_satchel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_satchel\/the_second_disciples_satchel.cd7755381916f165f5a993cdeeb43a64734228bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bounty_hunter\/the_second_disciples_satchel\/the_second_disciples_satchel_large.bab45de4a104a9aacde3f59fa0dbd1287f776997.png",
+				"item_set": "bountyhunter_second_disciple",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Hellfire Edge",
 				"defindex": 5704,
 				"item_class": "dota_item_wearable",
@@ -55570,11 +56236,11 @@
 				"item_description": "This item replaces the Mega-Kills announcer with the drunken antics of a scurvy-ridden Pirate Captain.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/announcer\/announcer_workshop_pirate",
+				"image_inventory": "econ\/announcer\/megakill_announcer_workshop_pirate",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_workshop_pirate.861695f278b9f2372692eb432d64a873b318a570.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_workshop_pirate_large.7cab5a1de026e8c8af0c6871057c4b70f55a4266.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_announcer_workshop_pirate.0f00203e613bcdc2a09b1ba92b70d97009b2559c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_announcer_workshop_pirate_large.20df675e3aeac8bb8110f961f1361f0c9181e396.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -65208,8 +65874,8 @@
 				"image_inventory": "econ\/announcer\/announcer_trine",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine.c3d6c7f5c5777d40a6132fc11e4ad017371469b3.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine_large.69ebf0b68d8c5e517080c5c125bb3f823845e59f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine.23cf59281dcecc12c9a4a397d523380be0c83b42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine_large.9e6939469d640ad4b7c3b15d89e910af270f11a4.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -65288,8 +65954,8 @@
 				"image_inventory": "econ\/announcer\/megakill_trine",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_trine.130243c0f934150652a94d492a1b6a430fbd5d50.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_trine_large.647467c5a43d1f90ff01baead80facd8ffeaa34f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_trine.ab8eb546d579925b1ba414a5e986c942477bd257.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/megakill_trine_large.3edad61393d113cc8500d8b87daad8c4d9199bd1.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -65857,6 +66523,31 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Coco the Courageous",
+				"defindex": 10375,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Coco the Courageous",
+				"item_description": "True courage is not how high you can hold a sword but how high you can hold your spirit... And sometimes, even the strongest of heroes need their spirit boosted! Introducing Coco, a courageous courier of the Redpaw Brewery, determined to bring brew to the battlefield at any cost! No longer shall a heroes thirst go unquenched! The call for brew is sacred and by oath it must be upheld! The brew must flow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/coco_the_courageous\/coco_the_courageous",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/coco_the_courageous\/coco_the_courageous.11af1a1a7a006307d818b1e20946b5e8a9071e48.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/coco_the_courageous\/coco_the_courageous_large.4079ff82d79cb7d26245c0b6f68781859478bba3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "Eye of Lyralei",
@@ -76608,6 +77299,267 @@
 				}
 			},
 			{
+				"name": "Aerocool Dota 2 Gaming Challenge Brazil",
+				"defindex": 15361,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Aerocool Dota 2 Gaming Challenge Brazil",
+				"item_description": "The top 8 Brazilian teams compete for a R$1,000 prize pool and gaming equipment from Aerocool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_aerocool",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_aerocool.4ea6f9e70c3493c56dc9fe1b31241432bd4aa676.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_aerocool_large.1fd924f2cd59596c3c5d85b68a59ecb69933a7f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Aerocool Dota 2 Gaming Challenge Brazil - ADMIN",
+				"defindex": 15362,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Aerocool Dota 2 Gaming Challenge Brazil - ADMIN",
+				"item_description": "The top 8 Brazilian teams compete for a R$1,000 prize pool and gaming equipment from Aerocool!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_aerocool",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_aerocool.4ea6f9e70c3493c56dc9fe1b31241432bd4aa676.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_aerocool_large.1fd924f2cd59596c3c5d85b68a59ecb69933a7f9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "The Orena",
+				"defindex": 15363,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The Orena",
+				"item_description": "32 of South Africa's top Dota 2 teams compete for a total prize pool of R8500 and gaming hardware from SteeelSeries!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_orena",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_orena.2c5ae8938f8ed68bd0e307f7731b678301e4ad39.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_orena_large.2038e3b83d5e00b2b0908352bfd3c66ca41b5c7b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "The Orena - ADMIN",
+				"defindex": 15364,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "The Orena - ADMIN",
+				"item_description": "32 of South Africa's top Dota 2 teams compete for a total prize pool of R8500 and gaming hardware from SteeelSeries!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_orena",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_orena.2c5ae8938f8ed68bd0e307f7731b678301e4ad39.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_orena_large.2038e3b83d5e00b2b0908352bfd3c66ca41b5c7b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Yard Orange Festival",
+				"defindex": 15365,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Yard Orange Festival",
+				"item_description": "16 teams will compete for a grand prize of $1,000! 12 teams will be invited and 4 will earn their spot through qualifying.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_yardorange",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardorange.6c2515dc0e3ea4227d04004d548d3bed338f9420.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardorange_large.2aa2fb1c70932e9bca308df3e81c666cb948de80.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Yard Orange Festival - ADMIN",
+				"defindex": 15366,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Yard Orange Festival - ADMIN",
+				"item_description": "16 teams will compete for a grand prize of $1,000! 12 teams will be invited and 4 will earn their spot through qualifying.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_yardorange",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardorange.6c2515dc0e3ea4227d04004d548d3bed338f9420.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardorange_large.2aa2fb1c70932e9bca308df3e81c666cb948de80.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "SLTV Star Series Season 8",
+				"defindex": 15368,
+				"item_class": "tool",
+				"item_type_name": "League Pass",
+				"item_name": "SLTV Star Series Season 8",
+				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $40,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "SLTV Star Series Season 8 - ADMIN",
+				"defindex": 15369,
+				"item_class": "tool",
+				"item_type_name": "Admin Pass",
+				"item_name": "SLTV Star Series Season 8 - ADMIN",
+				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $40,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8.5269b5c28deb141ea417841024a9cedc4a946508.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8_large.43918a6da85e65b9722b0fcc8c041b52bd7cbaca.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Star Series 8 Battle Bonus",
+				"defindex": 15379,
+				"item_class": "tool",
+				"item_type_name": "Battle Bonus",
+				"item_name": "Star Series 8 Battle Bonus",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>125%<\/font> for 6 days. Additionally, you will grant other players a stacking <font color='#9da1a9'>25%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/starladder8_battle_bonus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/starladder8_battle_bonus.f63d537f1eb7f845094fc63c79d8d3369b7c75f0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/tools\/starladder8_battle_bonus_large.5939610b2a5490028711cda97e7e89a6696afbf1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "fortunate_soul",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Artificer's Hammer",
 				"defindex": 17002,
 				"item_class": "tool",
@@ -78781,7 +79733,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Falconer's Design Set",
-				"item_description": "Includes all of the items in the 'Falconer's Design' set for Windrunner:",
+				"item_description": "Includes all of the items in the 'Falconer's Design' set for Windranger:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Falconers_Design_Set",
@@ -78811,7 +79763,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Zaru'Kina Protector's Garb Set",
-				"item_description": "Includes all of the items in the 'Zaru'Kina Protector's Garb' set for Windrunner:",
+				"item_description": "Includes all of the items in the 'Zaru'Kina Protector's Garb' set for Windranger:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_ZaruKina_Protectors_Garb_Set",
@@ -78841,7 +79793,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Flight of the Sparrowhawk Set",
-				"item_description": "Includes all of the items in the 'Flight of the Sparrowhawk' set for Windrunner:",
+				"item_description": "Includes all of the items in the 'Flight of the Sparrowhawk' set for Windranger:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Flight_of_the_Sparrowhawk_Set",
@@ -79196,12 +80148,12 @@
 				}
 			},
 			{
-				"name": "Windrunner's Sylvan Bundle",
+				"name": "Wind Ranger's Sylvan Bundle",
 				"defindex": 20083,
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
-				"item_name": "Windrunner's Sylvan Bundle",
-				"item_description": "This bundle contains all of the items for Windrunner released in October 2012.",
+				"item_name": "Wind Ranger's Sylvan Bundle",
+				"item_description": "This bundle contains all of the items for Wind Ranger released in October 2012.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/bundles\/windrunner_bundle",
@@ -80094,7 +81046,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Wings of the Gilded Falcon Set",
-				"item_description": "This bundle contains all of the items in the 'Wings of the Gilded Falcon' set for Windrunner:  Quick as wings, light as feathers, golden as the sun; the wings of the guilded Falcon set is a tribute to a rare and deadly predator.",
+				"item_description": "This bundle contains all of the items in the 'Wings of the Gilded Falcon' set for Windranger:  Quick as wings, light as feathers, golden as the sun; the wings of the guilded Falcon set is a tribute to a rare and deadly predator.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Wings_of_the_Gilded_Falcon_Set",
@@ -81017,7 +81969,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Featherfall Set",
-				"item_description": "Arrows of a feather flock together. Constructed from strong and resilient harpy feathers, this set of Featherfall is a fine upgrade to Windrunner's look.  This bundle contains all of the items in the 'Featherfall' set for Windrunner.",
+				"item_description": "Arrows of a feather flock together. Constructed from strong and resilient harpy feathers, this set of Featherfall is a fine upgrade to Windranger's look.  This bundle contains all of the items in the 'Featherfall' set for Windranger.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Featherfall_Set",
@@ -81047,7 +81999,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Armor of the Sanguine Moon Set",
-				"item_description": "By the blinding light of the blood moon, these items transform Lycan into the ultimate killing beast.  Includes all of the items in the 'Sanguine Moon' set for Lycanthrope:",
+				"item_description": "By the blinding light of the blood moon, these items transform Lycan into the ultimate killing beast.  Includes all of the items in the 'Sanguine Moon' set for Lycan:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Armor_of_the_Sanguine_Moon_Set",
@@ -83447,7 +84399,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "The Northern Wind Set",
-				"item_description": "This bundle contains all of the items in the 'Northern Wind' set for Windrunner: ",
+				"item_description": "This bundle contains all of the items in the 'Northern Wind' set for Windranger: ",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_The_Norther_Wind_Set",
@@ -84527,7 +85479,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Redwood Arms Set",
-				"item_description": "This bundle contains all of the items in the 'Redwood Arms' set for Windrunner.",
+				"item_description": "This bundle contains all of the items in the 'Redwood Arms' set for Windranger:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Redwood_Arms_Set",
@@ -85463,8 +86415,8 @@
 				"image_inventory": "econ\/announcer\/announcer_trine",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine.c3d6c7f5c5777d40a6132fc11e4ad017371469b3.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine_large.69ebf0b68d8c5e517080c5c125bb3f823845e59f.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine.23cf59281dcecc12c9a4a397d523380be0c83b42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/announcer\/announcer_trine_large.9e6939469d640ad4b7c3b15d89e910af270f11a4.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -85637,7 +86589,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Bundle",
 				"item_name": "Vestments of the Ten Plagues Set",
-				"item_description": "Includes all the items in the \"Vestments of the Ten Plagues\" set for Necrolyte.",
+				"item_description": "Includes all the items in the \"Vestments of the Ten Plagues\" set for Necrophos.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/sets\/DOTA_Item_Vestments_of_the_Ten_Plagues_Set",
@@ -86046,6 +86998,126 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Caustic Consumption Set",
+				"defindex": 20312,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Caustic Consumption Set",
+				"item_description": "This set contains all of the items in the 'Caustic Consumption' set for Sand King:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Caustic_Consumption_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_caustic_consumption_set.90ca2cd365d8d3a4d449ad429cddf7b9f1a87675.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_caustic_consumption_set_large.7f163820027d13be841b09d8d767de827e8a97f7.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Second Disciple Set",
+				"defindex": 20313,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Second Disciple Set",
+				"item_description": "Includes all of the items in the 'Second Disciple' set for Bounty Hunter:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Second_Disciple",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_second_disciple.24cdbb99ed93588ed26c405ce7718c8de8be0a1b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_second_disciple_large.7e46b8775e6f4d6683b12d3824f5194d5907061a.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Threads of Entwined Fate & Star Series 8 Bundle",
+				"defindex": 20314,
+				"item_class": "bundle",
+				"item_type_name": "Premium Tournament Bundle",
+				"item_name": "Threads of Entwined Fate & Star Series 8 Bundle",
+				"item_description": "Includes the evolving Threads of the Entwined Fate Set, 125% 6 day Battle Bonus and access to Star Series 8.<br><br>$2.50 of every purchase will go directly to the Star Series 8 prize pool.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8.5269b5c28deb141ea417841024a9cedc4a946508.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8_large.43918a6da85e65b9722b0fcc8c041b52bd7cbaca.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Anointed Armor of Ruination",
+				"defindex": 20315,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Anointed Armor of Ruination",
+				"item_description": "This item includes all of the items in the 'Anointed Armor of Ruination' set for Abaddon:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Anointed_Armor_of_Ruination",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_anointed_armor_of_ruination.173e7e332aa623547ecc012d3363059f6175d439.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_anointed_armor_of_ruination_large.651b7aa465a870659077719c1b3045f349462083.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -87197,6 +88269,18 @@
 		,
 		"item_sets": [
 			{
+				"item_set": "abaddon_anointed_ruination",
+				"name": "Anointed Armor of Ruination",
+				"items": [
+					"Darkstar the Mistforged",
+					"Netherax, Nightmare of the Mist",
+					"Mistplates of Ruin",
+					"Winged Shroud of Ruin",
+					"Tarnhelm of Ruin"
+				]
+				
+			},
+			{
 				"item_set": "acolyte_set",
 				"name": "Acolyte of Clasz",
 				"store_bundle": "Acolyte of Clasz Set",
@@ -87823,6 +88907,20 @@
 					"Blade of the Blood Stained Sands",
 					"Shuriken of the Blood Stained Sands",
 					"Pike of the Blood Stained Sands"
+				]
+				
+			},
+			{
+				"item_set": "bountyhunter_second_disciple",
+				"name": "The Second Disciple",
+				"store_bundle": "The Second Disciple Set",
+				"items": [
+					"The Second Disciple's Bastion",
+					"The Second Disciple's Veil",
+					"The Second Disciple's Satchel",
+					"The Second Disciple's Dagger",
+					"The Second Disciple's Chakram",
+					"The Second Disciple's Blade"
 				]
 				
 			},
@@ -89720,6 +90818,19 @@
 				
 			},
 			{
+				"item_set": "sandking_caustic_consumption",
+				"name": "Caustic Consumption",
+				"store_bundle": "The Caustic Consumption Set",
+				"items": [
+					"Caustic Glare",
+					"Caustic Tarsus",
+					"Caustic Guard",
+					"Caustic Rack",
+					"Caustic Spurs"
+				]
+				
+			},
+			{
 				"item_set": "sanguine_moon",
 				"name": "Armor of the Sanguine Moon",
 				"store_bundle": "Armor of the Sanguine Moon Set",
@@ -90289,6 +91400,19 @@
 					"Cape of the Warrior's Retribution",
 					"Gauntlet of the Warrior's Retribution",
 					"Helm of the Warrior's Retribution"
+				]
+				
+			},
+			{
+				"item_set": "weaver_threads",
+				"name": "Threads of Entwined Fate",
+				"store_bundle": "Threads of Entwined Fate & Star Series 8 Bundle",
+				"items": [
+					"Feelers of Entwined Fate",
+					"Stinger of Entwined Fate",
+					"Limbs of Entwined Fate",
+					"Whiskers of Entwined Fate",
+					"Crown of Entwined Fate"
 				]
 				
 			},
