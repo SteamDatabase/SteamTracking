@@ -3755,6 +3755,7 @@
 					{
 						"skin_red" "0"
 						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -3798,6 +3799,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -4249,6 +4253,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -4796,6 +4803,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -6422,6 +6432,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -6932,6 +6945,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9161,6 +9177,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9302,6 +9321,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9455,6 +9477,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9508,6 +9533,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9563,6 +9591,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9619,6 +9650,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9709,6 +9743,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9768,6 +9805,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9823,6 +9863,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -9881,6 +9924,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -10005,6 +10051,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -10847,6 +10896,9 @@
 				{
 					"0"
 					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 					"1"
 					{
@@ -19481,6 +19533,9 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
+						"selectable"	"0"
 					}
 					"1"
 					{
