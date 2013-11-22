@@ -39737,7 +39737,7 @@
 		{
 			"name"	"MvM GateBot Light Scout"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39746,6 +39746,14 @@
 			"used_by_classes"
 			{
 				"scout"	"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39772,7 +39780,7 @@
 		{
 			"name"	"MvM GateBot Light Pyro"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39781,6 +39789,14 @@
 			"used_by_classes"
 			{
 				"pyro"	"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39807,7 +39823,7 @@
 		{
 			"name"	"MvM GateBot Light Medic"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39816,6 +39832,14 @@
 			"used_by_classes"
 			{
 				"medic"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39842,7 +39866,7 @@
 		{
 			"name"	"MvM GateBot Light Heavy"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39851,6 +39875,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39877,7 +39909,7 @@
 		{
 			"name"	"MvM GateBot Light Demoman"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39886,6 +39918,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39912,7 +39952,7 @@
 		{
 			"name"	"MvM GateBot Light Sniper"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39921,6 +39961,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39947,7 +39995,7 @@
 		{
 			"name"	"MvM GateBot Light Soldier"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39956,6 +40004,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -39982,7 +40038,7 @@
 		{
 			"name"	"MvM GateBot Light Spy"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39991,6 +40047,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -40017,7 +40081,7 @@
 		{
 			"name"	"MvM GateBot Light Engineer"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"misc"
+			"prefab"	"no_craft misc"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -40026,6 +40090,14 @@
 			"used_by_classes"
 			{
 				"heavy"		"1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
 			}
 			"visuals"
 			{
@@ -61602,6 +61674,18 @@
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"show_in_armory"	"1"
+		}
+		"8938"
+		{
+			"name"		"Glitched Circuit Board"
+			"item_class"	"craft_item"
+			"craft_material_type"	""
+			"item_type_name"	"#TF_Item_GlitchedCircuitBoard_Type"
+			"item_name"	"#TF_Item_GlitchedCircuitBoard"
+			"item_description"	"#TF_Item_GlitchedCircuitBoard_Desc"
+			"image_inventory"	"backpack/crafting/glitched_circuit_board"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
 
 
