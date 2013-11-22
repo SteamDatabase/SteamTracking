@@ -3446,7 +3446,7 @@ function PublishPending( rgOptions )
 		});
 	}
 
-	if ( bSetReleased )
+	if ( bSetReleased && NewReleaseState && NewReleaseState == 'released' )
 	{
 		rgUrls.push( {
 			'url': 'https://partner.steamgames.com/apps/startlaunchmarketing/' + nAppId,
