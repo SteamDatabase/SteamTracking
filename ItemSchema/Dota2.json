@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.68aa92fa1bea3efac045b8274c46c043d24f19c9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.72b414654a6dfbb15e9b0c95baf2a5f0ea7be4ed.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -77481,11 +77481,11 @@
 				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $40,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": null,
+				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8.5269b5c28deb141ea417841024a9cedc4a946508.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8_large.43918a6da85e65b9722b0fcc8c041b52bd7cbaca.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
