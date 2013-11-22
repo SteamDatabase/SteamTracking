@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "Team Fortress 2",
-		"gameVersion": "329",
+		"gameVersion": "332",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -3628,6 +3628,41 @@
 					"name": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS_STAT",
 					"defaultvalue": 0,
 					"displayName": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS_STAT"
+				},
+				{
+					"name": "TF_MAPS_STANDIN_WIN_ROUNDS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MAPS_STANDIN_WIN_ROUNDS_STAT"
+				},
+				{
+					"name": "TF_MAPS_PROCESS_WIN_ROUNDS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MAPS_PROCESS_WIN_ROUNDS_STAT"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_WIN_ROUNDS_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MAPS_SNAKEWATER_WIN_ROUNDS_STAT"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_BOMB_BOT_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MVM_MAPS_MANNHATTAN_BOMB_BOT_GRIND_STAT"
+				},
+				{
+					"name": "TF_MVM_MAPS_ROTTENBURG_PIT_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MVM_MAPS_ROTTENBURG_PIT_GRIND_STAT"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_KILL_ENEMIES_IN_MIDDLE_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MAPS_SNAKEWATER_KILL_ENEMIES_IN_MIDDLE_STAT"
+				},
+				{
+					"name": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND_STAT"
 				}
 			]
 			,
@@ -7735,6 +7770,195 @@
 					"description": "Send Redmond/Blutarch to Hell 10 times",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c512faf198b0cf975c2868555b06f3b47c68c22f.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/66872d260be9b439e7ecfde7dba87b8aca9a9059.jpg"
+				},
+				{
+					"name": "TF_MAPS_STANDIN_WIN_ROUNDS",
+					"defaultvalue": 0,
+					"displayName": "Stand And Deliver",
+					"hidden": 0,
+					"description": "Win 139 Rounds.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c1e82fe850b067c3a24f9e7d07ed25150d206e5e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/8be766a033a60bbdc7d0ded6045c4816e1e36143.jpg"
+				},
+				{
+					"name": "TF_MAPS_PROCESS_WIN_ROUNDS",
+					"defaultvalue": 0,
+					"displayName": "Process Of Elimination",
+					"hidden": 0,
+					"description": "Win 140 Rounds.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/6e6d054ea640d5240ed59f18c6d4a7cfe3d2e79f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/9113dc11e180a18d2fe36907e9da41e1b6ced612.jpg"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_WIN_ROUNDS",
+					"defaultvalue": 0,
+					"displayName": "Snakewater Salesman",
+					"hidden": 0,
+					"description": "Win 141 Rounds.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/6ee7493bc48b90de48bdabf4de6ce0768197d137.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/0723691bdda873d12f05358977b303855586db32.jpg"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_PUSH_BACK_AND_WIN",
+					"defaultvalue": 0,
+					"displayName": "Snakebit",
+					"hidden": 0,
+					"description": "Win a round in which the enemy team has attempted to capture your final control point.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/a7d05b751a2a5b51d5b0038c431416719ddc8d92.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/4a6f7f02e7343e25db716348f16c89b06a620b6c.jpg"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_TEAM_KILL",
+					"defaultvalue": 0,
+					"displayName": "The Snakeout",
+					"hidden": 0,
+					"description": "Wipe the other team with 12 or more players on the server.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/692c1e2a2091ee0c755db8a28fef2615b194bcdc.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/720ad447a439aa9d42d54c821f3a8a38d327f240.jpg"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_DOUBLE_AIR_DEATHS",
+					"defaultvalue": 0,
+					"displayName": "Mutually Air-Sured-Destruction",
+					"hidden": 0,
+					"description": "While rocket jumping, use a rocket to kill a rocket jumping enemy who also kills you with a rocket.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/b272dd09c287eeb4b072a928315139fd2b72a734.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/6706abb617da105d8fd563dd0bc18ecf978465d7.jpg"
+				},
+				{
+					"name": "TF_MAPS_SNAKEWATER_KILL_ENEMIES_IN_MIDDLE",
+					"defaultvalue": 0,
+					"displayName": "Log Jammin",
+					"hidden": 0,
+					"description": "Kill 15 enemies in the rafters above the central capture point.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/5a9f5c3071acf54cffb22cd80b91fc4b6a65ed7a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/84bd7597073e4806f111f7282370d81078d99376.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_ROTTENBURG_TANK",
+					"defaultvalue": 0,
+					"displayName": "Palace-Aid",
+					"hidden": 0,
+					"description": "Kill a tank before it crashes through the barrier in Rottenburg.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/05d3fd9bb59052875dbf8051871d9c58df162634.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c67a2fe9c5492d7662f71245cf0d44992c28a619.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_ROTTENBURG_BOMB",
+					"defaultvalue": 0,
+					"displayName": "Crasher Crusher",
+					"hidden": 0,
+					"description": "Play an advanced wave in Rottenburg without the bomb entering the town.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/f4eb468b02499baa2e4cdd9e507ea428306f5991.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/726eda799d20f0fedb4a8d3880c3f1f8e0ce8522.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_PIT",
+					"defaultvalue": 0,
+					"displayName": "Chippin' In",
+					"hidden": 0,
+					"description": "As a team, pit 10 guys in a single wave in Mannhattan.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/f2abe3c440d04fcb63a95c1fa9e70088bd4f37c2.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/470039fc7231fd2794830322d72158b185014ddc.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_MYSTERY",
+					"defaultvalue": 0,
+					"displayName": "Now Legal To Eat",
+					"hidden": 0,
+					"description": "Ooohh Ooh Ahh Ahhhh! ...in Mannhattan",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/ed3fd653a820687ac37905eff37c7f6066ab791c.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/97f95c297e453302fee04b35eff4d15612bc25e5.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_NO_GATES",
+					"defaultvalue": 0,
+					"displayName": "Get Off My Lawn",
+					"hidden": 0,
+					"description": "Play an advanced mission without losing a single gate in Mannhattan.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/e03afb581fbc71c448d7bf989f397c8f5cef553e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/6b409262970981edc73f24971051a9833e7104b8.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_STUN_RADIOWAVE",
+					"defaultvalue": 0,
+					"displayName": "Software Downgrade",
+					"hidden": 0,
+					"description": "As a team, kill 50 stunned radiowave robots in an advanced mission in Mannhattan.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/bb57fa41f34ada3dc650d5a2de11bd0cbe55eb2e.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/3a6074715402a552ca47ab03a80b7ef905fa3675.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_MANNHATTAN_BOMB_BOT_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Urban Strike",
+					"hidden": 0,
+					"description": "Kill 500 gate crashing robots in Mannhattan.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/76b8b4a105ed66d7f4b1e93656ab1e6f4d2321cc.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/d9cbe1e62ed39f59bf46b95a3beb845cdf1fb0c5.jpg"
+				},
+				{
+					"name": "TF_MVM_SENTRY_BUSTER_FRIENDLY_FIRE",
+					"defaultvalue": 0,
+					"displayName": "Bot-Buster",
+					"hidden": 0,
+					"description": "Kill 5 robots in a single explosion from detonating a sentry buster.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/9e37e0c1b7d3c02fce1e2faaaeb7bb2a76e92f5f.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/f7937ad3250b5f3963345c239af281ebc3f636e9.jpg"
+				},
+				{
+					"name": "TF_MVM_MAPS_ROTTENBURG_PIT_GRIND",
+					"defaultvalue": 0,
+					"displayName": "A Bygone Century",
+					"hidden": 0,
+					"description": "Pit 100 enemies in Rottenburg.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/8383596cb5b09408d76023518d6ad5e7fc692b06.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/bba27e2d7c1a62b095d54aa7a351f9b9c157e132.jpg"
+				},
+				{
+					"name": "TF_MVM_SNIPER_COLLECT_HEADSHOT_MONEY",
+					"defaultvalue": 0,
+					"displayName": "Bank On It",
+					"hidden": 0,
+					"description": "As a Sniper collect $500 in a mission without running over the currency packs.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/595522035ee69f19220a292bf3c073cc4171a3e6.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/ec2921ad12c6f41430a58023b7eecb84359934e3.jpg"
+				},
+				{
+					"name": "TF_MVM_MEDIC_SHIELD_BLOCK_DAMAGE",
+					"defaultvalue": 0,
+					"displayName": "Wall Of Pain",
+					"hidden": 0,
+					"description": "Block 5,000 damage with the shield as a Medic in a single life.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/7c8062b2d9624891d5e199fb5ddf7fe2b3eb8129.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/0fcfa60d000ad3004d8f5fe5e5bbdca6be588536.jpg"
+				},
+				{
+					"name": "TF_MVM_MEDIC_REVIVE_TEAMMATES",
+					"defaultvalue": 0,
+					"displayName": "Reanimator 2",
+					"hidden": 0,
+					"description": "Use one ÜberCharge to quickly revive 2 teammates within 5 seconds.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/3011a6f8580c704261ed76d1396450ea0cf2da0b.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/72b32b6a7e546343ea7fff67b328d1d2ed4837a9.jpg"
+				},
+				{
+					"name": "TF_MVM_ROCKET_SPECIALIST_KILL_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Robot Flush",
+					"hidden": 0,
+					"description": "Kill 5 enemies with a single rocket while upgraded with rocket specialist.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/8596ec4092bba1d93a469e56053f1b057ac0af5a.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/8141da37565cd46eb7af5c590fc5418d0b7b7c54.jpg"
+				},
+				{
+					"name": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Dazed And Defused",
+					"hidden": 0,
+					"description": "Stun 50 robots while upgraded with rocket specialist.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/bddc6133ffdd3ba36c009d8ab643af7740256bfa.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c2a4908d840d9eb5ed0e3a8bbe1042b303e9f1e8.jpg"
 				}
 			]
 			
