@@ -1190,6 +1190,9 @@
 	"Notification_RefreshLogin"				"This account is logged in elsewhere."
 	"Notification_RemoteClientConnected"	"Connected to {s:machine}"
 	"Notification_RemoteClientDisconnected"	"Disconnected from {s:machine}"
+	"Notification_NewTurns"		"You have {d:numItems} new turns waiting"
+	"Notification_NewTurnsSingular"	"You have 1 new turn waiting"
+
 
 	"Friends_GroupEvent_NowStarting"	"has event starting"
 	"Friends_GroupEvent_NewEventScheduled"	"has scheduled an event"

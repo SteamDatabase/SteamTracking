@@ -916,6 +916,16 @@
 				}
 				1 { "dest"	46  }
 				2 { "dest"	48  }
+				7 
+				{ 
+					"dest"	137  
+					"cost"	LocalCostOneWayCellEdge
+				}
+				7 
+				{ 
+					"dest"	138  
+					"cost"	LocalCostOneWayCellEdge
+				}								
 			}
 		}
 
