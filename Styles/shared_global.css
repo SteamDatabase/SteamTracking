@@ -673,7 +673,7 @@ select.gray_bevel {
 }
 
 .header_notification_green, .header_notification_green .leftcap, .header_notification_green .rightcap {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_notification_green.png' );
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_notification_green.png?=1' );
 }
 
 .header_notification_green:hover, .header_notification_green.focus {
