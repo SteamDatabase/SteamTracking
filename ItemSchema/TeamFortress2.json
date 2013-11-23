@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.07ea6e0b98fb3603b28ab557e55c2125bc2aff8c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d7a3b8d9830d5c6fb52bdc0901e8f8c4a1adad24.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -79339,18 +79339,21 @@
 			{
 				"name": "Glitched Circuit Board",
 				"defindex": 8938,
-				"item_class": "craft_item",
+				"item_class": "tf_wearable",
 				"item_type_name": "TF_Item_GlitchedCircuitBoard_Type",
-				"item_name": "TF_Item_GlitchedCircuitBoard",
+				"item_name": "Glitched Circuit Board",
+				"item_description": "The remains of a Robo GateBot Light. It self-destructed after falling into the hands of a human.",
 				"proper_name": false,
+				"item_slot": "misc",
 				"model_player": null,
-				"item_quality": 255,
+				"item_quality": 6,
 				"image_inventory": "backpack\/crafting\/glitched_circuit_board",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "",
-				"image_url_large": "",
-				"craft_material_type": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/glitched_circuit_board.04c958fb902a103501634607892afbee5572bb1e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/glitched_circuit_board_large.fa1991a9037e9d12dca2cc900efaf8a6c07146fd.png",
+				"craft_class": "",
+				"craft_material_type": "hat",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -79360,8 +79363,17 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
-				"used_by_classes": [
-
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
 				]
 				
 			},
