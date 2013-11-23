@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.72b414654a6dfbb15e9b0c95baf2a5f0ea7be4ed.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c4a21c657e1abc3711479385bf7f8ef1539ab280.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10929,11 +10929,11 @@
 				}
 			},
 			{
-				"name": "Ember Spirit's Back Item",
+				"name": "Pudge's Belt",
 				"defindex": 470,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "back",
-				"item_name": "Ember Spirit's Back Item",
+				"item_type_name": "New Item",
+				"item_name": "Pudge's Belt",
 				"item_description": "This new item has no description.",
 				"proper_name": false,
 				"item_quality": 0,
@@ -77478,7 +77478,7 @@
 				"item_class": "tool",
 				"item_type_name": "League Pass",
 				"item_name": "SLTV Star Series Season 8",
-				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $40,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
+				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $50,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
@@ -77507,7 +77507,7 @@
 				"item_class": "tool",
 				"item_type_name": "Admin Pass",
 				"item_name": "SLTV Star Series Season 8 - ADMIN",
-				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $40,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
+				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $50,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
@@ -88271,6 +88271,7 @@
 			{
 				"item_set": "abaddon_anointed_ruination",
 				"name": "Anointed Armor of Ruination",
+				"store_bundle": "Anointed Armor of Ruination",
 				"items": [
 					"Darkstar the Mistforged",
 					"Netherax, Nightmare of the Mist",
