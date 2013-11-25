@@ -67,10 +67,10 @@
 			bgcolor="0 0 0 255"
 			render {
 				// lines around
-				1="fill( x0 + 9, y0 + 2, x0 + 10, y1 + 1, BorderThumbnailUnpublished )"  //left
-				2="fill( x1 + 9, y0 + 2, x1 + 10, y1 + 1, BorderThumbnailUnpublished )"  //right
-				3="fill( x0 + 9, y0 + 2, x1 + 10, y0 + 3, BorderThumbnailUnpublished )"  //top
-				4="fill( x0 + 9, y1 + 1, x1 + 10, y1 + 2, BorderThumbnailUnpublished )"  //btm
+				1="fill( x0 + 2, y0 + 1, x0 + 3, y1 + 0, BorderThumbnailUnpublished )"  //left
+				2="fill( x1 + 2, y0 + 1, x1 + 3, y1 + 0, BorderThumbnailUnpublished )"  //right
+				3="fill( x0 + 2, y0 + 1, x1 + 3, y0 + 2, BorderThumbnailUnpublished )"  //top
+				4="fill( x0 + 2, y1 + 0, x1 + 3, y1 + 1, BorderThumbnailUnpublished )"  //btm
 			}
 		}
 
@@ -79,10 +79,10 @@
 			bgcolor="0 0 0 255"
 			render {
 				// lines around
-				1="fill( x0 + 9, y0 + 2, x0 + 10, y1 + 1, BorderThumbnailPublished )"  //left
-				2="fill( x1 + 9, y0 + 2, x1 + 10, y1 + 1, BorderThumbnailPublished )"  //right
-				3="fill( x0 + 9, y0 + 2, x1 + 10, y0 + 3, BorderThumbnailPublished )"  //top
-				4="fill( x0 + 9, y1 + 1, x1 + 10, y1 + 2, BorderThumbnailPublished )"  //btm
+				1="fill( x0 + 2, y0 + 1, x0 + 3, y1 + 0, BorderThumbnailPublished )"  //left
+				2="fill( x1 + 2, y0 + 1, x1 + 3, y1 + 0, BorderThumbnailPublished )"  //right
+				3="fill( x0 + 2, y0 + 1, x1 + 3, y0 + 2, BorderThumbnailPublished )"  //top
+				4="fill( x0 + 2, y1 + 0, x1 + 3, y1 + 0, BorderThumbnailPublished )"  //btm
 			}
 		}
 
@@ -91,10 +91,10 @@
 			bgcolor="0 0 0 255"
 			render {
 				// lines around
-				1="fill( x0 + 9, y0 + 2, x0 + 10, y1 + 1, BorderThumbnailSelected )"  //left
-				2="fill( x1 + 9, y0 + 2, x1 + 10, y1 + 1, BorderThumbnailSelected )"  //right
-				3="fill( x0 + 9, y0 + 2, x1 + 10, y0 + 3, BorderThumbnailSelected )"  //top
-				4="fill( x0 + 9, y1 + 1, x1 + 10, y1 + 2, BorderThumbnailSelected )"  //btm
+				1="fill( x0 + 2, y0 + 1, x0 + 3, y1 + 0, BorderThumbnailSelected )"  //left
+				2="fill( x1 + 2, y0 + 1, x1 + 3, y1 + 0, BorderThumbnailSelected )"  //right
+				3="fill( x0 + 2, y0 + 1, x1 + 3, y0 + 2, BorderThumbnailSelected )"  //top
+				4="fill( x0 + 2, y1 + 0, x1 + 3, y1 + 1, BorderThumbnailSelected )"  //btm
 
 			}
 		}
@@ -104,10 +104,10 @@
 			bgcolor="0 0 0 255"
 			render {
 				// lines around
-				1="fill( x0 + 9, y0 + 2, x0 + 10, y1 + 1, BorderThumbnailUploaded )"  //left
-				2="fill( x1 + 9, y0 + 2, x1 + 10, y1 + 1, BorderThumbnailUploaded )"  //right
-				3="fill( x0 + 9, y0 + 2, x1 + 10, y0 + 3, BorderThumbnailUploaded )"  //top
-				4="fill( x0 + 9, y1 + 1, x1 + 10, y1 + 2, BorderThumbnailUploaded )"  //btm
+				1="fill( x0 + 2, y0 + 1, x0 + 3, y1 + 0, BorderThumbnailUploaded )"  //left
+				2="fill( x1 + 2, y0 + 1, x1 + 3, y1 + 0, BorderThumbnailUploaded )"  //right
+				3="fill( x0 + 2, y0 + 1, x1 + 3, y0 + 2, BorderThumbnailUploaded )"  //top
+				4="fill( x0 + 2, y1 + 0, x1 + 3, y1 + 1, BorderThumbnailUploaded )"  //btm
 			}
 		}
 
@@ -148,7 +148,7 @@
 
 		WrapPanel
 		{			
-			inset="10 2 10 2"
+			inset="3 1 2 2"
 			bgcolor="none"
 
 			render_bg {

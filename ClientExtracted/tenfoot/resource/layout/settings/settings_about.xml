@@ -45,8 +45,9 @@
 
 				<Label class="SettingsLegend SteamOSUpdates" text="#SettingsInterface_SteamOSCheckForUpdatesTitle" />
 				<Label class="SettingsValue SteamOSUpdates" text="#SettingsInterface_SteamOSCheckForUpdatesDesc" />
-				<Button class="Button ResBody SteamOSUpdates"  onactivate="SteamOSCheckForUpdates();" tabindex="auto" selectionpos="auto">
+				<Button id="SettingsAbout_SteamOSUpdateButton" class="Button ResBody SteamOSUpdates"  onactivate="SteamOSCheckForUpdates();" tabindex="auto" selectionpos="auto">
 					<Label class="LongDesc" text="#SettingsInterface_SteamOSCheckForUpdates"  />
+					<Panel class="SteamOsUpdateThrobber" />
 				</Button>
 
 		</Panel>	

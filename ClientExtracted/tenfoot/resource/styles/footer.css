@@ -324,13 +324,20 @@ TenfootFooterPanel
 	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
 }
 
-.OSX,.Linux #LegendRow .AButtonBox,
-.OSX,.Linux #LegendRow .BButtonBox,
-.OSX,.Linux #LegendRow .XButtonBox,
-.OSX,.Linux #LegendRow .YButtonBox,
-.OSX,.Linux #LegendRow .LBButtonBox,
-.OSX,.Linux #LegendRow .RBButtonText,
-.OSX,.Linux #LegendRow .TriggerButtonBox
+.OSX #LegendRow .AButtonBox,
+.OSX #LegendRow .BButtonBox,
+.OSX #LegendRow .XButtonBox,
+.OSX #LegendRow .YButtonBox,
+.OSX #LegendRow .LBButtonBox,
+.OSX #LegendRow .RBButtonText,
+.OSX #LegendRow .TriggerButtonBox,
+.Linux #LegendRow .AButtonBox,
+.Linux #LegendRow .BButtonBox,
+.Linux #LegendRow .XButtonBox,
+.Linux #LegendRow .YButtonBox,
+.Linux #LegendRow .LBButtonBox,
+.Linux #LegendRow .RBButtonText,
+.Linux #LegendRow .TriggerButtonBox
 {
 	padding-top: 3px;
 }
