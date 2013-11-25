@@ -175,7 +175,6 @@ a.games_list_tab:hover {
 }
 
 #gameslist_controls {
-	margin-top: -16px;
 	line-height: 24px;
 }
 
@@ -185,7 +184,7 @@ a.games_list_tab:hover {
 
 #wishlist_sort_options {
 	text-align: right;
-	margin-top: -16px;
+
 }
 
 .sort_options {
@@ -716,7 +715,7 @@ a.btn_visit_store:hover
 }
 
 body.migrated_profile_page #wishlist_comic {
-	top: -126px;
+	top: -121px;
 }
 
 .wishlist_empty_notice {
@@ -791,6 +790,7 @@ body.migrated_profile_page #wishlist_comic {
  */
 
 #clientConnBlock {
+	margin-bottom: 5px;
 }
 
 #clientConnGameBlocks {
@@ -804,8 +804,7 @@ body.migrated_profile_page #wishlist_comic {
     overflow: hidden;
     color: #D0D0D0;
     z-index: 2;
-    margin-top: -32px;
-    margin-bottom: 32px;
+
 }
 
 .clientConnArea #fullstretch {
@@ -1034,4 +1033,18 @@ body.migrated_profile_page #wishlist_comic {
     font-size: 14px;
     font-weight: bold;
     padding: 0px;
+}
+
+
+#mainContents {
+	padding: 0;
+}
+
+.sectionTabsHR {
+	display: none;
+}
+
+.games_list {
+	clear: both;
+	padding-top: 10px !important;
 }

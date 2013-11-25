@@ -943,4 +943,91 @@ function v_trim( str )
 	}
 }
 
+function V_ParseJSON( str )
+{
+	if ( typeof JSON == 'object' && JSON.parse )
+		return JSON.parse( str );	// built-in / json2.js
+	else
+		str.evalJSON();				// prototype
+}
+
+function V_ToJSON( object )
+{
+	if ( typeof JSON == 'object' && JSON.stringify )
+		return JSON.stringify( object );	// built-in / json2.js
+	else
+		Object.toJSON( object )				// prototype
+}
+
+function V_GetCookie( strCookieName )
+{
+	var rgMatches = document.cookie.match( '(^|; )' + strCookieName + '=([^;]*)' );
+	if ( rgMatches && rgMatches[2] )
+		return rgMatches[2];
+	else
+		return null;
+}
+
+function V_SetCookie( strCookieName, strValue, expiryInDays, path )
+{
+	if ( !expiryInDays )
+		expiryInDays = 0;
+	if ( !path )
+		path = '/';
+
+	var dateExpires = new Date();
+	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * expiryInDays );
+	document.cookie = strCookieName + '=' + strValue + '; expires=' + dateExpires.toGMTString() + ';path=' + path;
+}
+
+function SetValueLocalStorage( strPreferenceName, value )
+{
+	if ( window.localStorage )
+	{
+		window.localStorage[strPreferenceName] = value;
+	}
+	else
+	{
+		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
+
+		var oStorage = V_ParseJSON( strStorageJSON );
+
+		oStorage[strPreferenceName] = value;
+
+		V_SetCookie( 'storage', V_ToJSON( oStorage ), 365 )
+	}
+}
+
+function UnsetValueLocalStorage( strPreferenceName )
+{
+	if ( window.localStorage )
+	{
+		delete window.localStorage[strPreferenceName];
+	}
+	else
+	{
+		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
+
+		var oStorage = V_ParseJSON( strStorageJSON );
+
+		delete oStorage[strPreferenceName];
+
+		V_SetCookie( 'storage', V_ToJSON( oStorage ), 365 )
+	}
+}
+
+function GetValueLocalStorage( strPreferenceName, defaultValue )
+{
+	if ( window.localStorage )
+	{
+		return window.localStorage[strPreferenceName] || defaultValue;
+	}
+	else
+	{
+		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
+		var oStorage = V_ParseJSON( strStorageJSON );
+		return oStorage[strPreferenceName] || defaultValue;
+	}
+}
+
 

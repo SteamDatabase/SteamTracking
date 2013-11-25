@@ -2005,3 +2005,51 @@ h2.bb_tag + br {
 #EmbedModal .buttoncontainer {
 	text-align: right;
 }
+
+.dropcontainer ul {
+	list-style-type:none;
+	line-height: 22px;
+	background-color:#262626;
+	border:1px solid #82807C;
+	margin:0;
+	width:300px;
+	position:absolute;
+	left: 0px;
+	z-index: 999999;
+
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	top:5px;
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0px;
+	margin: 0px;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding-left:2px;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	color:#B0AEAC;
+	line-height: 22px;
+	height: 22px;
+}
+.dropcontainer a.highlighted_selection {
+	background:#3196FF;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.dropcontainer{
+	position:relative;
+}

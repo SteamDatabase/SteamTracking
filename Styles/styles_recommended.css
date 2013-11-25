@@ -303,6 +303,30 @@
 	top: 0px;
 }
 
+	.recommendation_area .reviewDate {
+		font-size: 14px;
+		color: #82807C;
+		margin-bottom: 3px;
+	}
+	.recommendation_area .thumb {
+		margin: 12px 8px 12px 12px;
+		float: left;
+	}
+	.recommendation_area .reviewPostedDescription {
+		color: #898A8C;
+		font-size: 14px;
+		margin: 16px 16px 8px 0px;
+	}
+	.recommendation_area .underlined_links {
+		color: #898A8C;
+		font-size: 14px;
+	}
+	.recommendation_area .commentCount {
+		float:right;
+		
+	}
+	
+
 .quote_serif
 {
 	font-family: Georgia, serif;
@@ -1157,13 +1181,12 @@ textarea.comment_input
 #review_container {
 	position: relative;
 	overflow: visible;
-	z-index: -1;
-	margin-top: -26px;
-	padding-top: 26px;
-	padding-bottom: 16px;
-	margin-bottom: 10px;
+
+	padding: 26px 80px 16px;
+	margin: -26px 0 10px -80px;
+	width: 940px;
 	background-image: url(http://cdn.store.steampowered.com/public/images/recommended/UserReviewAuthorBackgroundGlow.png);
-	background-position: bottom;
+	background-position: bottom center;
 	background-repeat: no-repeat;
 }
 
@@ -1207,22 +1230,21 @@ textarea.comment_input
 	margin-bottom: 5px;
 }
 
-#review_create .content .controls .controltext {
+#review_create .content .controls .dselect_container {
 	color: #b0aeac;
 	text-shadow: 1px 1px 0px #000;
-	line-height: 27px;
 	font-size: 12px;
 }
 
-#review_create .content .controls .controlblock {
-	float: left;
-	margin-right: 20px;
-	margin-bottom: 10px;
+#review_create .content .controls .dselect_container {
+	display: inline-block;
+	position: relative;
+
 }
-	#review_create .content .controls .controlblock select {
+	#review_create .content .controls .dselect_container a.trigger, #review_create .content .controls .dselect_container a.activetrigger {
 		background: url('http://cdn.store.steampowered.com/public/images/ico/ico_arrow_dn_for_select.gif') no-repeat right #000000;
 		color: #ebebeb;
-		padding: 2px 24px 4px 4px;
+		padding: 4px 30px 4px 8px;
 		font-size: 12px;
 		line-height: 13px;
 		border: 0;
@@ -1233,7 +1255,7 @@ textarea.comment_input
 		-moz-appearance: none;
 		text-indent: 0.01px;
 		text-overflow: '';
-
+		text-decoration: none;
 	}
 
 
@@ -1260,33 +1282,34 @@ textarea.comment_input
 	font-size: 16px;
 	color: #86b5d9;
 	border-bottom: 1px solid #2e3a4a;
+	margin-bottom: 15px;
 }
+
+	.user_reviews_header .user_reviews_see_all {
+		float:right;
+		font-size: 11px;
+		padding-top: 4px;
+	}
 
 .review_box {
 	border-top: 1px solid #425a76;
-	background: -moz-linear-gradient(top,  rgba(0,0,0,.4) 0%, rgba(60,61,62,.4) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.4)), color-stop(100%,rgba(60,61,62,.4)));
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: -o-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: -ms-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: linear-gradient(to bottom,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b3c3d',GradientType=0 );
-	margin-bottom: 26px;
+	background: -moz-linear-gradient(left, #20201f 5%, #252626 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#20201f), color-stop(95%,#252626));background: -webkit-linear-gradient(left, #20201f 5%,#252626 95%);background: -o-linear-gradient(left, #20201f 5%,#252626 95%);background: -ms-linear-gradient(left, #20201f 5%,#252626 95%);background: linear-gradient(to right, #20201f 5%,#252626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20201f', endColorstr='#252626',GradientType=1 );	margin-bottom: 26px;
 }
 
 .review_box .header {
 	padding: 8px 9px;
 	font-size: 12px;
 	color: #898a8c;
+	background-color: #181819;
 	border-bottom: 1px solid #2e3a4a;
 }
-
+	
 .review_box .leftcol {
 	width: 184px;
 	float: left;
 	padding: 8px;
 }
-
+	
 .review_box .rightcol {
 	float: left;
 	width: 400px;
@@ -1307,7 +1330,7 @@ textarea.comment_input
 .review_box .vote_header .hours {
 	font-size: 12px;
 	color: #d6d7d8;
-
+	
 }
 
 .review_box .vote_header .thumb {
@@ -1318,36 +1341,75 @@ textarea.comment_input
 .review_box .avatar {
 	float: left;
 	padding-right: 10px;
+	display: block;
 }
-
+	
 .review_box .persona_name {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 3px;
+	display: block;
 }
-
+	
 .review_box .num_owned_games {
-	font-size: 10px;
+	font-size: 11px;
+	color: #626366;
+	display: block;
 }
-
+	
 .review_box .content {
 	margin-right: 8px;
 	font-family: 'Motiva Sans', arial, tahoma;
 	font-size: 13px;
 	color: #cdcac1;
 }
-
+	
 .review_box .posted {
 	font-size: 10px;
 	font-style: italic;
 	color: #626366;
 	margin: 19px 0 8px;
 }
-
+	
 .review_box .hr {
 	background-color: #363f4c;
 	height: 1px;
 }
-
+	
 .review_box .control_block {
 	margin: 8px 0;
+	display: inline-block;
+}
+	
+.review_box .control_block .text {
+	display: inline-block;
+	margin-right: 9px;
+	color: #898a8c;
+	font-size: 12px;
+}
+
+.review_box .noReviewsYetTitle {
+	font-size: 16px;
+	color: #8BB9E0;
+	text-align: center;
+	margin-top: 40px;
+}
+.review_box .noReviewsYetSub {
+	font-size: 14px;
+	color: #898A8C;
+	text-align: center;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.review_box .noReviewsYetLink {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.controlblock {
+	display: inline-block;
 }
 
 .review_box .control_block .text {
@@ -1355,4 +1417,14 @@ textarea.comment_input
 	margin-right: 9px;
 	color: #898a8c;
 	font-size: 12px;
+}
+
+.review_box .review_flagged_by_developer {
+	padding: 10px;
+	color: #898a8c;
+	font-size: 12px;
+}
+
+.review_box .review_flagged_by_developer a {
+	color: #8BB9E0;
 }

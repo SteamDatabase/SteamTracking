@@ -169,3 +169,83 @@
 #profileBlock.recommendationProfileBlock {
 	padding-top: 13px;
 }
+.dselect_container {
+	padding: 0px;
+	display: inline;
+}
+
+.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
+{
+	font-size: 12px;
+	line-height: 22px;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a.trigger, a.activetrigger {
+	background: url(http://cdn.steamcommunity.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
+	border-right: 7px solid #000; /* HAAAAAX! */
+	display:block;
+
+	color: #B0AEAC;
+	height: 22px;
+	padding-left:8px;
+	padding-right: 20px;
+	overflow: hidden;
+
+
+	background-color: #000;
+	border-radius: 3px;
+	color: #e1e1e1;
+	margin: 3px 0;
+}
+
+.dropcontainer ul {
+	background-color: #000;
+	border-radius: 3px;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	list-style-type:none;
+	margin:0;
+	padding:5px 5px;
+
+	position:absolute;
+	line-height: 22px;
+	z-index: 999999;
+
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	top:-4px;
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding-left:2px;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	color:#e1e1e1;
+	line-height: 22px;
+	height: 22px;
+}
+.dropcontainer a.highlighted_selection {
+	background:#3196FF;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.dropcontainer{
+	position:relative;
+}
