@@ -368,7 +368,7 @@ div.hover {
 	border-bottom: 1px solid #82807c;
 }
 
-.hover_arrow {
+#global_hover .hover_arrow {
 	width: 26px;
 	height: 13px;
 	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/hover_arrow_up.gif );
