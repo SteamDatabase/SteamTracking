@@ -1,5 +1,6 @@
 
 g_BlotterNextLoadURL = null;
+g_recommendationIDs = new Array();
 
 function StartLoadingBlotter( url )
 {
@@ -23,6 +24,12 @@ function StartLoadingBlotter( url )
 				newDiv.setOpacity(0);
 				$('blotter_content').appendChild( newDiv );
 				new Effect.Appear( newDiv, { duration: .75 }  );
+
+				if ( g_recommendationIDs.length != 0 )
+				{
+					RequestCurrentUserRecommendationVotes( g_recommendationIDs );
+					g_recommendationIDs = new Array();
+				}
 
 				g_BlotterNextLoadURL = response.next_request;
 				Blotter_InfiniteScrollingCheckForMoreContent();

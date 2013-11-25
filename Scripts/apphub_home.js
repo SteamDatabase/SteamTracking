@@ -271,41 +271,16 @@ function RequestCurrentUserVotes( publishedFileIDs )
 				if ( vote.votesfor )
 				{
 					if ( $('vote_up_' + vote.publishedfileid) )
-						$('vote_up_' + vote.publishedfileid).addClassName('active');
+						$('vote_up_' + vote.publishedfileid).addClassName('btn_active');
 				}
 				else if ( vote.votesagainst )
 				{
 					if ( $('vote_down_' + vote.publishedfileid) )
-						$('vote_down_' + vote.publishedfileid).addClassName('active');
+						$('vote_down_' + vote.publishedfileid).addClassName('btn_active');
 				}
 			}
 		}
 	} );
-}
-
-function RequestCurrentUserRecommendationVotes( recommendationIDs )
-{
-	$J.post( 'http://steamcommunity.com/userreviews/ajaxgetvotes/', {
-			'recommendationids' : recommendationIDs
-		}
-	).done( function( response ) {
-			if ( response.success == 1 )
-			{
-				var votes = response.votes;
-				for ( var i = 0; i < votes.length; ++i )
-				{
-					var vote = votes[i];
-					if ( vote.voted_up )
-					{
-						$J('#RecommendationVoteUpBtn' + vote.recommendationid).addClass('active');
-					}
-					else if ( vote.voted_down )
-					{
-						$J('#RecommendationVoteDownBtn' + vote.recommendationid).addClass('active');
-					}
-				}
-			}
-		} );
 }
 
 function ValidateVoteSuccess( transport )
@@ -345,8 +320,8 @@ function PublishedFileVoteUp( id )
 				{
 					if ( ValidateVoteSuccess( transport ) )
 					{
-						$('vote_up_' + id).addClassName('active');
-						$('vote_down_' + id).removeClassName('active');
+						$('vote_up_' + id).addClassName('btn_active');
+						$('vote_down_' + id).removeClassName('btn_active');
 					}
 				}
 			}(id))
@@ -370,8 +345,8 @@ function PublishedFileVoteDown( id )
 				{
 					if ( ValidateVoteSuccess( transport ) )
 					{
-						$('vote_up_' + id).removeClassName('active');
-						$('vote_down_' + id).addClassName('active');
+						$('vote_up_' + id).removeClassName('btn_active');
+						$('vote_down_' + id).addClassName('btn_active');
 					}
 				}
 			}(id))
@@ -381,24 +356,4 @@ function PublishedFileVoteDown( id )
 			options
 		);
 	}
-}
-
-function UserReviewVoteUp( id )
-{
-	UserReview_Rate( id, true, 'http://steamcommunity.com',
-		function( rgResults ) {
-			$J( "#RecommendationVoteUpBtn" + id ).addClass( "active" );
-			$J( "#RecommendationVoteDownBtn" +id ).removeClass( "active" );
-		}
-	);
-}
-
-function UserReviewVoteDown( id )
-{
-	UserReview_Rate( id, false, 'http://steamcommunity.com',
-		function( rgResults ) {
-			$J( "#RecommendationVoteUpBtn" + id ).removeClass( "active" );
-			$J( "#RecommendationVoteDownBtn" + id ).addClass( "active" );
-		}
-	);
 }

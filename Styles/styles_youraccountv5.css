@@ -612,3 +612,9 @@ div.youraccount_history_home>div.account_wallet {
 	.accountTable td {
 		padding: 5px 14px;
 	}
+	
+.grey_overlay {
+	background-color:#000000;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
