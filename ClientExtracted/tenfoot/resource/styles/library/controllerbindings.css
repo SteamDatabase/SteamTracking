@@ -11,8 +11,11 @@ ControllerBindings #MsgBoxBodyRegion
 
 	padding: 0px;
 	flow-children: none;
+}
 
-
+ControllerBindings.DaisyWheelVisible #MsgBoxBodyRegion
+{
+	transform: translateX( 0px );
 }
 
 ControllerBindings#ControllerBindings.BehindAnotherMsgBox

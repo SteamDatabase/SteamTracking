@@ -111,6 +111,7 @@ SettingsPanel.SectionVisible #SettingsContent
 	background-position: left 0px top 75px;
 	height: 180px;
 	width: 100%;
+	z-index: 0;
 
 
 }
@@ -205,6 +206,10 @@ SettingsPanel.SectionVisible #SettingsContent
 	flow-children: down;
 }
 
+.SteamOS #SettingsInGame_Enable
+{
+	visibility: collapse;
+}
 
 .SettingsContent .Button,.CheckBox,ToggleButton
 {
@@ -450,7 +455,7 @@ Label.SettingsStatic
 	width: 100%;
 	text-overflow: clip;
 	white-space: nowrap;
-	
+
 	transform: translatex(-7px);
 	transition-property: color, transform;
 	transition-duration: 0.23s;
@@ -1021,6 +1026,49 @@ DropDown Label
 	color: applabelsolid;
 }
 
+.HorzLabelDropdown
+{
+	flow-children: right;
+	// leave room for content to grow
+	margin-bottom: 0px;
+	margin-top: 10px;
+	margin-right: 0px;
+}
+
+#Settings_Downloads .HorzLabelDropdown 
+{
+	width: 475px;
+}
+
+
+.TimeRestrictionDropdown, .TimeRestrictionDropdown:hover
+{
+	width: 230px;
+	horizontal-align: right;
+	opacity: 1.0;
+	desaturation: 0.0;
+	blur: none;
+	transition-property: opacity, blur, desaturation, pre-transform-scale2d, box-shadow;
+	transition-duration: SettingsPanelTransitionDuration;
+	transition-timing-function: ease-in;
+}
+
+.TimeRestrictionDropdown:disabled,.TimeRestrictionDropdown:disabled:hover, #SettingsDownloads_ToggleTimeLimits:selected .SettingsCalloutSnugRight
+{
+	opacity: 0.5;
+	desaturation: 0.5;
+	blur: gaussian( 1.0 );
+	pre-transform-scale2d: 1.0;
+	box-shadow: none;
+
+}
+
+.TimeRestrictionDropdown:hover, .TimeRestrictionDropdown:focus, .TimeRestrictionDropdown:focus:hover
+{
+
+	box-shadow: fill box_shadow_on_color -4.5px -4.5px 8px 8px;
+}
+
 DropDownMenu
 {
 	width: 475px;
@@ -1222,6 +1270,13 @@ KeyboardShortcut .Graphic
 {
 	margin-bottom: 2px;
 	margin-top: 4px;
+}
+
+.SettingsCalloutSnugRight
+{
+	text-align: right;
+	width: 230px;
+	opacity: 0.5;
 }
 
 .SettingsRight
@@ -2038,6 +2093,13 @@ SettingsPanelRemoteClientListing #Status
 	height: 20px;
 }
 
+#Settings_Downloads_RegionDropDownMenu DropDownMenu
+{
+	max-height: 600px;
+
+	}
+
+
 /* CSS for check for updates steam client button in About dialog */
 #SettingsInterface_SteamClientChecking
 {
@@ -2131,3 +2193,58 @@ SettingsPanel_Display.Underscan
 	visibility: visible;	
 }
 
+#SettingsAbout_SteamOSUpdateButton
+{
+	flow-children: right;
+}
+
+.SteamOsUpdateThrobber
+{
+	opacity: 0.0;
+	width: 34px;
+	height: 34px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+	margin-left: 100px;
+	margin-top: 2px;
+}
+
+.SteamOSCheckingForUpdates .SteamOsUpdateThrobber
+{
+	opacity: 0.7;
+}
+
+.HideDriverDate #DriverDateLabel, .HideDriverDate #DriverDateValue
+{
+	visibility: collapse;
+}
+
+#SettingsDownloads_TimeLimitFromDropDownMenu, 
+#SettingsDownloads_TimeLimitToDropDownMenu  
+{
+	width: 230px;
+	max-height: 320px;
+}
+	
+#ParentalFeaturesChild RadioButton
+{
+	width: fit-children;
+	background-color: simplebutton;
+}
+
+
+#ParentalFeaturesChild RadioButton:focus, 
+#ParentalFeaturesChild RadioButton:focus:hover
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+ 
+#ParentalFeaturesChild RadioButton:focus Label, 
+#ParentalFeaturesChild RadioButton:focus:hover Label
+{
+	color: applabelselected;	
+}
