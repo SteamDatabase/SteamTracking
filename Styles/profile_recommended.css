@@ -229,9 +229,7 @@ a.trigger, a.activetrigger {
 	margin: 0px;
 	list-style-type: none;
 }
-.dropcontainer ul li.emptyvalue {
-	font-style: italic;
-}
+
 .dropcontainer ul a {
 	padding-left:2px;
 	padding-right:2px;
