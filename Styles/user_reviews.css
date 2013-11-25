@@ -1,0 +1,195 @@
+
+/* report dialog */
+.user_review_report_dialog_explanation
+{
+	width: 500px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
+.user_review_report_dialog_text_area
+{
+	height: 100px;
+}
+
+select {
+	width: 100%;
+}
+.bluefade {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images//page_bg_blue.png');
+	margin-top: -21px;
+	padding-top: 20px;
+	background-position: 0px -1px;
+	background-repeat: no-repeat;
+}
+
+#rightContents {
+	width: 294px;
+	padding-top: 0px;
+	padding-right: 16px;
+}
+	#rightContents .panel {
+		background: rgba(27,27,27,.36);
+		border-radius: 4px;
+		padding: 10px 10px 10px 11px;
+		margin: 0 0 10px 0;
+		border: 1px solid #1f1f20;
+		box-shadow: 1px 1px 0 0 #39393a;
+	}
+	
+	#rightContents .panel.owner {
+		border-color: #81a313;
+	}
+
+	#rightContents .panel.admin {
+		border-color: #a55b13;
+	}
+
+	#rightContents .panel.admin .title {
+		color: #a55b13;
+	}
+	
+	.general_btn.panel_btn {
+		color: #EBEBEB;
+	}
+	
+	.friendBlock {
+		background-color: #252525;
+	}
+
+.gameLogoHolder_default img {
+	width: 292px;
+	height: 136px;
+	padding: 1px;
+}
+
+.review_app_actions {
+	margin-bottom: 16px;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding-bottom: 6px;
+}
+
+.review_area {
+	width: 600px;
+}
+
+#leftContents {
+	float: left;
+	width: 600px;
+	margin: 0;
+	padding: 0;
+	padding-right: 0px;
+}
+
+#comments {
+	border-top: 1px solid rgba(85, 125, 171, 0.6);
+	margin-top: 60px;
+}
+
+	.commentthread_entry {
+		background: none;
+	}
+	.commentthread_textarea {
+		background: none;
+	}
+
+.ratingBar {
+	height: 15px;
+	background-color: rgba(0, 0, 0, 0.4);
+	font-size: 12px;
+	color: #898A8C;
+	padding: 4px 6px 4px 6px;
+	border-top: 1px solid rgba(85, 125, 171, 0.6);
+	margin-bottom: 8px;
+}
+
+.ratingSummaryBlock img {
+	margin-right: 10px;
+	width:44px;
+	height:44px;
+}
+
+.ratingSummary {
+	font-size: 16px;
+	color: #D6D7D8;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	font-family: 'Motiva Sans', arial, tahoma;
+}
+
+.playTime  {
+	font-size: 12px;
+	color: #D6D7D8;
+}
+
+.review_area_content {
+	font-size: 13px;
+	line-height: 17px;
+	color: #CDCAC1;
+	font-family: 'Motiva Sans', arial, tahoma;
+}
+
+.review_edit_text_area
+{
+	width: 100%;
+	height: 200px;
+}
+
+.recommendation_date {
+	font-size: 11px;
+	color: #626366;
+	margin-top: 8px;
+}
+
+.review_rate_bar {
+	border-top: 1px solid rgba(85, 125, 171, 0.6);
+	margin-top: 16px;
+	padding-top: 6px;
+	color: #898A8C;
+	font-size: 12px;
+}
+
+.btn_grey_grey.btn_ico_thumbs_down {
+	padding-left: 20px;
+}
+
+#ReportBtn {
+	height: 21px;
+	padding: 0px;
+	padding-left: 32px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images//buttons/report_ico_tiled.png');
+	background-position: 8px -4px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	line-height: 30px;
+	float: right;
+	
+}
+
+.notification
+{
+	text-align: left;
+	margin: 0px auto;
+	margin-bottom: 8px;
+	padding: 18px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	font-size: 14px;
+	border-style: solid;
+	border-width: 2px;
+	margin-right: 17px;
+}
+
+.notification.banned
+{
+	color: #000000;
+	background-color: #b33b32;
+	border-color: #4c2c2a;
+}
+
+.notification.flagged_by_developer
+{
+	color: #ffffff;
+	background-color: #c69c5f;
+	border-color: #534436;
+}
