@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.0e3e6de636b21c5ab12c514eb0bec2204f378795.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.1441f4dc4070239aa2a1ed5a6096ba89e452017a.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -47383,14 +47383,14 @@
 				
 			},
 			{
-				"name": "Monarch",
+				"name": "Monarch Bow",
 				"defindex": 5386,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Bow",
-				"item_name": "Monarch",
-				"item_description": " ",
+				"item_name": "Monarch Bow",
+				"item_description": "A relic from a hegemony long since passed, the Monarch rewards those who value lethal precision and skill over blunt force. As graceful in action as at rest, it complements perfectly the coolest of heads under the deadliest of circumstances.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/items\/drow\/monarch_weapon\/monarch_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
@@ -49557,14 +49557,14 @@
 				}
 			},
 			{
-				"name": "Demonshard",
+				"name": "Demon Shard",
 				"defindex": 5471,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mace",
-				"item_name": "Demonshard",
-				"item_description": " ",
+				"item_name": "Demon Shard",
+				"item_description": "Shattered during the cataclysmic battle of Heaven’s Gate, the Blade of Worlds fell as a thousand pieces. Smuggled back into the foundries of Hell, the largest fragment was later reformed, the runes upon its surface shifting to denote a new name, Demon Shard.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/items\/doom\/demonshard_weapon\/demonshard_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
@@ -49582,19 +49582,19 @@
 				}
 			},
 			{
-				"name": "Vanguard Shield",
+				"name": "Guard of the Red Mist",
 				"defindex": 5472,
 				"item_class": "dota_item_wearable",
 				"item_type_name": "armor",
-				"item_name": "Vanguard Shield",
-				"item_description": " ",
+				"item_name": "Guard of the Red Mist",
+				"item_description": "Forged when the Red Mist were many and Mogul Khan was but a lowly grunt, the Guard is a rock among a sea of blows. As much a statement of intent as a shield, the cursed sigil of Battle Hunger lies emblazoned upon its face. Only death and slaughter may remedy its hex.",
 				"proper_name": false,
-				"item_quality": 4,
+				"item_quality": 1,
 				"image_inventory": "econ\/items\/axe\/vanguard_armor\/vanguard_armor",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/vanguard_armor\/vanguard_armor.6396ce6f2fce0dd18176581e7654904b4bf94264.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/vanguard_armor\/vanguard_armor_large.282357da139c10f1c35482950f6ac49cfe988069.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/vanguard_armor\/vanguard_armor.be3ddd679bd5ba9aecfba4dad43cea4b92f2365a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/vanguard_armor\/vanguard_armor_large.7d1b37e427fc004622c39e0a4fb396bf6f4178bb.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -54716,6 +54716,31 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Axe of Phractos",
+				"defindex": 5675,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mace",
+				"item_name": "Axe of Phractos",
+				"item_description": "An instrument of keen-edged trauma, the Axe of Phractos embodies power over grace. Newly forged by the steelworks of Ulmarain, searing heat still shimmers across its facets--a cauterisation in waiting.",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon.7afbc23ca70216c30dd3e681f712ebc2e65de912.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon_large.8190cbf522232bb0aac9b1abfeff20d0f621dd90.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "Limbs of Entwined Fate",
@@ -77560,6 +77585,122 @@
 				}
 			},
 			{
+				"name": "Nexon Sponsorship League Season 2",
+				"defindex": 15381,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Sponsorship League Season 2",
+				"item_description": "Starting in Sep 28th 2013, the Nexon Sponsorship League will span three seasons with a total of KRW 300 million ($267,153 USD) worth of sponsorship funding. Watch the top team matches of Season 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2.57a03c7694d7ec0304a4a957f9c87017a0cc9207.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2_large.052ac8d70c09cc03d719e5de3788bd93fe3e29d3.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Nexon Sponsorship League Season 2 - ADMIN",
+				"defindex": 15382,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Nexon Sponsorship League Season 2 - ADMIN",
+				"item_description": "Starting in Sep 28th 2013, the Nexon Sponsorship League will span three seasons with a total of KRW 300 million ($267,153 USD) worth of sponsorship funding. Watch the top team matches of Season 2.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2.57a03c7694d7ec0304a4a957f9c87017a0cc9207.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2_large.052ac8d70c09cc03d719e5de3788bd93fe3e29d3.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Pinoy Dota 2 Online Battle",
+				"defindex": 15383,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Pinoy Dota 2 Online Battle",
+				"item_description": "Pinoy Dota delivers Philippine E-sports in your hands! This tournament features 2 teams with 6 qualifiers that will compete for P10,000 prize pool on December 9th through February 1, 2014!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_pinoyonline",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline.aa2f1c6e9af83238c3f5821efcc572363b1bf530.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline_large.1d526e16e3a6fdf531cd8ab9bac238819208597c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Pinoy Dota 2 Online Battle - ADMIN",
+				"defindex": 15384,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Pinoy Dota 2 Online Battle - ADMIN",
+				"item_description": "Pinoy Dota delivers Philippine E-sports in your hands! This tournament features 2 teams with 6 qualifiers that will compete for P10,000 prize pool on December 9th through February 1, 2014!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_pinoyonline",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline.aa2f1c6e9af83238c3f5821efcc572363b1bf530.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline_large.1d526e16e3a6fdf531cd8ab9bac238819208597c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Artificer's Hammer",
 				"defindex": 17002,
 				"item_class": "tool",
@@ -85779,7 +85920,7 @@
 				"item_class": "bundle",
 				"item_type_name": "Premium Tournament Bundle",
 				"item_name": "MLG Championship Bundle",
-				"item_description": "MLG's first International Dota 2 competition will feature the world's best teams from Europe, China and North America competing for a growing prize pool starting at $50,000. $2.50 of every purchase will go directly to the MLG Championship Columbus prize pool.<br>Included in this bundle:<br>* Scalehound Courier<br>* Stronghold HUD Skin<br>* Tethered Sentinel Ward<br>* Battle Point Bonus through MLG Columbus (11\/24\/2013)<br>* Eligible for in-game item drops<br>",
+				"item_description": "MLG's first International Dota 2 competition will feature the world's best teams from Europe, China and North America competing for a growing prize pool starting at $50,000. <br>Included in this bundle:<br>* Scalehound Courier<br>* Stronghold HUD Skin<br>* Tethered Sentinel Ward",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
@@ -92553,6 +92694,12 @@
 				"id": 163,
 				"attach_to_rootbone": false,
 				"name": "Ionic Vapor"
+			},
+			{
+				"system": "axe_practos_ambient",
+				"id": 164,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle164"
 			}
 		]
 		,
