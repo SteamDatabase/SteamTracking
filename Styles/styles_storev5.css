@@ -3628,3 +3628,13 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 .game_purchase_subscription {
 	color: #ff9900;
 }
+
+body.antipodes {
+	transform: rotate( 180deg );
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+}
+
+body.antipodes .perf_timing_area {
+	display: none;
+}

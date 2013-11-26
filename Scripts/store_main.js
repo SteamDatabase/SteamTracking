@@ -61,7 +61,7 @@ function TabCompletionClosure( tab, delta, max )
 
 function RollTab( tab, delta )
 {
-	if ( $('tab_' + tab + '_items' ).hasClassName( 'summersale_tab_items' ) )
+	if ( $('tab_' + tab + '_items' ).hasClassName( 'insert_season_here_sale_tab_items' ) )
 	{
 		var xdiff = 950;
 		if ( delta > 0 )
@@ -511,17 +511,18 @@ function GameHover( elem, event, divHover, rgHoverData )
 	else if ( ( !hover.visible() || hover.target != elem ) && !elem.timer )
 	{
 		elem.bWantsHover = true;
+		var bPublic = rgHoverData['public'];
 		var strTargetPrefix = '';
 		var strUrlTarget = '';
 		if ( rgHoverData['type'] == 'app' )
 		{
 			strTargetPrefix = 'hover_app_';
-			strUrlTarget = 'apphover/';
+			strUrlTarget = 'apphover' + ( bPublic ? 'public' : '' ) + '/';
 		}
 		else if ( rgHoverData['type'] == 'sub' )
 		{
 			strTargetPrefix = 'hover_sub_';
-			strUrlTarget = 'subhover/';
+			strUrlTarget = 'subhover' + ( bPublic ? 'public' : '' ) + '/';
 		}
 		else
 		{
@@ -532,13 +533,20 @@ function GameHover( elem, event, divHover, rgHoverData )
 		var elemData = $( targetId );
 		var accountId = g_AccountID ? g_AccountID : 0;
 		var params = rgHoverData['params'] || {};
+
 		if ( !elemData && !elem.ajaxRequest )
 		{
+			var rgAjaxParams = { u: accountId };
+			if ( bPublic )
+			{
+				// is cc needed?
+				rgAjaxParams = { /*cc: rgHoverData['cc'],*/ l: 'english' };
+			}
 			window.setTimeout( function() { 
 				if ( elem.bWantsHover && !elem.ajaxRequest ) {
 					elem.ajaxRequest = new Ajax.Updater( hover.down('.content'),
 								'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'],
-								{ method: 'get', parameters: { u: accountId }, insertion: 'bottom', onComplete: function() { ShowGameHover( elem, divHover, targetId, params ); } } );
+								{ method: 'get', parameters: rgAjaxParams, insertion: 'bottom', onComplete: function() { ShowGameHover( elem, divHover, targetId, params ); } } );
 				}
 			}, 250 );
 		}
@@ -1124,47 +1132,50 @@ function LaunchWebChat()
 
 var g_oSuggestParams;
 
-function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVersion )
+function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
 	elemTerm = $(elemTerm);
-	new Form.Element.DelayedObserver( elemTerm, 0.4, SearchTimeout );
-	elemTerm.observe( 'keydown', SearchSuggestOnKeyDown.bindAsEventListener( null, elemTerm ) );
-	elemTerm.observe( 'click', SearchSuggestClearDefaultSearchText.bind( null, elemTerm ) );
-	elemTerm.observe( 'focus', SearchSuggestClearDefaultSearchText.bind( null, elemTerm ) );
-	elemTerm.observe( 'blur', SearchSuggestSetDefaultSearchText.bind( null, elemTerm ) );
+	elemSuggestionCtn = elemSuggestionCtn ? $(elemSuggestionCtn) : $( 'searchterm_options');
+	elemSuggestions = elemSuggestions ? $(elemSuggestions) : $('search_suggestion_contents');
+
+	new Form.Element.DelayedObserver( elemTerm, 0.4, function( elem, value ) { SearchTimeout(elem, value, elemSuggestionCtn, elemSuggestions ); } );
+	elemTerm.observe( 'keydown', SearchSuggestOnKeyDown.bindAsEventListener( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
+	elemTerm.observe( 'click', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
+	elemTerm.observe( 'focus', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
+	elemTerm.observe( 'blur', SearchSuggestSetDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
 	g_oSuggestParams = {
 		cc: cc,
 		l:l,
 		v: strPackageXMLVersion
 	}
 }
-function SearchTimeout( elem, value )
+function SearchTimeout( elem, value, elemSuggestionCtn, elemSuggestions )
 {
 	if ( value )
 	{
 		var parameters = {term: value, f: 'games' };
 		Object.extend( parameters, g_oSuggestParams );
-		new Ajax.Updater( 'search_suggestion_contents', 'http://store.steampowered.com/search/suggest',
+		new Ajax.Updater( elemSuggestions, 'http://store.steampowered.com/search/suggest',
 			{
 				parameters: parameters,
 				method: 'GET',
 				onComplete: function() {
-					$('search_suggestion_contents').select('a.match').each( function (e) { e.observe( 'mouseover', SearchSuggestOnMouseOver.bindAsEventListener( null, e ) ); } );
-					ShowSuggestionsAsNecessary();
+					elemSuggestions.select('a.match').each( function (e) { e.observe( 'mouseover', SearchSuggestOnMouseOver.bindAsEventListener( null, e ) ); } );
+					ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
 				}
 			} );
 	}
 	else
 	{
-		$('search_suggestion_contents').update( '' );
-		ShowSuggestionsAsNecessary();
+		elemSuggestions.update( '' );
+		ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
 	}
 }
 
-function ShowSuggestionsAsNecessary( bForceHide )
+function ShowSuggestionsAsNecessary( bForceHide, elemSuggestionCtn, elemSuggestions )
 {
-	var elem = $('searchterm_options');
-	if ( $('search_suggestion_contents').childElements().length > 0 && !bForceHide )
+	var elem = elemSuggestionCtn;
+	if ( elemSuggestions.childElements().length > 0 && !bForceHide )
 	{
 		ShowWithFade( elem );
 	}
@@ -1173,7 +1184,7 @@ function ShowSuggestionsAsNecessary( bForceHide )
 		HideWithFade( elem );
 	}
 }
-function SearchSuggestOnKeyDown( event, elem )
+function SearchSuggestOnKeyDown( event, elem, elemSuggestionCtn, elemSuggestions )
 {
 	if ( event.keyCode == Event.KEY_ESC )
 	{
@@ -1183,11 +1194,9 @@ function SearchSuggestOnKeyDown( event, elem )
 		|| event.keyCode == Event.KEY_UP
 		|| event.keyCode == Event.KEY_DOWN )
 	{
-		var elemSuggestionCtn = $('searchterm_options' );
 		if ( !elemSuggestionCtn.visible() || elemSuggestionCtn.hiding )
 			return;
 
-		var elemSuggestions = $('search_suggestion_contents');
 		var elemCurSuggestion = elemSuggestions.down('.focus');
 		var elemNewSuggestion = null;
 
@@ -1235,9 +1244,9 @@ function SearchSuggestOnMouseOver( event, elem )
 	elem.addClassName( 'focus' );
 }
 
-function SearchSuggestClearDefaultSearchText( elem )
+function SearchSuggestClearDefaultSearchText( elem, elemSuggestionCtn, elemSuggestions )
 {
-	ShowSuggestionsAsNecessary();
+	ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
 	var text = elem.value;
 	if ( text == 'search the store' )
 	{
@@ -1245,9 +1254,9 @@ function SearchSuggestClearDefaultSearchText( elem )
 		$(elem).removeClassName( 'default' );
 	}
 }
-function SearchSuggestSetDefaultSearchText( elem )
+function SearchSuggestSetDefaultSearchText( elem, elemSuggestionCtn, elemSuggestions )
 {
-	ShowSuggestionsAsNecessary( true );
+	ShowSuggestionsAsNecessary( true, elemSuggestionCtn, elemSuggestions );
 	var text = elem.value;
 	if ( text == '' )
 	{
@@ -1264,7 +1273,20 @@ function SearchSuggestCheckTerm( theform )
 	return true;
 }
 
+function EnableAntipodes()
+{
+	SetValueLocalStorage( 'antipodes', 1 );
+}
 
+function CheckAntipodes()
+{
+	if ( GetValueLocalStorage( 'antipodes' ) )
+	{
+		UnsetValueLocalStorage( 'antipodes' );
+		$J(document.body).addClass( 'antipodes' );
+		window.scrollTo( 0, 100000 );
+	}
+}
 
 // HEADER.JS
 
