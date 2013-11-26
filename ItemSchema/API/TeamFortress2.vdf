@@ -51838,6 +51838,275 @@
 			"image_inventory"	"backpack/player/items/all_class/etf2l_sixs_participant_2012"
 			"model_player"		"models/player/items/all_class/etf2l_sixs_participant_2012.mdl"
 		}
+		"8339"
+		{		
+			"name"				"OWL 10 Premier Division First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Premier_Division_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+		}
+		"8340"
+		{		
+			"name"				"OWL 10 Premier Division Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Premier_Division_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+		}
+		"8341"
+		{		
+			"name"				"OWL 10 Premier Division Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Premier_Division_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+		}
+		"8342"
+		{		
+			"name"				"OWL 10 Premier Division Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Premier_Division_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+		}
+		"8343"
+		{		
+			"name"				"OWL 10 Division 2 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division2_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8344"
+		{		
+			"name"				"OWL 10 Division 2 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division2_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8345"
+		{		
+			"name"				"OWL 10 Division 2 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division2_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8346"
+		{		
+			"name"				"OWL 10 Division 2 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division2_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8347"
+		{		
+			"name"				"OWL 10 Division 3 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division3_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8348"
+		{		
+			"name"				"OWL 10 Division 3 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division3_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8349"
+		{		
+			"name"				"OWL 10 Division 3 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division3_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8350"
+		{		
+			"name"				"OWL 10 Division 3 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division3_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8351"
+		{		
+			"name"				"OWL 10 Division 4 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division4_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8352"
+		{		
+			"name"				"OWL 10 Division 4 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division4_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8353"
+		{		
+			"name"				"OWL 10 Division 4 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division4_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8354"
+		{		
+			"name"				"OWL 10 Division 4 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division4_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8355"
+		{		
+			"name"				"OWL 10 Division 5 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division5_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8356"
+		{		
+			"name"				"OWL 10 Division 5 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division5_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8357"
+		{		
+			"name"				"OWL 10 Division 5 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division5_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8358"
+		{		
+			"name"				"OWL 10 Division 5 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division5_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8359"
+		{		
+			"name"				"OWL 10 Division 6 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division6_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8360"
+		{		
+			"name"				"OWL 10 Division 6 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division6_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8361"
+		{		
+			"name"				"OWL 10 Division 6 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division6_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8362"
+		{		
+			"name"				"OWL 10 Division 6 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_6v6_Division6_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8363"
+		{		
+			"name"				"AU Highlander Community League First Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Highlander_Community_First_Place"
+			"item_description"	"#TF_TournamentMedal_OzFortress_Highlander_Community_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_highlander_first/ozfortress_highlander_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_highlander_first/ozfortress_highlander_first_demo.mdl"
+		}
+		"8364"
+		{		
+			"name"				"AU Highlander Community League Second Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Highlander_Community_Second_Place"
+			"item_description"	"#TF_TournamentMedal_OzFortress_Highlander_Community_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_highlander_second/ozfortress_highlander_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_highlander_second/ozfortress_highlander_second_demo.mdl"
+		}
+		"8365"
+		{		
+			"name"				"AU Highlander Community League Third Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Highlander_Community_Third_Place"
+			"item_description"	"#TF_TournamentMedal_OzFortress_Highlander_Community_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_highlander_third/ozfortress_highlander_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_highlander_third/ozfortress_highlander_third_demo.mdl"
+		}
+		"8366"
+		{		
+			"name"				"AU Highlander Community League Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Highlander_Community_Participant"
+			"item_description"	"#TF_TournamentMedal_OzFortress_Highlander_Community_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_highlander_participant/ozfortress_highlander_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_highlander_participant/ozfortress_highlander_participant_demo.mdl"
+		}
+		"8367"
+		{		
+			"name"				"Heart of Gold"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_HeartOfGold"
+			"item_description"	"#TF_Medal_HeartOfGold_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/heart_of_gold/heart_of_gold"
+			"model_player"		"models/workshop/player/items/all_class/heart_of_gold/heart_of_gold_demo.mdl"
+		}
+
+
+
 
 
 
@@ -56788,6 +57057,46 @@
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
 			"holiday_restriction"	"halloween_or_fullmoon"
+		}
+		"2127"
+		{
+			"name" "TF2mixup Community Event 2013 Promo"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Heart of Gold"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_TF2mixup_Community_Event_2013_Promo"
+			"item_description"	"#TF_TF2mixup_Community_Event_2013_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 
 
@@ -67991,6 +68300,7 @@
 			"description_format"	"value_is_killstreakeffect_index"
 			"stored_as_integer"	"0"
 			"effect_type"	"positive"
+			"can_affect_recipe_component_name"	"1"
 		}
 		"2014"		
 		{
@@ -68000,6 +68310,7 @@
 			"description_format"	"value_is_killstreak_idleeffect_index"
 			"stored_as_integer"	"0"
 			"effect_type"	"positive"
+			"can_affect_recipe_component_name"	"1"
 		}
 
 		"2015"
