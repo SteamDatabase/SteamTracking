@@ -17,7 +17,15 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 				}
 				else if ( results.success == 21 )
 				{
-					ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+					ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+				}
+				else if ( results.success == 15 )
+				{
+					ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action.' );
+				}
+				else if ( results.success == 24 )
+				{
+					ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
 				}
 				else
 				{
