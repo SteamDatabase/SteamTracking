@@ -15,6 +15,10 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 				{
 					callback( results );
 				}
+				else if ( results.success == 21 )
+				{
+					ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+				}
 				else
 				{
 					ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
@@ -56,6 +60,10 @@ function UserReview_Report( recommendationID, baseURL, callback )
 					if ( results.success == 1 )
 					{
 						callback( results );
+					}
+					else if ( results.success == 21 )
+					{
+						ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
 					}
 					else
 					{
