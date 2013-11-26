@@ -1636,7 +1636,7 @@ body.flat_page .pagecontent.bluebg {
 
 .blotter_block .vote_header .thumb {
 	float: left;
-	margin-right: 10px;
+	margin: 0 3px 0 5px;
 }
 
 .blotter_block .apphub_CardTextContent {
