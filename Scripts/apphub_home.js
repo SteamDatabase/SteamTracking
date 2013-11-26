@@ -249,11 +249,11 @@ function SelectContentFilter( url )
 	window.location = url;
 }
 
-function SelectLanguageFilter( language )
+function SelectLanguageFilter( url )
 {
 	HideMenu( $('filterlanguage'), $('filterlanguage_options') );
 
-	window.location = window.location.href + ( window.location.href.indexOf( '?' ) != -1 ? "?" : "&" ) + "filterLanguage=" + language;
+	window.location = url;
 }
 
 function RequestCurrentUserVotes( publishedFileIDs )
