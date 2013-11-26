@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d7a3b8d9830d5c6fb52bdc0901e8f8c4a1adad24.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.bd69c8c1192d97f1cd5a3f14b960882210fc13d8.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -50312,6 +50312,39 @@
 				}
 			},
 			{
+				"name": "TF2mixup Community Event 2013 Promo",
+				"defindex": 2127,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "TF2mixup Community Event 2013 Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Craft Bar Level 1",
 				"defindex": 5000,
 				"item_class": "craft_item",
@@ -77610,6 +77643,1317 @@
 					}
 				]
 				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Premier Division First Place",
+				"defindex": 8339,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Premier Division First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_first\/ozfortress_sixes_prem_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_first\/ozfortress_sixes_prem_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_first.a8daa071079d4a31bb793391e3f744d03c2a712c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_first_large.5f6bbca1936cb3158388457bdcfa0d04e42bd0f0.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Premier Division Second Place",
+				"defindex": 8340,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Premier Division Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_second\/ozfortress_sixes_prem_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_second\/ozfortress_sixes_prem_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_second.2f7498d3f1e14eb64d32abd9912f20482d7ed430.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_second_large.2a034075a65bc112ba6b9ae97c24a5dc0bb2b65c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Premier Division Third Place",
+				"defindex": 8341,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Premier Division Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_third\/ozfortress_sixes_prem_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_third\/ozfortress_sixes_prem_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_third.8259c7031ceb1a5fefdb09eccf3e597651347b2e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_third_large.2d6defe773ed3986e8cfe7d1e84c2d261b1a889c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Premier Division Participant",
+				"defindex": 8342,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Premier Division Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_participant\/ozfortress_sixes_prem_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_prem_participant\/ozfortress_sixes_prem_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_participant.e008a87f4ca1a0010e9a5eb81652a01cc33a6b86.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_prem_participant_large.5ddaf727b2760d46f6ae4bcc81b5cb45f0dea788.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 2 First Place",
+				"defindex": 8343,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 2 First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first.9434d512a5b3aeca4a9310982aa43af26eac1229.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first_large.0031b689e7c2eb2c892e34ef466c1edfce835ddf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 2 Second Place",
+				"defindex": 8344,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 2 Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second.7905266d63c29ca05d4d6e92699815b3a922adc0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second_large.211551f91618a8adf373e52d44d8de51870b4e5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 2 Third Place",
+				"defindex": 8345,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 2 Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third.3f4d1b209fe0d806abad918c314d2fc70a7db167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third_large.636f7f05ba1683622e8a715e5f0d05a6c13cb531.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 2 Participant",
+				"defindex": 8346,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 2 Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant.bc5b2244791dccd566b4965d79314f792f917474.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant_large.b96c26ec5133fe2d2661907ed96d6bdc3d154433.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 3 First Place",
+				"defindex": 8347,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 3 First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first.9434d512a5b3aeca4a9310982aa43af26eac1229.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first_large.0031b689e7c2eb2c892e34ef466c1edfce835ddf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 3 Second Place",
+				"defindex": 8348,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 3 Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second.7905266d63c29ca05d4d6e92699815b3a922adc0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second_large.211551f91618a8adf373e52d44d8de51870b4e5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 3 Third Place",
+				"defindex": 8349,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 3 Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third.3f4d1b209fe0d806abad918c314d2fc70a7db167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third_large.636f7f05ba1683622e8a715e5f0d05a6c13cb531.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 3 Participant",
+				"defindex": 8350,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 3 Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant.bc5b2244791dccd566b4965d79314f792f917474.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant_large.b96c26ec5133fe2d2661907ed96d6bdc3d154433.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 4 First Place",
+				"defindex": 8351,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 4 First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first.9434d512a5b3aeca4a9310982aa43af26eac1229.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first_large.0031b689e7c2eb2c892e34ef466c1edfce835ddf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 4 Second Place",
+				"defindex": 8352,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 4 Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second.7905266d63c29ca05d4d6e92699815b3a922adc0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second_large.211551f91618a8adf373e52d44d8de51870b4e5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 4 Third Place",
+				"defindex": 8353,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 4 Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third.3f4d1b209fe0d806abad918c314d2fc70a7db167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third_large.636f7f05ba1683622e8a715e5f0d05a6c13cb531.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 4 Participant",
+				"defindex": 8354,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 4 Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant.bc5b2244791dccd566b4965d79314f792f917474.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant_large.b96c26ec5133fe2d2661907ed96d6bdc3d154433.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 5 First Place",
+				"defindex": 8355,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 5 First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first.9434d512a5b3aeca4a9310982aa43af26eac1229.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first_large.0031b689e7c2eb2c892e34ef466c1edfce835ddf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 5 Second Place",
+				"defindex": 8356,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 5 Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second.7905266d63c29ca05d4d6e92699815b3a922adc0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second_large.211551f91618a8adf373e52d44d8de51870b4e5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 5 Third Place",
+				"defindex": 8357,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 5 Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third.3f4d1b209fe0d806abad918c314d2fc70a7db167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third_large.636f7f05ba1683622e8a715e5f0d05a6c13cb531.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 5 Participant",
+				"defindex": 8358,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 5 Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant.bc5b2244791dccd566b4965d79314f792f917474.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant_large.b96c26ec5133fe2d2661907ed96d6bdc3d154433.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 6 First Place",
+				"defindex": 8359,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 6 First Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_first\/ozfortress_sixes_regular_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first.9434d512a5b3aeca4a9310982aa43af26eac1229.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_first_large.0031b689e7c2eb2c892e34ef466c1edfce835ddf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 6 Second Place",
+				"defindex": 8360,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 6 Second Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_second\/ozfortress_sixes_regular_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second.7905266d63c29ca05d4d6e92699815b3a922adc0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_second_large.211551f91618a8adf373e52d44d8de51870b4e5a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 6 Third Place",
+				"defindex": 8361,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 6 Third Place",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_third\/ozfortress_sixes_regular_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third.3f4d1b209fe0d806abad918c314d2fc70a7db167.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_third_large.636f7f05ba1683622e8a715e5f0d05a6c13cb531.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "OWL 10 Division 6 Participant",
+				"defindex": 8362,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "OWL 10 Division 6 Participant",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_sixes_regular_participant\/ozfortress_sixes_regular_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant.bc5b2244791dccd566b4965d79314f792f917474.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_sixes_regular_participant_large.b96c26ec5133fe2d2661907ed96d6bdc3d154433.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AU Highlander Community League First Place Season 1",
+				"defindex": 8363,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "AU Highlander Community League First Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_highlander_first\/ozfortress_highlander_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_highlander_first\/ozfortress_highlander_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_first.54dd9ac60fbd09323afa326d5abc27a4d1db97c7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_first_large.9fd0e4aabd9e7fff49738be9e6ddee5e6bf4b876.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AU Highlander Community League Second Place Season 1",
+				"defindex": 8364,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "AU Highlander Community League Second Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_highlander_second\/ozfortress_highlander_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_highlander_second\/ozfortress_highlander_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_second.d79f5b3da7f00c2640fe15d34e43299488ced5b1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_second_large.55602fa376d35798eede29c0e40ff3d29c1a707b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AU Highlander Community League Third Place Season 1",
+				"defindex": 8365,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "AU Highlander Community League Third Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_highlander_third\/ozfortress_highlander_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_highlander_third\/ozfortress_highlander_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_third.ac2bc139224a1f84639ff2bcc072b92d3e3f402a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_third_large.198eed422673d34562a962627ab4449f03235a91.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "AU Highlander Community League Participant Season 1",
+				"defindex": 8366,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "AU Highlander Community League Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ozfortress_highlander_participant\/ozfortress_highlander_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ozfortress_highlander_participant\/ozfortress_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_participant.1ed49f8e52603026c566b86a780506c311723191.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ozfortress_highlander_participant_large.d24ac3fa162a32e4b8b00f21ad987212034fe134.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Heart of Gold",
+				"defindex": 8367,
+				"item_class": "tf_wearable",
+				"item_type_name": "Community Medal",
+				"item_name": "Heart of Gold",
+				"item_description": "TF2mixup Community Event 2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/heart_of_gold\/heart_of_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/heart_of_gold\/heart_of_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heart_of_gold.6b2f9999abd0a9637d332550ba1fba2e6ff6bc43.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heart_of_gold_large.4ce913c83a9524572a68c5d10a8a567696d498c9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
 				"attributes": [
 					{
 						"name": "kill eater score type",
