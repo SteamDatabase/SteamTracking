@@ -253,7 +253,7 @@ function SelectLanguageFilter( language )
 {
 	HideMenu( $('filterlanguage'), $('filterlanguage_options') );
 
-	window.location = window.location.href + ( window.location.href.indexOf( '?' ) == 0 ? "?" : "&" ) + "filterLanguage=" + language;
+	window.location = window.location.href + ( window.location.href.indexOf( '?' ) != -1 ? "?" : "&" ) + "filterLanguage=" + language;
 }
 
 function RequestCurrentUserVotes( publishedFileIDs )
