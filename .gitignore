@@ -4,12 +4,10 @@ update.lock
 
 *.wav
 *.tmp
+*.webm
+*.zip
 
 ClientExtracted/extract.sh
-ClientExtracted/public_all.zip
-ClientExtracted/strings_all.zip
-ClientExtracted/tenfoot_all.zip
-ClientExtracted/resources_all.zip
 ClientExtracted/tenfoot/resource/keyboards/
 ClientExtracted/tenfoot/resource/wordlists/
 ClientExtracted/steam/drivercheck/
