@@ -4,6 +4,49 @@ var MEDIUM = 2;
 var LARGE = 4;
 var WIDE = 8;
 var TALL = 16;
+var MEDIUM_RESIZABLE = 32;
+var LARGE_RESIZABLE = 64;
+var TALL_RESIZABLE = 128;
+
+var gDebugging = 0;
+
+function GetCardCategoryString( category )
+{
+	var categoryString = '';
+	if ( category & SMALL )
+	{
+		categoryString += 'S';
+	}
+	if ( category & MEDIUM )
+	{
+		categoryString += 'M';
+	}
+	if ( category & LARGE )
+	{
+		categoryString += 'L';
+	}
+	if ( category & WIDE )
+	{
+		categoryString += 'W';
+	}
+	if ( category & TALL )
+	{
+		categoryString += 'T';
+	}
+	if ( category & MEDIUM_RESIZABLE )
+	{
+		categoryString += 'Mr';
+	}
+	if ( category & LARGE_RESIZABLE )
+	{
+		categoryString += 'Lr';
+	}
+	if ( category & TALL_RESIZABLE )
+	{
+		categoryString += 'Tr';
+	}
+	return categoryString;
+}
 
 function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 {
@@ -16,31 +59,31 @@ function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 		name: 'largeSmall',
 		fixedHeight: false,
 		category: LARGE,
-		cardTemplates: [ { width: twoThirdsWidth, category: LARGE }, { width: thirdWidth, category: SMALL } ]
+		cardTemplates: [ { width: twoThirdsWidth, category: LARGE_RESIZABLE }, { width: thirdWidth, category: SMALL } ]
 	};
 	var smallLarge = {
 		name: 'smallLarge',
 		fixedHeight: false,
 		category: SMALL,
-		cardTemplates: [ { width: thirdWidth, category: SMALL }, { width: twoThirdsWidth, category: LARGE } ]
+		cardTemplates: [ { width: thirdWidth, category: SMALL }, { width: twoThirdsWidth, category: LARGE_RESIZABLE } ]
 	};
 	var twoLarge = {
 		name: 'twoLarge',
 		fixedHeight: false,
 		category: MEDIUM | LARGE,
-		cardTemplates: [ { width: halfWidth, category: MEDIUM | LARGE }, { width: halfWidth, category: MEDIUM | LARGE } ]
+		cardTemplates: [ { width: halfWidth, category: MEDIUM_RESIZABLE | LARGE_RESIZABLE }, { width: halfWidth, category: MEDIUM_RESIZABLE | LARGE_RESIZABLE } ]
 	};
 	var twoSmall = {
 		name: 'twoSmall',
 		fixedHeight: false,
 		category: SMALL | MEDIUM,
-		cardTemplates: [ { width: halfWidth, category: SMALL | MEDIUM }, { width: halfWidth, category: SMALL | MEDIUM } ]
+		cardTemplates: [ { width: halfWidth, category: SMALL | MEDIUM_RESIZABLE }, { width: halfWidth, category: SMALL | MEDIUM_RESIZABLE } ]
 	};
 	var threeSmall = {
 		name: 'threeSmall',
 		fixedHeight: false,
 		category: SMALL | MEDIUM,
-		cardTemplates: [ { width: thirdWidth, category: SMALL | MEDIUM }, { width: thirdWidth, category: SMALL | MEDIUM }, { width: thirdWidth, category: SMALL | MEDIUM } ]
+		cardTemplates: [ { width: thirdWidth, category: SMALL | MEDIUM_RESIZABLE }, { width: thirdWidth, category: SMALL | MEDIUM_RESIZABLE }, { width: thirdWidth, category: SMALL | MEDIUM_RESIZABLE } ]
 	};
 	var threeLarge = {
 		name: 'threeLarge',
@@ -52,13 +95,13 @@ function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 		name: 'tallLeft',
 		fixedHeight: true,
 		category: TALL,
-		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM | LARGE | TALL }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM | LARGE | TALL }  ]
+		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
 	};
 	var tallRight = {
 		name: 'tallRight',
 		fixedHeight: true,
 		category: TALL,
-		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL, float: 'right' }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM | LARGE | TALL }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM | LARGE | TALL }  ]
+		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL, float: 'right' }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
 	};
 	var tallLarge = {
 		name: 'tallLarge',
@@ -227,7 +270,7 @@ function CategorizeCard( card )
 		}
 		else if ( image.aspectRatio > 1.4 )
 		{
-			card.category = LARGE;
+			card.category = LARGE | LARGE_RESIZABLE;
 			if ( width >= 1024 )
 			{
 				card.category |= WIDE;
@@ -235,15 +278,15 @@ function CategorizeCard( card )
 		}
 		else if ( image.aspectRatio > 1.33 )
 		{
-			card.category = MEDIUM;
+			card.category = MEDIUM | MEDIUM_RESIZABLE;
 		}
 		else
 		{
 			card.category = SMALL;
 			if ( image.aspectRatio <= 1 && width >= 512 )
 			{
-				card.category |= TALL;
-				card.preferredCategory |= TALL;
+				card.category |= TALL | TALL_RESIZABLE;
+				card.preferredCategory |= TALL | TALL_RESIZABLE;
 			}
 		}
 	}
@@ -262,15 +305,29 @@ function CategorizeCard( card )
 			card.category = MEDIUM | LARGE;
 			card.preferredCategory = LARGE;
 		}
-		else if ( textLength > 400 )
+		else if ( textLength > 300 )
 		{
-			card.category = SMALL | MEDIUM;
+			card.category = MEDIUM;
 			card.preferredCategory = MEDIUM;
 		}
 		else
 		{
 			card.category = SMALL | MEDIUM;
 			card.preferredCategory = SMALL;
+		}
+	}
+
+	if ( gDebugging )
+	{
+		var contentType = card.down( '.apphub_CardContentType' );
+		var textSection = card.down( '.apphub_CardTextContent' );
+		if ( contentType )
+		{
+			contentType.innerHTML = '[' + ( typeof card.preferredCategory != "undefined" ? ( GetCardCategoryString( card.preferredCategory ) + ',' ) : '' ) + GetCardCategoryString( card.category ) + '] ' + contentType.innerHTML;
+		}
+		else if ( textSection )
+		{
+			textSection.innerHTML = '[' + ( typeof card.preferredCategory != "undefined" ? ( GetCardCategoryString( card.preferredCategory ) + ',' ) : '' ) + GetCardCategoryString( card.category ) + '] ' + textSection.innerHTML;
 		}
 	}
 }

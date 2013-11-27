@@ -922,6 +922,15 @@ a.apphub_more_friends_who_play:hover
 	cursor: pointer;
 }
 
+.apphub_CardContentAppIcon
+{
+	position: relative;
+	float: left;
+	padding-right: 5px;
+	height: 32px;
+	width: 32px;
+}
+
 .apphub_CardContentAppName, .apphub_CardContentAppName a
 {
 	padding-top: 7px;
@@ -1054,6 +1063,13 @@ a.apphub_more_friends_who_play:hover
 {
 	position: relative;
 	float: right;
+}
+
+.apphub_CardCommentCount.alignUserReviews
+{
+	position: absolute;
+	bottom: 15px;
+	right: 0px;
 }
 
 /* workshop */
@@ -1284,19 +1300,26 @@ a.apphub_more_friends_who_play:hover
 .apphub_UserReviewCardContent
 {
 	padding: 10px;
+	position: relative;
+}
+
+.apphub_UserReviewCardContent .appSmallLogo
+{
+	float: left;
+	padding-right: 15px;
+	margin-bottom: 5px;
+}
+
+.apphub_UserReviewCardContent .reviewInfo
+{
+	float: left;
+	width: 300px;
 }
 
 .apphub_UserReviewCardStats
 {
 	padding-top: 7px;
 }
-
-/* User reviews app hub block */
-
-.apphub_UserReviewCardContent {
-	position: relative;
-}
-
 
 .UserReviewCardContent_FlaggedByDeveloper
 {
@@ -1354,7 +1377,6 @@ a.apphub_more_friends_who_play:hover
 }
 
 .apphub_UserReviewCardContent .vote_header {
-	height: 44px;
 	margin-bottom: 13px;
 }
 
