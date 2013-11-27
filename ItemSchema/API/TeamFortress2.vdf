@@ -979,6 +979,7 @@
 			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"craft_class"		""	
+			"craft_material_type"	""				
 			"capabilities"
 			{
 			}
@@ -39743,6 +39744,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_scout_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -39786,6 +39788,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_pyro_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -39829,6 +39832,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_medic_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"medic"		"1"
@@ -39872,6 +39876,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_heavy_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -39915,6 +39920,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_demo_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -39958,6 +39964,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_sniper_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -40001,6 +40008,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_soldier_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -40044,6 +40052,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_spy_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -40087,6 +40096,7 @@
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_engineer_on.mdl"
 			"drop_type"	"drop"
+			"show_in_armory"	"0"
 			"used_by_classes"
 			{
 				"heavy"		"1"
@@ -52098,6 +52108,8 @@
 			{
 				"paintable"		"1"
 			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_Medal_HeartOfGold"
 			"item_description"	"#TF_Medal_HeartOfGold_Desc"
