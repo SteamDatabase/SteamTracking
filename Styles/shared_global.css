@@ -807,3 +807,117 @@ select.gray_bevel {
 .header_parental_locked {
 	background-position: 0 -57px;
 }
+
+/* dynamic links */
+.dynamiclink_box {
+	font-family: Helvetica, Arial, sans-serif;
+	border: 1px solid #404042;
+	background-color: #343435;
+	padding: 6px;
+	margin: 10px 15% 10px 0px;
+	height: 88px;
+	-moz-box-shadow:    0 0 10px #000000;
+	-webkit-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 3px 0 #111111;
+
+	cursor: pointer;
+}
+
+.dynamiclink_box.noPopup
+{
+	cursor: default;
+}
+
+.dynamiclink_box.workshop_item {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/sharedfiles/bg_shared_item_workshop.jpg' );
+}
+
+.dynamiclink_box.greenlight_item {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/sharedfiles/bg_shared_item_greenlight.jpg' );
+}
+
+.dynamiclink_box.webguide_item {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/sharedfiles/bg_shared_item_guide.jpg' );
+}
+
+.dynamiclink_box.newspost .dynamiclink_description {
+	padding-top: 10px;
+}
+
+.dynamiclink_box:hover {
+	border-color: #97C0E3;
+}
+
+img.dynamiclink_preview {
+	height: 88px;
+	float: left;
+	margin-right: 14px;
+}
+.dynamiclink_content {
+	overflow: hidden;
+	color: #898989;
+	font-size: 11px;
+	height: 88px;
+	line-height: normal;
+	text-align: left;
+}
+.dynamiclink_name {
+	font-size: 14px;
+	color: #e7e7e7;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.dynamiclink_name .dynamiclink_type {
+	color: #898989;
+}
+.dynamiclink_url {
+	margin-top: 8px;
+}
+.dynamiclink_url a, .dynamiclink_author a {
+	color: #bfbfbf;
+	text-decoration: none;
+}
+.dynamiclink_url a:hover, .dynamiclink_author a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+.dynamiclink_url a, .dynamiclink_authorname {
+	color: #bfbfbf;
+}
+
+.dynamiclink_youtubeviewvideoembedded {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+/*
+.dynamiclink_youtubeviewvideoembedded {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: auto;
+	width: 580px;
+	height: 353px;
+}
+*/
+.dynamiclink_youtubeviewvideoembedded iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.dynamiclink_youtubeviews {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: #bfbfbf;
+}

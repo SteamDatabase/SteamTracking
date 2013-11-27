@@ -2167,29 +2167,6 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 }
 
 
-function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
-{
-	var el = $(elem);
-	var youtubeurl = 'http://www.youtube.com/embed/' + videoid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct&autoplay=1';
-	var iframeContent = new Element( 'iframe', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
-	iframeContent.src = youtubeurl;
-	if ( el )
-	{
-		el.insert( {after: iframeContent } );
-		el.remove();
-	}
-}
-
-function ReplaceDynamicLink( id, strHTML )
-{
-	var el = $(id);
-	if ( el && strHTML.length > 0 )
-	{
-		el.insert( {after: strHTML } );
-		el.remove();
-	}
-}
-
 function TargetIsChild( event, selector )
 {
 	var evt = event || window.event;
