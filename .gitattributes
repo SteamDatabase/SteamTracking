@@ -5,6 +5,7 @@
 *.doc binary
 *.gif binary
 *.ico binary
+*.jpg binary
 *.png binary
 *.tga binary
 *.ttf binary
