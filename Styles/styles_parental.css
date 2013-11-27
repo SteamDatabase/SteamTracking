@@ -1,0 +1,336 @@
+
+#main
+{
+	min-height: 300px;
+}
+
+#parental_notice
+{
+	border: 1px solid #4A4945;
+	width: 656px;
+	height: 220px;
+	padding: 20px;
+	margin: 0 auto;
+
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/keybg.png' );
+	background-repeat: no-repeat;
+	background-position: 80% 50%;
+
+	text-align: center;
+}
+
+#parental_notice_text
+{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#parental_notice_instructions
+{
+	margin-bottom: 30px;
+}
+
+#parental_notice input
+{
+	background-color:#4d4b49;
+	border:solid #82807c 1px;
+	padding:2px;
+	color:#ffffff;
+}
+
+#parental_notice button
+{
+	border: none;
+	margin-top: -2px;
+	margin-left: 4px;
+	display: initial;
+}
+
+#parental_error, .parental_error
+{
+	color: red;
+	margin-left: 10px;
+}
+
+#parental_notice #parental_error
+{
+	margin-left: 0px;
+	margin-top: 10px;
+}
+
+.parental_settings_form #parental_error
+{
+	float: right;
+}
+
+.parental_settings_title
+{
+	font-size: 24px;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.parental_settings_description
+{
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #b0aeac;
+}
+
+.parental_settings_box
+{
+	position: relative;
+	background-color: #262626;
+	border: 1px solid #4d4b49;
+	color: #b0aeac;
+	line-height: 18px;
+}
+
+.parental_settings_content
+{
+	margin: 14px;
+}
+
+.parental_settings_header
+{
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.parental_settings_subinstructions
+{
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.parental_settings_instructions
+{
+	font-size: 14px;
+	color: white;
+	font-weight: normal;
+	margin-top: 4px;
+}
+
+.parental_settings_form
+{
+	margin: 14px;
+}
+
+.parental_settings_form label
+{
+	display: inline-block;
+	width: 25%;
+	font-size: 14px;
+	text-align: right;
+}
+
+.parental_settings_form select
+{
+	background-color:#4d4b49;
+	border:solid #82807c 1px;
+	padding:2px;
+	color:#ffffff;
+	width: 65%;
+}
+
+.parental_settings_form input
+{
+	background-color:#4d4b49;
+	border:solid #82807c 1px;
+	padding:2px;
+	color:#ffffff;
+}
+
+.parental_settings_form button
+{
+	border: none;
+	float: right;
+}
+
+.parental_searchbox
+{
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/parental_search.png' );
+	margin-right: 12px;
+	border: none;
+
+	color: #a6a5a2;
+	width: 253px;
+	height: 27px;
+
+		position: relative;
+	z-index: 250;
+}
+
+.parental_searchbox input
+{
+	border: none;
+	background-color: #82807c;
+	color: #cdcac1;
+	margin-top: 5px;
+	margin-left: 8px;
+	width: 216px;
+	outline: none;
+}
+
+.parental_searchbox #filterClear
+{
+	cursor: pointer;
+
+	position: relative;
+	left: -2px;
+	top: 2px;
+	width: 23px;
+	float: right;
+}
+
+.parental_app_list_controls
+{
+	margin-top: 12px;
+}
+
+.parental_app_list_controls_buttons
+{
+	margin-top: 8px;
+}
+
+.parental_app_list_controls_buttons div
+{
+	float: left;
+}
+
+.parental_app_list_controls a
+{
+	margin-left: 4px;
+	margin-right: 4px;
+	color: #b0aeac;
+}
+
+.parental_app_list_form
+{
+	padding-bottom: 14px;
+}
+
+.parental_app_list_form button
+{
+	border: none;
+	float: right;
+}
+.parental_app_list
+{
+	overflow-y: scroll;
+	height: 400px;
+}
+
+.parental_app_row
+{
+	height: 20px;
+}
+
+.parental_app_row.light
+{
+	background-color: rgba(77, 75, 73, 0.62);
+}
+
+.parental_app_list_col1
+{
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+.parental_app_list_col2
+{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.parental_app_list_col2.link
+{
+	cursor: pointer;
+}
+
+#parental_setpin_box
+{
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/keybg.png' );
+	background-repeat: no-repeat;
+	background-position: 300px 50%;
+	height: 400px;
+	position: relative;
+}
+
+#set_formpin
+{
+	position: absolute;
+	top: 150px;
+	width: 90%;
+}
+
+#set_formpin button
+{
+	margin-top: 100px;
+}
+
+#parental_setpin_entries
+{
+	margin-left: 30px;
+	margin-top: 6px;
+}
+
+
+#parental_setcomplete_box
+{
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/familybg.png' );
+	background-repeat: no-repeat;
+	background-position: 50% 80px;
+}
+
+#parental_setcomplete_box .parental_settings_subinstructions
+{
+	margin-top: 0px;
+}
+
+#parental_button_instructions
+{
+	margin-top: 120px;
+}
+
+#parental_button_instructions .parental_settings_header
+{
+	margin-left: 53px;
+}
+
+.parental_button_instruction img
+{
+	margin-right: 12px;
+	vertical-align: middle;
+}
+
+#parental_modify_settings_instructionsk img
+{
+	margin: 10px 0px;
+}
+
+#parental_communications_instruction #email_line div
+{
+	display: inline;
+}
+
+#parental_communications_instruction #email
+{
+	color: darkolivegreen;
+	font-weight: bold;
+}
+
+.parental_settings_complete button
+{
+	border: none;
+	float: right;
+}
+
+.parental_debug.parental_error
+{
+	margin: 0px;
+}
