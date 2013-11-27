@@ -16,7 +16,8 @@
 			'resources_all.zip',
 			'tenfoot_all.zip',
 			'public_all.zip',
-			'strings_all.zip'
+			'strings_all.zip',
+			'tenfoot_images_all.zip'
 		);
 		
 		private $Options = Array(
