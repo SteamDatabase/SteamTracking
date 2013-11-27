@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.b8b212db83738ae5aed708826338337327f9ec64.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.384cdd81cf96d316b6ad8f0da10bb98aab3996f5.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1636,6 +1636,130 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/5yearcoin.8349aa6fa8af5018a3906bf5a0223537dce3e0bf.png",
 				"image_url_large": "",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack SteelSeries 2013 CS:GO Champion",
+				"defindex": 875,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at DreamHack 2013",
+				"item_description": "This championship trophy was awarded to the Champion at The 2013 DreamHack SteelSeries CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/dreamhack_2013_champion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_champion.9d715ee847c450b81f99861199a686e2aee36be0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_champion_large.a71dc37ea50a3c5a441922acc9b0596fa2b51a1d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack SteelSeries 2013 CS:GO Finalist",
+				"defindex": 876,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at DreamHack 2013",
+				"item_description": "This championship trophy was awarded to the Finalist at The 2013 DreamHack SteelSeries CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/dreamhack_2013_finalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_finalist.53f0c415765ea52f4302208fa60579e9094da109.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_finalist_large.dc4dced76778dfb4b7abb779b49dd07be8169bb8.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack SteelSeries 2013 CS:GO Semifinalist",
+				"defindex": 877,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at DreamHack 2013",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The 2013 DreamHack SteelSeries CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/dreamhack_2013_semifinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_semifinalist.03f538b9b1b48220f77e78820946e1cbfdb5b5d6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_semifinalist_large.9cabb8b8e44611b4b709c56f074a259ad2487eef.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack SteelSeries 2013 CS:GO Quarterfinalist",
+				"defindex": 878,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at DreamHack 2013",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The 2013 DreamHack SteelSeries CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/dreamhack_2013_quarterfinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_quarterfinalist.826029a11953955679bd1572a6520e56c1ba66f2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/dreamhack_2013_quarterfinalist_large.28b0d7ef982ef674148f77c5729be4d5221c0e49.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"capabilities": {
@@ -4115,6 +4239,28 @@
 				
 			},
 			{
+				"item_set": "set_dust_2",
+				"name": "The Dust 2 Collection",
+				"items": [
+					"weapon_g3sg1",
+					"weapon_p250",
+					"weapon_scar20",
+					"weapon_p90",
+					"weapon_mp9",
+					"weapon_nova",
+					"weapon_sawedoff",
+					"weapon_ak47",
+					"weapon_fiveseven",
+					"weapon_mac10",
+					"weapon_tec9",
+					"weapon_bizon",
+					"weapon_m4a1_silencer",
+					"weapon_sg556",
+					"weapon_hkp2000"
+				]
+				
+			},
+			{
 				"item_set": "set_esports",
 				"name": "The eSports 2013 Collection",
 				"items": [
@@ -4144,6 +4290,50 @@
 				
 			},
 			{
+				"item_set": "set_italy",
+				"name": "The Italy Collection",
+				"items": [
+					"weapon_tec9",
+					"weapon_aug",
+					"weapon_famas",
+					"weapon_nova",
+					"weapon_bizon",
+					"weapon_nova",
+					"weapon_ump45",
+					"weapon_hkp2000",
+					"weapon_elite",
+					"weapon_m4a1_silencer",
+					"weapon_xm1014",
+					"weapon_glock",
+					"weapon_mp7",
+					"weapon_sawedoff",
+					"weapon_awp"
+				]
+				
+			},
+			{
+				"item_set": "set_lake",
+				"name": "The Lake Collection",
+				"items": [
+					"weapon_p250",
+					"weapon_xm1014",
+					"weapon_aug",
+					"weapon_galilar",
+					"weapon_sg556",
+					"weapon_g3sg1",
+					"weapon_xm1014",
+					"weapon_awp",
+					"weapon_deagle",
+					"weapon_famas",
+					"weapon_bizon",
+					"weapon_sg556",
+					"weapon_usp_silencer",
+					"weapon_p90",
+					"weapon_elite"
+				]
+				
+			},
+			{
 				"item_set": "set_militia",
 				"name": "The Militia Collection",
 				"items": [
@@ -4158,6 +4348,28 @@
 					"weapon_xm1014",
 					"weapon_m4a1",
 					"weapon_scar20"
+				]
+				
+			},
+			{
+				"item_set": "set_mirage",
+				"name": "The Mirage Collection",
+				"items": [
+					"weapon_p250",
+					"weapon_fiveseven",
+					"weapon_aug",
+					"weapon_g3sg1",
+					"weapon_p90",
+					"weapon_galilar",
+					"weapon_glock",
+					"weapon_mp7",
+					"weapon_ssg08",
+					"weapon_negev",
+					"weapon_sg556",
+					"weapon_mp9",
+					"weapon_ump45",
+					"weapon_mac10",
+					"weapon_mag7"
 				]
 				
 			},
@@ -4187,6 +4399,50 @@
 					"weapon_galilar",
 					"weapon_hkp2000",
 					"weapon_mp7"
+				]
+				
+			},
+			{
+				"item_set": "set_safehouse",
+				"name": "The Safehouse Collection",
+				"items": [
+					"weapon_elite",
+					"weapon_scar20",
+					"weapon_ssg08",
+					"weapon_tec9",
+					"weapon_mp7",
+					"weapon_usp_silencer",
+					"weapon_aug",
+					"weapon_mp9",
+					"weapon_g3sg1",
+					"weapon_galilar",
+					"weapon_m249",
+					"weapon_famas",
+					"weapon_fiveseven",
+					"weapon_ssg08",
+					"weapon_m4a1_silencer"
+				]
+				
+			},
+			{
+				"item_set": "set_train",
+				"name": "The Train Collection",
+				"items": [
+					"weapon_ump45",
+					"weapon_elite",
+					"weapon_g3sg1",
+					"weapon_fiveseven",
+					"weapon_nova",
+					"weapon_bizon",
+					"weapon_mac10",
+					"weapon_m4a1",
+					"weapon_mag7",
+					"weapon_p250",
+					"weapon_scar20",
+					"weapon_p90",
+					"weapon_deagle",
+					"weapon_sawedoff",
+					"weapon_tec9"
 				]
 				
 			},
