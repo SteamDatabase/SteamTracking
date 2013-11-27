@@ -302,6 +302,34 @@ MainMenu.StackDepth3 #TopRow
 	opacity: 1.0;
 }
 
+#BetaButton Image
+{
+	transition-duration: 0.4s;
+	transition-property: wash-color;
+	transition-timing-function: ease-out;
+
+	wash-color: ui_primary_color;
+}
+
+#BetaButton:hover Image
+{
+	transition-duration: 0.3s !immediate;
+	wash-color: ui_common_control_hover; 
+}
+
+#BetaButton:Focus Image
+{
+	transition-duration: 0.4s !immediate;
+	wash-color: #c4c4c4ff; 
+
+	animation-name: beta-image-wash-pulse; 
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
 #ParentalLockButton .SmDesc, #GoOnlineButton .SmDesc
 {
 
@@ -388,21 +416,7 @@ Button:hover .ShortDesc
 	padding: 8px 8px;
 }
 
-.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
-{
-	transition-duration: 0.3s;
-	transition-property: wash-color;
-	transition-timing-function: ease-out;
 
-	wash-color: ui_primary_color;
-}
-
-.TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
-{
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	wash-color: ui_common_control_hover; 
-}
 
 .TopRowBase Button:hover, InboxMenu Button:hover, ParentalButton:hover
 {
@@ -432,6 +446,34 @@ Button:hover .ShortDesc
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
+{
+	transition-duration: 0.3s;
+	transition-property: wash-color;
+	transition-timing-function: ease-out;
+
+	wash-color: ui_primary_color;
+}
+
+.TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
+{
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
+	wash-color: ui_common_control_hover; 
+}
+
+.TopRowBase Button:Focus Image, InboxMenu Button:Focus Image, ParentalButton:Focus Image
+{
+	wash-color: #274855ff;
+
+	animation-name: image-wash-pulse;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -552,25 +594,25 @@ Button:hover .ShortDesc
 {
 	0%
 	{
-		wash-color: #c4c4c4ff;
+		wash-color: animated_icon_wash_color;
 		blur: gaussian( 0.5 );
 	}
 
 	48%
 	{
-		wash-color: #ffffffff;
+		wash-color: #383838ff;
 		blur: none;
 	}
 
 	52%
 	{
-		wash-color: #ffffffff;
+		wash-color: #383838ff;
 		blur: none;
 	}
 
 	100%
 	{
-		wash-color: #c4c4c4ff;
+		wash-color: animated_icon_wash_color;
 		blur: gaussian( 0.5 );
 	}
 }
@@ -651,6 +693,24 @@ margin-right: 8px;
 	vertical-align: center;
 }
 
+#BetaButton
+{
+	flow-children: right;
+	opacity: 0.0;
+	visibility: collapse;
+	
+	flow-children: right;
+	width: 110px;
+	height: 100px;
+}
+
+.SteamOS #BetaButton
+{
+	flow-children: right;
+	opacity: 1.0;
+	visibility: visible;
+}
+
 #BetaButton Label
 {
 	margin-right: 12px;
@@ -711,13 +771,6 @@ margin-right: 8px;
 	padding: 8px;
 }
 
-#BetaButton
-{
-	flow-children: right;
-	visibility: collapse;
-}
-
-
 #Exit
 {
 	flow-children: right;
@@ -738,7 +791,6 @@ margin-right: 8px;
 	margin-right: 4px;
 	margin-bottom: 0px;
 }
-
 	
 .SteamLogo
 {
@@ -1181,17 +1233,7 @@ InboxMenu.Destructing
 }
 
 
-.TopRowBase Button:Focus Image, InboxMenu Button:Focus Image, #ParentalLockButton.Locked:Focus #ParentalLockImageLocked
-{
-	wash-color: #274855ff;
 
-	animation-name: image-wash-pulse;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 
 ParentalButton.Locked
 {

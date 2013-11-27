@@ -72,6 +72,9 @@
 						<Image src="file://{images}/exit.png" />
 						<Label class="LongDesc" text="#MainMenu_Exit" />
 					</Button>
+					<Button id="BetaButton" tabindex="5" selectionpos="10.8,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
+						<Image src="file://{images}/betabutton4.tga" />
+					</Button>
 				</Panel>
 			</Panel>
 			
