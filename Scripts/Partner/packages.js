@@ -880,8 +880,6 @@ function AddSummaryDiscounts( target, id, reqCurrencies )
 	}
 	$( 'discountSummaryBlock' ).style.display = '';
 
-	var reqLen = reqCurrencies.length;
-
 	// What we need is to create a discount with all the discount summed (keeping the category)
 	// Then we would display that in a specific element id
 
@@ -912,18 +910,17 @@ function AddSummaryDiscounts( target, id, reqCurrencies )
 		var baseDiscounts = oneDiscount.discount.base;
 		if ( baseDiscounts )
 		{
-			for ( var j = 0; j < reqLen; ++j )
+			for (key in reqCurrencies) 
 			{
-				var currency = reqCurrencies[ j ];
-				if ( baseDiscounts[ currency ] != null )
+ 				if ( baseDiscounts[ key ] != null )
 				{
-					if ( summedDiscounts.discount.base[ currency ] )
+					if ( summedDiscounts.discount.base[ key ] )
 					{
-						summedDiscounts.discount.base[ currency ] += parseInt( baseDiscounts[ currency ] );
+						summedDiscounts.discount.base[ key ] += parseInt( baseDiscounts[ key ] );
 					}
 					else
 					{
-						summedDiscounts.discount.base[ currency ] = parseInt( baseDiscounts[ currency ] );
+						summedDiscounts.discount.base[ key ] = parseInt( baseDiscounts[ key ] );
 					}
 				}
 			}
