@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.dc1ad9215fbac31cea061bdaa0151e1fbabb3553.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c702b53c9aa67e73956206bcb9f54cf3be518925.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -52640,6 +52640,32 @@
 				
 			},
 			{
+				"name": "Hood of the Conjurer",
+				"defindex": 5594,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hood",
+				"item_name": "Hood of the Conjurer",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/hood_of_the_conjurer\/hood_of_the_conjurer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/hood_of_the_conjurer\/hood_of_the_conjurer.1d1868d60c16dfd5fe2603a10f60f5b88d75c642.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/hood_of_the_conjurer\/hood_of_the_conjurer_large.1358cf1bda343d9f262e1b977010b6e276c15a62.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Icewrack Pack",
 				"defindex": 5596,
 				"item_class": "dota_item_wearable",
@@ -55343,6 +55369,110 @@
 				}
 			},
 			{
+				"name": "Paws of the Shadowcat",
+				"defindex": 5700,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Paws of the Shadowcat",
+				"item_description": "The claws of the shadowcat, deadly and powerful.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/paws_of_the_shadowcat\/paws_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/paws_of_the_shadowcat\/paws_of_the_shadowcat.e3a2cc3cfff8b453047ac3372d064d71689ee56b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/paws_of_the_shadowcat\/paws_of_the_shadowcat_large.39374fbc9eaa61fae791e0d7767d0bfca4dbbf3e.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Pelt of the Shadowcat",
+				"defindex": 5701,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Pelt of the Shadowcat",
+				"item_description": "A cape created from the pelt of her prey.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/pelt_of_the_shadowcat\/pelt_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/pelt_of_the_shadowcat\/pelt_of_the_shadowcat.07f72f7fa366e79344d5cbce67c6aff5d5865916.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/pelt_of_the_shadowcat\/pelt_of_the_shadowcat_large.6205d5058ceb20bb2bc903b055f1dbe90574bbae.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Gaiters of the Shadowcat",
+				"defindex": 5702,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Gaiters of the Shadowcat",
+				"item_description": "Hindlegs and paws, fur and claws, crafted into gaiters.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/gaiters_of_the_shadowcat\/gaiters_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/gaiters_of_the_shadowcat\/gaiters_of_the_shadowcat.70b5ea62b492ba94d8314bba74ff0a28cc126860.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/gaiters_of_the_shadowcat\/gaiters_of_the_shadowcat_large.e7860d785d2b18a8fd01f693f2f65560435cc182.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Quiver of the Shadowcat",
+				"defindex": 5703,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Quiver of the Shadowcat",
+				"item_description": "Quiver and arrows made from the finest materials the forest offers and crafted together with the metals of the drow.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/quiver_of_the_shadowcat\/quiver_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/quiver_of_the_shadowcat\/quiver_of_the_shadowcat.69752d66519bf97eff4c767cfa5165e519ee0d6e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/quiver_of_the_shadowcat\/quiver_of_the_shadowcat_large.3e31005aa8d46f6a84ee3d0f92dbafcadb5a8149.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Hellfire Edge",
 				"defindex": 5704,
 				"item_class": "dota_item_wearable",
@@ -55368,6 +55498,310 @@
 				}
 			},
 			{
+				"name": "Furstole of the Shadowcat",
+				"defindex": 5705,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Furstole of the Shadowcat",
+				"item_description": "A stole created from the skin and pelt of the shadowcat.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/furstole_of_the_shadowcat\/furstole_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/furstole_of_the_shadowcat\/furstole_of_the_shadowcat.32599d8bf972aca56a86c37898d46bdd702167f4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/furstole_of_the_shadowcat\/furstole_of_the_shadowcat_large.ceba79ecad690579f6a0e60fc37dbeb1f2395918.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bow of the Shadowcat",
+				"defindex": 5706,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Bow of the Shadowcat",
+				"item_description": "A bow made of skin, fur, ebony and finest pieces of drow metal.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/bow_of_the_shadowcat\/bow_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/bow_of_the_shadowcat\/bow_of_the_shadowcat.2ae10fc0a0488f3498925b3cab24cea2c3b07525.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/bow_of_the_shadowcat\/bow_of_the_shadowcat_large.39332429305c53c0f56dbcbda3cd1e35fc3cb96e.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Trophy of the Shadowcat",
+				"defindex": 5707,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Trophy of the Shadowcat",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/trophy_of_the_shadowcat\/trophy_of_the_shadowcat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/trophy_of_the_shadowcat\/trophy_of_the_shadowcat.38f87ef19a6a3168cf2188b0d6d6131c04f1e50f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/trophy_of_the_shadowcat\/trophy_of_the_shadowcat_large.30afbd6129671e9f77e0ac37c58721cc3aeb0cdc.png",
+				"item_set": "drow_shadowcat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Trophy of the Shadowcat"
+					},
+					{
+						"name": "Fangs of the Shadowcat"
+					}
+				]
+				
+			},
+			{
+				"name": "Drape of Bird's Stone",
+				"defindex": 5714,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Drape of Bird's Stone",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/drape_of_birds_stone\/drape_of_birds_stone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/drape_of_birds_stone\/drape_of_birds_stone.877c5a4331f48d56752466a20c6a495d2a3056ee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/drape_of_birds_stone\/drape_of_birds_stone_large.a5e8f177056965b296f41ddb4e23e3f2c4ace394.png",
+				"item_set": "furion_birds_stone",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bracers of Bird's Stone",
+				"defindex": 5715,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of Bird's Stone",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/bracers_of_birds_stone\/bracers_of_birds_stone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/bracers_of_birds_stone\/bracers_of_birds_stone.0adeda46abe7b88e43393850dd66a46d51598dd2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/bracers_of_birds_stone\/bracers_of_birds_stone_large.b19876258e3ffa38019e897663bf57a0196f8969.png",
+				"item_set": "furion_birds_stone",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Helm of Bird's Stone",
+				"defindex": 5716,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Helm of Bird's Stone",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/helm_of_birds_stone\/helm_of_birds_stone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/helm_of_birds_stone\/helm_of_birds_stone.dc392a25dc22106625ba6ad4d35270483267951e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/helm_of_birds_stone\/helm_of_birds_stone_large.adb96e9a01c64be8351162951ce93df367e67333.png",
+				"item_set": "furion_birds_stone",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Helm of Bird's Stone"
+					},
+					{
+						"name": "Hood of Bird's Stone"
+					}
+				]
+				
+			},
+			{
+				"name": "Crest of Bird's Stone",
+				"defindex": 5718,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "shoulder",
+				"item_name": "Crest of Bird's Stone",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/crest_of_birds_stone\/crest_of_birds_stone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/crest_of_birds_stone\/crest_of_birds_stone.0e4da2542ef57fcd701f6ec42a242a3f4df2f0ee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/crest_of_birds_stone\/crest_of_birds_stone_large.3db05ab7361b4de5b819bd4eb9017c9bff999c09.png",
+				"item_set": "furion_birds_stone",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Staff of Bird's Stone",
+				"defindex": 5719,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Staff of Bird's Stone",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/staff_of_birds_stone\/staff_of_birds_stone",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/staff_of_birds_stone\/staff_of_birds_stone.af1ab4f019a750c597efdf2e8db6f7fcac0681a0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/furion\/staff_of_birds_stone\/staff_of_birds_stone_large.a5128f6fcabcbf7ba615a3ddbfc147cfdef0aee7.png",
+				"item_set": "furion_birds_stone",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Armlets of Command",
+				"defindex": 5720,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armlets",
+				"item_name": "Armlets of Command",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dark_seer\/armlets_of_command\/armlets_of_command",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/armlets_of_command\/armlets_of_command.392237cef94d1c228bfda249a9d38d920d0a4869.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/armlets_of_command\/armlets_of_command_large.721c46325c3856fe72bfeccb84c54ca3e00ebfbb.png",
+				"item_set": "darkseer_seerscommand",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Ring of Command",
+				"defindex": 5721,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "back",
+				"item_name": "Ring of Command",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dark_seer\/ring_of_command\/ring_of_command",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/ring_of_command\/ring_of_command.c27795c3070268735ec1ff0ceb0bd6d23def6879.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/ring_of_command\/ring_of_command_large.8673cbeedd2bca2d4b9c812cef7e03003b9c365a.png",
+				"item_set": "darkseer_seerscommand",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Waistguard of Command",
+				"defindex": 5722,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Waistguard of Command",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dark_seer\/waistguard_of_command\/waistguard_of_command",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/waistguard_of_command\/waistguard_of_command.5dac4bd3d304554070e9708787ba1901e60aee04.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/waistguard_of_command\/waistguard_of_command_large.416f6a00885c9f3312ce4e5d0b0f46fca039f168.png",
+				"item_set": "darkseer_seerscommand",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Slicer of the Depths",
 				"defindex": 5723,
 				"item_class": "dota_item_wearable",
@@ -55381,6 +55815,214 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/slicer_of_the_depths\/slicer_of_the_depths.519d92af7c13cddf8a37569c91152a21d89d833c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/slark\/slicer_of_the_depths\/slicer_of_the_depths_large.acbc55b6beba5dd81ae783b43703c95d0ba1c89a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Collar of Command",
+				"defindex": 5724,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Collar",
+				"item_name": "Collar of Command",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dark_seer\/collar_of_command\/collar_of_command",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/collar_of_command\/collar_of_command.d24d969c1885d8c25b5a0e084a7045cfa4cab4c3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/dark_seer\/collar_of_command\/collar_of_command_large.50f96a207d60a9042a0b5f12afbf005ff2568890.png",
+				"item_set": "darkseer_seerscommand",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bracers of the Conjurer",
+				"defindex": 5725,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of the Conjurer",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/bracers_of_the_conjurer\/bracers_of_the_conjurer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/bracers_of_the_conjurer\/bracers_of_the_conjurer.f946a11f5e55add8d2e334953c2f75ad8d770041.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/bracers_of_the_conjurer\/bracers_of_the_conjurer_large.aba573c3a1447057d9691335e76d6a80e7d1ecd0.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "The Demonomicon",
+				"defindex": 5726,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demonomicon",
+				"item_name": "The Demonomicon",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/the_demonomicon\/the_demonomicon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/the_demonomicon\/the_demonomicon.ae8cc36ac217ab0e0dbbc0ff9ca2c0cc1e26bc80.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/the_demonomicon\/the_demonomicon_large.35147b0cb9faedc2f615cb3a61393fc587aa5988.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Garment of Control",
+				"defindex": 5727,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Robe",
+				"item_name": "Garment of Control",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/garment_of_control\/garment_of_control",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/garment_of_control\/garment_of_control.0f6b16113fbe988b786a9d5ddfb3b7949f0429ed.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/garment_of_control\/garment_of_control_large.8fb92e833f73ab460bc0159e939313a327ac8078.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Staff of the Malevolent",
+				"defindex": 5728,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Staff of the Malevolent",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/staff_of_the_malevolent\/staff_of_the_malevolent",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/staff_of_the_malevolent\/staff_of_the_malevolent.23bfcdd7ba77d01e50abc9ea8e625e7c94d39279.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/staff_of_the_malevolent\/staff_of_the_malevolent_large.762269eb849625a33679724590d53705727e2d47.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Lantern of the Conjuring Sigil",
+				"defindex": 5729,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Lantern",
+				"item_name": "Lantern of the Conjuring Sigil",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/lantern_of_the_conjuring_sigil\/lantern_of_the_conjuring_sigil",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/lantern_of_the_conjuring_sigil\/lantern_of_the_conjuring_sigil.105ba3538aa0be00837b5026e0052342241ab2b7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/lantern_of_the_conjuring_sigil\/lantern_of_the_conjuring_sigil_large.f5af6ffd67aaf814911b74f0e07bec0afb4f4586.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Dark Pauldrons of the Conjurer",
+				"defindex": 5730,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Dark Pauldrons of the Conjurer",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/dark_pauldrons_of_the_conjurer\/dark_pauldrons_of_the_conjurer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/dark_pauldrons_of_the_conjurer\/dark_pauldrons_of_the_conjurer.4946a7bd04c529e3a53e42ecaf6cb6e170835714.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/dark_pauldrons_of_the_conjurer\/dark_pauldrons_of_the_conjurer_large.ffb83612c11ebeb581febf392f7d909ad4d57fc5.png",
+				"item_set": "warlock_exiled_demonologist",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Doom of Ithogoaki",
+				"defindex": 5731,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Demon",
+				"item_name": "Doom of Ithogoaki",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/golem\/doom_of_ithogoaki\/doom_of_ithogoaki_npc_dota_warlock_golem",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/golem\/doom_of_ithogoaki\/doom_of_ithogoaki_npc_dota_warlock_golem.48924bf81480303c3da795e23631b26b0d457a9c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/warlock\/golem\/doom_of_ithogoaki\/doom_of_ithogoaki_npc_dota_warlock_golem_large.0a984dfd37e8634f0385107ad5509b4d6995ce86.png",
+				"item_set": "warlock_exiled_demonologist",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -66563,6 +67205,31 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/coco_the_courageous\/coco_the_courageous.11af1a1a7a006307d818b1e20946b5e8a9071e48.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/coco_the_courageous\/coco_the_courageous_large.4079ff82d79cb7d26245c0b6f68781859478bba3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Tory the Sky Guardian",
+				"defindex": 10376,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Tory the Sky Guardian",
+				"item_description": "It's been told that Tory, the Sky Guardian, has been riding the winds since the beggining of time, serving the ancient tribes faithfully as a proficient messenger. \r\n\tEverlasting glory shall be provided to those who are chosen by Tory as allies, as the winds seem to open a path for him while he gracefully flies towards his destination. \r\n\tA skilled companion who can fly above the highest mountain and glide over the bloodiest battlefield, Tory can surpass every flying being in every way possible.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/tory_the_sky_guardian\/tory_the_sky_guardian",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/tory_the_sky_guardian\/tory_the_sky_guardian.5fec1ba1632af15db68d402449cca840c191bc69.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/courier\/tory_the_sky_guardian\/tory_the_sky_guardian_large.38c68875e093fbf1060421bd0fb223e8499ad800.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -87259,6 +87926,126 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Gifts of the Shadowcat Set",
+				"defindex": 20316,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Gifts of the Shadowcat Set",
+				"item_description": "Includes all of the items in the 'Gifts of the Shadowcat' set for Drow Ranger:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Gifts_of_the_Shadowcat_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gifts_of_the_shadowcat_set.76009d219e751e435f464a42ca48137af16bd3ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_gifts_of_the_shadowcat_set_large.211560e46f220dbedf5c41dfd4b989573c0e907e.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Bird's Stone Set",
+				"defindex": 20317,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Bird's Stone Set",
+				"item_description": "Includes all of the items in the 'Bird's Stone' set for Nature's Prophet:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Birds_Stone_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_birds_stone_set.fb5a516ee08b94eb0902907261549faacda51a58.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_birds_stone_set_large.d0455240f9a0e81932a93f2706da73090a513911.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Seers Command Set",
+				"defindex": 20318,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Seers Command Set",
+				"item_description": "Includes all of the items in 'The Seers Command' set for Dark Seer:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Seers_Command_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_seers_command_set.403ddaca1f23e675af5c417ba3bb946ca7f2c23b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_seers_command_set_large.be9ba436696611da8da6ebbd05903040132610bc.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "The Exiled Demonologist Set",
+				"defindex": 20319,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Exiled Demonologist Set",
+				"item_description": "This bundle contains all of the items in 'The Exiled Demonologist' set for Warlock:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Exiled_Demonologist_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_exiled_demonologist_set.5e6400645cede4073fe4a34221215ccfaa3d8fa4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_exiled_demonologist_set_large.cdac326a2f9f77452bb741a1cb3bcf8dd05275eb.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -89355,6 +90142,18 @@
 				
 			},
 			{
+				"item_set": "darkseer_seerscommand",
+				"name": "The Seers Command",
+				"store_bundle": "The Seers Command Set",
+				"items": [
+					"Armlets of Command",
+					"Ring of Command",
+					"Waistguard of Command",
+					"Collar of Command"
+				]
+				
+			},
+			{
 				"item_set": "dead_winter",
 				"name": "Dead Winter",
 				"store_bundle": "Dead Winter Set",
@@ -89587,6 +90386,21 @@
 					"Ice Burst Greaves",
 					"Ice Burst Cloak",
 					"Frost Spikes"
+				]
+				
+			},
+			{
+				"item_set": "drow_shadowcat",
+				"name": "Gifts of the Shadowcat",
+				"store_bundle": "Gifts of the Shadowcat Set",
+				"items": [
+					"Paws of the Shadowcat",
+					"Pelt of the Shadowcat",
+					"Gaiters of the Shadowcat",
+					"Quiver of the Shadowcat",
+					"Furstole of the Shadowcat",
+					"Bow of the Shadowcat",
+					"Trophy of the Shadowcat"
 				]
 				
 			},
@@ -89830,6 +90644,19 @@
 					"Staff of the Eagle",
 					"Grand Crown of the Gigas",
 					"Druidic Ritual Crest"
+				]
+				
+			},
+			{
+				"item_set": "furion_birds_stone",
+				"name": "Bird's Stone",
+				"store_bundle": "Bird's Stone Set",
+				"items": [
+					"Drape of Bird's Stone",
+					"Bracers of Bird's Stone",
+					"Helm of Bird's Stone",
+					"Crest of Bird's Stone",
+					"Staff of Bird's Stone"
 				]
 				
 			},
@@ -91517,6 +92344,22 @@
 				
 			},
 			{
+				"item_set": "warlock_exiled_demonologist",
+				"name": "The Exiled Demonologist",
+				"store_bundle": "The Exiled Demonologist Set",
+				"items": [
+					"Doom of Ithogoaki",
+					"Dark Pauldrons of the Conjurer",
+					"Lantern of the Conjuring Sigil",
+					"Hood of the Conjurer",
+					"The Demonomicon",
+					"Bracers of the Conjurer",
+					"Staff of the Malevolent",
+					"Garment of Control"
+				]
+				
+			},
+			{
 				"item_set": "warrior_of_the_steppe",
 				"name": "Warrior of the Steppe",
 				"store_bundle": "Warrior of the Steppe Set",
@@ -92700,6 +93543,12 @@
 				"id": 164,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle164"
+			},
+			{
+				"system": "furion_staff_glow_birdstone",
+				"id": 166,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle166"
 			}
 		]
 		,
