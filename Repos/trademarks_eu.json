@@ -13,9 +13,9 @@
         "status": "Registered",
         "applicantsreference": "ALM13-3369EM",
         "basis": "CTM",
-        "publishedsection": "A.1",
-        "publisheddate": "19/08/2013",
-        "publishedurl": "/copla/bulletin/data/detail/ctm/011945961/2013_155",
+        "publishedsection": "B.1",
+        "publisheddate": "28/11/2013",
+        "publishedurl": "/copla/bulletin/data/detail/ctm/011945961/2013_227",
         "applicantid": "207863",
         "applicantname": "Valve Corporation",
         "representativeid": "10513",
@@ -26,6 +26,12 @@
                 "sectionpub": "A.1",
                 "namebulletin": "2013/155",
                 "datebulletin": "19/08/2013"
+            },
+            {
+                "urlpub": "/copla/bulletin/data/detail/ctm/011945961/2013_227",
+                "sectionpub": "B.1",
+                "namebulletin": "2013/227",
+                "datebulletin": "28/11/2013"
             }
         ]
     },
