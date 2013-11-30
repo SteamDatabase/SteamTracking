@@ -2660,40 +2660,6 @@
 				
 			},
 			{
-				"name": "IEconItems_620",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					},
-					{
-						"name": "GetSchema",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to return the names in. Defaults to returning string keys."
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "IEconItems_710",
 				"methods": [
 					{
@@ -3028,26 +2994,6 @@
 						"httpmethod": "GET",
 						"parameters": [
 
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IPortal2Leaderboards_620",
-				"methods": [
-					{
-						"name": "GetBucketizedData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "leaderboardName",
-								"type": "string",
-								"optional": false,
-								"description": "The leaderboard name to fetch data for."
-							}
 						]
 						
 					}
@@ -4108,52 +4054,6 @@
 			},
 			{
 				"name": "ITFPromos_570",
-				"methods": [
-					{
-						"name": "GetItemID",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					},
-					{
-						"name": "GrantItem",
-						"version": 1,
-						"httpmethod": "POST",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "ITFPromos_620",
 				"methods": [
 					{
 						"name": "GetItemID",
