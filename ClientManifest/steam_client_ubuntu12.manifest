@@ -1,29 +1,29 @@
 "ubuntu12"
 {
-	"version"		"1383158641"
+	"version"		"1386029254"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.d983792a75348d88cf9b4938eb528ae363f0c497"
-		"checksum"		"d983792a75348d88cf9b4938eb528ae363f0c497"
-		"size"		"5145185"
+		"file"		"strings_all.zip.bde7871b3e5f3ec450cde93ec97559f4afc8fbe2"
+		"checksum"		"bde7871b3e5f3ec450cde93ec97559f4afc8fbe2"
+		"size"		"5426891"
 	}
 	"resources_all"
 	{
-		"file"		"resources_all.zip.9a8f398be752af63ee31d2f30959d480031e1dbd"
-		"checksum"		"9a8f398be752af63ee31d2f30959d480031e1dbd"
-		"size"		"9417285"
+		"file"		"resources_all.zip.ff5b39c4f9cae2a9f3381d4f9a7bd5220c7799a1"
+		"checksum"		"ff5b39c4f9cae2a9f3381d4f9a7bd5220c7799a1"
+		"size"		"8633482"
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.1d95c6a25d1b842a98776e9224582a07f7b5cff6"
-		"checksum"		"1d95c6a25d1b842a98776e9224582a07f7b5cff6"
-		"size"		"9157973"
+		"file"		"tenfoot_all.zip.02ac95443a4d6f0e8caf5dcdfa81fa2b9cb92672"
+		"checksum"		"02ac95443a4d6f0e8caf5dcdfa81fa2b9cb92672"
+		"size"		"9283321"
 	}
 	"tenfoot_fonts_all"
 	{
-		"file"		"tenfoot_fonts_all.zip.1b6915a5c23a4cf6e406f67608e9f812ff0f39aa"
-		"checksum"		"1b6915a5c23a4cf6e406f67608e9f812ff0f39aa"
-		"size"		"898479"
+		"file"		"tenfoot_fonts_all.zip.82c389bbff74dc9d642d9d9b0b33665b388bc9db"
+		"checksum"		"82c389bbff74dc9d642d9d9b0b33665b388bc9db"
+		"size"		"1042452"
 	}
 	"tenfoot_ambientsounds_all"
 	{
@@ -39,27 +39,27 @@
 	}
 	"tenfoot_images_all"
 	{
-		"file"		"tenfoot_images_all.zip.54deea93ef8983eb830c4f2bc564ce8bc4025340"
-		"checksum"		"54deea93ef8983eb830c4f2bc564ce8bc4025340"
-		"size"		"22947508"
+		"file"		"tenfoot_images_all.zip.ef15f8f2fa6c7c9152b540803ba19001925cdefc"
+		"checksum"		"ef15f8f2fa6c7c9152b540803ba19001925cdefc"
+		"size"		"22999830"
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.6a0f3e72cd659e95390e6eb5c99106e5e7daac0e"
-		"checksum"		"6a0f3e72cd659e95390e6eb5c99106e5e7daac0e"
-		"size"		"1215116"
+		"file"		"public_all.zip.f438e9103ae90719c872032f9ca5d250b771f36c"
+		"checksum"		"f438e9103ae90719c872032f9ca5d250b771f36c"
+		"size"		"1222333"
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.2475f9c32d336e96049376496bd53f6434251c87"
-		"checksum"		"2475f9c32d336e96049376496bd53f6434251c87"
-		"size"		"34264142"
+		"file"		"bins_ubuntu12.zip.c5eda666cec102dd76515d89ede973dcd0c9f6d4"
+		"checksum"		"c5eda666cec102dd76515d89ede973dcd0c9f6d4"
+		"size"		"34635557"
 	}
 	"webkit_ubuntu12"
 	{
-		"file"		"webkit_ubuntu12.zip.098236be2b5ef214b02f7818d56a2e486daff0f4"
-		"checksum"		"098236be2b5ef214b02f7818d56a2e486daff0f4"
-		"size"		"17817410"
+		"file"		"webkit_ubuntu12.zip.98d8bfeb2abac7568a99fd7cbd787ff2fc0b854b"
+		"checksum"		"98d8bfeb2abac7568a99fd7cbd787ff2fc0b854b"
+		"size"		"17817556"
 	}
 	"miles_ubuntu12"
 	{
@@ -69,15 +69,15 @@
 	}
 	"sdl2_ubuntu12"
 	{
-		"file"		"sdl2_ubuntu12.zip.f3c116c36555c68fdb4122cda7b0725e56055db4"
-		"checksum"		"f3c116c36555c68fdb4122cda7b0725e56055db4"
+		"file"		"sdl2_ubuntu12.zip.d9213b8d1cd6e096503f4c16804c8aa37ea7e772"
+		"checksum"		"d9213b8d1cd6e096503f4c16804c8aa37ea7e772"
 		"size"		"336122"
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.1bb9b1932d5bc7ddcbe45ac25b4ecfa46544c447"
-		"checksum"		"1bb9b1932d5bc7ddcbe45ac25b4ecfa46544c447"
-		"size"		"1207954"
+		"file"		"steam_ubuntu12.zip.93605ed78cd7c61f020d06c216e24349038b046f"
+		"checksum"		"93605ed78cd7c61f020d06c216e24349038b046f"
+		"size"		"1209667"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -95,5 +95,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"7af4269b8bd1a9e9cb9eb880db142488d34deac42bd857e7bc33b31a773f08c41cd8431259fff4de970093c721979f5a32d593a2e116d36b854d03d9709d3bcc599bbb5ee7f1c023447adced4712a29460592383a1cbb279d9dca1543c896d2c57e12fc875fe619eab296d39fa38f2604a0a91154bf58638f52acd0300338976"
+	"ubuntu12"		"98740e78f35e1d6f2abed4fbd0a9ff05008d21c6c31704a3be7bd56e8b50256509529f4f71cb6c2f8a01c222ebce1b365a5efa6a990532872b226f14709ebcaf9e2d579d09a25fee45f3a255cd1b8346bde271512f4c7e43aef1389fa9b8e63b5e4671d90a2d43ea806d297d6209806b4b2fe09bf41e087b5ed918255b17bcdd"
 }
