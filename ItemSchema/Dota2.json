@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.c702b53c9aa67e73956206bcb9f54cf3be518925.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8f1f2b8d48c002be9331d658305a5963a92867ef.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -47394,8 +47394,8 @@
 				"image_inventory": "econ\/items\/drow\/monarch_weapon\/monarch_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/monarch_weapon\/monarch_weapon.384ee0735bbb2a4f57ad0391e642461582209577.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/monarch_weapon\/monarch_weapon_large.44d43bddd9c6b89b6617998c592d3b5718968266.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/monarch_weapon\/monarch_weapon.7a948d64243f74fb68c4154123f90e6494be6b52.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/drow\/monarch_weapon\/monarch_weapon_large.bdc7c69e082ae0f8fe2f814ff605b0eb649bb79f.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -49562,14 +49562,14 @@
 				"item_class": "dota_item_wearable",
 				"item_type_name": "Mace",
 				"item_name": "Demon Shard",
-				"item_description": "Shattered during the cataclysmic battle of Heaven’s Gate, the Blade of Worlds fell as a thousand pieces. Smuggled back into the foundries of Hell, the largest fragment was later reformed, the runes upon its surface shifting to denote a new name, Demon Shard.",
+				"item_description": "Shattered during the cataclysmic battle of Heaven's Gate, the Blade of Worlds fell as a thousand pieces. Smuggled back into the foundries of Hell, the largest fragment was later reformed, the runes upon its surface shifting to denote a new name, Demon Shard.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ\/items\/doom\/demonshard_weapon\/demonshard_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/demonshard_weapon\/demonshard_weapon.caecaf94471e4f6bd3485d6c451e6786051edf64.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/demonshard_weapon\/demonshard_weapon_large.e27cf71dac6d43f66e859d96d9d98701d6d9bd67.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/demonshard_weapon\/demonshard_weapon.04ce716b7c39881e8da16eb7d6a77c13c1de7ab4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/doom\/demonshard_weapon\/demonshard_weapon_large.bc6570f03f3383ff29f6d2ca74bdb62b0f5eacce.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -54755,8 +54755,8 @@
 				"image_inventory": "econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon.7afbc23ca70216c30dd3e681f712ebc2e65de912.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon_large.8190cbf522232bb0aac9b1abfeff20d0f621dd90.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon.3835e92d5d6617c948b76ff19c2408899765b1c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/axe\/axe_practos_weapon\/axe_practos_weapon_large.23fbaab91c4f9653c281efb295dca1857ec3a61d.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -77486,6 +77486,64 @@
 				}
 			},
 			{
+				"name": "Montenegro National League",
+				"defindex": 15342,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Montenegro National League",
+				"item_description": "Montenegro National League is the first professional Dota 2 league in Montenegro organized by Montenegro E-Sports Association. The best teams from country will compete for the championship and prizes!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_montenegro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_montenegro.d82dcc52f58940512a6d272292914016d3719e87.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_montenegro_large.0968c7529fc7ac7697c8d495838e206e05ebc412.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Gigabyte Premier League Season 1",
+				"defindex": 15343,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Gigabyte Premier League Season 1",
+				"item_description": "Gigabyte in partnership with DotaTalk proudly brings you the Gigabyte Premier league. It features Southeast Asia's finest teams as they compete for a total prize pool of $1,500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gigabyteleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.ba535d8d25bd8dffcfba30e69d07c631e31f450b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.f6c8a671385a1b9b5a7ffd5148cf4da471616543.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Treasure Key of Earth Essence",
 				"defindex": 15344,
 				"item_class": "tool",
@@ -78352,6 +78410,412 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline.aa2f1c6e9af83238c3f5821efcc572363b1bf530.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_pinoyonline_large.1d526e16e3a6fdf531cd8ab9bac238819208597c.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Montenegro National League - ADMIN",
+				"defindex": 15387,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Montenegro National League - ADMIN",
+				"item_description": "The Montenegro National League is the first professional Dota 2 league in Montenegro organized by Montenegro E-Sports Association. The best teams from country will compete for the championship and prizes!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_montenegro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_montenegro.d82dcc52f58940512a6d272292914016d3719e87.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_montenegro_large.0968c7529fc7ac7697c8d495838e206e05ebc412.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Razer Pinoy Cup Season 1",
+				"defindex": 15388,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Razer Pinoy Cup Season 1",
+				"item_description": "The top 8 Filipino teams will compete for gaming equipment from Razer worth $1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_razorpinoy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_razorpinoy.4ee9388e0eb2f68520be6169266d72130268b77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_razorpinoy_large.c216014b235fa64a7e1341b723de1fe0bcd73b84.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Razer Pinoy Cup Season 1 - ADMIN",
+				"defindex": 15389,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Razer Pinoy Cup Season 1 - ADMIN",
+				"item_description": "The top 8 Filipino teams will compete for gaming equipment from Razer worth $1,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_razorpinoy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_razorpinoy.4ee9388e0eb2f68520be6169266d72130268b77f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_razorpinoy_large.c216014b235fa64a7e1341b723de1fe0bcd73b84.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sudamerican Master",
+				"defindex": 15390,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sudamerican Master",
+				"item_description": "This tournament will feature the top 16 South American teams;' 10 invited teams and 6 qualifying teams. Chile, Peru, Argentina, Brazil, Venezuela and Colombia squaring off for the award of more than $600!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sudamerican",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sudamerican.07862fd0c9b856aa2f130dd35489dada9490f5c5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sudamerican_large.f4ef9d58fa116ed26846fcf6624c06a382748543.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sudamerican Master - ADMIN",
+				"defindex": 15391,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sudamerican Master - ADMIN",
+				"item_description": "This tournament will feature the top 16 South American teams;' 10 invited teams and 6 qualifying teams. Chile, Peru, Argentina, Brazil, Venezuela and Colombia squaring off for the award of more than $600!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sudamerican",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sudamerican.07862fd0c9b856aa2f130dd35489dada9490f5c5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sudamerican_large.f4ef9d58fa116ed26846fcf6624c06a382748543.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Gigabyte Premier League Season 1 - ADMIN",
+				"defindex": 15392,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Gigabyte Premier League Season 1 - ADMIN",
+				"item_description": "Gigabyte in partnership with DotaTalk proudly brings you the Gigabyte Premier league. It features Southeast Asia's finest teams as they compete for a total prize pool of $1,500.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_gigabyteleague",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.ba535d8d25bd8dffcfba30e69d07c631e31f450b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.f6c8a671385a1b9b5a7ffd5148cf4da471616543.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Winter Open",
+				"defindex": 15393,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Winter Open",
+				"item_description": "16 teams from around the Midwest go head to head in the midst of Chicago's unforgiving winter for a $2000 prize pool and more! Also featuring live casting by Chicago-local Vykromond.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_winteropen",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_winteropen.fc59a0df11725a9d3853c4dfde41b9ca8788ab35.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_winteropen_large.7b95c4d473d5e84db77a2f48fa897541cfd6d47a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Winter Open - ADMIN",
+				"defindex": 15394,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Winter Open - ADMIN",
+				"item_description": "16 teams from around the Midwest go head to head in the midst of Chicago's unforgiving winter for a $2000 prize pool and more! Also featuring live casting by Chicago-local Vykromond.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_winteropen",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_winteropen.fc59a0df11725a9d3853c4dfde41b9ca8788ab35.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_winteropen_large.7b95c4d473d5e84db77a2f48fa897541cfd6d47a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Saratov Cup Open Finals",
+				"defindex": 15395,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Saratov Cup Open Finals",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_saratov",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_saratov.3f642979f1a493d22c028accfcbd7028114c2bd1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_saratov_large.a66e2bd90dfc52223317bc3a47da95cfc7019525.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Saratov Cup Open Finals - ADMIN",
+				"defindex": 15396,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Saratov Cup Open Finals - ADMIN",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_saratov",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_saratov.3f642979f1a493d22c028accfcbd7028114c2bd1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_saratov_large.a66e2bd90dfc52223317bc3a47da95cfc7019525.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Elite Southeast Asian League",
+				"defindex": 15397,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Elite Southeast Asian League",
+				"item_description": "The most talented players in Southeast Asia compete individually then form teams to be crowned the champion!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_elitesea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_elitesea.e22bf59632eadc35184c8fe4274d286ba9e10acf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_elitesea_large.d830c701b3a14825d4ab3946910d1b000bc848fb.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Elite Southeast Asian League - ADMIN",
+				"defindex": 15398,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Elite Southeast Asian League - ADMIN",
+				"item_description": "The most talented players in Southeast Asia compete individually then form teams to be crowned the champion!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_elitesea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_elitesea.e22bf59632eadc35184c8fe4274d286ba9e10acf.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_elitesea_large.d830c701b3a14825d4ab3946910d1b000bc848fb.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Raidcall Southeast Asian Invitational League",
+				"defindex": 15399,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Raidcall Southeast Asian Invitational League",
+				"item_description": "Raidcall presents the Southeast Asian Invitational League, featuring 16 of the best teams competing for $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcallsea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcallsea.66a82e2441ee0b80b096abf16e2598ec0de23001.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcallsea_large.f9dc3e755043e73ab98ec8975ee1b2a7bcd81e18.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Raidcall Southeast Asian Invitational League - ADMIN",
+				"defindex": 15400,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Raidcall Southeast Asian Invitational League - ADMIN",
+				"item_description": "Raidcall presents the Southeast Asian Invitational League, featuring 16 of the best teams competing for $1000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_raidcallsea",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcallsea.66a82e2441ee0b80b096abf16e2598ec0de23001.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_raidcallsea_large.f9dc3e755043e73ab98ec8975ee1b2a7bcd81e18.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
