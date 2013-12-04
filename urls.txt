@@ -34,7 +34,7 @@ Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_
 Styles/profile_friends_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list.css?_=*TIMENOW*
 Styles/profile_friends_list_self.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list_self.css?_=*TIMENOW*
 Styles/profile_games_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_games_list.css?_=*TIMENOW*
-Styles/profile_recommended.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_recommended.css?_=*TIMENOW*
+Styles/profile_reviews.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_reviews.css?_=*TIMENOW*
 Styles/profile_sharedfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_sharedfiles.css?_=*TIMENOW*
 Styles/profile_tradeoffers.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_tradeoffers.css?_=*TIMENOW*
 Styles/profile_videos.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_videos.css?_=*TIMENOW*
@@ -48,7 +48,6 @@ Styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gam
 Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_genrev5.css?_=*TIMENOW*
 Styles/styles_hwsurvey.css|http://cdn.store.steampowered.com/public/css/styles_hwsurvey.css?_=*TIMENOW*
 Styles/styles_loginv5.css|http://cdn.store.steampowered.com/public/css/styles_loginv5.css?_=*TIMENOW*
-Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/styles_sale.css|http://cdn.store.steampowered.com/public/css/styles_sale.css?_=*TIMENOW*
 Styles/styles_steamaccount.css|http://cdn.store.steampowered.com/public/css/styles_steamaccount.css?_=*TIMENOW*
 Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
@@ -108,6 +107,8 @@ Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/wo
 Scripts/workshop_previewplayer.js|http://cdn.steamcommunity.com/public/javascript/workshop_previewplayer.js?_=*TIMENOW*&l=english
 Scripts/youraccount.js|http://cdn.store.steampowered.com/public/javascript/youraccount.js?_=*TIMENOW*&l=english
 Scripts/user_reviews.js|http://cdn.steamcommunity.com/public/shared/javascript/user_reviews.js?_=*TIMENOW*&l=english
+Scripts/user_reviews_community.js|http://cdn.steamcommunity.com/public/javascript/user_reviews_community.js?_=*TIMENOW*&l=english
+Scripts/user_reviews_store.js|http://cdn4.store.steampowered.com/public/javascript/user_reviews_store.js?_=*TIMENOW*&l=english
 
 # Steamworks CSS
 Styles/Partner/styles_admin.css|https://partner.steamgames.com/public/css/styles_admin.css?_=*TIMENOW*
@@ -167,6 +168,7 @@ Repos/hometest_db.html|http://repo.steampowered.com/hometest/db/
 Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Repos/people.html|http://valvesoftware.com/company/people.html
 Repos/trademarks_eu.json|http://esearch.oami.europa.eu/copla/ctmsearch/json
+Repos/valve_group.json|http://steamcommunity.com/groups/valve/memberslistxml
 Repos/steamosbeta.html|http://www.steampowered.com/steamosbeta
 
 # Minecraft

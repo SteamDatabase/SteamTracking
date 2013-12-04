@@ -204,16 +204,28 @@
 			// Beautify JSON
 			else if( $File === 'Repos/trademarks_eu.json' )
 			{
-				$DataJSON = JSON_Decode( $Data, true );
+				$Data = JSON_Decode( $Data, true );
 				
-				if( !isset( $DataJSON[ 'items' ] ) )
+				if( !isset( $Data[ 'items' ] ) )
 				{
 					return false;
 				}
 				
-				$Data = JSON_Encode( $DataJSON[ 'items' ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+				$Data = JSON_Encode( $Data[ 'items' ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+			}
+			// Convert group members to JSON
+			else if( $File === 'Repos/valve_group.json' )
+			{
+				LibXML_Use_Internal_Errors( true );
 				
-				unset( $DataJSON );
+				$Data = SimpleXML_Load_String( $Data );
+				
+				if( $Data === false || Empty( $Data->members->steamID64 ) )
+				{
+					return false;
+				}
+				
+				$Data = JSON_Encode( Array_Values( (Array)$Data->members->steamID64 ), JSON_PRETTY_PRINT );
 			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
