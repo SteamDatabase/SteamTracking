@@ -820,6 +820,14 @@ function MakeNavCookie( snr, url )
 	document.cookie = 'snr=' + snr + '|' + encodeURIComponent( url ) +'; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
+function GetNavCookie()
+{
+    // get back the cookie that MakeNavCookie creates !
+    var ref = document.cookie.match( /\ssnr=([^;]*);/ );
+    if ( ref )
+        return  ref[1];
+}
+
 var g_iActiveSpotlight = 0;
 
 function AnimateSpotlightTransition( iCurSpotlight, iNextSpotlight )

@@ -1230,6 +1230,15 @@ textarea.comment_input
 	margin-bottom: 5px;
 }
 
+#review_create .content .controls {
+	color: #b0aeac;
+	text-shadow: 1px 1px 0px #000;
+}
+
+#review_create .content .controls .btn_active {
+	text-shadow: none;
+}
+
 #review_create .content .controls .dselect_container {
 	color: #b0aeac;
 	text-shadow: 1px 1px 0px #000;
@@ -1242,7 +1251,7 @@ textarea.comment_input
 
 }
 	#review_create .content .controls .dselect_container a.trigger, #review_create .content .controls .dselect_container a.activetrigger {
-		background: url('http://cdn.store.steampowered.com/public/images/ico/ico_arrow_dn_for_select.gif') no-repeat right #000000;
+		background: url('http://cdn.store.steampowered.com/public/images/ico/ico_arrow_dn_for_select.gif') no-repeat right transparent;
 		color: #ebebeb;
 		padding: 4px 30px 4px 8px;
 		font-size: 12px;
@@ -1285,11 +1294,32 @@ textarea.comment_input
 	margin-bottom: 15px;
 }
 
+.user_reviews_header.no_bottom_margin
+{
+	margin-bottom: 0px;
+}
+
 	.user_reviews_header .user_reviews_see_all {
 		float:right;
 		font-size: 11px;
 		padding-top: 4px;
 	}
+
+.user_reviews_container
+{
+	min-height: 1000px;
+}
+
+.no_more_reviews
+{
+	padding: 10px;
+	text-align: center;
+	background-color: #181819;
+	color: #8BB9E0;
+	font-size: 16px;
+	padding-top: 50px;
+	height: 50px;
+}
 
 .review_box {
 	border-top: 1px solid #425a76;
@@ -1303,6 +1333,10 @@ textarea.comment_input
 	background-color: #181819;
 	border-bottom: 1px solid #2e3a4a;
 }
+
+	.review_box .header .commentCount {
+		float:right;
+	}
 	
 .review_box .leftcol {
 	width: 184px;
@@ -1357,12 +1391,19 @@ textarea.comment_input
 	color: #626366;
 	display: block;
 }
+
+.review_box .num_reviews {
+	font-size: 11px;
+	color: #626366;
+	display: block;
+}
 	
 .review_box .content {
 	margin-right: 8px;
 	font-family: 'Motiva Sans', arial, tahoma;
 	font-size: 13px;
-	color: #cdcac1;
+	line-height: 17px;
+	color: #b0aeac;
 }
 
 .review_box .content .gradient, .review_box .view_more {
@@ -1467,5 +1508,45 @@ textarea.comment_input
 }
 
 .review_box .review_flagged_by_developer a {
+	color: #8BB9E0;
+}
+
+/* filter */
+.user_reviews_filter_bar
+{
+	background-color: #000000;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+	background: -moz-linear-gradient(top, #171E24 5%, #222D38  95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#171E24), color-stop(95%,#222D38 ));background: -webkit-linear-gradient(top, #171E24 5%,#222D38  95%);background: -o-linear-gradient(top, #171E24 5%,#222D38  95%);background: -ms-linear-gradient(top, #171E24 5%,#222D38  95%);background: linear-gradient(to bottom, #171E24 5%,#222D38  95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171E24', endColorstr='#222D38 ',GradientType=0 );}
+
+.user_reviews_filter_text
+{
+	padding-top: 5px;
+	text-transform: uppercase;
+	color: #898a8c;
+	font-size: 10px;
+	padding-right: 10px;
+	float: left;
+}
+
+.user_reviews_tab
+{
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+	color: #D6D7D8;
+	float: left;
+}
+
+.user_reviews_tab.active
+{
+	background-color: black;
+}
+
+.user_reviews_tab.active a
+{
 	color: #8BB9E0;
 }
