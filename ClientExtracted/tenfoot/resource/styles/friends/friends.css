@@ -243,7 +243,6 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	vertical-align: bottom;
 	white-space: nowrap;
 	font-weight: bold;
-	line-height: 31px;
 	font-size: 27px;
 	margin-left: 8px;
 	margin-bottom: 1px;
@@ -380,7 +379,6 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	padding-bottom: 2px;
 	font-size: 28px;
 	font-weight: normal;
-	line-height: 32px;
 	text-overflow: clip;
 	color: friendsitemmainlistbkgnd_from;
 	background-color: friendschatinputbkgnd_text;
@@ -625,7 +623,7 @@ FriendsSelfHeader.InGame Label
 	width: 100%;
 	font-weight: bold;
 	font-size: 27px;
-	line-height: 29px;
+	height: 32px;
 	margin-top: 1px;
 	margin-bottom: 0px;
 	white-space: nowrap;
@@ -640,7 +638,6 @@ FriendsSelfHeader.InGame Label
 	opacity: 0.85;
 	font-weight: normal;
 	font-size: 24px;
-	line-height: 29px;
 	margin-bottom: 1px;
 	white-space: nowrap;
 
@@ -655,7 +652,6 @@ FriendsSelfHeader.InGame Label
 	opacity: 0.85;
 	font-weight: normal;
 	font-size: 24px;
-	line-height: 29px;
 	margin-bottom: 1px;
 	white-space: nowrap;
 	transition-property: pre-transform-scale2d, transform;
@@ -1293,7 +1289,7 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 
 .FriendsOptionWrapper .FriendsOptionLabel
 {
-	width: 246px;
+	width: 272px;
 	margin-top: 6px;
 }
 
