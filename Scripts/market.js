@@ -520,6 +520,7 @@ var CSearchResults = Class.create( {
 	m_rgStaticParams: null,
 
 	m_strQuery: null,
+	m_bSearchDescriptions: false,
 	m_cTotalCount: 0,
 	m_iCurrentPage: 0,
 	m_cMaxPages: 0,
@@ -533,6 +534,7 @@ var CSearchResults = Class.create( {
 		this.m_strActionURL = url;
 
 		this.m_strQuery = rgSearchData['query'];
+		this.m_bSearchDescriptions = rgSearchData['search_descriptions'];
 		this.m_cTotalCount = rgSearchData['total_count'];
 		this.m_iCurrentPage = 0;
 		this.m_cPageSize = rgSearchData['pagesize'];
@@ -592,6 +594,7 @@ var CSearchResults = Class.create( {
 
 		var params = {
 			query: this.m_strQuery,
+			search_descriptions: this.m_bSearchDescriptions ? 1 : 0,
 			start: this.m_cPageSize * iPage,
 			count: this.m_cPageSize
 		};
