@@ -160,9 +160,67 @@ function UserReview_Moderate( recommendationID, params, baseURL, callback )
 		} );
 }
 
+function UserReview_ShowReportsDialog( recommendationID, baseURL )
+{
+	new Ajax.Request( baseURL + '/userreviews/ajaxgetreports/' + recommendationID,
+		{
+			method: 'POST',
+			parameters: {
+				'sessionid' : g_sessionID
+			},
+			onSuccess: function( transport )
+			{
+				var results = transport.responseJSON;
+				if ( results.success == 1 )
+				{
+					var container = $J('<div/>', {'class': 'review_reports' } );
+					var reports = results.reports;
+
+					{
+						var reportDiv = $J('<div/>', {'class': 'review_report header' } );
+						var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( 'Reporter' );
+						reportDiv.append( divReporter );
+						var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( 'Report Description' );
+						reportDiv.append( divDescription );
+						var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( 'Weight' );
+						reportDiv.append( divWeight );
+						var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( 'Cleared?' );
+						reportDiv.append( divWasReset );
+						var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( 'Date' );
+						reportDiv.append( divTime );
+						var divClear = $J('<div/>', {'style': 'clear: left' } );
+						reportDiv.append( divClear );
+						container.append( reportDiv );
+					}
+
+					for ( var i = 0; i < reports.length; ++i )
+					{
+						var report = reports[i];
+
+						var reportDiv = $J('<div/>', {'class': 'review_report' } );
+							var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( $J('<a/>', {'href': report.reporter_url, 'text': report.reporter, 'target': '_blank' } ) );
+							reportDiv.append( divReporter );
+							var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( report.description );
+							reportDiv.append( divDescription );
+							var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( report.weight );
+							reportDiv.append( divWeight );
+							var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( report.was_reset ? 'Yes' : 'No' );
+							reportDiv.append( divWasReset );
+							var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( report.time_string );
+							reportDiv.append( divTime );
+							var divClear = $J('<div/>', {'style': 'clear: left' } );
+							reportDiv.append( divClear );
+						container.append( reportDiv );
+					}
+					var dialog = ShowAlertDialog( 'Clear Reports', container );
+				}
+			}
+		} );
+}
+
 function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback )
 {
-	var dialog = ShowConfirmDialog( 'Clear Reports',  'Are you sure you want to clear all reports? This cannot be undone!' );
+	var dialog = ShowConfirmDialog( 'Clear Reports', 'Are you sure you want to clear all reports? This cannot be undone!' );
 	dialog.done( function() {
 		UserReview_Moderate( recommendationID, { 'clear_reports' : 1 }, baseURL, callback);
 	});

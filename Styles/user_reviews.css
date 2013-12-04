@@ -193,3 +193,28 @@ select {
 	background-color: #c69c5f;
 	border-color: #534436;
 }
+
+/* view reports */
+.review_reports
+{
+	width: 600px;
+}
+.review_report
+{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #aaaaaa;
+}
+.review_report.header
+{
+	font-weight: bold;
+}
+.review_report_data
+{
+	float: left;
+	width: 75px;
+}
+.review_report_data.description
+{
+	width: 300px;
+}
