@@ -176,6 +176,28 @@
 	outline: none;
 }
 
+#set_features_form .parental_settings_instructions
+{
+	margin-bottom: 5px;
+}
+
+.feature_row
+{
+	height: 20px;
+}
+
+.feature_row input
+{
+	width: 10%;
+	vertical-align: middle;
+}
+.feature_row label
+{
+	width: 85%;
+	text-align: left;
+	vertical-align: middle;
+}
+
 .parental_searchbox #filterClear
 {
 	cursor: pointer;
