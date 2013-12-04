@@ -34,6 +34,7 @@ Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_
 Styles/profile_friends_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list.css?_=*TIMENOW*
 Styles/profile_friends_list_self.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list_self.css?_=*TIMENOW*
 Styles/profile_games_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_games_list.css?_=*TIMENOW*
+Styles/profile_recommended.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_recommended.css?_=*TIMENOW*
 Styles/profile_reviews.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_reviews.css?_=*TIMENOW*
 Styles/profile_sharedfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_sharedfiles.css?_=*TIMENOW*
 Styles/profile_tradeoffers.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_tradeoffers.css?_=*TIMENOW*
@@ -54,8 +55,8 @@ Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_st
 Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
 Styles/styles_youraccountv5.css|http://cdn.store.steampowered.com/public/css/styles_youraccountv5.css?_=*TIMENOW*
 Styles/styles_widget.css|http://cdn.store.steampowered.com/public/css/styles_widget.css?_=*TIMENOW*
+Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
-Styles/workshop_charts.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_charts.css?_=*TIMENOW*
 Styles/workshop_home.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_home.css?_=*TIMENOW*
 Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
