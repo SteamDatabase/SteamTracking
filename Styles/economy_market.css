@@ -654,6 +654,11 @@ a.market_tab_well_tab_inactive:hover {
 	padding: 15px;
 }
 
+#market_search_advanced label {
+	font-size: 80%;
+	vertical-align: text-top;
+}
+
 #findItems .market_section_title {
 	margin-bottom: 16px;
 }

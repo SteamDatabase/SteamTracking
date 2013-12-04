@@ -1116,3 +1116,16 @@ function SSAPopup()
 	win.focus();
 }
 
+function ShowAdvancedSearchOptions()
+{
+	$J('#market_search_advanced_show').hide();
+	$J('#market_search_advanced_hide').show();
+	$J('#market_search_advanced').show();
+}
+
+function HideAdvancedSearchOptions()
+{
+	$J('#market_search_advanced_show').show();
+	$J('#market_search_advanced_hide').hide();
+	$J('#market_search_advanced').hide();
+}
