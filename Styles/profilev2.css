@@ -1249,6 +1249,7 @@ img.workshop_showcase_item_image {
 	max-width: 1010px;
 	height: 215px;
 	margin: 0 auto -98px auto;
+	background-position: center;
 }
 
 .profile_small_header_texture {
