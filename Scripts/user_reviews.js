@@ -160,6 +160,36 @@ function UserReview_Moderate( recommendationID, params, baseURL, callback )
 		} );
 }
 
+function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
+{
+	var dialog = ShowConfirmDialog( 'Clear Developer Flag Reason', 'This review was flagged by the developer. Are you sure you want to clear this status?' );
+	dialog.done( function() {
+		new Ajax.Request( baseURL + '/userreviews/cleardeveloperflag/' + recommendationID,
+			{
+				method: 'POST',
+				parameters: {
+					'sessionid' : g_sessionID
+				},
+				onSuccess: function( transport )
+				{
+					var results = transport.responseJSON;
+					if ( results.success == 1 )
+					{
+						if ( callback )
+						{
+							callback( results );
+						}
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+					}
+				}
+			} );
+	});
+
+}
+
 function UserReview_ShowReportsDialog( recommendationID, baseURL )
 {
 	new Ajax.Request( baseURL + '/userreviews/ajaxgetreports/' + recommendationID,
