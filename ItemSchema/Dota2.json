@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.8f1f2b8d48c002be9331d658305a5963a92867ef.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.df31031f084ac8b18e46de65e1f031ca304606c5.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -77526,8 +77526,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gigabyteleague",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.ba535d8d25bd8dffcfba30e69d07c631e31f450b.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.f6c8a671385a1b9b5a7ffd5148cf4da471616543.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.df5d91e77a78613dc8f73d57aba453148d27efb1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.0d67ef3465d7a0f3324c6a44fdee2099e35fcd05.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -78582,8 +78582,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_gigabyteleague",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.ba535d8d25bd8dffcfba30e69d07c631e31f450b.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.f6c8a671385a1b9b5a7ffd5148cf4da471616543.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague.df5d91e77a78613dc8f73d57aba453148d27efb1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_gigabyteleague_large.0d67ef3465d7a0f3324c6a44fdee2099e35fcd05.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
