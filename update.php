@@ -225,7 +225,11 @@
 					return false;
 				}
 				
-				$Data = JSON_Encode( Array_Values( (Array)$Data->members->steamID64 ), JSON_PRETTY_PRINT );
+				$Data = Array_Values( (Array)$Data->members->steamID64 );
+				
+				Sort( $Data );
+				
+				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
