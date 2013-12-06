@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.df31031f084ac8b18e46de65e1f031ca304606c5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.3b5dc0905d353882a54261efec1cc5b90830f39d.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -56035,6 +56035,587 @@
 				}
 			},
 			{
+				"name": "Araceae's Tribute Bracelets",
+				"defindex": 5744,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracelets",
+				"item_name": "Araceae's Tribute Bracelets",
+				"item_description": "Treasures from a faraway island.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/araceaes_tribute_bracelets\/araceaes_tribute_bracelets",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_bracelets\/araceaes_tribute_bracelets.71f6b7f0d0b49660eba6214a25607c2eb37aa6d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_bracelets\/araceaes_tribute_bracelets_large.53a2a304397c160f965ae199ed874acaada219a4.png",
+				"item_set": "enchantress_aracea's_tribute",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Araceae's Tribute Hair",
+				"defindex": 5745,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Araceae's Tribute Hair",
+				"item_description": "Treasures from a faraway island.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/araceaes_tribute_hair\/araceaes_tribute_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_hair\/araceaes_tribute_hair.ae5ffe44de8f3c458a4863f2252744f0bdefc3f5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_hair\/araceaes_tribute_hair_large.0a707f272ca0c92c0e47ab27ea62fb5b5bffca45.png",
+				"item_set": "enchantress_aracea's_tribute",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Araceae's Tribute Necklace",
+				"defindex": 5746,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Necklace",
+				"item_name": "Araceae's Tribute Necklace",
+				"item_description": "Treasures from a faraway island.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/araceaes_tribute_necklace\/araceaes_tribute_necklace",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_necklace\/araceaes_tribute_necklace.4a262a08eb7ebc32b30203a0c331dc708dbd723d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_necklace\/araceaes_tribute_necklace_large.0278a0222d86af3902cf2898fec2e71a2006eff2.png",
+				"item_set": "enchantress_aracea's_tribute",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Araceae's Tribute Skirt",
+				"defindex": 5747,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Skirt",
+				"item_name": "Araceae's Tribute Skirt",
+				"item_description": "Treasures from a faraway island.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/araceaes_tribute_skirt\/araceaes_tribute_skirt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_skirt\/araceaes_tribute_skirt.eff1f0a974a87b8601d116be873d3396b35c0626.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_skirt\/araceaes_tribute_skirt_large.b2ee070aeb17bfe1105a58b3cd530c8549312d9d.png",
+				"item_set": "enchantress_aracea's_tribute",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Araceae's Tribute Spear",
+				"defindex": 5748,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Araceae's Tribute Spear",
+				"item_description": "Treasures from a faraway island.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/enchantress\/araceaes_tribute_staff\/araceaes_tribute_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_staff\/araceaes_tribute_staff.9a6fa36459f10c6391ffe43560e93a6aa2b99652.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/enchantress\/araceaes_tribute_staff\/araceaes_tribute_staff_large.3357ca929db28c823d3ac675c3e46fbefab5fe86.png",
+				"item_set": "enchantress_aracea's_tribute",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Helm of Eternal Eclipse",
+				"defindex": 5749,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Helm of Eternal Eclipse",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/helm_of_eternal_eclipse\/helm_of_eternal_eclipse",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/helm_of_eternal_eclipse\/helm_of_eternal_eclipse.fa55852ddea6ff281d443d4ee1bb0480187ae66a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/helm_of_eternal_eclipse\/helm_of_eternal_eclipse_large.d6a9369423ed68dc1c160b867d3a23ead552770c.png",
+				"item_set": "luna_eternaleclipse",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Noriet the Dusky Guardian",
+				"defindex": 5750,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Noriet the Dusky Guardian",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/noriet_the_dusky_guardian\/noriet_the_dusky_guardian",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/noriet_the_dusky_guardian\/noriet_the_dusky_guardian.b178b7aca24fd11618f035241aa8972e06a6ce6c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/noriet_the_dusky_guardian\/noriet_the_dusky_guardian_large.6dc94d60d7ab2861d1db98e966ac83cd2a572d91.png",
+				"item_set": "luna_eternaleclipse",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Shield of Eternal Eclipse",
+				"defindex": 5751,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Shield of Eternal Eclipse",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/shield_of_eternal_eclipse\/shield_of_eternal_eclipse",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/shield_of_eternal_eclipse\/shield_of_eternal_eclipse.8ea58714fc3e912551fe79c5c3b085fbd7709fe5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/shield_of_eternal_eclipse\/shield_of_eternal_eclipse_large.2b20d0f29b5d59e0b98c9f99c2c94562f20fc90a.png",
+				"item_set": "luna_eternaleclipse",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Armor of Eternal Eclipse",
+				"defindex": 5752,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Armor of Eternal Eclipse",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/armor_of_eternal_eclipse\/armor_of_eternal_eclipse",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/armor_of_eternal_eclipse\/armor_of_eternal_eclipse.0637867a63ea9e5239fb28af5d24850bc85061c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/armor_of_eternal_eclipse\/armor_of_eternal_eclipse_large.947b9899fea6df05b1d16aceee666eacee000ff0.png",
+				"item_set": "luna_eternaleclipse",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Blades of Eternal Eclipse",
+				"defindex": 5753,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mace",
+				"item_name": "Blades of Eternal Eclipse",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/blades_of_eternal_eclipse\/blades_of_eternal_eclipse",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/blades_of_eternal_eclipse\/blades_of_eternal_eclipse.f81d35aba6f9b29d5565956745100f0d5c46ff6b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/luna\/blades_of_eternal_eclipse\/blades_of_eternal_eclipse_large.179ad31a6d6ba4905b057e79cf491910d8ebd43b.png",
+				"item_set": "luna_eternaleclipse",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bracers of the Awakened",
+				"defindex": 5754,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Bracers of the Awakened",
+				"item_description": "\"May thine Hatred lend thee the strength to shatter the symbol of thine bretheren's demise, for within its remains lies absolute power!\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/bracers_of_the_awakened\/bracers_of_the_awakened",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_awakened\/bracers_of_the_awakened.d4976e505e61a127b97f735a474e07e22eb79242.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/bracers_of_the_awakened\/bracers_of_the_awakened_large.e7547e903132943987fe146348eafc878e3c0e4a.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Gift of the Awakened",
+				"defindex": 5755,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Gift of the Awakened",
+				"item_description": "\"Ascend to Divinity upon shattered dreams of the fallen unworthy, whose lust for power and blind ignorance led them to their untimely demise.\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/gift_of_the_awakened\/gift_of_the_awakened",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/gift_of_the_awakened\/gift_of_the_awakened.901d051940f8ad8d324a432f79de8ef566ac26e7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/gift_of_the_awakened\/gift_of_the_awakened_large.937efce7c25b09581b00b83a5b3eabe0321fdda8.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Gift of the Awakened"
+					},
+					{
+						"name": "Tail of the Awakened"
+					}
+				]
+				
+			},
+			{
+				"name": "Leggings of the Awakened",
+				"defindex": 5757,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Leggings",
+				"item_name": "Leggings of the Awakened",
+				"item_description": "\"Shield thine loins from grasp of the Unliving, for Pestilent lands yield Putrid crops...\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/leggings_of_the_awakened\/leggings_of_the_awakened",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/leggings_of_the_awakened\/leggings_of_the_awakened.b554fec79a7c22adefbc84dc2f266748452e4916.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/leggings_of_the_awakened\/leggings_of_the_awakened_large.532b0d5dcae6d401f5fca6cca56c0d5e456167b1.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Shard of Retribution",
+				"defindex": 5758,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Shard of Retribution",
+				"item_description": "\"Let not thine conviction blind thee, but embrace Retribution for the Redemption of thine Order.\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/shard_of_retribution\/shard_of_retribution",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shard_of_retribution\/shard_of_retribution.2206ae973c3b425b95ddfcde586868d02dcfba7f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shard_of_retribution\/shard_of_retribution_large.c71e470e2d16a94cd230ca2b1588c9e6f4de99c1.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Shard of Vengeance",
+				"defindex": 5759,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Shard of Vengeance",
+				"item_description": "\"Let Vengeance be thine Radiance, so it may disperse the shadows that shroud the Wicked...\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/shard_of_vengeance\/shard_of_vengeance",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shard_of_vengeance\/shard_of_vengeance.cb6872366a53a7a4fc5f5ff36fd0caf1bcf5a83f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shard_of_vengeance\/shard_of_vengeance_large.faa3963ae969d09cee575e192c6474897fb7b2b7.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Shroud of the Awakened",
+				"defindex": 5760,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shroud",
+				"item_name": "Shroud of the Awakened",
+				"item_description": "\"May thine visage not be hindered by those of absent mind and eternal hunger, for thou shall bring an end to their suffering...\" - Taken from Tael'AmThis new item has no description.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/shroud_of_the_awakened\/shroud_of_the_awakened",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shroud_of_the_awakened\/shroud_of_the_awakened.6e556d2db35c7a4790e82305583b91c8b430f950.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/shroud_of_the_awakened\/shroud_of_the_awakened_large.8e536dfaca24e8626292a57f7a0234634490bc93.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Words of the Awakened",
+				"defindex": 5761,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scroll",
+				"item_name": "Words of the Awakened",
+				"item_description": "\"Preach my Word upon thine adversaries, lest you suffer their wicked blasphemy!\" - Taken from Tael'Am",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/antimage\/words_of_the_awakened\/words_of_the_awakened",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/words_of_the_awakened\/words_of_the_awakened.6db0f34b75a7e6bfd42b1d74cf450aff8038f3eb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/antimage\/words_of_the_awakened\/words_of_the_awakened_large.e97cd7b7ce2355d7484ab6fc3ba758ecd6e54e45.png",
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Heavy Barbed Arms",
+				"defindex": 5762,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spiked Bands",
+				"item_name": "Heavy Barbed Arms",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/heavy_barbed_arms\/heavy_barbed_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_arms\/heavy_barbed_arms.d3a63ad0b660f76c4e28c4eff6ba2ba846fe1b07.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_arms\/heavy_barbed_arms_large.74e4dc84c3205829931eabb9e2fad70cc7e9b378.png",
+				"item_set": "bristeback_heavy_barbed",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Heavy Barbed Back",
+				"defindex": 5763,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spikes",
+				"item_name": "Heavy Barbed Back",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/heavy_barbed_back\/heavy_barbed_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_back\/heavy_barbed_back.d563a06ca915320fbd9d23cc1a9e6bba660bc12f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_back\/heavy_barbed_back_large.fe0993d40b5c466b4ef9517acbb177df288457ef.png",
+				"item_set": "bristeback_heavy_barbed",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Heavy Barbed Head",
+				"defindex": 5764,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spiked Helm",
+				"item_name": "Heavy Barbed Head",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/heavy_barbed_head\/heavy_barbed_head",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_head\/heavy_barbed_head.f96ce38db1aa5b3c7365f432f785168236524d15.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_head\/heavy_barbed_head_large.fdbff763c09379ae215f386ac29ea0919c910c79.png",
+				"item_set": "bristeback_heavy_barbed",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Heavy Barbed Collar",
+				"defindex": 5765,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spiked Collar",
+				"item_name": "Heavy Barbed Collar",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/heavy_barbed_neck\/heavy_barbed_neck",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_neck\/heavy_barbed_neck.875792ac3f56af9c5319139b4929845fa01ca598.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_neck\/heavy_barbed_neck_large.970299d2862b101242ac80f958fa3f1036772cf3.png",
+				"item_set": "bristeback_heavy_barbed",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Heavy Barbed Morning Star",
+				"defindex": 5766,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spiked Mace",
+				"item_name": "Heavy Barbed Morning Star",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/bristleback\/heavy_barbed_morning_star\/heavy_barbed_morning_star",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_morning_star\/heavy_barbed_morning_star.c2173c029a3e6c22b2bbdf7886c6f07debbad880.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/items\/bristleback\/heavy_barbed_morning_star\/heavy_barbed_morning_star_large.aff65c755ec2a70614b819ec8baaa9f66457a224.png",
+				"item_set": "bristeback_heavy_barbed",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -59936,7 +60517,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Treasure Chest",
 				"item_name": "Frosty Treasure of Frostivus",
-				"item_description": "You will need a <font color='#9da1a9'>Treasure Key<\/font> to open this chest. You can pick one up at the DOTA 2 Store. Each chest series comes with a different selection of possible loot.",
+				"item_description": "You will need <font color='#9da1a9'>Frostivus 2013 Treasure Key<\/font> to open this chest. You can pick one up at the DOTA 2 Store. Beware! At the end of <font color='#9da1a9'>January 12, 2014<\/font> this chest will crumble into useless snowflakes. This chest contains one of several mysterious new items:",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/frostivus_chest",
@@ -59961,7 +60542,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 21
+						"value": 44
 					}
 				]
 				
@@ -88510,6 +89091,126 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Legacy of the Awakened Set",
+				"defindex": 20322,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Legacy of the Awakened Set",
+				"item_description": "Includes all of the items in the 'Legacy of the Awakened' set for Anti-Mage:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Legacy_of_the_Awakened_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_legacy_of_the_awakened_set.a132138b0c4f2e976fd7cb44b0860b3d05dace4d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_legacy_of_the_awakened_set_large.c1b0feed97e57694198130448c1e62fb0ec396f8.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Araceae's Tribute Set",
+				"defindex": 20323,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Araceae's Tribute Set",
+				"item_description": "This bundle contains all of the items in the 'Araceae's Tribute' set for Enchantress:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Araceaes_Tribute_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_araceaes_tribute_set.4c0a4475990ab9d9253135f0187d0b17bf290f9d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_araceaes_tribute_set_large.dc5a925fc2c02cff1150d9765b3529b95bfc010a.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Heavy Barbed Armor Set",
+				"defindex": 20324,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Heavy Barbed Armor Set",
+				"item_description": "This bundle contains all of the items in the 'Heavy Barbed Armor'' set for Bristleback:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Heavy_Barbed_Armor_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heavy_barbed_armor_set.f43f4f58529c02ac46e95d6a3de2555a66d3f0ee.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_heavy_barbed_armor_set_large.a78b6191579e4fdffc7e20d30fa62a70f45772fc.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Blessings of the Eternal Eclipse Set",
+				"defindex": 20327,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Blessings of the Eternal Eclipse Set",
+				"item_description": "Includes all of the items in the 'Blessings of the Eternal Eclipse' set for Luna:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Blessings_of_the_Eternal_Eclipse_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blessings_of_the_eternal_eclipse_set.2b0226628ad21e152fbfaa1a1a874f05e92cd17f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blessings_of_the_eternal_eclipse_set_large.5e2170ae9106fc5afecdc6ce696632e270a66528.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -89820,6 +90521,21 @@
 				
 			},
 			{
+				"item_set": "antimage_legacy_ofthe_awakened",
+				"name": "Legacy of the Awakened",
+				"store_bundle": "Legacy of the Awakened Set",
+				"items": [
+					"Bracers of the Awakened",
+					"Gift of the Awakened",
+					"Leggings of the Awakened",
+					"Shard of Retribution",
+					"Shard of Vengeance",
+					"Shroud of the Awakened",
+					"Words of the Awakened"
+				]
+				
+			},
+			{
 				"item_set": "antimage_mage_slayer",
 				"name": "The Mage Slayer",
 				"store_bundle": "The Mage Slayer's Set",
@@ -90314,6 +91030,19 @@
 					"The Second Disciple's Dagger",
 					"The Second Disciple's Chakram",
 					"The Second Disciple's Blade"
+				]
+				
+			},
+			{
+				"item_set": "bristeback_heavy_barbed",
+				"name": "Heavy Barbed Armor",
+				"store_bundle": "Heavy Barbed Armor Set",
+				"items": [
+					"Heavy Barbed Arms",
+					"Heavy Barbed Back",
+					"Heavy Barbed Head",
+					"Heavy Barbed Collar",
+					"Heavy Barbed Morning Star"
 				]
 				
 			},
@@ -90962,6 +91691,19 @@
 				
 			},
 			{
+				"item_set": "enchantress_aracea's_tribute",
+				"name": "Araceae's Tribute",
+				"store_bundle": "Araceae's Tribute Set",
+				"items": [
+					"Araceae's Tribute Bracelets",
+					"Araceae's Tribute Hair",
+					"Araceae's Tribute Necklace",
+					"Araceae's Tribute Skirt",
+					"Araceae's Tribute Spear"
+				]
+				
+			},
+			{
 				"item_set": "enigmatic_vestment",
 				"name": "Councilor's Raiment",
 				"store_bundle": "Councilor's Raiment Set",
@@ -91573,6 +92315,19 @@
 					"Scepter of the Sable Void",
 					"Gazing Eye of the Demon Witch",
 					"Skins of the Incubus"
+				]
+				
+			},
+			{
+				"item_set": "luna_eternaleclipse",
+				"name": "Blessings of the Eternal Eclipse",
+				"store_bundle": "Blessings of the Eternal Eclipse Set",
+				"items": [
+					"Blades of Eternal Eclipse",
+					"Helm of Eternal Eclipse",
+					"Noriet the Dusky Guardian",
+					"Shield of Eternal Eclipse",
+					"Armor of Eternal Eclipse"
 				]
 				
 			},
@@ -93046,7 +93801,7 @@
 				"system": "axe_commando",
 				"id": 4,
 				"attach_to_rootbone": false,
-				"name": "Attrib_Particle4"
+				"name": "Self-Made Aura"
 			},
 			{
 				"system": "furion_staff",
