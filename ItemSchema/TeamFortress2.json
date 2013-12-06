@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.130ab8172ba84fdf99894d21b2d6b9221c549452.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.288300370fc0ac5e1e9e52b7612645594d839c9f.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -13642,6 +13642,11 @@
 				]
 				,
 				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 51
+					},
 					{
 						"name": "mod soldier buff type",
 						"class": "set_buff_type",
@@ -44909,10 +44914,10 @@
 				"name": "MvM GateBot Light Scout",
 				"defindex": 1057,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_scout_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -44971,10 +44976,10 @@
 				"name": "MvM GateBot Light Pyro",
 				"defindex": 1058,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_pyro_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45033,10 +45038,10 @@
 				"name": "MvM GateBot Light Medic",
 				"defindex": 1059,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_medic_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45157,10 +45162,10 @@
 				"name": "MvM GateBot Light Demoman",
 				"defindex": 1061,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_demo_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45193,7 +45198,7 @@
 				]
 				,
 				"used_by_classes": [
-					"Heavy"
+					"Demoman"
 				]
 				,
 				"attributes": [
@@ -45219,10 +45224,10 @@
 				"name": "MvM GateBot Light Sniper",
 				"defindex": 1062,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_sniper_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45255,7 +45260,7 @@
 				]
 				,
 				"used_by_classes": [
-					"Heavy"
+					"Sniper"
 				]
 				,
 				"attributes": [
@@ -45281,10 +45286,10 @@
 				"name": "MvM GateBot Light Soldier",
 				"defindex": 1063,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_soldier_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45317,7 +45322,7 @@
 				]
 				,
 				"used_by_classes": [
-					"Heavy"
+					"Soldier"
 				]
 				,
 				"attributes": [
@@ -45343,10 +45348,10 @@
 				"name": "MvM GateBot Light Spy",
 				"defindex": 1064,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_spy_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45379,7 +45384,7 @@
 				]
 				,
 				"used_by_classes": [
-					"Heavy"
+					"Spy"
 				]
 				,
 				"attributes": [
@@ -45405,10 +45410,10 @@
 				"name": "MvM GateBot Light Engineer",
 				"defindex": 1065,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Hat",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
-				"item_slot": "misc",
+				"item_slot": "head",
 				"model_player": "models\/bots\/gameplay_cosmetic\/light_engineer_on.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack",
@@ -45441,7 +45446,7 @@
 				]
 				,
 				"used_by_classes": [
-					"Heavy"
+					"Engineer"
 				]
 				,
 				"attributes": [
@@ -50990,7 +50995,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 57
+						"value": 75
 					},
 					{
 						"name": "decoded by itemdefindex",
@@ -51826,7 +51831,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 71
+						"value": 76
 					},
 					{
 						"name": "decoded by itemdefindex",
@@ -52001,7 +52006,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 59
+						"value": 77
 					},
 					{
 						"name": "decoded by itemdefindex",
@@ -56644,12 +56649,100 @@
 				
 			},
 			{
+				"name": "Naughty Winter Crate 2013",
+				"defindex": 5714,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Naughty Winter Crate 2013",
+				"item_description": "This crate's contents are unknown.\nOnly Naughty Keys fit the lock.\n\nSome, but not all, of the items in this crate are Strange...\nAfter 01\/06\/2014 this crate can no longer be opened.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/smissmas_crate_naughty_2013",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/smissmas_crate_naughty_2013.a89a670058cdc94969e0a755ea190a9fd7b59464.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/smissmas_crate_naughty_2013_large.dc984c11f821c8db7e22e6d7e029dad2a76f7e3f.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "winter2013_naughty"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 78
+					}
+				]
+				
+			},
+			{
+				"name": "Nice Winter Crate 2013",
+				"defindex": 5715,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Nice Winter Crate 2013",
+				"item_description": "This crate's contents are unknown.\nOnly Nice Keys fit the lock.\nAfter 01\/06\/2014 this crate can no longer be opened.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/smissmas_crate_2013",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/smissmas_crate_2013.39cefad34f768c21e76a2c76d60a308a782062bc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/smissmas_crate_2013_large.265dbc023945d35455ef5815b86d69e98253a463.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "winter2013_nice"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 79
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Part (Armory)",
 				"defindex": 5999,
 				"item_class": "tool",
 				"item_type_name": "TF_StrangePart",
 				"item_name": "Strange Part",
-				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track an additional new statistic!",
+				"item_description": "Adding this Strange Part to a Strange-quality item will enable it to track an additional new statistic!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -57018,6 +57111,49 @@
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
 						"value": 18
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Spies Killed",
+				"defindex": 6008,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Spies Killed",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of Spies you kill with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_spies_killed",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_spies_killed.fa33e90c55d5360c34821e7d078dfcf566d3e479.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_spies_killed_large.82ab145412f96f3340a02800b5098a69cd9fc379.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 16
 					}
 				]
 				
@@ -58227,6 +58363,350 @@
 				
 			},
 			{
+				"name": "Strange Part: Players Wearing Unusuals",
+				"defindex": 6052,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Unusual-Wearing Player Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of enemies wearing Unusual-quality cosmetic items you kill with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_unusuals_killed",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_unusuals_killed.4f71a3b7ce2e1acd6036396d1d6b44fd361a477a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_unusuals_killed_large.fa71b1462aed22a35d1ce52503e5875ed0a2f0cd.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 78
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Burning Enemies Killed",
+				"defindex": 6053,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Burning Enemy Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of actively burning enemies you kill with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_burning_enemies_killed",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_burning_enemies_killed.1fcdab2385a8091e3caacabea0823c5ffd2a65a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_burning_enemies_killed_large.23bb4c82814b8fa86319a6c8fd97001fb6c4ac24.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 79
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Killstreaks Ended",
+				"defindex": 6054,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Killstreaks Ended",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of enemy player killstreaks you end with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_killstreaks_ended",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_killstreaks_ended.72458c0eb8b93257fdcfc4a210ba98b85f0ac196.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_killstreaks_ended_large.cf4e346c936a61130875d2e6f0fc65d4aae2adb5.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 80
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Cosmetic Part: Killcam Taunts",
+				"defindex": 6055,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Freezecam Taunt Appearances",
+				"item_description": "Adding this Strange Part to a Strange-quality cosmetic item will enable it to track the number of times you appear in enemy freezecams taunting while wearing it.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_killcam_taunts",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_killcam_taunts.5b04af8354c45ab6fa9fad0d82f6d5c5852e321e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_killcam_taunts_large.921aa3426bc7f957c12ef9d7d573660aa8ccce19.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 81
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Damage Dealt",
+				"defindex": 6056,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Damage Dealt",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the total amount of damage you deal to other players with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_damage_dealt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_damage_dealt.cdf43b90ce764eb84c57e2d638a4136e964bc0c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_damage_dealt_large.8decb4912535916134b30e3fc5a00ce7450ef696.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 82
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Cosmetic Part: Fires Survived",
+				"defindex": 6057,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Fires Survived",
+				"item_description": "Adding this Strange Part to a Strange-quality cosmetic item will enable it to track the times you survive being lit on fire.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_fires_survived",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_fires_survived.21ba12c93a400c0941cf63bdd1a7c46431da9c93.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_fires_survived_large.9c647522456198b13632a11f71b3687255e5fb85.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 83
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Ally Healing Done",
+				"defindex": 6058,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Allied Healing Done",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the total number of allied health points you directly restore with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_healing_done",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_healing_done.32559603a52856e4acb85baa52e99301864b6464.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_healing_done_large.e7522ec1bf6da297adf833835433cb19b9c368ed.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 84
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Point-Blank Kills",
+				"defindex": 6059,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Point-Blank Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of players you kill with that weapon from point-blank range.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_point_blank",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_point_blank.83ad7536a68e8bd67a06b3fba5eebdea5232d9a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_point_blank_large.77b21ab64ff08bac47d68652dd39c5beb4f9f5d4.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 85
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Filter: Coldfront (Community)",
 				"defindex": 6500,
 				"item_class": "tool",
@@ -59003,7 +59483,7 @@
 				"item_class": "tool",
 				"item_type_name": "TF_KillStreakifierToolB",
 				"item_name": "Kit",
-				"item_description": "Used to add killstreak properties and a cool sheen to an item.\n",
+				"item_description": "Used to add killstreak properties and a cool sheen to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -59087,7 +59567,7 @@
 				"item_class": "tool",
 				"item_type_name": "TF_KillStreakifierToolC",
 				"item_name": "Kit",
-				"item_description": "Used to add killstreak properties and a cool sheen to an item.\nGives the user special effects when on a killstreak.\n",
+				"item_description": "Used to add killstreak properties and a cool sheen to an item.\nGives the user special effects when on a killstreak.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -59136,7 +59616,7 @@
 				"item_class": "tool",
 				"item_type_name": "TF_KillStreakifierToolA",
 				"item_name": "Kit",
-				"item_description": "Used to add killstreak properties to an item.\n",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -103411,6 +103891,11 @@
 				"level_data": "KillEaterRank"
 			},
 			{
+				"type": 16,
+				"type_name": "Spies Killed",
+				"level_data": "KillEaterRank"
+			},
+			{
 				"type": 17,
 				"type_name": "Engineers Killed",
 				"level_data": "KillEaterRank"
@@ -103618,6 +104103,46 @@
 			{
 				"type": 77,
 				"type_name": "Taunt Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 78,
+				"type_name": "Unusual-Wearing Player Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 79,
+				"type_name": "Burning Player Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 80,
+				"type_name": "Killstreaks Ended",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 81,
+				"type_name": "Freezecam Taunt Appearances",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 82,
+				"type_name": "Damage Dealt",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 83,
+				"type_name": "Fires Survived",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 84,
+				"type_name": "Allied Healing Done",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 85,
+				"type_name": "Point Blank Kills",
 				"level_data": "KillEaterRank"
 			}
 		]
