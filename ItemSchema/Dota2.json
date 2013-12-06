@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.d2ea9ad177c7b74461825d4ea0479b77c5bfc282.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/570\/scripts\/items\/items_game.55c69be008ff9fca302858ef721f6aea5703d307.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -78208,7 +78208,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "diretide2013",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -78812,11 +78811,11 @@
 				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $50,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
+				"image_inventory": "econ\/leagues\/subscriptions_starseries8ticketonly",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8.5269b5c28deb141ea417841024a9cedc4a946508.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8_large.43918a6da85e65b9722b0fcc8c041b52bd7cbaca.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starseries8ticketonly.12b11b9e787e2f6b1c13552a99185a10c1d53bb4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starseries8ticketonly_large.d82478b667b55f391a8b45498a5d09c4602f86c7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -78841,11 +78840,11 @@
 				"item_description": "The 8th season of the legendary SLTV StarSeries will feature best 18 teams from Europe. They will compete for growing prize pool starting at $50,000. $2.50 of every purchase will go to the SLTV StarSeries prize pool. Round-robin online tournament and LAN finals in Kyiv Cybersport Arena.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_starladder8",
+				"image_inventory": "econ\/leagues\/subscriptions_starseries8ticketonly",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8.5269b5c28deb141ea417841024a9cedc4a946508.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starladder8_large.43918a6da85e65b9722b0fcc8c041b52bd7cbaca.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starseries8ticketonly.12b11b9e787e2f6b1c13552a99185a10c1d53bb4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_starseries8ticketonly_large.d82478b667b55f391a8b45498a5d09c4602f86c7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -89196,6 +89195,36 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blessings_of_the_eternal_eclipse_set.2b0226628ad21e152fbfaa1a1a874f05e92cd17f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/sets\/dota_item_blessings_of_the_eternal_eclipse_set_large.5e2170ae9106fc5afecdc6ce696632e270a66528.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "MLG Championship Item Bundle",
+				"defindex": 20331,
+				"item_class": "bundle",
+				"item_type_name": "Premium Tournament Bundle",
+				"item_name": "MLG Championship Item Bundle",
+				"item_description": "MLG's first International Dota 2 competition will feature the world's best teams from Europe, China and North America competing for a growing prize pool starting at $50,000. <br>Included in this bundle:<br>* Scalehound Courier<br>* Stronghold HUD Skin<br>* Tethered Sentinel Ward",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mlgd2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2.5267e96af907f3cd142253d62aecadc5707f911c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mlgd2_large.1872a332a6eb5c3f2770290c8ca55b8e11774cd7.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
