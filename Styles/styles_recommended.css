@@ -1337,6 +1337,10 @@ textarea.comment_input
 	.review_box .header .commentCount {
 		float:right;
 	}
+
+	.review_box .header .commentCount a {
+		text-decoration: none;
+	}
 	
 .review_box .leftcol {
 	width: 184px;
