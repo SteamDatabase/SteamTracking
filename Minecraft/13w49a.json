@@ -1,6 +1,6 @@
 {
   "id": "13w49a",
-  "time": "2013-12-05T15:34:41+01:00",
+  "time": "2013-12-06T12:11:49+01:00",
   "releaseTime": "2013-12-05T15:34:41+01:00",
   "type": "snapshot",
   "minecraftArguments": "--username ${auth_player_name} --version ${version_name} --gameDir ${game_directory} --assetsDir ${assets_root} --assetIndex ${assets_index_name} --uuid ${auth_uuid} --accessToken ${auth_access_token} --userProperties ${user_properties}",
@@ -97,10 +97,10 @@
       }
     },
     {
-      "name": "tv.twitch:twitch:5.10"
+      "name": "tv.twitch:twitch:5.12"
     },
     {
-      "name": "tv.twitch:twitch-platform:5.10",
+      "name": "tv.twitch:twitch-platform:5.12",
       "natives": {
         "linux": "natives-linux",
         "windows": "natives-windows-${arch}",
