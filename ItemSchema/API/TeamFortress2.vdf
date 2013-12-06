@@ -264,6 +264,10 @@
 		"cosmetic_killeater_attribs"
 		{
 			"public_prefab"			"1"
+			"tags"
+			{
+				"is_cosmetic"		"1"	
+			}
 			"attributes"
 			{
 				"kill eater score type"
@@ -701,6 +705,10 @@
 			"capabilities"
 			{
 				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
 			}
 			"item_class"	"tf_weapon_medigun"
 			"craft_class"	"weapon"
@@ -2148,6 +2156,10 @@
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
@@ -3632,6 +3644,10 @@
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
 			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medigun"
 			"item_name"	"#TF_Unique_Achievement_Medigun1"
@@ -3788,6 +3804,7 @@
 			"name"	"The Ubersaw"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve ubersaw"
+			"xifier_class_remap"	"ubersaw"
 		}
 		"38"
 		{
@@ -3813,6 +3830,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"axtinguisher"
 		}
 		"39"
 		{
@@ -4592,6 +4610,7 @@
 			"name"	"The Huntsman"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve huntsman"
+			"xifier_class_remap"	"huntsman"
 		}
 		"57"
 		{
@@ -4817,6 +4836,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"ambassador"
 		}
 		"94"
 		{
@@ -6241,6 +6261,7 @@
 			"name"	"The Buff Banner"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"valve buff_banner"
+			"xifier_class_remap"	"buff_banner"
 		}
 		"130"
 		{
@@ -6959,6 +6980,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"frontier_justice"
 		}
 		"142"
 		{
@@ -8247,6 +8269,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_medal_pickup.wav"
 			"drop_sound"		"ui/item_medal_pickup.wav"
+			"xifier_class_remap"	"wrench"
 		}
 		"170"
 		{
@@ -9032,6 +9055,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"bat"
 		}
 		"191"
 		{
@@ -9203,6 +9227,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"knife"
 		}
 		"195"
 		{
@@ -9350,6 +9375,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"wrench"
 		}
 		"198"
 		{
@@ -9493,6 +9519,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"scattergun"
 		}
 		"201"
 		{
@@ -9551,6 +9578,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"202"
 		{
@@ -9607,6 +9635,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"minigun"
 		}
 		"203"
 		{
@@ -9761,6 +9790,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"206"
 		{
@@ -9821,6 +9851,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"grenade_launcher"
 		}
 		"207"
 		{
@@ -9881,6 +9912,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"208"
 		{
@@ -9940,6 +9972,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"flamethrower"
 		}
 		"209"
 		{
@@ -10029,6 +10062,10 @@
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
 			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"item_type_name"	"#TF_Weapon_Medigun"
@@ -10080,6 +10117,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"xifier_class_remap"	"medigun"
 		}
 		"212"
 		{
@@ -10470,6 +10508,7 @@
 			"name"	"The Holy Mackerel"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"holy_mackerel"
+			"xifier_class_remap"	"holy_mackerel"
 		}
 		"222"
 		{
@@ -14483,6 +14522,7 @@
 				"can_deal_posthumous_damage"	"1"
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_heal_allies"		"1"
 			}
 			"item_type_name"	"#TF_Weapon_Crossbow"
 			"item_name"	"#TF_CrusadersCrossbow"
@@ -14791,6 +14831,10 @@
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
@@ -16671,6 +16715,11 @@
 			}
 			"attributes"
 			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"51" 
+				}
 				"mod soldier buff type"
 				{
 					"attribute_class"	"set_buff_type"
@@ -18836,6 +18885,10 @@
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medigun_Prototype"
@@ -28414,6 +28467,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"655"
 		{
@@ -28640,6 +28694,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"659"
 		{
@@ -28670,6 +28725,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"660"
 		{
@@ -28700,6 +28756,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"bat"
 		}
 		"661"
 		{
@@ -28745,6 +28802,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"662"
 		{
@@ -28775,6 +28833,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"663"
 		{
@@ -28805,6 +28864,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"664"
 		{
@@ -28835,6 +28895,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"665"
 		{
@@ -28865,6 +28926,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"666"
 		{
@@ -29037,6 +29099,7 @@
 					}
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"670"
 		{
@@ -32207,6 +32270,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 
 		"793"
@@ -32232,6 +32296,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"794"
 		{
@@ -32248,6 +32313,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_v.mdl"
+			"xifier_class_remap"	"knife"
 		}
 		"795"
 		{
@@ -32264,6 +32330,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/engineer/fob_h_wrench_v.mdl"
+			"xifier_class_remap"	"wrench"
 		}
 		"796"
 		{
@@ -32288,6 +32355,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"797"
 		{
@@ -32312,6 +32380,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"798"
 		{
@@ -32336,6 +32405,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"799"
 		{
@@ -32360,6 +32430,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"800"
 		{
@@ -32384,6 +32455,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"801"
 		{
@@ -32416,6 +32488,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"802"
 		{
@@ -32448,6 +32521,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"803"
 		{
@@ -32472,6 +32546,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"804"
 		{
@@ -32496,6 +32571,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"805"
 		{
@@ -32528,6 +32604,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"806"
 		{
@@ -32560,6 +32637,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"807"
 		{
@@ -32592,6 +32670,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"808"
 		{
@@ -32624,6 +32703,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"809"
 		{
@@ -32656,6 +32736,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"810"
 		{
@@ -33664,6 +33745,10 @@
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
 			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
 			"item_name"	"#TF_Robot_Sandvich"
@@ -34330,6 +34415,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"882"
 		{
@@ -34362,6 +34448,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"883"
 		{
@@ -34386,6 +34473,7 @@
 			{
 				"skin"	"5"
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"884"
 		{
@@ -34410,6 +34498,7 @@
 			{
 				"skin"	"5"
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"885"
 		{
@@ -34442,6 +34531,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"886"
 		{
@@ -34474,6 +34564,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"887"
 		{
@@ -34506,6 +34597,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"888"
 		{
@@ -34538,6 +34630,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"889"
 		{
@@ -34570,6 +34663,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"890"
 		{
@@ -34602,6 +34696,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"891"
 		{
@@ -34634,6 +34729,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"892"
 		{
@@ -34658,6 +34754,7 @@
 			{
 				"skin"	"7"
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"893"
 		{
@@ -34682,6 +34779,7 @@
 			{
 				"skin"	"7"
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"894"
 		{
@@ -34714,6 +34812,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"895"
 		{
@@ -34746,6 +34845,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"896"
 		{
@@ -34778,6 +34878,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"897"
 		{
@@ -34810,6 +34911,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"898"
 		{
@@ -34842,6 +34944,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"899"
 		{
@@ -34874,6 +34977,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"900"
 		{
@@ -34906,6 +35010,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"901"
 		{
@@ -34930,6 +35035,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"902"
 		{
@@ -34954,6 +35060,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"903"
 		{
@@ -34986,6 +35093,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"904"
 		{
@@ -35018,6 +35126,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"905"
 		{
@@ -35050,6 +35159,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"906"
 		{
@@ -35082,6 +35192,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"907"
 		{
@@ -35114,6 +35225,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"908"
 		{
@@ -35138,6 +35250,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"909"
 		{
@@ -35162,6 +35275,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"910"
 		{
@@ -35178,6 +35292,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_h_knife_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_h_knife_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_h_knife_diamond_v.mdl"
+			"xifier_class_remap"	"knife"
 		}
 		"911"
 		{
@@ -35194,6 +35309,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_h_wrench_diamond"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/engineer/fob_h_wrench_diamond_v.mdl"
+			"xifier_class_remap"	"wrench"
 		}
 		"912"
 		{
@@ -35218,6 +35334,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"913"
 		{
@@ -35242,6 +35359,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"914"
 		{
@@ -35266,6 +35384,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"915"
 		{
@@ -35290,6 +35409,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"916"
 		{
@@ -35314,6 +35434,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"917"
 		{
@@ -36854,6 +36975,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"958"
 		{
@@ -36878,6 +37000,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"959"
 		{
@@ -36894,6 +37017,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/spy/fob_e_knife"
 			"extra_wearable" "models/player/items/mvm_loot/spy/fob_e_knife.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/spy/fob_e_knife_v.mdl"
+			"xifier_class_remap"	"knife"
  		}
 		"960"
 		{
@@ -36910,6 +37034,7 @@
 			"image_inventory"	"backpack/player/items/mvm_loot/engineer/fob_e_wrench"
 			"extra_wearable" "models/player/items/mvm_loot/engineer/fob_e_wrench.mdl"
 			"extra_wearable_vm" "models/player/items/mvm_loot/engineer/fob_e_wrench_v.mdl"
+			"xifier_class_remap"	"wrench"
 		}
 		"961"
 		{
@@ -36934,6 +37059,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"962"
 		{
@@ -36958,6 +37084,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"963"
 		{
@@ -36982,6 +37109,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"964"
 		{
@@ -37006,6 +37134,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"965"
 		{
@@ -37030,6 +37159,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"966"
 		{
@@ -37062,6 +37192,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"sniper_rifle"
 		}
 		"967"
 		{
@@ -37094,6 +37225,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"minigun"
 		}
 		"968"
 		{
@@ -37118,6 +37250,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"knife"
 		}
 		"969"
 		{
@@ -37142,6 +37275,7 @@
 			{
 				"skin"	"3"
 			}
+			"xifier_class_remap"	"wrench"
 		}
 		"970"
 		{
@@ -37174,6 +37308,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"medigun"
 		}
 		"971"
 		{
@@ -37206,6 +37341,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"stickybomb_launcher"
 		}
 		"972"
 		{
@@ -37238,6 +37374,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"flamethrower"
 		}
 		"973"
 		{
@@ -37270,6 +37407,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"scattergun"
 		}
 		"974"
 		{
@@ -37302,6 +37440,7 @@
 					"value"	"1"
 				}
 			}
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"975"
 		{
@@ -38282,6 +38421,10 @@
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
 			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
+			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Medigun_Resist"
 			"item_name"		"#TF_Unique_MediGun_Resist"
@@ -38427,6 +38570,7 @@
 				"sound_melee_hit"	"Weapon_HolyMackerel.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_HolyMackerel.HitWorld"
 			}
+			"xifier_class_remap"	"holy_mackerel"
 		}
 		"1000"
 		{
@@ -38436,6 +38580,7 @@
 			"item_name"			"#TF_Weapon_Axtinguisher_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_fireaxe_pyro/c_fireaxe_pyro_xmas"
 			"model_player"		"models/weapons/c_models/c_fireaxe_pyro/c_fireaxe_pyro_xmas.mdl"
+			"xifier_class_remap"	"axtinguisher"
 		}
 		"1001"
 		{
@@ -38445,6 +38590,7 @@
 			"item_name"			"#TF_Weapon_BuffBanner_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_buffpack/c_buffpack_xmas"
 			"extra_wearable"	"models/weapons/c_models/c_buffpack/c_buffpack_xmas.mdl"
+			"xifier_class_remap"	"buff_banner"
 		}
 		"1002"
 		{
@@ -38471,6 +38617,7 @@
 			"item_name"			"#TF_Weapon_Ubersaw_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_ubersaw/c_ubersaw_xmas"
 			"model_player"		"models/weapons/c_models/c_ubersaw/c_ubersaw_xmas.mdl"
+			"xifier_class_remap"	"ubersaw"
 		}
 		"1004"
 		{
@@ -38480,6 +38627,7 @@
 			"item_name"			"#TF_Weapon_FrontierJustice_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_frontierjustice/c_frontierjustice_xmas"
 			"model_player"		"models/weapons/c_models/c_frontierjustice/c_frontierjustice_xmas.mdl"
+			"xifier_class_remap"	"frontier_justice"
 		}
 		"1005"
 		{
@@ -38490,6 +38638,7 @@
 			"image_inventory"	"backpack/weapons/c_models/c_bow/c_bow_xmas"
 			"model_player"		"models/weapons/c_models/c_bow/c_bow_xmas.mdl"
 			"set_item_remap"	"The Huntsman"
+			"xifier_class_remap"	"huntsman"
 			"attributes"
 			{
 				"override projectile type"
@@ -38507,6 +38656,7 @@
 			"item_name"			"#TF_Weapon_Ambassador_Festive2012"
 			"image_inventory"	"backpack/weapons/c_models/c_ambassador/c_ambassador_xmas"
 			"model_player"	"models/weapons/c_models/c_ambassador/c_ambassador_xmas.mdl"
+			"xifier_class_remap"	"ambassador"
 		}
 		"1007"
 		{
@@ -38515,6 +38665,7 @@
 			"craft_class"	""
 			"baseitem"		"0"
 			"item_quality"	"unique"
+			"xifier_class_remap"	"grenade_launcher"
 			"capabilities"
 			{
 				"can_gift_wrap" "1"
@@ -39738,7 +39889,7 @@
 		{
 			"name"	"MvM GateBot Light Scout"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39782,7 +39933,7 @@
 		{
 			"name"	"MvM GateBot Light Pyro"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39826,7 +39977,7 @@
 		{
 			"name"	"MvM GateBot Light Medic"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39870,7 +40021,7 @@
 		{
 			"name"	"MvM GateBot Light Heavy"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft misc"		
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39914,7 +40065,7 @@
 		{
 			"name"	"MvM GateBot Light Demoman"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39923,7 +40074,7 @@
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
-				"heavy"		"1"
+				"demoman"		"1"
 			}
 			"attributes"
 			{
@@ -39958,7 +40109,7 @@
 		{
 			"name"	"MvM GateBot Light Sniper"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -39967,7 +40118,7 @@
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
-				"heavy"		"1"
+				"sniper"		"1"
 			}
 			"attributes"
 			{
@@ -40002,7 +40153,7 @@
 		{
 			"name"	"MvM GateBot Light Soldier"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -40011,7 +40162,7 @@
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
-				"heavy"		"1"
+				"soldier"		"1"
 			}
 			"attributes"
 			{
@@ -40046,7 +40197,7 @@
 		{
 			"name"	"MvM GateBot Light Spy"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -40055,7 +40206,7 @@
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
-				"heavy"		"1"
+				"spy"		"1"
 			}
 			"attributes"
 			{
@@ -40090,7 +40241,7 @@
 		{
 			"name"	"MvM GateBot Light Engineer"
 			"first_sale_date"	"2011/12/19"
-			"prefab"	"no_craft misc"
+			"prefab"	"no_craft hat"
 			"item_name"	"#TF_GateBot_Light"
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
@@ -40099,7 +40250,7 @@
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
-				"heavy"		"1"
+				"engineer"		"1"
 			}
 			"attributes"
 			{
@@ -60405,6 +60556,40 @@
 			"item_description"	"#TF_Tool_DecoderRing_Desc"
 			"image_inventory"	"backpack/player/items/crafting/key"
 		}
+ 		"5714" 
+		{
+			"name"	"Naughty Winter Crate 2013"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2013/12/05"
+			"tool"
+			{
+				"restriction"	"winter2013_naughty"
+			}
+			"armory_desc" "winter_crate"
+			"item_name"		"#TF_WinterCrate2013_Naughty"
+			"item_description"	"#TF_WinterCrate2013_Naughty_Desc"
+			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_naughty_2013"
+			"attributes"
+			{
+			}
+		}
+		"5715" 
+		{
+			"name"	"Nice Winter Crate 2013"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2013/12/05"
+			"tool"
+			{
+				"restriction"	"winter2013_nice"
+			}
+			"armory_desc" "winter_crate"
+			"item_name"		"#TF_WinterCrate2013_Nice"
+			"item_description"	"#TF_WinterCrate2013_Nice_Desc"
+			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_2013"
+			"attributes"
+			{
+			}
+		}
 		
 		"5999"				
 		{
@@ -60625,8 +60810,32 @@
 			"item_name"	"#TF_StrangePart_MedicsKilled"
 			"item_description"	"#TF_StrangePart_MedicsKilled_Desc"
 		}
-		
-		
+		"6008"
+		{
+			"name"	"Strange Part: Spies Killed"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"16"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_spies_killed"
+			"item_name"	"#TF_StrangePart_SpiesKilled"
+			"item_description"	"#TF_StrangePart_SpiesKilled_Desc"
+		}
 		"6009"
 		{
 			"name"	"Strange Part: Buildings Destroyed"
@@ -61365,6 +61574,214 @@
 			"image_inventory"	"backpack/crafting/strange_part_taunt_kills"
 			"item_name"	"#TF_StrangePart_TauntKills"
 			"item_description"	"#TF_StrangePart_TauntKills_Desc"
+		}
+		"6052"
+		{
+			"name"	"Strange Part: Players Wearing Unusuals"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"78"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_unusuals_killed"
+			"item_name"	"#TF_StrangePart_PlayersWearingUnusualsKills"
+			"item_description"	"#TF_StrangePart_PlayersWearingUnusualsKills_Desc"
+		}
+		"6053"
+		{
+			"name"	"Strange Part: Burning Enemies Killed"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"79"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_burning_enemies_killed"
+			"item_name"	"#TF_StrangePart_BurningEnemiesKilled"
+			"item_description"	"#TF_StrangePart_BurningEnemiesKilled_Desc"
+		}
+		"6054"
+		{
+			"name"	"Strange Part: Killstreaks Ended"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"80"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_killstreaks_ended"
+			"item_name"	"#TF_StrangePart_KillstreaksEnded"
+			"item_description"	"#TF_StrangePart_KillstreaksEnded_Desc"
+		}
+		"6055"
+		{
+			"name"	"Strange Cosmetic Part: Killcam Taunts"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"is_cosmetic"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"81"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_killcam_taunts"
+			"item_name"	"#TF_StrangePart_KillcamTaunts"
+			"item_description"	"#TF_StrangePart_KillcamTaunts_Desc"
+		}
+		"6056"
+		{
+			"name"	"Strange Part: Damage Dealt"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"82"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_damage_dealt"
+			"item_name"	"#TF_StrangePart_DamageDealt"
+			"item_description"	"#TF_StrangePart_DamageDealt_Desc"
+		}
+		"6057"
+		{
+			"name"	"Strange Cosmetic Part: Fires Survived"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"is_cosmetic"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"83"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_fires_survived"
+			"item_name"	"#TF_StrangePart_FiresSurvived"
+			"item_description"	"#TF_StrangePart_FiresSurvived_Desc"
+		}
+		"6058"
+		{
+			"name"	"Strange Part: Ally Healing Done"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_heal_allies"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"84"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_healing_done"
+			"item_name"	"#TF_StrangePart_AllyHealing"
+			"item_description"	"#TF_StrangePart_AllyHealing_Desc"
+		}
+		"6059"
+		{
+			"name"	"Strange Part: Point-Blank Kills"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"85"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_point_blank"
+			"item_name"	"#TF_StrangePart_PointBlankKills"
+			"item_description"	"#TF_StrangePart_PointBlankKills_Desc"
 		}
 		
 
@@ -69246,6 +69663,24 @@
 			"The Hitman's Heatmaker"		"1"
 			"Bonk! Atomic Punch"		"1"
 		}
+		"kill_eater_set_mixed_v"
+		{
+			"Crit-a-Cola"		"1"
+			"The Solemn Vow"		"1"
+			"The Sydney Sleeper"		"1"
+		}
+		"kill_eater_set_mixed_w"
+		{
+			"The Concheror"		"1"
+			"Upgradeable TF_WEAPON_REVOLVER"		"1"
+			"The Eviction Notice"		"1"
+		}
+		"kill_eater_set_mixed_x"
+		{
+			"The Rescue Ranger"		"1"
+			"Upgradeable TF_WEAPON_GRENADELAUNCHER"		"1"
+			"The Scorch Shot"		"1"
+		}
 		"supply_crate_loot_list_1"
 		{
 			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_NonStrange_Weapons"
@@ -69738,6 +70173,36 @@
 			"The Buccaneer's Bicorne"		"1"
 			"The Soviet Gentleman"		"1"
 		}
+		"supply_crate_loot_list_75"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Strange_Weapons"
+			"kill_eater_set_mixed_v"		"1"
+			"Strange Part: Players Wearing Unusuals"		"1"
+			"Strange Part: Spies Killed"		"1"
+			"Strange Part: Burning Enemies Killed"		"1"
+			"Defiant Spartan"		"1"
+			"The Apparatchik's Apparel"		"1"
+		}
+		"supply_crate_loot_list_76"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Strange_Weapons"
+			"kill_eater_set_mixed_w"		"1"
+			"Strange Part: Killstreaks Ended"		"1"
+			"Strange Cosmetic Part: Killcam Taunts"		"1"
+			"Strange Part: Damage Dealt"		"1"
+			"The Front Runner"		"1"
+			"The Cold Killer"		"1"
+		}
+		"supply_crate_loot_list_77"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Strange_Weapons"
+			"kill_eater_set_mixed_x"		"1"
+			"Strange Cosmetic Part: Fires Survived"		"1"
+			"Strange Part: Ally Healing Done"		"1"
+			"Strange Part: Point-Blank Kills"		"1"
+			"The Builder's Blueprints"		"1"
+			"Blighted Beak"		"1"
+		}
 		"fall_2013_crate_contents_acorns"
 		{
 			"The Viking Braider"		"1"
@@ -69853,6 +70318,9 @@
 		"fall_2013_crate_list_acorns"	"72"	
 		"fall_2013_crate_list_gourd"	"73"	
 		"supply_crate_loot_list_halloween_2013"	"74"	
+		"supply_crate_loot_list_75"		"75"	
+		"supply_crate_loot_list_76"		"76"	
+		"supply_crate_loot_list_77"		"77"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -79365,7 +79833,10 @@
 		{
 			"type_name"	"KillEaterEventType_PyrosKilled"
 		}
-
+		"16"
+		{
+			"type_name"	"KillEaterEventType_SpiesKilled"
+		}
 		"17"
 		{
 			"type_name"	"KillEaterEventType_EngineersKilled"
@@ -79529,7 +80000,6 @@
 		"64" 
 		{
 			"type_name"					"KillEaterEvent_PointsScored"
-			"allow_bot_victims"			"1"		
 			"level_data"				"KillEater_PointsScored"
 		}
 		"65"
@@ -79554,10 +80024,38 @@
 		{
 			"type_name"			"KillEaterEvent_TauntKill"
 		}
-		
-		
-		
-		
+		"78"
+		{
+			"type_name"			"KillEaterEvent_PlayerWearingUnusualKill"
+		}
+		"79"
+		{
+			"type_name"			"KillEaterEvent_BurningPlayerKill"
+		}
+		"80"
+		{
+			"type_name"			"KillEaterEvent_KillstreaksEnded"
+		}
+		"81"
+		{
+			"type_name"			"KillEaterEvent_KillcamTaunts"
+		}
+		"82"
+		{
+			"type_name"			"KillEaterEvent_DamageDealt"
+		}
+		"83"
+		{
+			"type_name"			"KillEaterEvent_FiresSurvived"
+		}
+		"84"
+		{
+			"type_name"			"KillEaterEvent_AllyHealingDone"
+		}
+		"85"
+		{
+			"type_name"			"KillEaterEvent_PointBlankKill"
+		}
 
 
 	}
