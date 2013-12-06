@@ -977,15 +977,22 @@ var Countdown = Class.create( {
 	elClock: null,
 	nEndTime: null,
 	bEnded: false,
+	cbkExpired: null,
 
 	initialize: function( elClock, nEndTimeLocalTime )
 	{
 		this.elClock = elClock;
 		this.nEndTime = nEndTimeLocalTime;
 		this.bEnded = false;
+		this.cbkExpired = null;
 
 		this.refreshClock();
 		CCountdownManager.registerCountdown( this );
+	},
+
+	setCallback: function( cbkExpired )
+	{
+		this.cbkExpired = cbkExpired;
 	},
 	
 	refreshClock: function()
@@ -1007,6 +1014,11 @@ var Countdown = Class.create( {
 		var remainMinutes = Math.floor( ( secsRemaining % 3600 ) / 60 );
 		var remainSeconds = secsRemaining % 60;
 
+		if ( this.cbkExpired && secsRemaining < 1 )
+		{
+			this.cbkExpired();
+			this.cbkExpired = null;
+		}
 
 		this.render( remainDays, remainHours, remainMinutes, remainSeconds );
 	},
