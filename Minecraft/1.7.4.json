@@ -1,9 +1,11 @@
 {
   "id": "1.7.4",
-  "time": "2013-12-09T13:28:10+01:00",
+  "time": "2013-12-10T10:56:07+01:00",
   "releaseTime": "2013-12-09T13:28:10+01:00",
   "type": "release",
   "minecraftArguments": "--username ${auth_player_name} --version ${version_name} --gameDir ${game_directory} --assetsDir ${assets_root} --assetIndex ${assets_index_name} --uuid ${auth_uuid} --accessToken ${auth_access_token} --userProperties ${user_properties}",
+  "minimumLauncherVersion": 12,
+  "assets": "1.7.3",
   "libraries": [
     {
       "name": "java3d:vecmath:1.3.1"
@@ -141,7 +143,5 @@
       }
     }
   ],
-  "mainClass": "net.minecraft.client.main.Main",
-  "minimumLauncherVersion": 12,
-  "assets": "1.7.3"
+  "mainClass": "net.minecraft.client.main.Main"
 }
