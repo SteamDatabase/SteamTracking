@@ -343,6 +343,31 @@
 	background-origin: content-box;
 }
 
+.redeem_wallet_background_DE
+{
+	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_de.jpg');
+}
+
+.redeem_wallet_background_ES
+{
+	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_es.jpg');
+}
+
+.redeem_wallet_background_FR
+{
+	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_fr.jpg');
+}
+
+.redeem_wallet_background_IE
+{
+	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_ie.jpg');
+}
+
+.redeem_wallet_background_PT
+{
+	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_pt.jpg');
+}
+
 .redeem_wallet_background_eur
 {
 	background-image:url('http://cdn.store.steampowered.com/public/images/account/redeem_code_background_eur.jpg');
