@@ -276,25 +276,3 @@ a.trigger, a.activetrigger {
 .dropcontainer{
 	position:relative;
 }
-
-/* developer response */
-.review_developer_response
-{
-	padding: 10px 10px 10px 11px;
-	padding-left: 50px;
-	margin-top: 25px;
-	border-top: 1px solid #515152;
-	font-size: 13px;
-	color: #828282;
-}
-
-.review_developer_response_avatar
-{
-	position: absolute;
-	left: 0px;
-}
-
-.review_developer_response_title
-{
-	padding-bottom: 5px;
-}
