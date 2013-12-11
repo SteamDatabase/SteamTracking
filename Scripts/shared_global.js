@@ -282,6 +282,9 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 
 	$Dialog.append( $J('<div/>', {'class': 'newmodal_content_border' } ).append( $Content ) );
 
+	if ( rgModalParams && rgModalParams.bExplicitDismissalOnly )
+		$CloseButton.hide();
+
 	var Modal = new CModal( $Dialog, rgModalParams );
 	if ( fnOnCancel )
 	{

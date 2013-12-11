@@ -149,6 +149,28 @@ select {
 	font-size: 12px;
 }
 
+.review_developer_response
+{
+	background: rgba(27,27,27,.36);
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	padding-left: 58px;
+	margin-top: 50px;
+	border: 1px solid #515152;
+	font-size: 13px;
+}
+
+.review_developer_response_avatar
+{
+	position: absolute;
+	left: 25px;
+}
+
+.review_developer_response_title
+{
+	padding-bottom: 5px;
+}
+
 .btn_grey_grey.btn_ico_thumbs_down {
 	padding-left: 20px;
 }

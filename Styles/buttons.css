@@ -341,23 +341,21 @@ btn_border_2px > span {
 }
 
 
-.ico18.thumb_down {
-	background-position: -18px 0px;;
-}
+	.ico18.thumb_down {
+		background-position: -18px 0px;	}
 
-.btn_active .ico18.thumb_down{
-	background-position: -54px 0px;;
-}
+	
+			.btn_active .ico18.thumb_down, .active .ico18.thumb_down {
+			background-position: -54px 0px;		}
+		
+	.ico18.thumb_up {
+		background-position: 0px 0px;	}
 
-.ico18.thumb_up {
-	background-position: 0px 0px;;
-}
-
-.btn_active .ico18.thumb_up{
-	background-position: -36px 0px;;
-}
-
-/* 16x16 (NOTE: old icons also support .active, this is legacy and should not be added to new icons */
+	
+			.btn_active .ico18.thumb_up, .active .ico18.thumb_up {
+			background-position: -36px 0px;		}
+		
+/* 16x16 */
 .ico16{
 	display: inline-block;
 	width: 16px;
@@ -366,114 +364,40 @@ btn_border_2px > span {
 	vertical-align: text-top;
 }
 
-.ico16.comment {
-	background-position: 0px 0px;}
 
-.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.comment{
-	background-position: -16px 0px;}
+	.ico16.comment {
+		background-position: 0px 0px;	}
 
-.ico16.thumb_down {
-	background-position: -32px 0px;}
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.comment {
+			background-position: -16px 0px;		}
+	
+		
+	.ico16.thumb_down {
+		background-position: -32px 0px;	}
 
-.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_down{
-	background-position: -48px 0px;}
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_down {
+			background-position: -48px 0px;		}
+	
+			.btn_active .ico16.thumb_down, .active .ico16.thumb_down {
+			background-position: -64px 0px;		}
+		
+	.ico16.thumb_up {
+		background-position: -80px 0px;	}
 
-.btn_active .ico16.thumb_down, .active .ico16.thumb_down{
-	background-position: -64px 0px;;
-}
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_up {
+			background-position: -112px 0px;		}
+	
+			.btn_active .ico16.thumb_up, .active .ico16.thumb_up {
+			background-position: -96px 0px;		}
+		
+	.ico16.arrow_down {
+		background-position: -48px -16px;	}
 
-.ico16.thumb_up {
-	background-position: -80px 0px;}
-
-.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_up{
-	background-position: -112px 0px;}
-
-.btn_active .ico16.thumb_up, .active .ico16.thumb_up{
-	background-position: -96px 0px; ;
-}
-
-.ico16.arrow_down {
-	background-position: -48px -16px;}
-
-.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.arrow_down{
-	background-position: -32px -16px;}
-
-/* DON'T USE ANY OF THESE! If you find code referencing them, nuke from orbit and use icon classes above */
-
-.btn_grey_grey.btn_medium.btn_comments, .btn_grey_black.btn_medium.btn_comments {
-	background-position: 9px 7px;
-}
-
-.btn_grey_grey.btn_comments span, .btn_grey_black.btn_comments span {
-	padding-left: 2px  !important;
-}
-
-.btn_ico_thumbs_up {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup.png' );
-	background-repeat: no-repeat;
-	background-position: 5px center;
-	padding-left: 20px !important;
-	height: 20px;
-}
-
-.btn_ico_thumbs_up.no_text {
-	padding-left: 15px  !important;
-}
-
-.btn_ico_thumbs_up:not(.btn_disabled):not(.btn_active):not(.active):hover {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_hover.png' );
-}
-
-	.btn_ico_thumbs_up.active {
-		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_rateup_green.png' );
-	}
-
-		.btn_ico_thumbs_up.active:not(.btn_disabled):not(.btn_active):not(.active):hover {
-			color: #828282;
-			cursor: default;
-			background-color: #2c2c2c;
-		}
-
-.btn_ico_thumbs_down {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown.png' );
-	background-repeat: no-repeat;
-	background-position: 5px center;
-	padding-left: 15px  !important;
-	height: 20px;
-}
-	.btn_ico_thumbs_down span:after {
-		content: ' ';
-	}
-
-	.btn_ico_thumbs_down:not(.btn_disabled):not(.btn_active):not(.active):hover {
-		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_hover.png' );
-	}
-
-	.btn_ico_thumbs_down.active {
-		background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_ratedown_red.png' );
-	}
-
-		.btn_ico_thumbs_down.active:not(.btn_disabled):not(.btn_active):not(.active):hover {
-			color: #828282;
-			cursor: default;
-			background-color: #2c2c2c;
-		}
-
-	.btn_ico_thumbs_down.has_text {
-		padding-left: 20px  !important;
-	}
-
-.btn_ico_comments {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_comment.png' );
-	background-repeat: no-repeat;
-	background-position: 5px center;
-	padding-left: 20px  !important;
-}
-
-.btn_ico_comments:not(.btn_disabled):not(.btn_active):not(.active):hover {
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/buttons/icon_btn_comment_hover.png' );
-}
-
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.arrow_down {
+			background-position: -32px -16px;		}
+	
+		
+/* Arrows are the only icons I've not fully replaced yet. If you need to use them, please convert to the new icon code */
 
 .btn_details_arrow
 {

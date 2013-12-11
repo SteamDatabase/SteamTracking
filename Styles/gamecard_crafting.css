@@ -122,10 +122,6 @@
 	width: 900px;
 }
 
-.newmodal.badge_craft_modal .newmodal_close {
-	display: none;
-}
-
 .newmodal.badge_craft_modal .newmodal_content {
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/badge_craft_bg.jpg');
 	background-position: center top;
