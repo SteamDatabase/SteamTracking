@@ -468,6 +468,8 @@ a.commentthread_allcommentslink:hover {
 {
 	vertical-align: middle;
 	margin-left: 5px;
+	width: 59px;
+	height: 16px;
 }
 
 .commentthread_comment_author {

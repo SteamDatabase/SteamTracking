@@ -415,6 +415,8 @@ a.large_title:hover {
 
 .member_sectionheader img {
 	vertical-align: middle;
+	width: 12px;
+	height: 12px;
 }
 
 

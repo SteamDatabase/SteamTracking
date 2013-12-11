@@ -292,7 +292,6 @@ function OpenBooster( appid, itemid )
 	$Content.append( $CardArea, $PostUnpackActions );
 
 	var Modal = ShowDialog( 'Unpacking booster pack', $Content, { bExplicitDismissalOnly: true } );
-	Modal.GetContent().find('.newmodal_close').hide();
 
 	$BtnClose.click( function() { Modal.Dismiss(); } );
 

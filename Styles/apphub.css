@@ -1383,7 +1383,7 @@ a.apphub_more_friends_who_play:hover
 	.apphub_UserReviewCardContent .vote_header .title {
 		font-size: 16px;
 		color: #d6d7d8;
-font-family: 'Motiva Sans', arial, tahoma;
+		font-family: 'Motiva Sans', arial, tahoma;
 		padding: 5px 0 0 0;
 	}
 
@@ -1400,16 +1400,23 @@ font-family: 'Motiva Sans', arial, tahoma;
 
 .apphub_UserReviewCardContent .apphub_CardTextContent {
 	line-height: 20px;
-font-size: 13px;
-color: #cdcac1;
-font-family: 'Motiva Sans', arial, tahoma;
+	font-size: 13px;
+	color: #cdcac1;
+	font-family: 'Motiva Sans', arial, tahoma;
 }
 
 .UserReviewCardContent_Footer .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
-color: #898a8c;
-font-size: 12px;
+	color: #898a8c;
+	font-size: 12px;
+}
+
+.UserReviewCardContent_Footer .developer_response
+{
+	margin-top: -10px;
+	padding-bottom: 5px;
+	color: #7cb8e4;
 }
 
 .btn_ico_thumbs_down.has_text {

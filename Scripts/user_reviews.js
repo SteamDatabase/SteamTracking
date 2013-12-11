@@ -190,6 +190,40 @@ function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
 
 }
 
+function UserReview_SetDeveloperResponse( recommendationID, recommendation, baseURL, callback )
+{
+	var dialog = ShowPromptWithTextAreaDialog( 'Write Official Developer Response', recommendation.developer_response, null, null, 8000 );
+	var explanation = $J('<div/>', { 'class': 'user_review_report_dialog_explanation' } );
+	explanation.html( 'You can choose to respond to this review in an official capacity. This response will be visible to anyone who can see this review and will be marked as an official response from the developer.' );
+
+	var textArea = dialog.m_$Content.find( 'textarea' );
+	textArea.addClass( "user_review_report_dialog_text_area" );
+	textArea.parent().before( explanation );
+
+	dialog.done( function( note ) {
+		new Ajax.Request( baseURL + '/userreviews/setdeveloperresponse/' + recommendationID,
+			{
+				method: 'POST',
+				parameters: {
+					'developer_response' : note,
+					'sessionid' : g_sessionID
+				},
+				onSuccess: function( transport )
+				{
+					var results = transport.responseJSON;
+					if ( results.success == 1 )
+					{
+						callback( results );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+					}
+				}
+			} );
+	} );
+}
+
 function UserReview_ShowReportsDialog( recommendationID, baseURL )
 {
 	new Ajax.Request( baseURL + '/userreviews/ajaxgetreports/' + recommendationID,
