@@ -3,7 +3,6 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/mainmenu_storebackground.css" />
 		<include src="file://{resources}/styles/store/store.css" />
-		<include src="file://{resources}/styles/store/holidaysale.css" />
 	</styles>
 	
 	<StorePanel defaultfocus="FeaturedCapsules" hittest="false">

@@ -584,7 +584,7 @@ StorePanel:descendantfocus #FeaturedPlatform
 	opacity: 0.0;
 	flow-children: right;
 	width: 616px;
-	margin-top: 8px;
+	margin: 0px 10px;
 
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;

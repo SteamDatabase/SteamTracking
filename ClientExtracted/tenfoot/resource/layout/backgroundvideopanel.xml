@@ -2,20 +2,10 @@
 	<styles>		
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/backgroundvideopanel.css" />
-		<include src="file://{resources}/styles/store/holidaysale.css" />
 	</styles>
 	
 	<BackgroundVideoPanel>
-		<Panel id="HolidayBG"></Panel>
-		<Panel id="BackgroundGlobalPanel">
-			<Panel id="BackgroundGlobalL"></Panel>
-			<Panel id="PPWrapper">
-				<Panel id="PPath"></Panel>
-			</Panel>
-			<Panel id="HPWrapper">
-				<Panel id="HObject"></Panel>
-			</Panel>
-		</Panel>
+		<EventBackground id="EventBackground" />
 		<Panel id="BackgroundMovie"></Panel>
 	</BackgroundVideoPanel>
 </root>
