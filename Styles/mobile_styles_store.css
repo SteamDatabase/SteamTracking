@@ -14,6 +14,139 @@ div[data-role='page'] {
 ------------------------- STOREFRONT ---------------------------
 */
 
+.platformFilter {
+	overflow: hidden;
+	margin: 5px 0px 5px 12px;
+	height: 32px;
+}
+
+.filterHorizontalSeparator {
+	height: 1px;
+	background-color: #292929;
+	margin: 5px 0px;
+}
+
+.filterVerticalSeparator {
+	display: inline-block;
+	height: 30px;
+	width: 1px;
+	margin-right: 6px;
+	background-color: #292929;
+}
+
+.platformFilterButton, .showDLCButton {
+	display: inline-block;
+	height: 30px;
+	margin-right: 6px;
+	overflow: hidden;
+	vertical-align: top;
+
+	border-radius: 2px;
+	background: -moz-linear-gradient(top, #313131 5%, #202020 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#313131), color-stop(95%,#202020));background: -webkit-linear-gradient(top, #313131 5%,#202020 95%);background: -o-linear-gradient(top, #313131 5%,#202020 95%);background: -ms-linear-gradient(top, #313131 5%,#202020 95%);background: linear-gradient(to bottom, #313131 5%,#202020 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#202020',GradientType=0 );	box-shadow: none;
+	border: 1px solid #2C2C2C;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.platformFilterButtonDown, .showDLCButtonDown, .platformFilterButtonDown:active, .showDLCButtonDown:active {
+	background: none;
+	background-color: #162f54;
+	box-shadow: inset 0 0 5px #101010;
+	border: 1px solid #1b2636;
+}
+
+.filterButtonText {
+	padding: 7px 10px;
+	text-transform: uppercase;
+	color: #4d74c8;
+}
+
+.filterButtonIcon {
+	margin: 6px 10px;
+}
+
+.horizontalAppScroller {
+	/* For some reason this needs to be several pixels taller than its contents in order to disallow vertical scrolling on iOS */
+	height: 150px;
+	margin: 5px 12px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.horizontalAppScroller::-webkit-scrollbar {
+	display: none;
+}
+
+.horizontalScrollerSeeAll {
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	bottom: 5px;
+	right: 12px;
+}
+
+.horizontalScrollerAppContainer {
+	margin-right: 5px;
+	width: 225px;
+}
+
+.standardAppContainer {
+	display: inline-block;
+	max-height: 138px;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.standardAppContainer.active .standardAppCapsuleIcon, .largeCap.active .largeCapImg {
+	filter: brightness(120%);
+	-webkit-filter: brightness(120%);
+}
+
+.largeCap.active, .standardAppContainer.active {
+	background-color: #202540;
+}
+
+.standardAppCapsuleIcon {
+	display: block;
+	width: 225px;
+	max-height: 105px;
+}
+
+.standardAppCapsuleLabel {
+	display: block;
+	height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.standardAppCapsulePriceBlock {
+	padding-top: 1px;
+	height: 14px;
+	font-weight: normal;
+}
+
+.appCapsuleGrid {
+	margin: 5px;
+}
+
+.gridAppContainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 230px;
+}
+
 .largeCapFrame {
 	position: relative;
 	margin-top: 10px;
@@ -23,8 +156,6 @@ div[data-role='page'] {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	border: 1px solid #272E2C;
-	border-radius: 3px;
 }
 
 .largeCapScroller {
@@ -38,7 +169,6 @@ div[data-role='page'] {
 	bottom: 0px;
 	height: 15px;
 	width: 100%;
-	background-color: #202020;
 }
 
 .largeCapProgress {
@@ -51,129 +181,65 @@ div[data-role='page'] {
 	text-shadow: 0px 1px 1px #000000;
 }
 
+.largeCapProgressHighlight {
+	color: #57608D;
+}
+
 .largeCap {
-	display: block;
+	display: inline-block;
 	position: relative;
-	float: left;
 	overflow: hidden;
+
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .largeCapImg {
-	padding-top: 15px;
 	display: inline-block;
 	/* width specified programmatically based on .largeCapFrame width */
 	height: auto;
 }
 
-.largeCapTopOverlay {
+.largeCapTitle {
 	position: absolute;
-	display: inline;
-	padding: 0px 3px 0px 3px;
-	top: 0px;
-	left: 0px;
-	width: 100%;
 	height: 15px;
-	background-color: #202020;
+	left: 2px;
+	bottom: 28px;
+
+	font-size: 13px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .largeCapPlatformImg {
-	display: inline-block;
-	float: left;
-	margin: 2px 2px 1px 0px;
+	position: absolute;
+	right: 2px;
+	bottom: 7px;
 }
 
 .largeCapDescription {
-	display: inline-block;
-	float: left;
-	margin: 1px 2px 1px 1px;
-	max-width: 80%;
-	overflow: hidden;
+	position: absolute;
+	left: 2px;
+	bottom: 0px;
+	height: 14px;
+
+	font-size: 11px;
+	color: #A0A0A0;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	font-size: 10px;
 }
 
 .largeCapPrice {
-	display: inline-block;
-	float: right;
-	margin: 1px 7px 1px 0px;
+	position: absolute;
+	left: 2px;
+	bottom: 14px;
+	padding-top: 1px;
+	height: 14px;
+
+	font-size: 11px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	font-size: 10px;
-}
-
-.largeCapLeftArrow {
-	position: absolute;
-	top: 40%;
-	left: 5px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/arrow_blue_left.gif );
-	background-size: 12px 21px;
-	width: 12px;
-	height: 21px;
-	background-color: #404040;
-	opacity: 0.8;
-}
-
-.largeCapRightArrow {
-	position: absolute;
-	top: 40%;
-	right: 5px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/arrow_blue_right.gif );
-	background-size: 12px 21px;
-	width: 12px;
-	height: 21px;
-	background-color: #404040;
-	opacity: 0.8;
-}
-
-a img.largeCapLeftCol {
-	margin: 10px 0px 10px 10%;
-	float: left;
-	width: 35%;
-	height: auto;
-	display: inline-block;
-	border: 2px solid #D0D0D0;
-	border-radius: 3px;
-}
-
-a img.largeCapRightCol {
-	margin: 10px 10% 10px 0px;
-	float: right;
-	width: 35%;
-	height: auto;
-	display: inline-block;
-	border: 2px solid #D0D0D0;
-	border-radius: 3px;
-}
-
-.smallCapItemBlockIcon {
-	display: block;
-	float: left;
-	margin: 5px;
-	margin-right: 7px;
-	width: 87px;
-	height: 34px;
-}
-
-.smallCapIconHolder {
-	width: 87px;
-	height: 34px;
-	position: relative;
-}
-
-div.smallCapIcon {
-	width: 85px;
-	height: 32px;
-	top: 1px;
-	left: 1px;
-	position: absolute;
-}
-
-div.smallCapIcon img {
-	border-radius: 3px;
-	width: 85px;
-	height: 32px;
 }
 
 .spacerBlock {
@@ -211,7 +277,6 @@ div.smallCapIcon img {
 }
 
 .price, .match_price {
-	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
 	font-size: 11px;
 	color: #b0aeac;
 }
@@ -232,13 +297,11 @@ div.smallCapIcon img {
 }
 
 .discount_original_price {
-	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
 	color: #626366;
 	text-decoration: line-through;
 }
 
 .discount_final_price {
-	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
 	color: #d6d7d8;
 }
 
@@ -276,7 +339,6 @@ div.smallCapIcon img {
 
 .discount_block_inline {
 	display: inline;
-	font-family:tahoma, helvetica, arial, trebuchet ms, sans-serif;
 	padding: 1px 0px;
 }
 
@@ -343,7 +405,7 @@ div.smallCapIcon img {
 .game_area_purchase_game {
 	position: relative;
 
-	margin: 8px 8px 28px 8px;
+	margin: 0px 8px 28px 8px;
 
 	border: 1px solid #4d4b49;
 	background-color: #262626;
@@ -362,7 +424,38 @@ div.smallCapIcon img {
 	margin-bottom: 28px;
 	margin-left: 10px;
 	margin-right: 10px;
+	margin-top: 10px;
 }
+
+.game_area_already_owned {
+	height: 30px;
+	position: relative;
+
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
+	background-repeat: repeat-x;
+	background-position: top;
+
+	text-align: center;
+	margin-bottom: 10px;
+
+	line-height: 30px;
+	font-size: 14px;
+	color: #d6d7d8;
+}
+
+.game_area_purchase_game_wrapper .game_area_comingsoon {
+	background-color: #334817;
+	border: 1px solid #4c6b22;
+	height: 20px;
+	padding-left: 5px;
+	padding-top: 4px;
+	position: relative;
+	margin: 0px 8px 0px 8px;
+
+	font-size: 12px;
+	color: #8bc53f;
+}
+
 
 .game_area_purchase_game_wrapper .game_area_purchase_game {
 	margin-bottom: 0px;
@@ -455,19 +548,19 @@ div.smallCapIcon img {
 	height: 34px;
 	top: 0px;
 
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
 }
 
 .btn_addtocart .btn_addtocart_left {
@@ -488,11 +581,11 @@ div.smallCapIcon img {
 	color: #ffffff;
 	text-align: center;
 
-    padding: 0px 11px;
-    line-height: 34px;
+	padding: 0px 11px;
+	line-height: 34px;
 
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
-    background-repeat: repeat-x;
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
+	background-repeat: repeat-x;
 
 	text-transform: uppercase;
 
@@ -502,15 +595,15 @@ div.smallCapIcon img {
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
-    background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -675,6 +768,18 @@ div.smallCapIcon img {
 	position: relative;
 	height: 77px;
 	line-height: 16px;
+}
+
+.accountPaymentsBlock {
+	margin: 0px 12px;
+}
+
+.walletBalance {
+	font-size: 22px;
+}
+
+.accountPaymentsBlockButton {
+	margin: 5px 0px;
 }
 
 .youraccount_item.even {
@@ -951,64 +1056,64 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 }
 
 .cart_no_clientconn_area {
-    display: block;
-    overflow: hidden;
-    background-image: url( http://cdn.store.steampowered.com/public/images/mobile/Icon_DownloadsBar.png );
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #D0D0D0;
-    border-radius: 9px;
+	display: block;
+	overflow: hidden;
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/Icon_DownloadsBar.png );
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #D0D0D0;
+	border-radius: 9px;
 }
 
 .cart_no_clientconn_icon {
-    float: left;
-    vertical-align: middle;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 16px;
-    margin-right: 8px;
+	float: left;
+	vertical-align: middle;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-left: 16px;
+	margin-right: 8px;
 }
 
 .cart_no_clientconn_block {
-    vertical-align: middle;
-    margin: 8px;
-    margin-left: 96px;
-    white-space: normal;
-    text-decoration: none;
-    font-size: 16px;
+	vertical-align: middle;
+	margin: 8px;
+	margin-left: 96px;
+	white-space: normal;
+	text-decoration: none;
+	font-size: 16px;
 }
 
 .cart_clientconn_area {
-    display: block;
-    overflow: hidden;
+	display: block;
+	overflow: hidden;
 	background-color: #8BC53F;
 	text-shadow: 1px 1px 1px #006000;
 }
 
 .cart_clientconn_icon {
-    float: left;
-    vertical-align: middle;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
+	float: left;
+	vertical-align: middle;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-left: 16px;
+	margin-right: 16px;
 }
 
 .cart_clientconn_block {
-    vertical-align: middle;
-    margin: 8px;
-    white-space: normal;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
+	vertical-align: middle;
+	margin: 8px;
+	white-space: normal;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
 	color:  white;
 }
 
 .cart_pricechanged_tag {
-    color: #ff9900;
-    font-weight: bold;
-    font-size: 14px;
-    vertical-align: middle;
+	color: #ff9900;
+	font-weight: bold;
+	font-size: 14px;
+	vertical-align: middle;
 }
 
 /* COUPONS */
@@ -1721,70 +1826,62 @@ a.trigger, a.activetrigger {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 10px;
 }
 
 #snippet p {
-	margin: 10px;
+	margin: 10px 12px;
 }
 
-.galleryScreenshot {
+.genreReleaseDate {
+	margin-left: 12px;
+}
+
+.appSummaryButtons {
+	margin: 8px 0px;
+	text-align: center;
+}
+
+.appScreenshotCarousel {
+	height: 125px;
+	margin: 5px 12px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+}
+
+.appScreenshotCarousel::-webkit-scrollbar {
+	display: none;
+}
+
+.appScreenshotContainer {
 	display: inline-block;
-	width: 30%;
-	vertical-align: top;
-	margin: 1%;
+	max-height: 113px;
+	width: auto;
+	margin-right: 5px;
+
+	user-select: none;
+	-webkit-user-select: none;
 }
 
-.galleryScreenshot img {
-	width: 100%;
-	height: auto;
-	border: 1px solid #4D4B49;
+.appScreenshotImg {
+	display: block;
+	width: auto;
+	max-height: 113px;
 }
 
 .singleScreenshot {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	/* height specified programmatically */
-	overflow-x: hidden;
-	overflow-y: visible;
-	vertical-align: middle;
+	position: fixed;
+	/* width & height set programmatically */
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+	background-color: #000000;
 }
 
-.screenshotScroller {
-	position: absolute;
-	/* width & left specified programmatically */
-	overflow-x: visible;
-}
-
-.screenshotProgressFrame {
-	position: absolute;
-	bottom: 0px;
-	height: 20px;
-	width: 100%;
-	background-color: #404040;
-	opacity: 0.6;
-}
-
-.screenshotProgress {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	font-size: 15px;
-	text-align: center;
-	color: #D0D0D0;
-	text-shadow: 0px 1px 1px #000000;
-}
-
-.screenshotHolder {
-	display: block;
-	float: left;
-}
-
-.screenshotImg {
-	display: inline-block;
-	/* width specified programmatically based on .largeCapFrame width */
-	height: auto;
+.singleScreenshotImg {
+	/* width & height set programmatically */
+	max-width: 100%;
 }
 
 .gameAreaDescription, .clientDescription {
@@ -1818,12 +1915,17 @@ a.trigger, a.activetrigger {
 
 .gameAreaDescription ul {
 	margin-top: 5px;
-	margin-left: 16px;
-	list-style-type: square;
+	list-style-type: none;
 }
 
 .gameAreaDescription ul li {
 	margin-bottom: 5px;
+}
+
+.gameAreaDescription li {
+	margin-top: 5px;
+	margin-left: 5px;
+	list-style-type: none;
 }
 
 .gameAreaDescription img {
@@ -1832,51 +1934,129 @@ a.trigger, a.activetrigger {
 	height: auto;
 }
 
+
+.gameDetailsArea {
+	/* margin: 10px; */
+	background-image: url( http://cdn.store.steampowered.com/public/shared/images/mobile/grid-pattern.png );
+	background-repeat: repeat;
+	background-size: 15px 15px;
+	margin-top: 4px;
+}
+
+.gameDetailsArea p {
+	margin-bottom: 10px;
+}
+
+.gameDetailsArea h1, .gameDetailsArea h2, .gameDetailsArea h3, .gameDetailsArea h4, .gameDetailsArea h5, .gameDetailsArea h6 {
+	font-weight: bold;
+	font-size: 18px;
+
+	color: #FFFFFF;
+
+	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-repeat: no-repeat;
+	background-position: bottom left;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	clear: both;
+}
+
+.gameDetailsArea strong {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.gameDetailsArea ul {
+	margin-top: 5px;
+	margin-left: 16px;
+	list-style-type: square;
+}
+
+.gameDetailsArea ul li {
+	margin-bottom: 5px;
+}
+
+.gameDetailsArea img {
+	margin-top: 10px;
+	max-width: 100%;
+	height: auto;
+}
+
+span.platform_img {
+	display: inline-block;
+	height: 17.5px;
+	background-repeat: no-repeat;
+}
+
+span.platform_img.steamplay {
+	background-size: 91px 19px;
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_steamplay.png' );
+	width: 91px;
+}
+
+span.platform_img.win {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_win.png' );
+	background-size: 17.5px 19px;
+	width: 19px;
+}
+
+span.platform_img.mac {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_mac.png' );
+	background-size: 17.5px 19px;
+	width: 19px;
+}
+
+span.platform_img.linux {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_linux.png' );
+	background-size: 17.5px 19px;
+	width: 19px;
+}
+
+img.platform_small, .platform_img {
+	vertical-align: middle;
+	margin-left: 2px;
+}
+
 .platformImgMac {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_mac.png );
 	background-repeat: no-repeat;
-	background-size: 22px 22px;
-	width: 22px;
-	height: 22px;
+	background-size: 17.5px 19px;
+	width: 17.5px;
+	height: 19px;
 	vertical-align: middle;
 }
 
 .platformImgWin {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_win.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_win.png );
 	background-repeat: no-repeat;
-	background-size: 22px 22px;
-	width: 22px;
-	height: 22px;
+	background-size: 17.5px 19px;
+	width: 17.5px;
+	height: 19px;
 	vertical-align: middle;
 }
 
-.platformImgMacSmall {
+.platformImgLinux {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_mac.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_linux.png );
 	background-repeat: no-repeat;
-	background-size: 11px 11px;
-	width: 11px;
-	height: 11px;
-}
-
-.platformImgWinSmall {
-	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_win.png );
-	background-repeat: no-repeat;
-	background-size: 11px 11px;
-	width: 11px;
-	height: 11px;
+	background-size: 17.5px 19px;
+	width: 17.5px;
+	height: 19px;
+	vertical-align: middle;
 }
 
 .platformImgSteamPlaySmall {
 	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/platforms/platform_steamplay.png );
+	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_steamplay.png );
 	background-repeat: no-repeat;
-	background-size: 61px 11px;
-	width: 61px;
-	height: 11px;
+	background-size: 91px 19px;
+	width: 91px;
+	height: 19px;
+	vertical-align: middle;
 }
 
 #appExternalLink {
@@ -1884,69 +2064,46 @@ a.trigger, a.activetrigger {
 	color: #D0D0D0;
 }
 
-.appSummaryHeader {
-    background-color: #000000;
-    width: 100%;
-    height: 44px;
-    color: #D0D0D0;
-    display: table;
-}
-
-.appSummaryHeader .sectionText {
-    line-height: 44px;
-	white-space: nowrap;
-}
-
-.sectionHeader {
-    background-color: #3C3D3E;
-	background-size: 32px 27px;
-	width: 100%;
-	height: 26px;
-	color: #D0D0D0;
-	display: table;
-}
-
-.sectionHeader .sectionText {
-    line-height: 26px;
-}
-
 .sectionHeader .platformImgMac, .sectionHeader .platformImgWin {
-    height: 26px;
+	height: 26px;
 }
 
 .sectionHeader .platformImgMacSmall, .sectionHeader .platformImgWinSmall {
-    height: 13px;
+	height: 13px;
 }
 
-.sectionText {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	line-height: 18px;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 16px;
-	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
+.game_area_dlc_section .sectionHeader {
+	height: 50px;
+	border-top: 1px solid #441940;
+	background-image: -webkit-radial-gradient(60px -20px, 160px 64px, #4D1A4B 0%, #101010 100%);
+	background-image: radial-gradient(ellipse 160px 64px at 60px -20px, #4D1A4B 0%, #101010 100%);
+	position: relative;
 }
 
-.dlcSectionHeader {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/dlc-section-heading-background.png );
+.game_area_dlc_section .sectionHeaderText {
+	color: #6b2269;
 }
 
-.genreBlocks, .gameBlocks, .friendBlocks, .appFeatureBlocks, .gameDlcBlocks, .newsFeedBlocks {
-	border-radius: 8px;
-	overflow: hidden;
-	margin: 8px;
+.appFeatureBlocks
+{
+	margin-top: 2px;
 }
 
-#newsPostBlocks {
-	margin: 8px;
+a#genreLinkSmall {
+	color: #D0D0D0;
+	font-size: 12px;
+	display: inline-block;
+}
+
+div.statsBlock {
+	width: 100%;
+	display: table;
 }
 
 div.statsItemName {
 	color: #545454;
 	width: 40%;
-	margin-left: 8px;
+	margin-left: 12px;
 	font-size: 15px;
 	display: inline-block;
 	vertical-align: top;
@@ -1969,54 +2126,7 @@ div.divider {
 	width: 100%;
 	height: 1px;
 	background-color: #363636;
-	margin: 1px 0px 1px 0px;
-}
-
-.buttonFullWidth, .buttonHalfWidth {
-    display: inline-block;
-    float: left;
-    margin: 4px 0px 4px 8px;
-    background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
-    background-repeat: repeat-x;
-    background-size: 32px 45px;
-    height: 44px;
-    color: #D0D0D0;
-    border-radius: 4px;
-}
-
-.buttonSpecial {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/special-button-enabled-background.png );
-}
-
-.buttonActive {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-pressed-background.png );
-	color: #FFFFFF;
-}
-
-.buttonDisabled {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-disabled-background.png );
-}
-
-.buttonText {
-	text-align: center;
-	line-height: 44px;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 16px;
-	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
-}
-
-.tableViewCellInactive {
-	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/table-cell-background.png );
-	background-repeat: repeat-x;
-	background-size: 32px 45px;
-	height: 44px;
-	color: #D0D0D0;
-}
-
-.tableViewCellHidden {
-	display: none;
+	margin: 6px 0px;
 }
 
 .friendBlock_in-game {
@@ -2031,31 +2141,8 @@ div.divider {
 	color: #CFD2D4;
 }
 
-.tableViewCellActive {
-	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/table-cell-background-selected.png );
-	background-repeat: repeat-x;
-	background-size: 32px 45px;
-	height: 44px;
-	color: #FFFFFF;
-}
-
-.tableViewCellTextBlock {
-	padding-top: 3px;
-}
-
 .tableViewCellTextBlockSmall {
 	padding-top: 5px;
-}
-
-.tableViewCellMainText {
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 16px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
 }
 
 .tableViewCellMainTextSmall {
@@ -2068,139 +2155,95 @@ div.divider {
 	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
 }
 
-.tableViewCellMainTextCentered {
-	text-align: center;
-	line-height: 38px;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 16px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
-}
-
-.tableViewCellButton {
-	display: inline-block;
-	height: 14px;
-	padding: 1px;
-	background-color: #A04040;
-	border-radius: 1px;
-	border: 1px solid #4D4B49;
-}
-
-.tableViewCellButtonPressed {
-	background-color: #402020;
-}
-
-.tableViewCellStatusBox {
-	display: inline-block;
-}
-
-.tableViewCellRadioButtonSetInactive, .tableViewCellRadioButtonSetActive {
-	display: block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-enabled-background.png );
-	background-repeat: repeat-x;
-	background-size: 32px 45px;
-	height: 30px;
-	color: #E0E0E0;
-}
-
-.tableViewCellRadioButtonSetActive {
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-disabled-background.png );
-	color: #FFFFFF;
-}
-
-.tableViewCellRadioButtonSetText {
-	text-align: center;
-	line-height: 30px;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 14px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	text-shadow: 0pt -1px 0pt rgb(0, 0, 0);
-}
-
-.itemBlockIcon {
-	display: block;
-	float: left;
-	margin: 5px;
-	margin-right: 7px;
-	width: 34px;
-	height: 34px;
-}
-
-.iconHolder {
-	width: 34px;
-	height: 34px;
-	position: relative;
-}
-
-.iconHolder_in-game {
-	background-color: #AFD14F;
-	border-radius: 4px;
-}
-
-.iconHolder_online {
-	background-color: #9CC7FF;
-	border-radius: 4px;
-}
-
-.iconHolder_offline {
-	background-color: #606060;
-	border-radius: 4px;
-}
-
-.iconHolder_default {
-	background-color: #CFD2D4;
-	border-radius: 4px;
-}
-
-.iconHolder_game {
-	background-color: #272E2C;
-	border-radius: 4px;
-}
-
-div.avatarIcon {
-	width: 32px;
-	height: 32px;
-	top: 1px;
-	left: 1px;
-	position: absolute;
-}
-
-div.avatarIcon img {
-	border-radius: 3px;
-}
-
-.chevronIcon {
-	display: block;
-	float: right;
-	margin: 15px 10px 14px 0px;
-	width: 11px;
-	height: 15px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/chevron.png );
-	background-size: 11px 15px;
-}
 
 .friendInfo {
 	font-size: 12px;
 }
 
-#gameAreaMetascore {
-	margin: 10px auto 10px auto;
-	background-image: url( http://cdn.store.steampowered.com/public/images/metacritic_bg.gif );
-	height: 35px;
-	width: 180px;
-	font-family: "Trebuchet MS", "Arial Narrow", HelveticaNeue-Thin, Helvetica-Light, sans-serif;
-	font-size: 24px;
+.gameAreaMetascore {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: url( http://cdn.store.steampowered.com/public/images/metacritic_bg.png );
+	background-size: contain;
+	background-repeat:no-repeat;
+	background-color: #000000;
+	height: 40px;
+	width: 100%;
+	position: relative;
+
+	line-height: 32px; /* For vertical alignment of nested text in metacriticLevel* div */
+}
+
+.metacriticLevelOutstanding
+{
+	background-color: rgb(102, 204, 51);
+	color: rgb(255, 255, 255);
+	height: 32px;
+	width:  32px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
 	font-weight: bold;
-	color: #8BC53F;
-	text-align: right;
-	padding-right: 43px;
-	padding-top: 5px;
+	text-align: center;
+	text-shadow: 0px 0px;
+
+	position: absolute;
+	bottom: 4px;
+	left: 5px;
+}
+
+.metacriticLevelMixed {
+	background-color: rgb(255, 204, 51);
+	color: rgb(51, 51, 51);
+	height: 32px;
+	width:  32px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px;
+
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+
+}
+
+.metacriticLevelUnfavorable {
+	background-color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+	height: 32px;
+	width:  32px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px;
+
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+
+}
+
+.metacriticLevelDefault {
+	background-color: rgb(163, 163, 163);
+	color: rgb(0, 0, 0);
+	height: 32px;
+	width:  32px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0px 0px;
+
+	position: absolute;
+	bottom: 4px;
+	left: 4px;
+
 }
 
 div.appFeatures {
@@ -2214,13 +2257,15 @@ div.appFeatureIcon {
 	left: 0;
 	width: 30px;
 	height: 22px;
-	padding-top: 4px;
+	padding-top: 5px;
 	padding-left: 6px;
 	background-color: #1A1A1A;
 }
 
 div.appFeatureIcon img {
 	margin: 0px;
+	width: 26px;
+	height: 16px;
 }
 
 div.appFeature {
@@ -2229,7 +2274,7 @@ div.appFeature {
 	padding-top: 4px;
 	padding-left: 8px;
 	background-color: #1A1A1A;
-	color: #8BC53F;
+	color: #979797;
 }
 
 .earlyAccess {
@@ -2240,54 +2285,32 @@ div.appFeature {
 	background-size: 32px 45px;
 	height: 44px;
 	color: #D0D0D0;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/button-pressed-background.png );
+	background-image: url( http://cdn.store.steampowered.com/public/shared/images/mobile/button-pressed-background.png );
 }
 
 	div.earlyAccess h1 {
 		text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
 		font-size: 28px;
 		padding-top: 10px;
-		font-family: "Motiva Sans Light", arial, tahoma, sans-serif;
 	}
 
 	div.earlyAccess h2 {
 		text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
 		font-size: 13px;
 		padding-top: 0px;
-		font-family: "Motiva Sans Light", arial, tahoma, sans-serif;
 	}
 
 /*
 ------------------------- STORE SEARCH ---------------------------
 */
 
-#storeSearch {
-	margin: 0px 10px 0px 10px;
-	width: auto;
-}
-
 #searchLine {
 	display: block;
-	
+
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#storeSearchTerm {
-	font-size: 14px;
-	color: #FFFFFF;
-	border-radius: 4px;
-	border: 1px solid #4D4B49;
-	background-color: #363636;
-	padding: 5px;
-	margin: 1px;
-}
-
-#storeSearchTerm.default {
-	font-style: italic;
-	color: #D0D0D0;
 }
 
 #storeSearchButton {
@@ -2297,7 +2320,7 @@ div.appFeature {
 }
 
 #searchSuggestions {
-	
+
 }
 
 #searchSuggestions .match {
@@ -2342,11 +2365,9 @@ div.appFeature {
 */
 
 .newsPostBlock {
-	border: 1px solid #4D4B49;
 	padding: 2px;
 	background-color: #222222;
 	word-wrap: break-word;
-	border-radius: 4px;
 }
 
 .spacer {
@@ -2358,10 +2379,9 @@ div.appFeature {
 }
 
 .newsPostHeadline {
-	font-size: 18px;
+	font-size: 20px;
 	color: #D0D0D0;
-	font-weight: bold;
-	margin-bottom: 2px;
+	margin-bottom: 10px;
 }
 
 .newsPostByline {
@@ -2371,6 +2391,10 @@ div.appFeature {
 
 .newsPostBody {
 	color: #929292;
+	font-size: 15px;
+}
+
+.newsPostBody * {
 	font-size: 15px;
 }
 
@@ -2385,7 +2409,7 @@ a#newsPostLink {
 }
 
 .newsPostBody ul {
-	margin-left: 10px;
+	margin-left: 12px;
 }
 
 .newsPostBody li {
@@ -2479,287 +2503,6 @@ img.agegate_img_package {
 	color:#626366;
 	text-align:center;
 	margin-top:6px;
-}
-
-/*
-------------------------- STYLE FOR HEADER AND FOOTER ---------------------------
-*/
-
-#global_header {
-	height: 40px;
-	width: 100%;
-	background-color: #000000;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_icon_mainnavbg.png );
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-#secondary_header, #secondary_header_title {
-	height: 50px;
-	width: 100%;
-	background-color: #000000;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_icon_scndnavbg.png );
-	overflow-x: hidden;
-	white-space: nowrap;
-	position: relative;
-}
-
-div#secondary_header .content, div#secondary_header_title .content {
-	position: absolute;
-	white-space: nowrap;
-	z-index: 1;
-}
-
-#secondary_header_leftfade, #secondary_header_rightfade {
-	position: absolute;
-	z-index: 1;
-	height: 49px;
-	width: 50px;
-	top: 1px;
-}
-
-#secondary_header_leftfade {
-	left: 0px;
-}
-
-#secondary_header_rightfade {
-	right: 0px;
-}
-
-#headerLogoImage {
-	position: absolute;
-	z-index: 0;
-	top: 0px;
-	right: 28px;
-	width: 124px;
-	height: 40px;
-}
-
-#headerUserAvatarIcon {
-	width: 32px;
-	height: 32px;
-}
-
-#global_actions_avatar {
-	position: absolute;
-	right: 6px;
-	top: 3px;
-	height: 21px;
-	line-height: 21px;
-	color: #b8b6b4;
-	font-size: 11px;
-	z-index: 3;
-}
-#global_actions_headerExpandIndicator {
-	position: absolute;
-	right: 42px;
-	top: 15px;
-	height: 10px;
-	width: 10px;
-	z-index: 3;
-}
-
-#secondary_actions_scndnav_search_btn {
-	position: absolute;
-	right: 6px;
-	top: 10px;
-	height: 30px;
-	width: 40px;
-	z-index: 5;
-}
-#secondary_actions_scndnav_cart_btn {
-	position: absolute;
-	left: 6px;
-	top: 10px;
-	height: 30px;
-	width: 40px;
-	z-index: 5;
-}
-#secondary_actions_scndnav_wishlist_btn {
-	position: absolute;
-	left: 49px;
-	top: 10px;
-	height: 30px;
-	width: 40px;
-	z-index: 5;
-}
-
-	/* main nav */
-
-div#global_header .menuitemdiv {
-	font-size: 13px;
-	display: inline;
-	background-color: transparent;
-	position: relative;
-}
-
-div#global_header .menuitemdiv.menuitemdiv_login {
-	float: right;
-	margin-right: 10px;
-}
-
-div#global_header .menuitema {
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 13px;
-	font-weight: normal;
-	color: #A6A6A6;
-
-	position: relative;
-	left: 0px;
-	top: 13px;
-	padding-left: 3px;
-	padding-right: 3px;
-	width: 100%;
-	height: 100%;
-}
-
-div#global_header .menuitema.active {
-	color: #FFFFFF;
-}
-
-div#global_header #background {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
-}
-
-div#global_header #fullstretch {
-	width: 100%;
-	height: 40px;
-}
-
-	/* secondary nav */
-
-div#secondary_header .menuitemdiv, div#secondary_header_title .menuitemdiv {
-	font-size: 27px;
-	vertical-align: top;
-	display: inline;
-	background-color: transparent;
-	position: relative;
-}
-
-div#secondary_header_title .menuitemdiv.pageTitleHeader {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	z-index: 0;
-}
-
-div#secondary_header .menuitema, div#secondary_header_title .menuitema {
-	padding-left: 6px;
-	padding-right: 6px;
-	text-decoration: none;
-	font-weight: normal;
-	font-size: 27px;
-	font-weight: bold;
-	color: #979797;
-
-	position: relative;
-	left: 0px;
-	top: 10px;
-	width: 100%;
-	height: 100%;
-}
-
-div#secondary_header .menuitema.active, div#secondary_header_title .menuitema.active {
-	color: #FFFFFF;
-}
-
-div#secondary_header #background, div#secondary_header_title #background {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
-}
-
-div#secondary_header #fullstretch, div#secondary_header_title #fullstretch {
-	width: 100%;
-	height: 50px;
-}
-
-	/* user account information */
-
-#global_actions_pageoverlay {
-	background-color: transparent;
-	position:absolute;
-	z-index: 900;
-	overflow: hidden;
-
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-}
-
-div#global_actions_pageoverlay #dimmedbackground {
-	background-color:rgba(0, 0, 0, 0.5);
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-div#global_actions_pageoverlay #roundedboxpadtop {
-	height: 10px;
-}
-
-div#global_actions_pageoverlay #roundedbox {
-	background-color:rgba(0, 0, 0, 0.0);
-	/* background-image: url( http://cdn.store.steampowered.com/public/images/mobile/header_globalactions_overlay.png ); */
-
-	margin-left: 10px;
-	margin-right: 10px;
-	position: relative;
-	z-index: 901;
-}
-
-div#global_actions_pageoverlay #leftcol, div#global_actions_pageoverlay #rightcol {
-	display: inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-div#global_actions_pageoverlay #leftcol {
-	margin-left: 2%;
-	margin-right: 1%;
-	width: 68%;
-}
-
-div#global_actions_pageoverlay #rightcol {
-	margin-left: 1%;
-	margin-right: 2%;
-	width: 24%;
-}
-
-div#global_actions_pageoverlay .globaloverlayactionlink {
-	color: #FFFFFF;
-	float: left;
-	font-size: 12px;
-	font-weight: normal;
-}
-
-div#global_actions_pageoverlay .globaloverlayactionhint {
-	color: #AAAAAA;
-	text-transform: uppercase;
-	margin-top: 5px;
-	float: right;
-	font-size: 9px;
-	font-weight: bold;
-}
-
-div#global_actions_pageoverlay .globaloverlayactionval {
-	color: #FFFFFF;
-	float: left;
-	font-size: 9px;
-	font-weight: bold;
 }
 
 .game_purchase_subscription {

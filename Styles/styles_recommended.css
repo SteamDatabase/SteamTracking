@@ -1351,6 +1351,7 @@ textarea.comment_input
 .review_box .rightcol {
 	float: left;
 	width: 400px;
+	position: relative;
 }
 
 .review_box .vote_header {
@@ -1441,7 +1442,7 @@ textarea.comment_input
 	right: 0px;
 
 	z-index: 1;
-	height: 15px;
+	height: 30px;
 	/* @todo chrisk use short version */
 	background: -moz-linear-gradient(top,  rgba(37,38,38,0) 0%, rgba(37,38,38,.95) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,rgba(37,38,38,0)), color-stop(100%,rgba(37,38,38,.95)));
@@ -1553,4 +1554,54 @@ textarea.comment_input
 .user_reviews_tab.active a
 {
 	color: #8BB9E0;
+}
+
+/* developer response */
+
+.review_box.partial .review_developer_response {
+	max-height: 40px;
+	overflow: hidden;
+	position: relative;
+}
+
+.review_box.partial .review_developer_response .gradient {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+
+	z-index: 1;
+	height: 30px;
+	/* @todo chrisk use short version */
+	background: -moz-linear-gradient(top,  rgba(37,38,38,0) 0%, rgba(37,38,38,.95) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,rgba(37,38,38,0)), color-stop(100%,rgba(37,38,38,.95)));
+	background: -webkit-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
+	background: -o-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
+	background: -ms-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
+	background: linear-gradient(to bottom,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
+}
+
+.review_box .review_developer_response .gradient, .review_box .view_more {
+	display: none;
+}
+
+.review_developer_response
+{
+	padding: 10px 10px 10px 11px;
+	padding-left: 50px;
+	margin-top: 25px;
+	border-top: 1px solid #515152;
+	font-size: 13px;
+}
+
+.review_developer_response_avatar
+{
+	position: absolute;
+	left: 0px;
+}
+
+.review_developer_response_title
+{
+	padding-bottom: 5px;
 }
