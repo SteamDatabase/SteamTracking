@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1386125885"
+	"version"		"1386799584"
 	"strings_all"
 	{
 		"file"		"strings_all.zip.bde7871b3e5f3ec450cde93ec97559f4afc8fbe2"
@@ -15,15 +15,15 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.b79a820a9ee9c0c2480ef7fc8c8cf7725e72d652"
-		"checksum"		"b79a820a9ee9c0c2480ef7fc8c8cf7725e72d652"
-		"size"		"9283299"
+		"file"		"tenfoot_all.zip.628cd4e091dd02639a05eb1eb434bb939ab79fc4"
+		"checksum"		"628cd4e091dd02639a05eb1eb434bb939ab79fc4"
+		"size"		"9281947"
 	}
 	"tenfoot_fonts_all"
 	{
-		"file"		"tenfoot_fonts_all.zip.82c389bbff74dc9d642d9d9b0b33665b388bc9db"
-		"checksum"		"82c389bbff74dc9d642d9d9b0b33665b388bc9db"
-		"size"		"1042452"
+		"file"		"tenfoot_fonts_all.zip.7c5db178f5ebe8b1bb02aca53939040358a56342"
+		"checksum"		"7c5db178f5ebe8b1bb02aca53939040358a56342"
+		"size"		"1268642"
 	}
 	"tenfoot_ambientsounds_all"
 	{
@@ -51,9 +51,9 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.6e822b8355b715a93b90cb4631010116aad178f6"
-		"checksum"		"6e822b8355b715a93b90cb4631010116aad178f6"
-		"size"		"34635280"
+		"file"		"bins_ubuntu12.zip.d406ac8b3c1285be68cfc076d469e4a4742719a1"
+		"checksum"		"d406ac8b3c1285be68cfc076d469e4a4742719a1"
+		"size"		"34637603"
 	}
 	"webkit_ubuntu12"
 	{
@@ -75,9 +75,9 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.b7ad45fb24be222949be14f9dffc60f998cfa746"
-		"checksum"		"b7ad45fb24be222949be14f9dffc60f998cfa746"
-		"size"		"1209697"
+		"file"		"steam_ubuntu12.zip.d503be8a644fad66ea45126d93d674b8a58f0b7a"
+		"checksum"		"d503be8a644fad66ea45126d93d674b8a58f0b7a"
+		"size"		"1209703"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -95,5 +95,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"6bb17463a7a6a0e54fd677616d756fbd03930002bf4cd36ed612d62b6fad63af47260ce69124a0f0fd29471bdd62a779071dfec6b583bb07186e9709edb084f37dd02369a98719e38947b8a232dd60c8e25563c68d868813ba3f4ef6ade9476bacca4a532ef32d644b896ee1aba4d495395a664c590b6a1563c197f8a7e90253"
+	"ubuntu12"		"c1d8485ef66843f0b44bccabe31478b1439af8d8383aea1dd492da8caea223600512976e85156aa2b12fbebf86f35311ce424b4c17cc056d5ffd2774979432695f8928861e457b82c2a1d8195b39546d6520c9280de71c8939197fe32a2d854c7ef1782aa33ffb03d884ac4dc394df0fe33f17e9395083b19a5e2f6556706da5"
 }
