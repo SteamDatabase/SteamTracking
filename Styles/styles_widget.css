@@ -11,7 +11,7 @@ a, a:hover {
 #widget {
 	border: 1px solid #4d4b49;
 	background-color: #262626;
-	width: 614px;
+	/*width: 614px;*/
 	height: 146px;
 	padding: 10px 15px;
 	position: relative;
@@ -28,7 +28,6 @@ a, a:hover {
 }
 
 #widget .header_container {
-	width: 614px;
 }
 
 #widget h1 {
@@ -69,6 +68,8 @@ a, a:hover {
 	font-size: 13px;
 	color: #c9c9c9;
 	line-height: 16px;
+	max-height: 96px;
+	overflow: hidden;
 }
 
 #widget p.package_contents {
