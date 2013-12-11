@@ -512,14 +512,14 @@ $J( function() {
 	$J( '.platformFilterButton_' + g_currentPlatformFilter ).addClass( 'platformFilterButtonDown' );
 
 	var showDLC = getCookie( "mobileStoreDLCFilter" );
-	if ( showDLC == '1' )
+	if ( showDLC == '0' )
 	{
-		g_bShowingDLC = true;
-		$J( '.showDLCButton' ).addClass( 'showDLCButtonDown' );
+		g_bShowingDLC = false;
 	}
 	else
 	{
-		g_bShowingDLC = false;
+		g_bShowingDLC = true;
+		$J( '.showDLCButton' ).addClass( 'showDLCButtonDown' );
 	}
 
 	updateStoreItemFilter();
