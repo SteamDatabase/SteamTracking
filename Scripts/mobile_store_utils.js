@@ -10,33 +10,6 @@ $J( document ).bind( "pageinit", function() {
 });
 
 //
-// COMMON UI CONTROLS
-//
-
-function tableCellClicked( element, linkToOpen )
-{
-	$J( element ).addClass( 'tableViewCellActive' );
-	if ( linkToOpen )
-		top.location.href = linkToOpen;
-	window.setTimeout( function() {
-		$J( element ).removeClass( 'tableViewCellActive' );
-	}, 1000);
-}
-
-function buttonClicked( element, linkToOpen, bOpenNewWindow )
-{
-	$J( element ).addClass( 'buttonActive' );
-	if ( !bOpenNewWindow && linkToOpen )
-		top.location.href = linkToOpen;
-
-	window.setTimeout( function() {
-		$J( element ).removeClass( 'buttonActive' );
-		if ( bOpenNewWindow && linkToOpen )
-			window.open( linkToOpen )
-	}, bOpenNewWindow ? 500 : 1000 );
-}
-
-//
 // SEARCH
 //
 
@@ -116,7 +89,7 @@ function SearchSuggestClearDefaultSearchText( elem )
 		elem.removeClass( 'default' );
 	}
 }
-		
+
 function SearchSuggestSetDefaultSearchText( elem )
 {
 	elem = $J( elem );
@@ -137,10 +110,10 @@ function SearchSuggestCheckTerm( theform )
 	}
 	return true;
 }
-		
+
 function ExpandHiddenTableViewCells( element )
 {
-	$J( element ).parent().children( 'div.tableViewCellHidden' ).addClass( 'tableViewCellInactive' ).removeClass( 'tableViewCellHidden' );
+	$J( element ).parent().children( 'div.tableViewCellHidden' ).removeClass( 'tableViewCellHidden' );
 	$J( element ).remove();
 }
 
@@ -161,7 +134,7 @@ function AddToWishlistMobile( appid, divToHide, divToShowSuccess, navref )
 		MakeNavCookie( navref, url );
 
 	var url = 'http://store.steampowered.com/api/addtowishlist';
-		
+
 	$J.post(
 		url,
 		{
@@ -220,10 +193,10 @@ var g_nCapImageWidth;
 var g_nAutoScrollTimeoutID;
 
 // ID of current touch
-var g_CurrentTouchIdentifier;
+var g_LargeCapCurrentTouchID;
 // Last touch coordinate
-var g_nLastX, g_nLastY;
-var g_nStartX;
+var g_nLargeCapLastTouchX, g_nLargeCapLastTouchY;
+var g_nLargeCapStartX;
 var g_nStartCap;
 
 var g_bDisableScroll;
@@ -235,21 +208,25 @@ function setLargeCapDivSizes()
 {
 	if ( $J( '.largeCapFrame' ).length ) {
 
-	var capWidth = $J( '.largeCapFrame' ).get(0).offsetWidth;
-	var topOverlayHeight = $J( '.largeCapTopOverlay' ).get(0).offsetHeight;
-	var progressFrameHeight = $J( '.largeCapProgressFrame' ).get(0).offsetHeight;
-	g_nCapImageWidth = capWidth;
-	$J( '.largeCapFrame' ).height( g_nCapImageWidth / 2.58 + topOverlayHeight + progressFrameHeight );
-	$J( '.largeCap' ).height( g_nCapImageWidth / 2.58 + topOverlayHeight );
-	$J( '.largeCapImg' ).width( g_nCapImageWidth );
-	// add 2 to account for the extra divs on the far left and far right of the scroller (wrap-around)
-	$J( '.largeCapScroller' ).width( ( g_nCapCount + 2 ) * g_nCapImageWidth );
-	g_nCurrentLeftScroll = -g_nCapImageWidth * g_nCurrentCap;
-	$J( '.largeCapScroller' ).css( 'left', g_nCurrentLeftScroll );
+		var pageWidth = $J( 'body' ).width();
+		var capWidth = pageWidth - 24; // 12px margin left & right
+		if ( capWidth > 467 ) capWidth = 467;
+		$J( '.largeCapFrame' ).width( capWidth );
+		var progressFrameHeight = $J( '.largeCapProgressFrame' ).get(0).offsetHeight;
+		g_nCapImageWidth = capWidth;
+		var descriptionHeight = 45; // description, price, title
+		$J( '.largeCapFrame' ).height( g_nCapImageWidth / 2.58 + descriptionHeight + progressFrameHeight );
+		$J( '.largeCap' ).height( g_nCapImageWidth / 2.58 + descriptionHeight );
+		$J( '.largeCapImg' ).width( g_nCapImageWidth );
+		$J( '.largeCapImg' ).height( g_nCapImageWidth / 2.58 );
+		// add 2 to account for the extra divs on the far left and far right of the scroller (wrap-around)
+		$J( '.largeCapScroller' ).width( ( g_nCapCount + 2 ) * g_nCapImageWidth );
+		g_nCurrentLeftScroll = -g_nCapImageWidth * g_nCurrentCap;
+		$J( '.largeCapScroller' ).css( 'left', g_nCurrentLeftScroll );
 
 	} else {
 
-	g_nCapImageWidth = 50;
+		g_nCapImageWidth = 50;
 
 	}
 }
@@ -267,7 +244,7 @@ function updateLargeCapPageIndicator()
 	{
 		text += '&#183; ';
 	}
-	text += '&#8226; ';
+	text += '<span class="largeCapProgressHighlight">&#8226; </span>';
 	for ( var i = g_nCurrentCap + 1; i <= g_nCapCount; ++ i )
 	{
 		text += '&#183; ';
@@ -277,9 +254,9 @@ function updateLargeCapPageIndicator()
 }
 
 // Scroll right by 1 entry
-function scrollLargeCapRight()
+function scrollLargeCap( numCaps )
 {
-	g_nCurrentCap ++;
+	g_nCurrentCap += numCaps;
 	// If this causes us to overflow to the right, reset the location to the far left
 	// (actual indexing is [1, g_nCapCount], with 0 and g_nCapCount + 1 reserved for left/right overflow)
 	if ( g_nCurrentCap > g_nCapCount )
@@ -287,18 +264,23 @@ function scrollLargeCapRight()
 		g_nCurrentCap = 1;
 		$J( '.largeCapScroller' ).css( 'left', 0 );
 	}
+	else if ( g_nCurrentCap < 1 )
+	{
+		g_nCurrentCap = g_nCapCount;
+		$J( '.largeCapScroller' ).css( 'left', -g_nCapImageWidth * ( g_nCapCount + 1 ) );
+	}
 
 	g_nCurrentLeftScroll = -g_nCapImageWidth * g_nCurrentCap;
 	$J( '.largeCapScroller' ).animate({
 		left: g_nCurrentLeftScroll
 	},
-	g_nScrollDuration);
+	g_nScrollDuration );
 
 	updateLargeCapPageIndicator();
 
 	window.clearTimeout( g_nAutoScrollTimeoutID );
 	g_nAutoScrollTimeoutID = window.setTimeout( function() {
-		scrollLargeCapRight();
+		scrollLargeCap( 1 );
 	},
 	g_nAutoscrollInterval );
 }
@@ -312,11 +294,11 @@ function initializeLargeCapScroller()
 	$J( '.largeCapFrame' ).live( 'touchstart', function( event ) {
 
 		var newTouches = event.originalEvent.changedTouches;
-		if ( !g_CurrentTouchIdentifier )
+		if ( !g_LargeCapCurrentTouchID )
 		{
-			g_CurrentTouchIdentifier = newTouches[0].identifier;
-			g_nStartX = g_nLastX = newTouches[0].screenX;
-			g_nLastY = newTouches[0].screenY;
+			g_LargeCapCurrentTouchID = newTouches[0].identifier;
+			g_nLargeCapStartX = g_nLargeCapLastTouchX = newTouches[0].screenX;
+			g_nLargeCapLastTouchY = newTouches[0].screenY;
 			g_nStartCap = g_nCurrentCap;
 			g_bDisableScroll = false;
 
@@ -326,25 +308,36 @@ function initializeLargeCapScroller()
 		}
 	});
 
+	$J( '.largeCapFrame' ).keydown( function( event ) {
+
+		if ( event.keyCode == 37 || event.keyCode == 39 )
+		{
+			// Cancel any current animations or pending auto scrolls
+			$J( '.largeCapScroller' ).stop();
+			window.clearTimeout( g_nAutoScrollTimeoutID );
+			scrollLargeCap( event.keyCode == 37 ? -1 : 1 );
+		}
+	});
+
 	$J( '.largeCapFrame' ).live( 'touchmove', function( event ) {
 
 		// Avoid bug in Android that renders 'touchmove' event useless and breaks capsule scrolling
 		if( navigator.userAgent.match(/Android/i) ) {
 			event.preventDefault();
-        }
+		}
 
 		var changedTouches = event.originalEvent.changedTouches;
 
-		if ( g_CurrentTouchIdentifier != null )
+		if ( g_LargeCapCurrentTouchID != null )
 		{
 			for ( var i = 0; i < changedTouches.length; ++ i )
 			{
-				if ( changedTouches[i].identifier == g_CurrentTouchIdentifier )
+				if ( changedTouches[i].identifier == g_LargeCapCurrentTouchID )
 				{
-					var diffX = changedTouches[i].screenX - g_nLastX;
-					var diffY = changedTouches[i].screenY - g_nLastY;
-					g_nLastX = changedTouches[i].screenX;
-					g_nLastY = changedTouches[i].screenY;
+					var diffX = changedTouches[i].screenX - g_nLargeCapLastTouchX;
+					var diffY = changedTouches[i].screenY - g_nLargeCapLastTouchY;
+					g_nLargeCapLastTouchX = changedTouches[i].screenX;
+					g_nLargeCapLastTouchY = changedTouches[i].screenY;
 
 					if ( g_bDisableScroll )
 					{
@@ -383,13 +376,13 @@ function initializeLargeCapScroller()
 	{
 		var changedTouches = event.originalEvent.changedTouches;
 
-		if ( g_CurrentTouchIdentifier != null )
+		if ( g_LargeCapCurrentTouchID != null )
 		{
 			for ( var i = 0; i < changedTouches.length; ++ i )
 			{
-				if ( changedTouches[i].identifier == g_CurrentTouchIdentifier )
+				if ( changedTouches[i].identifier == g_LargeCapCurrentTouchID )
 				{
-					g_CurrentTouchIdentifier = null;
+					g_LargeCapCurrentTouchID = null;
 
 					var nCurrentCap = -g_nCurrentLeftScroll / g_nCapImageWidth;
 					var nCurrentCapRounded = Math.round( nCurrentCap );
@@ -404,7 +397,7 @@ function initializeLargeCapScroller()
 						g_nStartCap += g_nCapCount;
 					}
 
-					var nTotalDiffX = changedTouches[i].screenX - g_nStartX;
+					var nTotalDiffX = changedTouches[i].screenX - g_nLargeCapStartX;
 
 					var nTargetCap = g_nStartCap;
 
@@ -431,7 +424,7 @@ function initializeLargeCapScroller()
 
 					// Re-enable auto-scrolling
 					g_nAutoScrollTimeoutID = window.setTimeout( function() {
-						scrollLargeCapRight();
+						scrollLargeCap( 1 );
 					},
 					g_nAutoscrollInterval );
 				}
@@ -446,7 +439,7 @@ function initializeLargeCapScroller()
 
 	// Kick off auto-scrolling
 	g_nAutoScrollTimeoutID = window.setTimeout( function() {
-		scrollLargeCapRight();
+		scrollLargeCap( 1 );
 	},
 	g_nAutoscrollInterval );
 }
@@ -463,7 +456,7 @@ function dropdownMobileSelectOption( dropdownName, selectBox )
 		var subId = selectBox.options[selectBox.selectedIndex].value;
 		$J('#add_to_cart_' + dropdownName + '_value').val( subId );
 		$J('#add_to_cart_' + dropdownName + '_description_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_description_' + subId ).html() );
-		
+
 		bInCart = selectBox.options[selectBox.selectedIndex].getAttribute( "inCart" ) == "true";
 
 		if ( bInCart )
@@ -495,3 +488,101 @@ function dropdownMobileAddToCart( dropdownName )
 	{
 			}
 }
+
+//
+// STOREFRONT APP FILTERING
+//
+
+var g_currentPlatformFilter = 'all';
+var g_bShowingDLC = true;
+
+function getCookie( name ) {
+	var parts = document.cookie.split(name + "=");
+	if ( parts.length == 2 ) return parts.pop().split(";").shift();
+}
+
+$J( function() {
+	// set up store filter
+	var platformFilter = getCookie( "mobileStorePlatformFilter" );
+	if ( platformFilter == 'pc' || platformFilter == 'mac' || platformFilter == 'linux' )
+		g_currentPlatformFilter = platformFilter;
+	else
+		g_currentPlatformFilter = 'all';
+
+	$J( '.platformFilterButton_' + g_currentPlatformFilter ).addClass( 'platformFilterButtonDown' );
+
+	var showDLC = getCookie( "mobileStoreDLCFilter" );
+	if ( showDLC == '1' )
+	{
+		g_bShowingDLC = true;
+		$J( '.showDLCButton' ).addClass( 'showDLCButtonDown' );
+	}
+	else
+	{
+		g_bShowingDLC = false;
+	}
+
+	updateStoreItemFilter();
+});
+
+function onPlatformFilterButtonPressed( element, platform )
+{
+	$J( '.platformFilterButton' ).removeClass( 'platformFilterButtonDown' );
+	$J( element ).addClass( 'platformFilterButtonDown' );
+	g_currentPlatformFilter = platform;
+	document.cookie = "mobileStorePlatformFilter=" + g_currentPlatformFilter + "; path=/";
+	updateStoreItemFilter();
+}
+
+function updateStoreItemFilter()
+{
+	$J( '.storeItem' ).hide();
+	var additionalFilters = g_bShowingDLC ? "" : '.showNonDLC';
+	if ( g_currentPlatformFilter == 'all' )
+	{
+		$J( '.storeItem' + additionalFilters ).show();
+	}
+	else if ( g_currentPlatformFilter == 'pc' )
+	{
+		$J( '.showOnPC' + additionalFilters ).show();
+	}
+	else if ( g_currentPlatformFilter == 'mac' )
+	{
+		$J( '.showOnMac' + additionalFilters ).show();
+	}
+	else if ( g_currentPlatformFilter == 'linux' )
+	{
+		$J( '.showOnLinux' + additionalFilters ).show();
+	}
+
+	$J( '.storeItemSection' ).show();
+	$J( '.storeItemSection' ).each( function( index ) {
+		var hideSection = true;
+		if ( $J( this ).find( '.standardAppContainer' ).is( ':visible' ) )
+		{
+			hideSection = false;
+		}
+		if ( hideSection )
+			$J( this ).hide();
+	});
+
+	if ( typeof setDivSizes == 'function' )
+		setDivSizes();
+}
+
+function onDLCTogglePressed( element )
+{
+	if ( g_bShowingDLC )
+	{
+		g_bShowingDLC = false;
+		$J( element ).removeClass( "showDLCButtonDown" );
+	}
+	else
+	{
+		g_bShowingDLC = true;
+		$J( element ).addClass( "showDLCButtonDown" );
+	}
+	document.cookie = "mobileStoreDLCFilter=" + (g_bShowingDLC ? "1" : "0") + "; path=/";
+	updateStoreItemFilter();
+}
+

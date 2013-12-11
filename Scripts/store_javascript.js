@@ -109,7 +109,9 @@ function addToCart( subid, dedupe )
                     jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
                     if ( navData )
                     {
-                        jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : navData } ).appendTo( formSelector );
+                        var pipeSplit = new RegExp( /\|/ );
+                        var resultString = navData.split( pipeSplit )[0];
+                        jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
                     }
                 }
             }
@@ -193,7 +195,9 @@ function removeFromCart( gid )
                     jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
                     if ( navData )
                     {
-                        jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : navData } ).appendTo( formSelector );
+                        var pipeSplit = new RegExp( /\|/ );
+                        var resultString = navData.split( pipeSplit )[0];
+                        jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
                     }
                 }
             }
