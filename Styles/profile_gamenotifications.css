@@ -1,0 +1,266 @@
+
+.profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent  {
+	background-image:url('http://cdn.steamcommunity.com/public/images/profile/profile_gamenotifications_background.jpg');
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	min-height: 441px;
+	margin-top: -5px;
+}
+
+#gamenotifications_top {
+	position:relative;
+	z-index:10;
+	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+
+#gamenotifications_maincontents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:21px;
+}
+#gamenotifications_maincontents h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+	padding-left:5px;
+}
+#gamenotifications_maincontents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+	padding-left:5px;
+}
+
+.gamenotifications_shadow_section {
+	border: 1px solid black;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: rgba(15,15,14,.36);
+	box-shadow: 1px 1px 0 0 #2f2f30;
+}
+
+
+.gamenotifications_top_content {
+	background-image:url('http://cdn.steamcommunity.com/public/images/profile/profile_gamenotifications_turnicon.png');
+	background-repeat:no-repeat;
+	background-position: 13px 20px;
+	width: 940px;
+	height: 75px
+	padding-top: 12px;
+}
+
+.gamenotifications_header {
+	/* 940 x 75 */
+	width: 881px;
+	height: 75px;
+	padding-left: 65px;
+
+	margin-bottom: 15px;
+}
+
+.gamenotifications_header_notificationcount {
+	float: left;
+	color: white;
+	height: 51px;
+	line-height: 51px;
+	font-family: Arial, Tahoma;
+	font-size: 48px;
+	font-weight: bold;
+	padding-top: 15px;
+
+	margin-right: 4px;
+}
+
+.gamenotifications_header_content {
+	padding-top: 28px;
+	font-size: 11px;
+	font-family: Arial, Tahoma;
+	line-height: 13px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.gamenotifications_header_content_muted {
+	color: #626366;
+	text-transform: none;
+}
+
+.gamenotifications_header_rule {
+	height: 1px;
+	background-color: #000000;
+	border-bottom: 1px solid #333333;
+	margin-bottom: 14px;
+}
+
+#gamenotifications_right_content {
+	background-image:url('http://cdn.steamcommunity.com/public/images//sharedfiles/icons/icon_edit.png');
+	background-repeat: no-repeat;
+	background-position: 13px 21px;
+	width: 249px;
+	height: 65px;
+	padding-left: 41px;
+	padding-top: 20px;
+	float: right;
+}
+
+.gamenotifications_right_title {
+	font-family: Arial, Tahoma;
+	font-size: 16px;
+	color: #d6d7d8;
+}
+
+.gamenotifications_right_desc {
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	color: #626366;
+}
+
+#gamenotifications_left_content {
+	width: 632px;
+}
+
+.gamenotifications_app_area {
+	width: 632px;
+	background: rgba(15,15,14,.36);
+	box-shadow: 1px 1px 0 0 #2f2f30;
+	margin-bottom: 17px;
+}
+
+.gamenotifications_app_header {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.gamenotifications_app_image {
+	margin-left: 10px;
+	margin-right: 20px;
+	float: left;
+}
+
+.gamenotifications_app_info {
+	margin-top: 5px;
+}
+
+.gammenotifications_app_count {
+	font-size: 24px;
+	font-family: 'MotivaSans Light', Arial, Tahoma;
+	color: #b0aeac;
+}
+
+.gammenotifications_app_count b {
+	font-family: 'MotivaSans ExtraBold', Arial, Tahoma;
+	color: white;
+}
+
+.gamenotifications_app_action {
+}
+
+.gammenotifications_app_count_none {
+	font-size: 24px;
+	font-family: 'MotivaSans Light', Arial, Tahoma;
+	color: #b0aeac;
+	margin-top: 10px;
+}
+
+.gamenotifications_app_action_none {
+}
+
+.gamenotifications_launch_game_text {
+	margin-left: 5px;
+}
+
+.gamenotifications_app_separator {
+	width: 632px;
+	height: 1px;
+	background-color: #476285;
+}
+
+.gamenotifications_app_session_separator {
+	width: 632px;
+	height: 1px;
+	background-color: #46494e;
+}
+
+.gamenotifcations_app_session {
+	width: 622px;
+	background: rgba(15,15,14,.36);
+	box-shadow: 1px 1px 0 0 #2f2f30;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.gamenotifications_app_session_title {
+	font-family: 'MotivaSans Light', Arial, Tahoma;
+	font-size: 18px;
+	color: white;
+}
+
+.gamenotifications_app_session_timestamp {
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	color: #626366;
+}
+
+gamenotifications_app_session_message {
+	font-family: Arial, Tahoma;
+	font-size: 12px;
+	color: #898a8c;
+}
+
+.gamenotifications_app_session_controls {
+	float: right;
+	margin-top: -28px;
+	margin-right: 6px;
+}
+
+.gamenotifications_show_sessions {
+	background-image: url('http://cdn.steamcommunity.com/public/images/profile/icon_doubledownarrow_grey.png');
+	background-position: 10px 7px;
+	background-repeat: no-repeat;
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	color: white;
+	padding-top: 5px;
+	padding-left: 25px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.gamenotifications_hide_sessions {
+	background-image: url('http://cdn.steamcommunity.com/public/images/profile/icon_doubleuparrow_grey.png');
+	background-position: 10px 7px;
+	background-repeat: no-repeat;
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	color: white;
+	padding-top: 5px;
+	padding-left: 25px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.gamenotifications_no_notifications {
+	margin-left: 10px;
+	font-size: 12px;
+	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
+	color: white;
+}
+
+.gamenotifications_confirm_dialog_content {
+	max-width: 450px;
+}
