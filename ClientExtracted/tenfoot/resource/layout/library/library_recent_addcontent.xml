@@ -4,7 +4,9 @@
 		<include src="file://{resources}/styles/msgbox.css" />
 	</styles>
 	
-	<LibraryRecentAddContentDialog class="TenfootMsgBox" oncancel="ButtonCancel()" >
+	<LibraryRecentAddContentDialog class="TenfootMsgBox" 
+			oncancel="ButtonCancel()" 
+			onmouseactivate="CloseModalDialog();" >
 		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
 			<Button onactivate="ActivateProduct()" >
 				<Label text="#Library_AddContent_Activate" />

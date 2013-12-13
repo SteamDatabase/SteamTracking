@@ -29,7 +29,7 @@
 			</Button>
 			
 				<Label class="SettingsLegend ClientBetaOptIn" text="#SettingsAbout_BetaParticipation" />	
-				<ToggleButton class="CheckBox ClientBetaOptIn" id="SettingsAbout_BetaOption" text="#SettingsAbout_BetaOption" />
+				<ToggleButton class="CheckBox ClientBetaOptIn" id="SettingsAbout_BetaOption" text="#SettingsAbout_BetaOption" onactivate="ToggleBetaOptIn()" />
 				
 				<Label class="ClientInfoSectionHeader" text="#SettingsAbout_Built" />
 				<Label class="SettingsValue" text="#SettingsAbout_BuildDateTime" />
@@ -49,7 +49,6 @@
 					<Label class="LongDesc" text="#SettingsInterface_SteamOSCheckForUpdates"  />
 					<Panel class="SteamOsUpdateThrobber" />
 				</Button>
-
 		</Panel>	
 		
 		<Panel class="SettingsRightContent" tabindex="auto" selectionpos="auto">
@@ -80,6 +79,10 @@
 
 				<Label class="ResLabel" text="#SettingsAbout_VideoRAMLabel" />
 				<Label class="SettingsValue" text="#SettingsAbout_VideoRAM" />
+
+				<Button class="Button ResBody" id="SettingsAbout_LegalInformationButton" onactivate="ShowLegalInformation();">
+					<Label class="LongDesc" text="#SettingsAbout_LegalInformation"  />
+				</Button>
 
 		</Panel>
 	</Panel>	

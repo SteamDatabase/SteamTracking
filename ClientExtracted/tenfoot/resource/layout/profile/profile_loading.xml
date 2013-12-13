@@ -1,0 +1,21 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/profile/profile.css" />
+	</styles>
+	
+	<ProfilePanel>
+		<Panel id="ProfileContent">
+			<Panel id="ProfileBackground" class="ProfileBackground">
+				<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/library/library_app_details_bg_wash.png" />
+				<Panel id="BGScreenshotWrapper">
+					<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
+				</Panel>
+			</Panel>
+			<Panel id="Loading">
+				<Label id="LoadingStatus" text="#Profile_Loading" />
+				<Panel class="Throbber" />
+			</Panel>
+		</Panel>
+	</ProfilePanel>
+</root>

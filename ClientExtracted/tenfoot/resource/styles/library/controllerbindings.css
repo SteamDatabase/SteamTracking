@@ -91,6 +91,27 @@ ControllerBindings .MsgBoxSubTitle
 	margin-top: -4px;
 }
 
+ControllerBindings.NativeAPIMode .MsgBoxSubTitle
+{
+	opacity: 0.0;
+}
+
+ControllerBindings #BindingNativeNotice
+{
+	color: detailsdatalabel;
+	horizontal-align: center;
+	text-align: center;
+	width: 60%;
+	opacity: 0.0;
+	font-size: 32px;
+	margin-top: 620px;
+}
+
+ControllerBindings.NativeAPIMode #BindingNativeNotice
+{
+	opacity: 1.0;
+}
+
 ControllerBindings #LeftColumn
 {
 	padding: 26px 22px;
@@ -853,6 +874,12 @@ ControllerBindings #RepeatRegion
 	transition-duration: shortduration;
 	transition-timing-function: ease-in;
 }
+
+ControllerBindings.NativeAPIMode #BindingLabels
+{
+	opacity: 0.0;
+}
+
 
 .EditSingleBinding #BindingLabels,
 .EditPadBinding #BindingLabels

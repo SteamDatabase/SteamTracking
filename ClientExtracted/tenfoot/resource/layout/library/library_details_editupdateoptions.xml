@@ -1,0 +1,24 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<EditAppLaunchOptions class="TenfootMsgBox" defaultfocus="UpdateDropDown">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+    		<Label class="StdTitle" text="#Library_EditUpdateOptions_Title" />
+
+    		<Label class="StdLabelMedBlue" text="#Library_AutoUpdate_CodeLabel" />
+	    	<DropDown id="AutoUpdatesDropDown" >
+	    	</DropDown>
+	    	<ToggleButton tabindex="1.0" class="CheckBox" id="AllowOtherDownloadsCheck" text="#Library_AllowOtherDownloads_Label" onactivate="ToggleAllowOtherUpdates()"/>
+        <Panel id="MsgBoxButtons">
+            <Button onactivate="ButtonCancel()">
+                <Label text="#UI_OK" />
+            </Button>
+        </Panel>        
+        </Panel>
+	</EditAppLaunchOptions>
+</root>

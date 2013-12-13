@@ -9,10 +9,13 @@
 
 		<Panel class="ParentalUnlockPopupBody" tabindex="auto">
 			<Label class="StdTitle" text="#Parental_LockTitle" />
-			<Label class="StdLabel" text="#Parental_LockPrompt" />
-			<Panel class="ParentalLockButtons" >
-				<Button id="LockButton" class="Button" onactivate="ParentalLock()">
+			<Label id="MsgBoxDescriptionArea" text="#Parental_LockPrompt" />
+			<Panel id="MsgBoxButtons" >
+				<Button id="LockButton" onactivate="ParentalLock()">
 					<Label id="ParentalLockButtonLabel" text="#Parental_Lock2" />
+				</Button>
+				<Button id="CancelButton" onactivate="ButtonCancel()">
+					<Label text="#UI_Cancel" />
 				</Button>
 			</Panel>
 		</Panel>

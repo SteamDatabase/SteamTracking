@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/parental/parental.css" />
+	</styles>
+
+	<ParentalChooseAppsChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader" hittest="false">
+			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
+		</Panel>
+
+		<Panel class="SettingsBottomPanel">
+			<!-- main panel -->
+			<ParentalLibraryGrid id="ParentalLibraryGrid" />
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>			
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</ParentalChooseAppsChild>
+
+</root>

@@ -14,7 +14,9 @@
 				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
 					<Label id="MsgBoxContents" class="MsgBoxContents" />
 				</Panel>
-			
+
+				<Panel id="MsgBoxHTMLContainer" />		
+	
 				<Panel id="MsgBoxButtons">	
 					<Button id="ButtonOK" class="ButtonOK MsgBoxButton" onactivate="ButtonOK();">
 						<Label id="OKButtonText" />

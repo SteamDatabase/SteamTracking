@@ -300,6 +300,15 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffffff ), to( #bdbfbfff ) ); 
 	
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	
+	transition-duration: 0.23s;
+	transition-timing-function: linear;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 .TopBar Button.ActiveButton
@@ -315,7 +324,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	transition-duration: 0.23s !immediate;
 		
 	color: #f2f2f2ff;
-	background-color: webtabcurrentselection;
+	background-color: friendstabcurrentselection;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 }
 
@@ -334,7 +343,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
 	background-color: webtabcurrenthover;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	box-shadow: box_shadow_on_color -5.5px -5px 6px 10px;
 }
 
 .TopBar Button:active
@@ -343,6 +352,8 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	color: #f2f2f2ff;
 	background-color: webtabcurrentselection;
 }
+
+
 
 .CursorVisible .CloseButton
 {

@@ -1,0 +1,36 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/fileselector.css" />
+	</styles>
+
+	<TenfootFileSelector tabindex="auto" selectionpos="auto" onmouseactivate="CloseModalDialog();" >
+		<Panel id="FileSelectorBodyRegion" class="FileSelectorBodyRegion">
+
+			<Label id="FileSelectorHeaderLabel" class="FileSelectorHeaderLabel" text="Header"/>
+
+			<Label id="FileSelectorTextLabel" class="FileSelectorBoxText" text="Description"/>			
+
+			<Panel id="FileSelectorButtonTopRow" class="FileSelectorButtonTopRow">				
+			
+				<DropDown id="FileSelectorLocationDropDown" class="FileSelectorLocationDropDown"
+					onfocus="FileSelectorChangedFocus();">
+				</DropDown>
+				
+				<Button id="GoBackButton" class="GoBackButton MsgBoxButton" 
+					onactivate="GoBackButton();"
+					onfocus="FileSelectorChangedFocus();">
+						<Label id="UpButtonLabel" text="Back"/>
+				</Button>
+			
+			</Panel>
+			
+			
+			<Panel id="FileSelectorFileListArea" class="FileSelectorFileListArea">
+				<Panel class="FileSelectorFileListContainer" id="FileSelectorFileListContainer" childfocusonhover="false" />
+			</Panel>
+			
+		</Panel>
+	</TenfootFileSelector>
+</root>

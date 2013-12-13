@@ -34,7 +34,7 @@
 			</Panel>
 
 			<Label id="MessageAreaLabel" />
-			<Panel class="CredentialsContainer" selectionpos="auto" childfocusonhover="true">
+			<Panel class="CredentialsContainer" selectionpos="auto">
 				<TextEntry class="LoginPromptContainer" id="AccountNameTextEntry"
 						textinputid="InnerAccountNameTextEntry"
 						textinputdoneactionstring="#Login_NextField"
@@ -65,7 +65,7 @@
 					<Label id="LoginLabel" text="#Login_Login" />
 				</Button>
 
-				<Panel id="More" childfocusonhover="true">
+				<Panel id="More">
 					<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
 						<Label text="#Login_RememberPassword" />
 						<Panel id="SharedBorder" />

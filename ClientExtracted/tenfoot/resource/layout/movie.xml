@@ -28,26 +28,26 @@
 					</Panel>
 					<Panel class="ControlBarButtons" tabindex="auto" selectionpos="auto">
 						<Button id="PreviousTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerPreviousTrackPressed();">
-							<Image src="file://{images}/transport_controls/Icon_PreviousTrack.tga" />
+							<Image src="file://{images}/transport_controls/icon_previoustrack.png" />
 						</Button>
 						<Button id="Rewind" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerRewind();">
-							<Image src="file://{images}/transport_controls/Icon_RWD.tga" />
+							<Image src="file://{images}/transport_controls/icon_rwd.png" />
 						</Button>
 						<Button id="Stop" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerStopPressed();">
-							<Image src="file://{images}/transport_controls/Icon_Stop.tga" />
+							<Image src="file://{images}/transport_controls/icon_stop.png" />
 						</Button>
 						<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
-							<Image src="file://{images}/transport_controls/Icon_FFWD.tga" />
+							<Image src="file://{images}/transport_controls/icon_ffwd.png" />
 						</Button>
 						<Button id="NextTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerNextTrackPressed();">
-							<Image src="file://{images}/transport_controls/Icon_NextTrack.tga" />
+							<Image src="file://{images}/transport_controls/icon_nexttrack.png" />
 						</Button>
 						<ToggleButton id="PlayPause" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();">
 							<Image />
 						</ToggleButton>
 					</Panel>
 				</Panel>
-				<VUMeter tabindex="auto" selectionpos="auto" writable="true" id="Volume" class="VoiceBarContainer" numbars="12" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+				<VUMeter tabindex="auto" selectionpos="auto" writable="true" id="Volume" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
 			</Panel>
 		</Panel>
 	</Movie>	

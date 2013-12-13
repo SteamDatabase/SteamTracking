@@ -4,6 +4,7 @@
 	{
 		subheaderlabels { controlname="CDetailsSubHeaderLabelsPanel" }
 		launchbutton { controlname="Button" labeltext="#Steam_LaunchGame" style="detailsLaunchButton" tabposition=1 command="RunGameAction" }
+		clientlist { controlname="ClientListButton" labeltext="" style="ClientListButton" tabposition=2 zpos=100 }
 	}
 
 	colors
@@ -18,6 +19,78 @@
 		{
 			bgcolor=backgroundstartsubtle
 		}
+		
+		
+		ClientListButton
+		{
+			inset="-6 0 0 0"
+			// minimum-width=20
+			// minimum-height set by code to match actual height of Launch button
+			// Do not set either minimum-width or -height here or it will override the code and the layout will break
+			bgcolor=none
+
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 , y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+				
+				2="fill( x0 - 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle )"  // top
+				3="fill( x0 - 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle )"  // bottom
+				4="fill( x0 - 1, y0 + 4, x0, y1 - 4, text )"  // left
+				5="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
+				
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
+				8="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				9="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				10="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				11="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				
+				12="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle )"
+				13="fill( x0 - 1, y1 - 2, x0, y1 - 1, almostblack )"
+				14="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderSubtle )"
+				15="fill( x0 - 1, y1 - 2, x0, y1 - 1, almostblack )"
+				16="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderSubtle )"
+				17="fill( x0 -1, y1 - 1, x0, y1, ButtonBorderSubtle	 )"
+				18="fill( x0 - 2, y1 - 2, x0 - 1, y1 - 1, almostblack )"
+				19="fill( x0 - 1, y1 - 4, x0, y1 - 2, almostblack )"
+			}
+		}
+		
+		ClientListButton:hover
+		{
+			inset="-6 0 0 0"
+			bgcolor=none
+
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 , y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+				
+				2="gradient_horizontal( x0 - 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle, ButtonBorderFocus )"  // top
+				3="gradient_horizontal( x0 - 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle, ButtonBorderFocus )"  // bottom
+				
+				4="fill( x0 - 1, y0 + 4, x0, y1 - 4, text )"  // left
+				5="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+				
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				7="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+				8="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
+				9="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
+				10="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
+				11="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
+				
+				12="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle )"
+				13="fill( x0 - 1, y1 - 2, x0, y1 - 1, almostblack )"
+				14="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderSubtle )"
+				15="fill( x0 - 1, y1 - 2, x0, y1 - 1, almostblack )"
+				16="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderSubtle )"
+				17="fill( x0 -1, y1 - 1, x0, y1, ButtonBorderSubtle	 )"
+				18="fill( x0 - 2, y1 - 2, x0 - 1, y1 - 1, almostblack )"
+				19="fill( x0 - 1, y1 - 4, x0, y1 - 2, almostblack )"
+			}
+		}	
+		
 
 		DetailsButton
 		{   
@@ -67,26 +140,27 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, almostblack )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
 
 				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
+
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
 				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
 				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -96,7 +170,7 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none
 			
@@ -183,26 +257,27 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, almostblack )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
 
 				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
+
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
 				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
 				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -217,32 +292,30 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_down )"
 			}
 			render_bg
 			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
+        // background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
                 
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
-
-				// single pixel fills in the corners
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle  )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle  )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle  )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle  )"
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}
 		}
 		
@@ -253,37 +326,36 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_down )"
 			}
 			
 			render_bg
 			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
-
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle)"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle)"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderSubtle)"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle)"  // right
+        // background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+                
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle)"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle)"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderSubtle)"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle)"
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 				
@@ -344,26 +416,27 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, almostblack )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
 
 				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
+
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
 				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
 				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -379,32 +452,30 @@
 			
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_down )"
 			}
 			render_bg
 			{
                 // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
                 
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
-
-				// single pixel fills in the corners
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle  )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle  )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle  )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle  )"
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}
 		}
 		
@@ -415,37 +486,36 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_down )"
 			}
 			
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
 
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle)"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle)"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderSubtle)"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle)"  // right
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle)"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle)"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderSubtle)"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle)"
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -506,26 +576,27 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, almostblack )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
 
 				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
-								
-			   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
-			   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle )"
+
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
 				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -535,37 +606,36 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_down )"
 			}
 			
 			render_bg
 			{
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
-
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle)"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle)"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderSubtle)"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle)"  // right
+         // background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+                
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
 				
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle)"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle)"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderSubtle)"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle)"
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}	
 		}
 		
@@ -581,32 +651,30 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_hover )"
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_down )"
 			}
 			render_bg
 			{     
-				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
+        // background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
                 
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocusSubtle )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocusSubtle )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocusSubtle )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocusSubtle )"  // right
-
-				// single pixel fills in the corners
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle  )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocusSubtle  )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle  )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocusSubtle  )"
+				1="gradient_horizontal( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus, ButtonBorderSubtle )"  // top
+				2="gradient_horizontal( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus, ButtonBorderSubtle )"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle )"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocusSubtle )"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle )"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocusSubtle )"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle )"
 				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderSubtle )"
 				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderSubtle )"
 				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderSubtle )"
 				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderSubtle )"
 			}
 		}
 	}
@@ -617,7 +685,7 @@
 		region { name="header" y=0 x=0 width=max height=max }
 
 		place { 
-			control=launchbutton,subheaderlabels
+			control=launchbutton
 			region=header
 			dir=right
 			align=middle
@@ -625,6 +693,26 @@
 			margin-right=0
 			margin-top=10
 			margin-bottom=10
+			spacing=0
+		}
+		place { 
+			start=launchbutton
+			control=clientlist
+			region=header
+			dir=right
+			align=middle
+			margin-left=0
+			margin-right=0
+			spacing=0
+		}
+		place { 
+			start=clientlist
+			control=subheaderlabels
+			region=header
+			dir=right
+			align=middle
+			margin-left=10
+			margin-right=0
 			spacing=10
 		}
 	}

@@ -14,7 +14,7 @@
 			<!-- main panel -->
 			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
 				<Label class="SettingsCallout" text="#SettingsInGame_Intro" />
-				<ToggleButton id="SettingsInGame_Enable" class="CheckBox" text="#SettingsInGame_Enable" tabindex="0" selectionpos="0,0"/>
+				<ToggleButton id="SettingsInGame_Enable" class="CheckBox" text="#SettingsInGame_Enable" tabindex="0" selectionpos="0,0" onactivate="InGameSettingsControlSelected()"/>
 			</Panel>
 			<!-- used for enable/disable CSS -->
 			<Panel id="SettingsInGame_SubControls" tabindex="auto" selectionpos="auto">
@@ -44,8 +44,8 @@
 
 					</Panel>
 					<Label class="SettingsCallout SettingsCalloutSnug" text="#SettingsInGame_WhenScreenshotTaken" />
-					<ToggleButton id="SettingsInGame_DisplayNotification" class="CheckBox" text="#SettingsInGame_DisplayNotification" tabindex="auto" selectionpos="auto"/>
-					<ToggleButton id="SettingsInGame_PlaySound" class="CheckBox" text="#SettingsInGame_PlaySound" tabindex="auto" selectionpos="auto"/>
+					<ToggleButton id="SettingsInGame_DisplayNotification" class="CheckBox" text="#SettingsInGame_DisplayNotification" tabindex="auto" selectionpos="auto" onactivate="InGameSettingsControlSelected()"/>
+					<ToggleButton id="SettingsInGame_PlaySound" class="CheckBox" text="#SettingsInGame_PlaySound" tabindex="auto" selectionpos="auto" onactivate="InGameSettingsControlSelected()"/>
 				</Panel>
 			</Panel>
 		</Panel>

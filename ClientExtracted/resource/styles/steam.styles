@@ -4485,5 +4485,16 @@ steam.styles
 			1="fill( x0+6, y0+1, x1-6, y0+2, SuperDivider )"
 		}
 	}
+	
+	"NotifyRemoteClientTitle"
+	{
+		textcolor="LabelDisabled"
+	}
+	
+	"NotifyRemoteClientInfo"
+	{
+		textcolor="176 172 165 255"
+	}
+
   }
 }

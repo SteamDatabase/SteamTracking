@@ -475,6 +475,7 @@ TextInputDaisy
 .BButtonBox,
 .XButtonBox,
 .YButtonBox,
+.BkspButtonBox
 {
 	border-radius: 50%;
 	border: 2px solid #00000000;
@@ -506,7 +507,8 @@ TextInputDaisy
 .AButtonText,
 .BButtonText,
 .XButtonText,
-.YButtonText
+.YButtonText,
+.BkspButtonText
 {
 	margin-top: 4px;
 	margin-left: 8px;
@@ -1158,3 +1160,221 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 {
 	visibility: collapse;
 }
+
+
+
+@define pinpaddivider: #878c8eff;
+@define pinpadbuttonshadow: #EEEEEE30 -5px -5px 6px 10px;
+
+.DaisyInputTypePIN #Wheel
+{
+	visibility: collapse;
+}
+
+.DaisyInputTypePIN #Legends
+{
+	visibility: collapse;
+}
+
+.DaisyInputTypePIN #TextInputText
+{
+	visibility: collapse;
+}
+
+#PINPad
+{
+	width: 100%;
+	height: 1080px;
+	flow-children: down;
+	background-color: daisy_bg_wash_color;
+	visibility: collapse;
+}
+
+.DaisyInputTypePIN #PINPad
+{
+	visibility: visible;
+}
+
+.PINButton
+{
+	line-height: 120px;
+	flow-children: down;
+
+	color: tclegendlabel;
+
+	border-style: solid;
+	border-color: pinpaddivider;
+
+	height: 198px;
+	width: 126px;
+
+	padding: 20px 20px 10px 20px;
+}
+
+.PINButtonText
+{
+	horizontal-align: center;
+	font-size: 124px;
+	font-weight: light;
+	color: storetitlecolor;
+}
+
+.PINButton .PINButtonIcon
+{
+	line-height: 30px;
+	horizontal-align: center;
+	font-size: 21px;
+	font-family: "Motiva Sans";
+	font-weight: light;
+}
+
+#LBPIN .TriggerButtonBox
+{
+	padding-left: 20px;
+	width: 63px;
+	border-top-left-radius: 35px 18px;
+}
+
+#RBPIN .TriggerButtonBox
+{
+	padding-right: 20px;
+	width: 63px;
+	border-top-right-radius: 35px 18px;
+}
+
+.PINButtonBox
+{
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	box-shadow: pinpadbuttonshadow;
+}
+
+.PINRow
+{
+	flow-children: right;
+	horizontal-align: center;
+	border-style: solid;
+	border-color: pinpaddivider;
+}
+
+#PINTop
+{
+	margin-top: 30px;
+}
+
+#PINMiddle
+{
+	border-width: 1px 0px 1px 0px;
+}
+
+#PINBottom
+{
+	border-width: 0px 0px 1px 0px;
+}
+
+.PINButtonMiddle
+{
+	border-width: 0px 1px 0px 1px;
+}
+
+
+#Bksp_btn
+{
+	width: 47px;
+	height: 33px;
+	border-radius: 44%;
+	margin-right: 8px;
+}
+
+
+#PINFooter
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-bottom: 40px;
+	flow-children: right;
+
+	font-size: 24px;
+	line-height: 30px;
+	padding: 20px;
+	height: 88px;
+}
+
+
+.SteamPad .PINButtonBox,
+.SteamPad .DPadButtonBox,
+.SteamPad #PINFooter .AButtonBox,
+.SteamPad #PINFooter .BButtonBox
+{
+	visibility: collapse;
+}
+
+.SteamPadBox,
+.SteamPadGridBox
+{
+	visibility: collapse;
+}
+
+.SteamPad .SteamPadBox
+{
+	visibility: visible;
+
+	width: 48px;
+	height: 48px;
+	font-size: 20px;
+}
+
+.SteamPad .SteamPadGridBox
+{
+	visibility: visible;
+}
+
+#YPIN_btn_steampad
+{
+	margin-top: -6px;
+}
+
+#YPIN_btn_steampad Image
+{
+	opacity: 0.6;
+}
+
+#YPIN_btn_steampad Label
+{
+	margin-left: 24px;
+	margin-top: 2px;
+}
+
+#XPIN_btn_steampad
+{
+	margin-top: -6px;
+}
+
+#XPIN_btn_steampad Image
+{
+	opacity: 0.6;
+}
+
+#XPIN_btn_steampad Label
+{
+	padding-left: 25px;
+	padding-top: 14px;
+}
+
+#APIN_btn_steampad
+{
+	padding-left: 10px;
+	padding-top: 11px;
+	background-image: url( "file://{images}/footer/a_button.png" );
+}
+
+#BPIN_btn_steampad
+{
+	padding-left: 10px;
+	padding-top: 2px;
+	background-image: url( "file://{images}/footer/b_button.png" );
+}
+

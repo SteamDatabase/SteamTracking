@@ -31,7 +31,7 @@
 	
 
 	
-				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" />
+				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" onactivate="AccountSettingsToggleSavePW()"/>
 
 			</Panel>
 	

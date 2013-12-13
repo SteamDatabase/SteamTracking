@@ -341,3 +341,15 @@ BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 	opacity: 0.95;
 }
 
+BackgroundVideoPanel.SteamOS.GamesRunning #BackgroundThrobber
+{
+	width: 120px;
+	height: 120px;
+	align: center center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+
+	opacity: 1.0;
+}

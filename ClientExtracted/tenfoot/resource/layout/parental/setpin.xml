@@ -1,0 +1,53 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/parental/parental.css" />		
+	</styles>
+
+	<ParentalSetPINChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
+		</Panel>
+
+		<Panel class="SettingsBottomPanel">
+			<!-- main panel -->
+			<Label id="SetPIN" text="#Parental_Set_PIN" />
+
+			<Panel class="ParentalSetPINDialog">
+				<Panel class="ParentalPINEntry" >
+					<Label text="#Parental_Enter_PIN" />
+					<TextEntry class="ParentalPINEntry" id="Password"
+							   textinputid="ParentalPINEntry"
+							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							   undohistory="enabled" />
+				</Panel>
+				<Panel class="ParentalPINEntry">
+					<Label text="#Parental_Reenter_PIN" />				
+					<TextEntry class="ParentalPINEntry" id="PasswordReenter"
+							   textinputid="ParentalPINEntry"
+							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							   undohistory="enabled" />
+				</Panel>
+			</Panel>
+					
+
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button selectionpos="1.0,2.0" class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+			<Button selectionpos="2.0,2.0" class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>			
+			<Button selectionpos="3.0,2.0" class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</ParentalSetPINChild>
+
+</root>

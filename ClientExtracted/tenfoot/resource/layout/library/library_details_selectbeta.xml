@@ -8,19 +8,27 @@
 
 	<SelectAppBeta class="TenfootMsgBox" defaultfocus="BetaDropDown">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
-    		<Label class="StdTitle" text="#Library_SelectBeta_Title" />
+			<Label class="StdTitle" text="#Library_SelectBeta_Title" />
 
-    		<Label class="StdLabelMed" text="#Library_SelectBeta_CodeLabel" />
-	    	<DropDown id="BetaDropDown" >
-	   			<Label id="None" text="#Library_SelectBeta_None" />
-	    	</DropDown>
+			<Label class="StdLabelMedBlue" text="#Library_SelectBeta_CodeLabel" />
+			<DropDown id="BetaDropDown" >
+			</DropDown>
+			
+			<ToggleButton tabindex="1.0" class="CheckBox PrivateBeta" id="ShowPrivateBetas" text="#Library_SelectBeta_Private" onactivate="ToggleShowPrivateBetas()"/>
+			<TextEntry class="PrivateBeta StdLabelMedBlue" id="PrivateBetaPW"
+					textinputid="PrivateBetaPWTextEntry"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" >
+					<Label class="StdLabelMedBlue " text="#Library_SelectBeta_BetaPassword" />
+			</TextEntry>
 
-
-            <Panel id="MsgBoxButtons">
-                <Button onactivate="ButtonCancel()">
-                    <Label text="#Library_CloseButton" />
-                </Button>
-            </Panel>        
-        </Panel>
+			<Panel id="MsgBoxButtons">
+				<Button onactivate="ButtonOK()" id="OK" >
+					<Label text="#UI_OK" />
+				</Button>
+				<Button onactivate="ButtonCancel()">
+					<Label text="#UI_Cancel" />
+				</Button>
+			</Panel>        
+		</Panel>
 	</SelectAppBeta>
 </root>

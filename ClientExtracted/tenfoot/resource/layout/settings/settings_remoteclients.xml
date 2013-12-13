@@ -50,7 +50,7 @@
 						<Label id="60" text="#Settings_RemoteClients_Framerate60" />
 					</DropDown>
 					<Panel class="Spacer" />
-						<Button id="SettingsRemoteClients_Help" class="Button" >
+						<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617);">
 							<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
 						</Button>	
 				</Panel>

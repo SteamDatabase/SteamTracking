@@ -187,6 +187,11 @@ ToggleButton .TickBox
 	height: 49px;
 	vertical-align: center;
 	margin-right: 8px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 2px;
+	background-color: ui_common_control;
+	border-color: ui_common_control_border;
 }
 
 ToggleButton:selected .TickBox
@@ -1466,10 +1471,15 @@ CheckoutReviewLineItem
 	horizontal-align: right;
 }
 
-#ReviewSubTotal, #ReviewTax, #ReviewTotal
+#ReviewSubTotal, #ReviewTax, #ReviewTotal, #ConvertedReviewTotal
 {
 	width: 150px;
 	text-align: right;
+}
+
+#ReviewConvertedTotalRow
+{
+	padding-top: 8px;
 }
 
 .PaymentMethodReviewSection

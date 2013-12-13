@@ -64,13 +64,13 @@
 					<Panel id="RightWrapper">
 						<Panel id="BACKWrapper">
 							<Panel id="BACKInnerWrapper">
-								<Label id="BACK_btn" class="LegendButtonBox BACKButtonBox" text="◀" />
+								<Panel id="BACK_btn" class="LegendButtonBox BACKButtonBox" />
 								<FooterLabelButton id="BACK_txt" class="LegendText BACKButtonText" padevent="pad_back" />
 							</Panel>
 						</Panel>
 						<Panel id="STARTWrapper">
 							<Panel id="STARTInnerWrapper">
-								<Label id="START_btn" class="LegendButtonBox STARTButtonBox" text="▶" />
+								<Panel id="START_btn" class="LegendButtonBox STARTButtonBox" />
 								<FooterLabelButton id="START_txt" class="LegendText STARTButtonText" padevent="pad_start" />
 							</Panel>
 						</Panel>

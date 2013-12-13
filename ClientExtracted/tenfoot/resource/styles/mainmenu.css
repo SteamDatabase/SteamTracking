@@ -70,6 +70,18 @@ MainMenu.SlideAwayToRight
 
 }
 
+.BehindMessageBox SettingsPanel
+{
+	transition-property: blur, desaturation, opacity, wash-color, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+	desaturation: 0.4;
+	opacity: 1.0;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
 .BehindDaisyWheel #BodyWrapper
 {
 	desaturation: 0.0;
@@ -214,7 +226,7 @@ MainMenu.StackDepth3 .HomeGlow
 	margin-right: 10px;
 	padding: 65px 66px;
 	vertical-align: top;
-	height: 250px;
+	height: 263px;
 
 	width: 100%;
 	z-index: 2000;
@@ -246,7 +258,14 @@ MainMenu.StackDepth3 #TopRow
 .TopRowBase Label
 {
 	white-space: nowrap;
+	margin-top: 3px;
 	text-overflow: clip;
+	color: messagecolorwash;
+}
+
+.TopRowFocused Label
+{
+	color: tclegendlabel;
 }
 
 .TopRowBase .ShortDesc
@@ -333,14 +352,12 @@ MainMenu.StackDepth3 #TopRow
 #ParentalLockButton .SmDesc, #GoOnlineButton .SmDesc
 {
 
-	line-height: 18px;
+	height: 20px;
 	opacity: 0.0;
 
 	text-overflow: clip;
 	text-transform: uppercase;
 	font-size: 18px;
-	margin-top: 0px;
-	margin-bottom: -2px;
 	font-weight: medium;
 
 }
@@ -349,6 +366,14 @@ MainMenu.StackDepth3 #TopRow
 {
 	opacity: 1.0;
 	visibility: visible;
+}
+
+#ParentalLockImageOverlay
+{
+	width: 64px;
+	height: 64px;	
+	margin-bottom: 2px;
+	vertical-align: center;
 }
 
 #Clock,#ClockSuffix
@@ -389,6 +414,7 @@ Button:hover .ShortDesc
 {
 	transition-delay: 0.08s;
 	opacity: 1.0;
+	margin-top: 3px;
 
 }
 
@@ -413,7 +439,7 @@ Button:hover .ShortDesc
 
 .TopRowBase Button, InboxMenu Button
 {
-	padding: 8px 8px;
+	padding: 6px 6px;
 }
 
 
@@ -433,7 +459,7 @@ Button:hover .ShortDesc
 	border-style: solid;
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
-	padding: 8px 8px;
+	padding: 6px 6px;
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
@@ -450,6 +476,12 @@ Button:hover .ShortDesc
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
+
+.TopRowBase Button:focus Label, InboxMenu Button:focus Label, ParentalButton:focus Label
+{
+	color: applabelselectedsolid;	
+}
+
 
 .TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
 {
@@ -621,7 +653,8 @@ Button:hover .ShortDesc
 {
 	flow-children: right;
 	color: tcexitrow;
-	font-size: 36px;
+	font-size: 30px;
+	margin-top: 4px;
 	padding: 10px;
 	vertical-align: center;
 }
@@ -639,14 +672,15 @@ Button:hover .ShortDesc
 #TopRow #SystemIMs
 {
 	flow-children: right;
-	margin-left: 4px;
+	margin-left: 0px;
+	padding: 6px 6px;
 }
 
 #TopRow #Inbox
 {
 	flow-children: right;
-	margin-left: 4px;
-	padding: 8px;
+	margin-left: 0px;
+	padding: 6px;
 	opacity: 0.0;
 }
 
@@ -668,7 +702,7 @@ Button:hover .ShortDesc
 #Clock, #ClockSuffix
 {
 	vertical-align: center;
-	font-size: 36px;
+	font-size: 30px;
 	margin-right: 16px;
 	margin-bottom: 2px;
 	color: messagecolorwash;
@@ -686,7 +720,7 @@ margin-right: 8px;
 
 #DownloadsButton Label, #SystemIMs Label, #Inbox Label, InboxMenu Button Label
 {
-	font-size: 36px;
+	font-size: 30px;
 	margin-left: 6px;
 	margin-right: 6px;
 
@@ -748,7 +782,7 @@ margin-right: 8px;
 	horizontal-align: right;
 	flow-children: right;
 	color: tcexitrow;
-	font-size: 34px;
+	font-size: 30px;
 	padding: 10px;
 }
 
@@ -768,7 +802,7 @@ margin-right: 8px;
 {
 	flow-children: right;
 	vertical-align: center;
-	padding: 8px;
+	padding: 6px;
 }
 
 #Exit
@@ -785,11 +819,9 @@ margin-right: 8px;
 
 #BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label, .ExitRowCursorButton Label
 {
-	margin-left: 4px;
 	vertical-align: center;
 	padding-left: 4px;
-	margin-right: 4px;
-	margin-bottom: 0px;
+	margin-top: 0px;
 }
 	
 .SteamLogo
@@ -1113,7 +1145,11 @@ InboxMenu.Destructing
 {
 	flow-children: right;
 	vertical-align: center;
-	padding: 8px;
+	padding: 6px;
+	padding-top: 8px;
+	margin-top: 2px;
+	padding-bottom: 8px;
+	height: 106px;
 }
 
 .ParentalLockButtonLabels, .GoOnlineButtonLabels
@@ -1124,6 +1160,8 @@ InboxMenu.Destructing
 	height: 88px;
 	max-width: 0px;
 	opacity: 0.0;
+	margin-top: 0px;
+	margin-left: 4px;
 
 	transition-property: opacity, max-width;
 	transition-duration: 0.3s;
@@ -1153,7 +1191,13 @@ InboxMenu.Destructing
 	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
 	max-width: 400px;
+
 }
+
+.ParentalLockButtonLabels,
+{
+	margin-top: 1px;
+	}
 
 #ParentalLockButton.Locked:focus  #ParentalLockTextLocked, #ParentalLockButton:focus  #ParentalLockTextUnlocked
 {
@@ -1309,9 +1353,15 @@ ParentalButton.Locked
 	transition-property: max-width, opacity;
 }
 
+#GoOnlineButton #SmDesc1, #ParentalLockTextLockedSuffex1,
+{
+	margin-bottom: 1px;
+}
+
+
 .GoOnlineButtonLabels
 {
-	transform: translateY( 16px );
+	transform: translateY( 21px );
 	color: tcexitrow;
 }
 
@@ -1352,4 +1402,12 @@ ParentalButton.Locked
 {
 	visibility: visible;
 	opacity: 1.0;
+}
+
+#ParentalLockImageLocked, #ParentalLockImageUnlocked
+{
+	margin-bottom: 4px;
+	margin-top: -4px;
+	margin-right: -3px;
+	margin-left: 3px;
 }

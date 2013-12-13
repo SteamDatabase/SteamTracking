@@ -5,8 +5,9 @@
 	</styles>
 
 	<Panel class="NotificationRoot RemoteClientDisconnectNotification">
-		<Panel class="NotificationFrame" />
+		<Panel class="NotificationFrameDisconnected" />
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
-		<Label class="NotificationOneLabelBody" text="#Notification_RemoteClientDisconnected" />
+		<Label class="NotificationTwoLabelBodyLineOne" text="#Settings_RemoteClients" />
+		<Label class="NotificationTwoLabelBodyLineTwo" text="#Notification_RemoteClientDisconnected" />
 	</Panel>
 </root>

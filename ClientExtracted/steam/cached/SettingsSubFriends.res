@@ -57,7 +57,7 @@
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label2"
-		"xpos"		"80"
+		"xpos"		"70"
 		"ypos"		"15"
 		"wide"		"304"
 		"tall"		"24"
@@ -77,10 +77,10 @@
 	{
 		"ControlName"		"TextEntry"
 		"fieldName"		"NameEntry"
-		"xpos"		"80"
-		"ypos"		"41"
-		"wide"		"264"
-		"tall"		"24"
+		"xpos"		"70"
+		"ypos"		"43"
+		"wide"		"185"
+		"tall"		"25"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
@@ -222,7 +222,7 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"JoinGameNotifyCheck"
 		"xpos"		"40"
-		"ypos"		"252"
+		"ypos"		"272"
 		"wide"		"202"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -241,7 +241,7 @@
 		"ControlName"		"CheckButton"
 		"fieldName"		"JoinGamePlaySoundCheck"
 		"xpos"		"40"
-		"ypos"		"273"
+		"ypos"		"249"
 		"wide"		"202"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -315,7 +315,7 @@
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label6"
-		"xpos"		"249"
+		"xpos"		"282"
 		"ypos"		"227"
 		"wide"		"252"
 		"tall"		"24"
@@ -333,7 +333,7 @@
 	{
 		"ControlName"		"CheckButton"
 		"fieldName"		"ReceiveMessageNotifyCheck"
-		"xpos"		"269"
+		"xpos"		"305"
 		"ypos"		"249"
 		"wide"		"230"
 		"tall"		"24"
@@ -352,7 +352,7 @@
 	{
 		"ControlName"		"CheckButton"
 		"fieldName"		"ReceiveMessagePlaySoundCheck"
-		"xpos"		"269"
+		"xpos"		"305"
 		"ypos"		"271"
 		"wide"		"230"
 		"tall"		"24"
@@ -371,7 +371,7 @@
 	{
 		"ControlName"		"URLLabel"
 		"fieldName"		"URLLabel1"
-		"xpos"		"80"
+		"xpos"		"70"
 		"ypos"		"74"
 		"wide"		"324"
 		"tall"		"24"
@@ -410,7 +410,7 @@
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label7"
-		"xpos"		"249"
+		"xpos"		"282"
 		"ypos"		"305"
 		"wide"		"252"
 		"tall"		"24"
@@ -428,7 +428,7 @@
 	{
 		"ControlName"		"RadioButton"
 		"fieldName"		"FlashModeAlways"
-		"xpos"		"269"
+		"xpos"		"305"
 		"ypos"		"329"
 		"wide"		"252"
 		"tall"		"24"
@@ -448,7 +448,7 @@
 	{
 		"ControlName"		"RadioButton"
 		"fieldName"		"FlashModeMinimized"
-		"xpos"		"269"
+		"xpos"		"305"
 		"ypos"		"350"
 		"wide"		"252"
 		"tall"		"24"
@@ -468,7 +468,7 @@
 	{
 		"ControlName"		"RadioButton"
 		"fieldName"		"FlashModeNever"
-		"xpos"		"269"
+		"xpos"		"305"
 		"ypos"		"371"
 		"wide"		"252"
 		"tall"		"24"

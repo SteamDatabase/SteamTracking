@@ -5,7 +5,7 @@
 		"downloadsummarypanel"
 		{
 			style=CDownloadSummaryPanel
-			tall="120"
+			tall="130"
 		
 		}
 		
@@ -56,6 +56,18 @@
 			"labelText"	    "%TotalDownloaded%"
 			style="bigtext"
 		}
+		
+		"disk_status_image"
+		{
+			"ControlName"	    "ImagePanel"
+			"image"		"graphics/icon_disk_activity_idle.tga"
+		}
+		"disk_status_label"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "#steam_downloads_diskstatus_idle"
+			style="bigtextlabel"
+		}		
 		
 		"pauseresumeallbutton"
 		{
@@ -342,8 +354,8 @@
 			}
 			render
 			{
-				0="fill( x0, y0, x0+125,	y1, panelBackground	)"
-				1="gradient_horizontal( x0+125, y0, x0+275, y1, panelBackground,	panelBackgroundTransparent )"
+				0="fill( x0, y0, x0+170,	y1, panelBackground	)"
+				1="gradient_horizontal( x0+170, y0, x0+375, y1, panelBackground,	panelBackgroundTransparent )"
 			}
 		}
 	}
@@ -369,6 +381,7 @@
 		place { region=left_column  control="download_rate_value,download_rate" spacing=4 }
 		place { region=left_column  control="peak_download_rate_value, peak_download_rate" spacing=4 y=22 align=top }
 		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing= 4	y=44	align=top	}
+		place { region=left_column  control="disk_status_image, disk_status_label" spacing= 4	y=66	align=top	}
 		
 		// throttling info
 		place { region=middle_column controls="blackout_label, blackout_value" spacing=4 }

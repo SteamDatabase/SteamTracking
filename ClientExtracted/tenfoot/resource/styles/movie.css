@@ -182,21 +182,16 @@ MoviePanel
 
 #Timeline
 {
-	width: 577px;
+	width: 547px;
 	height: 20px;
 
 	border: 2px solid black;
 	padding: 2px;
 	margin: 0px 6px 0px 6px;
 	background-color: black;
-	border-radius: 6px;
+	border-radius: 4px;
 
-	animation-name: control-outer-glow;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
 }
 
 .ProgressBarWrapper
@@ -234,12 +229,7 @@ MoviePanel
 	background-color: black;
 	border-radius: 6px;
 
-	animation-name: control-outer-glow;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
 }
 
 .ControlBarButtons
@@ -276,6 +266,7 @@ MoviePanel
 .ControlBarButton Image
 {
 	align: center center;
+	pre-transform-scale2d: 0.8;
 }
 
 .ControlBarButton:focus Image
@@ -287,16 +278,17 @@ MoviePanel
 {
 	width: 37px;
 	height: 37px;
+	pre-transform-scale2d: 0.8;
 	align: center center;
 	border-color: none;
 	box-shadow: none;
 	background-color: none;
-	background-image: url( "file://{images}/transport_controls/Icon_Pause.tga" );
+	background-image: url( "file://{images}/transport_controls/icon_pause.png" );
 }
 
 #PlayPause:selected .TickBox
 {
-	background-image: url( "file://{images}/transport_controls/Icon_Play.tga" );
+	background-image: url( "file://{images}/transport_controls/icon_play.png" );
 }
 
 #PlayPause:descendantfocus .TickBox
@@ -307,30 +299,25 @@ MoviePanel
 
 #PreviousTrack
 {
-	border-radius: 6px 0px 0px 6px;
+	border-radius: 4px 0px 0px 4px;
 }
 
 #PlayPause
 {
-	border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 4px 4px 0px;
 }
 
 #Volume
 {
 	background-color: black;
-	width: 203px;
+	width: 173px;
 	height: 50px;
-	border-radius: 6px;
+	border-radius: 4px;
 	padding: 0px;
 	margin: 0px;
 	margin-left: 14px;
 
-	animation-name: control-outer-glow;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
 }
 
 #Volume:focus
@@ -362,7 +349,7 @@ MoviePanel
 	align: center center;
 	font-size: 26px;
 	margin-bottom: 4px;
-	color: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
+	color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #999999ff ) );
 }
 
 #Bar1.VoiceBar { height:  3px; }
@@ -382,4 +369,5 @@ MoviePanel
 {
 	margin-left: 4px;
 	margin-right: 4px;
+	margin-bottom: 4px;
 }

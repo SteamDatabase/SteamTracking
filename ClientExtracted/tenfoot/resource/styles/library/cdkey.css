@@ -27,14 +27,17 @@
 
 #CDKeyLabel
 {
-	width: 300px;
+	width: 314px;
+	color: applabel;
 	margin-right: 45px;
+	font-size: 28px;
 	vertical-align: center;
 }
 
 #CdKeyContents
 {
 	vertical-align: center;
+	color: applabelsolid;
 }
 
 #ThrobberRow, #Throbber
