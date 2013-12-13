@@ -9,17 +9,20 @@
 
 	<Panel class="ParentalUnlockPopupBody" tabindex="auto">
 		<Label class="StdTitle" text="#Parent_Mode" />
-		<Label class="StdLabel" text="#Parental_EnterPIN" />
+		<Label id="MsgBoxDescriptionArea" text="#Parental_EnterPIN" />
 		<TextEntry class="ParentalPINEntry" id="Password"
 					textinputid="ParentalPINEntry"
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					undohistory="enabled" />
-					
-	  <Panel class="ParentalUnlockButtons" >
-			<Button id="UnlockButton" class="Button" onactivate="ParentalUnlock()">
-							<Label id="ParentalUnlockButtonLabel" text="#Parental_Unlock2" />
-			</Button>
-		</Panel>
+			<Panel id="MsgBoxButtons" >
+				<Button id="UnlockButton" onactivate="ParentalUnlock()">
+					<Label id="ParentalUnlockButtonLabel" text="#Parental_Unlock2" />
+				</Button>
+				<Button id="CancelButton" onactivate="ButtonCancel()">
+					<Label text="#UI_Cancel" />
+				</Button>
+			</Panel>
+
 	</Panel>
 </ParentalUnlockPopup>
 </root>

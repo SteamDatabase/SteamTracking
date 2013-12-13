@@ -4,7 +4,7 @@
 @define red: #ad4543;
 @define darkred: #712d2c;
 @define green: #00ff00;
-@define blue: #0000ff;
+@define blue: #294566;
 @define black: #000000;
 @define yellow: #ffff00;
 @define purple: #800080;
@@ -91,14 +91,14 @@
 @define bgwithgradienttopleft: #000000ff, gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b00 ) );					
 
 //settings
-@define simplebutton: #4c7a992f;
+@define simplebutton: gradient( linear, 0% 0%, 100% 100%, from( #4c7a994c  ), to( #4c7a9914 ) );
 @define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #00101cff  ), to( #000d1600 ) );
 
 //system wide
 @define messagecolorwash: #5492b8ff;
 @define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #5492b8ff ), color-stop( 0.90, #5492b8ff ), to( #5492b800 ) );
 
-@define dialog_bg_color: #2d5680ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #2d5680 ), color-stop( 0.26, #242424ff ) );
+@define dialog_bg_color: #335980ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #335980 ), color-stop( 0.26, #242424ff ) );
 @define overlay_bg_color: #174b73aa;
 @define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #2d5680ff ), to( #242424ff ) );
 @define dropdown_box_bg: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), color-stop( 0.5, #224561ff ), to( #2c2c2cff ) );
@@ -139,6 +139,7 @@
 @define ui_primary_color: #5492b8;
 @define ui_common_control: gradient( linear, 0% 0%, 0% 100%, from( #365b78ff ), to( #4b7696ff ) );
 @define ui_common_control2: gradient( linear, 0% 0%, 0% 100%, from( #365b7866 ), to( #4b7696ff ) );
+@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), to( #365b7866 ) );
 @define ui_dark_common_control: gradient( linear, 0% 0%, 0% 100%, from( #1a3140ff ), to( #13242eff ) );
 @define ui_common_control_border: #365b78dd;
 @define ui_common_control_border_off: #36668300;
@@ -245,6 +246,16 @@ DropDown:focus
 	animation-direction: normal;
 }
 
+DropDown:focus Label
+{
+	color: applabelselected;
+}
+
+DropDown.DropDownMenuVisible:focus Label
+{
+	color: applabel;
+}
+
 DropDown.DropDownMenuVisible:focus
 {
 	background-color: ui_common_control;
@@ -335,6 +346,7 @@ DropDownMenu.DropDownMenuVisible
 	opacity: 1.0;
 	box-shadow: fill #00000066 0px 0px 10px 0px;
 
+	max-height: 420px;
 	transition-property: box-shadow;
 }
 
@@ -763,8 +775,8 @@ h2
 {
 	background-color: simplebutton;
 	height: 70px;
-	width: 200px;
-	border-radius: 8px;
+	width: 194px;
+	border-radius: 4px;
 	flow-children: right;
 	border: 5px solid #1c333dff;
 	padding-left: 1px;
@@ -826,6 +838,7 @@ FriendsChatDialog .VoiceBarContainer
 {
 	height: 100%;
 	width: 8px;
+	border-radius: 1px;
 	margin-left: 5px;
 	margin-right: 5px;
 	vertical-align: bottom;
@@ -904,7 +917,7 @@ FriendsChatDialog .VoiceBarContainer
 // read-write VUs can take focus / be edited
 .VoiceBarContainer:selected
 {
-	pre-transform-scale2d: 1.15;
+	pre-transform-scale2d: 1.06;
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
@@ -1200,6 +1213,8 @@ FriendsChatDialog .VoiceBarContainer
 	opacity: 1.0;
 }
 
+
+
 //
 // Standard label styles.
 //
@@ -1225,14 +1240,22 @@ FriendsChatDialog .VoiceBarContainer
 	font-size: medfontsize;
 	margin-top: 10px;
 	font-family: platformfont;
+	color: applabelsolid;
+}
+
+.StdLabelMedBlue
+{
+	font-size: medfontsize;
+	margin-top: 10px;
+	font-family: platformfont;
 	color: tcstatictext;
 }
 
 .StdLabelLarge
-{ 
+{
 	font-size: largefontsize;
 	font-family: platformfont;
-    color: tclegendlabel;
+	color: tcstatictext;
 }
 
 
@@ -1319,4 +1342,10 @@ FriendsChatDialog .VoiceBarContainer
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+
+#MusicPlayerMenu.ContextMenuBodyCentered
+{
+	width: 400px;
 }

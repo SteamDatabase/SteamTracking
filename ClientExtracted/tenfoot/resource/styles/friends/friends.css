@@ -5,6 +5,7 @@
 @define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
 @define friendsverticalscrollpad: 18px;
 @define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 0%, from( #caccccff  ), to( #aaacacce ) );
+@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
 
 Friends
 {
@@ -90,7 +91,8 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 
 #FriendsChatDialogContainer
 {
-	width: 839px;
+	width: 829px;
+	margin-left: 10px;
 	height: fit-children;
 	flow-children: none;
 }
@@ -398,10 +400,33 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	background-color: friendstabcurrenthover;
 }
 
+#FriendsMainBodyInputTextArea:descendantfocus
+{
+	color: applabelselectedsolid;
+	
+	transition-duration: 0.4s !immediate;
+
+	border-color: #cececeff;
+	background-color: friendsitemmainlistbkgnd;
+
+	animation-name: main-button-glow-movement-no-fill;
+	//animation-name: links-and-more-button-focus;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	transition-property: background-color, border;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
 #FriendsMainBodyInputTextArea:hover:disabled
 {
 	background-color: friendschatinputbkgnd_text;
 }
+
+
 
 
 #FriendsMainBodyInputSendButton
@@ -623,7 +648,7 @@ FriendsSelfHeader.InGame Label
 	width: 100%;
 	font-weight: bold;
 	font-size: 27px;
-	height: 32px;
+	height: 35px;
 	margin-top: 1px;
 	margin-bottom: 0px;
 	white-space: nowrap;
@@ -724,7 +749,7 @@ FriendsSelfHeader.InGame Label
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
-#FriendsMainBodyColumnLeft:descendantfocus .LeftMainListItem.CurrentSelection
+#FriendsMainBodyListContainer:descendantfocus .LeftMainListItem.CurrentSelection
 {
 	transition-duration: 0.4s !immediate;
 
@@ -753,7 +778,7 @@ FriendsSelfHeader.InGame Label
 {
 	transition-duration: 0.4s !immediate;
 
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #d7d9d9ff ), to( #fefefe66 ) );
+	background-color: ui_common_control3;
 	border-color: #ffffff00;
 
 	transition-property: background-color, border;
@@ -780,9 +805,16 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 	color: #999999FF;
 }
 
+
+
 .LeftMainListItem.Online Label
 {
 	color: friendsonline_darkbg;
+}
+
+.LeftMainListItem.Online:descendantfocus Label
+{
+	color: friendsonline_lightbg;
 }
 
 .LeftMainListItem.InGame Label
@@ -792,23 +824,43 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 
 .LeftMainListItem.CurrentSelection.Online Label
 {
+	color: friendsonline_darkbg;
+}
+
+.LeftMainListItem.CurrentSelection.Online:descendantfocus Label
+{
 	color: friendsonline_lightbg;
 }
 
-.LeftMainListItem.CurrentSelection.InGame Label
+.LeftMainListItem.InGame:descendantfocus Label
 {
 	color: friendsingame_lightbg;
 }
 
+.LeftMainListItem.CurrentSelection.InGame:descendantfocus Label
+{
+	color: friendsingame_lightbg;
+}
+
+.LeftMainListItem.CurrentSelection.InGame Label
+{
+	color: friendsingame_darkbg;
+}
+
 .LeftMainListItem.CurrentSelection.Offline Label
 {
-	color: friendsoffline_lightbg;
+	color: #99999999;
+}
+
+.LeftMainListItem.CurrentSelection.Offline:descendantfocus Label
+{
+	color: applabelselectedsolid;
 }
 
 // GroupListItem.LeftMainListItem.CurrentSelection.Offline Label
 GroupListItem.LeftMainListItem.Offline:focus Label
 {
-	color: #222222FF;
+	color: applabelselectedsolid;
 }
 
 GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
@@ -832,6 +884,15 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffffff ), to( #bdbfbfff ) ); 
 	
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	
+	transition-duration: 0.23s;
+	transition-timing-function: linear;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 #FriendsMainBodyLeftHeaderButtons:descendantfocus .FriendsMainBodyHeaderButton.CurrentSelection
@@ -839,6 +900,15 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	background-color: friendstabcurrentselection;
 	border-color: #ffffff00;	
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	
+	transition-duration: 0.23s;
+	transition-timing-function: linear;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 .FriendsMainBodyHeaderButton
@@ -869,6 +939,15 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	color: #f2f2f2ff;
 	background-color: friendstabcurrentselection;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	
+	transition-duration: 0.23s;
+	transition-timing-function: linear;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 .FriendsMainBodyHeaderButton:hover
@@ -877,6 +956,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	color: #f2f2f2ff;
 	background-color: friendstabcurrenthover;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	
 }
 
 .FriendsMainBodyHeaderButton:active
@@ -1185,17 +1265,30 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 	visibility: visible;
 }
 
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedText
+
+.LeftMainListItem.CurrentSelection:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedText
 {
 	color: #303030ff;
 }
 
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedText
+{
+	wash-color: #ffffffff;
+	background-color: none;
+}
+
+
+.LeftMainListItem.CurrentSelection:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
 {
 	background-color: #303030ff;
 	color: #a0a0a0ff;
 }
 
+.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+{
+
+	wash-color: #ffffffff;
+}
 .AddFriendMsgBox #MsgBoxDescriptionArea
 {
 	flow-children: down;

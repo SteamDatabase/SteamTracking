@@ -50,6 +50,24 @@
 			tooltiptext="#Friends_WebStatus_Tooltip"
 		}
 
+		MobileStatusImageInGame
+		{
+			style="MobileStatusStyleInGame"
+			tooltiptext="#Friends_MobileStatus_Tooltip"
+		}
+
+		BigPictureStatusImageInGame
+		{
+			style="BigPictureStatusStyleInGame"
+			tooltiptext="#Friends_BigPictureStatus_Tooltip"
+		}
+
+		WebStatusImageInGame
+		{
+			style="WebStatusStyleInGame"
+			tooltiptext="#Friends_WebStatus_Tooltip"
+		}
+
 		StatusLabel
 		{
 			style="statusStyle"
@@ -189,7 +207,25 @@
 			image="graphics/icon_status_mobile"
 			padding-left=4
 		}
-	}
+
+		WebStatusStyleInGame
+		{
+			image="graphics/icon_status_web_ingame"
+			padding-left=4
+		}
+	
+		BigPictureStatusStyleInGame
+		{
+			image="graphics/icon_status_bigpic_ingame"
+			padding-left=4
+		}
+		
+		MobileStatusStyleInGame
+		{
+			image="graphics/icon_status_mobile_ingame"
+			padding-left=4
+		}
+}
 	
 	
 	layout
@@ -199,7 +235,7 @@
 		place {	control="Clanstatusimage"			x=20  width=15 }
 		place { control="ClanStatusImage,NameLabel,FriendsNameInstanceLabel,MenuButton" x=50 y=7  }
 
-		place { control="StatusLabel,BigPictureStatusImage,MobileStatusImage,WebStatusImage" x=50 y=19 }
+		place { control="StatusLabel,BigPictureStatusImage,MobileStatusImage,WebStatusImage,BigPictureStatusImageInGame,MobileStatusImageInGame,WebStatusImageInGame" x=50 y=19 }
 		place { control="GameLabel" x=50 y=31 }
 
 		// these controls are shown for friendship requests

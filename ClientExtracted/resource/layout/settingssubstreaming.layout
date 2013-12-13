@@ -1,0 +1,77 @@
+"resource/layout/settingssubstreaming.layout"
+{
+	controls
+	{
+		"DescriptionLabel"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_Description"
+		}
+		"RemoteClientList"
+		{
+			ControlName="ListPanel"
+			style="RemoteClientList"
+			tall=140
+		}
+		"PerfInstructionsLabel"
+		{
+			ControlName="Label"
+			fieldName="PerfInstructionsLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_Perf_Instructions" hello=78
+		}
+		"SupportInformationLabel"
+		{
+			ControlName="URLLabel"
+			fieldName="SupportInformationLabel"
+			labelText="#Steam_Settings_Streaming_StreamingSupport"
+			URLText="https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617"
+		}
+		
+		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
+
+		"FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
+		"FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
+
+		"HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
+	}
+	
+	style
+	{
+	}
+	
+	layout
+	{
+		region { name=bottom margin-top=248  width=275 height=max }
+		
+		place { control="BandwidthLimit,FramerateLimit" height=24 }
+		place
+		{
+			control="DescriptionLabel,RemoteClientList,PerfInstructionsLabel,SupportInformationLabel"
+			dir=down
+			align=top
+			width=max
+			margin-left=20
+			margin-right=20
+			margin-top=10
+			spacing=10
+		}	
+		place
+		{
+			control="BandwidthLabel,BandwidthLimit,FramerateLabel,FramerateLimit,HwAccelDisable"
+			region=bottom
+			dir=down
+			align=top
+			width=max
+			margin-left=20
+			margin-right=20
+			margin-top=10
+			spacing=10
+		}	
+
+		
+	}
+}

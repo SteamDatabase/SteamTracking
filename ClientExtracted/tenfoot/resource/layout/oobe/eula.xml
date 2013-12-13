@@ -1,0 +1,26 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/oobe/oobe.css" />
+	</styles>
+
+	<OOBEEulaWizardChild class="WizardChild" defaultfocus="EulaHTML" tabindex="auto" selectionpos="auto">
+
+		<Label class="WizardChildTitle" id="EulaTitle" text="#OOBE_Eula_Title" />
+
+		<Panel class="InputContainerDown GapDown">
+			<HTML id="EulaHTML" embedded="true" />
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#OOBE_Eula_IAgree" />
+			</Button>
+			<Button class="WizardButton" id="ButtonBack" onactivate="ShutdownMachine()">
+				<Label id="Label" text="#Quit_Shutdown" />
+			</Button>
+		</Panel>
+
+	</OOBEEulaWizardChild>
+</root>

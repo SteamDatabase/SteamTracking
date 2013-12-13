@@ -11,7 +11,7 @@
 			<Label id="ParentalText2" class="BottomLine" text="#Parental_MoreGames" />
 		</Panel>
 		<Panel class="RecentNameRow">
-			<Label id="AppName" text="#Parental_SelectToEnter"/>
+			<Label id="AppName" text="#Parental_SelectToAccess"/>
 		</Panel>
 	</ParentalGridItem>
 </root>

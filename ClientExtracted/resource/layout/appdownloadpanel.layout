@@ -81,6 +81,11 @@
 			padding-top=0
 			padding-bottom=0
 		}
+
+		links:disabled
+		{
+			textcolor="TextDisabled"
+		}
 		
 		settingslink
 		{
@@ -102,7 +107,12 @@
 			padding-left=0
 			padding-top=0
 			padding-bottom=0
-		}		
+		}
+
+		settingslink:disabled
+		{
+			textcolor="TextDisabled"
+		}
 
 		rightcolumnlink:hover
 		{
@@ -162,25 +172,13 @@
 		
 		gameImagePanelHighlight
 		{   
-			inset="0 0 0 0"
-			render_bg
+			inset="2 0 0 0"
+			bgcolor=none
+			render_bg	
 			{
-				// Insert glowy image here?
-				
-				// bottom
-				0="gradient( x0+8, y1 - 8, x1 - 8, y1, light_blue_grad, none )"
-				// top
-				1="gradient( x0 + 8, y0, x1 - 8, y0 + 8, none, light_blue_grad )"
-				// left
-				2="gradient_horizontal( x0, y0 + 8, x0 + 8, y1 - 8, none, light_blue_grad )"
-				// right
-				3="gradient_horizontal( x1 - 8, y0 + 8, x1, y1 - 8, light_blue_grad, none )"				
-			}
-			render
-			{
-			}
-		}		
-						
+			0="image( x0 - 1, y0 - 3, x1 + 0, y1 + 0, graphics/downloads_bg )"
+			}		
+		}					
 		DetailsLaunchButton
 		{   
 

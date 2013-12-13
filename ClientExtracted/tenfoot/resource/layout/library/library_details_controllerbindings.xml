@@ -142,6 +142,7 @@
 
 						</Panel>
 					<Panel id="BindingCallouts" class="BindingCallouts" />
+					<Label id="BindingNativeNotice" text="#Library_Details_ControllerBindingNativeNotice" />
 					</Panel>
 				</Panel>
 			</Panel>

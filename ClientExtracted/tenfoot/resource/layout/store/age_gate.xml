@@ -30,7 +30,7 @@
 					</DropDown>
 					<DropDown id="Year" />
 					<Button id="ContinueBtn" class="AgeButton" onactivate="AgeGateSubmit();">
-						<Label text="#UI_Continue" />
+						<Label text="#UI_Age_Gate_Continue" />
 					</Button>
 				</Panel>
 			</Panel>

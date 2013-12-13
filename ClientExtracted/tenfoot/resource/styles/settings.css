@@ -13,9 +13,11 @@
 //@define bgcolorwash: #ff00ffff;
 @define GameControllerAnimationDuration: 0.1;
 
+
 Image
 {
-	wash-color: bgcolorwash;
+	wash-color: #5492b8;
+	horizontal-align: center;
 }
 
 AvatarImage Image
@@ -546,12 +548,12 @@ TextEntry:hover
 
 TextEntry:focus
 {
-	background-color: white;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #FDFDFDFF ), to( #bdbfbfff ) );
 	color: black;
 	border-color: white;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	
-	animation-name: main-button-glow-movement, quick-blur; 
+
+	animation-name: main-button-glow-movement, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
@@ -725,11 +727,11 @@ DropDown Label
 	border-width: 5px;
 	border-radius: 2px;
 	border-style: solid;
-	border-color: white;
+	border-color: none;
 	
-	color: #231f20;
+	color: applabelsolid;
 	
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffff ), to( #bababa ) );
+	background-color: simplebutton;
 	
 	transition-property: background-color, border, box-shadow;
 	transition-duration: 0.4s;
@@ -792,7 +794,9 @@ DropDown Label
 
 .NetworkConnectionStatus
 {
-	width: 150px;
+	width: 250px;
+	text-align: right;
+	margin-right: 10px;
 }
 	
 .NetworkLockBase
@@ -805,6 +809,19 @@ DropDown Label
 .NetworkLocked
 {
 	background-image: url( "file://{images}/settings/icon_wireless_secure.png" );
+	wash-color: white;
+}
+
+
+
+.AvailableNetworkSelected:focus .NetworkLocked,
+.AvailableNetworkSelected:focus .NetworkSignalStrength1,
+.AvailableNetworkSelected:focus .NetworkSignalStrength2,
+.AvailableNetworkSelected:focus .NetworkSignalStrength3,
+.AvailableNetworkSelected:focus .NetworkWiredPluggedIn,
+.AvailableNetworkSelected:focus .NetworkConnectionStatus,
+{
+	wash-color: applabelselectedsolid;  
 }
 
 .NetworkSignalBase
@@ -841,8 +858,8 @@ DropDown Label
 .NetworkThrobber
 {
 	opacity: 1.0;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	horizontal-align: right;
 	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
 	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
@@ -858,6 +875,22 @@ DropDown Label
 #NetworkDeviceStatus
 {	
 }
+
+ .NetworkName
+{
+	width: 720px;
+}
+
+.AvailableNetworkSelected .NetworkName
+{
+	color: applabelsolid;
+}
+
+.AvailableNetworkSelected:focus .NetworkName
+{
+	color: applabelselectedsolid;
+}
+
 
 .NetworkPasswordTextEntry
 {
@@ -905,12 +938,12 @@ DropDown Label
 #ConnectToNetwork Label
 {
 	color: applabelsolid;
-	padding: 4px 0px 4px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 #ConnectToNetwork:focus Label
 {
-	color: black;
+	color: applabelselectedsolid;
 }
 
 .SingleMonitor .MonitorArea
@@ -1221,7 +1254,7 @@ KeyboardShortcut:focus
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
 	
 	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
+	animation-duration: 1.7s, 0.23s;
 	animation-delay: 0.0s, 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
@@ -1390,7 +1423,7 @@ KeyboardShortcut .Graphic
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
 	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
+	animation-duration: 1.7s, 0.23s;
 	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
@@ -2247,4 +2280,9 @@ SettingsPanel_Display.Underscan
 #ParentalFeaturesChild RadioButton:focus:hover Label
 {
 	color: applabelselected;	
+}
+
+#SettingsAbout_LegalInformationButton
+{
+	margin-top: 25px;
 }

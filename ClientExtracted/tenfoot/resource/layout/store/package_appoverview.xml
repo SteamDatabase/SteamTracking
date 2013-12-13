@@ -1,12 +1,14 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/store.css" />
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 
 	<StorePackageAppOverview tabindex="auto" selectionpos="auto">
 		<Panel class="HeaderImageWrapper">
 			<Image id="HeaderImage" />
+			<Panel class="CapsuleControllerSupport" />
 			<Label id="DiscountDescription" />
 			<Panel class="ImageBorder" />
 		</Panel>

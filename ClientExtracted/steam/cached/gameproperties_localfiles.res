@@ -98,26 +98,6 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
-	"DefragButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"DefragButton"
-		"xpos"		"24"
-		"ypos"		"188"
-		"wide"		"256"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"4"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_GamePropertiesDefragment"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Command"		"rundefrag"
-		"Default"		"0"
-	}
 	"OpenInstallFolder"
 	{
 		"ControlName"		"Button"

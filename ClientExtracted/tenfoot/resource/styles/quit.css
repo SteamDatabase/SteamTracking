@@ -107,7 +107,7 @@
 	transition-property: transform;
 }
 
-#MusicControllerPanel:descendantfocus .SystemButton:hover Label,
+#MusicControllerPanel:descendantfocus .SystemButton:hover Label, #MusicControllerPanel:descendantfocus .SystemButton:focus Label,
 {
 	transform: translateX( 2px );
 	color: applabelselected;

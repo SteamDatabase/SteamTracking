@@ -15,11 +15,11 @@
 			<Label class="SettingsCallout" text="#SettingsNetwork_Intro" />
 
 			<Panel class="NetworkErrorGroup">
-				<Label class="SettingsLabel" text="#SettingsNetwork_SelectNetwork" />
+				<Label class="SettingsValue" text="#SettingsNetwork_SelectNetwork" />
 				<Label id="NetworkErrorLabel" />
 			</Panel>
 
-			<Panel id="AvailableNetworksList" class="VertContainer" childfocusonhover="true">
+			<Panel id="AvailableNetworksList" class="VertContainer" childfocusonhover="false">
 				<!-- instances of SettingsPanel_NetworkListEntry will be programmatically added here -->
 			</Panel>
 			<Panel id="NetworkPassword" class="VertContainer">

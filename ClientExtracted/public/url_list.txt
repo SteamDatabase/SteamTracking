@@ -32,7 +32,7 @@ SteamIDPage
 {
 	url			"%community%/profiles/%p1%/"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 SteamIDBadgePage
 {
@@ -152,19 +152,25 @@ GroupSteamIDPage
 {
 	url			"%community%/gid/%p1%"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
+}
+GroupOGGPage
+{
+	url			"%community%/games/%p1%"
+	method		"internal"
+	filter		"friends"
 }
 GroupEventsPage
 {
 	url			"%community%/gid/%p1%/events"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 GroupAnnouncementPage
 {
 	url			"%community%/gid/%p1%#announcements/detail/%p2%"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 GroupSteamIDAdmin
 {
@@ -176,20 +182,20 @@ GroupMembersPage
 {
 	url			"%community%/gid/%p1%/members"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 OfficialGameGroupPage
 {
 	url			"%community%/ogg/%p1%"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 LeaveGroupPage
 {
 	// just goes to the control panel for now (%p1% is the group steamid if we change it)
 	url			"%community%/%mystuff%/groups/"
 	method		"internal"
-	filter		"community"
+	filter		"friends"
 }
 ChatBanListAdmin
 {
@@ -633,12 +639,18 @@ MarketEligibilityCheck
 }
 ParentalBlocked
 {
-	url		"http://learningwithportals.com/client/"
+	url		"%store%/parental/blocked"
 	method	"internal"
 }
 ParentalSetup
 {
 	url		"%store%/parental/set"
+	method	"internal"
+	filter	"parentalsetup"
+}
+ParentalSetupComplete
+{
+	url		"%store%/parental/setcomplete"
 	method	"internal"
 }
 AsyncGames

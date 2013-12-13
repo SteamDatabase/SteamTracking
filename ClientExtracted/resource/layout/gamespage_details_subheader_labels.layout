@@ -10,6 +10,9 @@
 
 		shareheader { controlname="Label" style="headertext" labeltext="#steam_details_sharedbyheader" zpos="2" }
 		sharevalue { controlname="Label" style="valuetext" labeltext="" zpos="2" }
+
+		streamheader { controlname="Label" style="headertext" labeltext="#steam_details_streamfromheader" zpos="2" }
+		streamvalue { controlname="Label" style="valuetext" labeltext="" zpos="2" }
 	}
 
 	styles

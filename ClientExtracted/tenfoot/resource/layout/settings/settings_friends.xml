@@ -29,22 +29,22 @@
 					<Label class="LongDesc" text="#SettingsFriends_ViewProfile" />
 				</Button>
 	
-				<ToggleButton class="CheckBox" id="SettingsFriends_AutoSignIntoFriendsCheck" text="#SettingsFriends_AutoSignIn" selectionpos="auto"/>
-				<ToggleButton class="CheckBox" id="SettingsFriends_ShowTimeInChatLogCheck" text="#SettingsFriends_Timestamps" selectionpos="auto"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_AutoSignIntoFriendsCheck" text="#SettingsFriends_AutoSignIn" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()" />
+				<ToggleButton class="CheckBox" id="SettingsFriends_ShowTimeInChatLogCheck" text="#SettingsFriends_Timestamps" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
 			</Panel>
 	
 			<Panel class="SettingsContent SettingsRightContent" tabindex="auto" selectionpos="1,0">
 				<Label class="SettingsStatic" text="#SettingsFriends_WhenReceived" />
-				<ToggleButton class="CheckBox" id="SettingsFriends_ReceiveMessagePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto"/>
-				<ToggleButton class="CheckBox" id="SettingsFriends_ReceiveMessageNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_ReceiveMessagePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_ReceiveMessageNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
 	
 				<Label class="SettingsStatic" text="#SettingsFriends_WhenFriendJoins" />
-				<ToggleButton class="CheckBox" id="SettingsFriends_JoinGamePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto"/>
-				<ToggleButton class="CheckBox" id="SettingsFriends_JoinGameNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_JoinGamePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_JoinGameNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
 	
 				<Label class="SettingsStatic" text="#SettingsFriends_WhenFriendOnline" />
-				<ToggleButton class="CheckBox" id="SettingsFriends_FriendOnlinePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto"/>
-				<ToggleButton class="CheckBox" id="SettingsFriends_FriendOnlineNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_FriendOnlinePlaySoundCheck" text="#SettingsFriends_PlaySound" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
+				<ToggleButton class="CheckBox" id="SettingsFriends_FriendOnlineNotifyCheck" text="#SettingsFriends_DisplayNotification" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
 			</Panel>
 		</Panel>
 	

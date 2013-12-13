@@ -49,7 +49,7 @@
 	width: 100%;
 	height: 100%;
 	margin-left: 13px;
-	margin-right: 107px;
+	margin-right: 100px;
 	margin-bottom: frame_margin_bottom;
 	margin-top: frame_margin_top;
 	z-index: notification1_zindex;
@@ -57,6 +57,42 @@
 	border: 4px solid ui_common_control_border;
 	background-color: #2B2B2BFF;
 	box-shadow: #00000044 -4px -4px 6px 8px;
+}
+
+.NotificationFrameConnected
+{
+	width: 100%;
+	height: 100%;
+	margin-left: 13px;
+	margin-right: 100px;
+	margin-bottom: frame_margin_bottom;
+	margin-top: frame_margin_top;
+	z-index: notification1_zindex;
+	
+	border: 4px solid ui_common_control_border;
+	background-color: #2B2B2BFF;
+	box-shadow: #00000044 -4px -4px 6px 8px;
+	background-image: url( "{images}/settings/stream_connected.png" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+.NotificationFrameDisconnected
+{
+	width: 100%;
+	height: 100%;
+	margin-left: 13px;
+	margin-right: 100px;
+	margin-bottom: frame_margin_bottom;
+	margin-top: frame_margin_top;
+	z-index: notification1_zindex;
+	
+	border: 4px solid ui_common_control_border;
+	background-color: #2B2B2BFF;
+	box-shadow: #00000044 -4px -4px 6px 8px;
+	background-image: url( "{images}/settings/stream_disconnected.png" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
 }
 
 .NotificationTitle 
@@ -162,7 +198,28 @@
 	z-index: notification2_zindex;
 	margin-right: 200px;
 	margin-left: 153px;
+	margin-top: 62px;
+}
+
+.NotificationTwoLabelBodyLineOne
+{
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 200px;
+	margin-left: 153px;
 	margin-top: 52px;
+	opacity: 0.5;
+}
+
+.NotificationTwoLabelBodyLineTwo
+{
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 200px;
+	margin-left: 153px;
+	margin-top: 82px;
 }
 
 .NotificationLargeLabelBody

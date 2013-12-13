@@ -37,6 +37,10 @@
 							<Label text="#Checkout_Review_Total" />
 							<Label id="ReviewTotal" text="" />
 						</Panel>
+						<Panel id="ReviewConvertedTotalRow" class="ReviewTotalRow ReviewTotal">
+							<Label text="#Checkout_Review_ConvertedTotal" />
+							<Label id="ConvertedReviewTotal" text="" />
+						</Panel>
 						<Label id="IncludesVat" text="#Checkout_Review_VAT" />
 					</Panel>
 				</Panel>

@@ -133,6 +133,8 @@
 "Overlay_MicroTxnSubscriptionMonths"	"month(s)"
 "Overlay_MicroTxnSubscriptionWeeks"		"week(s)"
 "Overlay_MicroTxnSubscriptionDays"		"day(s)"
+"Overlay_MicroTxnAuth_ConvertedTotalLabel"	"You will be charged"
+"Overlay_MicroTxnAuth_ConvertedTotalValue"	"%converted_total%"
 
 "Overlay_AccessibilityNotification_Message" "This feature requires Universal Access turned on from System Preferences."
 

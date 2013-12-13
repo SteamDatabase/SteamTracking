@@ -719,8 +719,7 @@ LibraryAppDetails .ContentsRow
 {
 	width: 100%;
 	margin: 4px 20px 10px 26px;
-	padding: 8px 7px 8px 7px;
-
+	height: 60px;
 	flow-children: right;
 
 	color: detailsdatalabelfocus;
@@ -739,6 +738,8 @@ LibraryAppDetails .ContentsRow
 	font-family: platformfont;
 	font-size: 28px;
 	font-weight: normal;
+	margin-top: 7px;
+	margin-left: 8px;
 	transform: translatex(-7px);
 	color: detailsdatalabelfocus;
 	transition-property: transform;
@@ -765,20 +766,21 @@ ParentalButton.Locked
 
 .LinksAndMoreButton.Locked:focus
 {
-	wash-color: transparent;
+	wash-color: none;
 }
 
 .LinksAndMoreButton.Locked Label
 {
-	width: 90%;
+	width: fill-parent-flow(1.0);
 }
 
 .LinksAndMoreButton Image
 {
 	vertical-align: center;
 	horizontal-align: right;
-	height: 34px;
-	width: 34px;
+	height: 44px;
+	width: 44px;
+	margin-right: 4px;
 	opacity: 0.0;
 }
 
@@ -786,6 +788,8 @@ ParentalButton.Locked
 {
 	opacity: 1.0;
 }
+
+
 
 .LinksAndMoreButton:hover
 {
@@ -3870,6 +3874,18 @@ DropDown
 	visibility: collapse;
 }
 
+#FilterInstalledLocally,
+#GamesFilterDropDownMenu  #FilterInstalledLocally
+{
+	visibility: collapse;
+}
+
+#FilterInstalledLocally,
+#GamesFilterDropDownMenu  #FilterInstalledLocally.ShowInstalledLocally
+{
+	visibility: visible;
+}
+
 #FilterController DropDown Label,
 #GamesFilterDropDownMenu #FilterController 
 {
@@ -4307,13 +4323,19 @@ KeyboardShortcut Image
 {
 	margin-top: 20px;
 	font-size: 28px;
-	width: 900px;
+	width: 700px;
 }
 
 #BetaDropDown
 {
+	visibility: visible;
 	margin-top: 20px;
-	width: 900px;
+	width: 700px;
+}
+
+.NoAvailableBetas #BetaDropDown
+{
+	visibility: collapse;
 }
 
 #BetaDropDownDropDownMenu
@@ -4321,4 +4343,282 @@ KeyboardShortcut Image
 	z-index: msgbox_contextmenu_zindex;
 	width: 710px;
 	max-height: 140px;
+}
+
+.PrivateBeta
+{
+	visibility: collapse;
+
+}
+
+.PrivateBetas #ShowPrivateBetas
+{
+	visibility: visible;
+}
+
+.ShowPrivateBetas #PrivateBetaPW
+{
+	visibility: visible;
+}
+
+
+.PrivateBeta
+{
+	width: 700px;
+}
+
+#PrivateBetaPW Label
+{
+	opacity: 1.0;
+	font-size: 24px;
+	margin-top: 1px;
+	horizontal-align: right;
+
+	margin-right: 5px;
+}
+
+#PrivateBetaPW.HasInput Label
+{
+	opacity: 0;
+}
+
+#PrivateBetaPW:disabled, #ShowPrivateBetas:disabled
+{
+	opacity: 0.6;
+	desaturation: 0.4;
+	blur: gaussian( 1.0 );
+}
+
+#ShowPrivateBetas
+{
+	width: 700px;
+	height: 50px;
+	background-color: none;
+}
+
+#ShowPrivateBetas:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+}
+
+
+#ShowPrivateBetas Label
+{
+	font-size: 24px;
+	font-family: platformfont;
+	white-space: normal;
+	height: 100px;
+	width: 100%;
+	color: applabelsolid;
+	transform: translatex( 0px );
+}
+
+#ShowPrivateBetas:focus Label
+{
+	color: applabelselectedsolid;
+
+	transition-property: blur, color;
+	transition-duration: 0.23s;
+
+	animation-name: quick-blur;
+	animation-duration: 0.23s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+
+
+#AutoUpdatesDropDown 
+{
+	margin-top: 20px;
+	width: 700px;
+}
+
+#AutoUpdatesDropDown Label
+{
+	transform: translateX( 0px );
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+	transition-property: transform;
+}
+	
+#AutoUpdatesDropDown:hover Label
+{
+	transform: translateX( 7px );
+}
+
+#AutoUpdatesDropDownDropDownMenu
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 700px;
+	max-height: 170px;
+}
+
+
+.CheckBox
+{
+	transition-duration: 0.25s !immediate;
+	
+	horizontal-align: left;
+
+	width: 475px;
+	height: 48px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 2px;
+	border-color: #3d414200;
+
+	background-color: simplebutton;
+	
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;	
+
+}
+
+.CheckBox
+{
+	background-color: simplebutton;
+}
+
+.CheckBox:Focus
+{
+	animation-name: main-button-glow-movement, quick-blur;
+	animation-duration: longduration, 0.45s;
+	animation-delay: mediumduration, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;		
+}
+
+.CheckBox:descendantfocus
+{
+}
+
+
+// tickbox to turn togglebuttons into checkboxes
+.CheckBox .TickBox
+{
+	width: 38px;
+	height: 38px;
+	vertical-align: center;
+	background-color: ui_common_control; 
+	
+	transition-property: transform, background-color, border, box-shadow, color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;	
+}
+
+.CheckBox:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: ui_common_control;
+	
+}
+
+.CheckBox:Focus .TickBox
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;	
+}
+
+.CheckBox:Selected:Focus .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;
+}
+
+// and make room for the tickbox
+.CheckBox Label
+{
+	padding-left: 52px;
+	padding-top: 6px;
+	color: detailsdatalabel;
+	width: 100%;
+	text-overflow: clip;
+	white-space: nowrap;
+	
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;	
+}
+
+.Checkbox:focus Label
+{	
+}
+
+.CheckBox:hover Label
+{
+	color: #ffffffff;
+	transform: translatex(0px);
+}
+
+.CheckBox:focus Label
+{
+	color: #000000ff;
+	transform: translatex(0px);
+}
+
+#AllowOtherDownloadsCheck
+{
+	width: 700px;
+	height: 50px;
+	background-color: none;
+}
+
+#AllowOtherDownloadsCheck:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: background-color, color, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+}
+
+#AllowOtherDownloadsCheck Label
+{
+	font-size: 24px;
+	font-family: platformfont;
+	white-space: normal;
+	height: 100px;
+	width: 100%;
+	color: applabelsolid;
+}
+
+#AllowOtherDownloadsCheck:focus Label
+{
+	color: applabelselectedsolid;
+
+	transition-property: blur, color;
+	transition-duration: 0.23s;
+
+	animation-name: quick-blur;
+	animation-duration: 0.23s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-direction: normal;
 }

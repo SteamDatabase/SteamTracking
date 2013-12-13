@@ -1,0 +1,438 @@
+@define MessageBoxAnimationDuration: 0.4s;
+
+//
+// Styles for tenfoot msg box
+//
+
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
+
+//
+// Animations
+//
+@keyframes 'msg-box-appear'
+{
+	from
+	{
+		opacity: 0.0;
+		transform: translatez( 600px ) translatey( 1080px );
+	}
+
+	to
+	{
+		opacity: 1.0;
+		transform: translatez( 0px );
+	}
+}
+
+@keyframes 'msg-box-disappear'
+{
+	from
+	{
+		opacity: 1.0;
+		transform: translatez( 0px );
+	}
+	
+	to
+	{
+		opacity: 0.0;
+		transform: translatez( 600px ) translatey( 1080px );
+	}
+}
+
+@keyframes 'msgbox-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	}
+
+	to
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	}
+}
+
+//
+// Styles
+//
+TenfootFileSelector, .TenfootFileSelector
+{
+	width: 100%;
+	height: 100%;
+
+	z-index: 1;
+
+	transition-property: opacity, blur, desaturation, transform;
+	transition-duration: 0.3s, 0.3s, 0.3s, 0.4s !immediate;
+	transition-timing-function: linear;
+
+	animation-name: msg-box-appear;
+	animation-duration: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+TenfootFileSelector.Destructing, .TenfootFileSelector.Destructing,
+TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBox
+{
+	opacity: 0.0;
+	transform: translatez( 600px ) translatey( 1080px );
+}
+
+.TenfootFileSelector.ScreenSaverMode, TenfootFileSelector.ScreenSaverMode
+{
+	transition-property: opacity;
+	transition-duration: 1.4s, 0.3s !immediate;
+	transition-timing-function: linear;
+
+	opacity: 0.0;
+}
+
+#FileSelectorBodyRegion, .FileSelectorBodyRegion
+{
+	width: 800px;
+	height: 770px;
+	padding: 50px 40px 40px 40px;
+	background-color: message_box_bg;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	transform: translateX( 0px );
+	transition-property: transform;
+	transition-duration: 0.3s;
+
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+}
+
+.FileSelectorBodyRegionWider
+{ 
+    width: 65%;
+}
+
+.DaisyWheelVisible #FileSelectorBodyRegion, .DaisyWheelVisible .FileSelectorBodyRegion
+{
+	transform: translateX( 460px );	
+}
+
+#FileSelectorHeaderLabel
+{	
+	width: 100%;
+	height: 65px;
+
+	font-size: 44px;
+	color: detailsdatalabel;
+	font-family: platformfont;
+	font-weight: light;
+}
+
+#FileSelectorTextLabel
+{
+	width: 100%;
+	font-size: 28px;
+	font-family: platformfont;
+	max-height: 130px;
+	color: tcstatictext;
+	margin-top: 10px;
+}
+
+
+#FileSelectorButtonTopRow
+{
+	flow-children: right;
+
+	font-size: 42px;
+	font-family: platformfont;
+	color: #ffffffff;
+}
+
+#FileSelectorButtonTopRow Button
+{
+	flow-children: right;
+	margin-right: 10px;
+	padding: 4px 8px 4px 8px;
+	margin-top: 8px;
+	margin-bottom: 14px;
+	width: 10%;
+
+	color: detailsdatalabelfocus;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #00000000;
+
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
+	transition-duration: 0.25s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+#FileSelectorButtonTopRow Button Label
+{
+	horizontal-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	transform: translatex( 0px );
+
+	padding-right: 5px;
+	transition-property: color, transform;
+	transition-duration: 0.23s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+#FileSelectorButtonTopRow Button:hover
+{
+	background-color: simplebutton;
+}
+
+#FileSelectorButtonTopRow Button:hover Label
+{
+	transform: translateX( 7px );
+}
+
+#FileSelectorButtonTopRow Button:focus
+{
+	background-color: #00000020;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	animation-name: msgbox-button-focus; 
+	animation-duration: 1.7s;
+	animation-delay: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	
+}
+
+#FileSelectorButtonTopRow Button:disabled
+{
+	opacity: 0.4;
+	pre-transform-scale2d: 1.0;
+	box-shadow: #00000000 -5px -5px 6px 10px;
+	animation-name: none;
+}
+
+#GoBackButton, #NewFolderButton, #SelectButton
+{
+	height: 50px;
+	border-radius: 2px;
+	background-color: simplebutton;
+	border: 3px solid #ffffffff;
+	margin-right: 10px;
+}
+
+#GoBackButton Label, #NewFolderButton Label, #SelectButton Label,
+{
+	horizontal-align: left;
+	vertical-align: center;
+	text-align: left;
+	margin-top: 0px;
+	width: 100%;
+	transform: translatex( 0px );
+	
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+	
+}
+
+
+#FileSelectorFileListArea
+{
+	width: 100%;
+	height: 472px;
+	horizontal-align: right;
+	font-size: 42px;
+	font-family: platformfont;
+	color: #ffffffff;
+	margin-top: 10px;
+
+	flow-children: down;
+
+	visibility: visible;
+}
+
+.FileSelectorFileListContainer
+{
+	flow-children: down;
+	overflow: clip scroll;
+	width: 100%;
+	height: 100%;
+	opacity: 0.99;
+	padding-top: 10px;
+	margin-top: 0px;
+	padding-bottom: 10px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 10px;
+	background-color: simplebutton;
+	border-radius: 3px;
+	border-width: 5px;
+	border-color: ui_common_control_border;
+	border-style: solid;
+
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+
+FileSelectorEntry
+{
+	flow-children: right;
+	width: 100%;
+	height: 56px;
+	padding-right: 5px;
+	border-radius: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-width: 5px;
+}
+
+FileSelectorEntry:hover
+{
+	background-color: simplebutton;
+}
+
+FileSelectorEntry:focus
+{
+	
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, transform;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+FileSelectorEntry Label
+{
+	horizontal-align: left;
+	color: applabel;
+	width: 600px;
+	transform: translateX( -5px );
+	font-size: 24px;
+	font-weight: bold;
+	vertical-align: center;
+	margin: 5px;
+
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+}
+
+FileSelectorEntry:hover Label,
+{
+	transform: translateX( 7px );
+}
+
+FileSelectorEntry:focus Label,
+{
+	color: applabelselected;
+	transform: translateX( 0px );
+}
+
+FileSelectorEntry:focus:hover Label,
+{
+	transform: translateX( 5px );
+}
+
+FileSelectorEntry Image
+{
+	horizontal-align: right;
+	padding-right: 0px;
+	transition-property: wash-color;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+FileSelectorEntry:Focus Image
+{
+	wash-color: blue;
+}
+
+DropDownMenu.DropDownMenuVisible
+{
+	width: 700px;
+	max-height: 376px;
+	z-index: msgbox_contextmenu_zindex;
+}
+
+#FileSelectorLocationDropDown
+{
+	width: 700px;
+	z-index: 1000;
+}
+
+#FileSelectorLocationDropDown Label
+{
+	width: 650px;
+	font-weight: bold;
+	transform: translateX( 0px );
+	color: applabel;
+	
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+}
+
+#FileSelectorLocationDropDown:hover Label
+{
+	transform: translateX( 7px );
+}
+
+#FileSelectorLocationDropDown:focus Label
+{
+	color: applabelselected;
+}
+
+DropDownMenu Label
+{
+	font-weight: bold;
+}
+
+#FileSelectorLocationDropDown.DropDownMenuVisible:focus Label
+{
+	color: applabel;
+}
+
+#FileSelectorLocationDropDown.ScreenSaverMode
+{
+	transition-property: opacity;
+	transition-duration: 1.4s, 0.3s !immediate;
+	transition-timing-function: linear;
+
+	opacity: 0.0;
+}

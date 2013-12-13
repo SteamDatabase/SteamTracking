@@ -5,19 +5,7 @@
 	</styles>
 
 	<SettingsPanel_Parental class="SettingsSection" >
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-		
-		<Panel class="SettingsBottomPanel">
-			<!-- main panel -->
-			<!-- Buttons get added into this in code -->
-			<Panel id="ButtonPanel" class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="0,0">
-			</Panel>
-	
-		</Panel>
-	
+			<ParentalSettingsWizard id="Wizard" />
 	</SettingsPanel_Parental>
 
 </root>

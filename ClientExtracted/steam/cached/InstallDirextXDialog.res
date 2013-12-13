@@ -73,6 +73,6 @@
 		"labelText"		"#Steam_InstallDirextX_Link"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"http://www.microsoft.com/windows/directx/"
+		"URLText"		"http://www.microsoft.com/en-gb/download/details.aspx?id=35"
 	}
 }

@@ -449,12 +449,22 @@ StorePanel:descendantfocus #FeaturedCapsules
 	background-repeat: no-repeat;
 }
 
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
+{
+	margin: 0px;
+}
+
 .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
 	opacity: 1.0;
 	background-image: url( "file://{images}/controller_support_partial_storemain.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
+{
+	margin: 0px;
 }
 
 .SteamPad .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport, 
