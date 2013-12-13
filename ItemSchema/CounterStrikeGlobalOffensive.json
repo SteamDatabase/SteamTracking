@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.384cdd81cf96d316b6ad8f0da10bb98aab3996f5.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.0ca582397c7a53942cfc0c8b11a49eb122ac9bdd.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1475,6 +1475,7 @@
 				"tool": {
 					"type": "recipe",
 					"usage_capabilities": {
+						"usable_out_of_game": true,
 						"recipe": true
 					}
 				},
@@ -2677,7 +2678,8 @@
 					"type": "decoder_ring",
 					"restriction": "generic_valve_key",
 					"usage_capabilities": {
-						"decodable": true
+						"decodable": true,
+						"usable_out_of_game": true
 					}
 				}
 			},
@@ -2707,7 +2709,8 @@
 					"type": "decoder_ring",
 					"restriction": "esports_crate_key",
 					"usage_capabilities": {
-						"decodable": true
+						"decodable": true,
+						"usable_out_of_game": true
 					}
 				}
 			},
@@ -2755,7 +2758,10 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "generic_valve_key"
+					"restriction": "generic_valve_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
 				},
 				"attributes": [
 					{
@@ -2788,7 +2794,10 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "esports_crate_key"
+					"restriction": "esports_crate_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
 				},
 				"attributes": [
 					{
@@ -2821,7 +2830,10 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "generic_valve_key"
+					"restriction": "generic_valve_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
 				},
 				"attributes": [
 					{
@@ -2854,7 +2866,10 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "generic_valve_key"
+					"restriction": "generic_valve_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
 				},
 				"attributes": [
 					{
@@ -2886,7 +2901,10 @@
 					"paintable_unusual": true
 				},
 				"tool": {
-					"type": "supply_crate"
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
 				},
 				"attributes": [
 					{
