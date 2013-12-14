@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.1b04c21826a7fa1baaac4353f820a20365663e7f.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.4700fe1a966efe1e9fe6ad7b75f1cc0061e293fe.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -7124,6 +7124,29 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				}
+			},
+			{
+				"name": "Invoker's Belt",
+				"defindex": 305,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Invoker's Belt",
+				"item_description": "This new item has no description.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -62507,7 +62530,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet.f2b3ffe2877bbc7cc1d7fd0cb4ad74836a0c93a9.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet_large.623dab5f1796014d005d757fd64b6262543ee89c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/announcer\/announcer_death_prophet_large.06cc2f5f929fd031f9a2af1428dc6fad3f0ce5f4.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -62675,7 +62698,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_diretide.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_diretide_large.ba24b7cab715a7add2c30369cb3839e33901a38e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_diretide_large.5a9ffe1fee40e55e873b9c56b51d62bd4311217e.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63009,7 +63032,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_radiant.8a926f8d7925edb141df99592979b95051902aab.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_radiant_large.8a926f8d7925edb141df99592979b95051902aab.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_radiant_large.9fddf335b1504507825c532ff072c58474bd6b69.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63032,7 +63055,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dire.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dire_large.cbe896d0b156bcaa8c3b7e95461b3d921e24ff83.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dire_large.22aad84d3365fb748566cead93de87954ffc67f8.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63055,7 +63078,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frostivus.cf74154fb484878e4ad90b88c9388498598938df.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frostivus_large.cf74154fb484878e4ad90b88c9388498598938df.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frostivus_large.583a1b866117012f88d5718eec5141b257f0b25a.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63709,7 +63732,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_cold_depths.15d057e8edc82b97b13770340c81093fe9434a02.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_cold_depths_large.15d057e8edc82b97b13770340c81093fe9434a02.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_cold_depths_large.ae62c1dab0f0deac1e8f00ce4b639ea32d2a88f1.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63848,7 +63871,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_empower.94baf506c2755c683af0af83b182c83055efa8b0.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_empower_large.94baf506c2755c683af0af83b182c83055efa8b0.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_empower_large.82e6ff0e264833c01201e518b4083548596ecd5b.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63871,7 +63894,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_crystal_wings.39c08efd6611d982ada72dad9ca13937d2242e39.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_crystal_wings_large.39c08efd6611d982ada72dad9ca13937d2242e39.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_crystal_wings_large.c84307528bac63d6983c977295a79f359f5f3c8d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63917,7 +63940,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frozen_touch.683a9e7c54e5e3363de24e855e4d22ad664436b5.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frozen_touch_large.683a9e7c54e5e3363de24e855e4d22ad664436b5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_frozen_touch_large.71bd8318714b8c725782772b312aa4d260492295.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63940,7 +63963,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_menace.b5c0a58f071a2d8c43d4501c1db2de1715c84454.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_menace_large.b5c0a58f071a2d8c43d4501c1db2de1715c84454.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_menace_large.e11055dcf47bcfce94331a8853dd9f17c8e702e1.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63963,7 +63986,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_nature.4f07727c3f758860e0e66869163878f2a6e62c01.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_nature_large.4f07727c3f758860e0e66869163878f2a6e62c01.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_nature_large.e976c685ce214e013ab51d75b86c59a0cd9560d6.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -63986,7 +64009,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_driftwood.8d93cd9c971e6bdb0969124e902614fbe2a0a471.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_driftwood_large.828573c96de790ce2f703524353f35b784c4df53.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_driftwood_large.f70421601664858562b783ed9c8fb707be1d224b.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64009,7 +64032,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_gear_tooth.18319ad162840b37809e285383630487b97411f3.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_gear_tooth_large.6377ecfef10151198ab8b7bf4b425afa40583866.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_gear_tooth_large.a87705dca6be53dee0abefa8d55865058687a1f3.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64080,7 +64103,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_premier_league.1748f3b66be2a4035ed4e5db46caa48530a9626c.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_premier_league_large.1748f3b66be2a4035ed4e5db46caa48530a9626c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_premier_league_large.f7953502add81649debe7c3197ad41bfb0b47331.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64103,7 +64126,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_starladder.714ac1f0028f98ea11e71ba1c1c3bb3176723446.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_starladder_large.2fb8e5d758ed102d51bc989973223a2313dc4295.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_starladder_large.1511c233ccf600201b0e1a28b117373ea34c8eb5.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64212,7 +64235,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_valor.849ac6172ca7b0cac6576b98ffde78f2c5ccb21f.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_valor_large.8bfba127a33cc74fce8c8a6b727c8fdc8f0d5593.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_valor_large.82ff01a630524e4c6ee6b5a15e7bdfba05acde8a.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64475,7 +64498,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dark_forest.489292c4b7ba793d59d7a1db14290c0f4cc791bb.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dark_forest_large.0be4636291e6524acb7f4f6bd2fe86d13be9e113.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dark_forest_large.af233c6e0c86255d1068aaf6a556505d76f6ef6d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64574,7 +64597,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_jungle_ruin.9d31df51e3ce2ecd4df048b4651a429a1172fca7.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_jungle_ruin_large.711edd0ea324623f68106f2c4c4119e67f82aa8f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_jungle_ruin_large.f42d1fd9feed96353b56ca436b9e9f4af568d061.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -64620,7 +64643,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_ferocious.2f446b16f4a73bad4bed07774f91a07537733b46.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_ferocious_large.41bf007c0f432dcf9efbf20bc31c578a0f175206.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_ferocious_large.c3cfa3f3dbb7bf6a165fc733dcb589b398762f5d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68302,7 +68325,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_curiosity_hud.c6bebc163a4ce1d90c4c916c08d7d3b97d72eadc.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_curiosity_hud_large.fd2df663e1fc4030e142b75eef836d54a42d3906.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_curiosity_hud_large.c266e97d9dbd723db0f86a5e04e7aff6ac3c868c.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68371,7 +68394,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dragon_scale.845438fd3c9caad0683906317698773d4403b18b.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dragon_scale_large.212c96cb3255cb69b5fec779781fff52a33020bb.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_dragon_scale_large.ba4df00d8a93fd9cfa29e94ae596dad14c166e78.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68569,7 +68592,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_underwater.5bad98b46d92b0360ea0e7d07a4f1552b8a1f889.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_underwater_large.dc42a76185c3e5ddd4470c0607eeada761c9c0bc.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_underwater_large.abc95caa27adcafa8504a46c8c89fa978e252af8.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68683,7 +68706,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_weplay.51e30498f0ceeb668a0bcd7b822f8beff4a4b376.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_weplay_large.50f370ae758dad42da1309112e75482f1685c680.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_weplay_large.bdf8c4c5b7fac02ae710ad90cc6fe9f43ff8fa7c.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68731,7 +68754,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_portal.b5841af6efe01bff0d99e9c2049dd7f34f21b5ba.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_portal_large.41063da3c2601cfaa9bd39f7e0f28c4af7c823ea.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_portal_large.83a421baea4bb9b99c5409afdfe06a693eb080a3.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68790,7 +68813,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_golden_treasures.7df8277cf4b71277690412fae227c2df3ed6ec29.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_golden_treasures_large.ef2cfae87209de54ebcbf2115d6f75c14c66eb10.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_golden_treasures_large.f2b034876156d305d25b2567e16b6d2ef90d5a65.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -68966,7 +68989,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_quake.3410992998362143ffe6632a3c2027e3e507b55f.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_quake_large.ab4f87131dce1bb99c6493ea0cb25cc38d34b96b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_quake_large.01729d2a5116b6a3f50802093f5b59cb1b8a4f1b.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -69059,7 +69082,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_od.ac7caf46261835101c50869e89c1b31a6e78aeec.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_od_large.015c20425260aa6851a97221fcf7089edc7803a8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_od_large.bcc90bb589f3b828c9d6553ac3ce82717445ef8d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -69230,7 +69253,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_necropolis.1fcf39d4925d11d8f2dcec690c38e322c7019720.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_necropolis_large.e1e031a863a6d43ac3f97bda795e97238e8b0294.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_necropolis_large.eab1bcfcc46e03228eb52717d73f5d563ee5df01.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -69286,7 +69309,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_mana_pool.847c37632d1c6abd9f473b82bca69430b925aba0.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_mana_pool_large.e711684257e3adb4236418f10ba6b363abe488c3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_mana_pool_large.f65428ab5772625e1d43dea0600a5ca548d9ac00.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -69598,7 +69621,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_stronghold.1664319ac76de66fceef9afc95749c972a386155.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_stronghold_large.6dbd4a02898a9f0a0039dd2c37b7111e092f1df7.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_stronghold_large.362e9d6dd20cf36dff0cdb7fe8e7c63aae57ac91.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -70284,7 +70307,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/ursa_cryogenic_embrace.31a989dd572d8cf70413b62d5c33911b3ef60df8.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/ursa_cryogenic_embrace_large.f3c798be5ad54feb904c6d6396b3a5601e9c4236.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/ursa_cryogenic_embrace_large.9495d6dfe4355611813fce661465470f50e42684.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -70332,7 +70355,7 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/legacy_of_awakened.8d39b81958e813050fa1f1ce889722b62406e4f1.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/legacy_of_awakened_large.fe7ece48ead8f07d3f103242fe9e931abdc1d8c0.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/legacy_of_awakened_large.4c9da664fffcffee5006e6536303745e8cb7346e.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
