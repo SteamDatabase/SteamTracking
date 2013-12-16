@@ -1115,13 +1115,13 @@ function OnGetFinalPriceSuccess( result )
 				}				
 				else if ( method.value == 'beeline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Beeline transactions are authorized through the Beeline website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to Beeline';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Beeline &amp; MTC transactions are authorized through the Xsolla website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Xsolla';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Beeline customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Beeline website by entering your mobile phone number and email address.  You will receive an SMS text that you must respond to complete the transaction.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Beeline &amp; MTC customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Xsolla website by entering your mobile phone number and email address.  You will receive an SMS text that you must respond to complete the transaction.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'mopay' )
@@ -2696,7 +2696,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'beeline' && providerPaymentMethod == 33 )
 			{
-				$('payment_method_review_text').innerHTML = 'Beeline';
+				$('payment_method_review_text').innerHTML = 'Beeline &amp; MTC';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mopay' && providerPaymentMethod == 17 )
