@@ -395,7 +395,7 @@ function CreateDateControl( target, id, initValue )
 	var fullYear = Math.min( initDate.getFullYear(), now.getFullYear() );
 	for ( var i = fullYear; i < (now.getFullYear() + 4); i++ )
 	{
-		var selected = ( initValue != 0 && i == fullYear );
+		var selected = ( initValue != 0 && i == initDate.getFullYear() );
 		CreateOption( yearSelect, i, i, selected );	
 	}
 	
