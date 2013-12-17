@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.4700fe1a966efe1e9fe6ad7b75f1cc0061e293fe.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.972cef963678836026e2d7b3322e49c750f9c027.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -70260,8 +70260,8 @@
 				"image_inventory": "econ\/huds\/hud_Reign_of_Maelrawn_HUD_FGCL",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_reign_of_maelrawn_hud_fgcl.a567a6a0527b0324f34a790c005b80c85cb20773.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_reign_of_maelrawn_hud_fgcl_large.3b6bb52f93f9dd163d057f8132c3ec0d40780329.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -82740,6 +82740,35 @@
 				}
 			},
 			{
+				"name": "European Elite League - January",
+				"defindex": 15412,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League - January",
+				"item_description": "The most talented players in Europe compete in the classic in-house league format.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_eeljanuary",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eeljanuary.82fbfd8dc7e9de97ac4c0b94d4e2e48d9e421b05.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eeljanuary_large.2eca6dad7a1554bdec81dad5c7672d27b6d82919.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Wraith King's Favor",
 				"defindex": 15413,
 				"item_class": "tool",
@@ -83217,6 +83246,151 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fgcl.7168de7944e063c92d84c803c918098fa0a584af.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_fgcl_large.fd39ddaf2658b73fa99486c38bf14f8590213fcb.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "European Elite League - January - ADMIN",
+				"defindex": 15431,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "European Elite League - January - ADMIN",
+				"item_description": "The most talented players in Europe compete in the classic in-house league format.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_eeljanuary",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eeljanuary.82fbfd8dc7e9de97ac4c0b94d4e2e48d9e421b05.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_eeljanuary_large.2eca6dad7a1554bdec81dad5c7672d27b6d82919.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Korean Elite League - January",
+				"defindex": 15432,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Korean Elite League - January",
+				"item_description": "The most talented players in Korea compete in the classic in-house league format.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_keljanuary",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_keljanuary.4f500f93ca85ffd2fc119866802cfe7c027f6e12.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_keljanuary_large.16e1474882681d4177073b98917fe30d593536be.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Korean Elite League - January - ADMIN",
+				"defindex": 15433,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Korean Elite League - January - ADMIN",
+				"item_description": "The most talented players in Korea compete in the classic in-house league format.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_keljanuary",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_keljanuary.4f500f93ca85ffd2fc119866802cfe7c027f6e12.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_keljanuary_large.16e1474882681d4177073b98917fe30d593536be.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sunday Evening Cup Series - Season 2",
+				"defindex": 15434,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series - Season 2",
+				"item_description": "SECS is back for Season 2! SECS has been around since 2009 and provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs2.c13ec696b71510db158ee2f4690166b45039f2f2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs2_large.c3552656040bdba8e9eb1693d21ef9d57778a860.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sunday Evening Cup Series - Season 2 - ADMIN",
+				"defindex": 15435,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sunday Evening Cup Series - Season 2 - ADMIN",
+				"item_description": "SECS is back for Season 2! SECS has been around since 2009 and provides an open competitive platform for North and South American teams to gain real tournament experience.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_secs2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs2.c13ec696b71510db158ee2f4690166b45039f2f2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_secs2_large.c3552656040bdba8e9eb1693d21ef9d57778a860.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
