@@ -1692,7 +1692,10 @@
 	
 	"Steam_AllowGameLaunch_Info"	"Allow {s:gamename} to launch with optional command line \"{s:arguments}\" ?\nIf you did not request this launch then select Cancel"
 	"Steam_AllowGameLaunch_Title"	"Allow game launch"
-	
+
+	"Steam_Parental_GameBlocked_Title"		"Family Options"
+	"Steam_Parental_GameBlocked"			"This game is unavailable in Family View"
+
 	"Parental_Unlock"		"SELECT"
 	"Parental_Lock"			"OK"
 	"Parental_Unlock2"		"OK"
@@ -1700,7 +1703,8 @@
 	"Parental_Lock2"		"OK"
 	"Parental_Select"		"SELECT"
 	"Parental_CurrentMode"	"THIS IS"
-	"Parental_Unlocked"		"NOT FAMILY VIEW"
+	"Parental_CurrentMode_Unlocked" "THIS IS NOT"
+	"Parental_Unlocked"		"FAMILY VIEW"
 	"Parental_Locked"		"FAMILY VIEW"
 	"Parental_EnterPIN"		"Adults, enter your PIN below to exit Family View. (Sorry, kids!)"
 	"Parental_UnlockFailureTitle" "Family Options"
