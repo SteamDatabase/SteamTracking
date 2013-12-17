@@ -753,7 +753,7 @@
 		{
 			padding-left=3
 			padding-right=7
-			image="resource/unlocked_acct"
+			image="resource/notfamilyview"
 			render {}
 			render_bg
 			{
@@ -783,7 +783,7 @@
 		{
 			padding-left=3
 			padding-right=7
-			image="resource/unlocked_acct"
+			image="resource/notfamilyview"
 			render {}
 			render_bg
 			{
@@ -814,7 +814,7 @@
 		{
 			padding-left=3
 			padding-right=7
-			image="resource/locked_acct"
+			image="resource/familyview"
 			render {}
 			render_bg
 			{
@@ -846,7 +846,7 @@
 		{
 			padding-left=3
 			padding-right=7
-			image="resource/locked_acct"
+			image="resource/familyview"
 			render {}
 			render_bg
 			{

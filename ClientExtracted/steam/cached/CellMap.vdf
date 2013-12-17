@@ -250,7 +250,17 @@
 				{ 
 					"dest"	23 
 					"cost"	LocalCostOneWayCellEdge
-				}				
+				}	
+				2 
+				{ 
+					"dest"	139
+					"cost"	LocalCostOneWayCellEdge
+				}	
+				3 
+				{ 
+					"dest"	140
+					"cost"	LocalCostOneWayCellEdge
+				}												
 			}
 		}
 
@@ -2285,7 +2295,7 @@
 		137
 		{
 			"name" "China (Perfect World Unicom)"
-			"region"	"china"
+			"region"	"china-unicom"
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
 			"edges"
@@ -2296,13 +2306,35 @@
 		138
 		{
 			"name" "China (Perfect World Telecom)"
-			"region"	"china"
+			"region"	"china-telecom"
 			"latitude"	"31.231592"
 			"longitude"	"121.474113"
 			"edges"
 			{
 				0 { "dest"	47 }
 			}
+		}
+		139
+		{
+			"name" "Central America"
+			"region"	"central america"
+			"latitude"	"11.539234"
+			"longitude"	"-85.633793"
+			"edges"
+			{
+				0 { "dest"	12 }
+			}
+		}		
+		140
+		{
+			"name" "Caribbean"
+			"region"	"central america"
+			"latitude"	"18.542117"
+			"longitude"	"-72.335701"
+			"edges"
+			{
+				0 { "dest"	12 }
+			}		
 		}
 	}
 	"countries"
@@ -2329,13 +2361,13 @@
 		"AO"	130
 		
 		//"Anguilla"		
-		"AI"	12
+		"AI"	140
 		
 		//"Antarctica"	
 		"AQ"	0
 		
 		//"Antigua and Barbuda"
-		"AG"	12
+		"AG"	140
 		
 		//"Argentina"		
 		"AR"	116
@@ -2344,7 +2376,7 @@
 		"AM"	124
 		
 		//"Aruba"			
-		"AW"	12
+		"AW"	140
 		
 		//"Australia"		
 		"AU"	52
@@ -2356,7 +2388,7 @@
 		"AZ"	124
 		
 		//"Bahamas"		
-		"BS"	12
+		"BS"	140
 		
 		//"Bahrain"		
 		"BH"	30
@@ -2365,7 +2397,7 @@
 		"BD"	36
 		
 		//"Barbados"		
-		"BB"	12
+		"BB"	140
 		
 		//"Belarus"		
 		"BY"	38
@@ -2374,13 +2406,13 @@
 		"BE"	86
 		
 		//"Belize"		
-		"BZ"	12
+		"BZ"	139
 		
 		//"Benin"			
 		"BJ"	130
 		
 		//"Bermuda"		
-		"BM"	12
+		"BM"	140
 		
 		//"Bhutan"		
 		"BT"	36
@@ -2428,7 +2460,7 @@
 		"CV"	130
 		
 		//"Cayman Islands"				
-		"KY"	12
+		"KY"	140
 		
 		//"Central African Republic"			
 		"CF"	130
@@ -2464,7 +2496,7 @@
 		"CK"	0
 		
 		//"Costa Rica"					
-		"CR"	12
+		"CR"	139
 		
 		//"Cote d'Ivoire"					
 		"CI"	130
@@ -2473,7 +2505,7 @@
 		"HR"	42
 		
 		//"Curacao"
-		"CW"	12
+		"CW"	140
 		
 		//"Cyprus"						
 		"CY"	43
@@ -2488,10 +2520,10 @@
 		"DJ"	131
 		
 		//"Dominica"						
-		"DM"	12
+		"DM"	140
 		
 		//"Dominican Republic"			
-		"DO"	12
+		"DO"	140
 		
 		//"Ecuador"						
 		"EC"	118
@@ -2500,7 +2532,7 @@
 		"EG"	37
 		
 		//"El Salvador"					
-		"SV"	12
+		"SV"	139
 		
 		//"Equatorial Guinea"				
 		"GQ"	130
@@ -2530,7 +2562,7 @@
 		"FR"	14
 		
 		//"French Guiana"					
-		"GF"	12
+		"GF"	139
 		
 		//"French Polynesia"				
 		"PF"	10
@@ -2563,16 +2595,16 @@
 		"GL"	29
 		
 		//"Grenada"						
-		"GD"	12
+		"GD"	140
 		
 		//"Guadeloupe"					
-		"GP"	12
+		"GP"	140
 		
 		//"Guam"							
 		"GU"	10
 		
 		//"Guatemala"						
-		"GT"	12
+		"GT"	139
 		
 		//"Guinea"						
 		"GN"	130
@@ -2584,10 +2616,10 @@
 		"GG"	4
 		
 		//"Guyana"						
-		"GY"	12
+		"GY"	139
 		
 		//"Haiti"							
-		"HT"	12
+		"HT"	140
 		
 		//"Heard and Mc Donald Islands"			
 		"HM"	0
@@ -2596,7 +2628,7 @@
 		"VA"	37
 		
 		//"Honduras"						
-		"HN"	12
+		"HN"	139
 		
 		//"Hong Kong"						
 		"HK"	33
@@ -2632,7 +2664,7 @@
 		"IT"	37
 		
 		//"Jamaica"						
-		"JM"	12
+		"JM"	140
 		
 		//"Japan"							
 		"JP"	32
@@ -2716,7 +2748,7 @@
 		"MH"	0
 		
 		//"Martinique"					
-		"MQ"	12
+		"MQ"	140
 		
 		//"Mauritania"					
 		"MR"	130
@@ -2743,7 +2775,7 @@
 		"MN"	46
 		
 		//"Montserrat"					
-		"MS"	12
+		"MS"	140
 		
 		//"Morocco"						
 		"MA"	132
@@ -2767,7 +2799,7 @@
 		"NL"	15
 		
 		//"Netherlands Antilles"			
-		"AN"	12
+		"AN"	140
 		
 		//"New Caledonia"					
 		"NC"	10
@@ -2776,7 +2808,7 @@
 		"NZ"	22
 		
 		//"Nicaragua"						
-		"NI"	12
+		"NI"	139
 		
 		//"Niger"							
 		"NE"	130
@@ -2809,7 +2841,7 @@
 		"PS"	30
 		
 		//"Panama"						
-		"PA"	12
+		"PA"	139
 		
 		//"Papua New Guinea"				
 		"PG"	28
@@ -2833,7 +2865,7 @@
 		"PT"	40
 		
 		//"Puerto Rico"					
-		"PR"	12
+		"PR"	140
 		
 		//"Qatar"							
 		"QA"	127
@@ -2851,19 +2883,19 @@
 		"RW"	131
 		
 		//"Saint Helena"						
-		"SH"	12
+		"SH"	140
 		
 		//"Saint Kitts and Nevis"			
-		"KN"	12
+		"KN"	140
 		
 		//"Saint Lucia"					
-		"LC"	12
+		"LC"	140
 		
 		//"Saint Pierre and Miquelon"					
-		"PM"	12
+		"PM"	140
 		
 		//"Saint Vincent and the Grenadines"	
-		"VC"	12
+		"VC"	140
 		
 		//"Samoa"							
 		"WS"	10
@@ -2872,7 +2904,7 @@
 		"SM"	37
 		
 		//"Sao Tome and Principe"			
-		"ST"	12
+		"ST"	140
 		
 		//"Saudi Arabia"					
 		"SA"	126
@@ -2920,7 +2952,7 @@
 		"LK"	36
 		
 		//"Suriname"						
-		"SR"	12
+		"SR"	140
 		
 		//"Sudan"
 		"SD"	131
@@ -2965,7 +2997,7 @@
 		"TO"	0
 		
 		//"Trinidad and Tobago"			
-		"TT"	12
+		"TT"	140
 		
 		//"Tunisia"						
 		"TN"	132
@@ -2977,7 +3009,7 @@
 		"TM"	39
 		
 		//"Turks and Caicos Islands"			
-		"TC"	12
+		"TC"	140
 		
 		//"Tuvalu"						
 		"TV"	0
@@ -3016,10 +3048,10 @@
 		"VN"	71
 		
 		//"Virgin Islands	British"
-		"VG"	12
+		"VG"	140
 		
 		//"Virgin Islands	U.S."			
-		"VI"	12
+		"VI"	140
 		
 		//"Wallis and Futuna"				
 		"WF"	0

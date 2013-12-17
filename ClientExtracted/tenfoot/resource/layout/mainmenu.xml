@@ -51,13 +51,17 @@
 							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
 						</Panel>
-						<Panel class="ParentalLockButtonLabels">
-							<Label class="SmDesc" id="ParentalLockTextLockedPrefix" text="#Parental_CurrentMode" />
-							<Label class="LongDesc" id="ParentalLockTextLocked" text="#Parental_Locked" />	
-							<Label class="SmDesc" id="ParentalLockTextLockedSuffex1" text="#Parental_SelectToEnter" />
-							<Label class="SmDesc" id="ParentalLockTextLockedPrefix" text="#Parental_CurrentMode" />
-							<Label class="LongDesc" id="ParentalLockTextUnlocked" text="#Parental_Unlocked" />
-							<Label class="SmDesc" id="ParentalLockTextLockedSuffex2" text="#Parental_SelectToLock" />
+						<Panel id="ParentalLockButtonLabelsOverlay">
+							<Panel id="ParentalLockButtonLabelsLocked" class="ParentalLockButtonLabels">
+								<Label class="SmDesc" id="LockedPrefix" text="#Parental_CurrentMode" />
+								<Label class="LongDesc" id="LockedBody" text="#Parental_Locked" />	
+								<Label class="SmDesc2" id="LockedSuffix" text="#Parental_SelectToEnter" />
+							</Panel>
+							<Panel id="ParentalLockButtonLabelsUnlocked" class="ParentalLockButtonLabels">
+								<Label class="SmDesc" id="UnlockedPrefix" text="#Parental_CurrentMode_Unlocked" />
+								<Label class="LongDesc" id="UnlockedBody" text="#Parental_Unlocked" />
+								<Label class="SmDesc2" id="UnlockedSuffix" text="#Parental_SelectToLock" />
+							</Panel>
 						</Panel>
 					</ParentalButton>
 					<Button id="GoOnlineButton" tabindex="3" selectionpos="10.6,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
