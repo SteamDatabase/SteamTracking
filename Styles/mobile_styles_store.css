@@ -1894,9 +1894,17 @@ a.trigger, a.activetrigger {
 	max-height: 113px;
 	width: auto;
 	margin-right: 5px;
+	padding: 1px;
 
 	user-select: none;
 	-webkit-user-select: none;
+}
+
+.appScreenshotContainer.active {
+	filter: brightness(120%);
+	-webkit-filter: brightness(120%);
+	padding: 0px;
+	border: 1px solid #FFFFFF;
 }
 
 .appScreenshotImg {
