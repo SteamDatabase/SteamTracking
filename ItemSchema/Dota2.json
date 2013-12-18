@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.972cef963678836026e2d7b3322e49c750f9c027.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.416f5b3034fedbab4ecf3e815834f535aeea37dd.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -56350,6 +56350,31 @@
 				
 			},
 			{
+				"name": "Hobbly-Bob",
+				"defindex": 5717,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hobbly-Bob",
+				"item_description": "The fashionable way to keep bugs out of your sights.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/testitem_slot_empty",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Crest of Bird's Stone",
 				"defindex": 5718,
 				"item_class": "dota_item_wearable",
@@ -82012,6 +82037,64 @@
 				}
 			},
 			{
+				"name": "Defense of the Australians Season 2",
+				"defindex": 15385,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Defense of the Australians Season 2",
+				"item_description": "Defense of the Australians brings you its summer 2014 tournament. Professional teams throughout Australia will compete Australia wide online and in a Melbourne LAN event finals. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly.a56e8b1e2dbca9bb9991037e26bbcc8a99244c5c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly_large.e6cc745a09b6c469adb82236646d257cc71bf20f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Defense of the Australians Season 2 - ADMIN",
+				"defindex": 15386,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Defense of the Australians Season 2 - ADMIN",
+				"item_description": "Defense of the Australians brings you its summer 2014 tournament. Professional teams throughout Australia will compete Australia wide online and in a Melbourne LAN event finals. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly.a56e8b1e2dbca9bb9991037e26bbcc8a99244c5c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2ticketonly_large.e6cc745a09b6c469adb82236646d257cc71bf20f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Montenegro National League - ADMIN",
 				"defindex": 15387,
 				"item_class": "tool",
@@ -82977,7 +83060,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Dota 2 Holiday Dream Challenge",
-				"item_description": "The largest gaming event in Greece takes Dota 2 teams from around the country to compete for a grand prize of 1000â¬!",
+				"item_description": "The largest gaming event in Greece takes Dota 2 teams from around the country to compete for a grand prize of 1000 Euros!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamchallenge",
@@ -83064,7 +83147,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Dota 2 Holiday Dream Challenge - ADMIN",
-				"item_description": "The largest gaming event in Greece takes Dota 2 teams from around the country to compete for a grand prize of 1000Ã¢ÂÂ¬!",
+				"item_description": "The largest gaming event in Greece takes Dota 2 teams from around the country to compete for a grand prize of 1000 Euros!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dreamchallenge",
@@ -93528,6 +93611,36 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_sermon_of_the_frozen_apostle_set.817153640ba2e9952cea64ab3e3d7c4c72b8d6cc.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_sermon_of_the_frozen_apostle_set_large.7e72bc7cc114c7105c806c4dc0325b39da218366.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Defense of the Australians Season 2 & Hobbly-Bob Bundle",
+				"defindex": 20335,
+				"item_class": "bundle",
+				"item_type_name": "Premium Tournament Bundle",
+				"item_name": "Defense of the Australians Season 2 & Hobbly-Bob Bundle",
+				"item_description": "Defense of the Australians brings you its summer 2014 tournament. Professional teams throughout Australia will compete Australia wide online and in a Melbourne LAN event finals. Bundle includes the Hobbly-Bob Sniper Hat!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_defenseoftheaustralians2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2.bf7178931082400630d0463c97f3a7d7f74da065.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2_large.823e148a666a71650d27af48b3185654b4a49ba1.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
