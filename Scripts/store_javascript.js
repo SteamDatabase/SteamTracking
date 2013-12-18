@@ -41,15 +41,15 @@ function getBestAvailNavData()
 // Function to add a package to a cart, assumes form setup on the page
 function addToCart( subid, dedupe )
 {
-	try
-	{
-	    // Find all of the add to cart buttons displayed on the page
-	    var filterAllButtons='a.btn_addtocart_content';
-	    // the filterString can be used to find the element that invoked us, since the subid appears within it
-	    // note that href*= specifies that href contains the string
-	    var filterString = 'a[href*=' + subid + ']';
-	    // within the set of all buttons, get the index of the one that we are dealing with!
-	    // To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+    try
+    {
+        // Find all of the add to cart buttons displayed on the page
+        var filterAllButtons='a.btn_addtocart_content';
+        // the filterString can be used to find the element that invoked us, since the subid appears within it
+        // note that href*= specifies that href contains the string
+        var filterString = 'a[href*=' + subid + ']';
+        // within the set of all buttons, get the index of the one that we are dealing with!
+        // To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
         var allButtons = jQuery( filterAllButtons );
         // do we have anything to examine?
         if ( allButtons.length > 0 )
@@ -116,11 +116,11 @@ function addToCart( subid, dedupe )
                 }
             }
         }
-	}
-	catch( e )
-	{
+    }
+    catch( e )
+    {
         //console.log( e );
-			}
+            }
     // Regardless of instrumentation failures, try to submit the form for the user.
     try
     {
@@ -135,6 +135,73 @@ function addToCart( subid, dedupe )
 
 function addAllDlcToCart()
 {
+    try
+    {
+        // Find all of the add to cart buttons displayed on the page
+        var filterAllButtons='a.btn_addtocart_content';
+        // the filterString can be used to find the element that invoked us, since the subid appears within it
+        // note that href*= specifies that href contains the string
+        var filterString = 'a[href*=addAllDlcToCart]';
+        // within the set of all buttons, get the index of the one that we are dealing with!
+        // To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+        var allButtons = jQuery( filterAllButtons );
+        // do we have anything to examine?
+        if ( allButtons.length > 0 )
+        {
+
+            var navData = getBestAvailNavData();
+            var button = null;
+            var buttonOffset = { top : 0, left : 0 };
+            var buttonIndex = allButtons.index( jQuery( filterString ) );
+            if ( buttonIndex !== -1 )
+            {
+                button = allButtons.eq(buttonIndex);
+            }
+            //
+            //  If we are certain we know what button was clicked, then we'll provide info on the form!
+            //
+            if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+            {
+                buttonOffset = button.offset();
+                var height = jQuery(window).height();
+                var width = jQuery(window).width();
+                //
+                //  We have all the components we want the standard button to submit to the server!
+                //  we will now add input fields to the form we intend to submit.
+                //
+                var filterStringForm = 'form[name=add_all_dlc_to_cart]';
+                var formSelector = jQuery( filterStringForm );
+                var begintime = jQuery.data(document, 'x_readytime');
+                var selecttime = 0.0;
+                if ( begintime !== undefined )
+                {
+                    selecttime = new Date().getTime() - begintime;
+                }
+                if ( formSelector.length === 1 )
+                {
+                    //  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+                    jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+                    if ( navData )
+                    {
+                        var pipeSplit = new RegExp( /\|/ );
+                        var resultString = navData.split( pipeSplit )[0];
+                        jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+                    }
+                }
+            }
+        }
+    }
+    catch( e )
+    {
+        //console.log( e );
+            }
+
 	try
 	{
 		document.forms['add_all_dlc_to_cart'].submit();

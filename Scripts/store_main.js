@@ -61,7 +61,7 @@ function TabCompletionClosure( tab, delta, max )
 
 function RollTab( tab, delta )
 {
-	if ( $('tab_' + tab + '_items' ).hasClassName( 'insert_season_here_sale_tab_items' ) )
+	if ( $('tab_' + tab + '_items' ).hasClassName( 'twenty_smallcap_page_items' ) )
 	{
 		var xdiff = 950;
 		if ( delta > 0 )
@@ -786,13 +786,28 @@ function InstrumentLinks()
 		function ( link ) {
 			if ( link.bIsInstrumented )
 				return;
-			
-			var navinfo = link.href.match( /[\?&]snr=[^&]*(&|$)/ ); 
-			if ( navinfo && !link.href.match( /^javascript/ ) )
-			{
-				link.bIsInstrumented = true;
-				Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
-			}
+
+			var bIsInstrumented = false;
+			//  if the anchor uses javascript, then we don't want to monkey with any embedded URL's
+			if ( !link.href.match( /^javascript/ ) )
+		    {
+                var navinfo = link.href.match( /[\?&]snr=[^&]*(&|$)/ );
+                if ( navinfo  )
+                {
+                    bIsInstrumented = true;
+                    Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
+                }
+                var outcinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
+                if ( outcinfo && !bIsInstrumented )
+                {
+                    bIsInstrumented = true;
+                    Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
+                }
+                if ( bIsInstrumented )
+                {
+                    link.bIsInstrumented = bIsInstrumented;
+                }
+		    }
 		}
 	);
 }
@@ -810,6 +825,16 @@ function InstrumentedLinkOnClick( event, link )
 		
 		MakeNavCookie( navinfo[1], link.href );
 	}
+    var exprinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
+    if ( exprinfo )
+    {
+        replacement = '';
+        if ( exprinfo[2] == '&' )
+            replacement = exprinfo[0][0];
+        link.href = link.href.replace( /[\?&]outc=[^&]*(&|$)/, replacement );
+        MakeOutcomeCookie( exprinfo[1], link.href );
+    }
+
 	return true;
 }
 
@@ -818,6 +843,13 @@ function MakeNavCookie( snr, url )
 	var dateExpires = new Date();
 	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 );
 	document.cookie = 'snr=' + snr + '|' + encodeURIComponent( url ) +'; expires=' + dateExpires.toGMTString() + ';path=/';
+}
+
+function MakeOutcomeCookie( outc, url )
+{
+    var dateExpires = new Date();
+    dateExpires.setTime( dateExpires.getTime() + 1000 * 60 );
+    document.cookie = 'outc=' + outc +'; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
 function GetNavCookie()
@@ -1075,65 +1107,6 @@ var GraphicalCountdown = Class.create( Countdown, {
 		}
 	}
 });
-
-var CScrollOffsetWatcher = Class.create( {
-	offsetTop: null,
-	fnOnHit: null,
-	nBufferHeight: 32,
-
-	fnBoundEventListener: null,
-
-	initialize: function( el, fnCallback )
-	{
-		this.offsetTop = $(el).cumulativeOffset().top;
-		this.fnOnHit = fnCallback;
-
-		this.fnBoundEventListener = this.OnScroll.bind(this);
-		Event.observe( window, 'scroll', this.fnBoundEventListener );
-		Event.observe( window, 'resize', this.fnBoundEventListener );
-
-		this.OnScroll();
-	},
-
-	OnScroll: function()
-	{
-		var nScrollY = $(document).viewport.getScrollOffsets()[1];
-		if ( nScrollY + document.viewport.getHeight() > this.offsetTop - this.nBufferHeight )
-		{
-			this.fnOnHit();
-			this.Deactivate();
-		}
-	},
-
-	Deactivate: function()
-	{
-		Event.stopObserving( window, 'scroll', this.fnBoundEventListener );
-		Event.stopObserving( window, 'resize', this.fnBoundEventListener );
-	}
-
-} );
-
-function LoadImageGroupOnScroll( elTarget, strGroup )
-{
-	if ( $(elTarget) )
-		new CScrollOffsetWatcher( $(elTarget), LoadDelayedImages.bind( null, strGroup ) );
-}
-
-function LoadDelayedImages( group )
-{
-	if ( typeof g_rgDelayedLoadImages != 'undefined' && g_rgDelayedLoadImages[group] )
-	{
-		var rgURLs = g_rgDelayedLoadImages[group];
-		for ( var i=0; i < rgURLs.length; i++ )
-		{
-			var el = $('delayedimage_' + group + '_' + i);
-			if ( el )
-				el.src = rgURLs[i];
-		}
-
-		g_rgDelayedLoadImages[group] = false;
-	}
-}
 
 
 function LaunchWebChat()

@@ -49,7 +49,7 @@ div[data-role='page'] {
 	-webkit-user-select: none;
 }
 
-.platformFilterButtonDown, .showDLCButtonDown, .platformFilterButtonDown:active, .showDLCButtonDown:active {
+.platformFilterButtonDown, .showDLCButtonDown, .platformFilterButton.active, .showDLCButton.active {
 	background: none;
 	background-color: #162f54;
 	box-shadow: inset 0 0 5px #101010;
@@ -101,17 +101,15 @@ div[data-role='page'] {
 .standardAppContainer {
 	display: inline-block;
 	max-height: 138px;
-
-	user-select: none;
-	-webkit-user-select: none;
 }
 
-.standardAppContainer.active .standardAppCapsuleIcon, .largeCap.active .largeCapImg {
+.standardAppContainer.active .standardAppCapsuleIcon, .largeCap.active .largeCapImg,
+.todaysDeal.active .todaysDealCapsuleIcon, .spotlightDeal.active .spotlightDealCapsuleIcon {
 	filter: brightness(120%);
 	-webkit-filter: brightness(120%);
 }
 
-.largeCap.active, .standardAppContainer.active {
+.largeCap.active, .standardAppContainer.active, .todaysDeal.active, .spotlightDeal.active {
 	background-color: #202540;
 }
 
@@ -242,11 +240,54 @@ div[data-role='page'] {
 	white-space: nowrap;
 }
 
-.spacerBlock {
+.todaysDeal {
+	margin: 5px 12px;
+	max-width: 460px;
+}
+
+.spotlightDeal {
+	margin: 5px 12px;
+	max-width: 306px;
+}
+
+.todaysDealCapsuleIcon, .spotlightDealCapsuleIcon {
 	display: block;
-	float: left;
-	width: 20px;
-	height: 36px;
+	width: 100%;
+}
+
+.spotlightTitle {
+	margin-top: 5px;
+}
+
+.spotlightBody {
+	margin-top: 3px;
+}
+
+.storefrontQuicklinks {
+	margin: 5px 12px;
+	text-align: center;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.storefrontQuicklinkButtonMainText {
+	display: inline-block;
+	height: 40px;
+	margin: 0px 5px 0px -10px;
+	font-size: 24px;
+	line-height: 40px;
+	vertical-align: 15%;
+}
+
+.storefrontQuicklinkButtonText {
+	display: inline-block;
+	width: 85px;
+	height: 40px;
+	margin: 0px -10px 0px 5px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
 }
 
 /*
@@ -422,25 +463,21 @@ div[data-role='page'] {
 /* if the wrapper is used instead, let the wrapper set margin-bottom instead of the game_area_purchase_game */
 .game_area_purchase_game_wrapper {
 	margin-bottom: 28px;
-	margin-left: 10px;
-	margin-right: 10px;
 	margin-top: 10px;
 }
 
 .game_area_already_owned {
 	height: 30px;
-	position: relative;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/game_area_alreadyowned.png );
-	background-repeat: repeat-x;
-	background-position: top;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #324616), color-stop(11px, #4b6921), color-stop(100%, #57742f) );
+	background-image: -webkit-linear-gradient(top, #324616 0px, #4b6921 11px, #57742f 100%);
+	background-image: linear-gradient(to bottom, #324616 0px, #4b6921 11px, #57742f 100%);
 
 	text-align: center;
-	margin-bottom: 10px;
 
 	line-height: 30px;
 	font-size: 14px;
-	color: #d6d7d8;
+	color: #FFFFFF;
 }
 
 .game_area_purchase_game_wrapper .game_area_comingsoon {
@@ -1817,18 +1854,16 @@ a.trigger, a.activetrigger {
 ------------------------- APP SUMMARY/GALLERY ---------------------------
 */
 
-#snippet {
-}
 
-#snippet img {
-	max-width: 100%;
-	width: 460px;
+.snippetImage {
 	display: block;
+	width: 100%;
+	max-width: 460px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#snippet p {
+.snippet p {
 	margin: 10px 12px;
 }
 
@@ -1866,7 +1901,7 @@ a.trigger, a.activetrigger {
 
 .appScreenshotImg {
 	display: block;
-	width: auto;
+		width: 250px;
 	max-height: 113px;
 }
 
@@ -1877,6 +1912,9 @@ a.trigger, a.activetrigger {
 	top: 0px;
 	z-index: 10;
 	background-color: #000000;
+
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .singleScreenshotImg {
@@ -1884,8 +1922,8 @@ a.trigger, a.activetrigger {
 	max-width: 100%;
 }
 
-.gameAreaDescription, .clientDescription {
-	margin: 10px;
+.gameAreaDescription, .appFeatureBlocks {
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.55)', endColorstr='rgba(0,0,0,0)',GradientType=0 );	padding: 10px 12px;
 }
 
 .gameAreaDescription p {
@@ -1934,6 +1972,8 @@ a.trigger, a.activetrigger {
 	height: auto;
 }
 
+.gameDetailsContainer {
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.55)', endColorstr='rgba(0,0,0,0)',GradientType=0 );}
 
 .gameDetailsArea {
 	/* margin: 10px; */
@@ -1984,92 +2024,43 @@ a.trigger, a.activetrigger {
 	height: auto;
 }
 
-span.platform_img {
-	display: inline-block;
-	height: 17.5px;
-	background-repeat: no-repeat;
-}
-
-span.platform_img.steamplay {
+.platform_img.steamplay {
 	background-size: 91px 19px;
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_steamplay.png' );
 	width: 91px;
+	height: 19px;
 }
 
-span.platform_img.win {
+.platform_img.win {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_win.png' );
 	background-size: 17.5px 19px;
-	width: 19px;
+	width: 17.5px;
+	height: 19px;
 }
 
-span.platform_img.mac {
+.platform_img.mac {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_mac.png' );
 	background-size: 17.5px 19px;
-	width: 19px;
+	width: 17.5px;
+	height: 19px;
 }
 
-span.platform_img.linux {
+.platform_img.linux {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_linux.png' );
 	background-size: 17.5px 19px;
-	width: 19px;
+	width: 17.5px;
+	height: 19px;
 }
 
-img.platform_small, .platform_img {
-	vertical-align: middle;
+span.platform_img {
+	display: inline-block;
 	margin-left: 2px;
-}
-
-.platformImgMac {
-	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_mac.png );
-	background-repeat: no-repeat;
-	background-size: 17.5px 19px;
-	width: 17.5px;
-	height: 19px;
-	vertical-align: middle;
-}
-
-.platformImgWin {
-	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_win.png );
-	background-repeat: no-repeat;
-	background-size: 17.5px 19px;
-	width: 17.5px;
-	height: 19px;
-	vertical-align: middle;
-}
-
-.platformImgLinux {
-	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_linux.png );
-	background-repeat: no-repeat;
-	background-size: 17.5px 19px;
-	width: 17.5px;
-	height: 19px;
-	vertical-align: middle;
-}
-
-.platformImgSteamPlaySmall {
-	display: inline-block;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/platform_steamplay.png );
-	background-repeat: no-repeat;
-	background-size: 91px 19px;
-	width: 91px;
-	height: 19px;
-	vertical-align: middle;
+	vertical-align: -20%;
 }
 
 #appExternalLink {
 	text-decoration: none;
 	color: #D0D0D0;
-}
-
-.sectionHeader .platformImgMac, .sectionHeader .platformImgWin {
-	height: 26px;
-}
-
-.sectionHeader .platformImgMacSmall, .sectionHeader .platformImgWinSmall {
-	height: 13px;
 }
 
 .game_area_dlc_section .sectionHeader {
@@ -2082,11 +2073,6 @@ img.platform_small, .platform_img {
 
 .game_area_dlc_section .sectionHeaderText {
 	color: #6b2269;
-}
-
-.appFeatureBlocks
-{
-	margin-top: 2px;
 }
 
 a#genreLinkSmall {
@@ -2107,6 +2093,8 @@ div.statsItemName {
 	font-size: 15px;
 	display: inline-block;
 	vertical-align: top;
+	padding-top: 6px;
+	padding-bottom: 6px
 }
 
 div.statsItem {
@@ -2114,6 +2102,14 @@ div.statsItem {
 	font-size: 15px;
 	max-width: 55%;
 	display: inline-block;
+	padding-top: 6px;
+	padding-bottom: 6px
+}
+
+div.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #363636;
 }
 
 a#genreLink {
@@ -2122,12 +2118,7 @@ a#genreLink {
 	display: inline-block;
 }
 
-div.divider {
-	width: 100%;
-	height: 1px;
-	background-color: #363636;
-	margin: 6px 0px;
-}
+
 
 .friendBlock_in-game {
 	color: #AFD14F;
@@ -2189,7 +2180,7 @@ div.divider {
 
 	position: absolute;
 	bottom: 4px;
-	left: 5px;
+	left: 12px;
 }
 
 .metacriticLevelMixed {
@@ -2206,7 +2197,7 @@ div.divider {
 
 	position: absolute;
 	bottom: 4px;
-	left: 4px;
+	left: 12px;
 
 }
 
@@ -2224,7 +2215,7 @@ div.divider {
 
 	position: absolute;
 	bottom: 4px;
-	left: 4px;
+	left: 12px;
 
 }
 
@@ -2242,7 +2233,7 @@ div.divider {
 
 	position: absolute;
 	bottom: 4px;
-	left: 4px;
+	left: 12px;
 
 }
 

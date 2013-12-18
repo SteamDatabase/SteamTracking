@@ -75,12 +75,6 @@ function UserReviewShowMore( id, context )
 	$J('#ReviewContent'+context+id).parent().addClass('expanded');
 }
 
-function UserReviewShowMoreDevResponse( id, context )
-{
-	$J('#ReviewDevResponse'+context+id).removeClass('partial');
-	$J('#ReviewDevResponse'+context+id).addClass('expanded');
-}
-
 function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 {
 	var elem = $J( "#LoadMoreReviews" + context );
@@ -132,16 +126,6 @@ function CollapseLongReviews()
 {
 	$J('.review_box').each( function(j, i){
 		if( $J(i).outerHeight() > 400 )
-		{
-			if ( !$J(i).hasClass('expanded') )
-			{
-				$J(i).addClass('partial')
-			}
-		}
-	});
-
-	$J('.review_developer_response_container').each( function(j, i){
-		if( $J(i).outerHeight() > 100 )
 		{
 			if ( !$J(i).hasClass('expanded') )
 			{
