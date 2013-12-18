@@ -1372,6 +1372,8 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_AutoUpdateTimeRestrictionLabel"	"Limit auto-updating schedule"
 "Steam_AutoUpdateTimeRestrictionStart"	"From"
 "Steam_AutoUpdateTimeRestrictionEnd"		"To"
+"Steam_AllowDownloadsDuringGameplay"	"Allow downloads during gameplay"
+"Steam_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in each game's Properties page"
 
 "Steam_CloudLabel"					"Steam Cloud"			
 "Steam_CloudInfo"					"The Steam Cloud stores information so your product experience is consistent across computers."
@@ -1865,6 +1867,21 @@ You'll need to log out of OSX for the change to take effect."
 "Steam_GameProperties_NeverUpdateInfo$appType=demo"		"Content for this demo will not be automatically acquired."
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Content for this media will not be automatically acquired."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Content for this tool will not be automatically acquired."
+
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Background downloads"
+
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"While playing %game%, should Steam be allowed to download other games or applications?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"While using %game%, should Steam be allowed to download other games or applications?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"While playing %game%, should Steam be allowed to download other games or applications?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"While playing %game%, should Steam be allowed to download other games or applications?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"While using %game%, should Steam be allowed to download other games or applications?"
+
+"Steam_BackgroundDownloadsDefault_Allow"	"Follow my global setting (allow background downloads)"
+"Steam_BackgroundDownloadsDefault_Deny"	"Follow my global setting (stop background downloads)"
+"Steam_BackgroundDownloadsAllow"	"Always allow background downloads"
+"Steam_BackgroundDownloadsDeny"	"Never allow background downloads"
+
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Background downloads while playing this game"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"This application and its updates will be automatically acquired as soon as they are available. Steam will prioritize this application over other downloads."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"This game and its updates will be automatically acquired as soon as they are available. Steam will prioritize this game over other downloads."

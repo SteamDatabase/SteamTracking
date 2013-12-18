@@ -26,7 +26,7 @@
 					<DropDown id="SettingsDownloads_ThrottleRates" class="Filter" />	
 						<Panel class="Spacer" />
 						
-							<Label class="SettingsLabel" text="#SettingsDownloads_ScheduleLabel" />
+					<Label class="SettingsLabel" text="#SettingsDownloads_ScheduleLabel" />
 					<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleTimeLimits" text="#SettingsDownloads_TimeLimits" onactivate="ToggleTimeLimits()"/>
 					<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
 						<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitFrom" />
@@ -35,10 +35,12 @@
 					<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
 						<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitTo" />
 						<DropDown id="SettingsDownloads_TimeLimitTo" class="Filter TimeRestrictionDropdown" />
-					</Panel>					
+					</Panel>	
+														
 				</Panel>
 				<Panel class="SettingsContent SettingsRightContent" tabindex="auto" selectionpos="auto">
-
+					<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleDownloadsDuringGameplay" text="#SettingsDownloads_AllowDownloadsDuringGameplay" onactivate="ToggleBackgroundUpdates()"/>
+					<Label class="SettingsLabel" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
 					
 				</Panel>
 			</Panel>

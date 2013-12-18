@@ -48,13 +48,6 @@
 			"Default"		"0"
 		}
 		
-		"AllowOtherDownloadsCheck"
-		{
-			"ControlName"		"CheckButton"
-			"labelText"		"#Steam_Game_AllowOtherDownloads"
-			"Default"		"0"
-		}		
-		
 		"LaunchOptionsButton"
 		{
 			"ControlName"		"Button"
@@ -104,7 +97,7 @@
 	{
 		region { name=main margin=20 }
 		place { control=HomepageLabelName,DeveloperLabelName,ManualLabelName spacing=20 dir=down region=main }
-		place { controls=HomepageLabel,DeveloperLabel spacing=20 dir=down x=60 region=main }
+		place { controls=HomepageLabel,DeveloperLabel spacing=20 dir=down x=100 region=main }
 		place { control=ManualLabel start=DeveloperLabel spacing=20 dir=down region=main }
 		place { control=NoManualLabel start=DeveloperLabel spacing=20 margin-top=20 dir=down region=main }
 
@@ -112,8 +105,8 @@
 		
 		place {control=Divider1 start=ManualLabelName dir=down margin-top=20 region=main width=max }
 		
-		place {controls=EnableOverlayCheck,AllowOtherDownloadsCheck start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
-		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=AllowOtherDownloadsCheck dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
+		place {controls=EnableOverlayCheck start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
+		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableOverlayCheck dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 
 	}
 }

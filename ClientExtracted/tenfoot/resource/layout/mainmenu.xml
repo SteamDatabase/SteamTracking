@@ -106,7 +106,7 @@
 				<CommunityMainPanel id="Community" />
 				<ProfilePanel id="Profile" class="ProfilePanel" />
 
-				<Image class="HomeButton" src="file://{images}/steam_home.tga" onmouseactivate="ShowMainMenu();" />
+				<Image class="HomeButton" onmouseactivate="ShowMainMenu();"/>
 				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->
 			</Panel>
 

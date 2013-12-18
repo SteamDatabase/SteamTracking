@@ -2270,7 +2270,7 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 .ItemDetails
 {
 	flow-children: down;
-	margin-top: 30px;
+	margin-top: 8px;
 	margin-left: 10px;
 }
 
@@ -2280,15 +2280,15 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 	color: applabelsolid;
 	font-weight: bold;
 	font-size: 36px;
-	line-height: 40px;
 	max-height: 80px;
-	text-overflow: ellipsis;
+	text-overflow: clip;
 	white-space: normal;
 }
 
 .DetailsIconRow
 {
 	flow-children: right;
+	margin-top: 6px;
 }
 
 
@@ -2444,3 +2444,34 @@ DropDownMenu
 {
 	flow-children: right;
 	}
+	
+#ContinueBtn
+{
+	background-color: ui_common_control;	
+
+	transition-property: background-color, color, border, box-shadow;
+
+}	
+
+#ContinueBtn:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #ffffffff;
+	animation-name: main-button-glow-movement-no-fill, quick-blur;
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
+}
+	
+#ContinueBtn Label
+{
+	font-size: 24px;
+	padding-bottom: 2px;
+	transform: translateX( 0px );
+}

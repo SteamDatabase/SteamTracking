@@ -31,7 +31,8 @@
 		AutoUpdateTimeRestrictEndLabel { controlname=label labeltext=#Steam_AutoUpdateTimeRestrictionEnd style=padded }
 		AutoUpdateTimeRestrictStart { controlname=combobox }
 		AutoUpdateTimeRestrictEnd { controlname=combobox }
-				
+		AllowDownloadsDuringGameplayCheckbox { controlname=checkbutton labeltext=#Steam_AllowDownloadsDuringGameplay }
+		AllowDownloadsDuringGameplayInfo { controlname=label labeltext=#Steam_AllowDownloadsDuringGameplayDetails wrap=1 style=padded }
 				
 		Divider1 { ControlName=Divider	}				
 		Divider2 { ControlName=Divider	}				
@@ -67,7 +68,7 @@
 		
 		place { controls="RegionLabel" region=box start=Divider1 dir=down margin-top=15 }
 		place { controls="DownloadRegionCombo" region=box start=RegionLabel margin-top=10 height=25 width=235 dir=down }
-		place { controls="RegionInfoLabel" region=box start=DownloadRegionCombo margin-top=10 width=260 dir=down }
+		place { controls="RegionInfoLabel" region=box start=DownloadRegionCombo margin-top=10 width=max dir=down }
 	
 		place { controls="Divider2" region=box start=RegionInfoLabel dir=down width=max margin-top=15 }
 				
@@ -82,7 +83,8 @@
 		place { controls="ThrottleRatesLabel" region=box start=AutoUpdateTimeRestrictStartLabel dir=down margin-top=24 }
 		place { controls="ThrottleRates" region=box start=ThrottleRatesLabel dir=down width=235 height=25 margin-top=10 }
 		
-
+		place { controls="AllowDownloadsDuringGameplayCheckbox" region=box start=ThrottleRates dir=down margin-top=20 }
+		place { controls="AllowDownloadsDuringGameplayInfo" region=box start=AllowDownloadsDuringGameplayCheckbox dir=down margin-top=0 width=450 }
 			
 			
 	}

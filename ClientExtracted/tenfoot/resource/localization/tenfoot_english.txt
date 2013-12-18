@@ -503,7 +503,8 @@
 	"SettingsDownloads_ChangeRegion_Title"			"Change Region"
 	"SettingsDownloads_ChangeRegion_Description"	"You must restart Steam for this change to take effect"
 	"SettingsDownloads_No_Throttle"	"No Limit"
-
+	"SettingsDownloads_AllowDownloadsDuringGameplay"	"Allow downloads during gameplay"
+	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in each game's Properties page"
 
 	// Settings, network screen
 	"SettingsNetwork_Intro"					"Configure your network settings"
@@ -1161,7 +1162,13 @@
 	"Library_AutoUpdate_Enabled"	"Always keep this {s:apptype} up to date"
 	"Library_AutoUpdate_Disabled"	"Do not automatically update this {s:apptype}"
 	"Library_AutoUpdate_HighPriority"	"High Priority - Always auto-update this {s:apptype} ASAP"
-	"Library_AllowOtherDownloads_Label" "Download other updates while this {s:apptype} is running"
+	"Library_BackgroundUpdates_Label" "While {s:gamename} is running:"
+	
+	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Follow my global setting (allow background downloads)"
+	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Follow my global setting (stop background downloads)"
+	"Library_AppAllowDownloadsDuringGameplay_Always" "Always allow background downloads"
+	"Library_AppAllowDownloadsDuringGameplay_Never" "Never allow background downloads"
+	
 
 	"Activate_SubscriptionSuccess_Headline" "Activation Successful!"
 	"Activate_SubscriptionSuccess" "Your product activation code has successfully been activated. This product or products are now permanently associated with your Steam account. You must login to this account to have access to the items you've just activated on Steam."
@@ -1734,7 +1741,7 @@
 	"Parental_Web_Features" 	"Online content & features"
 
 	"Parental_No_Library"			"Only games I choose"
-	"Parental_All_Library"			"All the games in my library"
+	"Parental_All_Library"			"All games"
 	"Parental_All_Store"			"Steam store"
 	"Parental_All_Community"		"Community-generated content"
 	"Parental_All_Friends"			"Friends, chat, and groups"
@@ -1845,7 +1852,7 @@
 	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only."
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into"
 	"Library_SelectBeta_Title"	"Select Beta"
-	"Library_SelectBeta_Private"	"Show Private Betas"
+	"Library_SelectBeta_Private"	"Enter Beta Password"
 	"Library_SelectBeta_BetaPassword"	"Beta Password"
 	"Library_EditCommandLine_Title" "Launch Options for {s:gamename}"
 	"Library_SelectBeta_None" "None"

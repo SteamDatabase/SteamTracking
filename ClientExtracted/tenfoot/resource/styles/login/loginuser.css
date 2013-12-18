@@ -399,6 +399,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	font-size: 27px;
 	font-family: platformfont;
 	padding-right: 6px;
+	transform: translateX(0px);
 
 	// Linux/Mac bug: border-radius != 0 results in no border - will fix
 	//border-radius: 2px;
