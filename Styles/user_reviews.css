@@ -49,6 +49,10 @@ select {
 		color: #a55b13;
 	}
 	
+	#rightContents .panel.admin .smallText {
+		font-size: 12px;
+	}
+	
 	.general_btn.panel_btn {
 		color: #EBEBEB;
 	}
@@ -160,12 +164,12 @@ select {
 	margin-top: -23px;
 	margin-bottom: 26px;
 	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 .review_developer_response_container.multiple_listing.store
 {
 	background-color: rgba(37,38,38,.95);
+	padding-bottom: 10px;
 }
 
 .review_developer_response_container .leftcol
@@ -222,53 +226,11 @@ select {
 	color: #e9d528;
 }
 
-.review_developer_response_text .gradient, .review_developer_response_container .view_more
-{
-	display: none;
-}
-
-.review_developer_response_container.partial .rightcol
-{
-	max-height: 100px;
-	overflow: hidden;
-	position: relative;
-}
-
-.review_developer_response_container.partial .gradient
-{
-	display: block;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-
-	z-index: 1;
-	height: 50px;
-	/* @todo chrisk use short version */
-	background: -moz-linear-gradient(top,  rgba(37,38,38,0) 0%, rgba(37,38,38,.95) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,rgba(37,38,38,0)), color-stop(100%,rgba(37,38,38,.95)));
-	background: -webkit-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
-	background: -o-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
-	background: -ms-linear-gradient(top,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
-	background: linear-gradient(to bottom,  rgba(37,38,38,0) 0%,rgba(37,38,38,.95) 100%);
-}
-
-.review_developer_response_container.partial .view_more
-{
-	padding-top: 10px;
-	font-size: 10px;
-	display: block;
-	float: right;
-	margin-right: 15px;
-}
-
-.review_developer_response_container.partial .view_more a
+.review_developer_response_exists_date
 {
 	color: #529cde;
-	text-transform: uppercase;
-	font-style: normal;
+	font-size: 13px;
 }
-
 
 .btn_grey_grey.btn_ico_thumbs_down {
 	padding-left: 20px;
