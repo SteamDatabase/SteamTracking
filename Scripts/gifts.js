@@ -36,6 +36,13 @@ function UnpackGift( gidGift )
 	} );
 }
 
+// as above, but with different text
+function UnpackGiftItemReward( gidGift )
+{
+	UnpackGift( gidGift );
+}
+
+
 function OnValidateUnpackResults( gidGift, transport )
 {
 	var idUnpackResults = 'unpack_validate_results_' + gidGift;

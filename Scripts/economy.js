@@ -1367,6 +1367,10 @@ var CUser = Class.create( {
 		return inventory;
 	},
 
+	HasApp: function( appid ) {
+		return !!this.rgContexts[appid];
+	},
+
 	GetAllLoadedInventories: function()
 	{
 		var rgInventories = [];
@@ -1785,6 +1789,11 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 
 	$('tabcontent_inventory').show();
 	$('tabcontent_pendinggifts') && $('tabcontent_pendinggifts').hide();
+
+	if ( !g_ActiveUser.HasApp( appid ) )
+	{
+		return;
+	}
 
 	if ( !contextid )
 	{

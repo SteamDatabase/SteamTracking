@@ -1058,3 +1058,95 @@ function ReplaceDynamicLink( id, strHTML )
 	}
 }
 
+
+
+function CScrollOffsetWatcher( el, fnCallback )
+{
+	this.nOffsetTop = $J(el).offset().top;
+	this.nBufferHeight = 200;
+
+	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
+
+	this.fnOnHit = fnCallback;
+
+
+	CScrollOffsetWatcher.RegisterWatcher( this );
+}
+
+CScrollOffsetWatcher.sm_rgWatchers = [];
+CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0;
+CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
+{
+	var bHadWatchers = CScrollOffsetWatcher.sm_rgWatchers.length > 0;
+
+	// keep the list sorted by offset trigger
+	var iInsertionPoint;
+	for( iInsertionPoint = CScrollOffsetWatcher.sm_rgWatchers.length; iInsertionPoint > 0 ; iInsertionPoint-- )
+	{
+		if ( Watcher.nOffsetTopTrigger > CScrollOffsetWatcher.sm_rgWatchers[iInsertionPoint - 1].nOffsetTopTrigger )
+			break;
+	}
+	CScrollOffsetWatcher.sm_rgWatchers.splice( iInsertionPoint, 0, Watcher );
+
+	if ( !bHadWatchers )
+	{
+		$J(window).on( 'scroll.ScrollOffsetWatcher', CScrollOffsetWatcher.OnScroll );
+		$J(window).on( 'resize.ScrollOffsetWatcher', CScrollOffsetWatcher.OnScroll );
+	}
+
+	// use a 1ms timeout to roll these together as much as possible on page load
+	if ( !CScrollOffsetWatcher.m_nTimeoutInitialLoad )
+		CScrollOffsetWatcher.m_nTimeoutInitialLoad = window.setTimeout( function() { CScrollOffsetWatcher.OnScroll(); CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0; }, 1 );
+}
+
+CScrollOffsetWatcher.OnScroll = function()
+{
+	var nScrollY = document.viewport.getScrollOffsets()[1];
+	var nOffsetBottom = nScrollY + document.viewport.getHeight();
+
+	var cCompletedWatchers = 0;
+	for( var i = 0; i < CScrollOffsetWatcher.sm_rgWatchers.length; i++ )
+	{
+		var Watcher = CScrollOffsetWatcher.sm_rgWatchers[i];
+		if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
+		{
+			Watcher.fnOnHit();
+			cCompletedWatchers++;
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	if ( cCompletedWatchers )
+		CScrollOffsetWatcher.sm_rgWatchers.splice( 0, cCompletedWatchers );
+
+	if ( CScrollOffsetWatcher.sm_rgWatchers.length == 0 )
+	{
+		$J(window).off( 'scroll.ScrollOffsetWatcher' );
+		$J(window).off( 'resize.ScrollOffsetWatcher' );
+	}
+}
+
+function LoadImageGroupOnScroll( elTarget, strGroup )
+{
+	var $Element = $J( '#' + elTarget );
+	if ( $Element.length )
+		new CScrollOffsetWatcher( $Element, function() { LoadDelayedImages(strGroup); } );
+}
+
+function LoadDelayedImages( group )
+{
+	if ( typeof g_rgDelayedLoadImages != 'undefined' && g_rgDelayedLoadImages[group] )
+	{
+		var rgURLs = g_rgDelayedLoadImages[group];
+		for ( var i=0; i < rgURLs.length; i++ )
+		{
+			$J('#delayedimage_' + group + '_' + i).attr( 'src', rgURLs[i] );
+		}
+
+		g_rgDelayedLoadImages[group] = false;
+	}
+}
+

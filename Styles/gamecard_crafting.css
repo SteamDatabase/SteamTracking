@@ -123,8 +123,10 @@
 }
 
 .newmodal.badge_craft_modal .newmodal_content {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/badge_craft_bg.jpg');
+	background-color: #24242c;
+	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/badge_craft_bg.jpg?v=2');
 	background-position: center top;
+	background-repeat: no-repeat;
 }
 
 .badge_craft_container {
