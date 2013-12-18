@@ -259,14 +259,24 @@ a {
 	color: #898989;
 }
 
-.profileLevel {
-	font-size: 16px;
-	text-shadow: none;
-	color: #898989;
-
+.profileLevelContainer {
 	position: absolute;
 	top: 105px;
-	left: 16px;
+	left: 5px;
+
+	width: 94px;
+	text-align: center;
+}
+
+.profileLevel {
+	font-size: 12px;
+	text-shadow: none;
+	color: #898989;
+}
+
+.profileButton{
+	margin-top: 3px;
+	margin-bottom: 5px;
 }
 
 .groupInfoContainer {
@@ -623,13 +633,6 @@ span.statsItem {
 	font-size: 15px;
 	width: 60%;
 	display: table-cell;
-}
-
-div.divider {
-	width: 100%;
-	height: 1px;
-	background-color: #363636;
-	margin: 1px 0px 1px 0px;
 }
 
 .clientConnArea {

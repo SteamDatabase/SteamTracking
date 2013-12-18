@@ -709,6 +709,8 @@ function InitEconomyHovers( strEconomyCSS, strEconomyJS )
 		strDataName: 'economy-item',
 		strURLMatch: 'itemhover'
 	} );
+
+	window.BindSingleEconomyHover = rgCallbacks.fnBindSingleHover;
 }
 
 function ShowTradeOffer( tradeOfferID, rgParams )
