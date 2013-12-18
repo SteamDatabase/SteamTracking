@@ -168,7 +168,7 @@ GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/Ge
 Repos/alchemist_packages.txt|http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages
 Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Repos/people.html|http://valvesoftware.com/company/people.html
-Repos/trademarks_eu.json|http://esearch.oami.europa.eu/copla/ctmsearch/json
+#Repos/trademarks_eu.json|http://esearch.oami.europa.eu/copla/ctmsearch/json
 Repos/valve_group.json|http://steamcommunity.com/groups/valve/memberslistxml
 
 # Minecraft
