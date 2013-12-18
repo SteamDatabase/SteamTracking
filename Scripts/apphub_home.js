@@ -3,6 +3,7 @@ var currentPage = 1;
 var doneScrolling = false;
 var modalDialogVisible = false;
 var waitingForContent = false;
+var hasAdminPrivileges = false;
 
 window.onbeforeunload = function()
 {
@@ -222,6 +223,11 @@ function ShowContent( page )
 	var templates = ConstructDefaultRowTemplates( pageWidth, cardMargins );
 	ShowAppHubCards( 'page' + page, ogCards, templates.rowTemplates, templates.fallbackTemplates, page, pageWidth, cardMargins, Number.MAX_VALUE );
 
+	if ( hasAdminPrivileges )
+	{
+		$J('#page' + page + ' [id^="ban_btn_"]').show();
+	}
+
 	DoneWaitingForContent();
 	ScrollToLast();
 }
@@ -356,4 +362,22 @@ function PublishedFileVoteDown( id )
 			options
 		);
 	}
+}
+
+function PublishedFileBan( id, appid )
+{
+	var options = {
+		method: 'post',
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&IsBanned=1&reason=""',
+		onComplete: (function(id){
+			return function(transport)
+			{
+				$J( '#ban_btn_' + id ).replaceWith( '<span style="color: #ff0000;">Banned!</span>');
+			}
+		}(id))
+	};
+	new Ajax.Request(
+		'http://steamcommunity.com/sharedfiles/ban',
+		options
+	);
 }

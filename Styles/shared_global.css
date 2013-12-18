@@ -38,6 +38,7 @@
 .playerAvatar {
 	width: 34px;
 	height: 34px;
+	position: relative;
 }
 .playerAvatar img {
 	width: 32px;
@@ -73,6 +74,18 @@
 	width: 22px;
 	height: 22px;
 	border: none;
+}
+
+.playerAvatar_friendindicator {
+	position: absolute;
+	left: 26px;
+	top: 23px;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images//friendindicator_small.png' );
+	width: 20px;
+	height: 20px;
+	z-index: 2;
+
+	cursor: pointer;
 }
 
 .persona, a.persona, .persona a {

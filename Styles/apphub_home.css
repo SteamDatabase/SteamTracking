@@ -220,6 +220,14 @@ body
 	padding-left: 50px;
 }
 
+
+.apphub_SectionFilter .learnMore
+{
+	float:right;
+	padding-top: 16px;
+	padding-right: 8px;
+}
+
 .apphub_AllContentText
 {
 	position: relative;
