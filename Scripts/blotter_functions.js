@@ -96,13 +96,6 @@ function Blotter_SelectScreenshot( galleryid, screenshotid, spoiler )
 
 	$('commentthread_ss_' + screenshotid).show();
 
-	// hide/show the lots of comments link
-	if ( ss.m_commentCount > 3 )
-		$('comment_showall_' + screenshotid).show();
-	else
-		$('comment_showall_' + screenshotid).hide();
-
-
 	gallery.m_bSpoilerSelected = spoiler;
 	if ( gallery.m_bSpoilerSelected )
 		ShowSpoilerCover( galleryid );
