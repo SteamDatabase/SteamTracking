@@ -2269,3 +2269,8 @@ html, body { height:100%; }
 	background-color: #2f2f2f;
 	padding: 12px;
 }
+
+.optionTextDark {
+	color: #666666;
+	font-size: 12px;
+}
