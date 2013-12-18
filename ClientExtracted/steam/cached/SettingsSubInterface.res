@@ -311,7 +311,7 @@
 		"fieldName"		"SetJumpListOptionsButton"
 		"xpos"		"20"
 		"ypos"		"434"
-		"wide"		"235"
+		"wide"		"300"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"

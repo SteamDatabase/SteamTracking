@@ -11,9 +11,10 @@
     		<Label class="StdTitle" text="#Library_EditUpdateOptions_Title" />
 
     		<Label class="StdLabelMedBlue" text="#Library_AutoUpdate_CodeLabel" />
-	    	<DropDown id="AutoUpdatesDropDown" >
-	    	</DropDown>
-	    	<ToggleButton tabindex="1.0" class="CheckBox" id="AllowOtherDownloadsCheck" text="#Library_AllowOtherDownloads_Label" onactivate="ToggleAllowOtherUpdates()"/>
+	    	<DropDown id="AutoUpdatesDropDown" class="OptionsDropDown"/>
+	    	<Panel class="Spacer" />
+	    	<Label class="StdLabelMedBlue" text="#Library_BackgroundUpdates_Label" />
+	    	<DropDown id="BackgroundUpdatesDropDown" class="OptionsDropDown" />
         <Panel id="MsgBoxButtons">
             <Button onactivate="ButtonCancel()">
                 <Label text="#UI_OK" />

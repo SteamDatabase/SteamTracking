@@ -4436,13 +4436,13 @@ KeyboardShortcut Image
 }
 
 
-#AutoUpdatesDropDown 
+.OptionsDropDown 
 {
 	margin-top: 20px;
 	width: 700px;
 }
 
-#AutoUpdatesDropDown Label
+.OptionsDropDown  Label
 {
 	transform: translateX( 0px );
 	transition-duration: 0.23s;
@@ -4450,12 +4450,19 @@ KeyboardShortcut Image
 	transition-property: transform;
 }
 	
-#AutoUpdatesDropDown:hover Label
+.OptionsDropDown:hover Label
 {
 	transform: translateX( 7px );
 }
 
 #AutoUpdatesDropDownDropDownMenu
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 700px;
+	max-height: 170px;
+}
+
+#BackgroundUpdatesDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
 	width: 700px;
