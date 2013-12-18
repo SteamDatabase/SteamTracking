@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.288300370fc0ac5e1e9e52b7612645594d839c9f.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.8da038a71024293798220d3a3237566f121d5dcf.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -45715,6 +45715,312 @@
 						"name": "turn to gold",
 						"class": "set_turn_to_gold",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Portable Smissmas Spirit Dispenser",
+				"defindex": 1072,
+				"item_class": "tf_wearable",
+				"item_type_name": "Snowglobe",
+				"item_name": "Portable Smissmas Spirit Dispenser",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/pyro\/xms_backpack_snowglobe.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/pyro\/xms_backpack_snowglobe",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_backpack_snowglobe.873597d71b2bbb197eca6730a0cc4b2a8e08332c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_backpack_snowglobe_large.56b7031ab7c99d50719f161979019906a67f313c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The War on Smissmas Battle Hood",
+				"defindex": 1073,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "War on Smissmas Battle Hood",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/soldier\/soldier_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/soldier_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_hood.738fefaa0dd762a18ab6a49352a2a0495a6d08f9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_hood_large.3487c11d5e68b13fcaea061eaf9bd6cd0d94420f.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "No Helmet",
+						"additional_hidden_bodygroups": {
+							"hat": 1
+						}
+					},
+					{
+						"name": "Helmet"
+					}
+				]
+				,
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The War on Smissmas Battle Socks",
+				"defindex": 1074,
+				"item_class": "tf_wearable",
+				"item_type_name": "Decorative Bombs",
+				"item_name": "War on Smissmas Battle Socks",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/soldier\/xms_nade_socks.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/soldier\/xms_nade_socks",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_nade_socks.fb44d1f8b568b2cb5bda4d482aec30014bb9233a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_nade_socks_large.e8eeb9a8d549f66310fe7b0e4259bcdcfdff6119.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Sack Fulla Smissmas",
+				"defindex": 1075,
+				"item_class": "tf_wearable",
+				"item_type_name": "Backpack",
+				"item_name": "Sack Fulla Smissmas",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/scout\/xms_santa_sack.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/scout\/xms_santa_sack",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_santa_sack.aba68f6e9ef90691f0faa3e0814a8aad3293e1c5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_santa_sack_large.cee2b8add843eb0927c377d474714438b54e5cb6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Smissmass Caribou",
+				"defindex": 1076,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Smissmass Caribou",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": true,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/sniper\/xms_braindeer.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/sniper\/xms_braindeer",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_braindeer.45de3da857e89798385162f986325c602162056d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_braindeer_large.b4c34c976b5e443fdbb3144417020ca7165253ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Randolph the Blood-Nosed Caribou",
+				"defindex": 1077,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Randolph the Blood-Nosed Caribou",
+				"item_description": "Granted by crafting the Steam Holiday Sale 2013 badge.",
+				"proper_name": false,
+				"item_slot": "head",
+				"model_player": "models\/player\/items\/sniper\/xms_braindeer.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/sniper\/xms_braindeer_rare",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_braindeer_rare.0308b089c087f52205de92e39b081c3cfe54b5ea.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_braindeer_rare_large.a4ce1760c897e536ea1c6ccd11333241661d5d35.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
 					}
 				]
 				
