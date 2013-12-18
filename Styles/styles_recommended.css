@@ -1499,6 +1499,11 @@ textarea.comment_input
 	display: inline-block;
 }
 
+.controlblock.formattinghelp
+{
+	padding-right: 20px;
+}
+
 .review_box .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
@@ -1554,4 +1559,20 @@ textarea.comment_input
 .user_reviews_tab.active a
 {
 	color: #8BB9E0;
+}
+
+.user_reviews_by_friends_link
+{
+	margin-top: -15px;
+	padding-bottom: 25px;
+}
+
+#LoadMoreReviewsall, #LoadMoreReviewspositive, #LoadMoreReviewsnegative {
+	float: left;
+}
+
+#ViewAllReviews {
+	float: left;
+	padding-top: 8px;
+	padding-left: 21px;
 }

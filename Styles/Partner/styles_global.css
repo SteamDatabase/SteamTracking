@@ -876,13 +876,11 @@ a.tab, .tab a {
 /* diffing */
 .diff_insert
 {
-	background: #e6ffe6;
 	color: #00cc00;
 }
 
 .diff_delete
 {
-	background: #ffe6e6;
 	color: #cc0000;
 }
 
