@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.0ca582397c7a53942cfc0c8b11a49eb122ac9bdd.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.08a01f82165fa80e60aa2484886ef9c6dc78f507.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2658,7 +2658,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "CS:GO Case Key",
-				"item_description": "This key will open any Valve Series weapon case. Non-Valve Series cases (e.g. The eSports Case) require their own key to open.",
+				"item_description": "This key will open any Valve Series weapon case. Non-Valve Series cases (e.g. eSports Case) require their own key to open.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/weapon_case_key",
@@ -2688,8 +2688,8 @@
 				"defindex": 1204,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "eSports 2013 Key",
-				"item_description": "This key opens the eSports Case 2013.\n\nA portion of the proceeds from the sale of this key will go towards one of the established community-run CS:GO tournaments. Stay tuned for further announcements.",
+				"item_name": "eSports Key",
+				"item_description": "This key opens any eSports Case.\n\nA portion of the proceeds from the sale of this key will go towards one of the established community-run CS:GO tournaments. Stay tuned for further announcements.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/weapon_case_key_special_1",
@@ -2737,6 +2737,142 @@
 				}
 			},
 			{
+				"name": "Gift - 1 Player",
+				"defindex": 1210,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Gift Package",
+				"item_description": "When used, a random player in your match will get a random item as a gift from you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/gift1player",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/gift1player.d7af0c74ccc8314c314c870708c0ae3a0ead32ad.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "gift"
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 8.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Gift - 9 Players",
+				"defindex": 1211,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Pallet of Presents",
+				"item_description": "When used, up to 9 other players in your match will get a random item as a gift from you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/gift9players",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/gift9players.d17fef24890f21e6de8cbc9690f5198d45cbb617.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "gift"
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 8.000000
+					}
+				]
+				
+			},
+			{
+				"name": "Community Case Key 1",
+				"defindex": 1214,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Winter Offensive Case Key",
+				"item_description": "This key only opens Winter Offensive Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/crate_key_community_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/crate_key_community_1.f168439f93277d8b3869910a3ee649ee4039edb4.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_1",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Gift - 25 Spectators",
+				"defindex": 1215,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Audience Participation Parcel",
+				"item_description": "When used, up to 25 viewers watching your match will get a random item as a gift from you.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/gift25spectators",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/gift25spectators.2df066096864ba183f903f656abe149b9d1f7a02.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "gift"
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 8.000000
+					}
+				]
+				
+			},
+			{
 				"name": "crate_valve_1",
 				"defindex": 4001,
 				"item_class": "supply_crate",
@@ -2777,7 +2913,7 @@
 				"defindex": 4002,
 				"item_class": "supply_crate",
 				"item_type_name": "Weapon Case",
-				"item_name": "eSports 2013 Case",
+				"item_name": "eSports Case",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/weapon_cases\/crate_esports_2013",
@@ -2881,6 +3017,42 @@
 				
 			},
 			{
+				"name": "crate_esports_2013_winter",
+				"defindex": 4005,
+				"item_class": "supply_crate",
+				"item_type_name": "Weapon Case",
+				"item_name": "eSports Winter Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_esports_2013_14",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_esports_2013_14.a83d1976bb20db8b4a64e7acad93aac87127ddd5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "esports_crate_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 5.000000
+					}
+				]
+				
+			},
+			{
 				"name": "crate_dhw13_promo",
 				"defindex": 4006,
 				"item_class": "supply_crate",
@@ -2916,6 +3088,42 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 1.000000
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_1",
+				"defindex": 4009,
+				"item_class": "supply_crate",
+				"item_type_name": "Weapon Case",
+				"item_name": "Winter Offensive Weapon Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_community_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_community_1.b176b8ca60249d0a2e7c6d72ec7d2d1a9632bd06.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_1",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 7.000000
 					}
 				]
 				
@@ -4164,6 +4372,16 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "gifter account id",
+				"defindex": 162,
+				"attribute_class": "gifter_account_id",
+				"min_value": 0.000000,
+				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -4241,6 +4459,26 @@
 				
 			},
 			{
+				"item_set": "set_community_1",
+				"name": "The Winter Offensive Collection",
+				"items": [
+					"weapon_galilar",
+					"weapon_fiveseven",
+					"weapon_m249",
+					"weapon_bizon",
+					"weapon_famas",
+					"weapon_elite",
+					"weapon_mp9",
+					"weapon_nova",
+					"weapon_m4a1_silencer",
+					"weapon_p250",
+					"weapon_awp",
+					"weapon_m4a1",
+					"weapon_sawedoff"
+				]
+				
+			},
+			{
 				"item_set": "set_dust",
 				"name": "The Dust Collection",
 				"items": [
@@ -4291,6 +4529,25 @@
 					"weapon_ak47",
 					"weapon_awp",
 					"weapon_p90"
+				]
+				
+			},
+			{
+				"item_set": "set_esports_ii",
+				"name": "The eSports Winter Collection",
+				"items": [
+					"weapon_galilar",
+					"weapon_fiveseven",
+					"weapon_bizon",
+					"weapon_nova",
+					"weapon_g3sg1",
+					"weapon_p250",
+					"weapon_ak47",
+					"weapon_p90",
+					"weapon_famas",
+					"weapon_awp",
+					"weapon_deagle",
+					"weapon_m4a1"
 				]
 				
 			},
@@ -4359,9 +4616,9 @@
 					"weapon_xm1014",
 					"weapon_mac10",
 					"weapon_hkp2000",
-					"weapon_p250",
-					"weapon_nova",
 					"weapon_bizon",
+					"weapon_nova",
+					"weapon_p250",
 					"weapon_nova",
 					"weapon_xm1014",
 					"weapon_m4a1",
@@ -4396,8 +4653,8 @@
 				"name": "The Nuke Collection",
 				"items": [
 					"weapon_bizon",
-					"weapon_sawedoff",
 					"weapon_mag7",
+					"weapon_sawedoff",
 					"weapon_p90",
 					"weapon_ump45",
 					"weapon_xm1014",
