@@ -4553,3 +4553,20 @@ a.tooltip {
 {
 	visibility: visible;
 }
+
+.workshop_callout_dota2_spring_2014_event
+{
+	color:#350f09;
+	height: 95px;
+	padding-top: 26px;
+	padding-right: 220px;
+	text-align: center;
+	letter-spacing: 6px;
+	line-height: 22px;
+	font-size: 16px;
+	font-family: 'Motiva Sans Bold', Arial, Tahoma;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/dota2_spring_workshop_banner.jpg');
+	background-repeat:no-repeat;
+}

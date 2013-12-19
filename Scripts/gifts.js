@@ -39,7 +39,52 @@ function UnpackGift( gidGift )
 // as above, but with different text
 function UnpackGiftItemReward( gidGift )
 {
-	UnpackGift( gidGift );
+	var action = 'validateunpack';
+
+	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+		method: 'post',
+		parameters: { sessionid: g_sessionID },
+		onSuccess: function( transport ) {
+			var response = transport.responseJSON;
+			if ( response.owned )
+			{
+				ShowAlertDialog( 'Unpack Item', 'You already have this item on your account.' );
+			}
+			else
+			{
+				var item_name = response.gift_name;
+				var strDialogTitle = 'Unpack Item: %s'.replace( /%s/, item_name );
+				var Modal = ShowConfirmDialog( strDialogTitle,
+					'This will permanently bind the item to your account.  Once unpacked, the item can no longer be traded or sold.',
+					'Unpack Item'
+				).done( function() {
+
+					var action = 'unpack';
+
+					new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+						method: 'post',
+						parameters: { sessionid: g_sessionID },
+						onComplete: function( transport ) {
+							if ( transport.responseJSON && transport.responseJSON.success == 1 )
+							{
+								ShowAlertDialog( strDialogTitle, 'This item has been added to your account.')
+							}
+							else
+							{
+								ShowAlertDialog( strDialogTitle, 'There was a problem adding this item to your account.  Please try again later.' );
+							}
+							UserYou.ReloadInventory( 753, 7 );
+						}
+					} );
+				} );
+
+				Modal.GetContent().css('min-width', '300px');
+				Modal.GetContent().find('.newmodal_content').css('max-width', '450px');
+				Modal.AdjustSizing();
+			}
+		},
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
+	} );
 }
 
 

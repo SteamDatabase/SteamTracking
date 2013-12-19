@@ -168,11 +168,35 @@ function BuildBadgeReward( rgRewardData )
 	{
 		$Icon.append( $J('<img/>', {src: rgRewardData.image } ) );
 	}
+	if ( rgRewardData.economy_hover_data && typeof BindSingleEconomyHover != 'undefined' )
+	{
+		$Icon.attr( 'data-economy-item', rgRewardData.economy_hover_data );
+		BindSingleEconomyHover( $Icon );
+	}
 	var $Content = $J('<div/>', {'class': 'badge_reward_content' } );
-	$Content.append(
-		$J('<div/>', {'class': 'badge_reward_title'}).text( rgRewardData.title ),
-		$J('<div/>').text( rgRewardData.description )
-	);
+	var $Title = $J('<div/>', {'class': 'badge_reward_title'}).text( rgRewardData.title );
+	var $Desc = $J('<div/>').text( rgRewardData.description );
+
+	if ( rgRewardData.rarity )
+	{
+		$Desc.addClass( 'reward_rarity rarity' + rgRewardData.rarity );
+
+		if ( rgRewardData.rarity > 1 )
+		{
+			var strColor = '#ffffff';
+			switch( rgRewardData.rarity )
+			{
+				case 2: strColor = '#70b04a'; break;
+				case 3: strColor = '#9e2020'; break;
+				case 4: strColor = '#8650ac'; break;
+				case 5: strColor = '#505fac'; break;
+				case 6: strColor = '#e46100'; break;
+			}
+			$Reward.css( 'box-shadow', 'inset 0 0 10px 0 ' + strColor );
+		}
+	}
+
+	$Content.append( $Title, $Desc );
 
 	$Reward.append( $Icon, $Content, $J('<div/>', {style: 'clear: left;' } ) );
 	$RewardCtn.append( $Reward );
