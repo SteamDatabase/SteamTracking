@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.416f5b3034fedbab4ecf3e815834f535aeea37dd.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.4863ef37a9c434938ef7479f5fa4c607ac2d08a0.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -55123,6 +55123,31 @@
 				
 			},
 			{
+				"name": "Governor's Salakot",
+				"defindex": 5672,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Governor's Salakot",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ember_spirit\/salakot\/salakot",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot.075158e06b40e126c68b99268b4d2a4a7252e64c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot_large.5d5cce77a6212bade66b7d8178ef0b6b897a2076.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Lone Traveler's Beret",
 				"defindex": 5673,
 				"item_class": "dota_item_wearable",
@@ -56358,11 +56383,11 @@
 				"item_description": "The fashionable way to keep bugs out of your sights.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/testitem_slot_empty",
+				"image_inventory": "econ\/items\/sniper\/defenseaustralians_sniper_corkhat\/defenseaustralians_sniper_corkhat",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty.71716dc7a6b7f7303b96ddd15bbe904a772aa151.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/testitem_slot_empty_large.e2d02cb5cb711e84920c206e018d917d42a83dce.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sniper\/defenseaustralians_sniper_corkhat\/defenseaustralians_sniper_corkhat.a41fe101a11e89dcabf0261347b9b7e9dd98e883.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sniper\/defenseaustralians_sniper_corkhat\/defenseaustralians_sniper_corkhat_large.21729bceb9d43547ed195714c1e6501c4148ac16.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -58852,6 +58877,365 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lion\/hellclaw_of_maelrawn\/hellclaw_of_maelrawn.edea349de065aa055b65663b6d95ea0fa22b0419.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lion\/hellclaw_of_maelrawn\/hellclaw_of_maelrawn_large.ae574f662772d9a7be60bbb198d465db161f00c6.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Mountain Splitter",
+				"defindex": 5819,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Mountain Splitter",
+				"item_description": "Usually used only by the Sagesmiths of Vuur, the stone antlers of the Murex elk are one of few tools capable of grasping the burning heartflint of the Vuurcrag mountains. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/axe\/axe_antler",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/axe\/axe_antler.ff65b3fe357ffe533f3c1665c51a1254a8d73334.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/axe\/axe_antler_large.19e9f51263cde849f8f3386854ea623113c22de0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Scythe of Ice",
+				"defindex": 5820,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Scythe",
+				"item_name": "Scythe of Ice",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/scythe_of_ice\/scythe_of_ice",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/furion\/scythe_of_ice\/scythe_of_ice.656fd33970579230049895d04d0a37e2dbb1910d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/furion\/scythe_of_ice\/scythe_of_ice_large.6d1ed0b19d6bb9109e2b17ea35ea40dff94bd0be.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Atramentos the Apocalyptic",
+				"defindex": 5828,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Atramentos the Apocalyptic",
+				"item_description": "The stygian steed, breaker of prophecies, bearer of the blackened mark, and steeled in thrice-cursed barding. This horrible creature is recently escaped from the prison-plane Fellfoul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/invincible_fiery_warhorse\/invincible_fiery_warhorse",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/invincible_fiery_warhorse\/invincible_fiery_warhorse.74cd5cc343ece1cf3fa1e79815a8bbc5052ffb10.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/invincible_fiery_warhorse\/invincible_fiery_warhorse_large.8107c2029390c244056d68f5eff5b5ac60860631.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Infernal Pactblade",
+				"defindex": 5833,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Infernal Pactblade",
+				"item_description": "A demon-forged weapon obtained by the Branded One shortly before the shattering of Fellfoul.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/theimmortalblade\/theimmortalblade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/doom\/theimmortalblade\/theimmortalblade.a3029bb4a2e72d06793a3ff24dec5b8e061f4151.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/doom\/theimmortalblade\/theimmortalblade_large.d18cefea43b5ad61bb94cedd1d1d5fa6ac5ef9e3.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Evergreen Stalker",
+				"defindex": 5834,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Treant",
+				"item_name": "Evergreen Stalker",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/furion\/treant\/treant_cis\/treant_cis_npc_dota_furion_treant",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/furion\/treant\/treant_cis\/treant_cis_npc_dota_furion_treant.e1d0ed1c37d2b0add02970591f4cd639e246f54c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/furion\/treant\/treant_cis\/treant_cis_npc_dota_furion_treant_large.ef3b24630d2efc654dc24b13a812f6c125470d08.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iceshard",
+				"defindex": 5837,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Iceshard",
+				"item_description": "The black mist of Avernus is said to whisper the secrets of lordship, war-making, and dominance. It is no wonder that the immortal demons of hell hate and fear Abaddon in equal measure.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/abaddon\/sword_iceshard\/sword_iceshard",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/abaddon\/sword_iceshard\/sword_iceshard.b27ca8d843d78f5babc426db629ceab7363e6bb3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/abaddon\/sword_iceshard\/sword_iceshard_large.29b55f1885475d611543145491fc0e171e90d273.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Broiler's Cleaver",
+				"defindex": 5855,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cleaver",
+				"item_name": "Broiler's Cleaver",
+				"proper_name": true,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/butchersbroilers_cleaver\/butchersbroilers_cleaver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pudge\/butchersbroilers_cleaver\/butchersbroilers_cleaver.98c5f4f48892340daa3cb30223e64fba7acd7d5e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pudge\/butchersbroilers_cleaver\/butchersbroilers_cleaver_large.aac1be05afb9bef9967b26ff63e0695a6def314c.png",
+				"item_set": "butchers_broilers",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Broiler's Hook",
+				"defindex": 5856,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hook",
+				"item_name": "Broiler's Hook",
+				"proper_name": true,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pudge\/butchersbroilers_hook\/butchersbroilers_hook",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pudge\/butchersbroilers_hook\/butchersbroilers_hook.051f9b9e4c07b66dfa8bc4868ef11a79f4661129.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pudge\/butchersbroilers_hook\/butchersbroilers_hook_large.53fc4fa942e94cdd457923880737e958a5103bdd.png",
+				"item_set": "butchers_broilers",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Spike of Frostbite",
+				"defindex": 5872,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Spike of Frostbite",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sven\/ice_sword\/ice_sword",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sven\/ice_sword\/ice_sword.e46582eecc40002875ef51bf82486f1a19ac9f50.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sven\/ice_sword\/ice_sword_large.1bd612325d96f38fefc9c6c126bddbab9d1646fa.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Grand Helm of the Narrow Maze",
+				"defindex": 5873,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Grand Helm of the Narrow Maze",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/razor\/razor_helmet_grand\/razor_helmet_grand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/razor\/razor_helmet_grand\/razor_helmet_grand.0376636073503f8e88b523fa55be54708ad28379.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/razor\/razor_helmet_grand\/razor_helmet_grand_large.375d4444ee7d02a90043021066e6ca07e6b2308a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Black Reaver",
+				"defindex": 5874,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Black Reaver",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/centaur\/axe_reaver\/axe_reaver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/centaur\/axe_reaver\/axe_reaver.4cc892626367468f087f6c09e040be9a8a43ec30.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/centaur\/axe_reaver\/axe_reaver_large.e566d75834f5089fb2fe25a31e0f3c02fa6b1a81.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Waraxe of Lost Light",
+				"defindex": 5875,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Waraxe of Lost Light",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/weapon_prosto\/weapon_prosto",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon_prosto\/weapon_prosto.497ddd43a770f53d89617f3bb7db378ecf5de05f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/weapon_prosto\/weapon_prosto_large.60798b08f61b2bfda3d405764fbbaea12558c1a7.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Steamcape",
+				"defindex": 5876,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Steamcape",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/steamcape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/steamcape.89902745a77bb0848ef82fac8f090b289a5ee651.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/steamcape_large.b74842841602c444f1ef5936112189624e0cf59a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Omnivus",
+				"defindex": 5877,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hammer-axe",
+				"item_name": "Omnivus",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/omniknight\/omnivus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/omniknight\/omnivus.2d94ea41ae798fc0bf871c4f13a2463a6db1d926.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/omniknight\/omnivus_large.510028bc618e9c1233bdb6122cef85bd5e32fec0.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -70421,6 +70805,36 @@
 				}
 			},
 			{
+				"name": "Recipe: Evergreen Stalker",
+				"defindex": 10396,
+				"item_class": "tool",
+				"item_type_name": "Recipe Scroll",
+				"item_name": "Recipe: Evergreen Stalker",
+				"item_description": "A simple spell of animation.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/crafting\/crafting_recipe_scroll_wraithking",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_wraithking.bade41182a556a72543ccce6bf53456ea04ff528.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_wraithking_large.add4f2f101799ed8e72b015700aff79cbdc12b04.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "ItemDynamicRecipe_Use",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				}
+			},
+			{
 				"name": "Eye of Lyralei",
 				"defindex": 10400,
 				"item_class": "dota_item_wearable",
@@ -79657,7 +80071,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "HyperX D2L Season 4",
-				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world'ÂÂs best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar'ÂÂs Palace in Las Vegas!",
+				"item_description": "The D2L returns for its fourth season with more money and more teams! Witness sixteen of the world's best Dota 2 teams battle it out for over $50,000 and a ticket to the Live Finals at Caesar's Palace in Las Vegas!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_d2l_s4",
@@ -81929,11 +82343,11 @@
 				"item_description": "Starting in Sep 28th 2013, the Nexon Sponsorship League will span three seasons with a total of KRW 300 million ($267,153 USD) worth of sponsorship funding. Watch the top team matches of Season 2.\r\n\t\r\n\tIncludes the Gama Brothers courier!",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship2",
+				"image_inventory": "econ\/leagues\/subscriptions_nexon2gama",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2.57a03c7694d7ec0304a4a957f9c87017a0cc9207.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship2_large.052ac8d70c09cc03d719e5de3788bd93fe3e29d3.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon2gama.217028dea32682a0af13b14ffd339b9b09fcdb8a.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon2gama_large.93aacaf07a2151e524b209548bbaff412d0cf8ab.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -83488,6 +83902,159 @@
 					"type": "league_view_pass",
 					"use_string": "Use"
 				}
+			},
+			{
+				"name": "Asian Cyber Games Dota 2 Championship 2013",
+				"defindex": 15436,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Asian Cyber Games Dota 2 Championship 2013",
+				"item_description": "The top Asian teams compete in the Asian Cyber Games for a total prize pool of $30,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_asiancybergames",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_asiancybergames.0efa7484e635161a8ef3a9ceee280a32d96599af.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_asiancybergames_large.b8be5f5c019957433da005d7cd39196624cead31.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Asian Cyber Games Dota 2 Championship 2013 - ADMIN",
+				"defindex": 15437,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Asian Cyber Games Dota 2 Championship 2013 - ADMIN",
+				"item_description": "The top Asian teams compete in the Asian Cyber Games for a total prize pool of $30,000!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_asiancybergames",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_asiancybergames.0efa7484e635161a8ef3a9ceee280a32d96599af.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_asiancybergames_large.b8be5f5c019957433da005d7cd39196624cead31.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Chile Tournament",
+				"defindex": 15438,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Chile Tournament",
+				"item_description": "16 teams compete to reach the grand final and become the best team in Chile!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_chile",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_chile.46c644662d2a258b7083cf5b8612fcf2fa0dd024.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_chile_large.12ada54b8bd53b0ad903e619b2fa4b022f8c3c6e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Chile Tournament - ADMIN",
+				"defindex": 15439,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Chile Tournament - ADMIN",
+				"item_description": "16 teams compete to reach the grand final and become the best team in Chile!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_chile",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_chile.46c644662d2a258b7083cf5b8612fcf2fa0dd024.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_chile_large.12ada54b8bd53b0ad903e619b2fa4b022f8c3c6e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Wraith-Night Reliquary",
+				"defindex": 15440,
+				"item_class": "tool",
+				"item_type_name": "Unique Gift",
+				"item_name": "Wraith-Night Reliquary",
+				"item_description": "A unique gift from the King. Wraith-Night Reliquaries can only be acquired with Shining Fragments.  Shining Fragments are earned by activiting a Wraith King's Favor.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/wraithnight_gift_golden",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_golden.2f8e8aedc9fe82fa5e9d88787bd8da35a0d0f60b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_golden_large.065cfec972262eb25ab9841e594cd2ab817c29f2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift",
+					"use_string": "Open Gift"
+				},
+				"attributes": [
+					{
+						"name": "ignore charge notification",
+						"class": "ignore_charge_notification",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Artificer's Hammer",
@@ -91475,8 +92042,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Chained_Slayers_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_slayers_set.fc911af34fa11dcce4f9909b489842acd3591bf4.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_slayers_set_large.2411f182f171c6310377bfc62425c6b0bb865880.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_slayers_set.febb56bf5e70d55316bfd1cb8c4dd390682bd65b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chained_slayers_set_large.348365bf1969a6600a6b7ead045a65148f7ad7de.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -93656,6 +94223,74 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "The Butcher's Broilers Pack",
+				"defindex": 20337,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Butcher's Broilers Pack",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Butchers_Broilers_Pack",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.860effab0435ec1bda000c82d20316bc804ce9f4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.4007810e60e6c2c64cc1ba9e37d75bc53cc02099.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "The Butcher's Broilers Pack - Finals Gift",
+				"defindex": 20338,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "The Butcher's Broilers Pack - Finals Gift",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Butchers_Broilers_Pack",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.860effab0435ec1bda000c82d20316bc804ce9f4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.4007810e60e6c2c64cc1ba9e37d75bc53cc02099.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -95550,6 +96185,16 @@
 					"Wrap of the Shifting Sorcerer",
 					"Hatchet of the Shifting Sorcerer",
 					"Hatchet of the Shifting Sorcerer - Offhand"
+				]
+				
+			},
+			{
+				"item_set": "butchers_broilers",
+				"name": "The Butcher's Broilers",
+				"store_bundle": "The Butcher's Broilers Pack",
+				"items": [
+					"Broiler's Cleaver",
+					"Broiler's Hook"
 				]
 				
 			},
@@ -99436,6 +100081,36 @@
 				"id": 173,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle173"
+			},
+			{
+				"system": "doom_hellthorns_sword",
+				"id": 174,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle174"
+			},
+			{
+				"system": "courier_butch_ambient",
+				"id": 175,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle175"
+			},
+			{
+				"system": "natures_prophet_scythe_of_ice",
+				"id": 176,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle176"
+			},
+			{
+				"system": "drow_bow_death_shadow",
+				"id": 177,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle177"
+			},
+			{
+				"system": "sven_ice_sword",
+				"id": 178,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle178"
 			}
 		]
 		,
