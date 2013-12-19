@@ -1571,8 +1571,25 @@ textarea.comment_input
 	float: left;
 }
 
-#ViewAllReviews {
+.view_all_reviews_btn
+{
 	float: left;
 	padding-top: 8px;
 	padding-left: 21px;
+}
+
+.loading_more_reviews
+{
+	width: 616px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.loading_more_reviews_throbber
+{
+	width: 32px;
+	height: 32px;
+	margin-right: 5px;
+	vertical-align: middle;
 }

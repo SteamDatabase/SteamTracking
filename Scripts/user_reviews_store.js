@@ -77,8 +77,9 @@ function UserReviewShowMore( id, context )
 
 function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 {
-	var elem = $J( "#LoadMoreReviews" + context );
-	elem.remove();
+	$J( "#ViewAllReviews" + context ).remove();
+	$J( "#LoadMoreReviews" + context ).remove();
+	$J( "#LoadingMoreReviews" + context ).show();
 
 	var container = $J( "#Reviews_" + context );
 
@@ -95,6 +96,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 			{
 				if ( transport.responseJSON.success == 1 )
 				{
+					$J( "#LoadingMoreReviews" + context ).remove();
 					container.append( transport.responseJSON.html );
 					CollapseLongReviews();
 					RequestCurrentUserRecommendationVotes( transport.responseJSON.recommendationids );
