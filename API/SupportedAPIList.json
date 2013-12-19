@@ -4121,7 +4121,7 @@
 								"description": "The Steam ID to fetch items for"
 							},
 							{
-								"name": "PromoID",
+								"name": "promoid",
 								"type": "uint32",
 								"optional": false,
 								"description": "The promo ID to grant an item for"
@@ -4141,7 +4141,7 @@
 								"description": "The Steam ID to fetch items for"
 							},
 							{
-								"name": "PromoID",
+								"name": "promoid",
 								"type": "uint32",
 								"optional": false,
 								"description": "The promo ID to grant an item for"
