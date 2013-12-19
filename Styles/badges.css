@@ -153,6 +153,8 @@ a.badge_row:hover .badge_view_details {
 .badge_info_image {
 	float: left;
 	margin-right: 24px;
+	width: 80px;
+	height: 80px;
 }
 
 .badge_info_description {
@@ -247,33 +249,38 @@ a.badge_row:hover .badge_view_details {
 	height: 8px;
 	background: -moz-linear-gradient(top, #848080 5%, #5c5c5c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#848080), color-stop(95%,#5c5c5c));background: -webkit-linear-gradient(top, #848080 5%,#5c5c5c 95%);background: -o-linear-gradient(top, #848080 5%,#5c5c5c 95%);background: -ms-linear-gradient(top, #848080 5%,#5c5c5c 95%);background: linear-gradient(to bottom, #848080 5%,#5c5c5c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#848080', endColorstr='#5c5c5c',GradientType=0 );}
 
-.summersale_card_drop_info .card_drop_info_header, .summersale_card_drop_info .card_drop_info_progress {
-	color: #77b7ae;
+.salespend_card_drop_info .card_drop_info_header, .salespend_card_drop_info .card_drop_info_progress {
+	color: #b6b2a3;
 }
 
-.summersale_card_drop_info .card_drop_info_subarea {
-	border-color: #7ec2b8;
+.salespend_card_drop_info .card_drop_info_subarea {
+	border-color: #ffca00;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/promo/wintersale_snowflakes.png' );
+	background-repeat: no-repeat;
+	background-position: top left;
 }
 
-.summersale_card_drop_info .card_drop_info_progress_bar {
-	border-color: #51867c;
-	background: -moz-linear-gradient(top, #6dafa5 5%, #314c47 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#6dafa5), color-stop(95%,#314c47));background: -webkit-linear-gradient(top, #6dafa5 5%,#314c47 95%);background: -o-linear-gradient(top, #6dafa5 5%,#314c47 95%);background: -ms-linear-gradient(top, #6dafa5 5%,#314c47 95%);background: linear-gradient(to bottom, #6dafa5 5%,#314c47 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dafa5', endColorstr='#314c47',GradientType=0 );}
+.salespend_card_drop_info .card_drop_info_progress_bar {
+	border-color: #27282b;
+	background: -moz-linear-gradient(top, #ecb70c 5%, #664503 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#ecb70c), color-stop(95%,#664503));background: -webkit-linear-gradient(top, #ecb70c 5%,#664503 95%);background: -o-linear-gradient(top, #ecb70c 5%,#664503 95%);background: -ms-linear-gradient(top, #ecb70c 5%,#664503 95%);background: linear-gradient(to bottom, #ecb70c 5%,#664503 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecb70c', endColorstr='#664503',GradientType=0 );}
 
-.summersale_card_drop_info .card_drop_info_totalspending {
-	color: #b1e3dc;
+.salespend_card_drop_info .card_drop_info_totalspending {
+	color: #ffca00;
+	font-size: 15px;
 }
 
-.summersale_card_drop_info_moreinfo {
-	font-size: 14px;
+.salespend_card_drop_info_moreinfo {
+	font-size: 13px;
 }
 
-.summersale_card_drop_info_moreinfo a {
-	color: #77b7ae;
+.salespend_card_drop_info_moreinfo a {
 	text-decoration: underline;
+	color: #b6b2a3;
 }
 
-.summersale_card_drop_info_moreinfo a:hover {
-	color: #b1e3dc;
+.salespend_card_drop_info_moreinfo a:hover {
+	color: #e9e4d1;
 }
 
 .badge_task_tooltip {

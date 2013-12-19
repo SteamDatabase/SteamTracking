@@ -2166,7 +2166,9 @@ function BuildHover( prefix, item, owner )
 	var strHoverClass = 'item_desc_content';
 	if ( item.appid )
 		strHoverClass = strHoverClass + ' app' + item.appid + ' context' + item.contextid;
-	$(prefix+'_content').className = strHoverClass;
+
+	var elHoverContent = $(prefix+'_content');
+	elHoverContent.className = strHoverClass;
 
 	$(prefix+'_item_icon').src = url;
 	$(prefix+'_item_icon').alt = item.name;
@@ -2287,6 +2289,11 @@ function BuildHover( prefix, item, owner )
 	if ( elMarketActions )
 	{
 		PopulateMarketActions( elMarketActions, item );
+	}
+
+	if ( typeof g_rgWinterSaleRewardData != 'undefined' )
+	{
+		PopulateWinterSale( prefix, elHoverContent, item );
 	}
 
 	$(prefix).builtFor = item;
@@ -2438,6 +2445,44 @@ function PopulateMarketActions( elActions, item )
 	
 		
 	elActions.show();
+}
+
+function PopulateWinterSale( prefix, elHoverContent, item )
+{
+	var $WinterSale = $J('#'+prefix+'_winter2013');
+	var rgRewardData = g_rgWinterSaleRewardData && g_rgWinterSaleRewardData[item.appid] && g_rgWinterSaleRewardData[item.appid][item.market_hash_name];
+
+	if ( !rgRewardData )
+	{
+		$WinterSale.hide();
+		elHoverContent.removeClassName('has_wintersale');
+		return;
+	}
+
+	elHoverContent.addClassName( 'has_wintersale');
+	if ( !$WinterSale.length )
+	{
+		$WinterSale = $J('<div id="' + prefix + '_winter2013" class="faq_reward_hover_callout"></div>');
+		$J(elHoverContent).after( $WinterSale );
+	}
+
+	if ( !$WinterSale.children().length )
+	{
+		$WinterSale.html(
+			'<div class="faq_reward_hover_flourish">' +
+				'<div class="ellipsis">Steam Holiday Sale 2013 Exclusive</div>' +
+			'</div>' +
+			'<div class="reward_rarity"></div>' +
+			'<div class="craftcount"></div>'
+		);
+	}
+	$WinterSale.show();
+	var $Rarity = $WinterSale.children( '.reward_rarity' );
+	var $CraftCount = $WinterSale.children( '.craftcount' );
+
+	$Rarity.attr( 'class', 'reward_rarity rarity' + rgRewardData.winter2013_reward_rarity );
+	$Rarity.text( rgRewardData.winter2013_reward_rarity_desc );
+	$CraftCount.text( rgRewardData.winter2013_reward_craftcount_desc );
 }
 
 function SellCurrentSelection()
@@ -3449,8 +3494,7 @@ function CreateCurrencyHoverFromContainer( container, id, appid, contextid, curr
 	rgItem.appid = appid;
 	rgItem.contextid = contextid;
 	rgItem.amount = amount;
-	element.observe( 'mouseover', MouseOverItem.bindAsEventListener( null, UserYou, element, rgItem ) );
-	element.observe( 'mouseout', MouseOutItem.bindAsEventListener( null, UserYou, element, rgItem ) );
+	AddItemHoverToElement( element, rgItem );
 }
 
 function CreateItemHoverFromContainer( container, id, appid, contextid, assetid, amount )
@@ -3466,6 +3510,12 @@ function CreateItemHoverFromContainer( container, id, appid, contextid, assetid,
 	rgItem.contextid = contextid;
 	rgItem.amount = amount;
 	rgItem.is_stackable = amount > 1;
+	AddItemHoverToElement( element, rgItem );
+}
+
+function AddItemHoverToElement( element, rgItem )
+{
+	element = $(element);
 	element.observe( 'mouseover', MouseOverItem.bindAsEventListener( null, UserYou, element, rgItem ) );
 	element.observe( 'mouseout', MouseOutItem.bindAsEventListener( null, UserYou, element, rgItem ) );
 }
