@@ -339,21 +339,18 @@ SteamClientNewsPage
 {
 	url			"http://storefront.steampowered.com/platform/update_history/index.php"
 	method		"internal"
-	filter		"news"
 }
 
 SteamClientBetaNewsPage
 {
 	url			"http://steamcommunity.com/groups/SteamClientBeta/announcements?client_view=1"
 	method		"internal"
-	filter		"news"
 }
 
 SteamClientBetaBugReports
 {
 	url			"http://steamcommunity.com/groups/SteamClientBeta/discussions/0/"
 	method		"internal"
-	filter		"community"
 }
 
 NewsHomePage

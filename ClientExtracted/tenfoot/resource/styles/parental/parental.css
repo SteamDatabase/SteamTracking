@@ -179,10 +179,14 @@ ParentalReplacementPanel Label
 ParentalReplacementPanel Image
 {
 	margin-top: 50px;
-	height: 100px;
-	width: 100px;
+	height: 110px;
+	width: 120px;
 	horizontal-align: center;
-	wash-color: parental_locked_wash;
+	wash-color: none;
+	opacity: 0.3;
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
 }
 
 ParentalReplacementPanel Button
@@ -224,10 +228,10 @@ ParentalReplacementPanel Button:focus Label
 
 ParentalReplacementPanel:descendantfocus Image
 {
-	wash-color: #ffffffff;
 	transition-property: wash-color !immediate;
 	transition-duration: 0.25s;
 	transition-timing-function: ease-in-out;
+	opacity: 0.5;
 }
 
 ParentalReplacementPanel Button:hover
@@ -295,6 +299,7 @@ ParentalReplacementPanel Button:focus
 	horizontal-align: center;
 	margin: 4px;
 	margin-top: 45px;
+	opacity: 0.7;
 }
 
 #ParentalGridItemContents Label, #ParentalRecentAppContents Label
