@@ -781,12 +781,23 @@ ParentalButton.Locked
 	height: 44px;
 	width: 44px;
 	margin-right: 4px;
+	wash-color: none;
 	opacity: 0.0;
 }
 
 .LinksAndMoreButton.Locked Image
 {
 	opacity: 1.0;
+	wash-color: none;
+	
+	transition-property: wash-color;
+	transition-duration: 0.08s;
+	transition-timing-function: ease-in-out;
+}
+
+.LinksAndMoreButton.Locked:descendantfocus Image
+{
+	wash-color: #2f2f2fff;
 }
 
 
@@ -4628,4 +4639,14 @@ KeyboardShortcut Image
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-direction: normal;
+}
+
+
+#ParentalGridItem
+{
+	background-color: dialog_bg_color;
+	width: 450px;
+	height: 210px;
+	padding-top: -200px;
+
 }

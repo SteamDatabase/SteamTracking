@@ -41,6 +41,8 @@
 @define language_transition_time: 0.2s;
 @define language_show_time: 0.8s;
 
+@define pad_select_color: #1d3547ff;
+
 TextInputDaisy
 {
 	width: 100%;
@@ -332,8 +334,27 @@ TextInputDaisy
 	height: 30px;
 	margin-top: 1px;
 	margin-left: 10px;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: language_transition_time;
+	transition-timing-function: ease-in;
+}
+
+.SteamPad #DPadLegend Image.SteamPad
+{
+	width: 64px;
+	height: 64px;
+	margin-top: -15px;
+	margin-left: -10px;
+	opacity: 0.5;
+}
+
+.XInputPad #DPadLegend Image.XInputPad
+{
 	opacity: 0.7;
 }
+
 
 #DPad_txt
 {
@@ -451,10 +472,9 @@ TextInputDaisy
 
 	font-size: 24px;
 	font-weight: light;
-	line-height: 30px;
 	font-family: "Motiva Sans";
 	padding: 20px;
-
+	padding-top: 25px;
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.25s;
@@ -471,35 +491,195 @@ TextInputDaisy
 	opacity: 1.0;
 }
 
+.SteamPad	#MiddleLegendRS
+{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+
 .AButtonBox,
 .BButtonBox,
 .XButtonBox,
 .YButtonBox,
 .BkspButtonBox
 {
-	border-radius: 50%;
-	border: 2px solid #00000000;
 	width: 38px;
 	height: 38px;
 	text-align: center;
-	padding-top: 2px;
+
+	font-size: 24px;
+	font-weight: light;
+}
+
+#ABXY_Footer_Wrapper,
+#SteamPad_ABXY_Footer_Wrapper
+{
+	visibility: collapse;
+}
+
+.SteamPad #SteamPad_ABXY_Footer_Wrapper
+{
+	visibility: visible;
+	height: 120px;
+	width: 600px;
+}
+
+.XInputPad #ABXY_Footer_Wrapper
+{
+	visibility: visible;
+	flow-children: right;
+}
+
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowRight
+{
+	flow-children: right;
+	height: 120px;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowXY
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: none;
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
+{
+	height: 76px;
+	width: 76px;
+	margin-top: 20px;
+	background-image: url( "file://{images}/footer/grid.png" );
+}
+
+#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowAB
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: none;
+}
+
+.XInputPad .AButtonBox,
+.XInputPad .BButtonBox,
+.XInputPad .XButtonBox,
+.XInputPad .YButtonBox,
+.XInputPad .BkspButtonBox,
+.SteamPad .BkspButtonBox
+{
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
 	margin-left: 16px;
 	margin-right: 2px;
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+	padding-top: 2px;
+
+}	
+
+.SteamPad .A_Wrapper,
+.SteamPad .B_Wrapper,
+.SteamPad .X_Wrapper,
+.SteamPad .Y_Wrapper
+{
+	flow-children: right;
 }
-.YButtonBox
+
+.SteamPad .X_Wrapper,
+.SteamPad .Y_Wrapper
+{
+	horizontal-align: right;
+}
+
+.SteamPad .A_Wrapper,
+.SteamPad .B_Wrapper
+{
+	horizontal-align: left;
+}
+
+.SteamPad .A_Wrapper .AButtonBox,
+.SteamPad .B_Wrapper .BButtonBox,
+.SteamPad .X_Wrapper .XButtonBox,
+.SteamPad .Y_Wrapper .YButtonBox
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	min-width: 48px;
+	width: 48px;
+	height: 48px;
+	border-radius: 0px;
+	box-shadow: none;
+
+	font-size: 20px;
+} 
+
+.SteamPad .A_Wrapper
+{
+	vertical-align: bottom;
+}
+ 
+.SteamPad .A_Wrapper .AButtonBox
+{
+	padding-left: -14px;
+	padding-top: 16px;
+	background-image: url( "file://{images}/footer/a_button.png" );
+}
+
+
+.SteamPad .B_Wrapper
+{
+	vertical-align: top;
+} 
+
+.SteamPad .BButtonBox
+{
+	padding-top: 6px;
+	padding-left: -18px;
+	background-image: url( "file://{images}/footer/b_button.png" );
+}
+
+.SteamPad .Y_Wrapper .YButtonBox
+{
+	background-image: url( "file://{images}/footer/y_button.png" );
+	padding-top: 6px;
+	padding-right: 8px;
+	text-align: right;
+}
+
+.SteamPad .X_Wrapper .XButtonBox
+{
+	background-image: url( "file://{images}/footer/y_button.png" );
+	padding-top: 4px;
+	padding-right: 7px;
+	text-align: right;
+}
+
+#SteamPad_ABXY_Footer_Wrapper .LegendText
+{
+	margin-left: 8px;
+	margin-right: 8px;
+	vertical-align: center;
+	font-size: 24;
+	font-family: "Motiva Sans";
+	color: tclegendlabel; 
+}
+
+.XInputPad .YButtonBox
 {
 	background-color: #b38e1f00;
 }
-.XButtonBox
+.XInputPad .XButtonBox
 {
 	background-color: #19427f00;
 }
-.AButtonBox
+.XInputPad .AButtonBox
 {
 	background-color: #6b900c00;
 }
-.BButtonBox
+.XInputPad .BButtonBox
 {
 	background-color: #a51c0c00;
 }
@@ -910,7 +1090,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY.RightPad_Up .Group.SelectionGroup #Item_N
 {
-	background-color: #00000000;
+	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
 	border: 2px solid #ffffff80; 
 	border-radius: borderradius;
@@ -957,7 +1137,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY.RightPad_Down .Group.SelectionGroup #Item_S
 {
-	background-color: #00000000;
+	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
 	border: 2px solid #ffffff80; 
 	border-radius: borderradius;
@@ -1005,7 +1185,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY.RightPad_Left .Group.SelectionGroup #Item_W
 {
-	background-color: #00000000;
+	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
 	border: 2px solid #ffffff80; 
 	border-radius: borderradius;
@@ -1053,7 +1233,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY.RightPad_Right .Group.SelectionGroup #Item_E
 {
-	background-color: #00000000;
+	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
 	border: 2px solid #ffffff80; 
 	border-radius: borderradius;
@@ -1197,7 +1377,6 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .PINButton
 {
-	line-height: 120px;
 	flow-children: down;
 
 	color: tclegendlabel;
@@ -1213,6 +1392,9 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .PINButtonText
 {
+	height: 100px;
+	margin-bottom: 20px;
+	padding-top: -22px;
 	horizontal-align: center;
 	font-size: 124px;
 	font-weight: light;
@@ -1221,7 +1403,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .PINButton .PINButtonIcon
 {
-	line-height: 30px;
+	padding-top: 4px;
 	horizontal-align: center;
 	font-size: 21px;
 	font-family: "Motiva Sans";
@@ -1298,33 +1480,19 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	flow-children: right;
 
 	font-size: 24px;
-	line-height: 30px;
 	padding: 20px;
 	height: 88px;
 }
 
 
-.SteamPad .PINButtonBox,
-.SteamPad .DPadButtonBox,
-.SteamPad #PINFooter .AButtonBox,
-.SteamPad #PINFooter .BButtonBox
+.SteamPad .DPadButtonBox
 {
 	visibility: collapse;
 }
 
-.SteamPadBox,
 .SteamPadGridBox
 {
 	visibility: collapse;
-}
-
-.SteamPad .SteamPadBox
-{
-	visibility: visible;
-
-	width: 48px;
-	height: 48px;
-	font-size: 20px;
 }
 
 .SteamPad .SteamPadGridBox
@@ -1332,49 +1500,42 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	visibility: visible;
 }
 
-#YPIN_btn_steampad
+#YPIN_Wrapper,
+#XPIN_Wrapper
+{
+	horizontal-align: center;
+}
+
+#PINPad .YButtonBox,
+#PINPad .XButtonBox
+{
+	visibility: visible;
+	opacity: 0.6;
+	margin-left: 0px;
+	margin-right: 0px;
+	horizontal-align: center;
+}
+
+#XPIN_Wrapper .XButtonBox
+{
+	visibility: visible;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.SteamPad #XPIN_Wrapper,
+.SteamPad #YPIN_Wrapper
 {
 	margin-top: -6px;
 }
 
-#YPIN_btn_steampad Image
+#PINFooter .A_Wrapper,
+#PINFooter .B_Wrapper
 {
-	opacity: 0.6;
+	flow-children: right;
 }
 
-#YPIN_btn_steampad Label
+#PINFooter .LegendText
 {
-	margin-left: 24px;
-	margin-top: 2px;
+	vertical-align: center;
 }
-
-#XPIN_btn_steampad
-{
-	margin-top: -6px;
-}
-
-#XPIN_btn_steampad Image
-{
-	opacity: 0.6;
-}
-
-#XPIN_btn_steampad Label
-{
-	padding-left: 25px;
-	padding-top: 14px;
-}
-
-#APIN_btn_steampad
-{
-	padding-left: 10px;
-	padding-top: 11px;
-	background-image: url( "file://{images}/footer/a_button.png" );
-}
-
-#BPIN_btn_steampad
-{
-	padding-left: 10px;
-	padding-top: 2px;
-	background-image: url( "file://{images}/footer/b_button.png" );
-}
-

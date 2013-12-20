@@ -12,24 +12,24 @@
 				<Panel id="LinksAndActionsWrapper" class="LinksAndActionsWrapper" tabindex="auto" selectionpos="auto" selectionposboundary="vertical" childfocusonhover="true">
 					<ParentalButton id="DLCButton" class="DLCButton LinksAndMoreButton">
 						<Label id="DLCLabel" text="#Library_Details_DownloadableContent" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<ParentalButton id="StoreButton" class="StoreButton LinksAndMoreButton">
 						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<ParentalButton id="GameHubButton" class="GameHubButton LinksAndMoreButton">
 						<Label id="GameHubLabel" text="#Library_Details_GameHubPage" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<Panel id="hr1" class="HorizontalRule" />
 					<ParentalButton id="ForumsButton" class="ForumsButton LinksAndMoreButton">
 						<Label id="ForumsLabel" text="#Library_Details_GameForums" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<ParentalButton id="GroupsButton" class="GroupsButton LinksAndMoreButton">
 						<Label id="GroupsLabel" text="#Library_Details_RelatedGroups" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<Button id="CDKeyButton" class="CDKeyButton LinksAndMoreButton">
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
@@ -39,12 +39,12 @@
 					</Button>
 					<ParentalButton id="ManageAccountButton" class="ManageAccountButton LinksAndMoreButton">
 						<Label id="ManageAccountLabel" text="#Library_Details_ManageAccount" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<Panel id="hr2" class="HorizontalRule" />
 					<ParentalButton id="RecommendButton" class="RecomendButton LinksAndMoreButton">
 						<Label id="RecommendLabel" text="#Library_Details_RecommendThisGame" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct.png" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 					<Button id="FavoritesButton" class="FavoritesButton LinksAndMoreButton">
 						<Label id="FavoritesLabel" text="#Library_Details_AddToFavorites" />
