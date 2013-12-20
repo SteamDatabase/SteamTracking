@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.b25d34623b33b28cfd46ee01234c3a5d4f6fc1dc.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.ad33c52271369e1cc0e1ac3708d8a205e99d64e4.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -50269,7 +50269,7 @@
 				"name": "Arcane Drapings",
 				"defindex": 5494,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "back",
+				"item_type_name": "Cape",
 				"item_name": "Arcane Drapings",
 				"item_description": "A tattered, faded cape--it burst to brilliant life, showing its true form once Invoker put it on.",
 				"proper_name": false,
@@ -55123,19 +55123,18 @@
 				
 			},
 			{
-				"name": "Governor's Salakot",
+				"name": "Ancient Imbued Spinal Blade",
 				"defindex": 5672,
 				"item_class": "dota_item_wearable",
-				"item_type_name": "Hat",
-				"item_name": "Governor's Salakot",
-				"item_description": "",
+				"item_type_name": "Blade",
+				"item_name": "Ancient Imbued Spinal Blade",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/items\/ember_spirit\/salakot\/salakot",
+				"image_inventory": "econ\/items\/slark\/ancient_imbued_spinal_blade\/ancient_imbued_spinal_blade",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot.075158e06b40e126c68b99268b4d2a4a7252e64c.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot_large.5d5cce77a6212bade66b7d8178ef0b6b897a2076.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/slark\/ancient_imbued_spinal_blade\/ancient_imbued_spinal_blade.f6f74808b1aa28b5538c8b1574ca09f8a40bf7fb.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/slark\/ancient_imbued_spinal_blade\/ancient_imbued_spinal_blade_large.7ebddea3659366010a1afe973156c2d10228812d.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -56203,6 +56202,31 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Dagger of the Outcast",
+				"defindex": 5710,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dagger",
+				"item_name": "Dagger of the Outcast",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/outcast_dagger\/outcast_dagger",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_dagger\/outcast_dagger.3ce2b33358d6a7b5cefc90dc9f85e7543089af4a.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_dagger\/outcast_dagger_large.ae62be143be031e71e827e31eee8a35662dffc38.png",
+				"item_set": "naga_outcast_deep",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "The Scintillant Sting",
@@ -58121,6 +58145,31 @@
 				}
 			},
 			{
+				"name": "Iceforged Bracers",
+				"defindex": 5785,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Iceforged Bracers",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/iceforged_bracer\/iceforged_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_bracer\/iceforged_bracer.81844f5070d9e405e48fb10027662b3fa5f80f77.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_bracer\/iceforged_bracer_large.a52297e951a0a4677d3a3cd96ebe6685954488ea.png",
+				"item_set": "invoker_iceforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Wolfsden Gift",
 				"defindex": 5786,
 				"item_class": "dota_item_wearable",
@@ -58939,6 +58988,160 @@
 				}
 			},
 			{
+				"name": "Avon of the Crescent Moon",
+				"defindex": 5822,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Avon of the Crescent Moon",
+				"item_description": "Spawned from the Lunar Moth, this felmoth named Avon was raised by Nova. Still young and curious Avon is now trained and ready for her first battle.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/avon_of_the_crescent_moon\/avon_of_the_crescent_moon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/avon_of_the_crescent_moon\/avon_of_the_crescent_moon.deb5e66a88a203450b02e2da4a2056d7557bc992.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/avon_of_the_crescent_moon\/avon_of_the_crescent_moon_large.3653115a4d924d2f2c7b7ead401a85dcbeb30c75.png",
+				"item_set": "luna_crescentmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Glaves of the Crescent Moon",
+				"defindex": 5823,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mace",
+				"item_name": "Glaves of the Crescent Moon",
+				"item_description": "Glaves as sharp as moon beams cut swaths through her enemies. Ribboned by a pair of glossamar wings, they fly true and far.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/glaves_of_the_crescent_moon\/glaves_of_the_crescent_moon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/glaves_of_the_crescent_moon\/glaves_of_the_crescent_moon.6e83456780af1f52db28597e5bb6d2edf7190cbd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/glaves_of_the_crescent_moon\/glaves_of_the_crescent_moon_large.9592751b84570b9a19881ae538f6192ed48726a7.png",
+				"item_set": "luna_crescentmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Guard of the Crescent Moon",
+				"defindex": 5824,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Guard of the Crescent Moon",
+				"item_description": "A shield made from pure MoonSilver and dusted with the wing scales of the Lunar Moth. Attacks that luna fails to evade are blocked effortlessly by this guard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/guard_of_the_crescent_moon\/guard_of_the_crescent_moon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/guard_of_the_crescent_moon\/guard_of_the_crescent_moon.2d51dc8f0c4e03a21ac916df3c7e5e86cfbb7613.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/guard_of_the_crescent_moon\/guard_of_the_crescent_moon_large.1d629b0695ba4d08368f593226f6c57ec7cc2d67.png",
+				"item_set": "luna_crescentmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Mantle of the Crescent Moon",
+				"defindex": 5825,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Mantle of the Crescent Moon",
+				"item_description": "Plaid with moth wings and dressed with armour made from pure Moonsilver. A vestment like this is both rare and magical as it grants its wearer with the boon of increased agility.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/mantle_of_the_crescent_moon\/mantle_of_the_crescent_moon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/mantle_of_the_crescent_moon\/mantle_of_the_crescent_moon.a32cb43b6ec1f2062ebff2594e28c69ccac62099.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/mantle_of_the_crescent_moon\/mantle_of_the_crescent_moon_large.f8c8be580501c7851be9f8266daf3cccfe4b0674.png",
+				"item_set": "luna_crescentmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Headress of the Crescent Moon",
+				"defindex": 5826,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Headress of the Crescent Moon",
+				"item_description": "Adorned with the wings of the sacred Lunar Moth, Luna rides into battle with strength and agility. Able to sense an attack before it happens, she can deftly avoid blows that would otherwise seek to harm her.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/luna\/headress_of_the_crescent_moon\/headress_of_the_crescent_moon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/headress_of_the_crescent_moon\/headress_of_the_crescent_moon.a88f93a7643a11b8b61793cd0d56ba288ef5adc4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/luna\/headress_of_the_crescent_moon\/headress_of_the_crescent_moon_large.cf2a9e251fe95b50c900784a7584334b7919f6a8.png",
+				"item_set": "luna_crescentmoon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Alchemists Infuser",
+				"defindex": 5827,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blades",
+				"item_name": "Alchemists Infuser",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/alchemist\/alchemist_infuser\/alchemist_infuser",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/alchemist\/alchemist_infuser\/alchemist_infuser.fb25c03deaa34a28c626f84e3de33fc09ae499b4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/alchemist\/alchemist_infuser\/alchemist_infuser_large.2e51db17b66315c1b13372d26bae0ded00dac8ce.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Atramentos the Apocalyptic",
 				"defindex": 5828,
 				"item_class": "dota_item_wearable",
@@ -58952,6 +59155,31 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/invincible_fiery_warhorse\/invincible_fiery_warhorse.74cd5cc343ece1cf3fa1e79815a8bbc5052ffb10.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/invincible_fiery_warhorse\/invincible_fiery_warhorse_large.8107c2029390c244056d68f5eff5b5ac60860631.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Rune Forged Belt",
+				"defindex": 5832,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Rune Forged Belt",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_belt\/rune_forged_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_belt\/rune_forged_belt.2e953f510a24fb549da136d1bc01ba933be5d3fb.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_belt\/rune_forged_belt_large.fce5857d03a638d365731e5ca3d706122ee6ff4a.png",
+				"item_set": "skywrath_rune_forged",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -59013,6 +59241,54 @@
 				}
 			},
 			{
+				"name": "Blade of the Abyss",
+				"defindex": 5835,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Blade",
+				"item_name": "Blade of the Abyss",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/spectre\/blade_of_the_abyss\/blade_of_the_abyss",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/spectre\/blade_of_the_abyss\/blade_of_the_abyss.2ac77dfd4e9d475994f7ff6b03b37e89da813314.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/spectre\/blade_of_the_abyss\/blade_of_the_abyss_large.a785608489130ccd7059796b30075dccbb13ec4a.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iguana's Quiver",
+				"defindex": 5836,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Iguana's Quiver",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/iguanas__quiver\/iguanas__quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/iguanas__quiver\/iguanas__quiver.092347d59b1063635dae541db83b281de5ad5ac2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/iguanas__quiver\/iguanas__quiver_large.ebfb87d4f57f7a8766d4cbed198fac80f4fc8e23.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Iceshard",
 				"defindex": 5837,
 				"item_class": "dota_item_wearable",
@@ -59026,6 +59302,398 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/abaddon\/sword_iceshard\/sword_iceshard.b27ca8d843d78f5babc426db629ceab7363e6bb3.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/abaddon\/sword_iceshard\/sword_iceshard_large.29b55f1885475d611543145491fc0e171e90d273.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iguana's Bow",
+				"defindex": 5838,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Iguana's Bow",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/iguanas_bow_quiver_v\/iguanas_bow_quiver_v",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/iguanas_bow_quiver_v\/iguanas_bow_quiver_v.a4cb2b7e31cf6b6e5134397cdac5b95f558f76f0.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/iguanas_bow_quiver_v\/iguanas_bow_quiver_v_large.1edc406f413a14fa657c854f9cb37e3bd45b5e2b.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Hellthorn's Sword",
+				"defindex": 5839,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sword",
+				"item_name": "Hellthorn's Sword",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/doom\/hellthorns_sword\/hellthorns_sword",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/doom\/hellthorns_sword\/hellthorns_sword.af30ff31d734d94498234db24a637df7d67d5434.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/doom\/hellthorns_sword\/hellthorns_sword_large.f9a005c68a1a6a379d788d9b2bcd88a12a07e36c.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Twisted Firekeeper",
+				"defindex": 5840,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Twisted Firekeeper",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/warlock\/twisted_firekeeper\/twisted_firekeeper",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/warlock\/twisted_firekeeper\/twisted_firekeeper.d88e657802826d0a0b7390079026dc0102a7c966.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/warlock\/twisted_firekeeper\/twisted_firekeeper_large.ba5e587d13ca92df71d31aeaa44ff8b06037c4cb.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Bracers",
+				"defindex": 5841,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Death Shadow Bracers",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_bracers\/death_shadow_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_bracers\/death_shadow_bracers.2b7bed18a59cd48fd368400193181183e7de5593.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_bracers\/death_shadow_bracers_large.fcc505a48ef2de962888bcc3f49c70a6ef2872b5.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Cape",
+				"defindex": 5842,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Death Shadow Cape",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_cape\/death_shadow_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_cape\/death_shadow_cape.25e4182b9e508cdf7ec40fb1a549b3f9a95cbf36.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_cape\/death_shadow_cape_large.b3ffb064c5104e0425c120bbb0a43df8221ccabd.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Cowl",
+				"defindex": 5843,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cowl",
+				"item_name": "Death Shadow Cowl",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_cowl\/death_shadow_cowl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_cowl\/death_shadow_cowl.2c0edd5e12dbec99f9566e2f1165948e5a3772f8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_cowl\/death_shadow_cowl_large.960b255f310f24a1ae3a5c734c3a37b0ea2a7487.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Boots",
+				"defindex": 5844,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Death Shadow Boots",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_boots\/death_shadow_boots",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_boots\/death_shadow_boots.51a8ad780114dd2ad9b27027baa93cf02e019ebe.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_boots\/death_shadow_boots_large.713e082a576de4e9518f232e33a800cc7494393e.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Quiver",
+				"defindex": 5845,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Death Shadow Quiver",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_quiver\/death_shadow_quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_quiver\/death_shadow_quiver.9b562f08c308e9578489f17c1d756f5d3dca82f8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_quiver\/death_shadow_quiver_large.4623f15fcfbd9d2a68ac01aa4f3670ef62fe9b23.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Mantle",
+				"defindex": 5846,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulders",
+				"item_name": "Death Shadow Mantle",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_mantle\/death_shadow_mantle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_mantle\/death_shadow_mantle.3ea19309987f94c015822de798f6a505d6ca1a52.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_mantle\/death_shadow_mantle_large.73580e468248fc66f4649aa79cf937c9e42da88a.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Death Shadow Bow",
+				"defindex": 5847,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bow",
+				"item_name": "Death Shadow Bow",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/death_shadow_bow\/death_shadow_bow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_bow\/death_shadow_bow.77ba5ef6d49a66954981d73bc000d67f84ab1df5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/death_shadow_bow\/death_shadow_bow_large.54bffd94fa4ae803c245014f41a6a804afb2188f.png",
+				"item_set": "drow_deathshadow",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Dark Ranger's Headdress",
+				"defindex": 5848,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Dark Ranger's Headdress",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/drow\/drowranger_headdress\/drowranger_headdress",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/drowranger_headdress\/drowranger_headdress.54f5dd8c66340ceb8cb246669ffcbabc01ff9772.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/drow\/drowranger_headdress\/drowranger_headdress_large.1aa4515590805819fe20c4ffab63a0b7156c437c.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Braid of Fiery Curls",
+				"defindex": 5849,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Braid of Fiery Curls",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/lina_braid_of_fierycurls\/lina_braid_of_fierycurls",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/lina_braid_of_fierycurls\/lina_braid_of_fierycurls.7f8961b787f7ea920360e99da5e0aa7ab8549371.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/lina_braid_of_fierycurls\/lina_braid_of_fierycurls_large.4e65eceeced2b1409b7b3e0d6c24f745cc5e7828.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Braids of Moonshadow",
+				"defindex": 5850,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Braids of Moonshadow",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/mirana\/braids_of_moonshadow\/braids_of_moonshadow",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/mirana\/braids_of_moonshadow\/braids_of_moonshadow.b59645693a1e5d7a0429e16a1c885e4419de5741.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/mirana\/braids_of_moonshadow\/braids_of_moonshadow_large.8e27011da8d51492a546a7154909f17e6943d705.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Tail of the Secret Order",
+				"defindex": 5851,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Tail of the Secret Order",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lanaya\/tail_of_the_secret_order\/tail_of_the_secret_order",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lanaya\/tail_of_the_secret_order\/tail_of_the_secret_order.629a6bcaafa9adf97abc89cd0e0845d6bcafa3b8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lanaya\/tail_of_the_secret_order\/tail_of_the_secret_order_large.bd6f9a4603abca54f5cfd8d070fe7d3cd03f8f81.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Style of the Grove",
+				"defindex": 5852,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Style of the Grove",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/windrunner\/style_of_the_grove\/style_of_the_grove",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/style_of_the_grove\/style_of_the_grove.372de742dec71f7c2b6dbf44a84abc535c0ee2f5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/windrunner\/style_of_the_grove\/style_of_the_grove_large.bcab90699b883492376384e90f74d38794038726.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Corset of the Outcast",
+				"defindex": 5853,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "armor",
+				"item_name": "Corset of the Outcast",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/outcast_corset\/outcast_corset",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_corset\/outcast_corset.ef0f006db266b7986b0d7480f14b18effe1f87a9.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_corset\/outcast_corset_large.d5ab413dcc06fab118c3c509bd92eb9ba46725d5.png",
+				"item_set": "naga_outcast_deep",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -59102,6 +59770,330 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Rune Forged Wings",
+				"defindex": 5857,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Wings",
+				"item_name": "Rune Forged Wings",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_wings\/rune_forged_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_wings\/rune_forged_wings.e6a64f4e35bbd3e6d33cead94c1ba92fa86d95be.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_wings\/rune_forged_wings_large.03a0bb4f70eb26b024727c657be75fbd901af6de.png",
+				"item_set": "skywrath_rune_forged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Rune Forged Staff",
+				"defindex": 5858,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Staff",
+				"item_name": "Rune Forged Staff",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_staff\/rune_forged_staff",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_staff\/rune_forged_staff.b2a27db62e35bf0ae78386cfa11435d8b8737a44.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_staff\/rune_forged_staff_large.401dd37613b27bf832938c67e018a190f48c9290.png",
+				"item_set": "skywrath_rune_forged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Rune Forged Bracers",
+				"defindex": 5859,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Bracers",
+				"item_name": "Rune Forged Bracers",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_bracers\/rune_forged_bracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_bracers\/rune_forged_bracers.ac2582b9721f967219f463e15f17af53c3cd2743.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_bracers\/rune_forged_bracers_large.78386820c033422332f4620c649e93a3c7d3b42f.png",
+				"item_set": "skywrath_rune_forged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bulwark of the Rogue Knight",
+				"defindex": 5860,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shield",
+				"item_name": "Bulwark of the Rogue Knight",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/sven\/bulwark_rogue_knight\/bulwark_rogue_knight",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sven\/bulwark_rogue_knight\/bulwark_rogue_knight.d7975c2932144f90dae4d3993ed84fb1a4a850c4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/sven\/bulwark_rogue_knight\/bulwark_rogue_knight_large.e5a90cead4acf2f01f97de7d3ca43b194d4e0655.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Helm of the Outcast",
+				"defindex": 5862,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Helm of the Outcast",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/outcast_helm\/outcast_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_helm\/outcast_helm.48552afb31c5ab302f958b2ff8f400b17862cee5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_helm\/outcast_helm_large.33fca9f5d204789d774c3c8aaece0ba6e42b44d2.png",
+				"item_set": "naga_outcast_deep",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Trophies of the Outcast",
+				"defindex": 5863,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tail",
+				"item_name": "Trophies of the Outcast",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/outcast_trophies\/outcast_trophies",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_trophies\/outcast_trophies.7baec01c00cf9687d2883e64cb82524f7e84d47b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_trophies\/outcast_trophies_large.92d5cfec79a0b30e4fbe8f283cd795c2d430ed26.png",
+				"item_set": "naga_outcast_deep",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Spear of the Outcast",
+				"defindex": 5864,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spear",
+				"item_name": "Spear of the Outcast",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/siren\/outcast_spear\/outcast_spear",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_spear\/outcast_spear.4f6b853949621fdc7c71dfd592871e6f7e1e5699.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/siren\/outcast_spear\/outcast_spear_large.bdfb4f52fdbfff2cebca8ebe19ab6260a8fc046e.png",
+				"item_set": "naga_outcast_deep",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iceforged Shoulders",
+				"defindex": 5865,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Shoulderpiece",
+				"item_name": "Iceforged Shoulders",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/iceforged_shoulders\/iceforged_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_shoulders\/iceforged_shoulders.64bc05def498de15d89c22ca705d6e183d42900b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_shoulders\/iceforged_shoulders_large.8227d814ff995c3b1acce475dc5c3c24d2395988.png",
+				"item_set": "invoker_iceforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iceforged Cape",
+				"defindex": 5866,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Cape",
+				"item_name": "Iceforged Cape",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/iceforged_cape\/iceforged_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_cape\/iceforged_cape.26270845308cf2609624bb8005207556e4d9e187.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_cape\/iceforged_cape_large.8da62b93aeba7c368aa5ce847c523a55191ee0a4.png",
+				"item_set": "invoker_iceforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iceforged Hair",
+				"defindex": 5867,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Iceforged Hair",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/iceforged_hair\/iceforged_hair",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_hair\/iceforged_hair.ac83defdaefb1f5f8e64f5a14dedb330bb897776.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/iceforged_hair\/iceforged_hair_large.4534e06795d492735a40b978e16887736d223a63.png",
+				"item_set": "invoker_iceforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Iceforged Spirit",
+				"defindex": 5869,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spirit",
+				"item_name": "Iceforged Spirit",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/forge_spirit\/iceforged_spirit\/iceforged_spirit_npc_dota_invoker_forged_spirit",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/forge_spirit\/iceforged_spirit\/iceforged_spirit_npc_dota_invoker_forged_spirit.fb0516f70130a172d813cd06d81f838c79a039cd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/forge_spirit\/iceforged_spirit\/iceforged_spirit_npc_dota_invoker_forged_spirit_large.9f015c48e086f63cad9519447a3d9f3bc69f942b.png",
+				"item_set": "invoker_iceforged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Rune Forged Helm",
+				"defindex": 5870,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Helm",
+				"item_name": "Rune Forged Helm",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_helm\/rune_forged_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_helm\/rune_forged_helm.1ccf4dc77b0da61d1a22307fb3daef5dc59c0384.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_helm\/rune_forged_helm_large.e5104b8279f30470cc31dac2f5a5e8cab23c8341.png",
+				"item_set": "skywrath_rune_forged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Rune Forged Shoulders",
+				"defindex": 5871,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Pauldrons",
+				"item_name": "Rune Forged Shoulders",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/skywrath_mage\/rune_forged_shoulders\/rune_forged_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_shoulders\/rune_forged_shoulders.41bdf7702412f18fc84b5d2ea4362c159653279e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/skywrath_mage\/rune_forged_shoulders\/rune_forged_shoulders_large.cffefeb2f08ee92ad0f5ff4310ce98312f61a584.png",
+				"item_set": "skywrath_rune_forged",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "Spike of Frostbite",
@@ -59236,6 +60228,31 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/omniknight\/omnivus.2d94ea41ae798fc0bf871c4f13a2463a6db1d926.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/omniknight\/omnivus_large.510028bc618e9c1233bdb6122cef85bd5e32fec0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Governor's Salakot",
+				"defindex": 5972,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Governor's Salakot",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ember_spirit\/salakot\/salakot",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot.075158e06b40e126c68b99268b4d2a4a7252e64c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ember_spirit\/salakot\/salakot_large.5d5cce77a6212bade66b7d8178ef0b6b897a2076.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -70172,6 +71189,38 @@
 				}
 			},
 			{
+				"name": "Familiar Woods",
+				"defindex": 10364,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Familiar Woods",
+				"item_description": "A trusted friend on a well-worn path.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_familiar_woods",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_familiar_woods.eb1f61d45316b7da95af93be6f6f9cc48cc02229.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_familiar_woods_large.6b553fef6a97d4599e23a4f59a02a6fdd736c935.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "Woodsy"
+					},
+					{
+						"name": "Shagbark!"
+					}
+				]
+				
+			},
+			{
 				"name": "Hollow Jack",
 				"defindex": 10365,
 				"item_class": "dota_item_wearable",
@@ -70775,6 +71824,52 @@
 				}
 			},
 			{
+				"name": "Thunder Spirit",
+				"defindex": 10392,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Thunder Spirit",
+				"item_description": "Fury crackles as the skies split.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_thunder_spirit",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_thunder_spirit.467cecdfc30f939ceba8dba928d4f6ef266b0ea7.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_thunder_spirit_large.d4a631ba563887a70b306195c746ae283accba94.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				}
+			},
+			{
+				"name": "Timber Fury",
+				"defindex": 10393,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Timber Fury",
+				"item_description": "Let no forest stand in your path",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_timber_fury",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_timber_fury.28f2a2132296bbf7a10d576c2b69dc984cde14fd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_timber_fury_large.ee9b6d55a1cac880ace217061ad41fdefcd0a268.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				}
+			},
+			{
 				"name": "Recipe: Wraith King's Relic",
 				"defindex": 10394,
 				"item_class": "tool",
@@ -70813,11 +71908,11 @@
 				"item_description": "A simple spell of animation.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/crafting\/crafting_recipe_scroll_wraithking",
+				"image_inventory": "econ\/crafting\/crafting_recipe_scroll_evergreen",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_wraithking.bade41182a556a72543ccce6bf53456ea04ff528.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_wraithking_large.add4f2f101799ed8e72b015700aff79cbdc12b04.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_evergreen.595e9835e9d315a67a34ecaf6841c7032b9a12a4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/crafting\/crafting_recipe_scroll_evergreen_large.4c4f06b9319eb192fb2f9066198e1d8828fd00fc.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -84020,19 +85115,19 @@
 				}
 			},
 			{
-				"name": "Wraith-Night Reliquary",
+				"name": "Wraith-Night Feretory",
 				"defindex": 15440,
 				"item_class": "tool",
 				"item_type_name": "Unique Gift",
-				"item_name": "Wraith-Night Reliquary",
-				"item_description": "A unique gift from the King. Wraith-Night Reliquaries can only be acquired with Shining Fragments.  Shining Fragments are earned by activiting a Wraith King's Favor.",
+				"item_name": "Wraith-Night Feretory",
+				"item_description": "A unique gift from the King. Wraith-Night Feretories can only be acquired with Shining Fragments.  Shining Fragments are earned by activiting a Wraith King's Favor.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/tools\/wraithnight_gift_golden",
+				"image_inventory": "econ\/tools\/wraithnight_gift_medium",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_golden.2f8e8aedc9fe82fa5e9d88787bd8da35a0d0f60b.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_golden_large.065cfec972262eb25ab9841e594cd2ab817c29f2.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_medium.51e3eb5d9a6d81a3f3816ce67be1bcc6dab728e1.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/wraithnight_gift_medium_large.e6304c4666466288446596fe69d2eeff6ab53144.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -84055,6 +85150,35 @@
 					}
 				]
 				
+			},
+			{
+				"name": "400% Battle Point Booster (500 minutes)",
+				"defindex": 15441,
+				"item_class": "tool",
+				"item_type_name": "Battle Point Booster",
+				"item_name": "400% Battle Point Booster (500 minutes)",
+				"item_description": "Available until January 3rd. Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>400%<\/font> for 500 game minutes. Additionally, you will grant other players a stacking <font color='#9da1a9'>80%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.<br><br>\r\n\tBattle Point Boosters are only consumed whenever Battle Points are earned and features like spectating games or coaching do not deplete them.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/battle_bonus_winter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/battle_bonus_winter.5746fbc297e40a802e081cfecf2ea04b232460cd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/tools\/battle_bonus_winter_large.2e1d0fb26635c0435ced88d0306722818225a07b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "fortunate_soul",
+					"use_string": "Use"
+				}
 			},
 			{
 				"name": "Artificer's Hammer",
@@ -94195,6 +95319,36 @@
 				}
 			},
 			{
+				"name": "Flight of the Crescent Moon Set",
+				"defindex": 20334,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Flight of the Crescent Moon Set",
+				"item_description": "Includes all of the items in the 'Flight of the Crescent Moon' set for Luna:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Flight_of_the_Crescent_Moon_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_flight_of_the_crescent_moon_set.87d7af7edb0d6792b566170de106e6805ca0864f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_flight_of_the_crescent_moon_set_large.fb17a0e6b4fc8a270e1513cf197984fa6aaa4b79.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "Defense of the Australians Season 2 & Hobbly-Bob Bundle",
 				"defindex": 20335,
 				"item_class": "bundle",
@@ -94208,6 +95362,36 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2.bf7178931082400630d0463c97f3a7d7f74da065.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_defenseoftheaustralians2_large.823e148a666a71650d27af48b3185654b4a49ba1.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Death Shadow Set",
+				"defindex": 20336,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Death Shadow Set",
+				"item_description": "Includes all of the items in the 'Death Shadow' set for Drow Ranger:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Death_Shadow_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_death_shadow_set.5aac8f95f5da4fe50246c211a24a6bdffa9f5062.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_death_shadow_set_large.48209b8760de57d3ffc839dac2c41a1ef7101176.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -94276,6 +95460,172 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.860effab0435ec1bda000c82d20316bc804ce9f4.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.4007810e60e6c2c64cc1ba9e37d75bc53cc02099.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Iceforged Set",
+				"defindex": 20339,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Iceforged Set",
+				"item_description": "Includes all of the items in the 'Iceforged'' set for Invoker:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Iceforged_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_iceforged_set.c7ff4a9fa197d2c981a9c9fe545507a24337afa1.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_iceforged_set_large.6e77aff854298cdaebfa6720c89edcbe6a022f87.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Outcast of the Deep Set",
+				"defindex": 20340,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Outcast of the Deep Set",
+				"item_description": "Includes all of the items in the 'Outcast of the Deep' set for Naga Siren:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Outcast_of_the_Deep_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_outcast_of_the_deep_set.f53da929dc322f7e140a13226911bcbd1dc6f06c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_outcast_of_the_deep_set_large.756e99387c00132627779ed520a3d8fd8a9b8750.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Rune Forged Set",
+				"defindex": 20341,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Rune Forged Set",
+				"item_description": "This bundle contains all of the items in the 'Rune Forged' Set for Skywrath Mage:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Rune_Forged_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_rune_forged_set.0a236902f8df5e58fb11b2b66a7bea531e80701b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_rune_forged_set_large.39d694570251ab6c0c46a7595fab1c2aa3974c88.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Blacksmith's Blessings",
+				"defindex": 20342,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Blacksmith's Blessings",
+				"item_description": "Includes the following new weaponry:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/bundles\/weapon_bundle_dec_19_13",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/bundles\/weapon_bundle_dec_19_13.6331936d3545a83bf0e3c0e4bffeb23747dcb6d5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/bundles\/weapon_bundle_dec_19_13_large.ea1a78b23365235648a8793145caa269fefd1b1d.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Styles of Unending Battle",
+				"defindex": 20343,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Styles of Unending Battle",
+				"item_description": "Includes the following new hairstyles:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/bundles\/hair_bundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/bundles\/hair_bundle.76f70dd83a705e3c3dbdb66ab36eca124b80b1d5.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/bundles\/hair_bundle_large.f3376d2211766ea635e062a159ea5ff3972c8b2a.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -96699,6 +98049,21 @@
 				
 			},
 			{
+				"item_set": "drow_deathshadow",
+				"name": "Death Shadow",
+				"store_bundle": "Death Shadow Set",
+				"items": [
+					"Death Shadow Bracers",
+					"Death Shadow Bow",
+					"Death Shadow Mantle",
+					"Death Shadow Quiver",
+					"Death Shadow Boots",
+					"Death Shadow Cowl",
+					"Death Shadow Cape"
+				]
+				
+			},
+			{
 				"item_set": "drow_ranger_frost_spikes",
 				"name": "Spikes of Frost",
 				"store_bundle": "Spikes of Frost Set",
@@ -97281,6 +98646,19 @@
 				
 			},
 			{
+				"item_set": "invoker_iceforged",
+				"name": "Iceforged",
+				"store_bundle": "Iceforged Set",
+				"items": [
+					"Iceforged Bracers",
+					"Iceforged Shoulders",
+					"Iceforged Cape",
+					"Iceforged Hair",
+					"Iceforged Spirit"
+				]
+				
+			},
+			{
 				"item_set": "invoker_magnus",
 				"name": "The Magus Magnus",
 				"store_bundle": "The Magus Magnus Set",
@@ -97557,6 +98935,19 @@
 				
 			},
 			{
+				"item_set": "luna_crescentmoon",
+				"name": "Flight of the Crescent Moon",
+				"store_bundle": "Flight of the Crescent Moon Set",
+				"items": [
+					"Avon of the Crescent Moon",
+					"Glaves of the Crescent Moon",
+					"Guard of the Crescent Moon",
+					"Mantle of the Crescent Moon",
+					"Headress of the Crescent Moon"
+				]
+				
+			},
+			{
 				"item_set": "luna_eternaleclipse",
 				"name": "Blessings of the Eternal Eclipse",
 				"store_bundle": "Blessings of the Eternal Eclipse Set",
@@ -97729,6 +99120,19 @@
 					"Mysterious Vagabond's Hat",
 					"Mysterious Vagabond's Pack",
 					"Mysterious Vagabond's Wand"
+				]
+				
+			},
+			{
+				"item_set": "naga_outcast_deep",
+				"name": "Outcast of the Deep",
+				"store_bundle": "Outcast of the Deep Set",
+				"items": [
+					"Trophies of the Outcast",
+					"Corset of the Outcast",
+					"Dagger of the Outcast",
+					"Helm of the Outcast",
+					"Spear of the Outcast"
 				]
 				
 			},
@@ -98348,6 +99752,20 @@
 					"Gloves of the Crested Cannoneer",
 					"Mantle of the Crested Cannoneer",
 					"Cannonade"
+				]
+				
+			},
+			{
+				"item_set": "skywrath_rune_forged",
+				"name": "Rune Forged",
+				"store_bundle": "Rune Forged Set",
+				"items": [
+					"Rune Forged Belt",
+					"Rune Forged Wings",
+					"Rune Forged Bracers",
+					"Rune Forged Helm",
+					"Rune Forged Staff",
+					"Rune Forged Shoulders"
 				]
 				
 			},
