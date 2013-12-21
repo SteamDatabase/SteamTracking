@@ -1376,7 +1376,8 @@ function MapTypeToText( type )
 		case 128: return "Driver";
 		case 1073741824: return "Shortcut";
 		case 2147483648: return "Depot";
-		default: return 'UNKNOWN' + type;
+		case 256: return "Config";
+		default: return 'UNKNOWN: ' + type;
 	}
 }
 
@@ -1598,6 +1599,7 @@ function DisplayAllApps( response, resultsElement )
 			case 32: color = '#a159a3'; break;		// DLC
 			case 16:	color = '#6ba1bd'; break;		// Media
 			case 64:	color = '#6ba1bd'; break;
+			case 256:	color = '#6666FF'; break;
 			default:							color = '#ff0000';	break;			// If we don't recognize the type, let put a nice color :)
 		}
 
