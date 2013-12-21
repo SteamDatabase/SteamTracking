@@ -1306,37 +1306,14 @@ function trim( s )
 
 function CompareAppResults( thisApp1, thisApp2 )
 {
-	// First, we prioritize the app with depots
-	// Deactivated for the moment...
-/*
-	if ( thisApp1.Depots )
-	{
-		if ( thisApp2.Depots )
-		{
-			// Both have depots, we are going to compare with AppId.
-		}
-		else
-		{
-			return -1;
-		}
-	}
-	else if ( thisApp2.Depots )
-	{
-		return +1;
-	}
-	else
-	{
-		// None have depots, we are going to compare with AppIds.
-	}
-*/
 	// First let's compare the types, sorted by lowest first
-	if (thisApp1.Type != thisApp2.Type )
+	if (thisApp1.app_type != thisApp2.app_type )
 	{
-		return thisApp1.Type - thisApp2.Type;
+		return thisApp1.app_type - thisApp2.app_type;
 	}
 
 	// Same type
-	return thisApp2.AppId - thisApp1.AppId;		// Display the highest AppId first
+	return thisApp2.appid - thisApp1.appid;		// Display the highest AppId first
 												// As there is bigger chance that we want to see the recent Apps.
 }
 
@@ -1357,259 +1334,50 @@ function IsNullOrEmptyString( text )
 	return false;
 }
 
-function GetAppNameText( thisApp )
-{
-	// First, if Store, CDDB and Steamworks have the same name, then there is no issue, we return the expected text
-	// We also have to take in account if the corresponding info exists
-	var cddbName = trim( thisApp.CddbName );
-	var storeName = trim( thisApp.StoreName );
-	var steamworksName = trim( thisApp.SteamworksName );
-	var registeredName = trim( thisApp.RegisteredName );
-
-	var referenceName = '';
-	if ( IsNullOrEmptyString( cddbName ) == false )
-	{
-		referenceName = cddbName;
-	}
-	else if ( IsNullOrEmptyString( storeName ) == false )
-	{
-		referenceName = storeName;
-	}
-	else if ( IsNullOrEmptyString( steamworksName ) == false )
-	{
-		referenceName = steamworksName;
-	}
-	else
-	{
-		if ( IsNullOrEmptyString( registeredName )  )
-		{
-			return '???';
-		}
-		else
-		{
-			return registeredName;
-		}
-	}
-
-	// Now that we have reference name, let's check that those defined match...
-	var allMatch = true;
-	var countOfInputs = 0;
-	if ( thisApp.InCddb && ( cddbName != referenceName ) )
-	{
-		allMatch = false;
-		++countOfInputs;
-	}
-	if ( thisApp.InStore && ( storeName != referenceName ) )
-	{
-		allMatch = false;
-		++countOfInputs;
-	}
-	if ( thisApp.IsSteamworks && ( steamworksName != referenceName ) )
-	{
-		allMatch = false;
-		++countOfInputs;
-	}
-	// At this level, we do not take in account the registeredName yet
-	// We accept minor variations between registered and public info.
-
-	if ( allMatch )
-	{
-		if ( ( countOfInputs > 1 ) || IsNullOrEmptyString( registeredName ) || ( registeredName == referenceName ) )
-		{
-			return referenceName;		// All in sync, or more than 2 public sources in sync
-										// If that is the case, we don't mind variations in registration
-		}
-		// However if we only had one match, there is something registered that is not the same,
-		// we actually do the full text display. This is to make more explicit issues like "ValveTestApp...".
-	}
-
-	var textToDisplay = '';
-	if ( thisApp.IsRegistered && ( registeredName != referenceName ) )
-	{
-		textToDisplay += 'Registered: ' + registeredName;
-	}
-	if ( thisApp.InCddb )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'CDDB: ' + cddbName;
-	}
-	if ( thisApp.InStore )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'Store: ' + storeName;
-	}
-	if ( thisApp.InSteamworks )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'Steamworks: ' + steamworksName;
-	}
-
-	return textToDisplay;
-}
-
 function GetPartnerNameText( thisApp )
 {
-	// First, if Store, CDDB and Steamworks have the same name, then there is no issue, we return the expected text
-	// We also have to take in account if the corresponding info exists
-	var CddbDeveloperName = trim( thisApp.CddbDeveloperName );
-	var storeDeveloperName = trim( thisApp.StoreDeveloperName );
-	var storePublisherName = trim( thisApp.StorePublisherName );
-
-	var referenceName = '';
 	var textToDisplay = '';
-	if ( IsNullOrEmptyString( CddbDeveloperName ) == false )
+	if ( thisApp.publishers && thisApp.publishers.length > 0 )
 	{
-		referenceName = CddbDeveloperName;
-	}
-	else if ( IsNullOrEmptyString( storeDeveloperName ) == false )
-	{
-		referenceName = storeDeveloperName;
-	}
-	else
-	{
-		if ( IsNullOrEmptyString( storePublisherName ) )
+		textToDisplay += "Publishers: ";
+		for ( var i = 0; i < thisApp.publishers.length; ++i )
 		{
-			return '???';
-		}
-		else
-		{
-			textToDisplay = 'Developer: ???';
-			textToDisplay += '<br/>Publisher in store: ' + storePublisherName;
-			return textToDisplay;
+			textToDisplay += ( i != 0 ? ', ' : '' ) + thisApp.publishers[i];
 		}
 	}
-
-	// Now that we have reference name, let's check that those defined match...
-	var allMatch = true;
-	if ( thisApp.InCddb && ( CddbDeveloperName != referenceName ) )
+	if ( thisApp.store_publishers && thisApp.store_publishers.length > 0 )
 	{
-		allMatch = false;
-	}
-	if ( thisApp.InStore && ( storeDeveloperName != referenceName ) )
-	{
-		allMatch = false;
-	}
-
-	if ( allMatch )
-	{
-		if ( thisApp.InStore )
+		if ( thisApp.publishers && thisApp.publishers.length > 0 )
 		{
-			if ( storePublisherName == referenceName )
-			{
-				return referenceName;		// match, and the publisher is the developer, return the simple text
-			}
-
-			textToDisplay = 'Developer: ' + referenceName + '<br/>Publisher in store: ';
-			textToDisplay += IsNullOrEmptyString( storePublisherName ) ? '???' : storePublisherName;
-			return textToDisplay;
+			textToDisplay += '<br>';
 		}
-		else
+		textToDisplay += "Store Publishers: ";
+		for ( var i = 0; i < thisApp.store_publishers.length; ++i )
 		{
-			return referenceName;				// match, and nothing from the Store, return the simple name
+			textToDisplay += ( i != 0 ? ', ' : '' ) + thisApp.store_publishers[i];
 		}
 	}
 
-	if ( thisApp.InCddb )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'Developer in CDDB: ' + CddbDeveloperName;
-	}
-	if ( thisApp.InStore )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'Developer in Store: ' + storeDeveloperName;
-		if ( IsNullOrEmptyString( storePublisherName ) )
-		{
-			textToDisplay += '<br/>Publisher in store: ???';
-		}
-		else
-		{
-			textToDisplay += '<br/>Publisher in store: ' + storePublisherName;
-		}
-	}
-
-	return textToDisplay;
+	return textToDisplay.length != 0 ? textToDisplay : "None set";
 }
 
 function MapTypeToText( type )
 {
 	switch ( type )
 	{
-	case 0:	return 'Game/Application';
-	case 1: return 'Demo';
-	case 2: return 'DLC';
-	case 3: return 'Mod';
-	case 4: return 'Media';
-	case 5: return 'Advertising';
-	case 6: return 'Guide';
-	case 7: return 'Hardware';
-	default: return '???';
+		case 0: return "Invalid";
+		case 1: return "Game";
+		case 2: return "Application";
+		case 4: return "Tool";
+		case 8: return "Demo";
+		case 16: return "Media";
+		case 32: return "DLC";
+		case 64: return "Guide";
+		case 128: return "Driver";
+		case 1073741824: return "Shortcut";
+		case 2147483648: return "Depot";
+		default: return 'UNKNOWN' + type;
 	}
-}
-
-function RetrieveType( thisApp )
-{
-	var cddbType = thisApp.CddbType;
-	var storeType = thisApp.StoreType;
-
-	var referenceType = 0;			// By default it is an App
-	if ( cddbType != undefined )
-	{
-		referenceType = cddbType;
-	}
-	else if ( storeType != undefined )
-	{
-		referenceType = storeType;
-	}
-	else
-	{
-		if ( thisApp.IsRegistered )
-		{
-			thisApp.Type = 0;
-			return MapTypeToText( 0 );			// By default, it is an app
-		}
-		else
-		{
-			thisApp.Type = -1;
-			return MapTypeToText( -1 );			// Unknown type
-		}
-	}
-
-	thisApp.Type = referenceType;
-
-	// Now that we have reference name, let's check that those defined match...
-	var allMatch = true;
-	var countOfInputs = 0;
-	if ( thisApp.InCddb && ( cddbType != referenceType ) )
-	{
-		allMatch = false;
-		++countOfInputs;
-	}
-	if ( thisApp.InStore && ( storeType != referenceType ) )
-	{
-		allMatch = false;
-		++countOfInputs;
-	}
-
-	// In this case, we do not take in account the registration yet.
-	// We probably should at a later point, once we store the info in the db, and we cleaned the source from the wiki.
-
-	if ( allMatch )
-	{
-		return MapTypeToText( referenceType );		// All in sync
-	}
-
-	var textToDisplay = '';
-	if ( thisApp.InCddb )
-	{
-		textToDisplay += 'CDDB: ' + MapTypeToText( cddbType );
-	}
-	if ( thisApp.InStore )
-	{
-		textToDisplay += ( textToDisplay != '' ) ? '<br/>' : '';
-		textToDisplay += 'Store: ' + MapTypeToText( storeType );
-	}
-	return textToDisplay;
 }
 
 admin.CreateDiv = function CreateDiv( parent, template, id, value )
@@ -1797,36 +1565,13 @@ function OnChangeAllAppsCallback( transport, parameters )
 		return;
 	}
 
-	DisplayAllApps( response.result, $( 'results' ), 'Query result: ', false );
+	DisplayAllApps( response, $( 'results' ) );
 }
 
-function DisplayAllApps( result, resultsElement, prefixText, hideDepot )
+function DisplayAllApps( response, resultsElement )
 {
-	var initialStyleDisplayForDepots = '';
-	if ( ( Object.keys(result).length > 5 ) || hideDepot )
-	{
-		// More than 5 elements... Depots will be hidden
-		initialStyleDisplayForDepots = 'none';
-	}
-
-	// Before we sort the objects, let's populate some info that could be used for sorting
-	var arrayOfResults = new Array();
-	var i = 0;
-	for ( var appId in result )
-	{
-		if ( appId < 0 )
-		{
-			continue;			// Skip workaround for PHP JSON encoding issue
-		}
-		var thisApp = result[ appId ];
-		thisApp.AppId = appId ? appId : -1;			// If there is no AppId, always at the end
-		thisApp.AppIdText = appId ? appId : '???';
-		thisApp.TypeText = RetrieveType( thisApp );	// Will also fill thisApp.Type
-
-		arrayOfResults[ i++ ] = thisApp;
-	}
-
-	arrayOfResults.sort( CompareAppResults );
+	var apps = response.result;
+	apps.sort( CompareAppResults );
 
 	// Before we add to the result, let's delete previous content.
 	while ( resultsElement.hasChildNodes() )
@@ -1834,50 +1579,26 @@ function DisplayAllApps( result, resultsElement, prefixText, hideDepot )
 		resultsElement.removeChild( resultsElement.firstChild );
 	}
 
-	var numberOfResults = arrayOfResults.length;
-	var resultText;
-	if ( numberOfResults == 0 )
-	{
-		resultText = prefixText + 'No result found.';
-	}
-	else
-	{
-		resultText = prefixText + numberOfResults + ' result(s) found.';
-	}
-
+	var numberOfResults = response.num_found;
+	var resultText = numberOfResults == 0 ? 'No result found.' : "Displaying " + apps.length + " of " + numberOfResults + ' results ';
 	$( 'resultsCount' ).update( resultText );
 
 	// Note that we would probably want to sort by AppIds before displaying this
-	for (var i = 0 ; i < numberOfResults ; ++i )
+	for ( var i = 0 ; i < apps.length ; ++i )
 	{
-		var thisApp = arrayOfResults[ i ];
-
-		var found = thisApp.IsRegistered;
-		found |= thisApp.InCddb;
-		found |= thisApp.InSteamworks;
-		found |= thisApp.InStore;
-		if ( found == false )
-		{
-			continue;		// We have an AppId but no other information. Skip it...
-		}
-
-		// We found an application, let's update the UI
+		var thisApp = apps[ i ];
 
 		var color;		// Color will match the definition in styles_admin.css (.app_Movie, etc...)
-		switch ( thisApp.Type )
+		switch ( parseInt( thisApp.app_type ) )
 		{
-			case 0:	color = '#ffffff'; break;		// App
-			case 1: color = '#89c53f'; break;		// Demo
-			case 2: color = '#a159a3'; break;		// DLC
-			case 3: color = '#e1b21e'; break;		// Mod
-			case 4:									// Media
-			case 5:									// Advertising
-			case 6:									// Guide
-				color = '#6ba1bd';
-				break;
-			default:
-				color = '#ff0000';				// If we don't recognize the type, let put a nice color :)
-				break;
+			case 1:	color = '#ffffff'; break;
+			case 2:	color = '#ffffff'; break;
+			case 4:	color = '#ffffff'; break;
+			case 8: color = '#89c53f'; break;		// Demo
+			case 32: color = '#a159a3'; break;		// DLC
+			case 16:	color = '#6ba1bd'; break;		// Media
+			case 64:	color = '#6ba1bd'; break;
+			default:							color = '#ff0000';	break;			// If we don't recognize the type, let put a nice color :)
 		}
 
 		// First the application
@@ -1888,78 +1609,35 @@ function DisplayAllApps( result, resultsElement, prefixText, hideDepot )
 		applicationElement.style.paddingBottom = '4px';
 		resultsElement.appendChild( applicationElement );
 
-		var appIdText = thisApp.AppIdText;
-		if ( thisApp.RegisteredEndRange )
-		{
-			// Won't happen with AppIdText of '???' (i.e. in the case we set the AppId to -1).
-
-			// There is 2 modes to display the range.
-			// in most cases, the range is something like 10 - 19. There is no need to display the full range
-			// Instead in some cases we are going to display a portion of the range
-
-			var displayExtendedRange = false;
-			if ( thisApp.RegisteredEndRange - thisApp.AppId >= 10 )
-			{
-				displayExtendedRange = true;
-			}
-			else
-			{
-				var appIdMod10 = thisApp.AppId % 10;
-				var endRangeMod10 = thisApp.RegisteredEndRange % 10;
-				if ( endRangeMod10 < appIdMod10 )
-				{
-					// The full range overlaps with the tens, display extended range
-					displayExtendedRange = true;
-				}
-			}
-
-			if ( displayExtendedRange )
-			{
-				appIdText += ' - ' + thisApp.RegisteredEndRange;
-			}
-			else
-			{
-				appIdText += ' - ' + ( thisApp.RegisteredEndRange % 10 );
-			}
-		}
-
-		var depots = thisApp.Depots;
-		var postfix = '';
-		if (depots != undefined )
-		{
-			postfix = ' ...';
-		}
-
-		var appIdDiv = admin.CreateDiv( applicationElement, 'appIdHeader', 'appId', appIdText + postfix );
+		var appIdText = thisApp.appid;
+		var appIdDiv = admin.CreateDiv( applicationElement, 'appIdHeader', 'appId', appIdText );
 		appIdDiv.style.color = color;
 
-		var appIdNameDiv = admin.CreateDiv( applicationElement, 'appNameHeader', 'appName', GetAppNameText( thisApp) );
+		var appIdNameDiv = admin.CreateDiv( applicationElement, 'appNameHeader', 'appName', thisApp.name );
 		appIdNameDiv.style.color = color;
 
 		var partnerNameDiv = admin.CreateDiv( applicationElement, 'partnerNameHeader', 'partnerName', GetPartnerNameText( thisApp ) );
 		partnerNameDiv.style.color = color;
 
+		// store link
 		var text = 'no';
-		if ( thisApp.InStore )
+		if ( thisApp.store_itemid )
 		{
-			var url = g_szBaseURL + '/admin/game/edit/' + thisApp.ItemId;
+			var url = g_szBaseURL + '/admin/game/edit/' + thisApp.store_itemid;
 			text = '<a href="' + url + '" target="_blank">edit</a>';
 		}
 		admin.CreateDiv( applicationElement, 'inStoreHeader', 'inStore', text );
-		text = 'no';
-		if ( thisApp.InSteamworks )
-		{
-			var url = g_szBaseURL + '/apps/view/' + thisApp.AppId;
-			text = '<a href="' + url + '" target="_blank">edit</a>';
-		}
-		admin.CreateDiv( applicationElement, 'inSteamworksHeader', 'inSteamworks', text );
-		admin.CreateDiv( applicationElement, 'isReleasedHeader', 'isReleased', thisApp.VisibleInStore ? 'yes' : 'no' );
 
-		var typeDiv = admin.CreateDiv( applicationElement, 'typeHeader', 'type', thisApp.TypeText );
+		// steamworks link
+		var url = g_szBaseURL + '/apps/landing/' + thisApp.appid;
+		text = '<a href="' + url + '" target="_blank">edit</a>';
+		admin.CreateDiv( applicationElement, 'inSteamworksHeader', 'inSteamworks', text );
+
+		var typeDiv = admin.CreateDiv( applicationElement, 'typeHeader', 'type', MapTypeToText( parseInt( thisApp.app_type ) ) );
 		typeDiv.style.color = color;
 
-		url = g_szBaseURL + "/admin/allpackages?appId=" + thisApp.AppId;
-		var numPackages = thisApp.hasOwnProperty('Packages') ? Object.keys(thisApp.Packages).length : 0;
+		url = g_szBaseURL + "/admin/allpackages?appId=" + thisApp.appid;
+		var numPackages = thisApp.hasOwnProperty('subs') ? thisApp.subs.length : 0;
 		if (numPackages == 0)
 		{
 			text = 'no packages';
@@ -1975,40 +1653,6 @@ function DisplayAllApps( result, resultsElement, prefixText, hideDepot )
 		admin.CreateDiv( applicationElement, 'packagesHeader', 'packages', text );
 
 		CreateBr( applicationElement );
-
-		// Then if there are some depots, display the depots...
-		if ( depots != undefined )
-		{
-			// Add some scripting to display / hide the depots
-			var depotId = "depots_" + appIdText;
-			applicationElement.onclick = ( function( id ) { return function () { OnAppClick( id ); } } ( depotId ) );
-			applicationElement.style.cursor = 'pointer';
-
-			var depotsElement = document.createElement( 'div' );
-			depotsElement.id = depotId;
-			depotsElement.style.backgroundColor = '#2d2d2d';
-			depotsElement.style.display = initialStyleDisplayForDepots;
-			resultsElement.appendChild( depotsElement );			// Attach to 'results' so does not inherit the onclick
-			for (var depotId in depots)
-			{
-				var depotName = depots[depotId];
-
-				admin.CreateDiv( depotsElement, 'appIdHeader', 'appId', depotId );
-				admin.CreateDiv( depotsElement, 'appNameHeader', 'appName', depotName );
-				// Empty div, so we can display the type for the depot
-				var div;
-				div = admin.CreateDiv( depotsElement, 'partnerNameHeader', 'partnerName', '-' );
-				div.style.visibility = 'hidden';
-				div = admin.CreateDiv( depotsElement, 'inStoreHeader', 'inStore', '-' );
-				div.style.visibility = 'hidden';
-				div = admin.CreateDiv( depotsElement, 'inSteamworksHeader', 'inSteamworks', '-' );
-				div.style.visibility = 'hidden';
-				div = admin.CreateDiv( depotsElement, 'isReleasedHeader', 'isReleased', '-' );
-				div.style.visibility = 'hidden';
-				admin.CreateDiv( depotsElement, 'typeHeader', 'type', 'depot' );
-				CreateBr( depotsElement );
-			}
-		}
 
 		var spacingElement = document.createElement( 'div' );
 		spacingElement.style.marginTop = '4px';
