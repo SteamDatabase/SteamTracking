@@ -14,6 +14,7 @@
 		
 		private $ClientArchives = Array(
 			'resources_all.zip',
+			'remoteui_all.zip',
 			'tenfoot_all.zip',
 			'public_all.zip',
 			'strings_all.zip',
