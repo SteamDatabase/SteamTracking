@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.3fb4f1f0378c005abe676e6605595b1d5b2a58e8.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.04ae42fc6de03f44b299116718d730dc47ed9787.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -71596,7 +71596,7 @@
 				},
 				"tool": {
 					"type": "supply_crate",
-					"restriction": "community_pack_1"
+					"restriction": "welcoming_chest"
 				},
 				"attributes": [
 					{
@@ -83364,7 +83364,7 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "community_pack_1",
+					"restriction": "welcoming_chest",
 					"usage_capabilities": {
 						"decodable": true
 					}
