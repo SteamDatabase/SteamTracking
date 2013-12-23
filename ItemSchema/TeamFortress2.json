@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.0380de28c751eaf1674841059b58128141c228d4.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a3a6dda83fdd1a84448301b46728957ab4d5d2f2.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -54470,6 +54470,14 @@
 				"used_by_classes": [
 
 				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 0
+					}
+				]
 				
 			},
 			{
@@ -54504,6 +54512,14 @@
 				},
 				"used_by_classes": [
 
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 0
+					}
 				]
 				
 			},

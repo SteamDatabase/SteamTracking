@@ -60293,6 +60293,14 @@
 			"max_ilevel"	"5"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value" 	"0"
+				}
+			}
 		}
 		"5085"
 		{
@@ -60321,6 +60329,14 @@
 			"max_ilevel"	"5"
 			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
 			"drop_sound"		"ui/item_cardboard_drop.wav"
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value" 	"0"
+				}
+			}
 		}
 		
 		"5500"
