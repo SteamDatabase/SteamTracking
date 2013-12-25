@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "",
-		"gameVersion": "126",
+		"gameVersion": "127",
 		"availableGameStats": {
 			"achievements": [
 				{
@@ -624,6 +624,15 @@
 					"description": "Plays games with free weekend players and helps them survive a campaign.",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/550/4b259160cfc16f4ef342bb0d92486485b839299b.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/550/658c9a9f51dc71aa3e678ed68612f551c638a7ff.jpg"
+				},
+				{
+					"name": "ACH_HELP_FREE_CHRISTMAS_PLAYER_SURVIVE",
+					"defaultvalue": 0,
+					"displayName": "GHOST OF CHRISTMAS PRESENT",
+					"hidden": 0,
+					"description": "Spread cheer by helping a free holiday player survive a campaign.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/550/8c808b4d4f3b4abcabe4db393acf962f58243cbe.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/550/51ce55eee8954b91bb30f6a26ae4512908c574ea.jpg"
 				}
 			]
 			,
