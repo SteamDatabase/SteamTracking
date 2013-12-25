@@ -252,6 +252,14 @@
 				
 				return true;
 			}
+			// Make sure we received everything
+			else if( SubStr( $File, -5 ) === '.html' )
+			{
+				if( StrrPos( $Data, '</body>' ) === false )
+				{
+					return false;
+				}
+			}
 			
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
