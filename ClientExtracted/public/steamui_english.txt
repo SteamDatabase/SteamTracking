@@ -244,8 +244,11 @@ This should take less than a minute."
 "SteamUI_JoinDialog_ReadyToPlayTime"	"Ready to launch in approximately:"
 "SteamUI_JoinDialog_ContentHosting"	"Content hosting provided by:"
 "SteamUI_JoinDialog_ReadyToPlay"	"Ready to launch"
+"SteamUI_JoinDialog_ContineLaunch" "Contine launch"
 "SteamUI_JoinDialog_KeyRequestFailed_Title" "Steam - Error"
 "SteamUI_JoinDialog_KeyRequestFailed_Text" "Failed to contact key server"
+"SteamUI_JoinDialog_KeyRequestPending_Text" "Product key request pending"
+
 
 "SteamUI_JoinDialog_DataRequest_Text" "Completing installation... %progress%%%"
 "SteamUI_JoinDialog_DataRequestFailed_Title" "Steam - Error"
@@ -1223,6 +1226,9 @@ This should take less than a minute."
 
 "Steam_App_Install_Failed_Title"	"Steam - Error"
 "Steam_App_Install_Failed_Text"	"An error occurred while installing %game% (%reason%)"
+
+"Steam_App_LegacyKey_Denied_Title" "Steam - Warning"
+"Steam_App_LegacyKey_Denied_Text" "Some or all content of \"%game%\" is only avaliable by connecting to a third-party service.\nThe original owner must have registered with this service to access this content."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text"	"An error occurred while updating %game% (%reason%)"
