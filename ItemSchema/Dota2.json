@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.87b3b9cdac9b28ae6b470c9773bab9acdc0228c3.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.e3a088fd8e61918db9c13b189eae316075ed9122.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -95420,8 +95420,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_The_Butchers_Broilers_Pack",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.7c9180c357b570ed64858d3b273556b0e5ea6c76.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.9e69607f50b5bfb371418b6c463a0a1d2c993b12.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.c411f91717fec44b2f0ed4c2568a61ce47334de4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.1192bc5c8071e327c7b30179a51be7e6db64a4d4.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -95458,8 +95458,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_The_Butchers_Broilers_Pack",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.7c9180c357b570ed64858d3b273556b0e5ea6c76.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.9e69607f50b5bfb371418b6c463a0a1d2c993b12.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack.c411f91717fec44b2f0ed4c2568a61ce47334de4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_butchers_broilers_pack_large.1192bc5c8071e327c7b30179a51be7e6db64a4d4.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
