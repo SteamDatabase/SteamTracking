@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1388786814"
+	"version"		"1388790359"
 	"strings_all"
 	{
 		"file"		"strings_all.zip.bf532540c8fa959de240354861e56436a751fb2a"
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.de52b0336f1b11dd6379764689336680ed0b39c3"
-		"checksum"		"de52b0336f1b11dd6379764689336680ed0b39c3"
-		"size"		"9321564"
+		"file"		"tenfoot_all.zip.af34b90dc662bf575483afbc54f491ac5789bfba"
+		"checksum"		"af34b90dc662bf575483afbc54f491ac5789bfba"
+		"size"		"9321558"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -89,5 +89,5 @@
 }
 "kvsignatures"
 {
-	"win32"		"904bead7069ddd9f38247cbec067efa6a9dca9cef9ba84535e4568702430a36b8a9f2039a4a2ecc154eb6354f3fe2868b63cc2c41eefeffb6c6ea6e0174d7428d6eef815f81de71d5ae2aa29869315becba87a4b2545c0e07709648a6495aee62e9870b752cd7ec8beac7feebc56349e462d33ca16f559bce6c1731f3c8f126e"
+	"win32"		"1f9b66bd64848678452f79fb3484f3a704054a778ce9de2cb8d5fc40962acab7944bde4157d9e9cd9499ef7cba61817b30233c3ef4d4d2ca2783547f81077ac76e1ee8e8483fe4848641f2c6874d3767a1afdf5a079300583846741ed1cae2666854cb77344af6c8077018f33ca00c2057029ba0b3770eb254b7bb231af1f24c"
 }
