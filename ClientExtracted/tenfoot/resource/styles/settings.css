@@ -208,6 +208,11 @@ SettingsPanel.SectionVisible #SettingsContent
 	flow-children: down;
 }
 
+.FlowRight
+{
+	flow-children: right;
+}
+
 .SteamOS #SettingsInGame_Enable
 {
 	visibility: collapse;
@@ -269,6 +274,8 @@ Button,ToggleButton,.CheckBox,RadioButton
 	height: 48px;
 	margin-top: 8px;
 	margin-bottom: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
 
 	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
 
@@ -1821,6 +1828,31 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
     margin-bottom: 15px;
 }
 
+.SettingsPanel_Family_Sharing_List
+{
+	height: 400px;
+	width: 1200px;
+	flow-children: down;
+	overflow: clip scroll;
+	background-color: simplebutton;
+}
+
+.SettingsPanel_Family_Sharing_List_ColumnName
+{
+
+	font-size: 24px;
+	margin-left: 4px;
+	margin-top: 20px;
+	color: tcstatictext;
+}
+
+.SettingsPanel_Family_Sharing_List_ColumnItem
+{	
+	width: 48px;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
 .SettingsManageDevices_Header
 {
 	font-size: 32px;
@@ -2285,4 +2317,14 @@ SettingsPanel_Display.Underscan
 #SettingsAbout_LegalInformationButton
 {
 	margin-top: 25px;
+}
+
+.SettingsPanel_Family_Sharing_Borrower
+{
+	flow-children: right;
+	width: 1200px;
+	margin: 0px;
+	padding: 0px;
+	padding-left:15px;
+	border-width: 0px;
 }

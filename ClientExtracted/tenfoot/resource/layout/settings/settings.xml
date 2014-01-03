@@ -32,6 +32,11 @@
 				<Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
 					<Label class="LongDesc" text="#Settings_Interface" />
 				</Button>
+				
+				<Button id="FamilySharingButton" class="Button" onactivate="ShowSettings( AuthorizeLocalDevice );" >
+					<Label class="LongDesc" text="#Settings_Family_Sharing_Title" />
+				</Button>
+				
 				<Button id="ParentalSettingsButton" class="Button" onactivate="ShowParentalSettings();">
 					<Label class="LongDesc" text="#Parental_Settings_Title" />
 				</Button>

@@ -656,3 +656,9 @@ AsyncGames
 	method	"internal"
 	filter	"profile"
 }
+FamilySharing
+{
+	url		"%storehttps%/account/managedevices"
+	method		"internal"
+	filter		"profile"
+}
