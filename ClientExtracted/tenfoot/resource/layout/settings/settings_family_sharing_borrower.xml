@@ -1,0 +1,12 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_Family_Sharing_Borrower class="SettingsPanel_Family_Sharing_Borrower" >
+			<Label id="NumberLabel" text="" class="SettingsPanel_Family_Sharing_List_ColumnItem" />
+			<ToggleButton id="BorrowerToggle" class="CheckBox" onactivate="ToggleBorrowerChanged();" text="" />				
+	</SettingsPanel_Family_Sharing_Borrower>
+
+</root>

@@ -1,0 +1,67 @@
+"resource/layout/subpaneloptionscloud.layout"
+{
+	controls
+	{
+		FamilySharingTitle { controlname=label	labeltext=#Steam_Settings_Family_Sharing_Title style=highlight}
+				
+		FamilySharingTextState { controlname=label labeltext=#Steam_Settings_Family_Sharing_StateNotAuthorized wrap=1 }
+		
+		AuthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_AuthorizeDevice command=AuthorizeDevice }
+		DeauthorizeDeviceButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_DeauthorizeDevice command=DeauthorizeDevice }
+		
+		BorrowersLabel { controlname=label labeltext=#Steam_Settings_Family_Sharing_Borrowers wrap=1 }
+		BorrowersList { controlname=listpanel }
+				
+		ManageSharingButton { controlname=button	labelText=#Steam_Settings_Family_Sharing_ManageSharing command=ManageSharing }
+				
+		FamilyOptionsTitle { controlname=label	labeltext=#Steam_Settings_Family_Options_Title style=highlight }
+		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
+		
+		ManageOptionsButton { controlname=button	labelText=#Steam_Parental_Manage command=ManageParental }
+	
+		Divider1 { ControlName=Divider	}				
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+		
+		padded
+		{
+			padding-top=6
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+	
+		place { controls="FamilySharingTitle" region=box }
+					
+		place { controls="FamilySharingTextState" region=box start=FamilySharingText margin-top=24 width=360 height=24 dir=down }
+		place { controls="AuthorizeDeviceButton," region=box margin-top=8 start=FamilySharingTextState dir=down }
+		place { controls="DeauthorizeDeviceButton" region=box margin-top=8 start=FamilySharingTextState dir=down }
+		place { controls="ManageSharingButton" region=box margin-top=8 margin-left=186 start=FamilySharingTextState dir=down }
+		
+		
+		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=360 height=24 dir=down }
+		place { controls="BorrowersList" region=box start=BorrowersLabel width=360 height=160 margin-top=12 dir=down }
+		
+		
+						
+		place { controls="Divider1" region=box start=BorrowersList dir=down margin-top=16 width=max }
+		
+		place { controls="FamilyOptionsTitle" region=box start=Divider1 dir=down margin-top=15 }
+		place { controls="FamilyOptionsText" region=box start=FamilyOptionsTitle margin-top=10 width=360 height=25 dir=down }
+		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=10 dir=down }
+			
+		
+	}
+}

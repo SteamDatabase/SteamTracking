@@ -16,9 +16,6 @@
 				<Button id="SettingsAccount_History" onactivate="BrowseToSteamURL( StoreAccount )" class="Button">
 					<Label class="LongDesc" text="#SettingsAccount_History" />
 				</Button>
-				<Button id="SettingsAccount_ManageDevices" class="Button" onactivate="ShowSettings( ManageDevices );" >
-					<Label class="LongDesc" text="#SettingsAccount_ManageDeviceAuth" />
-				</Button>
 				<!--<Button class="Button">
 					<Label class="LongDesc" text="#SettingsAccount_Verify" />
 				</Button>
