@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.69b71364e0c236b30f4b369c64006d6815d79dcb.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.f968aa2d6e53c9fa1766b530befe3e3d16ce0762.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -58738,7 +58738,7 @@
 				"item_name": "Blades of Voth Domosh",
 				"item_description": "Set in her vengeance against the abyss, Tresdin approached the baleful armorer Qwyth, who gifted to her these hellbound blades. Though she obtained the swords without cost, she may realize too late that the price extracted for wielding such incredible power could be more than she is willing to part with...",
 				"proper_name": true,
-				"item_quality": 17,
+				"item_quality": 4,
 				"image_inventory": "econ\/items\/legion_commander\/demon_sword",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
@@ -84361,12 +84361,12 @@
 				}
 			},
 			{
-				"name": "Wraith King's Favor",
+				"name": "Converted Wraith King's Favor",
 				"defindex": 15413,
 				"item_class": "tool",
-				"item_type_name": "Collector of Shining Fragments",
-				"item_name": "Wraith King's Favor",
-				"item_description": "Use this item to earn Shining Fragments in Wraith-Night. Shining Fragments can be redemeed for Wraith-Night Ossuaries. Starts with 500 minutes that are only consumed when you play Wraith-Night and will grant a 10% stackable bonus to each of your cohorts. Features like spectating games or coaching do not deplete them.",
+				"item_type_name": "Battle Point Booster",
+				"item_name": "Converted Wraith King's Favor",
+				"item_description": "Use this item to increase the rate at which you earn <font color='#9da1a9'>Battle Points<\/font> by <font color='#9da1a9'>80%<\/font> for 500 game minutes. Additionally, you will grant other players a stacking <font color='#9da1a9'>16%<\/font> bonus to their <font color='#9da1a9'>Battle Points<\/font> rate.<br><br>Battle Point Boosters are only consumed whenever Battle Points are earned and features like spectating games or coaching do not deplete them.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/wraith_kings_favor",
@@ -85177,6 +85177,644 @@
 				},
 				"tool": {
 					"type": "fortunate_soul",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota2.fr League",
+				"defindex": 15442,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota2.fr League",
+				"item_description": "The best  teams in France compete every week in the Dota 2 French League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dota2fr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2fr.4238fc91db42eb20c25de96b45b34c341bc32cfa.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2fr_large.c5c390e291711b672421d6b1ae7ef0afd9c940e9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota2.fr League - ADMIN",
+				"defindex": 15443,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota2.fr League - ADMIN",
+				"item_description": "The best  teams in France compete every week in the Dota 2 French League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dota2fr",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2fr.4238fc91db42eb20c25de96b45b34c341bc32cfa.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2fr_large.c5c390e291711b672421d6b1ae7ef0afd9c940e9.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Macedonian Dota 2 Cup #2",
+				"defindex": 15444,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Macedonian Dota 2 Cup #2",
+				"item_description": "A Macedonian tournamentwhere all the Macedonian teams compete for a prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_macedoniacup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_macedoniacup2.b6b1ae32f041a8ab613984dec2a5614133343ea4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_macedoniacup2_large.32c8f9b8f15ffa0327800519a7e52cd1c3841a9f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Macedonian Dota 2 Cup #2 - ADMIN",
+				"defindex": 15445,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Macedonian Dota 2 Cup #2 - ADMIN",
+				"item_description": "A Macedonian tournamentwhere all the Macedonian teams compete for a prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_macedoniacup2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_macedoniacup2.b6b1ae32f041a8ab613984dec2a5614133343ea4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_macedoniacup2_large.32c8f9b8f15ffa0327800519a7e52cd1c3841a9f.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Challenge",
+				"defindex": 15446,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Challenge",
+				"item_description": "The best teams from within the United Kingdom converge on February 14th for the Dota 2 Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dota2challenge",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2challenge.0c81830b17d55144003fb040d06e2500db77a52c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2challenge_large.c0469fb19293299914fd887278472e3317f74c70.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota 2 Challenge - ADMIN",
+				"defindex": 15447,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota 2 Challenge - ADMIN",
+				"item_description": "The best teams from within the United Kingdom converge on February 14th for the Dota 2 Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_dota2challenge",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2challenge.0c81830b17d55144003fb040d06e2500db77a52c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_dota2challenge_large.c0469fb19293299914fd887278472e3317f74c70.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Logitech G - Free to Play 2",
+				"defindex": 15454,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play 2",
+				"item_description": "eSports Interactive Entertainment presents India's Biggest LAN Center Tournament with a grand prize of 50,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg2.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg2_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Logitech G - Free to Play 2 - ADMIN",
+				"defindex": 15455,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Logitech G - Free to Play 2 - ADMIN",
+				"item_description": "eSports Interactive Entertainment presents India's Biggest LAN Center Tournament with a grand prize of 50,000 INR!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_logitechg2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg2.5faf5ac9d439205c7fccaf255c9a8a273e3ee9d0.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_logitechg2_large.51095a2d921deee24d9ea1e0def2d1b89a63eaa2.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hero Dota: Second Chapter",
+				"defindex": 15456,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hero Dota: Second Chapter",
+				"item_description": "Second season of tournament for semi-pro and non-pro team from Russia, Ukraine, Belarus. Any team can prove themselves fighting for the main prize of over $1,000 USD (32 thousand rubles), besides for special rewards provided by sponsors and partners.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_herodota2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_herodota2.13593ce672ed80d85ed5ddfa441b49da33e16d92.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_herodota2_large.2526ef56ac3a9daf91d2cb9a1431c1fd8f5f2634.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hero Dota: Second Chapter - ADMIN",
+				"defindex": 15457,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hero Dota: Second Chapter - ADMIN",
+				"item_description": "Second season of tournament for semi-pro and non-pro team from Russia, Ukraine, Belarus. Any team can prove themselves fighting for the main prize of over $1,000 USD (32 thousand rubles), besides for special rewards provided by sponsors and partners.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_herodota2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_herodota2.13593ce672ed80d85ed5ddfa441b49da33e16d92.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_herodota2_large.2526ef56ac3a9daf91d2cb9a1431c1fd8f5f2634.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Australian E-Sports League 2014 Summer Cup",
+				"defindex": 15458,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Australian E-Sports League 2014 Summer Cup",
+				"item_description": "The 2014 Summer Cup for the Australian E-Sports League will see top teams from across Australia and the Oceanic region compete for their share of AUD $3,500 in cash plus sponsor prizes; with the Grand Finals held live in Sydney on the 1st of March. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ael",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ael.0df07b456033fbd88ee742c05497776dfc3c24c1.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ael_large.131b72f5c2ff523a89fc735b0f32cabba50a34b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Australian E-Sports League 2014 Summer Cup - ADMIN",
+				"defindex": 15459,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Australian E-Sports League 2014 Summer Cup - ADMIN",
+				"item_description": "The 2014 Summer Cup for the Australian E-Sports League will see top teams from across Australia and the Oceanic region compete for their share of AUD $3,500 in cash plus sponsor prizes; with the Grand Finals held live in Sydney on the 1st of March. ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ael",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ael.0df07b456033fbd88ee742c05497776dfc3c24c1.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ael_large.131b72f5c2ff523a89fc735b0f32cabba50a34b4.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Amateur Dota 2 League Season 1 - Playoffs",
+				"defindex": 15460,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Amateur Dota 2 League Season 1 - Playoffs",
+				"item_description": "Teams compete in the playoffs for the first season of the Amateur Dota 2 League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_adl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl.02f61d3cd02535c5a395f1f186dafa57e49cb8d2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl_large.76cfc5b6dcf81bc53de3340fb890d676cb62a09b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Amateur Dota 2 League Season 1 - Playoffs - ADMIN",
+				"defindex": 15461,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Amateur Dota 2 League Season 1 - Playoffs - ADMIN",
+				"item_description": "Teams compete in the playoffs for the first season of the Amateur Dota 2 League!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_adl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl.02f61d3cd02535c5a395f1f186dafa57e49cb8d2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl_large.76cfc5b6dcf81bc53de3340fb890d676cb62a09b.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Amateur Dota 2 League Season 2",
+				"defindex": 15462,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Amateur Dota 2 League Season 2",
+				"item_description": "The second season of the Amateur Dota 2 League kicks off where Amateur teams compete to be crowned champions!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_adl2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl2.faec5a52893dce959252af28651efe9615be904d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl2_large.7e9c0128992fb9057b04eaacf0f254ea3107ddf1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Amateur Dota 2 League Season 2 - ADMIN",
+				"defindex": 15463,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Amateur Dota 2 League Season 2 - ADMIN",
+				"item_description": "The second season of the Amateur Dota 2 League kicks off where Amateur teams compete to be crowned champions!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_adl2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl2.faec5a52893dce959252af28651efe9615be904d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_adl2_large.7e9c0128992fb9057b04eaacf0f254ea3107ddf1.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Tampa eSports Winter WonderLAN 2014",
+				"defindex": 15464,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Tampa eSports Winter WonderLAN 2014",
+				"item_description": "Watch amateur teams from Florida compete for over $600 in cash and prizes!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_tampa",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_tampa.c7003fdb3eab434266f3b754e656b0a113d636b9.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_tampa_large.e0006687f4336783821d73ab74c69fed4b807611.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Tampa eSports Winter WonderLAN 2014 - ADMIN",
+				"defindex": 15465,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Tampa eSports Winter WonderLAN 2014 - ADMIN",
+				"item_description": "Watch amateur teams from Florida compete for over $600 in cash and prizes!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_tampa",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_tampa.c7003fdb3eab434266f3b754e656b0a113d636b9.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_tampa_large.e0006687f4336783821d73ab74c69fed4b807611.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Prodota Winter Cup",
+				"defindex": 15466,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Prodota Winter Cup",
+				"item_description": "Professional Dota 2 teams compete for a grand pize of $1,000 USD in the Prodota Winter Cup!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_prodotawinter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_prodotawinter.2dee27e3f7819bfc1211f3b1106a9a2c7915184d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_prodotawinter_large.9522852abefcfdef1f6860f0e2b55aa716a5820e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Prodota Winter Cup - ADMIN",
+				"defindex": 15467,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Prodota Winter Cup - ADMIN",
+				"item_description": "Professional Dota 2 teams compete for a grand pize of $1,000 USD in the Prodota Winter Cup!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_prodotawinter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_prodotawinter.2dee27e3f7819bfc1211f3b1106a9a2c7915184d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_prodotawinter_large.9522852abefcfdef1f6860f0e2b55aa716a5820e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 3",
+				"defindex": 15468,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 3",
+				"item_description": "Steelseries Euro Cup is back for Season 3! This is an open tournament featuring the most talented European teams competing for a $1,000 USD prize pool.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup3.51ef4e560ef0e73fb199179e27571bb546355cf6.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup3_large.91ad22601b8d671dc7a994e39e554df85d90a416.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "SteelSeries Euro Cup Season 3 - ADMIN",
+				"defindex": 15469,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "SteelSeries Euro Cup Season 3 - ADMIN",
+				"item_description": "Steelseries Euro Cup is back for Season 3! This is an open tournament featuring the most talented European teams competing for a $1,000 USD prize pool.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_steelserieseurocup3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup3.51ef4e560ef0e73fb199179e27571bb546355cf6.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_steelserieseurocup3_large.91ad22601b8d671dc7a994e39e554df85d90a416.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
 					"use_string": "Use"
 				}
 			},
