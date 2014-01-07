@@ -681,6 +681,7 @@ function OnInitializeTransactionSuccess( result )
 			$('payment_row_five').style.display = 'none';
 			$('payment_row_six').style.display = 'none';
 			$('payment_header_title').style.display = 'none';
+			$('payment_row_save_my_address').style.display = 'none';
 
 			$('payment_row_eight').style.display = 'block';
 			
@@ -2036,6 +2037,7 @@ function UpdatePaymentInfoForm()
 		$('payment_row_five').style.display = strAddressDisplay;
 		$('payment_row_six').style.display = strAddressDisplay;
 		$('payment_header_title').style.display = strAddressDisplay;
+		$('payment_row_save_my_address').style.display = strAddressDisplay;
 		
 		var strBankAccountDisplay = bShowBankAccountForm ? 'block' : 'none';
 		$('bank_account_label').style.display = strBankAccountDisplay;
@@ -3300,6 +3302,7 @@ function DisplayReceiptPage()
 function DisplayPendingReceiptPage()
 {
 	$('cart_area').style.display = 'none';
+	$('col_right_review').style.display = 'none';
 	$('pending_receipt_area').style.display = 'block';
 
 	$('pending_receipt_total_price').innerHTML = $('review_total_value').innerHTML;
