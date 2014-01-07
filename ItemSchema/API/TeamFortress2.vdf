@@ -61744,11 +61744,6 @@
 			"image_inventory"	"backpack/player/items/crafting/crate_halloween_02"
 			"attributes"
 			{
-				"decoded by itemdefindex"
-				{
-					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5713"
-				}
 			}
 			"holiday_restriction"	"halloween_or_fullmoon"
 			"event_desc_footer"	"#Halloween_Unusuals"	
@@ -61778,11 +61773,6 @@
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_naughty_2013"
 			"attributes"
 			{
-				"decoded by itemdefindex"
-				{
-					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5716"
-				}
 			}
 		}
 		"5715" 
@@ -61800,11 +61790,6 @@
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_2013"
 			"attributes"
 			{
-				"decoded by itemdefindex"
-				{
-					"attribute_class"	"decoded_by_itemdefindex"
-					"value" "5717"
-				}
 			}
 		}
 		
@@ -61813,13 +61798,9 @@
 			"name"	"Naughty Winter Key 2013" 
 			"prefab" "valve eventkey"
 			"first_sale_date"	"2013/12/21"
-			"tool"
-			{
-				"restriction"	"winter2013_naughty"
-			}
-			"item_name"		"#TF_Tool_WinterKey2013_Naughty"
-			"item_description"	"#TF_Tool_WinterKey2013_Naughty_Desc"
-			"image_inventory"	"backpack/crafting/winter2013_naughty_key"
+			"item_name"		"#TF_Tool_DecoderRing"
+			"item_description"	"#TF_Tool_DecoderRing_Desc"
+			"image_inventory"	"backpack/player/items/crafting/key"
 		}
 		
 		"5717"
@@ -61827,13 +61808,9 @@
 			"name"	"Nice Winter Key 2013" 
 			"prefab" "eventkey"
 			"first_sale_date"	"2013/12/21"
-			"tool"
-			{
-				"restriction"	"winter2013_nice"
-			}
-			"item_name"		"#TF_Tool_WinterKey2013_Nice"
-			"item_description"	"#TF_Tool_WinterKey2013_Nice_Desc"
-			"image_inventory"	"backpack/crafting/winter2013_nice_key"
+			"item_name"		"#TF_Tool_DecoderRing"
+			"item_description"	"#TF_Tool_DecoderRing_Desc"
+			"image_inventory"	"backpack/player/items/crafting/key"
 		}
 		
 		"5718"

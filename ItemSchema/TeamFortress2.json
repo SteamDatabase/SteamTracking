@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.a3a6dda83fdd1a84448301b46728957ab4d5d2f2.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.9ccf2667234ef64ec044a974a6a7e7d0dc0aac78.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -57536,11 +57536,6 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 74
-					},
-					{
-						"name": "decoded by itemdefindex",
-						"class": "decoded_by_itemdefindex",
-						"value": 5713
 					}
 				]
 				
@@ -57591,7 +57586,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Naughty Winter Crate 2013",
-				"item_description": "This crate's contents are unknown.\nOnly Naughty Keys fit the lock.\n\nSome, but not all, of the items in this crate are Strange...\nAfter 01\/06\/2014 this crate can no longer be opened.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -57625,11 +57620,6 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 78
-					},
-					{
-						"name": "decoded by itemdefindex",
-						"class": "decoded_by_itemdefindex",
-						"value": 5716
 					}
 				]
 				
@@ -57640,7 +57630,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Nice Winter Crate 2013",
-				"item_description": "This crate's contents are unknown.\nOnly Nice Keys fit the lock.\nAfter 01\/06\/2014 this crate can no longer be opened.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -57674,11 +57664,6 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 79
-					},
-					{
-						"name": "decoded by itemdefindex",
-						"class": "decoded_by_itemdefindex",
-						"value": 5717
 					}
 				]
 				
@@ -57688,16 +57673,16 @@
 				"defindex": 5716,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "Naughty Winter Crate Key 2013",
-				"item_description": "Used to open Naughty Winter Crate 2013.\nThis key will not open Nice crates.\n\nAfter 1\/6\/2013 this will turn into a normal key.",
+				"item_name": "Mann Co. Supply Crate Key",
+				"item_description": "Used to open locked supply crates.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
-				"image_inventory": "backpack\/crafting\/winter2013_naughty_key",
+				"image_inventory": "backpack\/player\/items\/crafting\/key",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/winter2013_naughty_key.c5e7451b89f71ac40d9982677960bc600d4d412b.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/winter2013_naughty_key_large.d95b1d82021ab7bd993f815894b23dd1d246643d.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key.067945a6cae528464e4fa00126f0ef17ee2dc8b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key_large.443e254bfd7c6f54de0842a14df3c2aa72e8b6f0.png",
 				"craft_class": "tool",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -57710,7 +57695,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "winter2013_naughty",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -57729,16 +57713,16 @@
 				"defindex": 5717,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "Nice Winter Crate Key 2013",
-				"item_description": "Used to open Nice Winter Crate 2013.\nThis key will not open Naughty crates.\n\nAfter 1\/6\/2013 this will turn into a normal key.",
+				"item_name": "Mann Co. Supply Crate Key",
+				"item_description": "Used to open locked supply crates.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
-				"image_inventory": "backpack\/crafting\/winter2013_nice_key",
+				"image_inventory": "backpack\/player\/items\/crafting\/key",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/winter2013_nice_key.cb54e80f15862d0d49933bc2adff8d206ca1bf6f.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/winter2013_nice_key_large.11e8d9592dbba89926c3ad1a50fe7bec5347d0eb.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key.067945a6cae528464e4fa00126f0ef17ee2dc8b5.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/key_large.443e254bfd7c6f54de0842a14df3c2aa72e8b6f0.png",
 				"craft_class": "tool",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -57751,7 +57735,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "winter2013_nice",
 					"usage_capabilities": {
 						"decodable": true
 					}
