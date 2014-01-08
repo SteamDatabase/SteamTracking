@@ -33,6 +33,7 @@ Styles/profile_editv2.css|http://cdn.steamcommunity.com/public/css/skin_1/profil
 Styles/profile_friendactivity.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friendactivity.css?_=*TIMENOW*
 Styles/profile_friends_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list.css?_=*TIMENOW*
 Styles/profile_friends_list_self.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_friends_list_self.css?_=*TIMENOW*
+Styles/profile_gamenotifications.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_gamenotifications.css?_=*TIMENOW*
 Styles/profile_games_list.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_games_list.css?_=*TIMENOW*
 Styles/profile_recommended.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_recommended.css?_=*TIMENOW*
 Styles/profile_reviews.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_reviews.css?_=*TIMENOW*
@@ -49,21 +50,20 @@ Styles/styles_gamev5.css|http://cdn.store.steampowered.com/public/css/styles_gam
 Styles/styles_genrev5.css|http://cdn.store.steampowered.com/public/css/styles_genrev5.css?_=*TIMENOW*
 Styles/styles_hwsurvey.css|http://cdn.store.steampowered.com/public/css/styles_hwsurvey.css?_=*TIMENOW*
 Styles/styles_loginv5.css|http://cdn.store.steampowered.com/public/css/styles_loginv5.css?_=*TIMENOW*
+Styles/styles_parental.css|http://cdn.store.steampowered.com/public/css/styles_parental.css?_=*TIMENOW*
+Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/styles_sale.css|http://cdn.store.steampowered.com/public/css/styles_sale.css?_=*TIMENOW*
 Styles/styles_steamaccount.css|http://cdn.store.steampowered.com/public/css/styles_steamaccount.css?_=*TIMENOW*
 Styles/styles_storev5.css|http://cdn.store.steampowered.com/public/css/styles_storev5.css?_=*TIMENOW*
 Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_video.css?_=*TIMENOW*
-Styles/styles_youraccountv5.css|http://cdn.store.steampowered.com/public/css/styles_youraccountv5.css?_=*TIMENOW*
 Styles/styles_widget.css|http://cdn.store.steampowered.com/public/css/styles_widget.css?_=*TIMENOW*
-Styles/styles_recommended.css|http://cdn.store.steampowered.com/public/css/styles_recommended.css?_=*TIMENOW*
+Styles/styles_youraccountv5.css|http://cdn.store.steampowered.com/public/css/styles_youraccountv5.css?_=*TIMENOW*
+Styles/user_reviews.css|http://cdn.steamcommunity.com/public/shared/css/user_reviews.css?_=*TIMENOW*
 Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
 Styles/workshop_home.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_home.css?_=*TIMENOW*
 Styles/workshop_itemdetails.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
 Styles/workshop_userfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
-Styles/user_reviews.css|http://cdn.steamcommunity.com/public/shared/css/user_reviews.css?_=*TIMENOW*
-Styles/styles_parental.css|http://cdn.store.steampowered.com/public/css/styles_parental.css?_=*TIMENOW*
-Styles/profile_gamenotifications.css|http://cdn.steamcommunity.com/public/css/skin_1/profile_gamenotifications.css?_=*TIMENOW*
 
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
@@ -74,6 +74,7 @@ Scripts/cart.js|http://cdn.store.steampowered.com/public/javascript/cart.js?_=*T
 Scripts/chat.js|http://cdn.steamcommunity.com/public/javascript/chat.js?_=*TIMENOW*&l=english
 Scripts/checkout.js|http://cdn.store.steampowered.com/public/javascript/checkout.js?_=*TIMENOW*&l=english
 Scripts/commentnotifications.js|http://cdn.steamcommunity.com/public/javascript/commentnotifications.js?_=*TIMENOW*&l=english
+Scripts/comments.js|http://cdn.store.steampowered.com/public/javascript/comments.js?_=*TIMENOW*&l=english
 Scripts/communityhome.js|http://cdn.steamcommunity.com/public/javascript/communityhome.js?_=*TIMENOW*&l=english
 Scripts/discussions.js|http://cdn.steamcommunity.com/public/javascript/discussions.js?_=*TIMENOW*&l=english
 Scripts/dmca.js|http://cdn.steamcommunity.com/public/javascript/dmca.js?_=*TIMENOW*&l=english
@@ -81,6 +82,7 @@ Scripts/economy.js|http://cdn.steamcommunity.com/public/javascript/economy.js?_=
 Scripts/economy_trade.js|http://cdn.steamcommunity.com/public/javascript/economy_trade.js?_=*TIMENOW*&l=english
 Scripts/economy_tradeoffer.js|http://cdn.steamcommunity.com/public/javascript/economy_tradeoffer.js?_=*TIMENOW*&l=english
 Scripts/forums.js|http://cdn.steamcommunity.com/public/javascript/forums.js?_=*TIMENOW*&l=english
+Scripts/gamehighlightplayer.js|http://cdn.store.steampowered.com/public/javascript/gamehighlightplayer.js?_=*TIMENOW*&l=english
 Scripts/gifts.js|http://cdn.steamcommunity.com/public/javascript/gifts.js?_=*TIMENOW*&l=english
 Scripts/global.js|http://cdn.steamcommunity.com/public/javascript/global.js?_=*TIMENOW*&l=english
 Scripts/group.js|http://cdn.steamcommunity.com/public/javascript/group.js?_=*TIMENOW*&l=english
@@ -103,14 +105,14 @@ Scripts/sharedfiles_functions_logged_in.js|http://cdn.steamcommunity.com/public/
 Scripts/store_javascript.js|http://cdn.store.steampowered.com/public/javascript/javascript.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|http://cdn.store.steampowered.com/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|http://cdn.store.steampowered.com/public/javascript/search.js?_=*TIMENOW*&l=english
+Scripts/user_reviews.js|http://cdn.steamcommunity.com/public/shared/javascript/user_reviews.js?_=*TIMENOW*&l=english
+Scripts/user_reviews_community.js|http://cdn.steamcommunity.com/public/javascript/user_reviews_community.js?_=*TIMENOW*&l=english
+Scripts/user_reviews_store.js|http://cdn.store.steampowered.com/public/javascript/user_reviews_store.js?_=*TIMENOW*&l=english
 Scripts/video_functions.js|http://cdn.steamcommunity.com/public/javascript/video_functions.js?_=*TIMENOW*&l=english
 Scripts/video_functions_v2.js|http://cdn.steamcommunity.com/public/javascript/video_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/workshop_functions.js|http://cdn.steamcommunity.com/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
 Scripts/workshop_previewplayer.js|http://cdn.steamcommunity.com/public/javascript/workshop_previewplayer.js?_=*TIMENOW*&l=english
 Scripts/youraccount.js|http://cdn.store.steampowered.com/public/javascript/youraccount.js?_=*TIMENOW*&l=english
-Scripts/user_reviews.js|http://cdn.steamcommunity.com/public/shared/javascript/user_reviews.js?_=*TIMENOW*&l=english
-Scripts/user_reviews_community.js|http://cdn.steamcommunity.com/public/javascript/user_reviews_community.js?_=*TIMENOW*&l=english
-Scripts/user_reviews_store.js|http://cdn4.store.steampowered.com/public/javascript/user_reviews_store.js?_=*TIMENOW*&l=english
 
 # Steamworks CSS
 Styles/Partner/styles_admin.css|https://partner.steamgames.com/public/css/styles_admin.css?_=*TIMENOW*
