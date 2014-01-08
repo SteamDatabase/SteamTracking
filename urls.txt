@@ -162,7 +162,6 @@ GameSchema/Portal.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForG
 GameSchema/Portal2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=620
 GameSchema/Spacewar.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=480
 GameSchema/TeamFortress2.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=440
-GameSchema/TeamFortress2Beta.json|http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=520
 
 # Repos
 Repos/alchemist_packages.txt|http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages
