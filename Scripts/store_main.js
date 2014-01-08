@@ -140,26 +140,16 @@ function TabSelectStealth( target )
 
 function GetDefaultTabSelection()
 {
-	var cookies = document.cookie.split(";");
-	for( var i = 0; i < cookies.length; i++ )
-	{
-		var key = cookies[i].substr( 0, cookies[i].indexOf( "=" ) );
-		var value = cookies[i].substr( cookies[i].indexOf( "=" ) + 1 );
-		key = key.replace( /^\s+|\s+$/g, "" );
+	var value = WebStorage.GetLocal( 'store_newreleases_filter_dlc' );
 
-		if( key == "store_newreleases_filter_dlc" )
-			return unescape( value );
-	}
-	return "tab_filtered_dlc_content";
+	if( value == null )
+		return "tab_filtered_dlc_content";
+	return value;
 }
 
 function SetDefaultTabSelection( tab )
 {
-	var expirationDate = new Date();
-	expirationDate.setDate( expirationDate.getDate() + 365 );
-	var cookieValue = escape( tab ) + "; expires=" + expirationDate.toUTCString() + "; path=/";
-
-	document.cookie = "store_newreleases_filter_dlc=" + cookieValue;
+	WebStorage.SetLocal( 'store_newreleases_filter_dlc', tab );
 }
 
 function InitTabDefaults()
