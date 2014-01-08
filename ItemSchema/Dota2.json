@@ -96288,7 +96288,7 @@
 				"defindex": 1,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96297,7 +96297,7 @@
 				"defindex": 2,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96306,7 +96306,7 @@
 				"defindex": 3,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96315,7 +96315,7 @@
 				"defindex": 4,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96324,7 +96324,7 @@
 				"defindex": 5,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96333,7 +96333,7 @@
 				"defindex": 6,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96342,7 +96342,7 @@
 				"defindex": 7,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96351,7 +96351,7 @@
 				"defindex": 8,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96359,7 +96359,7 @@
 				"name": "gem type",
 				"defindex": 9,
 				"attribute_class": "gem type",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96368,7 +96368,7 @@
 				"defindex": 10,
 				"attribute_class": "socket",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -96376,7 +96376,7 @@
 				"name": "required socket type",
 				"defindex": 11,
 				"attribute_class": "required socket type",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96384,7 +96384,7 @@
 				"name": "stat type",
 				"defindex": 12,
 				"attribute_class": "stat type",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96392,7 +96392,7 @@
 				"name": "gem name",
 				"defindex": 13,
 				"attribute_class": "gem name",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96400,7 +96400,7 @@
 				"name": "gem quality",
 				"defindex": 14,
 				"attribute_class": "gem quality",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96616,7 +96616,7 @@
 				"name": "skin index",
 				"defindex": 162,
 				"attribute_class": "skin index",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -96656,7 +96656,7 @@
 				"name": "model index",
 				"defindex": 167,
 				"attribute_class": "model index",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -97292,7 +97292,7 @@
 				"name": "purgatory expires after date",
 				"defindex": 411,
 				"attribute_class": "purgatory expires after date",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -97300,7 +97300,7 @@
 				"name": "multi drop chest",
 				"defindex": 412,
 				"attribute_class": "multi drop chest",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -97308,7 +97308,7 @@
 				"name": "original quality",
 				"defindex": 413,
 				"attribute_class": "original quality",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -97316,7 +97316,7 @@
 				"name": "hero drop chest",
 				"defindex": 414,
 				"attribute_class": "hero drop chest",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -97332,7 +97332,7 @@
 				"name": "usage level requirement",
 				"defindex": 416,
 				"attribute_class": "usage_level_requirement",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -97348,7 +97348,7 @@
 				"name": "recipe name",
 				"defindex": 1999,
 				"attribute_class": "recipe name",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -97357,7 +97357,7 @@
 				"defindex": 2000,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97366,7 +97366,7 @@
 				"defindex": 2001,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97375,7 +97375,7 @@
 				"defindex": 2002,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97384,7 +97384,7 @@
 				"defindex": 2003,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97393,7 +97393,7 @@
 				"defindex": 2004,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97402,7 +97402,7 @@
 				"defindex": 2005,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97411,7 +97411,7 @@
 				"defindex": 2006,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97420,7 +97420,7 @@
 				"defindex": 2007,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97429,7 +97429,7 @@
 				"defindex": 2008,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -97438,7 +97438,7 @@
 				"defindex": 2009,
 				"attribute_class": "dynamic_recipe_component",
 				"description_format": "break",
-				"effect_type": "value_is_game_time",
+				"effect_type": "parent",
 				"hidden": false,
 				"stored_as_integer": false
 			}
