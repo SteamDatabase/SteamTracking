@@ -973,14 +973,19 @@ function V_GetCookie( strCookieName )
 
 function V_SetCookie( strCookieName, strValue, expiryInDays, path )
 {
-	if ( !expiryInDays )
-		expiryInDays = 0;
 	if ( !path )
 		path = '/';
 
-	var dateExpires = new Date();
-	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * expiryInDays );
-	document.cookie = strCookieName + '=' + strValue + '; expires=' + dateExpires.toGMTString() + ';path=' + path;
+	var strDate = '';
+
+	if( expiryInDays != null )
+	{
+		var dateExpires = new Date();
+		dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * expiryInDays );
+		strDate = '; expires=' + dateExpires.toGMTString();
+	}
+
+	document.cookie = strCookieName + '=' + strValue + strDate + ';path=' + path;
 }
 
 function SetValueLocalStorage( strPreferenceName, value )
@@ -1149,4 +1154,57 @@ function LoadDelayedImages( group )
 		g_rgDelayedLoadImages[group] = false;
 	}
 }
+
+WebStorage = {
+	GetLocal: function ( key, bSessionOnly )
+	{
+		var type = ( bSessionOnly ) ? 'session' : 'local';
+
+		var storage = window[type + 'Storage'];
+
+		if (!window[type + 'Storage'])
+			return WebStorage.GetCookie( key );
+
+		var value = storage.getItem(key);
+
+		if( value == null )
+		{
+			// Check if we have the value stored in a cookie instead. If so, move that to LS and remove the cookie
+			value = WebStorage.GetCookie( key );
+			if( value != null )
+			{
+				WebStorage.SetLocal( key, value, bSessionOnly );
+				WebStorage.ClearCookie( key );
+			}
+		}
+		return V_ParseJSON(value);
+	},
+	SetLocal: function ( key, value, bSessionOnly )
+	{
+		var type = ( bSessionOnly ) ? 'session' : 'local';
+
+		var storage = window[type + 'Storage'];
+
+		if (!window[type + 'Storage'])
+			return WebStorage.SetCookie( key, value, ( bSessionOnly ) ? null : 365 );
+
+		value = V_ToJSON( value );
+
+		storage.setItem( key, value, type);
+	},
+	GetCookie: function( key )
+	{
+		var keyValue = V_GetCookie( key )
+		return keyValue ? V_ParseJSON( keyValue ) : null;
+	},
+	SetCookie: function( key, value, duration )
+	{
+		value = V_ToJSON( value );
+		V_SetCookie( key, value, duration );
+	},
+	ClearCookie: function( key )
+	{
+		WebStorage.SetCookie(key, null, -1 );
+	}
+};
 
