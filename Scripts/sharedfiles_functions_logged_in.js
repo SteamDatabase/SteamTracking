@@ -91,7 +91,7 @@ function VoteUp(item_id)
 					var votesUpCount = $('VotesUpCount');
 					if ( votesUpCount )
 					{
-						votesUpCount.innerHTML = parseInt( votesUpCount.innerHTML ) + 1;
+						UpdateFormattedNumber( votesUpCount, 1 );
 						$('VotesUpCountContainer').show();
 					}
 
@@ -145,7 +145,7 @@ function VoteDown(item_id)
 					var votesUpCount = $('VotesUpCount');
 					if ( votesUpCount && $('VoteUpBtn').hasClassName( 'toggled' ) )
 					{
-						votesUpCount.innerHTML = parseInt( votesUpCount.innerHTML ) - 1;
+						UpdateFormattedNumber( votesUpCount, -1 );
 						if ( parseInt( votesUpCount.innerHTML ) == 0 )
 						{
 							$('VotesUpCountContainer').hide();

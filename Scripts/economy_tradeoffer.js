@@ -470,10 +470,11 @@ CTradeOfferStateManager = {
 				).always( function() {
 						EndTradeOffer( UserYou.GetProfileURL() + '/tradeoffers/sent/', true );
 				} );
-			}).fail( function() {
+			}).fail( function( jqXHR ) {
+				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Make Offer', 'There was an error sending your trade offer.  Please try again later.' );
+				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' );
 			});
 		}
 		else if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
@@ -481,7 +482,8 @@ CTradeOfferStateManager = {
 			var nTradeOfferID = this.m_nTradeOfferID;
 			var rgParams = {
 				sessionid: g_sessionID,
-				tradeofferid: nTradeOfferID
+				tradeofferid: nTradeOfferID,
+				partner: g_ulTradePartnerSteamID
 			};
 
 			return $J.ajax(
@@ -509,10 +511,11 @@ CTradeOfferStateManager = {
 					window.location = 'http://steamcommunity.com/trade/' + data.tradeid + '/receipt';
 				else
 					EndTradeOffer( UserYou.GetProfileURL() + '/inventory/' );	//?? not sure
-			}).fail( function() {
+			}).fail( function( jqXHR ) {
+				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Accept Trade', 'There was an error accepting this trade offer.  Please try again later.' );
+				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' );
 			});
 		}
 	},

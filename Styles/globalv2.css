@@ -550,6 +550,14 @@ span.bb_spoiler:hover {
 	color: #ffffff;
 }
 
+span.bb_spoiler > span {
+	visibility: hidden;
+}
+
+span.bb_spoiler:hover > span {
+	visibility: visible;
+}
+
 blockquote.bb_blockquote {
 	border: 1px solid #535354;
 	border-radius: 3px;

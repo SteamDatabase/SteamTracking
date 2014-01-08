@@ -350,6 +350,12 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 	}
 }
 
+function UpdateFormattedNumber( element, delta )
+{
+	var $Element = $J(element);
+	$Element.text( v_numberformat( parseInt( $Element.text().replace( /,/, '' ) ) + delta ) );
+}
+
 function IsCurrencySymbolBeforeValue( currencyCode )
 {
 	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' )

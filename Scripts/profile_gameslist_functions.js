@@ -663,23 +663,15 @@ function GetDefaultScrollSize()
 	if( size > 0 )
 		return size;
 
-	var cookies = document.cookie.split(";");
-	for( var i = 0; i < cookies.length; i++ )
-	{
-		var key = cookies[i].substr( 0, cookies[i].indexOf( "=" ) );
-		var value = cookies[i].substr( cookies[i].indexOf( "=" ) + 1 );
-		key = key.replace( /^\s+|\s+$/g, "" );
+	var value = WebStorage.GetLocal('community_game_list_scroll_size');
 
-		if( key == "community_game_list_scroll_size" )
-		{
-			if( value == 'all' )
-				return TotalGames;
-			value = parseInt( value );
-			if( value < 10 )
-				return 10
-			return value;
-		}
-	}
+	if( value == 'all' )
+		return TotalGames;
+	value = parseInt( value );
+	if( value < 10 )
+		return 10
+	return value;
+
 	return 10;
 }
 
@@ -706,10 +698,8 @@ function SetDefaultScrollSize( newSize )
 	if( newSize == TotalGames )
 		newSize = 'all';
 
-	var expirationDate = new Date();
-	expirationDate.setDate( expirationDate.getDate() + 365 );
-	var cookieValue = escape( newSize ) + "; expires=" + expirationDate.toUTCString() + "; path=/";
-	document.cookie = "community_game_list_scroll_size=" + cookieValue;
+	WebStorage.SetLocal('community_game_list_scroll_size', newSize)
+
 }
 
 function UpdateChangingGames( updates )
