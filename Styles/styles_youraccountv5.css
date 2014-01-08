@@ -623,7 +623,7 @@ div.youraccount_history_home>div.account_wallet {
 	}
 
 	.accountTable > tbody > tr:last-child {
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid #4d4b49;
 	}
 
 		.accountTable > tbody > tr:nth-child(even) {
