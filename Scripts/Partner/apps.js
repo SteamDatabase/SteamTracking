@@ -1853,15 +1853,17 @@ function SetDrmModule( appid, destRow, drmModule )
 		destRow.insertCell( -1).innerHTML = downloadoriglink;
 	}
 
-	// drmtoolp writes modtype
+	// rack based uploads have a modtype field
+	// (old ones done by the partner site will not)
     if ( drmModule[ 'modtype' ] !== undefined )
     {
         destRow.insertCell( -1 ).innerHTML = drmModule[ 'modtype' ];
     }
     else
     {
-	    // otherwise must be drmtool
-        destRow.insertCell( -1 ).innerHTML = "(Legacy) Win32 PE";
+	    // otherwise, must be a drmtool upload, which means
+	    // it will always be PE32
+        destRow.insertCell( -1 ).innerHTML = "32-bit Windows PE";
     }
     destRow.insertCell( -1 ).innerHTML = FlagsToString( drmModule[ 'flags' ] );
 	destRow.insertCell( -1 ).innerHTML = d.toLocaleString();
