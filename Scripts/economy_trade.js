@@ -1533,7 +1533,7 @@ function UpdateEventLog( events )
 			else
 				strEvent = '<span class="playerchatname">' + g_strYourPersonaName + '</span>: ';
 
-			strEvent += event.text ? event.text.escapeHTML().replace( /\n/g, '<br>' ) : '';
+			strEvent += event.text ? event.text.substr( 0, 100 ).escapeHTML().replace( /\n/g, '' ) : '';
 
 			break;
 		case 4:
