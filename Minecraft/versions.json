@@ -1,9 +1,15 @@
 { 
   "latest": {
-    "snapshot": "14w02b",
+    "snapshot": "14w02c",
     "release": "1.7.4"
   },
   "versions": [
+    {
+      "id": "14w02c",
+      "time": "2014-01-10T16:42:36+01:00",
+      "releaseTime": "2014-01-10T16:42:36+01:00",
+      "type": "snapshot"
+    },
     {
       "id": "14w02b",
       "time": "2014-01-09T16:45:55+01:00",
