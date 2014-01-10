@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.9ccf2667234ef64ec044a974a6a7e7d0dc0aac78.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d79c79d461e6384e1f4317936c33d7d111482927.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -319,6 +319,12 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Heavy"
 				]
@@ -1600,6 +1606,11 @@
 						"name": "special taunt",
 						"class": "special_taunt",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -1825,6 +1836,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					}
 				]
@@ -2311,6 +2327,11 @@
 						"name": "special taunt",
 						"class": "special_taunt",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -2357,6 +2378,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 5
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -4174,6 +4200,11 @@
 						"name": "mod soldier buff type",
 						"class": "set_buff_type",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -4292,6 +4323,11 @@
 					{
 						"name": "afterburn immunity",
 						"class": "afterburn_immunity",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					}
 				]
@@ -4715,6 +4751,14 @@
 				},
 				"used_by_classes": [
 					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 86
+					}
 				]
 				
 			},
@@ -5550,6 +5594,11 @@
 						"name": "special taunt",
 						"class": "special_taunt",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -5710,6 +5759,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					}
 				]
@@ -6939,6 +6993,12 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Heavy"
 				]
@@ -8052,6 +8112,11 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 4
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -8269,6 +8334,11 @@
 						"name": "max health additive bonus",
 						"class": "add_maxhealth",
 						"value": 20
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -8539,6 +8609,11 @@
 						"name": "dmg taken from blast increased",
 						"class": "mult_dmgtaken_from_explosions",
 						"value": 1.2000000476837158
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -11452,6 +11527,11 @@
 						"name": "maxammo primary reduced",
 						"class": "mult_maxammo_primary",
 						"value": 0.25
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -11756,6 +11836,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					}
 				]
@@ -13661,6 +13746,11 @@
 						"name": "health regen",
 						"class": "add_health_regen",
 						"value": 2
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -15632,6 +15722,11 @@
 						"name": "max health additive bonus",
 						"class": "add_maxhealth",
 						"value": 25
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -15706,6 +15801,11 @@
 						"name": "dmg taken from blast reduced",
 						"class": "mult_dmgtaken_from_explosions",
 						"value": 0.85000002384185791
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -16754,6 +16854,11 @@
 						"name": "special taunt",
 						"class": "special_taunt",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -17310,6 +17415,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 26
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -24904,6 +25014,11 @@
 						"name": "max health additive bonus",
 						"class": "add_maxhealth",
 						"value": 25
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -24941,6 +25056,14 @@
 				},
 				"used_by_classes": [
 					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
+					}
 				]
 				
 			},
@@ -26562,6 +26685,11 @@
 						"name": "dmg taken increased",
 						"class": "mult_dmgtaken",
 						"value": 1.2000000476837158
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -33935,6 +34063,11 @@
 						"name": "crit vs stunned players",
 						"class": "or_crit_vs_playercond",
 						"value": 65536
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -35022,6 +35155,11 @@
 						"name": "crit vs stunned players",
 						"class": "or_crit_vs_playercond",
 						"value": 65536
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -36326,6 +36464,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					}
 				]
@@ -42994,6 +43137,11 @@
 						"name": "mod soldier buff type",
 						"class": "set_buff_type",
 						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -43039,6 +43187,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					},
 					{
@@ -43207,6 +43360,11 @@
 					{
 						"name": "special taunt",
 						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
 						"value": 1
 					},
 					{
@@ -46181,6 +46339,11 @@
 						"value": 0.25
 					},
 					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
+					},
+					{
 						"name": "override projectile type",
 						"class": "override_projectile_type",
 						"value": 23
@@ -46207,6 +46370,7 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -46553,6 +46717,14 @@
 				},
 				"used_by_classes": [
 					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 86
+					}
 				]
 				
 			},
@@ -57783,6 +57955,50 @@
 						"name": "cannot trade",
 						"class": "cannot_trade",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Strongbox Crate 2014",
+				"defindex": 5719,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Mann Co. Strongbox",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strongbox_crate",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strongbox_crate.c57f9c259f6a13c328a6e414edee043bd3e443c2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strongbox_crate_large.c37142e5805db180150844445780699f26a49dc1.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "strongbox_2014"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 81
 					}
 				]
 				
@@ -80882,6 +81098,7 @@
 				"craft_material_type": "",
 				"capabilities": {
 					"paintable": true,
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -101863,7 +102080,7 @@
 				"name": "electrical airblast DISPLAY ONLY",
 				"defindex": 300,
 				"attribute_class": "electrical_airblast_DISPLAY_ONLY",
-				"description_string": "On Fire: Generates an electrical field that destroys\nprojectiles and damages enemies in front of the player",
+				"description_string": "On Fire: Generates an electrical field that destroys\nprojectiles and damages enemies in front of the player.\nConsumes 15 ammo per projectile destroyed.",
 				"description_format": "value_is_additive_percentage",
 				"effect_type": "positive",
 				"hidden": false,
@@ -104380,6 +104597,14 @@
 				"effect_type": "visuals_mvm_boss",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "allowed in medieval mode",
+				"defindex": 2029,
+				"attribute_class": "allowed_in_medieval_mode",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -106790,6 +107015,11 @@
 			{
 				"type": 85,
 				"type_name": "Point Blank Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 86,
+				"type_name": "Wrangled Sentry Kills",
 				"level_data": "KillEaterRank"
 			}
 		]

@@ -1447,6 +1447,7 @@
 			"propername"	"1"
 			"model_player"	"models/weapons/v_models/v_sd_sapper_spy.mdl"
 			"model_world"	"models/weapons/w_models/w_sd_sapper.mdl"
+			"xifier_class_remap"	"red_tape_recorder"
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -1507,6 +1508,7 @@
 			"attach_to_hands"	"1"
 			"propername"	"1"
 			"item_quality"	"unique"
+			"xifier_class_remap"	"long_heatmaker"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -1569,6 +1571,7 @@
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_sd_cleaver/v_sd_cleaver.mdl"
 			"model_world"	"models/weapons/c_models/c_sd_cleaver/c_sd_cleaver.mdl"
+			"xifier_class_remap"	"guillotine"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -1589,6 +1592,11 @@
 				{
 					"attribute_class"	"or_crit_vs_playercond"
 					"value"	"65536"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -1641,6 +1649,7 @@
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
 			"propername"	"1"
+			"xifier_class_remap"	"neon_annihilator"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -1708,6 +1717,7 @@
 			"image_inventory"	"backpack/player/items/all_class/sd_shirt_sniper"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"xifier_class_remap"	"triad_trinket"
 			"model_player_per_class"	
 			{
 				"scout"		"models/player/items/all_class/sd_shirt_scout.mdl"
@@ -1773,6 +1783,7 @@
 			"image_inventory"	"backpack/player/items/all_class/sd_tattoos_scout"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"xifier_class_remap"	"champ_stamp"
 			"model_player_per_class"	
 			{
 				"scout"		"models/player/items/all_class/sd_tattoos_scout.mdl"
@@ -1818,6 +1829,7 @@
 			"image_inventory"	"backpack/player/items/all_class/sd_glasses"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"xifier_class_remap"	"marxman"
 			"model_player_per_class"	
 			{
 				"scout"		"models/player/items/all_class/sd_glasses_scout.mdl"
@@ -1909,6 +1921,7 @@
 			"image_inventory"	"backpack/player/items/all_class/sd_helm_demo"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
+			"xifier_class_remap"	"cannonball"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/sd_helm_scout.mdl"
@@ -2123,6 +2136,11 @@
 					"attribute_class"	"set_buff_type"
 					"value"	"1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"visuals_blu"
 			{
@@ -2190,6 +2208,11 @@
 				{
 					"attribute_class"	"special_taunt"
 					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
@@ -2378,6 +2401,11 @@
 				{
 					"attribute_class"	"special_taunt"
 					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -2931,6 +2959,11 @@
 					"attribute_class"	"mult_maxammo_primary"
 					"value"	"0.25"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
@@ -3398,6 +3431,14 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"86"							
+				}
+			}
 		}
 		
 
@@ -3570,6 +3611,17 @@
 					"ACT_VM_HITRIGHT"	"ACT_FISTS_VM_HITRIGHT"
 					"ACT_VM_SWINGHARD"	"ACT_FISTS_VM_SWINGHARD"
 					"ACT_VM_DRAW"	"ACT_FISTS_VM_DRAW"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"v_skin_red"	"2"
+						"v_skin_blu"	"3"
+						"selectable"	"0"
+					}
 				}
 			}
 		}
@@ -4784,6 +4836,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
 			"drop_sound"		"ui/item_soda_can_drop.wav"
@@ -5104,6 +5161,11 @@
 				{
 					"attribute_class"	"kill_eater_score_type"
 					"value" 	"5"									
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
@@ -6804,6 +6866,11 @@
 					"attribute_class"	"afterburn_immunity"
 					"value"			"1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
@@ -8044,6 +8111,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 		}
 		"160"
@@ -8242,6 +8314,11 @@
 				{
 					"attribute_class"	"special_taunt"
 					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_soda_can_pickup.wav"
@@ -9545,6 +9622,28 @@
 					"value" "1"
 				}
 			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_FISTS_VM_IDLE"
+					"ACT_VM_HITLEFT"	"ACT_FISTS_VM_HITLEFT"
+					"ACT_VM_HITRIGHT"	"ACT_FISTS_VM_HITRIGHT"
+					"ACT_VM_SWINGHARD"	"ACT_FISTS_VM_SWINGHARD"
+					"ACT_VM_DRAW"	"ACT_FISTS_VM_DRAW"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"2"
+						"skin_blu"	"3"
+						"v_skin_red"	"2"
+						"v_skin_blu"	"3"
+						"selectable"	"0"
+					}
+				}
+			}
 		}
 		"196"
 		{
@@ -10826,6 +10925,11 @@
 					"attribute_class"	"kill_eater_score_type"
 					"value" 	"4"									
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -11071,6 +11175,11 @@
 					"attribute_class"	"add_maxhealth"
 					"value" "20"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"visuals_blu"
 			{
@@ -11301,6 +11410,11 @@
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value" "1.2"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_leather_pickup.wav"
@@ -14919,6 +15033,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
 			"drop_sound"		"ui/item_sandwich_pickup.wav"
@@ -16777,6 +16896,11 @@
 					"attribute_class"	"add_health_regen"
 					"value"	"2"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
 			"drop_sound"		"ui/item_pack_drop.wav"
@@ -18607,6 +18731,11 @@
 					"attribute_class"	"add_maxhealth"
 					"value" "25"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -18681,6 +18810,11 @@
 				{
 					"attribute_class"	"mult_dmgtaken_from_explosions"
 					"value"			"0.85"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -19978,6 +20112,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_sandwich_drop.wav"
 			"drop_sound"		"ui/item_sandwich_pickup.wav"
@@ -20554,6 +20693,11 @@
 				{
 					"attribute_class"	"kill_eater_kill_type"
 					"value"	"26"		
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -26710,6 +26854,11 @@
 					"attribute_class"	"add_maxhealth"
 					"value" "25"
 				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -26759,6 +26908,14 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
@@ -27954,6 +28111,11 @@
 				{
 					"attribute_class"	"mult_dmgtaken"
 					"value"	"1.2"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
@@ -33821,6 +33983,11 @@
 				{
 					"attribute_class"	"special_taunt"
 					"value" "1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -40778,6 +40945,10 @@
 		{
 			"name"			"Festive Sapper"
 			"prefab"	"sapper"
+			"capabilities"
+			{
+				"can_gift_wrap" 	"1"
+			}
 			"item_class"	"tf_weapon_sapper"		
 			"propername"	"0"
 			"craft_class"	""
@@ -53372,6 +53543,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
+				"nameable"		"1"
 			}
 			"show_in_armory"	"1"
 			"armory_remap"		""
@@ -61847,6 +62019,23 @@
 			"max_ilevel"	"13"
 		}
 		
+		"5719" 
+		{
+			"name"	"Strongbox Crate 2014"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2014/01/09"
+			"tool"
+			{
+				"restriction"	"strongbox_2014"
+			}
+			"item_name"		"#TF_StrongboxCrate"
+			"item_description"	"#TF_StrongboxCrate_Desc"
+			"image_inventory"	"backpack/crafting/strongbox_crate"
+			"attributes"
+			{
+			}
+		}
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -63700,6 +63889,8 @@
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
+		
+
 
 
 
@@ -70119,6 +70310,12 @@
 		{
 			"name"					"is marketable"
 			"attribute_class"		"is_marketable"
+			"hidden"				"1"
+		}
+		"2029"
+		{
+			"name"					"allowed in medieval mode"
+			"attribute_class"		"allowed_in_medieval_mode"
 			"hidden"				"1"
 		}
 
@@ -81331,6 +81528,10 @@
 		"85"
 		{
 			"type_name"			"KillEaterEvent_PointBlankKill"
+		}
+		"86"
+		{
+			"type_name"			"KillEaterEvent_PlayerKillsBySentry"
 		}
 
 
