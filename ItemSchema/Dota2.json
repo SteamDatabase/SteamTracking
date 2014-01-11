@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.25b56df28bcadd9c7cedc72a0faee9e1aea0de7e.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.49744a8ae0b81767453f063bd3b51e4153192371.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -60709,15 +60709,7 @@
 					"autograph": true,
 					"can_consume": true,
 					"can_have_sockets": true
-				},
-				"attributes": [
-					{
-						"name": "socket 1",
-						"class": "socket",
-						"value": 0
-					}
-				]
-				
+				}
 			},
 			{
 				"name": "Perceptive Spiderling",
@@ -60743,6 +60735,39 @@
 					"can_consume": true,
 					"can_have_sockets": true
 				}
+			},
+			{
+				"name": "Grievous Ingots",
+				"defindex": 5905,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Spirit",
+				"item_name": "Grievous Ingots",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/invoker\/forge_spirit\/grievous_ingots\/grievous_ingots_npc_dota_invoker_forged_spirit",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/forge_spirit\/grievous_ingots\/grievous_ingots_npc_dota_invoker_forged_spirit.42f6d579e1635a2258e2f3ea852e9b3eb840f061.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/invoker\/forge_spirit\/grievous_ingots\/grievous_ingots_npc_dota_invoker_forged_spirit_large.2845468de64bb38d498c0e963a193988932373d9.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Governor's Salakot",
@@ -72362,11 +72387,11 @@
 				"item_description": "Overwhelming odds!",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/loading_screens\/stonehall_royal_guard_large",
+				"image_inventory": "econ\/loading_screens\/stonehall_royal_guard",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/stonehall_royal_guard_large.a0087b8e3a575368cc5a5a4994cfcc10afdb446d.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/stonehall_royal_guard.3c79695f5f860a9fbc4cbae3af2b23cfe3696832.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/stonehall_royal_guard_large.a0087b8e3a575368cc5a5a4994cfcc10afdb446d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -72493,8 +72518,8 @@
 				"image_inventory": "econ\/loading_screens\/broodmother_webs_of_perception",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/broodmother_webs_of_perception.9181fddb22be22088c6f432c0ea92c817b3d6bff.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/broodmother_webs_of_perception_large.78bc0c1527b1f4685a3d9c3dc801fb7ac87b9b4d.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -86767,6 +86792,64 @@
 				}
 			},
 			{
+				"name": "CIS Carnage 2014",
+				"defindex": 15476,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CIS Carnage 2014",
+				"item_description": "CIS Carnage 2014 features 8 well-known CIS teams competing for a total prize pool of $4,000. Includes custom forge spirits for Invoker.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "CIS Carnage 2014 - ADMIN",
+				"defindex": 15477,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "CIS Carnage 2014 - ADMIN",
+				"item_description": "CIS Carnage 2014 features 8 well-known CIS teams competing for a total prize pool of $4,000. Includes custom forge spirits for Invoker.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Artificer's Hammer",
 				"defindex": 17002,
 				"item_class": "tool",
@@ -97357,11 +97440,11 @@
 				"item_description": "24 Asian teams invited, including Orange, TongFu, Rattlesnakes, Vici Gaming, Rising Stars and For.Love. 8 teams go to the offline final for a total prize pool of $21,187. Includes exclusive Snaggletooth Jerry courier.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_redbull_ecl_bundle_large",
+				"image_inventory": "econ\/leagues\/subscriptions_redbull_ecl_bundle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull_ecl_bundle_large.22a197cf0a85c736d54e15a9ac97a48ba8677dc6.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull_ecl_bundle.c48683db9ee41d963fe7e8c3658f84587d261093.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_redbull_ecl_bundle_large.766304f5a2387dfb87f924762d8b24e5c7053c91.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -97387,11 +97470,41 @@
 				"item_description": "The Nexon Sponsorship League starts its final season. Starting in January 2014, the NSL spans three seasons with a total of KRW 300 million ($267,153) worth of funding. The best team from Korea will compete for Nexon's sponsorship. Includes exclusive Kangdae the Dokkaebi courier.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship3_large_bundle",
+				"image_inventory": "econ\/leagues\/subscriptions_nexon_sponsorship3_bundle",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship3_large_bundle.82927a873e08b83fc3affa8c7b10a1c48fd9d16f.png",
-				"image_url_large": "",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship3_bundle.cb5bb20e10827132d79e0f2500f9095d2e365cfd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_nexon_sponsorship3_bundle_large.7f9aec49d37dd8a26f055d7231f5b84f962a145a.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "CIS Carnage 2014 Bundle",
+				"defindex": 20351,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "CIS Carnage 2014 Bundle",
+				"item_description": "CIS Carnage 2014 features 8 well-known CIS teams competing for a total prize pool of $4,000. Includes Grievous Ingots for Invoker!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_ciscarnagebundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnagebundle.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnagebundle_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
