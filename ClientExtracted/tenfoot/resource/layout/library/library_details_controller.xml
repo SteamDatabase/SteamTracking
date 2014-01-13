@@ -43,7 +43,7 @@
 						<Image id="ControllerDetailImage1" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels1" class="ControllerLabels">
 							<Label id="ControllerLabelTitle1" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller1" />
-							<Label id="ControllerLabelHeader1" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader1" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription1" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -51,7 +51,7 @@
 						<Image id="ControllerDetailImage2" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels2" class="ControllerLabels">
 							<Label id="ControllerLabelTitle2" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller2" />
-							<Label id="ControllerLabelHeader2" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader2" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription2" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -59,7 +59,7 @@
 						<Image id="ControllerDetailImage3" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels3" class="ControllerLabels">
 							<Label id="ControllerLabelTitle3" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller3" />
-							<Label id="ControllerLabelHeader3" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader3" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription3" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -67,7 +67,7 @@
 						<Image id="ControllerDetailImage4" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels4" class="ControllerLabels">
 							<Label id="ControllerLabelTitle4" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller4" />
-							<Label id="ControllerLabelHeader4" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader4" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription4" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -75,7 +75,7 @@
 						<Image id="ControllerDetailImage5" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels5" class="ControllerLabels">
 							<Label id="ControllerLabelTitle5" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller5" />
-							<Label id="ControllerLabelHeader5" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader5" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription5" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -83,7 +83,7 @@
 						<Image id="ControllerDetailImage6" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels6" class="ControllerLabels">
 							<Label id="ControllerLabelTitle6" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller6" />
-							<Label id="ControllerLabelHeader6" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader6" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription6" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -91,7 +91,7 @@
 						<Image id="ControllerDetailImage7" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels7" class="ControllerLabels">
 							<Label id="ControllerLabelTitle7" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller7" />
-							<Label id="ControllerLabelHeader7" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader7" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription7" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
@@ -99,7 +99,7 @@
 						<Image id="ControllerDetailImage8" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels8" class="ControllerLabels">
 							<Label id="ControllerLabelTitle8" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller8" />
-							<Label id="ControllerLabelHeader8" class="ControllerLabelHeader" text="#Library_Details_Controller_PlayerAssigned" />
+							<Label id="ControllerLabelHeader8" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription8" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>

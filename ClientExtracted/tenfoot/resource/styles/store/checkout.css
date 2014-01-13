@@ -99,6 +99,11 @@ CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:fo
 	animation-direction: normal;
 }
 
+CartLineItem:descendantfocus #FinalPrice
+{
+	color: applabelselectedsolid;
+}
+
 .ProminentButton
 {
 	width: 100%;

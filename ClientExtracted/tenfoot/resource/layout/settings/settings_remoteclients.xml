@@ -38,8 +38,18 @@
 						<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
 						<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
 					</DropDown>
+
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
+					<DropDown id="ResolutionLimit" class="Filter" tabindex="auto" selectionpos="0,0">
+						<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
+						<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
+						<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
+					</DropDown>
 					<Panel class="Spacer" />
-					<ToggleButton class="CheckBox" id="DisableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_DisableHardwareDecoding" />
+					<Panel class="Spacer2" />
+					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617);">
+						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
+					</Button>
 				</Panel>
 	
 				<Panel class="SettingsContent SettingsColumnarContent">
@@ -50,9 +60,8 @@
 						<Label id="60" text="#Settings_RemoteClients_Framerate60" />
 					</DropDown>
 					<Panel class="Spacer" />
-						<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617);">
-							<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
-						</Button>	
+					<Panel class="Spacer2" />
+					<ToggleButton class="CheckBox" id="DisableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_DisableHardwareDecoding" />
 				</Panel>
 			</Panel>
 		</Panel>

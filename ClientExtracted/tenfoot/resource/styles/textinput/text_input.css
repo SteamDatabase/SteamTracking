@@ -1498,6 +1498,8 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 .SteamPad .SteamPadGridBox
 {
 	visibility: visible;
+	height: 48px;
+	width: 48px;
 }
 
 #YPIN_Wrapper,

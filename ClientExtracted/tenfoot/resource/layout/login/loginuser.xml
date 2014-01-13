@@ -65,18 +65,10 @@
 					<Label id="LoginLabel" text="#Login_Login" />
 				</Button>
 
-				<Panel id="More">
-					<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
-						<Label text="#Login_RememberPassword" />
-						<Panel id="SharedBorder" />
-					</ToggleButton>
-
-					<Panel id="GradientDivider" />
-
-					<Button class="Button" id="RemoveUser" >
-						<Label text="#Login_RemoveUser" />
-					</Button>
-				</Panel>
+				<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
+					<Label text="#Login_RememberPassword" />
+					<Panel id="SharedBorder" />
+				</ToggleButton>
 			</Panel>
 		</Panel>
 	</LoginUser>

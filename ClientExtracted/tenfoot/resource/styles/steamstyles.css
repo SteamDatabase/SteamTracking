@@ -238,11 +238,11 @@ DropDown:focus
 	border-style: solid;
 	border-color: #fdfefeff;
 
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.0s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -493,7 +493,7 @@ VerticalScrollBar
 
 	// NOTE: The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
-	transition-property: transform;
+	transition-property: transform, opacity;
 	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 }

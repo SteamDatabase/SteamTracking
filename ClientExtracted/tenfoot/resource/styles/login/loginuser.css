@@ -48,12 +48,12 @@ LoginUser:descendantfocus
 	flow-children: down;
 	horizontal-align: left;
 	width: 530px;
-	height: 790px;
+	height: 860px;
 
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-top: 130px;
+	margin-top: 60px;
 
 	transform: translatex(698px);
 
@@ -172,14 +172,14 @@ LoginUser:descendantfocus
 	margin-top: 8px;
 }
 
-.ShowMessageArea .UserContainer,.ShowMore .UserContainer
+.ShowMessageArea .UserContainer
 {
 	margin-top: 0px;
 	margin-bottom: 25px;
 	flow-children: right;
 }
 
-.ShowMessageArea .LoginImage,.ShowMore .LoginImage
+.ShowMessageArea .LoginImage
 {
 	height: 105px;
 	width: 105px;
@@ -187,7 +187,7 @@ LoginUser:descendantfocus
 	box-shadow: #00000044 0px 0px 04px 0px;
 }
 
-.ShowMessageArea .Bezel,.ShowMore .Bezel
+.ShowMessageArea .Bezel
 {
 	height: 115px;
 	width: 115px;
@@ -196,7 +196,7 @@ LoginUser:descendantfocus
 	vertical-align: center;
 }
 
-.ShowMessageArea #LoginNamesContainer,.ShowMore #LoginNamesContainer
+.ShowMessageArea #LoginNamesContainer
 {
 	min-height: 0px;
 	vertical-align: center;
@@ -204,14 +204,14 @@ LoginUser:descendantfocus
 	margin-top: 0px;
 }
 
-.ShowMessageArea #AccountNameLabel,.ShowMore #AccountNameLabel
+.ShowMessageArea #AccountNameLabel
 {
 	padding-left: 0px;
 	text-align: left;
 	margin-top: 0px;
 }
 
-.ShowMessageArea #PersonaNameLabel,.ShowMore #PersonaNameLabel
+.ShowMessageArea #PersonaNameLabel
 {
 	font-size: 44px;
 	horizontal-align: left;
@@ -219,7 +219,7 @@ LoginUser:descendantfocus
 	margin-left: 0px;
 }
 
-.ShowMessageArea .UserContainer,.ShowMore .UserContainer
+.ShowMessageArea .UserContainer
 {
 	margin-top: 50px;
 	margin-bottom: 60px;
@@ -271,7 +271,7 @@ LoginUser:descendantfocus
 	visibility: collapse;
 }
 
-.AnonLogin.ShowMessageArea #AccountNameLabel,.AnonLogin.ShowMore #AccountNameLabel
+.AnonLogin.ShowMessageArea #AccountNameLabel
 {
 	visibility: visible;
 }
@@ -282,11 +282,6 @@ LoginUser:descendantfocus
 }
 
 .IpRestricted #AccountNameTextEntry, .IpRestricted #PasswordTextEntry, .IpRestricted #LoginButton
-{
-	visibility: collapse;
-}
-
-.CachedCredentials #PasswordTextEntry
 {
 	visibility: collapse;
 }
@@ -364,10 +359,10 @@ TextEntry
 	text-transform: uppercase;
 	margin-bottom: 4px;
 	padding-top: 5px;
-	color: detailsdatalabel;
+	color: applabelsolid;
 
 	vertical-align: center;
-	
+
 	font-family: platformfont;
 	font-size: 28px;
 	font-weight: normal;
@@ -388,7 +383,7 @@ TextEntry
 
 .LoginPromptContainer:disabled Label
 {
-	color: detailsdatalabelfocus;
+	color: applabelsolid;
 }	
 
 Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryPrompt
@@ -423,93 +418,6 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	font-size: 34px;
 }
 
-
-
-#RemoveUser
-{
-	width: 100%;
-	height: 70px;
-	margin: 4px 0px 20px 0px;
-	padding: 8px 7px 8px 7px;
-
-	color: detailsdatalabelfocus;
-	background-color: none;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-
-	transition-property: border, background-color, color, box-shadow;
-	transition-timing-function: ease-out;
-	
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-}
-
-#RemoveUser:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-}
-
-
-#RemoveUser:disabled:hover
-{
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-}
-
-#RemoveUser:focus
-{
-	transition-duration: 0.4s !immediate;
-
-	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-	
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#RemoveUser Label
-{
-	width: 100%;
-	font-family: platformfont;
-	font-size: 28px;
-	font-weight: normal;
-	padding-left: 10px;
-	padding-top: 6px;
-	transform: translatex(-7px);
-	color: detailsdatalabel;
-	transition-property: transform;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-in;
-}
-#RemoveUser:focus Label
-{
-	color: black;
-	transform: translatex(0px);
-}
-
-#RemoveUser:disabled:hover Label
-{
-	color: #bcc0c3;
-	transform: translatex(0px);
-}
-
-
-#GradientDivider
-{
-	height: 6px;
-	width: 100%;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #00000000 ), color-stop( 0.5, #3a4a54 ), to( #00000000 ) );
-	margin-top: 10px;
-	margin-bottom: 15px;
-}
 
 // This class gets added when the progress dialog is visible
 .ShowingLoginProgress LoginUser
@@ -628,33 +536,6 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 .CheckBox:Selected:focus .TickBox
 {
 	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-}
-
-#More
-{
-	flow-children: down;
-	height: fit-children;
-	visibility: collapse;
-}
-
-.ShowMore #More
-{
-	visibility: visible;
-}
-
-.ShowMore #GradientDivider,.ShowMore #RemoveUser
-{
-	visibility: collapse;
-}
-
-.ShowMore.ShowRemoveUser #GradientDivider,.ShowMore.ShowRemoveUser #RemoveUser
-{
-	visibility: visible;
-}
-
-.ShowMore .CredentialsContainer
-{
-	vertical-align: top;
 }
 
 #PasswordTextEntry:disabled, #LoginButton Label:disabled

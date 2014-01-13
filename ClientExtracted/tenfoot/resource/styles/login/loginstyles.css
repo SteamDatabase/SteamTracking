@@ -5,6 +5,14 @@
 	width: 276px;
 	height: 69px;
 	opacity: 0.85;
+	
+	transition-property: opacity;
+	transition-duration: 0.23s;
+}
+
+.DaisyWheelVisible .Logo
+{
+	opacity: 0.0;
 }
 
 .TopRow

@@ -99,7 +99,7 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 
 FriendsChatDialog
 {
-	width: 839px;
+	width: 829px;
 	height: fit-children;
 	flow-children: down;
 }

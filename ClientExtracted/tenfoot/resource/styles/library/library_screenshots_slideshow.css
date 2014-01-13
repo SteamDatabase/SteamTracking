@@ -282,6 +282,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 	width: 100%;
 	height: 150px;
 	white-space: normal;
+	overflow: clip scroll;
 }
 
 #VisibilityDropDown

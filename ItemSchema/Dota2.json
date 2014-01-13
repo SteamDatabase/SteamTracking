@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.49744a8ae0b81767453f063bd3b51e4153192371.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.5c09301264dff46822ac7502e8259b479d227bea.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -86803,8 +86803,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.3374fc2c39410fe2cc8858680f5d0c4397eee520.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.5308c987443b33f8e6a7925f8380419d523c1fc7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -86832,8 +86832,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.3374fc2c39410fe2cc8858680f5d0c4397eee520.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.5308c987443b33f8e6a7925f8380419d523c1fc7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
