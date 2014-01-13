@@ -223,6 +223,8 @@ SettingsPanel.SectionVisible #SettingsContent
 	// vcenter alignment is applied after the flow, causing the last item
 	// to stick in weird places.
 	vertical-align: top;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 ToggleButton .TickBox
@@ -274,8 +276,6 @@ Button,ToggleButton,.CheckBox,RadioButton
 	height: 48px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	margin-left: 8px;
-	margin-right: 8px;
 
 	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
 
@@ -330,16 +330,16 @@ Button:focus,ToggleButton:focus,RadioButton:focus
 	border-color: #fdfefef0;
 	z-index: 1000;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	pre-transform-scale2d: 1.0;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -413,7 +413,7 @@ Label.SettingsStatic
 
 .Button,.CheckBox
 {
-	height: 48px;
+	height: 50px;
 	margin-bottom: 8px;
 	margin-top: 8px;
 }
@@ -560,11 +560,11 @@ TextEntry:focus
 	border-color: white;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -1125,6 +1125,7 @@ DropDownMenu
 {
 	horizontal-align: left;
 	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .SettingsGroup .CheckBox,VUMeter
@@ -1830,11 +1831,66 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsPanel_Family_Sharing_List
 {
-	height: 400px;
-	width: 1200px;
 	flow-children: down;
 	overflow: clip scroll;
-	background-color: simplebutton;
+	width: 970px;
+	height: 460px;
+	margin-top: 10px;
+	padding-right: 8px;
+	padding-bottom: 6px;
+
+	border-width: 5px;
+	border-radius: 2px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	background-color: dialog_bg_color;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
+}
+
+.SettingsPanel_Family_Sharing_List:descendantfocus
+{
+	border-color: applabelsolid;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+	
+.SettingsPanel_Family_Sharing_List:focus
+{
+	border-color: applabelsolid;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.SettingsPanel_Family_Sharing_List VerticalScrollBar
+{
+	margin-right: 10px;
+	margin-left: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#BorrowerToggle
+{
+	width: 900px;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+
+#BorrowerToggle:descendantfocus Label, 
+{
+	transform: translateX( 0px );
 }
 
 .SettingsPanel_Family_Sharing_List_ColumnName
@@ -1847,10 +1903,12 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 }
 
 .SettingsPanel_Family_Sharing_List_ColumnItem
-{	
+{
 	width: 48px;
 	font-size: 24px;
 	margin-top: 20px;
+	text-align: right;
+	padding-right: 10px;
 }
 
 .SettingsManageDevices_Header
@@ -2002,11 +2060,11 @@ color: black;
 {
 	border-color: applabelsolid;
 
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -2112,14 +2170,16 @@ SettingsPanelRemoteClientListing:focus
 
 }
 
-SettingsPanelRemoteClientListing:descendantfocus { color: black; box-shadow:
-box_shadow_on_color -5px -5px 6px 10px;
-	
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+SettingsPanelRemoteClientListing:descendantfocus
+{
+	color: black;
+	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -2157,6 +2217,12 @@ SettingsPanelRemoteClientListing #Status
 {
 	height: 20px;
 }
+
+.Spacer2
+{
+	height: 22px;
+}
+
 
 #Settings_Downloads_RegionDropDownMenu DropDownMenu
 {
@@ -2299,7 +2365,11 @@ SettingsPanel_Display.Underscan
 	width: fit-children;
 	background-color: simplebutton;
 }
+#Settings_AuthorizeLocalDevice .Button
 
+{
+	margin-right: 20px;
+}
 
 #ParentalFeaturesChild RadioButton:focus, 
 #ParentalFeaturesChild RadioButton:focus:hover
@@ -2322,9 +2392,85 @@ SettingsPanel_Display.Underscan
 .SettingsPanel_Family_Sharing_Borrower
 {
 	flow-children: right;
-	width: 1200px;
 	margin: 0px;
 	padding: 0px;
-	padding-left:15px;
+	padding-left: 0px;
 	border-width: 0px;
+	width: 100%;
+	margin-right: 8px;
+}
+
+.SettingsPanel_Family_Sharing_Borrower:descendantfocus
+{
+	background-color: none;
+}
+
+// Steam Controller Settings styles
+.CtlrBarContainer
+{
+	background-color: simplebutton;
+	height: 70px;
+	width: fit-children;
+	border-radius: 4px;
+	flow-children: right;
+	border: 5px solid #1c333dff;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin: 14px;
+	margin-left: 0px;
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: 0.20s;
+	border-color: none;
+	border-style: solid;
+	border-width: 5px;
+
+}
+
+.CtlrBar
+{
+	height: 100%;
+	width: 8px;
+	border-radius: 1px;
+	margin-left: 5px;
+	margin-right: 5px;
+	vertical-align: bottom;
+	background-color: #99999999;
+	opacity: 0.5;
+
+	transition-property: background-color;
+	transition-duration: 0.05s;
+	transition-timing-function: ease-in-out;
+}
+
+.CtlrBarContainer:focus .CtlrBar
+{
+	opacity: 1.0;
+}
+
+.CtlrBarActive
+{
+	background-color: ui_primary_color;
+	transition-duration: 0.3s;
+	opacity: 1.0;
+}
+
+.CtlrBarContainer:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
+	pre-transform-scale2d: 1.0;
+	border-color: white;
+	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+}
+
+.CtlrBarContainer:selected
+{
+	pre-transform-scale2d: 1.06;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+.OfflineMode #SettingsAccount_ChangePassword
+{
+	visibility: collapse;
 }

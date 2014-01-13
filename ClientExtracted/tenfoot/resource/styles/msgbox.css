@@ -185,12 +185,11 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtons Button, #MsgBoxButtonsVertical Button
 {
 	flow-children: right;
-	margin-left: 26px;
+	margin-left: 20px;
 	padding: 4px 8px 4px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 	min-width: 100px;
-	width: fit-children;
 	background-color: simplebutton;
 	color: detailsdatalabelfocus;
 
@@ -201,6 +200,11 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s !immediate;
 	transition-timing-function: ease-in-out;
+}
+
+#MsgBoxButtonsVertical Button
+{
+	margin-left: 0px;
 }
 
 #MsgBoxButtons Button Label, #MsgBoxButtonsVertical Button Label

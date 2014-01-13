@@ -36,6 +36,9 @@
 		"FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
 		"FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
 
+		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
+
 		"HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
 	}
 	
@@ -47,7 +50,7 @@
 	{
 		region { name=bottom margin-top=248  width=275 height=max }
 		
-		place { control="BandwidthLimit,FramerateLimit" height=24 }
+		place { control="BandwidthLimit,FramerateLimit,ResolutionLimit" height=24 }
 		place
 		{
 			control="DescriptionLabel,RemoteClientList,PerfInstructionsLabel,SupportInformationLabel"
@@ -61,7 +64,7 @@
 		}	
 		place
 		{
-			control="BandwidthLabel,BandwidthLimit,FramerateLabel,FramerateLimit,HwAccelDisable"
+			control="BandwidthLabel,BandwidthLimit,FramerateLabel,FramerateLimit,ResolutionLabel,ResolutionLimit,FullscreenDisable,HwAccelDisable"
 			region=bottom
 			dir=down
 			align=top

@@ -4232,7 +4232,25 @@ KeyboardShortcut Image
 	opacity: 0.0;
 }
 
+.Validating #ButtonGlow
+{
+	opacity: 0.0;
+}
+
+.Validating #ButtonImage
+{	
+	opacity: 0.0;
+}
+
 .PlayActionModal .PlayAction #Working
+{
+	opacity: 1.0;
+
+	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
+	background-image: url( "file://{images}/browser/reticle.webm" );
+}
+
+.Validating #Working
 {
 	opacity: 1.0;
 
@@ -4247,6 +4265,11 @@ KeyboardShortcut Image
 	//border-color: #FFFFFF00;
 	//box-shadow: #00000000 -6px -6px 12px 12px;
 	//background-color: none;
+}
+
+.Validating .ButtonBody, .Validating .ButtonBody:hover
+{
+	pre-transform-scale2d: 1.0;
 }
 
 .ButtonBodyWrapper

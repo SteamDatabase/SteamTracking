@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel defaultfocus="AccountSettingsButton" oncancel="NavigateTenfootBack()">
+	<SettingsPanel oncancel="NavigateTenfootBack()">
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_Title" />
@@ -45,7 +45,9 @@
 					<Label class="LongDesc" text="#Settings_Controller" />
 				</Button>
 
-				
+				<Button id="SteamControllerSettingsButton" class="Button" onactivate="ShowSettings( SteamController );">
+					<Label class="LongDesc" text="#Settings_SteamController" />
+				</Button>
 
 
 

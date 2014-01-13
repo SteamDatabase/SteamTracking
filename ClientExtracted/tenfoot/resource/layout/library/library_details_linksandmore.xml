@@ -56,6 +56,9 @@
 						<Label id="CategoryLabel" text="#Library_Details_SetCategory" />
 					</Button>
 					<Panel id="hr3" class="HorizontalRule" />
+					<Button id="ValidateButton" class="ValidateButton LinksAndMoreButton">
+						<Label id="ValidateLabel" text="#Library_Details_ValidateLocalContent" />
+					</Button>					
 					<Button id="DeleteButton" class="DeleteButton LinksAndMoreButton">
 						<Label id="DeleteLabel" text="#Library_Details_DeleteLocalContent" />
 					</Button>

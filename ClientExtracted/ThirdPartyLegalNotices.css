@@ -1,0 +1,17 @@
+BODY	{
+	font-family: motiva sans, arial, sans-serif;
+	font-size:16pt;
+	color:#a2a09b;
+
+	margin:44px 36px 36px 36px;
+ 	background: #2c2c2c;
+  
+	scrollbar-face-color: #4C5844;
+	scrollbar-shadow-color: #4C5844;
+	scrollbar-highlight-color: #4C5844;
+	scrollbar-3dlight-color: #818D7C;
+	scrollbar-darkshadow-color: #1C261E;
+	scrollbar-track-color: #5A6A50;
+	scrollbar-arrow-color: #969F8E;
+	}
+

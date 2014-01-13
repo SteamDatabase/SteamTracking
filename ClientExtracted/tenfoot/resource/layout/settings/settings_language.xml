@@ -5,7 +5,7 @@
 		
 	</styles>
 
-	<SettingsPanel_Language class="SettingsSection" defaultfocus="LanguageDropdown">
+	<SettingsPanel_Language class="SettingsSection" defaultfocus="Language">
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_Language" />

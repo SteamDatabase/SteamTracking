@@ -352,4 +352,33 @@ BackgroundVideoPanel.SteamOS.GamesRunning #BackgroundThrobber
 	background-size: 100% 100%;
 
 	opacity: 1.0;
+	animation-name: gamesrunning-throbber-anim;
+	animation-duration: 5.0s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	
+}
+
+BackgroundVideoPanel.SteamOS.GamesRunning.HideThrobber #BackgroundThrobber
+{
+	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
+}
+
+@keyframes 'gamesrunning-throbber-anim'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+	
+	95%
+	{
+		opacity: 0.0;
+	}
+	
+	100%
+	{
+		opacity: 1.0;
+	}
+	
 }

@@ -388,11 +388,12 @@ SlideShow
 	box-shadow: inset #00000080 2px 2px 8px 2px;
 }
 
-#UrlBar:focus
+#UrlBar:descendantfocus
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 	border-color: #ffffff;
 	color: #333333;
+	box-shadow: inset #00000040 2px 2px 4px 4px;
 }
 
 #BrowserFavoriteAdded
@@ -463,6 +464,13 @@ SlideShow
 	background-color: none;
 	box-shadow: none;
 	width: 100%;
+}
+
+#UrlBar TextEntry:descendantfocus
+{
+	color: applabelselectedsolid;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+
 }
 
 #UrlBar TextEntry:disabled

@@ -1311,7 +1311,8 @@ SaveBindingsMsgBox .MsgBoxBodyRegion
 	transition-timing-function: ease-in-out;
 }
 
-SaveBindingsMsgBox.DaisyWheelVisible .MsgBoxBodyRegion
+SaveBindingsMsgBox.DaisyWheelVisible .MsgBoxBodyRegion,
+SaveBindingsMsgBox.DaisyWheelVisible #MsgBoxBodyRegion,
 {
 	transform: translatex( 470px );
 }
@@ -1371,6 +1372,7 @@ SaveBindingsMsgBox TextEntry
 {
 	height: 200px;
 	white-space: normal;
+	overflow: clip scroll;
 }
 
 #VisibilityDropDown

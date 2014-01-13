@@ -49,24 +49,24 @@
 					<Panel id="LeftPIN" class="PINButton PINButtonLeft">
 						<Label text="7" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_left.png" />
-						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/footer/grid.png" />
+						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_0.png" />
 					</Panel>
 					<Panel id="UpPIN" class="PINButton PINButtonMiddle">
 						<Label text="8" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_up.png" />
-						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/footer/grid.png" />
+						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_1.png" />
 					</Panel>
 					<Panel id="RightPIN" class="PINButton PINButtonRight">
 						<Label text="9" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_right.png" />
-						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/footer/grid.png" />
+						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_2.png" />
 					</Panel>
 				</Panel>
 				<Panel id="PINZero" class="PINRow" >
 					<Panel id="DownPIN" class="PINButton PINButtonMiddle">
 						<Label text="0" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_down.png" />
-						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/footer/grid.png" />
+						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_3.png" />
 					</Panel>
 				</Panel>
 
