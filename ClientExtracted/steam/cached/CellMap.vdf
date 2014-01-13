@@ -728,6 +728,21 @@
 					"dest"	70
 					"cost"	LocalCostOneWayCellEdge
 				}	
+				7
+				{
+					"dest"	34
+					"cost"	LocalCostOneWayCellEdge
+				}		
+				8
+				{
+					"dest"	45
+					"cost"	LocalCostOneWayCellEdge
+				}	
+				9
+				{
+					"dest"	9
+					"cost"	LocalCostOneWayCellEdge
+				}												
 				10
 				{
 					"dest"	71
