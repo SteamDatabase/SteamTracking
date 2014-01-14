@@ -18,7 +18,8 @@
 			'tenfoot_all.zip',
 			'public_all.zip',
 			'strings_all.zip',
-			'tenfoot_images_all.zip'
+			'tenfoot_images_all.zip',
+			//'bins_win32.zip'
 		);
 		
 		private $Options = Array(
@@ -122,6 +123,10 @@
 				
 				// Let's break all kinds of things! :(
 				System( 'sh ' . __DIR__ . '/ClientExtracted/extract.sh' );
+				
+				//$this->Log( '{lightcyan}Dumping protobufs' );
+				
+				//System( 'sh ' . __DIR__ . '/ProtobufDumper/dump.sh' );
 			}
 		}
 		
@@ -168,35 +173,24 @@
 							
 							$this->ETags[ $Archive ] = $Test;
 							
+							if( $Archive === 'bins_win32.zip' )
+							{
+								$Path = 'ProtobufDumper/';
+							}
+							else
+							{
+								$Path = 'ClientExtracted/';
+							}
+							
 							$this->URLsToFetch[ ] = Array(
 								'URL'  => 'http://media.steampowered.com/client/' . $Archive . '.' . $Test,
-								'File' => 'ClientExtracted/' . $Archive
+								'File' => $Path . $Archive
 							);
 						}
 					}
 				}
 				
-				unset( $Test );
-			}
-			// Minecraft versions file
-			else if( $File === 'Minecraft/versions.json' )
-			{
-				$DataJSON = JSON_Decode( $Data, true );
-				
-				if( isset( $DataJSON[ 'versions' ] ) )
-				{
-					foreach( $DataJSON[ 'versions' ] as $Version )
-					{
-						$ID = $Version[ 'id' ];
-						
-						$this->URLsToFetch[ ] = Array(
-							'URL'  => 'http://s3.amazonaws.com/Minecraft.Download/versions/' . $ID . '/' . $ID . '.json',
-							'File' => 'Minecraft/' . $ID . '.json'
-						);
-					}
-				}
-				
-				unset( $DataJSON, $Version, $ID );
+				unset( $Test, $Path );
 			}
 			// Beautify JSON
 			else if( $File === 'Repos/trademarks_eu.json' )
