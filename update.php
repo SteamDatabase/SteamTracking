@@ -19,7 +19,7 @@
 			'public_all.zip',
 			'strings_all.zip',
 			'tenfoot_images_all.zip',
-			'bins_win32.zip'
+			'bins_ubuntu12.zip'
 		);
 		
 		private $Options = Array(
@@ -95,21 +95,9 @@
 			{
 				$URLs = $this->URLsToFetch;
 				
-				$this->URLsToFetch = Array( );
-				
-				USort( $URLs, function( $a, $b )
-				{
-					$Test = strcasecmp( $a[ 'URL' ], $b[ 'URL' ] );
-					
-					if( $Test == 0 )
-					{
-						return 0;
-					}
-					
-					return $Test > 0 ? -1 : 1;
-				} );
-				
 				$this->Log( '{yellow}' . Count( $URLs ) . ' urls to be fetched...' );
+				
+				$this->URLsToFetch = Array( );
 				
 				$this->Fetch( $URLs );
 			}
@@ -159,7 +147,7 @@
 				unset( $DataJSON );
 			}
 			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_win32.manifest' )
+			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12.manifest' )
 			{
 				foreach( $this->ClientArchives as $Archive )
 				{
@@ -169,11 +157,11 @@
 						
 						if( !Array_Key_Exists( $Archive, $this->ETags ) || $this->ETags[ $Archive ] !== $Test )
 						{
-							$this->Log( '{lightblue}Downloading new ' . $Archive . ' - checksum: ' . $Test );
+							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Test );
 							
 							$this->ETags[ $Archive ] = $Test;
 							
-							if( $Archive === 'bins_win32.zip' )
+							if( $Archive === 'bins_ubuntu12.zip' )
 							{
 								$Path = 'ProtobufDumper/';
 							}
@@ -245,7 +233,7 @@
 			// Make sure we received everything
 			else if( SubStr( $File, -5 ) === '.html' )
 			{
-				if( StrrPos( $Data, '</body>' ) === false )
+				if( StrrPos( $Data, '</html>' ) === false )
 				{
 					return false;
 				}
