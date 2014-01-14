@@ -41,11 +41,7 @@
 			
 			$File = 'urls.txt';
 			
-			if( $Option === 'schema' )
-			{
-				$File = 'urls_schema.txt';
-			}
-			else if( $Option === 'force' )
+			if( $Option === 'force' )
 			{
 				$this->UseCache = false;
 			}

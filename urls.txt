@@ -171,6 +171,3 @@ Repos/job_postings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Repos/people.html|http://valvesoftware.com/company/people.html
 #Repos/trademarks_eu.json|http://esearch.oami.europa.eu/copla/ctmsearch/json
 Repos/valve_group.json|http://steamcommunity.com/groups/valve/memberslistxml
-
-# Minecraft
-Minecraft/versions.json|http://s3.amazonaws.com/Minecraft.Download/versions/versions.json
