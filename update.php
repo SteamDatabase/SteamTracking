@@ -19,7 +19,7 @@
 			'public_all.zip',
 			'strings_all.zip',
 			'tenfoot_images_all.zip',
-			//'bins_win32.zip'
+			'bins_win32.zip'
 		);
 		
 		private $Options = Array(
@@ -124,9 +124,9 @@
 				// Let's break all kinds of things! :(
 				System( 'sh ' . __DIR__ . '/ClientExtracted/extract.sh' );
 				
-				//$this->Log( '{lightcyan}Dumping protobufs' );
+				$this->Log( '{lightcyan}Dumping protobufs' );
 				
-				//System( 'sh ' . __DIR__ . '/ProtobufDumper/dump.sh' );
+				System( 'sh ' . __DIR__ . '/ProtobufDumper/dump.sh' );
 			}
 		}
 		
