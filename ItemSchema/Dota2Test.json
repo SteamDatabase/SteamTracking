@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/205790\/scripts\/items\/items_game.d255883ecd53ac2a6119aacd522ef971b5efce83.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/205790\/scripts\/items\/items_game.406f0246e67b97a197f6bd68d24f434e07b4eef0.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -86796,8 +86796,8 @@
 				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage.3374fc2c39410fe2cc8858680f5d0c4397eee520.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.5308c987443b33f8e6a7925f8380419d523c1fc7.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -86825,8 +86825,124 @@
 				"image_inventory": "econ\/leagues\/subscriptions_ciscarnage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage.3374fc2c39410fe2cc8858680f5d0c4397eee520.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.5308c987443b33f8e6a7925f8380419d523c1fc7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "South Sumatera Dota 2 Amateur League 2014",
+				"defindex": 15480,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Sumatera Dota 2 Amateur League 2014",
+				"item_description": "South Sumatera Dota 2 Amateur League is a Dota 2 competition between 15 most talented amateur teams in the region.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sumatera",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sumatera.ac1562ff5290771032599c9f8d96b9b672c9bf78.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sumatera_large.5597c34254b3952f19c3d2b850d26c605d2ed547.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "South Sumatera Dota 2 Amateur League 2014 - ADMIN",
+				"defindex": 15481,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Sumatera Dota 2 Amateur League 2014 - ADMIN",
+				"item_description": "South Sumatera Dota 2 Amateur League is a Dota 2 competition between 15 most talented amateur teams in the region.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sumatera",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sumatera.ac1562ff5290771032599c9f8d96b9b672c9bf78.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_sumatera_large.5597c34254b3952f19c3d2b850d26c605d2ed547.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hungarian Premier League Season 6",
+				"defindex": 15482,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League Season 6",
+				"item_description": "48 teams and four invited teams compete in the Hungarian Premier League for a $150 prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungarians6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungarians6.e5908fd4b629584fff86d2c02aa97da3eb510185.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungarians6_large.dcfb4ef36d17f844d4cfbd86de41d537d8c1d40e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hungarian Premier League Season 6 - ADMIN",
+				"defindex": 15483,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League Season 6 - ADMIN",
+				"item_description": "48 teams and four invited teams compete in the Hungarian Premier League for a $150 prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungarians6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungarians6.e5908fd4b629584fff86d2c02aa97da3eb510185.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/205790\/icons\/econ\/leagues\/subscriptions_hungarians6_large.dcfb4ef36d17f844d4cfbd86de41d537d8c1d40e.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
