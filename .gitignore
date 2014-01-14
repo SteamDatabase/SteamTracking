@@ -2,6 +2,8 @@ etags.txt
 apikey.txt
 update.lock
 
+ProtobufDumper/
+
 *.wav
 *.tmp
 *.webm
