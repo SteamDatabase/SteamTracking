@@ -971,6 +971,15 @@ img.game_header_image {
 	color: #8bc53f;
 }
 
+.game_area_details_specs .name a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.game_area_details_specs .name a:hover {
+	text-decoration: underline;
+}
+
 .game_details .language_list i {
 	color: #626366;
 	font-style: normal;
@@ -2052,4 +2061,188 @@ h2.bb_tag + br {
 }
 .dropcontainer{
 	position:relative;
+}
+
+.glance_tags_ctn {
+	margin: 12px 0;
+	font-size: 11px;
+}
+
+.glance_tags_label {
+	line-height: 17px;
+}
+
+.glance_tags {
+	white-space: nowrap;
+	height: 22px;
+}
+
+.app_tag, .app_tag_checkbox {
+	display: inline-block;
+	line-height: 19px;
+	padding: 0 7px;
+	color: #b0aeac;
+	background-color: #384959;
+
+	margin-right: 2px;
+	border-radius: 3px;
+
+	box-shadow: 1px 1px 0 0 #000000;
+	cursor: pointer;
+
+	margin-bottom: 3px;
+}
+
+.app_tag.add_your_own {
+	background-color: #4d4b49;
+}
+
+.app_tag_checkbox {
+	float: right;
+}
+
+.app_tag_checkbox.checked {
+	background-color: #000000;
+	color: #384959;
+}
+
+
+.app_tag_modal.nologin .app_tag_checkbox {
+	display: none;
+}
+
+.app_tag_modal_left, .app_tag_modal_right {
+	width: 256px;
+}
+
+.app_tag_modal_left {
+	padding-right: 16px;
+	float: left;
+	border-right: 1px solid #3c3d3e;
+}
+
+.app_tag_modal_right {
+	float: right;
+	width: 256px;
+	padding-left: 16px;
+}
+
+.app_tag_modal {
+	width: 546px;
+}
+
+.app_tag_modal h2 {
+	color: #4d6d8c;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.app_tag_modal p {
+	line-height: 17px;
+	margin-bottom: 8px;
+}
+
+.app_tag_modal_frame .newmodal_content_border {
+	padding: 1px;
+	background: #557dab;
+}
+
+.app_tag_form_ctn {
+	position: relative;
+}
+
+.app_tag_form_ctn button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.app_tag_form_ctn .gray_bevel.for_text_input {
+	height: 27px;
+}
+
+.app_tag_form_ctn .gray_bevel.for_text_input input {
+	margin-top: 2px;
+	height: 25px;
+	line-height: 25px;
+}
+
+
+/* new input styles */
+
+input.gray_bevel:-moz-placeholder, textarea.gray_bevel:-moz-placeholder, .gray_bevel textarea:-moz-placeholder, .gray_bevel input:-moz-placeholder {
+	font-style: italic;
+	color: #7c7c7c;
+}
+
+input.gray_bevel::-webkit-input-placeholder, textarea.gray_bevel::-webkit-input-placeholder, .gray_bevel textarea::-webkit-input-placeholder, .gray_bevel input::-webkit-input-placeholder {
+	font-style: italic;
+	color: #7c7c7c;
+}
+
+input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_textarea_ctn {
+	background-color: #565658;
+	border-radius: 3px;
+	border: 1px solid #262627;
+	box-shadow: 1px 1px 0px #39393a;
+	color: #BFBFBF;
+
+	margin-bottom: 6px;
+	outline: none;
+
+
+	padding: 4px 6px;
+}
+
+.gray_bevel.for_text_input {
+	display: inline-block;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	height: 23px;
+}
+
+.gray_bevel input {
+	line-height: 21px;
+	height: 21px;
+}
+
+.gray_bevel input, .gray_bevel textarea {
+	border: none;
+	outline: none;
+	background-color: #565658;
+	font-size: 13px;
+	color: #BFBFBF;
+}
+
+.gray_bevel.fullwidth {
+	display: block;
+}
+
+.gray_bevel.fullwidth.for_text_input input, .gray_bevel.fullwidth textarea {
+	width: 100%;
+}
+
+input.gray_bevel {
+	height: 20px;
+}
+
+textarea.gray_bevel, .gray_bevel textarea {
+	resize: none;
+}
+
+select.gray_bevel {
+	background-color: #565658;
+	border-radius: 3px;
+	border: 1px solid #262627;
+	box-shadow: 1px 1px 0px #39393a;
+	color: #BFBFBF;
+
+	margin-bottom: 6px;
+	outline: none;
+
+	padding: 0px;
+	line-height: 27px;
+	height: 27px;
+	font-size: 14px;
 }

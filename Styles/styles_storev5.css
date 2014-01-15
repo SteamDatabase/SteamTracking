@@ -809,6 +809,10 @@ div.rightcol {
 	margin: 16px 0px;
 }
 
+.block .block_content .inner_rule.small_margin {
+	margin: 6px 0px;
+}
+
 .block .block_footer {
 	
 	margin-top: 1px;
@@ -1633,6 +1637,10 @@ a.btn_browse:hover {
 	vertical-align: text-top;
 	font-size: 18px;
 	line-height: 24px;
+}
+
+.btn_browse h3 .currency_long {
+	font-size: 20px;
 }
 
 .btn_browse h5 {
@@ -3637,4 +3645,14 @@ body.antipodes {
 
 body.antipodes .perf_timing_area {
 	display: none;
+}
+
+
+.store_error_dialog {
+	border: 1px solid #ff9900;
+	background-color: #000000;
+	color: #cdcac1;
+	margin: 15px;
+	padding: 11px 15px;
+	padding-left: 19px;
 }

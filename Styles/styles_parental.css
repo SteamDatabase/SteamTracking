@@ -45,7 +45,7 @@
 	border: none;
 	margin-top: -2px;
 	margin-left: 4px;
-	display: initial;
+	display: inline-block;
 }
 
 #parental_error, .parental_error
@@ -139,7 +139,6 @@
 
 .parental_settings_form input
 {
-	background-color:#4d4b49;
 	border:solid #82807c 1px;
 	padding:2px;
 	color:#ffffff;
@@ -301,6 +300,10 @@
 	margin-top: 6px;
 }
 
+#parental_setpin_entries input
+{
+	background-color:#4d4b49;
+}
 
 #parental_setcomplete_box
 {
