@@ -1588,15 +1588,6 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 	padding-bottom:4px;
 }
 
-.cart_total_row.rebate_total_row, .cart_total_row.rebate_total_row .price {
-	color: #8bc53f;
-}
-
-#checkout_review_rebate_note {
-	text-align: right;
-	color: #626366;
-}
-
 .review_row {
 	position: relative;
 	margin-bottom: 12px;
