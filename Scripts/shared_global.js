@@ -964,20 +964,20 @@ function V_ToJSON( object )
 
 function V_IsJSON( str )
 {
-	function tryParseJSON (jsonString){
-		try {
-			if( typeof JSON == 'object' && JSON.stringify )
-			{
-				var o = JSON.parse(jsonString);
-				if (o && typeof o === "object" && o !== null) {
-					return true;
-				}
-			} else return str.isJSON();
-		}
-		catch (e) { }
+	try
+	{
+		if( typeof JSON == 'object' && JSON.parse )
+		{
+			var o = JSON.parse(str);
+			if ( o !== null )
+				return true;
 
-		return false;
-	};
+		} else {
+			return str.isJSON();
+		}
+	}
+	catch (e) { }
+	return false;
 }
 
 
@@ -1181,7 +1181,7 @@ WebStorage = {
 
 		var storage = window[type + 'Storage'];
 
-		if (!window[type + 'Storage'])
+		if ( !window[type + 'Storage'] )
 			return WebStorage.GetCookie( key );
 
 		var value = storage.getItem(key);
@@ -1205,7 +1205,7 @@ WebStorage = {
 
 		var storage = window[type + 'Storage'];
 
-		if (!window[type + 'Storage'])
+		if ( !window[type + 'Storage'] )
 			return WebStorage.SetCookie( key, value, ( bSessionOnly ) ? null : 365 );
 
 		value = V_ToJSON( value );
@@ -1214,7 +1214,7 @@ WebStorage = {
 	},
 	GetCookie: function( key )
 	{
-		var keyValue = V_GetCookie( key )
+		var keyValue = V_GetCookie( key );
 
 		return V_IsJSON( keyValue ) ? V_ParseJSON( keyValue ) : keyValue;
 	},

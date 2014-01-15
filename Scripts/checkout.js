@@ -239,6 +239,9 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'aura':
 				case 'mastercardbrazil':
 				case 'dinerscardbrazil':
+				case 'molpoints':
+				case 'konbini':
+				case 'eclubpoints':
 					displayPendingReceipt = true;
 					break;
 						
@@ -705,7 +708,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 33 
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
-					|| result.paymentmethod == 31 )
+					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -847,6 +850,9 @@ function OnPayPalSuccess( gidTransID )
 					case 'aura':
 					case 'mastercardbrazil':
 					case 'dinerscardbrazil':
+					case 'molpoints':
+					case 'konbini':
+					case 'eclubpoints':
 						DisplayPendingReceiptPage();
 						break;
 
@@ -1263,6 +1269,26 @@ function OnGetFinalPriceSuccess( result )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MOL Points customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the MOL website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'konbini' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Konbini transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Konbini customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Boleto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'eclubpoints' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'EClub Points transactions are authorized through the EClub website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to EClub';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for EClub Points customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the EClub website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 			}
@@ -1818,6 +1844,7 @@ function UpdatePaymentMethodList( bIsSplitTransaction )
 	rgPaymentMethodsToToggle[10] = 'hipercard';
 	rgPaymentMethodsToToggle[11] = 'mastercardbrazil';
 	rgPaymentMethodsToToggle[12] = 'dinerscardbrazil';
+	rgPaymentMethodsToToggle[13] = 'konbini';
 	
 	for (var i = 0; i < rgPaymentMethodsToToggle.length; i++)
 	{
@@ -1926,7 +1953,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
-			|| method.value == 'molpoints' || method.value == 'beeline' )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2349,7 +2376,7 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
-			|| method.value == 'molpoints' || method.value == 'beeline' )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2771,6 +2798,16 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'MOL Points';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'konbini' && providerPaymentMethod == 34 )
+			{
+				$('payment_method_review_text').innerHTML = 'Konbini';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'eclubpoints' && providerPaymentMethod == 35 )
+			{
+				$('payment_method_review_text').innerHTML = 'EClub Points';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 		}
 		
 		$('review_address_body').innerHTML = $('first_name').value+' '+$('last_name').value;
@@ -2897,16 +2934,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				//in V5, this is a seperate notice
 				$('checkout_review_purchase_notice').innerHTML = price_data.purchaseNotice;
 				$('checkout_review_purchase_notice_area').show();
-			}
-			
-			if ( price_data.rebate && price_data.rebate > 0 && price_data.formattedRebate )
-			{
-				$('checkout_review_rebate_area').style.display = 'block';
-				$('payment_method_review_rebate_total').innerHTML = price_data.formattedRebate;
-			}
-			else
-			{
-				$('checkout_review_rebate_area').style.display = 'none';
 			}
 		}
 	} 
@@ -3128,6 +3155,8 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 28:
 			case 29:
 			case 31:
+			case 34:
+			case 35:
 			default:
 			{
 				switch ( eErrorDetail )
@@ -3324,12 +3353,29 @@ function DisplayPendingReceiptPage()
 		case 'aura':
 		case 'mastercardbrazil':
 		case 'dinerscardbrazil':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_boacompra_description_long';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.boacompra.com/shop/info.php?contact">BoaCompra</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 
-	
+		case 'molpoints':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.mol.com">MOL</a>.';
+			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			break;
+			
+		case 'konbini':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
+			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			break;
+			
+		case 'eclubpoints':
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">EClub</a>.';
+			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
+			break;
+						
 		default:
 			$('pending_purchase_summary_payment_method_notes').style.display = 'none';
 			break;
