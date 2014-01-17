@@ -1088,7 +1088,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #00000000;
 }
 
-.DaisyInputTypeABXY.RightPad_Up .Group.SelectionGroup #Item_N
+.DaisyInputTypeABXY.RightPad_Up .Group.SelectionGroup #Item_N,.DaisyInputTypeABXY.RightPad_PickAllItems .Group.SelectionGroup #Item_N
 {
 	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
@@ -1135,7 +1135,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #00000000;
 }
 
-.DaisyInputTypeABXY.RightPad_Down .Group.SelectionGroup #Item_S
+.DaisyInputTypeABXY.RightPad_Down .Group.SelectionGroup #Item_S,.DaisyInputTypeABXY.RightPad_PickAllItems .Group.SelectionGroup #Item_S
 {
 	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
@@ -1183,7 +1183,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #00000000;
 }
 
-.DaisyInputTypeABXY.RightPad_Left .Group.SelectionGroup #Item_W
+.DaisyInputTypeABXY.RightPad_Left .Group.SelectionGroup #Item_W,.DaisyInputTypeABXY.RightPad_PickAllItems .Group.SelectionGroup #Item_W
 {
 	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
@@ -1231,7 +1231,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #00000000;
 }
 
-.DaisyInputTypeABXY.RightPad_Right .Group.SelectionGroup #Item_E
+.DaisyInputTypeABXY.RightPad_Right .Group.SelectionGroup #Item_E,.DaisyInputTypeABXY.RightPad_PickAllItems .Group.SelectionGroup #Item_E
 {
 	background-color: pad_select_color;
 	box-shadow: #ffffff80 0px 0px 2px 0px;
