@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.5c09301264dff46822ac7502e8259b479d227bea.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.b34a27dbee9803375057d44cad69ba37bb40b189.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -58794,7 +58794,6 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/legion_commander\/demon_sword.4d130374e28a3a82fca2a64acf5baa07d2904924.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/legion_commander\/demon_sword_large.e5e7140cfa3bcf3d5783e8d8c93570de9914218e.png",
-				"item_set": "legioncommander_voth_domosh_arcana",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -60448,6 +60447,106 @@
 				}
 			},
 			{
+				"name": "Band Of Summoning",
+				"defindex": 5879,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Band Of Summoning",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/band_of_summoning\/band_of_summoning",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/band_of_summoning\/band_of_summoning.1926d62d2818b633f7e13e6ccbc56eac09349af4.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/band_of_summoning\/band_of_summoning_large.dfabec5df9d4bad2b92f8d5e79528ae3fd5cb0d1.png",
+				"item_set": "yuwipi",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Headdress Of The Yuwipi",
+				"defindex": 5880,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Headdress Of The Yuwipi",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/headdress_of_the_yuwipi\/headdress_of_the_yuwipi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/headdress_of_the_yuwipi\/headdress_of_the_yuwipi.11d2bdf45e2771d080a89a102b4b25b20f901f63.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/headdress_of_the_yuwipi\/headdress_of_the_yuwipi_large.a54da1224ddd9ae105659728ab8b4072579ebb99.png",
+				"item_set": "yuwipi",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bonedress of the Yuwipi",
+				"defindex": 5881,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Bonedress of the Yuwipi",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/bonedress_of_the_yuwipi\/bonedress_of_the_yuwipi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/bonedress_of_the_yuwipi\/bonedress_of_the_yuwipi.ed0f333e9cbab275dd5c8fbe6647793453a965e8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/bonedress_of_the_yuwipi\/bonedress_of_the_yuwipi_large.e4b9af32d541297e5c20f9ba76d7ad7e81b3c077.png",
+				"item_set": "yuwipi",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Staff of the Yuwipi",
+				"defindex": 5882,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Staff of the Yuwipi",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/dazzle\/staff_of_the_yuwipi\/staff_of_the_yuwipi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/staff_of_the_yuwipi\/staff_of_the_yuwipi.08bec57a20a175a53b809b83c4cf18a79e728a0f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/dazzle\/staff_of_the_yuwipi\/staff_of_the_yuwipi_large.19f495214679aac7b715d05a5abe6a5be731d791.png",
+				"item_set": "yuwipi",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Stonehall Royal Guard Arms",
 				"defindex": 5885,
 				"item_class": "dota_item_wearable",
@@ -60533,6 +60632,31 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Belt of the Radiant Protector",
+				"defindex": 5888,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Belt of the Radiant Protector",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/belt_of_radiant_protector\/belt_of_radiant_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/belt_of_radiant_protector\/belt_of_radiant_protector.6913fd091493e3afb749df2eb5946b8f4edc5f6e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/belt_of_radiant_protector\/belt_of_radiant_protector_large.86c20bf4fab7f27778555ac9b3cc861af2ed1905.png",
+				"item_set": "ursa_radiant_protector",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "Stonehall Royal Guard Pauldrons",
@@ -60625,6 +60749,81 @@
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/broodmother\/legs_of_perception\/legs_of_perception.069b2a95b1895b879aff4a261d3f1bd4062705f4.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/broodmother\/legs_of_perception\/legs_of_perception_large.7d90decb3d1a98bfffb4469474460c65c9078014.png",
 				"item_set": "broodmother_webs_of_perception",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Wraps of the Radiant Protector",
+				"defindex": 5893,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Armbands",
+				"item_name": "Wraps of the Radiant Protector",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/wraps_of_the_radiant_protector\/wraps_of_the_radiant_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/wraps_of_the_radiant_protector\/wraps_of_the_radiant_protector.b397d0ee50f502a95f25be05086a71274784f936.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/wraps_of_the_radiant_protector\/wraps_of_the_radiant_protector_large.7636a99a52be755a09087bcac5045084a49b3216.png",
+				"item_set": "ursa_radiant_protector",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Mark of the Radiant Protector",
+				"defindex": 5894,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Fur",
+				"item_name": "Mark of the Radiant Protector",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/mark_of_the_radiant_protector\/mark_of_the_radiant_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/mark_of_the_radiant_protector\/mark_of_the_radiant_protector.d1fd116cf3803609ce31dde7898876a165dd4614.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/mark_of_the_radiant_protector\/mark_of_the_radiant_protector_large.3f93853f94ca1574767ca5a99ee2be3fd37b1fb5.png",
+				"item_set": "ursa_radiant_protector",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Braids of the Radiant Protector",
+				"defindex": 5895,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hair",
+				"item_name": "Braids of the Radiant Protector",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/ursa\/braids_of_the_radiant_protector\/braids_of_the_radiant_protector",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/braids_of_the_radiant_protector\/braids_of_the_radiant_protector.b531c90248d086eb871f945af03ef184e8eb1eb3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/ursa\/braids_of_the_radiant_protector\/braids_of_the_radiant_protector_large.39a2cc6eb122cc5fd51f9f3a8ead0bb04ed2a0a5.png",
+				"item_set": "ursa_radiant_protector",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_mark": true,
@@ -60759,6 +60958,31 @@
 					"autograph": true,
 					"can_consume": true,
 					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Nether Lord's Bracer",
+				"defindex": 5912,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Bracer",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_bracer\/nether_lords_bracer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_bracer\/nether_lords_bracer.2fa99c7d2c4fdd1b62e87ab73e82bacebddb50d3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_bracer\/nether_lords_bracer_large.d32b22f31b81edc763da802e881ccab26b77a460.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
 				},
 				"attributes": [
 					{
@@ -60768,6 +60992,667 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Nether Lord's Belt",
+				"defindex": 5913,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Belt",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_belt\/nether_lords_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_belt\/nether_lords_belt.9d08d14d99cd887eb7ae26a1c0566484dd2399ec.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_belt\/nether_lords_belt_large.f6c7fa8b81130c8a7503dbf8fdad10540c6e2d63.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Nether Lord's Hat",
+				"defindex": 5914,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Hat",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_hat\/nether_lords_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_hat\/nether_lords_hat.a6e91834ad7745147399fe13a2c7c0475e64255a.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_hat\/nether_lords_hat_large.8cf11da985f1be74ef81d3ce68627b5f5e6b7d1a.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Nether Lord's Devourer",
+				"defindex": 5915,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Devourer",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_devourer\/nether_lords_devourer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_devourer\/nether_lords_devourer.a314be71fde5bd8ad722e782c6d7868137f37da1.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_devourer\/nether_lords_devourer_large.23f13aa52be2891cd92e457926e2c22f3699b4a4.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Nether Lord's Scepter",
+				"defindex": 5916,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Scepter",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_scepter\/nether_lords_scepter",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_scepter\/nether_lords_scepter.39ee9ad6677ba1d0465e94a13428a7afd5af93ad.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_scepter\/nether_lords_scepter_large.d7f318ee0e89a0b483ab56e367d8278b49ae11c7.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Nether Lord's Cape",
+				"defindex": 5917,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Lord's Cape",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/nether_lords_cape\/nether_lords_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_cape\/nether_lords_cape.030a069223279dc24f9fb79bf866b17f3d8cbdbb.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/nether_lords_cape\/nether_lords_cape_large.676b08644bdc56465ca31028355712a4f1d77625.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Nether Heart",
+				"defindex": 5919,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Nether Heart",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/ward\/nether_heart\/nether_heart_npc_dota_pugna_nether_ward",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/ward\/nether_heart\/nether_heart_npc_dota_pugna_nether_ward.0d9135401b5b2932ade69ccfca26269eaa050167.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/ward\/nether_heart\/nether_heart_npc_dota_pugna_nether_ward_large.c41eb347862fe8cb5a94bd3b4aabb063c01c10db.png",
+				"item_set": "nether_lords_regalia",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Shadow Calvaria",
+				"defindex": 5926,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Shadow Calvaria",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/shadow_calvaria\/shadow_calvaria",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_calvaria\/shadow_calvaria.c1033df5939d87b3a7f66ee743e699f1ee7dc48c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_calvaria\/shadow_calvaria_large.1aa7fa50458663a691e5579c95f69f7460fd4f4f.png",
+				"item_set": "shadow_hunter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Shadow Calveria (Yellow)"
+					},
+					{
+						"name": "Shadow Calveria (Blue)"
+					},
+					{
+						"name": "Shadow Calveria (Purple)"
+					},
+					{
+						"name": "Shadow Calveria (Red)"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					},
+					{
+						"name": "unlocked styles",
+						"class": "unlocked styles",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Shadow Tracers",
+				"defindex": 5927,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Shadow Tracers",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/shadow_tracers\/shadow_tracers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_tracers\/shadow_tracers.45d0f0f4bd4367582014cc885f41ee1cbbc6f5f8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_tracers\/shadow_tracers_large.0c99746b1d5e67a92831bbed8976a610e2b57d76.png",
+				"item_set": "shadow_hunter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Shadow Spine (Yellow)"
+					},
+					{
+						"name": "Shadow Spine (Blue)"
+					},
+					{
+						"name": "Shadow Spine (Purple)"
+					},
+					{
+						"name": "Shadow Spine (Red)"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					},
+					{
+						"name": "unlocked styles",
+						"class": "unlocked styles",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Shadow Claws",
+				"defindex": 5928,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Shadow Claws",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/shadow_claws\/shadow_claws",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_claws\/shadow_claws.692679439fee41f4b60cdbbaabc2484781d8e0c9.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_claws\/shadow_claws_large.1756bab54c84c2e11020e0dc8b348317bbd1bf4a.png",
+				"item_set": "shadow_hunter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Shadow Claws (Yellow)"
+					},
+					{
+						"name": "Shadow Claws (Blue)"
+					},
+					{
+						"name": "Shadow Claws (Purple)"
+					},
+					{
+						"name": "Shadow Claws (Red)"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					},
+					{
+						"name": "unlocked styles",
+						"class": "unlocked styles",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Shadow Spine",
+				"defindex": 5929,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "New Item",
+				"item_name": "Shadow Spine",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/nerubian_assassin\/shadow_spine\/shadow_spine",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_spine\/shadow_spine.5809e78d9131cdb2f1f113d1335bc463bc3b0586.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/nerubian_assassin\/shadow_spine\/shadow_spine_large.cde18a3ca49af939631ce64b6e94c518bb0c0502.png",
+				"item_set": "shadow_hunter",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				},
+				"styles": [
+					{
+						"name": "Shadow Spine (Yellow)"
+					},
+					{
+						"name": "Shadow Spine (Blue)"
+					},
+					{
+						"name": "Shadow Spine (Purple)"
+					},
+					{
+						"name": "Shadow Spine (Red)"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					},
+					{
+						"name": "unlocked styles",
+						"class": "unlocked styles",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Bright Moon Jeonmo",
+				"defindex": 5930,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bright Moon Jeonmo",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/hwang_jin_yihead\/hwang_jin_yihead",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yihead\/hwang_jin_yihead.af7fd1552d51f36c0f0e5464392ee75e5acf49bc.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yihead\/hwang_jin_yihead_large.4ede7fdeda30085f5f9a48807137fda29450147d.png",
+				"item_set": "bright_moon_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bright Moon Chima",
+				"defindex": 5931,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Dress",
+				"item_name": "Bright Moon Chima",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/hwang_jin_yibelt\/hwang_jin_yibelt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yibelt\/hwang_jin_yibelt.d0d01c50594c7c2639ac374875498cfc5e693ef9.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yibelt\/hwang_jin_yibelt_large.884d79614c7a0d1a1f187923e3fbbbe67bb618b2.png",
+				"item_set": "bright_moon_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bright Moon Somae",
+				"defindex": 5932,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Sleeves",
+				"item_name": "Bright Moon Somae",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/hwang_jin_yiarms\/hwang_jin_yiarms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yiarms\/hwang_jin_yiarms.c318d52aae42c6ded42b84a2decff26474c53616.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yiarms\/hwang_jin_yiarms_large.efeb3165d3b7ae9af54905e03a1c4715f267b72e.png",
+				"item_set": "bright_moon_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bright Moon Mokdori",
+				"defindex": 5933,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Collar",
+				"item_name": "Bright Moon Mokdori",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/lina\/hwang_jin_yineck\/hwang_jin_yineck",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yineck\/hwang_jin_yineck.dd49741584020d42c41d299eaa991b60c6672c00.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/lina\/hwang_jin_yineck\/hwang_jin_yineck_large.711d80a75139720396ca15683e310b3316581af6.png",
+				"item_set": "bright_moon_set",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Axe",
+				"defindex": 5934,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Axe",
+				"item_name": "Bobusang's Axe",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/babusangs_axe\/babusangs_axe",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/babusangs_axe\/babusangs_axe.72ee1afbcd5403a2ba8af171839d72399af29909.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/babusangs_axe\/babusangs_axe_large.3a5fea943ea8d695df59c12303359e2383bbded0.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Merchandise",
+				"defindex": 5935,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "back",
+				"item_name": "Bobusang's Merchandise",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/bobusangs_botjim\/bobusangs_botjim",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_botjim\/bobusangs_botjim.1d3a3cdc6c15295e3a490b1a4b9fc8a63b2bcb2a.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_botjim\/bobusangs_botjim_large.f5f30f31ac7b60cee110d2c83a9b5c9520eba0c2.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Jacket",
+				"defindex": 5936,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Jacket",
+				"item_name": "Bobusang's Jacket",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/bobusangs_jacket\/bobusangs_jacket",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_jacket\/bobusangs_jacket.b2d742a3a792a9fda13c4c33660287ae41bfbed8.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_jacket\/bobusangs_jacket_large.88cd4a1887aac93b0abc2cfa7de878ccc3689dde.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Fist of the Predator Owl",
+				"defindex": 5937,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Fist",
+				"item_name": "Bobusang's Fist of the Predator Owl",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/bobusangs_owl\/bobusangs_owl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_owl\/bobusangs_owl.b116c5faa8812cc64a55f003902f6f6636e0356f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_owl\/bobusangs_owl_large.1c687c50f75c08bd9f23ed4fdbcdec86fbceb257.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Tobacco Fix",
+				"defindex": 5938,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Tusks",
+				"item_name": "Bobusang's Tobacco Fix",
+				"item_description": "This item comes with a custom particle effect on the pipe.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/bobusangs_pipe\/bobusangs_pipe",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_pipe\/bobusangs_pipe.aac1062cdec49d735ea6c4a4b7171d1ed3705540.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_pipe\/bobusangs_pipe_large.edeea39d091a6927f99c15ee03ae1bb38a4b5327.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Bobusang's Sunshade",
+				"defindex": 5939,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bobusang's Sunshade",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/tuskarr\/bobusangs_paeraengyi\/bobusangs_paeraengyi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_paeraengyi\/bobusangs_paeraengyi.0ce4739c3c6676590cb2eef20823d5bccb07be19.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/tuskarr\/bobusangs_paeraengyi\/bobusangs_paeraengyi_large.440cc5a5be29a2df1a8d4674165f4188b06ec308.png",
+				"item_set": "bobusangs_necessities",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
 			},
 			{
 				"name": "Governor's Salakot",
@@ -72555,6 +73440,29 @@
 				}
 			},
 			{
+				"name": "Surge",
+				"defindex": 10399,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Hud Skin",
+				"item_name": "Surge",
+				"item_description": "The power to win is the power to conquer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/huds\/hud_esp_surge_hud",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_esp_surge_hud.a2e55591d8b6b2dc3c9e5254482d9616406efff6.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/huds\/hud_esp_surge_hud_large.223049625d671fa8f0e3e169e6e34edf8e6f37f4.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				}
+			},
+			{
 				"name": "Eye of Lyralei",
 				"defindex": 10400,
 				"item_class": "dota_item_wearable",
@@ -72577,6 +73485,53 @@
 					"autograph": true,
 					"can_consume": true,
 					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Eye of Thunderkeg",
+				"defindex": 10402,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Ward",
+				"item_name": "Eye of Thunderkeg",
+				"item_description": "A handy creation of the Thunderkeg spirit to give vision to allies in the thick fog which surrounds them.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/wards\/esp_eye_of_thunderkeg\/esp_eye_of_thunderkeg_npc_dota_observer_wards",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/wards\/esp_eye_of_thunderkeg\/esp_eye_of_thunderkeg_npc_dota_observer_wards.636d1b92737d9dc8d61d2ea596ece5dac92a6b95.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/wards\/esp_eye_of_thunderkeg\/esp_eye_of_thunderkeg_npc_dota_observer_wards_large.c7c017c96c3842564d9032d6b6e455bfda28c590.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Dazzle Yuwipi",
+				"defindex": 10403,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Loading Screen",
+				"item_name": "Dazzle Yuwipi",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/loading_screens\/dazzle_yuwipi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/dazzle_yuwipi.a84e33edc9e11051b5a9c93d91e042eb26df73bf.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/loading_screens\/dazzle_yuwipi_large.20c502347ecad4751d9cbf9b3375c337d6b1ae5f.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
 				}
 			},
 			{
@@ -85020,7 +85975,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Dota 2 Romania IV",
-				"item_description": "The fourth Dota 2 Romania tournament where teams compete for a grand prize of over 100€!",
+				"item_description": "The fourth Dota 2 Romania tournament where teams compete for a grand prize of over 100â¬!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_dotaromania",
@@ -86507,7 +87462,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Prodota Winter Cup",
-				"item_description": "Professional Dota 2 teams compete for a grand pize of $1,000 USD in the Prodota Winter Cup!",
+				"item_description": "Professional Dota 2 teams compete for a grand prize of $1,000 USD in the Prodota Winter Cup!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_prodotawinter",
@@ -86536,7 +87491,7 @@
 				"item_class": "tool",
 				"item_type_name": "New Item",
 				"item_name": "Prodota Winter Cup - ADMIN",
-				"item_description": "Professional Dota 2 teams compete for a grand pize of $1,000 USD in the Prodota Winter Cup!",
+				"item_description": "Professional Dota 2 teams compete for a grand prize of $1,000 USD in the Prodota Winter Cup!",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/leagues\/subscriptions_prodotawinter",
@@ -86834,6 +87789,180 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage.3374fc2c39410fe2cc8858680f5d0c4397eee520.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnage_large.5308c987443b33f8e6a7925f8380419d523c1fc7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "ESP Shock Therapy Cup",
+				"defindex": 15478,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ESP Shock Therapy Cup",
+				"item_description": "Eight of the West's top teams battle it out, double-elimination style, for $10,000! Casted by BeyondtheSummit.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_shocktherapy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_shocktherapy.fc3163ad8c33b02b169125c6f29ad8aa078a326d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_shocktherapy_large.013660a128664d508813da825dcd50bc4b180a41.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "ESP Shock Therapy Cup - ADMIN",
+				"defindex": 15479,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "ESP Shock Therapy Cup - ADMIN",
+				"item_description": "Eight of the West's top teams battle it out, double-elimination style, for $10,000! Casted by BeyondtheSummit.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_shocktherapy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_shocktherapy.fc3163ad8c33b02b169125c6f29ad8aa078a326d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_shocktherapy_large.013660a128664d508813da825dcd50bc4b180a41.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "South Sumatera Dota 2 Amateur League 2014",
+				"defindex": 15480,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Sumatera Dota 2 Amateur League 2014",
+				"item_description": "South Sumatera Dota 2 Amateur League is a Dota 2 competition between 15 most talented amateur teams in the region.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sumatera",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sumatera.ac1562ff5290771032599c9f8d96b9b672c9bf78.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sumatera_large.5597c34254b3952f19c3d2b850d26c605d2ed547.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "South Sumatera Dota 2 Amateur League 2014 - ADMIN",
+				"defindex": 15481,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "South Sumatera Dota 2 Amateur League 2014 - ADMIN",
+				"item_description": "South Sumatera Dota 2 Amateur League is a Dota 2 competition between 15 most talented amateur teams in the region.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sumatera",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sumatera.ac1562ff5290771032599c9f8d96b9b672c9bf78.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sumatera_large.5597c34254b3952f19c3d2b850d26c605d2ed547.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hungarian Premier League Season 6",
+				"defindex": 15482,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League Season 6",
+				"item_description": "48 teams and four invited teams compete in the Hungarian Premier League for a $150 prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungarians6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungarians6.e5908fd4b629584fff86d2c02aa97da3eb510185.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungarians6_large.dcfb4ef36d17f844d4cfbd86de41d537d8c1d40e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Hungarian Premier League Season 6 - ADMIN",
+				"defindex": 15483,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Hungarian Premier League Season 6 - ADMIN",
+				"item_description": "48 teams and four invited teams compete in the Hungarian Premier League for a $150 prize.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_hungarians6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungarians6.e5908fd4b629584fff86d2c02aa97da3eb510185.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_hungarians6_large.dcfb4ef36d17f844d4cfbd86de41d537d8c1d40e.png",
 				"capabilities": {
 					"usable_gc": true,
 					"usable_out_of_game": true,
@@ -92435,8 +93564,8 @@
 				"image_inventory": "econ\/sets\/DOTA_Item_Frostiron_Raider_Set",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set.78b70c367f791ecc7237a20aab8245f56f3e846e.png",
-				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set_large.f9358126041a54d954f3b2c2f454e9300b7432ef.png",
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set.ad087b26baa365bc898706ee06b1eb0fd0e1c76b.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_frostiron_raider_set_large.4598ba09e7d01a5445c21614c6e8e4110c46b59d.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -97492,6 +98621,36 @@
 				}
 			},
 			{
+				"name": "Radiant Protector Set",
+				"defindex": 20350,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Radiant Protector Set",
+				"item_description": "This bundle contains all of the items in the 'Radiant Protector' Set for Ursa:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Radiant_Protector_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_radiant_protector_set.1d4d7b98671387206c6a93281448b34818425f3e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_radiant_protector_set_large.fd4e21afca7060e139f9d9056fcc154bb0324f92.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
 				"name": "CIS Carnage 2014 Bundle",
 				"defindex": 20351,
 				"item_class": "bundle",
@@ -97505,6 +98664,202 @@
 				"max_ilevel": 1,
 				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnagebundle.94e42867dd93aa40eadd38b357f4b5dfdfbe1a64.png",
 				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_ciscarnagebundle_large.051a21d961cafaf4caad1481da762c3f50e1b747.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Yuwipi Set",
+				"defindex": 20352,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Yuwipi Set",
+				"item_description": "This bundle contains all of the items in the 'Yuwipi' set for Dazzle:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Yuwipi_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_yuwipi_set.550fcce890cb0ac74768fbc9d209105b91cffac2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_yuwipi_set_large.0bb474e2b56bad0d8e739f31e76b9e68b18bce74.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Nether Lord's Regalia Set",
+				"defindex": 20353,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Nether Lord's Regalia Set",
+				"item_description": "This bundle contains all of the items in the 'Nether Lord's Regalia' set for Pugna:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Nether_Lords_Regalia_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_nether_lords_regalia_set.e27b98358f011ce435e54ffc0e2fe4f0e3f9f94f.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_nether_lords_regalia_set_large.d7cae6579d6a963f4fdacb565266ffb478bda5b6.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "ESP Shock Therapy Cup Bundle",
+				"defindex": 20354,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "ESP Shock Therapy Cup Bundle",
+				"item_description": "Eight of the West's top teams battle it out, double-elimination style, for $10,000! Casted by BeyondtheSummit. Bundled includes the Surge HUD skin!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_espshocktherapybundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espshocktherapybundle.f4cb798bfa1d5dc3a1d9d4d061c6c45db23a4867.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_espshocktherapybundle_large.ff0351f573f961645257f6e94969597376170d59.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Shadow Hunter Set",
+				"defindex": 20356,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Shadow Hunter Set",
+				"item_description": "This bundle contains all of the items in the 'Shadow Hunter' set for Nyx:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Shadow_Hunter_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_shadow_hunter_set.d13665a600ac653c4df3de8ea6ce99a026145545.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_shadow_hunter_set_large.7aaad3fb1c400f9447ca9013a8ae856fb6968ff0.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				},
+				"attributes": [
+					{
+						"name": "socket 1",
+						"class": "socket",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Jini the Bright Moon Set",
+				"defindex": 20357,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Jini the Bright Moon Set",
+				"item_description": "This bundle contains all of the items in the 'Jini the Bright Moon' set for Lina:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_The_Bright_Moon_of_Josean_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_bright_moon_of_josean_set.ebb5c7189ba4e58d0bb437fa9629ebbaaf8ebade.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_the_bright_moon_of_josean_set_large.da31433ea9f0a5bafc3361c27fdf34f92ad89883.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Bobusang's Traveling Necessities Set",
+				"defindex": 20358,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Bobusang's Traveling Necessities Set",
+				"item_description": "This bundle contains all of the items in the 'Bobusang's Traveling Necessities' set for Tusk:",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Bobusangs_Traveling_Necessities_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_bobusangs_traveling_necessities_set.85e513b4bde1b4f1f599ae4d3f7f53998e96bc33.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_bobusangs_traveling_necessities_set_large.9e5300d26de55bacee96cbdac29f20a936ce17d6.png",
 				"capabilities": {
 					"nameable": true,
 					"usable_gc": true,
@@ -99243,6 +100598,20 @@
 				
 			},
 			{
+				"item_set": "bobusangs_necessities",
+				"name": "Bobusang's Traveling Necessities",
+				"store_bundle": "Bobusang's Traveling Necessities Set",
+				"items": [
+					"Bobusang's Merchandise",
+					"Bobusang's Axe",
+					"Bobusang's Jacket",
+					"Bobusang's Fist of the Predator Owl",
+					"Bobusang's Tobacco Fix",
+					"Bobusang's Sunshade"
+				]
+				
+			},
+			{
 				"item_set": "bone_ruins",
 				"name": "Spoils of the Bone Ruins",
 				"store_bundle": "Spoils of the Bone Ruins Set",
@@ -99368,6 +100737,18 @@
 					"Second Disciple's Chakram",
 					"Second Disciple's Blade",
 					"Second Disciple's Satchel"
+				]
+				
+			},
+			{
+				"item_set": "bright_moon_set",
+				"name": "The Bright Moon of Joseon",
+				"store_bundle": "Jini the Bright Moon Set",
+				"items": [
+					"Bright Moon Chima",
+					"Bright Moon Somae",
+					"Bright Moon Mokdori",
+					"Bright Moon Jeonmo"
 				]
 				
 			},
@@ -100798,14 +102179,6 @@
 				
 			},
 			{
-				"item_set": "legioncommander_voth_domosh_arcana",
-				"name": "Blades of Voth Domosh",
-				"items": [
-					"Blades of Voth Domosh"
-				]
-				
-			},
-			{
 				"item_set": "lina_fiery_soul_arcana",
 				"name": "Fiery Soul of the Slayer",
 				"items": [
@@ -101064,6 +102437,21 @@
 					"Pride of the Woodland Outcast",
 					"Petals of the Woodland Outcast",
 					"Oak of the Woodland Outcast"
+				]
+				
+			},
+			{
+				"item_set": "nether_lords_regalia",
+				"name": "Nether Lord's Regalia",
+				"store_bundle": "Nether Lord's Regalia Set",
+				"items": [
+					"Nether Lord's Bracer",
+					"Nether Lord's Belt",
+					"Nether Lord's Hat",
+					"Nether Lord's Devourer",
+					"Nether Lord's Scepter",
+					"Nether Lord's Cape",
+					"Nether Heart"
 				]
 				
 			},
@@ -101602,6 +102990,18 @@
 				
 			},
 			{
+				"item_set": "shadow_hunter",
+				"name": "Shadow Hunter",
+				"store_bundle": "Shadow Hunter Set",
+				"items": [
+					"Shadow Calvaria",
+					"Shadow Tracers",
+					"Shadow Claws",
+					"Shadow Spine"
+				]
+				
+			},
+			{
 				"item_set": "shadowshaman_eki_implements",
 				"name": "Eki Spiritual Implements",
 				"store_bundle": "Eki Spiritual Implements Set",
@@ -102086,6 +103486,18 @@
 				
 			},
 			{
+				"item_set": "ursa_radiant_protector",
+				"name": "Radiant Protector",
+				"store_bundle": "Radiant Protector Set",
+				"items": [
+					"Belt of the Radiant Protector",
+					"Wraps of the Radiant Protector",
+					"Mark of the Radiant Protector",
+					"Braids of the Radiant Protector"
+				]
+				
+			},
+			{
 				"item_set": "ursa_ravager",
 				"name": "The Ursine Ravager",
 				"store_bundle": "The Ursine Ravager Set",
@@ -102386,6 +103798,18 @@
 					"Pauldrons of the Northern Wind",
 					"Quiver of the Northern Wind",
 					"Circlet of the Northern Wind"
+				]
+				
+			},
+			{
+				"item_set": "yuwipi",
+				"name": "Yuwipi",
+				"store_bundle": "Yuwipi Set",
+				"items": [
+					"Band Of Summoning",
+					"Bonedress of the Yuwipi",
+					"Headdress Of The Yuwipi",
+					"Staff of the Yuwipi"
 				]
 				
 			}
@@ -103471,6 +104895,12 @@
 				"id": 179,
 				"attach_to_rootbone": false,
 				"name": "Attrib_Particle179"
+			},
+			{
+				"system": "tusk_bobusang_pipe",
+				"id": 181,
+				"attach_to_rootbone": false,
+				"name": "Attrib_Particle181"
 			}
 		]
 		,
