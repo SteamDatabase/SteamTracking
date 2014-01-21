@@ -691,6 +691,7 @@ SummaryGridItem
 .DownloadLabelWrapper
 {
 	width: 100%;
+	padding-top: 9px;
 	flow-children: right;
 	vertical-align: center;
 }
@@ -699,20 +700,20 @@ DownloadsGridItem Label
 {
 	height: 26px;
 	margin-top: 6px;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: normal;
 	horizontal-align: right;
 }
 
 SummaryGridItem Label
 {
-	height: 32px;
-	margin-top: 6px;
+	height: 34px;
+	margin-top: 9px;
 	margin-bottom: 2px;
 	font-size: 28px;
 	font-weight: normal;
 	horizontal-align: right;
-	
+
 }
 
 DownloadsGridItem:descendantfocus .AppTitle, .PercentDownload
@@ -736,7 +737,7 @@ DownloadsGridItem Button
 
 .DownloadSpacer
 {
-	height: 16px;
+	height: 12px;
 	width: 100%;
 }
 
@@ -972,7 +973,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	text-transform: uppercase;
 	opacity: 1.0;
 	font-size: 32px;
-	margin-top: 6px;
+	margin-top: 0px;
 }
 
 .DownloadBarBackground

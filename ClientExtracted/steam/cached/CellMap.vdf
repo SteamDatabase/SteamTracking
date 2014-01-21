@@ -737,11 +737,6 @@
 				{
 					"dest"	45
 					"cost"	LocalCostOneWayCellEdge
-				}	
-				9
-				{
-					"dest"	9
-					"cost"	LocalCostOneWayCellEdge
 				}												
 				10
 				{

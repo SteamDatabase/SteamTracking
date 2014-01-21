@@ -45,19 +45,19 @@
 		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
 		
 		place { controls="FamilyOptionsTitle" region=box dir=down margin-top=15 }
-		place { controls="FamilyOptionsText" region=box start=FamilyOptionsTitle margin-top=10 width=360 height=25 dir=down }
+		place { controls="FamilyOptionsText" region=box start=FamilyOptionsTitle margin-top=10 width=490 height=32 dir=down }
 		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=10 dir=down }
 		
 		place { controls="Divider1" region=box start=ManageOptionsButton dir=down margin-top=16 width=max }
 		place { controls="FamilySharingTitle" region=box start=Divider1 dir=down margin-top=15 }
 					
-		place { controls="FamilySharingTextState" region=box start=FamilySharingTitle  margin-top=10 width=360 height=24 dir=down }
+		place { controls="FamilySharingTextState" region=box start=FamilySharingTitle  margin-top=10 width=490 height=64 dir=down }
 		place { controls="AuthorizeDeviceButton," region=box margin-top=8 start=FamilySharingTextState dir=down }
 		place { controls="DeauthorizeDeviceButton" region=box margin-top=8 start=FamilySharingTextState dir=down }
 		place { controls="ManageSharingButton" region=box margin-top=8 margin-left=186 start=FamilySharingTextState dir=down }
 				
-		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=360 height=24 dir=down }
-		place { controls="BorrowersList" region=box start=BorrowersLabel width=360 height=160 margin-top=12 dir=down }
+		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=490 height=34 dir=down }
+		place { controls="BorrowersList" region=box start=BorrowersLabel width=360 height=110 margin-top=12 dir=down }
 								
 		
 			

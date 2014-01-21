@@ -701,6 +701,7 @@ TenfootFooterPanel
 
 	padding: 20px;
 	margin: -20px;
+	margin-top: 0px;
 	border-radius: 4px;
 }
 
