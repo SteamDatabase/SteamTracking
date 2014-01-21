@@ -47,7 +47,7 @@
 					</DropDown>
 					<Panel class="Spacer" />
 					<Panel class="Spacer2" />
-					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617);">
+					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
 						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
 					</Button>
 				</Panel>

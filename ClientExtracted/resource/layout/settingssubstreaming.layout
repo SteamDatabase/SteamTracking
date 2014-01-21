@@ -27,7 +27,7 @@
 			ControlName="URLLabel"
 			fieldName="SupportInformationLabel"
 			labelText="#Steam_Settings_Streaming_StreamingSupport"
-			URLText="https://support.valvesoftware.com/kb_article.php?ref=3629-RIAV-1617"
+			URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 		}
 		
 		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }

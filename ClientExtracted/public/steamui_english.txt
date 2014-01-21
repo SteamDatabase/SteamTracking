@@ -777,7 +777,7 @@ This should take less than a minute."
 "SteamUI_Selection_Bulgarian"			"Български (Bulgarian)"
 "SteamUI_Selection_Turkish"			"Türkçe (Turkish)"
 "SteamUI_Selection_Arabic"			"العربية(Arabic)"
-"SteamUI_Selection_Ukrainian"			"Український (Ukrainian)"
+"SteamUI_Selection_Ukrainian"			"Українська (Ukrainian)"
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
 "SteamUI_ISDN_112k"		"ISDN - 112kbps"
@@ -3548,11 +3548,12 @@ Set a category for this game to help you find it quickly and organize your Libra
 
 "Friends_game_on_PS3"	"%s1 on PlayStation®3"
 
-"tooltip_view_details"		"Detail View " "tooltip_view_list"			"List View "
-"tooltip_view_grid"			"Grid View " "tooltip_view_fullscreen"	"Big Picture
-mode " "tooltip_sharedlibrary" 	"Playing now will send %borrower% a notice that
-it's time to quit." "tooltip_sharedlibrary2"	"Try playing later, or buy this
-game for your own library to play it now."#Steam_SharedGameUnavailable"
+"tooltip_view_details"		"Detail View " 
+"tooltip_view_list"			"List View "
+"tooltip_view_grid"			"Grid View " 
+"tooltip_view_fullscreen"	"Big Picture mode" 
+"tooltip_sharedlibrary" 	"Playing now will send %borrower% a notice that it's time to quit." 
+"tooltip_sharedlibrary2"	"Try playing later, or buy this game for your own library to play it now."
 
 "NoBigPicture_Title"		"Big Picture mode"
 "NoBigPicture_Explanation"	"Steam Big Picture mode is not supported on your platform."
@@ -3932,7 +3933,8 @@ game for your own library to play it now."#Steam_SharedGameUnavailable"
 "Steam_Settings_Streaming_StreamingSupport"	"View support information"
 
 "Steam_Settings_Streaming_Connected" "Connected"
-"Steam_Settings_Streaming_Disconnected" "Not Connected"
+"Steam_Settings_Streaming_NotConnected" "Not connected"
+"Steam_Settings_Streaming_DifferentVersion" "Different client version"
 "Steam_Settings_Streaming_Self" "Logged in as me"
 "Steam_Settings_Streaming_Other" "Logged in as different user"
 
