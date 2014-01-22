@@ -2093,8 +2093,19 @@ h2.bb_tag + br {
 	margin-bottom: 3px;
 }
 
+.app_tag:hover, .app_tag_checkbox:hover {
+	text-decoration: none;
+	background-color: #516980;
+	color: #ffffff;
+}
+
 .app_tag.add_your_own {
 	background-color: #4d4b49;
+}
+
+.app_tag.add_your_own:hover {
+	background-color: #787572;
+	color: #ffffff;
 }
 
 .app_tag_checkbox {
@@ -2166,6 +2177,16 @@ h2.bb_tag + br {
 	margin-top: 2px;
 	height: 25px;
 	line-height: 25px;
+}
+
+.app_tag_lang_note {
+	font-size: 11px;
+	color: #626366;
+	line-height: 20px;
+}
+
+form#app_tag_form {
+	margin-bottom: 18px;
 }
 
 
