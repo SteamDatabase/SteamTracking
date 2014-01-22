@@ -576,3 +576,25 @@
 .join_now_block > a {
 	margin-right: 10px;
 }
+
+#ProgressSection {
+	margin-top: 25px;
+}
+
+#ProgressBar {
+
+	height: 25px;
+	border: 1px solid #000;
+	padding: 1px;
+	display: none;
+}
+
+#ProgressBar > div {
+	height: 25px;
+	background-color: green;
+	text-align: center;
+	color: #fff;
+	width: 0px;
+	padding: 0;
+	margin: 0;
+}

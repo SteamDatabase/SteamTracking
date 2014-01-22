@@ -188,10 +188,10 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 //
 // Set the economy info
 //
-function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, assetClassVersion, privateMode, hasItemServer )
+function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, privateMode, hasItemServer )
 {
     AppsAjaxRequest( g_szBaseURL + '/apps/seteconomyinfo/' + appid,
-		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'assetClassVersion': assetClassVersion, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
+		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
 		function( results )
 		{
 			// now reflect results
@@ -199,6 +199,19 @@ function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, assetClassVersi
 		},
 		"POST"
 		);
+}
+
+//
+// Set the economy info
+//
+function EconomyFlushAssetAppearanceCache( appid )
+{
+	$J.post( g_szBaseURL + '/apps/economyflushappearance/' + appid).done( function( data ) {
+		$J('#asset_class_version').text( data );
+		ShowAlertDialog( 'Flush Asset Appearance Cache', 'Asset appearance cache flushed.  The Steam servers will start generating GetAssetClassInfo calls the next time each item is displayed.' );
+	}).fail( function() {
+		ShowAlertDialog( 'Flush Asset Appearance Cache', 'There was a problem flushing the asset appearance cache for this game.  Please try again later.' );
+	} );
 }
 
 //
@@ -2058,6 +2071,9 @@ function ImageUploadCallback(jsonResponse)
 				break;
 			case "clienttga":
 				id = "appTga";
+				break;
+			case "workshop_header":
+				id = "workshop_header";
 				break;
 			}
 			if ( id )

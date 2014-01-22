@@ -2428,12 +2428,32 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	border: 1px solid #39393a;
 }
 
+
+
 .game_area_purchase_game.publish {
 	margin: 20px 0 -10px 0;
 	box-shadow: 0 0 6px #111;
 	text-align: left;
 	border: none;
 }
+
+.game_area_purchase_game.generic {
+	background: #445b7c;
+	border-radius: 3px;
+	color: #bbb;
+	text-shadow: 1px 1px #000;
+}
+
+	.game_area_purchase_game.publish ul {
+		margin-bottom: 0;
+		list-style: none;
+	}
+
+	.game_area_purchase_game.publish ul li:before {
+		content: '\2022';
+		padding: 10px;
+		text-shadow: 1px 1px #000;
+	}
 
 	.game_area_purchase_game.publish > a {
 		bottom: 20px;
