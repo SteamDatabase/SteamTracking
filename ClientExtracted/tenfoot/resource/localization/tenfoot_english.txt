@@ -1994,4 +1994,14 @@
 	"SettingsSteamController_TrackballRotationAngle" "Angle Trackpads"
 	"SettingsSteamController_MouseSensitivity" "Mouse Sensitivity"
 	"SettingsSteamController_MouseAcceleration" "Mouse Acceleration"
+	"SettingsAudio_Steam"	"Steam Audio Settings"
+	"SettingsAudio_Hardware"	"System Audio Settings"
+
+	"SettingsAudio_Card"	"Sound output device"
+	"SettingsAudio_Profile"	"Sound output type"
+	"SettingsAudio_Port"	"Sound output port"
+
+	"SettingsAudio_AC3"	"AC3 Pass-through"
+	"SettingsAudio_DTS"	"DTS Pass-through"
+
 }

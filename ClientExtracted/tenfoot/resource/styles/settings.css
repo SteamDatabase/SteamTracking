@@ -2474,3 +2474,25 @@ SettingsPanel_Display.Underscan
 {
 	visibility: collapse;
 }
+
+#AudioCard
+{
+	visibility: collapse;
+}
+
+
+.SystemAudioSupport #AudioCard
+{
+	visibility: visible;
+}
+
+
+.AudioBottom
+{
+	margin-bottom: 10px;
+}
+
+.AudioCheck
+{
+	margin-top: 20px;
+}
