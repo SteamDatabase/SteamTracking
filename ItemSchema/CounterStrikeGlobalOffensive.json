@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.08a01f82165fa80e60aa2484886ef9c6dc78f507.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.61c1cdd9b5200c4c32118a38bd2530dccaae1b6f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -123,6 +123,14 @@
 			},
 			{
 				"origin": 22,
+				"name": "Passport Reward"
+			},
+			{
+				"origin": 23,
+				"name": "Tutorial Drop"
+			},
+			{
+				"origin": 24,
 				"name": "Stock Item"
 			}
 		]
@@ -150,8 +158,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_elite",
@@ -175,8 +188,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_fiveseven",
@@ -200,8 +218,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_glock",
@@ -225,24 +248,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "has burst mode",
-						"class": "has_burst_mode",
-						"value": 1.000000
-					},
-					{
-						"name": "cycletime when in burst mode",
-						"class": "cycletime_when_in_burst_mode",
-						"value": 0.500000
-					},
-					{
-						"name": "time between burst shots",
-						"class": "time_between_burst_shots",
-						"value": 0.050000
-					}
+
 				]
 				
 			},
@@ -268,8 +278,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_aug",
@@ -293,8 +308,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_awp",
@@ -318,14 +338,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "unzoom after shot",
-						"class": "unzoom_after_shot",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -351,24 +368,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "has burst mode",
-						"class": "has_burst_mode",
-						"value": 1.000000
-					},
-					{
-						"name": "cycletime when in burst mode",
-						"class": "cycletime_when_in_burst_mode",
-						"value": 0.550000
-					},
-					{
-						"name": "time between burst shots",
-						"class": "time_between_burst_shots",
-						"value": 0.075000
-					}
+
 				]
 				
 			},
@@ -394,8 +398,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_galilar",
@@ -419,8 +428,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_m249",
@@ -444,8 +458,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_m4a1",
@@ -469,8 +488,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_mac10",
@@ -494,8 +518,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_p90",
@@ -519,8 +548,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_ump45",
@@ -528,7 +562,7 @@
 				"item_class": "weapon_ump45",
 				"item_type_name": "SMG",
 				"item_name": "UMP-45",
-				"item_description": "The misunderstood middle child of the SMG family, the UMP45's small clip is the only drawback to an otherwise versatile close-quarters automatic.",
+				"item_description": "The misunderstood middle child of the SMG family, the UMP45's small magazine is the only drawback to an otherwise versatile close-quarters automatic.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_ump45",
@@ -544,8 +578,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_xm1014",
@@ -569,8 +608,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_bizon",
@@ -594,8 +638,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_mag7",
@@ -619,8 +668,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_negev",
@@ -644,8 +698,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_sawedoff",
@@ -669,8 +728,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_tec9",
@@ -678,7 +742,7 @@
 				"item_class": "weapon_tec9",
 				"item_type_name": "Pistol",
 				"item_name": "Tec-9",
-				"item_description": "A low-accuracy semi-automatic, the Tec-9 offers excellent penetration damage and a high clip capacity, though its recoil can be unforgiving.",
+				"item_description": "A low-accuracy semi-automatic, the Tec-9 offers excellent penetration damage and a high magazine capacity, though its recoil can be unforgiving.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_tec9",
@@ -694,8 +758,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_taser",
@@ -717,7 +786,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -742,8 +812,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_mp7",
@@ -767,8 +842,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_mp9",
@@ -792,8 +872,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_nova",
@@ -817,8 +902,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_p250",
@@ -842,8 +932,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_scar20",
@@ -867,8 +962,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_sg556",
@@ -892,8 +992,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_ssg08",
@@ -917,14 +1022,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "unzoom after shot",
-						"class": "unzoom_after_shot",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -934,13 +1036,13 @@
 				"item_class": "weapon_knife",
 				"item_type_name": "Knife",
 				"item_name": "Knife",
-				"item_description": "Quiet and always available, the combat knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill.",
+				"item_description": "Quiet and always available, the knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ\/weapons\/base_weapons\/weapon_knife",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapons\/base_weapons\/weapon_knife.f0bf59a7ec6f6b19dc0489b1feb11369db28debb.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapons\/base_weapons\/weapon_knife.a07b900d79ea768eae1a217a2839c5727f760396.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -949,8 +1051,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_flashbang",
@@ -972,7 +1079,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -995,7 +1103,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -1018,7 +1127,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -1041,7 +1151,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -1064,7 +1175,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -1087,7 +1199,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -1111,8 +1224,38 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
+			},
+			{
+				"name": "weapon_knife_t",
+				"defindex": 59,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Knife",
+				"item_description": "Quiet and always available, the knife has a fast, low-damage primary attack and a slow, high-damage secondary attack. A backstab will earn quiet players an instant kill.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/weapons\/base_weapons\/weapon_knife_t",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapons\/base_weapons\/weapon_knife_t.6c6fbb53be0e00096168d04a9b3e7f2ab0938090.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_m4a1_silencer",
@@ -1136,234 +1279,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "is full auto",
-						"class": "is_full_auto",
-						"value": 1.000000
-					},
-					{
-						"name": "time between burst shots",
-						"class": "time_between_burst_shots",
-						"value": 0.090000
-					},
-					{
-						"name": "has silencer",
-						"class": "has_silencer",
-						"value": 1.000000
-					},
-					{
-						"name": "in game price",
-						"class": "in_game_price",
-						"value": 2900.000000
-					},
-					{
-						"name": "primary clip size",
-						"class": "primary_clip_size",
-						"value": 20.000000
-					},
-					{
-						"name": "heat per shot",
-						"class": "heat_per_shot",
-						"value": 0.350000
-					},
-					{
-						"name": "addon scale",
-						"class": "addon_scale",
-						"value": 0.900000
-					},
-					{
-						"name": "tracer frequency",
-						"class": "tracer_frequency",
-						"value": 3.000000
-					},
-					{
-						"name": "tracer frequency alt",
-						"class": "tracer_frequency_alt",
-						"value": 0.000000
-					},
-					{
-						"name": "max player speed",
-						"class": "max_player_speed",
-						"value": 225.000000
-					},
-					{
-						"name": "max player speed alt",
-						"class": "max_player_speed_alt",
-						"value": 225.000000
-					},
-					{
-						"name": "armor ratio",
-						"class": "armor_ratio",
-						"value": 1.400000
-					},
-					{
-						"name": "crosshair min distance",
-						"class": "crosshair_min_distance",
-						"value": 4.000000
-					},
-					{
-						"name": "crosshair delta distance",
-						"class": "crosshair_delta_distance",
-						"value": 3.000000
-					},
-					{
-						"name": "penetration",
-						"class": "penetration",
-						"value": 2.000000
-					},
-					{
-						"name": "damage",
-						"class": "damage",
-						"value": 33.000000
-					},
-					{
-						"name": "range",
-						"class": "range",
-						"value": 8192.000000
-					},
-					{
-						"name": "range modifier",
-						"class": "range_modifier",
-						"value": 0.990000
-					},
-					{
-						"name": "bullets",
-						"class": "bullets",
-						"value": 1.000000
-					},
-					{
-						"name": "cycletime",
-						"class": "cycletime",
-						"value": 0.090000
-					},
-					{
-						"name": "time to idle",
-						"class": "time_to_idle",
-						"value": 1.500000
-					},
-					{
-						"name": "idle interval",
-						"class": "idle interval",
-						"value": 60.000000
-					},
-					{
-						"name": "flinch velocity modifier large",
-						"class": "flinch_velocity_modifier_large",
-						"value": 0.400000
-					},
-					{
-						"name": "flinch velocity modifier small",
-						"class": "flinch velocity modifier small",
-						"value": 0.550000
-					},
-					{
-						"name": "spread",
-						"class": "spread",
-						"value": 0.600000
-					},
-					{
-						"name": "inaccuracy crouch",
-						"class": "inaccuracy_crouch",
-						"value": 3.680000
-					},
-					{
-						"name": "inaccuracy stand",
-						"class": "inaccuracy_stand",
-						"value": 4.900000
-					},
-					{
-						"name": "inaccuracy jump",
-						"class": "innacuracy_jump",
-						"value": 0.656000
-					},
-					{
-						"name": "inaccuracy land",
-						"class": "innacuracy_land",
-						"value": 0.197000
-					},
-					{
-						"name": "inaccuracy ladder",
-						"class": "innacuracy_ladder",
-						"value": 110.994003
-					},
-					{
-						"name": "inaccuracy fire",
-						"class": "innacuracy_fire",
-						"value": 12.000000
-					},
-					{
-						"name": "inaccuracy fire alt",
-						"class": "innacuracy_fire_alt",
-						"value": 7.000000
-					},
-					{
-						"name": "inaccuracy move",
-						"class": "innacuracy_move",
-						"value": 92.879997
-					},
-					{
-						"name": "spread alt",
-						"class": "spread_alt",
-						"value": 0.450000
-					},
-					{
-						"name": "recovery time crouch",
-						"class": "recovery_time_crouch",
-						"value": 0.302625
-					},
-					{
-						"name": "recovery time stand",
-						"class": "recovery_time_stand",
-						"value": 0.423676
-					},
-					{
-						"name": "recoil seed",
-						"class": "recoil_seed",
-						"value": 38965.000000
-					},
-					{
-						"name": "recoil angle",
-						"class": "recoil_angle",
-						"value": 0.000000
-					},
-					{
-						"name": "recoil angle alt",
-						"class": "recoil_angle_alt",
-						"value": 0.000000
-					},
-					{
-						"name": "recoil angle variance",
-						"class": "recoil_angle_variance",
-						"value": 65.000000
-					},
-					{
-						"name": "recoil angle variance alt",
-						"class": "recoil_angle_variance_alt",
-						"value": 65.000000
-					},
-					{
-						"name": "recoil magnitude",
-						"class": "recoil_magnitude",
-						"value": 25.000000
-					},
-					{
-						"name": "recoil magnitude variance",
-						"class": "recoil_magnitude_variance",
-						"value": 3.000000
-					},
-					{
-						"name": "recoil magnitude alt",
-						"class": "recoil_magnitude_alt",
-						"value": 21.000000
-					},
-					{
-						"name": "recoil magnitude variance alt",
-						"class": "recoil_magnitude_variance_alt",
-						"value": 0.000000
-					}
+
 				]
 				
 			},
@@ -1389,64 +1309,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "has silencer",
-						"class": "has_silencer",
-						"value": 1.000000
-					},
-					{
-						"name": "spread",
-						"class": "spread",
-						"value": 2.500000
-					},
-					{
-						"name": "spread alt",
-						"class": "spread_alt",
-						"value": 1.500000
-					},
-					{
-						"name": "inaccuracy fire",
-						"class": "inaccuracy_fire",
-						"value": 71.000000
-					},
-					{
-						"name": "inaccuracy fire alt",
-						"class": "inaccuracy_fire_alt",
-						"value": 52.000000
-					},
-					{
-						"name": "inaccuracy move",
-						"class": "inaccuracy_move",
-						"value": 13.870000
-					},
-					{
-						"name": "recoil magnitude",
-						"class": "recoil_magnitude",
-						"value": 29.000000
-					},
-					{
-						"name": "recoil magnitude alt",
-						"class": "recoil_magnitude_alt",
-						"value": 23.000000
-					},
-					{
-						"name": "tracer frequency",
-						"class": "tracer_frequency",
-						"value": 1.000000
-					},
-					{
-						"name": "tracer frequency alt",
-						"class": "tracer_frequency_alt",
-						"value": 0.000000
-					},
-					{
-						"name": "primary clip size",
-						"class": "primary_clip_size",
-						"value": 12.000000
-					}
+
 				]
 				
 			},
@@ -1470,7 +1337,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "recipe",
@@ -1480,21 +1348,7 @@
 					}
 				},
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1.000000
-					},
-					{
-						"name": "recipe filter",
-						"class": "recipe_filter",
-						"value": -3.000000
-					},
-					{
-						"name": "preferred sort",
-						"class": "preferred_sort",
-						"value": 4.000000
-					}
+
 				]
 				
 			},
@@ -1520,8 +1374,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_knife_flip",
@@ -1545,8 +1404,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_knife_gut",
@@ -1570,8 +1434,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_knife_karambit",
@@ -1595,8 +1464,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_knife_m9_bayonet",
@@ -1620,8 +1494,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Five Year Service Coin",
@@ -1643,14 +1522,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -1674,14 +1550,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -1705,14 +1578,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -1736,14 +1606,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -1767,14 +1634,11 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -1800,23 +1664,15 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "season_pass",
 					"use_string": "USE"
 				},
 				"attributes": [
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 0.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1001.000000
-					}
+
 				]
 				
 			},
@@ -1840,33 +1696,14 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 0.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
-					},
-					{
-						"name": "upgrade threshold",
-						"class": "upgrade_threshold",
-						"value": 600.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1002.000000
+						"value": 1
 					}
 				]
 				
@@ -1891,33 +1728,14 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 0.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
-					},
-					{
-						"name": "upgrade threshold",
-						"class": "upgrade_threshold",
-						"value": 3000.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1003.000000
+						"value": 1
 					}
 				]
 				
@@ -1942,23 +1760,14 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 0.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -1983,8 +1792,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Downtown",
@@ -2006,8 +1820,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Thunder",
@@ -2029,8 +1848,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Favela",
@@ -2052,8 +1876,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Motel",
@@ -2075,8 +1904,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Seaside",
@@ -2098,8 +1932,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Library",
@@ -2121,8 +1960,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Community Season Two Autumn 2013",
@@ -2146,23 +1990,15 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "season_pass",
 					"use_string": "USE"
 				},
 				"attributes": [
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 1.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1013.000000
-					}
+
 				]
 				
 			},
@@ -2186,83 +2022,59 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 1.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "match wins",
 						"class": "match_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive minutes played",
 						"class": "competitive_minutes_played",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive wins",
 						"class": "competitive_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive kills",
 						"class": "competitive_kills",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 3k",
 						"class": "competitive_3k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 4k",
 						"class": "competitive_4k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 5k",
 						"class": "competitive_5k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive hsp",
 						"class": "competitive_hsp",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive mvps",
 						"class": "competitive_mvps",
-						"value": 0.000000
-					},
-					{
-						"name": "upgrade threshold",
-						"class": "upgrade_threshold",
-						"value": 600.000000
-					},
-					{
-						"name": "upgrade threshold wins",
-						"class": "upgrade_threshold_wins",
-						"value": 5.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1014.000000
+						"value": 0
 					}
 				]
 				
@@ -2287,83 +2099,59 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 1.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "match wins",
 						"class": "match_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive minutes played",
 						"class": "competitive_minutes_played",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive wins",
 						"class": "competitive_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive kills",
 						"class": "competitive_kills",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 3k",
 						"class": "competitive_3k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 4k",
 						"class": "competitive_4k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 5k",
 						"class": "competitive_5k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive hsp",
 						"class": "competitive_hsp",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive mvps",
 						"class": "competitive_mvps",
-						"value": 0.000000
-					},
-					{
-						"name": "upgrade threshold",
-						"class": "upgrade_threshold",
-						"value": 1800.000000
-					},
-					{
-						"name": "upgrade threshold wins",
-						"class": "upgrade_threshold_wins",
-						"value": 15.000000
-					},
-					{
-						"name": "upgrade definition index",
-						"class": "upgrade_definition_index",
-						"value": 1015.000000
+						"value": 0
 					}
 				]
 				
@@ -2388,68 +2176,59 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1.000000
-					},
-					{
-						"name": "season access",
-						"class": "season_access",
-						"value": 1.000000
-					},
-					{
 						"name": "minutes played",
 						"class": "minutes_played",
-						"value": 1.000000
+						"value": 1
 					},
 					{
 						"name": "match wins",
 						"class": "match_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive minutes played",
 						"class": "competitive_minutes_played",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive wins",
 						"class": "competitive_wins",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive kills",
 						"class": "competitive_kills",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 3k",
 						"class": "competitive_3k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 4k",
 						"class": "competitive_4k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive 5k",
 						"class": "competitive_5k",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive hsp",
 						"class": "competitive_hsp",
-						"value": 0.000000
+						"value": 0
 					},
 					{
 						"name": "competitive mvps",
 						"class": "competitive_mvps",
-						"value": 0.000000
+						"value": 0
 					}
 				]
 				
@@ -2474,8 +2253,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Ali",
@@ -2497,8 +2281,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Cache",
@@ -2520,8 +2309,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Chinatown",
@@ -2543,8 +2337,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Gwalior",
@@ -2566,8 +2365,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Ruins",
@@ -2589,8 +2393,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Map Token Siege",
@@ -2612,8 +2421,13 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
-				}
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "Name Tag",
@@ -2635,7 +2449,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "name",
@@ -2644,11 +2459,7 @@
 					}
 				},
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1.000000
-					}
+
 				]
 				
 			},
@@ -2672,7 +2483,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "decoder_ring",
@@ -2703,7 +2515,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "decoder_ring",
@@ -2733,7 +2546,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				}
 			},
 			{
@@ -2757,7 +2571,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "gift"
@@ -2766,7 +2581,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 8.000000
+						"value": 8
 					}
 				]
 				
@@ -2792,7 +2607,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "gift"
@@ -2801,7 +2617,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 8.000000
+						"value": 8
 					}
 				]
 				
@@ -2826,7 +2642,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "decoder_ring",
@@ -2858,7 +2675,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "gift"
@@ -2867,7 +2685,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 8.000000
+						"value": 8
 					}
 				]
 				
@@ -2890,7 +2708,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -2903,7 +2722,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -2926,7 +2745,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -2939,7 +2759,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 2.000000
+						"value": 2
 					}
 				]
 				
@@ -2962,7 +2782,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -2975,7 +2796,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 3.000000
+						"value": 3
 					}
 				]
 				
@@ -2998,7 +2819,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -3011,7 +2833,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 4.000000
+						"value": 4
 					}
 				]
 				
@@ -3034,7 +2856,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -3047,7 +2870,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 5.000000
+						"value": 5
 					}
 				]
 				
@@ -3070,7 +2893,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -3082,12 +2906,12 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 6.000000
+						"value": 6
 					},
 					{
 						"name": "tournament event id",
 						"class": "tournament_event_id",
-						"value": 1.000000
+						"value": 1
 					}
 				]
 				
@@ -3110,7 +2934,8 @@
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
-					"paintable_unusual": true
+					"paintable_unusual": true,
+					"autograph": true
 				},
 				"tool": {
 					"type": "supply_crate",
@@ -3123,7 +2948,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 7.000000
+						"value": 7
 					}
 				]
 				
@@ -3135,29 +2960,23 @@
 				"name": "always tradable",
 				"defindex": 1,
 				"attribute_class": "always_tradable",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "negative",
+				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "cannot trade",
 				"defindex": 2,
 				"attribute_class": "cannot_trade",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "negative",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "referenced item id low",
 				"defindex": 3,
 				"attribute_class": "referenced_item_id_low",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "negative",
+				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -3165,9 +2984,7 @@
 				"name": "referenced item id high",
 				"defindex": 4,
 				"attribute_class": "referenced_item_id_high",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "negative",
+				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -3175,9 +2992,7 @@
 				"name": "referenced item def",
 				"defindex": 5,
 				"attribute_class": "referenced_item_def",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "negative",
+				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -3185,8 +3000,6 @@
 				"name": "set item texture prefab",
 				"defindex": 6,
 				"attribute_class": "set_item_texture_prefab",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3195,8 +3008,6 @@
 				"name": "set item texture seed",
 				"defindex": 7,
 				"attribute_class": "set_item_texture_seed",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3205,19 +3016,7 @@
 				"name": "set item texture wear",
 				"defindex": 8,
 				"attribute_class": "set_item_texture_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
-				"hidden": true,
-				"stored_as_integer": false
-			},
-			{
-				"name": "set item texture prefab static",
-				"defindex": 9,
-				"attribute_class": "set_item_texture_prefab",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -3225,8 +3024,6 @@
 				"name": "has silencer",
 				"defindex": 10,
 				"attribute_class": "has_silencer",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3235,20 +3032,16 @@
 				"name": "attach particle effect",
 				"defindex": 11,
 				"attribute_class": "set_attached_particle",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"description_string": "Attrib_AttachedParticle",
 				"description_format": "value_is_particle_index",
-				"effect_type": "neutral",
+				"effect_type": "positive",
 				"hidden": false,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "has burst mode",
 				"defindex": 13,
 				"attribute_class": "has_burst_mode",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3257,8 +3050,6 @@
 				"name": "cycletime when in burst mode",
 				"defindex": 14,
 				"attribute_class": "cycletime_when_in_burst_mode",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3267,8 +3058,6 @@
 				"name": "time between burst shots",
 				"defindex": 15,
 				"attribute_class": "time_between_burst_shots",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3277,8 +3066,6 @@
 				"name": "unzoom after shot",
 				"defindex": 16,
 				"attribute_class": "unzoom_after_shot",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3287,8 +3074,6 @@
 				"name": "cycletime when zoomed",
 				"defindex": 17,
 				"attribute_class": "cycletime_when_zoomed",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3297,8 +3082,6 @@
 				"name": "cannot shoot underwater",
 				"defindex": 18,
 				"attribute_class": "cannot_shoot_underwater",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3307,50 +3090,40 @@
 				"name": "in game price",
 				"defindex": 19,
 				"attribute_class": "in_game_price",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "primary clip size",
 				"defindex": 20,
 				"attribute_class": "primary_clip_size",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "secondary clip size",
 				"defindex": 21,
 				"attribute_class": "secondary_clip_size",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "is full auto",
 				"defindex": 22,
 				"attribute_class": "is_full_auto",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"description_string": "Attrib_FullAuto",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "heat per shot",
 				"defindex": 23,
 				"attribute_class": "heat_per_shot",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3359,8 +3132,6 @@
 				"name": "addon scale",
 				"defindex": 24,
 				"attribute_class": "addon_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3369,118 +3140,94 @@
 				"name": "tracer frequency",
 				"defindex": 25,
 				"attribute_class": "tracer_frequency",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "max player speed",
 				"defindex": 26,
 				"attribute_class": "max_player_speed",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "max player speed alt",
 				"defindex": 27,
 				"attribute_class": "max_player_speed_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "armor ratio",
 				"defindex": 28,
 				"attribute_class": "armor_ratio",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "crosshair min distance",
 				"defindex": 29,
 				"attribute_class": "crosshair_min_distance",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "crosshair delta distance",
 				"defindex": 30,
 				"attribute_class": "crosshair_delta_distance",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "penetration",
 				"defindex": 31,
 				"attribute_class": "penetration",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "damage",
 				"defindex": 32,
 				"attribute_class": "damage",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "range",
 				"defindex": 33,
 				"attribute_class": "range",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "range modifier",
 				"defindex": 34,
 				"attribute_class": "range_modifier",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "bullets",
 				"defindex": 35,
 				"attribute_class": "bullets",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "cycletime",
 				"defindex": 36,
 				"attribute_class": "cycletime",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3489,8 +3236,6 @@
 				"name": "time to idle",
 				"defindex": 37,
 				"attribute_class": "time_to_idle",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3499,18 +3244,14 @@
 				"name": "idle interval",
 				"defindex": 38,
 				"attribute_class": "idle interval",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "flinch velocity modifier large",
 				"defindex": 39,
 				"attribute_class": "flinch_velocity_modifier_large",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3519,8 +3260,6 @@
 				"name": "flinch velocity modifier small",
 				"defindex": 40,
 				"attribute_class": "flinch velocity modifier small",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3529,8 +3268,6 @@
 				"name": "spread",
 				"defindex": 41,
 				"attribute_class": "spread",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3539,8 +3276,6 @@
 				"name": "inaccuracy crouch",
 				"defindex": 42,
 				"attribute_class": "inaccuracy_crouch",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3549,8 +3284,6 @@
 				"name": "inaccuracy stand",
 				"defindex": 43,
 				"attribute_class": "inaccuracy_stand",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3559,8 +3292,6 @@
 				"name": "inaccuracy jump",
 				"defindex": 44,
 				"attribute_class": "inaccuracy_jump",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3569,8 +3300,6 @@
 				"name": "inaccuracy land",
 				"defindex": 45,
 				"attribute_class": "inaccuracy_land",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3579,8 +3308,6 @@
 				"name": "inaccuracy ladder",
 				"defindex": 46,
 				"attribute_class": "inaccuracy_ladder",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3589,8 +3316,6 @@
 				"name": "inaccuracy fire",
 				"defindex": 47,
 				"attribute_class": "inaccuracy_fire",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3599,8 +3324,6 @@
 				"name": "inaccuracy move",
 				"defindex": 48,
 				"attribute_class": "inaccuracy_move",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3609,8 +3332,6 @@
 				"name": "spread alt",
 				"defindex": 49,
 				"attribute_class": "spread_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3619,8 +3340,6 @@
 				"name": "inaccuracy crouch alt",
 				"defindex": 50,
 				"attribute_class": "inaccuracy_crouch_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3629,8 +3348,6 @@
 				"name": "inaccuracy stand alt",
 				"defindex": 51,
 				"attribute_class": "inaccuracy_stand_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3639,8 +3356,6 @@
 				"name": "inaccuracy jump alt",
 				"defindex": 52,
 				"attribute_class": "inaccuracy_jump_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3649,8 +3364,6 @@
 				"name": "inaccuracy land alt",
 				"defindex": 53,
 				"attribute_class": "inaccuracy_land_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3659,8 +3372,6 @@
 				"name": "inaccuracy ladder alt",
 				"defindex": 54,
 				"attribute_class": "inaccuracy_ladder_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3669,8 +3380,6 @@
 				"name": "inaccuracy fire alt",
 				"defindex": 55,
 				"attribute_class": "inaccuracy_fire_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3679,8 +3388,6 @@
 				"name": "inaccuracy move alt",
 				"defindex": 56,
 				"attribute_class": "inaccuracy_move_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3689,8 +3396,6 @@
 				"name": "recovery time crouch",
 				"defindex": 57,
 				"attribute_class": "recovery_time_crouch",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3699,8 +3404,6 @@
 				"name": "recovery time stand",
 				"defindex": 58,
 				"attribute_class": "recovery_time_stand",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3709,8 +3412,6 @@
 				"name": "recoil seed",
 				"defindex": 59,
 				"attribute_class": "recoil_seed",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3719,8 +3420,6 @@
 				"name": "recoil angle",
 				"defindex": 60,
 				"attribute_class": "recoil_angle",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3729,8 +3428,6 @@
 				"name": "recoil angle variance",
 				"defindex": 61,
 				"attribute_class": "recoil_angle_variance",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3739,8 +3436,6 @@
 				"name": "recoil magnitude",
 				"defindex": 62,
 				"attribute_class": "recoil_magnitude",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3749,8 +3444,6 @@
 				"name": "recoil magnitude variance",
 				"defindex": 63,
 				"attribute_class": "recoil_magnitude_variance",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3759,8 +3452,6 @@
 				"name": "recoil angle alt",
 				"defindex": 64,
 				"attribute_class": "recoil_angle_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3769,8 +3460,6 @@
 				"name": "recoil angle variance alt",
 				"defindex": 65,
 				"attribute_class": "recoil_angle_variance_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3779,8 +3468,6 @@
 				"name": "recoil magnitude alt",
 				"defindex": 66,
 				"attribute_class": "recoil_magnitude_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3789,8 +3476,6 @@
 				"name": "recoil magnitude variance alt",
 				"defindex": 67,
 				"attribute_class": "recoil_magnitude_variance_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3799,8 +3484,6 @@
 				"name": "set supply crate series",
 				"defindex": 68,
 				"attribute_class": "supply_crate_series",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"description_string": "Case Series #%s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -3811,8 +3494,6 @@
 				"name": "minutes played",
 				"defindex": 69,
 				"attribute_class": "minutes_played",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"description_string": "Operation Time Logged: %s1",
 				"description_format": "value_is_mins_as_hours",
 				"effect_type": "positive",
@@ -3823,58 +3504,38 @@
 				"name": "alternate icon",
 				"defindex": 70,
 				"attribute_class": "alternate_icon",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "season access",
 				"defindex": 71,
 				"attribute_class": "season_access",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "disallow recycling",
 				"defindex": 72,
 				"attribute_class": "disallow_recycling",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "upgrade threshold",
 				"defindex": 73,
 				"attribute_class": "upgrade_threshold",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
-			},
-			{
-				"name": "upgrade definition index",
-				"defindex": 74,
-				"attribute_class": "upgrade_definition_index",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
-				"effect_type": "positive",
-				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "tradable after date",
 				"defindex": 75,
 				"attribute_class": "tradable_after_date",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3883,8 +3544,6 @@
 				"name": "postpone fire",
 				"defindex": 76,
 				"attribute_class": "postpone_fire",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3893,8 +3552,6 @@
 				"name": "has bullet altfire",
 				"defindex": 77,
 				"attribute_class": "has_bullet_altfire",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3903,8 +3560,6 @@
 				"name": "elevate quality",
 				"defindex": 78,
 				"attribute_class": "set_elevated_quality",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3913,8 +3568,6 @@
 				"name": "cycletime alt",
 				"defindex": 79,
 				"attribute_class": "cycletime_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3923,20 +3576,82 @@
 				"name": "kill eater",
 				"defindex": 80,
 				"attribute_class": "kill_eater",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
-				"description_string": "This weapon features StatTrak™ technology, which tracks certain statistics when held by its owner.",
-				"description_format": "value_is_additive",
 				"effect_type": "positive",
-				"hidden": false,
+				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
 				"name": "kill eater score type",
 				"defindex": 81,
 				"attribute_class": "kill_eater_score_type",
-				"min_value": 0.000000,
-				"max_value": 1.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user 1",
+				"defindex": 82,
+				"attribute_class": "kill_eater_user_1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user score type 1",
+				"defindex": 83,
+				"attribute_class": "kill_eater_user_score_type_1",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user 2",
+				"defindex": 84,
+				"attribute_class": "kill_eater_user_2",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user score type 2",
+				"defindex": 85,
+				"attribute_class": "kill_eater_user_score_type_2",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user 3",
+				"defindex": 86,
+				"attribute_class": "kill_eater_user_3",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater user score type 3",
+				"defindex": 87,
+				"attribute_class": "kill_eater_user_score_type_3",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater 2",
+				"defindex": 88,
+				"attribute_class": "kill_eater_2",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "kill eater score type 2",
+				"defindex": 89,
+				"attribute_class": "kill_eater_score_type_2",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3945,38 +3660,30 @@
 				"name": "tracer frequency alt",
 				"defindex": 92,
 				"attribute_class": "tracer_frequency_alt",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "primary default clip size",
 				"defindex": 93,
 				"attribute_class": "primary_default_clip_size",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "secondary default clip size",
 				"defindex": 94,
 				"attribute_class": "secondary_default_clip_size",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
-				"stored_as_integer": true
+				"stored_as_integer": false
 			},
 			{
 				"name": "recipe filter",
 				"defindex": 95,
 				"attribute_class": "recipe_filter",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -3985,8 +3692,6 @@
 				"name": "competitive kills",
 				"defindex": 97,
 				"attribute_class": "competitive_kills",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3995,8 +3700,6 @@
 				"name": "competitive 3k",
 				"defindex": 98,
 				"attribute_class": "competitive_3k",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4005,8 +3708,6 @@
 				"name": "competitive 4k",
 				"defindex": 99,
 				"attribute_class": "competitive_4k",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4015,8 +3716,6 @@
 				"name": "competitive 5k",
 				"defindex": 101,
 				"attribute_class": "competitive_5k",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4025,8 +3724,6 @@
 				"name": "competitive hsp",
 				"defindex": 102,
 				"attribute_class": "competitive_hsp",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4035,8 +3732,6 @@
 				"name": "competitive wins",
 				"defindex": 103,
 				"attribute_class": "competitive_wins",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4045,8 +3740,6 @@
 				"name": "competitive mvps",
 				"defindex": 104,
 				"attribute_class": "competitive_mvps",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4055,8 +3748,6 @@
 				"name": "competitive minutes played",
 				"defindex": 105,
 				"attribute_class": "competitive_minutes_played",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4065,8 +3756,6 @@
 				"name": "match wins",
 				"defindex": 106,
 				"attribute_class": "match_wins",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"description_string": "Competitive Wins in Operation Maps: %s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -4077,8 +3766,6 @@
 				"name": "preferred sort",
 				"defindex": 107,
 				"attribute_class": "preferred_sort",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4087,8 +3774,22 @@
 				"name": "upgrade threshold wins",
 				"defindex": 108,
 				"attribute_class": "upgrade_threshold_wins",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "custom name attr",
+				"defindex": 111,
+				"attribute_class": "custom_name_attr",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "custom desc attr",
+				"defindex": 112,
+				"attribute_class": "custom_desc_attr",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4097,8 +3798,6 @@
 				"name": "sticker slot 0 id",
 				"defindex": 113,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4107,8 +3806,6 @@
 				"name": "sticker slot 0 wear",
 				"defindex": 114,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4117,8 +3814,6 @@
 				"name": "sticker slot 0 scale",
 				"defindex": 115,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4127,8 +3822,6 @@
 				"name": "sticker slot 0 rotation",
 				"defindex": 116,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4137,8 +3830,6 @@
 				"name": "sticker slot 1 id",
 				"defindex": 117,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4147,8 +3838,6 @@
 				"name": "sticker slot 1 wear",
 				"defindex": 118,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4157,8 +3846,6 @@
 				"name": "sticker slot 1 scale",
 				"defindex": 119,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4167,8 +3854,6 @@
 				"name": "sticker slot 1 rotation",
 				"defindex": 120,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4177,8 +3862,6 @@
 				"name": "sticker slot 2 id",
 				"defindex": 121,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4187,8 +3870,6 @@
 				"name": "sticker slot 2 wear",
 				"defindex": 122,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4197,8 +3878,6 @@
 				"name": "sticker slot 2 scale",
 				"defindex": 123,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4207,8 +3886,6 @@
 				"name": "sticker slot 2 rotation",
 				"defindex": 124,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4217,8 +3894,6 @@
 				"name": "sticker slot 3 id",
 				"defindex": 125,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4227,8 +3902,6 @@
 				"name": "sticker slot 3 wear",
 				"defindex": 126,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4237,8 +3910,6 @@
 				"name": "sticker slot 3 scale",
 				"defindex": 127,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4247,8 +3918,6 @@
 				"name": "sticker slot 3 rotation",
 				"defindex": 128,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4257,8 +3926,6 @@
 				"name": "sticker slot 4 id",
 				"defindex": 129,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4267,8 +3934,6 @@
 				"name": "sticker slot 4 wear",
 				"defindex": 130,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4277,8 +3942,6 @@
 				"name": "sticker slot 4 scale",
 				"defindex": 131,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4287,8 +3950,6 @@
 				"name": "sticker slot 4 rotation",
 				"defindex": 132,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4297,8 +3958,6 @@
 				"name": "sticker slot 5 id",
 				"defindex": 133,
 				"attribute_class": "sticker_slot_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4307,8 +3966,6 @@
 				"name": "sticker slot 5 wear",
 				"defindex": 134,
 				"attribute_class": "sticker_slot_wear",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4317,8 +3974,6 @@
 				"name": "sticker slot 5 scale",
 				"defindex": 135,
 				"attribute_class": "sticker_slot_scale",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4327,8 +3982,6 @@
 				"name": "sticker slot 5 rotation",
 				"defindex": 136,
 				"attribute_class": "sticker_slot_rotation",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -4337,8 +3990,6 @@
 				"name": "tournament event id",
 				"defindex": 137,
 				"attribute_class": "tournament_event_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4347,8 +3998,6 @@
 				"name": "tournament event stage id",
 				"defindex": 138,
 				"attribute_class": "tournament_event_stage_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4357,8 +4006,6 @@
 				"name": "tournament event team0 id",
 				"defindex": 139,
 				"attribute_class": "tournament_event_team_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4367,18 +4014,62 @@
 				"name": "tournament event team1 id",
 				"defindex": 140,
 				"attribute_class": "tournament_event_team_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
 			},
 			{
+				"name": "icon display model",
+				"defindex": 142,
+				"attribute_class": "icon_display_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "buymenu display model",
+				"defindex": 143,
+				"attribute_class": "buymenu_display_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "pedestal display model",
+				"defindex": 144,
+				"attribute_class": "pedestal_display_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "magazine model",
+				"defindex": 145,
+				"attribute_class": "magazine_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "uid model",
+				"defindex": 146,
+				"attribute_class": "uid_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "stattrak model",
+				"defindex": 147,
+				"attribute_class": "stattrak_model",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "gifter account id",
 				"defindex": 162,
 				"attribute_class": "gifter_account_id",
-				"min_value": 0.000000,
-				"max_value": 0.000000,
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
