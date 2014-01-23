@@ -143,7 +143,7 @@ ClientManifest/steam_client_publicbeta_osx.manifest|http://media.steampowered.co
 API/SupportedAPIList.json|http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
 
 # Item Schemas
-GetItemSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/IEconItems_730/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/CounterStrikeGlobalOffensive.json|http://api.steampowered.com/IEconItems_730/GetSchema/v2/?key=*APIKEY*&language=english
 GetItemSchema/Dota2.json|http://api.steampowered.com/IEconItems_570/GetSchema/v1/?key=*APIKEY*&language=english
 GetItemSchema/Dota2Test.json|http://api.steampowered.com/IEconItems_205790/GetSchema/v1/?key=*APIKEY*&language=english
 GetItemSchema/TeamFortress2.json|http://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
