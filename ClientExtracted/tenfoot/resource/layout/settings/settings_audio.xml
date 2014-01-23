@@ -12,22 +12,49 @@
 		</Panel>
 		
 		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
-			<ToggleButton tabindex="1.0" class="CheckBox" id="SettingsAudio_MuteAll" text="#SettingsAudio_MuteAll" onactivate="MuteAll()"/>
-			<Panel id="AudioSub" class="FlowDown SettingsRight">
-				<Panel class="HorzSub SettingsRight">
-					<VUMeter writable="true" id="AmbientLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-					<Label class="SettingsCallout" text="#SettingsAudio_Ambient" />
+		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
+			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
+				<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
+						<Label class="SettingsCallout" text="#SettingsAudio_Steam" />
 				</Panel>
-				<Panel class="HorzSub SettingsRight">
-					<VUMeter writable="true" id="MoviesLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-					<Label class="SettingsCallout" text="#SettingsAudio_Movies" />
+				<ToggleButton tabindex="1.0" class="CheckBox" id="SettingsAudio_MuteAll" text="#SettingsAudio_MuteAll" onactivate="MuteAll()"/>
+				<Panel id="AudioVolume" class="FlowDown SettingsRight">
+					<Panel class="HorzSub SettingsRight">
+						<VUMeter writable="true" id="AmbientLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+						<Label class="SettingsCallout" text="#SettingsAudio_Ambient" />
+					</Panel>
+					<Panel class="HorzSub SettingsRight">
+						<VUMeter writable="true" id="MoviesLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+						<Label class="SettingsCallout" text="#SettingsAudio_Movies" />
+					</Panel>
+					<Panel class="HorzSub SettingsRight">
+						<VUMeter writable="true" id="NavigationLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+						<Label class="SettingsCallout" text="#SettingsAudio_Navigation" />
+					</Panel>
+					<Panel /> <!-- good times -->
 				</Panel>
-				<Panel class="HorzSub SettingsRight">
-					<VUMeter writable="true" id="NavigationLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-					<Label class="SettingsCallout" text="#SettingsAudio_Navigation" />
+			</Panel>
+
+			<Panel id="AudioCard" class="SettingsContent SettingsRightContent">
+				<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
+						<Label class="SettingsCallout" text="#SettingsAudio_Hardware" />
 				</Panel>
-				<Panel /> <!-- good times -->
+				<Panel class="FlowDown">
+					<Panel class="FlowDown SettingsRight">
+						<Label class="SettingsValue" text="#SettingsAudio_Card" />
+						<DropDown id="Sink" />
+					</Panel>
+					<Panel class="FlowDown SettingsRight">
+						<Label class="SettingsValue" text="#SettingsAudio_Profile" />
+						<DropDown id="Profile" />
+					</Panel>
+					<Panel class="FlowDown SettingsRight AudioBottom">
+						<Label class="SettingsValue" text="#SettingsAudio_Port" />
+						<DropDown id="Port" />
+					</Panel>
+					<ToggleButton class="CheckBox AudioCheck" id="SettingsAudio_AC3" text="SettingsAudio_AC3" onactivate="ToggleAudioStreamPassthru();" />
+					<ToggleButton class="CheckBox AudioCheck" id="SettingsAudio_DTS" text="SettingsAudio_DTS" onactivate="ToggleAudioStreamPassthru();"  />
+				</Panel>
 			</Panel>
 		</Panel>
 
