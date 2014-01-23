@@ -1278,7 +1278,7 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Konbini customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Boleto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from Degica will also be sent to you with the details of your Konbini.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'eclubpoints' )
