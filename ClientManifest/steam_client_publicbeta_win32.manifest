@@ -1,11 +1,11 @@
 "win32"
 {
-	"version"		"1390333555"
+	"version"		"1390441211"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.29d1411a48003e268829ea35d9b5672991703eb7"
-		"checksum"		"29d1411a48003e268829ea35d9b5672991703eb7"
-		"size"		"5507340"
+		"file"		"strings_all.zip.55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"checksum"		"55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"size"		"5507393"
 	}
 	"resources_all"
 	{
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.984279b0664a4347058c8ebbb4815b794a24171a"
-		"checksum"		"984279b0664a4347058c8ebbb4815b794a24171a"
-		"size"		"9415693"
+		"file"		"tenfoot_all.zip.2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"checksum"		"2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"size"		"9415730"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -57,9 +57,9 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.3f11e2917512e113c9a11689279e3a4ea88dffac"
-		"checksum"		"3f11e2917512e113c9a11689279e3a4ea88dffac"
-		"size"		"27054877"
+		"file"		"bins_win32.zip.2d5bdfe41a678cd107bd94570ab350535b757208"
+		"checksum"		"2d5bdfe41a678cd107bd94570ab350535b757208"
+		"size"		"27055112"
 	}
 	"webkit_win32"
 	{
@@ -75,13 +75,13 @@
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.80f011720c3bf7b2d3e5ab3f5b97d7e1717700f3"
-		"checksum"		"80f011720c3bf7b2d3e5ab3f5b97d7e1717700f3"
+		"file"		"steam_win32.zip.312352b794bf3399a7dfae733dcaa1995dbd6695"
+		"checksum"		"312352b794bf3399a7dfae733dcaa1995dbd6695"
 		"size"		"837116"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"18512339a8005b152b0136685bdad99487fd637f6dcec0baafd9c809308ec5d886eb689b3f440cb6133bf5316a9f28f3165a6c5f297ce22b03cb191c2bc4fbb4edee301e705def839703152699bc3b891f19b7f623409a1e8b5fb52d6ca1fcde680b11d0f14caa4fd6fdb58f7a935c3c0e45b315c1e3294181d35503792eb63a"
+	"win32"		"5761d14c9da7dc716eeb152ec4ba26b720b7a35315a7acb45b1f21c9bc1ba7c268307af659faa061a09268ca53f3f9fa7ccc0a165275ce32d75532083608713e212c4ae1ebae66fec8b4d6bf399dc2f46fd0bd4bae96a9b23584a3d3055a8e04a76bc61f4adad3f19e310c1129bae1eb1e3c95923bb43e31a24d8da13a05a14b"
 }

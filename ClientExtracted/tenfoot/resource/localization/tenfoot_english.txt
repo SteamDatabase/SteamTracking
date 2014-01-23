@@ -1975,6 +1975,7 @@
 	"SteamUI_StreamClient_Failed_Connect"	"Couldn't connect to the remote computer."
 	"SteamUI_StreamClient_Failed_Proto"	"The versions of Steam installed on the local and remote computers do not match."
 	"SteamUI_StreamClient_Failed_Auth"	"Authentication failed."
+	"SteamUI_StreamClient_Failed_DirectX"	"Please install the DirectX runtime from Microsoft's website."
 	"SteamUI_StreamLaunch_Failed_Title" "Stream Launch Failed"
 	"SteamUI_StreamLaunch_RequiresUI"	"This game launch requires user intervention.\n\nLaunch manually on the remote computer and then join the stream from here." 
 	"SteamUI_StreamLaunch_AccessDenied"	"Authentication problem."
