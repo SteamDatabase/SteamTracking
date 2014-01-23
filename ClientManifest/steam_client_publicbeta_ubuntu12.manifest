@@ -1,11 +1,11 @@
 "ubuntu12"
 {
-	"version"		"1390333555"
+	"version"		"1390441212"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.29d1411a48003e268829ea35d9b5672991703eb7"
-		"checksum"		"29d1411a48003e268829ea35d9b5672991703eb7"
-		"size"		"5507340"
+		"file"		"strings_all.zip.55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"checksum"		"55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"size"		"5507393"
 	}
 	"resources_all"
 	{
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.984279b0664a4347058c8ebbb4815b794a24171a"
-		"checksum"		"984279b0664a4347058c8ebbb4815b794a24171a"
-		"size"		"9415693"
+		"file"		"tenfoot_all.zip.2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"checksum"		"2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"size"		"9415730"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -57,9 +57,9 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.56d56f22852840aee3e7f8c1c71c5d29aa956318"
-		"checksum"		"56d56f22852840aee3e7f8c1c71c5d29aa956318"
-		"size"		"38155754"
+		"file"		"bins_ubuntu12.zip.6129e3d43e99eef0a4c640057e512f6fcd786c75"
+		"checksum"		"6129e3d43e99eef0a4c640057e512f6fcd786c75"
+		"size"		"38155414"
 	}
 	"webkit_ubuntu12"
 	{
@@ -81,9 +81,9 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.7c835ac2a065df6d7a627c12698a4ef95f197086"
-		"checksum"		"7c835ac2a065df6d7a627c12698a4ef95f197086"
-		"size"		"1211004"
+		"file"		"steam_ubuntu12.zip.de54c4b0907bffdf9fbc276de03138066448a8d9"
+		"checksum"		"de54c4b0907bffdf9fbc276de03138066448a8d9"
+		"size"		"1211003"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -101,5 +101,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"aa87b732a2b438f528f41b584f1c93b4dd596c4dbb87702036ce9aa8b1a3663a2c1dc2da8b75a5b9c2de59f77bebb4e458e8cf4b33186042066f6af99eb995171a2e116f5c54d68faa9eca9c55f13fdbf7bc11999bc69da9f459864ef7108b3d5119b580c584dd704cdbfad062916a1d79a2c46006fdcf275c6b44b0d11a6f68"
+	"ubuntu12"		"91b9cdea7d781ba6691d9b39baa62b163b915ba5ac7cd8f8e9e3416989d5916811ab1553cd90aa1f84bab6ff63b72f72eff8549362e2108cf2a3c84fcb8434431dc0efa69270c8a4793926f55afa367d48068e02ed50c34e1702ebd5c418054b4a432b915d82a94cdcf810521339fa68307b9ed2fb8272de27dbff7d4916bfed"
 }

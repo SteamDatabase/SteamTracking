@@ -1,11 +1,11 @@
 "osx"
 {
-	"version"		"1390333555"
+	"version"		"1390441212"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.29d1411a48003e268829ea35d9b5672991703eb7"
-		"checksum"		"29d1411a48003e268829ea35d9b5672991703eb7"
-		"size"		"5507340"
+		"file"		"strings_all.zip.55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"checksum"		"55a37919f1bd353826754d3c37ffb0c60f20d2e9"
+		"size"		"5507393"
 	}
 	"resources_all"
 	{
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.984279b0664a4347058c8ebbb4815b794a24171a"
-		"checksum"		"984279b0664a4347058c8ebbb4815b794a24171a"
-		"size"		"9415693"
+		"file"		"tenfoot_all.zip.2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"checksum"		"2cf2494d6f9925d42e7378dd8d7994e732eac3aa"
+		"size"		"9415730"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -57,9 +57,9 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.ba80571552c6b77b4fa6f14541dab187ab435763"
-		"checksum"		"ba80571552c6b77b4fa6f14541dab187ab435763"
-		"size"		"34328617"
+		"file"		"bins_osx.zip.28f371ea943b8dfb2db4bc706cb5d7f578a1876d"
+		"checksum"		"28f371ea943b8dfb2db4bc706cb5d7f578a1876d"
+		"size"		"34328183"
 	}
 	"webkit_osx"
 	{
@@ -81,13 +81,13 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.365143db9b00ab795b29820d39e92192c9285bed"
-		"checksum"		"365143db9b00ab795b29820d39e92192c9285bed"
-		"size"		"1195921"
+		"file"		"steam_osx.zip.79c76f2d6281b5d26e16ffb79ef6057020a98aa7"
+		"checksum"		"79c76f2d6281b5d26e16ffb79ef6057020a98aa7"
+		"size"		"1195873"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"9677f69fd376408bbd313139b2f84533f15b3b8942558b036be20394700fbbac2af838e8b9f69e9ce7585a90094eed3b52b9ed59d686282552d618fdeef57fb9ddbf1f2535ed234c9059d5f67ce501a1cd74fa172decb1cee0672fac551631baa32a45bac4aeda7c832f831e90e004417fc4d0bb6940ef6ee87a4de4032b27cf"
+	"osx"		"2ff8c9daf08d811822c0789d92c5071a53e413f36e3c2416aa81c6454e2616748fd44cdd9fb8b11bc9d2c0168f186376bc8f2eb6e6c6f5e7fc10a0f68bac29246837f907929706ba1d37b1ad5b3de017e31e7f97793f9f63e4436d076c75a94cd51c63753757d7ab374a93c9f77e634bda5a98d133ef373227237bb696a80449"
 }
