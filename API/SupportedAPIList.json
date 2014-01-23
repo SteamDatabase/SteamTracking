@@ -2223,7 +2223,7 @@
 					},
 					{
 						"name": "GetSchema",
-						"version": 1,
+						"version": 2,
 						"httpmethod": "GET",
 						"parameters": [
 							{
@@ -2237,7 +2237,7 @@
 					},
 					{
 						"name": "GetSchemaURL",
-						"version": 1,
+						"version": 2,
 						"httpmethod": "GET",
 						"parameters": [
 
@@ -2255,15 +2255,6 @@
 								"optional": true,
 								"description": "The language to results in."
 							}
-						]
-						
-					},
-					{
-						"name": "GetStoreStatus",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
 						]
 						
 					}
@@ -2433,24 +2424,6 @@
 			{
 				"name": "IGCVersion_730",
 				"methods": [
-					{
-						"name": "GetClientVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
-					{
-						"name": "GetClusterVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
 					{
 						"name": "GetServerVersion",
 						"version": 1,
