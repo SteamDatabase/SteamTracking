@@ -8,15 +8,6 @@
 		"last_valid_item_slot"		"54"
 		"num_item_presets"		"4"
 	}
-	"web_resources"
-	{
-		"0"
-		{
-			"name"		"TI 2013 Results"
-			"url"		"TI_2013_results.txt"
-			"on_demand"		"0"
-		}
-	}
 	"rarities"
 	{
 		"default"
