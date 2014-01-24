@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.d79c79d461e6384e1f4317936c33d7d111482927.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.34ae34daca155a39845ac29cbf026818677f5c96.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -24060,6 +24060,18 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "With Helmet"
+					},
+					{
+						"name": "Without Helmet",
+						"additional_hidden_bodygroups": {
+							"hat": 1
+						}
+					}
+				]
+				,
 				"used_by_classes": [
 					"Engineer"
 				]
@@ -29617,6 +29629,7 @@
 				"craft_material_type": "",
 				"capabilities": {
 					"paintable": true,
+					"nameable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -54577,7 +54590,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "Giftapult",
-				"item_description": "Can be used to wrap one item for gifting. The gift will be distributed to a random online player when used.",
+				"item_description": "Can be used to wrap one item for gifting. The gift will be distributed to a random Steam user currently playing TF2.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -81127,6 +81140,1283 @@
 				
 			},
 			{
+				"name": "UGC Highlander 1st Place Platinum Season 11",
+				"defindex": 8368,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Platinum",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_first\/ugc_season11_platinum_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_first\/ugc_season11_platinum_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_first.a2cbb85ed08f00e5985d9e0968aacdfdf7a390a2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_first_large.ec3190186c76689133052211774873cd4c67eb78.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Platinum Season 11",
+				"defindex": 8369,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Platinum",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_second\/ugc_season11_platinum_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_second\/ugc_season11_platinum_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_second.4daf3e8cf75360b806b9a4601f4109485c620a5d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_second_large.cec22f383dc373b0ece4e7a55060cd1a330cbdaa.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Platinum Season 11",
+				"defindex": 8370,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Platinum",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_third\/ugc_season11_platinum_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_third\/ugc_season11_platinum_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_third.c064b180e6bfc7a6cea15f9140d6ec2049dc2bf7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_third_large.344f93635763fcd1e837e782996cbb3c789843f1.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Platinum Participant Season 11",
+				"defindex": 8371,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Platinum Participant",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_participant\/ugc_season11_platinum_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_participant\/ugc_season11_platinum_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_participant.3683577b8305f67c69feeefde1ada38fc89021e7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_participant_large.f0537b1c736ab0cf5fdfbf40474e068890f78be7.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Gold Season 11",
+				"defindex": 8372,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Gold",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_gold_first\/ugc_season11_gold_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_gold_first\/ugc_season11_gold_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_first.0d88d66b7948492aa7dbdb563724e39749de1933.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_first_large.248576125c853576ba33a58b00ac7da20ddde54c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Gold Season 11",
+				"defindex": 8373,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Gold",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_gold_second\/ugc_season11_gold_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_gold_second\/ugc_season11_gold_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_second.11a79ae50620f9f4d277f810a3bed5f34fd346d3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_second_large.bfaf20dda6cfd043310757b99753c201883a310a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Gold Season 11",
+				"defindex": 8374,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Gold",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_gold_third\/ugc_season11_gold_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_gold_third\/ugc_season11_gold_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_third.e13b53e93118ca173e42e61db0149f7a7ddebc22.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_third_large.450e8b42c9a2156d5245ddc193c7fc6336324e75.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Gold Participant Season 11",
+				"defindex": 8375,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Gold Participant",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_gold_participant\/ugc_season11_gold_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_gold_participant\/ugc_season11_gold_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_participant.d141db6c528b02d7b7c6e6307f85d19797a1a0df.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_gold_participant_large.871fd11254d6f6f1177495b411baba3e3196c841.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Silver Season 11",
+				"defindex": 8376,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Silver",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_silver_first\/ugc_season11_silver_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_silver_first\/ugc_season11_silver_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_first.51b47bfbb1775c88133ab14717dbf1da788d8039.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_first_large.60a2322a852055de0338ad5d1e388ef6d0a7525d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Silver Season 11",
+				"defindex": 8377,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Silver",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_silver_second\/ugc_season11_silver_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_silver_second\/ugc_season11_silver_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_second.b69eaa2a4433519bfdbbf1f1ab6fdb7c3018c3f1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_second_large.09d9eec742554b6fee6468d42b040fedb926ce17.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Silver Season 11",
+				"defindex": 8378,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Silver",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_silver_third\/ugc_season11_silver_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_silver_third\/ugc_season11_silver_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_third.83bd59b77478151f586755e6f350d2a2a1dbdb0b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_third_large.f94171ca4a1d348cdec7248ba7ede91c0d91ae5c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Silver Participant Season 11",
+				"defindex": 8379,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Silver Participant",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_silver_participant\/ugc_season11_silver_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_silver_participant\/ugc_season11_silver_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_participant.c3aad730f2176e396894280dec486510f6fe1b1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_participant_large.872d7e09ac59beebeab52d8fb7a4854ff8f5fbf9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Steel Season 11",
+				"defindex": 8380,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Steel",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_steel_first\/ugc_season11_steel_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_steel_first\/ugc_season11_steel_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_first.4bd475ebdc186b61658854d13fab6606d0bc4a26.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_first_large.42a8e9b97ac3502ec3f04444f9195675fd22d772.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Steel Season 11",
+				"defindex": 8381,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Steel",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_steel_second\/ugc_season11_steel_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_steel_second\/ugc_season11_steel_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_second.d0f8bf66ef9ad2e5c3cc2e003d422283caec1367.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_second_large.b2c01a77d489b133f8faa46d619ce9f6a678c3ae.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Steel Season 11",
+				"defindex": 8382,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Steel",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_steel_third\/ugc_season11_steel_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_steel_third\/ugc_season11_steel_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_third.313a56344458833e8104d2b78441849193d5818d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_third_large.532c2558c5818f1ba6e34f7e1654653bb466e33b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Steel Participant Season 11",
+				"defindex": 8383,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Steel Participant",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_steel_participant\/ugc_season11_steel_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_steel_participant\/ugc_season11_steel_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_participant.fe4b94573ee027b46540d11aecaa17605c62a0b2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_participant_large.79968877befcf269022950168385f8d87f124723.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 1st Place Iron Season 11",
+				"defindex": 8384,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 1st Place Iron",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_iron_first\/ugc_season11_iron_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_iron_first\/ugc_season11_iron_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_first.f141bb3ec2015ab12ad3040a45f25c474db9aa28.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_first_large.144f476f5a5bbdf7ff5ed9efb31c681bbfddeac3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 2nd Place Iron Season 11",
+				"defindex": 8385,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 2nd Place Iron",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_iron_second\/ugc_season11_iron_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_iron_second\/ugc_season11_iron_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_second.1b17111f51895b74780315b9fdc19fb7821bc23e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_second_large.9a729d4956cc1b181c1f0ba17970d472bc3b1861.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander 3rd Place Iron Season 11",
+				"defindex": 8386,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander 3rd Place Iron",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_iron_third\/ugc_season11_iron_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_iron_third\/ugc_season11_iron_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_third.6c537289d1303748f2cf7bdf05132eb222e1f1d0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_third_large.af95f097410a09e496a8dad2107c66d78a970a3f.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC Highlander Iron Participant Season 11",
+				"defindex": 8387,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC Highlander Iron Participant",
+				"item_description": "UGC Highlander League Season 11",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_iron_participant\/ugc_season11_iron_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_iron_participant\/ugc_season11_iron_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_participant.99367a0c53eda6453a9eb5c2223c42d36a830f8a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_participant_large.1d8319309194678f0f0cd8e5ca93e6eb6b59bc14.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 1st Place Platinum Season 13",
+				"defindex": 8388,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 1st Place Platinum",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_first\/ugc_season11_platinum_first_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_first\/ugc_season11_platinum_first",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_first.a2cbb85ed08f00e5985d9e0968aacdfdf7a390a2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_first_large.ec3190186c76689133052211774873cd4c67eb78.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 2nd Place Platinum Season 13",
+				"defindex": 8389,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 2nd Place Platinum",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_second\/ugc_season11_platinum_second_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_second\/ugc_season11_platinum_second",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_second.4daf3e8cf75360b806b9a4601f4109485c620a5d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_second_large.cec22f383dc373b0ece4e7a55060cd1a330cbdaa.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 3rd Place Platinum Season 13",
+				"defindex": 8390,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 3rd Place Platinum",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_third\/ugc_season11_platinum_third_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_third\/ugc_season11_platinum_third",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_third.c064b180e6bfc7a6cea15f9140d6ec2049dc2bf7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_third_large.344f93635763fcd1e837e782996cbb3c789843f1.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Platinum Participant Season 13",
+				"defindex": 8391,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Platinum Participant",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_platinum_participant\/ugc_season11_platinum_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_platinum_participant\/ugc_season11_platinum_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_participant.3683577b8305f67c69feeefde1ada38fc89021e7.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_platinum_participant_large.f0537b1c736ab0cf5fdfbf40474e068890f78be7.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Silver Participant Season 13",
+				"defindex": 8392,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Silver Participant",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_silver_participant\/ugc_season11_silver_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_silver_participant\/ugc_season11_silver_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_participant.c3aad730f2176e396894280dec486510f6fe1b1f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_silver_participant_large.872d7e09ac59beebeab52d8fb7a4854ff8f5fbf9.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Steel Participant Season 13",
+				"defindex": 8393,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Steel Participant",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_steel_participant\/ugc_season11_steel_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_steel_participant\/ugc_season11_steel_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_participant.fe4b94573ee027b46540d11aecaa17605c62a0b2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_steel_participant_large.79968877befcf269022950168385f8d87f124723.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "UGC 6vs6 Iron Participant Season 13",
+				"defindex": 8394,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "UGC 6vs6 Iron Participant",
+				"item_description": "UGC 6vs6 League Season 13",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/ugc_season11_iron_participant\/ugc_season11_iron_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/ugc_season11_iron_participant\/ugc_season11_iron_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_participant.99367a0c53eda6453a9eb5c2223c42d36a830f8a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ugc_season11_iron_participant_large.1d8319309194678f0f0cd8e5ca93e6eb6b59bc14.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -95336,6 +96626,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -96917,6 +98212,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -97637,7 +98937,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
 				"item_name": "Blizzard Breather",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/pyro\/xms2013_pyro_arctic_mask\/xms2013_pyro_arctic_mask.mdl",
 				"item_quality": 6,
@@ -97686,7 +98986,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
 				"item_name": "Sub Zero Suit",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/pyro\/xms2013_pyro_arctic_suit\/xms2013_pyro_arctic_suit.mdl",
 				"item_quality": 6,
@@ -97829,7 +99129,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Sled",
 				"item_name": "Trail-Blazer",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/pyro\/xms2013_pyro_sled\/xms2013_pyro_sled.mdl",
 				"item_quality": 6,
@@ -97926,7 +99226,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Coat",
 				"item_name": "Snow Scoper",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/sniper\/xms2013_sniper_jacket\/xms2013_sniper_jacket.mdl",
 				"item_quality": 6,
@@ -97975,7 +99275,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Nunhood",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/medic\/xms2013_medic_hood\/xms2013_medic_hood.mdl",
 				"item_quality": 6,
@@ -98024,7 +99324,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
 				"item_name": "Angel of Death",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/medic\/xms2013_medic_robe\/xms2013_medic_robe.mdl",
 				"item_quality": 6,
@@ -98072,7 +99372,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Kiss King",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/all_class\/xms2013_kissking\/xms2013_kissking_scout.mdl",
 				"item_quality": 6,
@@ -98117,7 +99417,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Slo-Poke",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/soldier\/xms2013_soldier_marshal_hat\/xms2013_soldier_marshal_hat.mdl",
 				"item_quality": 6,
@@ -98215,7 +99515,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Toy Soldier",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/sniper\/xms2013_sniper_shako\/xms2013_sniper_shako.mdl",
 				"item_quality": 6,
@@ -98264,7 +99564,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Facial Hair",
 				"item_name": "Five-Month Shadow",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/sniper\/xms2013_sniper_beard\/xms2013_sniper_beard.mdl",
 				"item_quality": 6,
@@ -98313,7 +99613,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Mann of Reason",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/medic\/xms2013_medic_knecht_hat\/xms2013_medic_knecht_hat.mdl",
 				"item_quality": 6,
@@ -98357,12 +99657,12 @@
 				
 			},
 			{
-				"name": "The Mann Of The House",
+				"name": "The Mann of the House",
 				"defindex": 30319,
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
-				"item_name": "Mann Of House",
-				"proper_name": false,
+				"item_name": "Mann of the House",
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/heavy\/xms2013_heavy_pants\/xms2013_heavy_pants.mdl",
 				"item_quality": 6,
@@ -98449,6 +99749,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -98557,7 +99862,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Facial Hair",
 				"item_name": "Ruffled Ruprecht",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/medic\/xms2013_ruffled_beard\/xms2013_ruffled_beard.mdl",
 				"item_quality": 6,
@@ -98606,7 +99911,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Coat",
 				"item_name": "Golden Garment",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/sniper\/xms2013_sniper_golden_garment\/xms2013_sniper_golden_garment.mdl",
 				"item_quality": 6,
@@ -98655,7 +99960,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
 				"item_name": "Little Drummer Mann",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/scout\/xms2013_scout_drummer_shirt\/xms2013_scout_drummer_shirt.mdl",
 				"item_quality": 6,
@@ -98704,7 +100009,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Scout Shako",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/scout\/xms2013_scout_drummer_hat\/xms2013_scout_drummer_hat.mdl",
 				"item_quality": 6,
@@ -98753,7 +100058,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Toy Tailor",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/pyro\/xms2013_pyro_tailor_hat\/xms2013_pyro_tailor_hat.mdl",
 				"item_quality": 6,
@@ -98801,7 +100106,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
 				"item_name": "Extra Layer",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/sniper\/xms2013_sniper_layer_vest\/xms2013_sniper_layer_vest.mdl",
 				"item_quality": 6,
@@ -98849,7 +100154,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Polar Pullover",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/all_class\/xms2013_polar_pullover\/xms2013_polar_pullover_scout.mdl",
 				"item_quality": 6,
@@ -98894,7 +100199,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Coat",
 				"item_name": "Dogfighter",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models\/workshop\/player\/items\/engineer\/xms2013_dogfighter_jacket\/xms2013_dogfighter_jacket.mdl",
 				"item_quality": 6,
