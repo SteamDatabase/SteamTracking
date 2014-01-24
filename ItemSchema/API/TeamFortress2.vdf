@@ -204,6 +204,7 @@
 		{
 			"scout_pants"		"1"
 			"heavy_bullets"		"1"
+			"engineer_hair"		"1"			
 		}
 	}
 	"equip_conflicts"
@@ -26104,7 +26105,7 @@
 			"item_name"	"#TF_Brainiac"
 			"item_description"	"#TF_Brainiac_Desc"
 			"item_slot"	"misc"
-			"equip_region" "beard"
+			"equip_region" "engineer_hair"
 			"item_quality"	"unique"
 			"propername" "1"
 			"image_inventory"	"backpack/player/items/engineer/drg_brainiac_hair"
@@ -26115,6 +26116,24 @@
 			"used_by_classes"
 			{
 				"engineer"	"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"	"#TF_Brainiac_Style_Helmet"
+					}
+					"1"
+					{
+						"name"	"#TF_Brainiac_Style_NoHelmet"
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+						}
+					}
+				}
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_pickup.wav"
@@ -39662,7 +39681,7 @@
 		"1033"
 		{
 			"name"	"The TF2VRH"
-			"prefab"		"base_hat"
+			"prefab"		"base_misc"
 			"first_sale_date"	"2013/03/19"
 			"capabilities"
 			{
@@ -39678,8 +39697,8 @@
 			"item_name"	"#TF_TF2VRH"
 			"item_description"	"#TF_TF2VRH_Desc"
 			"propername"	"1"
-			"equip_region"	"hat"
-			"item_slot"	"head"
+			"equip_region"	"glasses"
+			"item_slot"	"misc"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/all_class/all_class_oculus_demo"
 			"image_inventory_size_w"		"128"
@@ -40723,7 +40742,8 @@
 		{
 			"name"	"The Portable Smissmas Spirit Dispenser"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft misc"
+			"prefab"	"misc"
+			"craft_class"	"" 
 			"equip_region"	"back"
 			"item_type_name"	"#TF_Wearable_Snowglobe"
 			"item_name"	"#TF_Winter2013_SpiritDispenser"
@@ -40755,7 +40775,8 @@
 		{
 			"name"	"The War on Smissmas Battle Hood"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft hat"
+			"prefab"	"hat"
+			"craft_class"	"" 
 			"item_name"	"#TF_Winter2013_BattleHood"
 			"item_description"	"#TF_Winter2013_BattleHood_Desc"
 			"image_inventory"	"backpack/player/items/soldier/soldier_hood"
@@ -40806,11 +40827,14 @@
 		{
 			"name"	"The War on Smissmas Battle Socks"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft grenades"
+			"prefab"	"misc"
+			"craft_class"	"" 
+			"item_type_name"		"#TF_Wearable_Bombs"
 			"item_name"	"#TF_Winter2013_BattleSocks"
 			"item_description"	"#TF_Winter2013_BattleSocks_Desc"
 			"image_inventory"	"backpack/player/items/soldier/xms_nade_socks"
 			"model_player"		"models/player/items/soldier/xms_nade_socks.mdl"
+			"equip_region"			"grenades"
 			"propername" "1"
 			"used_by_classes"
 			{
@@ -40829,7 +40853,8 @@
 		{
 			"name"	"The Sack Fulla Smissmas"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft misc"
+			"prefab"	"misc"
+			"craft_class"	"" 
 			"equip_region"	"scout_backpack"
 			"item_type_name"	"#TF_Wearable_Backpack"
 			"item_name"	"#TF_Winter2013_SmissmasSack"
@@ -40854,7 +40879,8 @@
 		{
 			"name"	"The Smissmas Caribou"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft hat"
+			"prefab"	"hat"
+			"craft_class"	"" 
 			"item_name"	"#TF_Winter2013_Caribou"
 			"item_description"	"#TF_Winter2013_Caribou_Desc"
 			"image_inventory"	"backpack/player/items/sniper/xms_braindeer"
@@ -40881,7 +40907,8 @@
 		{
 			"name"	"Randolph the Blood-Nosed Caribou"
 			"first_sale_date"	"2013/12/18"
-			"prefab"	"no_craft hat"
+			"prefab"	"hat"
+			"craft_class"	"" 
 			"item_name"	"#TF_Winter2013_Randolph"
 			"item_description"	"#TF_Winter2013_Randolph_Desc"
 			"image_inventory"	"backpack/player/items/sniper/xms_braindeer_rare"
@@ -44537,12 +44564,12 @@
 		"30140"
 		{
 			"name"		"The Virtual Viewfinder"
-			"prefab"		"hat"
+			"prefab"		"misc"
 			"first_sale_date"		"2013/08/26"
 			"item_type_name"		"#TF_Wearable_Headset"
 			"item_name"		"#TF_jul13_se_headset"
 			"item_description"		"#TF_jul13_se_headset_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"glasses"
 			"propername"		"1"
 			"visuals"
 			{
@@ -47057,6 +47084,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30255"
 		{
@@ -47874,6 +47909,14 @@
 				"pyro"		"1"
 			}
 			"item_type_name"		"#TF_Wearable_UndeadPet"
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30289"
 		{
@@ -48336,6 +48379,7 @@
 			"item_name"		"#TF_xms2013_pyro_arctic_mask"
 			"item_description"		"#TF_xms2013_pyro_arctic_mask_Desc"
 			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48364,6 +48408,7 @@
 			"item_description"		"#TF_xms2013_pyro_arctic_suit_Desc"
 			"equip_region"		"shirt"
 			"image_inventory"		"backpack/workshop/player/items/pyro/xms2013_pyro_arctic_suit/xms2013_pyro_arctic_suit"
+			"propername"		"1"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -48450,6 +48495,7 @@
 			"item_name"		"#TF_xms2013_pyro_sled"
 			"item_description"		"#TF_xms2013_pyro_sled_Desc"
 			"equip_region"		"back"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48493,6 +48539,7 @@
 			"item_name"		"#TF_xms2013_sniper_jacket"
 			"item_description"		"#TF_xms2013_sniper_jacket_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_jacket/xms2013_sniper_jacket"
 			"capabilities"
 			{
@@ -48512,6 +48559,7 @@
 			"item_name"		"#TF_xms2013_medic_hood"
 			"item_description"		"#TF_xms2013_medic_hood_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/xms2013_medic_hood/xms2013_medic_hood"
 			"capabilities"
 			{
@@ -48532,6 +48580,7 @@
 			"item_name"		"#TF_xms2013_medic_robe"
 			"item_description"		"#TF_xms2013_medic_robe_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/xms2013_medic_robe/xms2013_medic_robe"
 			"model_player"		"models/workshop/player/items/medic/xms2013_medic_robe/xms2013_medic_robe.mdl"
 			"used_by_classes"
@@ -48547,6 +48596,7 @@
 			"item_name"		"#TF_xms2013_kissking"
 			"item_description"		"#TF_xms2013_kissking_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48593,6 +48643,7 @@
 			"item_name"		"#TF_xms2013_soldier_marshal_hat"
 			"item_description"		"#TF_xms2013_soldier_marshal_hat_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48638,6 +48689,7 @@
 			"item_name"		"#TF_xms2013_sniper_shako"
 			"item_description"		"#TF_xms2013_sniper_shako_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_shako/xms2013_sniper_shako"
 			"capabilities"
 			{
@@ -48658,6 +48710,7 @@
 			"item_name"		"#TF_xms2013_sniper_beard"
 			"item_description"		"#TF_xms2013_sniper_beard_Desc"
 			"equip_region"		"beard"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_beard/xms2013_sniper_beard"
 			"capabilities"
 			{
@@ -48677,6 +48730,7 @@
 			"item_name"		"#TF_xms2013_medic_knecht_hat"
 			"item_description"		"#TF_xms2013_medic_knecht_hat_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/xms2013_medic_knecht_hat/xms2013_medic_knecht_hat"
 			"capabilities"
 			{
@@ -48690,13 +48744,14 @@
 		}
 		"30319"
 		{
-			"name"		"The Mann Of The House"
+			"name"		"The Mann of the House"
 			"prefab"		"misc"
 			"first_sale_date"		"2013/12/19"
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_xms2013_heavy_pants"
 			"item_description"		"#TF_xms2013_heavy_pants_Desc"
 			"equip_region"		"belt_misc"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/xms2013_heavy_pants/xms2013_heavy_pants"
 			"model_player"		"models/workshop/player/items/heavy/xms2013_heavy_pants/xms2013_heavy_pants.mdl"
 			"used_by_classes"
@@ -48722,6 +48777,14 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
 			}
 		}
 		"30321"
@@ -48780,6 +48843,7 @@
 			"item_name"		"#TF_xms2013_ruffled_beard"
 			"item_description"		"#TF_xms2013_ruffled_beard_Desc"
 			"equip_region"		"beard"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/xms2013_ruffled_beard/xms2013_ruffled_beard"
 			"capabilities"
 			{
@@ -48800,6 +48864,7 @@
 			"item_name"		"#TF_xms2013_sniper_golden_garment"
 			"item_description"		"#TF_xms2013_sniper_golden_garment_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_golden_garment/xms2013_sniper_golden_garment"
 			"capabilities"
 			{
@@ -48820,6 +48885,7 @@
 			"item_name"		"#TF_xms2013_scout_drummer_shirt"
 			"item_description"		"#TF_xms2013_scout_drummer_shirt_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/scout/xms2013_scout_drummer_shirt/xms2013_scout_drummer_shirt"
 			"capabilities"
 			{
@@ -48839,6 +48905,7 @@
 			"item_name"		"#TF_xms2013_scout_drummer_hat"
 			"item_description"		"#TF_xms2013_scout_drummer_hat_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48866,6 +48933,7 @@
 			"item_name"		"#TF_xms2013_pyro_tailor_hat"
 			"item_description"		"#TF_xms2013_pyro_tailor_hat_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/pyro/xms2013_pyro_tailor_hat/xms2013_pyro_tailor_hat"
 			"model_player"		"models/workshop/player/items/pyro/xms2013_pyro_tailor_hat/xms2013_pyro_tailor_hat.mdl"
 			"used_by_classes"
@@ -48882,6 +48950,7 @@
 			"item_name"		"#TF_xms2013_sniper_layer_vest"
 			"item_description"		"#TF_xms2013_sniper_layer_vest_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest"
 			"model_player"		"models/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest.mdl"
 			"used_by_classes"
@@ -48897,6 +48966,7 @@
 			"item_name"		"#TF_xms2013_polar_pullover"
 			"item_description"		"#TF_xms2013_polar_pullover_Desc"
 			"equip_region"		"hat"
+			"propername"		"1"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48945,6 +49015,7 @@
 			"item_name"		"#TF_xms2013_dogfighter_jacket"
 			"item_description"		"#TF_xms2013_dogfighter_jacket_Desc"
 			"equip_region"		"shirt"
+			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/engineer/xms2013_dogfighter_jacket/xms2013_dogfighter_jacket"
 			"capabilities"
 			{
@@ -49571,6 +49642,7 @@
 			"capabilities"
 			{
 				"paintable"		"1"
+				"nameable"		"1"
 			}
 			"item_type_name"	"#TF_Wearable_MapperMedal"
 			"item_name"			"#TF_MapperMedal"
@@ -53553,10 +53625,281 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/heart_of_gold/heart_of_gold"
 			"model_player"		"models/workshop/player/items/all_class/heart_of_gold/heart_of_gold_demo.mdl"
 		}
-
-
-
-
+		"8368"
+		{
+			"name"				"UGC Highlander 1st Place Platinum Season 11"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first_demo.mdl"
+		}
+		"8369"
+		{
+			"name"				"UGC Highlander 2nd Place Platinum Season 11"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second_demo.mdl"
+		}
+		"8370"
+		{
+			"name"				"UGC Highlander 3rd Place Platinum Season 11"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third_demo.mdl"
+		}
+		"8371"
+		{
+			"name"				"UGC Highlander Platinum Participant Season 11"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant_demo.mdl"
+		}
+		"8372"
+		{
+			"name"				"UGC Highlander 1st Place Gold Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_gold_first/ugc_season11_gold_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_gold_first/ugc_season11_gold_first_demo.mdl"
+		}
+		"8373"
+		{
+			"name"				"UGC Highlander 2nd Place Gold Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_gold_second/ugc_season11_gold_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_gold_second/ugc_season11_gold_second_demo.mdl"
+		}
+		"8374"
+		{
+			"name"				"UGC Highlander 3rd Place Gold Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_gold_third/ugc_season11_gold_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_gold_third/ugc_season11_gold_third_demo.mdl"
+		}
+		"8375"
+		{
+			"name"				"UGC Highlander Gold Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_gold_participant/ugc_season11_gold_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_gold_participant/ugc_season11_gold_participant_demo.mdl"
+		}
+		"8376"
+		{
+			"name"				"UGC Highlander 1st Place Silver Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_silver_first/ugc_season11_silver_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_silver_first/ugc_season11_silver_first_demo.mdl"
+		}
+		"8377"
+		{
+			"name"				"UGC Highlander 2nd Place Silver Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_silver_second/ugc_season11_silver_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_silver_second/ugc_season11_silver_second_demo.mdl"
+		}
+		"8378"
+		{
+			"name"				"UGC Highlander 3rd Place Silver Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_silver_third/ugc_season11_silver_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_silver_third/ugc_season11_silver_third_demo.mdl"
+		}
+		"8379"
+		{
+			"name"				"UGC Highlander Silver Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_silver_participant/ugc_season11_silver_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_silver_participant/ugc_season11_silver_participant_demo.mdl"
+		}
+		"8380"
+		{
+			"name"				"UGC Highlander 1st Place Steel Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_first/ugc_season11_steel_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_first/ugc_season11_steel_first_demo.mdl"
+		}
+		"8381"
+		{
+			"name"				"UGC Highlander 2nd Place Steel Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_second/ugc_season11_steel_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_second/ugc_season11_steel_second_demo.mdl"
+		}
+		"8382"
+		{
+			"name"				"UGC Highlander 3rd Place Steel Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_third/ugc_season11_steel_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_third/ugc_season11_steel_third_demo.mdl"
+		}
+		"8383"
+		{
+			"name"				"UGC Highlander Steel Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
+		}
+		"8384"
+		{
+			"name"				"UGC Highlander 1st Place Iron Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_first/ugc_season11_iron_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_first/ugc_season11_iron_first_demo.mdl"
+		}
+		"8385"
+		{
+			"name"				"UGC Highlander 2nd Place Iron Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_second/ugc_season11_iron_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_second/ugc_season11_iron_second_demo.mdl"
+		}
+		"8386"
+		{
+			"name"				"UGC Highlander 3rd Place Iron Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_third/ugc_season11_iron_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_third/ugc_season11_iron_third_demo.mdl"
+		}
+		"8387"
+		{
+			"name"				"UGC Highlander Iron Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant_demo.mdl"
+		}
+		"8388"
+		{
+			"name"				"UGC 6vs6 1st Place Platinum Season 13"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_first/ugc_season11_platinum_first_demo.mdl"
+		}
+		"8389"
+		{
+			"name"				"UGC 6vs6 2nd Place Platinum Season 13"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_second/ugc_season11_platinum_second_demo.mdl"
+		}
+		"8390"
+		{
+			"name"				"UGC 6vs6 3rd Place Platinum Season 13"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_third/ugc_season11_platinum_third_demo.mdl"
+		}
+		"8391"
+		{		
+			"name"				"UGC 6vs6 Platinum Participant Season 13"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_platinum_participant/ugc_season11_platinum_participant_demo.mdl"
+		}
+		"8392"
+		{		
+			"name"				"UGC 6vs6 Silver Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_silver_participant/ugc_season11_silver_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_silver_participant/ugc_season11_silver_participant_demo.mdl"
+		}
+		"8393"
+		{		
+			"name"				"UGC 6vs6 Steel Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_steel_participant/ugc_season11_steel_participant_demo.mdl"
+		}
+		"8394"
+		{		
+			"name"				"UGC 6vs6 Iron Participant Season 13"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season13"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant_demo.mdl"
+		}
 
 
 
@@ -60418,7 +60761,6 @@
 					"can_gift_wrap" "1"
 				}
 			}
-			"armory_desc"		"gift_wrap"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
 			"item_name"		"#TF_Tool_GiftWrap_Global"
