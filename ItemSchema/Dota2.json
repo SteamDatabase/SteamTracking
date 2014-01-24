@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.64b3537066687ac9b283a65c3a9ec7e405fbd725.txt",
+		"items_game_url": "http:\/\/cdn.dota2.com\/apps\/570\/scripts\/items\/items_game.e54fee7b015784b2adb3726c938b0a08ae590654.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -61680,6 +61680,281 @@
 				}
 			},
 			{
+				"name": "Chaos Legion Mount",
+				"defindex": 5980,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "mount",
+				"item_name": "Chaos Legion Mount",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/chaos_legion_mount\/chaos_legion_mount",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_mount\/chaos_legion_mount.f6c914c781ab3d805a4bc7879c4a9f0c890d6ece.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_mount\/chaos_legion_mount_large.dddfc785bef120adeec4f9394bb2433ad7d2b638.png",
+				"item_set": "chaos_legion",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Chaos Legion Drapes",
+				"defindex": 5981,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "shoulder",
+				"item_name": "Chaos Legion Drapes",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/chaos_legion_drapes\/chaos_legion_drapes",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_drapes\/chaos_legion_drapes.77b8343fc597d1ae815569f64d45050b7c487db2.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_drapes\/chaos_legion_drapes_large.f566ee1536f1497ba01ce31141d1b81d29ebb0e2.png",
+				"item_set": "chaos_legion",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Chaos Legion Helm",
+				"defindex": 5982,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "helmet",
+				"item_name": "Chaos Legion Helm",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/chaos_legion_helm\/chaos_legion_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_helm\/chaos_legion_helm.e7f8b1fa1b3539fa4087ee24edadeb69a5848081.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_helm\/chaos_legion_helm_large.211d37022e40322a4122e217fe2d4a1e73d45d43.png",
+				"item_set": "chaos_legion",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Chaos Legion Shield",
+				"defindex": 5983,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "offhand weapon",
+				"item_name": "Chaos Legion Shield",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/chaos_legion_shield\/chaos_legion_shield",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_shield\/chaos_legion_shield.4ca2d5bfddd0b6259ffe9b391db9dcf6df2e84ac.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_shield\/chaos_legion_shield_large.6a9089f4ce0d2a58871e80f981e696480018575a.png",
+				"item_set": "chaos_legion",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Chaos Legion Weapon",
+				"defindex": 5984,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mace",
+				"item_name": "Chaos Legion Weapon",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/chaos_knight\/chaos_legion_weapon\/chaos_legion_weapon",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_weapon\/chaos_legion_weapon.91195781734c3319ba6b70aa75321061b70756aa.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/chaos_knight\/chaos_legion_weapon\/chaos_legion_weapon_large.ae7bb5e90e5003002bfc2d6a1848633cf15a4953.png",
+				"item_set": "chaos_legion",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Arms",
+				"defindex": 5992,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "arms",
+				"item_name": "Oblivion Headmaster Arms",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_arms\/oblivion_headmaster_arms",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_arms\/oblivion_headmaster_arms.fb53811d1222c0be03641401687e1d08bbfdc8ba.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_arms\/oblivion_headmaster_arms_large.bfa53f3614f7ed7905dbf32cb6260bce43739cec.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Cape",
+				"defindex": 5994,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "back",
+				"item_name": "Oblivion Headmaster Cape",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_back\/oblivion_headmaster_back",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_back\/oblivion_headmaster_back.929b39b94d752f242312e4c720959ab9729a1386.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_back\/oblivion_headmaster_back_large.1b086d119c630925259bec692d01fdcc4c846b43.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Belt",
+				"defindex": 5996,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "belt",
+				"item_name": "Oblivion Headmaster Belt",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_belt\/oblivion_headmaster_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_belt\/oblivion_headmaster_belt.5ed037068cf8fff72a3c939623e78707df08728e.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_belt\/oblivion_headmaster_belt_large.69e7e4fb3b1b9831c859faa5f1339bba6633a482.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Helmet",
+				"defindex": 5997,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "head",
+				"item_name": "Oblivion Headmaster Helmet",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_helm\/oblivion_headmaster_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_helm\/oblivion_headmaster_helm.5b1b19e827007b9fe8ca2cebd830fb5d5a345f19.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_helm\/oblivion_headmaster_helm_large.14c6c5f568d224ef8f080606f2c81fb1c230073e.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Shoulders",
+				"defindex": 6000,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "shoulder",
+				"item_name": "Oblivion Headmaster Shoulders",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_shoulders\/oblivion_headmaster_shoulders",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_shoulders\/oblivion_headmaster_shoulders.4b9e060fa5e7d0a818307a2ca2073a4c18dc712d.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_shoulders\/oblivion_headmaster_shoulders_large.1f96d80f154ef00a5e77ba8606612dec9a001e72.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Wand",
+				"defindex": 6001,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Mace",
+				"item_name": "Oblivion Headmaster Wand",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/pugna\/oblivion_headmaster_wand\/oblivion_headmaster_wand",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_wand\/oblivion_headmaster_wand.a5cfc4eb7bc550aad6f6fd1365f46c3abdeeac25.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/pugna\/oblivion_headmaster_wand\/oblivion_headmaster_wand_large.97eaa3b77459c642b2bda6b3b738cce2cbcbcab6.png",
+				"item_set": "oblivion_headmaster",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
+				}
+			},
+			{
 				"name": "Free Trial Premium Upgrade",
 				"defindex": 10000,
 				"item_class": "upgrade",
@@ -73532,6 +73807,31 @@
 					"paintable_unusual": true,
 					"autograph": true,
 					"can_consume": true
+				}
+			},
+			{
+				"name": "Amphibian Kid",
+				"defindex": 10407,
+				"item_class": "dota_item_wearable",
+				"item_type_name": "Courier",
+				"item_name": "Amphibian Kid",
+				"item_description": "Long an admirer of those locked in battle above, this little Slithereen swam to the surface to help out its heroes.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/items\/courier\/amphibian_kid\/amphibian_kid",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/courier\/amphibian_kid\/amphibian_kid.7298ec19a61225ae8cb72b4aff95b8212aef4c34.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/items\/courier\/amphibian_kid\/amphibian_kid_large.c98742dbe838c67e054dc138cff3d13c7545d41f.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true,
+					"can_have_sockets": true
 				}
 			},
 			{
@@ -87979,6 +88279,528 @@
 				}
 			},
 			{
+				"name": "Helios Esports & Logitech Gaming Season 1",
+				"defindex": 15484,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Helios Esports & Logitech Gaming Season 1",
+				"item_description": "An amateur tournament to showcase the top North American and European teams competing for prizes worth over $1500!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_helios",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_helios.a19a208781f5016639c78c4e3529365b96006e14.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_helios_large.b209aa9e5e91aed397cb4880339e40dd6205e406.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Helios Esports & Logitech Gaming Season 1 - ADMIN",
+				"defindex": 15485,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Helios Esports & Logitech Gaming Season 1 - ADMIN",
+				"item_description": "An amateur tournament to showcase the top North American and European teams competing for prizes worth over $1500!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_helios",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_helios.a19a208781f5016639c78c4e3529365b96006e14.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_helios_large.b209aa9e5e91aed397cb4880339e40dd6205e406.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sweaty Cup",
+				"defindex": 15486,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sweaty Cup",
+				"item_description": "Semi-pro teams and amateurs compete in this tournament for 16,000 Rubles!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sweatycup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sweatycup.f63bca764d852dd9eb82e1280c74a29bfcd5aa20.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sweatycup_large.ec318c5221123884b071df7b948915aada8f8537.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Sweaty Cup - ADMIN",
+				"defindex": 15487,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Sweaty Cup - ADMIN",
+				"item_description": "Semi-pro teams and amateurs compete in this tournament for 16,000 Rubles!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_sweatycup",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sweatycup.f63bca764d852dd9eb82e1280c74a29bfcd5aa20.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_sweatycup_large.ec318c5221123884b071df7b948915aada8f8537.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 West",
+				"defindex": 15488,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 5 West",
+				"item_description": "Netolic Pro League West 5 invites the best teams and rivalries from Europe and the Americas to fight it out! This ticket includes the exclusive Oblivion Headmaster set!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5west",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west.0c35904fcbc7e2774d2a788840386f60ddf05f41.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west_large.7ce2e02d3deda9a0fb4128cadc98b7e117c68a69.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 West - ADMIN",
+				"defindex": 15489,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 5 West - ADMIN",
+				"item_description": "Netolic Pro League West 5 Inviting the best teams and rivalries from Europe and the Americas to fight it out! This ticket includes the exclusive Oblivion Headmaster set!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5west",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west.0c35904fcbc7e2774d2a788840386f60ddf05f41.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west_large.7ce2e02d3deda9a0fb4128cadc98b7e117c68a69.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota2VO Seasons: Frostfire",
+				"defindex": 15490,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota2VO Seasons: Frostfire",
+				"item_description": "Teams from the CIS compete for a prize pool of $1,000+ and the title of Dota2VO Champions! ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_frostfire",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_frostfire.71dc2c944baa6513cbe0e5eec824e14bd43004dd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_frostfire_large.9fb3017c8992f3435d409672bba4145e1c5d5108.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Dota2VO Seasons: Frostfire - ADMIN",
+				"defindex": 15491,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Dota2VO Seasons: Frostfire - ADMIN",
+				"item_description": "Teams from the CIS compete for a prize pool of $1,000+ and the title of Dota2VO Champions! ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_frostfire",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_frostfire.71dc2c944baa6513cbe0e5eec824e14bd43004dd.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_frostfire_large.9fb3017c8992f3435d409672bba4145e1c5d5108.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Asian Cyber Games Invitational: Best of the Best",
+				"defindex": 15492,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Asian Cyber Games Invitational: Best of the Best",
+				"item_description": "Southeast Asian teams are invited to compete in the Asian Cyber Games Invitational: Best of the Best tournament for a total prize pool of $3500!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_acgbob",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_acgbob.9785748e040a3ac442bbf74dbdeb96bdbbb00f79.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_acgbob_large.c148ce67c302f6d28c252c7f9e154a6a7e7b07f7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Asian Cyber Games Invitational: Best of the Best - ADMIN",
+				"defindex": 15493,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Asian Cyber Games Invitational: Best of the Best - ADMIN",
+				"item_description": "Southeast Asian teams are invited to compete in the Asian Cyber Games Invitational: Best of the Best tournament for a total prize pool of $3500!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_acgbob",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_acgbob.9785748e040a3ac442bbf74dbdeb96bdbbb00f79.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_acgbob_large.c148ce67c302f6d28c252c7f9e154a6a7e7b07f7.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Macedonian Elite League",
+				"defindex": 15494,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Macedonian Elite League",
+				"item_description": "Top players compete in two divisions in the Macedonian Elite League for a prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mel.1c20bf4a11dc96a9543c9102ee6d1f732c7603f3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mel_large.262bb2e4859f59f0660a6a7077a4f253ffa1ed6a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Macedonian Elite League - ADMIN",
+				"defindex": 15495,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Macedonian Elite League - ADMIN",
+				"item_description": "Top players compete in two divisions in the Macedonian Elite League for a prize!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_mel",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mel.1c20bf4a11dc96a9543c9102ee6d1f732c7603f3.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_mel_large.262bb2e4859f59f0660a6a7077a4f253ffa1ed6a.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 East",
+				"defindex": 15496,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 5 East",
+				"item_description": "Netolic Pro League East 5 invites the best teams and rivalries from Asia to battle it out! This ticket includes the exclusive Chaos Legion set!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5east",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east.d1ec4bf0e4bdfaa1419adbf830fab7c4e6eb835c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east_large.d3663556d91a9ad31069323222991e1c0a49c10e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 East - ADMIN",
+				"defindex": 15497,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Netolic Pro League 5 East - ADMIN",
+				"item_description": "Netolic Pro League East 5 invites the best teams and rivalries from Asia to battle it out! This ticket includes the exclusive Chaos Legion set!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5east",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east.d1ec4bf0e4bdfaa1419adbf830fab7c4e6eb835c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east_large.d3663556d91a9ad31069323222991e1c0a49c10e.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "GamerSportPeru",
+				"defindex": 15498,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "GamerSportPeru",
+				"item_description": "32 teams compete in the GamerSportPeru tournament!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_peru",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_peru.e75364f09a4fcfe3c9e4b360c9a778e7ba975cea.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_peru_large.1a607a371117f1bef51550b91dd5370c59349e96.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "GamerSportPeru - ADMIN",
+				"defindex": 15499,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "GamerSportPeru - ADMIN",
+				"item_description": "32 teams compete in the GamerSportPeru tournament!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_peru",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_peru.e75364f09a4fcfe3c9e4b360c9a778e7ba975cea.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_peru_large.1a607a371117f1bef51550b91dd5370c59349e96.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Yard White Festival",
+				"defindex": 15502,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Yard White Festival",
+				"item_description": "Yard Festival is back for Yard White Festival - the second tournament for non-pro teams! Six amateur teams from qualifying matches will compete for $2000 with professional Dota 2 scene teams!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_yardwhite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite.fb0077bac13603ca66961d21d0ff29de746d9603.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite_large.6c6ac116567021ee2a46e0be7bcf3c37be80c542.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
+				"name": "Yard White Festival - ADMIN",
+				"defindex": 15503,
+				"item_class": "tool",
+				"item_type_name": "New Item",
+				"item_name": "Yard White Festival - ADMIN",
+				"item_description": "Yard Festival is back for Yard White Festival - the second tournament for non-pro teams! Six amateur teams from qualifying matches will compete for $2000 with professional Dota 2 scene teams!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_yardwhite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite.fb0077bac13603ca66961d21d0ff29de746d9603.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite_large.6c6ac116567021ee2a46e0be7bcf3c37be80c542.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "league_view_pass",
+					"use_string": "Use"
+				}
+			},
+			{
 				"name": "Artificer's Hammer",
 				"defindex": 17002,
 				"item_class": "tool",
@@ -98875,6 +99697,155 @@
 					"type": "item_pack",
 					"use_string": "Open Bundle"
 				}
+			},
+			{
+				"name": "Chaos Legion Set",
+				"defindex": 20364,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Chaos Legion Set",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Chaos_Legion_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chaos_legion_set.19c18ef2ce7c70b0d39f537e4d7b772b53848010.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_chaos_legion_set_large.eda1cdf10380de83606f1e3760795fee51ad918f.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Oblivion Headmaster Set",
+				"defindex": 20365,
+				"item_class": "bundle",
+				"item_type_name": "Bundle",
+				"item_name": "Oblivion Headmaster Set",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/sets\/DOTA_Item_Oblivion_Headmaster_Set",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_oblivion_headmaster_set.5bc43d160bc4bbdb0d672bb8375f2d0db13f0763.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/sets\/dota_item_oblivion_headmaster_set_large.824bbd853f1c0d72b852ad57d301468a25977b0c.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 West Bundle",
+				"defindex": 20366,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 5 West Bundle",
+				"item_description": "Netolic Pro League West 5 invites the best teams and rivalries from Europe and the Americas to fight it out! This ticket includes the exclusive Oblivion Headmaster set! ",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5west",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west.0c35904fcbc7e2774d2a788840386f60ddf05f41.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5west_large.7ce2e02d3deda9a0fb4128cadc98b7e117c68a69.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Netolic Pro League 5 East Bundle",
+				"defindex": 20367,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Netolic Pro League 5 East Bundle",
+				"item_description": "Netolic Pro League East 5 invites the best teams and rivalries from Asia to battle it out! This ticket includes the exclusive Chaos Legion set!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_netolic5east",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east.d1ec4bf0e4bdfaa1419adbf830fab7c4e6eb835c.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_netolic5east_large.d3663556d91a9ad31069323222991e1c0a49c10e.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
+			},
+			{
+				"name": "Yard White Festival Bundle",
+				"defindex": 20369,
+				"item_class": "bundle",
+				"item_type_name": "Tournament Bundle",
+				"item_name": "Yard White Festival Bundle",
+				"item_description": "Yard Festival is back for Yard White Festival - the second tournament for non-pro teams! Six amateur teams from qualifying matches will compete for $2000 with professional Dota 2 scene teams! Includes Amphibian Kid courier!",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/leagues\/subscriptions_yardwhite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite.fb0077bac13603ca66961d21d0ff29de746d9603.png",
+				"image_url_large": "http:\/\/cdn.dota2.com\/apps\/570\/icons\/econ\/leagues\/subscriptions_yardwhite_large.6c6ac116567021ee2a46e0be7bcf3c37be80c542.png",
+				"capabilities": {
+					"nameable": true,
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "item_pack",
+					"use_string": "Open Bundle"
+				}
 			}
 		]
 		,
@@ -100894,6 +101865,19 @@
 				
 			},
 			{
+				"item_set": "chaos_legion",
+				"name": "Chaos Legion",
+				"store_bundle": "Chaos Legion Set",
+				"items": [
+					"Chaos Legion Weapon",
+					"Chaos Legion Mount",
+					"Chaos Legion Drapes",
+					"Chaos Legion Helm",
+					"Chaos Legion Shield"
+				]
+				
+			},
+			{
 				"item_set": "chiseled_guard",
 				"name": "Raiment of the Chiseled Guard",
 				"store_bundle": "Raiment of the Chiseled Guard",
@@ -102518,6 +103502,20 @@
 					"Obsidian Blade Pauldron",
 					"Obsidian Blade Spear",
 					"Obsidian Blade Dagger"
+				]
+				
+			},
+			{
+				"item_set": "oblivion_headmaster",
+				"name": "Oblivion Headmaster",
+				"store_bundle": "Oblivion Headmaster Set",
+				"items": [
+					"Oblivion Headmaster Shoulders",
+					"Oblivion Headmaster Wand",
+					"Oblivion Headmaster Helmet",
+					"Oblivion Headmaster Belt",
+					"Oblivion Headmaster Cape",
+					"Oblivion Headmaster Arms"
 				]
 				
 			},
