@@ -22,7 +22,7 @@
 					<Label text="#Settings_ManageDevices_User" class="SettingsManageDevices_ColumnUser" />
 				</Panel>
 				
-				<Panel id="SettingsManageDevices_List" class="SettingsManageDevices_List" >
+				<Panel id="SettingsManageDevices_List" class="SettingsPanel_Family_Sharing_List" >
 					<!-- instances of SettingsPanel_ManageDevices_ListEntry will be programmatically added here -->
 				</Panel>
 			</Panel>

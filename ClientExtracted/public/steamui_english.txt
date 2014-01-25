@@ -3803,7 +3803,7 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_DeviceAuth_ChooseDialog_Cancel" "Cancel"
 
 
-"Steam_DeviceAuth_RequestDialog_Title" "Family Sharing request"
+"Steam_DeviceAuth_RequestDialog_Title" "Family Library Sharing Request"
 "Steam_DeviceAuth_RequestDialog_To" "Hi %owner%,"
 "Steam_DeviceAuth_RequestDialog_From" "Thanks,\n%user%"
 "Steam_DeviceAuth_RequestDialog_Text" "Would you share access to your Steam library on this computer?"
@@ -3813,32 +3813,32 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_DeviceAuth_RequestDialog_SendOK" "We’ve discovered the owner has already authorized this device for game sharing. You’re all set."
 "Steam_DeviceAuth_RequestDialog_SendError" "Failed to send authorization request (%reason%)"
 "Steam_DeviceAuth_RequestDialog_SendPending" "Your email request has been sent. Here’s hoping your wish will be granted soon!"
-"Steam_DeviceAuth_RequestDialog_No_SteamGuard" "Steam Guard needs to be enabled to access Family Sharing"
+"Steam_DeviceAuth_RequestDialog_No_SteamGuard" "Steam Guard needs to be enabled to access Family Library Sharing"
 
 "Steam_DeviceAuth_StoppedSharedGame_Title" "Shared Library Warning"
 "Steam_DeviceAuth_StoppedSharedGame_Text" "Steam terminated \"%game%\" because %owner% is currently using this game library."
 
-"Steam_Settings_Family_Sharing_Title" "Family Sharing"
+"Steam_Settings_Family_Sharing_Title" "Family Library Sharing"
 "Steam_Settings_Family_Sharing_ManageSharing" "Manage other computers ..."
-"Steam_Settings_Family_Sharing_StateAuthorized" "This computer is currently authorized by you for Family Sharing. Selected accounts can use your game library while logged in here."
-"Steam_Settings_Family_Sharing_StateNotAuthorized" "You can authorize up to 10 computers to allow selected accounts to use your game library while you are not playing."
+"Steam_Settings_Family_Sharing_StateAuthorized" "Family Library Sharing enables you to share your Steam library with others. Once authorized, Steam users on shared computers may access, download and play your available library of Steam games.\n\nThis computer is currently authorized to share your games. Selected accounts may use your available game library while logged in here."
+"Steam_Settings_Family_Sharing_StateNotAuthorized" "Family Library Sharing enables you to share your Steam library with others. Once authorized, Steam users on shared computers may access, download and play your library of Steam games.\n\nYou may authorize up to ten computers to allow selected accounts to use your Steam library while you are not playing."
 "Steam_Settings_Family_Sharing_AuthorizeDevice" "Authorize this computer..."
 "Steam_Settings_Family_Sharing_DeauthorizeDevice" "Deauthorize this computer..."
 "Steam_Settings_Family_Sharing_AuthorizeError" "Failed to authorized computer (%reason%)"
 "Steam_Settings_Family_Sharing_DeauthorizeError" "Failed to deauthorized computer (%reason%)"
 "Steam_Settings_Family_Sharing_UpdateBorrowers" "Update borrowers"
 "Steam_Settings_Family_Sharing_BorrowerError" "Failed to update borrower (%reason%)"
-"Steam_Settings_Family_Sharing_No_SteamGuard" "Steam Guard is required to enable Family Sharing"
+"Steam_Settings_Family_Sharing_No_SteamGuard" "Steam Guard is required to enable Family Library Sharing"
 "Steam_Settings_Family_Sharing_TooManyBorrowers" "You can only authorize up to 10 accounts."
 "Steam_Settings_Family_Sharing_AuthorizedBorrower" "Authorized accounts"
 "Steam_Settings_Family_Sharing_List_Empty" "No other local accounts found."
 "Steam_Settings_Family_Sharing_Borrowers" "You can select up to 10 accounts to use your game library on any authorized computer:"
 
-"Steam_Settings_Family_Options_Title" "Family Options"
-"Steam_Settings_Family_Options_Text" "Family Options can be used to restrict access to content and features while in a PIN-protected Family View."
+"Steam_Settings_Family_Options_Title" "Family View"
+"Steam_Settings_Family_Options_Text" "Family View can be used to restrict access to content and features while in a PIN-protected Family View."
 
 
-"Steam_AccountPage_ManageDeviceAuth"	"Manage Family Sharing & Devices..."
+"Steam_AccountPage_ManageDeviceAuth"	"Manage Family Library Sharing..."
 
 
 "Steam_DeviceAuth_Authorized_Notification" "%owner%'s games are now available for you to play on this computer." 
@@ -3853,22 +3853,22 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_AllowGameLaunch_Info"	"Allow %game% to launch with optional command line \"%arguments%\" ?\nIf you did not request this launch then click Cancel"
 "Steam_AllowGameLaunch_Title"	"Allow game launch"
 
-"Steam_Parental_UnlockTitle"			"Family Options"
+"Steam_Parental_UnlockTitle"			"Family View"
 "Steam_Parental_UnlockInstructions"		"Adults, enter your PIN below to exit Family View"
 "Steam_Parental_UnlockInstructions2"	"(Sorry, kids!)"
-"Steam_Parental_UnlockFailureTitle"		"Family Options"
+"Steam_Parental_UnlockFailureTitle"		"Family View"
 "Steam_Parental_UnlockFailure"			"Nice try. Please enter the correct PIN."
 "Steam_Parental_UnlockFailureExceeded"	"Too many failed attempts. Please restart Steam to try again."
-"Steam_Parental_GameBlocked_Title"		"Family Options"
+"Steam_Parental_GameBlocked_Title"		"Family View"
 "Steam_Parental_GameBlocked"			"This game is unavailable in Family View"
 
-"Steam_Parental_LockTitle"				"Family Options"
+"Steam_Parental_LockTitle"				"Family View"
 "Steam_Parental_LockInstructions"		"Please confirm you'd like to return to Family View."
 
 "SteamUI_ParentalControl_Tip_Locked"	"You are in Family View. Select to change."
 "SteamUI_ParentalControl_Tip_Unlocked"	"You are not in Family View. Select to change."
 
-"Steam_Parental_Manage"					"Manage Family Options..."
+"Steam_Parental_Manage"					"Manage Family View..."
 
 "steam_inbox_asyncgame"			"1 new turn waiting"
 "steam_inbox_asyncgames"		"%count% new turns waiting"

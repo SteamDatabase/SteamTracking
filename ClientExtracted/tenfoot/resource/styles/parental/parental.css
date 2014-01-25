@@ -389,6 +389,11 @@ ParentalReplacementPanel Button:focus
 	flow-children: down;
 	margin-right: 300px;
 	padding-top: 100px;
+	
+	background-image: url( "file://{images}/settings/keybg.png" );
+	background-repeat: no-repeat no-repeat;
+	background-position: left 900px top 400px;
+
 }
 
 #ParentalIntroChild #Instructions
@@ -402,7 +407,7 @@ ParentalReplacementPanel Button:focus
 }
 #ParentalIntroChild ToggleButton
 {
-	width: 700px;
+	width: 800px;
 }
 
 ParentalFeaturesChild .SettingsBottomPanel
@@ -420,7 +425,16 @@ ParentalFeaturesChild .SettingsBottomPanel
 #ParentalFeaturesChild #ChooseFeaturesPanel
 {
 	flow-children: down;
-	margin-top: 0px;
+	margin-right: 300px;
+	padding-top: 100px;
+	width:1300px;
+	height: 800px;
+	background-image: url( "file://{images}/settings/keybg.png" );
+	background-repeat: no-repeat no-repeat;
+	background-position: left 900px top 400px;
+	
+
+
 }
 
 #ParentalFeaturesChild ToggleButton
@@ -540,11 +554,11 @@ ParentalSetPINChild .SettingsBottomPanel
 .ParentalSetPINDialog
 {
 	margin-top: .0px;
-	padding: 200px 40px 20px 40px;
+	padding: 200px 300px 20px 300px;
 
 	flow-children: down;
 	horizontal-align: center;
-	width: 850px;
+	width: 1920px;
 	height: 800px;
 
 	opacity: 1.0;
@@ -552,7 +566,7 @@ ParentalSetPINChild .SettingsBottomPanel
 
 	background-image: url( "file://{images}/settings/keybg.png" );
 	background-repeat: no-repeat no-repeat;
-	background-position: 55% 35%;
+	background-position: left 1200px top 300px;
 
 	transition-property: transform;
 	transition-duration: 0.4s;
