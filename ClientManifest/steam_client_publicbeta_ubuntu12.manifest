@@ -1,11 +1,11 @@
 "ubuntu12"
 {
-	"version"		"1390515650"
+	"version"		"1390610019"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.55a37919f1bd353826754d3c37ffb0c60f20d2e9"
-		"checksum"		"55a37919f1bd353826754d3c37ffb0c60f20d2e9"
-		"size"		"5507393"
+		"file"		"strings_all.zip.8c0b91098c9133ad1be75f3b0542209fc1831a27"
+		"checksum"		"8c0b91098c9133ad1be75f3b0542209fc1831a27"
+		"size"		"5507472"
 	}
 	"resources_all"
 	{
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.e946d2a838bd486fb2ed9303da1ac32049489f2c"
-		"checksum"		"e946d2a838bd486fb2ed9303da1ac32049489f2c"
-		"size"		"9416047"
+		"file"		"tenfoot_all.zip.726e952c5a6704f9ce603480e63b1e20b3dab05f"
+		"checksum"		"726e952c5a6704f9ce603480e63b1e20b3dab05f"
+		"size"		"9416227"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -39,9 +39,9 @@
 	}
 	"tenfoot_images_all"
 	{
-		"file"		"tenfoot_images_all.zip.268d4b618a4e4144920920eed89a86f8903e06fe"
-		"checksum"		"268d4b618a4e4144920920eed89a86f8903e06fe"
-		"size"		"23978906"
+		"file"		"tenfoot_images_all.zip.21e938cbea1a9c7d7aed39b6ddf591ee8dc07c66"
+		"checksum"		"21e938cbea1a9c7d7aed39b6ddf591ee8dc07c66"
+		"size"		"23978915"
 	}
 	"remoteui_all"
 	{
@@ -57,9 +57,9 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.89fd30aac5c7189d1a1cb8c596eb175f4b3788d5"
-		"checksum"		"89fd30aac5c7189d1a1cb8c596eb175f4b3788d5"
-		"size"		"38181220"
+		"file"		"bins_ubuntu12.zip.74ba7b539e7055dfabeca9adefa1c7d04b96ff07"
+		"checksum"		"74ba7b539e7055dfabeca9adefa1c7d04b96ff07"
+		"size"		"38181747"
 	}
 	"webkit_ubuntu12"
 	{
@@ -81,9 +81,9 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.f9e10a4807fcaa0f35eef2f9c140c0bff523227f"
-		"checksum"		"f9e10a4807fcaa0f35eef2f9c140c0bff523227f"
-		"size"		"1211004"
+		"file"		"steam_ubuntu12.zip.2886e87acef2362e1f3d233a209d2c4e4644aabc"
+		"checksum"		"2886e87acef2362e1f3d233a209d2c4e4644aabc"
+		"size"		"1211006"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -101,5 +101,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"6dcfef840b8b8d7cd77c99ed6c40e2cc727805b92e866a1ce08c65fe75e641f1c1c14c92dc65a99666c1d51171c9a6f671b8cfb1500cfb71d74612b429d42de80ba5e4ce6a8d27df00c8a6eb2442f5760a9a2f866a85669d782c17203332b8e68b1d15bad732e9aee4dcc9c773f40fc768b3c252749897a8f4c669fb93be5cf1"
+	"ubuntu12"		"0a2ab77e56bfa28024811cd3e129b6878b89baeb74cc95ea74356ec4b8f57af91229e84e2ce02acb4a050e51bf9b4d85ef92970d08424c16e3ebcc2bcf660d13159688e6401be75f3783b8092068235ded1f6e381ded54352aabc2fa469b5494c14b62e85a0d542177c0d93fa7d0174dcee16423a12cc8aae1e84d5b775f1b5c"
 }

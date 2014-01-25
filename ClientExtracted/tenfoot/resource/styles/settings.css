@@ -763,11 +763,11 @@ DropDown Label
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
 	
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -783,11 +783,11 @@ DropDown Label
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #ccccccff ), to( #999999ff ) );
 	color: #231f20;
 
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 }
@@ -1261,11 +1261,11 @@ KeyboardShortcut:focus
 	color: black;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
 	
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.23s;
-	animation-delay: 0.0s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement; 
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -1412,12 +1412,14 @@ KeyboardShortcut .Graphic
 	padding: 5px;
 	border-style: solid;
 	border-width: 5px;
+	border-color: none;
 }
 
 .SettingsController_BindRow:focus
 {
 	transition-duration: 0.25s !immediate;
 	transform: translateX( 0px );
+	transition-property: border, background-color, color, box-shadow, transform;
 
 	border-width: 5px;
 	border-style: solid;
@@ -1430,11 +1432,11 @@ KeyboardShortcut .Graphic
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
-	animation-name: main-button-glow-movement, quick-blur; 
-	animation-duration: 1.7s, 0.23s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
@@ -1833,7 +1835,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 {
 	flow-children: down;
 	overflow: clip scroll;
-	width: 970px;
+	width: 1000px;
 	height: 460px;
 	margin-top: 10px;
 	padding-right: 8px;
@@ -1847,18 +1849,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 }
 
-.SettingsPanel_Family_Sharing_List:descendantfocus
-{
-	border-color: applabelsolid;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 	
 .SettingsPanel_Family_Sharing_List:focus
 {
@@ -1882,16 +1873,57 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 #BorrowerToggle
 {
-	width: 900px;
 	margin-bottom: 6px;
 	margin-top: 6px;
+	margin-right: 8px;
+	background-color: none;
+	height: 52px;
+	border-color: none;
+	box-shadow: none;
+	animation-name: none;
+	
 }
 
-
-#BorrowerToggle:descendantfocus Label, 
+#BorrowerToggle Label
 {
-	transform: translateX( 0px );
+	color: applabel;
+	transform: translateX( 4px );
+	opacity: 0.7;
+	transition-property: color, transform, opacity;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-out;
+	transition-delay: 0.0s;
 }
+
+#BorrowerToggle:descendantfocus Label, #BorrowerToggle:hover Label, 
+{
+	transform: translateX( 10px );
+	opacity: 1.0;
+}
+
+#BorrowerToggle .CheckBox, #BorrowerToggle .TickBox
+{
+	width: 44px;
+	height: 44px;
+	border-width: 5px;
+	border-color: ui_common_control_border;	
+	border-style: solid;
+	border-radius: 2px;
+
+	
+}
+
+#BorrowerToggle:descendantfocus .CheckBox, #BorrowerToggle:descendantfocus .TickBox
+{
+	box-shadow: fill box_shadow_on_color -3px -3px 9px 6px;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;	
+}
+
 
 .SettingsPanel_Family_Sharing_List_ColumnName
 {
@@ -1924,12 +1956,12 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	width: 1200px;
 	flow-children: down;
 	overflow: clip scroll;
-	background-color: simplebutton;
+	background-color: dialog_bg_color;
 }
 
 .SettingsManageDevices_ColumnItem
 {
-	width: 48px;
+	width: 55px;
 	font-size: 24px;
 	margin-top: 20px;
 }
@@ -1946,7 +1978,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 #Settings_ManageDevices .SettingsManageDevices_ColumnName
 {
-	width: 352px;
+	width: 317px;
 }
 
 #Settings_RemoteClients .SettingsManageDevices_ColumnName
@@ -1957,7 +1989,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 .SettingsManageDevices_ColumnTime
 {
-	width: 400px;
+	width: 350px;
 	font-size: 24px;
 	margin-top: 20px;
 	margin-left: 8px;
@@ -1979,23 +2011,25 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	margin-right: 8px;
 	font-size: 24px;
 	text-align: right;
-	color: applabelsolid;
+	color: tcstatictext;
 }
 
 .SettingsManageDevices_ColumnNameContent
+{
+	width: 325px;
+	font-size: 24px;
+	padding-right: 8px;
+	color: applabelsolid;
+	opacity: 0.7;
+}
+
+.SettingsManageDevices_ColumnTimeContent
 {
 	width: 350px;
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;
-}
-
-.SettingsManageDevices_ColumnTimeContent
-{
-	width: 400px;
-	font-size: 24px;
-	margin-right: 8px;
-	color: applabelsolid;
+	opacity: 0.7;
 }
 
 .SettingsManageDevices_ColumnUserContent
@@ -2004,11 +2038,13 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	font-size: 24px;
 	margin-right: 8px;
 	color: applabelsolid;
+	opacity: 0.7;
 }
 
 .SettingsController_BindRow:focus .SettingsManageDevices_ColumnItemContent,.SettingsController_BindRow:focus .SettingsManageDevices_ColumnNameContent, .SettingsController_BindRow:focus .SettingsManageDevices_ColumnTimeContent, .SettingsController_BindRow:focus .SettingsManageDevices_ColumnUserContent
 {
-	color:black;
+	color: black;
+	opacity: 1.0;
 }
 
 .AuthButton
@@ -2495,4 +2531,23 @@ SettingsPanel_Display.Underscan
 .AudioCheck
 {
 	margin-top: 20px;
+}
+
+#DeviceAuthorizedStateLabel
+{
+	margin-bottom: 10px;
+}
+	
+#BorrowersLabel
+{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+	
+#LastTimeLabel
+{
+
+	font-size: 20px;
+	margin-top: 4px;
+
 }

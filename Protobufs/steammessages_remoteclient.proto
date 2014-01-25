@@ -87,7 +87,7 @@ message CMsgRemoteClientStartStreamResponse {
 	optional int32 e_launch_result = 1 [default = 2];
 	optional uint32 stream_port = 2;
 	repeated int32 launch_options = 3;
-	optional string auth_token = 4;
+	optional bytes auth_token = 4;
 }
 
 message CMsgRemoteClientPing {
