@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.34ae34daca155a39845ac29cbf026818677f5c96.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.524fef31ce7ffee0d1ff68336b10aaaf59244f10.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -51407,6 +51407,31 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Robot Heavy Collectible Figure Promo",
+				"defindex": 2128,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Robot Heavy Collectible Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				}
 			},
 			{
 				"name": "Craft Bar Level 1",
