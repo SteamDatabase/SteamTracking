@@ -123,14 +123,6 @@
 			},
 			{
 				"origin": 22,
-				"name": "Passport Reward"
-			},
-			{
-				"origin": 23,
-				"name": "Tutorial Drop"
-			},
-			{
-				"origin": 24,
 				"name": "Stock Item"
 			}
 		]
