@@ -152,6 +152,82 @@
 	font-size: 16px;
 }
 
+.tab_filter_control {
+	border: 1px solid #3c3d3e;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	line-height: 28px;
+	padding: 0 8px;
+
+	font-size: 12px;
+	color: #b0aeac;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	cursor: pointer;
+}
+
+.tab_filter_control.checked {
+	background-color: #384959;
+	border-color: #384959;
+}
+
+.tab_filter_control_checkbox {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-position: top center;
+
+	margin-right: 16px;
+	background-image: url('http://cdn.store.steampowered.com/public/images/v5/store_checkbox_blue.png');
+	vertical-align: text-bottom;
+}
+
+.tab_filter_control.checked .tab_filter_control_checkbox {
+	background-position: bottom center;
+}
+
+.tab_filter_control_label {
+	display: inline-block;
+}
+
+.tab_filter_ctn {
+	color: #779abd;
+	margin-bottom: 24px;
+	font-size: 12px;
+}
+
+.tab_filter_header {
+	font-size: 13px;
+	line-height: 21px;
+}
+
+.tab_filters {
+	min-height: 30px;
+}
+
+.tab_filter {
+	display: inline-block;
+	white-space: nowrap;
+	background-color: #384959;
+	border-radius: 3px;
+	padding: 0 12px;
+	line-height: 30px;
+
+	margin: 0 4px 4px 0;
+}
+
+.tab_filter_remove {
+	display: inline-block;
+	cursor: pointer;
+	background: no-repeat center center url('http://cdn.store.steampowered.com/public/images/v5/delete_search_term.png');
+	width: 12px;
+	height: 30px;
+	margin-left: 8px;
+}
+
 #header_callout {
 
 	height: 101px;

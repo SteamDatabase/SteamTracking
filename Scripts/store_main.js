@@ -1436,3 +1436,37 @@ CTextInputSuggest.prototype.Destroy = function()
 	this.m_$Input.off( '.CTextInputSuggest' );
 }
 
+// tags in the menu
+function EnsureStoreMenuTagsLoaded( strId )
+{
+	var $Element = $J(strId);
+	if ( !$Element.data('tags-loaded') )
+	{
+		$Element.data('tags-loaded', true );
+
+		var url = 'http://store.steampowered.com/tagdata/myfrequenttags';
+		var mytag_version = WebStorage.GetLocal( 'mytag_version', true );
+		if ( mytag_version )
+			url += '?v=' + parseInt( mytag_version );
+
+		$J.get( url ).done( function( data ) {
+			rgYourPopularTags = data || [];
+			if ( rgYourPopularTags.length > 0 )
+			{
+				$Element.empty();
+				$Element.css( 'min-height', '' );
+				for( var i = 0; i < rgYourPopularTags.length && i < 5; i++ )
+				{
+					var tag = rgYourPopularTags[i];
+					var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) })
+					$Link.text( tag.name );
+					$Element.append( $Link );
+				}
+			}
+		}).fail( function() {
+		}).always( function() {
+			$Element.children( '.popup_menu_subarea').show();
+		});
+	}
+}
+

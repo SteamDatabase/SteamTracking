@@ -317,13 +317,20 @@ body{
 			margin-bottom: 5px;
 		}
 
+		.landingRightCol .panel h2 {
+			line-height: 21px;
+			margin-bottom: 8px;
+		}
+
 		.landingRightCol .panel .btn_medium {
 			margin-bottom: 10px;
 		}
-	.landingRightCol .panel h2 {
-		line-height: 21px;
-		margin-bottom: 8px;
-	}
+
+		.landingRightCol .panel .labelExplanation {
+			padding-left: 25px;
+			padding-bottom: 10px;
+			font-size: 10px;
+		}
 
  .iconLink {
 	display: block;

@@ -3364,16 +3364,12 @@ function PublishPending( rgOptions )
 					}
 				};
 
-				dateData = {
-					'releases/0/steam_release_date' : d.getTime() / 1000
-				};
-
 				rgUrls.push( {
 					'url': 'https://partner.steamgames.com/store/packagesave/' + j,
 					'data': {
-						'dates': dateData,
 						'app': appData,
-						'json': true
+						'json': true,
+						'set_date': ( bSetDate ) ? 1 : 0
 					},
 					'message': 'Setting release date on ' + j
 				} );

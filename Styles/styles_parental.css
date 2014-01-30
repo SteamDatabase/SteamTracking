@@ -19,6 +19,14 @@
 	text-align: center;
 }
 
+.mobileBody #parental_notice
+{
+	border: none;
+	margin-top: 16px;
+	width: inherit;
+	background-image: inherit;
+}
+
 #parental_notice_text
 {
 	margin-bottom: 20px;
@@ -40,11 +48,16 @@
 	color:#ffffff;
 }
 
+.mobileBody #parental_notice input
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
 #parental_notice button
 {
-	border: none;
-	margin-top: -2px;
-	margin-left: 4px;
 	display: inline-block;
 }
 
