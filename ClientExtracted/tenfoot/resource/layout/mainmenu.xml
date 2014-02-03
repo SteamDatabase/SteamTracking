@@ -103,8 +103,8 @@
 
 				<StorePanel id="Store" />
 				<LibraryPanel id="Library" class="LibraryPanel"/>
-				<CommunityMainPanel id="Community" />
-				<ProfilePanel id="Profile" class="ProfilePanel" />
+				<CommunityMainPanel id="Community" /> 
+				<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
 
 				<Image class="HomeButton" onmouseactivate="ShowMainMenu();"/>
 				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->

@@ -1815,11 +1815,6 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	visibility: collapse;
 }
 
-.NotLoggedIn #AudioSettingsButton
-{
-	visibility: collapse;
-}
-
 .NotLoggedIn #InGameSettingsButton
 {
 	visibility: collapse;
@@ -2506,12 +2501,105 @@ SettingsPanel_Display.Underscan
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
-.OfflineMode #SettingsAccount_ChangePassword
+// Remote Control
+.SettingsRemoteControl_DevicesHeader
+{
+	font-size: 32px;
+	flow-children: right;
+	margin-top: 20px;
+}
+
+.SettingsRemoteControl_List
+{
+	height: 500px;
+	width: 1200px;
+	flow-children: down;
+	overflow: clip scroll;
+	background-color: simplebutton;
+
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+.SettingsRemoteControl_ColumnItem
+{
+	width: 48px;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+.SettingsRemoteControl_ColumnName
+{
+	width: 352px;
+	font-size: 24px;
+	margin-left: 4px;
+	margin-top: 20px;
+	color: tcstatictext;
+}
+
+.SettingsRemoteControl_ColumnTime
+{
+	width: 400px;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-left: 8px;
+	color: tcstatictext;
+}
+
+.SettingsRemoteControl_ColumnAccess
+{
+	width: 150px;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-left: 8px;
+	color: tcstatictext;
+}
+
+.SettingsController_BindRow:focus .SettingsRemoteControl_ColumnItemContent,.SettingsController_BindRow:focus .SettingsRemoteControl_ColumnNameContent, .SettingsController_BindRow:focus .SettingsRemoteControl_ColumnTimeContent, .SettingsController_BindRow:focus .SettingsRemoteControl_ColumnAccessContent
+{
+	color:black;
+}
+
+.SettingsRemoteControl_ColumnItemContent
+{
+	width: 32px;
+	margin-right: 8px;
+	font-size: 24px;
+	text-align: right;
+	color: applabelsolid;
+}
+
+.SettingsRemoteControl_ColumnNameContent
+{
+	width: 350px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.SettingsRemoteControl_ColumnTimeContent
+{
+	width: 400px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.SettingsRemoteControl_ColumnAccessContent
+{
+	width: 150px;
+	font-size: 24px;
+	margin-right: 8px;
+	color: applabelsolid;
+}
+
+.OfflineMode #SettingsAccount_ChangePassword,.OfflineMode #SettingsAccount_ChangeEmail
 {
 	visibility: collapse;
 }
 
-#AudioCard
+#AudioCard, #AudioCard_Error
 {
 	visibility: collapse;
 }
@@ -2521,6 +2609,12 @@ SettingsPanel_Display.Underscan
 {
 	visibility: visible;
 }
+
+.SystemAudioSupport_Failed #AudioCard_Error
+{
+	visibility: visible;
+}
+
 
 
 .AudioBottom

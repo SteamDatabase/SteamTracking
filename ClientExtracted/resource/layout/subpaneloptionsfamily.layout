@@ -18,6 +18,8 @@
 		FamilyOptionsText { controlname=label	labeltext=#Steam_Settings_Family_Options_Text	wrap=1 }
 		
 		ManageOptionsButton { controlname=button	labelText=#Steam_Parental_Manage command=ManageParental }
+		
+		ShowNotificationsCheck { ControlName=checkbutton labeltext=#Steam_Settings_Family_Show_Notifications }
 	
 		Divider1 { ControlName=Divider	}				
 	}
@@ -46,18 +48,19 @@
 		
 		place { controls="FamilyOptionsTitle" region=box dir=down margin-top=15 }
 		place { controls="FamilyOptionsText" region=box start=FamilyOptionsTitle margin-top=10 width=490 height=32 dir=down }
-		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=10 dir=down }
+		place { controls="ManageOptionsButton" region=box start=FamilyOptionsText margin-top=10 width=235 height=24 dir=down }
 		
 		place { controls="Divider1" region=box start=ManageOptionsButton dir=down margin-top=16 width=max }
 		place { controls="FamilySharingTitle" region=box start=Divider1 dir=down margin-top=15 }
 					
 		place { controls="FamilySharingTextState" region=box start=FamilySharingTitle  margin-top=10 width=490 height=64 dir=down }
-		place { controls="AuthorizeDeviceButton," region=box margin-top=8 start=FamilySharingTextState dir=down }
-		place { controls="DeauthorizeDeviceButton" region=box margin-top=8 start=FamilySharingTextState dir=down }
-		place { controls="ManageSharingButton" region=box margin-top=8 margin-left=186 start=FamilySharingTextState dir=down }
+		place { controls="AuthorizeDeviceButton" region=box margin-top=8 width=235 height=24 start=FamilySharingTextState dir=down }
+		place { controls="DeauthorizeDeviceButton" region=box margin-top=8 width=235 height=24 start=FamilySharingTextState dir=down }
+		place { controls="ManageSharingButton" region=box margin-top=8 width=235 height=24 margin-left=263 start=FamilySharingTextState dir=down }
 				
-		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=490 height=34 dir=down }
-		place { controls="BorrowersList" region=box start=BorrowersLabel width=360 height=110 margin-top=12 dir=down }
+		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=490 dir=down }
+		place { controls="BorrowersList" region=box start=BorrowersLabel width=max height=154 margin-top=6 dir=down }
+		place { controls="ShowNotificationsCheck" region=box start=BorrowersList margin-top=10 dir=down }
 								
 		
 			

@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/changeemail.css" />
+	</styles>
+
+	<SendingConfCodeWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#ChangeEmail_SendingConfCode_Title" />
+		<Label class="WizardChildDescription" text="#ChangeEmail_SendingConfCode_Description" />
+
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+
+	</SendingConfCodeWizardChild>
+
+</root>

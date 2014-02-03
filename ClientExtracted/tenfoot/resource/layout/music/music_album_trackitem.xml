@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/music/music_album.css" />
+	</styles>
+	
+	<TrackListItem class="TrackButton Button" 
+		onfocus="TrackListItemGotFocus();" onactivate="TrackDetailPlay();">
+		<Label id="TrackLabel" class="TrackLabel"/>
+		<Panel >
+			<Label id="TimeLabel" class="TimeLabel" text="0:00"/>
+			<Label id="ElapsedLabel" class="TimeLabel" text="0:00"/>
+		</Panel>
+	</TrackListItem>
+	
+</root>

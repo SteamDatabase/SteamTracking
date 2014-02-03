@@ -1,0 +1,46 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+		<include src="file://{resources}/styles/music/music_library.css" />
+	</styles>
+	
+	<MusicLibraryContainerPanel selectionposboundary="vertical" >
+		
+		<Image id="GridBackground" class="GridBackground" />
+
+		<Panel id="HeaderRow" class="HeaderRow" tabindex="auto" selectionpos="0,0">
+			<Label class="SectionHeader" text="#Music_Library_Header" />
+		</Panel>
+
+		<Panel id="PanelDuringCrawling">
+			<Label id="CrawlingHeader" class="CrawlingHeader" text="#Music_Library_Crawling_Header" />
+			<MusicLibraryCrawlingPanel id="MusicLibraryCrawlingPanel"/>
+		</Panel>
+		
+		<Panel id="ContentPanel">		
+			<Carousel id="GridTabs" 
+					tabindex="0" selectionpos="0,0" focus="edge" focus-offset="105px" wrap="false" drawframe="false" 
+					selectionposboundary="vertical" >
+				<Button id="AlbumButton" 
+						onmoveup="CloseMusicLibrary();"	
+						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"
+						onfocus="MusicLibraryActivateAlbumView();">
+					<Label  text="#Music_Library_Albums_Sort" />
+				</Button>
+				<Button id="ArtistButton" 
+						onmoveup="CloseMusicLibrary();"	
+						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryArtistPanel );"
+						onfocus="MusicLibraryActivateArtistView();">
+					<Label text="#Music_Library_Artists_Sort" />
+				</Button>
+			</Carousel>	
+		
+			<Panel id="LibraryContent" class="LibraryContent">
+				<MusicLibraryAlbumPanel id="MusicLibraryAlbumPanel"/>
+				<MusicLibraryArtistPanel id="MusicLibraryArtistPanel"/>	
+			</Panel>		
+		</Panel>
+		
+	</MusicLibraryContainerPanel>
+</root>

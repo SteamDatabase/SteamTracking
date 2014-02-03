@@ -17,6 +17,9 @@
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="RegionSelected()">
 				<Label id="Label" text="#WizardButton_Next" />
 			</Button>
+			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>
 		</Panel>
 	</OOBETimeZoneSettingsWizardChild>
 

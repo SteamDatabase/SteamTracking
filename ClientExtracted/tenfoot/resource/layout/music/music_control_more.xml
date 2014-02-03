@@ -1,0 +1,37 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+	</styles>
+	
+	<MusicControlMoreDialog class="TenfootMsgBox" 
+			oncancel="ButtonCancel()" 
+			onmouseactivate="CloseModalDialog();" >
+	
+		<Panel id="MusicPlayerMenu" class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
+			<Button onactivate="MusicControlMore();" >
+				<Label text="#Music_Control_Browse_Music" />
+			</Button>
+			<Panel class="HorizontalRule"/>
+			<Button id="RemoveCurrentTrackButton" onactivate="RemoveCurrentTrack();" >
+				<Label text="#Music_Control_Remove_Track_From_Queue" />
+			</Button>
+			<Button id="ShowCurrentTrackButton" onactivate="ShowCurrentInSystem();">
+				<Label text="#Music_Control_Show_Track_In_System" />
+			</Button>
+			<Button id="ShowCurrentInUserInterfaceButton" onactivate="ShowCurrentInUserInterface();">
+				<Label text="#Music_Control_Show_Album_In_UI" />
+			</Button>
+			<Panel id="ShowRulerWhenShowCurrent" class="HorizontalRule"/>
+			<Button id="BrowseQueueButton" onactivate="BrowseQueue();">
+				<Label text="#Music_Control_Browse_Queue" />
+			</Button>			
+			<Button id="EmptyQueueButton" onactivate="EmptyQueue();">
+				<Label text="#Music_Control_Clear_Queue" />
+			</Button>
+
+		</Panel>
+	</MusicControlMoreDialog>
+	
+</root>

@@ -1,0 +1,32 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+	</styles>
+	
+	<MusicTrackMoreDialog class="TenfootMsgBox" 
+			oncancel="ButtonCancel()" 
+			onmouseactivate="CloseModalDialog();" >
+		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
+			<Button onactivate="PlayCurrentTrack( true, false);" >
+				<Label text="#MusicAlbum_Play_Track" />
+			</Button>
+			<Button id="TrackPlayNextButton" onactivate="PlayCurrentTrack( false, true);" >
+				<Label text="#MusicAlbum_Play_Next" />
+			</Button>
+			<Button onactivate="PlayCurrentTrack( false, false);" >
+				<Label text="#MusicAlbum_Add_To_Queue" />
+			</Button>
+			<Button id="ViewEntireAlbum" onactivate="ViewEntireAlbum();">
+				<Label text="#MusicAlbum_Show_Entire_Album" />
+			</Button>
+			<Button id="ShowCurrentAlbumInSystemButton" onactivate="ShowCurrentAlbumInSystem();">
+				<Label text="#MusicAlbum_Show_In_System" />
+			</Button>
+			<Button onactivate="RecrawlTrack();">
+				<Label text="#MusicAlbum_Refresh_Track" />
+			</Button>
+		</Panel>
+	</MusicTrackMoreDialog>
+</root>
