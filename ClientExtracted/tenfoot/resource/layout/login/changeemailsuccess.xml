@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/changeemail.css" />
+	</styles>
+
+	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
+		<Label class="WizardChildTitle" text="#ChangeEmail_Success_Title" />
+		<Label class="WizardChildDescription" text="#ChangeEmail_Success_Description" />
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton" id="ButtonDone" onactivate="ChangeEmailDone()">
+				<Label id="Label" text="#WizardButton_Done" />
+			</Button>
+		</Panel>
+
+	</SimpleWizardChild>
+
+</root>

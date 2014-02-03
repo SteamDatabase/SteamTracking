@@ -1,0 +1,39 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+		<include src="file://{resources}/styles/music/music_control.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/quit.css" />
+	</styles>
+	
+
+	<MusicControlPanel onmouseactivate="CloseModalDialog();">
+		<Panel id="MusicControllerPanel" class="MusicControllerPanel" tabindex="auto" selectionpos="auto">
+		
+			<Panel id="HeaderButtons">
+				<Button id="MusicTabButton" class="MusicControlHeaderButton"
+						onmovedown="MoveDownFromMusicTab();"
+						onactivate="ActivateNamedTab( Music )"
+						onfocus="FocusNamedTab( Music )">
+				<Label text="#Music_Control_Music" />
+				</Button>
+				<Button id="SystemTabButton" class="MusicControlHeaderButton"
+						onactivate="ActivateNamedTab( System )"
+						onfocus="FocusNamedTab( System )">
+				<Label text="#Music_Control_System" />
+				</Button>	
+			</Panel> 
+		
+			<Panel id="SystemControlPanel" class="SystemControlTabPanel">
+				<QuitEntriesPanel id="QuitEntriesPanel"/>
+			</Panel>
+			
+			<Panel id="MusicControlPanel" class="MusicControlTabPanel">
+				<MusicControlTransport childfocusonhover="true" id="MusicControlTransport" />			
+			</Panel>
+		
+		</Panel>	
+	</MusicControlPanel>
+
+</root>

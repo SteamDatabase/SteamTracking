@@ -51,9 +51,9 @@
 		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
 		region { name=top region=box margin-top=10 }
 		region { name=topleft region=top y=100 width=255 margin-right=20 }
-		region { name=topright region=top x=262 width=235 y=101}
+		region { name=topright region=top x=263 width=235 y=101}
 		
-		region { name=bottom region=box y=280 }
+		region { name=bottom region=box y=295 }
 		
 		place { controls=TitleLabel region=top }
 		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
@@ -72,9 +72,9 @@
 			width=max
 			height=22
 			region=topright }
-		place { control=ScreenshotActionLabel region=topright start=SetScreenshotFolderButton dir=down margin-top=10 }
+		place { control=ScreenshotActionLabel region=topright start=SetScreenshotFolderButton dir=down margin-top=19 }
 		place { controls=ScreenshotNotifyCheck,ScreenshotPlaySoundCheck,ScreenshotSaveUncompressedCheck dir=down start=ScreenshotActionLabel
-			margin-top=4 height=22 width=max region=topright }
+			margin-top=6 margin-left=10 height=22 width=max region=topright }
 		
 		place { control=Divider1 region=bottom width=max }
 		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=10 width=max dir=down }

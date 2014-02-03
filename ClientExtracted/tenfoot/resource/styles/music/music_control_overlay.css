@@ -1,0 +1,195 @@
+@define currententrytrackcolor: #fefefe;
+@define currententrydotcolor: #595850;
+@define currententryartistcolor: #698dc6;
+@define titlebarbackgroundcolor: #20334c;
+
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2ff ), to( #cbcbcb00 ) );
+@define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
+
+MusicControlOverlay
+{
+	margin: 8px;
+	background-color: #161718b0;
+	flow-children: down;
+	height: 296px;
+	width: 435px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	
+  transform: translatey( 236px );
+
+	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
+	transition-duration: shortduration !immediate;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+	
+	pre-transform-scale2d: 1.0;
+}
+
+.MusicControlOverlay:hover
+{
+	z-index: 90;
+	transition-duration: shortduration !immediate;
+	background-color: #161718b0;
+	box-shadow: box_shadow_on_color -6px -6px 12px 12px;
+}
+
+.MusicControlOverlay:descendantfocus, .MusicControlOverlay:focus,
+{
+	margin: 8px;
+	background-color: action_module;
+	flow-children: down;
+	height: 600px;
+	width: 524px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: ui_common_control_border;
+	
+	transform: translatey( 0px );
+
+	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
+	transition-duration: shortduration !immediate;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+	
+	pre-transform-scale2d: 1.0;
+	
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.MusicControlTransport
+{
+	pre-transform-scale2d: 1.0;
+}
+
+
+
+.HeaderLabel
+{
+	font-family: platformfont;
+	margin: 5px 20px 6px 18px;
+	font-size: 36px;
+	color: detailsdatalabel;
+	visibility: visible;
+	horizontal-align: left;
+
+	width: 100%;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: ease-in-out;
+	transform: translatex( 22px );
+	font-weight: light;
+	opacity: 1.0;
+}
+
+
+.MusicControlOverlay:descendantfocus .HeaderLabel
+{
+	visibility: collapse;
+}
+
+
+.MusicControlOverlay #BrowseQueue
+{
+	visibility: collapse;
+}
+
+#MusicControlOverlay .ControlBarButton
+{
+	pre-transform-scale2d: 0.8;
+	width: 65px;
+	margin-left: -5px;
+	margin-right: -12px;
+	margin-top: -9px;
+	margin-bottom: -5px;
+}
+
+
+#MusicControlOverlay:descendantfocus #Volume
+{
+		pre-transform-scale2d: 0.9;
+		margin-left: -10px;
+		margin-right: -5px;
+		margin-top: 9px;
+		width: 151px;
+}
+
+#MusicControlOverlay:descendantfocus .VoiceBar
+{
+	margin-left: 2.5px;
+	margin-right: 2.5px;
+	width: 8px;
+	background-color: #ffffff22;
+	opacity: 1.0;
+}
+
+#MusicControlOverlay #MusicControlTransport .QueueControlButtons
+{
+	visibility: collapse;
+
+}
+
+#MusicControlOverlay:descendantfocus #MusicControlTransport:descendantfocus .QueueControlButtons
+{
+	visibility: visible;
+	background-size: 475px 55px;
+	background-position: 9px 28px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#MusicControlOverlay #EntriesContainer
+{
+	transform: translateY( -0px );
+	opacity: 0.7;
+	transition-property: transform, opacity;
+	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
+}
+
+#MusicControlOverlay #EntriesContainer VerticalScrollBar
+{
+	opacity: 0.0;
+	margin-top: 10px;
+}
+
+#MusicControlOverlay:descendantfocus #EntriesContainer VerticalScrollBar
+{
+	opacity: 1.0;
+}
+
+
+#MusicControlOverlay:descendantfocus #EntriesContainer
+{
+	transform: translateY( 0px );
+	opacity: 1.0;
+	opacity-mask: none;
+}
+
+
+
+#MusicControlOverlay #Volume .VoiceBarActive
+{
+	background-color: #ffffffff;
+}
+
+#MusicControlOverlay #Volume:descendantfocus .VoiceBar, #MusicControlOverlay #Volume:selected .VoiceBar
+{
+	background-color: #ffffffff;
+}
+
+
+#MusicControlOverlay #Volume:descendantfocus .VoiceBarActive, #MusicControlOverlay #Volume:selected .VoiceBarActive
+{
+	background-color: #111111aa;
+}
+
+

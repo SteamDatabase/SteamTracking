@@ -46,6 +46,62 @@
 	}
 }
 
+#CommunityWrapper
+{
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+}
+
+#CommunityWrapper.ProfileVisible
+{
+	opacity: 1.0;
+}
+
+#CommunityWrapper.ProfileInvisible
+{
+	opacity: 0.0;
+}
+
+#CommunityNavBar
+{
+	width: 100%;
+	height: 80px;
+	margin-top: 120px;
+	padding-left: 100px;
+	padding-right: 100px;
+	opacity: 0.0;
+
+	flow-children: right;
+
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+
+}
+
+#CommunityWrapper.ProfileVisible:descendantfocus #CommunityNavBar
+{
+	opacity: 1.0;
+}
+
+#CommunityNavBar Label
+{
+	font-size: 46px;
+	color: #fefefeff;
+
+	opacity: 0.45;
+
+	margin-right: 30px;
+}
+
+#CommunityNavBar .Selected Label
+{
+	opacity: 1.0;
+}
+
 ProfilePanel
 {
 	width: 100%;
@@ -61,13 +117,13 @@ ProfilePanel
 	transition-timing-function: linear;
 }
 
-ProfilePanel.ProfileVisible
+.ProfileVisible ProfilePanel
 {
 	opacity: 1.0;
 	
 }
 
-ProfilePanel.ProfileInvisible
+.ProfileInvisible ProfilePanel
 {
 	opacity: 0.0;
 }
@@ -101,9 +157,9 @@ ProfilePanel:descendantfocus #ProfileContent
 }
 
 
-ProfilePanel.ProfileVisible:descendantfocus
+CommunityWrapper.ProfileVisible:descendantfocus ProfilePanel
 {
-	transform: translate3d( 0px, 132px, 0px );
+	transform: translate3d( 0px, 182px, 0px );
 }
 
 ProfilePanel .ProfileBackground
@@ -123,16 +179,16 @@ ProfilePanel .ProfileBackground
 	transition-timing-function: linear;
 }
 
-.ProfilePanel.ProfileVisible:descendantfocus .ProfileBackground
+.ProfileVisible .ProfilePanel:descendantfocus .ProfileBackground
 {
 	opacity: 1.0;
 }
 
-.ProfilePanel.ProfileVisible #UpperRow
+.ProfileVisible .ProfilePanel #UpperRow
 {
 	width: 100%;
 	height: 122px;
-	margin-top: 70px;
+	margin-top: 20px;
 	margin-left: 100px;
 	margin-right: 100px;
 

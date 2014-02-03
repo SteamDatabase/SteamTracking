@@ -1149,6 +1149,12 @@ FriendsIndicatorContainer
 	visibility: collapse;
 }
 
+.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedText,
+.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+{
+	color: #999999ff;
+}
+
 #FriendIndicatorContainedImageChat
 {
 	opacity-mask: url( "file://{images}/friends/friends_indicator_chat.png" );

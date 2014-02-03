@@ -238,11 +238,11 @@ DropDown:focus
 	border-style: solid;
 	border-color: #fdfefeff;
 
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.0s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -420,12 +420,12 @@ DropDown,
 
 TextEntry:focus
 {
-	background-color: ui_common_control;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 
-	color: #333333;
+	color: applabelselectedsolid;
 
 	border-style: solid;
-	border-color: #fdfefeff;
+	border-color: #ffffffff;
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -464,6 +464,9 @@ ToggleButton:descendantfocus .TickBox
 ToggleButton:descendantfocus .TickBox
 {
 	border-color: #ffffffff;
+	transition-property: border;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-out;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 }
 
@@ -493,7 +496,7 @@ VerticalScrollBar
 
 	// NOTE: The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
-	transition-property: transform, opacity;
+	transition-property: transform;
 	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 }
@@ -929,22 +932,49 @@ FriendsChatDialog .VoiceBarContainer
 .HomeButton
 {
 	opacity: 0.0;
+	
+	background-image: url( "file://{images}/steam_home.png" );
+	background-repeat: no-repeat;
+	background-position: 3px 3px;
 
 	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding: 6px;
+
 	border-radius: 3px;
-	border: 2px solid #4F647200;
-	width: 79px;
-	height: 79px;
+	box-shadow: box_shadow_off_color -4px -4px 6px 8px;
+	width: 73px;
+	height: 73px;
 	margin-left: 1752px;
 	margin-top: 41px;
 
-	transition-property: opacity, box-shadow, background-color, transform;
+	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, transform;
 	transition-timing-function: ease-in-out;
-	transition-duration: 0.4s;
+	transition-duration: 0.23s;
+}
+
+.SteamOS .HomeButton
+{
+	opacity: 0.0;
+	
+	background-image: url( "file://{images}/steam_home_os.png" );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+
+	
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-radius: 50%;
+	box-shadow: fill box_shadow_off_color -4px -4px 6px 8px;
+	width: 67px;
+	height: 67px;
+	margin-left: 1752px;
+	margin-top: 41px;
+
+	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
 }
 
 .CursorVisible .HomeButton
@@ -955,9 +985,19 @@ FriendsChatDialog .VoiceBarContainer
 .HomeButton:hover
 {
 	opacity: 1.0;
-	
-	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE00 ), to( #EEEEEE00 ) );
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+	pre-transform-scale2d: 1.04;
+
+	box-shadow: box_shadow_on_color -4px -4px 6px 8px;
+	wash-color: none;
+}
+
+.SteamOS .HomeButton:hover
+{
+	opacity: 1.0;
+	pre-transform-scale2d: 1.04;
+
+	box-shadow: fill box_shadow_on_color -4px -4px 6px 8px;
+	wash-color: #FFFFFFFF;
 }
 
 .StackDepth1 .HomeButton
@@ -1349,3 +1389,9 @@ FriendsChatDialog .VoiceBarContainer
 {
 	width: 400px;
 }
+
+MusicQueueMoreDialog .ContextMenuBodyCentered, MusicTrackMoreDialog .ContextMenuBodyCentered
+{
+	width: 400px;
+}
+

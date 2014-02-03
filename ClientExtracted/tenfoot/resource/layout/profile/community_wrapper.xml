@@ -1,0 +1,19 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/profile/profile.css" />
+	</styles>
+	
+	<CommunityWrapper defaultfocus="Profile">
+		<Panel id="CommunityNavBar">
+			<Button id="FriendActivityButton" class="Selected" onactivate="OpenFriendActivity();">
+				<Label text="#Profile_OpenFriendActivity" />
+			</Button>
+			<Button id="ProfileButton" onactivate="OpenMyProfile();">
+				<Label text="#Profile_OpenMyProfile" />
+			</Button>
+		</Panel>
+
+		<ProfilePanel id="Profile" class="ProfilePanel" ondescendantfocus="SetFocusedProfileSection( ProfileButton );" />
+	</CommunityWrapper>
+</root>

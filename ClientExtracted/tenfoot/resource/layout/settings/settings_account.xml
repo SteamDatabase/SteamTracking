@@ -22,9 +22,9 @@
 				<Button class="Button" id="SettingsAccount_ChangePassword" onactivate="AccountSettingsChangePassword();">
 					<Label class="LongDesc" text="#SettingsAccount_ChangePassword" />
 				</Button>
-				<!--<Button class="Button">
+				<Button class="Button" id="SettingsAccount_ChangeEmail" onactivate="AccountSettingsChangeEmail();">
 					<Label class="LongDesc" text="#SettingsAccount_ChangeEmail" />
-				</Button>-->
+				</Button>
 	
 				<ToggleButton class="CheckBox" id="SettingsAccount_SavePW" text="#SettingsAccount_SaveCredentials" onactivate="AccountSettingsToggleSavePW()"/>
 

@@ -56,6 +56,10 @@
 					<ToggleButton class="CheckBox AudioCheck" id="SettingsAudio_DTS" text="SettingsAudio_DTS" onactivate="ToggleAudioStreamPassthru();"  />
 				</Panel>
 			</Panel>
+
+			<Panel id="AudioCard_Error" class="SettingsContent SettingsRightContent">
+				<Label class="SettingsValue" text="#SettingsAudio_Failed" />
+			</Panel>
 		</Panel>
 
 	</SettingsPanel_Audio>

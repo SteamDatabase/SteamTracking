@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+		<include src="file://{resources}/styles/music/music_control_overlay.css" />
+		<include src="file://{resources}/styles/music/music_control_transport.css" />
+	</styles>
+	
+
+	<MusicControlOverlay class="MusicControlOverlay" onfocus="FocusMusicControlOverlay()">
+				<Label text="#Music_Control_Music" class="HeaderLabel" /> 
+				<MusicControlTransport id="MusicControlTransport" class="MusicControlTransport"/>			
+	</MusicControlOverlay>
+
+</root>

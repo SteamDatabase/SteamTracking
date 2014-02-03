@@ -59,7 +59,7 @@
 			width=max
 			margin-left=20
 			margin-right=20
-			margin-top=10
+			margin-top=20
 			spacing=10
 		}	
 		place
@@ -71,7 +71,7 @@
 			width=max
 			margin-left=20
 			margin-right=20
-			margin-top=10
+			margin-top=40
 			spacing=10
 		}	
 

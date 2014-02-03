@@ -2280,7 +2280,7 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 	color: applabelsolid;
 	font-weight: bold;
 	font-size: 36px;
-	max-height: 80px;
+	max-height: 88px;
 	text-overflow: clip;
 	white-space: normal;
 }

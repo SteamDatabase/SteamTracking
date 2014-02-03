@@ -1,0 +1,22 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+		<include src="file://{resources}/styles/music/music_library.css" />
+	</styles>
+	
+	<MusicLibraryArtistPanel onmoveup="MusicLibraryActivateGridTabs( ArtistButton );"
+			defaultfocus="MusicArtistGrid" selectionposboundary="vertical" >
+		
+		<Panel hittest="false" id="FastScrollWrapper">
+			<Label id="FastScrollLabel" />
+			<Label id="TypeToJumpLabel" />
+		</Panel>
+		
+		<Grid id="MusicArtistGrid" class="MusicArtistGrid"
+			scrolldirection="horizontal" verticalcount="7" horizontalcount="4" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto">
+		</Grid>
+		
+	</MusicLibraryArtistPanel>
+	
+</root>

@@ -586,7 +586,8 @@ OverlayBasePanel .CommunityFriendsCarousel:descendantfocus #CarouselTitleContain
 {
 	color: carousel_title;
 	font-size: 48;
-	line-height: 48;
+	height: 48px;
+	margin-top: 8px;
 	horizontal-align: right;
 	text-transform: uppercase;
 }
@@ -1529,7 +1530,7 @@ FriendsFeedItemMenuActionButton:focus
 
 #OverlayBasePanel:descendantfocus .CommunityFriendsCarousel
 {
-	transform: translateY( 390px );
+	transform: translateY( 380px );
 }
 
 #CommunityFriendsStrip.Locked

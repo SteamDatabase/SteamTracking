@@ -74,6 +74,9 @@
 				<Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
 					<Label class="LongDesc" text="#Settings_TimeZone" />
 				</Button>
+				<Button id="RemoteControlSettingsButton" class="Button" onactivate="ShowSettings( RemoteControl );">
+					<Label class="LongDesc" text="#Settings_RemoteControl" />
+				</Button>
 
 				<!-- <Button class="Button" >
 					<Label class="LongDesc" text="#Settings_Cloud" />
