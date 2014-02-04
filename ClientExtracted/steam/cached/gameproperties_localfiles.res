@@ -30,7 +30,26 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"395 Mb"
+		"labelText"		""
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	
+	"BuildIDLabel"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"BuildIDLabel"
+		"xpos"		"24"
+		"ypos"		"186"
+		"wide"		"272"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_ContentBuildID"
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}

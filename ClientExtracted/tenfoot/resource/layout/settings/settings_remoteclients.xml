@@ -32,6 +32,7 @@
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
 					<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto" selectionpos="0,0">
 						<Label id="-1" text="#Settings_RemoteClients_BandwidthAuto" />
+            <Label id="3000" text="#Settings_RemoteClients_Bandwidth3000" />
 						<Label id="5000" text="#Settings_RemoteClients_Bandwidth5000" />
 						<Label id="10000" text="#Settings_RemoteClients_Bandwidth10000" />
 						<Label id="15000" text="#Settings_RemoteClients_Bandwidth15000" />
@@ -44,6 +45,7 @@
 						<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
 						<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
 						<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
+            <Label id="852×480" text="#Settings_RemoteClients_Resolution480p" />
 					</DropDown>
 					<Panel class="Spacer" />
 					<Panel class="Spacer2" />
