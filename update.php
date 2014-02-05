@@ -180,18 +180,6 @@
 				
 				unset( $Test, $Path );
 			}
-			// Beautify JSON
-			else if( $File === 'Repos/trademarks_eu.json' )
-			{
-				$Data = JSON_Decode( $Data, true );
-				
-				if( !isset( $Data[ 'items' ] ) )
-				{
-					return false;
-				}
-				
-				$Data = JSON_Encode( $Data[ 'items' ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
-			}
 			// Convert group members to JSON
 			else if( $File === 'Repos/valve_group.json' )
 			{
@@ -422,13 +410,6 @@
 						$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
 					}
 				}
-			}
-			
-			// European trademarks search
-			if( $URL[ 'URL' ] === 'http://esearch.oami.europa.eu/copla/ctmsearch/json' )
-			{
-				$Options[ CURLOPT_POST ] = true;
-				$Options[ CURLOPT_POSTFIELDS ] = 'start=0&rows=100&criterion_1=ApplicantIdentifier&term_1=207863&sortField=ApplicationNumber&sortOrder=desc';
 			}
 			
 			cURL_SetOpt_Array( $Slave, $Options );
