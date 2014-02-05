@@ -406,7 +406,7 @@ TenfootFooterPanel
 
 .SteamPad #LegendRow #MiddleLegend .LegendText
 {
-	max-width: 198px;
+	max-width: 240px;
 	max-height: 60px;
 }
 
@@ -465,7 +465,7 @@ TenfootFooterPanel
 {
 	visibility: visible;
 	height: 120px;
-	width: 600px;
+	width: 640px;
 }
 
 .SteamPad #LBWrapper

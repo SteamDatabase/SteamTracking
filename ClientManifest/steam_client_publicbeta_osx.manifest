@@ -1,11 +1,11 @@
 "osx"
 {
-	"version"		"1391473118"
+	"version"		"1391621915"
 	"strings_all"
 	{
-		"file"		"strings_all.zip.c2525ef2f9452dd8dcf3674e93c52e5c6e67ae15"
-		"checksum"		"c2525ef2f9452dd8dcf3674e93c52e5c6e67ae15"
-		"size"		"5541087"
+		"file"		"strings_all.zip.db5a21a88d476c992fc702930d161063c351ee58"
+		"checksum"		"db5a21a88d476c992fc702930d161063c351ee58"
+		"size"		"5541089"
 	}
 	"resources_all"
 	{
@@ -15,9 +15,9 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.fe3ad1618c04b6e3cbbd135718e3ca119db086e3"
-		"checksum"		"fe3ad1618c04b6e3cbbd135718e3ca119db086e3"
-		"size"		"9453424"
+		"file"		"tenfoot_all.zip.9f6645237a9e2c22dcad325e743f1f93bbfca8ac"
+		"checksum"		"9f6645237a9e2c22dcad325e743f1f93bbfca8ac"
+		"size"		"9453477"
 	}
 	"tenfoot_fonts_all"
 	{
@@ -57,9 +57,9 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.5c6a1d5fc5fd289b6fb7319ecd4d1c5f04e24a68"
-		"checksum"		"5c6a1d5fc5fd289b6fb7319ecd4d1c5f04e24a68"
-		"size"		"33606426"
+		"file"		"bins_osx.zip.aafa5a110f39d153b7e21150c827dd953e27b6a2"
+		"checksum"		"aafa5a110f39d153b7e21150c827dd953e27b6a2"
+		"size"		"33607097"
 	}
 	"webkit_osx"
 	{
@@ -81,13 +81,13 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.b486c7da4344909d66fa274256a0eb5fd5d0f369"
-		"checksum"		"b486c7da4344909d66fa274256a0eb5fd5d0f369"
-		"size"		"1195936"
+		"file"		"steam_osx.zip.2679bc7a0b7630a4019fdca421e1d369e46559d6"
+		"checksum"		"2679bc7a0b7630a4019fdca421e1d369e46559d6"
+		"size"		"1196176"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"cc00794de940f57a6e1d95bac3b79172da821fa9cdf847191c0be91750889094bba2092f24aa9b084a76af5b98b17529208e9e2ca0a7eabde7e77336bb316318b8e221a02fe024337d7379c3b95f8ae802ca6ed5a65e11af129ddccb5a85747c278396f103a4cc8f0cf5009429b018fda68086f954da073348c87d786479f846"
+	"osx"		"0778f079fa992cdf6d4b4ef5a0057fa9666412c82acec06d9ee0b81c1c417d37399f46887de5a7ee078b85e495adfe21ad3311229f43aefe2d447f522245f20750d7d1dcf017705081e736613285b0470a6121347c935f5f34c0704ec59206aa88ce9c90c68529ef79c708c176f4cec1701730fd0e3fa9af4294d822037fbe00"
 }
