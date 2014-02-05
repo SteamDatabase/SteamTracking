@@ -384,6 +384,11 @@ ParentalReplacementPanel Button:focus
 	padding-right: 110px;
 }
 
+#ParentalChooseAppsChild #WizardButtons
+{
+	margin-top: -70px;
+}
+
 #ParentalIntroChild .SettingsBottomPanel
 {
 	flow-children: down;
@@ -469,8 +474,9 @@ ParentalFeaturesChild .SettingsBottomPanel
 {
 	width: 100%;
 	height: 750px;
+	pre-transform-scale2d: 1.0, 0.96;
 
-	position: 0px 150px 0px;
+	position: 0px 130px 0px;
 	padding-top: 35px;
 	padding-bottom: 100px;
 	margin-top: 00px;
