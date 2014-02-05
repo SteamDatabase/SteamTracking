@@ -481,6 +481,8 @@ span.popup_menu_pulldown_indicator {
 
 	font-size: 13px;
 	color: #939393;
+
+	position: relative;
 }
 
 .newmodal_content_innerbg {

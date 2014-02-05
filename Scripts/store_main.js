@@ -804,24 +804,28 @@ function InstrumentLinks()
 
 function InstrumentedLinkOnClick( event, link )
 {
-	var navinfo = link.href.match( /[\?&]snr=([^&]*)(&|$)/ ); 
+	var navinfo = link.href.match( /[\?&]snr=([^&#]*)(&|$|#)/ );
 	if ( navinfo )
 	{
 		// if we matched an ampersand at the end, there are more arguments
 		var replacement = '';
 		if ( navinfo[2] == '&' )	// there was an ampersand after the snr arg
 			replacement = navinfo[0][0];	//keep the first character of the match (a ? or &)
-		link.href = link.href.replace( /[\?&]snr=[^&]*(&|$)/, replacement );
+		else
+			replacement = navinfo[2];	// whatever other thing came next, either blank or a # sign
+		link.href = link.href.replace( /[\?&]snr=[^&#]*(&|#|$)/, replacement );
 		
 		MakeNavCookie( navinfo[1], link.href );
 	}
-    var exprinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
+    var exprinfo = link.href.match( /[\?&]outc=([^&#]*)(&|#|$)/ );
     if ( exprinfo )
     {
         replacement = '';
         if ( exprinfo[2] == '&' )
             replacement = exprinfo[0][0];
-        link.href = link.href.replace( /[\?&]outc=[^&]*(&|$)/, replacement );
+		else
+			replacement = navinfo[2];
+        link.href = link.href.replace( /[\?&]outc=[^&#]*(&|#|$)/, replacement );
         MakeOutcomeCookie( exprinfo[1], link.href );
     }
 
@@ -1444,10 +1448,12 @@ function EnsureStoreMenuTagsLoaded( strId )
 	{
 		$Element.data('tags-loaded', true );
 
-		var url = 'http://store.steampowered.com/tagdata/myfrequenttags';
+		var url = 'http://store.steampowered.com/tagdata/recommendedtags';
+		/*
 		var mytag_version = WebStorage.GetLocal( 'mytag_version', true );
 		if ( mytag_version )
 			url += '?v=' + parseInt( mytag_version );
+			*/
 
 		$J.get( url ).done( function( data ) {
 			rgYourPopularTags = data || [];

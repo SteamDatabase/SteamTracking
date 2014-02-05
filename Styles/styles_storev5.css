@@ -1048,7 +1048,27 @@ img.small_cap_img {
 	margin: 0px;
 }
 
+.small_cap.updated_app
+{
+}
 
+.small_cap_desc
+{
+	width: 184px;
+	padding-left: 10px;
+	font-size: 12px;
+	font-family: Arial;
+	color: #939598;
+	word-wrap: break-word;
+	height: 45px;
+	overflow: hidden;
+}
+
+.small_cap_announcement_link
+{
+	padding: 10px;
+	font-size: 11px;
+}
 
 
 .movie_cap {
@@ -1113,7 +1133,7 @@ img.small_cap_img {
 
 .small_cap_pager {
 	width: 614px;
-	height: 272px;
+	height: 136px;
 	overflow: hidden;
 	position: relative;
 }
@@ -1129,7 +1149,7 @@ img.small_cap_img {
 .small_cap_page {
 	float: left;
 	width: 614px;
-	height: 272px;
+	height: 136px;
 }
 
 /*
@@ -1834,6 +1854,8 @@ div.hover {
 	
 	color: #b0aeac;
 	font-size: 12px;
+
+	overflow: hidden;
 }
 
 .hover_box .content {
@@ -2623,9 +2645,9 @@ h1.blue, h2.blue {
 	color: #e5e4dc;
 	
 	text-transform: none;
-	font-size: 11px;
-	font-weight: bold;
-	line-height: normal;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 14px;
 }
 
 .popup_menu span.popup_menu_item {
@@ -2640,7 +2662,7 @@ h1.blue, h2.blue {
 .popup_menu_subheader {
 	color: #9e9995;
 	font-size: 11px;
-	padding: 0 12px;
+	padding: 2px 12px 3px 12px;
 	cursor: default;
 }
 
@@ -2648,6 +2670,11 @@ h1.blue, h2.blue {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.popup_menu_hint {
+	float: right;
+	margin-left: 8px;
 }
 
 .popup_menu_subarea {
@@ -2817,6 +2844,7 @@ h2.pageheader.tag_pageheader {
 	font-size: 30px;
 	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
 	margin-bottom: 24px;
+	word-wrap: break-word;
 }
 
 /*
@@ -3452,7 +3480,7 @@ a.item_action {
 .popup_menu .hr {
 	height: 1px;
 	background-color: #82807c;
-	margin: 6px 12px 0 12px;
+	margin: 10px 12px 0 12px;
 }
 
 .store_nav .tab {
@@ -3709,4 +3737,16 @@ body.antipodes .perf_timing_area {
 	margin: 15px;
 	padding: 11px 15px;
 	padding-left: 19px;
+}
+
+
+.store_tooltip {
+	background: #c2c2c2;
+	color: #3d3d3f;
+	font-size: 11px;
+	border-radius: 3px;
+	padding: 5px;
+	max-width: 225px;
+	white-space: normal;
+	box-shadow: 0 0 3px #000000;
 }
