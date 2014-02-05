@@ -2507,12 +2507,12 @@ function SubmitPaymentInfoForm()
 		
 		if ( method.value == 'giropay' )
 		{
-			if ( $('bank_account').value.length < 1 )
+			if ( isNaN( $('bank_account').value ) || $('bank_account').value.length < 1 || $('bank_account').value.length > 10 )
 			{
 				errorString += 'Please enter your account number.<br/>';
 				rgBadFields.bank_account = true;
 			}
-			if ( $('bank_code').value.length < 1 )
+			if ( isNaN( $('bank_code').value ) || $('bank_code').value.length < 1 || $('bank_code').value.length > 8 )
 			{
 				errorString += 'Please enter your bank code.<br/>';
 				rgBadFields.bank_code = true;
