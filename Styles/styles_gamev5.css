@@ -748,6 +748,7 @@ img.game_header_image {
 .game_area_description {
 	line-height: 1.5em;
 	margin-bottom: 18px;
+	overflow: hidden;
 }
 
 .game_area_description p {
@@ -755,7 +756,6 @@ img.game_header_image {
 }
 
 .game_area_description h2 {
-	margin-top: 18px;
 	margin-bottom: 6px;
 }
 
@@ -2077,7 +2077,7 @@ h2.bb_tag + br {
 	height: 22px;
 }
 
-.app_tag, .app_tag_checkbox {
+.app_tag {
 	display: inline-block;
 	line-height: 19px;
 	padding: 0 7px;
@@ -2091,32 +2091,95 @@ h2.bb_tag + br {
 	cursor: pointer;
 
 	margin-bottom: 3px;
+
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.app_tag:hover, .app_tag_checkbox:hover {
+.app_tag:hover {
 	text-decoration: none;
 	background-color: #516980;
 	color: #ffffff;
 }
 
-.app_tag.add_your_own {
+.app_tag.add_your_own, .app_tag.previous_tag {
 	background-color: #4d4b49;
 }
 
-.app_tag.add_your_own:hover {
+.app_tag.add_your_own:hover, .app_tag.previous_tag:hover {
 	background-color: #787572;
 	color: #ffffff;
 }
 
+.app_tag.previous_tag {
+	background-image: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_yours_addbg.png' );
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 19px;
+}
+
+.app_tag_control {
+	height: 19px;
+	line-height: 19px;
+	color: #626366;
+	padding: 2px;
+	background-color: #19191b;
+	margin-bottom: 2px;
+}
+
+.app_tag_control.no_tags_yet {
+	padding-left: 8px;
+}
+
 .app_tag_checkbox {
 	float: right;
+	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_check.png' ) bottom center no-repeat;
+	width: 13px;
+	height: 19px;
+	cursor: pointer;
+}
+
+.tag_control_flash {
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-name: anim_tag_control_flash;
+	-webkit-animation-name: anim_tag_control_flash;
+}
+
+@keyframes anim_tag_control_flash {
+	from {
+		background-color: #4d6d8c;
+	}
+	to {
+		background-color: #19191b;
+	}
+}
+
+@-webkit-keyframes anim_tag_control_flash {
+	from {
+		background-color: #4d6d8c;
+	}
+	to {
+		background-color: #19191b;
+	}
 }
 
 .app_tag_checkbox.checked {
-	background-color: #000000;
-	color: #384959;
+	background-position: top;
 }
 
+.app_tag_modal_tooltip {
+	font-size: 11px;
+	color: #626366;
+	cursor: default;
+	margin-left: 8px;
+}
+
+.app_tags.your_tags {
+	margin-bottom: 36px;
+}
 
 .app_tag_modal.nologin .app_tag_checkbox {
 	display: none;
@@ -2129,7 +2192,20 @@ h2.bb_tag + br {
 .app_tag_modal_left {
 	padding-right: 16px;
 	float: left;
-	border-right: 1px solid #3c3d3e;
+}
+
+.app_tag_modal_content {
+	position: relative;
+	margin-bottom: 64px;
+}
+
+.app_tag_modal_seperator {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 272px;
+	width: 1px;
+	background-color: #3c3d3e;
 }
 
 .app_tag_modal_right {
@@ -2147,6 +2223,7 @@ h2.bb_tag + br {
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 20px;
+	margin-bottom: 6px;
 }
 
 .app_tag_modal p {
@@ -2187,6 +2264,29 @@ h2.bb_tag + br {
 
 form#app_tag_form {
 	margin-bottom: 18px;
+}
+
+.app_tag_modal_beta_callout {
+	position: absolute;
+	left: 16px;
+	bottom: 19px;
+	line-height: 20px;
+	font-size: 13px;
+	color: #ad8241;
+}
+
+.app_tag_modal_beta_callout img {
+	vertical-align: text-bottom;
+	margin-right: 4px;
+}
+
+.app_tag_modal_beta_callout a {
+	color: #e6ac56;
+	text-decoration: underline;
+}
+
+.app_tag_modal_beta_callout a:hover {
+	color: #f7cb89;
 }
 
 
