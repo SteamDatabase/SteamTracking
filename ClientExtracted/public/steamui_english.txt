@@ -3832,10 +3832,10 @@ Set a category for this game to help you find it quickly and organize your Libra
 "Steam_Settings_Family_Sharing_UpdateBorrowers" "Update borrowers"
 "Steam_Settings_Family_Sharing_BorrowerError" "Failed to update borrower (%reason%)"
 "Steam_Settings_Family_Sharing_No_SteamGuard" "Steam Guard is required to enable Family Library Sharing"
-"Steam_Settings_Family_Sharing_TooManyBorrowers" "You can only authorize up to 10 accounts."
+"Steam_Settings_Family_Sharing_TooManyBorrowers" "You can only authorize up to %maxborrowers% accounts at the same time."
 "Steam_Settings_Family_Sharing_AuthorizedBorrower" "Authorized accounts"
 "Steam_Settings_Family_Sharing_List_Empty" "No other local accounts found."
-"Steam_Settings_Family_Sharing_Borrowers" "Please select up to ten users who may access and use your library on your authorized computers:"
+"Steam_Settings_Family_Sharing_Borrowers" "Please select up to %maxborrowers% users who may access and use your library on your authorized computers:"
 "Steam_Settings_Family_Show_Notifications" "Show notifications when shared libraries become available again"
 
 "Steam_Settings_Family_Options_Title" "Family View"
