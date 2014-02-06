@@ -384,6 +384,66 @@
 			{
 				"icon_path"		"econ/stickers/dreamhack/dh_snowman_holo"
 			}
+			"13"
+			{
+				"icon_path"		"econ/stickers/standard/thirteen"
+			}
+			"14"
+			{
+				"icon_path"		"econ/stickers/standard/aces_high"
+			}
+			"15"
+			{
+				"icon_path"		"econ/stickers/standard/aces_high_holo"
+			}
+			"16"
+			{
+				"icon_path"		"econ/stickers/standard/conquered"
+			}
+			"17"
+			{
+				"icon_path"		"econ/stickers/standard/destroy"
+			}
+			"18"
+			{
+				"icon_path"		"econ/stickers/standard/dispatch"
+			}
+			"19"
+			{
+				"icon_path"		"econ/stickers/standard/fearsome"
+			}
+			"20"
+			{
+				"icon_path"		"econ/stickers/standard/fearsome_holo"
+			}
+			"21"
+			{
+				"icon_path"		"econ/stickers/standard/guarding_hell"
+			}
+			"22"
+			{
+				"icon_path"		"econ/stickers/standard/lemon"
+			}
+			"23"
+			{
+				"icon_path"		"econ/stickers/standard/luck"
+			}
+			"24"
+			{
+				"icon_path"		"econ/stickers/standard/vigilance"
+			}
+			"25"
+			{
+				"icon_path"		"econ/stickers/standard/vigilance_holo"
+			}
+			"26"
+			{
+				"icon_path"		"econ/stickers/standard/thirteen_foil"
+			}
+			"27"
+			{
+				"icon_path"		"econ/stickers/standard/luck_foil"
+			}
 		}
 		"weapon_icons"
 		{
@@ -4326,6 +4386,7 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
+				"can_sticker"		"1"
 			}
 			"item_type_name"		"#CSGO_Type_Pistol"
 			"item_slot"		"secondary"
@@ -4347,6 +4408,7 @@
 			{
 				"nameable"		"1"
 				"paintable"		"1"
+				"can_sticker"		"1"
 			}
 			"tags"
 			{
@@ -7974,6 +8036,27 @@
 			"item_rarity"		"unusual"
 			"image_inventory"		"econ/weapons/base_weapons/weapon_smokegrenade"
 		}
+		"1209"
+		{
+			"name"		"Sticker"
+			"first_sale_date"		"2014/01/29"
+			"prefab"		"csgo_tool"
+			"item_name"		"#CSGO_Tool_Sticker"
+			"item_description"		"#CSGO_Tool_Sticker_Desc"
+			"tool"
+			{
+				"type"		"sticker"
+				"usage_capabilities"
+				{
+					"can_sticker"		"1"
+					"usable_out_of_game"		"1"
+				}
+			}
+			"attributes"
+			{
+				"always tradable"		"1"
+			}
+		}
 		"1210"
 		{
 			"name"		"Gift - 1 Player"
@@ -8030,14 +8113,18 @@
 					"target_rule"		"only_other_players"
 				}
 			}
-			"attributes"
+		}
+		"1212"
+		{
+			"name"		"Sticker Crate Key"
+			"item_name"		"#CSGO_sticker_crate_key_1"
+			"item_description"		"#CSGO_sticker_crate_key_1_desc"
+			"first_sale_date"		"2014/01/29"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/sticker_crate_key"
+			"tool"
 			{
-				"set supply crate series"
-				{
-					"attribute_class"		"supply_crate_series"
-					"value"		"8"
-					"force_gc_to_generate"		"1"
-				}
+				"restriction"		"sticker_crate_key"
 			}
 		}
 		"1214"
@@ -8224,6 +8311,30 @@
 				{
 					"attribute_class"		"tournament_event_id"
 					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"4007"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack01"
+			"name"		"crate_sticker_pack01"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack01"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1212"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"sticker_crate_key"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"9"
 					"force_gc_to_generate"		"1"
 				}
 			}
@@ -9650,6 +9761,126 @@
 			"item_name"		"#StickerKit_dh_snowman_holo"
 			"description_string"		"#StickerKit_desc_dh_snowman_holo"
 			"sticker_material"		"dreamhack/dh_snowman_holo"
+		}
+		"13"
+		{
+			"name"		"std_thirteen"
+			"item_name"		"#StickerKit_std_thirteen"
+			"description_string"		"#StickerKit_desc_std_thirteen"
+			"sticker_material"		"standard/thirteen"
+			"item_rarity"		"rare"
+		}
+		"14"
+		{
+			"name"		"std_aces_high"
+			"item_name"		"#StickerKit_std_aces_high"
+			"description_string"		"#StickerKit_desc_std_aces_high"
+			"sticker_material"		"standard/aces_high"
+			"item_rarity"		"rare"
+		}
+		"15"
+		{
+			"name"		"std_aces_high_holo"
+			"item_name"		"#StickerKit_std_aces_high_holo"
+			"description_string"		"#StickerKit_desc_std_aces_high_holo"
+			"sticker_material"		"standard/aces_high_holo"
+			"item_rarity"		"mythical"
+		}
+		"16"
+		{
+			"name"		"std_conquered"
+			"item_name"		"#StickerKit_std_conquered"
+			"description_string"		"#StickerKit_desc_std_conquered"
+			"sticker_material"		"standard/conquered"
+			"item_rarity"		"rare"
+		}
+		"17"
+		{
+			"name"		"std_destroy"
+			"item_name"		"#StickerKit_std_destroy"
+			"description_string"		"#StickerKit_desc_std_destroy"
+			"sticker_material"		"standard/destroy"
+			"item_rarity"		"rare"
+		}
+		"18"
+		{
+			"name"		"std_dispatch"
+			"item_name"		"#StickerKit_std_dispatch"
+			"description_string"		"#StickerKit_desc_std_dispatch"
+			"sticker_material"		"standard/dispatch"
+			"item_rarity"		"rare"
+		}
+		"19"
+		{
+			"name"		"std_fearsome"
+			"item_name"		"#StickerKit_std_fearsome"
+			"description_string"		"#StickerKit_desc_std_fearsome"
+			"sticker_material"		"standard/fearsome"
+			"item_rarity"		"rare"
+		}
+		"20"
+		{
+			"name"		"std_fearsome_holo"
+			"item_name"		"#StickerKit_std_fearsome_holo"
+			"description_string"		"#StickerKit_desc_std_fearsome_holo"
+			"sticker_material"		"standard/fearsome_holo"
+			"item_rarity"		"mythical"
+		}
+		"21"
+		{
+			"name"		"std_guarding_hell"
+			"item_name"		"#StickerKit_std_guarding_hell"
+			"description_string"		"#StickerKit_desc_std_guarding_hell"
+			"sticker_material"		"standard/guarding_hell"
+			"item_rarity"		"rare"
+		}
+		"22"
+		{
+			"name"		"std_lemon"
+			"item_name"		"#StickerKit_std_lemon"
+			"description_string"		"#StickerKit_desc_std_lemon"
+			"sticker_material"		"standard/lemon"
+			"item_rarity"		"rare"
+		}
+		"23"
+		{
+			"name"		"std_luck"
+			"item_name"		"#StickerKit_std_luck"
+			"description_string"		"#StickerKit_desc_std_luck"
+			"sticker_material"		"standard/luck"
+			"item_rarity"		"rare"
+		}
+		"24"
+		{
+			"name"		"std_vigilance"
+			"item_name"		"#StickerKit_std_vigilance"
+			"description_string"		"#StickerKit_desc_std_vigilance"
+			"sticker_material"		"standard/vigilance"
+			"item_rarity"		"rare"
+		}
+		"25"
+		{
+			"name"		"std_vigilance_holo"
+			"item_name"		"#StickerKit_std_vigilance_holo"
+			"description_string"		"#StickerKit_desc_std_vigilance_holo"
+			"sticker_material"		"standard/vigilance_holo"
+			"item_rarity"		"mythical"
+		}
+		"26"
+		{
+			"name"		"std_thirteen_foil"
+			"item_name"		"#StickerKit_std_thirteen_foil"
+			"description_string"		"#StickerKit_desc_std_thirteen_foil"
+			"sticker_material"		"standard/thirteen_foil"
+			"item_rarity"		"legendary"
+		}
+		"27"
+		{
+			"name"		"std_luck_foil"
+			"item_name"		"#StickerKit_std_luck_foil"
+			"description_string"		"#StickerKit_desc_std_luck_foil"
+			"sticker_material"		"standard/luck_foil"
+			"item_rarity"		"legendary"
 		}
 	}
 	"paint_kits"
@@ -14201,6 +14432,36 @@
 			"crate_community_1_ancient"		"1"
 			"unusual_revolving_list"		"1"
 		}
+		"crate_sticker_pack01_rare"
+		{
+			"[std_thirteen]Sticker"		"1"
+			"[std_aces_high]Sticker"		"1"
+			"[std_conquered]Sticker"		"1"
+			"[std_destroy]Sticker"		"1"
+			"[std_dispatch]Sticker"		"1"
+			"[std_fearsome]Sticker"		"1"
+			"[std_guarding_hell]Sticker"		"1"
+			"[std_lemon]Sticker"		"1"
+			"[std_luck]Sticker"		"1"
+			"[std_vigilance]Sticker"		"1"
+		}
+		"crate_sticker_pack01_mythical"
+		{
+			"[std_aces_high_holo]Sticker"		"1"
+			"[std_fearsome_holo]Sticker"		"1"
+			"[std_vigilance_holo]Sticker"		"1"
+		}
+		"crate_sticker_pack01_legendary"
+		{
+			"[std_thirteen_foil]Sticker"		"1"
+			"[std_luck_foil]Sticker"		"1"
+		}
+		"crate_sticker_pack01"
+		{
+			"crate_sticker_pack01_rare"		"1"
+			"crate_sticker_pack01_mythical"		"1"
+			"crate_sticker_pack01_legendary"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -14212,6 +14473,7 @@
 		"6"		"crate_dhw13_promo"
 		"7"		"crate_community_1"
 		"8"		"giftpkg_2013_winter"
+		"9"		"crate_sticker_pack01"
 	}
 	"item_levels"
 	{

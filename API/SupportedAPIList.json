@@ -2,6 +2,21 @@
 	"apilist": {
 		"interfaces": [
 			{
+				"name": "ICSGOServers_730",
+				"methods": [
+					{
+						"name": "GetGameServersStatus",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+
+						]
+						
+					}
+				]
+				
+			},
+			{
 				"name": "IDOTA2Fantasy_205790",
 				"methods": [
 					{
