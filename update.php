@@ -19,6 +19,7 @@
 			'public_all.zip',
 			'strings_all.zip',
 			'tenfoot_images_all.zip',
+			'tenfoot_misc_all.zip',
 			'bins_ubuntu12.zip'
 		);
 		
@@ -175,6 +176,10 @@
 								'File' => $Path . $Archive
 							);
 						}
+					}
+					else
+					{
+						$this->Log( '{red}Failed to find {lightblue}' . $Archive );
 					}
 				}
 				
