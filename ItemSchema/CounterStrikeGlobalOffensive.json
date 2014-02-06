@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.cca4a053b93395d66788e9935791fe957f8cc307.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.732c833f606f7128b0504dbcad6f148aff92c798.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -151,7 +151,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -181,7 +182,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -211,7 +213,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -241,7 +244,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -271,7 +275,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -301,7 +306,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -331,7 +337,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -361,7 +368,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -391,7 +399,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -421,7 +430,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -451,7 +461,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -481,7 +492,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -511,7 +523,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -541,7 +554,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -571,7 +585,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -601,7 +616,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -631,7 +647,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -661,7 +678,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -691,7 +709,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -721,7 +740,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -751,7 +771,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -805,7 +826,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -835,7 +857,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -865,7 +888,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -895,7 +919,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -925,7 +950,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -955,7 +981,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -985,7 +1012,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -1015,7 +1043,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -1272,7 +1301,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -1302,7 +1332,8 @@
 					"can_be_restored": true,
 					"strange_parts": true,
 					"paintable_unusual": true,
-					"autograph": true
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -2461,7 +2492,7 @@
 				"item_class": "tool",
 				"item_type_name": "Tool",
 				"item_name": "CS:GO Case Key",
-				"item_description": "This key will open any Valve Series weapon case. Non-Valve Series cases (e.g. eSports Case) require their own key to open.",
+				"item_description": "This key will open any Valve Series Weapon Case. Non-Valve Series cases (e.g. eSports Case) require their own key to open.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/weapon_case_key",
@@ -2543,6 +2574,41 @@
 				}
 			},
 			{
+				"name": "Sticker",
+				"defindex": 1209,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Sticker",
+				"item_description": "This is a weapon sticker decal. It will be permanently visible on the first-person weapon and viewable in game.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "sticker",
+					"usage_capabilities": {
+						"usable_out_of_game": true,
+						"can_sticker": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Gift - 1 Player",
 				"defindex": 1210,
 				"item_class": "tool",
@@ -2604,15 +2670,39 @@
 				},
 				"tool": {
 					"type": "gift"
+				}
+			},
+			{
+				"name": "Sticker Crate Key",
+				"defindex": 1212,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "CS:GO Capsule Key",
+				"item_description": "This key will open any Valve Series Capsule.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/sticker_crate_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/sticker_crate_key.1a436eb9f66602a8f472adf2afa600271056370c.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
 				},
-				"attributes": [
-					{
-						"name": "set supply crate series",
-						"class": "supply_crate_series",
-						"value": 8
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "sticker_crate_key",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
 					}
-				]
-				
+				}
 			},
 			{
 				"name": "Community Case Key 1",
@@ -2686,7 +2776,7 @@
 				"name": "crate_valve_1",
 				"defindex": 4001,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "CS:GO Weapon Case",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2723,7 +2813,7 @@
 				"name": "crate_esports_2013",
 				"defindex": 4002,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "eSports Case",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2760,7 +2850,7 @@
 				"name": "crate_operation_ii",
 				"defindex": 4003,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "Operation Bravo Case",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2797,7 +2887,7 @@
 				"name": "crate_valve_2",
 				"defindex": 4004,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "CS:GO Weapon Case 2",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2834,7 +2924,7 @@
 				"name": "crate_esports_2013_winter",
 				"defindex": 4005,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "eSports Winter Case",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2871,7 +2961,7 @@
 				"name": "crate_dhw13_promo",
 				"defindex": 4006,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "DreamHack 2013 Souvenir Package",
 				"proper_name": false,
 				"item_quality": 4,
@@ -2909,10 +2999,47 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack01",
+				"defindex": 4007,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker Capsule",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_sticker_pack01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_sticker_pack01.050d07ce442dc326f33bbb10ade6df941136b479.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "sticker_crate_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 9
+					}
+				]
+				
+			},
+			{
 				"name": "crate_community_1",
 				"defindex": 4009,
 				"item_class": "supply_crate",
-				"item_type_name": "Weapon Case",
+				"item_type_name": "Container",
 				"item_name": "Winter Offensive Weapon Case",
 				"proper_name": false,
 				"item_quality": 4,
@@ -3476,7 +3603,7 @@
 				"name": "set supply crate series",
 				"defindex": 68,
 				"attribute_class": "supply_crate_series",
-				"description_string": "Case Series #%s1",
+				"description_string": "Container Series #%s1",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
