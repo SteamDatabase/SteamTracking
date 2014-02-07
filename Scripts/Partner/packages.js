@@ -664,9 +664,12 @@ function CreateDiscount( target, id, discount )
 
 function OnClickDeleteDiscount( id )
 {
- 	$( id + '_discountDiv' ).remove();
-	g_AllDiscounts[ id ] = undefined;
-	UpdateSummaryDiscounts();
+	if( confirm("Please don't delete historical discount data. Set the end date to \"now\" if you just want to end a discount early. If you have questions ask Kadar\r\n\r\nDelete this discount?") )
+	{
+ 		$( id + '_discountDiv' ).remove();
+		g_AllDiscounts[ id ] = undefined;
+		UpdateSummaryDiscounts();
+	}
 }
 
 // 
