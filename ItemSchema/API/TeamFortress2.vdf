@@ -169,7 +169,6 @@
 			"medic_pocket"		"1"
 			"soldier_pocket"	"1"
 			"demo_belt"			"1"
-			"sniper_pocket"		"1"			
 		}
 		"shared"
 		{
@@ -199,6 +198,7 @@
 			"heavy_mullet"		"1"			
 			"medic_pipe"		"1"
 			"soldier_legs"		"1"
+			"sniper_pocket"		"1"			
 		}
 		"shared"
 		{
@@ -30262,7 +30262,7 @@
 				}
 				"no primary ammo from dispensers while active"
 				{
-					"attribute_class"	"no_primary_ammo_from_dispensers_while_active"
+					"attribute_class"	"no_primary_ammo_from_dispensers"	
 					"value"	"1"
 				}
 			}
@@ -70325,7 +70325,7 @@
 		"421"
 		{
 			"name"	"no primary ammo from dispensers while active"
-			"attribute_class"	"no_primary_ammo_from_dispensers_while_active"
+			"attribute_class"	"no_primary_ammo_from_dispensers"	
 			"description_string"	"#Attrib_NoPrimaryAmmoFromDispensers"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"

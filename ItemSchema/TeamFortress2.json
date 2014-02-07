@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.5b0cd978e142c5e33df51a374a9b0aaaf06d152c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.1d25d7ff4203e8a2e2ed717c6a3ef272cda7e6b9.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -30166,7 +30166,7 @@
 					},
 					{
 						"name": "no primary ammo from dispensers while active",
-						"class": "no_primary_ammo_from_dispensers_while_active",
+						"class": "no_primary_ammo_from_dispensers",
 						"value": 1
 					}
 				]
@@ -106955,7 +106955,7 @@
 			{
 				"name": "no primary ammo from dispensers while active",
 				"defindex": 421,
-				"attribute_class": "no_primary_ammo_from_dispensers_while_active",
+				"attribute_class": "no_primary_ammo_from_dispensers",
 				"description_string": "No ammo from dispensers when active",
 				"description_format": "value_is_additive",
 				"effect_type": "negative",
