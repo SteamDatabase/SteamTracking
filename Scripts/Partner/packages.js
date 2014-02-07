@@ -874,4 +874,556 @@ function GetNumberOfSummaryDiscounts()
 
 function AddSummaryDiscounts( target, id, reqCurrencies )
 {
-	// let's count the number of real discounts (the code is a 
+	// let's count the number of real discounts (the code is a bit too conservative)
+	var countDiscounts = GetNumberOfSummaryDiscounts();
+	if ( countDiscounts < 2 )
+	{
+		$( 'discountSummaryBlock' ).style.display = 'none';
+		return;		// We display the summary only if more than one discount
+	}
+	$( 'discountSummaryBlock' ).style.display = '';
+
+	// What we need is to create a discount with all the discount summed (keeping the category)
+	// Then we would display that in a specific element id
+
+	var summedDiscounts = new Object();
+	summedDiscounts.discount = new Object();
+	summedDiscounts.discount.base = new Object();
+	summedDiscounts.discount.region = new Object();
+	summedDiscounts.discount.country = new Object();
+
+	for ( var i in g_AllDiscounts )
+	{
+		if ( g_AllDiscounts.hasOwnProperty( i ) == false )
+		{
+			continue;
+		}
+		var oneDiscount = g_AllDiscounts[ i ];
+		if ( oneDiscount == null || oneDiscount == undefined )
+		{
+			continue;
+		}
+
+		if ( oneDiscount.discount == null || oneDiscount.discount == undefined )
+		{
+			continue;
+		}
+
+		// Sum base discounts
+		var baseDiscounts = oneDiscount.discount.base;
+		if ( baseDiscounts )
+		{
+			for (key in reqCurrencies) 
+			{
+ 				if ( baseDiscounts[ key ] != null )
+				{
+					if ( summedDiscounts.discount.base[ key ] )
+					{
+						summedDiscounts.discount.base[ key ] += parseInt( baseDiscounts[ key ] );
+					}
+					else
+					{
+						summedDiscounts.discount.base[ key ] = parseInt( baseDiscounts[ key ] );
+					}
+				}
+			}
+		}
+
+		// Then sum region overrides
+		var regionDiscounts = oneDiscount.discount.region;
+		if ( regionDiscounts )
+		{
+			for ( var region in regionDiscounts )
+			{
+				var value = regionDiscounts[ region ].value;
+				if ( value )
+				{
+					if ( summedDiscounts.discount.region[ region ] )
+					{
+						summedDiscounts.discount.region[ region ].value += parseInt( value );
+					}
+					else
+					{
+						summedDiscounts.discount.region[ region ] = new Object();
+						summedDiscounts.discount.region[ region ].value = parseInt( value );
+						var currency = regionDiscounts[ region ].currency;
+						summedDiscounts.discount.region[ region ].currency = currency;
+					}
+				}
+			}
+		}
+
+		// Finally sum country overrides
+		var countryDiscounts = oneDiscount.discount.country;
+		if ( countryDiscounts )
+		{
+			for ( var country in countryDiscounts )
+			{
+				var value = countryDiscounts[ country ].value;
+				if ( value )
+				{
+					if ( summedDiscounts.discount.country[ country ] )
+					{
+						summedDiscounts.discount.country[ country ].value += parseInt( value );
+					}
+					else
+					{
+						summedDiscounts.discount.country[ country ] = new Object();
+						summedDiscounts.discount.country[ country ].value = parseInt( value );
+						var currency = countryDiscounts[ country ].currency;
+						summedDiscounts.discount.country[ country ].currency = currency;
+					}
+				}
+			}
+		}
+	}
+	
+	while ( target.hasChildNodes() )
+	{
+		target.removeChild( target.firstChild );
+	}
+
+	// Now let's add the discount to the UI
+	var amt = summedDiscounts.discount;
+	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, true );
+	var discountBlock = templ_DiscountsSummaryDiv.evaluate( { DiscountId: id, DiscountPrices: strDiscountPrices } );
+	target.insert( discountBlock );		// Have to insert the result so $( id + '_RegionCost' ) works as expected.
+
+	var regionDiv = $( id + '_RegionCost' );
+	CreateRegionOverridesBlock( regionDiv, id + '[regionDiscounts]', g_RegionCurrencies, summedDiscounts.discount.region, true, true );
+	
+	// add countries
+	var countryDiv = $( id + '_CountryOverrides');
+	if ( summedDiscounts.discount.country != null )
+	{
+		for ( var i in summedDiscounts.discount.country )
+		{
+			AddCountryOverride( countryDiv, id + '[countryDiscounts]', i, summedDiscounts.discount.country[ i ].value, summedDiscounts.discount.country[ i ].currency, true, true );
+		}
+	}
+}
+
+//
+// Ajax calls
+//
+
+function CreateAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
+{
+	if ( requestMethod == null ) requestMethod = 'get';
+	new Ajax.Request( requestUrl,
+		{
+			requestHeaders: { 'Accept': 'application/json' },
+			method: requestMethod,
+			parameters: hashParms,
+			onSuccess: function( transport )
+			{
+				var results = transport.responseJSON;
+				if ( results )
+				{
+					successClosure( results );
+				}
+			}
+		} );
+}
+
+function SetPackageCost( packageid, formName, submitName )
+{
+	// disable submit button if passed
+	submitButton = $(submitName);
+	if ( submitButton != null )
+	{
+		submitText = submitButton.value;
+		submitButton.value = 'Working...';
+		EnableElement( submitName, false );
+	}
+	
+	CreateAjaxRequest( g_szBaseURL + '/packages/setpackagecost/' + packageid,
+		$(formName).serialize(true),
+		function( results )
+		{
+			$('resultsSuccessDiv').hide();
+			$('resultsErrorDiv').hide();
+			if ( results['success'] )
+			{
+				target = $('resultsSuccessDiv');
+				target.innerHTML = "";
+				AddText( target, "Package cost successfully updated!" );
+				target.show();
+				new Effect.Highlight(target, {startcolor: '#00adee', endcolor: '#003f57'});
+			}
+			else
+			{
+				target = $('resultsErrorDiv');
+				target.innerHTML = "";
+				// errors should be set. Dump all into a list
+				AddText( target, "Update was not saved. The following errors were found:" );
+				AddLineBreak( target );
+				
+				errorList = document.createElement( 'ul' );
+				for ( i = 0; i < results['errors'].length; i++ )
+				{
+					listItem = document.createElement( 'li' );
+					listItem.innerHTML = results['errors'][i];
+					errorList.appendChild( listItem );
+				}
+				
+				target.appendChild( errorList );			
+				target.show();
+				new Effect.Highlight(target, {startcolor: '#a81a28', endcolor: '#4a0b12'});	
+			}
+			
+			// enable submit button if passed
+			if ( submitButton != null )
+			{
+				submitButton.value = submitText;
+				EnableElement( submitName, true );			
+			}
+			
+		}, 'post' );
+}
+
+//
+// Misc
+//
+
+function HideElement( target )
+{
+	var type = typeof( target );
+	if ( type == 'string' )
+		target = document.getElementById( target );
+	
+	target.style.display = 'none';
+}
+
+function ShowElement( target )
+{
+	var type = typeof( target );
+	if ( type == 'string' )
+		target = document.getElementById( target );
+	
+	target.style.display = 'block';
+}
+
+function EnableElement( name, enabled )
+{
+	document.getElementById( name ).disabled = !enabled;
+}
+
+// checks all boxes in a form. if callback is set, calls function passing each checkbox which is checked
+function CheckAllBoxes( form, check, callback )
+{
+	var elements = $(form).getElementsByTagName( 'INPUT' );
+	if ( elements == null )
+		return;
+	
+	for (var i = 0; i < elements.length; i++)
+	{  			
+		if ( elements[i].type == 'checkbox' && elements[i].checked != check )
+		{
+			elements[i].checked = check;
+			
+			if ( callback != null )
+				callback( elements[i] );						
+		}
+	}
+}
+
+// hightlights row which contains specified element
+function HighlightCheckboxRow( checkbox )
+{
+	var clrBackground = '#262626';
+	var clrHighlight = '#00658e';
+	
+	// find parent row. Prototype's .up('TR') takes a long time when used over 700+ rows, so do this ourselves
+	var row = checkbox.parentNode;
+	while ( row != null )
+	{
+		if ( row.nodeName == 'TR' )
+			break;
+			
+		row = row.parentNode;
+	}
+	
+	if ( row == null )
+		return;	
+		
+	if ( $(checkbox).checked )
+	{
+		new Effect.Highlight( $(row), {startcolor: clrBackground, endcolor: clrHighlight, restorecolor: clrHighlight, duration: 0.3 } );
+	}
+	else
+	{
+		new Effect.Highlight( $(row), {startcolor: clrHighlight, endcolor: clrBackground, restorecolor: clrBackground, duration: 0.3 } );
+	}
+}
+
+// hightlights row which contains specified element
+function HighlightCheckboxParent( checkbox )
+{
+	var clrBackground = '#262626';
+	var clrHighlight = '#00658e';
+
+	var parent = checkbox.parentNode;
+	if ( parent == null )
+		return;
+
+	if ( $(checkbox).checked )
+	{
+		new Effect.Highlight( $(parent), {startcolor: clrBackground, endcolor: clrHighlight, restorecolor: clrHighlight, duration: 0.3 } );
+	}
+	else
+	{
+		new Effect.Highlight( $(parent), {startcolor: clrHighlight, endcolor: clrBackground, restorecolor: clrBackground, duration: 0.3 } );
+	}
+}
+
+//
+// Publishing
+//
+
+function DiffPackage( packageid, target )
+{
+	//$('appOutput').innerHTML = '';
+	if ( target != null )
+	{
+		$(target).innerHTML = '';
+		ShowElement( target );
+	}
+
+	CreateAjaxRequest( 	g_szBaseURL + "/packages/diff/" + packageid,
+						{},
+						function( results )
+						{
+							theDiffs = results[ 'opened' ] + results[ 'diff' ];
+							if ( theDiffs == "" )
+							{
+								theDiffs = "[No changes detected.]";
+							}
+							
+							$(target).innerHTML = "<pre>" + theDiffs + "</pre>";
+						}
+					);				
+}
+
+//
+// many of our AJAX actions send back JSON with two items in it:
+// - message: text to put into an element
+// - success: whether it succeeded
+// this callback writes the text into the specified element, and applies
+// a CSS class based on the success code.
+//
+function StandardCallback( results, elementName )
+{
+	elt = $(elementName);
+
+	// check type of elt
+	if ( typeof( elt ) == "object" )
+	{
+		// poke in results
+		elt.innerHTML = results[ 'message' ];
+
+		// set style based on returned success code
+		elt.className = results[ 'success' ] ? "outputSuccess" : "outputFailure";
+		
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function RevertPackage( packageid, target )
+{
+	if ( !confirm( "Revert all unpublished changes?" ) )
+	{
+		return;
+	}
+
+	$('packageOutput').innerHTML = "";
+	HideElement( 'packageDiff' );
+	$('packageDiff').innerHTML = '';
+	$('publishbtn').style.display = 'none';
+
+	CreateAjaxRequest(	g_szBaseURL + "/packages/revert/" + packageid,
+						{},
+						function( results )
+						{
+							StandardCallback( results, 'packageOutput' );
+						}
+					);
+}
+
+function PreparePackage( packageid )
+{
+	$('packageOutput').innerHTML = "";
+	HideElement( 'packageDiff' );
+
+	CreateAjaxRequest(	g_szBaseURL + "/packages/prepare/" + packageid,
+						{},
+						function( results )
+						{
+							StandardCallback( results, 'packageOutput' );
+							if ( results[ 'success' ] )
+							{
+								$('publishHidden').style.display = '';
+							}
+						}
+					);
+}
+
+function CancelEvent( event )
+{
+	if ( !event ) var event = window.event;
+	
+	event.cancelBubble = true;
+	if ( event.stopPropagation ) event.stopPropagation();
+}
+
+// Functions for Tooltip
+packages.ToolTip_FindPos = function ToolTip_FindPos( el )
+{
+	// Get in absolute position
+	var _x = 0;
+	var _y = 0;
+	while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) )
+	{
+		_x += el.offsetLeft;
+		_y += el.offsetTop;
+		el = el.offsetParent;
+	}
+	return { y: _y, x: _x };
+};
+
+packages.Decode = function Decode( text )
+{
+	text = decodeURIComponent( text );
+	text = UnEscapeSQL( text );
+	return text;
+};
+
+packages.Encode = function Encode( text )
+{
+	text = EscapeSQL( text );
+	text = encodeURIComponent( text );
+	return text;
+};
+
+packages.UnEscapeSQL = function UnEscapeSQL( text )
+{
+	// Revert the escape that has been introduced in PHP for the SQL layer
+	// Javascript replace doesn't replace all occurences but only the first one, we have to use a RegEx for the multiple search and replace. !?!
+	// We use the /pattern/modifier pattern instead of RegExp( "pattern", "modifier" )
+	// to avoid double escaping and making the code more readable. ?!?
+	// 'g' for global search and replace. I miss C# :).
+	text = text.replace( /\\\\/g, "\\" );
+	text = text.replace( /\\0/g, "\0" );
+	text = text.replace( /\\n/g, "\n" );
+	text = text.replace( /\\r/g, "\r" );
+	text = text.replace( /\\Z/g, "\x1a" );
+	// ' are escaped in the SQL side by using ''. SQL interprets that as '
+	//text = text.replace( /''/g, "'" );
+	text = text.replace( /""/g, '"' );
+	return text;
+};
+
+packages.EscapeSQL = function EscapeSQL( text )
+{
+	text = text.replace( /\\/g, "\\\\" );
+	text = text.replace( /\0/g, "\\0" );
+	text = text.replace( /\n/g, "\\n" );
+	text = text.replace( /\r/g, "\\r" );
+	text = text.replace( /\x1a/g, "\\Z" );
+	// ' are escaped in the SQL side by using ''. SQL interprets that as '
+	//text = text.replace( /''/g, "'" );
+	text = text.replace( /"/g, '""' );
+	return text;
+};
+
+packages.Ln2Br = function Ln2Br( text )
+{
+	return text.replace( /\n/g, "<br/>" );
+};
+
+packages.EscapeHTML = function EscapeHTML( text )
+{
+	return text.replace( /&/g, "&amp;" )
+				.replace( /</g, "&lt;" )
+				.replace( />/g, "&gt;" )
+				.replace( /"/g, "&quot;" )
+				.replace( /'/g, "&#039;" );
+};
+
+packages.ToolTip_Show = function ToolTip_Show( tooltipId, parentId )
+{
+	var toolTip = $( tooltipId );
+
+	while ( toolTip.hasChildNodes() )
+	{
+		toolTip.removeChild( toolTip.firstChild );
+	}
+
+	var parent = $( parentId );
+	var packageId = parent.getAttribute( "packageId" );
+
+	if ( !g_PackageInfo[ packageId ] )
+	{
+		return;
+	}
+	var initialCost = g_PackageInfo[ packageId ].initial_cost;
+	if ( initialCost == null )
+	{
+		return;
+	}
+
+	CreateRequiredCurrencyBlock( toolTip, 'tooltip' + (++g_nextElementID), g_RequiredCurrencies, initialCost.base, false, true );
+	CreateRegionOverridesBlock( toolTip, 'tooltip' + (++g_nextElementID), g_RegionCurrencies, initialCost.region, false, true );
+
+	if ( initialCost.country )
+	{
+		for ( var countryId in initialCost.country )
+		{
+			var country = initialCost.country[ countryId ];
+			CreateCountryOverride( toolTip, 'tooltip' + (++g_nextElementID), countryId, country.value, country.currency, false, true );
+		}
+	}
+
+	// Then let's display the discounts
+	AddLineBreak( toolTip );
+	AddLineBreak( toolTip );
+	AddText( toolTip, "Discounts: " );
+
+	var discounts = g_PackageInfo[ packageId ].discounts;
+	if ( discounts )
+	{
+		for ( var discountId in discounts )
+		{
+			if ( discounts.hasOwnProperty( discountId ) == false )
+			{
+				continue;
+			}
+			var discount = discounts[ discountId ];
+
+			g_InitialCostsBase = initialCost.base;
+			g_InitialCostsCountry = initialCost.country;
+			g_InitialCostsRegion = initialCost.country;
+
+			AddDiscount( toolTip, 'discounts', discount, false );
+		}
+	}
+	
+	//	UpdateSummaryDiscounts();
+
+	var result = packages.ToolTip_FindPos( parent );
+	var x = result.x + 250;		// Adjust position (with +250,-200)
+	var y = result.y - 200;
+	toolTip.style.top = y + 'px';
+	toolTip.style.left = x + 'px';
+	toolTip.style.visibility = 'visible';
+};
+
+packages.ToolTip_Hide = function ToolTip_Hide( id )
+{
+	$( id ).style.visibility = 'hidden';
+};
+
