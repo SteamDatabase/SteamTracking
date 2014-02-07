@@ -17067,7 +17067,6 @@
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"anim_slot"	"item1"
 			"image_inventory"	"backpack/weapons/c_models/c_shogun_katana/c_shogun_katana"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
