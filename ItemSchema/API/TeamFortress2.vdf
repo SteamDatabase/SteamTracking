@@ -205,6 +205,7 @@
 			"scout_pants"		"1"
 			"heavy_bullets"		"1"
 			"engineer_hair"		"1"			
+			"sniper_vest"		"1"			
 		}
 	}
 	"equip_conflicts"
@@ -327,6 +328,7 @@
 		{
 			"public_prefab"			"1"
 			"prefab"				"cosmetic base_misc"
+			"item_type_name"		"#TF_Wearable_CosmeticItem"
 		}
 
 		"hat"
@@ -4603,6 +4605,11 @@
 				{
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "1.5"
 				}
 			}
 			"visuals"
@@ -10844,12 +10851,12 @@
 				"damage force increase hidden"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value" "1.8"
+					"value" "1.4"
 				}
 				"airblast vulnerability multiplier hidden"
 				{
 					"attribute_class"	"airblast_vulnerability_multiplier"
-					"value" "1.8"
+					"value" "1.4"
 				}
 				"healing received bonus"
 				{
@@ -17060,6 +17067,7 @@
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
+			"anim_slot"	"item1"
 			"image_inventory"	"backpack/weapons/c_models/c_shogun_katana/c_shogun_katana"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -19415,12 +19423,12 @@
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
-					"value" "0.5"
+					"value" "0.66"
 				}
 				"mod mini-crit airborne deploy"
 				{
 					"attribute_class"	"mini_crit_airborne_deploy"
-					"value" "3"
+					"value" "5"
 				}
 				"deploy time decreased"
 				{
@@ -20921,11 +20929,6 @@
 				{
 					"attribute_class"	"set_scattergun_no_reload_single"
 					"value"	"1"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
 				}
 			}
 			"visuals"
@@ -23733,6 +23736,11 @@
 				"disable weapon hiding for animations"
 				{
 					"attribute_class"	"disable_weapon_hiding_for_animations"
+					"value"	"1"
+				}
+				"no metal from dispensers while active"
+				{
+					"attribute_class"	"no_metal_from_dispensers_while_active"
 					"value"	"1"
 				}
 			}
@@ -30253,9 +30261,9 @@
 					"attribute_class"	"projectile_spread_angle"
 					"value"	"3"
 				}
-				"no primary ammo from dispensers"
+				"no primary ammo from dispensers while active"
 				{
-					"attribute_class"	"no_primary_ammo_from_dispensers"
+					"attribute_class"	"no_primary_ammo_from_dispensers_while_active"
 					"value"	"1"
 				}
 			}
@@ -30887,10 +30895,10 @@
 			"attach_to_hands"	"1"
 			"attributes"
 			{
-				"critboost on kill"
+				"minicritboost on kill"
 				{
-					"attribute_class"	"add_onkill_critboost_time"
-					"value"	"3"
+					"attribute_class"	"add_onkill_minicritboost_time"
+					"value"	"8"
 				}
 				"fire rate penalty"
 				{
@@ -41067,7 +41075,66 @@
 			"image_inventory"	"backpack/weapons/c_models/c_wrangler_xmas"
 			"model_player"		"models/weapons/c_models/c_wrangler_xmas.mdl"
 		}
-		
+		"1089"
+		{
+			"name"	"Mister Bubbles"
+			"prefab"	"promo misc"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_PocketBuddy"
+			"item_name"	"#TF_MisterBubbles"
+			"item_description"	"#TF_MisterBubbles_Desc"
+			"image_inventory"	"backpack/workshop/player/items/engineer/bi_big_daddy_doll/bi_big_daddy_doll"
+			"model_player"	"models/workshop/player/items/engineer/bi_big_daddy_doll/bi_big_daddy_doll.mdl"
+			"equip_region"	"engineer_pocket"
+			"used_by_classes"
+			{
+				"engineer" "1"
+			}
+		}
+		"1090"
+		{
+			"name"	"The Big Daddy"
+			"prefab"	"promo hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Mask"
+			"item_name"	"#TF_BigDaddy"
+			"item_description"	"#TF_BigDaddy_Desc"
+			"image_inventory"	"backpack/workshop/player/items/soldier/bi_washington_mask/bi_washington_mask"
+			"model_player"	"models/workshop/player/items/soldier/bi_washington_mask/bi_washington_mask.mdl"
+			"equip_region"	"whole_head"
+			"propername" "1"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+		}
+		"1091"
+		{
+			"name"	"The First American"
+			"prefab"	"promo hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Mask"
+			"item_name"	"#TF_FirstAmerican"
+			"item_description"	"#TF_FirstAmerican_Desc"
+			"image_inventory"	"backpack/workshop/player/items/soldier/bi_franklin_mask/bi_franklin_mask"
+			"model_player"	"models/workshop/player/items/soldier/bi_franklin_mask/bi_franklin_mask.mdl"
+			"equip_region"	"whole_head"
+			"propername" "1"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+		}
+
 
 
 
@@ -47088,8 +47155,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -47913,8 +47980,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -48782,8 +48849,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -48949,7 +49016,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_xms2013_sniper_layer_vest"
 			"item_description"		"#TF_xms2013_sniper_layer_vest_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"sniper_vest"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest"
 			"model_player"		"models/workshop/player/items/sniper/xms2013_sniper_layer_vest/xms2013_sniper_layer_vest.mdl"
@@ -49145,6 +49212,972 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+		}
+		"30336"
+		{
+			"name"		"The Trencher's Topper"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_trenchers_topper"
+			"item_description"		"#TF_sbox2014_trenchers_topper_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_trenchers_topper/sbox2014_trenchers_topper"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sbox2014_trenchers_topper/sbox2014_trenchers_topper.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30337"
+		{
+			"name"		"The Trencher's Tunic"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_trenchers_tunic"
+			"item_description"		"#TF_sbox2014_trenchers_tunic_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_trenchers_tunic/sbox2014_trenchers_tunic"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sbox2014_trenchers_tunic/sbox2014_trenchers_tunic.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30338"
+		{
+			"name"		"Ground Control"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_soldier_major"
+			"item_description"		"#TF_sbox2014_soldier_major_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/sbox2014_soldier_major/sbox2014_soldier_major"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sbox2014_soldier_major/sbox2014_soldier_major.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30339"
+		{
+			"name"		"The Killer's Kit"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_killers_kit"
+			"item_description"		"#TF_sbox2014_killers_kit_Desc"
+			"equip_region"		"soldier_legs"
+			"image_inventory"		"backpack/workshop/player/items/soldier/sbox2014_killers_kit/sbox2014_killers_kit"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sbox2014_killers_kit/sbox2014_killers_kit.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30340"
+		{
+			"name"		"Stylish DeGroot"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_stylish_degroot"
+			"item_description"		"#TF_sbox2014_stylish_degroot_Desc"
+			"equip_region"		"head_skin"
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_stylish_degroot/sbox2014_stylish_degroot"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_stylish_degroot/sbox2014_stylish_degroot.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30341"
+		{
+			"name"		"Ein"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Animal"
+			"item_name"		"#TF_sbox2014_einstein"
+			"item_description"		"#TF_sbox2014_einstein_Desc"
+			"equip_region"		"left_shoulder"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_einstein/sbox2014_einstein"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sbox2014_einstein/sbox2014_einstein.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+		}
+		"30342"
+		{
+			"name"		"The Heavy Lifter"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_heavy_gunshow"
+			"item_description"		"#TF_sbox2014_heavy_gunshow_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_heavy_gunshow/sbox2014_heavy_gunshow"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_heavy_gunshow/sbox2014_heavy_gunshow.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30343"
+		{
+			"name"		"Gone Commando"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_heavy_camopants"
+			"item_description"		"#TF_sbox2014_heavy_camopants_Desc"
+			"equip_region"		"heavy_hip"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_heavy_camopants/sbox2014_heavy_camopants"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_heavy_camopants/sbox2014_heavy_camopants.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30344"
+		{
+			"name"		"Bullet Buzz"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_heavy_buzzcut"
+			"item_description"		"#TF_sbox2014_heavy_buzzcut_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_heavy_buzzcut/sbox2014_heavy_buzzcut"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_heavy_buzzcut/sbox2014_heavy_buzzcut.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30345"
+		{
+			"name"		"The Leftover Trap"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_sbox2014_leftover_trap"
+			"item_description"		"#TF_sbox2014_leftover_trap_Desc"
+			"equip_region"		"beard"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_leftover_trap/sbox2014_leftover_trap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_leftover_trap/sbox2014_leftover_trap.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30346"
+		{
+			"name"		"The Trash Man"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_trash_man"
+			"item_description"		"#TF_sbox2014_trash_man_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_trash_man/sbox2014_trash_man"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_trash_man/sbox2014_trash_man.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30347"
+		{
+			"name"		"The Scotch Saver"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_sbox2014_scotch_saver"
+			"item_description"		"#TF_sbox2014_scotch_saver_Desc"
+			"equip_region"		"beard"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_scotch_saver/sbox2014_scotch_saver"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sbox2014_scotch_saver/sbox2014_scotch_saver.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30348"
+		{
+			"name"		"Bushi-Dou"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_demo_samurai_armour"
+			"item_description"		"#TF_sbox2014_demo_samurai_armour_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_samurai_armour/sbox2014_demo_samurai_armour"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_samurai_armour/sbox2014_demo_samurai_armour.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30349"
+		{
+			"name"		"The Fashionable Megalomaniac"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_sbox2014_fashionable_megalomaniac"
+			"item_description"		"#TF_sbox2014_fashionable_megalomaniac_Desc"
+			"equip_region"		"beard"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_fashionable_megalomaniac/sbox2014_fashionable_megalomaniac"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_fashionable_megalomaniac/sbox2014_fashionable_megalomaniac.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30350"
+		{
+			"name"		"The Dough Puncher"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_chefs_coat"
+			"item_description"		"#TF_sbox2014_chefs_coat_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_chefs_coat/sbox2014_chefs_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_chefs_coat/sbox2014_chefs_coat.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30351"
+		{
+			"name"		"The Teutonic Toque"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_teutonic_toque"
+			"item_description"		"#TF_sbox2014_teutonic_toque_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_teutonic_toque/sbox2014_teutonic_toque"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_teutonic_toque/sbox2014_teutonic_toque.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30352"
+		{
+			"name"		"The Mustachioed Mann"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_FacialHair"
+			"item_name"		"#TF_sbox2014_mustachioed_mann"
+			"item_description"		"#TF_sbox2014_mustachioed_mann_Desc"
+			"equip_region"		"face"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30353"
+		{
+			"name"		"The Backstabber's Boomslang"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Animal"
+			"item_name"		"#TF_sbox2014_spy_snake"
+			"item_description"		"#TF_sbox2014_spy_snake_Desc"
+			"equip_region"		"left_shoulder"
+			"image_inventory"		"backpack/workshop/player/items/spy/sbox2014_spy_snake/sbox2014_spy_snake"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sbox2014_spy_snake/sbox2014_spy_snake.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+		}
+		"30354"
+		{
+			"name"		"The Rat Stompers"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Boots"
+			"item_name"		"#TF_sbox2014_rat_stompers"
+			"item_description"		"#TF_sbox2014_rat_stompers_Desc"
+			"equip_region"		"feet"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_rat_stompers/sbox2014_rat_stompers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_rat_stompers/sbox2014_rat_stompers.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30355"
+		{
+			"name"		"Sole Mate"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_sole_mate"
+			"item_description"		"#TF_sbox2014_sole_mate_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/pyro/sbox2014_sole_mate/sbox2014_sole_mate"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sbox2014_sole_mate/sbox2014_sole_mate.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30356"
+		{
+			"name"		"The Heat of Winter"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"item_name"		"#TF_sbxo2014_medic_wintergarb_coat"
+			"item_description"		"#TF_sbxo2014_medic_wintergarb_coat_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbxo2014_medic_wintergarb_coat/sbxo2014_medic_wintergarb_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbxo2014_medic_wintergarb_coat/sbxo2014_medic_wintergarb_coat.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30357"
+		{
+			"name"		"The Dark Falkirk Helm"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_demo_knight_helmet"
+			"item_description"		"#TF_sbox2014_demo_knight_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_knight_helmet/sbox2014_demo_knight_helmet"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_knight_helmet/sbox2014_demo_knight_helmet.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30358"
+		{
+			"name"		"The Sole Saviors"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Boots"
+			"item_name"		"#TF_sbox2014_demo_armor_shoes"
+			"item_description"		"#TF_sbox2014_demo_armor_shoes_Desc"
+			"equip_region"		"feet"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_armor_shoes/sbox2014_demo_armor_shoes"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_armor_shoes/sbox2014_demo_armor_shoes.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30359"
+		{
+			"name"		"The Huntsman's Essentials"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Quiver"
+			"item_name"		"#TF_sbox2014_sniper_quiver"
+			"item_description"		"#TF_sbox2014_sniper_quiver_Desc"
+			"equip_region"		"Back"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sbox2014_sniper_quiver/sbox2014_sniper_quiver"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sbox2014_sniper_quiver/sbox2014_sniper_quiver.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30360"
+		{
+			"name"		"The Napolean Complex"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_napolean_complex"
+			"item_description"		"#TF_sbox2014_napolean_complex_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/spy/sbox2014_napolean_complex/sbox2014_napolean_complex"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sbox2014_napolean_complex/sbox2014_napolean_complex.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30361"
+		{
+			"name"		"The Colonel's Coat"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Coat"
+			"item_name"		"#TF_sbox2014_medic_colonel_coat"
+			"item_description"		"#TF_sbox2014_medic_colonel_coat_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_medic_colonel_coat/sbox2014_medic_colonel_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_medic_colonel_coat/sbox2014_medic_colonel_coat.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30362"
+		{
+			"name"		"The Law"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_law"
+			"item_description"		"#TF_sbox2014_law_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/sbox2014_law/sbox2014_law"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sbox2014_law/sbox2014_law_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30363"
+		{
+			"name"		"The Juggernaut Jacket"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_juggernaut_jacket"
+			"item_description"		"#TF_sbox2014_juggernaut_jacket_Desc"
+			"equip_region"		"left_shoulder"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_juggernaut_jacket/sbox2014_juggernaut_jacket"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_juggernaut_jacket/sbox2014_juggernaut_jacket.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30364"
+		{
+			"name"		"The Warmth Preserver"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_warmth_preserver"
+			"item_description"		"#TF_sbox2014_warmth_preserver_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_warmth_preserver/sbox2014_warmth_preserver"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_warmth_preserver/sbox2014_warmth_preserver.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30365"
+		{
+			"name"		"The Smock Surgeon"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Apron"
+			"item_name"		"#TF_sbox2014_medic_apron"
+			"item_description"		"#TF_sbox2014_medic_apron_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_medic_apron/sbox2014_medic_apron"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_medic_apron/sbox2014_medic_apron.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30366"
+		{
+			"name"		"The Sangu Sleeves"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_demo_samurai_sleeves"
+			"item_description"		"#TF_sbox2014_demo_samurai_sleeves_Desc"
+			"equip_region"		"arms"
+			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30367"
+		{
+			"name"		"The Cute Suit"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_pyro_zipper_suit"
+			"item_description"		"#TF_sbox2014_pyro_zipper_suit_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/sbox2014_pyro_zipper_suit/sbox2014_pyro_zipper_suit"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sbox2014_pyro_zipper_suit/sbox2014_pyro_zipper_suit.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30368"
+		{
+			"name"		"The War Goggles"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Glasses"
+			"item_name"		"#TF_sbox2014_war_goggles"
+			"item_description"		"#TF_sbox2014_war_goggles_Desc"
+			"equip_region"		"glasses"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_war_goggles/sbox2014_war_goggles"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_war_goggles/sbox2014_war_goggles.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30369"
+		{
+			"name"		"The Eliminators Safeguard"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_war_helmet"
+			"item_description"		"#TF_sbox2014_war_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_war_helmet/sbox2014_war_helmet"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_war_helmet/sbox2014_war_helmet.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30371"
+		{
+			"name"		"The Archers Groundings"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Boots"
+			"item_name"		"#TF_sbox2014_archers_groundings"
+			"item_description"		"#TF_sbox2014_archers_groundings_Desc"
+			"equip_region"		"feet"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sbox2014_archers_groundings/sbox2014_archers_groundings"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sbox2014_archers_groundings/sbox2014_archers_groundings.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30372"
+		{
+			"name"		"Combat Slacks"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_war_pants"
+			"item_description"		"#TF_sbox2014_war_pants_Desc"
+			"equip_region"		"heavy_hip"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_war_pants/sbox2014_war_pants"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_war_pants/sbox2014_war_pants.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30373"
+		{
+			"name"		"The Toowoomba Tunic"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_toowoomba_tunic"
+			"item_description"		"#TF_sbox2014_toowoomba_tunic_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sbox2014_toowoomba_tunic/sbox2014_toowoomba_tunic"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sbox2014_toowoomba_tunic/sbox2014_toowoomba_tunic.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30374"
+		{
+			"name"		"The Sammy Cap"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_sammy_cap"
+			"item_description"		"#TF_sbox2014_sammy_cap_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_sammy_cap/sbox2014_sammy_cap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sbox2014_sammy_cap/sbox2014_sammy_cap.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30375"
+		{
+			"name"		"The Deep Cover Operator"
+			"propername"		"1"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_camo_headband"
+			"item_description"		"#TF_sbox2014_camo_headband_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/sbox2014_camo_headband/sbox2014_camo_headband"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/sbox2014_camo_headband/sbox2014_camo_headband_sniper.mdl"
+				"spy"		"models/workshop/player/items/all_class/sbox2014_camo_headband/sbox2014_camo_headband_spy.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper"		"1"
+				"spy"		"1"
+			}
+		}
+		"30376"
+		{
+			"name"		"The Ticket Boy"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"item_name"		"#TF_sbox2014_ticket_boy"
+			"item_description"		"#TF_sbox2014_ticket_boy_Desc"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sbox2014_ticket_boy/sbox2014_ticket_boy"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sbox2014_ticket_boy/sbox2014_ticket_boy.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30377"
+		{
+			"name"		"The Antarctic Researcher"
+			"propername"		"1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Coat"
+			"item_name"		"#TF_sbox2014_antarctic_researcher"
+			"item_description"		"#TF_sbox2014_antarctic_researcher_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sbox2014_antarctic_researcher/sbox2014_antarctic_researcher"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sbox2014_antarctic_researcher/sbox2014_antarctic_researcher.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30378"
+		{
+			"name"		"Heer's Helmet"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_sbox2014_medic_wintergarb_helmet"
+			"item_description"		"#TF_sbox2014_medic_wintergarb_helmet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_medic_wintergarb_helmet/sbox2014_medic_wintergarb_helmet"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_medic_wintergarb_helmet/sbox2014_medic_wintergarb_helmet.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30379"
+		{
+			"name"		"The Gaiter Guards"
+			"propername" "1"
+			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Boots"
+			"item_name"		"#TF_sbox2014_medic_wintergarb_gaiter"
+			"item_description"		"#TF_sbox2014_medic_wintergarb_gaiter_Desc"
+			"equip_region"		"feet"
+			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_medic_wintergarb_gaiter/sbox2014_medic_wintergarb_gaiter"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sbox2014_medic_wintergarb_gaiter/sbox2014_medic_wintergarb_gaiter.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
 			}
 		}
 
@@ -53900,6 +54933,16 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant"
 			"model_player"		"models/workshop/player/items/all_class/ugc_season11_iron_participant/ugc_season11_iron_participant_demo.mdl"
 		}
+		"8395"
+		{
+			"name"				"Tumblr Vs Reddit Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TumblrVsReddit"
+			"item_description"	"#TF_TournamentMedal_TumblrVsReddit_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tvr_medal/tvr_medal"
+			"model_player"		"models/workshop/player/items/all_class/tvr_medal/tvr_medal_demo.mdl"
+		}
+
 
 
 
@@ -62407,7 +63450,25 @@
 			"image_inventory"	"backpack/crafting/strongbox_crate"
 			"attributes"
 			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5720"	
+				}
 			}
+		}
+		"5720"
+		{
+			"name"	"Strongbox Key 2014" 
+			"prefab" "eventkey"
+			"first_sale_date"	"2014/02/07"
+			"tool"
+			{
+				"restriction"	"strongbox_2014"
+			}
+			"item_name"		"#TF_StrongboxKey"
+			"item_description"	"#TF_StrongboxKey_Desc"
+			"image_inventory"	"backpack/crafting/strongbox_crate_key"
 		}
 		
 		"5999"				
@@ -69264,8 +70325,8 @@
 		}
 		"421"
 		{
-			"name"	"no primary ammo from dispensers"
-			"attribute_class"	"no_primary_ammo_from_dispensers"
+			"name"	"no primary ammo from dispensers while active"
+			"attribute_class"	"no_primary_ammo_from_dispensers_while_active"
 			"description_string"	"#Attrib_NoPrimaryAmmoFromDispensers"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
@@ -70353,7 +71414,28 @@
 			"effect_type"	"positive"
 			"stored_as_integer"	"1"
 		}
-		
+		"613"
+		{
+			"name"	"minicritboost on kill"
+			"attribute_class"	"add_onkill_minicritboost_time"
+			"description_string"	"#Attrib_MiniCritBoost_OnKill"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"armory_desc"	"on_kill"
+			"stored_as_integer"	"0"
+		}
+		"614"
+		{
+			"name"	"no metal from dispensers while active"
+			"attribute_class"	"no_metal_from_dispensers_while_active"
+			"description_string"	"#Attrib_NoMetalFromDispensersWhileActive"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"1"
+		}
+
 		"1000"
 		{
 			"name"	"CARD: damage bonus"
@@ -72168,6 +73250,7 @@
 		"supply_crate_loot_list_77"		"77"	
 		"winter_crate_loot_list_2013_naughty"	"78"	
 		"winter_crate_loot_list_2013_nice"	"79"	
+		"strongbox_crate_loot_list_2014"	"81"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"

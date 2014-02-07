@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.524fef31ce7ffee0d1ff68336b10aaaf59244f10.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.47683d0f523547e2fc20571b2deca045276e1215.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -1560,6 +1560,11 @@
 						"name": "lunchbox adds minicrits",
 						"class": "set_weapon_mode",
 						"value": 1
+					},
+					{
+						"name": "maxammo primary increased",
+						"class": "mult_maxammo_primary",
+						"value": 1.5
 					}
 				]
 				
@@ -8010,12 +8015,12 @@
 					{
 						"name": "damage force increase hidden",
 						"class": "damage_force_reduction",
-						"value": 1.7999999523162842
+						"value": 1.3999999761581421
 					},
 					{
 						"name": "airblast vulnerability multiplier hidden",
 						"class": "airblast_vulnerability_multiplier",
-						"value": 1.7999999523162842
+						"value": 1.3999999761581421
 					},
 					{
 						"name": "healing received bonus",
@@ -16204,12 +16209,12 @@
 					{
 						"name": "clip size penalty",
 						"class": "mult_clipsize",
-						"value": 0.5
+						"value": 0.6600000262260437
 					},
 					{
 						"name": "mod mini-crit airborne deploy",
 						"class": "mini_crit_airborne_deploy",
-						"value": 3
+						"value": 5
 					},
 					{
 						"name": "deploy time decreased",
@@ -17643,11 +17648,6 @@
 						"name": "scattergun no reload single",
 						"class": "set_scattergun_no_reload_single",
 						"value": 1
-					},
-					{
-						"name": "crit mod disabled",
-						"class": "mult_crit_chance",
-						"value": 0
 					}
 				]
 				
@@ -21084,6 +21084,11 @@
 					{
 						"name": "disable weapon hiding for animations",
 						"class": "disable_weapon_hiding_for_animations",
+						"value": 1
+					},
+					{
+						"name": "no metal from dispensers while active",
+						"class": "no_metal_from_dispensers_while_active",
 						"value": 1
 					}
 				]
@@ -30160,8 +30165,8 @@
 						"value": 3
 					},
 					{
-						"name": "no primary ammo from dispensers",
-						"class": "no_primary_ammo_from_dispensers",
+						"name": "no primary ammo from dispensers while active",
+						"class": "no_primary_ammo_from_dispensers_while_active",
 						"value": 1
 					}
 				]
@@ -31017,9 +31022,9 @@
 				,
 				"attributes": [
 					{
-						"name": "critboost on kill",
-						"class": "add_onkill_critboost_time",
-						"value": 3
+						"name": "minicritboost on kill",
+						"class": "add_onkill_minicritboost_time",
+						"value": 8
 					},
 					{
 						"name": "fire rate penalty",
@@ -45271,7 +45276,7 @@
 				"name": "MvM GateBot Light Heavy",
 				"defindex": 1060,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "TF_GateBot_Light",
 				"proper_name": false,
 				"item_slot": "misc",
@@ -46737,6 +46742,168 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 86
+					}
+				]
+				
+			},
+			{
+				"name": "Mister Bubbles",
+				"defindex": 1089,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pocket Buddy",
+				"item_name": "Mister Bubbles",
+				"item_description": "Thwart pickpockets, pocket-squatters and cheaters who ignore the rules of the \"What's in my Pocket?\" game with the last word in iron-clad diminutive pocket defense. Also works with underwater pockets!",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/bi_big_daddy_doll\/bi_big_daddy_doll.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/bi_big_daddy_doll\/bi_big_daddy_doll",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_big_daddy_doll.5b71b5f5e70878170efa9099bcdf1660d4286c42.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_big_daddy_doll_large.1fe0216da29500e9942576e468540f445815a9c6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Big Daddy",
+				"defindex": 1090,
+				"item_class": "tf_wearable",
+				"item_type_name": "Mask",
+				"item_name": "Big Daddy",
+				"item_description": "Enjoy all of the benefits of being President (leading the free world, joining up with bank-robbing surf-gangs, steep discounts at fast food restaurants) with this tricky Presidential mask.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/bi_washington_mask\/bi_washington_mask.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/bi_washington_mask\/bi_washington_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_washington_mask.8b2c1f940ddf81a850b213509456379f13532542.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_washington_mask_large.58a5c796784efa8e92d39646c213e0085bdf8bdf.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The First American",
+				"defindex": 1091,
+				"item_class": "tf_wearable",
+				"item_type_name": "Mask",
+				"item_name": "First American",
+				"item_description": "Statesman. Scientist. Inventor. Pretend to be all of these things and more with this Benjamin Franklin mask. So life-like, the real Franklin will think he invented another version of himself!",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/bi_franklin_mask\/bi_franklin_mask.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/bi_franklin_mask\/bi_franklin_mask",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_franklin_mask.45f96b08eeac34ac2ec7e4f54df81bd9a39c82d1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bi_franklin_mask_large.d76a8d75e201f4c473ef58ca9a6f29262e23f266.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -55285,8 +55452,8 @@
 				"image_inventory": "backpack\/player\/items\/engineer\/engineer_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie.9c40388eb6bf93770beeaf31986ad898721cf939.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie_large.4c360bae12e1c46594278c5f5fc13d3c75c7715e.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie.85641a28d0a0873ab52ed60b80ac75c1c9a68803.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie_large.a3af58d0fccc63591435ab31e3db32bf4f9822b6.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55336,8 +55503,8 @@
 				"image_inventory": "backpack\/player\/items\/scout\/scout_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_zombie.f17489a99d6b046ff612c865d783c5b7a394591c.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_zombie_large.cd8bfb3877ecc1c407a240c1a149e9126c641e0c.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_zombie.38da56fcbcc3819df5e94fea9a1cada3a846db45.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_zombie_large.1bd8409c7abdaa251e701ca8d8f176197fa35775.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55391,8 +55558,8 @@
 				"image_inventory": "backpack\/player\/items\/soldier\/soldier_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_zombie.7f77ceba6ed9e0fce809f41dd9244acb075a89ff.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_zombie_large.5de8c8e6b9fa10a0095416aad8983f9a94ebc7e3.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_zombie.4ca89ee970f7ad62cae7dbd122eb0c50a577595a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_zombie_large.45c7034f657c5aaa88d6b7d226cb516730091dba.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55446,8 +55613,8 @@
 				"image_inventory": "backpack\/player\/items\/heavy\/heavy_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_zombie.a8924462e7fec2f12c27b944dab817fe1a4ef5cf.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_zombie_large.49d6d2bd24f78632fc0464b4335ff8f332ff23e3.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_zombie.88d934029543ec1aeb84c35ebe0f9bee98c9d2e3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_zombie_large.15f013a933dd45694987718beb44f8e5230fc8d8.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55501,8 +55668,8 @@
 				"image_inventory": "backpack\/player\/items\/demo\/demo_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_zombie.c7550db180e5b3f00f3280a9e34fbff16d479eea.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_zombie_large.109612c0224a615572eb79bdd9dc6b2e2136996c.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_zombie.ad383fb1cd058fc5bb528cf987246bc3dea1e495.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_zombie_large.45bfd82c20aa17bee741a65e98788323fa3cf560.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55556,8 +55723,8 @@
 				"image_inventory": "backpack\/player\/items\/engineer\/engineer_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie.9c40388eb6bf93770beeaf31986ad898721cf939.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie_large.4c360bae12e1c46594278c5f5fc13d3c75c7715e.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie.85641a28d0a0873ab52ed60b80ac75c1c9a68803.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/engineer_zombie_large.a3af58d0fccc63591435ab31e3db32bf4f9822b6.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55611,8 +55778,8 @@
 				"image_inventory": "backpack\/player\/items\/medic\/medic_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_zombie.a9ad13a626dbc0492cfe2d898316087b00e55581.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_zombie_large.45eba32080bb9514383e372a45ccb4b1d68a7a20.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_zombie.9456f1e84a6e18d461ba6720a5b8700707101d99.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_zombie_large.f27029efd4ff86204a16180fb0d8621ed19bdb94.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55666,8 +55833,8 @@
 				"image_inventory": "backpack\/player\/items\/spy\/spy_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_zombie.73153a4b72d995c42f877fb963a5f9b103ad83a7.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_zombie_large.b321cd393f35abb728f6c1bec59394d83828f4e0.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_zombie.0581b4c2acfccdaa03ca3fa2f77e6afc3992dc56.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_zombie_large.a362869a7a531c7cfa54321b963dc28e35a112ae.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55721,8 +55888,8 @@
 				"image_inventory": "backpack\/player\/items\/pyro\/pyro_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_zombie.8d4ea9b439ed1826f5e0db1af35e8f1429133d33.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_zombie_large.5898fcb3d175aa1c178ff3c0f904ed9174d7c804.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_zombie.ef53cae5dc5004ae836da6ee58b1627841062a45.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_zombie_large.812ee2cced01bed0fb13e0d26fcda9bb24b4bf86.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -55776,8 +55943,8 @@
 				"image_inventory": "backpack\/player\/items\/sniper\/sniper_zombie",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sniper_zombie.55fdfa951c0d1970e7b452dc15fbc0fd51af2ba5.png",
-				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sniper_zombie_large.5d0fb396cde5941c210bb70b0cd73c0c5bc8de3d.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sniper_zombie.0b163716318baa1df63a180f2bf56fbc9e80efac.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sniper_zombie_large.0a1d0ae4bcecd45c0a44633b5319b4800a8ec09a.png",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"capabilities": {
 					"nameable": true,
@@ -58003,7 +58170,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "TF_LockedCrate",
 				"item_name": "Mann Co. Strongbox",
-				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"item_description": "This crate is special.\nIts contents are unknown and requires a\nMann Co. Strongbox Key to unlock.\n\nThe Strongbox will become a rare drop after February 24, 2014.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58037,7 +58204,53 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 81
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5720
 					}
+				]
+				
+			},
+			{
+				"name": "Strongbox Key 2014",
+				"defindex": 5720,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Mann Co. Strongbox Key",
+				"item_description": "Used to unlock a Mann Co. Strongbox.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strongbox_crate_key",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strongbox_crate_key.13c8267d8f66a8175fc79f6099c10cd7f351bde6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strongbox_crate_key_large.6bc74d4e5564b62c0af6ff66d6f3bfb07658f0da.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "strongbox_2014",
+					"usage_capabilities": {
+						"decodable": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+
 				]
 				
 			},
@@ -82442,6 +82655,53 @@
 				
 			},
 			{
+				"name": "Tumblr Vs Reddit Participant Season 1",
+				"defindex": 8395,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Tumblr Vs Reddit Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/tvr_medal\/tvr_medal_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/tvr_medal\/tvr_medal",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tvr_medal.2d8d3a86d50916b012c98120a32ef4461743e26a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tvr_medal_large.229913dc4dfeb9cf0c685084686eb4b3751ded23.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -92437,7 +92697,7 @@
 				"name": "tw_sentrybuster",
 				"defindex": 30161,
 				"item_class": "tf_wearable",
-				"item_type_name": "",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Sentrybuster",
 				"item_description": "",
 				"proper_name": false,
@@ -100511,6 +100771,2153 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Trencher's Topper",
+				"defindex": 30336,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Trencher's Topper",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/sbox2014_trenchers_topper\/sbox2014_trenchers_topper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/sbox2014_trenchers_topper\/sbox2014_trenchers_topper",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_topper.65f252318cdf8d1a10c0c804dc4b46a2ca546b5b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_topper_large.d65d93e128c3935e89c90bd4dc9963dc09488640.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Trencher's Tunic",
+				"defindex": 30337,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Trencher's Tunic",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/sbox2014_trenchers_tunic\/sbox2014_trenchers_tunic.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/sbox2014_trenchers_tunic\/sbox2014_trenchers_tunic",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_tunic.e4fa46c83b4c744a2bc16c1f0530b54b360dfbf0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_tunic_large.2eb05805ab72e0ea9a82e7cfafbadb9969c89339.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Ground Control",
+				"defindex": 30338,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Ground Control",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/sbox2014_soldier_major\/sbox2014_soldier_major.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/sbox2014_soldier_major\/sbox2014_soldier_major",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_soldier_major.ffe323206ef2c10bb1d9859bbfd8c7c1e0b51468.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_soldier_major_large.e10f89132f907652be604631665d4264810228c5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Killer's Kit",
+				"defindex": 30339,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Killer's Kit",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/sbox2014_killers_kit\/sbox2014_killers_kit.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/sbox2014_killers_kit\/sbox2014_killers_kit",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_killers_kit.e49163c5b85108648b506d41a8db77e8e3093b05.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_killers_kit_large.44f1fe6ee3de48d435cc7f45d4f8da8ab3a455be.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Stylish DeGroot",
+				"defindex": 30340,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Stylish DeGroot",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_stylish_degroot\/sbox2014_stylish_degroot.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_stylish_degroot\/sbox2014_stylish_degroot",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_stylish_degroot.c3cbe1fcf5945bf68acd6a86b751e55c494f1b3a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_stylish_degroot_large.8c1f9c93b2ec744a84c30ac30b66042f447b96b2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Ein",
+				"defindex": 30341,
+				"item_class": "tf_wearable",
+				"item_type_name": "TF_Wearable_Animal",
+				"item_name": "Ein",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/sbox2014_einstein\/sbox2014_einstein.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/sbox2014_einstein\/sbox2014_einstein",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_einstein.bad87843db84583609c099c6ebdc55af6b25cce0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_einstein_large.a64fada2414ec2f77272c30b50fc4975ee04bb78.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Heavy Lifter",
+				"defindex": 30342,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Heavy Lifter",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_heavy_gunshow\/sbox2014_heavy_gunshow.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_heavy_gunshow\/sbox2014_heavy_gunshow",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_gunshow.04286c12460a8638965cc62b6b6a3d9138c7032d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_gunshow_large.de7ab06dba151e68a798e08b17f0c40ed5b64a7c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Gone Commando",
+				"defindex": 30343,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Gone Commando",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_heavy_camopants\/sbox2014_heavy_camopants.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_heavy_camopants\/sbox2014_heavy_camopants",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_camopants.99e89f4c7a9ff5d5c54021daf6e4030b351fb058.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_camopants_large.74a2a469698a2c56bf8c760143928006047dbba5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Bullet Buzz",
+				"defindex": 30344,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Bullet Buzz",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_heavy_buzzcut\/sbox2014_heavy_buzzcut.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_heavy_buzzcut\/sbox2014_heavy_buzzcut",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_buzzcut.e8576b0afc833bcf187289e2e771276e1dbf81dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_heavy_buzzcut_large.e1103c064fed8fd16669902a3ed53521470a9ba4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Leftover Trap",
+				"defindex": 30345,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Leftover Trap",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_leftover_trap\/sbox2014_leftover_trap.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_leftover_trap\/sbox2014_leftover_trap",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_leftover_trap.2597a721255f713aa9d101bb7a9a5806d02f73a2.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_leftover_trap_large.ad5c009e012b0da2b266e42a5a81e3a1c91d1229.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Trash Man",
+				"defindex": 30346,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Trash Man",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_trash_man\/sbox2014_trash_man.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_trash_man\/sbox2014_trash_man",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trash_man.a828657ac4c491d2099d2eb4b9f86d1433736136.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trash_man_large.ee8bd8ce17d0df2619ca14f073e9318408dbcfa8.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Scotch Saver",
+				"defindex": 30347,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Scotch Saver",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/sbox2014_scotch_saver\/sbox2014_scotch_saver.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/sbox2014_scotch_saver\/sbox2014_scotch_saver",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_scotch_saver.2b3ce660a2b41ca5dad36b0ba5b9a2cd23de388b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_scotch_saver_large.57d4cfbbc0696675227d9b5f0d3dc66e4035106a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Bushi-Dou",
+				"defindex": 30348,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Bushi-Dou",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_demo_samurai_armour\/sbox2014_demo_samurai_armour.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_demo_samurai_armour\/sbox2014_demo_samurai_armour",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_samurai_armour.b1ac760a13df29b074144444669dbaa20638bba6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_samurai_armour_large.d5090c55b8a745f7dc21ba1eb7e5813e13399a33.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Fashionable Megalomaniac",
+				"defindex": 30349,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Fashionable Megalomaniac",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_fashionable_megalomaniac\/sbox2014_fashionable_megalomaniac.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_fashionable_megalomaniac\/sbox2014_fashionable_megalomaniac",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_fashionable_megalomaniac.6c2d4d5563daa1fc9c5b7325bcf22283d698acf8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_fashionable_megalomaniac_large.fac37344191db8f934244fd7324636f0c5075c44.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Dough Puncher",
+				"defindex": 30350,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Dough Puncher",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_chefs_coat\/sbox2014_chefs_coat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_chefs_coat\/sbox2014_chefs_coat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_chefs_coat.239206b7c45d9b3f138c45c56b084e7198cb5d79.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_chefs_coat_large.0508ceea5b75e229161c7517b3d7f0331618394a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Teutonic Toque",
+				"defindex": 30351,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Teutonic Toque",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_teutonic_toque\/sbox2014_teutonic_toque.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_teutonic_toque\/sbox2014_teutonic_toque",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_teutonic_toque.323822268fb1905791ed41d26151b8f16c878260.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_teutonic_toque_large.f6f249ae0da7ed3393d58c5c02edcbea6ae9de99.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Mustachioed Mann",
+				"defindex": 30352,
+				"item_class": "tf_wearable",
+				"item_type_name": "Facial Hair",
+				"item_name": "Mustachioed Mann",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_mustachioed_mann\/sbox2014_mustachioed_mann.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_mustachioed_mann\/sbox2014_mustachioed_mann",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_mustachioed_mann.f3f42962184bf79508e2a0f25fc007383d5cc2b0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_mustachioed_mann_large.c5a30d56c9583d7c28ddac19354ed2537a37f861.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Backstabber's Boomslang",
+				"defindex": 30353,
+				"item_class": "tf_wearable",
+				"item_type_name": "TF_Wearable_Animal",
+				"item_name": "Backstabber's Boomslang",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/sbox2014_spy_snake\/sbox2014_spy_snake.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/sbox2014_spy_snake\/sbox2014_spy_snake",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_spy_snake.72d5e81ae78661af8a65d600b0e1c12ca3c0ff85.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_spy_snake_large.f1711b1953fc4d5960c0f9f472e1cadbe7979ccd.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Rat Stompers",
+				"defindex": 30354,
+				"item_class": "tf_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Rat Stompers",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_rat_stompers\/sbox2014_rat_stompers.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_rat_stompers\/sbox2014_rat_stompers",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_rat_stompers.72b258ca37a7d591efb261ce101e71b896b83427.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_rat_stompers_large.64f150b201ab45eb3d24d68c5227d18d59cad9e0.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Sole Mate",
+				"defindex": 30355,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Sole Mate",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/sbox2014_sole_mate\/sbox2014_sole_mate.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/sbox2014_sole_mate\/sbox2014_sole_mate",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sole_mate.5d6f417c9807caca552b2d523c0523bf98471af1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sole_mate_large.a515c2e1f2f9ab28659d3d137a2951f84270e4cc.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Heat of Winter",
+				"defindex": 30356,
+				"item_class": "tf_wearable",
+				"item_type_name": "Coat",
+				"item_name": "Heat of Winter",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbxo2014_medic_wintergarb_coat\/sbxo2014_medic_wintergarb_coat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbxo2014_medic_wintergarb_coat\/sbxo2014_medic_wintergarb_coat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbxo2014_medic_wintergarb_coat.776b2b99dbdf39ad3c451b4502ae9b379c8e6c76.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbxo2014_medic_wintergarb_coat_large.437858dd8e38c99f0ab9632d87a29a873e1d9a7d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Dark Falkirk Helm",
+				"defindex": 30357,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Dark Falkirk Helm",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_demo_knight_helmet\/sbox2014_demo_knight_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_demo_knight_helmet\/sbox2014_demo_knight_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_knight_helmet.0bd6268d0a701d334d04ac745bc9af9fd3e86121.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_knight_helmet_large.5fed043d0797d6ae35e74912e4cce9bab0600488.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Sole Saviors",
+				"defindex": 30358,
+				"item_class": "tf_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Sole Saviors",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_demo_armor_shoes\/sbox2014_demo_armor_shoes.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_demo_armor_shoes\/sbox2014_demo_armor_shoes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_armor_shoes.cfeb8e1bc94a986254a9e9c5a57e8538953831ed.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_armor_shoes_large.59b0e0146d4d23dec34a6e5d57b49d8b0e80fc0a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Huntsman's Essentials",
+				"defindex": 30359,
+				"item_class": "tf_wearable",
+				"item_type_name": "Quiver",
+				"item_name": "Huntsman's Essentials",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/sbox2014_sniper_quiver\/sbox2014_sniper_quiver.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/sbox2014_sniper_quiver\/sbox2014_sniper_quiver",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sniper_quiver.4eaf1d1ed5d105fd2a4a956c4a8b193d43539119.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sniper_quiver_large.bde95c86b48a2264de2c42c3c94e9ee41c1874cc.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Napolean Complex",
+				"defindex": 30360,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Napolean Complex",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/spy\/sbox2014_napolean_complex\/sbox2014_napolean_complex.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/spy\/sbox2014_napolean_complex\/sbox2014_napolean_complex",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_napolean_complex.0feba0bf1ac65bdc580172c8fe0ec1b4c42d0c53.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_napolean_complex_large.d577ecfec8649cc9e0dd135b3b39e558b8fce16b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Colonel's Coat",
+				"defindex": 30361,
+				"item_class": "tf_wearable",
+				"item_type_name": "Coat",
+				"item_name": "Colonel's Coat",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_medic_colonel_coat\/sbox2014_medic_colonel_coat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_medic_colonel_coat\/sbox2014_medic_colonel_coat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_colonel_coat.d0fc18474063d1577d5c0ea1180d499179d8653c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_colonel_coat_large.78dd502206aed1a607df7d01df1085aa612d6d2d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Law",
+				"defindex": 30362,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Law",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/sbox2014_law\/sbox2014_law_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/sbox2014_law\/sbox2014_law",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_law.ab6acbc2a1c832512951ef0432d04f459828354b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_law_large.81b5392a020aacaa9fffcc6815758a8b0f30b678.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Juggernaut Jacket",
+				"defindex": 30363,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Juggernaut Jacket",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_juggernaut_jacket\/sbox2014_juggernaut_jacket.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_juggernaut_jacket\/sbox2014_juggernaut_jacket",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_juggernaut_jacket.15badb00803a120d3aeef55b62fc8a7e12e11262.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_juggernaut_jacket_large.8fd4c2bd39273bcfa06eecd26a3857bd90b37884.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Warmth Preserver",
+				"defindex": 30364,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Warmth Preserver",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_warmth_preserver\/sbox2014_warmth_preserver.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_warmth_preserver\/sbox2014_warmth_preserver",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_warmth_preserver.6503372ab5479fccb00e79cf01ef3305be74372a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_warmth_preserver_large.cbed730e0b64e3e92fe10ccf985e4eda1520419e.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Smock Surgeon",
+				"defindex": 30365,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apron",
+				"item_name": "Smock Surgeon",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_medic_apron\/sbox2014_medic_apron.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_medic_apron\/sbox2014_medic_apron",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_apron.72e1b665aa1a209c857501335c4c11b8719fb369.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_apron_large.fe8da31b09d5391e9703e8c346b01ae7fa13ea89.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Sangu Sleeves",
+				"defindex": 30366,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Sangu Sleeves",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/demo\/sbox2014_demo_samurai_sleeves\/sbox2014_demo_samurai_sleeves.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/demo\/sbox2014_demo_samurai_sleeves\/sbox2014_demo_samurai_sleeves",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_samurai_sleeves.6128900378fa1993a21c31749d7e36477732d0dc.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_samurai_sleeves_large.561e79cc2f01dd1ddd693a40f0d53e97c63ebfb8.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Cute Suit",
+				"defindex": 30367,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Cute Suit",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/pyro\/sbox2014_pyro_zipper_suit\/sbox2014_pyro_zipper_suit.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/pyro\/sbox2014_pyro_zipper_suit\/sbox2014_pyro_zipper_suit",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_pyro_zipper_suit.06e086ad193914b4ef6e07bbccdd64d3ebff53ac.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_pyro_zipper_suit_large.1c2f42f6ea0f2d140c52d4b0e465c709f16bdc92.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The War Goggles",
+				"defindex": 30368,
+				"item_class": "tf_wearable",
+				"item_type_name": "Glasses",
+				"item_name": "War Goggles",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_war_goggles\/sbox2014_war_goggles.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_war_goggles\/sbox2014_war_goggles",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_goggles.53c0ed105535c6e35f64fea7767286da807e19c1.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_goggles_large.13afc6e4d111f35fc001831ec5d7fd37ceb0c359.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Eliminators Safeguard",
+				"defindex": 30369,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Eliminators Safeguard",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_war_helmet\/sbox2014_war_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_war_helmet\/sbox2014_war_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_helmet.568b097bb7db410bc3842e331f6fb87ab5e65004.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_helmet_large.5a35a4529b0c41f59bd91295ae8e7395b14ac76c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Archers Groundings",
+				"defindex": 30371,
+				"item_class": "tf_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Archers Groundings",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/sbox2014_archers_groundings\/sbox2014_archers_groundings.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/sbox2014_archers_groundings\/sbox2014_archers_groundings",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_archers_groundings.35bb952ab43b0f4b7df68be3ca7f067147ce2a91.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_archers_groundings_large.bbfe130000574bfa5c6233771c1e8e831bf93b2b.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Combat Slacks",
+				"defindex": 30372,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Combat Slacks",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_war_pants\/sbox2014_war_pants.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_war_pants\/sbox2014_war_pants",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_pants.eed460a6b02af20db7597f71c4b5353d914ad555.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_pants_large.d14a4eedacf7b9c110f8d39ab634c4aee552940a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Toowoomba Tunic",
+				"defindex": 30373,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Toowoomba Tunic",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/sbox2014_toowoomba_tunic\/sbox2014_toowoomba_tunic.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/sbox2014_toowoomba_tunic\/sbox2014_toowoomba_tunic",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_toowoomba_tunic.e7c2d1cc82a7471569ccb191a13f39856ca90942.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_toowoomba_tunic_large.4a438554787a7ef1e7a274edb0340c65ac5ed5de.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Sammy Cap",
+				"defindex": 30374,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Sammy Cap",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/heavy\/sbox2014_sammy_cap\/sbox2014_sammy_cap.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/heavy\/sbox2014_sammy_cap\/sbox2014_sammy_cap",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sammy_cap.30642cbe56f6cb853f414ea436fa2836d250c94f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_sammy_cap_large.0f739798c117c20a955bc864e74396947446b292.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Deep Cover Operator",
+				"defindex": 30375,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Deep Cover Operator",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/sbox2014_camo_headband\/sbox2014_camo_headband_sniper.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/sbox2014_camo_headband\/sbox2014_camo_headband",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_camo_headband.5c92c91390b05977b2d1f40ebef943776b470d9b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_camo_headband_large.053aa789eab4e25ae0ed356aca6e267c010f2830.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper",
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Ticket Boy",
+				"defindex": 30376,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Ticket Boy",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/scout\/sbox2014_ticket_boy\/sbox2014_ticket_boy.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/scout\/sbox2014_ticket_boy\/sbox2014_ticket_boy",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_ticket_boy.fc2adb99e3a09e754d3c30c4a3ef8fd463976883.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_ticket_boy_large.9154d88d761712935a0be3971655375173835f7a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Antarctic Researcher",
+				"defindex": 30377,
+				"item_class": "tf_wearable",
+				"item_type_name": "Coat",
+				"item_name": "Antarctic Researcher",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/engineer\/sbox2014_antarctic_researcher\/sbox2014_antarctic_researcher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/engineer\/sbox2014_antarctic_researcher\/sbox2014_antarctic_researcher",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_antarctic_researcher.d543c55de30eb89c495644937f44b8e49f909a86.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_antarctic_researcher_large.75eb6679a9e875e8ffe48dfe8ded06702a3c94b6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "Heer's Helmet",
+				"defindex": 30378,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Heer's Helmet",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_medic_wintergarb_helmet\/sbox2014_medic_wintergarb_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_medic_wintergarb_helmet\/sbox2014_medic_wintergarb_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_helmet.916428df0ab6d31efe181632c3dc1e60252b449b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_helmet_large.44cc9b5d6db9d240ba8b8cb9ce3a896d53e05f9d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Gaiter Guards",
+				"defindex": 30379,
+				"item_class": "tf_wearable",
+				"item_type_name": "Boots",
+				"item_name": "Gaiter Guards",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/medic\/sbox2014_medic_wintergarb_gaiter\/sbox2014_medic_wintergarb_gaiter.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/medic\/sbox2014_medic_wintergarb_gaiter\/sbox2014_medic_wintergarb_gaiter",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_gaiter.026a1a179e23079604bb25adecc6ccf61f133840.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_gaiter_large.ed7607878496071a379ea651d1eca2398f86afd5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
 			}
 		]
 		,
@@ -104546,10 +106953,10 @@
 				"stored_as_integer": true
 			},
 			{
-				"name": "no primary ammo from dispensers",
+				"name": "no primary ammo from dispensers while active",
 				"defindex": 421,
-				"attribute_class": "no_primary_ammo_from_dispensers",
-				"description_string": "Cannot collect ammo from dispensers",
+				"attribute_class": "no_primary_ammo_from_dispensers_while_active",
+				"description_string": "No ammo from dispensers when active",
 				"description_format": "value_is_additive",
 				"effect_type": "negative",
 				"hidden": false,
@@ -105558,6 +107965,26 @@
 				"attribute_class": "special_taunt",
 				"effect_type": "positive",
 				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "minicritboost on kill",
+				"defindex": 613,
+				"attribute_class": "add_onkill_minicritboost_time",
+				"description_string": "On Kill: Gain Minicrits for %s1 seconds.",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "no metal from dispensers while active",
+				"defindex": 614,
+				"attribute_class": "no_metal_from_dispensers_while_active",
+				"description_string": "No metal from dispensers when active.",
+				"description_format": "value_is_additive",
+				"effect_type": "negative",
+				"hidden": false,
 				"stored_as_integer": true
 			},
 			{
