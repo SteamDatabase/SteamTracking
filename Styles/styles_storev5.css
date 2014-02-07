@@ -2705,6 +2705,11 @@ h1.blue, h2.blue {
 	background: #4d4b49;
 }
 
+#foryou_flyout .popup_body.popup_menu, #genre_flyout .popup_body.popup_menu {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
 /*
  * DROP SHADOWS
  */
@@ -3749,4 +3754,16 @@ body.antipodes .perf_timing_area {
 	max-width: 225px;
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
+}
+
+.updated_apps_new_bug {
+	background-color: #779ABD;
+	border-radius: 2px;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #384959;
+	padding: 2px 4px;
+}
+#updated_apps_container.block_content {
+	border: 1px solid #4D6D8C;
 }
