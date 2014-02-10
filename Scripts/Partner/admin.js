@@ -1992,4 +1992,449 @@ function ActionOnPackages( parentElement, appIds, action )
 	$( 'removeIdsButton' ).disable().addClassName('disabled');
 
 	// Construct the string that list all the packages
-	var allPackagesToUpd
+	var allPackagesToUpdate = '';
+	var inputElements = parentElement.getElementsByTagName( 'input' );
+	var count = 0;
+	for ( var i = 0 ; i < inputElements.length ; ++i )
+	{
+		var inputElement = inputElements[ i ];
+		if ( ( inputElement.type == "checkbox" ) && inputElement.checked )
+		{
+			if ( allPackagesToUpdate != '' )
+			{
+				allPackagesToUpdate += ',';
+			}
+			allPackagesToUpdate += String( inputElement.value );
+			count += 1;
+		}
+	}
+
+	if ( count >= 10 )
+	{
+		var r = confirm( "Are you sure you want to modify " + count + " packages?" );
+		if ( r == false )
+		{
+			return;
+		}
+	}
+
+	// The inputs check is done by the PHP code.
+	var parameters = {};
+	parameters.packageidstoupdate = allPackagesToUpdate;
+	parameters.appids = appIds;
+	parameters.action = action;
+
+	new Ajax.Request( g_szBaseURL + '/admin/actiononpackagesajax',
+		{
+			method: 'post',
+			requestHeaders: { 'Accept': 'application/json' },
+			evalJSON: 'force',
+			parameters: parameters,
+			onSuccess:  function(transport)
+						{
+							var response = transport.responseJSON;
+							if ( response )
+							{
+								$( 'packageActionUpdateText').update( response.message_text );
+								$( 'packageActionErrorText').update( response.error_text );
+							}
+							$( 'packageActionStatusText' ).update( '' );
+							$( 'addIdsButton' ).enable().removeClassName('disabled');;
+							$( 'removeIdsButton' ).enable().removeClassName('disabled');;
+						},
+			onFailure: function ( transport ) { alert( 'Ajax call failed in ActionOnPackages().' ); },
+			onException: function ( request, e ) { alert( 'Exception during call to ActionOnPackages().' + e ); throw e; }
+		} );
+}
+
+// updates allowed country hidden input fields
+function UpdateAllowedCountries()
+{
+	var select = $( 'AllowedCountriesSelect' );
+	var text = $( 'AllowedCountriesText' ).value;
+
+	var hiddenAllowed = $('AllowedCountries_Hidden');
+	var hiddenRestricted = $('RestrictedCountries_Hidden');
+
+	if ( select.value == 'not' )
+	{
+		hiddenAllowed.value = '';
+		hiddenRestricted.value = text;
+	}
+	else
+	{
+		hiddenAllowed.value = text;
+		hiddenRestricted.value = '';
+	}
+}
+
+//
+// Localized text areas
+//
+
+// called when a localized text area selection box has changed
+function OnLocLanguageSelect( id )
+{
+	var select = $( id + '_select' );
+	LocChangeLanguage( select.value );
+}
+
+// changes the localization language
+function LocChangeLanguage( strLanguage )
+{
+	for ( var i = 0; i < g_LocSectionIDs.length; i++ )
+		LocLanguageSelect( g_LocSectionIDs[i], strLanguage );
+}
+
+// global for registering all localized sections. Used to update all text area languages when one changes
+var g_LocSectionIDs = [];
+var g_bLocSetToEnglishOnLoad = false;
+function LocListenForEvents( id )
+{
+	g_LocSectionIDs.push( id );
+
+	// fire an event to set all text entries to english on page load. Only do this once, and after
+	// all enteries have registered for language change notifications (hence the setTimeout call below)
+	if ( !g_bLocSetToEnglishOnLoad )
+	{
+		g_bLocSetToEnglishOnLoad = true;
+		setTimeout( function(){ LocChangeLanguage( 'english' ) }, 1 );
+	}
+}
+
+// sets up text area for specific language
+function LocLanguageSelect( id, language )
+{
+	var select = $( id + '_select' );
+	if ( select )
+		select.value = language;
+
+	var currentLang = $( id + '_currentlanguage' );
+	if ( currentLang )
+		currentLang.value = language;
+
+	var textArea = $( id + '_textarea' );
+	var hiddenInput = $( id + language + '__hidden' );
+	if ( textArea && hiddenInput )
+		textArea.value = hiddenInput.value;
+}
+
+// called when localized text input changes. Updates hidden inputs
+function OnLocTextChanged( id )
+{
+	var currentLanguage = $( id + '_currentlanguage' ).value;
+	if ( currentLanguage.length <= 0 )
+		return;
+
+	var textArea = $( id + '_textarea' );
+	var hiddenInput = $( id + currentLanguage + '__hidden' );
+	hiddenInput.value = textArea.value;
+}
+
+// called to set styles on text area select
+function LocUpdateLangThatHaveText( id )
+{
+	var hiddenInputs = $$( '#' + id + '_area input' );
+	for ( var i = 0; i < hiddenInputs.length; i++ )
+	{
+		if ( hiddenInputs[i].id.indexOf( "_hidden" ) == -1 )
+			continue;
+
+		var idLanguage = hiddenInputs[i].id.slice( id.length );
+		idLanguage = idLanguage.slice( 0, idLanguage.indexOf( "_" ) );
+		var option = $( id + idLanguage + '__option' );
+
+		if ( hiddenInputs[i].value.length > 0 )
+			option.addClassName( 'HasText' );
+		else
+			option.removeClassName( 'HasText' );
+	}
+}
+
+function InferHtmlTagsInTextArea( id )
+{
+	// find text area
+	var area = $( id + '_textarea' );
+	window.originalHtmlAreaValue = area.value;
+	area.value = InferHtmlTags( area.value );
+	jQuery("#app_content_about_default_preview").html( area.value );
+	OnLocTextChanged( id );
+}
+
+function InferBBCodeInTextArea( id )
+{
+	// find text area
+	var area = $( id + '_textarea' );
+	window.originalHtmlAreaValue = area.value;
+	area.value = InferBBCode( area.value );
+	jQuery("#app_content_about_default_preview").html( area.value );
+	OnLocTextChanged( id );
+}
+
+function RevertInferedHtml( id, value )
+{
+	if ( window.originalHtmlAreaValue )
+	{
+		// find text area
+		var area = $( id + '_textarea' );
+		jQuery("#app_content_about_default_preview").html();
+		area.value = window.originalHtmlAreaValue;
+		OnLocTextChanged( id );
+	}
+}
+
+
+/* store flyout/menu code */
+
+
+function ShowWithFade( elem )
+{
+	var elem = $(elem);
+
+	if ( !elem.visible() || elem.hiding )
+	{
+		elem.hiding = false;
+		if ( elem.effect )
+			elem.effect.cancel();
+
+		if ( Prototype.Browser.IE )
+		{
+			elem.addClassName( 'suppress_shadow' );
+			elem.effect = new Effect.Appear( elem, { duration: 0.2, afterFinish: function() { elem.removeClassName( 'suppress_shadow' ); } } );
+		}
+		else
+		{
+			elem.effect = new Effect.Appear( elem, { duration: 0.2 } );
+		}
+	}
+}
+
+function HideWithFade( elem )
+{
+	var elem = $(elem);
+
+	if ( elem.visible() && !elem.hiding )
+	{
+		if ( elem.effect && !elem.hiding )
+			elem.effect.cancel();
+		elem.hiding = true;
+
+		if ( Prototype.Browser.IE )
+		{
+			elem.addClassName( 'suppress_shadow' );
+		}
+		elem.effect = new Effect.Fade( elem, { duration: 0.2 } );
+	}
+}
+
+
+// register some events to dismiss popup (ie, user clicking elsewhere on the window, escape)
+//   cleans up event binds afterwards.  clicks to children of "elemIgnore" will not dismiss popup
+function RegisterPopupDismissal( dismissFunc, elemIgnore, bNoGuard )
+{
+	var dismissHandler = {
+		guard: bNoGuard ? 0 : 1,
+		dismiss: function( event ) {
+			if ( this.elemIgnore )
+			{
+				var elem = Event.element( event );
+				if ( elem.up( '#' + elemIgnore.id ) )
+					return;
+			}
+			// ignore the first click- assume it's the one starting the popup
+			if ( this.guard-- > 0 )
+				return;
+			this.regFunc();
+			this.unregister();
+		},
+		unregister: function() {
+			Event.stopObserving( document, 'click', this.boundHandler );
+			Event.stopObserving( document, 'keydown', this.boundHandler );
+		}
+	};
+	dismissHandler.regFunc = dismissFunc;
+	dismissHandler.elemIgnore = elemIgnore || null;
+	dismissHandler.boundHandler = dismissHandler.dismiss.bindAsEventListener( dismissHandler );
+	Event.observe( document, 'click', dismissHandler.boundHandler );
+	Event.observe( document, 'keydown', dismissHandler.boundHandler );
+
+	return dismissHandler;
+
+}
+
+function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+
+	AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
+
+	ShowWithFade( elemPopup );
+	elemLink.addClassName('focus');
+	RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
+}
+
+function HideMenu( elemLink, elemPopup )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+
+	HideWithFade( elemPopup );
+	elemLink.removeClassName( 'focus' );
+	if ( elemLink.dismissHandler )
+		elemLink.dismissHandler.unregister();
+}
+
+function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
+{
+	Event.observe( elemLink, 'mouseover', function(event) { FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder ); } );
+
+	Event.observe( elemLink, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
+	Event.observe( elemPopup, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
+
+}
+
+function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+
+	if ( !elemPopup.visible() || elemPopup.hiding )
+	{
+		AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
+		ShowWithFade( elemPopup );
+		elemLink.addClassName('focus');
+	}
+
+}
+
+function HideFlyoutMenu( event, elemLink, elemPopup )
+{
+	var elemLink = $(elemLink);
+	var elemPopup = $(elemPopup);
+	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
+	if ( !reltarget || ( $(reltarget).up( '#' + elemLink.id ) || $(reltarget).up( '#' + elemPopup.id )  ) || elemLink.id == reltarget.id )
+		return;
+
+	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
+	window.setTimeout( HideWithFade.bind( null, elemPopup ), 33 );
+	elemLink.removeClassName('focus');
+}
+
+function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
+{
+	var align = align ? align : 'left';
+
+	if ( !valign )
+	{
+		//if there's not enough room between our spot and the top of the document, we definitely want to drop down
+		if ( document.viewport.getScrollOffsets().top + elemLink.viewportOffset().top < nPopupHeight )
+			valign = 'bottom';
+		else
+		{
+			// add a little bit of padding so we don't position it flush to an edge if possible
+			var nPopupHeight = elemPopup.getHeight() + 8;
+			var nSpaceAbove = elemLink.viewportOffset().top;
+			var nSpaceBelow = document.viewport.getHeight() - elemLink.viewportOffset().top;
+			//otherwise we only want to drop down if we've got enough space below us (measured based on view area)
+			// or if there's not enough space above to pop in either direction and there's more space below
+			if ( nSpaceBelow > nPopupHeight || ( nSpaceAbove < nPopupHeight && nSpaceBelow > nSpaceAbove ) )
+				valign = 'bottom';
+			else
+				valign = 'top';
+
+		}
+	}
+
+	var borderpx = bLinkHasBorder ? 1 : 0;
+	var shadowpx = elemPopup.hasClassName( 'popup_block_new' ) ? 0 : 12;
+	var offsetLeft = 0;
+	if ( align == 'left' )
+	{
+		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - 12 ) + 'px';
+		offsetLeft = -shadowpx - borderpx;
+	}
+	else if ( align == 'right' )
+	{
+		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - elemPopup.getWidth() + 13 ) + 'px';
+		offsetLeft = elemLink.getWidth() - elemPopup.getWidth() + shadowpx + borderpx;
+	}
+	else if ( align == 'leftsubmenu' )
+	{
+		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - elemPopup.getWidth() + 12 ) + 'px';
+		offsetLeft = -elemPopup.getWidth() + shadowpx - borderpx;
+	}
+	else if ( align == 'rightsubmenu' )
+	{
+		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - 12 ) + 'px';
+		offsetLeft = elemLink.getWidth()  - shadowpx + 2 * borderpx;
+	}
+
+	var offsetTop = 0;
+	if ( valign == 'bottom' )
+	{
+		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
+		offsetTop = elemLink.getHeight() - shadowpx;
+	}
+	else if ( valign == 'top' )
+	{
+		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
+		offsetTop = -elemPopup.getHeight() + shadowpx;
+	}
+	else if ( valign == 'bottomsubmenu' )
+	{
+		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - 12 ) + 'px';
+		offsetTop = -shadowpx;
+	}
+
+
+	var bPopupHidden = !elemPopup.visible();
+
+	if ( bPopupHidden )
+	{
+		// IE can't do this with display: none elements
+		elemPopup.style.visibility = 'hidden';
+		elemPopup.show();
+	}
+
+	elemPopup.clonePosition( elemLink, { setWidth: false, setHeight: false, offsetLeft: offsetLeft, offsetTop: offsetTop } );
+
+	if ( bPopupHidden )
+	{
+		// restore visibility
+		elemPopup.hide();
+		elemPopup.style.visibility = 'visible';
+	}
+}
+
+function v_trim( str )
+{
+	if ( str.trim )
+		return str.trim();
+	else
+	{
+		return str.replace(/^\s+/, '').replace(/\s+$/, '');
+	}
+}
+
+function RejectAppReleaseRequest( appid )
+{
+	var dialog = ShowPromptWithTextAreaDialog( 'Notes to send to the partner', '', null, null, 1000 );
+
+	dialog.done( function( data ) {
+		data = v_trim( data );
+		if ( data.length < 1 )
+		{
+			ShowAlertDialog( 'Error', 'Please enter in some notes for the partner telling them what they need to do before their app can be released.' );
+			return;
+		}
+		$J.post( 'https://partner.steamgames.com/admin/ajaxrejectappreleaserequest', {
+				'appid' : appid,
+				'notes_for_partner' : data
+			}
+		).done( function( json ) {
+				top.location.reload();
+			} );
+	} );
+}
+
