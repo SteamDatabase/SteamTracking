@@ -18,6 +18,23 @@
 				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_PTT" tabindex="1.0" text="#SettingsVoice_PTT" selectionpos="auto" onactivate="PushToTalk( true )"/>
 				<Label class="SettingsLegend" text="#SettingsVoice_Keyboard" />
 				<KeyboardShortcut id="SettingsVoice_KbdXmit" tabindex="2.0" selectionpos="auto"/>
+
+				<Panel class="SettingsGroup" tabindex="3.0" selectionpos="auto">
+					<Button id="DetectAudioButton" class="Button" onactivate="DetectAudioDevices()">
+						<Label class="LongDesc" text="#SettingsVoice_DetectDevices" />
+					</Button>
+					<Panel id="InputDeviceGroup" >
+						<Label class="SettingsLegend" text="#SettingsVoice_InputDevice" />
+						<Label class="SettingsValue" id="SettingsVoice_InputDevice" text="#SettingsVoice_Microphone" />
+					</Panel>
+					<Panel id="InputDeviceGroupLinux" >
+						<Label class="SettingsLegend" text="#SettingsVoice_InputDevice" />
+						<DropDown id="MicInputDropdown" />
+						<ToggleButton id="VoiceOutputToInput" tabindex="0.0" class="CheckBox LongDesc" onactivate="ToggleVoiceOutputToInput()">
+							<Label text="#SettingsVoice_VoiceOutputtoInput" />
+						</ToggleButton>
+					</Panel>
+				</Panel>
 			</Panel>
 			<Panel class="SettingsContent SettingsRightContent" tabindex="1.0" selectionpos="1.0, 10.0">
 				<Panel class="SettingsGroup" tabindex="0.0" selectionpos="auto">
@@ -47,13 +64,6 @@
 					</Panel>
 				</Panel>
 			
-				<Panel class="SettingsGroup" tabindex="3.0" selectionpos="auto">
-					<Button class="Button" onactivate="DetectAudioDevices()">
-						<Label class="LongDesc" text="#SettingsVoice_DetectDevices" />
-					</Button>
-					<Label class="SettingsLegend" text="#SettingsVoice_InputDevice" />
-					<Label class="SettingsValue" id="SettingsVoice_InputDevice" text="#SettingsVoice_Microphone" />
-				</Panel>
 			</Panel>
 		</Panel>
 

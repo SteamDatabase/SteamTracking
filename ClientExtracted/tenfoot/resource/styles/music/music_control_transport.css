@@ -262,7 +262,14 @@ MusicControlTransport
 	visibility: visible;
 	flow-children: down;
 	padding-top: 10px;
+	
+	background-image: url( "file://{images}/music/empty_player_bg.png" );
+	background-size: 208px 243px;
+	background-position: 200px 130px;
+	background-repeat: no-repeat;
 }
+
+
 
 #MusicQueueEntriesContainer
 {
@@ -454,16 +461,19 @@ MusicControlQueueEntry:focus .TrackCompositeTitle
 
 #MusicControlOverlay MusicControlQueueEntry.CurrentEntry Label
 {
-	color: messagecolorwashfade;
+	color: gradient( linear, 0% 80%, 80% 100%, from( #5492b8ff ), color-stop( 0.75, #5492b8ff ), to( #5492b800 ) );
 	text-overflow: clip;
 	transform: translateX( 5px );
+	width: 350px;
 }
+
 
 #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry Label, #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry:focus Label
 {
 	color: gradient( linear, 0% 80%, 80% 100%, from( #5492b8ff ), color-stop( 0.75, #5492b8ff ), to( #5492b800 ) );
 	text-overflow: clip;
 	transform: translateX( 5px );
+	width: 450px;
 }
 
 #MusicControllerPanel MusicControlQueueEntry.CurrentEntry .TrackTime, 
@@ -503,6 +513,7 @@ MusicControlQueueEntry.IsPlaying:focus .TrackTime
 	opacity: 1.0;
 }
 
+#MusicControlOverlay MusicControlQueueEntry.CurrentEntry:descendantfocus .TrackTime,
 #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry .TrackTime,
 #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry:descendantfocus .TrackTime
 {

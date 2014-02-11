@@ -596,7 +596,7 @@
 	"SettingsVoice_MicVolume"				"Microphone volume"
 	"SettingsVoice_RecvVolume"				"Receive volume"
 	"SettingsVoice_DetectDevices"			"Detect audio devices"
-	"SettingsVoice_InputDevice"				"Input device"
+	"SettingsVoice_InputDevice"				"Audio recording device"
 	"SettingsVoice_Microphone"				"{s:microphone}"
 	"SettingsVoice_NoneDetected"			"(None detected)"
 
@@ -981,6 +981,7 @@
 	"Library_Games"			"GAMES"
 	"Library_Movies"		"MOVIES"
 	"Library_Music"			"MUSIC"
+	"Library_ViewAll_Music"	"VIEW ALL"
 	"Library_Details_LinksAndMore"	"LINKS & MORE"
 	"Library_Details_Achievements"	"ACHIEVEMENTS"
 	"Library_Details_Guides"	"GUIDES"
@@ -1154,8 +1155,8 @@
 	"Library_LaunchOption_Application"	"Launch {s:gamename}"
 	"Library_LaunchOption_Cancel"		"Cancel"
 	"Library_LaunchEulaTitle"		"End User License Agreement"
-	"Library_LaunchEULA_Agree"		"Agree"
-	"Library_LaunchEULA_Cancel"		"Cancel"
+	"Library_LaunchEULA_Agree"		"I AGREE"
+	"Library_LaunchEULA_Cancel"		"CANCEL"
 	"Library_LaunchEULA_Detail"		"Please read this agreement in its entirety.  You must agree with the terms of the EULA to play {s:gamename}."
 	"Library_WaitingOnGamesTitle"		"Please Wait"
 	"Library_WaitingOnGamesDesc"		"Steam is scanning for configuration and game updates, please wait{s:progress}"
@@ -1266,7 +1267,7 @@
 	"Tenfoot_InstallServiceCancel" "CANCEL"
 
 	"Profile_Loading" "Loading..."
-	"Profile_OpenFriendActivity" "ACTIVITY"
+	"Profile_OpenFriendActivity" "FRIEND ACTIVITY"
 	"Profile_OpenMyProfile"	     "PROFILE"
 	
 	"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... {d:progress}%"
@@ -1933,9 +1934,9 @@
 	"RemoteControl_AuthorizeUnnamedDevice_Title"	"ALLOW REMOTE CONTROL"
 	"RemoteControl_AuthorizeUnnamedDevice_Text"		"An unknown remote control application is trying to control Steam. Do you want to allow it?"
 
-	"SettingsInterface_SteamOSCheckForUpdatesDesc"	"Last update check {t:s:steamosupdatetime} at {t:t:steamosupdatetime}" 
+	"SettingsInterface_SteamOSCheckForUpdatesDesc"	"{s:steamosversion} update {s:steamosupdatelevel}"
 	"SettingsInterface_SteamOSCheckForUpdates"	"Check for SteamOS updates"
-	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS last update check"
+	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS version"
 
 	"MainMenu_NewSteamOSUpdate"	"{s:osname} reboot required"
 	"MainMenu_RestartForSteamOSUpdate_Title"	"{s:osname} reboot"
@@ -1990,7 +1991,7 @@
 	"Music_Control_Remove_Track_From_Queue"	"Remove Track from Queue"
 	"Music_Control_Show_Track_In_System"	"View Track In System"
 	"Music_Control_Show_Album_In_UI"	"View Album"
-	"Music_Control_Browse_Queue"	"View Queue"
+	"Music_Control_Browse_Queue"	"View Entire Queue"
 	"Music_Control_Clear_Queue"	"Clear Queue"
 	
 	"Music_Transport_Browse_Music"	"Browse Music"
@@ -2142,6 +2143,9 @@
 	"SettingsRemoteControl_Unblock"			"UNBLOCK THIS DEVICE"
 	"SettingsAudio_Steam"	"Steam Audio Settings"
 	"SettingsAudio_Hardware"	"System Audio Settings"
+
+
+	"SettingsVoice_VoiceOutputtoInput"	"Use for voice output too"
 
 	"SettingsAudio_Card"	"Sound output device"
 	"SettingsAudio_Profile"	"Sound output type"

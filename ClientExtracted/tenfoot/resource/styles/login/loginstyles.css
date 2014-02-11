@@ -1,11 +1,11 @@
 .Logo
 {
-	margin-top: 63px;
-	margin-left: -20px;
 	width: 276px;
 	height: 69px;
+	margin-top: 58px;
+	margin-left: 40px;
 	opacity: 0.85;
-	
+
 	transition-property: opacity;
 	transition-duration: 0.23s;
 }
@@ -18,8 +18,11 @@
 .TopRow
 {
 	margin: 0px;
-	padding-left: 120px;
-	padding-right: 120px;
+	margin-right: 10px;
+	vertical-align: top;
+	padding: 65px 66px;
+	flow-children: right;
+	height: 263px;
 	width: 100%;
 	z-index: 2000;
 	transition-property: blur, desaturation, opacity, transform !immediate;
@@ -29,7 +32,6 @@
 
 .TopRow Button
 {
-	margin-top: 50px;	
 	padding: 10px;
 	flow-children: right;
 	horizontal-align: right;
@@ -55,11 +57,13 @@
 	margin-right: 0px;
 	margin-bottom: 0px;
 	color: tcexitrow;
-	font-size: 36px;
+	font-size: 30px;
 	line-height: 38px;
 	max-width: 300px;
 	font-family: platformfont;
 
+	white-space: nowrap;
+	text-overflow: clip;
 	transition-property: opacity, max-width;
 	transition-duration: 0.15s;
 	transition-delay: 0.0s !immediate;
