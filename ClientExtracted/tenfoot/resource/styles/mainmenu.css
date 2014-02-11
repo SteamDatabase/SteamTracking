@@ -307,7 +307,7 @@ MainMenu.StackDepth3 #TopRow
 {
 	max-width: 310px;
 	opacity: 1.0;
-	text-overflow: ellipsis;
+	text-overflow: clip;
 	transition-property: opacity, max-width;
 
 	transition-duration: 0.3s;
@@ -856,12 +856,13 @@ margin-right: 8px;
 
 #MenuRow
 {
-	margin-bottom: 100px;
+	padding-top: 15px;
+	margin-bottom: 115px;
 	horizontal-align: center;
 	vertical-align: center;
 	font-size: 33;
 	background-color: #00000000;
-	height: 200px;
+	height: 170px;
 	z-index: topmostzindex;
 
 	transform-origin: 0% 0% parent-relative;

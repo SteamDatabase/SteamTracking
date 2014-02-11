@@ -68,8 +68,8 @@
 {
 	width: 100%;
 	height: 80px;
-	margin-top: 120px;
-	padding-left: 100px;
+	margin-top: 126px;
+	padding-left: 92px;
 	padding-right: 100px;
 	opacity: 0.0;
 
@@ -89,18 +89,69 @@
 
 #CommunityNavBar Label
 {
-	font-size: 46px;
-	color: #fefefeff;
+	font-size: 41px;
 
 	opacity: 0.45;
 
-	margin-right: 30px;
+
+	transition-property: opacity, color;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+
 }
 
 #CommunityNavBar .Selected Label
 {
 	opacity: 1.0;
 }
+
+#CommunityNavBar Button:hover Label
+{
+	opacity: 0.7;
+}
+
+#CommunityNavBar Button.Selected:hover Label
+{
+	opacity: 1.0;
+}
+
+#CommunityNavBar Button
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
+	border: 5px solid #0d1c2200;
+	color: carousel_title;
+	background-color: #0d192100;
+
+	transition-property: border, blur, background-color, color, transform, max-width, box-shadow;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+
+	margin: 5px;
+	margin-right: 30px;
+}	
+
+#CommunityNavBar Button:focus
+{
+	color: tcexitrowfocus;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-property: blur, background-color, color, max-width, transform;
+
+	transform: translatez( 0px );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
 
 ProfilePanel
 {
@@ -150,16 +201,31 @@ ProfilePanel #ProfileContent
 
 }
 
-ProfilePanel:descendantfocus #ProfileContent
+@keyframes 'background-visible'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
+}
+
+.StackDepth2 ProfilePanel #ProfileContent,
+.StackDepth3 ProfilePanel #ProfileContent
 {
 	transform: translatex( 0px );
 	animation-name: none;
 }
 
 
-CommunityWrapper.ProfileVisible:descendantfocus ProfilePanel
+.StackDepth2 CommunityWrapper.ProfileVisible ProfilePanel,
+.StackDepth3 CommunityWrapper.ProfileVisible ProfilePanel
 {
-	transform: translate3d( 0px, 182px, 0px );
+	transform: translate3d( 0px, 202px, 0px );
 }
 
 ProfilePanel .ProfileBackground
@@ -179,8 +245,16 @@ ProfilePanel .ProfileBackground
 	transition-timing-function: linear;
 }
 
-.ProfileVisible .ProfilePanel:descendantfocus .ProfileBackground
+.StackDepth2 .ProfileVisible .ProfilePanel .ProfileBackground,
+.StackDepth3 .ProfileVisible .ProfilePanel .ProfileBackground
 {
+	animation-name: background-visible;
+	animation-duration: mediumduration;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
 	opacity: 1.0;
 }
 
@@ -222,6 +296,13 @@ ProfilePanel .Throbber
 	background-image: url( "file://{images}/browser/reticle.webm" );
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
+
+	animation-name: background-visible;
+	animation-duration: mediumduration;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
 
 	opacity: 1.0;
 }

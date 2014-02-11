@@ -25,13 +25,19 @@
 				<Button id="AlbumButton" 
 						onmoveup="CloseMusicLibrary();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"
-						onfocus="MusicLibraryActivateAlbumView();">
+						onfocus="MusicLibraryActivateAlbumView();"
+						onmouseactivate="MusicLibraryActivateAlbumView();"
+						onactivate="MusicLibraryActivateFirstAlbum();" >
+						 >
 					<Label  text="#Music_Library_Albums_Sort" />
 				</Button>
 				<Button id="ArtistButton" 
 						onmoveup="CloseMusicLibrary();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryArtistPanel );"
-						onfocus="MusicLibraryActivateArtistView();">
+						onfocus="MusicLibraryActivateArtistView();"
+						onmouseactivate="MusicLibraryActivateArtistView();"
+						onactivate="MusicLibraryActivateFirstArtist();" 
+						>
 					<Label text="#Music_Library_Artists_Sort" />
 				</Button>
 			</Carousel>	

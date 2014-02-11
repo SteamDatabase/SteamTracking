@@ -17,8 +17,8 @@
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#OOBE_Eula_IAgree" />
 			</Button>
-			<Button class="WizardButton" id="ButtonBack" onactivate="ShutdownMachine()">
-				<Label id="Label" text="#Quit_Shutdown" />
+			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
 			</Button>
 		</Panel>
 

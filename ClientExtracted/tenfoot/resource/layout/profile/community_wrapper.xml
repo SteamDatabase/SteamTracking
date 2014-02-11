@@ -5,15 +5,15 @@
 	</styles>
 	
 	<CommunityWrapper defaultfocus="Profile">
-		<Panel id="CommunityNavBar">
-			<Button id="FriendActivityButton" class="Selected" onactivate="OpenFriendActivity();">
+		<Panel id="CommunityNavBar" tabindex="auto" selectionpos="auto" onmoveup="CloseProfile();">
+			<Button id="FriendActivityButton" class="Selected" onactivate="OpenFriendActivity();" tabindex="auto" selectionpos="auto">
 				<Label text="#Profile_OpenFriendActivity" />
 			</Button>
-			<Button id="ProfileButton" onactivate="OpenMyProfile();">
+			<Button id="ShowProfileButton" onactivate="OpenMyProfile();" tabindex="auto" selectionpos="auto">
 				<Label text="#Profile_OpenMyProfile" />
 			</Button>
 		</Panel>
 
-		<ProfilePanel id="Profile" class="ProfilePanel" ondescendantfocus="SetFocusedProfileSection( ProfileButton );" />
+		<ProfilePanel id="Profile" class="ProfilePanel" />
 	</CommunityWrapper>
 </root>

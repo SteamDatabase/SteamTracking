@@ -392,8 +392,7 @@ Label.SettingsStatic
 #Settings_Voice .SettingsRightContent
 {
 	margin-top: 33px;
-	}
-
+}
 
 
 .SettingsCenterContent
@@ -2645,3 +2644,26 @@ SettingsPanel_Display.Underscan
 	margin-top: 4px;
 
 }
+
+.SteamOS #DetectAudioButton, .SteamOS #InputDeviceGroup
+{
+	flow-children: down;
+	visibility: collapse;
+}
+
+#InputDeviceGroupLinux
+{
+	visibility: collapse;
+}
+
+.SteamOS #InputDeviceGroupLinux
+{
+	flow-children: down;
+	visibility: visible;
+}
+
+#VoiceOutputToInput
+{
+	width: 600px;
+}
+
