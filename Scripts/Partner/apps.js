@@ -1827,6 +1827,10 @@ function EditStat( appid, stat )
 	}
 }
 
+
+//
+// pretty printer for DRM wrap flags, should match template
+//
 function FlagsToString( flags )
 {
 	if ( flags == 544 ) return 'Static, simple check';
@@ -1834,11 +1838,14 @@ function FlagsToString( flags )
 	if ( flags == 527 ) return 'Dynamic, generic checks';
 	if ( flags == 783 ) return 'Dynamic, machine specific';
 	if ( flags == 128 ) return 'SDK DRM';
-	if ( flags == 38 ) return 'Compatibility';
-	if ( flags == 32 ) return 'Standard';
-	
+	if ( flags == 38 ) return 'Compatibility Mode + Skip Debugger Check';
+	if ( flags == 32 ) return 'Skip Debugger Check';
+	if ( flags == 6 ) return 'Compatibility Mode';
+	if ( flags == 0 ) return 'Standard Mode';
+
 	return flags;
 }
+
 
 //
 // pokes a given stat into a given DOM element for its TR.
