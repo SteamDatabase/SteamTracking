@@ -1,0 +1,32 @@
+"osx"
+{
+	"version"		"1391537035"
+	"steamcmd_public_all"
+	{
+		"file"		"steamcmd_public_all.zip.4a7375aab67130b2db0298a5a7849028da093188"
+		"checksum"		"4a7375aab67130b2db0298a5a7849028da093188"
+		"size"		"57628"
+	}
+	"steamcmd_bins_osx"
+	{
+		"file"		"steamcmd_bins_osx.zip.8a790e9885103d1a2673372ceb242a42a036ae82"
+		"checksum"		"8a790e9885103d1a2673372ceb242a42a036ae82"
+		"size"		"14797938"
+	}
+	"breakpad_osx"
+	{
+		"file"		"breakpad_osx.zip.2533890141f7c34dc31dcb96db8470f2a4803999"
+		"checksum"		"2533890141f7c34dc31dcb96db8470f2a4803999"
+		"size"		"364949"
+	}
+	"steamcmd_osx"
+	{
+		"file"		"steamcmd_osx.zip.6caa5eb8b24de90adbe7d06fdd4a8ceae609f000"
+		"checksum"		"6caa5eb8b24de90adbe7d06fdd4a8ceae609f000"
+		"size"		"948215"
+	}
+}
+"kvsignatures"
+{
+	"osx"		"278a3de15525b19ca43403673c71cf7b9487f52aba8dd836f31a0b32e2312303f14817a67a90ba38310ad6257955a4ee699bbc8a45c33eac958dac78ca53a72c33c8ea165e6bdaa4eb3c223f06848f6f55c81866c04dbc137c1e1d661a3700b0960bf6fd776175bb561c2d07531dec1cd76d5c3cc2d3ed1486764b1742c76924"
+}
