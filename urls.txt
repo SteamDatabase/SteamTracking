@@ -74,6 +74,7 @@ Styles/styles_video.css|http://cdn.store.steampowered.com/public/css/styles_vide
 Styles/styles_widget.css|http://cdn.store.steampowered.com/public/css/styles_widget.css?_=*TIMENOW*
 Styles/styles_youraccountv5.css|http://cdn.store.steampowered.com/public/css/styles_youraccountv5.css?_=*TIMENOW*
 Styles/styles_updated_apps.css|http://cdn.store.steampowered.com/public/css/styles_updated_apps.css?_=*TIMENOW*
+Styles/styles_tags.css|http://cdn.store.steampowered.com/public/css/styles_tags.css?_=*TIMENOW*
 Styles/user_reviews.css|http://cdn.steamcommunity.com/public/shared/css/user_reviews.css?_=*TIMENOW*
 Styles/workshop.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop.css?_=*TIMENOW*
 Styles/workshop_home.css|http://cdn.steamcommunity.com/public/css/skin_1/workshop_home.css?_=*TIMENOW*
@@ -84,6 +85,7 @@ Styles/workshop_userfiles.css|http://cdn.steamcommunity.com/public/css/skin_1/wo
 # JS
 Scripts/apphub.js|http://cdn.steamcommunity.com/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
 Scripts/apphub_home.js|http://cdn.steamcommunity.com/public/javascript/apphub_home.js?_=*TIMENOW*&l=english
+Scripts/app_tagging.js|http://cdn.store.steampowered.com/public/javascript/app_tagging.js?_=*TIMENOW*&l=english
 Scripts/badges.js|http://cdn.steamcommunity.com/public/javascript/badges.js?_=*TIMENOW*&l=english
 Scripts/blotter_functions.js|http://cdn.steamcommunity.com/public/javascript/blotter_functions.js?_=*TIMENOW*&l=english
 Scripts/cart.js|http://cdn.store.steampowered.com/public/javascript/cart.js?_=*TIMENOW*&l=english
