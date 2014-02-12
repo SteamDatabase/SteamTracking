@@ -9,9 +9,9 @@ ClientManifest/steam_client_publicbeta_win32|http://media.steampowered.com/clien
 ClientManifest/steam_client_publicbeta_osx|http://media.steampowered.com/client/steam_client_publicbeta_osx?_=*TIMENOW*
 
 # SteamCMD Manifests
-ClientManifest/steam_cmd_ubuntu12|http://media.steampowered.com/client/steam_cmd_ubuntu12
-ClientManifest/steam_cmd_win32|http://media.steampowered.com/client/steam_cmd_win32
-ClientManifest/steam_cmd_osx|http://media.steampowered.com/client/steam_cmd_osx
+ClientManifest/steam_cmd_linux|http://media.steampowered.com/client/steam_cmd_linux?_=*TIMENOW*
+ClientManifest/steam_cmd_win32|http://media.steampowered.com/client/steam_cmd_win32?_=*TIMENOW*
+ClientManifest/steam_cmd_osx|http://media.steampowered.com/client/steam_cmd_osx?_=*TIMENOW*
 
 # CSS
 Styles/apphub.css|http://cdn.steamcommunity.com/public/shared/css/apphub.css?_=*TIMENOW*
