@@ -8166,6 +8166,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"TTG Max Pistol"
 		}
 		"161"
 		{
@@ -14356,6 +14357,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"TTG Max Pistol"
 		}
 		"295"
 		{
@@ -31906,7 +31908,7 @@
 			"first_sale_date"	"2012/07/10"
 			"prefab"	"misc"
 			"equip_region"	"left_shoulder"
-			"item_type_name"	"#TF_Wearable_Animal"
+			"item_type_name"	"#TF_Wearable_Mascot"
 			"item_name"	"#TF_DemoParrot"
 			"item_description"	"#TF_DemoParrot_Desc"
 			"image_inventory"	"backpack/player/items/demo/demo_parrot"
@@ -33213,7 +33215,7 @@
 				"paintable"			"1"
 				"can_craft_count"	"1"
 			}
-			"equip_region"	"face"
+			"equip_region"	"beard"
 			"item_type_name"	"#TF_Wearable_Mask"
 			"item_name"	"#TF_MedicGasMask"
 			"item_description"	"#TF_MedicGasMask_Desc"
@@ -33260,7 +33262,7 @@
 				"can_craft_count"	"1"
 			}
 			"equip_region"	"left_shoulder"
-			"item_type_name"	"#TF_Wearable_Animal"
+			"item_type_name"	"#TF_Wearable_Mascot"
 			"item_name"	"#TF_Archimedes"
 			"item_description"	"#TF_Archimedes_Desc"
 			"image_inventory"	"backpack/player/items/medic/archimedes"
@@ -35681,7 +35683,7 @@
 				"paintable"	"1"
 			}
 			"equip_region"	"left_shoulder"
-			"item_type_name"	"#TF_Wearable_Animal"
+			"item_type_name"	"#TF_Wearable_Mascot"
 			"item_name"	"#TF_SirHootsalot"
 			"item_description"	"#TF_SirHootsalot_desc"
 			"image_inventory"	"backpack/player/items/sniper/sniper_owl"
@@ -39411,7 +39413,7 @@
 			{
 				"can_craft_count"	"1"
 			}
-			"item_type_name"	"#TF_Wearable_Animal"
+			"item_type_name"	"#TF_Wearable_Mascot"
 			"item_name"	"#TF_SteelSongbird"
 			"item_description"	"#TF_SteelSongbird_Desc"
 			"propername"	"1"
@@ -41133,6 +41135,20 @@
 				"soldier" "1"
 			}
 		}
+		"1092"
+		{
+			"name"	"The Fortified Compound"
+			"first_sale_date"	"2014/02/11"
+			"prefab"	"promo huntsman"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_FortifiedCompound"
+			"item_description"	"#TF_FortifiedCompound_Desc"
+			"image_inventory"	"backpack/weapons/c_models/c_bow/c_bow_thief"
+			"model_player"	"models/weapons/c_models/c_bow/c_bow_thief.mdl"
+		}
 
 
 
@@ -42468,7 +42484,7 @@
 			"item_name"		"#TF_robo_medic_archimedes"
 			"item_description"		"#TF_robo_medic_archimedes_Desc"
 			"equip_region"		"left_shoulder"
-			"item_type_name"		"#TF_Wearable_Animal"
+			"item_type_name"		"#TF_Wearable_Mascot"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_archimedes/robo_medic_archimedes"
 			"capabilities"
 			{
@@ -43299,6 +43315,14 @@
 			{
 				"heavy"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
 		}
 		"30080"
 		{
@@ -43800,6 +43824,14 @@
 			{
 				"sniper"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
 		}
 		"30103"
 		{
@@ -44082,6 +44114,14 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
 			}
 		}
 		"30116"
@@ -44427,6 +44467,14 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
 			}
 		}
 		"30131"
@@ -45451,6 +45499,14 @@
 			{
 				"sniper"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
 		}
 		"30182"
 		{
@@ -45829,6 +45885,14 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30199"
 		{
@@ -45984,6 +46048,14 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
 			}
 		}
 		"30207"
@@ -46282,6 +46354,14 @@
 			{
 				"heavy"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30218"
 		{
@@ -46505,6 +46585,14 @@
 			"used_by_classes"
 			{
 				"demoman"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
 			}
 		}
 		"30227"
@@ -47077,6 +47165,14 @@
 			{
 				"paintable"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30253"
 		{
@@ -47272,6 +47368,14 @@
 			"used_by_classes"
 			{
 				"sniper"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
 			}
 		}
 		"30259"
@@ -47657,6 +47761,14 @@
 			{
 				"soldier"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30277"
 		{
@@ -47752,6 +47864,11 @@
 				{
 					"attribute_class"		"additional_halloween_response_criteria_name"
 					"value"		"IsMedicZombieBird"
+				}
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
 				}
 			}
 		}
@@ -48028,6 +48145,14 @@
 			{
 				"paintable"		"1"
 			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
+			}
 		}
 		"30290"
 		{
@@ -48126,6 +48251,11 @@
 				{
 					"attribute_class"		"additional_halloween_response_criteria_name"
 					"value"		"IsSoldierMaggotHat"
+				}
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"2"
 				}
 			}
 		}
@@ -48830,7 +48960,7 @@
 			"name"		"Chucklenuts"
 			"prefab"		"misc"
 			"first_sale_date"		"2013/12/19"
-			"item_type_name"		"#TF_Wearable_Squirrel"
+			"item_type_name"		"#TF_Wearable_Mascot"
 			"item_name"		"#TF_xms2013_scout_squirrel"
 			"item_description"		"#TF_xms2013_scout_squirrel_Desc"
 			"equip_region"		"left_shoulder"
@@ -49329,7 +49459,7 @@
 		{
 			"name"		"Ein"
 			"prefab"		"no_craft misc"
-			"item_type_name"		"#TF_Wearable_Animal"
+			"item_type_name"		"#TF_Wearable_Mascot"
 			"item_name"		"#TF_sbox2014_einstein"
 			"item_description"		"#TF_sbox2014_einstein_Desc"
 			"equip_region"		"left_shoulder"
@@ -49579,7 +49709,7 @@
 			"name"		"The Backstabber's Boomslang"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"		"#TF_Wearable_Animal"
+			"item_type_name"		"#TF_Wearable_Mascot"
 			"item_name"		"#TF_sbox2014_spy_snake"
 			"item_description"		"#TF_sbox2014_spy_snake_Desc"
 			"equip_region"		"left_shoulder"

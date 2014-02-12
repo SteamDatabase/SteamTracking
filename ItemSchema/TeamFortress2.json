@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.1d25d7ff4203e8a2e2ed717c6a3ef272cda7e6b9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.7596ac43b0a3c23c453355927023ef79af5e71a9.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -32358,7 +32358,7 @@
 				"name": "The Bird-Man of Aberdeen",
 				"defindex": 776,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Bird-Man of Aberdeen",
 				"item_description": "This shoulder-mounted feathered friend comes in any color you like, and is so full of whiskey it couldn't fly off if it wanted to. Great to have around if you decide to eat it—just turn your head and bite!",
 				"proper_name": true,
@@ -34846,7 +34846,7 @@
 				"name": "Archimedes",
 				"defindex": 828,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Archimedes",
 				"item_description": "Before Archimedes came into the Medic's care, he made his living through wedding dovery. A lucrative trade, but he always felt something was missing. He looks back on the day that the Medic stole that catering van during the prime minister's wedding as the best day of his life. He's been burrowing into the chests of unwitting patients ever since.",
 				"proper_name": false,
@@ -38857,7 +38857,7 @@
 				"name": "Sir Hootsalot",
 				"defindex": 917,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Sir Hootsalot",
 				"item_description": "If owls are so smart, why did this one let you glue it to your shoulder? Come to think of it, neither one of you is looking like a super-genius on this one.",
 				"proper_name": false,
@@ -44243,7 +44243,7 @@
 				"name": "The Steel Songbird",
 				"defindex": 1023,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Steel Songbird",
 				"item_description": "It gets pretty quiet in that sniper's nest. Why not treat yourself to the haunting rhythmic symphony of bolts being constantly pooped by this mute, easily terrified incontinent bird?",
 				"proper_name": true,
@@ -46899,6 +46899,68 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Fortified Compound",
+				"defindex": 1092,
+				"item_class": "tf_weapon_compound_bow",
+				"item_type_name": "Bow",
+				"item_name": "Fortified Compound",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "primary",
+				"model_player": "models\/weapons\/c_models\/c_bow\/c_bow_thief.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/weapons\/c_models\/c_bow\/c_bow_thief",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_bow_thief.2752806eb597af27565b2050a241704801e37237.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_bow_thief_large.85f399a7404e5a82a5114af76b424ba8994fc67c.png",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "hidden primary max ammo bonus",
+						"class": "mult_maxammo_primary",
+						"value": 0.5
+					},
+					{
+						"name": "disable fancy class select anim",
+						"class": "disable_fancy_class_select_anim",
+						"value": 1
+					},
+					{
+						"name": "special taunt",
+						"class": "special_taunt",
+						"value": 1
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					},
 					{
 						"name": "cannot trade",
@@ -87145,7 +87207,7 @@
 				"name": "Mecha-Medes",
 				"defindex": 30048,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Mecha-Medes",
 				"item_description": "Mecha-Medes first appeared in Archimedes' Flights of Fantasy #314 when Archimedes accidentally fell off a table into a parallel world, met his robot double, ate some seeds, squawked in terror at a half-buried Statue of Liberty, then flew into a patio door.",
 				"proper_name": false,
@@ -88756,6 +88818,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -89837,6 +89904,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -90443,6 +90515,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -91203,6 +91280,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -93650,6 +93732,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -94414,6 +94501,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -94716,6 +94808,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -95171,6 +95268,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -95631,6 +95733,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -96808,6 +96915,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -97114,6 +97226,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -97882,6 +97999,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -98035,6 +98157,11 @@
 						"name": "additional halloween response criteria name",
 						"class": "additional_halloween_response_criteria_name",
 						"value": 0
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -98549,6 +98676,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
 					}
 				]
 				
@@ -98758,6 +98890,11 @@
 						"name": "additional halloween response criteria name",
 						"class": "additional_halloween_response_criteria_name",
 						"value": 0
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 2
 					}
 				]
 				
@@ -99993,7 +100130,7 @@
 				"name": "Chucklenuts",
 				"defindex": 30320,
 				"item_class": "tf_wearable",
-				"item_type_name": "Squirrel",
+				"item_type_name": "Mascot",
 				"item_name": "Chucklenuts",
 				"proper_name": false,
 				"item_slot": "misc",
@@ -101024,7 +101161,7 @@
 				"name": "Ein",
 				"defindex": 30341,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Ein",
 				"proper_name": false,
 				"item_slot": "misc",
@@ -101625,7 +101762,7 @@
 				"name": "The Backstabber's Boomslang",
 				"defindex": 30353,
 				"item_class": "tf_wearable",
-				"item_type_name": "TF_Wearable_Animal",
+				"item_type_name": "Mascot",
 				"item_name": "Backstabber's Boomslang",
 				"proper_name": true,
 				"item_slot": "misc",
