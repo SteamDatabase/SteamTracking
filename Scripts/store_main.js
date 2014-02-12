@@ -1449,13 +1449,8 @@ function EnsureStoreMenuTagsLoaded( strId )
 		$Element.data('tags-loaded', true );
 
 		var url = 'http://store.steampowered.com/tagdata/recommendedtags';
-		/*
-		var mytag_version = WebStorage.GetLocal( 'mytag_version', true );
-		if ( mytag_version )
-			url += '?v=' + parseInt( mytag_version );
-			*/
 
-		$J.get( url ).done( function( data ) {
+		$J.get( url, {ll: 'english'} ).done( function( data ) {
 			rgYourPopularTags = data || [];
 			if ( rgYourPopularTags.length > 0 )
 			{
