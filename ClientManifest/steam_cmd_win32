@@ -1,0 +1,38 @@
+"win32"
+{
+	"version"		"1391537035"
+	"steamcmd_public_all"
+	{
+		"file"		"steamcmd_public_all.zip.4a7375aab67130b2db0298a5a7849028da093188"
+		"checksum"		"4a7375aab67130b2db0298a5a7849028da093188"
+		"size"		"57628"
+	}
+	"steamcmd_bins_win32"
+	{
+		"file"		"steamcmd_bins_win32.zip.14cd4e668a300cd73eaa448b36539d411382e6f7"
+		"checksum"		"14cd4e668a300cd73eaa448b36539d411382e6f7"
+		"size"		"6045406"
+	}
+	"steamcmd_steamservice_win32"
+	{
+		"file"		"steamcmd_steamservice_win32.zip.01b7df306863e13e83550d30d9cb18b694015990"
+		"checksum"		"01b7df306863e13e83550d30d9cb18b694015990"
+		"size"		"1198596"
+	}
+	"steamcmd_steamerrorreporter_win32"
+	{
+		"file"		"steamcmd_steamerrorreporter_win32.zip.739263973f298b173f93c33af150ee2510ce1663"
+		"checksum"		"739263973f298b173f93c33af150ee2510ce1663"
+		"size"		"106599"
+	}
+	"steamcmd_win32"
+	{
+		"file"		"steamcmd_win32.zip.515f51774edcf2243d674c517229b23ee7e67cf7"
+		"checksum"		"515f51774edcf2243d674c517229b23ee7e67cf7"
+		"size"		"768301"
+	}
+}
+"kvsignatures"
+{
+	"win32"		"779579b8fa16fbde49d1d9f09379a5d4dbce1d850154fc35a9643a86561a7967181587bedacdc1397d0d28218c7ecdef84b0a38eebd1f6c2b248fe7bd635004d34ee87e6ca4b5ec9172b1aeb0314eb3cf1ea5937c974133c782d901760fdc9afb5e8bf90f981b4da508deeafe664fe4dcb9afd234157fdc8acac2202124badd6"
+}
