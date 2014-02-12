@@ -855,7 +855,7 @@ div.rightcol {
 }
 
 .block .block_header {
-	background-image: url('http://cdn.store.steampowered.com/public/images/v5/full_bg_gray.png');
+	/* background-image: url('http://cdn.store.steampowered.com/public/images/v5/full_bg_gray.png'); */
 	background-repeat: no-repeat;
 	background-color: #303030;
 }
@@ -867,9 +867,9 @@ div.rightcol {
 }
 
 .rightcol .block .block_header {
-	background-image: url('http://cdn.store.steampowered.com/public/images/v5/rightcol_bg_blue.png');
+	/* background-image: url('http://cdn.store.steampowered.com/public/images/v5/rightcol_bg_blue.png'); */
 	background-repeat: no-repeat;
-	background-color: #292f35;
+	background-color: #3C3D3E;
 }
 
 .rightcol .block .block_header_green {
