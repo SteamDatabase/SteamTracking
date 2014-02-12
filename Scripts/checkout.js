@@ -241,7 +241,8 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'dinerscardbrazil':
 				case 'molpoints':
 				case 'konbini':
-				case 'eclubpoints':
+				case 'bank_transfer_japan':
+				case 'payeasy':
 					displayPendingReceipt = true;
 					break;
 						
@@ -708,7 +709,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 33 
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
-					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 35 )
+					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -852,7 +853,8 @@ function OnPayPalSuccess( gidTransID )
 					case 'dinerscardbrazil':
 					case 'molpoints':
 					case 'konbini':
-					case 'eclubpoints':
+					case 'bank_transfer_japan':
+					case 'payeasy':
 						DisplayPendingReceiptPage();
 						break;
 
@@ -1279,6 +1281,36 @@ function OnGetFinalPriceSuccess( result )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Konbini customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from Degica will also be sent to you with the details of your Konbini.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'credit_card_japan' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Japanese Credit Card transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Domestic Credit Card customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'bank_transfer_japan' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank transfer transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Transfer customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'payeasy' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pay Easy transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pay Easy customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'eclubpoints' )
@@ -1845,6 +1877,8 @@ function UpdatePaymentMethodList( bIsSplitTransaction )
 	rgPaymentMethodsToToggle[11] = 'mastercardbrazil';
 	rgPaymentMethodsToToggle[12] = 'dinerscardbrazil';
 	rgPaymentMethodsToToggle[13] = 'konbini';
+	rgPaymentMethodsToToggle[14] = 'bank_transfer_japan';
+	rgPaymentMethodsToToggle[15] = 'payeasy';
 	
 	for (var i = 0; i < rgPaymentMethodsToToggle.length; i++)
 	{
@@ -1953,7 +1987,8 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy'  )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2376,7 +2411,8 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy'  )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2803,6 +2839,21 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Konbini';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'credit_card_japan' && providerPaymentMethod == 36 )
+			{
+				$('payment_method_review_text').innerHTML = 'Credit Card (Japan)';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'bank_transfer_japan' && providerPaymentMethod == 37 )
+			{
+				$('payment_method_review_text').innerHTML = 'Bank Transfer (Japan)';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'payeasy' && providerPaymentMethod == 38 )
+			{
+				$('payment_method_review_text').innerHTML = 'Pay Easy';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 			else if ( method.value == 'eclubpoints' && providerPaymentMethod == 35 )
 			{
 				$('payment_method_review_text').innerHTML = 'EClub Points';
@@ -3156,6 +3207,9 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 29:
 			case 31:
 			case 34:
+			case 36:
+			case 37:
+			case 38:
 			case 35:
 			default:
 			{
@@ -3365,6 +3419,8 @@ function DisplayPendingReceiptPage()
 			break;
 			
 		case 'konbini':
+		case 'bank_transfer_japan':
+		case 'payeasy':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
