@@ -186,7 +186,7 @@
 				unset( $Test, $Path );
 			}
 			// Convert group members to JSON
-			else if( $File === 'Other/ValveGroup.json' )
+			else if( $File === 'Random/ValveGroup.json' )
 			{
 				LibXML_Use_Internal_Errors( true );
 				
@@ -330,7 +330,7 @@
 						{
 							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
 							||  SubStr( $Request, 0, 15 ) === 'Styles/Partner/'
-							||  SubStr( $Request, 0, 6 ) === 'Other/' )
+							||  SubStr( $Request, 0, 6 ) === 'Random/' )
 							{
 								$LengthExpected = $LengthDownload;
 							}
