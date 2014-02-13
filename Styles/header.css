@@ -479,7 +479,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 .pulldown {
 	padding-left: 5px;
 	padding-right: 18px;
-	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
+	background-image: url(  'data:image/gif;base64,' );
 	background-position: right center;
 	background-repeat: no-repeat;
 
@@ -496,7 +496,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	position: relative;
 
 	background-color: #3b3938;
-	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABCCAIAAAAZuyscAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNp0jsENACEIBDdUaXzYfw189lCDQDwfZNYhIBi9iaoKACFZaQXLztvNN4MPR8uw7PxzmzFb3Pnb9+Z7qltMs/n+3Yt9yX0CDAAt4VMy+xZJfQAAAABJRU5ErkJggg==' );
+	background-image: url( 'data:image/png;base64,' );
 	background-repeat: repeat-x;
 	background-position: top;
 }
@@ -665,7 +665,7 @@ div#headerSearch {
 	height: 12px;
 	width: 12px;
 	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_corners.png );
-	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVRJREFUeNq0VlGyAiEMo8Dq/a+rCzj66E7IS/FLZjqgQtq0oWjpb1hah4k17xk08/rz2TbgOPs6z7kD4Ng4TFWAMzCb/zbIFLvFQQSYaXaATvNQ6aoBOIKyeYrcjJwtTAocQkBflxmE2zG/Y0ZcP2diRUTuVsHBAVYEuIk6hDXIAHIQA99/TvMzz3nGozesgWJQKC0HOEuCxSDZuhNZZOXgBvN7PAh8QJE7YI1K2s6ChUd/Bwcs17c1OOtqsgo3lBkgi9u0O+ncgdvc3win5fTjoe6BumyYljZr8JjqeYKqGl3CD32UVaecnoFaGJyBL1XVQAlNNDhsBecm+qUvlaA9q6vv1gQ4s7j2F9GGo+s/KHVoXTBIzCCJlCTRnhtEjNbVG1EEMDNR9WFgfhuWdm0bGXOPYZX1IPKLgW1StHsyQ8BvNYgYMJseAP979O3Xf1teAgwAvqvFROfF+RQAAAAASUVORK5CYII= );
+	background-image: url( data:image/png;base64, );
 }
 
 .shadow_ul {
@@ -699,7 +699,7 @@ div#headerSearch {
 	left: 0;
 	right: 0;
 	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_topbottom.png );
-	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNo0zFEKQFAQAMB9u0hSEvc/IUk5gEb5mc+JiGj5kyh0GDBiwowFKzbsCBw4ceHGUwL0KCQa4uMVYAAMZQVwOy2LWAAAAABJRU5ErkJggg== );
+	background-image: url( data:image/png;base64, );
 	background-repeat: repeat-x; 
 }
 .shadow_top {
@@ -717,7 +717,7 @@ div#headerSearch {
 	margin: 12px 0;
 	width: 12px;
 	background-image: url( http://cdn.steamcommunity.com/public/images/header/shadow_leftright.png );
-	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAABCAYAAADAW76WAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNosyssKQFAUAMBzkSQl8f9fKFIsyGuUxewmRUT6ZeQUlFTUNLR09Aw8jEzMLKxs7BycXNzffwUYAFWiDQPUjcVGAAAAAElFTkSuQmCC );
+	background-image: url( data:image/png;base64, );
 	background-repeat: repeat-y;
 }
 .shadow_left {
