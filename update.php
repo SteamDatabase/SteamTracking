@@ -330,7 +330,7 @@
 						{
 							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
 							||  SubStr( $Request, 0, 15 ) === 'Styles/Partner/'
-							||  SubStr( $Request, 0, 6 ) === 'Random/' )
+							||  SubStr( $Request, 0, 7 ) === 'Random/' )
 							{
 								$LengthExpected = $LengthDownload;
 							}
