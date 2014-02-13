@@ -226,6 +226,10 @@ a.group_tab:hover {
 	width: 645px;
 }
 
+.leftcol.hasContentBoxes img {
+	max-width: 645px;
+}
+
 .group_content {
 
 	padding-left: 5px;
