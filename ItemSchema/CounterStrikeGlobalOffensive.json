@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.732c833f606f7128b0504dbcad6f148aff92c798.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.733e2da67676166155aeb29f689428e5c6b4bc8b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1369,6 +1369,37 @@
 						"usable_out_of_game": true,
 						"recipe": true
 					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_cz75a",
+				"defindex": 63,
+				"item_class": "weapon_p250",
+				"item_type_name": "Pistol",
+				"item_name": "CZ75-Auto",
+				"item_description": "A fully automatic variant of the CZ75, the CZ75-Auto is another inexpensive choice against armored opponents. But with very little ammo provided, strong trigger discipline is required.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": "econ\/weapons\/base_weapons\/weapon_cz75a",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapons\/base_weapons\/weapon_cz75a.057939990f5f295fc5eaf8f758cdef21a7cfeb8a.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true,
+					"can_sticker": true
 				},
 				"attributes": [
 
@@ -2894,7 +2925,7 @@
 				"image_inventory": "econ\/weapon_cases\/crate_valve_2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_valve_2.5b1de0e6db36a318059e56d278433cf9834715e2.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_valve_2.912031176f2320d2d39f449ab3e27c41f5ec7faa.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true,
@@ -3068,6 +3099,43 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_valve_3",
+				"defindex": 4010,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "CS:GO Weapon Case 3",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_valve_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_valve_3.b49dc22a06991946e849c7b364b7d5876534ef61.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "generic_valve_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 10
 					}
 				]
 				
@@ -4186,12 +4254,84 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "aimsight capable",
+				"defindex": 150,
+				"attribute_class": "aimsight_capable",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "aimsight eye pos",
+				"defindex": 151,
+				"attribute_class": "aimsight_eye_pos",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight pivot angle",
+				"defindex": 154,
+				"attribute_class": "aimsight_pivot_angle",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight speed up",
+				"defindex": 157,
+				"attribute_class": "aimsight_speed_up",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight speed down",
+				"defindex": 158,
+				"attribute_class": "aimsight_speed_down",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight looseness",
+				"defindex": 159,
+				"attribute_class": "aimsight_looseness",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight fov",
+				"defindex": 160,
+				"attribute_class": "aimsight_fov",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "aimsight pivot forward",
+				"defindex": 161,
+				"attribute_class": "aimsight_pivot_forward",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "gifter account id",
 				"defindex": 162,
 				"attribute_class": "gifter_account_id",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "aimsight lens mask",
+				"defindex": 165,
+				"attribute_class": "aimsight_lens_mask",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -4576,6 +4716,25 @@
 					"weapon_p90",
 					"weapon_usp_silencer",
 					"weapon_ssg08"
+				]
+				
+			},
+			{
+				"item_set": "set_weapons_iii",
+				"name": "The Arms Deal 3 Collection",
+				"items": [
+					"weapon_cz75a",
+					"weapon_hkp2000",
+					"weapon_elite",
+					"weapon_usp_silencer",
+					"weapon_glock",
+					"weapon_cz75a",
+					"weapon_tec9",
+					"weapon_deagle",
+					"weapon_fiveseven",
+					"weapon_cz75a",
+					"weapon_p250",
+					"weapon_cz75a"
 				]
 				
 			}
