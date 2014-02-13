@@ -254,7 +254,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			WebStorage.SetLocal( 'mytag_version', parseInt( WebStorage.GetLocal( 'mytag_version', true ) || 0 ) + 1, true );
 
 		}).fail( function() {
-			ShowAlertDialog( 'View and edit tags for this game', 'There was a problem adding your tag.' );
+			ShowAlertDialog( 'View and edit tags for this product', 'There was a problem adding your tag.' );
 		});
 	};
 
@@ -349,7 +349,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 	{
 
 		$AppTagModal.show();
-		var Modal = ShowAlertDialog( 'View and edit tags for this game', $AppTagModal, 'Close' );
+		var Modal = ShowAlertDialog( 'View and edit tags for this product', $AppTagModal, 'Close' );
 		Modal.GetContent().addClass( 'app_tag_modal_frame');
 		fnBuildTagDisplay( Modal );
 
