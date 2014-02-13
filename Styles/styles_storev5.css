@@ -1659,8 +1659,44 @@ a.btn_browse:hover {
 	line-height: 24px;
 }
 
-.btn_browse h3 .currency_long {
+.btn_browse h3 .currency_JPY {
 	font-size: 20px;
+}
+
+.btn_browse h3 .currency_NOK {
+	font-size: 16px;
+}
+
+.btn_browse h3 .currency_MYR {
+	font-size: 16px;	
+}
+
+.btn_browse h3 .currency_TRY {
+	font-size: 16px;
+}
+
+.btn_browse h3 .currency_KRW {
+	font-size: 16px;
+}
+
+.btn_browse h3 .currency_VND {
+	font-size: 15px;
+}
+
+.btn_browse h3 .currency_PHP {
+	font-size: 18px;
+}
+
+.btn_browse h3 .currency_THB {
+	font-size: 18px;
+}
+
+.btn_browse h3 .currency_SGD {
+	font-size: 20px;
+}
+
+.btn_browse h3 .currency_IDR {
+	font-size: 16px;
 }
 
 .btn_browse h5 {
