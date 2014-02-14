@@ -56,7 +56,7 @@
 	layout
 	{
 		region { name="dates"	align=left margin-top=60 margin-left=16 }
-		region { name="aliases"	align=right margin-top=60 margin-left=10 margin-right=20 }
+		region { name="aliases"	margin-top=60 margin-left=10 margin-right=20 }
 		region { name="bottomrow" align=bottom height=36 }
 		place { control=CloseButton region=bottomrow align=right margin-right=24 }
 		place { control=Caption x=10 y=30 margin-right=20 }
@@ -69,7 +69,7 @@
 			spacing=4
 			height=15
 			width=max
-			align=right
+			align=left
 			margin-left=130
 		}
 		place

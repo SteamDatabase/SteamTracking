@@ -6,15 +6,8 @@
 
 	<LoginProgress defaultfocus="Cancel" tabindex="auto" selectionpos="auto">
 		<Panel class="LoginThrobber" />
-		<Label class="ProgressLabel" text="#Login_Connecting" />
-		<Label class="ProgressLabel Progress" text="#Login_UpdatingPlatform" />
-		<Panel id="Wait" class="Wait"/>
-
-		<ProgressBar id="Progress" class="Progress"/>
-		<Button id="Cancel" tabindex="auto" selectionpos="auto">
-			<Label text="#UI_Cancel" />
-		</Button>
-		<Panel />
+		<Label class="ProgressLabel" id="ProgressLabel" />
+		<ProgressBar id="ProgressBar" />
 	</LoginProgress>
 
 </root>

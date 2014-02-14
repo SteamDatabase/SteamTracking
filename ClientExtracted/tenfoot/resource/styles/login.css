@@ -461,18 +461,15 @@ RefreshLogin #Cancel
 ProgressBar
 {
 	width: 500px;
-	height: 72px;
+	height: 8px;
+	horizontal-align: center;
 	background-color: bgwithgradientlogin;
+	opacity: 0.0;
 }
 
-.Progress
+.ShowProgress #ProgressBar
 {
-	visibility: collapse;
-}
-
-.ShowProgress .Progress
-{
-	visibility: visible;
+	opacity: 1.0;
 }
 
 .ProgressBarLeft
@@ -568,11 +565,6 @@ RefreshLogin #LoginMessageContainer
 	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
-}
-
-.ShowProgress .LoginThrobber
-{
-	opacity: 0.0;
 }
 
 #Exit
