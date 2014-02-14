@@ -118,8 +118,6 @@ SettingsPanel.SectionVisible #SettingsContent
 
 }
 
-
-
 .SettingsContained .SettingsHeader
 {
 	visibility: collapse;
@@ -492,6 +490,11 @@ Label.SettingsStatic
 	transition-timing-function: ease-in-out;
 	flow-children: down;
 	background-color: settingsbackgroundgradient;
+}
+
+.SettingsSection.SettingsContained
+{
+	background-color: none;
 }
 
 .SettingsBottomPanel

@@ -18,16 +18,16 @@
 				<Label class="SettingsCallout" text="#SettingsDisplay_Intro" />
 				<Panel id="CurrentResWrapper">
 					<Panel id="GPUInfoWrapper">
-						<Label class="SettingsCallout ResLabel" id="GPUInfo" text="#SettingsDisplay_DisplayDevice" visible="false" />
-						<Label class="ResBody" id="GPUInfoValue" text="#SettingsDisplay_DisplayDeviceValue" visible="false" />
+						<Label class="SettingsCallout ResLabel" id="GPUInfo" text="#SettingsDisplay_DisplayDevice" />
+						<Label class="ResBody" id="GPUInfoValue" text="#SettingsDisplay_DisplayDeviceValue" />
 					</Panel>
 					<Panel id="WindowSizeWrapper">
-						<Label class="SettingsCallout ResLabel" id="WindowSize" text="#SettingsDisplay_WindowSize" visible="false" />
-						<Label class="ResBody" id="WindowSizeValue" text="#SettingsDisplay_WindowSizeValue" visible="false" />
+						<Label class="SettingsCallout ResLabel" id="WindowSize" text="#SettingsDisplay_WindowSize" />
+						<Label class="ResBody" id="WindowSizeValue" text="#SettingsDisplay_WindowSizeValue" />
 					</Panel>
 					<Panel id="SurfaceSizeWrapper">
-						<Label class="SettingsCalloutLabel ResLabel" id="SurfaceSize" text="#SettingsDisplay_SurfaceSize" visible="false" />
-						<Label class="ResBody" id="SurfaceSizeValue" text="#SettingsDisplay_SurfaceSizeValue" visible="false" />
+						<Label class="SettingsCalloutLabel ResLabel" id="SurfaceSize" text="#SettingsDisplay_SurfaceSize" />
+						<Label class="ResBody" id="SurfaceSizeValue" text="#SettingsDisplay_SurfaceSizeValue" />
 					</Panel>
 				</Panel>
 
@@ -43,11 +43,11 @@
 					</DropDown>
 				</Panel>
 			</Panel>
-			<Panel id="SteamOSSettingsArea" class="FlowDown">
+			<Panel id="SteamOSSettingsArea" class="FlowDown" tabindex="auto" selectionpos="auto">
 				<Label class="SettingsLabel" text="#SettingsDisplay_Underscan" />
-				<VUMeter onselect="AddStyle( Settings_Display, Underscan )" ondeselect="RemoveStyle( Settings_Display, Underscan )" writable="true" id="UnderscanAmount" class="VoiceBarContainer SliderContainer" numbars="25" barpaneladdclass="Slider" barpanelactiveclass="VoiceBarActive" />
+				<VUMeter onselect="UnderscanSelected()" ondeselect="UnderscanDeselected()" writable="true" id="UnderscanAmount" class="VoiceBarContainer SliderContainer" numbars="25" barpaneladdclass="Slider" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
 				<Label class="SettingsLabel" text="#SettingsDisplay_Brightness" />
-				<VUMeter writable="true" id="BrightnessLevel" class="VoiceBarContainer SliderContainer" numbars="50" barpaneladdclass="Slider SliderHalf" barpanelactiveclass="VoiceBarActive" />
+				<VUMeter writable="true" id="BrightnessLevel" class="VoiceBarContainer SliderContainer" numbars="50" barpaneladdclass="Slider SliderHalf" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
 			</Panel>
 		</Panel>
 	</SettingsPanel_Display>

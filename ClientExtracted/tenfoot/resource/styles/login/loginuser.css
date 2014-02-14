@@ -256,12 +256,12 @@ LoginUser:descendantfocus
 	visibility: visible;
 }
 
-.SteamGuard #AccountNameTextEntry,.SteamGuard #PasswordTextEntry
+.SteamGuard #AccountNameTextEntry,.SteamGuard #PasswordTextEntry,.SteamGuard #RememberPassword
 {
 	visibility: collapse;
 }
 
-.AccountSuspended #AccountNameTextEntry, .AccountSuspended #PasswordTextEntry, .AccountSuspended #LoginButton
+.AccountSuspended #AccountNameTextEntry,.AccountSuspended #PasswordTextEntry,.AccountSuspended #LoginButton,.AccountSuspended #RememberPassword
 {
 	visibility: collapse;
 }
@@ -281,7 +281,7 @@ LoginUser:descendantfocus
 	visibility: collapse;
 }
 
-.IpRestricted #AccountNameTextEntry, .IpRestricted #PasswordTextEntry, .IpRestricted #LoginButton
+.IpRestricted #AccountNameTextEntry,.IpRestricted #PasswordTextEntry,.IpRestricted #LoginButton,.IpRestricted #RememberPassword
 {
 	visibility: collapse;
 }

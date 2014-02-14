@@ -148,7 +148,7 @@
 				unset( $DataJSON );
 			}
 			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12.manifest' )
+			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12' )
 			{
 				foreach( $this->ClientArchives as $Archive )
 				{

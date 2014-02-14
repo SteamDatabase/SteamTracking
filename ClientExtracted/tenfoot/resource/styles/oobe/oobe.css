@@ -54,3 +54,10 @@ OOBEProgress
 	animation-direction: normal;	
 }
 
+OOBEDisplayWizardChild.Underscan
+{
+	background-image: url( "file://{images}/settings/underscan1.png" ), url( "file://{images}/settings/underscan2.png" ), url( "file://{images}/settings/underscan3.png" ), url( "file://{images}/settings/underscan4.png" );
+	background-repeat: no-repeat;
+	background-position: left top, right top, right bottom, left bottom;
+	background-size: 100px 100px;
+}
