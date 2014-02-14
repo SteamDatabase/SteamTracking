@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1392252873"
+	"version"		"1392412439"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.07c166ac12d8ec0cf7007dcfa320cc2e83133ec2"
-		"checksum"		"07c166ac12d8ec0cf7007dcfa320cc2e83133ec2"
-		"size"		"2043191"
-		"zipvz"		"tenfoot_all.zip.vz.dc25b130e5a5e93b8eea5c10e47f927a464e8ea6_750318"
+		"file"		"tenfoot_all.zip.c025fe56d7dd668ed08fa658d7ddea31929119ee"
+		"checksum"		"c025fe56d7dd668ed08fa658d7ddea31929119ee"
+		"size"		"2043805"
+		"zipvz"		"tenfoot_all.zip.vz.e705fc30fb7bd9f802d2db04cb65e0a061e0a746_750496"
 	}
 	"resources_misc_all"
 	{
@@ -62,9 +62,9 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.fad4049ecf781124588ae0ee21f29076e16f8635"
-		"checksum"		"fad4049ecf781124588ae0ee21f29076e16f8635"
-		"size"		"108971"
+		"file"		"strings_en_all.zip.f3195add8d299f4bc56bcb7d8424fe76f111aa9d"
+		"checksum"		"f3195add8d299f4bc56bcb7d8424fe76f111aa9d"
+		"size"		"108991"
 	}
 	"strings_all"
 	{
@@ -116,21 +116,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.938e360d89cb3204dff577df0ae510aaa5e690f3"
-		"checksum"		"938e360d89cb3204dff577df0ae510aaa5e690f3"
-		"size"		"21692916"
-		"zipvz"		"bins_win32.zip.vz.3df8c4a96d29c63eef90c54748ae4059cbff818e_11970764"
+		"file"		"bins_win32.zip.9e1badcf94b0afe4e9b9c8ecf7381be75af6693d"
+		"checksum"		"9e1badcf94b0afe4e9b9c8ecf7381be75af6693d"
+		"size"		"21701223"
+		"zipvz"		"bins_win32.zip.vz.feb53e0f015daaa380bc4c937233b3896715cd85_11976213"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.3edbfc1d061fe13602afeebad29cfdd0f50f8546"
-		"checksum"		"3edbfc1d061fe13602afeebad29cfdd0f50f8546"
-		"size"		"841437"
-		"zipvz"		"steam_win32.zip.vz.7b0bcfc92effbde9dbb4f0edf08c2251c5f60aca_696177"
+		"file"		"steam_win32.zip.083218b8723616f386644474ff9fc23573e4ce0e"
+		"checksum"		"083218b8723616f386644474ff9fc23573e4ce0e"
+		"size"		"841436"
+		"zipvz"		"steam_win32.zip.vz.e5a834dbc6cf3f17c2b5c634288fb6d9c788fff6_696178"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"9510ea3368817c1adfc8bb14f1034a10f2889266105529589964f55b1135cc8b1e5b3382f9ba4f821bda2683c650d7e43789e3456657239512efa12181e346f6d246dacb44451fdf7eb0fcc17589906630a63c7aee320b423a3549162f9e8c3e8abfbd5d09944e059af6de71c866ae7dd82b2e56316325c0a9ea83edfe794be4"
+	"win32"		"01caf35ecee7257e2333f95c77ca6e8d4d9789fd43c7c230f02c14b0646b0bc3d4c0c5af05edb45eee4209c56ea6c3a458173569e3771b4557f56a79111f379ed4fb48bbd0bcb00c3c8b4e14c5649b53c1980997d36986b770b90b27575ac94ffb82ab58d3a21d11b85c493031e6d96b518753793fd5e888f5e9856d4516ed6f"
 }
