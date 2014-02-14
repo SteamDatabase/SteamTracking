@@ -52,7 +52,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 	var fnSetReportTooltip = function( $ReportFlag )
 	{
 		if ( $ReportFlag.hasClass('reported') )
-			$ReportFlag.data('store-tooltip', 'You have repoted this tag.' );
+			$ReportFlag.data('store-tooltip', 'You have reported this tag.' );
 		else
 			$ReportFlag.data('store-tooltip', 'Click to enter a report for this tag.' );
 	};
