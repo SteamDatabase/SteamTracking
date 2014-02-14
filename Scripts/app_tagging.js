@@ -26,7 +26,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 
 	var rgUserTagsByTagID = {};
 	for ( var i= 0; i < rgUserTags.length; i++ )
+	{
 		rgUserTagsByTagID[ rgUserTags[i].tagid ] = rgUserTags[i];
+	}
 
 	var rgYourPopularTags = null;
 	var rgGlobalPopularTags = null;
@@ -39,33 +41,67 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			$AppTagButton.addClass( 'btn_disabled' );
 	};
 
+	var fnSetCheckboxTooltip = function( $Checkbox )
+	{
+		if ( $Checkbox.hasClass('checked') )
+			$Checkbox.data('store-tooltip', 'You have applied this tag.  Click to remove.' );
+		else
+			$Checkbox.data('store-tooltip', 'Click here to apply this tag.' );
+	};
+
+	var fnSetReportTooltip = function( $ReportFlag )
+	{
+		if ( $ReportFlag.hasClass('reported') )
+			$ReportFlag.data('store-tooltip', 'You have repoted this tag.' );
+		else
+			$ReportFlag.data('store-tooltip', 'Click to enter a report for this tag.' );
+	};
+
 	var fnCheckboxClick = function( checkbox, tag, bPopular )
 	{
 		var bWithdraw = $J(checkbox).hasClass('checked');
 		fnApplyTag( tag, bWithdraw, bPopular );
-	}
+	};
 
-	var fnMakeTag = function( tagid, tag, checked, bPopular )
+	var fnMakeTag = function( tagid, tag, checked, bPopular, bReported )
 	{
 		var $Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': tagid } );
+
+		var $Checkbox = $J('<div/>', {'data-store-tooltip': '', 'class': 'app_tag_checkbox' + ( checked && !bReported ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular ); });
+		BindStoreTooltip( $Checkbox );
+		fnSetCheckboxTooltip( $Checkbox );
+
+		$Tag.append( $Checkbox );
+
 		if ( bPopular )
+		{
 			$Tag.addClass( 'popular' );
-		$Tag.append( $J('<div/>', {'class': 'app_tag_checkbox' + ( checked ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular ); }) );
+
+			var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' ) } );
+			BindStoreTooltip( $Report );
+			fnSetReportTooltip( $Report );
+			$Tag.append( $Report );
+
+			$Report.click( function() { if ( !$Report.hasClass('reported') ) { fnReportTag( tag ); } } );
+		}
+
 		$Tag.append( $J('<a/>', {'class': 'app_tag', 'href': TagLink( tag ) } ).text( tag ) );
+
 		return $Tag;
 	};
 
 	var fnMakeFrequentTag = function( tagid, tag )
 	{
-		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid }).text( tag ).click( function() { fnApplyTag( tag ) } );
+		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid, 'data-store-tooltip': 'Click here to apply this tag.' }).text( tag ).click( function() { fnApplyTag( tag ) } );
+		BindStoreTooltip( $Tag );
 		return $Tag;
 	};
 
-	var fnCheckTagBox = function( $Elements, withdraw )
+	var fnCheckTagBox = function( $Elements, withdraw, reported )
 	{
 		var $Checkbox = $Elements.find( '.app_tag_checkbox' );
 
-		if ( withdraw )
+		if ( withdraw || reported )
 		{
 			$Checkbox.removeClass( 'checked' );
 		}
@@ -73,6 +109,14 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		{
 			$Checkbox.addClass( 'checked' );
 		}
+		fnSetCheckboxTooltip( $Checkbox );
+
+		var $ReportFlag = $Elements.find( '.app_tag_report' );
+		if ( reported )
+			$ReportFlag.addClass( 'reported' );
+		else
+			$ReportFlag.removeClass( 'reported' );
+		fnSetReportTooltip( $ReportFlag );
 	};
 
 	var fnFlashTag = function( $Tag )
@@ -90,7 +134,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		for ( var i = 0; i < rgAppTags.length; i++ )
 		{
 			var tagid = rgAppTags[i].tagid;
-			var $AppTag = fnMakeTag( tagid, rgAppTags[i].name, rgUserTagsByTagID[tagid], true );
+			var $AppTag = fnMakeTag( tagid, rgAppTags[i].name, rgUserTagsByTagID[tagid], true, rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported );
 
 			$PopularTags.append( $AppTag );
 		}
@@ -137,6 +181,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 				var tagid = rgUserTags[i].tagid;
 				rgYourTagsSeen[tagid] = true;
 
+				if ( rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported )
+					continue;
+
 				var $AppTag = fnMakeTag( tagid, rgUserTags[i].name, rgUserTagsByTagID[tagid] );
 
 				$YourTags.append( $AppTag );
@@ -176,6 +223,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			$YourTagsOnPage.children( '.app_tag.add_more').show();
 			for ( var i = 0; i < rgUserTags.length; i++ )
 			{
+				if ( rgUserTags[i].is_reported )
+					continue;
+
 				var $AppTag = $J('<a/>', {'class': 'app_tag', 'href': TagLink( rgUserTags[i].name ) }).text( rgUserTags[i].name );
 				$YourTagsOnPage.prepend( $AppTag, ' ' );
 			}
@@ -188,7 +238,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		}
 	}
 
-	var fnApplyTag = function( tag, withdraw, bPopularClick )
+	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType )
 	{
 		var rgParams = {
 			appid: appid,
@@ -197,6 +247,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		};
 		if ( withdraw )
 			rgParams['withdraw'] = 1;
+		else if ( eReportType )
+			rgParams['reporttype'] = eReportType;
 
 		$J.post( 'http://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
 
@@ -204,7 +256,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			var $AppTag = $PopularTags.find( strControlSelector );
 			var $YourTag = $YourTags.find( strControlSelector );
 
-			if ( !$YourTag.length && !data.withdraw )
+			if ( !$YourTag.length && !data.withdraw && !data.reported )
 			{
 				$YourTag = fnMakeTag( data.tagid, data.name );
 				$YourTags.append( $YourTag );
@@ -223,15 +275,18 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			if ( data.withdraw )
 			{
 				delete rgUserTagsByTagID[ data.tagid ];
-				fnCheckTagBox( $YourTag, true );
 				if ( iExistingTag < rgUserTags.length )
 					rgUserTags.splice( iExistingTag, 1 );
+
+				fnCheckTagBox( $YourTag, true );
 			}
 			else
 			{
 				rgUserTagsByTagID[ data.tagid ] = data;
 				if ( iExistingTag >= rgUserTags.length )
+				{
 					rgUserTags.push( data );
+				}
 
 				// remove from the frequent tag box
 				$FrequentTags.find( '[data-tagid=' + data.tagid + ']' ).hide();
@@ -239,10 +294,17 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 					$FrequentTagCtn.hide();
 
 				// make sure it's checked
-				fnCheckTagBox( $YourTag );
+				if ( data.is_reported )
+				{
+					$YourTag.remove();
+				}
+				else
+				{
+					fnCheckTagBox( $YourTag );
+				}
 			}
 
-			fnCheckTagBox( $AppTag, data.withdraw );
+			fnCheckTagBox( $AppTag, data.withdraw, data.is_reported );
 
 			// highlight the popular tag to show it has changed
 			if ( !bPopularClick && !data.withdraw && $AppTag.length )
@@ -267,6 +329,34 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		fnApplyTag( $AppTagInput.val(), false );
 		$AppTagInput.val('');
 		$AppTagInput.change();
+	};
+
+	var fnReportTag = function( tag ) {
+		var $Dialog = $J('<div/>', {'class': 'app_tag_report_dialog' } );
+		$Dialog.append( $J('<div/>', {'class': 'app_tag_report_dialog_intro' } ).text('Please pick a reason that you are reporting this tag on this product.') );
+
+		var rgReportOptions = {
+			1: 'Offensive/abusive tag',
+			2: 'Not appropriate for this product',
+			3: 'Not a helpful tag',
+			4: 'Spoiler'
+		};
+
+		for ( var eReportType in rgReportOptions )
+		{
+			var $ReportOption = $J('<div/>', {'class': 'app_tag_report_dialog_option' } );
+			$ReportOption.append( $J('<input/>', {'type': 'radio', 'name':'report_type', 'value': eReportType, 'id': 'report_type_' + eReportType } ) );
+			$ReportOption.append( $J('<label/>', {'for': 'report_type_' + eReportType }).text( rgReportOptions[eReportType] ) );
+			$Dialog.append( $ReportOption );
+		}
+
+		ShowConfirmDialog( 'Report a Tag', $Dialog, 'Report').done( function() {
+			var eReportTypeSelected = $Dialog.find( 'input[type=radio]:checked' ).val();
+			if ( eReportTypeSelected )
+			{
+				fnApplyTag( tag, false, true, eReportTypeSelected );
+			}
+		});
 	};
 
 	var fnRemoveYourTagsFromGlobalTags = function()

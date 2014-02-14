@@ -2133,12 +2133,45 @@ h2.bb_tag + br {
 	padding-left: 8px;
 }
 
-.app_tag_checkbox {
+.app_tag_checkbox, .app_tag_report {
 	float: right;
-	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_check.png' ) bottom center no-repeat;
 	width: 13px;
 	height: 19px;
 	cursor: pointer;
+}
+
+.app_tag_checkbox {
+	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_check.png' ) bottom center no-repeat;
+	margin-left: 4px;
+}
+
+.app_tag_report {
+	background: none;
+}
+
+.app_tag_control:hover .app_tag_report {
+	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_report.png' ) bottom center no-repeat;
+}
+
+.app_tag_control .app_tag_report.reported {
+	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_report.png' ) top center no-repeat;
+}
+
+.app_tag_report_dialog {
+	font-size: 14px;
+}
+
+.app_tag_report_dialog_intro {
+	margin-bottom: 20px;
+}
+
+.app_tag_report_dialog_option {
+	margin-bottom: 16px;
+	line-height: 20px;
+}
+.app_tag_report_dialog_option input {
+	vertical-align: middle;
+	margin-right: 6px;
 }
 
 .tag_control_flash {
