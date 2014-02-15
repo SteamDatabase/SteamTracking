@@ -342,19 +342,27 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 			4: 'Spoiler'
 		};
 
+		var fnDoReport= function( eReportTypeSelected ) { fnApplyTag( tag, false, true, eReportTypeSelected ); };
+
+		var Modal = null;
 		for ( var eReportType in rgReportOptions )
 		{
 			var $ReportOption = $J('<div/>', {'class': 'app_tag_report_dialog_option' } );
 			$ReportOption.append( $J('<input/>', {'type': 'radio', 'name':'report_type', 'value': eReportType, 'id': 'report_type_' + eReportType } ) );
 			$ReportOption.append( $J('<label/>', {'for': 'report_type_' + eReportType }).text( rgReportOptions[eReportType] ) );
+			$ReportOption.dblclick( function() { Modal.Dismiss(); fnDoReport( eReportType ); })
 			$Dialog.append( $ReportOption );
 		}
 
-		ShowConfirmDialog( 'Report a Tag', $Dialog, 'Report').done( function() {
+		Modal = ShowConfirmDialog( 'Report a Tag', $Dialog, 'Report').done( function() {
 			var eReportTypeSelected = $Dialog.find( 'input[type=radio]:checked' ).val();
 			if ( eReportTypeSelected )
 			{
-				fnApplyTag( tag, false, true, eReportTypeSelected );
+				fnDoReport( eReportTypeSelected )
+			}
+			else
+			{
+				ShowAlertDialog( 'Report a Tag', 'You must select a report reason.').done( function() { fnReportTag( tag ); } );
 			}
 		});
 	};
