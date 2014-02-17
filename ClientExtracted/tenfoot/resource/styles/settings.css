@@ -2648,11 +2648,17 @@ SettingsPanel_Display.Underscan
 
 }
 
-.SteamOS #DetectAudioButton, .SteamOS #InputDeviceGroup
+.SteamOS #DetectAudioButton, .SteamOS #InputDeviceGroupOther
 {
 	flow-children: down;
 	visibility: collapse;
 }
+
+#InputDeviceGroupOther
+{
+	flow-children: down;
+}
+
 
 #InputDeviceGroupLinux
 {

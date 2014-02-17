@@ -5,7 +5,7 @@
 	</styles>
 	
 	<CommunityWrapper defaultfocus="Profile">
-		<Panel id="CommunityNavBar" tabindex="auto" selectionpos="auto" onmoveup="CloseProfile();">
+		<Panel id="CommunityNavBar" tabindex="auto" selectionpos="auto" onmoveup="CloseProfile();" onmovedown="SetInputFocus( Profile )">
 			<Button id="FriendActivityButton" class="Selected" onactivate="OpenFriendActivity();" tabindex="auto" selectionpos="auto">
 				<Label text="#Profile_OpenFriendActivity" />
 			</Button>
