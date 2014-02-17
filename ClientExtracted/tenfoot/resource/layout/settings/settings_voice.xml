@@ -23,7 +23,7 @@
 					<Button id="DetectAudioButton" class="Button" onactivate="DetectAudioDevices()">
 						<Label class="LongDesc" text="#SettingsVoice_DetectDevices" />
 					</Button>
-					<Panel id="InputDeviceGroup" >
+					<Panel id="InputDeviceGroupOther" >
 						<Label class="SettingsLegend" text="#SettingsVoice_InputDevice" />
 						<Label class="SettingsValue" id="SettingsVoice_InputDevice" text="#SettingsVoice_Microphone" />
 					</Panel>
