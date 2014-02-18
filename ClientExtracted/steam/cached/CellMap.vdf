@@ -754,10 +754,10 @@
 		// #36 India
 		36
 		{
-			"name" "India"
+			"name" "India - Mumbai"
 			"region"	"india"
-			"latitude"	"21.145992"
-			"longitude"	"79.076157"
+			"latitude"	"19.082884"
+			"longitude"	"72.835922"
 			"edges"
 			{
 				0 
@@ -765,8 +765,13 @@
 					"dest"	35  
 					"cost"	LocalCostIndiaToSingapore
 				}
-				1 { "dest"	128  }
-				2 { "dest"	127  }
+				1 { "dest"	141  }
+				2 { "dest"	142  }
+				3 { "dest"	143  }
+				4 { "dest"	144  }
+				5 { "dest"	145  }
+				6 { "dest"	128  }
+				7 { "dest"	127  }
 			}
 		}
 
@@ -2346,6 +2351,74 @@
 				0 { "dest"	12 }
 			}		
 		}
+		141
+		{
+			"name" "India - Chennai"
+			"region"	"india"
+			"latitude"	"13.090179"
+			"longitude"	"80.240707"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	142 }
+				2 { "dest"	143 }
+				3 { "dest"	144 }
+				4 { "dest"	145 }
+				5 
+				{ 
+					"dest"	35  
+					"cost"	LocalCostIndiaToSingapore
+				}
+			}		
+		}
+		142
+		{
+			"name" "India - Delhi"
+			"region"	"india"
+			"latitude"	"28.613459"
+			"longitude"	"77.186508"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	141 }
+			}		
+		}
+		143
+		{
+			"name" "India - Bangalore"
+			"region"	"india"
+			"latitude"	"12.961736"
+			"longitude"	"77.625961"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	141 }
+			}		
+		}
+		144
+		{
+			"name" "India - Hyderabad"
+			"region"	"india"
+			"latitude"	"17.392579"
+			"longitude"	"78.460922"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	141 }
+			}		
+		}		
+		145
+		{
+			"name" "India - Kolkata"
+			"region"	"india"
+			"latitude"	"22.593726"
+			"longitude"	"88.37059"
+			"edges"
+			{
+				0 { "dest"	36 }
+				1 { "dest"	141 }
+			}		
+		}									
 	}
 	"countries"
 	{
