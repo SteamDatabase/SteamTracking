@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1392677126"
+	"version"		"1392764255"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -82,17 +82,17 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.c5df4d1eaabe40ceb384604192b270d5c7eee30c"
-		"checksum"		"c5df4d1eaabe40ceb384604192b270d5c7eee30c"
-		"size"		"1267174"
-		"zipvz"		"public_all.zip.vz.5eb0ce8c97ab68a0946a0b998be2043b7fc6c7b1_509086"
+		"file"		"public_all.zip.b88d1cf8e6a48f6811c9dcd8a3faf839e14d6753"
+		"checksum"		"b88d1cf8e6a48f6811c9dcd8a3faf839e14d6753"
+		"size"		"1267394"
+		"zipvz"		"public_all.zip.vz.abcfe550e7d4f741383f5c307c60d17f94edaab4_509314"
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.4332b73beb55cf4da5b9bf8d13ec7a5a3ae7aeec"
-		"checksum"		"4332b73beb55cf4da5b9bf8d13ec7a5a3ae7aeec"
-		"size"		"35188143"
-		"zipvz"		"bins_ubuntu12.zip.vz.6602e92f3d84b33dd5e93c9bbcf704bb020206fb_20673572"
+		"file"		"bins_ubuntu12.zip.d1675ed83979564acfff6c073e9d03a8e7ae695a"
+		"checksum"		"d1675ed83979564acfff6c073e9d03a8e7ae695a"
+		"size"		"35187397"
+		"zipvz"		"bins_ubuntu12.zip.vz.fa561ecf316ff89531afb48281ea4f95d7ba241d_20697729"
 	}
 	"bins_codecs_ubuntu12"
 	{
@@ -129,10 +129,10 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.706d59e4132783883196503d8eeb0ccbb67c515c"
-		"checksum"		"706d59e4132783883196503d8eeb0ccbb67c515c"
-		"size"		"1140042"
-		"zipvz"		"steam_ubuntu12.zip.vz.7353c24daae8c4368b676c340343c0b0f4adf198_878570"
+		"file"		"steam_ubuntu12.zip.12e7356fab4d25bfe121a9dae6d1e1b3e4487b4a"
+		"checksum"		"12e7356fab4d25bfe121a9dae6d1e1b3e4487b4a"
+		"size"		"1140041"
+		"zipvz"		"steam_ubuntu12.zip.vz.e1d7e774e6b739ded031278824bfb6792d5bf580_878609"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -150,5 +150,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"121c73885f91bb4086925c75e6bbf42988d3187926691bf7d749bdeeb7298457f52b97a7c56b056cc50c082b9ee9dc807a437ec344e456ff2d316267af5b822877121db62c54f83a1a0e42e53d535d10e3d4f4d32fa22ca27e55bdc8d338ee1a581ff706e3272431b80c45bffbdc62cdd740e1a9cb9283db7ecd7719f2a7acab"
+	"ubuntu12"		"1e52e3f2d31e39c1bcc4eefcee12a76087d5557897cb081012dd8d4b150a2583baa21b9e5f0c8acb37cb5958f6e596ab2b300e81301c51f222eddc93e30966487378491fbc78b826cad8ca36d9858e612a5bfaa86e628468d227744ab5d7c745de4dba91e318e7313507761c3e5a0f0df4a134c7022b8d7e749ba57ffe712842"
 }
