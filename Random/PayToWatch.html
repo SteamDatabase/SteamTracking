@@ -60,6 +60,32 @@
 
         <style>
             
+
+            #mobile_bg{
+                background: url(http://media.steampowered.com/apps/freetoplay/img/fallback_bg.jpg);
+                display: none;
+                height: 720px;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 920px;
+                min-height: 720px;
+                min-width: 900px;
+                overflow: hidden;
+                width: auto;
+                z-index: -1000;
+            }
+
+            
+            @media only screen and (max-width: 830px){
+                #mobile_bg{
+                    display: block;
+                }
+
+                video#loop_ftp{
+                    display:none;
+                }
+            }
+
         </style>
 
     </head>
@@ -110,11 +136,12 @@
                     <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.mp4" type="video/mp4">       
                     <img src="http://media.steampowered.com/apps/freetoplay/img/fallback_bg.jpg" />
                 </video>
+                <div id="mobile_bg"></div>
 
                 <!-- navigation -->
                  <div id="nav">
                     <a id="nav_trailer" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
-                    <a id="nav_trailer_small" class="" href="http://www.youtu.be/R-RKqGaNq-Y/"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
+                    <a id="nav_trailer_small" class="" href="http://youtu.be/R-RKqGaNq-Y"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
 
                     <a id="nav_premiere" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_premiere.png"/></a>
                     <div style="clear:both"></div>
@@ -304,13 +331,8 @@
 
         <script src="http://media.steampowered.com/apps/freetoplay/js/main_v1.2.js"></script>
         <script>
-            $('div a.internal_link').bind( "touchstart", function(){
-                pageId = $(this).attr('id');
-                revealContent(pageId);
-                return false;
-            });
 
-
+            $('#loop_ftp').animate({volume: 0}, 1000);
         </script>
 
     </body>
