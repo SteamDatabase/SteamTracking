@@ -24,7 +24,6 @@
 #controlsRepeatButton.onState { background-image: url('images/remote_playControls_repeat_on.png'); }
 #controlsShuffleButton.offState { background-image: url('images/remote_playControls_shuffle.png'); }
 #controlsShuffleButton.onState { background-image: url('images/remote_playControls_shuffle_on.png'); }
-#controlsRepeatButton { background-image: url('images/remote_playControls_repeat.png'); }
 #controlsForwardTrackButton { background-image: url('images/remote_playControls_forwardTrack.png'); }
 #controlsBackTrackButton { background-image: url('images/remote_playControls_backTrack.png'); }
 

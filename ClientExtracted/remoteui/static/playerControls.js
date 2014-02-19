@@ -1,4 +1,13 @@
+var preloadImages = ['images/remote_playControls_repeat_on.png', 'images/remote_playControls_shuffle_on.png'];
+
 $(function() {
+    for (var i = 0; i < preloadImages.length; ++i)
+    {
+        var src = preloadImages[i];
+        preloadImages[i] = new Image();
+        preloadImages[i].src = src;
+    }
+
     var volumeBar = $("#controlsVolumeBar");
     var volumeScrubber = $("#controlsVolumeScrubber");
 
@@ -138,16 +147,32 @@ $(function() {
         $.ajax({
             url: "/steam/state",
             data: {"long_poll": +!firstPoll, "session_name": "playerControls"},
-            success: function(response){
+            success: function(response) {
                 var music = response['data']['music'];
                 var playback = music['playback'];
                 volumeScrubber.setVolume(playback['volume']);
                 $("#controlsRepeatButton").setToggleState(playback['looped']);
                 $("#controlsShuffleButton").setToggleState(playback['shuffled']);
                 $("#controlsPlayButton").setToggleState(playback['status'] == 'playing');
+                poll(false);
+            },
+            statusCode: {
+                401: function() {
+                    window.location = 'steam-remote-callback://error/Lost connection to Steam.';
+                },
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                if (textStatus == "timeout")
+                {
+                    poll(false);
+                }
+                else
+                {
+                    console.warn("Long poll error, backing off for 10s: " + textStatus + " - " + errorThrown);
+                    setTimeout(function() { poll(false) }, 10 * 1000);
+                }
             },
             dataType: "json",
-            complete: function() { poll(false); },
-            timeout: 30000 });
+            timeout: 30 * 1000 });
     })(true);
 });
