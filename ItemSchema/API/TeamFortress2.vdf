@@ -4621,7 +4621,7 @@
 				"sound_special2"	"Weapon_Minifun.WindDown"
 				"sound_special3"	"Weapon_Minifun.Spin"
 				"sound_burst"	"Weapon_Minifun.FireCrit"
-				"skin"	"2"
+				"skin"	"10"
 				"attached_models"
 				{
 					"0"
@@ -41138,7 +41138,7 @@
 		"1092"
 		{
 			"name"	"The Fortified Compound"
-			"first_sale_date"	"2014/02/11"
+			"first_sale_date"	"2014/02/18"
 			"prefab"	"promo huntsman"
 			"capabilities"
 			{
@@ -41148,6 +41148,99 @@
 			"item_description"	"#TF_FortifiedCompound_Desc"
 			"image_inventory"	"backpack/weapons/c_models/c_bow/c_bow_thief"
 			"model_player"	"models/weapons/c_models/c_bow/c_bow_thief.mdl"
+		}
+		"1093"
+		{
+			"name"	"The Baronial Bouncer"
+			"first_sale_date"	"2014/02/18"
+			"prefab"	"promo hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_BaronialBouncer"
+			"item_description"	"#TF_BaronialBouncer_Desc"
+			"propername" "1"
+			"image_inventory"	"backpack/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet"
+			"model_player"	"models/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet.mdl"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+		}
+		"1094"
+		{
+			"name"	"The Cutthroat's Cloak"
+			"first_sale_date"	"2014/02/18"
+			"prefab"	"promo misc"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Apparel"
+			"item_name"	"#TF_CutthroatsCloak"
+			"item_description"	"#TF_CutthroatsCloak_Desc"
+			"equip_region"		"sniper_vest"
+			"propername" "1"
+			"image_inventory"	"backpack/workshop/player/items/sniper/thief_sniper_cape/thief_sniper_cape"
+			"model_player"	"models/workshop/player/items/sniper/thief_sniper_cape/thief_sniper_cape.mdl"
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+		}
+		"1095"
+		{
+			"name"	"The Dread Hiding Hood"
+			"first_sale_date"	"2014/02/18"
+			"prefab"	"promo hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_name"	"#TF_DreadHidingHood"
+			"item_description"	"#TF_DreadHidingHood_Desc"
+			"propername" "1"
+			"equip_regions"
+			{
+				"hat"		"1"
+				"beard"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/sniper/thief_sniper_hood/thief_sniper_hood"
+			"model_player"	"models/workshop/player/items/sniper/thief_sniper_hood/thief_sniper_hood.mdl"
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+		}
+		"1096"
+		{
+			"name"	"The Garrett Badge"
+			"first_sale_date"	"2014/02/18"
+			"prefab"	"promo misc"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Badge"
+			"item_name"	"#TF_GarrettBadge"
+			"item_description"	"#TF_GarrettBadge_Desc"
+			"equip_region"	"medal"
+			"propername" "1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/thief_badge/thief_badge"
+			"model_player"	"models/workshop/player/items/all_class/thief_badge/thief_badge_demo.mdl"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
 		}
 
 
@@ -45889,8 +45982,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -46053,8 +46146,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -46358,8 +46451,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -47169,8 +47262,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -47373,8 +47466,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -47765,8 +47858,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -47867,8 +47960,8 @@
 				}
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -48149,8 +48242,8 @@
 			{
 				"counts as assister is some kind of pet this update is going to be awesome"
 				{
-					"attribute_class"	"counts_as_assister"
-					"value"				"1"
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
 				}
 			}
 		}
@@ -49375,7 +49468,7 @@
 			"name"		"The Trencher's Tunic"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Apparel"
+			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_sbox2014_trenchers_tunic"
 			"item_description"		"#TF_sbox2014_trenchers_tunic_Desc"
 			"equip_region"		"shirt"
@@ -49738,7 +49831,7 @@
 			"name"		"The Rat Stompers"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Boots"
+			"item_type_name"		"#TF_Wearable_Boots"
 			"item_name"		"#TF_sbox2014_rat_stompers"
 			"item_description"		"#TF_sbox2014_rat_stompers_Desc"
 			"equip_region"		"feet"
@@ -49817,7 +49910,7 @@
 			"name"		"The Sole Saviors"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Boots"
+			"item_type_name"		"#TF_Wearable_Boots"
 			"item_name"		"#TF_sbox2014_demo_armor_shoes"
 			"item_description"		"#TF_sbox2014_demo_armor_shoes_Desc"
 			"equip_region"		"feet"
@@ -49844,7 +49937,7 @@
 			"name"		"The Huntsman's Essentials"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Quiver"
+			"item_type_name"		"#TF_Wearable_Quiver"
 			"item_name"		"#TF_sbox2014_sniper_quiver"
 			"item_description"		"#TF_sbox2014_sniper_quiver_Desc"
 			"equip_region"		"Back"
@@ -49885,7 +49978,7 @@
 			"name"		"The Colonel's Coat"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Coat"
+			"item_type_name"		"#TF_Wearable_Coat"
 			"item_name"		"#TF_sbox2014_medic_colonel_coat"
 			"item_description"		"#TF_sbox2014_medic_colonel_coat_Desc"
 			"equip_region"		"shirt"
@@ -50001,7 +50094,7 @@
 			"name"		"The Smock Surgeon"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Apron"
+			"item_type_name"		"#TF_Wearable_Apron"
 			"item_name"		"#TF_sbox2014_medic_apron"
 			"item_description"		"#TF_sbox2014_medic_apron_Desc"
 			"equip_region"		"shirt"
@@ -50254,7 +50347,7 @@
 			"name"		"The Antarctic Researcher"
 			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Coat"
+			"item_type_name"		"#TF_Wearable_Coat"
 			"item_name"		"#TF_sbox2014_antarctic_researcher"
 			"item_description"		"#TF_sbox2014_antarctic_researcher_Desc"
 			"equip_region"		"shirt"
@@ -50291,9 +50384,9 @@
 		"30379"
 		{
 			"name"		"The Gaiter Guards"
-			"propername" "1"
+			"propername"		"1"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Boots"
+			"item_type_name"		"#TF_Wearable_Boots"
 			"item_name"		"#TF_sbox2014_medic_wintergarb_gaiter"
 			"item_description"		"#TF_sbox2014_medic_wintergarb_gaiter_Desc"
 			"equip_region"		"feet"
