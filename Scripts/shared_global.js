@@ -779,11 +779,14 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 		}
 	};
 	var fnBindAllHoverElements = function( $Element ) {
+		var $Target;
 		if ( !$Element )
-			$Element = $J(document);
+			$Target = $J(strSelector);
+		else
+			$Target = $Element.find(strSelector);
 
-		$Element.find(strSelector).each( function() { fnBindSingleHover( this ); } );
-	}
+		$Target.each( function() { fnBindSingleHover( this ); } );
+	};
 
 	fnBindAllHoverElements();
 
@@ -801,7 +804,7 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 	{
 		//prototype AJAX
 		Ajax.Responders.register({
-			onComplete: fnBindAllHoverElements
+			onComplete: function() { fnBindAllHoverElements(); }
 		});
 	}
 

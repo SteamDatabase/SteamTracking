@@ -987,6 +987,8 @@ select.gray_bevel {
 
 img.emoticon {
 	vertical-align: text-bottom;
+	height: 18px;
+	width: 18px;
 }
 
 
