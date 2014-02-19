@@ -114,10 +114,18 @@ div.profile_page.has_profile_background {
 }
 
 .profile_header .profile_summary {
-	line-height: 16px;
-	height: 48px;
+	line-height: 18px;
+	height: 57px;
 	overflow: hidden;
 	margin-bottom: 8px;
+}
+
+.profile_summary_modal {
+	line-height: 18px;
+}
+
+.profile_summary img.emoticon, .profile_summary_modal img.emoticon {
+	vertical-align: text-bottom;
 }
 
 .profile_header_badgeinfo .persona_level {

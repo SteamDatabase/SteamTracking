@@ -681,10 +681,11 @@ a.nohover, a.nohover:hover
 .blotter_group_announcement_content
 {
 	font-size: 14px;
+	line-height: 18px;
 	padding: 8px;
 	padding-left: 12px;
 	text-align: left;
-	font-family: font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
 	color: #bdbcbb;
 	background-color: #1e1e1e;
 	min-height: 30px;
