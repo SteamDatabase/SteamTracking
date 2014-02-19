@@ -441,6 +441,23 @@ p {
 	width: 100%;
 	color: #b2b2b2;
 }
+
+	.landingTable.nowrap .td, .landingTable.nowrap .th, .landingTable.nowrap a, .landingTable.nowrap td, .landingTable.nowrap th
+	{
+		white-space: nowrap;
+	}
+
+	.landingTable .td.editable, td.editable
+	{
+		border-left: 1px solid #262626;
+		background-color: #000 !important;
+	}
+
+		.landingTable .td.editable:hover, td.editable:hover
+		{
+			background-color: #333333 !important;
+		}
+
 	.landingTable a {
 		color: inherit;
 		text-decoration: none;
@@ -553,6 +570,31 @@ p {
 	}
 	.landingTable tr.app_Game td, .landingTable .tr.app_Game .td {
 		color: #E7E8E9;
+	}
+
+	.landingTable .currency_input_field {
+		background: transparent;
+		border: none;
+		display: inline;
+		width: 100%;
+		min-width: 75px;
+		padding: 0 0px 0 0px;
+		text-align: right;
+		box-sizing:border-box;
+		cursor: cell;
+		margin-left: -5px;
+	}
+
+	.landingTable .currency_label {
+		display: inline-block;width: 0px;
+	}
+
+	.landingTable .blueTitle {
+		color: #00adee;
+	}
+
+	.landingTable .capsule {
+		max-height: 28px;
 	}
 
 .landingInfoTable {
@@ -674,6 +716,13 @@ h2.bright {
 	padding-bottom: 138px;
 }
 
+.AdminPageContent.FullWidth {
+	max-width: none;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .tinyGreyArrow {
 	position: relative;
 	background: #727477;
@@ -762,6 +811,11 @@ h2.bright {
 		line-height: 20px;
 
 	}
+
+		div.inlineLabel.wide
+		{
+			width: 250px;
+		}
 
 	input.inlineLabel, select.inlineLabel, div.inputLabelContent{
 		width: 346px;
@@ -1273,6 +1327,29 @@ span.icon_star { display: inline-block;}
 	font-size: 10px;
 }
 
+.required_currency_box {
+	display: inline-block;
+	width: 100px;
+	margin: 4px 0;
+}
+
+	.required_currency_box input {
+		width: 73px;
+	}
+
+	.required_currency_box h5 {
+		margin: 0;
+	}
+
+.price_template {
+	margin: 5px 0;
+	padding: 5px 5px;
+}
+
+.price_template:nth-child(odd) {
+	background-color:#333333;
+}
+
 /* css for timepicker */
 .ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
 .ui-timepicker-div dl { text-align: left; }
@@ -1316,6 +1393,14 @@ input.datepicker {
 	border-bottom: 1px solid #657b16;
 	height: 1px;
 	margin: 0;
+}
+
+.price_template .btn_proposal {
+	display: none;
+}
+
+.price_template .has_changed .btn_proposal {
+	display: inline-block;
 }
 
 .release_header .release_nav .option {

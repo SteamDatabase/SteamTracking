@@ -1856,7 +1856,7 @@ function SetDrmModule( appid, destRow, drmModule )
 {
 	var d=new Date();
 	d.setTime( drmModule[ 'date' ]*1000 );
-	var downloadlink = '<a href="'+ drmModule[ 'download' ]+ '">' + drmModule[ 'module' ] + '</a>';
+	var downloadlink = '<a href="'+ encodeURI( drmModule[ 'download' ] )+ '">' + drmModule[ 'module' ] + '</a>';
 	
 	destRow.insertCell( -1 ).innerHTML = drmModule[ 'buildcrc' ];
 
@@ -1868,7 +1868,7 @@ function SetDrmModule( appid, destRow, drmModule )
 		var downloadoriglink = 'Not available';
 		if ( drmModule[ 'download_orig' ] )
 		{
-			downloadoriglink = '<a href="'+ drmModule[ 'download_orig' ]+ '">' + drmModule[ 'module' ] + '</a>';
+			downloadoriglink = '<a href="'+ encodeURI( drmModule[ 'download_orig' ] )+ '">' + drmModule[ 'module' ] + '</a>';
 		}
 		destRow.insertCell( -1).innerHTML = downloadoriglink;
 	}
@@ -2687,7 +2687,12 @@ function SetAvatars( appid, avatars )
 	{
 		var divAvatar = document.createElement( 'div' );
 		divAvatar.className = 'avatar';
-		
+
+		// TODO this can be a direct pull from the CDN.
+		// (and stock avatar images need to go straight to the CDN instead of only going there
+		// at publish time.)
+		//
+		// Same drill for screen shots.
 		var imageBase = g_szBaseURL + "/public/get_appimage.php?appid=" + appid + "&filetype=jpg&id=";
 		
 		var anchor = document.createElement( 'a' );
