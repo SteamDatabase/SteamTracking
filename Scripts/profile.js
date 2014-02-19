@@ -173,14 +173,16 @@ function InitProfileSummary( strSummary )
 	var $Summary = $J( '.profile_summary' );
 	var $SummaryFooter = $J( '.profile_summary_footer' );
 
-	if ( $Summary[0].scrollHeight <= 64 )
+	if ( $Summary[0].scrollHeight <= 76 )
 	{
-		$Summary.css( 'height', 64 );
+		$Summary.css( 'height', 76 );
 		$SummaryFooter.hide();
 	}
 	else
 	{
 		var $ModalSummary = $J('<div/>', {'class': 'profile_summary_modal'}).html( strSummary );
+		if ( window.BindAllEmoticonHovers )
+			BindAllEmoticonHovers( $ModalSummary );
 		$SummaryFooter.find( 'span' ).click( function() {
 			var Modal = ShowDialog( 'Info', $ModalSummary );
 			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );

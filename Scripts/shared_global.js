@@ -778,8 +778,11 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 			$Target.data( strBoundDataName, true );
 		}
 	};
-	var fnBindAllHoverElements = function() {
-		$J(strSelector).each( function() { fnBindSingleHover( this ); } );
+	var fnBindAllHoverElements = function( $Element ) {
+		if ( !$Element )
+			$Element = $J(document);
+
+		$Element.find(strSelector).each( function() { fnBindSingleHover( this ); } );
 	}
 
 	fnBindAllHoverElements();
@@ -975,6 +978,7 @@ function InitEmoticonHovers()
 	} );
 
 	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
+	window.BindAllEmoticonHovers = rgCallbacks.fnBindAllHoverElements;
 	window.DismissEmoticonHover = rgCallbacks.fnCancelHover;
 }
 
