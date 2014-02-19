@@ -113,8 +113,11 @@ a.inventory_item_link:focus {
 /* steam gift styles */
 
 .item_actions, .item_owner_actions {
-	margin-top: 9px;
-	margin-bottom: 13px;
+}
+
+.item_actions .btn_small, .item_owner_actions .btn_small {
+	margin-right: 12px;
+	margin-bottom: 16px;
 }
 
 a.item_action {
@@ -132,6 +135,7 @@ a.item_action {
 	padding: 0 19px;
 
 	margin-right: 22px;
+	margin-bottom: 13px;
 	background-repeat: repeat-x;
 
 	background-color: #5c5957;
@@ -252,7 +256,6 @@ a.item_action:hover {
 }
 
 .item_desc_descriptors {
-	margin-top: 9px;
 	margin-bottom: 16px;
 }
 
@@ -291,6 +294,7 @@ a.item_action:hover {
 	padding-left: 36px;
 	color: #767676;
 	min-height: 32px;
+	margin-bottom: 16px;
 }
 
 .item_desc_game_info .item_desc_game_icon {
@@ -298,10 +302,6 @@ a.item_action:hover {
 	left: 0;
 	top: 0;
 }
-
-
-
-
 
 
 
@@ -416,6 +416,11 @@ input.filter_search_box:-moz-placeholder {
 	font-size: 71.4%;
 }
 
+.econ_tag_filter_collapsable_tags_showlink {
+	padding-left: 8px;
+	line-height: 19px;
+}
+
 
 /* Steam gift styles */
 .item_desc_content.app753.context1 .item_desc_descriptors {
@@ -511,11 +516,8 @@ input.filter_search_box:-moz-placeholder {
 	font-size: 12pt;
 	color: #ffffff;
 	line-height: 1em;
-	
-	background-image: linear-gradient(to bottom, #484848, #262626);
-	background-image: -moz-linear-gradient(top, #484848, #262626);
-	background-image: -webkit-linear-gradient(top, #484848, #262626);
-	border: 1px solid #797272;
+
+	background: -moz-linear-gradient(top, #484848 5%, #262626 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#262626));background: -webkit-linear-gradient(top, #484848 5%,#262626 95%);background: -o-linear-gradient(top, #484848 5%,#262626 95%);background: -ms-linear-gradient(top, #484848 5%,#262626 95%);background: linear-gradient(to bottom, #484848 5%,#262626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#262626',GradientType=0 );	border: 1px solid #797272;
 	border-bottom: none;
 
 	border-top-left-radius: 3px;

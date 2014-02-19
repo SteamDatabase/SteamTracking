@@ -90,7 +90,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel );
 	Modal.Show();
 
-	_BindOnEnterKeyPressForDialog( deferred, fnOK );
+	_BindOnEnterKeyPressForDialog( Modal, deferred, fnOK );
 
 	deferred.always( function() { Modal.Dismiss(); } );
 	// attach the deferred's events to the modal
@@ -114,7 +114,7 @@ function ShowAlertDialog( strTitle, strDescription, strOKButton )
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 
-	_BindOnEnterKeyPressForDialog( deferred, fnOK );
+	_BindOnEnterKeyPressForDialog( Modal, deferred, fnOK );
 
 	// attach the deferred's events to the modal
 	deferred.promise( Modal );
@@ -249,10 +249,10 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 	return Modal;
 }
 
-function _BindOnEnterKeyPressForDialog( deferred, fnOnEnter )
+function _BindOnEnterKeyPressForDialog( Modal, deferred, fnOnEnter )
 {
 	var fnOnKeyUp = function( event ) {
-		if ( event.which == 13 && ( !event.target || event.target.nodeName != 'TEXTAREA' ) )
+		if ( Modal.BIsActiveModal() && event.which == 13 && ( !event.target || event.target.nodeName != 'TEXTAREA' ) )
 			fnOnEnter();
 	};
 	$J(document).on( 'keyup.SharedConfirmDialog', fnOnKeyUp );
@@ -305,7 +305,7 @@ function _BuildDialogButton( strText, bActive, rgOptions )
 	if ( rgOptions.strClassName )
 		strClassName = rgOptions.strClassName;
 
-	var elButtonLabel = $J( '<span/>' ).text( strText );
+	var elButtonLabel = $J( '<span/>' ).html( strText );
 	var elButton = $J('<div/>', {'class': strClassName } ).append( elButtonLabel );
 	return elButton;
 }
@@ -340,8 +340,8 @@ function CModal( $Content, rgParams )
 
 
 	var _modal = this;
-	this.m_fnBackgroundClick = function() { if ( _modal.m_bDismissOnBackgroundClick ) { _modal.Dismiss(); } };
-	this.m_fnOnEscapeKeyPress = function( event ) { if ( event.which == 27 ) _modal.m_fnBackgroundClick(); };
+	this.m_fnBackgroundClick = function() { if ( _modal.BIsActiveModal() && _modal.m_bDismissOnBackgroundClick ) { _modal.Dismiss(); } };
+	this.m_fnOnEscapeKeyPress = function( event ) { if ( _modal.BIsActiveModal() && event.which == 27 ) _modal.m_fnBackgroundClick(); };
 	this.m_fnSizing = function() { _modal.AdjustSizing(); };
 
 	/* make sure the content is parented correctly */
@@ -446,7 +446,7 @@ CModal.prototype.Show = function()
 	this.m_$Content.find('img').load( this.m_fnSizing );
 
 	this.m_bVisible = true;
-	CModal.s_ActiveModal = this;
+	CModal.PushActiveModal( this );
 }
 
 CModal.prototype.Dismiss = function()
@@ -462,9 +462,6 @@ CModal.prototype.Dismiss = function()
 	{
 		$J(window).off( 'resize', null, this.m_fnSizing );
 	}
-	CModal.s_$Background.off( 'click.CModal', this.m_fnBackgroundClick );
-	$J(document).off( 'keyup.CModal', this.m_fnOnEscapeKeyPress );
-	CModal.HideModalBackground();
 
 	if ( this.m_fnOnDismiss )
 		this.m_fnOnDismiss();
@@ -475,8 +472,18 @@ CModal.prototype.Dismiss = function()
 		this.m_$Content = null;
 	}
 
-	if ( CModal.s_ActiveModal == this )
-		CModal.s_ActiveModal = null;
+	CModal.PopActiveModal( this );
+	if ( !CModal.s_rgModalStack.length )
+	{
+		CModal.s_$Background.off( 'click.CModal', this.m_fnBackgroundClick );
+		$J(document).off( 'keyup.CModal', this.m_fnOnEscapeKeyPress );
+		CModal.HideModalBackground();
+	}
+}
+
+CModal.prototype.BIsActiveModal = function()
+{
+	return CModal.s_rgModalStack.length && CModal.s_rgModalStack[ CModal.s_rgModalStack.length - 1 ] == this;
 }
 
 /* static */
@@ -501,11 +508,36 @@ CModal.HideModalBackground = function()
 	}
 }
 
-CModal.s_ActiveModal = null;
+CModal.s_rgModalStack = [];
 CModal.DismissActiveModal = function()
 {
-	if ( CModal.s_ActiveModal )
-		CModal.s_ActiveModal.Dismiss();
+	if ( CModal.s_rgModalStack.length )
+		CModal.s_rgModalStack[CModal.s_rgModalStack.length-1].Dismiss();
+}
+
+CModal.PushActiveModal = function( Modal )
+{
+	for ( var i = 0; i < CModal.s_rgModalStack.length; i++ )
+	{
+		// push below background
+		CModal.s_rgModalStack[i].m_$Content.css( 'z-index', 899 );
+	}
+	CModal.s_rgModalStack.push( Modal );
+}
+
+CModal.PopActiveModal = function( Modal )
+{
+	for ( var i = 0; i < CModal.s_rgModalStack.length; i++ )
+	{
+		if ( CModal.s_rgModalStack[i] == Modal )
+		{
+			CModal.s_rgModalStack.splice( i, 1 );
+			break;
+		}
+	}
+
+	if ( CModal.s_rgModalStack.length )
+		CModal.s_rgModalStack[ CModal.s_rgModalStack.length - 1 ].m_$Content.css( 'z-index', 1000 );
 }
 
 // this will set the right headers for a cross-domain request to community
@@ -895,11 +927,21 @@ function InitEmoticonHovers()
 		{
 			return $Element.data('emoticon');
 		}
-		else
+		else if ( $Element.attr( 'src' ) )
 		{
 			var rgMatches = $Element.attr( 'src' ).match( 'emoticon/(.*)$' );
 			if ( rgMatches && rgMatches[1] )
-				return rgMatches[1];
+			{
+				var strEmoticon = rgMatches[1];
+				if ( strEmoticon.length > 1 )
+				{
+					if ( strEmoticon[0] == ':' )
+						strEmoticon = strEmoticon.substr( 1 );
+					if ( strEmoticon[ strEmoticon.length - 1 ] == ':' )
+						strEmoticon = strEmoticon.substr( 0, strEmoticon.length - 1 );
+				}
+				return strEmoticon;
+			}
 		}
 
 		return null;
