@@ -1,1 +1,299 @@
-<html><head><title>Test</title></head><body><h1>Hello, world!</h1></body></html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Free to Play: The Movie</title>
+        <meta name="description" content="Free to Play movie examines the life of three Dota 2 players competing at the International">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="http://media.steampowered.com/apps/freetoplay/css/normalize.css">
+        <link rel="stylesheet" href="http://media.steampowered.com/apps/freetoplay/css/main_v2.css">
+        <script src="http://media.steampowered.com/apps/freetoplay/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+        <script src="http://media.steampowered.com/apps/dota2/javascript/static/jquery-1.7.1.min.js?v=252" type="text/javascript"></script>
+        <script src="http://media.steampowered.com/apps/dota2/javascript/static/jquery.cycle.all.js?v=252" type="text/javascript"></script>
+
+        <script>
+            $(document).ready(function() {
+               $('#image_container').cycle({
+                        fx:     'fade', 
+                        speed:   300, 
+                        fit:     1, 
+                        next:   '#next', 
+                        prev:   '#prev', 
+                        pause:   1,
+                        slideResize: 0,
+                        containerResize: 0
+                    });
+
+               $('#image_container').cycle('pause');
+            });
+        
+            // keyboard controls
+            $(document.documentElement).keyup(function (e) {
+                if (e.keyCode == 39)
+                {        
+                   $('#image_container').cycle('next');
+                }
+
+                if (e.keyCode == 37)
+                {
+                    $('#image_container').cycle('prev');
+                }
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+            <!-- facebook like -->
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            
+           
+            
+            <div id="video_background" class="">
+                <img id="logo" src="http://media.steampowered.com/apps/freetoplay/img/logo.png"/>
+                
+                <!-- countdown -->
+                <div id="countdown">
+                    <img id="coming_soon" src="http://media.steampowered.com/apps/freetoplay/img/coming_soon.png"/>
+                    
+                    <img class="digits" id="days0" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="digits" id="days1" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="time_unit" src="http://media.steampowered.com/apps/freetoplay/img/days.png" />
+
+                    <img class="digits" id="hours0" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="digits" id="hours1" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="time_unit" src="http://media.steampowered.com/apps/freetoplay/img/hours.png" />
+
+                    <img class="digits" id="minutes0" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="digits" id="minutes1" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="time_unit" src="http://media.steampowered.com/apps/freetoplay/img/minutes.png" />
+
+                    <img class="digits" id="seconds0" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="digits" id="seconds1" src="http://media.steampowered.com/apps/freetoplay/img/digits/blank.png"/>
+                    <img class="time_unit" src="http://media.steampowered.com/apps/freetoplay/img/seconds.png" />
+                </div>
+
+                <video id="loop_ftp" preload="none" autoplay="true" loop="loop" volume="0">   
+                    <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.webmsd.webm" type="video/webm">
+                    <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.oggtheora.ogv" type="video/ogg">        
+                    <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.mp4" type="video/mp4">       
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/fallback_bg.jpg" />
+                </video>
+
+                <!-- navigation -->
+                 <div id="nav">
+                    <a id="nav_trailer" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
+                    <a id="nav_trailer_small" class="" href="http://www.youtu.be/R-RKqGaNq-Y/"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
+
+                    <a id="nav_premiere" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_premiere.png"/></a>
+                    <div style="clear:both"></div>
+
+                    <a id="nav_bios" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_bios.png"/></a>
+                    <a id="nav_about" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_about.png"/></a>
+                    <div style="clear:both"></div>
+                    
+                    <a id="nav_reviews" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_reviews.png"/></a>
+                    <a id="nav_gallery" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_gallery.png"/></a>
+                    <a id="nav_news" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_news.png"/></a>   
+                </div>
+                
+                <!-- footer -->
+                 <footer>
+                    <a id="footer_imdb" class="footer_link" href="http://www.imdb.com/title/tt3203290/"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_imdb.png"/></a>
+                    <a id="footer_dota2" class="footer_link" href="http://store.steampowered.com/app/570/"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_dota2.png"/></a>
+                    <a id="footer_contact" class="footer_link" href="mailto:freetoplaythemovie@valvesoftware.com"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_contact.png"/></a>
+                    <a id="footer_twitter" class="footer_link" href="https://twitter.com/FreeToPlayMovie"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_twitter.png"/></a>
+                    <a id="footer_facebook"><div  class="fb-like footer_link" data-href="https://www.facebook.com/freetoplaymovie" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></a>
+                    <a id="footer_valve" class="footer_link" href="http://www.valvesoftware.com"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_valve_logo.png"/></a>
+                    <a id="footer_sound_toggle" class="footer_link"><img src="http://media.steampowered.com/apps/freetoplay/img/sound_off.png"/></a>
+                    <span id="language_wrapper">
+                        <a id="footer_language" class="footer_link">language</a>
+                        <div id="language_selector">
+                            <a href="http://www.freetoplaythemovie.com/">english</a>
+                            <a href="http://www.freetoplaythemovie.com/de/">deutsch</a>
+                            <a href="http://www.freetoplaythemovie.com/fr/">français</a>
+                            <a href="http://www.freetoplaythemovie.com/es/">español</a>
+                            <a href="http://www.freetoplaythemovie.com/ru/">русский</a>
+                            <a href="http://www.freetoplaythemovie.com/sc/">简体中文</a>
+                            <a href="http://www.freetoplaythemovie.com/br/">português-brasil</a>
+                            <a href="http://www.freetoplaythemovie.com/ko/">한국어</a>
+                        </div>
+                    </span>
+                </footer>
+
+            </div>
+                
+           
+            <!-- trailer -->
+            <div id="trailer" class="content trailer_container">
+                <a class="close_box outside"></a>
+                <div id="trailer_container">
+                   <object width="768" height="432" id="trailer_video">
+                        <param name="movie" value="//www.youtube.com/v/R-RKqGaNq-Y?version=3&amp;enablejsapi=1"></param>
+                        <param name="allowFullScreen" value="true"></param>
+                        <param name="allowscriptaccess" value="always"></param>
+                        <param name="modestbranding" value="1"></param>
+                        <param name="rel" value="0"></param>
+                        <embed  id="trailer_video" src="//www.youtube.com/v/R-RKqGaNq-Y?version=3&amp;enablejsapi=1&modestbranding=1&rel=0" type="application/x-shockwave-flash" width="768" height="432" allowscriptaccess="always" allowfullscreen="true"></embed>
+                    </object>
+                </div>
+            </div>
+            
+            <!-- premiere -->
+            <div id="premiere" class="content content_container">
+                <a class="close_box"></a>
+                <img id="banner_premiere" src="http://media.steampowered.com/apps/freetoplay/img/banner_premiere.png" />
+                <div id="premeire_copy">
+                    <div class="premiere_date">Tuesday, March 18th, 2014</div>
+                    <div class="premiere_time">8:00pm (PDT)</div>
+                    <div class="address">
+                        <span class="bold">The Castro Theatre</span><br/>
+                        429 Castro Street<br/>
+                        San Francisco, CA 94114
+                    </div>
+                    <p class="ticket_info">Please click here for <a href="http://freetoplaythemovie.eventbrite.com/">ticket info</a></p>
+                </div>
+            </div>
+            
+            <!-- news -->
+            <div id="news" class="content content_container">
+                <a class="close_box"></a>
+                <img id="banner_news" src="http://media.steampowered.com/apps/freetoplay/img/banner_news.png"/>
+                <h2>Watch “Free to Play” on Steam</h2>
+                <p>Free to Play will be available for free on Steam March 19th, 2014!
+                
+                <h2>The Free to Play Pack</h2>
+                <p>The Free to Play Pack will also be available for purchase on Steam and the Dota 2 Store, and 25% of the sales will be distributed to the players featured in the film as well as the contributors.  The Free to Play Pack will include the following:</p>
+
+                <h2>Dota 2 In-Game Items</h2>
+                <img id="item_sets_promo" src="http://media.steampowered.com/apps/freetoplay/img/Item_sets_promo.png"/>
+                <ul>
+                    <li><span class="bold">Fear’s Sven Set</span> – Jeremy Klein, Ziedrich</li>
+                    <li><span class="bold">hyhy’s Doom Set</span> – Vermillion Wlad</li>
+                    <li><span class="bold">Dendi’s Pudge Set</span> – Danidem, Bronto ϟ Thunder</li>
+                    <li><span class="bold">Free to Play Wards</span> – Created by Valve</li>
+                    <li><span class="bold">Free to Play HUD</span> – Created by Valve</li>
+                    <li><span class="bold">Free to Play Courier</span> – Created by Valve</li>
+                </ul>
+                <p>Items will be available on March 19th, 2014 at the <a href="http://www.dota2.com/store">Dota 2 Store</a> and <a href="http://store.steampowered.com/app/245550">Steam</a></p>
+            </div>
+            
+            <!-- about the film -->
+            <div id="about" class="content content_container">
+                <a class="close_box"></a>
+                <img id="banner_about" src="http://media.steampowered.com/apps/freetoplay/img/banner_about.png"/>
+                <p class="about_copy"><span class="bold">FREE TO PLAY</span> is a feature-length documentary that follows three professional gamers from around the world as they compete for a million dollar prize in the first Dota 2 International Tournament. In recent years, E Sports has surged in popularity to become one of the most widely-practiced forms of competitive sport today. A million dollar tournament changed the landscape of the gaming world and for those elite players at the top of their craft, nothing would ever be the same again. Produced by Valve, the film documents the challenges and sacrifices required of players to compete at the highest level.</p>
+            </div>
+            
+            <!-- reviews -->
+            <div id="reviews" class="content content_container">
+                <a class="close_box"></a>
+                <img id="banner_reviews" src="http://media.steampowered.com/apps/freetoplay/img/banner_reviews.png"/>
+                <div class="quote quote_spike_tv">A fascinating. eye-opening look at how video games are becoming the next-generation of sports.</div>
+                <div class="reviewer">—Geoff Keighley, <span class="bold">Spike TV</span></div>
+
+                <div class="quote quote_indie_game">Beautifully captured and wonderfully executed; Free to Play is a film about heart, passion and what drives us. Surely, it will become the definitive E Sports documentary, but really, it resonates well beyond.  Free to Play is a remarkable film. </div>
+                <div class="reviewer">—James Swirsky and Lisanne Pajot, <span class="bold">Indie Game: The Movie</span></div>
+
+                <div class="quote quote_wired">A fascinating an humanising insight into the world of E Sports. It documents a tipping point.</div>
+                <div class="reviewer">—Philippa Warr, <span class="bold">Wired.co.uk</span></div>
+            </div>
+
+            <!-- image gallery -->
+            <div id="gallery" class="content">
+                <a class="close_box close_box_white gallery_ui_element"></a>
+
+                 <div id="pager_container">       
+                    <div id="next" class="gallery_ui_element" href=""></div>
+                    <div id="prev" class="gallery_ui_element" href=""></div>
+                </div>
+
+                <div id="image_container">
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_dendi_001.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_dendi_011.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_dendi_17.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_dendi_027.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_fear_10.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_fear_012.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_fear_14.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_fear_16.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_hyhy_01.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_hyhy_03.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_hyhy_004.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_hyhy_011.jpg" />
+
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/backstory_zhou_12.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day02_07.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day03_04.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day03_17.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day04_05.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day04_16.jpg" />
+
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day04_21.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day04_29.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day05_11.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day05_13.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day06_09.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day06_20.jpg" />
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/gallery/tourney_day06_23.jpg" />
+                </div>
+               
+            </div>   
+            
+                 
+
+            <!-- player bios -->
+            <div id="bios" class="content content_container">
+                 <div id="sub_nav_bios">
+                    <a id="dendi" class=""></a>
+                    <a id="hyhy" class=""></a>
+                    <a id="fear" class=""></a>
+                    
+                </div>
+                <a class="close_box"></a>
+                <div class="bio" id="bio_dendi">
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/dendi.png" />
+                        <p>Born in L’viv, Ukraine, Dendi began playing video games at a young age after his older brother received a PC from their grandmother.  As he had with his other early interests in life, music and dancing, Dendi picked up games very quickly and was soon excelling far beyond his age bracket.  The prodigious dexterity earned through long hours of piano study was soon put to use in local gaming tournaments where he earned a reputation as a dominant and creative competitor.  Though he was successful at other games, he knew he found his calling when he stumbled upon Dota.</p>
+                </div>
+
+                <div class="bio" id="bio_hyhy">
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/hyhy.png" />
+                    <p>If you’ve followed the development of Singaporian Dota, then Benedict “HyHy” Lim is a name that is familiar to you. Born in Singapore on 1990, HyHy’s rise to prominence began when he and teammates represented Singapore in the 2007 Asian Cyber Games.  The following year, he was victorious in the Electronic Sports World Cup.  Since then his body of work has become a pillar in the Dota 2 community. Never one to shy away from controversy, HyHy speaks his mind, and has made a name for himself as one of professional gaming’s most driven and versatile players.</p>
+                </div>
+
+                <div class="bio" id="bio_fear">
+                    <img src="http://media.steampowered.com/apps/freetoplay/img/fear.png" />
+                    <p>Arguably among the most formidable Dota 2 players to ever come out of the Western Hemisphere, Clinton “Fear” Loomis, has never had an easy path in front of him. Ever the underdog, he’s used a balance of raw skill and hard-earned experience to overcome the isolation that US players often face when they compete at the highest level. Born 1988, his work ethic and dedication have taken him from Medford, Oregon to Europe, to China, and finally to the Dota 2 International, the tournament with the largest prize pool in the history of video games.</p>
+                </div>
+            </div>
+
+           
+        <div id="darkbox"></div>
+        
+
+        <script src="http://media.steampowered.com/apps/freetoplay/js/main_v1.2.js"></script>
+
+
+    </body>
+</html>
