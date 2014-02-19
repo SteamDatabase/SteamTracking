@@ -32,10 +32,22 @@ $(function() {
 
             if ( !response['success'] )
             {
-                alert( "Unable to load list! Error: " + response['data']['error'] );
+                if ( window.steamremotecontrol )
+                {
+                    window.location = 'steam-remote-callback://error/Unable to load games list./' + response['data']['error'];
+                }
+                else
+                {
+                    alert("Failed to load games list!");
+                }
             }
             else
             {
+                if ( window.steamremotecontrol )
+                {
+                    window.location = 'steam-remote-callback://complete-loading';
+                }
+
                 var data = response['data'];
                 var appids = Object.keys(data);
                 if ( appids.length < 1 )
@@ -134,7 +146,7 @@ $(function() {
                             .always( function () { 
                                 if ( window.steamremotecontrol )
                                 {
-                                    window.location = "steam-remote-callback://dismiss";
+                                    window.location = "steam-remote-callback-dismiss://log-event/GameLaunch/appid/" + appid;
                                 }
                             } )
                     } );
