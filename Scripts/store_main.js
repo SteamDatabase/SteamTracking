@@ -766,40 +766,52 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 }
 
 
-Event.observe( window, 'load', function() {
+Event.observe( document, 'dom:loaded', function() {
 	InstrumentLinks();
+
+	// add a jquery extension to handle our SNR stuff (we do this on load because jquery is included after this file)
+	jQuery.fn.InstrumentLinks = function()
+	{
+		if ( this.is('a') )
+			this.each( function() { InstrumentLink( this ); } );
+		else
+			this.find( 'a' ).each( function() { InstrumentLink( this ); } );
+
+		return this;
+	};
 } );
 
 function InstrumentLinks()
 {
-	$$('A').each(
-		function ( link ) {
-			if ( link.bIsInstrumented )
-				return;
+	$$('A').each( InstrumentLink );
+}
 
-			var bIsInstrumented = false;
-			//  if the anchor uses javascript, then we don't want to monkey with any embedded URL's
-			if ( !link.href.match( /^javascript/ ) )
-		    {
-                var navinfo = link.href.match( /[\?&]snr=[^&]*(&|$)/ );
-                if ( navinfo  )
-                {
-                    bIsInstrumented = true;
-                    Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
-                }
-                var outcinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
-                if ( outcinfo && !bIsInstrumented )
-                {
-                    bIsInstrumented = true;
-                    Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
-                }
-                if ( bIsInstrumented )
-                {
-                    link.bIsInstrumented = bIsInstrumented;
-                }
-		    }
+function InstrumentLink( link )
+{
+	if ( link.bIsInstrumented )
+		return;
+
+	var bIsInstrumented = false;
+	//  if the anchor uses javascript, then we don't want to monkey with any embedded URL's
+	if ( !link.href.match( /^javascript/ ) )
+	{
+		var navinfo = link.href.match( /[\?&]snr=[^&]*(&|$)/ );
+		if ( navinfo  )
+		{
+			bIsInstrumented = true;
+			Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
 		}
-	);
+		var outcinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
+		if ( outcinfo && !bIsInstrumented )
+		{
+			bIsInstrumented = true;
+			Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
+		}
+		if ( bIsInstrumented )
+		{
+			link.bIsInstrumented = bIsInstrumented;
+		}
+	}
 }
 
 function InstrumentedLinkOnClick( event, link )
@@ -1147,6 +1159,7 @@ function SearchTimeout( elem, value, elemSuggestionCtn, elemSuggestions )
 				parameters: parameters,
 				method: 'GET',
 				onComplete: function() {
+					$J(elemSuggestions).InstrumentLinks();
 					elemSuggestions.select('a.match').each( function (e) { e.observe( 'mouseover', SearchSuggestOnMouseOver.bindAsEventListener( null, e ) ); } );
 					ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
 				}

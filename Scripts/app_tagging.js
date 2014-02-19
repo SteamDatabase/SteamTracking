@@ -11,7 +11,7 @@ function TagLink( tag, language )
 	return url;
 }
 
-function InitAppTagModal( appid, rgAppTags, rgUserTags )
+function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR )
 {
 	var $AppTagModal = $J('#app_tagging_modal');
 	var $AppTagForm = $J('#app_tag_form');
@@ -77,15 +77,21 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 		{
 			$Tag.addClass( 'popular' );
 
-			var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' ) } );
-			BindStoreTooltip( $Report );
-			fnSetReportTooltip( $Report );
-			$Tag.append( $Report );
+			// only if logged in
+			if ( $YourTags.length )
+			{
+				var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' ) } );
+				BindStoreTooltip( $Report );
+				fnSetReportTooltip( $Report );
+				$Tag.append( $Report );
 
-			$Report.click( function() { if ( !$Report.hasClass('reported') ) { fnReportTag( tag ); } } );
+				$Report.click( function() { if ( !$Report.hasClass('reported') ) { fnReportTag( tag ); } } );
+			}
 		}
 
-		$Tag.append( $J('<a/>', {'class': 'app_tag', 'href': TagLink( tag ) } ).text( tag ) );
+		var $Link = $J('<a/>', {'class': 'app_tag', 'href': TagLink( tag ) + '?snr=' + strTagLinkSNR } ).text( tag );
+		$Link.InstrumentLinks();
+		$Tag.append( $Link );
 
 		return $Tag;
 	};
@@ -226,7 +232,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags )
 				if ( rgUserTags[i].is_reported )
 					continue;
 
-				var $AppTag = $J('<a/>', {'class': 'app_tag', 'href': TagLink( rgUserTags[i].name ) }).text( rgUserTags[i].name );
+				var $AppTag = $J('<a/>', {'class': 'app_tag', 'href': TagLink( rgUserTags[i].name ) + '?snr=' + strYourTagSNR }).text( rgUserTags[i].name );
+				$AppTag.InstrumentLinks();
 				$YourTagsOnPage.prepend( $AppTag, ' ' );
 			}
 			AdjustVisibleAppTags( $YourTagsOnPage );
@@ -807,6 +814,7 @@ function InitTagBrowsePage( strTagLanguage, strCC )
 				name: strTagName
 			}).done( function ( html ) {
 				$Element.html( html );
+				$Element.InstrumentLinks();
 			}).fail( function () {
 				$GamesElement.find( '.browse_tag_loading').text( 'Sorry, there was a problem loading items.  Please try again later.' );
 			});
