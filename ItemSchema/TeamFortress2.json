@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.7596ac43b0a3c23c453355927023ef79af5e71a9.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.ed832c7f585fdf29eb735392c77657fe68ce6731.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -23168,7 +23168,7 @@
 				"name": "Unarmed Combat",
 				"defindex": 572,
 				"item_class": "tf_weapon_bat_fish",
-				"item_type_name": "TF_Weapon_Severed_Arm",
+				"item_type_name": "Severed Arm",
 				"item_name": "Unarmed Combat",
 				"item_description": "So nice of the Spy to lend an arm...",
 				"proper_name": false,
@@ -46971,6 +46971,218 @@
 				
 			},
 			{
+				"name": "The Baronial Bouncer",
+				"defindex": 1093,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Baronial Bouncer",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/soldier\/thief_soldier_helmet\/thief_soldier_helmet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/soldier\/thief_soldier_helmet\/thief_soldier_helmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_soldier_helmet.19e87a917c12365ef318154aeff6455cac84c32d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_soldier_helmet_large.d638dff5adb6ebd0371cc7b411ec5d0803f22748.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Cutthroat's Cloak",
+				"defindex": 1094,
+				"item_class": "tf_wearable",
+				"item_type_name": "Apparel",
+				"item_name": "Cutthroat's Cloak",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/thief_sniper_cape\/thief_sniper_cape.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/thief_sniper_cape\/thief_sniper_cape",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_cape.b2fa82a26e134ff86132bf762f33a01fe9c929a9.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_cape_large.bad40b941d5c73828a75c99f534bcb1f12e9ea5c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Dread Hiding Hood",
+				"defindex": 1095,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Dread Hiding Hood",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/sniper\/thief_sniper_hood\/thief_sniper_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/sniper\/thief_sniper_hood\/thief_sniper_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_hood.2dffa960e14a4a094005c44b4545ab31f4a57bcb.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_hood_large.635afbd63359fe606459bdce63fbee626554c802.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Garrett Badge",
+				"defindex": 1096,
+				"item_class": "tf_wearable",
+				"item_type_name": "Badge",
+				"item_name": "Garrett Badge",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/thief_badge\/thief_badge_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/thief_badge\/thief_badge",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_badge.7660d202e52f0ea5425725f75de8293f4642763b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_badge_large.30b901d0f23e24532b15d0b8c5a697c756c3b995.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "World Traveler",
 				"defindex": 1899,
 				"item_class": "tf_wearable",
@@ -47648,7 +47860,7 @@
 				"item_class": "map_token",
 				"item_type_name": "Map Stamp",
 				"item_name": "Map Stamp - Snakewater",
-				"item_description": "A Control Point Map\n\nMade by Toivo Sawen\n\nPurchasing this item directly supports the creator of the Snakewater community map.  Show your support today!",
+				"item_description": "A Control Point Map\n\nMade by Toivo 'chojje' Sawen\n\nPurchasing this item directly supports the creator of the Snakewater community map.  Show your support today!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
