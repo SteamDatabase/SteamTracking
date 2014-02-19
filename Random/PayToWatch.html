@@ -55,6 +55,7 @@
 
             });
 
+            $('#nav a').css('cursor','pointer');
         </script>
 
     </head>
@@ -298,7 +299,15 @@
         
 
         <script src="http://media.steampowered.com/apps/freetoplay/js/main_v1.2.js"></script>
+        <script>
+            $('div a.internal_link').bind( "touchstart", function(){
+                pageId = $(this).attr('id');
+                revealContent(pageId);
+                return false;
+            });
 
+            
+        </script>
 
     </body>
 </html>
