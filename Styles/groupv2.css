@@ -604,6 +604,7 @@ a.subtle:hover {
 .announcement_body {
 	line-height: 20px;
 	margin-bottom: 14px;
+	word-wrap: break-word;
 }
 
 .announcement_share {

@@ -545,6 +545,17 @@ var CInventory = Class.create( {
 			elTagCategory.appendChild( elTagCategoryLabel );
 
 			var rgCategoryTags = [];
+			//quickly determine the total number of valid tags
+			var cTagsTotal = 0;
+			for ( var sInternalName in rgCategory.tags )
+			{
+				if ( typeof sInternalName == 'string' )
+					cTagsTotal++;
+			}
+
+			var elTagCtn = elTagCategory;
+
+			var cTagsDisplayed = 0;
 			for( var sInternalName in rgCategory.tags )
 			{
 				if( !rgCategory.tags.hasOwnProperty( sInternalName ) )
@@ -598,7 +609,21 @@ var CInventory = Class.create( {
 
 				elTagDiv.appendChild( elTagFilter );
 				elTagDiv.appendChild( elTagLabel );
-				elTagCategory.appendChild( elTagDiv );
+
+				if ( ++cTagsDisplayed == 5 && cTagsTotal > 7 )
+				{
+					var elExpandTags = new Element( 'div',{'class': 'econ_tag_filter_collapsable_tags_showlink whiteLink' } );
+					var elCollapsedTagCtn = new Element( 'div', {'class': 'econ_tag_filter_collapsable_tags', style: 'display: none;' } );
+					elExpandTags.update( '+ Show more' );
+					Event.observe( elExpandTags, 'click', (function( elExpandLink, elDivToExpand ) { elExpandLink.hide(); new Effect.BlindDown( elDivToExpand, {duration: 0.25} ); } ).bind( null, elExpandTags, elCollapsedTagCtn ) );
+
+					elTagCtn.appendChild( elExpandTags );
+					elTagCtn.appendChild( elCollapsedTagCtn );
+
+					elTagCtn = elCollapsedTagCtn;
+				}
+
+				elTagCtn.appendChild( elTagDiv );
 			}
 
 			this.elTagContainer.appendChild( elTagCategory );
@@ -2296,8 +2321,13 @@ function BuildHover( prefix, item, owner )
 function PopulateDescriptions( elDescriptions, rgDescriptions )
 {
 	elDescriptions.update('');
-	if ( !rgDescriptions )
+	if ( !rgDescriptions || !rgDescriptions.length )
+	{
+		elDescriptions.hide();
 		return;
+	}
+
+	elDescriptions.show();
 	for ( var i = 0; i < rgDescriptions.length; i++ )
 	{
 		var description = rgDescriptions[i];
@@ -2352,8 +2382,10 @@ function PopulateActions( elActions, rgActions, item )
 		var action = rgActions[i];
 		if ( !action.link || !action.name )
 			continue;
-		var elAction = new Element( 'a', {'class': 'item_action', href: action.link.replace("%assetid%", item.id) } );
-		elAction.update( action.name );
+		var elAction = new Element( 'a', {'class': 'btn_small btn_grey_white_innerfade', href: action.link.replace("%assetid%", item.id) } );
+		var elSpan = new Element( 'span' );
+		elSpan.update( action.name );
+		elAction.appendChild( elSpan );
 		elActions.appendChild( elAction );
 	}
 	elActions.show();

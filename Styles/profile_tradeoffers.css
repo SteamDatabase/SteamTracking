@@ -18,11 +18,7 @@
 	color: #ffffff;
 	font-size: 17px;
 
-	margin-bottom: 12px;
-}
-
-.tradeoffer_message {
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 }
 
 .tradeoffer_items_ctn {
@@ -304,4 +300,40 @@ a.right_controls_large_block {
 
 div.gray_bevel.newurl_updated {
 	border-color: #5491cf;
+}
+
+
+.tradeoffer_message {
+	position: relative;
+	margin-bottom: 12px;
+	padding-left: 16px;
+}
+
+.quote
+{
+	padding: 13px 13px;
+	border: 1px solid #3c3d3e;
+	color: #d6d7d8;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 19px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.quote_arrow
+{
+	position: absolute;
+	width: 17px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/quotearrow_graybg_flipped.png);
+}
+
+
+.tradeoffer_message .quote_arrow
+{
+	left: 0;
+	top: 0;
 }
