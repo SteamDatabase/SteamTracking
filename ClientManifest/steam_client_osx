@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1392764255"
+	"version"		"1392853084"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -75,10 +75,10 @@
 	}
 	"remoteui_all"
 	{
-		"file"		"remoteui_all.zip.86ef05529c5e014a201134433d31a16a99eb5bae"
-		"checksum"		"86ef05529c5e014a201134433d31a16a99eb5bae"
-		"size"		"190651"
-		"zipvz"		"remoteui_all.zip.vz.7781169920e97282599daf939fa8088cf936637a_142600"
+		"file"		"remoteui_all.zip.8fea1acb91c78e46b8bbb1383e76714316310497"
+		"checksum"		"8fea1acb91c78e46b8bbb1383e76714316310497"
+		"size"		"190997"
+		"zipvz"		"remoteui_all.zip.vz.7fd71964e13c15aa7072e0f542067f12adbd8760_142855"
 	}
 	"public_all"
 	{
@@ -89,10 +89,10 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.d6c0dd69f529508ad5e96834dc717493bee61005"
-		"checksum"		"d6c0dd69f529508ad5e96834dc717493bee61005"
-		"size"		"30236412"
-		"zipvz"		"bins_osx.zip.vz.e4bef321995e89496e2a5dea66e463a6b7f39bd3_17211035"
+		"file"		"bins_osx.zip.1b3b8e5d72aded204d928cf4da0fa24f30b0f67f"
+		"checksum"		"1b3b8e5d72aded204d928cf4da0fa24f30b0f67f"
+		"size"		"30236580"
+		"zipvz"		"bins_osx.zip.vz.ae9720899ceb1f5ef998640dcc3ca81b401736f6_17196238"
 	}
 	"bins_codecs_osx"
 	{
@@ -136,14 +136,14 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.7e269a200477479173416399abb233505341448e"
-		"checksum"		"7e269a200477479173416399abb233505341448e"
-		"size"		"1203976"
-		"zipvz"		"steam_osx.zip.vz.30bed185e2af8aa2cef872d3289d4ff75915306c_919994"
+		"file"		"steam_osx.zip.96b6daa141407f782069c8ec5538dda5e0076c7f"
+		"checksum"		"96b6daa141407f782069c8ec5538dda5e0076c7f"
+		"size"		"1203971"
+		"zipvz"		"steam_osx.zip.vz.63e40f9ecf2b433c50c3d1d5c981790b06f145db_918768"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"6fa31c2495080229121d22e653886206f04859e294f02f1450c2cac9c543772e76ccd61298dda8609813d27d14905683ca1b3883ecfa9726eca6e8a44f18dcc79cb9a952ee97c60ac3241605dd97b3bfcbc059e46c6d1a16672fcfc74e0791e2c4e3ce6ce238d0d5aba69ce5772a36e074ddb56fd191521bea99404f845bebee"
+	"osx"		"4045cef0d8c6aea931ff1212281c78491e58df6fe1821a9e577fbf7d29b20c903db4fed611dbad06bbf23b97898da226a6c3977737b7bb645e3973a0705097a83636000c25092d8dc809003695e8871a84f28b5bb59f3bf43d1aefde3ba0abb1d1b6d6b6ed7981bd67c5cc17f5528f996dc081eee8482cae3bff37219b5bd772"
 }
