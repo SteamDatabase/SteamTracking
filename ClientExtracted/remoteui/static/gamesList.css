@@ -46,3 +46,9 @@
 	font-size: 14px;
 	font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin", Helvetica, Arial, Verdana, sans-serif
 }
+
+#gamesListNoUser {
+	font-size: 16px;
+	margin-top: 16px;
+	margin-left: 16px;
+}
