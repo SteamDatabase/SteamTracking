@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.733e2da67676166155aeb29f689428e5c6b4bc8b.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.28130e51c824adf1b42966b1fc7dd8726083c649.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2484,6 +2484,271 @@
 				
 			},
 			{
+				"name": "Community Season Three Spring 2014",
+				"defindex": 1023,
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Phoenix Pass",
+				"item_description": "Grants access to Operation Phoenix, which consists of access to community maps, exclusive items, and a record of your competitive stats.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_phoenix_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_pass.ef3b4180e52d2d4a4cbb9fbe2df440b1ee8f0dca.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Community Season Three Spring 2014 Coin 1",
+				"defindex": 1024,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Phoenix Challenge Coin",
+				"item_description": "Participated in Operation Phoenix.\nPlay in Operation Phoenix and win Operation Phoenix Competitive Matches to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_phoenix_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_bronze.b95d670bb428fa933b93e903feeb338728e1cd8d.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_bronze_large.a370356824b271e2691ec6495e91e66e89567ceb.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Three Spring 2014 Coin 2",
+				"defindex": 1025,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Phoenix Coin",
+				"item_description": "Participated in Operation Phoenix.\nPlay in Operation Phoenix and win Operation Phoenix Competitive Matches to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_phoenix_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_silver.b5c4fb2070286c6c3682345dcdbf17dadd16e1af.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_silver_large.0340dbf0af85f9f4c4bf36b3c605c273d9f80a26.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Three Spring 2014 Coin 3",
+				"defindex": 1026,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Phoenix Coin",
+				"item_description": "Participated in Operation Phoenix.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/operation_phoenix_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_gold.44da84b8da10c864f7eea9b2d0f9c780184ec30e.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/operation_phoenix_gold_large.7d5441fcfab0ce9df406b6e36a16ef1d5b884cf0.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "match wins",
+						"class": "match_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					}
+				]
+				
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 1200,
 				"item_class": "tool",
@@ -2802,6 +3067,38 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Community Case Key 2",
+				"defindex": 1303,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Operation Phoenix Case Key",
+				"item_description": "This key only opens Operation Phoenix Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/crate_key_community_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/crate_key_community_2.d1bb59f3fd96f4332979690c08dc314f74d484de.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_2",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -3136,6 +3433,43 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 10
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_2",
+				"defindex": 4011,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Operation Phoenix Weapon Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_community_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_community_2.49174abddcccb6519b83d27d0cff476e1c44cc57.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_2",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 11
 					}
 				]
 				
@@ -3963,7 +4297,7 @@
 				"attribute_class": "upgrade_threshold_wins",
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "custom name attr",
@@ -4425,6 +4759,26 @@
 					"weapon_awp",
 					"weapon_m4a1",
 					"weapon_sawedoff"
+				]
+				
+			},
+			{
+				"item_set": "set_community_2",
+				"name": "The Phoenix Collection",
+				"items": [
+					"weapon_ump45",
+					"weapon_negev",
+					"weapon_tec9",
+					"weapon_mag7",
+					"weapon_mac10",
+					"weapon_sg556",
+					"weapon_famas",
+					"weapon_usp_silencer",
+					"weapon_ak47",
+					"weapon_p90",
+					"weapon_nova",
+					"weapon_awp",
+					"weapon_aug"
 				]
 				
 			},
