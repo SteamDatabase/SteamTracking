@@ -963,6 +963,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_hy_ak47lam_blue_heavy"
 			}
+			"459880"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_cobra_light"
+			}
+			"459881"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_cobra_medium"
+			}
+			"459882"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_cobra_heavy"
+			}
 			"524328"
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_hy_copperhead_light"
@@ -1059,6 +1071,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_an_navy_bravo_heavy"
 			}
+			"525408"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_cu_aug_chameleonaire_light"
+			}
+			"525409"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_cu_aug_chameleonaire_medium"
+			}
+			"525410"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_cu_aug_chameleonaire_heavy"
+			}
 			"589944"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_sp_snake_light"
@@ -1154,6 +1178,18 @@
 			"590862"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_cobra_heavy"
+			}
+			"590940"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_asimov_light"
+			}
+			"590941"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_asimov_medium"
+			}
+			"590942"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_asimov_heavy"
 			}
 			"655448"
 			{
@@ -1262,6 +1298,18 @@
 			"656402"
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_cu_famas_pulse_heavy"
+			}
+			"656512"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_an_famas_sgt_light"
+			}
+			"656513"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_an_famas_sgt_medium"
+			}
+			"656514"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_an_famas_sgt_heavy"
 			}
 			"720920"
 			{
@@ -1695,6 +1743,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_aa_fade_metallic_heavy"
 			}
+			"1115248"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_redhot_light"
+			}
+			"1115249"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_redhot_medium"
+			}
+			"1115250"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_redhot_heavy"
+			}
 			"1245452"
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_am_slither_p90_light"
@@ -1815,6 +1875,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_sp_mesh_hot_and_cold_heavy"
 			}
+			"1246316"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_trigon_light"
+			}
+			"1246317"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_trigon_medium"
+			}
+			"1246318"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_trigon_heavy"
+			}
 			"1572924"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_hy_gelpen_light"
@@ -1886,6 +1958,18 @@
 			"1573638"
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_sp_skull_diagram_bravo_heavy"
+			}
+			"1573988"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump_corporal_light"
+			}
+			"1573989"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump_corporal_medium"
+			}
+			"1573990"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump_corporal_heavy"
 			}
 			"1638568"
 			{
@@ -2187,6 +2271,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_sp_hazard_bravo_heavy"
 			}
+			"1770636"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_heaven_light"
+			}
+			"1770637"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_heaven_medium"
+			}
+			"1770638"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_heaven_heavy"
+			}
 			"1835120"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_light"
@@ -2222,6 +2318,18 @@
 			"1835970"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_hy_varicamo_desert_heavy"
+			}
+			"1836148"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_turq_terrain_light"
+			}
+			"1836149"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_turq_terrain_medium"
+			}
+			"1836150"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_turq_terrain_heavy"
 			}
 			"1900664"
 			{
@@ -2438,6 +2546,18 @@
 			"1967170"
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_am_fluted_tec9_heavy"
+			}
+			"1967236"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_cu_tec9_sandstorm_light"
+			}
+			"1967237"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_cu_tec9_sandstorm_medium"
+			}
+			"1967238"
+			{
+				"icon_path"		"econ/default_generated/weapon_tec9_cu_tec9_sandstorm_heavy"
 			}
 			"2097236"
 			{
@@ -2823,6 +2943,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_nova_cu_skull_nova_heavy"
 			}
+			"2294904"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_antique_light"
+			}
+			"2294905"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_antique_medium"
+			}
+			"2294906"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_cu_nova_antique_heavy"
+			}
 			"2359356"
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_hy_gelpen_light"
@@ -3147,6 +3279,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_aq_damascus_sg553_heavy"
 			}
+			"2557052"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_pulse_light"
+			}
+			"2557053"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_pulse_medium"
+			}
+			"2557054"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_cu_sg553_pulse_heavy"
+			}
 			"2621544"
 			{
 				"icon_path"		"econ/default_generated/weapon_ssg08_sp_short_tape_light"
@@ -3374,6 +3518,18 @@
 			"3998806"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_aq_usp_stainless_heavy"
+			}
+			"3998856"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_elegant_light"
+			}
+			"3998857"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_elegant_medium"
+			}
+			"3998858"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_elegant_heavy"
 			}
 			"4128816"
 			{
@@ -4297,6 +4453,74 @@
 			"attributes"
 			{
 				"season access"		"1"
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+					"force_gc_to_generate"		"1"
+				}
+				"match wins"
+				{
+					"attribute_class"		"match_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive minutes played"
+				{
+					"attribute_class"		"competitive_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive wins"
+				{
+					"attribute_class"		"competitive_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive kills"
+				{
+					"attribute_class"		"competitive_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 3k"
+				{
+					"attribute_class"		"competitive_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 4k"
+				{
+					"attribute_class"		"competitive_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 5k"
+				{
+					"attribute_class"		"competitive_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive hsp"
+				{
+					"attribute_class"		"competitive_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive mvps"
+				{
+					"attribute_class"		"competitive_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"season3_coin"
+		{
+			"prefab"		"collectible_untradable"
+			"attributes"
+			{
+				"season access"		"2"
 				"minutes played"
 				{
 					"attribute_class"		"minutes_played"
@@ -8237,6 +8461,79 @@
 				"pedestal display model"		"models/inventory_items/maptoken_siege.mdl"
 			}
 		}
+		"1023"
+		{
+			"name"		"Community Season Three Spring 2014"
+			"first_sale_date"		"2014/02/17"
+			"prefab"		"csgo_tool"
+			"item_type_name"		"#CSGO_Type_Ticket"
+			"item_name"		"#CSGO_Ticket_CommunitySeasonThreeSpring2014"
+			"item_description"		"#CSGO_Ticket_CommunitySeasonThreeSpring2014_Desc"
+			"image_inventory"		"econ/status_icons/operation_phoenix_pass"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"tool"
+			{
+				"type"		"season_pass"
+				"use_string"		"#ConsumeItem"
+			}
+			"attributes"
+			{
+				"season access"		"2"
+				"referenced item def"		"1024"
+			}
+		}
+		"1024"
+		{
+			"name"		"Community Season Three Spring 2014 Coin 1"
+			"prefab"		"season3_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin1"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin1_Desc"
+			"image_inventory"		"econ/status_icons/operation_phoenix_bronze"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"attributes"
+			{
+				"upgrade threshold"		"600"
+				"upgrade threshold wins"		"5"
+				"referenced item def"		"1025"
+				"pedestal display model"		"models/inventory_items/phoenix_bronze_01.mdl"
+			}
+		}
+		"1025"
+		{
+			"name"		"Community Season Three Spring 2014 Coin 2"
+			"prefab"		"season3_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin2"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin2_Desc"
+			"image_inventory"		"econ/status_icons/operation_phoenix_silver"
+			"min_ilevel"		"2"
+			"max_ilevel"		"2"
+			"attributes"
+			{
+				"upgrade threshold"		"1800"
+				"upgrade threshold wins"		"15"
+				"referenced item def"		"1026"
+				"pedestal display model"		"models/inventory_items/phoenix_silver_01.mdl"
+			}
+		}
+		"1026"
+		{
+			"name"		"Community Season Three Spring 2014 Coin 3"
+			"prefab"		"season3_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin3"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonThreeSpring2014_Coin3_Desc"
+			"image_inventory"		"econ/status_icons/operation_phoenix_gold"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/phoenix_gold_01.mdl"
+			}
+		}
 		"1200"
 		{
 			"name"		"Name Tag"
@@ -8425,6 +8722,19 @@
 					"value"		"8"
 					"force_gc_to_generate"		"1"
 				}
+			}
+		}
+		"1303"
+		{
+			"name"		"Community Case Key 2"
+			"item_name"		"#CSGO_community_crate_key_2"
+			"item_description"		"#CSGO_community_crate_key_2_desc"
+			"first_sale_date"		"2014/2/19"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_2"
+			"tool"
+			{
+				"restriction"		"community_case_2"
 			}
 		}
 		"4001"
@@ -8637,6 +8947,30 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"10"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"4011"
+		{
+			"item_name"		"#CSGO_crate_community_2"
+			"name"		"crate_community_2"
+			"image_inventory"		"econ/weapon_cases/crate_community_2"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1303"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"community_case_2"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"11"
 					"force_gc_to_generate"		"1"
 				}
 			}
@@ -9585,6 +9919,7 @@
 			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"positive"
+			"stored_as_integer"		"1"
 		}
 		"111"
 		{
@@ -14257,6 +14592,286 @@
 			"wear_remap_min"		"0.060000"
 			"wear_remap_max"		"0.580000"
 		}
+		"279"
+		{
+			"name"		"cu_awp_asimov"
+			"description_string"		"#PaintKit_cu_m4_asimov"
+			"description_tag"		"#PaintKit_cu_m4_asimov_tag"
+			"style"		"7"
+			"pattern"		"zone9_awp"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"180"
+			"phongintensity"		"255"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.180000"
+			"wear_remap_max"		"1.000000"
+		}
+		"280"
+		{
+			"name"		"cu_aug_chameleonaire"
+			"description_string"		"#PaintKit_cu_aug_chameleonaire"
+			"description_tag"		"#PaintKit_cu_aug_chameleonaire_tag"
+			"style"		"7"
+			"pattern"		"Chameleonaire"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"33"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"281"
+		{
+			"name"		"cu_ump_corporal"
+			"description_string"		"#PaintKit_cu_ump_corporal"
+			"description_tag"		"#PaintKit_cu_ump_corporal_tag"
+			"style"		"7"
+			"pattern"		"corporal_ump-45"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"50"
+			"phongintensity"		"100"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.050000"
+			"wear_remap_max"		"0.750000"
+		}
+		"282"
+		{
+			"name"		"cu_ak47_cobra"
+			"description_string"		"#PaintKit_cu_awp_cobra"
+			"description_tag"		"#PaintKit_cu_awp_cobra_tag"
+			"style"		"7"
+			"pattern"		"ElegantREDV1.1"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"150"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.100000"
+			"wear_remap_max"		"0.700000"
+		}
+		"283"
+		{
+			"name"		"cu_p90_trigon"
+			"description_string"		"#PaintKit_cu_p90_trigon"
+			"description_tag"		"#PaintKit_cu_p90_trigon_tag"
+			"style"		"7"
+			"pattern"		"faceit_p90"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"200"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.080000"
+			"wear_remap_max"		"0.750000"
+		}
+		"284"
+		{
+			"name"		"cu_mac10_redhot"
+			"description_string"		"#PaintKit_cu_mac10_redhot"
+			"description_tag"		"#PaintKit_cu_mac10_redhot_tag"
+			"style"		"7"
+			"pattern"		"MAC-10 REDHOT"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"120"
+			"phongintensity"		"100"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"285"
+		{
+			"name"		"sp_negev_turq_terrain"
+			"description_string"		"#PaintKit_sp_negev_turq_terrain"
+			"description_tag"		"#PaintKit_sp_negev_turq_terrain_tag"
+			"style"		"3"
+			"pattern"		"terrain_pattern"
+			"color0"		"41 41 41"
+			"color1"		"25 25 25"
+			"color2"		"15 96 90"
+			"color3"		"19 19 19"
+			"pattern_scale"		"1.500000"
+			"phongexponent"		"100"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.450000"
+		}
+		"286"
+		{
+			"name"		"cu_nova_antique"
+			"description_string"		"#PaintKit_cu_nova_antique"
+			"description_tag"		"#PaintKit_cu_nova_antique_tag"
+			"style"		"7"
+			"pattern"		"nova antique"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"192"
+			"phongintensity"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.300000"
+		}
+		"287"
+		{
+			"name"		"cu_sg553_pulse"
+			"description_string"		"#PaintKit_cu_famas_pulse"
+			"description_tag"		"#PaintKit_cu_famas_pulse_tag"
+			"style"		"7"
+			"pattern"		"triangles"
+			"pattern_scale"		"2.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.200000"
+			"pattern_offset_x_end"		"0.300000"
+			"pattern_offset_y_start"		"0.300000"
+			"pattern_offset_y_end"		"0.400000"
+			"pattern_rotate_start"		"45.000000"
+			"pattern_rotate_end"		"45.000000"
+			"wear_remap_min"		"0.100000"
+			"wear_remap_max"		"0.600000"
+		}
+		"288"
+		{
+			"name"		"an_famas_sgt"
+			"description_string"		"#PaintKit_an_famas_sgt"
+			"description_tag"		"#PaintKit_an_famas_sgt_tag"
+			"style"		"8"
+			"pattern"		"staffsgt_famas"
+			"color0"		"138 124 120"
+			"color1"		"120 120 120"
+			"color2"		"255 255 255"
+			"color3"		"119 104 104"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"180"
+			"phongalbedoboost"		"45"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.100000"
+			"wear_remap_max"		"1.000000"
+		}
+		"289"
+		{
+			"name"		"cu_tec9_sandstorm"
+			"description_string"		"#PaintKit_cu_sandstorm"
+			"description_tag"		"#PaintKit_cu_sandstorm_tag"
+			"style"		"7"
+			"pattern"		"underwater"
+			"pattern_scale"		"0.500000"
+			"phongexponent"		"150"
+			"phongintensity"		"100"
+			"ignore_weapon_size_scale"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.500000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.500000"
+			"wear_remap_min"		"0.100000"
+			"wear_remap_max"		"0.700000"
+		}
+		"290"
+		{
+			"name"		"cu_usp_elegant"
+			"description_string"		"#PaintKit_cu_usp-s_elegant"
+			"description_tag"		"#PaintKit_cu_m4a1-s_elegant_Tag"
+			"style"		"7"
+			"pattern"		"USP-S_ct_elegant_update"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"30"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.380000"
+		}
+		"291"
+		{
+			"name"		"cu_mag7_heaven"
+			"description_string"		"#PaintKit_cu_mag7_heaven"
+			"description_tag"		"#PaintKit_cu_mag7_heaven_tag"
+			"style"		"7"
+			"pattern"		"m2"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"100"
+			"phongintensity"		"75"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.400000"
+		}
 	}
 	"paint_kits_rarity"
 	{
@@ -14451,6 +15066,19 @@
 		"so_panther"		"rare"
 		"aq_usp_stainless"		"uncommon"
 		"hy_craquelure"		"uncommon"
+		"cu_awp_asimov"		"legendary"
+		"cu_aug_chameleonaire"		"ancient"
+		"cu_ump_corporal"		"rare"
+		"cu_ak47_cobra"		"mythical"
+		"cu_p90_trigon"		"legendary"
+		"cu_mac10_redhot"		"mythical"
+		"sp_negev_turq_terrain"		"rare"
+		"cu_nova_antique"		"legendary"
+		"cu_sg553_pulse"		"mythical"
+		"an_famas_sgt"		"mythical"
+		"cu_tec9_sandstorm"		"rare"
+		"cu_usp_elegant"		"rare"
+		"cu_mag7_heaven"		"rare"
 	}
 	"item_sets"
 	{
@@ -14900,6 +15528,28 @@
 				"[aq_etched_cz75]weapon_cz75a"		"1"
 			}
 		}
+		"set_community_2"
+		{
+			"name"		"#CSGO_set_community_2"
+			"set_description"		"#CSGO_set_community_2_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[cu_ump_corporal]weapon_ump45"		"1"
+				"[sp_negev_turq_terrain]weapon_negev"		"1"
+				"[cu_tec9_sandstorm]weapon_tec9"		"1"
+				"[cu_mag7_heaven]weapon_mag7"		"1"
+				"[cu_mac10_redhot]weapon_mac10"		"1"
+				"[cu_sg553_pulse]weapon_sg556"		"1"
+				"[an_famas_sgt]weapon_famas"		"1"
+				"[cu_usp_elegant]weapon_usp_silencer"		"1"
+				"[cu_ak47_cobra]weapon_ak47"		"1"
+				"[cu_p90_trigon]weapon_p90"		"1"
+				"[cu_nova_antique]weapon_nova"		"1"
+				"[cu_awp_asimov]weapon_awp"		"1"
+				"[cu_aug_chameleonaire]weapon_aug"		"1"
+			}
+		}
 	}
 	"client_loot_lists"
 	{
@@ -15069,6 +15719,31 @@
 		{
 			"[aq_etched_cz75]weapon_cz75a"		"1"
 		}
+		"crate_community_2_rare"
+		{
+			"[cu_ump_corporal]weapon_ump45"		"1"
+			"[sp_negev_turq_terrain]weapon_negev"		"1"
+			"[cu_tec9_sandstorm]weapon_tec9"		"1"
+			"[cu_mag7_heaven]weapon_mag7"		"1"
+		}
+		"crate_community_2_mythical"
+		{
+			"[cu_mac10_redhot]weapon_mac10"		"1"
+			"[cu_sg553_pulse]weapon_sg556"		"1"
+			"[an_famas_sgt]weapon_famas"		"1"
+			"[cu_usp_elegant]weapon_usp_silencer"		"1"
+		}
+		"crate_community_2_legendary"
+		{
+			"[cu_ak47_cobra]weapon_ak47"		"1"
+			"[cu_p90_trigon]weapon_p90"		"1"
+			"[cu_nova_antique]weapon_nova"		"1"
+		}
+		"crate_community_2_ancient"
+		{
+			"[cu_awp_asimov]weapon_awp"		"1"
+			"[cu_aug_chameleonaire]weapon_aug"		"1"
+		}
 		"crate_valve_1"
 		{
 			"crate_valve_1_rare"		"1"
@@ -15155,6 +15830,14 @@
 			"crate_valve_3_ancient"		"1"
 			"unusual_revolving_list"		"1"
 		}
+		"crate_community_2"
+		{
+			"crate_community_2_rare"		"1"
+			"crate_community_2_mythical"		"1"
+			"crate_community_2_legendary"		"1"
+			"crate_community_2_ancient"		"1"
+			"unusual_revolving_list"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -15168,6 +15851,7 @@
 		"8"		"giftpkg_2013_winter"
 		"9"		"crate_sticker_pack01"
 		"10"		"crate_valve_3"
+		"11"		"crate_community_2"
 	}
 	"item_levels"
 	{
