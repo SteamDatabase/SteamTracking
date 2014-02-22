@@ -2454,7 +2454,7 @@ function iSwapFullURL( imgID, newImg )
 
 function GetCurrentScrollPercentage()
 {
-	return ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+	return ( ( document.documentElement.scrollTop ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100 );
 }
 
 // @elemID id of the element
