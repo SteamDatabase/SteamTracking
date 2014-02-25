@@ -27,10 +27,14 @@
 
         <script src="http://media.steampowered.com/apps/dota2/javascript/static/jquery-1.7.1.min.js?v=252" type="text/javascript"></script>
         <script src="http://media.steampowered.com/apps/dota2/javascript/static/jquery.cycle.all.js?v=252" type="text/javascript"></script>
+        
 
         <script>
+            
+           
+
             $(document).ready(function() {
-               $('#image_container').cycle({
+                $('#image_container').cycle({
                         fx:     'fade', 
                         speed:   300, 
                         fit:     1, 
@@ -40,8 +44,7 @@
                         slideResize: 0,
                         containerResize: 0
                     });
-
-               $('#image_container').cycle('pause');
+               
             });
         
             // keyboard controls
@@ -56,10 +59,15 @@
                     $('#image_container').cycle('prev');
                 }
 
+              
+
             });
 
             $('#nav a').css('cursor','pointer');
+
+
         </script>
+    
 
     </head>
     <body>
@@ -92,10 +100,10 @@
                     <img class="time_unit" src="http://media.steampowered.com/apps/freetoplay/img/seconds.png" />
                 </div>
 
-                <video id="loop_ftp" preload="none" autoplay="true" loop="loop" volume=".5">   
+                <video id="loop_ftp" class="" preload="none" autoplay="true" loop="loop" volume=".5" >   
                     <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.webmsd.webm" type="video/webm">
                     <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.oggtheora.ogv" type="video/ogg">        
-                    <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.mp4" type="video/mp4">       
+                    <source src="http://media.steampowered.com/apps/freetoplay/video/mix06.mp4.mp4" type="video/mp4">       
                     <img src="http://media.steampowered.com/apps/freetoplay/img/fallback_bg.jpg" />
                 </video>
                 <div id="mobile_bg"></div>
