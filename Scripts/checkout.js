@@ -717,6 +717,11 @@ function OnInitializeTransactionSuccess( result )
 			
 			GetFinalPriceAndUpdateReviewTab();
 		}
+		else if ( result.paymentmethod == 128 )
+		{
+						DHighlightItemByValue( 'payment_method', 'steamaccount', true );	
+			GetFinalPriceAndUpdateReviewTab();
+		}
 		else
 		{
 						GetFinalPriceAndUpdateReviewTab();
@@ -2644,7 +2649,8 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			
 			if ( providerPaymentMethod == 0 )
 			{
-								$('payment_method_review_row_steam_account').style.display = 'block';
+								$('payment_method_review_row_provider_cvv').style.display = 'none';
+				$('payment_method_review_row_steam_account').style.display = 'block';
 				$('payment_method_review_row_provider').style.display = 'none';
 			}
 			else if ( steamAccountTotal > 0 )
