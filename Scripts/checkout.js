@@ -1838,7 +1838,26 @@ function ShowNextPaymentMethod()
 		}
 		else
 		{
-			DHighlightItem( 'payment_method', 0, true );
+			var paymentMethodDropList = $('payment_method_droplist');
+				
+			for ( var i = 0; i < paymentMethodDropList.childNodes.length; i++ )
+			{
+				var bPaymentMethodFound = false;
+				for ( var j = 0; j < g_rgPaymentMethodsToToggle.length; j++ )
+				{
+					if ( g_rgPaymentMethodsToToggle[j] == paymentMethodDropList.childNodes[i].childNodes[0].id )
+					{
+						bPaymentMethodFound = true;
+						break;
+					}
+				}
+				
+				if ( !bPaymentMethodFound )
+				{
+					DHighlightItem( 'payment_method', i, true );
+					break;
+				}
+			}			
 		}
 	}
 	
@@ -1864,30 +1883,30 @@ function SelectPaymentMethod( method )
 	UpdatePaymentInfoForm();
 }
 
+// this is a list of payment methods that are not allowed to be used in a split
+var g_rgPaymentMethodsToToggle = new Array();
+g_rgPaymentMethodsToToggle[0] = 'steamaccount';
+g_rgPaymentMethodsToToggle[1] = 'boleto';
+g_rgPaymentMethodsToToggle[2] = 'boacompragold';
+g_rgPaymentMethodsToToggle[3] = 'bancodobrasilonline';
+g_rgPaymentMethodsToToggle[4] = 'itauonline';
+g_rgPaymentMethodsToToggle[5] = 'bradescoonline';
+g_rgPaymentMethodsToToggle[6] = 'pagseguro';
+g_rgPaymentMethodsToToggle[7] = 'visabrazil';
+g_rgPaymentMethodsToToggle[8] = 'amexbrazil';
+g_rgPaymentMethodsToToggle[9] = 'aura';
+g_rgPaymentMethodsToToggle[10] = 'hipercard';
+g_rgPaymentMethodsToToggle[11] = 'mastercardbrazil';
+g_rgPaymentMethodsToToggle[12] = 'dinerscardbrazil';
+g_rgPaymentMethodsToToggle[13] = 'konbini';
+g_rgPaymentMethodsToToggle[14] = 'bank_transfer_japan';
+g_rgPaymentMethodsToToggle[15] = 'payeasy';
+
 function UpdatePaymentMethodList( bIsSplitTransaction )
 {
-	// this is a list of payment methods that are not allowed to be used in a split
-	var rgPaymentMethodsToToggle = new Array();
-	rgPaymentMethodsToToggle[0] = 'steamaccount';
-	rgPaymentMethodsToToggle[1] = 'boleto';
-	rgPaymentMethodsToToggle[2] = 'boacompragold';
-	rgPaymentMethodsToToggle[3] = 'bancodobrasilonline';
-	rgPaymentMethodsToToggle[4] = 'itauonline';
-	rgPaymentMethodsToToggle[5] = 'bradescoonline';
-	rgPaymentMethodsToToggle[6] = 'pagseguro';
-	rgPaymentMethodsToToggle[7] = 'visabrazil';
-	rgPaymentMethodsToToggle[8] = 'amexbrazil';
-	rgPaymentMethodsToToggle[9] = 'aura';
-	rgPaymentMethodsToToggle[10] = 'hipercard';
-	rgPaymentMethodsToToggle[11] = 'mastercardbrazil';
-	rgPaymentMethodsToToggle[12] = 'dinerscardbrazil';
-	rgPaymentMethodsToToggle[13] = 'konbini';
-	rgPaymentMethodsToToggle[14] = 'bank_transfer_japan';
-	rgPaymentMethodsToToggle[15] = 'payeasy';
-	
-	for (var i = 0; i < rgPaymentMethodsToToggle.length; i++)
+	for (var i = 0; i < g_rgPaymentMethodsToToggle.length; i++)
 	{
-		var pm = $(rgPaymentMethodsToToggle[i]);
+		var pm = $(g_rgPaymentMethodsToToggle[i]);
 		
 		if ( pm )
 		{
