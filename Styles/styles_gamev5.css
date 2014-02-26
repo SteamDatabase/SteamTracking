@@ -2264,6 +2264,13 @@ h2.bb_tag + br {
 	margin-bottom: 8px;
 }
 
+.app_tag_modal p.small {
+	line-height: 14px;
+	margin-bottom: 8px;
+	font-size: 12px;
+	color: #626467;
+}
+
 .app_tag_modal_frame .newmodal_content_border {
 	padding: 1px;
 	background: #557dab;
