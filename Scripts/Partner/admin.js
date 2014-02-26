@@ -2438,3 +2438,32 @@ function RejectAppReleaseRequest( appid )
 	} );
 }
 
+// Register a callback to fire when our changes have been processed by the AI
+function OnAIWaitComplete(func)
+{
+	var doCheck = function()
+	{
+		$J.ajax({
+			url: "https://partner.steamgames.com/actions/waitforedits",
+			type: "GET",
+			dataType: "json"
+		})
+			.done(function( rgResult )
+			{
+				if( rgResult.wait_successful == 1 )
+				{
+					func();
+				}
+				else
+				{
+					// Try again in 500ms
+					setTimeout(doCheck, 500);
+				}
+			})
+			.fail(function( jqXHR, textStatus ) {
+				alert( "Request failed: " + textStatus );
+			});
+	};
+	doCheck();
+}
+

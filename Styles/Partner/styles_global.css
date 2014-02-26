@@ -470,6 +470,12 @@ input[type=submit].btn_green_white_innerfade.btn_medium {
 	font-size: 15px;
 	line-height: 30px;
 }
+input[type=button].btn_grey_white_innerfade.btn_medium {
+	padding: 0 15px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
 
 
 input[type=file] {
