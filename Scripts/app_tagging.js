@@ -11,7 +11,7 @@ function TagLink( tag, language )
 	return url;
 }
 
-function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR )
+function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, rgAddtlReportOptions )
 {
 	var $AppTagModal = $J('#app_tagging_modal');
 	var $AppTagForm = $J('#app_tag_form');
@@ -348,6 +348,11 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			3: 'Not a helpful tag',
 			4: 'Spoiler'
 		};
+
+		if ( rgAddtlReportOptions )
+		{
+			$J.extend( rgReportOptions, rgAddtlReportOptions );
+		}
 
 		var fnDoReport= function( eReportTypeSelected ) { fnApplyTag( tag, false, true, eReportTypeSelected ); };
 
