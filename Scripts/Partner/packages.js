@@ -773,8 +773,8 @@ function AddPctgDiscount( target, id, pctg )
 		if ( initialCostMatches )
 		{
 			var currency = initialCostMatches[1];
-			
-			discounts[currency] = Math.round( element.value * ( pctg / 100 ) );			
+			if ( element.value != '' && element.value != '-' )
+				discounts[currency] = Math.round( element.value * ( pctg / 100 ) );			
 			continue;
 		}
 		
