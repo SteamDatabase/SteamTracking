@@ -361,8 +361,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		{
 			var $ReportOption = $J('<div/>', {'class': 'app_tag_report_dialog_option' } );
 			$ReportOption.append( $J('<input/>', {'type': 'radio', 'name':'report_type', 'value': eReportType, 'id': 'report_type_' + eReportType } ) );
-			$ReportOption.append( $J('<label/>', {'for': 'report_type_' + eReportType }).text( rgReportOptions[eReportType] ) );
-			$ReportOption.dblclick( function() { Modal.Dismiss(); fnDoReport( eReportType ); })
+			$ReportOption.append( $J('<label/>', {'for': 'report_type_' + eReportType }).html( rgReportOptions[eReportType] ) );
+			$ReportOption.dblclick( (function( eReportType ) { return function() { Modal.Dismiss(); fnDoReport( eReportType ); }; })(eReportType) );
 			$Dialog.append( $ReportOption );
 		}
 
