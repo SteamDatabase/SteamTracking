@@ -650,6 +650,7 @@ a.nohover, a.nohover:hover
 	font-size: 24px;
 	color: #529CDE;
 	margin-bottom: 10px;
+	line-height: 26px;
 }
 
 .blotter_group_announcement_header
@@ -1308,7 +1309,7 @@ a.blotter_comment_thread_showall span
 .highlight_strip {
 	margin: 2px 0 2px 0;
 	position: relative;
-	height: 90px;
+	height: 93px;
 	z-index: 40;
 	overflow: hidden;
 }

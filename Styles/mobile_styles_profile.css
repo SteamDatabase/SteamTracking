@@ -252,6 +252,12 @@ a {
 	color: #898989;
 }
 
+.profilePrivateInfo {
+	padding: 12px 0;
+	color: #a94847;
+	font-size: 17px;
+}
+
 .profileMemberSince {
 	font-size: 12px;
 	text-shadow: none;
