@@ -348,7 +348,7 @@ div.filterselect_options.language {
 	width: auto;
 }
 
-div.filterselect .filterselect_arrow {
+div.filterselect .filterselect_arrow, div.filterselect #filterselect_arrow {
 	position: absolute;
 	right: 0px;
 	top: 2px;
