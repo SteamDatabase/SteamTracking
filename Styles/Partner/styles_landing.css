@@ -894,6 +894,39 @@ input {
 	.fancySelect > span {
 		color: #e1e1e1 !important;
 	}
+	
+.fancyLink {
+	display: block;
+	padding: 5px !important;
+	color: #e1e1e1 !important;
+	background: -moz-linear-gradient(top, #82a6d7 5%, #3c6091 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#82a6d7), color-stop(95%,#3c6091));background: -webkit-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -o-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: -ms-linear-gradient(top, #82a6d7 5%,#3c6091 95%);background: linear-gradient(to bottom, #82a6d7 5%,#3c6091 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82a6d7', endColorstr='#3c6091',GradientType=0 );}
+
+.fancyLink > span {
+	color: #e1e1e1 !important;
+}	
+	
+.fancyLinkBox {
+	display: block;
+	background-color: #3c6091;
+	width: 305px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.fancyLinkBox > a {
+	display: block;
+	padding: 5px;
+	color: #e1e1e1;
+	text-decoration: none;
+	text-align: center;
+	float: left;
+	width: 50px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+.fancyLinkBox > a:hover {
+	background-color: #5c80b1;
+}	
 
 .fancyCurrencyInput {
 	display: inline-block;
@@ -905,15 +938,62 @@ input {
 	padding: 2px 3px !important;
 }
 
-	.fancyCurrencyInput input {
-		background-color: inherit;
-		border: none;
-		color: inherit;
-		font-size: inherit;
-		outline: none;
-		text-align: right;
-		width: 75px;
-	}
+.fancyCurrencyInput input {
+	background-color: inherit;
+	border: none;
+	color: inherit;
+	font-size: inherit;
+	outline: none;
+	text-align: right;
+	width: 75px;
+}
+
+.fancyCurrencyInputDisabled
+{
+	background-color: rgb(51, 51, 51) !important;
+	bordor-color: rgb(84, 84, 84);
+}
+
+.fancyCurrencyInputDisabled .displayCF
+{
+	color: rgb(84, 84, 84) !important;
+	background-color: rgb(51, 51, 51) !important;
+}
+
+.priceInputUnlockLink
+{
+	display: inline-block;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.priceInputSymbolPrefix
+{
+	width: 50px;
+	display: inline-block;
+	text-align: right;
+}
+
+.priceInputSymbolPostfix
+{
+	width: 20px;
+	display: inline-block;
+}
+
+.packagePriceForm
+{
+	width: 500px;
+}
+
+.packagePriceFormCurrencyLabelColumn
+{
+	width: 200px;
+}
+
+.packagePriceFormSelectPriceDropdown
+{
+	width: 200px;
+}
 
 .fancySelectBox {
 	display: block;
