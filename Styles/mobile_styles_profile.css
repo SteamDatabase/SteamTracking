@@ -41,7 +41,7 @@ a {
 .profileSnippet {
 	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-header-background.png );
 	background-size: cover;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 	height: 145px;
 	position: relative;
 }
@@ -727,8 +727,8 @@ span.statsItem {
 	font-size: 8px;
 }
 
-#searchText {
-	width: 90%;
+.gamesSearchBox {
+	width: 100%;
 }
 
 .gamesListCellActive {
@@ -1220,3 +1220,282 @@ a#postLink, a#blotterLink {
 	display: inline-block;
 }
 
+/*
+------------------------- INVENTORY ---------------------------
+*/
+
+.inventoryFilterSection {
+	margin: 5px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.inventoryFilterSection .steamComboBox {
+	display: block;
+	width: 100%;
+	margin: 5px 0px;
+}
+
+.inventoryFilterSection .searchBox {
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.inventoryFilterSection #inventorySearchBox.searchBox {
+	color: #406191
+}
+
+.inventoryFilterButton {
+	display: inline-block;
+	height: 35px;
+	margin-right: 6px;
+	overflow: hidden;
+	vertical-align: top;
+
+	border-radius: 2px;
+	background: -moz-linear-gradient(top, #313131 5%, #202020 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#313131), color-stop(95%,#202020));background: -webkit-linear-gradient(top, #313131 5%,#202020 95%);background: -o-linear-gradient(top, #313131 5%,#202020 95%);background: -ms-linear-gradient(top, #313131 5%,#202020 95%);background: linear-gradient(to bottom, #313131 5%,#202020 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#202020',GradientType=0 );	box-shadow: none;
+	border: 1px solid #2C2C2C;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.inventoryFilterButton.active {
+	background: none;
+	background-color: #162f54;
+	box-shadow: inset 0 0 5px #101010;
+	border: 1px solid #1b2636;
+}
+
+.inventoryFilterButtonText {
+	padding: 9px 20px;
+	font-size: 15px;
+	color: #cacaca;
+}
+
+.inventoryFilterSection .inventoryFilterStroke {
+	border: 1px solid #406191;
+}
+
+.filterBoxWithCloseButton {
+	position: relative;
+}
+
+.inventoryFilterCategories {
+	margin: 5px 0px;
+	background-color: #1F1F1F;
+	border: 1px solid #3C3C3C;
+}
+
+.inventoryFilterHeading {
+	margin: 5px;
+	color: #406191;
+	font-size: 18px;
+}
+
+.inventoryFilterCategory {
+}
+
+.inventoryFilterCategoryMultiSelect {
+	-webkit-appearance: none;
+	display: inline-block;
+	width: 0px; height: 0px;
+	opacity: 0;
+}
+
+.inventoryFilterCategoryLabel {
+	margin: 5px;
+	color: #FFFFFF;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.inventoryFilterCategoryLabelPunctuation {
+	font-size: 18px;
+}
+
+
+.inventoryFilterCategoryLabel.active {
+	color: #A0A0A0;
+}
+
+.inventoryFilterOption {
+	margin: 5px;
+	color: #406191;
+	font-size: 15px;
+	display: inline-block;
+}
+
+.inventoryFilterOptionDeselected {
+	color: #cacaca;
+}
+
+.inventoryItems {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+
+	margin: 5px;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.inventoryItemColumn {
+	display: inline-block;
+	width: 64px;
+	margin-right: 3px;
+	vertical-align: top;
+}
+
+.inventoryItem {
+	width: 64px;
+	height: 64px;
+	margin: 3px 0px;
+	border-radius: 1px;
+	background-color: #292929;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+}
+
+.inventoryItem.active {
+	background-color: #576D80;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+}
+
+.inventoryItem img {
+	width: 100%;
+	height: 100%;
+}
+
+.inventoryThrobber {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.inventoryResults {
+	margin-left: 5px;
+}
+
+.inventoryResults.inventoryResultsFiltered {
+	color: #406191;
+}
+
+.inventoryResultText, .inventoryResultCount, .inventoryResultRange {
+	-webkit-text-size-adjust: none;
+	font-size: 18px;
+}
+
+.singleInventoryItemView {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+	background-color: rgba( 0, 0, 0, .80 );
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.singleInventoryItemViewContent {
+	background-image: -webkit-radial-gradient(50% 30%, 50% 50%, #404040 0%, #202020 100%);
+	background-image: radial-gradient(ellipse 50% 50% at 50% 30%, #404040 0%, #202020 100%);
+
+	position: fixed;
+	left: 15px;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+
+	padding: 10px;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.singleInventoryItemDismiss {
+	background-image: url( http://cdn.steamcommunity.com/public/shared/images/mobile/close_icon.png );
+	position: fixed;
+	width: 36px;
+	height: 36px;
+	background-size: 36px 36px;
+	right: 10px;
+	top: 10px;
+	z-index: 20;
+}
+
+.singleInventoryItemDismiss.active {
+	background-image: url( http://cdn.steamcommunity.com/public/shared/images/mobile/close_icon_gray.png );
+}
+
+.singleInventoryItemImage {
+	margin: 5px 0px;
+	text-align: center;
+}
+
+.singleInventoryItemImage img {
+	height: 96px;
+	width: auto;
+}
+
+.singleInventoryItemName {
+	margin: 5px 12px;
+	font-size: 18px;
+	color: #C0C0C0;
+}
+
+.singleInventoryItemTypeBlock {
+	position: relative;
+	height: 32px;
+	margin: 5px 12px;
+}
+
+.singleInventoryItemAppIcon {
+	position: absolute;
+	top: 2px;
+	left: 0px;
+	height: 32px;
+	width: 32px;
+	border-radius: 2px;
+}
+
+.singleInventoryItemAppName {
+	position: absolute;
+	top: 0px;
+	left: 36px;
+	line-height: 18px;
+}
+
+.singleInventoryItemType {
+	position: absolute;
+	top: 18px;
+	left: 36px;
+	line-height: 18px;
+}
+
+.singleInventoryItemDescription {
+	margin: 5px 12px;
+	color: #A0A0A0;
+}
+
+.inventoryItemDescriptor {
+	margin: 2px 0px;
+}
+
+.inventoryItemDescriptorLabel {
+}
+
+#inventoryStatus {
+	margin: 5px;
+	font-size: 20px;
+	color: #FF2020;
+}
