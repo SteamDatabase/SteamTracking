@@ -444,6 +444,70 @@
 			{
 				"icon_path"		"econ/stickers/standard/luck_foil"
 			}
+			"31"
+			{
+				"icon_path"		"econ/stickers/stickers2/bish_holo"
+			}
+			"32"
+			{
+				"icon_path"		"econ/stickers/stickers2/bash_holo"
+			}
+			"33"
+			{
+				"icon_path"		"econ/stickers/stickers2/bosh_holo"
+			}
+			"34"
+			{
+				"icon_path"		"econ/stickers/stickers2/banana"
+			}
+			"35"
+			{
+				"icon_path"		"econ/stickers/stickers2/bomb_code"
+			}
+			"36"
+			{
+				"icon_path"		"econ/stickers/stickers2/chicken_lover"
+			}
+			"37"
+			{
+				"icon_path"		"econ/stickers/stickers2/crown"
+			}
+			"38"
+			{
+				"icon_path"		"econ/stickers/stickers2/goodgame"
+			}
+			"39"
+			{
+				"icon_path"		"econ/stickers/stickers2/goodluck"
+			}
+			"40"
+			{
+				"icon_path"		"econ/stickers/stickers2/havefun"
+			}
+			"41"
+			{
+				"icon_path"		"econ/stickers/stickers2/lets_roll_oll"
+			}
+			"42"
+			{
+				"icon_path"		"econ/stickers/stickers2/lets_roll_oll_holo"
+			}
+			"43"
+			{
+				"icon_path"		"econ/stickers/stickers2/metal"
+			}
+			"44"
+			{
+				"icon_path"		"econ/stickers/stickers2/nice_shot"
+			}
+			"46"
+			{
+				"icon_path"		"econ/stickers/stickers2/stupid_banana_foil"
+			}
+			"47"
+			{
+				"icon_path"		"econ/stickers/stickers2/welcome_clutch"
+			}
 		}
 		"weapon_icons"
 		{
@@ -8975,6 +9039,30 @@
 				}
 			}
 		}
+		"4012"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack02"
+			"name"		"crate_sticker_pack02"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack02"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1212"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"sticker_crate_key"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"12"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
 	}
 	"attributes"
 	{
@@ -10575,6 +10663,134 @@
 			"description_string"		"#StickerKit_desc_std_luck_foil"
 			"sticker_material"		"standard/luck_foil"
 			"item_rarity"		"legendary"
+		}
+		"31"
+		{
+			"name"		"std2_bish_holo"
+			"item_name"		"#StickerKit_std2_bish_holo"
+			"description_string"		"#StickerKit_desc_std2_bish_holo"
+			"sticker_material"		"stickers2/bish_holo"
+			"item_rarity"		"mythical"
+		}
+		"32"
+		{
+			"name"		"std2_bash_holo"
+			"item_name"		"#StickerKit_std2_bash_holo"
+			"description_string"		"#StickerKit_desc_std2_bash_holo"
+			"sticker_material"		"stickers2/bash_holo"
+			"item_rarity"		"mythical"
+		}
+		"33"
+		{
+			"name"		"std2_bosh_holo"
+			"item_name"		"#StickerKit_std2_bosh_holo"
+			"description_string"		"#StickerKit_desc_std2_bosh_holo"
+			"sticker_material"		"stickers2/bosh_holo"
+			"item_rarity"		"mythical"
+		}
+		"34"
+		{
+			"name"		"std2_banana"
+			"item_name"		"#StickerKit_std2_banana"
+			"description_string"		"#StickerKit_desc_std2_banana"
+			"sticker_material"		"stickers2/banana"
+			"item_rarity"		"rare"
+		}
+		"35"
+		{
+			"name"		"std2_bomb_code"
+			"item_name"		"#StickerKit_std2_bomb_code"
+			"description_string"		"#StickerKit_desc_std2_bomb_code"
+			"sticker_material"		"stickers2/bomb_code"
+			"item_rarity"		"rare"
+		}
+		"36"
+		{
+			"name"		"std2_chicken_lover"
+			"item_name"		"#StickerKit_std2_chicken_lover"
+			"description_string"		"#StickerKit_desc_std2_chicken_lover"
+			"sticker_material"		"stickers2/chicken_lover"
+			"item_rarity"		"rare"
+		}
+		"37"
+		{
+			"name"		"std_crown_foil"
+			"item_name"		"#StickerKit_std_crown_foil"
+			"description_string"		"#StickerKit_desc_std_crown_foil"
+			"sticker_material"		"stickers2/crown_foil"
+			"item_rarity"		"legendary"
+		}
+		"38"
+		{
+			"name"		"std2_goodgame"
+			"item_name"		"#StickerKit_std2_goodgame"
+			"description_string"		"#StickerKit_desc_std2_goodgame"
+			"sticker_material"		"stickers2/goodgame"
+			"item_rarity"		"rare"
+		}
+		"39"
+		{
+			"name"		"std2_goodluck"
+			"item_name"		"#StickerKit_std2_goodluck"
+			"description_string"		"#StickerKit_desc_std2_goodluck"
+			"sticker_material"		"stickers2/goodluck"
+			"item_rarity"		"rare"
+		}
+		"40"
+		{
+			"name"		"std2_havefun"
+			"item_name"		"#StickerKit_std2_havefun"
+			"description_string"		"#StickerKit_desc_std2_havefun"
+			"sticker_material"		"stickers2/havefun"
+			"item_rarity"		"rare"
+		}
+		"41"
+		{
+			"name"		"std2_lets_roll_oll"
+			"item_name"		"#StickerKit_std2_lets_roll_oll"
+			"description_string"		"#StickerKit_desc_std2_lets_roll_oll"
+			"sticker_material"		"stickers2/lets_roll_oll"
+			"item_rarity"		"rare"
+		}
+		"42"
+		{
+			"name"		"std2_lets_roll_oll_holo"
+			"item_name"		"#StickerKit_std2_lets_roll_oll_holo"
+			"description_string"		"#StickerKit_desc_std2_lets_roll_oll_holo"
+			"sticker_material"		"stickers2/lets_roll_oll_holo"
+			"item_rarity"		"mythical"
+		}
+		"43"
+		{
+			"name"		"std2_metal"
+			"item_name"		"#StickerKit_std2_metal"
+			"description_string"		"#StickerKit_desc_std2_metal"
+			"sticker_material"		"stickers2/metal"
+			"item_rarity"		"rare"
+		}
+		"44"
+		{
+			"name"		"std2_nice_shot"
+			"item_name"		"#StickerKit_std2_nice_shot"
+			"description_string"		"#StickerKit_desc_std2_nice_shot"
+			"sticker_material"		"stickers2/nice_shot"
+			"item_rarity"		"rare"
+		}
+		"46"
+		{
+			"name"		"std2_stupid_banana_foil"
+			"item_name"		"#StickerKit_std2_stupid_banana_foil"
+			"description_string"		"#StickerKit_desc_std2_stupid_banana_foil"
+			"sticker_material"		"stickers2/stupid_banana_foil"
+			"item_rarity"		"legendary"
+		}
+		"47"
+		{
+			"name"		"std2_welcome_clutch"
+			"item_name"		"#StickerKit_std2_welcome_clutch"
+			"description_string"		"#StickerKit_desc_std2_welcome_clutch"
+			"sticker_material"		"stickers2/welcome_clutch"
+			"item_rarity"		"rare"
 		}
 	}
 	"paint_kits"
@@ -15822,6 +16038,37 @@
 			"crate_sticker_pack01_mythical"		"1"
 			"crate_sticker_pack01_legendary"		"1"
 		}
+		"crate_sticker_pack02_rare"
+		{
+			"[std2_banana]Sticker"		"1"
+			"[std2_bomb_code]Sticker"		"1"
+			"[std2_chicken_lover]Sticker"		"1"
+			"[std2_goodgame]Sticker"		"1"
+			"[std2_goodluck]Sticker"		"1"
+			"[std2_havefun]Sticker"		"1"
+			"[std2_lets_roll_oll]Sticker"		"1"
+			"[std2_metal]Sticker"		"1"
+			"[std2_nice_shot]Sticker"		"1"
+			"[std2_welcome_clutch]Sticker"		"1"
+		}
+		"crate_sticker_pack02_mythical"
+		{
+			"[std2_bish_holo]Sticker"		"1"
+			"[std2_bash_holo]Sticker"		"1"
+			"[std2_bosh_holo]Sticker"		"1"
+			"[std2_lets_roll_oll_holo]Sticker"		"1"
+		}
+		"crate_sticker_pack02_legendary"
+		{
+			"[std_crown_foil]Sticker"		"1"
+			"[std2_stupid_banana_foil]Sticker"		"1"
+		}
+		"crate_sticker_pack02"
+		{
+			"crate_sticker_pack02_rare"		"1"
+			"crate_sticker_pack02_mythical"		"1"
+			"crate_sticker_pack02_legendary"		"1"
+		}
 		"crate_valve_3"
 		{
 			"crate_valve_3_rare"		"1"
@@ -15852,6 +16099,7 @@
 		"9"		"crate_sticker_pack01"
 		"10"		"crate_valve_3"
 		"11"		"crate_community_2"
+		"12"		"crate_sticker_pack02"
 	}
 	"item_levels"
 	{
