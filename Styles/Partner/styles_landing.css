@@ -196,6 +196,9 @@ body{
 		#landingWelcome .appName .adminSection {
 			color: #00adee;
 		}
+		#landingWelcome .appName .TypeDark {
+			color: #666666;
+		}
 
 	#landingWelcome .rightSection {
 		float: right;
