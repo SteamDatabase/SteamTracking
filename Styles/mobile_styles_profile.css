@@ -1261,7 +1261,7 @@ a#postLink, a#blotterLink {
 	-webkit-user-select: none;
 }
 
-.inventoryFilterButton.active {
+.inventoryFilterButtonDown, .inventoryFilterButton.active {
 	background: none;
 	background-color: #162f54;
 	box-shadow: inset 0 0 5px #101010;
@@ -1472,14 +1472,24 @@ a#postLink, a#blotterLink {
 	position: absolute;
 	top: 0px;
 	left: 36px;
+	right: 0px;
 	line-height: 18px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .singleInventoryItemType {
 	position: absolute;
 	top: 18px;
 	left: 36px;
+	right: 0px;
 	line-height: 18px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .singleInventoryItemDescription {
