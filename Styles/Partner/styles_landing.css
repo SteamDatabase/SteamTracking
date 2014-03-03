@@ -1586,6 +1586,17 @@ input.datepicker {
 	color: #FBB963;
 }
 
+.activatedKeys {
+	background-color: #614826;
+	border-radius: 2px;
+	border: 1px solid #FBB963;
+	padding-left: 8px;
+	color: #FBB963;
+}
+	.activatedKeys p {
+		color: #FBB963;
+	}
+
 .modalv3 {
 	padding: 8px;
 	color: #b2b2b2;
