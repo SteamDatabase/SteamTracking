@@ -30,7 +30,7 @@
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsContent SettingsColumnarContent" >
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
-					<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto" selectionpos="0,0">
+					<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto">
 						<Label id="-1" text="#Settings_RemoteClients_BandwidthAuto" />
 						<Label id="3000" text="#Settings_RemoteClients_Bandwidth3000" />
 						<Label id="5000" text="#Settings_RemoteClients_Bandwidth5000" />
@@ -41,7 +41,7 @@
 					</DropDown>
 
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
-					<DropDown id="ResolutionLimit" class="Filter" tabindex="auto" selectionpos="0,0">
+					<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
 						<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
 						<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
 						<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
@@ -56,7 +56,7 @@
 	
 				<Panel class="SettingsContent SettingsColumnarContent">
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_Framerate" />
-					<DropDown id="FramerateLimit" class="Filter" tabindex="auto" selectionpos="1,0" >
+					<DropDown id="FramerateLimit" class="Filter" tabindex="auto">
 						<Label id="-1" text="#Settings_RemoteClients_FramerateAuto" />
 						<Label id="30" text="#Settings_RemoteClients_Framerate30" />
 						<Label id="60" text="#Settings_RemoteClients_Framerate60" />

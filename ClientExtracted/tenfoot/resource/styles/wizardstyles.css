@@ -212,17 +212,114 @@
 	background-position: 50% 50%;
 }
 
-.CheckBox Label
+.CheckBox Label,.RadioButton Label
 {
 	padding-left: 50px;
 }
 
-.WizardLabel
+.WizardLabel,.RadioButton Label
 {
 	font-size: 27px;
 	font-family: platformfont;
 	color: secondary_label;
 	margin-bottom: 2px;
+}
+
+.RadioButton Label
+{
+	vertical-align: center;
+}
+
+.RadioButton
+{
+	horizontal-align: left;
+	width: buttonwidth;
+	height: buttonheight;
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 2px;
+	border-color: #3d414200;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+.RadioButton:focus
+{
+	transition-duration: 0.25s !immediate;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	z-index: 1000;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.RadioButton
+{
+	height: 48px;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+.RadioButton .RadioBox
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	vertical-align: center;
+	background-color: ui_common_control;
+}
+
+.RadioButton:Selected .RadioBox
+{
+	background-image: url( "file://{images}/store/Icon_RadioDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.RadioButton Label
+{
+	padding-left: 52px;
+	color: detailsdatalabel;
+	width: 100%;
+	text-overflow: clip;
+	white-space: nowrap;
+
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+.RadioButton:hover Label
+{
+	color: #ffffffff;
+	transform: translatex(0px);
+}
+
+.RadioButton:focus Label
+{
+	color: #000000ff;
+	transform: translatex(0px);
 }
 
 .WizardTextEntry
@@ -315,7 +412,7 @@
 	animation-name: none;
 }
 
-.WizardButton:disabled Label,.CheckBox:disabled .TickBox
+.WizardButton:disabled Label,.CheckBox:disabled .TickBox,.RadioButton:disabled Label
 {
 	color: tcstatictext;
 }
@@ -396,3 +493,9 @@
 	
 	transition-property: background-color, opacity;
 }
+
+
+#SSAButtonContainer .WizardButton
+{
+	width: 745px;
+	}

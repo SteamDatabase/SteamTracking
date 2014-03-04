@@ -1830,7 +1830,7 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayLargeBody, LibraryFriendsWhoPlay:desc
 	border-color: #00000000;
 	color: detailsdatalabelfocus;
 
-	transition-property: opacity, border, background-color !immediate;
+	transition-property: opacity, border, background-color;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 }
@@ -1849,7 +1849,6 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayLargeBody, LibraryFriendsWhoPlay:desc
 
 	animation-name: links-and-more-button-focus;
 	animation-duration: longduration;
-	animation-delay: mediumduration;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -1869,7 +1868,7 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayLargeBody, LibraryFriendsWhoPlay:desc
 
 .FriendPanel AvatarImage, .FriendPanel .FriendPanelLabels
 {
-	transition-property: transform !immediate;
+	transition-property: transform;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 
@@ -4357,14 +4356,14 @@ KeyboardShortcut Image
 {
 	margin-top: 20px;
 	font-size: 28px;
-	width: 700px;
+	width: 770px;
 }
 
 #BetaDropDown
 {
 	visibility: visible;
 	margin-top: 20px;
-	width: 700px;
+	width: 760px;
 }
 
 .NoAvailableBetas #BetaDropDown
@@ -4375,7 +4374,7 @@ KeyboardShortcut Image
 #BetaDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 710px;
+	width: 760px;
 	max-height: 140px;
 }
 
@@ -4470,10 +4469,10 @@ KeyboardShortcut Image
 }
 
 
-.OptionsDropDown 
+.OptionsDropDown
 {
 	margin-top: 20px;
-	width: 700px;
+	width: 770px;
 }
 
 .OptionsDropDown  Label
@@ -4489,20 +4488,48 @@ KeyboardShortcut Image
 	transform: translateX( 7px );
 }
 
+#BackgroundUpdatesDropDown 
+{
+	margin-bottom: 80px;
+}
+
+
 #AutoUpdatesDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 700px;
+	width: 770px;
 	max-height: 170px;
 }
 
 #BackgroundUpdatesDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 700px;
+	width: 770px;
 	max-height: 170px;
 }
 
+#CategoryDropDown
+{
+	visibility: visible;
+	margin-top: 20px;
+	width: 770px;
+	margin-bottom: 80px;
+}
+
+#CategoryDropDownDropDownMenu
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 770px;
+	max-height: 170px;
+}
+
+#NewCategory
+{
+	margin-top: 20px;
+	padding-top: -2px;
+	font-size: 28px;
+	width: 760px;
+}
 
 .CheckBox
 {

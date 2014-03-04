@@ -11,6 +11,7 @@ MusicLibrarySetupPanel .MsgBoxBodyRegion
 	transition-property: transform;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
+	padding-right: 20px;
 }
 
 MusicLibrarySetupPanel.DaisyWheelVisible .MsgBoxBodyRegion
@@ -22,7 +23,7 @@ MusicLibrarySetupPanel.DaisyWheelVisible .MsgBoxBodyRegion
 {
 	flow-children: down;
 	height: 400px;
-	width: 710px;
+	width: 810px;
 	overflow: clip scroll;
 	opacity: 0.99;
 	padding-top: 10px;
@@ -30,7 +31,7 @@ MusicLibrarySetupPanel.DaisyWheelVisible .MsgBoxBodyRegion
 	padding-bottom: 10px;
 	padding-right: 8px;
 	margin-left: -10px;
-	
+
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
@@ -86,7 +87,7 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 	height: 52px;
 	background-color: ui_common_control;
 	margin-left: 20px;
-	margin-top: 2px;
+	margin-top: 4px;
 }
 
 #Entry:descendantfocus #ActionButton, #AddDirectory:descendantfocus #ActionButton
@@ -109,7 +110,7 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 {
 	flow-children: down;
 	padding-left: 10px;
-	width: 580px;
+	width: 670px;
 }
 
 .UpperlineLabel

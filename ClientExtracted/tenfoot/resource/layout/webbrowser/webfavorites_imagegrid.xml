@@ -13,7 +13,7 @@
 				<Label class="HistoryCategory" text="#Web_RecentLabel" />
 			</Panel>	
 					
-			<Panel class="HistoryFavoriteRow FavoriteRow FavoriteFirstRow" >
+			<Panel class="HistoryFavoriteRow FavoriteRow FavoriteFirstRow" selectionposboundary="vertical" >
 				<Button class="FavoritesButton" id="ButtonHtml2" onactivate="WebFavoritesOpenFavorite( 1 )" >
 			  	<Image id="WebImage1" class="WebImage" >
 				  	<Button  class="CloseButton" onactivate="WebFavoritesCloseEntry( 1 )" >

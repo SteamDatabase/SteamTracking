@@ -253,10 +253,10 @@ SlideShow
 
 #ControlBar_Buttons
 {
-	horizontal-align: right;
+	horizontal-align: left;
 	flow-children: right;
 	margin : 0px;
-	margin-right: 50px;
+	margin-left: 30px;
 	opacity: 1.0;
 }
 
@@ -275,11 +275,12 @@ SlideShow
 	flow-children: right;
 	horizontal-align: left;
 	border-radius: 4px;
-	margin-top: 9px;
+	margin-top: 6px;
 	margin-left: 4px;
 	margin-right: 4px;
 	border-width: 2px;
 	border-style: solid;
+	vertical-align: center;
 
 
 	transition-property: border, background-color, color, transform, box-shadow;
@@ -288,8 +289,26 @@ SlideShow
 
 #ControlBar .ControlBarButton Image
 {
+	vertical-align: center;
+	wash-color: #5492b8ff;
 }
 
+#ControlBar .ControlBarButton:disabled Image
+{
+	opacity: 0.3;
+	wash-color: #5492b899;
+}
+
+#ControlBar .ControlBarButton:hover Image
+{
+	wash-color: #74c9feff;
+}
+
+#ControlBar .ControlBarButton:Focus Image,
+#ControlBar .ControlBarButton:hover:focus Image
+{
+	wash-color: #427290ff;
+}
 
 #ControlBar .ControlBarButton:hover
 {
@@ -297,6 +316,8 @@ SlideShow
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 	box-shadow: #eeeeee60 -2.5px -2.5px 3px 5px;
 }
+
+
 
 #ControlBar .ControlBarButton:hover:disabled
 {
@@ -350,11 +371,6 @@ SlideShow
 
 #ControlBar .ControlBarButton:active
 {
-}
-
-#ControlBar .ControlBarButton:disabled Image
-{
-	wash-color: #000000aa;
 }
 
 #ControlBar ParentalButton.Locked Image

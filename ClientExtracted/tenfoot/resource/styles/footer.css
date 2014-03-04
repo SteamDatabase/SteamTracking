@@ -17,8 +17,8 @@ TenfootFooterPanel
 }
 
 
-.Show.Anim_LT_btn #LT_btn, .Show.Anim_LT_txt #LT_txt,
-.Show.Anim_RT_btn #RT_btn, .Show.Anim_RT_txt #RT_txt,
+.Show.Anim_LT_btn #LB_btn, .Show.Anim_LT_txt #LB_txt,
+.Show.Anim_RT_btn #RB_btn, .Show.Anim_RT_txt #RB_txt,
 .Show.Anim_MID #A_btn, .Show.Anim_MID #A_txt,
 .Show.Anim_MID #B_btn, .Show.Anim_MID #B_txt,
 .Show.Anim_MID #X_btn, .Show.Anim_MID #X_txt,
@@ -28,8 +28,8 @@ TenfootFooterPanel
 .Show.Anim_MID #X_btn_s, .Show.Anim_MID #X_txt_s,
 .Show.Anim_MID #Y_btn_s, .Show.Anim_MID #Y_txt_s,
 .Show.Anim_MID #SteamPadFlowCenter,
-.Show.Anim_MID #RB_btn, .Show.Anim_MID #RB_txt,
-.Show.Anim_MID #LB_btn, .Show.Anim_MID #LB_txt,
+.Show.Anim_MID #RT_btn, .Show.Anim_MID #RT_txt,
+.Show.Anim_MID #LT_btn, .Show.Anim_MID #LT_txt,
 .Show.Anim_MID #START_btn, .Show.Anim_MID #START_txt,
 .Show.Anim_MID #BACK_btn, .Show.Anim_MID #BACK_txt,
 .Show.Anim_RT_txt #RightLegend .FriendsNotifications,
@@ -117,8 +117,8 @@ TenfootFooterPanel
 	pre-transform-scale2d: 1.0, 0.03;
 }
 
-.Hide.Anim_LT_btn #LT_btn, .Hide.Anim_LT_txt #LT_txt,
-.Hide.Anim_RT_btn #RT_btn, .Hide.Anim_RT_txt #RT_txt,
+.Hide.Anim_LT_btn #LB_btn, .Hide.Anim_LT_txt #LB_txt,
+.Hide.Anim_RT_btn #RB_btn, .Hide.Anim_RT_txt #RB_txt,
 .Hide.Anim_MID #A_btn, .Hide.Anim_MID #A_txt,
 .Hide.Anim_MID #B_btn, .Hide.Anim_MID #B_txt,
 .Hide.Anim_MID #X_btn, .Hide.Anim_MID #X_txt,
@@ -128,8 +128,8 @@ TenfootFooterPanel
 .Hide.Anim_MID #X_btn_s, .Hide.Anim_MID #X_txt_s,
 .Hide.Anim_MID #Y_btn_s, .Hide.Anim_MID #Y_txt_s,
 .Hide.Anim_MID #SteamPadFlowCenter,
-.Hide.Anim_MID #RB_btn, .Hide.Anim_MID #RB_txt,
-.Hide.Anim_MID #LB_btn, .Hide.Anim_MID #LB_txt,
+.Hide.Anim_MID #RT_btn, .Hide.Anim_MID #RT_txt,
+.Hide.Anim_MID #LT_btn, .Hide.Anim_MID #LT_txt,
 .Hide.Anim_MID #START_btn, .Hide.Anim_MID #START_txt,
 .Hide.Anim_MID #BACK_btn, .Hide.Anim_MID #BACK_txt,
 .Hide.Anim_RT_txt #RightLegend .FriendsNotifications,
@@ -651,12 +651,12 @@ TenfootFooterPanel
 }
 
 .CursorVisible #LegendRow .TriggerButtonText,
+.CursorVisible #LegendRow .RBButtonText,
 .CursorVisible #LegendRow .LBButtonText,
 .CursorVisible #LegendRow .AButtonText,
 .CursorVisible #LegendRow .BButtonText,
 .CursorVisible #LegendRow .XButtonText,
 .CursorVisible #LegendRow .YButtonText,
-.CursorVisible #LegendRow .RBButtonText,
 .CursorVisible #LegendRow .STARTButtonText,
 .CursorVisible #LegendRow .BACKButtonText,
 {
@@ -675,12 +675,12 @@ TenfootFooterPanel
 }
 
 .CursorVisible #LegendRow .TriggerButtonText:hover,
+.CursorVisible #LegendRow .RBButtonText:hover,
 .CursorVisible #LegendRow .LBButtonText:hover,
 .CursorVisible #LegendRow .AButtonText:hover,
 .CursorVisible #LegendRow .BButtonText:hover,
 .CursorVisible #LegendRow .XButtonText:hover,
 .CursorVisible #LegendRow .YButtonText:hover,
-.CursorVisible #LegendRow .RBButtonText:hover,
 .CursorVisible #LegendRow .STARTButtonText:hover,
 .CursorVisible #LegendRow .BACKButtonText:hover,
 {

@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/changepassword.css" />
+	</styles>
+
+	<FindingAccountsWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#ForgotAccountName_FindingAccounts_Title" />
+		<Label class="WizardChildDescription" text="#ForgotAccountName_FindingAccounts_Description" />
+
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+
+	</FindingAccountsWizardChild>
+
+</root>

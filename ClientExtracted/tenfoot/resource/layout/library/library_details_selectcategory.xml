@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<SelectAppCategory class="TenfootMsgBox" defaultfocus="CategoryDropDown">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+			<Label class="StdTitle" text="#Library_SelectCategory_Title" />
+
+			<Label class="StdLabelMedBlue" text="#Library_SelectCategory_CodeLabel" />
+			<DropDown id="CategoryDropDown" />
+
+			<Panel id="MsgBoxButtons">
+				<Button onactivate="ButtonCreateCategory()">
+					<Label text="#Library_SelectCategory_AddCategory" />
+				</Button>
+				<Button onactivate="ButtonCancel()">
+					<Label text="#UI_Done" />
+				</Button>
+			</Panel>
+		</Panel>
+	</SelectAppCategory>
+</root>
+

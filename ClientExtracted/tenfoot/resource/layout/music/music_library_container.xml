@@ -42,7 +42,7 @@
 				</Button>
 			</Carousel>	
 		
-			<Panel id="LibraryContent" class="LibraryContent">
+			<Panel id="LibraryContent" class="LibraryContent" selectionposboundary="vertical">
 				<MusicLibraryAlbumPanel id="MusicLibraryAlbumPanel"/>
 				<MusicLibraryArtistPanel id="MusicLibraryArtistPanel"/>	
 			</Panel>		

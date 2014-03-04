@@ -88,6 +88,11 @@ CreateAccountWizard .ScreenSaverMode, CreateAccountWizard .ShowingLoginProgress
 	opacity: 1.0;
 }
 
+#ppa #PPAButton
+{
+	width: 845px;
+}
+
 #AgreementsHTML
 {
 	height: 608px;
@@ -151,17 +156,18 @@ CreatingAccountWizardChild #ThrobberContainer
 
 CreateAccountSuccessWizardChild #PasswordTextEntry
 {
-	width: 380px;
+	width: 480px;
 }
 
 #ShowPasswordButton
 {
-	width: 100px;
+	width: 240px;
 	margin-left: 10px;
 	padding-left: 0px;
 }
 
 #ShowPasswordButton #ShowPasswordLabel
 {
-	horizontal-align: center;
+	horizontal-align: left;
+	padding-left: 8px;
 }

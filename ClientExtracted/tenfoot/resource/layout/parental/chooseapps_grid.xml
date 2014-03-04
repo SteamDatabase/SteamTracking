@@ -23,7 +23,7 @@
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
 		</Panel>
-		<Grid id="GamesGrid" class="GamesGrid" scrolldirection="horizontal" verticalcount="3" horizontalcount="4" selectionpos="0,3" tabindex="auto">
+		<Grid id="GamesGrid" class="GamesGrid" scrolldirection="horizontal" verticalcount="3" horizontalcount="4" selectionpos="0,3" tabindex="auto" selectionposboundary="vertical">
 		</Grid>
 	</Panel>
 </root>

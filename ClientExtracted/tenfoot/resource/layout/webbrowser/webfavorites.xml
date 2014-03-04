@@ -21,7 +21,7 @@
 			</Panel>
 		</Panel>
 	
-		<SlideShow id="FavoritePages" >
+		<SlideShow id="FavoritePages" selectionposboundary="vertical">
 			<FavoritesImageGrid id="History" tabindex="none" />
 			<FavoritesImageGrid id="Current" tabindex="none" />
 			<FavoritesGrid id="FavoritesGrid" class="FavoritesGrid" scrolldirection="horizontal" verticalcount="2" horizontalcount="3" tabindex="none" />	

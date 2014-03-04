@@ -17,5 +17,9 @@
 			scrolldirection="horizontal" verticalcount="2" horizontalcount="5" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto">
 		</Grid>
 		
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+		
 	</MusicLibraryAlbumPanel>
 </root>
