@@ -28,9 +28,11 @@
 						<Label class="SettingsValue" id="SettingsVoice_InputDevice" text="#SettingsVoice_Microphone" />
 					</Panel>
 					<Panel id="InputDeviceGroupLinux" >
-						<Label class="SettingsLegend" text="#SettingsVoice_InputDevice" />
-						<DropDown id="MicInputDropdown" />
-						<ToggleButton id="VoiceOutputToInput" tabindex="0.0" class="CheckBox LongDesc" onactivate="ToggleVoiceOutputToInput()">
+						<Label class="SettingsValue" text="#SettingsVoice_InputDevice" />
+						<DropDown id="MicInputDropdown"  tabindex="4.0" />
+						<Label class="SettingsValue" text="#SettingsVoice_InputPort" />
+						<DropDown id="MicInputPortDropdown"  tabindex="5.0" />
+						<ToggleButton id="VoiceOutputToInput" tabindex="6.0" class="CheckBox LongDesc" onactivate="ToggleVoiceOutputToInput()">
 							<Label text="#SettingsVoice_VoiceOutputtoInput" />
 						</ToggleButton>
 					</Panel>

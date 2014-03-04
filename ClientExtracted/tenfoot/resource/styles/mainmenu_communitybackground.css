@@ -93,16 +93,13 @@ OverlayBasePanel #CommunityFriendsStrip
 	overflow: noclip clip;
 	opacity: 0.8;
 	desaturation: 0.3;
-	transition-property: desaturation, opacity, position, blur, transform;
+	transition-property: desaturation, opacity, position, blur, transform, opacity-mask, pre-transform-scale2d;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	pre-transform-scale2d: 1.0;
 
-	transition-property: transform, pre-transform-scale2d, blur, opacity, desaturation;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 
 }

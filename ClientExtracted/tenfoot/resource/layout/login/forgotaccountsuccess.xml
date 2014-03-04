@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/changepassword.css" />
+	</styles>
+
+	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
+		<Label class="WizardChildTitle" text="#ForgotAccountName_Success_Title" />
+		<Label class="WizardChildDescription" text="#ForgotAccountName_Success_Description" />
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonDone()">
+				<Label id="Label" text="#WizardButton_Done" />
+			</Button>
+		</Panel>
+
+	</SimpleWizardChild>
+
+</root>

@@ -346,7 +346,7 @@ DropDownMenu.DropDownMenuVisible
 	opacity: 1.0;
 	box-shadow: fill #00000066 0px 0px 10px 0px;
 
-	max-height: 420px;
+	max-height: 320px;
 	transition-property: box-shadow;
 }
 
@@ -929,44 +929,23 @@ FriendsChatDialog .VoiceBarContainer
 // Home & Exit Button styles
 //
 
-.HomeButton
-{
-	opacity: 0.0;
-	
-	background-image: url( "file://{images}/steam_home.png" );
-	background-repeat: no-repeat;
-	background-position: 3px 3px;
-
-	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
-	padding: 6px;
-
-	border-radius: 3px;
-	box-shadow: box_shadow_off_color -4px -4px 6px 8px;
-	width: 73px;
-	height: 73px;
-	margin-left: 1752px;
-	margin-top: 41px;
-
-	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, transform;
-	transition-timing-function: ease-in-out;
-	transition-duration: 0.23s;
-}
-
-.SteamOS .HomeButton
+#HomeButton
 {
 	opacity: 0.0;
 	
 	background-image: url( "file://{images}/steam_home_os.png" );
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
-
+	
+	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
+	z-index: 1000;
 	
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	border-radius: 50%;
-	box-shadow: fill box_shadow_off_color -4px -4px 6px 8px;
+	box-shadow: fill #00000055 -4px -4px 6px 8px;
 	width: 67px;
 	height: 67px;
 	margin-left: 1752px;
@@ -977,21 +956,12 @@ FriendsChatDialog .VoiceBarContainer
 	transition-duration: 0.23s;
 }
 
-.CursorVisible .HomeButton
+#HomeButton.CursorVisible
 {
 	opacity: 0.8;
 }
 
-.HomeButton:hover
-{
-	opacity: 1.0;
-	pre-transform-scale2d: 1.04;
-
-	box-shadow: box_shadow_on_color -4px -4px 6px 8px;
-	wash-color: none;
-}
-
-.SteamOS .HomeButton:hover
+#HomeButton:hover,
 {
 	opacity: 1.0;
 	pre-transform-scale2d: 1.04;
@@ -1000,7 +970,8 @@ FriendsChatDialog .VoiceBarContainer
 	wash-color: #FFFFFFFF;
 }
 
-.StackDepth1 .HomeButton
+
+#HomeButton.ForceHidden
 {
 	opacity: 0.0;
 	transform: translatey( -250px );

@@ -136,12 +136,16 @@ function populateGamesList(games) {
     for ( var i = 0; i < appids.length; ++i )
     {
         var appid = appids[i];
-        var info = games[appid];
-        var row = createGamesListRow(info);
+        var row = createGamesListRow(games[appid]);
         row.data( 'appid', appid );
         row.click( function () {
             var appid = $(this).data( 'appid' );
-            var prompt = 'Do you wish to launch ' + info['name'] + ' now?';
+            var info = games[appid];
+
+            var prompt = 'Do you wish to install ' + info['name'] + ' now?';
+            if ( info['installed'] > 0 )
+                prompt = 'Do you wish to launch ' + info['name'] + ' now?';
+
             if ( !confirm(prompt) )
                 return;
 

@@ -47,6 +47,8 @@
 			</Button>
 						
 			<VUMeter writable="true" tabindex="auto" selectionpos="auto" 
+					selectionposboundary="horizontal"
+					onmouseactivate="VUMeterOnMouseActivate();"
 					onmoveup="ControlButtonMoveUp();"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"						

@@ -97,14 +97,14 @@
 		"font"		"uiHeadline"
 		"wrap"		"1"
 	}
-	"Label2"
+	"LabelAppearOffline"
 	{
 		"ControlName"		"Label"
-		"fieldName"		"Label2"
+		"fieldName"		"LabelAppearOffline"
 		"xpos"		"24"
 		"ypos"		"76"
 		"wide"		"312"
-		"tall"		"54"
+		"tall"		"84"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
@@ -112,7 +112,7 @@
 		"tabPosition"		"0"
 		"paintbackground"		"1"
 		"appearance"		"LabelDull"
-		"labelText"		"#SteamUI_OfflineMode_AppearOffline"
+		"labelText"		""
 		"textAlignment"		"north-west"
 		"wrap"		"1"
 	}

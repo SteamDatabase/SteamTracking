@@ -6,8 +6,8 @@
 	</styles>
 
 	<Friends defaultfocus="FriendsMainBodyFriendsList" oncancel="NavigateTenfootBack()">
-		<Panel id="BodyWrapper">
 
+		<Panel id="BodyWrapper">
 			<Panel id="FriendsMainBodyColumnsContainer">
 				<Panel id="FriendsMainBodyColumnLeft">
 					<Panel id="FriendsMainBodyLeftHeader">

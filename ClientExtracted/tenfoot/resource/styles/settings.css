@@ -499,8 +499,9 @@ Label.SettingsStatic
 
 .SettingsBottomPanel
 {
-	margin-left: 300px;
+	margin-left: 295px;
 	height: 680px;
+	padding-left: 10px;
 }
 
 .SettingsSection.SectionVisible
@@ -2327,6 +2328,12 @@ SettingsPanelRemoteClientListing #Status
 	margin-top: 82px;
 }
 
+.SteamOS .ClientInfoSectionHeader
+{
+	margin-top: 12px;
+}
+
+
 .NotLoggedIn .ClientBetaOptIn
 {
 	visibility: collapse;
@@ -2648,7 +2655,7 @@ SettingsPanel_Display.Underscan
 
 }
 
-.SteamOS #DetectAudioButton, .SteamOS #InputDeviceGroupOther
+.SystemAudioSupport #DetectAudioButton, .SystemAudioSupport #InputDeviceGroupOther
 {
 	flow-children: down;
 	visibility: collapse;
@@ -2665,7 +2672,7 @@ SettingsPanel_Display.Underscan
 	visibility: collapse;
 }
 
-.SteamOS #InputDeviceGroupLinux
+.SystemAudioSupport #InputDeviceGroupLinux
 {
 	flow-children: down;
 	visibility: visible;
@@ -2673,6 +2680,93 @@ SettingsPanel_Display.Underscan
 
 #VoiceOutputToInput
 {
+	margin-top: 20px;
 	width: 600px;
 }
 
+.colorpicker
+{
+	flow-children: right;
+	padding: 20px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.colorpicker Image
+{
+	margin-right: 12px;
+
+	wash-color: #00000000;
+}
+
+.colorwrapper
+{
+	vertical-align: center;
+}
+
+.colorpicker .colorregion
+{
+	padding: 2px;
+	vertical-align: center;
+
+	flow-children: right;
+
+	overflow: noclip noclip;
+}
+
+.colorpicker .colorregion Button
+{
+	z-index: 0;
+	width: 40px;
+	height: 40px;
+
+	margin: 0px;
+
+	overflow: noclip noclip;
+
+	border-style: solid;
+	border-radius: 0px;
+	border-width: 2px;
+	border-color: #18364900;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, pre-transform-scale2d;
+	transition-duration: 0.20s;
+
+}
+
+.colorpicker .colorregion Button:focus,
+.colorpicker .colorregion Button:hover,
+.colorpicker .colorregion Button.active
+{
+	z-index: 10;
+	border-style: solid;
+	border-color: #ffffffff;
+	pre-transform-scale2d: 1.3;
+}
+
+.colorborderwrapper
+{
+	z-index: -1;
+}
+
+SettingsPanel_AlienFX .SettingsCenterContent
+{
+	width: 1300px;
+}
+
+.colorborder
+{
+	z-index: -1;
+	width: 804px;
+	height: 44px;
+	vertical-align: center;
+
+	border-style: solid;
+	border-radius: 2px;
+	border-width: 2px;
+	border-color: #183649ff;
+
+
+}

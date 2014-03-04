@@ -240,7 +240,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 {
 	flow-children: right;
 	perspective-origin: 50% 50%;
-	opacity-mask: none;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 	opacity: 1.0;
 	desaturation: 0.2;
 	blur: gaussian(0.2);
@@ -257,7 +257,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 {
 	flow-children: right;
 	perspective-origin: 50% 50%;
-	opacity-mask: none;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 	opacity: 1.0;
 	desaturation: 0.0;
 	blur: gaussian(0.0);

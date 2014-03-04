@@ -10,7 +10,7 @@
 		</Panel>
 		<Panel id="Loading">
 		</Panel>
-		<Panel id="Loaded">
+		<Panel id="Loaded" selectionposboundary="vertical">
 			<Panel class="TitleRow">
 				<Label id="GenreTitle" text="#Store_GenreTitle" />
 			</Panel>

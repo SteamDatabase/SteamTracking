@@ -7,7 +7,8 @@
 
 	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="NavigateTenfootBack()">
 		<Panel id="MainPage" > <!-- main web browser page -->
-			<Panel class="TopBar" selectionpos="0,0" >
+
+			<Panel class="TopBar" selectionpos="0,0" >		
 				<Panel id="UrlBar" >
 					<Image class="Secure" src="file://{images}/browser/browser_secure.png" />
 					<Image class="Insecure" src="file://{images}/browser/browser_insecure.png" />
@@ -31,7 +32,7 @@
 						</ParentalButton>
 						<Button id="ForwardButton" class="ControlBarButton" onactivate="BrowserForward()" selectionpos="5,0"	>
 							<Image src="file://{images}/browser/browser_forward.png" />
-						</Button>
+						</Button>px
 					</Panel>
 				</Panel>
 			</Panel>

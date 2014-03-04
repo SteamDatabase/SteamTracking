@@ -5,13 +5,9 @@
 	</styles>
 	
 	<AlbumGridItem>
-	
-		<!-- The below will be created by code, when the panel is in view only! 
-		<Image id="AlbumImage" class="AlbumImage" src="file://{images}/music/placeholder_album.png" defaultsrc="file://{images}/music/placeholder_album.png" scaling="stretch-to-fit-preserve-aspect" />
+		<Image id="AlbumImage" class="AlbumImage" scaling="stretch-to-fit-preserve-aspect" />
+		<Panel id="FocusBorderPanel" class="FocusBorderPanel" />
 		<Label id="AlbumUpperLabel" text="" />
 		<Label id="AlbumLowerLabel" text="" />
-		<Panel class="FocusBorderPanel" />
-		!-->
-		
 	</AlbumGridItem>
 </root>

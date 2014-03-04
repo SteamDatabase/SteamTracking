@@ -14,7 +14,7 @@
 
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
-			<ParentalLibraryGrid id="ParentalLibraryGrid" />
+			<ParentalLibraryGrid selectionposboundary="vertical" id="ParentalLibraryGrid" />
 		</Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

@@ -412,7 +412,7 @@ ParentalReplacementPanel Button:focus
 }
 #ParentalIntroChild ToggleButton
 {
-	width: 800px;
+	width: fit-children;
 }
 
 ParentalFeaturesChild .SettingsBottomPanel
@@ -430,14 +430,14 @@ ParentalFeaturesChild .SettingsBottomPanel
 #ParentalFeaturesChild #ChooseFeaturesPanel
 {
 	flow-children: down;
-	margin-right: 300px;
-	padding-top: 100px;
-	width:1300px;
-	height: 800px;
+	margin-left: -10px;
+	padding-left: 10px;
+	width: 1300px;
+	height: 820px;
 	background-image: url( "file://{images}/settings/keybg.png" );
 	background-repeat: no-repeat no-repeat;
 	background-position: left 900px top 400px;
-	
+
 
 
 }
@@ -552,7 +552,7 @@ ParentalSetPINChild .SettingsBottomPanel
 #SetPIN
 {
 	horizontal-align: left;
-	margin-left: 305px;
+	margin-left: 295px;
 	margin-top: 0px;
 	width: 80%;
 }
@@ -679,7 +679,7 @@ ParentalSetInProgressChild .SettingsBottomPanel
 
 #ParentalChooseAppsChild #SectionLabel
 {
-	margin-left: 305px;
+	margin-left: 295px;
 	max-width: 900px;
 	vertical-align: top;
 	height: 70px;
@@ -700,7 +700,7 @@ ParentalSetInProgressChild .SettingsBottomPanel
 ParentalSetSuccessChild .SettingsBottomPanel
 {
 	flow-children: down;
-	margin-left: 305px;
+	margin-left: 295px;
 	margin-right: 150px;
 	width: 900px;
 }

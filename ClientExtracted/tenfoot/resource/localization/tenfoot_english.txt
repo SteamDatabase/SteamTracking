@@ -54,7 +54,7 @@
 	"UI_TextEntry_PasteClipboard"	"Paste"
 
 	"UI_Agreements"					"Agreements"
-	"UI_ViewAgreements"				"View SSA and Privacy Policy"
+	"UI_ViewAgreements"				"VIEW SSA & PRIVACY POLICY"
 	"UI_I_Agree"					"I agree"
 
 	"Month_January"					"January"
@@ -220,6 +220,7 @@
 	"Login_Password_CapsLock"		"PASSWORD / CAPS LOCK ON"
 	"Login_Login"					"LOGIN"
 	"Login_RememberPassword"		"REMEMBER"
+	"Login_Help"					"LOGIN HELP"
 	"Login_LoggedInElsewhere"		"This account is currently logged in elsewhere. Please re-enter your password to login."
 	"Login_SteamGuardCode"			"ACCESS CODE"
 	"Login_SteamGuardPrompt"		"Steam Guard requires you to enter the special access code we've just emailed to you at {s:domain}"
@@ -254,6 +255,7 @@
 	"Login_RemoveUserDescription"	"Are you sure you'd like to remove {s:accountname}?"
 	"Login_SteamUnreachable_Title"	"Network Problem"
 	"Login_SteamUnreachable_Description" "We're having trouble connecting to the Steam service. Please check your network."
+	"Login_SteamUnreachable_SteamUnavailable" "We're having trouble connecting to the Steam service. Please try again later."
 	"Login_SteamUnreachable_TryAgain" "TRY AGAIN"
 	"Login_SteamUnreachable_LoginOffline" "LOGIN OFFLINE"
 	"Login_ErrorCouldNotConnect" 	"Could not connect to Steam network.\nThis could be due to a problem with your Internet connection, or with the \nSteam network. Please visit www.steampowered.com for more info."
@@ -271,7 +273,7 @@
 	"CreateAccount_Credentials_Title" "Hello,"
 	"CreateAccount_Credentials_Description" "Creating a Steam account takes just a few simple steps.\nLet's get started."
 	"CreateAccount_Credentials_AgeLimitNext" "I AM AT LEAST 13 YEARS OLD"
-	"CreateAccount_Credentials_AccountName" "Account Name"
+	"CreateAccount_Credentials_AccountName" "Account name"
 	"CreateAccount_Credentials_Password" "Password"
 	"CreateAccount_Credentials_PasswordAgain" "Password, again"
 	"CreateAccount_Credentials_AvailableAccountNames" "Available account names"
@@ -311,13 +313,13 @@
 	"CreateAccount_Agreements_Description" "By creating a Steam account, you agree to the Steam Subscriber Agreement and Privacy Policy."
 	"CreateAccount_Agreements_IAgree" "I AGREE"
 	"CreateAccount_Agreements_Agreements" "Agreements"
-	"CreateAccount_Agreements_ViewSSAAndPPA" "View SSA & Privacy Policy"
+	"CreateAccount_Agreements_ViewSSAAndPPA" "VIEW SSA & PRIVACY POLICY"
 
 	"CreateAccount_SSA_Title"		"Steam Subscriber Agreement"
-	"CreateAccount_SSA_ViewPPA"		"View Privacy Policy"
+	"CreateAccount_SSA_ViewPPA"		"VIEW PRIVACY POLICY"
 
 	"CreateAccount_PPA_Title"		"Steam Privacy Policy"
-	"CreateAccount_PPA_ViewSSA"		"View Steam Subscriber Agreement"
+	"CreateAccount_PPA_ViewSSA"		"VIEW STEAM SUBSCRIBER AGREEMENT"
 
 	"CreateAccount_Creating_Title" "Almost there..."
 	"CreateAccount_Creating_Description" "Hang tight - we're busily creating your Steam account."
@@ -332,8 +334,8 @@
 
 	"CreateAccount_Success_Title"	"You're all set!"
 	"CreateAccount_Success_Description" "Just stare at this screen for two minutes to burn the information below onto the back of your retina.\n\nYou'll need this to access your games, so don't forget it!"
-	"CreateAccount_Success_Show"	"Show"
-	"CreateAccount_Success_Hide"	"Hide"
+	"CreateAccount_Success_Show"	"SHOW"
+	"CreateAccount_Success_Hide"	"HIDE"
 	"CreateAccount_Success_ContactEmailAddress" "Contact email address"
 
 	"ChangePassword_Title"		"Change password"
@@ -345,6 +347,7 @@
 	"ChangePassword_NewPassword_Title"		"Change password"
 	"ChangePassword_NewPassword_Description"	"Please enter the confirmation code that was sent to your email address, along with your new password."
 	"ChangePassword_EnterConfirmationCode" "Confirmation code sent to {s:emailaddress}"
+	"ChangePassword_EnterConfirmationCodePlain" "Confirmation code"
 	"ChangePassword_EnterNewPassword"		"New password"
 	"ChangePassword_EnterNewPasswordAgain"		"New password, again"
 	"ChangePassword_Changing_Title"			"Almost there..."
@@ -356,13 +359,51 @@
 	"ChangePassword_Success_Description"	"Steam successfully changed your password."
 	"ChangePassword_ServiceUnavailable" 	"Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later."
 	"ChangePassword_IncorrectPassword"		"This password is incorrect. Please enter your current password."
-	"ChangePassword_EmailProgress" 			"Contacting Steam servers to send a confirmation message to {s:emailaddress}."
+	"ChangePassword_EmailProgress" 			"Contacting Steam servers to send a confirmation code to {s:emailaddress}."
 	"ChangePassword_IncorrectConfirmationCode"	"Please check that you have entered the confirmation code correctly."
 	"ChangePassword_ReusedPassword"			"You may not reuse an old password. Please choose again."
 	"ChangePassword_IllegalPassword"		"That password did not satisfy additional complexity requirements. Please choose again."
 	"ChangePassword_WrongPassword"			"Please check that you have entered your original password correctly."
 	"ChangePassword_Cancel_Title"			"Change password"
 	"ChangePassword_Cancel_Description"		"Are you sure you'd like to cancel changing your password?"
+
+	"ChangePassword_ForgotPassword_Title"			"Forgot Password"
+	"ChangePassword_ForgotPassword_Description"		"Before changing your password, Steam needs to verify your identity. Please enter your account name."
+	"ChangePassword_ForgotPassword_AccountName"		"Account Name"
+	"ChangePassword_ForgotPassword_AccountDisabled" "This account has been disabled. Please contact Steam Support."
+	"ChangePassword_ForgotPassword_AccountNotFound" "Account not found. Please enter the account name used to login to Steam."
+	"ChangePassword_ForgotPassword_EmailProgress" 	"Contacting Steam servers to send a confirmation code to contact email address."
+
+	"LoginHelp_Title"					    "Need some help?"
+	"LoginHelp_Description"					"Please select one of the following choices to recover your account information."
+	"LoginHelp_ForgotPassword"				"I forgot my password"
+	"LoginHelp_ForgotAccountName"			"I forgot my account name"
+
+	"ForgotAccountName_Type_Title"			"Forgot Account Name"
+	"ForgotAccountName_Type_Description"	"Steam can find your account name if you know either the contact email address of the account, or a product code you activated with the account."
+	"ForgotAccountName_Type_Email"			"Contact email address"
+	"ForgotAccountName_Type_CDKey"			"Product code"
+
+	"ForgotAccountName_ContactEmail_Title"		"Contact Email Address"
+	"ForgotAccountName_ContactEmail_Description" "Please enter the contact email address associated with this Steam account."
+	"ForgotAccountName_ContactEmail_EmailAddress" "Contact email address"
+
+	"ForgotAccountName_CDKey_Title"			"Product Code"
+	"ForgotAccountName_CDKey_Description"	"Please enter the product code you activated in your Steam account."
+	"ForgotAccountName_CDKey_ProductCode"	"Product code"
+
+	"ForgotAccountName_FindingAccounts_Title" "Almost there..."
+	"ForgotAccountName_FindingAccounts_Description" "We're busily finding your account."
+
+	"ForgotAccountName_Fail_Title"			"Oh no!"
+	"ForgotAccountName_Fail_Description"	"Steam could not find your account."
+	"ForgotAccountName_Fail_TryAgain"		"Try Again"
+
+	"ForgotAccountName_Success_Title"		"Check Your Email"
+	"ForgotAccountName_Success_Description"	"An email containing your Steam account name has been sent to you. Once you have your account name, you can go to Login Help again to reset your password."
+
+	"ForgotAccountName_Cancel_Title"			"Forgot Account Name"
+	"ForgotAccountName_Cancel_Description"		"Are you sure you'd like to cancel?"
 
 	"ChangeEmail_NewEmail_Title"			"Change email address"
 	"ChangeEmail_NewEmail_Description"		"Your contact email address is used to confirm purchases and help you manage access to your Steam account. To change it, please enter the info below."
@@ -597,7 +638,7 @@
 	"SettingsVoice_MicVolume"				"Microphone volume"
 	"SettingsVoice_RecvVolume"				"Receive volume"
 	"SettingsVoice_DetectDevices"			"Detect audio devices"
-	"SettingsVoice_InputDevice"				"Audio recording device"
+	"SettingsVoice_InputDevice"				"Voice recording device"
 	"SettingsVoice_Microphone"				"{s:microphone}"
 	"SettingsVoice_NoneDetected"			"(None detected)"
 
@@ -1509,8 +1550,8 @@
 	"Friends_AllFriendsAndRequests"		"Friends and Requests"
 	"Friends_OnlineFriendsOnly"		"Online Friends Only"
 	"Friends_ChangeProfileName"		"Change Profile Name"
-	"Friends_EditProfile"			"Edit Profile"
-	"Friends_AddFriendAction"		"Add a Friend"
+	"Friends_EditProfile"			"Edit Profile..."
+	"Friends_AddFriendAction"		"Add a Friend..."
 	"Friends_FriendsActionsFooter"		"ACTIONS"
 	"Friends_ChooseURL"			"Open URL in browser"
 	"Friends_ChooseURL_Cancel"		"CANCEL"
@@ -1726,8 +1767,8 @@
 	
 	"DeviceAuth_ChooseDialog_Title" "Want to play this game?"
 	"DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user {s:owner}. Would you like to request access to {s:owner}'s games on this device?"
-	"DeviceAuth_ChooseDialog_Purchase" "I'd rather buy it..."
-	"DeviceAuth_ChooseDialog_Request" "Request access..."
+	"DeviceAuth_ChooseDialog_Purchase" "I'D RATHER BUY IT..."
+	"DeviceAuth_ChooseDialog_Request" "REQUEST ACCESS..."
 	"DeviceAuth_ChooseDialog_Cancel" "Cancel"
 
 	"DeviceAuth_RequestDialog_Title" "Family Library Sharing Request"
@@ -1777,11 +1818,11 @@
 	"Settings_Family_Sharing_DeauthorizeError" "Failed to deauthorized computer ({s:reason})"
 	"Settings_Family_Sharing_UpdateBorrowers" "Update borrowers"
 	"Settings_Family_Sharing_No_SteamGuard" "Steam Guard is required to enable Family Library Sharing"
-	"Settings_Family_Sharing_TooManyBorrowers" "You can only authorize up to 10 accounts."
+	"Settings_Family_Sharing_TooManyBorrowers" "You can only authorize up to 5 accounts."
 	"Settings_Family_Sharing_BorrowerError" "Failed to update borrower ({s:reason})"
 	"Settings_Family_Sharing_AuthorizedBorrower" "Authorized accounts"
 	"Settings_Family_Sharing_List_Empty" "No other local accounts found."
-	"Settings_Family_Sharing_Borrowers" "Select up to 10 users who may use your game library on your authorized computers."
+	"Settings_Family_Sharing_Borrowers" "Select up to 5 people who may use your game library on your authorized computers. The following users have previously logged into Steam on one or more of your shared computers."
 
 	"Settings_RemoteClients_Title" "In-Home Streaming"		
 	"Settings_RemoteClients_Description" "You can stream gameplay from the following devices detected on your local network. To connect, simply log into this same Steam account on another local device."
@@ -2042,7 +2083,7 @@
 	"Music_Library_Setup_Entry_ButtonLabel" "-"
 	"Music_Library_Setup_Select_To_Add_Library" "Select to Add Library"
 	"Music_Library_Setup_Marked_For_Removal" "Directory marked for removal"
-	"Music_Library_Setup_Mark_For_Removal" "Select to mark directory for removal"
+	"Music_Library_Setup_Mark_For_Removal" " "
 	"Music_Library_Setup_Footer_Done"	"DONE"
 	"Music_Library_Setup_Footer_Cancel" "CANCEL"
 	"Music_Library_Setup_Footer_Select" "SELECT"
@@ -2051,6 +2092,7 @@
 	"Music_Library_Select_Directory_Text"	"Select a directory in which you store music."
 	"Music_Library_Footer_More" "SELECT"
 	"Music_Library_Footer_Play"	"PLAY"
+	"Music_Library_Footer_ContextMenu"	"MORE"
 	"Music_Library_Footer_Cancel_Crawling" "STOP"
 	
 	"Music_Queue_X_Of_Y"	"{i:CurrentQueueEntry} of {i:QueueCount}"
@@ -2092,13 +2134,21 @@
 	
 	"Library_Details_OptIntoBeta" "Select Beta..."
 	"Library_Details_EditLaunchCommandLine"	"Set Launch Options..."
-	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only."
+	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only"
 	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into"
 	"Library_SelectBeta_Title"	"Select Beta"
 	"Library_SelectBeta_Private"	"Enter Beta Password"
 	"Library_SelectBeta_BetaPassword"	"Beta Password"
 	"Library_EditCommandLine_Title" "Launch Options for {s:gamename}"
 	"Library_SelectBeta_None" "None"
+
+	"Library_SelectCategory_Title"	"Select a category"
+	"Library_SelectCategory_CodeLabel"	"Select a category for {s:gamename}"
+	"Library_SelectCategory_None"	"None"
+	"Library_SelectCategory_AddCategory"	"CREATE NEW CATEGORY..."
+
+	"Library_CreateCategory_Title"	"Create New Category"
+	"Library_CreateCategory_CodeLabel"	 "Enter a new category for {s:gamename}"
 
 	"SteamUI_StreamClient_Failed_Title"	"Streaming Client Failed"
 	"SteamUI_StreamClient_Failed"		"The streaming client exited unexpectedly ({d:error})"
@@ -2153,9 +2203,14 @@
 	"SettingsAudio_Card"	"Sound output device"
 	"SettingsAudio_Profile"	"Sound output type"
 	"SettingsAudio_Port"	"Sound output port"
+	"SettingsVoice_InputPort" "Voice recording port"
 
 	"SettingsAudio_AC3"	"AC3 Pass-through"
 	"SettingsAudio_DTS"	"DTS Pass-through"
 	"SettingsAudio_Failed"	"Audio settings unavailable. Failed to connect to audio service."
+
+	"Settings_AlienFX"	"Alien FX"
+	"Settings_AlienFXDescription" "Select the effects to be applied to your Alienware case lighting zones."
+	"Settings_AlienFXHeader"	"Alien FX"
 
 }

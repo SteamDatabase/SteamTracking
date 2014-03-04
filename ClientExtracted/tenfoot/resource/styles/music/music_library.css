@@ -64,6 +64,30 @@ MusicLibraryAlbumPanel.Active
 	opacity: 1.0;
 }
 
+MusicLibraryAlbumPanel #ThrobberContainer
+{
+	opacity: 0.0;
+	margin-top: 260px;
+	horizontal-align: center;
+}
+
+MusicLibraryAlbumPanel .Throbber
+{
+	opacity: 1.0;
+	width: 130px;
+	height: 130px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+MusicLibraryAlbumPanel.RebuildAlbumList #ThrobberContainer
+{
+	opacity: 1.0;
+}
+
 MusicLibraryArtistPanel
 {
 	width: 100%;
@@ -82,6 +106,29 @@ MusicLibraryArtistPanel.Active
 	opacity: 1.0;
 }
 
+MusicLibraryArtistPanel #ThrobberContainer
+{
+	opacity: 0.0;
+	margin-top: 260px;
+	horizontal-align: center;
+}
+
+MusicLibraryArtistPanel .Throbber
+{
+	opacity: 1.0;
+	width: 130px;
+	height: 130px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+MusicLibraryArtistPanel.RebuildArtistList #ThrobberContainer
+{
+	opacity: 1.0;
+}
 
 MusicLibraryCrawlingPanel
 {
@@ -531,6 +578,66 @@ AlbumGridItem Label
 {
 	transform: translateY( -14px ) translateX( 16px );
 	font-weight: normal;
+}
+
+.NoCover #AlbumUpperLabel 
+{
+	opacity: 1.0;
+	font-size: 80px;
+	height: 100px;
+	font-weight: light;
+	vertical-align: top;
+	transform: translateY( 0px ) translateX( 16px );
+}
+
+.NoCover:focus #AlbumUpperLabel 
+{
+	transform: translateY( -48px ) translateX( 16px );
+	height: 32px;
+	width: 300px;
+	font-size: 26px;
+	font-family: basefont;
+	color: applabel;
+	vertical-align: bottom;
+	text-overflow: clip;
+	white-space: nowrap;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+	font-family: platformfont;
+	z-index: 6;
+		font-weight: bold;
+}
+
+.NoCover #AlbumLowerLabel 
+{
+	opacity: 1.0;
+	font-size: 80px;
+	height: 100px;
+	font-weight: light;
+	vertical-align: top;
+	transform: translateY( 88px ) translateX( 16px );
+}
+
+.NoCover:focus #AlbumLowerLabel 
+{
+	transform: translateY( -14px ) translateX( 16px );
+	height: 32px;
+	width: 300px;
+	font-size: 26px;
+	font-family: basefont;
+	font-weight: normal;
+	color: applabel;
+	vertical-align: bottom;
+	text-overflow: clip;
+	white-space: nowrap;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+	font-family: platformfont;
+	z-index: 6;
 }
 
 AlbumGridItem:focus Label
@@ -1086,3 +1193,4 @@ MusicArtistPanel #MusicAlbumGrid
 {
 	transform: translateX( 0px );
 }
+

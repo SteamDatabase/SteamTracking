@@ -8,5 +8,6 @@
 		<EventBackground id="EventBackground" />
 		<Panel id="BackgroundMovie"></Panel>
 		<Panel id="BackgroundThrobber"></Panel>
+		<Panel id="HomeButton" onmouseactivate="ShowMainMenu();" />
 	</BackgroundVideoPanel>
 </root>

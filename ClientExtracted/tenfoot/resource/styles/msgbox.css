@@ -112,6 +112,12 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	border-color: ui_common_control_border;
 }
 
+.DaisyWheelVisible .MsgBoxBodyRegion
+{
+	transform: translateX( 470px );
+}
+
+
 .HTMLVisible #MsgBoxBodyRegion
 {
 	width: 90%;
@@ -166,6 +172,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	font-family: platformfont;
 	color: #ffffffff;
 	margin-top: 20px;
+	padding-left: 15px;
 
 	flow-children: right;
 }
@@ -186,6 +193,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 {
 	flow-children: right;
 	margin-left: 20px;
+	margin-right: 0px;
 	padding: 4px 8px 4px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
@@ -233,24 +241,24 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	background-color: #00000020;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
 
-	animation-name: msgbox-button-focus; 
+	animation-name: msgbox-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-	
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
-	animation-delay: MessageBoxAnimationDuration;
+	animation-delay: 0.1s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
-	
+
 }
 
 #MsgBoxButtons Button:disabled

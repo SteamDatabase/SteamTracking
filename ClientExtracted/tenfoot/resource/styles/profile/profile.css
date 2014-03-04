@@ -179,7 +179,8 @@ ProfilePanel
 	opacity: 0.0;
 }
 
-ProfilePanel #ProfileContent
+ProfilePanel #ProfileContent,
+ProfilePanel #ContentRow
 {
 	width: 100%;
 	height: 100%;
@@ -191,14 +192,27 @@ ProfilePanel #ProfileContent
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 64px, 600px, 330px );
 
-	transition-property: transform, position, opacity;
+	transition-property: transform, position, opacity, opacity-mask;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: linear;
 
+}
+
+.StackDepth2 ProfilePanel #ContentRow,
+.StackDepth3 ProfilePanel #ContentRow
+{
+	animation-name: none;
+	animation-duration: 0s;
+
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
+
+	transform: translateX( 0px );
 }
 
 @keyframes 'background-visible'
@@ -217,6 +231,7 @@ ProfilePanel #ProfileContent
 .StackDepth2 ProfilePanel #ProfileContent,
 .StackDepth3 ProfilePanel #ProfileContent
 {
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 	transform: translatex( 0px );
 	animation-name: none;
 }
