@@ -7,7 +7,9 @@
 	<AlbumGridItem>
 		<Image id="AlbumImage" class="AlbumImage" scaling="stretch-to-fit-preserve-aspect" />
 		<Panel id="FocusBorderPanel" class="FocusBorderPanel" />
-		<Label id="AlbumUpperLabel" text="" />
-		<Label id="AlbumLowerLabel" text="" />
+		<Panel id="AlbumLabelWrapper">
+			<Label id="AlbumUpperLabel" text="" />
+			<Label id="AlbumLowerLabel" text="" />
+		</Panel>
 	</AlbumGridItem>
 </root>
