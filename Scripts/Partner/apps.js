@@ -2625,9 +2625,9 @@ function SetScreens( appid, screens )
 	{
 		var divScreen = document.createElement( 'div' );
 		divScreen.className = 'screenshot';
-		
-		var imageBase = g_szBaseURL + "/public/get_appimage.php?appid=" + appid + "&filetype=jpg&id=";
-		
+
+		var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
+
 		var anchor = document.createElement( 'a' );
 		anchor.href = imageBase + screens[id]['screen'] + ".jpg";
 		
@@ -2688,12 +2688,7 @@ function SetAvatars( appid, avatars )
 		var divAvatar = document.createElement( 'div' );
 		divAvatar.className = 'avatar';
 
-		// TODO this can be a direct pull from the CDN.
-		// (and stock avatar images need to go straight to the CDN instead of only going there
-		// at publish time.)
-		//
-		// Same drill for screen shots.
-		var imageBase = g_szBaseURL + "/public/get_appimage.php?appid=" + appid + "&filetype=jpg&id=";
+		var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
 		
 		var anchor = document.createElement( 'a' );
 		anchor.href = '#';
@@ -2727,7 +2722,7 @@ function avatarPopupClosure(appid, avatar)
 
 function avatarPopup(event, appid, avatar)
 {
-	var imageBase = g_szBaseURL + "/public/get_appimage.php?appid=" + appid + "&filetype=jpg&id=";
+	var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
 
 	var e=event;
 	if (! e )

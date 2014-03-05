@@ -204,6 +204,11 @@
 	padding-bottom: 10px;
 }
 
+.gamenotifications_app_session_left_container {
+	max-width: 460px;
+	display: inline-block;
+}
+
 .gamenotifications_app_session_title {
 	font-family: 'MotivaSans Light', Arial, Tahoma;
 	font-size: 18px;
@@ -223,8 +228,8 @@ gamenotifications_app_session_message {
 }
 
 .gamenotifications_app_session_controls {
+	clear: both;
 	float: right;
-	margin-top: -28px;
 	margin-right: 6px;
 }
 

@@ -496,11 +496,6 @@ function dropdownMobileAddToCart( dropdownName )
 var g_currentPlatformFilter = 'all';
 var g_bShowingDLC = true;
 
-function getCookie( name ) {
-	var parts = document.cookie.split(name + "=");
-	if ( parts.length == 2 ) return parts.pop().split(";").shift();
-}
-
 $J( function() {
 	// set up store filter
 	var platformFilter = getCookie( "mobileStorePlatformFilter" );

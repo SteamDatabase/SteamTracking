@@ -230,6 +230,8 @@ a.item_action:hover {
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/trade_hover_background.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
+
+	overflow: hidden;
 }
 
 .item_desc_descriptors a, .item_desc_descriptors a:hover {

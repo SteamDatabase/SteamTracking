@@ -385,6 +385,7 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_listing_listed_date {
+	min-height: 1px;
 	float: right;
 	width: 133px;
 	color: #AFAFAF;
