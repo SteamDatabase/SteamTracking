@@ -2958,6 +2958,14 @@ h2.stats {
 			display: inline-block;
 			padding: 0 5px;
 		}
+		
+	.statsBox #revenueChart {
+		margin: 10px;
+		padding-bottom: 10px;
+	}
+	.statsBox .jqplot-axis {
+		font-size: 11px;
+	}
 
 #ig_bottom .breadcrumbs a {
 	color: #ffffff;

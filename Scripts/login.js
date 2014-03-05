@@ -74,7 +74,7 @@ function DoLogin()
 		{
 			method: 'post',
 			parameters: {
-				username: form.elements['username'].value
+				username: username
 			},
 			onSuccess: OnRSAKeyResponse,
 			onException: function( req, e ) { throw e; }
