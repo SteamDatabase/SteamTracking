@@ -3549,4 +3549,90 @@ function PublishActionNext( rgRequest )
 
 }
 
+function CreateNewApp( pubId, pubName, appName, appType, reservedRange, bAddPartnerAppReporting )
+{
+	var progressDialog = ShowCreateNewAppProgress( 'Create New App', 'Creating new app for partner: ' + pubName );
+	progressDialog.done( function() { top.location.reload(); } );
+
+	var progressMessages = $J( '#ProgressMessagesContainer' );
+	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID for ' + appName + '</div>' );
+
+	// add initial one to create the range
+	$J.post( 'https://partner.steamgames.com/apps/ajaxcreatenewapp/',
+		{
+			'name' : appName,
+			'type' : appType,
+			'range' : reservedRange,
+			'add_partner_app_reporting' : bAddPartnerAppReporting,
+			'publisherid' : pubId
+		}
+	).done(
+		function( response ) {
+			if ( response.success == 1 )
+			{
+				var divDone = $J('<div/>', { 'style' : 'font-weight: bold; color: white;' } );
+				divDone.append( "Done creating new app!" );
+				$J( "#WaitingContainer" ).html( divDone );
+
+				if ( response.messages )
+				{
+					for ( var i = 0; i < response.messages.length; ++i )
+					{
+						progressMessages.append( '<div class="add_dlc_msg">' + response.messages[i] + '</div>' );
+					}
+				}
+				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
+
+				progressMessages.append( '<div class="add_dlc_msg parent">Done!</div>' );
+				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
+				return;
+			}
+			else
+			{
+				if ( !response.messages )
+				{
+					progressMessages.append( '<div class="add_dlc_error_msg">' + response + '</div>' );
+					return;
+				}
+				if ( response.messages )
+				{
+					for ( var i = 0; i < response.messages.length; ++i )
+					{
+						progressMessages.append( '<div class="add_dlc_error_msg">' + response.messages[i] + '</div>' );
+					}
+				}
+				progressMessages.animate({"scrollTop": progressMessages.scrollHeight}, "slow");
+			}
+		}
+	).fail(
+		function( jqxhr ) {
+			progressDialog.Dismiss();
+			ShowAlertDialog( 'Failed to create new app', jqxhr.responseText );
+		}
+	);
+}
+
+function ShowCreateNewAppProgress( strTitle, strDescription )
+{
+	var deferred = new jQuery.Deferred();
+	var fnOK = function() { deferred.resolve(); };
+
+	var progress_container = $J('<div/>', {'class': 'progress_container', 'id' : 'ProgressMessagesContainer' } );
+
+	var throbber_container = $J('<div/>', {'class': 'waiting_dialog_container', 'id' : 'WaitingContainer' } );
+	var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
+	throbber_container.append( throbber );
+	throbber_container.append( strDescription );
+
+	progress_container.append( throbber_container );
+
+	var Modal = _BuildDialog( strTitle, progress_container, [], fnOK );
+	deferred.always( function() { Modal.Dismiss(); } );
+	Modal.Show();
+
+	// attach the deferred's events to the modal
+	deferred.promise( Modal );
+
+	return Modal;
+}
 
