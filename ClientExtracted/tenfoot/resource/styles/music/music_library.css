@@ -552,11 +552,11 @@ AlbumGridItem Label
 	height: 32px;
 	width: 300px;
 	font-size: 26px;
+	transform: translateY( 240px );
 	font-family: basefont;
 	font-weight: normal;
 	color: applabel;
 	opacity: 0.0;
-	vertical-align: bottom;
 	text-overflow: clip;
 	white-space: nowrap;
 	transition-property: opacity;
@@ -568,83 +568,112 @@ AlbumGridItem Label
 
 }
 
+#AlbumLabelWrapper
+{
+	width: 100%;
+	height: 100%;
+	margin: 8px;
+	margin-left: 18px;
+	flow-children: down;
+	visibility: visible;
+	opacity: 1.0;
+	z-index: 10;
+}
+
 #AlbumUpperLabel
 {
-	transform: translateY( -48px ) translateX( 16px );
 	font-weight: bold;
 }
 
-#AlbumLowerLabel
+.NoCover #AlbumUpperLabel,
+.NoCover:focus #AlbumUpperLabel
 {
-	transform: translateY( -14px ) translateX( 16px );
-	font-weight: normal;
-}
-
-.NoCover #AlbumUpperLabel 
-{
-	opacity: 1.0;
-	font-size: 80px;
-	height: 100px;
-	font-weight: light;
-	vertical-align: top;
-	transform: translateY( 0px ) translateX( 16px );
-}
-
-.NoCover:focus #AlbumUpperLabel 
-{
-	transform: translateY( -48px ) translateX( 16px );
-	height: 32px;
-	width: 300px;
-	font-size: 26px;
-	font-family: basefont;
-	color: applabel;
-	vertical-align: bottom;
+	opacity: 0.5;
+	font-size: 64px;
+	max-height: 230px;
+	width: 100%;
+	font-weight: thin;
+	text-transform: uppercase;
+	white-space: normal;
 	text-overflow: clip;
-	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
-	font-family: platformfont;
-	z-index: 6;
-		font-weight: bold;
+	height: fit-children;
+	transform: none;
 }
 
-.NoCover #AlbumLowerLabel 
-{
-	opacity: 1.0;
-	font-size: 80px;
-	height: 100px;
-	font-weight: light;
-	vertical-align: top;
-	transform: translateY( 88px ) translateX( 16px );
-}
 
-.NoCover:focus #AlbumLowerLabel 
+
+.NoCover #AlbumLowerLabel,
+.NoCover:focus #AlbumLowerLabel
 {
-	transform: translateY( -14px ) translateX( 16px );
-	height: 32px;
-	width: 300px;
-	font-size: 26px;
-	font-family: basefont;
-	font-weight: normal;
-	color: applabel;
-	vertical-align: bottom;
+	opacity: 0.2;
+	font-size: 64px;
+	max-height: 230px;
+	width: 100%;
+	font-weight: thin;
+	text-transform: uppercase;
 	text-overflow: clip;
-	white-space: nowrap;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
-	font-family: platformfont;
-	z-index: 6;
+	white-space: normal;
+	transform: none;
+	height: fit-children;
+	vertical-align: top;
 }
+
 
 AlbumGridItem:focus Label
 {
 	opacity: 1.0;
-	z-index: 6;
+	z-index: 10;
 }
+
+#MusicArtistPanel AlbumGridItem:focus #AlbumUpperLabel
+{
+		opacity: 0.0;
+}
+
+#MusicArtistPanel AlbumGridItem:focus #AlbumLowerLabel
+{
+	opacity: 1.0;
+	transform: translateY( -10px );
+}
+
+#MusicArtistPanel .NoCover:focus #AlbumLowerLabel
+{
+	transform: translateY( 0px );
+	opacity: 0.2;
+}
+
+#MusicArtistPanel AlbumGridItem:focus #AlbumUpperLabel
+{
+		opacity: 0.0;
+}
+
+#MusicArtistPanel .NoCover #AlbumUpperLabel
+{
+	opacity: 0.5;
+	font-size: 120px;
+	max-height: 370px;
+}
+
+#MusicArtistPanel .NoCover:focus #AlbumUpperLabel
+{
+	opacity: 0.5;
+}
+
+#MusicArtistPanel .NoCover #AlbumLowerLabel
+{
+	opacity: 0.2;
+	font-size: 120px;
+	max-height: 370px;
+}
+
+#MusicArtistPanel .NoCover:focus #AlbumUpperLabel
+#MusicArtistPanel .NoCover:focus #AlbumLowerLabel
+{
+		opacity: 1.0;
+		transform: translateY( 0px );
+}
+
+
 
 .LeftMouseScrollRegion, .RightMouseScrollRegion
 {

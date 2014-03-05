@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1393896522"
+	"version"		"1393980224"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.34c8ebdebe589ddecbf18454f6738fe17c40d384"
-		"checksum"		"34c8ebdebe589ddecbf18454f6738fe17c40d384"
-		"size"		"2122900"
-		"zipvz"		"tenfoot_all.zip.vz.ebc5c304f714ac159956b7a02bbdee2dd911fb05_775564"
+		"file"		"tenfoot_all.zip.b3b3d5d1bab1b2e31cdfd31c83a0f39d4e2c5a8b"
+		"checksum"		"b3b3d5d1bab1b2e31cdfd31c83a0f39d4e2c5a8b"
+		"size"		"2123013"
+		"zipvz"		"tenfoot_all.zip.vz.843c6572270550881c52ab0abe30e6b89e13060c_775627"
 	}
 	"resources_misc_all"
 	{
@@ -89,10 +89,10 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.fb63e3966aad5bf18456fe282e0d704b6224e543"
-		"checksum"		"fb63e3966aad5bf18456fe282e0d704b6224e543"
-		"size"		"30219722"
-		"zipvz"		"bins_osx.zip.vz.ed8834e64d1d26aa7e833a05a1b7800954226de1_17194397"
+		"file"		"bins_osx.zip.a6d3c5b95702f8a438088efb8a7e1ddea2e560df"
+		"checksum"		"a6d3c5b95702f8a438088efb8a7e1ddea2e560df"
+		"size"		"30222163"
+		"zipvz"		"bins_osx.zip.vz.51ba296e654a0f6f2084fe41e74bb7aedc58424c_17197059"
 	}
 	"bins_codecs_osx"
 	{
@@ -136,14 +136,14 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.aa67fe30b0dcb24fd915c48d079684d2d18d3a85"
-		"checksum"		"aa67fe30b0dcb24fd915c48d079684d2d18d3a85"
-		"size"		"1204754"
-		"zipvz"		"steam_osx.zip.vz.0be931443775e3839bb2b8669d35e9bcd71c3b4a_919207"
+		"file"		"steam_osx.zip.aa19c1a16d5d94263f6dc3064a456c5b4228ed13"
+		"checksum"		"aa19c1a16d5d94263f6dc3064a456c5b4228ed13"
+		"size"		"1204784"
+		"zipvz"		"steam_osx.zip.vz.7033c421766756a75044812761ca073be5c0e459_919223"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"34742877803ab1fb74220fc30aa434f5118e4c33ec2646969f6ea50edb77a25bf86c433a6aa5bc9f6a8f5ce43e04394e06cbc6fd33714f0b4f110db5a0ea64fb97e56df68ea74405a63b8f5dac4a8cf8247eeed204946f7dd6156a2d68887a11bf9b0e92daea226fd489b38a90d32d8a2eabc794b5fd3d8bc11869ce5c5552dd"
+	"osx"		"173e58d94e22038af2ee1c62d9be45be794b9d57a73ef33643a65e60367e2cdb360fb347d429b711ede1908afdaba64a8a71caf0133817094f4a46d7441a230e9b5272a0f2141d71b0037fe653dfb9efb4fc04eeb7b076aabef16eb6a9dc8f709dcde2b8efc6651100ffc8a2e1dc955cb78f766e2ab72e8c42fb5c747986642e"
 }

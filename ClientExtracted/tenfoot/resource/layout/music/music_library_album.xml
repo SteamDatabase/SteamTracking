@@ -18,7 +18,6 @@
 		</Grid>
 		
 		<Panel id="ThrobberContainer">
-			<Panel class="Throbber" />
 		</Panel>
 		
 	</MusicLibraryAlbumPanel>
