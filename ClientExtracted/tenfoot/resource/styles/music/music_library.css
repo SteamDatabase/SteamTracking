@@ -650,8 +650,8 @@ AlbumGridItem:focus Label
 #MusicArtistPanel .NoCover #AlbumUpperLabel
 {
 	opacity: 0.5;
-	font-size: 120px;
-	max-height: 370px;
+	font-size: 122px;
+	max-height: 440px;
 }
 
 #MusicArtistPanel .NoCover:focus #AlbumUpperLabel
@@ -662,7 +662,7 @@ AlbumGridItem:focus Label
 #MusicArtistPanel .NoCover #AlbumLowerLabel
 {
 	opacity: 0.2;
-	font-size: 120px;
+	font-size: 110px;
 	max-height: 370px;
 }
 

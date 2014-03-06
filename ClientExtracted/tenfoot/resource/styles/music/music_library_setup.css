@@ -149,24 +149,10 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 }
 
 
-MusicLibrarySetupEntry:Focus .UpperlineLabel, 
-MusicLibrarySetupEntry:Focus .LowerlineLabel,
+MusicLibrarySetupEntry:Focus .SingleLineLabel, 
 MusicLibrarySetupAdd:Focus .UpperlineLabel,
 {
-	color: applabelselectedsolid;
+	color: applabelselected;
 	transform: translateX( 3px );
 
-}
-
-.LowerlineLabel
-{
-	height: 28px;
-	width: 100%;
-	color: white;
-	font-size: 24px;
-	transform: translateX( -4px );
-	
-	transition-property: transform;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
 }

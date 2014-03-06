@@ -307,7 +307,7 @@ MainMenu.StackDepth3 #TopRow
 {
 	max-width: 310px;
 	opacity: 1.0;
-	text-overflow: clip;
+	text-overflow: ellipsis;
 	transition-property: opacity, max-width;
 
 	transition-duration: 0.3s;
