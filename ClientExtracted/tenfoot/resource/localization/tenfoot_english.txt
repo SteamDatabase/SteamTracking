@@ -1035,10 +1035,12 @@
 	
 	"Library_Details_ComingSoon"	"COMING SOON"
 	"Library_Details_Preload"	"PRELOAD"
+	"Library_Details_PrePurchase"	"PRE-PURCHASE"
 	"Library_Details_ActivateGuestPass"	"ACTIVATE"
 	"Library_Details_Install"		"INSTALL"
 	"Library_Details_Installing"		"DOWNLOADING"
 	"Library_Details_Validating"	"VALIDATING"
+	"Library_Details_Preloading"	"PRELOADING"
 	"Library_Details_CancelValidation"	"CANCEL"
 	"Library_Details_UpdatePending"		"DOWNLOAD"
 	"Library_Details_Launch"		"LAUNCH"
@@ -2087,6 +2089,8 @@
 	"Music_Library_Setup_Footer_Done"	"DONE"
 	"Music_Library_Setup_Footer_Cancel" "CANCEL"
 	"Music_Library_Setup_Footer_Select" "SELECT"
+	"Music_Library_Setup_Footer_RemoveFromList"	"REMOVE FROM LIST"
+	"Music_Library_Setup_Footer_BuildLibrary"	"BUILD LIBRARY"
 	
 	"Music_Library_Select_Directory_Header" "Music Library"
 	"Music_Library_Select_Directory_Text"	"Select a directory in which you store music."
