@@ -169,6 +169,7 @@
 			"medic_pocket"		"1"
 			"soldier_pocket"	"1"
 			"demo_belt"			"1"
+			"sniper_quiver"		"1"
 		}
 		"shared"
 		{
@@ -206,6 +207,11 @@
 			"heavy_bullets"		"1"
 			"engineer_hair"		"1"			
 			"sniper_vest"		"1"			
+			"soldier_stash"		"1"			
+		}
+		"shared"
+		{
+			"soldier_lucky_shot"		"1"	
 		}
 	}
 	"equip_conflicts"
@@ -221,10 +227,20 @@
 			"face"			"1"
 			"glasses"		"1"
 			"ears"			"1"
+			"soldier_lucky_shot"	"1"
+			"soldier_stash"			"1"
 		}
 		"heavy_pocket"
 		{
 			"medal"			"1"
+		}
+		"soldier_lucky_shot"	
+		{
+			"hat"			"1"
+		}
+		"soldier_stash"	
+		{
+			"hat"			"1"
 		}	
 	}
 	"prefabs"
@@ -5085,7 +5101,7 @@
 			"item_name"	"#TF_Soldier_Hat_1"
 			"item_description"	"#TF_Soldier_Hat_1_Desc"
 			"item_slot"	"head"
-			"equip_region"	"hat"
+			"equip_region"	"soldier_stash"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/soldier/soldier_hat"
 			"image_inventory_size_w"		"128"
@@ -8017,6 +8033,16 @@
 				{
 					"attribute_class"	"mult_dmgtaken_from_fire"
 					"value"			"1.20"
+				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"0"									
+				}
+				"kill eater score type 2"
+				{
+					"attribute_class"	"kill_eater_score_type_2"
+					"value" 	"3"									
 				}
 			}
 			"visuals"
@@ -29566,6 +29592,7 @@
 			"name"	"The Lucky Shot"
 			"first_sale_date"	"2012/01/10"
 			"prefab"	"hat"
+			"equip_region"	"soldier_lucky_shot"
 			"item_name"	"#TF_LuckyShot"
 			"item_description"	"#TF_LuckyShot_Desc"
 			"image_inventory"	"backpack/player/items/soldier/luckyshot"
@@ -29708,6 +29735,10 @@
 					"attribute_class"	"taunt_success_sound"
 					"value"				"scout.boombox"
 				}
+			}
+			"visuals"
+			{
+				"custom_sound0"		"scout.boombox"
 			}
 		}
 		"708"
@@ -30810,6 +30841,7 @@
 					"start_taunting"	"ACT_RUN"
 					"stop_taunting"	"ACT_IDLE"
 				}
+				"custom_sound0"		"pyro.music_backpack"
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_pickup.wav"
@@ -41151,15 +41183,15 @@
 		}
 		"1093"
 		{
-			"name"	"The Baronial Bouncer"
+			"name"	"The Gilded Guard"
 			"first_sale_date"	"2014/02/18"
 			"prefab"	"promo hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
 			}
-			"item_name"	"#TF_BaronialBouncer"
-			"item_description"	"#TF_BaronialBouncer_Desc"
+			"item_name"	"#TF_GildedGuard"
+			"item_description"	"#TF_GildedGuard_Desc"
 			"propername" "1"
 			"image_inventory"	"backpack/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet"
 			"model_player"	"models/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet.mdl"
@@ -41170,7 +41202,7 @@
 		}
 		"1094"
 		{
-			"name"	"The Cutthroat's Cloak"
+			"name"	"The Criminal Cloak"
 			"first_sale_date"	"2014/02/18"
 			"prefab"	"promo misc"
 			"capabilities"
@@ -41178,8 +41210,8 @@
 				"can_craft_count"	"1"
 			}
 			"item_type_name"	"#TF_Wearable_Apparel"
-			"item_name"	"#TF_CutthroatsCloak"
-			"item_description"	"#TF_CutthroatsCloak_Desc"
+			"item_name"	"#TF_CriminalCloak"
+			"item_description"	"#TF_CriminalCloak_Desc"
 			"equip_region"		"sniper_vest"
 			"propername" "1"
 			"image_inventory"	"backpack/workshop/player/items/sniper/thief_sniper_cape/thief_sniper_cape"
@@ -41215,7 +41247,7 @@
 		}
 		"1096"
 		{
-			"name"	"The Garrett Badge"
+			"name"	"The Baronial Badge"
 			"first_sale_date"	"2014/02/18"
 			"prefab"	"promo misc"
 			"capabilities"
@@ -41223,8 +41255,8 @@
 				"can_craft_count"	"1"
 			}
 			"item_type_name"	"#TF_Wearable_Badge"
-			"item_name"	"#TF_GarrettBadge"
-			"item_description"	"#TF_GarrettBadge_Desc"
+			"item_name"	"#TF_BaronialBadge"
+			"item_description"	"#TF_BaronialBadge_Desc"
 			"equip_region"	"medal"
 			"propername" "1"
 			"image_inventory"	"backpack/workshop/player/items/all_class/thief_badge/thief_badge"
@@ -49940,7 +49972,7 @@
 			"item_type_name"		"#TF_Wearable_Quiver"
 			"item_name"		"#TF_sbox2014_sniper_quiver"
 			"item_description"		"#TF_sbox2014_sniper_quiver_Desc"
-			"equip_region"		"Back"
+			"equip_region"		"sniper_quiver"
 			"image_inventory"		"backpack/workshop/player/items/sniper/sbox2014_sniper_quiver/sbox2014_sniper_quiver"
 			"capabilities"
 			{
@@ -50118,7 +50150,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_sbox2014_demo_samurai_sleeves"
 			"item_description"		"#TF_sbox2014_demo_samurai_sleeves_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"shirt"
 			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves"
 			"capabilities"
 			{

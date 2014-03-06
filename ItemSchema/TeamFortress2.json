@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.ed832c7f585fdf29eb735392c77657fe68ce6731.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.c2c61a489b3b390b98cd2e99844496c3d349c460.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -5503,6 +5503,16 @@
 						"name": "dmg taken from fire increased",
 						"class": "mult_dmgtaken_from_fire",
 						"value": 1.2000000476837158
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 0
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 3
 					}
 				]
 				
@@ -46971,11 +46981,11 @@
 				
 			},
 			{
-				"name": "The Baronial Bouncer",
+				"name": "The Gilded Guard",
 				"defindex": 1093,
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
-				"item_name": "Baronial Bouncer",
+				"item_name": "Gilded Guard",
 				"item_description": "",
 				"proper_name": true,
 				"item_slot": "misc",
@@ -47025,11 +47035,11 @@
 				
 			},
 			{
-				"name": "The Cutthroat's Cloak",
+				"name": "The Criminal Cloak",
 				"defindex": 1094,
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
-				"item_name": "Cutthroat's Cloak",
+				"item_name": "Criminal Cloak",
 				"item_description": "",
 				"proper_name": true,
 				"item_slot": "misc",
@@ -47133,11 +47143,11 @@
 				
 			},
 			{
-				"name": "The Garrett Badge",
+				"name": "The Baronial Badge",
 				"defindex": 1096,
 				"item_class": "tf_wearable",
 				"item_type_name": "Badge",
-				"item_name": "Garrett Badge",
+				"item_name": "Baronial Badge",
 				"item_description": "",
 				"proper_name": true,
 				"item_slot": "misc",
