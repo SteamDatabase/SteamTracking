@@ -508,6 +508,142 @@
 			{
 				"icon_path"		"econ/stickers/stickers2/welcome_clutch"
 			}
+			"48"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/3dmax"
+			}
+			"49"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/3dmax_holo"
+			}
+			"50"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/complexity"
+			}
+			"51"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/complexity_holo"
+			}
+			"52"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/dignitas"
+			}
+			"53"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/dignitas_holo"
+			}
+			"55"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/fnatic"
+			}
+			"56"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/fnatic_holo"
+			}
+			"57"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/hellraisers"
+			}
+			"58"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/hellraisers_holo"
+			}
+			"59"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ibuypower"
+			}
+			"60"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ibuypower_holo"
+			}
+			"61"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ldlc"
+			}
+			"62"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ldlc_holo"
+			}
+			"63"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/lgb"
+			}
+			"64"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/lgb_holo"
+			}
+			"65"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mousesports"
+			}
+			"66"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mousesports_holo"
+			}
+			"67"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mystik"
+			}
+			"68"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mystik_holo"
+			}
+			"69"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/navi"
+			}
+			"70"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/navi_holo"
+			}
+			"71"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas"
+			}
+			"72"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas_holo"
+			}
+			"73"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/reason"
+			}
+			"74"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/reason_holo"
+			}
+			"75"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/titan"
+			}
+			"76"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/titan_holo"
+			}
+			"77"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/virtuspro"
+			}
+			"78"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/virtuspro_holo"
+			}
+			"79"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/voxeminor"
+			}
+			"80"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/voxeminor_holo"
+			}
+			"81"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/esl1_foil"
+			}
+			"82"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/esl2_foil"
+			}
 		}
 		"weapon_icons"
 		{
@@ -9063,6 +9199,72 @@
 				}
 			}
 		}
+		"4013"
+		{
+			"item_name"		"#CSGO_crate_ems14_promo"
+			"name"		"crate_ems14_promo"
+			"image_inventory"		"econ/weapon_cases/crate_ems14_promo"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"13"
+					"force_gc_to_generate"		"1"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"3"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"4014"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_kat2014_01"
+			"name"		"crate_sticker_pack_kat2014_01"
+			"item_description"		"#CSGO_crate_sticker_pack_kat2014_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_kat2014_01"
+			"first_sale_date"		"2014/03/02"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"14"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"3"
+				}
+			}
+		}
+		"4015"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_kat2014_02"
+			"item_description"		"#CSGO_crate_sticker_pack_kat2014_desc"
+			"name"		"crate_sticker_pack_kat2014_02"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_kat2014_02"
+			"first_sale_date"		"2014/03/02"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"15"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"3"
+				}
+			}
+		}
 	}
 	"attributes"
 	{
@@ -10718,6 +10920,7 @@
 			"item_name"		"#StickerKit_std_crown_foil"
 			"description_string"		"#StickerKit_desc_std_crown_foil"
 			"sticker_material"		"stickers2/crown_foil"
+			"sticker_icon"		"stickers2/crown"
 			"item_rarity"		"legendary"
 		}
 		"38"
@@ -10791,6 +10994,280 @@
 			"description_string"		"#StickerKit_desc_std2_welcome_clutch"
 			"sticker_material"		"stickers2/welcome_clutch"
 			"item_rarity"		"rare"
+		}
+		"48"
+		{
+			"name"		"kat2014_3dmax"
+			"item_name"		"#StickerKit_kat2014_3dmax"
+			"description_string"		"#StickerKit_desc_kat2014_3dmax"
+			"sticker_material"		"emskatowice2014/3dmax"
+			"item_rarity"		"rare"
+		}
+		"49"
+		{
+			"name"		"kat2014_3dmax_holo"
+			"item_name"		"#StickerKit_kat2014_3dmax_holo"
+			"description_string"		"#StickerKit_desc_kat2014_3dmax_holo"
+			"sticker_material"		"emskatowice2014/3dmax_holo"
+			"item_rarity"		"mythical"
+		}
+		"50"
+		{
+			"name"		"kat2014_complexity"
+			"item_name"		"#StickerKit_kat2014_complexity"
+			"description_string"		"#StickerKit_desc_kat2014_complexity"
+			"sticker_material"		"emskatowice2014/complexity"
+			"item_rarity"		"rare"
+		}
+		"51"
+		{
+			"name"		"kat2014_complexity_holo"
+			"item_name"		"#StickerKit_kat2014_complexity_holo"
+			"description_string"		"#StickerKit_desc_kat2014_complexity_holo"
+			"sticker_material"		"emskatowice2014/complexity_holo"
+			"item_rarity"		"mythical"
+		}
+		"52"
+		{
+			"name"		"kat2014_dignitas"
+			"item_name"		"#StickerKit_kat2014_dignitas"
+			"description_string"		"#StickerKit_desc_kat2014_dignitas"
+			"sticker_material"		"emskatowice2014/dignitas"
+			"item_rarity"		"rare"
+		}
+		"53"
+		{
+			"name"		"kat2014_dignitas_holo"
+			"item_name"		"#StickerKit_kat2014_dignitas_holo"
+			"description_string"		"#StickerKit_desc_kat2014_dignitas_holo"
+			"sticker_material"		"emskatowice2014/dignitas_holo"
+			"item_rarity"		"mythical"
+		}
+		"55"
+		{
+			"name"		"kat2014_fnatic"
+			"item_name"		"#StickerKit_kat2014_fnatic"
+			"description_string"		"#StickerKit_desc_kat2014_fnatic"
+			"sticker_material"		"emskatowice2014/fnatic"
+			"item_rarity"		"rare"
+		}
+		"56"
+		{
+			"name"		"kat2014_fnatic_holo"
+			"item_name"		"#StickerKit_kat2014_fnatic_holo"
+			"description_string"		"#StickerKit_desc_kat2014_fnatic_holo"
+			"sticker_material"		"emskatowice2014/fnatic_holo"
+			"item_rarity"		"mythical"
+		}
+		"57"
+		{
+			"name"		"kat2014_hellraisers"
+			"item_name"		"#StickerKit_kat2014_hellraisers"
+			"description_string"		"#StickerKit_desc_kat2014_hellraisers"
+			"sticker_material"		"emskatowice2014/hellraisers"
+			"item_rarity"		"rare"
+		}
+		"58"
+		{
+			"name"		"kat2014_hellraisers_holo"
+			"item_name"		"#StickerKit_kat2014_hellraisers_holo"
+			"description_string"		"#StickerKit_desc_kat2014_hellraisers_holo"
+			"sticker_material"		"emskatowice2014/hellraisers_holo"
+			"item_rarity"		"mythical"
+		}
+		"59"
+		{
+			"name"		"kat2014_ibuypower"
+			"item_name"		"#StickerKit_kat2014_ibuypower"
+			"description_string"		"#StickerKit_desc_kat2014_ibuypower"
+			"sticker_material"		"emskatowice2014/ibuypower"
+			"item_rarity"		"rare"
+		}
+		"60"
+		{
+			"name"		"kat2014_ibuypower_holo"
+			"item_name"		"#StickerKit_kat2014_ibuypower_holo"
+			"description_string"		"#StickerKit_desc_kat2014_ibuypower_holo"
+			"sticker_material"		"emskatowice2014/ibuypower_holo"
+			"item_rarity"		"mythical"
+		}
+		"61"
+		{
+			"name"		"kat2014_ldlc"
+			"item_name"		"#StickerKit_kat2014_ldlc"
+			"description_string"		"#StickerKit_desc_kat2014_ldlc"
+			"sticker_material"		"emskatowice2014/ldlc"
+			"item_rarity"		"rare"
+		}
+		"62"
+		{
+			"name"		"kat2014_ldlc_holo"
+			"item_name"		"#StickerKit_kat2014_ldlc_holo"
+			"description_string"		"#StickerKit_desc_kat2014_ldlc_holo"
+			"sticker_material"		"emskatowice2014/ldlc_holo"
+			"item_rarity"		"mythical"
+		}
+		"63"
+		{
+			"name"		"kat2014_lgb"
+			"item_name"		"#StickerKit_kat2014_lgb"
+			"description_string"		"#StickerKit_desc_kat2014_lgb"
+			"sticker_material"		"emskatowice2014/lgb"
+			"item_rarity"		"rare"
+		}
+		"64"
+		{
+			"name"		"kat2014_lgb_holo"
+			"item_name"		"#StickerKit_kat2014_lgb_holo"
+			"description_string"		"#StickerKit_desc_kat2014_lgb_holo"
+			"sticker_material"		"emskatowice2014/lgb_holo"
+			"item_rarity"		"mythical"
+		}
+		"65"
+		{
+			"name"		"kat2014_mousesports"
+			"item_name"		"#StickerKit_kat2014_mousesports"
+			"description_string"		"#StickerKit_desc_kat2014_mousesports"
+			"sticker_material"		"emskatowice2014/mousesports"
+			"item_rarity"		"rare"
+		}
+		"66"
+		{
+			"name"		"kat2014_mousesports_holo"
+			"item_name"		"#StickerKit_kat2014_mousesports_holo"
+			"description_string"		"#StickerKit_desc_kat2014_mousesports_holo"
+			"sticker_material"		"emskatowice2014/mousesports_holo"
+			"item_rarity"		"mythical"
+		}
+		"67"
+		{
+			"name"		"kat2014_mystik"
+			"item_name"		"#StickerKit_kat2014_mystik"
+			"description_string"		"#StickerKit_desc_kat2014_mystik"
+			"sticker_material"		"emskatowice2014/mystik"
+			"item_rarity"		"rare"
+		}
+		"68"
+		{
+			"name"		"kat2014_mystik_holo"
+			"item_name"		"#StickerKit_kat2014_mystik_holo"
+			"description_string"		"#StickerKit_desc_kat2014_mystik_holo"
+			"sticker_material"		"emskatowice2014/mystik_holo"
+			"item_rarity"		"mythical"
+		}
+		"69"
+		{
+			"name"		"kat2014_navi"
+			"item_name"		"#StickerKit_kat2014_navi"
+			"description_string"		"#StickerKit_desc_kat2014_navi"
+			"sticker_material"		"emskatowice2014/navi"
+			"item_rarity"		"rare"
+		}
+		"70"
+		{
+			"name"		"kat2014_navi_holo"
+			"item_name"		"#StickerKit_kat2014_navi_holo"
+			"description_string"		"#StickerKit_desc_kat2014_navi_holo"
+			"sticker_material"		"emskatowice2014/navi_holo"
+			"item_rarity"		"mythical"
+		}
+		"71"
+		{
+			"name"		"kat2014_ninjasinpyjamas"
+			"item_name"		"#StickerKit_kat2014_ninjasinpyjamas"
+			"description_string"		"#StickerKit_desc_kat2014_ninjasinpyjamas"
+			"sticker_material"		"emskatowice2014/ninjasinpyjamas"
+			"item_rarity"		"rare"
+		}
+		"72"
+		{
+			"name"		"kat2014_ninjasinpyjamas_holo"
+			"item_name"		"#StickerKit_kat2014_ninjasinpyjamas_holo"
+			"description_string"		"#StickerKit_desc_kat2014_ninjasinpyjamas_holo"
+			"sticker_material"		"emskatowice2014/ninjasinpyjamas_holo"
+			"item_rarity"		"mythical"
+		}
+		"73"
+		{
+			"name"		"kat2014_reason"
+			"item_name"		"#StickerKit_kat2014_reason"
+			"description_string"		"#StickerKit_desc_kat2014_reason"
+			"sticker_material"		"emskatowice2014/reason"
+			"item_rarity"		"rare"
+		}
+		"74"
+		{
+			"name"		"kat2014_reason_holo"
+			"item_name"		"#StickerKit_kat2014_reason_holo"
+			"description_string"		"#StickerKit_desc_kat2014_reason_holo"
+			"sticker_material"		"emskatowice2014/reason_holo"
+			"item_rarity"		"mythical"
+		}
+		"75"
+		{
+			"name"		"kat2014_titan"
+			"item_name"		"#StickerKit_kat2014_titan"
+			"description_string"		"#StickerKit_desc_kat2014_titan"
+			"sticker_material"		"emskatowice2014/titan"
+			"item_rarity"		"rare"
+		}
+		"76"
+		{
+			"name"		"kat2014_titan_holo"
+			"item_name"		"#StickerKit_kat2014_titan_holo"
+			"description_string"		"#StickerKit_desc_kat2014_titan_holo"
+			"sticker_material"		"emskatowice2014/titan_holo"
+			"item_rarity"		"mythical"
+		}
+		"77"
+		{
+			"name"		"kat2014_virtuspro"
+			"item_name"		"#StickerKit_kat2014_virtuspro"
+			"description_string"		"#StickerKit_desc_kat2014_virtuspro"
+			"sticker_material"		"emskatowice2014/virtuspro"
+			"item_rarity"		"rare"
+		}
+		"78"
+		{
+			"name"		"kat2014_virtuspro_holo"
+			"item_name"		"#StickerKit_kat2014_virtuspro_holo"
+			"description_string"		"#StickerKit_desc_kat2014_virtuspro_holo"
+			"sticker_material"		"emskatowice2014/virtuspro_holo"
+			"item_rarity"		"mythical"
+		}
+		"79"
+		{
+			"name"		"kat2014_voxeminor"
+			"item_name"		"#StickerKit_kat2014_voxeminor"
+			"description_string"		"#StickerKit_desc_kat2014_voxeminor"
+			"sticker_material"		"emskatowice2014/voxeminor"
+			"item_rarity"		"rare"
+		}
+		"80"
+		{
+			"name"		"kat2014_voxeminor_holo"
+			"item_name"		"#StickerKit_kat2014_voxeminor_holo"
+			"description_string"		"#StickerKit_desc_kat2014_voxeminor_holo"
+			"sticker_material"		"emskatowice2014/voxeminor_holo"
+			"item_rarity"		"mythical"
+		}
+		"81"
+		{
+			"name"		"kat2014_esl1_foil"
+			"item_name"		"#StickerKit_kat2014_esl1_foil"
+			"description_string"		"#StickerKit_desc_kat2014_esl1_foil"
+			"sticker_material"		"emskatowice2014/wolf_esl_foil"
+			"sticker_icon"		"emskatowice2014/esl1_foil"
+			"item_rarity"		"legendary"
+		}
+		"82"
+		{
+			"name"		"kat2014_esl2_foil"
+			"item_name"		"#StickerKit_kat2014_esl2_foil"
+			"description_string"		"#StickerKit_desc_kat2014_esl2_foil"
+			"sticker_material"		"emskatowice2014/wolf_skull_esl_foil"
+			"sticker_icon"		"emskatowice2014/esl2_foil"
+			"item_rarity"		"legendary"
 		}
 	}
 	"paint_kits"
@@ -16085,6 +16562,70 @@
 			"crate_community_2_ancient"		"1"
 			"unusual_revolving_list"		"1"
 		}
+		"crate_sticker_pack_kat2014_01_rare"
+		{
+			"[kat2014_3dmax]Sticker"		"1"
+			"[kat2014_ibuypower]Sticker"		"1"
+			"[kat2014_mousesports]Sticker"		"1"
+			"[kat2014_mystik]Sticker"		"1"
+			"[kat2014_navi]Sticker"		"1"
+			"[kat2014_reason]Sticker"		"1"
+			"[kat2014_virtuspro]Sticker"		"1"
+			"[kat2014_voxeminor]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_01_mythical"
+		{
+			"[kat2014_3dmax_holo]Sticker"		"1"
+			"[kat2014_ibuypower_holo]Sticker"		"1"
+			"[kat2014_mousesports_holo]Sticker"		"1"
+			"[kat2014_mystik_holo]Sticker"		"1"
+			"[kat2014_navi_holo]Sticker"		"1"
+			"[kat2014_reason_holo]Sticker"		"1"
+			"[kat2014_virtuspro_holo]Sticker"		"1"
+			"[kat2014_voxeminor_holo]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_01_legendary"
+		{
+			"[kat2014_esl1_foil]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_01"
+		{
+			"crate_sticker_pack_kat2014_01_rare"		"1"
+			"crate_sticker_pack_kat2014_01_mythical"		"1"
+			"crate_sticker_pack_kat2014_01_legendary"		"1"
+		}
+		"crate_sticker_pack_kat2014_02_rare"
+		{
+			"[kat2014_complexity]Sticker"		"1"
+			"[kat2014_dignitas]Sticker"		"1"
+			"[kat2014_fnatic]Sticker"		"1"
+			"[kat2014_hellraisers]Sticker"		"1"
+			"[kat2014_ldlc]Sticker"		"1"
+			"[kat2014_lgb]Sticker"		"1"
+			"[kat2014_ninjasinpyjamas]Sticker"		"1"
+			"[kat2014_titan]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_02_mythical"
+		{
+			"[kat2014_complexity_holo]Sticker"		"1"
+			"[kat2014_dignitas_holo]Sticker"		"1"
+			"[kat2014_fnatic_holo]Sticker"		"1"
+			"[kat2014_hellraisers_holo]Sticker"		"1"
+			"[kat2014_ldlc_holo]Sticker"		"1"
+			"[kat2014_lgb_holo]Sticker"		"1"
+			"[kat2014_ninjasinpyjamas_holo]Sticker"		"1"
+			"[kat2014_titan_holo]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_02_legendary"
+		{
+			"[kat2014_esl2_foil]Sticker"		"1"
+		}
+		"crate_sticker_pack_kat2014_02"
+		{
+			"crate_sticker_pack_kat2014_02_rare"		"1"
+			"crate_sticker_pack_kat2014_02_mythical"		"1"
+			"crate_sticker_pack_kat2014_02_legendary"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -16100,6 +16641,9 @@
 		"10"		"crate_valve_3"
 		"11"		"crate_community_2"
 		"12"		"crate_sticker_pack02"
+		"13"		"crate_ems14_promo"
+		"14"		"crate_sticker_pack_kat2014_01"
+		"15"		"crate_sticker_pack_kat2014_02"
 	}
 	"item_levels"
 	{

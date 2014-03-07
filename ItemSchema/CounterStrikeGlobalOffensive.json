@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.0219e595a1b927691ba0365632c3dda86df28316.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.b809e98835c26186d4dac18eff8f4139ddb94698.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3507,6 +3507,131 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_ems14_promo",
+				"defindex": 4013,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "EMS One 2014 Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_ems14_promo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_ems14_promo.33f9ab927a267014a4b21b233284a1e04fd6b53d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 13
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 3
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_kat2014_01",
+				"defindex": 4014,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "EMS Katowice 2014 Challengers",
+				"item_description": "This capsule contains a single EMS One Katowice 2014 participant sticker. A portion of the proceeds is shared equally among the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_sticker_pack_kat2014_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_sticker_pack_kat2014_01.217983bfc1c97317903a25beab668565ad417ef8.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 14
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 3
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_kat2014_02",
+				"defindex": 4015,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "EMS Katowice 2014 Legends",
+				"item_description": "This capsule contains a single EMS One Katowice 2014 participant sticker. A portion of the proceeds is shared equally among the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_sticker_pack_kat2014_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_sticker_pack_kat2014_02.71f2e9a0cb0e3f5ffea795f381058ecb84152d80.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 15
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 3
 					}
 				]
 				
