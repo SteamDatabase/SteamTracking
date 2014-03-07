@@ -1654,13 +1654,17 @@ div.early_access_header {
 		position: relative;
 	}
 
-		div.early_access_header .devnotes > p {
+		div.early_access_header .devnotes > div {
 			font-size: 14px;
 			color: #ceccc9;
 			font-style: italic;
 			line-height: 18px;
 			max-height: 72px;
 			overflow: hidden;
+		}
+
+		div.early_access_header .devnotes ul, div.early_access_header .devnotes ol {
+			padding-left: 17px;
 		}
 
 		div.early_access_header .devnotes h1 {
