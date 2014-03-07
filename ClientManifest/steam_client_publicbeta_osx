@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1394136601"
+	"version"		"1394158693"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.ef0f6d27bb2767904f2667dec99e1bb0a0379d59"
-		"checksum"		"ef0f6d27bb2767904f2667dec99e1bb0a0379d59"
-		"size"		"2123048"
-		"zipvz"		"tenfoot_all.zip.vz.6f155ddfff80fe97e2786f7ea41ec555f5592b52_775615"
+		"file"		"tenfoot_all.zip.762167d45a766ba35ff1982965f1219477292a4d"
+		"checksum"		"762167d45a766ba35ff1982965f1219477292a4d"
+		"size"		"2123064"
+		"zipvz"		"tenfoot_all.zip.vz.ba2656d39de4cf1b72fe8fbfacbe7c339d2d2a52_775600"
 	}
 	"resources_misc_all"
 	{
@@ -89,10 +89,10 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.982c3124c24469579cb98014a9bfa2ca555b0ce7"
-		"checksum"		"982c3124c24469579cb98014a9bfa2ca555b0ce7"
-		"size"		"30223186"
-		"zipvz"		"bins_osx.zip.vz.c6488e00cfe6c70454286888d878f6f22456381a_17177690"
+		"file"		"bins_osx.zip.59f70cd704af8c690b87ca245d92708237904f8c"
+		"checksum"		"59f70cd704af8c690b87ca245d92708237904f8c"
+		"size"		"30227599"
+		"zipvz"		"bins_osx.zip.vz.5ea20a853f2a71001f4fa99025c5bac04ce5cda7_17184581"
 	}
 	"bins_codecs_osx"
 	{
@@ -136,14 +136,14 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.27a0a2da8d5989596521d46e04c3fb62a98949e2"
-		"checksum"		"27a0a2da8d5989596521d46e04c3fb62a98949e2"
-		"size"		"1204822"
-		"zipvz"		"steam_osx.zip.vz.a7d04647c2732fd2908e3385de100cbf510e057d_919189"
+		"file"		"steam_osx.zip.57957aa55b1e8ecd7baabf4428cac6e28ddad960"
+		"checksum"		"57957aa55b1e8ecd7baabf4428cac6e28ddad960"
+		"size"		"1204763"
+		"zipvz"		"steam_osx.zip.vz.afee1e842a925313043f65d546f299a47ff1155b_919697"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"1a81d55f4ed02409fa0f32625994691047874603dce832d4cbc5b05f661f69f905cc09766a70f1b8f6e0bd6df3fdddf20379226246a667285ead7b5ace1406beb1cf2ea8bc60356b183b73aaa4f44c16e5f62e8bf14cefd6b1de24e6eef94ef4b6e74fe8dae284cbb18bdc8299c47f58251c21c0f59c8e2510b079b00262015d"
+	"osx"		"559ade61fc0a3825224ad88c1d9ea773428b6a7973d68b105d248877406c900c560aa27d57f45bee58e8792ed44c406119d11b329afcbd86cb55090add5ee91296b7cdb2189868c3bbde190f1365f27f90bcd6eef9a7fb1b710d4c163b33a100cab94700df9fb5983d253f337747f2fea70364b640c75dac2f95b731ec6035e9"
 }

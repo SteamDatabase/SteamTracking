@@ -1041,6 +1041,7 @@
 	"Library_Details_Installing"		"DOWNLOADING"
 	"Library_Details_Validating"	"VALIDATING"
 	"Library_Details_Preloading"	"PRELOADING"
+	"Library_Details_Queued"	"QUEUED"
 	"Library_Details_CancelValidation"	"CANCEL"
 	"Library_Details_UpdatePending"		"DOWNLOAD"
 	"Library_Details_Launch"		"LAUNCH"
