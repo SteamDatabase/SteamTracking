@@ -343,10 +343,10 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		$Dialog.append( $J('<div/>', {'class': 'app_tag_report_dialog_intro' } ).text('Please pick a reason that you are reporting this tag on this product.') );
 
 		var rgReportOptions = {
-			1: 'Offensive/abusive tag',
-			2: 'Not appropriate for this product',
-			3: 'Not a helpful tag',
-			4: 'Spoiler'
+			1: 'Offensive/abusive tag<br><span class="sub">You find this tag offensive or abusive</span>',
+			2: 'Not appropriate for this product<br><span class="sub">This tag is generally helpful, but not applicable to this product</span>',
+			3: 'Not a helpful tag<br><span class="sub">This tag is generally not helpful as a way to browse for similar products</span>',
+			4: 'Spoiler<br><span class="sub">This tag gives away an important plot element in this product</span>'
 		};
 
 		if ( rgAddtlReportOptions )
