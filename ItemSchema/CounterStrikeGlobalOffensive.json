@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.b809e98835c26186d4dac18eff8f4139ddb94698.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.886592dfe238f5ccbfd4224c79df3edc7cdc036c.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1697,6 +1697,118 @@
 				
 			},
 			{
+				"name": "EMS One Katowice 2014 CS:GO Champion",
+				"defindex": 879,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at EMS One Katowice 2014",
+				"item_description": "This championship trophy was awarded to the Champion at The 2014 EMS One Katowice CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/katowice_2014_champion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_champion.796479b0c33ebd69fb00fada14b565036e304da3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_champion_large.bf565f6085cb4a3fa366e3167f7b873090176623.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "EMS One Katowice 2014 CS:GO Finalist",
+				"defindex": 880,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at EMS One Katowice 2014",
+				"item_description": "This championship trophy was awarded to the Finalist at The 2014 EMS One Katowice CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/katowice_2014_finalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_finalist.5aa55b24f3d385735476e27cbff25370bac476c0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_finalist_large.a96fab9b692e4e55cb310682df0deb8dba8f3a89.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "EMS One Katowice 2014 CS:GO Semifinalist",
+				"defindex": 881,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at EMS One Katowice 2014",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The 2014 EMS One Katowice CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/katowice_2014_semifinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_semifinalist.3edec56e82c658ea8b94aed79b44401370775e56.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_semifinalist_large.85046d0d4b5748572859cb638c8e1f502825955d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "EMS One Katowice 2014 CS:GO Quarterfinalist",
+				"defindex": 882,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at EMS One Katowice 2014",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The 2014 EMS One Katowice CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/status_icons\/katowice_2014_quarterfinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_quarterfinalist.1ad440c5b1334996c339dbfe631037a86c847604.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/status_icons\/katowice_2014_quarterfinalist_large.54910e582990bd76a5058312f6ae85c3a5dec30c.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Community Season One Spring 2013",
 				"defindex": 1000,
 				"item_class": "tool",
@@ -2966,7 +3078,15 @@
 				},
 				"tool": {
 					"type": "gift"
-				}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 8
+					}
+				]
+				
 			},
 			{
 				"name": "Sticker Crate Key",
@@ -3522,7 +3642,7 @@
 				"image_inventory": "econ\/weapon_cases\/crate_ems14_promo",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_ems14_promo.33f9ab927a267014a4b21b233284a1e04fd6b53d.png",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_ems14_promo.a2c1d0b7aae61d8bd734d7dd3f391fa42bfee643.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true,
@@ -3709,16 +3829,6 @@
 				"attribute_class": "has_silencer",
 				"effect_type": "positive",
 				"hidden": true,
-				"stored_as_integer": true
-			},
-			{
-				"name": "attach particle effect",
-				"defindex": 11,
-				"attribute_class": "set_attached_particle",
-				"description_string": "Attrib_AttachedParticle",
-				"description_format": "value_is_particle_index",
-				"effect_type": "positive",
-				"hidden": false,
 				"stored_as_integer": true
 			},
 			{
