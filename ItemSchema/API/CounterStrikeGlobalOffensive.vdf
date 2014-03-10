@@ -644,6 +644,78 @@
 			{
 				"icon_path"		"econ/stickers/emskatowice2014/esl2_foil"
 			}
+			"83"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/3dmax_foil"
+			}
+			"84"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/complexity_foil"
+			}
+			"85"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/dignitas_foil"
+			}
+			"86"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/fnatic_foil"
+			}
+			"87"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/hellraisers_foil"
+			}
+			"88"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ibuypower_foil"
+			}
+			"89"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ldlc_foil"
+			}
+			"90"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/lgb_foil"
+			}
+			"91"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mousesports_foil"
+			}
+			"92"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/mystik_foil"
+			}
+			"93"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/navi_foil"
+			}
+			"94"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas_foil"
+			}
+			"95"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/reason_foil"
+			}
+			"96"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/titan_foil"
+			}
+			"97"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/virtuspro_foil"
+			}
+			"98"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/voxeminor_foil"
+			}
+			"99"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/wolf_esl_gold_foil"
+			}
+			"100"
+			{
+				"icon_path"		"econ/stickers/emskatowice2014/wolf_skull_esl_gold_foil"
+			}
 		}
 		"weapon_icons"
 		{
@@ -8335,6 +8407,54 @@
 				"pedestal display model"		"models/inventory_items/dreamhack_trophy_quarterfinalist.mdl"
 			}
 		}
+		"879"
+		{
+			"name"		"EMS One Katowice 2014 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Kat2014_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_Kat2014_Champion_Desc"
+			"image_inventory"		"econ/status_icons/katowice_2014_champion"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/katowice_trophy_champion.mdl"
+			}
+		}
+		"880"
+		{
+			"name"		"EMS One Katowice 2014 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Kat2014_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_Kat2014_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/katowice_2014_finalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/katowice_trophy_finalist.mdl"
+			}
+		}
+		"881"
+		{
+			"name"		"EMS One Katowice 2014 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Kat2014_SemiFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Kat2014_SemiFinalist_Desc"
+			"image_inventory"		"econ/status_icons/katowice_2014_semifinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/katowice_trophy_semifinalist.mdl"
+			}
+		}
+		"882"
+		{
+			"name"		"EMS One Katowice 2014 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Kat2014_QuarterFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Kat2014_QuarterFinalist_Desc"
+			"image_inventory"		"econ/status_icons/katowice_2014_quarterfinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/katowice_trophy_quarterfinalist.mdl"
+			}
+		}
 		"1000"
 		{
 			"name"		"Community Season One Spring 2013"
@@ -8837,7 +8957,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"8"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -8862,6 +8981,14 @@
 					"num_items"		"1"
 					"max_recipients"		"9"
 					"target_rule"		"only_other_players"
+				}
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"8"
 				}
 			}
 		}
@@ -8920,7 +9047,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"8"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -8957,7 +9083,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -8981,7 +9106,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"2"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9005,7 +9129,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"4"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9029,7 +9152,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"3"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9053,7 +9175,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"5"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9069,13 +9190,11 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"6"
-					"force_gc_to_generate"		"1"
 				}
 				"tournament event id"
 				{
 					"attribute_class"		"tournament_event_id"
 					"value"		"1"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9099,7 +9218,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"9"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9123,7 +9241,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"7"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9147,7 +9264,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"10"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9171,7 +9287,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"11"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9195,7 +9310,6 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"12"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9211,13 +9325,11 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"13"
-					"force_gc_to_generate"		"1"
 				}
 				"tournament event id"
 				{
 					"attribute_class"		"tournament_event_id"
 					"value"		"3"
-					"force_gc_to_generate"		"1"
 				}
 			}
 		}
@@ -9350,16 +9462,6 @@
 			"description_format"		"value_is_additive"
 			"description_string"		"#Attrib_HasSilencer"
 			"hidden"		"1"
-			"effect_type"		"positive"
-			"stored_as_integer"		"1"
-		}
-		"11"
-		{
-			"name"		"attach particle effect"
-			"attribute_class"		"set_attached_particle"
-			"description_string"		"#Attrib_AttachedParticle"
-			"description_format"		"value_is_particle_index"
-			"hidden"		"0"
 			"effect_type"		"positive"
 			"stored_as_integer"		"1"
 		}
@@ -11267,6 +11369,168 @@
 			"description_string"		"#StickerKit_desc_kat2014_esl2_foil"
 			"sticker_material"		"emskatowice2014/wolf_skull_esl_foil"
 			"sticker_icon"		"emskatowice2014/esl2_foil"
+			"item_rarity"		"legendary"
+		}
+		"83"
+		{
+			"name"		"kat2014_3dmax_foil"
+			"item_name"		"#StickerKit_kat2014_3dmax_foil"
+			"description_string"		"#StickerKit_desc_kat2014_3dmax_foil"
+			"sticker_material"		"emskatowice2014/3dmax_foil"
+			"sticker_icon"		"emskatowice2014/3dmax_foil"
+			"item_rarity"		"legendary"
+		}
+		"84"
+		{
+			"name"		"kat2014_complexity_foil"
+			"item_name"		"#StickerKit_kat2014_complexity_foil"
+			"description_string"		"#StickerKit_desc_kat2014_complexity_foil"
+			"sticker_material"		"emskatowice2014/complexity_foil"
+			"sticker_icon"		"emskatowice2014/complexity_foil"
+			"item_rarity"		"legendary"
+		}
+		"85"
+		{
+			"name"		"kat2014_dignitas_foil"
+			"item_name"		"#StickerKit_kat2014_dignitas_foil"
+			"description_string"		"#StickerKit_desc_kat2014_dignitas_foil"
+			"sticker_material"		"emskatowice2014/dignitas_foil"
+			"sticker_icon"		"emskatowice2014/dignitas_foil"
+			"item_rarity"		"legendary"
+		}
+		"86"
+		{
+			"name"		"kat2014_fnatic_foil"
+			"item_name"		"#StickerKit_kat2014_fnatic_foil"
+			"description_string"		"#StickerKit_desc_kat2014_fnatic_foil"
+			"sticker_material"		"emskatowice2014/fnatic_foil"
+			"sticker_icon"		"emskatowice2014/fnatic_foil"
+			"item_rarity"		"legendary"
+		}
+		"87"
+		{
+			"name"		"kat2014_hellraisers_foil"
+			"item_name"		"#StickerKit_kat2014_hellraisers_foil"
+			"description_string"		"#StickerKit_desc_kat2014_hellraisers_foil"
+			"sticker_material"		"emskatowice2014/hellraisers_foil"
+			"sticker_icon"		"emskatowice2014/hellraisers_foil"
+			"item_rarity"		"legendary"
+		}
+		"88"
+		{
+			"name"		"kat2014_ibuypower_foil"
+			"item_name"		"#StickerKit_kat2014_ibuypower_foil"
+			"description_string"		"#StickerKit_desc_kat2014_ibuypower_foil"
+			"sticker_material"		"emskatowice2014/ibuypower_foil"
+			"sticker_icon"		"emskatowice2014/ibuypower_foil"
+			"item_rarity"		"legendary"
+		}
+		"89"
+		{
+			"name"		"kat2014_ldlc_foil"
+			"item_name"		"#StickerKit_kat2014_ldlc_foil"
+			"description_string"		"#StickerKit_desc_kat2014_ldlc_foil"
+			"sticker_material"		"emskatowice2014/ldlc_foil"
+			"sticker_icon"		"emskatowice2014/ldlc_foil"
+			"item_rarity"		"legendary"
+		}
+		"90"
+		{
+			"name"		"kat2014_lgb_foil"
+			"item_name"		"#StickerKit_kat2014_lgb_foil"
+			"description_string"		"#StickerKit_desc_kat2014_lgb_foil"
+			"sticker_material"		"emskatowice2014/lgb_foil"
+			"sticker_icon"		"emskatowice2014/lgb_foil"
+			"item_rarity"		"legendary"
+		}
+		"91"
+		{
+			"name"		"kat2014_mousesports_foil"
+			"item_name"		"#StickerKit_kat2014_mousesports_foil"
+			"description_string"		"#StickerKit_desc_kat2014_mousesports_foil"
+			"sticker_material"		"emskatowice2014/mousesports_foil"
+			"sticker_icon"		"emskatowice2014/mousesports_foil"
+			"item_rarity"		"legendary"
+		}
+		"92"
+		{
+			"name"		"kat2014_mystik_foil"
+			"item_name"		"#StickerKit_kat2014_mystik_foil"
+			"description_string"		"#StickerKit_desc_kat2014_mystik_foil"
+			"sticker_material"		"emskatowice2014/mystik_foil"
+			"sticker_icon"		"emskatowice2014/mystik_foil"
+			"item_rarity"		"legendary"
+		}
+		"93"
+		{
+			"name"		"kat2014_navi_foil"
+			"item_name"		"#StickerKit_kat2014_navi_foil"
+			"description_string"		"#StickerKit_desc_kat2014_navi_foil"
+			"sticker_material"		"emskatowice2014/navi_foil"
+			"sticker_icon"		"emskatowice2014/navi_foil"
+			"item_rarity"		"legendary"
+		}
+		"94"
+		{
+			"name"		"kat2014_ninjasinpyjamas_foil"
+			"item_name"		"#StickerKit_kat2014_ninjasinpyjamas_foil"
+			"description_string"		"#StickerKit_desc_kat2014_ninjasinpyjamas_foil"
+			"sticker_material"		"emskatowice2014/ninjasinpyjamas_foil"
+			"sticker_icon"		"emskatowice2014/ninjasinpyjamas_foil"
+			"item_rarity"		"legendary"
+		}
+		"95"
+		{
+			"name"		"kat2014_reason_foil"
+			"item_name"		"#StickerKit_kat2014_reason_foil"
+			"description_string"		"#StickerKit_desc_kat2014_reason_foil"
+			"sticker_material"		"emskatowice2014/reason_foil"
+			"sticker_icon"		"emskatowice2014/reason_foil"
+			"item_rarity"		"legendary"
+		}
+		"96"
+		{
+			"name"		"kat2014_titan_foil"
+			"item_name"		"#StickerKit_kat2014_titan_foil"
+			"description_string"		"#StickerKit_desc_kat2014_titan_foil"
+			"sticker_material"		"emskatowice2014/titan_foil"
+			"sticker_icon"		"emskatowice2014/titan_foil"
+			"item_rarity"		"legendary"
+		}
+		"97"
+		{
+			"name"		"kat2014_virtuspro_foil"
+			"item_name"		"#StickerKit_kat2014_virtuspro_foil"
+			"description_string"		"#StickerKit_desc_kat2014_virtuspro_foil"
+			"sticker_material"		"emskatowice2014/virtuspro_foil"
+			"sticker_icon"		"emskatowice2014/virtuspro_foil"
+			"item_rarity"		"legendary"
+		}
+		"98"
+		{
+			"name"		"kat2014_voxeminor_foil"
+			"item_name"		"#StickerKit_kat2014_voxeminor_foil"
+			"description_string"		"#StickerKit_desc_kat2014_voxeminor_foil"
+			"sticker_material"		"emskatowice2014/voxeminor_foil"
+			"sticker_icon"		"emskatowice2014/voxeminor_foil"
+			"item_rarity"		"legendary"
+		}
+		"99"
+		{
+			"name"		"kat2014_wolf_esl_gold_foil"
+			"item_name"		"#StickerKit_kat2014_wolf_esl_gold_foil"
+			"description_string"		"#StickerKit_desc_kat2014_wolf_esl_gold_foil"
+			"sticker_material"		"emskatowice2014/wolf_esl_gold_foil"
+			"sticker_icon"		"emskatowice2014/wolf_esl_gold_foil"
+			"item_rarity"		"legendary"
+		}
+		"100"
+		{
+			"name"		"kat2014_wolf_skull_esl_gold_foil"
+			"item_name"		"#StickerKit_kat2014_wolf_skull_esl_gold_foil"
+			"description_string"		"#StickerKit_desc_kat2014_wolf_skull_esl_gold_foil"
+			"sticker_material"		"emskatowice2014/wolf_skull_esl_gold_foil"
+			"sticker_icon"		"emskatowice2014/wolf_skull_esl_gold_foil"
 			"item_rarity"		"legendary"
 		}
 	}
