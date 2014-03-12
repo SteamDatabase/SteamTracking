@@ -2454,7 +2454,11 @@ function iSwapFullURL( imgID, newImg )
 
 function GetCurrentScrollPercentage()
 {
-	return ( ( document.documentElement.scrollTop ) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100 );
+	var s = $J(window).scrollTop();
+	var d = $J(document).height();
+	var c = $J(window).height();
+	var scrollPercent = (s / (d-c)) * 100;
+	return scrollPercent;
 }
 
 // @elemID id of the element
@@ -2687,6 +2691,58 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 			ShowAlertDialog( 'Share', 'There was a problem sharing the status update.  Please try again later.' );
 		}
 	});
+}
+
+function RateAnnouncement( $groupURL, gid, bVoteUp )
+{
+	var rateURL = $groupURL + "/announcements/rate/" + gid;
+	$J.post( rateURL, {
+			'voteup' : bVoteUp,
+			'sessionid' : g_sessionID
+		}
+	).done( function( json ) {
+
+		var votesUpCount = $J('#VotesUpCount_' + gid);
+		if ( votesUpCount )
+		{
+			var increment = 0;
+			if ( bVoteUp )
+			{
+				increment = 1;
+			}
+			else if ( $J('#VoteUpBtn_' + gid).hasClass( 'btn_active' ) )
+			{
+				increment = -1;
+			}
+			votesUpCount.html( parseInt( votesUpCount.html() ) + increment );
+
+			if ( parseInt( votesUpCount.html() ) == 0 )
+			{
+				$J('#VotesUpCountContainer_' + gid).hide();
+			}
+			else
+			{
+				$J('#VotesUpCountContainer_' + gid).show();
+			}
+		}
+
+		if ( bVoteUp )
+		{
+			$J('#VoteUpBtn_' + gid).addClass( "btn_active" );
+			$J('#VoteDownBtn_' + gid).removeClass( "btn_active" );
+		}
+		else
+		{
+			$J('#VoteDownBtn_' + gid).addClass( "btn_active" );
+			$J('#VoteUpBtn_' + gid).removeClass( "btn_active" );
+		}
+
+
+
+	} )
+	.fail( function( jqxhr ) {
+	} );
+	return false;
 }
 
 var CAjaxPagingControls = Class.create( {

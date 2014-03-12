@@ -405,6 +405,7 @@ a.market_listing_item_name_link:hover {
 .market_listing_gainorloss {
 	float: left;
 	width: 32px;
+	min-height: 1px;
 	color: white;
 
 	font-size: 16px;

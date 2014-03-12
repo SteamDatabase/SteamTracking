@@ -3276,7 +3276,7 @@ ul.squares li {
 	right: 0px;
 }
 
-.btn_addtocart a.btn_addtocart_content {
+.btn_addtocart .btn_addtocart_content {
 	display: inline-block;
 	height: 34px;
 	
@@ -3291,17 +3291,18 @@ ul.squares li {
 	background-repeat: repeat-x;
 	
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
-.btn_addtocart.btn_packageinfo a.btn_addtocart_content {
+.btn_addtocart.btn_packageinfo .btn_addtocart_content {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif' );
 }
 
-.btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
+.btn_addtocart.btn_addtocart_blue .btn_addtocart_content {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg' );
 }
 
-.btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
+.btn_addtocart.btn_clickfordetails .btn_addtocart_content {
 	background-image: url( 'http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif' );
 }
 

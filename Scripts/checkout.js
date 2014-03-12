@@ -2714,7 +2714,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'dankort' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'Dankort'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'Visa Dankort'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
 			{

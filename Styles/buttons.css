@@ -397,6 +397,15 @@ btn_border_2px > span {
 			background-position: -32px -16px;		}
 	
 		
+	.ico16.report {
+		background-position: -128px 0px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.report {
+			background-position: -144px 0px;		}
+	
+			.btn_active .ico16.report, .active .ico16.report {
+			background-position: -160px 0px;		}
+		
 /* Arrows are the only icons I've not fully replaced yet. If you need to use them, please convert to the new icon code */
 
 .btn_details_arrow

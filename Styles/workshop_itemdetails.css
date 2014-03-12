@@ -2960,7 +2960,7 @@ h2.stats {
 		}
 		
 	.statsBox #revenueChart {
-		margin: 10px;
+		margin: 10px 10px 15px 20px;
 		padding-bottom: 10px;
 	}
 	.statsBox .jqplot-axis {

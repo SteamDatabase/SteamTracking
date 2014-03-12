@@ -1484,3 +1484,29 @@ function EnsureStoreMenuTagsLoaded( strId )
 	}
 }
 
+
+function AddFreeLicense( subid, strDisplayName )
+{
+	if ( window.g_bAddFreeLicenseInFlight )
+		return;
+
+	window.g_bAddFreeLicenseInFlight = true;
+
+	$J.post( 'http://store.steampowered.com/checkout/addfreelicense/' + subid, { ajax: true, sessionid: g_sessionID }).done( function() {
+		ShowAlertDialog(
+			strDisplayName,
+			'%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName )
+		).done( function() {
+			window.location.reload();
+		});
+	}).fail( function( jqXHR ) {
+		var data = V_ParseJSON( jqXHR.responseText );
+		if ( data && data.purchaseresultdetail == 9 )
+			ShowAlertDialog( strDisplayName, 'This product is already available in your Steam library.' );
+		else
+			ShowAlertDialog( strDisplayName, 'There was a problem adding this product to your account.  Please try again later.' );
+	}).always( function () {
+		delete window.g_bAddFreeLicenseInFlight;
+	});
+}
+
