@@ -2604,6 +2604,32 @@
 							}
 						]
 						
+					},
+					{
+						"name": "AuthenticateUserTicket",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "key",
+								"type": "string",
+								"optional": false,
+								"description": "access key"
+							},
+							{
+								"name": "appid",
+								"type": "uint32",
+								"optional": false,
+								"description": "appid of game"
+							},
+							{
+								"name": "ticket",
+								"type": "string",
+								"optional": false,
+								"description": "Ticket from GetAuthSessionTicket."
+							}
+						]
+						
 					}
 				]
 				
