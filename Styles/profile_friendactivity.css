@@ -694,6 +694,24 @@ a.nohover, a.nohover:hover
 	word-wrap: break-word;
 }
 
+.blotter_group_announcement_rating_controls
+{
+	padding-top: 10px;
+}
+
+.blotter_group_announcement_rating_controls .rateUpCount
+{
+	color: #7CC5FB;
+	padding-right: 10px;
+	line-height: 30px;
+}
+
+.blotter_group_announcement_rating_controls .rateUpCount img
+{
+	vertical-align: middle;
+	padding-right: 0px;
+}
+
 /* DAILY ROLLUP block */
 .blotter_daily_rollup
 {
@@ -910,7 +928,7 @@ a.nohover, a.nohover:hover
 .blotter_screenshot_gallery_image
 {
 	float: left;
-	border: 3px solid #333333;
+	border: 3px solid #0d0d0d;
 }
 
 

@@ -2177,6 +2177,58 @@ h2.bb_tag + br {
 	vertical-align: middle;
 	margin-right: 6px;
 }
+.app_tag_report_dialog_option .sub {
+	font-size: 12px;
+	color: #555555;
+	margin-left: 20px;
+}
+
+.app_report_dialog
+{
+	font-size: 14px;
+	width: 600px;
+}
+
+.app_report_dialog_intro {
+	margin-bottom: 20px;
+}
+
+.app_report_dialog_option {
+	margin-bottom: 16px;
+	line-height: 20px;
+}
+
+	.app_report_dialog_option .sub {
+	font-size: 12px;
+	color: #777777;
+}
+
+.app_report_dialog_option_input {
+	margin-top: 4px;
+	float: left;
+}
+.app_report_dialog_option_text {
+	margin-left: 25px;
+}
+.app_report_dialog_reason
+{
+	display: inline-block;
+	padding: 5px;
+	width: 590px;
+	height: 90px;
+	border: none;
+	outline: none;
+	background-color: #565658;
+	font-size: 13px;
+	color: #BFBFBF;
+}
+
+.app_report_dialog_dmca
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 13px;
+}
 
 .tag_control_flash {
 	animation-duration: 1s;

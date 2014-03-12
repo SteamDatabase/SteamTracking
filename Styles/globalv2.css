@@ -1091,3 +1091,10 @@ img.emoticon {
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
 }
+
+span.bb_link_host {
+	font-size: 10px;
+	color: #888;
+	padding: 4px;
+	top: -1px;
+}

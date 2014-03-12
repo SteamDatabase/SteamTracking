@@ -611,6 +611,25 @@ a.subtle:hover {
 	float: right;
 }
 
+.announcement_control_container
+{
+	position: relative;
+	padding: 6px;
+	background-color: #111111;
+}
+
+.announcement_control_container .rateUpCount
+{
+	color: #7CC5FB;
+	padding-right: 10px;
+}
+
+.announcement_control_container .rateUpCount img
+{
+	vertical-align: middle;
+	padding-right: 0px;
+}
+
 .group_body_links a {
 	color: #828282;
 	text-decoration: underline;
