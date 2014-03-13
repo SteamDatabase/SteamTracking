@@ -97,15 +97,9 @@ function CreateRequiredCurrencyBlock( target, id, reqCurrencies, initValues )
 	$(target).insert( GetRequiredCurrencyBlock( id, reqCurrencies, initValues, false, false ) );
 }
 
-function IsCurrencyWhole( currency )
-{
-	// Currently RUB is the only whole unit currency. TODO: Improve this so we can receive the list from the back-end.
-	return ( currency == 'RUB' );
-}
-
 function GetFinalPrice( finalPrice, currency )
 {
-	if ( IsCurrencyWhole( currency ) || isNaN( finalPrice ) )
+	if ( isNaN( finalPrice ) )
 	{
 		// Check if we can cast it to an int, as sometimes, we are passing '-'
 		return finalPrice;
