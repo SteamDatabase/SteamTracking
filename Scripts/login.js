@@ -61,11 +61,15 @@ var g_bEmailAuthSuccessfulWantToLeave = false;
 function DoLogin()
 {
 	var form = document.forms['logon'];
-	if ( g_bLoginInFlight || form.elements['username'].value.length == 0 || form.elements['password'].value.length == 0 )
-		return;
 
 	var username = form.elements['username'].value;
 	username = username.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
+
+	var password = form.elements['password'].value;
+	password = password.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
+
+	if ( g_bLoginInFlight || username.length == 0 || password.length == 0 )
+		return;
 
 	g_bLoginInFlight = true;
 	$('login_btn_signin').hide();
