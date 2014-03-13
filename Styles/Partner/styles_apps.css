@@ -29,6 +29,10 @@ div.leaderboard_count_entries {
 	width: 7em;
 }
 
+div.leaderboard_update_error {
+	color: red;
+}
+
 div.leaderboard_info {
 	clear: both;
 }
