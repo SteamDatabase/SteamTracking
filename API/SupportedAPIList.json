@@ -1461,12 +1461,6 @@
 								"type": "uint32",
 								"optional": true,
 								"description": "The ID of the league to get the prize pool of"
-							},
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The prize pool size for the given tournament id."
 							}
 						]
 						
