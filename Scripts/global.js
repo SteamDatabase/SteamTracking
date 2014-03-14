@@ -2695,6 +2695,15 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 
 function RateAnnouncement( $groupURL, gid, bVoteUp )
 {
+	if ( bVoteUp && $J('#VoteUpBtn_' + gid).hasClass( "btn_active" ) )
+	{
+		return;
+	}
+	if ( !bVoteUp && $J('#VoteDownBtn_' + gid).hasClass( "btn_active" ) )
+	{
+		return;
+	}
+
 	var rateURL = $groupURL + "/announcements/rate/" + gid;
 	$J.post( rateURL, {
 			'voteup' : bVoteUp,
