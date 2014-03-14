@@ -2714,9 +2714,9 @@ function RateAnnouncement( $groupURL, gid, bVoteUp )
 			{
 				increment = -1;
 			}
-			votesUpCount.html( parseInt( votesUpCount.html() ) + increment );
+			UpdateFormattedNumber( votesUpCount, increment );
 
-			if ( parseInt( votesUpCount.html() ) == 0 )
+			if ( parseInt( votesUpCount.html().replace(/,/g, '') ) == 0 )
 			{
 				$J('#VotesUpCountContainer_' + gid).hide();
 			}
