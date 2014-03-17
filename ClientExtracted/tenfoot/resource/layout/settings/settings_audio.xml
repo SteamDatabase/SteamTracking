@@ -39,28 +39,30 @@
 				<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
 						<Label class="SettingsCallout" text="#SettingsAudio_Hardware" />
 				</Panel>
-				<Panel class="FlowDown">
-					<Panel class="FlowDown SettingsRight">
-						<Label class="SettingsValue" text="#SettingsAudio_Card" />
-						<DropDown id="Sink" />
-					</Panel>
-					<Panel class="FlowDown SettingsRight">
-						<Label class="SettingsValue" text="#SettingsAudio_Profile" />
-						<DropDown id="Profile" />
-					</Panel>
-					<Panel class="FlowDown SettingsRight AudioBottom">
-						<Label class="SettingsValue" text="#SettingsAudio_Port" />
-						<DropDown id="Port" />
-					</Panel>
-					<ToggleButton class="CheckBox AudioCheck" id="SettingsAudio_AC3" text="SettingsAudio_AC3" onactivate="ToggleAudioStreamPassthru();" />
-					<ToggleButton class="CheckBox AudioCheck" id="SettingsAudio_DTS" text="SettingsAudio_DTS" onactivate="ToggleAudioStreamPassthru();"  />
+
+				<Label class="SettingsLegend" text="#SettingsAudio_Card" />
+				<Label class="SettingsValue" id="SettingsAudio_Card_Value" />
+
+				<Label class="SettingsLegend" text="#SettingsAudio_Profile" />
+				<Label class="SettingsValue" id="SettingsAudio_Profile_Value" />
+
+				<Label class="SettingsLegend" text="#SettingsAudio_Port" />
+				<Label class="SettingsValue" id="SettingsAudio_Port_Value" />
+
+				<Panel id="WizardButtonsAudio" tabindex="auto" selectionpos="auto">
+					<Button class="Button" onactivate="AudioWizardStart()">
+						<Label class="LongDesc" text="#SettingsAudioConfig_BeginWizard" />
+					</Button>
 				</Panel>
+
 			</Panel>
 
 			<Panel id="AudioCard_Error" class="SettingsContent SettingsRightContent">
 				<Label class="SettingsValue" text="#SettingsAudio_Failed" />
 			</Panel>
 		</Panel>
+
+
 
 	</SettingsPanel_Audio>
 

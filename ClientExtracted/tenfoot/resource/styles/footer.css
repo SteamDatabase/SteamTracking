@@ -406,7 +406,7 @@ TenfootFooterPanel
 
 .SteamPad #LegendRow #MiddleLegend .LegendText
 {
-	max-width: 240px;
+	max-width: 200px;
 	max-height: 60px;
 }
 
@@ -607,6 +607,11 @@ TenfootFooterPanel
 	background-image: url( "file://{images}/footer/y_button.png" );
 }
 
+.OSX.SteamPad #Y_Wrapper .YButtonBox,.Linux.SteamPad #Y_Wrapper .YButtonBox
+{
+	padding-top: 5px;
+}
+
 .SteamPad #B_Wrapper
 {
 	vertical-align: top;
@@ -618,6 +623,12 @@ TenfootFooterPanel
 	padding-left: -18px;
 	background-image: url( "file://{images}/footer/b_button.png" );
 }
+
+.OSX.SteamPad #B_Wrapper .BButtonBox,.Linux.SteamPad #B_Wrapper .BButtonBox
+{
+	padding-top: 5px;
+}
+
 
 #LegendRow #RightLegend
 {

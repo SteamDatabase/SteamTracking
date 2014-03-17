@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 	
-	<StoreAppFriendsSection defaultfocus="FriendsExanded" >
+	<StoreAppFriendsSection defaultfocus="FriendsExpanded" >
 		<Panel class="AppSectionWrapper">
 			<Label class="HeaderLabel" text="#Store_Friends" />
 			<Panel class="AppSectionBody">

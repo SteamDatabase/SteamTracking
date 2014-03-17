@@ -92,7 +92,7 @@
 
 //settings
 @define simplebutton: gradient( linear, 0% 0%, 100% 100%, from( #4c7a994c  ), to( #4c7a9914 ) );
-@define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #00101cff  ), to( #000d1600 ) );
+@define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #00101cff  ), to( #000d16ff ) );
 
 //system wide
 @define messagecolorwash: #5492b8ff;
@@ -1366,3 +1366,41 @@ MusicQueueMoreDialog .ContextMenuBodyCentered, MusicTrackMoreDialog .ContextMenu
 	width: 400px;
 }
 
+
+//
+// Slider
+//
+Slider
+{
+	// needs to be at least as wide as the thumb and, as the thumb center stops at end
+	// of track, needs to allow for 1/2 the height of the thumb on each end
+	width: 20px;
+	height: 130px;
+}
+
+#SliderTrack
+{
+	height: 120px;
+	width: 10px;
+	background-color: #283842;
+	align: center center;
+	border-radius: 3px;
+}
+
+#SliderTrackProgress
+{
+	width: 10px;
+	height: 100%;
+	background-color: #5492b8;
+	align: center center;
+	border-radius: 3px;
+}
+
+#SliderThumb
+{
+	width: 20px;
+	height: 20px;
+	background-color: #3885b5;
+	border-radius: 10px;
+	box-shadow: fill black 1px 1.5px 4px 0px;
+}

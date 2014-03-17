@@ -29,7 +29,7 @@
 		"PinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
-		"tabPosition"		"0"
+		"tabPosition"		"1"
 		"paintbackground"		"1"
 		"labelText"		"#vgui_ok"
 		"textAlignment"		"west"

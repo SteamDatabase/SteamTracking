@@ -15,13 +15,34 @@
 			style="RemoteClientList"
 			tall=140
 		}
-		"PerfInstructionsLabel"
+		"EnableStreaming" { ControlName="CheckButton" fieldName="EnableStreaming" labelText="#Steam_Settings_Streaming_EnableStreaming" }
+
+		"HostDivider" { ControlName="divider" }
+		"HostLabel"
 		{
 			ControlName="Label"
-			fieldName="PerfInstructionsLabel"
+			fieldName="HostLabel"
 			wrap=1
-			labelText="#Steam_Settings_Streaming_Perf_Instructions" hello=78
+			labelText="#Steam_Settings_Streaming_HostLabel"
 		}
+		
+		"AdvancedHostOptions" { ControlName="Button" fieldName="AdvancedHostOptions" command="AdvancedHostOptions" labelText="#Steam_Settings_Streaming_AdvancedHostOptions" }
+
+		"ClientDivider" { ControlName="divider" }
+		"ClientLabel"
+		{
+			ControlName="Label"
+			fieldName="ClientLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_ClientLabel"
+		}
+		
+		"QualityFast" { ControlName="RadioButton" fieldName="QualityFast" labelText="#Steam_Settings_Streaming_QualityFast" }
+		"QualityBalanced" { ControlName="RadioButton" fieldName="QualityBalanced" labelText="#Steam_Settings_Streaming_QualityBalanced" }
+		"QualityBeautiful" { ControlName="RadioButton" fieldName="QualityBeautiful" labelText="#Steam_Settings_Streaming_QualityBeautiful" }
+		
+		"AdvancedClientOptions" { ControlName="Button" fieldName="AdvancedClientOptions" command="AdvancedClientOptions" labelText="#Steam_Settings_Streaming_AdvancedClientOptions" }
+		
 		"SupportInformationLabel"
 		{
 			ControlName="URLLabel"
@@ -29,17 +50,6 @@
 			labelText="#Steam_Settings_Streaming_StreamingSupport"
 			URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
 		}
-		
-		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
-		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
-
-		"FramerateLabel" { ControlName="Label" associate="FramerateLimit" labelText="#Steam_Settings_Streaming_Framerate" }
-		"FramerateLimit" { ControlName="ComboBox" fieldName="FramerateLimit" style="FramerateLimit" }
-
-		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
-		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
-
-		"HwAccelDisable" { ControlName="CheckButton" fieldName="HwAccelDisable" labelText="#Steam_Settings_Streaming_DisableHardwareDecoding" }
 	}
 	
 	style
@@ -48,12 +58,11 @@
 	
 	layout
 	{
-		region { name=bottom margin-top=248  width=275 height=max }
-		
-		place { control="BandwidthLimit,FramerateLimit,ResolutionLimit" height=24 }
+		region { name=bottom margin-top=240  width=275 height=max }
+
 		place
 		{
-			control="DescriptionLabel,RemoteClientList,PerfInstructionsLabel,SupportInformationLabel"
+			control="DescriptionLabel,RemoteClientList,EnableStreaming"
 			dir=down
 			align=top
 			width=max
@@ -61,20 +70,27 @@
 			margin-right=20
 			margin-top=20
 			spacing=10
-		}	
+		}
+		
+		place { region=bottom control=HostDivider width=max x=20 y=0 }
+		place { region=bottom control=HostLabel width=max x=20 y=10 }
+		place { region=bottom control=AdvancedHostOptions x=20 y=35 }
+		
+		place { region=bottom control=ClientDivider width=max x=20 y=70 }
+		place { region=bottom control=ClientLabel width=max x=20 y=80 }
 		place
 		{
-			control="BandwidthLabel,BandwidthLimit,FramerateLabel,FramerateLimit,ResolutionLabel,ResolutionLimit,FullscreenDisable,HwAccelDisable"
+			control="QualityFast,QualityBalanced,QualityBeautiful"
 			region=bottom
-			dir=down
+			dir=right
 			align=top
 			width=max
-			margin-left=20
-			margin-right=20
-			margin-top=40
 			spacing=10
-		}	
-
+			x=20
+			y=100
+		}
+		place { region=bottom control=AdvancedClientOptions x=20 y=140 }
 		
+		place { region=bottom control=SupportInformationLabel x=20 y=230 }
 	}
 }

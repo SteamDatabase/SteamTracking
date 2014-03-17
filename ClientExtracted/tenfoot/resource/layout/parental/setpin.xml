@@ -14,7 +14,7 @@
 
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
-			<Label id="SetPIN" text="#Parental_Set_PIN" />
+			<Label id="SetPIN" text="#Parental_Set_PIN" class="SettingsBody" />
 
 			<Panel class="ParentalSetPINDialog">
 				<Panel class="ParentalPINEntry" >

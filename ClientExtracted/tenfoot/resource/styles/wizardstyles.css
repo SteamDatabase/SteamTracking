@@ -3,7 +3,7 @@
 @define mediumduration: 0.4s;
 @define longduration: 1.7s;
 
-@define paddinghorz: 110px;
+@define paddinghorz: 200px;
 @define buttonwidth: 480px;
 @define buttonheight: 60px;
 @define controlgaphorz: 25px;
@@ -98,10 +98,10 @@
 
 .WizardChildTitle
 {
-	font-size: 96px;
+	font-size: 78px;
 	font-family: platformfont;
 
-	margin-top: 58px;
+	margin-top: 76px;
 	color: white;
 }
 
@@ -109,10 +109,11 @@
 {
 	padding-top: 50px;
 	padding-bottom: 20px;
-	font-size: 44px;
+	font-size: 40px;
 	font-family: platformfont;
 	font-weight: light;
 	color: #b0b4b7;
+	opacity: 0.8;
 }
 
 #WizardButtons
@@ -219,7 +220,7 @@
 
 .WizardLabel,.RadioButton Label
 {
-	font-size: 27px;
+	font-size: 24px;
 	font-family: platformfont;
 	color: secondary_label;
 	margin-bottom: 2px;
@@ -483,19 +484,20 @@
 	margin-bottom: controlgaphorz;
 }
 
-#ssa, #ppa
+#ThrobberContainer
 {
-	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
-	background-image: url("file://{images}/store/slideshow_glow.png");
-	background-repeat: no-repeat no-repeat;
-	background-position: left 0px top 75px;
-	width: 100%;
-	
-	transition-property: background-color, opacity;
+	margin-top: 260px;
+	horizontal-align: center;
 }
 
-
-#SSAButtonContainer .WizardButton
+.Throbber
 {
-	width: 745px;
-	}
+	opacity: 1.0;
+	width: 130px;
+	height: 130px;
+	horizontal-align: center;
+	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
+	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}

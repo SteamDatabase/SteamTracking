@@ -26,7 +26,7 @@
 						onmoveup="CloseMusicLibrary();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"
 						onfocus="MusicLibraryActivateAlbumView();"
-						onmouseactivate="MusicLibraryActivateAlbumView();"
+						onmouseactivate="MusicLibraryActivateFirstAlbum();"
 						onactivate="MusicLibraryActivateFirstAlbum();" >
 						 >
 					<Label  text="#Music_Library_Albums_Sort" />
@@ -35,7 +35,7 @@
 						onmoveup="CloseMusicLibrary();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryArtistPanel );"
 						onfocus="MusicLibraryActivateArtistView();"
-						onmouseactivate="MusicLibraryActivateArtistView();"
+						onmouseactivate="MusicLibraryActivateFirstArtist();"
 						onactivate="MusicLibraryActivateFirstArtist();" 
 						>
 					<Label text="#Music_Library_Artists_Sort" />

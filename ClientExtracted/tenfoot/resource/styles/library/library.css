@@ -4363,7 +4363,7 @@ KeyboardShortcut Image
 {
 	visibility: visible;
 	margin-top: 20px;
-	width: 760px;
+	width: 770px;
 }
 
 .NoAvailableBetas #BetaDropDown
@@ -4374,7 +4374,7 @@ KeyboardShortcut Image
 #BetaDropDownDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
-	width: 760px;
+	width: 770px;
 	max-height: 140px;
 }
 
@@ -4397,7 +4397,8 @@ KeyboardShortcut Image
 
 .PrivateBeta
 {
-	width: 700px;
+	width: 770px;
+	margin-top: 0px;
 }
 
 #PrivateBetaPW Label
@@ -4424,7 +4425,7 @@ KeyboardShortcut Image
 
 #ShowPrivateBetas
 {
-	width: 700px;
+	width: 770px;
 	height: 50px;
 	background-color: none;
 }
