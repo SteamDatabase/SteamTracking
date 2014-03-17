@@ -56,13 +56,41 @@
 
 #CommunityWrapper.ProfileVisible
 {
+	transform: translatey( 0px );
 	opacity: 1.0;
 }
 
 #CommunityWrapper.ProfileInvisible
 {
+	transform: translatey( 1080px );
 	opacity: 0.0;
 }
+
+#CommunityWrapper ProfilePanel
+{
+	transform: translatey( 202px );
+	opacity: 1.0;
+}
+
+#CommunityWrapper ProfilePanel#FriendActivity
+{
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
+#CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity
+{
+	transform: translatey( 202px );
+	opacity: 1.0;
+}
+
+#CommunityWrapper.ActivityFocused ProfilePanel#Profile
+{
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
+
 
 #CommunityNavBar
 {
@@ -82,7 +110,8 @@
 
 }
 
-#CommunityWrapper.ProfileVisible:descendantfocus #CommunityNavBar
+.StackDepth2 .ProfileVisible #CommunityNavBar,
+.StackDepth3 .ProfileVisible #CommunityNavBar,
 {
 	opacity: 1.0;
 }
@@ -152,6 +181,19 @@
 	animation-direction: normal;
 }
 
+.StackDepth1 ProfilePanel #ProfileContent.ProfileLoading,
+.StackDepth2 ProfilePanel #ProfileContent.ProfileLoading,
+.StackDepth3 ProfilePanel #ProfileContent.ProfileLoading
+{
+	transition-duration: 0.3s;
+	opacity: 0.0;
+}
+
+.StackDepth2 ProfilePanel #ProfileContent.ProfileLoading.LoadingVisible,
+.StackDepth3 ProfilePanel #ProfileContent.ProfileLoading.LoadingVisible
+{
+	opacity: 1.0;
+}
 
 ProfilePanel
 {
@@ -192,6 +234,7 @@ ProfilePanel #ContentRow
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
+	opacity: 0.0;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	transform-origin: 0% 0% parent-relative;
@@ -199,14 +242,17 @@ ProfilePanel #ContentRow
 
 	transition-property: transform, position, opacity, opacity-mask;
 	transition-duration: mediumduration;
-	transition-delay: 0s;
-	transition-timing-function: linear;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
 
 }
 
+.StackDepth2 ProfilePanel #ProfileContent,
+.StackDepth3 ProfilePanel #ProfileContent,
 .StackDepth2 ProfilePanel #ContentRow,
 .StackDepth3 ProfilePanel #ContentRow
 {
+	opacity: 1.0;
 	animation-name: none;
 	animation-duration: 0s;
 

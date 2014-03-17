@@ -25,45 +25,38 @@
 					</Panel>	
 				</Panel>
 			</Panel>
-			<Label text="#Settings_RemoteClients_Perf_Instructions" />	
 			
+			<Panel class="SettingsContent SettingsContentStreaming">	
+				<ToggleButton class="CheckBox" id="EnableStreaming" onactivate="ToggleEnableStreaming();" text="#Settings_RemoteClients_EnableStreaming" />
+				<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
+						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
+				</Button>
+			</Panel>
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsContent SettingsColumnarContent" >
-					<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
-					<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto">
-						<Label id="-1" text="#Settings_RemoteClients_BandwidthAuto" />
-						<Label id="3000" text="#Settings_RemoteClients_Bandwidth3000" />
-						<Label id="5000" text="#Settings_RemoteClients_Bandwidth5000" />
-						<Label id="10000" text="#Settings_RemoteClients_Bandwidth10000" />
-						<Label id="15000" text="#Settings_RemoteClients_Bandwidth15000" />
-						<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
-						<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
-					</DropDown>
-
-					<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
-					<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
-						<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
-						<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
-						<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
-						<Label id="852x480" text="#Settings_RemoteClients_Resolution480p" />
-					</DropDown>
-					<Panel class="Spacer" />
-					<Panel class="Spacer2" />
-					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
-						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_HostLabel" />
+					<Button class="Button" id="AdvancedHostOptions" onactivate="ShowAdvancedHostOptions();" >
+						<Label class="LongDesc" text="#Settings_RemoteClients_AdvancedHostOptions" />
 					</Button>
+				
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					
+				
 				</Panel>
 	
 				<Panel class="SettingsContent SettingsColumnarContent">
-					<Label class="SettingsLabel" text="#Settings_RemoteClients_Framerate" />
-					<DropDown id="FramerateLimit" class="Filter" tabindex="auto">
-						<Label id="-1" text="#Settings_RemoteClients_FramerateAuto" />
-						<Label id="30" text="#Settings_RemoteClients_Framerate30" />
-						<Label id="60" text="#Settings_RemoteClients_Framerate60" />
-					</DropDown>
-					<Panel class="Spacer" />
-					<Panel class="Spacer2" />
-					<ToggleButton class="CheckBox" id="DisableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_DisableHardwareDecoding" />
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_ClientLabel" />
+					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityFast" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityFast" selectionpos="auto" />
+					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityBalanced" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityBalanced" selectionpos="auto" />
+					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityBeautiful" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityBeautiful" selectionpos="auto" />
+					<Button class="Button" id="AdvancedClientOptions" onactivate="ShowAdvancedClientOptions();" >
+						<Label class="LongDesc" text="#Settings_RemoteClients_AdvancedClientOptions" />
+					</Button>
 				</Panel>
 			</Panel>
 		</Panel>

@@ -38,6 +38,7 @@
 		Divider							{}
 		MiniMode			[!$OSX]		{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
 		LargeMode			[!$OSX]		{	text="#steam_menu_largemode"			shellcmd="steam://open/largegameslist" }
+		StartVR							{	text="#steam_menu_startvr"				command="startvr" }
 		BigPictureMode					{ text="#steam_menu_bigpicturemode" 		shellcmd="steam://open/bigpicture" } 
 		Divider				[!$OSX]		{}
 		Friends							{	text="#steam_menu_friends"				shellcmd="steam://open/friends" }

@@ -960,51 +960,15 @@ StoreSlideshow #Contents
 	transform: translatex( 1920px );
 }
 
-#SlideShowGlow
+StoreSlideshowImage Image
 {
 	width: 100%;
-	height: 77px;
-	vertical-align: top;
-	background-image: url( "file://{images}/store/slideshow_glow.png" );
-  background-color: none;
-	transform: translatey( 1200px );
-
-	transition-property: transform;
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
+	height: 100%;
 }
 
-.ShowDescription #SlideShowGlow
+StoreSlideshowImage #PlaybackTitleAndControls
 {
-	transform: translatey( 756px );
-}
-
-#SlideShowDescription
-{
-	width: 100%;
-	height: 250px;
-	vertical-align: bottom;
-	background-color: slideshow_bg;
-
-	transform: translatey( 327px );
-
-	transition-property: transform;
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
-}
-
-.ShowDescription #SlideShowDescription
-{
-	transform: translatey( 0px );
-}
-
-#SlideShowDescription Label
-{
-	font-size: 58px;
-	color: applabel;
-	font-weight: light;
-	width: 100%;
-	margin: 40px 20px 0px 104px;
+	z-index: 1000;
 }
 
 StoreSlideshow:hover .RightMouseScrollRegion

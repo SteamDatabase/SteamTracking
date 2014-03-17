@@ -26,7 +26,7 @@
 			</Panel>
 		</Panel>
 		<Panel id="FriendsMainBodyInputGroup">
-			<FriendsInputGroupTextEntry id="FriendsMainBodyInputTextArea"
+			<TextEntry id="FriendsMainBodyInputTextArea"
 				textinputid="FriendsInputTextEntry"
 				textinputdoneactionstring="#UI_SendMessage"
 				textinputclass="HalfWidth DockLeft AppearFromBottomCenter"

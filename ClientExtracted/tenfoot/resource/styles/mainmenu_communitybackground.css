@@ -52,7 +52,7 @@ OverlayBasePanel #CommunityFriendsStrip
 	height: 480px;
 }
 
-#CommunityFriendsStripWrapperBackground, #CommunityFeedStripWrapperBackground
+#CommunityFriendsStripWrapperBackground, #CommunityFeedStripWrapperBackground, #ProfileFriendsStripWrapperBackground
 {
 	width: 1920px;
 	height: 1080px;
@@ -131,12 +131,33 @@ OverlayBasePanel #CommunityFriendsStrip
 }
 
 
-.CommunityFriendsStripWrapperBackgroundBaseVisible
+.CommunityFriendsStripWrapperBackgroundBaseVisible,
+.ProfileVisible #CommunityFriendsStripWrapper
 {
 	visibility: visible;
 	transform-origin: 0% 0% parent-relative;
 	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px ) ;
 	opacity: 1.0;	
+}
+
+.ProfileVisible #CommunityFriendsStripWrapper
+{
+	transition-duration: 0.4s;
+}
+
+CommunityWrapper #CommunityFriendsStrip
+{
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.StackDepth2 .ProfileVisible #CommunityFriendsStripWrapper,
+.StackDepth2 .ProfileVisible #CommunityFriendsStrip
+{
+	transform: rotateZ( 0deg );
+	opacity: 0.0;
 }
 
 .CommunityVisible:descendantfocus .CommunityFriendsStripWrapperBackgroundBaseVisible
@@ -175,7 +196,8 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsStripWrapper
 	opacity: 0.0;
 }
 
-.CommunityFriendsTransitionRightAndOff
+.CommunityFriendsTransitionRightAndOff,
+.ProfileTransitionRightAndOff #CommunityFriendsStripWrapperBackground
 {
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX( 1000px ) translateY( -200px ) translateZ( 0px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px ) ;

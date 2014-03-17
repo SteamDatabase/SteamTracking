@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+	</styles>
+	
+	<Slider>
+		<Panel id="SliderTrack" />
+		<Panel id="SliderTrackProgress" />
+		<Panel id="SliderThumb" />
+	</Slider>	
+</root>

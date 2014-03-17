@@ -848,7 +848,7 @@ AlbumGridItem:focus Label
 	background-repeat: repeat no-repeat;
 	background-position: 0px 0px;
 	overflow: noclip;
-	margin-top: -210px;
+	margin-top: -310px;
 	animation-name: stream-activity;
 	animation-duration: 30s;
 	animation-iteration-count: infinite;

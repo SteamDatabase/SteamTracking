@@ -16,7 +16,7 @@
 
 
 			<Panel id="ChooseFeaturesPanel">
-				<Panel class="ParentalInstructions" >
+				<Panel class="SettingsBody">
 					<Label text="#Parental_Choose_Features" />
 				</Panel>
 				<Panel class="Spacer" />

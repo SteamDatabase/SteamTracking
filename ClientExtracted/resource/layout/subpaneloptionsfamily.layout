@@ -59,7 +59,7 @@
 		place { controls="ManageSharingButton" region=box margin-top=8 width=235 height=24 margin-left=263 start=FamilySharingTextState dir=down }
 				
 		place { controls="BorrowersLabel" region=box start=FamilySharingTextState margin-top=44 width=490 dir=down }
-		place { controls="BorrowersList" region=box start=BorrowersLabel width=max height=154 margin-top=6 dir=down }
+		place { controls="BorrowersList" region=box start=BorrowersLabel width=max height=121 margin-top=6 dir=down }
 		place { controls="ShowNotificationsCheck" region=box start=BorrowersList margin-top=10 dir=down }
 								
 		

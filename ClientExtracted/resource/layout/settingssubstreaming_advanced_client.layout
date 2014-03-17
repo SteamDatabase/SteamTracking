@@ -1,0 +1,60 @@
+"resource/layout/settingssubstreaming_advanced_client.layout"
+{
+	controls
+	{
+		"DescriptionLabel"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_Description"
+		}
+		
+		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
+		"BandwidthLimit" { ControlName="ComboBox" fieldName="BandwidthLimit" style="BandwidthLimit" }
+
+		"ResolutionLabel" { ControlName="Label" associate="ResolutionLimit" labelText="#Steam_Settings_Streaming_Resolution" }
+		"ResolutionLimit" { ControlName="ComboBox" fieldName="ResolutionLimit" style="ResolutionLimit" }
+
+		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
+		"EnableDebugOverlay" { ControlName="CheckButton" fieldName="EnableDebugOverlay" labelText="#Steam_Settings_Streaming_EnableDebugOverlay" }
+		
+		"SupportInformationLabel"
+		{
+			ControlName="URLLabel"
+			fieldName="SupportInformationLabel"
+			labelText="#Steam_Settings_Streaming_StreamingSupport"
+			URLText="https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
+		}
+		
+		OKButton { ControlName="Button" fieldName="OKButton" command="Close" labelText="#PropertyDialog_OK" }
+	}
+	
+	style
+	{
+	}
+	
+	layout
+	{
+		region { name="buttons" width=max height=36 align="bottom" }
+	
+		place
+		{
+			control="DescriptionLabel,BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,EnableHardwareDecoding,EnableDebugOverlay"
+			dir=down
+			align=top
+			width=max
+			margin-left=20
+			margin-right=20
+			margin-top=40
+			spacing=10
+		}
+		place { control="SupportInformationLabel" region="buttons"
+						margin-left=20 margin-top=0
+						margin-bottom=2 spacing=10 }
+		place { control="OKButton" region="buttons"
+		        width=92 height=25 align=right
+						margin-right=10 margin-top=0
+						margin-bottom=2 spacing=10 }
+	}
+}

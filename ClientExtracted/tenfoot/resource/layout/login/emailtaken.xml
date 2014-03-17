@@ -9,12 +9,24 @@
 		<Label class="WizardChildTitle" text="#CreateAccount_EmailTaken_Title" />
 		<Label class="WizardChildDescription" text="#CreateAccount_EmailTaken_Description" />
 
+		<Panel id="RadioButtonContainer">
+			<Panel class="InputContainerDown GapDown">
+				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioExistingAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_ExistingAccount" selectionpos="auto" />
+			</Panel>
+			<Panel class="InputContainerDown GapDown">
+				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_NewAccount" selectionpos="auto" />
+			</Panel>
+			<Panel class="InputContainerDown GapDown">
+				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewEmail" tabindex="0.0" text="#CreateAccount_EmailTaken_NewEmail" selectionpos="auto" />
+			</Panel>
+		</Panel>
+
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#CreateAccount_EmailTaken_EnterNewAddress" />
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
 			</Button>
-			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#CreateAccount_EmailTaken_CreateAccountAnyway" />
+			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
 			</Button>
 			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
 				<Label id="Label" text="#WizardButton_Cancel" />

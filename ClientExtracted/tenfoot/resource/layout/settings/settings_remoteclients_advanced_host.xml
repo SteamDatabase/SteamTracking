@@ -1,0 +1,58 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_RemoteClients_AdvancedHost class="SettingsModal" defaultfocus="EnableHardwareEncoding" tabindex="auto" selectionpos="auto">
+
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_RemoteClients_AdvancedHostOptions_Title" />
+		</Panel>
+
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContentWide">
+			<Label text="#Settings_RemoteClients_AdvancedHostOptions_Description" />
+			
+			<Panel class="SettingsContentFlowRight">
+				<Panel class="SettingsLeftContentWide" >
+					<ToggleButton class="CheckBox" id="EnableHardwareEncoding" onactivate="ToggleHardwareEncoding()" text="#Settings_RemoteClients_EnableHardwareEncoding" />
+					
+					<Panel class="Spacer" />
+					<Label class="SettingsLabel" text="#Settings_RemoteClients_EnableTrafficPriority_Description" />
+					<ToggleButton class="CheckBox" id="EnableTrafficPriority" onactivate="ToggleTrafficPriority()" text="#Settings_RemoteClients_EnableTrafficPriority" />
+					
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					<!-- Because this dialog is modal, we can't launch the browser
+					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
+						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
+					</Button>
+					-->
+				</Panel>
+			</Panel>
+		</Panel>
+		
+	</SettingsPanel_RemoteClients_AdvancedHost>
+</root>

@@ -161,7 +161,7 @@ CreateAccountSuccessWizardChild #PasswordTextEntry
 
 #ShowPasswordButton
 {
-	width: 240px;
+	width: 265px;
 	margin-left: 10px;
 	padding-left: 0px;
 }
@@ -170,4 +170,31 @@ CreateAccountSuccessWizardChild #PasswordTextEntry
 {
 	horizontal-align: left;
 	padding-left: 8px;
+}
+
+#RadioButtonContainer
+{
+	margin-top: 75px;
+	flow-children: down;
+}
+
+RadioButton.Wide
+{
+	width: 1000px;
+}
+
+#ssa, #ppa
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
+	background-image: url("file://{images}/store/slideshow_glow.png");
+	background-repeat: no-repeat no-repeat;
+	background-position: left 0px top 75px;
+	width: 100%;
+	
+	transition-property: background-color, opacity;
+}
+
+#SSAButtonContainer .WizardButton
+{
+	width: 745px;
 }

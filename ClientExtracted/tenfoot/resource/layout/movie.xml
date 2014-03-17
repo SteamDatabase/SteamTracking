@@ -11,43 +11,43 @@
 		<Panel id="PlayIndicator" />
 		<Label id="ErrorMessage" text="#Panorama_MoviePlaybackError" />
 
-		<Panel id="PlaybackControls">
-			<Label id="PlaybackSpeed" class="PlaybackControl" />
-			<Panel id="Timeline" class="PlaybackControl" >
-				<!-- Add bar for buffered data -->
-				
-				<!-- Wrap progress bar so transforms can be easily used to scale on animation thread -->
-				<Panel class="ProgressBarWrapper">
-					<Panel id="PlaybackProgress" />
-				</Panel>
-			</Panel>
+		<Panel id="PlaybackTitleAndControls">
+			<Panel class="PlaybackTitleGlow" />
+			<Panel class="PlaybackTitleBackground">
+				<Label id="PlaybackTitle" />
 
-			<Panel id="ControlBarRow" class="PlaybackControl">
-				<Panel id="ControlBar" tabindex="auto" selectionpos="auto" defaultfocus="PlayPause">
-					<Panel class="ControlBarBackground">
+				<Panel id="PlaybackControls">
+					<Label id="PlaybackSpeed" class="PlaybackControl" />
+					<Panel id="Timeline" class="PlaybackControl" >
+						<!-- Add bar for buffered data -->
+						
+						<!-- Wrap progress bar so transforms can be easily used to scale on animation thread -->
+						<Panel class="ProgressBarWrapper">
+							<Panel id="PlaybackProgress" />
+						</Panel>
 					</Panel>
-					<Panel class="ControlBarButtons" tabindex="auto" selectionpos="auto">
-						<Button id="PreviousTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerPreviousTrackPressed();">
-							<Image src="file://{images}/transport_controls/icon_previoustrack.png" />
-						</Button>
-						<Button id="Rewind" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerRewind();">
-							<Image src="file://{images}/transport_controls/icon_rwd.png" />
-						</Button>
-						<Button id="Stop" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerStopPressed();">
-							<Image src="file://{images}/transport_controls/icon_stop.png" />
-						</Button>
-						<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
-							<Image src="file://{images}/transport_controls/icon_ffwd.png" />
-						</Button>
-						<Button id="NextTrack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerNextTrackPressed();">
-							<Image src="file://{images}/transport_controls/icon_nexttrack.png" />
-						</Button>
-						<ToggleButton id="PlayPause" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();">
-							<Image />
-						</ToggleButton>
+
+					<Panel id="ControlBarRow" class="PlaybackControl">
+						<Panel id="ControlBar" tabindex="auto" selectionpos="auto" defaultfocus="PlayPause">
+							<Panel class="ControlBarBackground">
+							</Panel>
+							<Panel class="ControlBarButtons" tabindex="auto" selectionpos="auto">
+								<Button id="JumpBack" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerJumpBack();">
+									<Image src="file://{images}/transport_controls/icon_jump_back.png" />
+								</Button>
+								<ToggleButton id="PlayPause" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();">
+									<Image />
+								</ToggleButton>
+								<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
+									<Image src="file://{images}/transport_controls/icon_ffwd.png" />
+								</Button>
+								<Button id="VolumeControl" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerVolumeControl();">
+									<Panel class="VolumeImage" />
+								</Button>
+							</Panel>
+						</Panel>
 					</Panel>
 				</Panel>
-				<VUMeter tabindex="auto" selectionpos="auto" writable="true" id="Volume" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
 			</Panel>
 		</Panel>
 	</Movie>	

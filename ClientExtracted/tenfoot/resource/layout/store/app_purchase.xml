@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 
-	<StoreAppPurchaseSection>
+	<StoreAppPurchaseSection defaultfocus="AppSectionLargeBody">
 		<Panel class="StoreAppPurchaseSection AppSection">
 			<Panel class="AppSectionWrapper">
 				<Image id="HeaderImage" />

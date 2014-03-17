@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+	</styles>
+
+	<VerifyingEmailWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#VerifyEmail_Verifying_Title" />
+		<Label class="WizardChildDescription" text="#VerifyEmail_Verifying_Description" />
+
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+
+	</VerifyingEmailWizardChild>
+
+</root>

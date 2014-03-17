@@ -270,7 +270,7 @@
 	font-size: 36px;
 }
 
-.SystemIMImage #SystemIMDisclaimer
+.SystemIMImage:focus #SystemIMDisclaimer
 {
 	margin-left: 4px;
 	margin-top: 4px;
@@ -583,7 +583,7 @@
 
 	animation-name: main-button-glow-movement; 
 	animation-duration: 1.7s;
-	animation-delay: 0.4s;
+	animation-delay: 0.1s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }

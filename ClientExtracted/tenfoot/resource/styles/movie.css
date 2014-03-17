@@ -155,14 +155,68 @@ MoviePanel
 	opacity: 0.0;
 }
 
+//
+// Title section
+//
+#PlaybackTitleAndControls
+{
+	width: 100%;
+	flow-children: down;
+	vertical-align: bottom;
+
+	transform: translatey( 327px );
+
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+.ShowTitle #PlaybackTitleAndControls
+{
+	transform: translatey( 0px );
+}
+
+.TitleImmediatelyVisible #PlaybackTitleAndControls
+{
+	transform: translatey( 0px );
+	transition-property: transform !immediate;
+	transition-duration: 0.0s;
+}
+
+.PlaybackTitleGlow
+{
+	width: 100%;
+	height: 77px;
+	vertical-align: top;
+	background-image: url( "file://{images}/store/slideshow_glow.png" );
+	background-color: none;
+}
+
+.PlaybackTitleBackground
+{
+	width: 100%;
+	height: 250px;
+	vertical-align: bottom;
+	background-color: slideshow_bg;
+	flow-children: down;
+}
+
+#PlaybackTitle
+{
+	font-size: 58px;
+	color: applabel;
+	font-weight: light;
+	width: 100%;
+	margin: 20px 104px 0px 104px;
+}
+
 
 //
 // Playback controls
 //
 #PlaybackControls
 {
-	align: center bottom;
-	margin-bottom: 5%;
+	align: center top;
 	flow-children: down;
 }
 
@@ -215,6 +269,7 @@ MoviePanel
 	margin-top: 3px;
 	padding: 6px;
 	flow-children: right;
+	align: center top;
 }
 
 #ControlBar
@@ -224,7 +279,7 @@ MoviePanel
 
 .ControlBarBackground
 {
-	width: 360px;
+	width: 240px;
 	height: 50px;
 	background-color: black;
 	border-radius: 6px;
@@ -263,15 +318,39 @@ MoviePanel
 	animation-direction: normal;
 }
 
-.ControlBarButton Image
+.ControlBarButton Image,
+#VolumeControl .VolumeImage
 {
+	width: 37px;
+	height: 37px;
 	align: center center;
 	pre-transform-scale2d: 0.8;
 }
 
-.ControlBarButton:focus Image
+.ControlBarButton:focus Image,
+#VolumeControl:focus .VolumeImage
 {
 	wash-color: #000000ff;
+}
+
+#VolumeControl .VolumeImage
+{
+	background-image: url( "file://{images}/transport_controls/icon_volume_04.png" );
+}
+
+#VolumeControl.AudioVolumeMuted .VolumeImage
+{
+	background-image: url( "file://{images}/transport_controls/icon_volume_01.png" );
+}
+
+#VolumeControl.AudioVolumeUnder33 .VolumeImage
+{
+	background-image: url( "file://{images}/transport_controls/icon_volume_02.png" );
+}
+
+#VolumeControl.AudioVolumeUnder66 .VolumeImage
+{
+	background-image: url( "file://{images}/transport_controls/icon_volume_03.png" );
 }
 
 #PlayPause .TickBox
@@ -297,51 +376,14 @@ MoviePanel
 	background-color: none;
 }
 
-#PreviousTrack
+#JumpBack
 {
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 6px 0px 0px 6px;
 }
 
-#PlayPause
+#VolumeControl
 {
 	border-radius: 0px 4px 4px 0px;
-}
-
-#Volume
-{
-	background-color: black;
-	width: 173px;
-	height: 50px;
-	border-radius: 4px;
-	padding: 0px;
-	margin: 0px;
-	margin-left: 14px;
-
-	box-shadow: box_shadow_on_color -2.0px -2.0px 8px 4px;
-}
-
-#Volume:focus
-{
-	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) ); 
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-	border-color: #fdfefef0;
-
-	animation-name: movie-button-focus, main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#Volume Image
-{
-	align: center center;
-}
-
-#Volume:focus Image
-{
-	wash-color:	#000000ff;
 }
 
 #PlaybackSpeed
@@ -352,22 +394,26 @@ MoviePanel
 	color: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #999999ff ) );
 }
 
-#Bar1.VoiceBar { height:  3px; }
-#Bar2.VoiceBar { height:  6px; }
-#Bar3.VoiceBar { height:  9px; }
-#Bar4.VoiceBar { height: 12px; }
-#Bar5.VoiceBar { height: 15px; }
-#Bar6.VoiceBar { height: 18px; }
-#Bar7.VoiceBar { height: 21px; }
-#Bar8.VoiceBar { height: 24px; }
-#Bar9.VoiceBar { height: 27px; }
-#Bar10.VoiceBar { height: 30px; }
-#Bar11.VoiceBar { height: 33px; }
-#Bar12.VoiceBar { height: 36px; }
-
-.VoiceBar
+VolumeSliderPopup
 {
-	margin-left: 4px;
-	margin-right: 4px;
-	margin-bottom: 4px;
+	width: 100%;
+	height: 100%;
+}
+
+VolumeSliderPopup .SliderWrapper
+{
+	width: 60px;
+	height: 150px;
+
+	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	border: 2px solid #fdfefef0;
+	border-radius: 4px;
+
+	transform: translatey( -10px );
+}
+
+VolumeSliderPopup Slider
+{
+	align: center center;
 }
