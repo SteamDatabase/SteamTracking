@@ -3320,13 +3320,6 @@ function PublishPending( rgOptions )
 	nAppId = rgOptions.appid;
 	nItemid = rgOptions.itemid;
 
-	// Assumptions
-	if( NewReleaseState == 'released')
-	{
-		bAddToMaster = true;
-		bAddToPress = true;
-	}
-
 	bPublishStoreApp = true;
 
 	rgUrls = []; // Clear any cruft from previous attempts.
@@ -3335,28 +3328,6 @@ function PublishPending( rgOptions )
 	{
 
 		$J.each(rgPackages, function(i, j){
-			if( bAddToMaster )
-			{
-				rgUrls.push( {
-					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
-					'data' : {
-						'packageIdSrc' : j,
-						'packageIdDst' : 61					},
-					'message': 'Adding package '+j+' to Steam master sub'
-				} );
-			}
-
-			if( bAddToPress )
-			{
-				rgUrls.push( {
-					'url': 'https://partner.steamgames.com/store/ajaxpackagemerge',
-					'data' : {
-						'packageIdSrc' : j,
-						'packageIdDst' : 62					},
-					'message': 'Adding package '+j+' to press master sub'
-				} );
-			}
-
 			if( bSetDate )
 			{
 				d = new Date();
@@ -3549,9 +3520,19 @@ function PublishActionNext( rgRequest )
 
 }
 
-function CreateNewApp( pubId, pubName, appName, appType, reservedRange, bAddPartnerAppReporting )
+function CreateDemo( parentId, demoName )
 {
-	var progressDialog = ShowCreateNewAppProgress( 'Create New App', 'Creating new app for partner: ' + pubName );
+	CreateNewAppHelper( 0, parentId, demoName, 'Demo', 10, true );
+}
+
+function CreateNewApp( pubId, appName, appType, reservedRange, bAddPartnerAppReporting )
+{
+	CreateNewAppHelper( pubId, 0, appName, appType, reservedRange, bAddPartnerAppReporting );
+}
+
+function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, bAddPartnerAppReporting )
+{
+	var progressDialog = ShowCreateNewAppProgress( 'Create New App', 'Creating new app' );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
@@ -3564,7 +3545,8 @@ function CreateNewApp( pubId, pubName, appName, appType, reservedRange, bAddPart
 			'type' : appType,
 			'range' : reservedRange,
 			'add_partner_app_reporting' : bAddPartnerAppReporting,
-			'publisherid' : pubId
+			'publisherid' : pubId,
+			'parentid' : parentId
 		}
 	).done(
 		function( response ) {

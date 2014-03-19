@@ -229,6 +229,22 @@ body{
 	margin-top: 45px;
 }
 
+	.errorContainer #message {
+		width: 600px;
+		margin: 0 auto;
+	}
+	
+	.errorContainer h3 {
+		font-size: 1.6em; 
+		font-weight: bold; 
+		margin-left: 15px; 
+		text-transform: none;
+		color: #cccccc; 
+		margin:0px;
+	}
+
+	
+
 /* Utility styles */
 .break { /* Used to prevent CSS from collapsing margins */
 	overflow: hidden;
@@ -839,6 +855,23 @@ h2.bright {
 
 input {
 	border-radius: 2px;
+}
+
+
+.gray_bevel.for_text_input input {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	height: 23px;
+	background-color: #565658;
+	border-radius: 3px;
+	border: 1px solid #262627;
+	box-shadow: 1px 1px 0px #39393a;
+	color: #BFBFBF;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	outline: none;
+	padding: 4px 6px;
+	display: block;
 }
 
 .jsTooltip {
@@ -1620,4 +1653,48 @@ input.datepicker {
 
 .main_capsule {
 	position: relative
+}
+
+
+/* -------------- paging controls -------------*/
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	background-color: #000000;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #939393;
+}
+
+.pagebtn:hover, a.pagebtn:hover {
+	background-color: #97C0E3;
+	border-color: #97C0E3;
+	color: #3C3D3E;
+	text-decoration: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	border: 1px solid #333333;
+	background-color: transparent;
+	color: #333333;
+	cursor: default;
+}
+
+a.pagelink:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.outofmatrix {
+	border: 1px dashed #e24044 !important;
+}
+
+.subnote
+{
+	font-size: 9px;
+	background-color: transparent;
+	font-weight: normal;
+	color: #808285;
 }
