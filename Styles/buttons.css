@@ -275,49 +275,49 @@ btn_border_2px > span {
 }
 
 /* Sizing */
-.btn_large > span {
+.btn_large > span, input.btn_large {
 	padding: 0 15px;
 	font-size: 16px;
 	line-height: 40px;
 }
 
-.btn_medium_tall > span {
+.btn_medium_tall > span, input.btn_medium_tall {
 	padding: 0 15px;
 	font-size: 15px;
 	line-height: 36px;
 }
 
-.btn_medium > span {
+.btn_medium > span, input.btn_medium {
 	padding: 0 15px;
 	font-size: 15px;
 	line-height: 30px;
 }
 
-.btn_medium_thin > span {
+.btn_medium_thin > span, input.btn_medium_thin {
 	padding: 0 5px;
 	font-size: 15px;
 	line-height: 30px;
 }
 
-.btn_medium_wide > span {
+.btn_medium_wide > span, input.btn_medium_wide {
 	padding: 0 24px;
 	font-size: 15px;
 	line-height: 30px;
 }
 
-.btn_small > span {
+.btn_small > span, input.btn_small {
 	padding: 0 15px;
 	font-size: 12px;
 	line-height: 20px;
 }
 
-.btn_small_thin > span {
+.btn_small_thin > span, input.btn_small_thin {
 	padding: 0 5px;
 	font-size: 12px;
 	line-height: 20px;
 }
 
-.btn_small_wide > span {
+.btn_small_wide > span, input.btn_small_wide {
 	padding: 0 24px;
 	font-size: 12px;
 	line-height: 20px;

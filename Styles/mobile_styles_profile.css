@@ -1338,6 +1338,7 @@ a#postLink, a#blotterLink {
 	white-space: nowrap;
 
 	margin: 5px;
+	padding-bottom: 10px;
 
 	user-select: none;
 	-webkit-user-select: none;
