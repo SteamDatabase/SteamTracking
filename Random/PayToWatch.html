@@ -19,7 +19,7 @@
         <meta property="og:site_name" content="Free to Play: The Movie" />
         <meta property="og:image" content="http://media.steampowered.com/apps/freetoplay/img/thumb.jpg">
         
-        <link rel="icon" href="favicon.png" type="image/x-icon" />
+        <link rel="icon" href="/favicon.png" type="image/x-icon" />
 
         <link rel="stylesheet" href="http://media.steampowered.com/apps/freetoplay/css/normalize.css">
         <link rel="stylesheet" href="css/main_v2.4.css">
@@ -111,10 +111,11 @@
 
                 <!-- navigation -->
                  <div id="nav">
+                    <a id="nav_watch" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_watch.png"/></a>
                     <a id="nav_trailer" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
                     <a id="nav_trailer_small" class="" href="http://youtu.be/R-RKqGaNq-Y"><img src="http://media.steampowered.com/apps/freetoplay/img/button_trailer.png"/></a>
 
-                    <a id="nav_premiere" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_premiere.png"/></a>
+                    
                     <div style="clear:both"></div>
 
                     <a id="nav_bios" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/button_bios.png"/></a>
@@ -134,6 +135,7 @@
                     <a id="footer_twitter" class="footer_link" href="https://twitter.com/FreeToPlayMovie"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_twitter.png"/></a>
                     <a id="footer_facebook" href="https://www.facebook.com/freetoplaymovie"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_facebook.png"/></a>
                     <a id="footer_valve" class="footer_link" href="http://www.valvesoftware.com"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_valve_logo.png"/></a>
+                    
                     <a id="footer_sound_toggle" class="footer_link"><img src="http://media.steampowered.com/apps/freetoplay/img/sound_on.png"/></a>
                     <span id="language_wrapper">
                         <a id="footer_language" class="footer_link">language</a>
@@ -146,7 +148,7 @@
 							<a href="http://www.freetoplaythemovie.com/gr/">ελληνικά</a>
 							<a href="http://www.freetoplaythemovie.com/">english</a>
 							<a href="http://www.freetoplaythemovie.com/es/">español</a>
-							<a href="http://www.freetoplaythemovie.com/fr/" style="z-index: 1;">français</a>
+							<a href="http://www.freetoplaythemovie.com/fr/" >français</a>
 							<a href="http://www.freetoplaythemovie.com/it/">italiano</a>
 							<a href="http://www.freetoplaythemovie.com/jp/">日本語</a>
 							<a href="http://www.freetoplaythemovie.com/ko/">한국어</a>
@@ -167,6 +169,7 @@
 							<a href="http://www.freetoplaythemovie.com/vt">việt</a>
                         </div>
                     </span>
+                    <a id="nav_license" class="internal_link"><img src="http://media.steampowered.com/apps/freetoplay/img/footer_link_showing.png"></a>
                 </footer>
 
             </div>
@@ -202,6 +205,18 @@
                     <p class="ticket_info">Please click here for <a href="http://freetoplaythemovie.eventbrite.com/">ticket info</a></p>
                 </div>
             </div>
+
+            <!-- watch ftp -->
+            <div id="watch" class="content content_container">
+                <a class="close_box"></a>
+                <img id="banner_watch" src="http://media.steampowered.com/apps/freetoplay/img/banner_watch.png" />
+                <div id="watch_copy">
+                    <p><span class="bold">FREE TO PLAY</span> is available now:</p>
+                    <a id="watch_steam" href="http://store.steampowered.com/app/245550/"><span>Watch on Steam</span></a>
+                    <a id="watch_youtube" href="http://youtu.be/UjZYMI1zB9s"><span>Watch on Youtube</span></a>
+                    <a id="watch_itunes" href="https://itunes.apple.com/us/movie/free-to-play/id838598746"><span>Watch on Itunes</span></a>
+                </div>
+            </div>
             
             <!-- news -->
             <div id="news" class="content content_container">
@@ -223,7 +238,7 @@
                     <li><span class="bold">Free to Play HUD</span> – Created by Valve</li>
                     <li><span class="bold">Free to Play Courier</span> – Created by Valve</li>
                 </ul>
-                <p>Items will be available on March 19th, 2014 at the <a href="http://www.dota2.com/store">Dota 2 Store</a> and <a href="http://store.steampowered.com/app/245550">Steam</a></p>
+                <p>Items will be available on March 19th, 2014 at the <a href="http://www.dota2.com/store/itemdetails/20404">Dota 2 Store</a> and <a href="http://store.steampowered.com/app/245550">Steam</a></p>
             </div>
             
             <!-- about the film -->
@@ -314,7 +329,37 @@
                 </div>
             </div>
 
-           
+            <!-- license -->
+            <div id="license" class="content content_container">
+                <a class="close_box"></a>
+                <div id="license_content">   
+                    <h2>Sponsor a Showing</h2>
+                    <p class="intro">Valve offers you the right to show Free to Play, and to use related marketing materials to promote your showing, using the files available below.  By downloading these files, you agree to these license terms: <p>
+                    <ol class="license_list number">
+                    <li>License to Movie Files. Valve Corporation (“Valve”) grants you a nonexclusive, royalty-free, terminable license to reproduce, distribute, and publicly display the files linked below containing its movie Free to Play (the “Movie”) (a) at locations owned or operated by you, and (b) via television, internet video service, or other audiovisual distribution service.  </li>
+                     
+                    <li>Marketing Materials. Valve grants you a nonexclusive, royalty-free, terminable license to reproduce, distribute, and publicly display the files linked below containing marketing materials related to the Movie (the “Marketing Materials”) in any media for purposes of promoting your distribution and display of the Movie.  </li>
+                    
+                    <li> 
+                        
+                        Limitations. Your license to the Movie and the Marketing Materials is subject to these limitations: 
+                        <ol class="license_list_secondary lower">    
+                            <li>You may not modify, edit or change the Movie or Marketing Materials in any way. </li>
+                            <li>Valve grants you a license to the Movie and Marketing Materials anywhere in the world, but you must comply with applicable law in any jurisdiction where you exercise the license rights, including marketing, content labeling, or other laws that may apply.  </li>
+                            <li>You will promote and present the Movie and Marketing Materials in a manner that makes clear Valve is the owner and the source of the Movie, the Marketing Materials, and Dota 2. Where appropriate, you will display the following credit:  “© Valve Corporation 2014. All Rights Reserved. Valve, the Valve logo, Dota and the Dota logo are trademarks and/or registered trademarks of Valve.” </li>
+                            <li>You shall comply with reasonable requests that Valve may issue, from time to time, to cooperate in the marketing and promotion of the Movie.</li>
+                            <li>Valve may update the Movie or Marketing Materials from time to time. Upon Valve’s public notice of an update, you will promptly download the updated file from this web site, and cease reproduction, distribution and display of any prior version.</li>
+                        </ol>
+                     </li>
+                    <li>Indemnity. You agree to indemnify, defend and hold Valve harmless from all liabilities, claims and expenses, including attorneys’ fees, that arise from or in connection with breach of this license or use of the Movie or Marketing Materials. Valve reserves the right, at its own expense, to assume the exclusive defense and control of any matter subject to indemnification. </li>
+                     
+                    <li>Law and Jurisdiction. This license is governed by the law of Washington, USA, and for any dispute arising in connection with this license or your use of the Movie or Materials, you agree to jurisdiction and venue in the state and federal courts sitting in King County, Washington, USA. </li>
+                    </ol>
+                    <div>Download Marketing Materials <a class="orange" href="http://media.steampowered.com/apps/freetoplay/marketing/FtP_Assets.zip">here</a>.</div>
+                    <div>Download Movie Files <a id="venue_download" class="orange" href="http://media.steampowered.com/apps/freetoplay/movie/Free_to_Play_The_Movie(US).zip">here</a>.</div>
+                </div>    
+            </div>
+
         <div id="darkbox"></div>
         
 
