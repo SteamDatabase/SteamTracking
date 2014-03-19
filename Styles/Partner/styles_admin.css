@@ -329,6 +329,10 @@ select.hourselect,  select.minuteselect {
 	clear: both;
 }
 
+.subarea.noclear {
+	clear: none;
+}
+
 .innerformrow {
 	padding: 4px 0px;
 }
@@ -1820,11 +1824,13 @@ html, body { height:100%; }
 }
 
 .community_items_checklist_item {
-	padding-left: 0px;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px 0;
 }
 
 .community_items_checklist_done {
-	color: green;
+	color: #A4D007;
 	width: 70px;
 	text-align: right;
 	display: inline-block;
@@ -1832,7 +1838,7 @@ html, body { height:100%; }
 }
 
 .community_items_checklist_notdone {
-	color: red;
+	color: #e24044;
 	width: 70px;
 	text-align: right;
 	display: inline-block;
@@ -2273,4 +2279,30 @@ html, body { height:100%; }
 .optionTextDark {
 	color: #666666;
 	font-size: 12px;
+}
+
+.tradingcardstate0 { color: #808285; }
+.tradingcardstate1 { color: #E7E8E9; }
+.tradingcardstate2 { color: #A4D007; }
+.tradingcardstate3 { color: #808285; }
+.tradingcardstate4 { color: #e24044; }
+.tradingcardstate5 { color: #A4D007; }
+.tradingcard_thumbnail {
+	max-width: 64px;
+	max-height: 64px;
+}
+
+.priceChangedNew
+{
+	color: #82a6d7;
+}
+
+.priceChangedHigher
+{
+	color: #ca5029;
+}
+
+.priceChangedLower
+{
+	color: #8BB006;
 }
