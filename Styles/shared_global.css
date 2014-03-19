@@ -936,3 +936,18 @@ img.dynamiclink_preview {
 	padding-bottom: 4px;
 	color: #bfbfbf;
 }
+
+.adult_content_age_gate {
+	padding-top: 88px;
+	text-align: center;
+	width: 460px;
+	margin: 0 auto;
+
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.adult_content_age_gate p {
+	padding: 26px 0;
+}

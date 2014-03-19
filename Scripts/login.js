@@ -90,7 +90,7 @@ function DoLogin()
 function OnRSAKeyResponse( transport )
 {
 	var results = transport.responseJSON;
-	if ( results.publickey_mod && results.publickey_exp && results.timestamp )
+	if ( results && results.publickey_mod && results.publickey_exp && results.timestamp )
 	{
 		var form = document.forms['logon'];
 
@@ -121,7 +121,7 @@ function OnRSAKeyResponse( transport )
 	}
 	else
 	{
-		if ( results.message )
+	    if ( results && results.message )
 		{
 			HighlightFailure( results.message );
 		}

@@ -672,8 +672,12 @@ function CWebChatDialog( Chat, elDialog, elContent )
 }
 
 CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
+CWebChatDialog.s_regexDomain = new RegExp( 'https?://[^/]*?((?:[^/]+\.)?([^/]+\.[^/]+))(?:/|$)', 'i' );
 CWebChatDialog.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CWebChatDialog.s_regexMyEmoticons = null;
+
+CWebChatDialog.s_regexValveDomains = new RegExp( '^https?://[^/]*(?:valvesoftware|steamcommunity|steampowered)\.com(?:/|$)', 'i' );
+CWebChatDialog.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk"];
 
 CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMessage, eMessageType )
 {
@@ -735,7 +739,45 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	var elText = $J('<span/>', {'class': 'chat_message_text' }).text( strMessage );
 	// then format links
 	var strHTML = elText.html();
-	strHTML = strHTML.replace( CWebChatDialog.s_regexLinks, '$1<a href="$2" class="whiteLink" target="_blank">$2</a>' )
+	// links are tested to see if they are from trustworthy domains. Untrusted
+	// domains are wrapped with the linkfilter.
+	strHTML = strHTML.replace( CWebChatDialog.s_regexLinks, function( match, s1, s2 )
+	{
+		var bTrustedDomain = function()
+		{
+			if ( s2.match( CWebChatDialog.s_regexValveDomains ) )
+			{
+				return true;
+			}
+
+			var rgTLDCandidates = s2.match( CWebChatDialog.s_regexDomain );
+			if ( !rgTLDCandidates ) {
+				return false;
+			}
+
+			// nested for-loops instead of indexOf or filter for compatibility with IE <9
+			for ( var i = rgTLDCandidates.length - 1; i >= 1; --i )
+			{
+				for ( var j = CWebChatDialog.m_rgWhitelistedDomains.length - 1; j >= 0; --j )
+				{
+					if ( CWebChatDialog.m_rgWhitelistedDomains[j] == rgTLDCandidates[i].toLowerCase() )
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}();
+
+		if ( bTrustedDomain )
+		{
+			return ( s1 + '<a href="' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
+		}
+		else
+		{
+			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
+		}
+	} );
 
 	var regexEmoticons = CWebChatDialog.s_regexEmoticons;
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
