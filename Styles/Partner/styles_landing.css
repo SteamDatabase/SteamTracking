@@ -1691,6 +1691,23 @@ a.pagelink:hover {
 	border: 1px dashed #e24044 !important;
 }
 
+.outofmatrixlower {
+	border: 1px dashed #8bb006 !important;
+}
+
+.pricingLegend
+{
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pricingLegend div
+{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
 .subnote
 {
 	font-size: 9px;
