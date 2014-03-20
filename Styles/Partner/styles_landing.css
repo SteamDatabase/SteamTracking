@@ -573,15 +573,15 @@ p {
 			color: #939597;
 		}
 
-	.landingTable tr.released td, .landingTable .tr.released .td {
+	.landingTable tr.released td, .landingTable .tr.released .td, .td.released, td.released {
 		color: #fbb963;
 	}
 
-	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease {
+	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease, .td.prerelease,a td.prerelease {
 		color: #A4D007;
 	}
 
-	.landingTable tr.beta td, .landingTable .tr.beta .td {
+	.landingTable tr.beta td, .landingTable .tr.beta .td, td.beta, .td.beta {
 		color: #82a6d7;
 	}
 	.landingTable tr.app_DLC td, .landingTable .tr.app_DLC .td {
