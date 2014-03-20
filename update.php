@@ -235,6 +235,9 @@
 			// Stupid store CDN keeps switching subdomains between resources
 			$Data = Str_Replace( Array( 'cdn4.store.steampowered.com', 'cdn3.store.steampowered.com', 'cdn2.store.steampowered.com' ), 'cdn.store.steampowered.com', $Data );
 			
+			// Yep
+			$Data = Preg_Replace( '/cdn\.[a-z0-9]+\.steamstatic\.com/m', 'cdn.akamai.steamstatic.com', $Data );
+			
 			// Drunken_F00l please
 			$Data = Str_Replace( Array( 'media2.steampowered.com', 'media3.steampowered.com', 'media4.steampowered.com' ), 'media.steampowered.com', $Data );
 			
