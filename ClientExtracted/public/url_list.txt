@@ -662,3 +662,8 @@ FamilySharing
 	method		"internal"
 	filter		"profile"
 }
+LinkFilter
+{
+	url		"%community%/linkfilter/"
+	method	"internal"
+}
