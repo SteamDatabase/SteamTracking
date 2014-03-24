@@ -435,11 +435,12 @@ a.contentsLink:hover {
 }
 
 input, select , textarea, button, .likeButton {
-	background-color:#1d1d1d;
+	background-color:#565658;
 	font-family:tahoma, arial, helvetica, trebuchet ms, sans-serif;
 	color:#e1e1e1;
 	font-size:13px;
 	border: 1px #777777 solid;
+	border-radius: 3px;
 }
 
 .likeButton {

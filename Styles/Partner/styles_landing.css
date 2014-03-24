@@ -729,6 +729,11 @@ h2.bright {
 	color: #E7E8E9;
 }
 
+h2.incomplete {
+	font-size: 24px;
+	color: #e24044;
+}
+
 
 .AdminPageContent {
 	margin: 12px 0 0 0;
