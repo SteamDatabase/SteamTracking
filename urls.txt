@@ -185,4 +185,3 @@ Random/JobPostings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Random/ValvePeople.html|http://valvesoftware.com/company/people.html
 Random/ValveGroup.json|http://steamcommunity.com/groups/valve/memberslistxml
 Random/ChristenGroups.json|http://api.steampowered.com/ISteamUser/GetUserGroupList/v1/?key=*APIKEY*&steamid=76561198024402255
-Random/PayToWatch.html|http://freetoplaythemovie.com/?_=*TIMENOW*
