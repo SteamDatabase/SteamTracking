@@ -439,8 +439,10 @@ input, select , textarea, button, .likeButton {
 	font-family:tahoma, arial, helvetica, trebuchet ms, sans-serif;
 	color:#e1e1e1;
 	font-size:13px;
-	border: 1px #777777 solid;
+	border: 1px #262627 solid;
 	border-radius: 3px;
+	box-shadow: 1px 1px 0px #39393a;
+	padding: 3px;
 }
 
 .likeButton {
