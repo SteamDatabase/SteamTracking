@@ -602,6 +602,7 @@ p {
 		box-sizing:border-box;
 		cursor: cell;
 		margin-left: -5px;
+		border-radius: none;
 	}
 
 	.landingTable .currency_label {
