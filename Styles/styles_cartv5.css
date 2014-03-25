@@ -1585,3 +1585,8 @@ a.trigger, a.activetrigger {
 	margin-right: 10px;
 }
 
+.checkout_region_warning
+{
+	color: #bd4847;
+}
+
