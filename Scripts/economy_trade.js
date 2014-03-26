@@ -110,32 +110,32 @@ CUserThem = Class.create( CUser, {
 
 		if ( g_bTradeOffer )
 		{
-			g_strTradePartnerInventoryLoadURL;
-			new Ajax.Request( g_strTradePartnerInventoryLoadURL, {
-					method: 'post',
-					parameters: {
+			RequestFullInventory(
+					g_strTradePartnerInventoryLoadURL,
+					{
 						sessionid:	g_sessionID,
 						partner: 	steamid,
-						appid: 	appid,
-						contextid: contextid,
+						appid:		appid,
+						contextid:	contextid
 					},
-					onSuccess: function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ) },
-					onFailure: function( transport ) { thisClosure.OnInventoryLoadFailed( transport, appid, contextid ) }
-				}
+					function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ); },
+					function( transport ) { thisClosure.OnInventoryLoadFailed( transport, appid, contextid ) },
+					null
 			);
 		}
 		else
 		{
-			new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/', {
-					method: 'post',
-					parameters: {
+			RequestFullInventory(
+					'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/',
+					{
 						sessionid:	g_sessionID,
 						steamid: 	steamid,
 						appid:		appid,
 						contextid:	contextid
 					},
-					onSuccess: function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); }
-				}
+					function( transport ) { thisClosure.OnLoadForeignAppContextData( transport, appid, contextid ); },
+					null,
+					null
 			);
 		}
 		return true;
@@ -153,10 +153,8 @@ CUserThem = Class.create( CUser, {
 				g_rgAppContextData[appid] = Object.clone(rgAppInfo);
 			}
 
-			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
-
 			// replace the pending inventory object with the real inventory
-			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
+			var inventory = new CInventory( this, appid, contextid, transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency );
 
 			this.addInventory( inventory );
 

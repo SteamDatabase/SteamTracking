@@ -1136,7 +1136,16 @@ CWebChat.prototype.PollComplete = function( pollid, data )
 								notification.show();
 
 								// chrome doesn't seem to dismiss these right now, so we'll give it 6 seconds
-								window.setTimeout( function() { notification.close(); }, 6000 );
+								window.setTimeout( function() {
+									if ( notification.close )
+									{
+										notification.close();
+									}
+									else if ( notification.cancel )
+									{
+										notification.cancel();
+									}
+								}, 6000 );
 							}
 						}
 

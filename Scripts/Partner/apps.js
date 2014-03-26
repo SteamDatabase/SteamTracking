@@ -2626,7 +2626,7 @@ function SetScreens( appid, screens )
 		var divScreen = document.createElement( 'div' );
 		divScreen.className = 'screenshot';
 
-		var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
+		var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
 
 		var anchor = document.createElement( 'a' );
 		anchor.href = imageBase + screens[id]['screen'] + ".jpg";
@@ -2688,7 +2688,7 @@ function SetAvatars( appid, avatars )
 		var divAvatar = document.createElement( 'div' );
 		divAvatar.className = 'avatar';
 
-		var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
+		var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
 		
 		var anchor = document.createElement( 'a' );
 		anchor.href = '#';
@@ -2722,7 +2722,7 @@ function avatarPopupClosure(appid, avatar)
 
 function avatarPopup(event, appid, avatar)
 {
-	var imageBase = 'http://media.steampowered.com/steamcommunity/public/images/apps/' + appid + '/';
+	var imageBase = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/' + appid + '/';
 
 	var e=event;
 	if (! e )
@@ -3304,6 +3304,42 @@ function CreatePHPDateFromObject( d )
 	dateData['minute'] = d.getUTCMinutes();
 
 	return dateData;
+}
+
+function ReleaseGame(appid, data)
+{
+	jQuery.ajax({
+		dataType: "json",
+		url: 'https://partner.steamgames.com/apps/releaseapp/' + appid,
+		type: 'POST',
+		data: data,
+		success: function(data)
+		{
+			if( data.message )
+				$J('#publish_status_log').append(  $J( '<span>' + data.message + '</span><br>' ) );
+
+			if( data['success'] != 1 )
+			{
+					console.log("Failed:");
+					console.log(data);
+					$J('#publish_status_log').show();
+					$J('#publish_status').hide();
+			} else {
+				$J('#publish_status').hide();
+				$J('#release_details_container').hide();
+				$J('#publish_success').show();
+			}
+		},
+		error: function( response )
+		{
+			console.log(response);
+			$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p>') );
+			$J('#publish_status_log').show();
+			$J('#publish_status').hide();
+			$J('#publish_button').show();
+
+		}
+	});
 }
 
 //function PublishPending( nAppId, nItemid, NewReleaseState, bSetReleased, bSetDate, bPublishStoreApp, bAddToMaster, bAddToPress, nLaunchDiscount, rgPackages )

@@ -2758,6 +2758,7 @@ var CAjaxPagingControls = Class.create( {
 	m_strActionURL: null,
 	m_cPageSize: null,
 	m_strElementPrefix: "",
+	m_strClassPrefix: "",
 	m_rgStaticParams: null,
 
 	m_strQuery: null,
@@ -2766,6 +2767,7 @@ var CAjaxPagingControls = Class.create( {
 	m_cMaxPages: 0,
 	m_bLoading: false,
 
+	m_fnPreRequestHandler: null,
 	m_fnResponseHandler: null,
 	m_fnPageChangedHandler: null,
 
@@ -2782,6 +2784,9 @@ var CAjaxPagingControls = Class.create( {
 		if ( rgSearchData['prefix'] )
 			this.m_strElementPrefix = rgSearchData['prefix'];
 
+		if ( rgSearchData['class_prefix'] )
+			this.m_strClassPrefix = rgSearchData['class_prefix'];
+
 		$(this.m_strElementPrefix + '_btn_prev').observe( 'click', this.PrevPage.bind( this ) );
 		$(this.m_strElementPrefix + '_btn_next').observe( 'click', this.NextPage.bind( this ) );
 
@@ -2792,6 +2797,11 @@ var CAjaxPagingControls = Class.create( {
 	{
 		var url = this.m_strActionURL + action + '/';
 		return url;
+	},
+
+	SetPreRequestHandler: function( fnHandler )
+	{
+		this.m_fnPreRequestHandler = fnHandler;
 	},
 
 	SetResponseHandler: function( fnHandler )
@@ -2851,6 +2861,9 @@ var CAjaxPagingControls = Class.create( {
 			}
 		}
 
+		if ( this.m_fnPreRequestHandler != null )
+			this.m_fnPreRequestHandler( params );
+		
 		this.m_bLoading = true;
 		new Ajax.Request( this.GetActionURL( 'render' ), {
 			method: 'get',
@@ -2945,7 +2958,7 @@ var CAjaxPagingControls = Class.create( {
 
 	AddPageLink: function( elPageLinks, iPage )
 	{
-		var el = new Element( 'span', {'class': this.m_strElementPrefix + '_paging_pagelink' } );
+		var el = new Element( 'span', {'class': ( this.m_strClassPrefix != "" ? this.m_strClassPrefix : this.m_strElementPrefix ) + '_paging_pagelink' } );
 		el.update( (iPage + 1) + ' ' );
 
 		if ( iPage == this.m_iCurrentPage )
