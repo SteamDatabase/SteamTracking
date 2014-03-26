@@ -2557,6 +2557,12 @@
 								"type": "string",
 								"optional": false,
 								"description": "The vanity URL to get a SteamID for"
+							},
+							{
+								"name": "url_type",
+								"type": "int32",
+								"optional": true,
+								"description": "The type of vanity URL. 1 (default): Individual profile, 2: Group, 3: Official game group"
 							}
 						]
 						
