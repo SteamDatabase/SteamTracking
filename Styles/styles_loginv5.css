@@ -200,7 +200,7 @@ ul#why_list li {
 }
 
 .modal_top_band {
-	background-image:url( 'http://cdn.store.steampowered.com/public/images/got_steam_top.jpg' );
+	background-image:url( 'http://store.akamai.steamstatic.com/public/images/got_steam_top.jpg' );
 	background-repeat:no-repeat;
 	width:508px;
 	height:25px;
@@ -290,7 +290,7 @@ ul#why_list li {
 	width: 67px;
 	height: 48px;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/emailauth_icons.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/emailauth_icons.png );
 	background-repeat: no-repeat;
 }
 
@@ -315,7 +315,7 @@ ul#why_list li {
 }
 
 .auth_icon.ipt_icon {
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/ipt_lockout_icon.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/ipt_lockout_icon.png );
 	height: 62px;
 	width: 53px;
 
@@ -336,7 +336,7 @@ ul#why_list li {
 }
 
 .authcode_entry_box {
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/code_box.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/code_box.png );
 	background-repeat: no-repeat;
 	width: 220px;
 	height: 27px;
@@ -344,7 +344,7 @@ ul#why_list li {
 
 .friendly_name_box
 {
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/friendlyname_box.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/friendlyname_box.png );
 	background-repeat: no-repeat;
 	width: 220px;
 	height: 27px;
@@ -371,13 +371,13 @@ input.authcode_entry_input.defaulttext {
 #auth_buttonset_waiting {
 	height: 66px;
 	
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/throbber.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/throbber.gif );
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .auth_button {
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/emailauth_button.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/emailauth_button.png );
 	background-repeat: no-repeat;
 	width: 219px;
 	height: 66px;
@@ -417,7 +417,7 @@ a.auth_button, a.auth_button:hover {
 }
 
 #loginIPTModal .modal_box {
-	background-image: url( http://cdn.store.steampowered.com/public/images/login/ipt_lockout_bg.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/login/ipt_lockout_bg.png );
 	width: 466px;
 	height: 231px;
 }

@@ -442,32 +442,32 @@ function DisplayPasswordStrength()
 	if ( pass.length == 0 )
 	{
 		strength_text.style.display = 'none';
-		strength_img.src = 'http://cdn.store.steampowered.com/public/images/password_unchecked.gif';
+		strength_img.src = 'http://store.akamai.steamstatic.com/public/images/password_unchecked.gif';
 		return;
 	}
 	else if ( !g_bPasswordAvailable )
 	{
 		strength_text.innerHTML = 'Not allowed';
 		strength_text.style.color = "#b02222";
-		strength_img.src = 'http://cdn.store.steampowered.com/public/images/password_weak.gif';
+		strength_img.src = 'http://store.akamai.steamstatic.com/public/images/password_weak.gif';
 	}
 	else if ( nStrength == 3 )
 	{
 		strength_text.innerHTML = 'Strong';
 		strength_text.style.color = "#6C8942";
-		strength_img.src = 'http://cdn.store.steampowered.com/public/images/password_strong.gif';
+		strength_img.src = 'http://store.akamai.steamstatic.com/public/images/password_strong.gif';
 	}
 	else if ( nStrength == 2 )
 	{
 		strength_text.innerHTML = 'Alright';
 		strength_text.style.color = "#dbc142";
-		strength_img.src = 'http://cdn.store.steampowered.com/public/images/password_ok.gif';
+		strength_img.src = 'http://store.akamai.steamstatic.com/public/images/password_ok.gif';
 	}
 	else
 	{
 		strength_text.innerHTML = 'Weak';
 		strength_text.style.color = "#b02222";
-		strength_img.src = 'http://cdn.store.steampowered.com/public/images/password_weak.gif';
+		strength_img.src = 'http://store.akamai.steamstatic.com/public/images/password_weak.gif';
 	}
 	Effect.Appear( 'password_strength_text', { from : 0.2, to : 1.0, duration : 0.5 } );
 }

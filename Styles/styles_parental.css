@@ -12,7 +12,7 @@
 	padding: 20px;
 	margin: 0 auto;
 
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/keybg.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
 
@@ -165,7 +165,7 @@
 
 .parental_searchbox
 {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/parental_search.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/parental/parental_search.png' );
 	margin-right: 12px;
 	border: none;
 
@@ -288,7 +288,7 @@
 
 #parental_setpin_box
 {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/keybg.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 300px 50%;
 	height: 400px;
@@ -320,7 +320,7 @@
 
 #parental_setcomplete_box
 {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/parental/familybg.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/parental/familybg.png' );
 	background-repeat: no-repeat;
 	background-position: 50% 80px;
 }

@@ -7,7 +7,7 @@
 	display: block;
 	width: 276px;
 	height: 32px;
-	background-image: url(http://cdn.store.steampowered.com/public/images/v5/btn_lg_grey_pulldown.gif);
+	background-image: url(http://store.akamai.steamstatic.com/public/images/v5/btn_lg_grey_pulldown.gif);
 	background-repeat: no-repeat;
 	
 	cursor: pointer;
@@ -107,7 +107,7 @@
 	width:60px;
 	height:19px;
 	cursor:pointer;
-	background-image:url(http://cdn.store.steampowered.com/public/images//v5/itemthumb_normal.png);
+	background-image:url(http://store.akamai.steamstatic.com/public/images//v5/itemthumb_normal.png);
 
 }
 
@@ -118,11 +118,11 @@
 	left: 24px;
 	width: 12px;
 	height: 8px;
-	background-image:url(http://cdn.store.steampowered.com/public/images//v5/itemthumb_arrow.png)
+	background-image:url(http://store.akamai.steamstatic.com/public/images//v5/itemthumb_arrow.png)
 }
 
 #genre_single_cluster .btn_container > .btn_panel.active {
-	background-image:url(http://cdn.store.steampowered.com/public/images//v5/itemthumb_selected.png)
+	background-image:url(http://store.akamai.steamstatic.com/public/images//v5/itemthumb_selected.png)
 }
 #genre_single_cluster .btn_container > .btn_panel.active > .btn_arrow  {
 	display: block;
@@ -181,7 +181,7 @@
 	background-position: top center;
 
 	margin-right: 16px;
-	background-image: url('http://cdn.store.steampowered.com/public/images/v5/store_checkbox_blue.png');
+	background-image: url('http://store.akamai.steamstatic.com/public/images/v5/store_checkbox_blue.png');
 	vertical-align: text-bottom;
 }
 
@@ -222,7 +222,7 @@
 .tab_filter_remove {
 	display: inline-block;
 	cursor: pointer;
-	background: no-repeat center center url('http://cdn.store.steampowered.com/public/images/v5/delete_search_term.png');
+	background: no-repeat center center url('http://store.akamai.steamstatic.com/public/images/v5/delete_search_term.png');
 	width: 12px;
 	height: 30px;
 	margin-left: 8px;
@@ -231,7 +231,7 @@
 #header_callout {
 
 	height: 101px;
-	background-image: url(http://cdn.store.steampowered.com/public/images/promo/earlyaccess/header_splash.png);
+	background-image: url(http://store.akamai.steamstatic.com/public/images/promo/earlyaccess/header_splash.png);
 	box-shadow: 0px 3px 8px -3px #000;
 	z-index: 10;
 	position: relative;

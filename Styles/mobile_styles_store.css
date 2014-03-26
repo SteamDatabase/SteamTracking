@@ -585,19 +585,19 @@ div[data-role='page'] {
 	height: 34px;
 	top: 0px;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_corners.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_corners.gif );
 }
 
 .btn_addtocart.btn_packageinfo .btn_addtocart_left, .btn_addtocart.btn_packageinfo .btn_addtocart_right {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_corners.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_corners.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue .btn_addtocart_left, .btn_addtocart.btn_addtocart_blue .btn_addtocart_right {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_corners.jpg );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_blue_corners.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails .btn_addtocart_left, .btn_addtocart.btn_clickfordetails .btn_addtocart_right {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_corners.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_clickfordetails_corners.gif );
 }
 
 .btn_addtocart .btn_addtocart_left {
@@ -621,7 +621,7 @@ div[data-role='page'] {
 	padding: 0px 11px;
 	line-height: 34px;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif );
 	background-repeat: repeat-x;
 
 	text-transform: uppercase;
@@ -632,15 +632,15 @@ div[data-role='page'] {
 }
 
 .btn_addtocart.btn_packageinfo a.btn_addtocart_content {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_packageinfo_repeat.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_repeat.gif );
 }
 
 .btn_addtocart.btn_addtocart_blue a.btn_addtocart_content {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_blue_repeat.jpg );
 }
 
 .btn_addtocart.btn_clickfordetails a.btn_addtocart_content {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/btn_clickfordetails_repeat.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_clickfordetails_repeat.gif );
 }
 
 .btn_addtocart a.btn_addtocart_content:hover {
@@ -786,7 +786,7 @@ div[data-role='page'] {
 }
 
 .cart_status_message_arrow {
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/cart_statusmessage_arrow.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/cart_statusmessage_arrow.png );
 	height: 9px;
 	width: 18px;
 	margin: 0px auto;
@@ -1095,7 +1095,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 .cart_no_clientconn_area {
 	display: block;
 	overflow: hidden;
-	background-image: url( http://cdn.store.steampowered.com/public/images/mobile/Icon_DownloadsBar.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/mobile/Icon_DownloadsBar.png );
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #D0D0D0;
@@ -1304,7 +1304,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 
 .cart_tab_left_on {
 	position: absolute;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_pipeline_undershadow.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_pipeline_undershadow.png );
 	height: 9px;
 	top: 30px;
 	left: 1px;
@@ -1321,7 +1321,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 	top: 0px;
 	right: 0px;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_pipeline_rightshadow.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_pipeline_rightshadow.png );
 }
 
 .cart_tab_on, .cart_tab_off, .cart_tab_inactive {
@@ -1346,7 +1346,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 .cart_tab_spacer {
 	width: 4px;
 	height: 8px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/checkout_tab_spacer.gif );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_tab_spacer.gif );
 	background-repeat: no-repeat;
 	margin: 10px 10px;
 }
@@ -1774,7 +1774,7 @@ a.btn_checkout_blue, a.btn_checkout_blue:hover  {
 }
 
 a.trigger, a.activetrigger {
-	background: url(http://cdn.store.steampowered.com/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
+	background: url(http://store.akamai.steamstatic.com/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
 
 	display:block;
 	float:left;
@@ -1935,7 +1935,7 @@ a.trigger, a.activetrigger {
 
 	color: #FFFFFF;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/maincol_gradient_rule.png );
 	background-repeat: no-repeat;
 	background-position: bottom left;
 
@@ -1976,7 +1976,7 @@ a.trigger, a.activetrigger {
 
 .gameDetailsArea {
 	/* margin: 10px; */
-	background-image: url( http://cdn.store.steampowered.com/public/shared/images/mobile/grid-pattern.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/shared/images/mobile/grid-pattern.png );
 	background-repeat: repeat;
 	background-size: 15px 15px;
 	margin-top: 4px;
@@ -1992,7 +1992,7 @@ a.trigger, a.activetrigger {
 
 	color: #FFFFFF;
 
-	background-image: url( http://cdn.store.steampowered.com/public/images/v5/maincol_gradient_rule.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/maincol_gradient_rule.png );
 	background-repeat: no-repeat;
 	background-position: bottom left;
 
@@ -2025,27 +2025,27 @@ a.trigger, a.activetrigger {
 
 .platform_img.steamplay {
 	background-size: 91px 19px;
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_steamplay.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/mobile/platform_steamplay.png' );
 	width: 91px;
 	height: 19px;
 }
 
 .platform_img.win {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_win.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/mobile/platform_win.png' );
 	background-size: 17.5px 19px;
 	width: 17.5px;
 	height: 19px;
 }
 
 .platform_img.mac {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_mac.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/mobile/platform_mac.png' );
 	background-size: 17.5px 19px;
 	width: 17.5px;
 	height: 19px;
 }
 
 .platform_img.linux {
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/mobile/platform_linux.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/mobile/platform_linux.png' );
 	background-size: 17.5px 19px;
 	width: 17.5px;
 	height: 19px;
@@ -2153,7 +2153,7 @@ a#genreLink {
 .gameAreaMetascore {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-image: url( http://cdn.store.steampowered.com/public/images/metacritic_bg.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/images/metacritic_bg.png );
 	background-size: contain;
 	background-repeat:no-repeat;
 	background-color: #000000;
@@ -2275,7 +2275,7 @@ div.appFeature {
 	background-size: 32px 45px;
 	height: 44px;
 	color: #D0D0D0;
-	background-image: url( http://cdn.store.steampowered.com/public/shared/images/mobile/button-pressed-background.png );
+	background-image: url( http://store.akamai.steamstatic.com/public/shared/images/mobile/button-pressed-background.png );
 }
 
 	div.earlyAccess h1 {

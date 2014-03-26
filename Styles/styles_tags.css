@@ -6,7 +6,7 @@ html {
 body.tag_page {
 	position: relative;
 	min-height: 100%;
-	background-image: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_browse_bg.png' );
+	background-image: url( 'http://store.akamai.steamstatic.com/public/images/v6/tag_browse_bg.png' );
 	background-position: 50% 105px;
 	background-repeat: repeat-x;
 	background-color: #000000;
@@ -17,7 +17,7 @@ body.tag_page.in_client {
 }
 
 body.blue.tag_page {
-	background: url( 'http://cdn.store.steampowered.com/public/images/v6/blue_body_repeat.png' ) center top repeat-y #000000;
+	background: url( 'http://store.akamai.steamstatic.com/public/images/v6/blue_body_repeat.png' ) center top repeat-y #000000;
 }
 
 body.tag_page > div#global_header {
@@ -25,13 +25,13 @@ body.tag_page > div#global_header {
 }
 
 .new_page_bg {
-	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top;
+	background: url( 'http://store.akamai.steamstatic.com/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top;
 }
 
 body.blue .new_page_bg {
 	background:
-		url( 'http://cdn.store.steampowered.com/public/images/v6/blue_top_center.png' ) center top no-repeat,
-		url( 'http://cdn.store.steampowered.com/public/images/v6/blue_top_repeat.png' ) center top repeat-x
+		url( 'http://store.akamai.steamstatic.com/public/images/v6/blue_top_center.png' ) center top no-repeat,
+		url( 'http://store.akamai.steamstatic.com/public/images/v6/blue_top_repeat.png' ) center top repeat-x
 	;
 
 	min-height: 370px;
@@ -321,7 +321,7 @@ body.tag_page h3 {
 	position: absolute;
 	left: -79px;
 	top: 0;
-	background: url( 'http://cdn.store.steampowered.com/public/images/v6/tag_betabug.png' );
+	background: url( 'http://store.akamai.steamstatic.com/public/images/v6/tag_betabug.png' );
 }
 
 .tag_beta_bug, .tag_beta_bug img {
