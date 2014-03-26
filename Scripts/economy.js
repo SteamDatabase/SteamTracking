@@ -1632,8 +1632,7 @@ var CUser = Class.create( {
 		this.cLoadsInFlight--;
 		if ( transport.responseJSON && transport.responseJSON.success )
 		{
-			var merged = MergeInventoryWithDescriptions( transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency, transport.responseJSON.rgDescriptions );
-			var inventory = new CInventory( this, appid, contextid, merged.inventory, merged.currency );
+			var inventory = new CInventory( this, appid, contextid, transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency );
 
 			this.addInventory( inventory );
 			var elInventory = inventory.getInventoryElement();
@@ -1739,11 +1738,13 @@ CUserYou = Class.create( CUser, {
 		if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
 			params.market = 1;
 
-		new Ajax.Request( g_strInventoryLoadURL + appid + '/' + contextid + '/', {
-			method: 'get',
-			parameters: params,
-			onComplete: function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ); }
-		} );
+		RequestFullInventory(
+				g_strInventoryLoadURL + appid + '/' + contextid + '/',
+				params,
+				null,
+				null,
+				function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ); }
+		);
 	},
 
 	// an obj with .appid and .contextid
@@ -3518,60 +3519,6 @@ function HistoryPageCreateItemHover( id, appid, contextid, assetid, amount )
 	CreateItemHoverFromContainer( g_rgHistoryInventory, id, appid, contextid, assetid, amount );
 }
 
-function MergeInventoryWithDescriptions( rgInventory, rgCurrency, rgDescriptions )
-{
-	var rgMergedInventory = null;
-	var rgMergedCurrency = null;
-
-	if ( rgInventory && !( rgInventory instanceof Array ) )
-	{
-		rgMergedInventory = {};
-		for ( var itemid in rgInventory )
-		{
-			var rgItem = rgInventory[itemid];
-			if ( rgItem )
-			{
-				rgMergedInventory[itemid] = Object.extend( rgItem, Object.clone( rgDescriptions[rgItem.classid + '_' + rgItem.instanceid] ) );
-
-				// each item needs its own tags
-				if ( rgItem.tags )
-				{
-					rgMergedInventory[itemid].tags = rgMergedInventory[itemid].tags.clone();
-				}
-			}
-		}
-	}
-	else
-	{
-		rgMergedInventory = rgInventory;
-	}
-
-	if ( rgCurrency && !( rgCurrency instanceof Array ) )
-	{
-		rgMergedCurrency = {};
-		for ( var itemid in rgCurrency )
-		{
-			var rgItem = rgCurrency[itemid];
-			if ( rgItem )
-			{
-				rgMergedCurrency[itemid] = Object.extend( rgItem, Object.clone( rgDescriptions[rgItem.classid + '_' + 0] ) );
-
-				// each item needs its own tags
-				if ( rgItem.tags )
-				{
-					rgMergedCurrency[itemid].tags = rgMergedCurrency[itemid].tags.clone();
-				}
-			}
-		}
-	}
-	else
-	{
-		rgMergedCurrency = rgCurrency;
-	}
-
-	return { inventory: rgMergedInventory, currency: rgMergedCurrency };
-}
-
 CNewItemScroller = Class.create( {
 
 	m_rgPageOffsets: [],
@@ -4081,5 +4028,121 @@ function ReportTradeScam( steamIDTarget, strPersonaName )
 	} );
 
 	$TextArea.focus();
+}
+
+function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, strURL, oParams, fOnSuccess, fOnFailure, fOnComplete )
+{
+	var bMore = false;
+
+	if ( transport.responseJSON && transport.responseJSON.success )
+	{
+		bMore = transport.responseJSON.more;
+
+		if ( transport.responseJSON.rgAppInfo )
+		{
+			mergedResponse.rgAppInfo = transport.responseJSON.rgAppInfo;
+		}
+
+		// Merge the inventory into the merged response and also put the description with the item
+		if ( transport.responseJSON.rgInventory && !( transport.responseJSON.rgInventory instanceof Array ) )
+		{
+			for ( var itemid in transport.responseJSON.rgInventory )
+			{
+				var rgItem = transport.responseJSON.rgInventory[itemid];
+				if ( rgItem )
+				{
+					mergedResponse.rgInventory[itemid] = Object.extend( rgItem, Object.clone( transport.responseJSON.rgDescriptions[rgItem.classid + '_' + rgItem.instanceid] ) );
+
+					// each item needs its own tags
+					if ( rgItem.tags )
+					{
+						mergedResponse.rgInventory[itemid].tags = mergedResponse.rgInventory[itemid].tags.clone();
+					}
+				}
+			}
+		}
+
+		// Merge the currencies into the merged response and also put the description with the currency
+		if ( transport.responseJSON.rgCurrency && !( transport.responseJSON.rgCurrency instanceof Array ) )
+		{
+			for ( var itemid in transport.responseJSON.rgCurrency )
+			{
+				var rgItem = transport.responseJSON.rgCurrency[itemid];
+				if ( rgItem )
+				{
+					mergedResponse.rgCurrency[itemid] = Object.extend( rgItem, Object.clone( transport.responseJSON.rgDescriptions[rgItem.classid + '_' + 0] ) );
+
+					// each item needs its own tags
+					if ( rgItem.tags )
+					{
+						mergedResponse.rgCurrency[itemid].tags = mergedResponse.rgCurrency[itemid].tags.clone();
+					}
+				}
+			}
+		}
+
+		if ( bMore )
+		{
+			oParams.start = transport.responseJSON.more_start;
+
+			new Ajax.Request( strURL, {
+				method: 'get',
+				parameters: oParams,
+				onComplete:
+					function( transport )
+					{
+						ContinueFullInventoryRequestIfNecessary(
+								transport,
+								mergedResponse,
+								strURL,
+								oParams,
+								fOnSuccess, fOnFailure, fOnComplete
+						);
+					}
+			} );
+		}
+	}
+	else
+	{
+		if ( fOnFailure != null )
+		{
+			fOnFailure( transport );
+		}
+	}
+
+	// If we're done, call the complete method
+	if ( !bMore )
+	{
+		mergedResponse.success = true;
+
+		if ( fOnSuccess != null )
+		{
+			fOnSuccess( { responseJSON: mergedResponse } );
+		}
+
+		if ( fOnComplete != null )
+		{
+			fOnComplete( { responseJSON: mergedResponse } );
+		}
+	}
+}
+
+function RequestFullInventory( strURL, oParams, fOnSuccess, fOnFailure, fOnComplete )
+{
+	new Ajax.Request( strURL, {
+		method: 'get',
+		parameters: oParams,
+		onComplete:
+			function( transport )
+			{
+				ContinueFullInventoryRequestIfNecessary(
+						transport,
+						{ rgInventory: {}, rgCurrency: {}, rgAppInfo: {} },
+						strURL,
+						oParams,
+						fOnSuccess, fOnFailure, fOnComplete
+				);
+			}
+	} );
 }
 

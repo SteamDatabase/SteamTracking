@@ -304,6 +304,11 @@ a.market_listing_item_name_link:hover {
 	color: #AFAFAF;
 }
 
+.market_sortable_column {
+	/* Not ready yet */
+	/* cursor: pointer; */
+}
+
 .market_listing_left_cell {
 	float: left;
 }
@@ -337,6 +342,11 @@ a.market_listing_item_name_link:hover {
 
 .market_listing_table_header .market_listing_right_cell {
 	border-left: 1px solid #404040;
+	white-space: nowrap;
+}
+
+.market_sort_arrow {
+	font-size: 80%;
 }
 
 .market_listing_price {
@@ -364,7 +374,7 @@ a.market_listing_item_name_link:hover {
 	width: 90px;
 }
 
-.market_listing_their_price > span, .market_listing_my_price > span, .market_listing_num_listings > span {
+.market_listing_their_price > span.market_table_value, .market_listing_my_price > span.market_table_value, .market_listing_num_listings > span.market_table_value {
 	font-size: 85.7%;
 	line-height: 1.25em;
 	vertical-align: middle;
@@ -375,12 +385,16 @@ a.market_listing_item_name_link:hover {
 		margin: 10px 0;
 }
 
+.market_listing_searchresult .market_listing_their_price > span {
+	vertical-align: top;
+	margin: 1.3em 0;
+}
+
 .market_listing_num_listings {
-	width: 110px;
+	width: 80px;
 }
 
 .market_listing_num_listings_qty {
-	color: white;
 	font-size: 14px;
 }
 
