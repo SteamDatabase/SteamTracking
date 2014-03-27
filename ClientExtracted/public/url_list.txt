@@ -664,6 +664,6 @@ FamilySharing
 }
 LinkFilter
 {
-	url		"%community%/linkfilter/"
+	url		"%communityhttps%/linkfilter/"
 	method	"internal"
 }
