@@ -1719,5 +1719,8 @@ a.pagelink:hover {
 	font-size: 9px;
 	background-color: transparent;
 	font-weight: normal;
-	color: #808285;
+}
+
+.lowkeywarning {
+    color: #e44044
 }
