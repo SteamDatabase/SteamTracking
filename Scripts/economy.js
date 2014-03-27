@@ -4033,10 +4033,12 @@ function ReportTradeScam( steamIDTarget, strPersonaName )
 function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, strURL, oParams, fOnSuccess, fOnFailure, fOnComplete )
 {
 	var bMore = false;
+	var bSuccess = false;
 
 	if ( transport.responseJSON && transport.responseJSON.success )
 	{
 		bMore = transport.responseJSON.more;
+		bSuccess = true;
 
 		if ( transport.responseJSON.rgAppInfo )
 		{
@@ -4089,10 +4091,10 @@ function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, str
 				method: 'get',
 				parameters: oParams,
 				onComplete:
-					function( transport )
+					function( newTransport )
 					{
 						ContinueFullInventoryRequestIfNecessary(
-								transport,
+								newTransport,
 								mergedResponse,
 								strURL,
 								oParams,
@@ -4113,9 +4115,9 @@ function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, str
 	// If we're done, call the complete method
 	if ( !bMore )
 	{
-		mergedResponse.success = true;
+		mergedResponse.success = bSuccess;
 
-		if ( fOnSuccess != null )
+		if ( fOnSuccess != null && bSuccess )
 		{
 			fOnSuccess( { responseJSON: mergedResponse } );
 		}
