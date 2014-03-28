@@ -445,6 +445,25 @@ input, select , textarea, button, .likeButton {
 	padding: 3px;
 }
 
+input[type=submit], button {
+	border-radius: 2px;
+	border: none;
+	padding: 3px 5px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #fff !important;
+	background: #57749e;
+	background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));
+	background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);
+	background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
+	background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
+	background: linear-gradient(to bottom, #57749e 5%,#364963 95%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
+	box-shadow: none;
+}
+
 .likeButton {
 	text-align: center;
 	cursor: pointer;
@@ -466,10 +485,13 @@ input[type=submit].btn_darkblue_white_innerfade.btn_small_thin, button.btn_darkb
 	line-height: 20px;
 }
 
-input[type=submit].btn_green_white_innerfade.btn_medium {
+input[type=submit].btn_green_white_innerfade.btn_medium, button[type=button].btn_green_white_innerfade.btn_medium {
 	font-size: 15px;
 	line-height: 30px;
 }
+	button[type=button].btn_medium {
+		padding: 0 15px;
+	}
 input[type=button].btn_grey_white_innerfade.btn_medium {
 	font-size: 15px;
 	line-height: 30px;
