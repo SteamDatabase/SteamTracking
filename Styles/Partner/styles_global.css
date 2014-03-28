@@ -445,7 +445,7 @@ input, select , textarea, button, .likeButton {
 	padding: 3px;
 }
 
-input[type=submit], button {
+input[type=submit]:not(.btn_green_white_innerfade), button {
 	border-radius: 2px;
 	border: none;
 	padding: 3px 5px;
