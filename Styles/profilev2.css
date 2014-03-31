@@ -1561,10 +1561,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	max-height: 600px;
 }
 
-.newmodal_content {
-	overflow: visible;
-}
-
 .newmodal_content a.bb_link:hover, .profile_summary a.bb_link:hover, .showcase_notes a.bb_link:hover, .showcase_notes a:hover {
 	text-decoration: underline;
 }
