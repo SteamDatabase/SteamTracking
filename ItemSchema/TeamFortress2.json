@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.c2c61a489b3b390b98cd2e99844496c3d349c460.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.c4442fcffaa3de7b6b961c6326fb550982155210.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -51882,7 +51882,19 @@
 					"can_strangify": true,
 					"can_killstreakify": true,
 					"can_consume": true
-				}
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Craft Bar Level 1",
