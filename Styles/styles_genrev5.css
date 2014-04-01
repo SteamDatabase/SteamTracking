@@ -228,6 +228,12 @@
 	margin-left: 8px;
 }
 
+.related_tag_see_more {
+	text-align: right;
+	cursor: pointer;
+	padding-top: 8px;
+}
+
 #header_callout {
 
 	height: 101px;

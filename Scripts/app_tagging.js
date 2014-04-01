@@ -778,6 +778,11 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 		});
 	});
 
+	$J('#related_tags_more_toggle').click( function() {
+		$J('#related_tags_more_toggle').hide();
+		$J('#related_tags_more').show('fast');
+	});
+
 	// due to php, this might be an empty array, or an object.  on an object, length will be undefined
 	if ( rgInitialParams.length !== 0 )
 	{
