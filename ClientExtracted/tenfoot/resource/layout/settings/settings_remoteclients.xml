@@ -35,18 +35,14 @@
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsContent SettingsColumnarContent" >
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_HostLabel" />
+					
+					<!-- This is visible if hosting is not supported on this platform -->
+					<Label class="SettingsLabel" id="UnsupportedPlatform" text="#Settings_RemoteClients_UnsupportedPlatform" />
+					
+					<!-- This is visible if hosting is supported on this platform -->
 					<Button class="Button" id="AdvancedHostOptions" onactivate="ShowAdvancedHostOptions();" >
 						<Label class="LongDesc" text="#Settings_RemoteClients_AdvancedHostOptions" />
 					</Button>
-				
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					
-				
 				</Panel>
 	
 				<Panel class="SettingsContent SettingsColumnarContent">

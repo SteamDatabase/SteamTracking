@@ -1843,6 +1843,7 @@
 	"Settings_RemoteClients_DeviceName" "DEVICE NAME"
 	"Settings_RemoteClients_Status" "STATUS"
 	"Settings_RemoteClients_EnableStreaming" "Enable Streaming"
+	"Settings_RemoteClients_UnsupportedPlatform" "Hosting is not currently supported on this platform"
 	"Settings_RemoteClients_HostLabel" "Host options"
 	"Settings_RemoteClients_ClientLabel" "Client options"
 	"Settings_RemoteClients_QualityFast" "Fast"
@@ -1879,6 +1880,7 @@
 	"Settings_RemoteClients_DifferentUser" "Different user logged in"
 	"Settings_RemoteClients_DifferentVersion" "Different client version"
 	"Settings_RemoteClients_Disabled" "Streaming disabled"
+	"Settings_RemoteClients_Unsupported" "Unsupported platform"
 	"Settings_RemoteClients_Disconnected" "Not connected"
 	
 	
