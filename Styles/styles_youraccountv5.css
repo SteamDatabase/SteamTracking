@@ -643,3 +643,14 @@ div.youraccount_history_home>div.account_wallet {
 	opacity: 0.2;
 	filter: alpha(opacity=20);
 }
+
+
+.errormsg {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #a81a28;
+    background-color: #4a0b12;
+}
