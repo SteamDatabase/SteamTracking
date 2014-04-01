@@ -536,8 +536,16 @@ function MoveItemToInventory( elItem )
 	{
 		CleanupSlot( elItem.parentNode.parentNode );
 	}
-	RevertItem( item );
 
+	if ( item.is_stackable )
+	{
+		// stackable items are fully removed by this call
+		SetStackableItemInTrade( item, 0 );
+		return;
+	}
+
+	RevertItem( item );
+	
 	item.homeElement.down('.slot_actionmenu_button').show();
 
 	GTradeStateManager.RemoveItemFromTrade( item );
