@@ -26,6 +26,14 @@
 			labelText="#Steam_Settings_Streaming_HostLabel"
 		}
 		
+		"UnsupportedPlatform"
+		{
+			ControlName="Label"
+			fieldName="UnsupportedPlatform"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_UnsupportedPlatform"
+		}
+		
 		"AdvancedHostOptions" { ControlName="Button" fieldName="AdvancedHostOptions" command="AdvancedHostOptions" labelText="#Steam_Settings_Streaming_AdvancedHostOptions" }
 
 		"ClientDivider" { ControlName="divider" }
@@ -74,6 +82,7 @@
 		
 		place { region=bottom control=HostDivider width=max x=20 y=0 }
 		place { region=bottom control=HostLabel width=max x=20 y=10 }
+		place { region=bottom control=UnsupportedPlatform width=max x=20 y=35 }
 		place { region=bottom control=AdvancedHostOptions x=20 y=35 }
 		
 		place { region=bottom control=ClientDivider width=max x=20 y=70 }
