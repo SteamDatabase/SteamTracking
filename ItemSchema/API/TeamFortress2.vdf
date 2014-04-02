@@ -154,10 +154,10 @@
 		"shared"
 		{
 			"pyro_spikes"		"1"
-			"scout_bandages"	"1"			
-			"engineer_pocket"	"1"			
+			"scout_bandages"	"1"				
+			"engineer_pocket"	"1"				
 			"medigun_backpack"	"1"
-			"heavy_belt_back"	"1"			
+			"heavy_belt_back"	"1"				
 			"demo_mustache_eyepatch"	"1"		
 			"soldier_gloves"	"1"
 		}
@@ -199,7 +199,7 @@
 			"heavy_mullet"		"1"			
 			"medic_pipe"		"1"
 			"soldier_legs"		"1"
-			"sniper_pocket"		"1"			
+			"sniper_headband"	"1"
 		}
 		"shared"
 		{
@@ -211,7 +211,10 @@
 		}
 		"shared"
 		{
-			"soldier_lucky_shot"		"1"	
+			"demo_arms"			"1"
+			"sniper_pocket"		"1"			
+			"engineer_lenses"	"1"			
+			"heavy_hip_pouch"	"1"	
 		}
 	}
 	"equip_conflicts"
@@ -227,21 +230,11 @@
 			"face"			"1"
 			"glasses"		"1"
 			"ears"			"1"
-			"soldier_lucky_shot"	"1"
-			"soldier_stash"			"1"
 		}
 		"heavy_pocket"
 		{
 			"medal"			"1"
 		}
-		"soldier_lucky_shot"	
-		{
-			"hat"			"1"
-		}
-		"soldier_stash"	
-		{
-			"hat"			"1"
-		}	
 	}
 	"prefabs"
 	{
@@ -1107,6 +1100,7 @@
 			"item_slot"	"misc"
 			"equip_region"	"glasses"
 			"item_quality"	"unique"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/all_class/pyrovision_goggles_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -1337,6 +1331,10 @@
 		"strangifier_base"
 		{
 			"item_class"	"tool"
+			"capabilities"
+			{
+				"can_gift_wrap" 	"1"
+			}
 			"tool"
 			{
 				"type"	"strangifier"
@@ -1351,7 +1349,9 @@
 			}
 			"show_in_armory"	"0"
 			"item_type_name"	"#TF_StrangifierTool"
-			"image_inventory"	"backpack/crafting/strange_bacon_grease"
+			"item_name"			"#TF_Strangifier_Name"
+			"item_description"	"#TF_Strangifier_Desc"
+			"image_inventory"	"backpack/crafting/strange_generic"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "96"
 			"item_quality"		"unique"
@@ -1391,7 +1391,7 @@
 			"item_name"			"#TF_KillStreakifier_Name"
 			"item_description"	"#TF_KillStreakifier_Desc"
 			"item_type_name"	"#TF_KillStreakifierToolA"
-			"image_inventory"	"backpack/crafting/killstreakifier_generic"
+			"image_inventory"	"backpack/crafting/professional_grease_basic"
 			"image_inventory_size_w" "128"
 			"image_inventory_size_h" "96"
 			"item_quality"		"unique"
@@ -1400,7 +1400,21 @@
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"			"ui/item_bottle_drop.wav"
 		}
-
+		"killstreakifier_kit_basic"
+		{
+			"prefab" "killstreakifier_base"
+			"item_description"	"#TF_KillStreakifierBasic_Desc"
+			"image_inventory"	"backpack/crafting/professional_grease_basic"
+			"attributes"
+			{
+				"killstreak tier"
+				{
+					"attribute_class"	"killstreak_tier"
+					"value"	"1"
+				}
+			}
+		}
+		
 		"dynamic_recipe_base"
 		{
 			"item_class"	"tool"
@@ -1843,7 +1857,7 @@
 			"loadondemand"			"1"
 			"show_in_armory"		"1"
 			"item_quality"			"unique"
-			"drop_type"				"none"
+			"drop_type"				"drop"
 			"propername" "1"
 			"image_inventory"	"backpack/player/items/all_class/sd_glasses"
 			"image_inventory_size_w"		"128"
@@ -3447,6 +3461,13 @@
 			{
 				"sound_single_shot" "Weapon_Ambassador.Single"
 				"sound_burst" "Weapon_Ambassador.SingleCrit"
+			}
+			"tags"
+			{
+				"can_deal_gib_damage"	"1"
+				"can_deal_damage"		"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -5648,7 +5669,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/pyro/pyro_chicken.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -5943,7 +5964,7 @@
 			"item_name"	"#TF_Sniper_Jarate_Headband"
 			"item_description"	"#TF_Sniper_Jarate_Headband_Desc"
 			"item_slot"	"head"
-			"equip_region"	"hat"
+			"equip_region"	"sniper_headband"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/sniper/jarate_headband"
 			"image_inventory_size_w"		"128"
@@ -6372,7 +6393,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	""
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -6944,6 +6965,11 @@
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
 					"value" "0.4"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
@@ -10594,7 +10620,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/pyro/attendant.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -14335,7 +14361,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/heavy/ttg_visor.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -14410,7 +14436,7 @@
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
 			"model_player"	"models/player/items/demo/ttg_glasses.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -14604,6 +14630,7 @@
 			"item_description"	"#TF_CameraHelm_Desc"
 			"item_slot"	"head"
 			"equip_region"	"hat"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/all_class/replay_hat"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -14941,7 +14968,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/heavy/heavy_big_chief.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -15301,7 +15328,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/pyro/pyro_pyromancers_mask.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"pyro"	"1"
@@ -17205,7 +17232,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/demo/demo_shogun_kabuto.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -17242,11 +17269,7 @@
 			"item_name"	"#TF_Homefront_Blindfold"
 			"item_description"	"#TF_Homefront_Blindfold_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"glasses"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/soldier/homefront_blindfold"
 			"image_inventory_size_w"		"128"
@@ -18902,11 +18925,7 @@
 			"item_name"	"#TF_CharityHat_A"
 			"item_description"	"#TF_CharityHat_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"face"			"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
@@ -19994,7 +20013,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/heavy/capones_capper.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -20189,7 +20208,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/soldier/bucket.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -20230,7 +20249,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/pyro/traffic_cone.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -20274,7 +20293,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/engineer/mbsf_engineer.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -20317,7 +20336,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/spy/mbsf_spy.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -21143,7 +21162,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/scout/bonk_mask.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -21772,7 +21791,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/medic/medic_mtg.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -21815,7 +21834,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/scout/scout_mtg.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"propername"	"1"
 			"used_by_classes"
 			{
@@ -22914,13 +22933,6 @@
 				"sound_deploy"			"Weapon_QuakeRPG.Draw"
 				"sound_reload"			"Weapon_QuakeRPG.Reload"
 				"sound_special1"		"Weapon_QuakeRPG.Explode"
-			}
-			"visuals_mvm_boss"
-			{
-				"use_visualsblock_as_base"	"visuals"
-				"sound_single_shot"		"MVM.GiantSoldierRocketShoot"
-				"sound_burst"			"MVM.GiantSoldierRocketShoot"
-				"sound_special1"		"MVM.GiantSoldierRocketExplode"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -24470,11 +24482,7 @@
 			"item_name"	"#TF_Hwn_PyroHat"
 			"item_description"	"#TF_Hwn_PyroHat_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"			"1"
-				"lenses"		"1"
-			}
+			"equip_region"	"lenses"
 			"propername"	"1"
 			"image_inventory"	"backpack/player/items/pyro/hwn_pyro_hat"
 			"model_player"	"models/player/items/pyro/hwn_pyro_hat.mdl"
@@ -26854,7 +26862,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/player/items/demo/mighty_pirate.mdl"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -29200,6 +29208,7 @@
 			"item_description"	"#TF_Winter2011_SantaHat_Desc"
 			"image_inventory"	"backpack/player/items/all_class/xms_santa_hat_demo"
 			"propername" "1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/xms_santa_hat_scout.mdl"
@@ -29394,6 +29403,7 @@
 			"item_description"	"#TF_Winter2011_WinterFurCap_Desc"
 			"image_inventory"	"backpack/player/items/all_class/xms_furcap_demo"
 			"propername" "1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/xms_furcap_scout.mdl"
@@ -29520,6 +29530,7 @@
 			"item_description"	"#TF_Winter2011_Ebenezer_Desc"
 			"image_inventory"	"backpack/player/items/all_class/xms_winter_joy_hat_demo"
 			"propername" "1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/xms_winter_joy_hat_scout.mdl"
@@ -29592,7 +29603,6 @@
 			"name"	"The Lucky Shot"
 			"first_sale_date"	"2012/01/10"
 			"prefab"	"hat"
-			"equip_region"	"soldier_lucky_shot"
 			"item_name"	"#TF_LuckyShot"
 			"item_description"	"#TF_LuckyShot_Desc"
 			"image_inventory"	"backpack/player/items/soldier/luckyshot"
@@ -29794,6 +29804,7 @@
 			"item_description"	"#TF_DailyDuelWinnerRewardHat_Desc"
 			"image_inventory"	"backpack/player/items/all_class/dueler_demo"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/dueler_scout.mdl"
@@ -29815,6 +29826,7 @@
 			"item_description"	"#TF_DailyGiftGiverRewardHat_Desc"
 			"image_inventory"	"backpack/player/items/all_class/generous_demo"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/generous_scout.mdl"
@@ -29836,6 +29848,7 @@
 			"item_description"	"#TF_DailyMapStampRewardHat_Desc"
 			"image_inventory"	"backpack/player/items/all_class/stamper_demo"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/stamper_scout.mdl"
@@ -29947,6 +29960,7 @@
 			"image_inventory"	"backpack/player/items/sniper/jag_shadow"
 			"model_player"	"models/player/items/sniper/jag_shadow.mdl"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"sniper"	"1"
@@ -30344,6 +30358,7 @@
 			"item_name"	"#TF_DS_FootballHelmet"
 			"item_description"	"#TF_DS_FootballHelmet_Desc"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/soldier/ds_football_helmet"
 			"model_player"	"models/player/items/soldier/ds_football_helmet.mdl"
 			"used_by_classes"
@@ -31182,7 +31197,7 @@
 				"engineer"	"models/player/items/all_class/crimecraft_helmet_engineer.mdl"
 				"pyro"		"models/player/items/all_class/crimecraft_helmet_pyro.mdl"
 			}
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"used_by_classes"
@@ -31459,6 +31474,7 @@
 			"item_name"	"#TF_GRFS_1"
 			"item_description"	"#TF_GRFS_1_Desc"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/soldier/grfs_soldier"
 			"model_player"	"models/player/items/soldier/grfs_soldier.mdl"
 			"used_by_classes"
@@ -31478,6 +31494,7 @@
 			"item_name"	"#TF_GRFS_2"
 			"item_description"	"#TF_GRFS_2_Desc"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/scout/grfs_scout"
 			"model_player"	"models/player/items/scout/grfs_scout.mdl"
 			"used_by_classes"
@@ -31820,6 +31837,7 @@
 			"craft_class"	""
 			"craft_material_type"	""
 			"propername"	"1"
+			"drop_type"	"drop"
 			"item_name"	"#TF_DoomsdayAchievementHat"
 			"item_description"	"#TF_DoomsdayAchievementHat_Desc"
 			"image_inventory"	"backpack/player/items/all_class/sd_rocket_spy"
@@ -32050,6 +32068,7 @@
 			"image_inventory"	"backpack/player/items/medic/medic_ushanka"
 			"model_player"	"models/player/items/medic/medic_ushanka.mdl"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -32091,6 +32110,7 @@
 			"image_inventory"	"backpack/player/items/scout/pep_hat"
 			"model_player"	"models/player/items/scout/pep_hat.mdl"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -32266,7 +32286,7 @@
 				"engineer"	"models/player/items/all_class/as_robot_chicken_engineer.mdl"
 				"pyro"		"models/player/items/all_class/as_robot_chicken_pyro.mdl"
 			}
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -33232,6 +33252,7 @@
 			"item_description"	"#TF_SpyCardHat_Desc"
 			"image_inventory"	"backpack/player/items/spy/spy_cardhat"
 			"model_player"	"models/player/items/spy/spy_cardhat.mdl"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -33329,6 +33350,7 @@
 			"image_inventory"	"backpack/player/items/soldier/soldier_warpig"
 			"model_player"	"models/player/items/soldier/soldier_warpig.mdl"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -33612,6 +33634,7 @@
 			"item_description"	"#TF_Soldier_Robot_Helmet_Desc"
 			"image_inventory"	"backpack/player/items/mvm_loot/soldier/robot_helmet"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"styles"
@@ -33738,15 +33761,6 @@
 			{
 				"tracer_effect"	"bullet_tracer02"
 			}
-			"visuals_mvm_boss"
-			{
-				"use_visualsblock_as_base"	"visuals"
-				"sound_double_shot"	"MVM.GiantHeavyGunFire"
-				"sound_burst"		"MVM.GiantHeavyGunFire"
-				"sound_special1"	"MVM.GiantHeavyGunWindUp"
-				"sound_special2"	"MVM.GiantHeavyGunWindDown"
-				"sound_special3"	"MVM.GiantHeavyGunSpin"
-			}
 		}
 		"851"
 		{
@@ -33791,6 +33805,14 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+			}
+			"attributes"
+			{
+				"attach particle effect static"
+				{
+					"attribute_class"	"set_attached_particle_static"
+					"value"	"28"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
@@ -35819,7 +35841,7 @@
 				"sniper"	"models/player/items/all_class/witchhat_sniper.mdl"
 				"spy"		"models/player/items/all_class/witchhat_spy.mdl"
 			}
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -36344,6 +36366,7 @@
 			"image_inventory"	"backpack/player/items/demo/demo_bonehat"
 			"model_player"		"models/player/items/demo/demo_bonehat.mdl"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -37900,6 +37923,7 @@
 			"item_description"	"#TF_SoldiersSlopeScopers_Desc"
 			"image_inventory"	"backpack/player/items/soldier/soldier_skihat"
 			"model_player"	"models/player/items/soldier/soldier_skihat.mdl"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -38051,7 +38075,7 @@
 			"name"	"Tough Stuff Muffs"
 			"first_sale_date"	"2013/01/24"
 			"prefab"	"hat"
-			"drop_type"	"none"
+			"drop_type"	"drop"
 			"item_name"	"#TF_ToughStuffMuffs"
 			"item_description"	"#TF_ToughStuffMuffs_Desc"
 			"image_inventory"	"backpack/player/items/all_class/all_earwarmer_demo"
@@ -39309,6 +39333,7 @@
 				"paintable"		"1"
 				"can_craft_count"	"1"
 			}
+			"drop_type"	"drop"
 			"item_name"	"#TF_VoxDiabolus"
 			"item_description"	"#TF_VoxDiabolus_Desc"
 			"image_inventory"	"backpack/player/items/engineer/bio_voxhood"
@@ -39394,6 +39419,7 @@
 			"propername"	"1"
 			"image_inventory"	"backpack/player/items/soldier/bio_soldier_founders"
 			"model_player"	"models/player/items/soldier/bio_soldier_founders_cover.mdl"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"soldier"	"1"
@@ -39404,11 +39430,15 @@
 				{
 					"0"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
 						"model_player"	"models/player/items/soldier/bio_soldier_founders_cover.mdl"
 						"name"	"#TF_DoeBoy_Style0"
 					}
 					"1"
 					{
+						"skin_red" "0"
+						"skin_blu" "1"
 						"model_player"	"models/player/items/soldier/bio_soldier_founders.mdl"
 						"name"	"#TF_DoeBoy_Style1"
 					}
@@ -39428,6 +39458,7 @@
 			"item_name"	"#TF_StrawBoat"
 			"item_description"	"#TF_StrawBoat_Desc"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/sniper/bio_sniper_boater"
 			"model_player"	"models/player/items/sniper/bio_sniper_boater.mdl"
 			"used_by_classes"
@@ -39642,6 +39673,7 @@
 			"prefab"	"hat"
 			"craft_class"	""				
 			"craft_material_type"	""	
+			"drop_type"	"drop"
 			"item_name"	"#TF_Bloodhound"
 			"item_description"	"#TF_Bloodhound_Desc"
 			"propername"	"1"
@@ -39686,6 +39718,7 @@
 			"item_name"	"#TF_Necronomicrown"
 			"item_description"	"#TF_Necronomicrown_Desc"
 			"propername"	"1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/player/items/pyro/pn2_evilash"
 			"model_player"	"models/player/items/pyro/pn2_evilash.mdl"
 			"used_by_classes"
@@ -40109,6 +40142,7 @@
 			"propername"		"1"
 			"image_inventory"	"backpack/player/items/medic/as_medic_cloud_hat"
 			"model_player"	"models/player/items/medic/as_medic_cloud_hat.mdl"
+			"drop_type"	"drop"
 			"used_by_classes"
 			{
 				"medic"	"1"
@@ -40163,7 +40197,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_scout_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40207,7 +40241,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_pyro_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40251,7 +40285,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_medic_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40295,7 +40329,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_heavy_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40339,7 +40373,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_demo_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40383,7 +40417,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_sniper_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40427,7 +40461,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_soldier_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40471,7 +40505,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_spy_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40515,7 +40549,7 @@
 			"item_description"	"#TF_GateBot_Light_Desc"
 			"image_inventory"	"backpack"
 			"model_player"	"models/bots/gameplay_cosmetic/light_engineer_on.mdl"
-			"drop_type"	"drop"
+			"drop_type"	"none"
 			"show_in_armory"	"0"
 			"used_by_classes"
 			{
@@ -40602,6 +40636,7 @@
 			"item_description"	"#TF_Grandmaster_Desc"
 			"image_inventory"	"backpack/player/items/all_class/chess_hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"model_player_per_class"
 			{
 				"scout"		"models/player/items/all_class/chess_scout_red.mdl"
@@ -41170,8 +41205,8 @@
 		"1092"
 		{
 			"name"	"The Fortified Compound"
-			"first_sale_date"	"2014/02/18"
-			"prefab"	"promo huntsman"
+			"first_sale_date"	"2014/03/07"
+			"prefab"	"huntsman"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41184,8 +41219,8 @@
 		"1093"
 		{
 			"name"	"The Gilded Guard"
-			"first_sale_date"	"2014/02/18"
-			"prefab"	"promo hat"
+			"first_sale_date"	"2014/03/07"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41193,6 +41228,7 @@
 			"item_name"	"#TF_GildedGuard"
 			"item_description"	"#TF_GildedGuard_Desc"
 			"propername" "1"
+			"drop_type"	"drop"
 			"image_inventory"	"backpack/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet"
 			"model_player"	"models/workshop/player/items/soldier/thief_soldier_helmet/thief_soldier_helmet.mdl"
 			"used_by_classes"
@@ -41203,8 +41239,8 @@
 		"1094"
 		{
 			"name"	"The Criminal Cloak"
-			"first_sale_date"	"2014/02/18"
-			"prefab"	"promo misc"
+			"first_sale_date"	"2014/03/07"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41224,8 +41260,8 @@
 		"1095"
 		{
 			"name"	"The Dread Hiding Hood"
-			"first_sale_date"	"2014/02/18"
-			"prefab"	"promo hat"
+			"first_sale_date"	"2014/03/07"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41248,8 +41284,8 @@
 		"1096"
 		{
 			"name"	"The Baronial Badge"
-			"first_sale_date"	"2014/02/18"
-			"prefab"	"promo misc"
+			"first_sale_date"	"2014/03/07"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41272,6 +41308,27 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+			}
+		}
+		"1097"
+		{
+			"name"	"The Little Bear"
+			"first_sale_date"	"2014/04/01"
+			"prefab"	"valve misc"
+			"equip_region"		"heavy_hip_pouch"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_PocketBuddy"
+			"item_name"	"#TF_LittleBear"
+			"item_description"	"#TF_LittleBear_Desc"
+			"propername" "1"
+			"image_inventory"	"backpack/player/items/heavy/heavy_pocket_bot"
+			"model_player"	"models/player/items/heavy/heavy_pocket_bot.mdl"
+			"used_by_classes"
+			{
+				"heavy" "1"
 			}
 		}
 
@@ -41325,6 +41382,7 @@
 			"item_name"		"#TF_robo_all_modest_pile"
 			"item_description"		"#TF_robo_all_modest_pile_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41371,6 +41429,7 @@
 			"item_name"		"#TF_robo_sniper_liquidator"
 			"item_description"		"#TF_robo_sniper_liquidator_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41403,6 +41462,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -41451,7 +41511,7 @@
 			}
 			"item_name"		"#TF_robo_sniper_soldered_sensei"
 			"item_description"		"#TF_robo_sniper_soldered_sensei_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"sniper_headband"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41482,6 +41542,7 @@
 			"item_name"		"#TF_robo_sniper_solar_topi"
 			"item_description"		"#TF_robo_sniper_solar_topi_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41512,6 +41573,7 @@
 			"item_name"		"#TF_robo_all_noble_amassment"
 			"item_description"		"#TF_robo_all_noble_amassment_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41558,6 +41620,7 @@
 			"item_name"		"#TF_robo_spy_backbiter_billycock"
 			"item_description"		"#TF_robo_spy_backbiter_billycock_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/spy/robo_spy_backbiter_billycock/robo_spy_backbiter_billycock"
 			"capabilities"
@@ -41581,6 +41644,7 @@
 			"item_name"		"#TF_robo_all_towering_pillar"
 			"item_description"		"#TF_robo_all_towering_pillar_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41717,6 +41781,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/robo_heavy_football_helmet/robo_heavy_football_helmet"
 			"capabilities"
 			{
@@ -41739,6 +41804,7 @@
 			"item_name"		"#TF_robo_soldier_tyrantium"
 			"item_description"		"#TF_robo_soldier_tyrantium_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41806,6 +41872,7 @@
 			"item_name"		"#TF_robo_soldier_shako"
 			"item_description"		"#TF_robo_soldier_shako_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41836,6 +41903,7 @@
 			"item_name"		"#TF_robo_scout_dogger"
 			"item_description"		"#TF_robo_scout_dogger_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
 			"visuals"
@@ -41868,6 +41936,7 @@
 			"item_name"		"#TF_robo_scout_baker_boy"
 			"item_description"		"#TF_robo_scout_baker_boy_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -41930,6 +41999,7 @@
 			"item_name"		"#TF_robo_demo_capotain"
 			"item_description"		"#TF_robo_demo_capotain_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_capotain/robo_demo_capotain"
@@ -42010,6 +42080,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_stuntman/robo_demo_stuntman"
 			"capabilities"
 			{
@@ -42034,6 +42105,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/robo_pyro_electric_escorter/robo_pyro_electric_escorter"
 			"capabilities"
 			{
@@ -42056,6 +42128,7 @@
 			"item_name"		"#TF_robo_soldier_fullmetaldrillhat"
 			"item_description"		"#TF_robo_soldier_fullmetaldrillhat_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/soldier/robo_soldier_fullmetaldrillhat/robo_soldier_fullmetaldrillhat"
 			"capabilities"
@@ -42145,6 +42218,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_glengarry_botnet/robo_demo_glengarry_botnet"
 			"capabilities"
 			{
@@ -42167,6 +42241,7 @@
 			"item_name"		"#TF_robo_scout_bonk_helm"
 			"item_description"		"#TF_robo_scout_bonk_helm_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"visuals"
 			{
@@ -42200,6 +42275,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -42285,6 +42361,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_buccaneer_bicorne/robo_demo_buccaneer_bicorne"
 			"capabilities"
 			{
@@ -42309,6 +42386,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/engineer/robo_engineer_rustin/robo_engineer_rustin"
 			"capabilities"
 			{
@@ -42364,6 +42442,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/demo/robo_demo_scotsmans_stovepipe/robo_demo_scotsmans_stovepipe"
 			"model_player"		"models/workshop/player/items/demo/robo_demo_scotsmans_stovepipe/robo_demo_scotsmans_stovepipe.mdl"
 			"used_by_classes"
@@ -42382,6 +42461,7 @@
 			"item_name"		"#TF_robo_pyro_firewall_helmet"
 			"item_description"		"#TF_robo_pyro_firewall_helmet_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/pyro/robo_pyro_firewall_helmet/robo_pyro_firewall_helmet"
 			"capabilities"
@@ -42405,6 +42485,7 @@
 			"item_name"		"#TF_robo_pyro_respectless_glove"
 			"item_description"		"#TF_robo_pyro_respectless_glove_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/pyro/robo_pyro_respectless_glove/robo_pyro_respectless_glove"
 			"capabilities"
@@ -42428,6 +42509,7 @@
 			"item_name"		"#TF_robo_pyro_whirly_bird"
 			"item_description"		"#TF_robo_pyro_whirly_bird_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/pyro/robo_pyro_whirly_bird/robo_pyro_whirly_bird"
 			"capabilities"
@@ -42470,6 +42552,7 @@
 			"item_name"		"#TF_robo_medic_pickelhaube"
 			"item_description"		"#TF_robo_medic_pickelhaube_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_pickelhaube/robo_medic_pickelhaube"
 			"capabilities"
@@ -42495,6 +42578,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_grimm_hatte/robo_medic_grimm_hatte"
 			"capabilities"
 			{
@@ -42517,6 +42601,7 @@
 			"item_name"		"#TF_robo_engineer_texastingallon"
 			"item_description"		"#TF_robo_engineer_texastingallon_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/engineer/robo_engineer_texastingallon/robo_engineer_texastingallon"
 			"capabilities"
@@ -42540,6 +42625,7 @@
 			"item_name"		"#TF_robo_medic_tyrolean"
 			"item_description"		"#TF_robo_medic_tyrolean_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/medic/robo_medic_tyrolean/robo_medic_tyrolean"
 			"capabilities"
@@ -42586,6 +42672,7 @@
 			"item_name"		"#TF_robo_spy_bootleg_billycock"
 			"item_description"		"#TF_robo_spy_bootleg_billycock_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"image_inventory"		"backpack/workshop/player/items/spy/robo_spy_bootleg_billycock/robo_spy_bootleg_billycock"
 			"capabilities"
@@ -42642,6 +42729,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/robo_heavy_tungsten_toque/robo_heavy_tungsten_toque"
 			"capabilities"
 			{
@@ -42758,6 +42846,7 @@
 			"equip_region"		"hat"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/robo_heavy_chief/robo_heavy_chief"
 			"capabilities"
 			{
@@ -42858,6 +42947,7 @@
 			"item_description"		"#TF_gunpointcoilhat_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/all_class/gunpointcoilhat/gunpointcoilhat"
 			"model_player_per_class"
 			{
@@ -43000,6 +43090,7 @@
 			"item_description"		"#TF_tw2_greek_helm_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/tw2_greek_helm/tw2_greek_helm"
 			"capabilities"
 			{
@@ -43045,6 +43136,7 @@
 			"item_description"		"#TF_tw2_roman_wreath_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -43142,6 +43234,7 @@
 			"item_description"		"#TF_riflemans_rallycap_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/sniper/riflemans_rallycap/riflemans_rallycap"
 			"capabilities"
 			{
@@ -43183,6 +43276,7 @@
 			"item_description"		"#TF_enlightened_mann_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/enlightened_mann/enlightened_mann"
 			"capabilities"
 			{
@@ -43232,6 +43326,7 @@
 			"item_description"		"#TF_cloud_crasher_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -43604,7 +43699,7 @@
 			"item_type_name"		"#TF_Wearable_Satchel"
 			"item_name"		"#TF_jul13_scrap_reserve"
 			"item_description"		"#TF_jul13_scrap_reserve_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"belt_misc"
 			"image_inventory"		"backpack/workshop/player/items/engineer/jul13_scrap_reserve/jul13_scrap_reserve"
 			"propername"		"1"
 			"capabilities"
@@ -43848,6 +43943,7 @@
 			"item_name"		"#TF_jul13_secret_state_surgeon"
 			"item_description"		"#TF_jul13_secret_state_surgeon_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_secret_state_surgeon/jul13_secret_state_surgeon"
 			"capabilities"
 			{
@@ -43989,6 +44085,7 @@
 			"item_name"		"#TF_jul13_sweet_shades"
 			"item_description"		"#TF_jul13_sweet_shades_Desc"
 			"equip_region"		"glasses"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/all_class/jul13_sweet_shades/jul13_sweet_shades"
 			"capabilities"
 			{
@@ -44030,6 +44127,7 @@
 			"equip_region"		"hat"
 			"image_inventory"		"backpack/workshop/player/items/demo/jul13_blam_o_shanter/jul13_blam_o_shanter"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -44115,6 +44213,7 @@
 			"item_name"		"#TF_jul13_bro_plate"
 			"item_description"		"#TF_jul13_bro_plate_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_bro_plate/jul13_bro_plate"
 			"capabilities"
 			{
@@ -44134,7 +44233,11 @@
 			"item_type_name"		"#TF_Wearable_PuffyShirt"
 			"item_name"		"#TF_jul13_gallant_gael"
 			"item_description"		"#TF_jul13_gallant_gael_Desc"
-			"equip_region"		"shirt"
+			"equip_regions"
+			{
+					"shirt"		"1"
+					"demo_arms"	"1"
+			}
 			"image_inventory"		"backpack/workshop/player/items/demo/jul13_gallant_gael/jul13_gallant_gael"
 			"propername"		"1"
 			"capabilities"
@@ -44309,6 +44412,7 @@
 			"equip_region"		"whole_head"
 			"image_inventory"		"backpack/workshop/player/items/soldier/jul13_helicopter_helmet/jul13_helicopter_helmet"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -44329,6 +44433,7 @@
 			"item_description"		"#TF_jul13_soldier_fedora_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -44357,6 +44462,7 @@
 			"item_description"		"#TF_jul13_ol_jack_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -44428,6 +44534,7 @@
 			"equip_region"		"hat"
 			"image_inventory"		"backpack/workshop/player/items/spy/jul13_harmburg/jul13_harmburg"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -44447,7 +44554,11 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_jul13_gaelic_garb"
 			"item_description"		"#TF_jul13_gaelic_garb_Desc"
-			"equip_region"		"shirt"
+			"equip_regions"
+			{
+					"shirt"		"1"
+					"demo_arms"	"1"
+			}
 			"propername"		"1"
 			"visuals"
 			{
@@ -44540,6 +44651,7 @@
 			"item_description"		"#TF_jul13_double_clue_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/spy/jul13_double_clue/jul13_double_clue"
 			"capabilities"
 			{
@@ -44697,6 +44809,7 @@
 			"item_name"		"#TF_jul13_sniper_souwester"
 			"item_description"		"#TF_jul13_sniper_souwester_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -44724,6 +44837,7 @@
 			"item_name"		"#TF_jul13_montys_menace"
 			"item_description"		"#TF_jul13_montys_menace_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/jul13_montys_menace/jul13_montys_menace"
 			"capabilities"
 			{
@@ -44858,6 +44972,7 @@
 			"item_name"		"#TF_jul13_honchos_heavy_reader"
 			"item_description"		"#TF_jul13_honchos_heavy_reader_Desc"
 			"equip_region"		"glasses"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/jul13_honchos_heavy_reader/jul13_honchos_heavy_reader"
 			"capabilities"
 			{
@@ -45212,6 +45327,7 @@
 			"item_description"		"#TF_fall2013_air_raider_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_air_raider/fall2013_air_raider"
 			"capabilities"
 			{
@@ -45334,7 +45450,7 @@
 			"item_type_name"		"#TF_Wearable_Glasses"
 			"item_name"		"#TF_fall2013_the_special_eyes"
 			"item_description"		"#TF_fall2013_the_special_eyes_Desc"
-			"equip_region"		"glasses"
+			"equip_region"		"engineer_lenses"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/engineer/fall2013_the_special_eyes/fall2013_the_special_eyes"
 			"capabilities"
@@ -45440,6 +45556,7 @@
 			"item_name"		"#TF_fall2013_brimfull_of_bullets"
 			"item_description"		"#TF_fall2013_brimfull_of_bullets_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/sniper/fall2013_brimfull_of_bullets/fall2013_brimfull_of_bullets"
 			"capabilities"
 			{
@@ -45461,6 +45578,7 @@
 			"item_description"		"#TF_fall2013_the_cotton_head_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/fall2013_the_cotton_head/fall2013_the_cotton_head"
 			"capabilities"
 			{
@@ -45502,6 +45620,7 @@
 			"item_name"		"#TF_fall2013_hong_kong_cone"
 			"item_description"		"#TF_fall2013_hong_kong_cone_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48769,6 +48888,7 @@
 			"item_name"		"#TF_xms2013_winter_hat_scarf"
 			"item_description"		"#TF_xms2013_winter_hat_scarf_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48918,6 +49038,7 @@
 			"item_description"		"#TF_xms2013_kissking_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -48965,6 +49086,7 @@
 			"item_description"		"#TF_xms2013_soldier_marshal_hat_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -49011,6 +49133,7 @@
 			"item_description"		"#TF_xms2013_sniper_shako_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/sniper/xms2013_sniper_shako/xms2013_sniper_shako"
 			"capabilities"
 			{
@@ -49227,6 +49350,7 @@
 			"item_description"		"#TF_xms2013_scout_drummer_hat_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -49255,6 +49379,7 @@
 			"item_description"		"#TF_xms2013_pyro_tailor_hat_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/xms2013_pyro_tailor_hat/xms2013_pyro_tailor_hat"
 			"model_player"		"models/workshop/player/items/pyro/xms2013_pyro_tailor_hat/xms2013_pyro_tailor_hat.mdl"
 			"used_by_classes"
@@ -49376,6 +49501,7 @@
 			"item_name"		"#TF_xms2013_scout_skicap"
 			"item_description"		"#TF_xms2013_scout_skicap_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -49430,6 +49556,7 @@
 			"item_name"		"#TF_xms2013_demo_plaid_hat"
 			"item_description"		"#TF_xms2013_demo_plaid_hat_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -49476,6 +49603,7 @@
 			"item_name"		"#TF_sbox2014_trenchers_topper"
 			"item_description"		"#TF_sbox2014_trenchers_topper_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -49796,6 +49924,7 @@
 			"item_name"		"#TF_sbox2014_teutonic_toque"
 			"item_description"		"#TF_sbox2014_teutonic_toque_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_teutonic_toque/sbox2014_teutonic_toque"
 			"capabilities"
 			{
@@ -49925,6 +50054,7 @@
 			"item_name"		"#TF_sbox2014_demo_knight_helmet"
 			"item_description"		"#TF_sbox2014_demo_knight_helmet_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_knight_helmet/sbox2014_demo_knight_helmet"
 			"capabilities"
 			{
@@ -49993,6 +50123,7 @@
 			"item_name"		"#TF_sbox2014_napolean_complex"
 			"item_description"		"#TF_sbox2014_napolean_complex_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/spy/sbox2014_napolean_complex/sbox2014_napolean_complex"
 			"capabilities"
 			{
@@ -50034,6 +50165,7 @@
 			"item_name"		"#TF_sbox2014_law"
 			"item_description"		"#TF_sbox2014_law_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -50150,7 +50282,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_sbox2014_demo_samurai_sleeves"
 			"item_description"		"#TF_sbox2014_demo_samurai_sleeves_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"demo_arms"
 			"image_inventory"		"backpack/workshop/player/items/demo/sbox2014_demo_samurai_sleeves/sbox2014_demo_samurai_sleeves"
 			"capabilities"
 			{
@@ -50200,6 +50332,7 @@
 			"item_name"		"#TF_sbox2014_war_goggles"
 			"item_description"		"#TF_sbox2014_war_goggles_Desc"
 			"equip_region"		"glasses"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_war_goggles/sbox2014_war_goggles"
 			"capabilities"
 			{
@@ -50220,6 +50353,7 @@
 			"item_name"		"#TF_sbox2014_war_helmet"
 			"item_description"		"#TF_sbox2014_war_helmet_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_war_helmet/sbox2014_war_helmet"
 			"capabilities"
 			{
@@ -50401,6 +50535,7 @@
 			"item_name"		"#TF_sbox2014_medic_wintergarb_helmet"
 			"item_description"		"#TF_sbox2014_medic_wintergarb_helmet_Desc"
 			"equip_region"		"hat"
+			"drop_type"	"drop"
 			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_medic_wintergarb_helmet/sbox2014_medic_wintergarb_helmet"
 			"capabilities"
 			{
@@ -55196,6 +55331,19 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/tvr_medal/tvr_medal"
 			"model_player"		"models/workshop/player/items/all_class/tvr_medal/tvr_medal_demo.mdl"
 		}
+		"8396"
+		{		
+			"name"				"InfoShow LAN Party 2014 Participant"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_InfoShow2014"
+			"item_description"	"#TF_Medal_InfoShow2014_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/infoshowmedal14/infoshowmedal14"
+			"model_player"		"models/workshop/player/items/all_class/infoshowmedal14/infoshowmedal14.mdl"
+		}
+
+
+
 
 
 
@@ -60193,7 +60341,8 @@
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The U-clank-a"		"1"
+				"The Little Bear"		"1"
+				"The Triple A Badge"	"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
 			"item_name"		"#TF_RobotHeavy_Promo"
@@ -63725,6 +63874,216 @@
 			"image_inventory"	"backpack/crafting/strongbox_crate_key"
 		}
 		
+		"5721"
+		{
+			"name"	"Pretty Boy's Pocket Pistol Strangifier"
+			"prefab" "strangifier_base"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value"				"773" 
+				}
+			}
+		}
+		"5722"
+		{
+			"name"	"Phlogistinator Strangifier"
+			"prefab" "strangifier_base"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value"				"594" 
+				}
+			}
+		}
+		"5723"
+		{
+			"name"	"Cleaner's Carbine Strangifier"
+			"prefab" "strangifier_base"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value"				"751" 
+				}
+			}
+		}
+		"5724"
+		{
+			"name"	"Private Eye Strangifier"
+			"prefab" "strangifier_base"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value"				"388" 
+				}
+			}
+		}
+		"5725"
+		{
+			"name"	"Big Chief Strangifier"
+			"prefab" "strangifier_base"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value"				"309" 
+				}
+			}
+		}
+		
+		"5726"
+		{
+			"name"	"Rocket Launcher Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "205" 
+				}
+			}
+		}
+		"5727"
+		{
+			"name"	"Scattergun Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "200" 
+				}
+			}
+		}
+		"5728"
+		{
+			"name"	"Sniperrifle Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "201" 
+				}
+			}
+		}
+		"5729"
+		{
+			"name"	"Shotgun Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "199" 
+				}
+			}
+		}
+		"5730"
+		{
+			"name"	"Ubersaw Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "37" 
+				}
+			}
+		}
+		"5731"
+		{
+			"name"	"GRU Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "239" 
+				}
+			}
+		}
+		"5732"
+		{
+			"name"	"Spy-cicle Launcher Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "649" 
+				}
+			}
+		}
+		"5733"
+		{
+			"name"	"Axtinguisher Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"attributes"
+			{
+				"tool target item"
+				{
+					"attribute_class"	"tool_target_item"
+					"value" "38" 
+				}
+			}
+		}
+		"5734"
+		{
+			"name"	"Supply Crate Ration"		
+			"prefab" "eventcrate"
+			"armory_desc" "supply_crate"
+			"item_name"		"#TF_SupplyCrateRation"
+			"item_description"	"#TF_SupplyCrate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/crate_variation"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"attributes"
+			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
+			}
+		}
+		"5735"
+		{
+			"name"	"Supply Crate Ration 2"		
+			"prefab" "eventcrate"
+			"armory_desc" "supply_crate"
+			"item_name"		"#TF_SupplyCrateRation"
+			"item_description"	"#TF_SupplyCrate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/crate_variation"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"attributes"
+			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
+			}
+		}
+		
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -64917,8 +65276,59 @@
 			"item_name"	"#TF_StrangePart_PointBlankKills"
 			"item_description"	"#TF_StrangePart_PointBlankKills_Desc"
 		}
+		"6060"
+		{
+			"name"	"Strange Cosmetic Part: Kills"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"is_cosmetic"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"87"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_cosmetic_part_kills"
+			"item_name"	"#TF_StrangePart_CosmeticKills"
+			"item_description"	"#TF_StrangePart_CosmeticKills_Desc"
+		}
+		"6061"
+		{
+			"name"	"Strange Part: Full Health Kills"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"88"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_full_health_kills"
+			"item_name"	"#TF_StrangePart_FullHealthKills"
+			"item_description"	"#TF_StrangePart_FullHealthKills_Desc"
+		}
 		
-
 		"6500"
 		{
 			"name"	"Strange Filter: Coldfront (Community)"
@@ -65352,8 +65762,6 @@
 		{
 			"name"	"Killstreakifier Basic"
 			"prefab" "killstreakifier_base"
-			"item_type_name"	"#TF_KillStreakifierToolA"
-			"item_name"			"#TF_KillStreakifierBasic_Name"
 			"item_description"	"#TF_KillStreakifierBasic_Desc"
 			"image_inventory"	"backpack/crafting/professional_grease_basic"
 			"attributes"
@@ -66301,6 +66709,14 @@
 				{
 				}
 			}
+			"attributes"
+			{
+				"series number"
+				{
+					"attribute_class"	"series_number"
+					"value" "1"
+				}
+			}
 		}
 
 		"20001"
@@ -66355,6 +66771,14 @@
 				{
 				}
 			}
+			"attributes"
+			{
+				"series number"
+				{
+					"attribute_class"	"series_number"
+					"value" "2"
+				}
+			}
 		}
 
 		"20006"
@@ -66379,6 +66803,48 @@
 			{
 				"usage"
 				{
+				}
+			}
+		}
+
+		"20008"
+		{
+			"name"	"Rebuild Strange Weapon Recipe"
+			"prefab" "dynamic_recipe_base"
+			"item_name"	"#TF_Cosmetic_Strangifier_Recipe"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+		}
+
+		"20009"
+		{
+			"name"	"Cosmetic Strangifier Recipe 3"
+			"prefab" "dynamic_recipe_base"
+			"item_name"	"#TF_Cosmetic_Strangifier_Recipe"
+			"min_ilevel"	"3"
+			"max_ilevel"	"3"
+			"expiration_date"	"2014-04-22 06:00:00"
+			"tool"
+			{
+				"usage"
+				{
+				}
+			}
+			"attributes"
+			{
+				"series number"
+				{
+					"attribute_class"	"series_number"
+					"value" "3"
+				}
+				"recipe no partial complete"
+				{
+					"attribute_class" "recipe_no_partial_complete"
+					"value" "1"
 				}
 			}
 		}
@@ -72028,6 +72494,18 @@
 			"attribute_class"		"allowed_in_medieval_mode"
 			"hidden"				"1"
 		}
+		"2031"
+		{
+			"name"					"series number"
+			"attribute_class"		"series_number"
+			"hidden"	"1"
+		}
+		"2032"
+		{
+			"name"					"recipe no partial complete"
+			"attribute_class"		"recipe_no_partial_complete"
+			"hidden"	"1"
+		}
 
 
 
@@ -73423,6 +73901,30 @@
 		{
 			"fall_2013_crate_contents_gourd"		"1"
 		}
+		"supply_crate_loot_list_82"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List"
+			"Pretty Boy's Pocket Pistol Strangifier"		"1"
+			"Phlogistinator Strangifier"		"1"
+			"Cleaner's Carbine Strangifier"		"1"
+			"Strange Cosmetic Part: Kills"		"1"
+			"Strange Part: Full Health Kills"		"1"
+			"Strange Part: Headshot Kills"		"1"
+			"Private Eye Strangifier"		"1"
+			"Big Chief Strangifier"		"1"
+		}
+		"supply_crate_loot_list_83"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Killstreak_Kits"
+			"Rocket Launcher Killstreakifier Basic"		"1"
+			"Scattergun Killstreakifier Basic"		"1"
+			"Sniperrifle Killstreakifier Basic"		"1"
+			"Shotgun Killstreakifier Basic"		"1"
+			"Ubersaw Killstreakifier Basic"		"1"
+			"GRU Killstreakifier Basic"		"1"
+			"Spy-cicle Launcher Killstreakifier Basic"		"1"
+			"Axtinguisher Killstreakifier Basic"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -73505,6 +74007,8 @@
 		"winter_crate_loot_list_2013_naughty"	"78"	
 		"winter_crate_loot_list_2013_nice"	"79"	
 		"strongbox_crate_loot_list_2014"	"81"	
+		"supply_crate_loot_list_82"	"82"	
+		"supply_crate_loot_list_83"	"83"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -83243,6 +83747,14 @@
 		"86"
 		{
 			"type_name"			"KillEaterEvent_PlayerKillsBySentry"
+		}
+		"87"
+		{
+			"type_name"			"KillEaterEvent_CosmeticKills"
+		}
+		"88"
+		{
+			"type_name"			"KillEaterEvent_FullHealthKills"
 		}
 
 

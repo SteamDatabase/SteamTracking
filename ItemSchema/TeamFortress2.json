@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.c4442fcffaa3de7b6b961c6326fb550982155210.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.ba7861004c7422ae5c83499bcdccd4f3856acac7.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -3012,7 +3012,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_chicken.9f8e125f893d8756186355f69ead017f80a7d416.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_chicken_large.9db6857b9254b5ea01c5d3512811614be06d58b2.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -3779,7 +3779,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medal.2191e008d6ab1f3fa40101b2c995e20b2f2cecfb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medal_large.9b62a4e95bd6b360f2c2c6d299d16fbce79382ba.png",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"capabilities": {
 					"nameable": true,
 					"can_gift_wrap": true,
@@ -4451,6 +4451,11 @@
 						"name": "rocket jump damage reduction",
 						"class": "rocket_jump_dmg_reduction",
 						"value": 0.40000000596046448
+					},
+					{
+						"name": "allowed in medieval mode",
+						"class": "allowed_in_medieval_mode",
+						"value": 1
 					}
 				]
 				
@@ -7729,7 +7734,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/attendant.62440cb63ca8afd089f34644dd74f389f551bd68.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/attendant_large.942e0c19ba13519c8dc868827e04f0a6c7c4218d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "polycount_pyro",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -11064,7 +11069,7 @@
 				"max_ilevel": 50,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_visor.8f15be97277922acec8efd0506ef9f6cc88da5f9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_visor_large.486bff85001b24f805c15df137522cb8106e0601.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
@@ -11144,7 +11149,7 @@
 				"max_ilevel": 20,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_glasses.ac2911939760bd4212bfd7a0ece866eac4f3b59e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ttg_glasses_large.06647f7ded2c2c00b6d92aeabc09b966d9b4994c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
@@ -11722,7 +11727,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_big_chief.21b3362a88450aaf42d2848170db7b14067a1dae.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_big_chief_large.d3dddc9d237f84aaab0cc65db1fddeee801952e1.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "hibernating_bear",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -12083,7 +12088,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_pyromancers_mask.c37a257c3fea5fbbfb10b36013ef1a84398e4a84.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyro_pyromancers_mask_large.0ff9250e11085c419818640713d42201e1f78c4b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -13997,7 +14002,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_shogun_kabuto.9a05511d3a829d03b7b316c920d77e1fc2644ac2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_shogun_kabuto_large.bd7695c0723145755696ec2b59f798693ea473d4.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -16653,7 +16658,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/capones_capper.e462eb63d54e1502c10c9f185fc231504b0e4206.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/capones_capper_large.3bbb599a40a2776cac233448a6577addb1869c57.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "black_market",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -16894,7 +16899,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bucket.07ffe03fb0c5209a0126146f49aa951e18a34feb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bucket_large.a23c8859aceaca0cc0b1d2f7cc03ccaced9fb2b0.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -16944,7 +16949,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/traffic_cone.67a3fd18970ffb12cc44afb6e5f650ce646fe61f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/traffic_cone_large.4e731945867189cedc42983f431d04f5f1a73b9d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -16993,7 +16998,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mbsf_engineer.76072445a76c946a39021cbe59bad3fd0bc21e35.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mbsf_engineer_large.bb07e594ab6cdacbab200a129e4d2c822aec645a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -17043,7 +17048,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mbsf_spy.fd684745262f8cb4b4bf459337177b14ccfe645c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mbsf_spy_large.377b36f79695aac940821f78963922e6dba3867d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -17788,7 +17793,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bonk_mask.f4eaafa5980d384aff7f1c6b121322aee1bfe7d2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bonk_mask_large.51c1079a2edb9a703c5bb49b4c53610526b0cff3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "bonk_fan",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -18398,7 +18403,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_mtg.833e6137f6258d96fe5b2742eafb355414d40d20.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_mtg_large.30b948a43833be77184380817f531b8980f37de3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -18447,7 +18452,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_mtg.a3dab389e1db2959c0afab09e25968a2689cb87a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/scout_mtg_large.ed87d4f41168400f09561202cabedd702fc68aa7.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -24959,7 +24964,7 @@
 				"max_ilevel": 10,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mightypirate.2ad51ddcb69e8f916eeb2a6c5021c76d96d6066b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/mightypirate_large.615f4a8c4e2bbc77a0d4651bcbaf6de50f1a1486.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "swashbucklers_swag",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -27845,7 +27850,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_santa_hat_demo.227b4d6dba0f2f97395c617f892e510c0d474970.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_santa_hat_demo_large.e7284b79e5d53890417e3d75668f233fc795e8c5.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -28064,7 +28069,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_furcap_demo.f4d784ffcac7539f24ccc71dab4bf13284cebe2a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_furcap_demo_large.4d4de32aa9ce1ff792969ba84711182d1ce0e8e0.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -28164,7 +28169,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_winter_joy_hat_demo.bb4eb80628e470fb42a705b956196aed4348534c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms_winter_joy_hat_demo_large.b3bf12c8abac5ddb70ccfdd55237fd42b7917280.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -29489,7 +29494,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueler_demo.3b4e679819841779c710903ab51a82b8bc08570a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/dueler_demo_large.bff07fa9fb3638e386842b7ff4615e43b4bab223.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -29539,7 +29544,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/generous_demo.baed158c7c15916bf4b7182a08840ff945a8585e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/generous_demo_large.01f623034c61ecc2285451fd12703991844afe4c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -29589,7 +29594,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamper_demo.7d44a04c8da248d384272e6b91a0d2a9438d9020.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/stamper_demo_large.66b573032d14e721135a1b409b757456c09f2712.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -29795,7 +29800,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jag_shadow.4b496f1ea52575be62e34f8daf9349e7da05e523.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jag_shadow_large.f3449871dc622788983689377588441280388776.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -30249,7 +30254,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ds_football_helmet.be1bec395e50d6dd9adedf7a590e1c993b831ba1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/ds_football_helmet_large.8ffd9782ce0aa4c5b3b9be318c419728a84a77c2.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "soldier_dumpster_diver",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -30770,6 +30775,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyrovision_goggles_heavy.fb9dd8f3255e949238f1aa80e8087a38f1b6cbad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyrovision_goggles_heavy_large.8e3ec8d4edd02cf99640c1711d8f7d3749c15680.png",
+				"drop_type": "drop",
 				"capabilities": {
 					"nameable": true,
 					"can_gift_wrap": true,
@@ -30826,6 +30832,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyrovision_goggles_heavy.fb9dd8f3255e949238f1aa80e8087a38f1b6cbad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pyrovision_goggles_heavy_large.8e3ec8d4edd02cf99640c1711d8f7d3749c15680.png",
+				"drop_type": "drop",
 				"capabilities": {
 					"nameable": true,
 					"can_gift_wrap": true,
@@ -31310,7 +31317,7 @@
 				"max_ilevel": 10,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crimecraft_helmet_demo.9fb1a334248d8141a3a1c62df355244e18bed898.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crimecraft_helmet_demo_large.6da2e7c949bc69222f039d385334ab65c18a2c45.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -31734,7 +31741,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/grfs_soldier.db74e1f826550763b5e9062e2838ea3c5422c2f2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/grfs_soldier_large.f6ae17dc9b7b25b69fbfc56949901a58b1d0f71c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -31785,7 +31792,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/grfs_scout.1fcf6329598d9960d685d2858e4827e13536493d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/grfs_scout_large.1028b65d7f8c72286e2025b6e68d619ebddd42b9.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -32274,7 +32281,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_rocket_spy.d42dcc007ed4800f18df2c2651180aaad5dcc2bb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_rocket_spy_large.3cea69ee96d51f037ce6277809addaf910453f13.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -32513,7 +32520,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_ushanka.b86ff5040ee1eef5268d2392466fec70e7f8cf29.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/medic_ushanka_large.1f685e571f6c2bf4302ee9f8d1448d1ee3e53e24.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -32616,7 +32623,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pep_hat.69f1a1c23c38c6ff6ac15fe2364df753f7f37a4d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pep_hat_large.6441bd00e159588eaa9842f09139cac848ae3026.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"item_set": "scout_public_enemy",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -32888,7 +32895,7 @@
 				"max_ilevel": 10,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_robot_chicken_demo.f75f47a8c8e1ccd92d50b1d4b7991451b60dce1c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_robot_chicken_demo_large.abb07e963eee64af56d21525b35081c5192a8fe4.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -34295,7 +34302,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_glasses.402304a948877617c53c75881df9150f8bc015b3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_glasses_large.9f0021aabc31d03e1092b82222eb125818aa023a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -34715,7 +34722,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_cardhat.6e3e93b0daa8260125d5f032fe98e6711b04cb29.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/spy_cardhat_large.d665cd3494898fc835019d46bc3ba24803d5c8ab.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -34923,7 +34930,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_warpig.e183081f85b5b2e3e9da1217481685613a3fed1f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_warpig_large.2db1b9289778ba26c85c9bc2ffff90395d22c62c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -35387,7 +35394,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_glasses.402304a948877617c53c75881df9150f8bc015b3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sd_glasses_large.9f0021aabc31d03e1092b82222eb125818aa023a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -35725,7 +35732,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robot_helmet.a8fd9c5fdced7fc3dc7b31dcdbf53b5734e5a1fd.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robot_helmet_large.9f37efc5fc6bc021c6f60b2ff52094ff526e187d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -36076,6 +36083,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "attach particle effect static",
+						"class": "set_attached_particle_static",
+						"value": 28
 					}
 				]
 				
@@ -39043,7 +39055,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/witchhat_demo.75012466ebcf4d9d81c6d7f75ca646b673114353.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/witchhat_demo_large.e66f59c194331b2ed7805738d3778765b579026d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -39800,7 +39812,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_bonehat.f89d96df08bfbcb8a6bf1009c6d61434d5b1035d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/demo_bonehat_large.441d8b78b2ecf9d8bf3cd09a38fe7ce92fb98988.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -41931,7 +41943,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_skihat.bbea3ae6a05e437398a52aaab72925c9502aae10.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/soldier_skihat_large.8d056017d8a8ad002e5bdb2cbe731c254f310cb9.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -42167,7 +42179,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_earwarmer_demo.817a9f7bdb3b19cd81bacb8687accfd3e3d5a5af.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/all_earwarmer_demo_large.0820861baf9298d34106a654d508e6405b1ecfa4.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -43951,7 +43963,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_voxhood.9b4a222aa4f8cfc8eaea9aa9389f0569980e682d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_voxhood_large.d44431ec4ab0a0d95b5e52f92a0d3931c05b1fdf.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -44155,7 +44167,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_soldier_founders.32aeec2d224ed72aa2c1bf00e1c53da500ad4393.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_soldier_founders_large.5d8a42a3c689bc11a5e49552ea6aa995c005f787.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -44214,7 +44226,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_boater.668d584edd098259c240cdb0d2e885760c0c1f34.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/bio_sniper_boater_large.0cc06e6b6c1578b0e1aefd1e7efda76b2da8bc0b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -44552,7 +44564,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_samhat_spy.613e0f42619a09a729443fcc4e25e9f24d2cd55c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_samhat_spy_large.7662fecfcd90ebf6d6fc18f74b7455d67484ef37.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -44651,7 +44663,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_evilash.68183416be257c2dd010e62b49d1d3a04945fe44.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/pn2_evilash_large.366f560cfbff2fab674527a721306e94b4e4d7c8.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "",
 				"capabilities": {
@@ -44999,7 +45011,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat.68e654cfbf33ffa0940a1559e4cb36c2e2d7f2b1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/as_medic_cloud_hat_large.62c5bd512a233c781588e50bb3915a9aea554bf7.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45111,7 +45123,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45173,7 +45185,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45235,7 +45247,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45297,7 +45309,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45359,7 +45371,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45421,7 +45433,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45483,7 +45495,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45545,7 +45557,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45607,7 +45619,7 @@
 				"max_ilevel": 100,
 				"image_url": "",
 				"image_url_large": "",
-				"drop_type": "drop",
+				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -45714,7 +45726,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chess_hat.ed0f248b2781eef19054c220431c7f84b85f06e7.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/chess_hat_large.68b605e9711c5d377e4c96cb681300382c68cbf7.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -46934,10 +46946,11 @@
 				"max_ilevel": 10,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_bow_thief.2752806eb597af27565b2050a241704801e37237.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/c_bow_thief_large.85f399a7404e5a82a5114af76b424ba8994fc67c.png",
-				"craft_class": "",
+				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -46971,11 +46984,6 @@
 						"name": "allowed in medieval mode",
 						"class": "allowed_in_medieval_mode",
 						"value": 1
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -46996,12 +47004,13 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_soldier_helmet.19e87a917c12365ef318154aeff6455cac84c32d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_soldier_helmet_large.d638dff5adb6ebd0371cc7b411ec5d0803f22748.png",
-				"drop_type": "none",
-				"craft_class": "",
+				"drop_type": "drop",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47025,11 +47034,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -47051,11 +47055,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_cape.b2fa82a26e134ff86132bf762f33a01fe9c929a9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_cape_large.bad40b941d5c73828a75c99f534bcb1f12e9ea5c.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47079,11 +47084,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -47105,11 +47105,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_hood.2dffa960e14a4a094005c44b4545ab31f4a57bcb.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_sniper_hood_large.635afbd63359fe606459bdce63fbee626554c802.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47133,11 +47134,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -47159,11 +47155,12 @@
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_badge.7660d202e52f0ea5425725f75de8293f4642763b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/thief_badge_large.30b901d0f23e24532b15d0b8c5a697c756c3b995.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -47183,11 +47180,56 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Little Bear",
+				"defindex": 1097,
+				"item_class": "tf_wearable",
+				"item_type_name": "Pocket Buddy",
+				"item_name": "Little Bear",
+				"item_description": "Make sure the contents of your pockets are distributed fairly with the latest in Communist pocket enforcement.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/heavy\/heavy_pocket_bot.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/heavy_pocket_bot",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_pocket_bot.7d155ac32dd10bab8ca6d6d47d3cc157fbb0a1ba.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_pocket_bot_large.b0505b38225789f56608e76a982a04afe0183760.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
 					},
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
 					}
 				]
 				
@@ -52497,7 +52539,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 75
+						"value": 82
 					},
 					{
 						"name": "decoded by itemdefindex",
@@ -53333,7 +53375,7 @@
 					{
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
-						"value": 76
+						"value": 83
 					},
 					{
 						"name": "decoded by itemdefindex",
@@ -58551,6 +58593,754 @@
 				
 			},
 			{
+				"name": "Pretty Boy's Pocket Pistol Strangifier",
+				"defindex": 5721,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 773
+					}
+				]
+				
+			},
+			{
+				"name": "Phlogistinator Strangifier",
+				"defindex": 5722,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 594
+					}
+				]
+				
+			},
+			{
+				"name": "Cleaner's Carbine Strangifier",
+				"defindex": 5723,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 751
+					}
+				]
+				
+			},
+			{
+				"name": "Private Eye Strangifier",
+				"defindex": 5724,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 388
+					}
+				]
+				
+			},
+			{
+				"name": "Big Chief Strangifier",
+				"defindex": 5725,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 309
+					}
+				]
+				
+			},
+			{
+				"name": "Rocket Launcher Killstreakifier Basic",
+				"defindex": 5726,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 205
+					}
+				]
+				
+			},
+			{
+				"name": "Scattergun Killstreakifier Basic",
+				"defindex": 5727,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 200
+					}
+				]
+				
+			},
+			{
+				"name": "Sniperrifle Killstreakifier Basic",
+				"defindex": 5728,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 201
+					}
+				]
+				
+			},
+			{
+				"name": "Shotgun Killstreakifier Basic",
+				"defindex": 5729,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 199
+					}
+				]
+				
+			},
+			{
+				"name": "Ubersaw Killstreakifier Basic",
+				"defindex": 5730,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 37
+					}
+				]
+				
+			},
+			{
+				"name": "GRU Killstreakifier Basic",
+				"defindex": 5731,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 239
+					}
+				]
+				
+			},
+			{
+				"name": "Spy-cicle Launcher Killstreakifier Basic",
+				"defindex": 5732,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 649
+					}
+				]
+				
+			},
+			{
+				"name": "Axtinguisher Killstreakifier Basic",
+				"defindex": 5733,
+				"item_class": "tool",
+				"item_type_name": "TF_KillStreakifierToolA",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					},
+					{
+						"name": "tool target item",
+						"class": "tool_target_item",
+						"value": 38
+					}
+				]
+				
+			},
+			{
+				"name": "Supply Crate Ration",
+				"defindex": 5734,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Mann Co. Supply Munition",
+				"item_description": "You need a Mann Co. Supply Crate Key to open this.\nYou can pick one up at the Mann Co. Store.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/crate_variation",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crate_variation.ea16782c97a72a05b97ff71188248a4d013423ec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crate_variation_large.6382ba0c3f4247664164c3ef6b1d175ae4252f8c.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": ""
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 82
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021
+					}
+				]
+				
+			},
+			{
+				"name": "Supply Crate Ration 2",
+				"defindex": 5735,
+				"item_class": "supply_crate",
+				"item_type_name": "TF_LockedCrate",
+				"item_name": "Mann Co. Supply Munition",
+				"item_description": "You need a Mann Co. Supply Crate Key to open this.\nYou can pick one up at the Mann Co. Store.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/crate_variation",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crate_variation.ea16782c97a72a05b97ff71188248a4d013423ec.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/crate_variation_large.6382ba0c3f4247664164c3ef6b1d175ae4252f8c.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": ""
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 83
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Part (Armory)",
 				"defindex": 5999,
 				"item_class": "tool",
@@ -60516,6 +61306,92 @@
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
 						"value": 85
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Cosmetic Part: Kills",
+				"defindex": 6060,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Cosmetic Part: Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality cosmetic will enable it to track the total number of kills you have while wearing that item.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_cosmetic_part_kills",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_cosmetic_part_kills.ac9fdd6505e5eeda27081176adde7771c245bae0.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_cosmetic_part_kills_large.ecd620e624aeb6ee48b56b6afdcab814b97a0566.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 87
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Full Health Kills",
+				"defindex": 6061,
+				"item_class": "tool",
+				"item_type_name": "TF_StrangePart",
+				"item_name": "Strange Part: Full Health Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of players you kill with that weapon while at Full Health or Overhealed.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/crafting\/strange_part_full_health_kills",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_full_health_kills.87d0d43006654cd1512ab06f07e562e528c3ecab.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/strange_part_full_health_kills_large.58a78f67dfe37bee78ddbd4a00e042ea61d9ba7d.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 88
 					}
 				]
 				
@@ -82998,6 +83874,53 @@
 				
 			},
 			{
+				"name": "InfoShow LAN Party 2014 Participant",
+				"defindex": 8396,
+				"item_class": "tf_wearable",
+				"item_type_name": "Community Medal",
+				"item_name": "InfoShow TF2 Tournament Participant",
+				"item_description": "InfoShow LAN Party 2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/infoshowmedal14\/infoshowmedal14.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/infoshowmedal14\/infoshowmedal14",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/infoshowmedal14.7275dd38943bfa484b2ff7240319b3b2e138c7c4.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/infoshowmedal14_large.d2aa424c81e4ae65e893b33bdc891f8e0d68a5ae.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -84780,6 +85703,14 @@
 				"used_by_classes": [
 
 				]
+				,
+				"attributes": [
+					{
+						"name": "series number",
+						"class": "series_number",
+						"value": 1
+					}
+				]
 				
 			},
 			{
@@ -84928,6 +85859,14 @@
 				"used_by_classes": [
 
 				]
+				,
+				"attributes": [
+					{
+						"name": "series number",
+						"class": "series_number",
+						"value": 2
+					}
+				]
 				
 			},
 			{
@@ -85005,6 +85944,93 @@
 				
 			},
 			{
+				"name": "Rebuild Strange Weapon Recipe",
+				"defindex": 20008,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Chemistry Set",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/construction_kit",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit.1fdb61cd0fa671cb99439512198681a53a52f686.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit_large.44a7be2bcb295a9eb60b540f8c02422e59b50881.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Cosmetic Strangifier Recipe 3",
+				"defindex": 20009,
+				"item_class": "tool",
+				"item_type_name": "Recipe",
+				"item_name": "Chemistry Set",
+				"item_description": "This item has a set of inputs that, once fulfilled, will\nreward you with what's listed in its outputs.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/crafting\/construction_kit",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit.1fdb61cd0fa671cb99439512198681a53a52f686.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/construction_kit_large.44a7be2bcb295a9eb60b540f8c02422e59b50881.png",
+				"craft_class": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "dynamic_recipe",
+					"use_string": "Inspect",
+					"usage_capabilities": {
+						"can_consume": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "series number",
+						"class": "series_number",
+						"value": 3
+					},
+					{
+						"name": "recipe no partial complete",
+						"class": "recipe_no_partial_complete",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "The Electric Badge-aloo",
 				"defindex": 30000,
 				"item_class": "tf_wearable",
@@ -85065,7 +86091,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_modest_pile.39ceecea08d057a6d86c265d92a733fa64a77cff.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_modest_pile_large.530e61684d48cb890e9e1d5e6339e231695270f2.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85111,7 +86137,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_liquidator.83ef068973e93ee5430966ff58506651f5647059.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_liquidator_large.aebde4a2a60533e02709dbd900d20fc05f92f899.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85162,7 +86188,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_gibus.3abb36f0f6cf2704518fa96649b75a76e2f2fb42.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_gibus_large.141743920496960b81f5f04f734b2c42129e7da6.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85260,7 +86286,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_solar_topi.e5dbff0a06b7e739e2176c30f1b660a3698ded53.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_sniper_solar_topi_large.38c335b8f36d4eafd0f554b233d0606e67eda45d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85311,7 +86337,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_noble_amassment.6a3ba86247a4820746e652719dedc5812b62b7d3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_noble_amassment_large.23c81e6ecfce27131e60e2e5d3ed5c6ccf02e00d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85357,7 +86383,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_backbiter_billycock.27daf217fbcec5f3651d2f6acdccf1ebce92af64.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_backbiter_billycock_large.bf5ff30a4926fe16b111433ed7bd749b94507dda.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85408,7 +86434,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_towering_pillar.571d5e4a61458398f0e7263852cb5b2e63c90c64.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_all_towering_pillar_large.fdac36583e11ff3e6559b48bd20681d7f73e4e96.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85656,7 +86682,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_football_helmet.556c06caa502a2b66118735c5fc65498f9ecff29.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_football_helmet_large.2a433ae0b3135e73b2b09e3b6e432748779aedc9.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85707,7 +86733,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_tyrantium.94ba6924961be8d940bd942a07a347dc2b25720c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_tyrantium_large.d8a557c30f37f7ae9b21f8902f0fbf739076b3db.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85861,7 +86887,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_shako.069947dcb4c1faa7cd50c6148b0b307c6ea93236.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_shako_large.c40d8e9c92988e8599bfd5f3d622adfc7e4c30d0.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85912,7 +86938,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_dogger.268d91acdb5a9e45c0fbfa5d8d65e1dfcc33107f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_dogger_large.11262bc69ec9fd7390de3b7f4994ab8c0a7ad9ea.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -85963,7 +86989,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_baker_boy.94a205dbf9c71c1ee53717527d70f7002f85c2e9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_baker_boy_large.e0030c11bb8deff0c2229b838e4f9829b22587bd.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86065,7 +87091,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_capotain.beadede8732767152ae6d147b9d7b9a2b011b316.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_capotain_large.3a61d4013109d2241684e8e079b95e8765afee98.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86223,7 +87249,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_stuntman.c05e44f90fe1c6575921f6f8ee8e0de6027cfda2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_stuntman_large.e0a877e408db66867f4d74f1a3f0cec2fb11d392.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86274,7 +87300,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_electric_escorter.15dfd5daca285ca77666c6dd095a918f8e452820.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_electric_escorter_large.5d9151374efb8e05e01e3e258e4713a23f59c395.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86325,7 +87351,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat.72e2f15e4f61317c570abe0bca1d3c206b855fd6.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_soldier_fullmetaldrillhat_large.418f858727b5a9b4e1e3aefd18de5cf3beec9384.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86483,7 +87509,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_glengarry_botnet.d537170fa3eb8dec909e78cf0239788c4973930b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_glengarry_botnet_large.130f40e316fcb86109884c6e40fbb9228d326ffc.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86534,7 +87560,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bonk_helm.e6b33c8c8602f20d2d2571628746ceaae971d7b8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_scout_bonk_helm_large.ad1fd90987e5878dd399cef341ac76264b390b9b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86585,7 +87611,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_greaser.b6a07dbe90526ead9fea0a37a6552cb1313a77ff.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_greaser_large.a42c61973194b537950a34739b3c00356ceee8f8.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86741,7 +87767,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_buccaneer_bicorne.6fa5c5848d07ea33d97e13c47d8409221be0153a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_buccaneer_bicorne_large.75e1f7b0a5fca77a550c9c8d4ae14c376496dca5.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86792,7 +87818,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_rustin.6eee19755b8d2c8ea226f5f3cb9c715ed57123f3.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_rustin_large.9053b744848dcd57e243a983e47b9c6dba25385a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86894,7 +87920,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_scotsmans_stovepipe.7eed4463f9b246ede5ef2270295f1b10979379f4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_demo_scotsmans_stovepipe_large.e2c4e616d4d6e4697b0151c167e977b34dfc20a4.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86944,7 +87970,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_firewall_helmet.6e001f6f6169609c20ed612e85dc1918843e122f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_firewall_helmet_large.fb0cf565a7f920433713431967943baf4ae9090b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -86995,7 +88021,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_respectless_glove.760a8a3d634a1760d2039ef4958aeb0cb62e34fa.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_respectless_glove_large.d0c629e2c19ab37439ce16c60fd81f93cc52321c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87046,7 +88072,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_whirly_bird.3f899471d653be6af22f1b3502880fba729db42d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_pyro_whirly_bird_large.5fe2580678ca4d99982126954626b6383a5a28e6.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87147,7 +88173,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_pickelhaube.4a74773394f4142089f7a9a5c6efbf42c527d21d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_pickelhaube_large.9598df4354898ac5eb8dfc23e9a4830c25048b90.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87198,7 +88224,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte.58156ffa901bf6b1b25401682913fcb6ee566875.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_grimm_hatte_large.3c83b32886b85f5bb61fe1d976465885922c6f5f.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87249,7 +88275,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_texastingallon.6403267082a66d3290f0b263aae3d4156cc2f3a4.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_engineer_texastingallon_large.64c33059cad4e37b18ff32abe2413c365281c61a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87300,7 +88326,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_tyrolean.88b663ae8222e0271d52a08133d645b515a84075.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_medic_tyrolean_large.0d909e089de4c91cf5176319e94a56e428fd7123.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87402,7 +88428,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_bootleg_billycock.4ed6ea8db60d4008d89042a9a90b217a27d0199b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_spy_bootleg_billycock_large.0009a693b346e71f9a55647ce7e4b24e41085cb6.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87509,7 +88535,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_tungsten_toque.64ab42109ead9f70f1c9bcfa126006a39b625255.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_tungsten_toque_large.abce70e9308858202689a3bc556b766ec500a18f.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87766,7 +88792,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_chief.bc67ca439241a5b7454815b4220d4efb81e20a3a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/robo_heavy_chief_large.d019f745b31ae3c34c857af02e0cb5ba4d9e4cb3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -87970,7 +88996,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat.5de90f195cc1dea809a3a966101a21aa68217fb1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/gunpointcoilhat_large.ae2cfae27a22df9b26b5ad86a89fd40992d19679.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -88218,7 +89244,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm.55fd485f87684f228135c4e7b1be65d3c91274d0.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_greek_helm_large.115dcf83d88ca2bd90b4c66d3176578b6c5a6f32.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -88319,7 +89345,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath.dc7aa052b14a75f3920faac81778e638e0b44784.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/tw2_roman_wreath_large.0dc050f1589653e4363de098c63b8a07065f0952.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -88416,7 +89442,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/riflemans_rallycap.98f74ecc0796123cc35e7c0ffc2b8aece4114f20.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/riflemans_rallycap_large.8d86ab01e3a4ecc46dd58eb2d9114a3adda48704.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -88516,7 +89542,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/enlightened_mann.24ddb315d56dc6f5030fcdf460368ae20becf74c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/enlightened_mann_large.47ef066a4c558de4a157182c32f46809b5d644e6.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -88621,7 +89647,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cloud_crasher.d005ef29b69251e46c6e073f690da0c75f6c3da9.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/cloud_crasher_large.f57ca72a58ec08350dba856e4dd455121030915c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -89904,7 +90930,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_secret_state_surgeon.831345e47f7553ccba23573f5e8568a664d9089e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_secret_state_surgeon_large.861b0794340f056d18c531a2ec2ebe9a1e25e82f.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90214,7 +91240,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_sweet_shades.73247074a24a4984de66f3b30e925d92c101b579.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_sweet_shades_large.f93468937d57ef315507731024cc412fc344adff.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90261,7 +91287,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_blam_o_shanter.c05f2c9a1fa59ecbcac8b516c483afaa900ccbfe.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_blam_o_shanter_large.6fdd76757f498d26c9a9c8bff74b0b279a50f129.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90465,7 +91491,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_bro_plate.8a906153d33987b144a148c7632b874386139aaa.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_bro_plate_large.14f129020821d5c0fce07b34fecff300339c4095.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90875,7 +91901,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_helicopter_helmet.acc8dfe0ef590ce0b9eb868e095413ef49e7ff94.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_helicopter_helmet_large.8422134e93709ee882f820c783b50b16f8a7cfb3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90926,7 +91952,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_soldier_fedora.ec4971943386c378e174786b6302d058e4e8627a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_soldier_fedora_large.cf68779590f16674454748cda2afa5140174feed.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -90977,7 +92003,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_ol_jack.ac4bff6fec7253396cd51bfcc276b577e8b730b2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_ol_jack_large.013fc58b1a07bb7eaea5fb789997cda7ed0281c6.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -91129,7 +92155,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_harmburg.239e41a7e4157c39f879062830bd733f19a9d283.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_harmburg_large.f6910e51afeb9cfc0d63de6572399393499235a3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -91382,7 +92408,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_double_clue.59e0b6832a8cf2f52d9195fa83c4f8d134ff124d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_double_clue_large.fcb228779cf39e74841a76360ffe19b341a38776.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -91742,7 +92768,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_sniper_souwester.85b19b1e0e1cf7c6f6306c309a8b0b59c61c7d3c.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_sniper_souwester_large.64f035c405581067c4ffd1f1400338884132c7a9.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -91793,7 +92819,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_montys_menace.6ee55a56ba5ff739d666667d8774322994c80b61.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_montys_menace_large.118ca292322c226b310a62a56353a7130d3f00a4.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -92043,7 +93069,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_honchos_heavy_reader.cf2814bb6fc50a3fd01a4b7fec1581536269646a.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/jul13_honchos_heavy_reader_large.6f18b1c0681e175853ee0b8022f28f17499a674b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -93074,7 +94100,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_air_raider.d954c6b968316c561054b9c88b6592e3b9dcaf88.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_air_raider_large.1d553090f75ce9a585c9599b58133b060754641d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -93582,7 +94608,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_brimfull_of_bullets.22cce184bb43d36a93bdcbfe73411b850002ce5d.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_brimfull_of_bullets_large.63d9be1e75fdec2f9898a842b0e8a521842903c7.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -93633,7 +94659,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cotton_head.70d4c0987876e4150c80311a295b72ae8b201427.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_the_cotton_head_large.3ed4d952c18c8c46b921967ce50d0a1ae307de7a.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -93735,7 +94761,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_hong_kong_cone.f1a30e855407bf18b9ad2f308a27bb063a545c85.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/fall2013_hong_kong_cone_large.8ae8976dbef7cce1b0b84d937ef38f49b73c9bb9.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -99749,7 +100775,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_winter_hat_scarf.78517c57260ae5fa46b2162502dc9581f3f9aa53.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_winter_hat_scarf_large.6e2fd45b7beeea630bf62aed526341ca5461b621.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100037,7 +101063,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_kissking.a481289840e4184a6ad1155eb851531e3f8a02e8.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_kissking_large.18d5414772e44f747ade038f8744640f613a041b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100082,7 +101108,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_soldier_marshal_hat.395f6e8790aa22a7271b8d872b4361b13d1a3b2e.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_soldier_marshal_hat_large.46101020b41908751da76f5cb5cb61380e57c6be.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100180,7 +101206,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_sniper_shako.f2b4459f07a8e3b41335af2e7bf2d68fdd2cb381.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_sniper_shako_large.be76178469391d095e949fe845ca0200b0945d56.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100674,7 +101700,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_scout_drummer_hat.e3ed0ff594a1f921f4d12c585548b75b06789104.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_scout_drummer_hat_large.423a374e69c7c17b2fbc4d39ee241f9b03a47422.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100723,7 +101749,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_pyro_tailor_hat.0bcf9a4ec2187d15e3222540deb7081e875c6e2f.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_pyro_tailor_hat_large.2411d6fc1fffb577b8ec0760384889eef5600db3.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -100962,7 +101988,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_scout_skicap.0b6f0c0b79d2b1334771174e9f31b3ee740acdb2.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_scout_skicap_large.22e9176080a0969a319c0a5dc49f9b8411fa6ae2.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -101060,7 +102086,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_demo_plaid_hat.152c6db9806406bd10fd82bd518de3c89ccb6fad.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/xms2013_demo_plaid_hat_large.29928aa0ccd63c876b57eaa202ecf668704e1fde.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -101158,7 +102184,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_topper.65f252318cdf8d1a10c0c804dc4b46a2ca546b5b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_trenchers_topper_large.d65d93e128c3935e89c90bd4dc9963dc09488640.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -101907,7 +102933,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_teutonic_toque.323822268fb1905791ed41d26151b8f16c878260.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_teutonic_toque_large.f6f249ae0da7ed3393d58c5c02edcbea6ae9de99.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -102211,7 +103237,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_knight_helmet.0bd6268d0a701d334d04ac745bc9af9fd3e86121.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_demo_knight_helmet_large.5fed043d0797d6ae35e74912e4cce9bab0600488.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -102360,7 +103386,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_napolean_complex.0feba0bf1ac65bdc580172c8fe0ec1b4c42d0c53.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_napolean_complex_large.d577ecfec8649cc9e0dd135b3b39e558b8fce16b.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -102460,7 +103486,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_law.ab6acbc2a1c832512951ef0432d04f459828354b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_law_large.81b5392a020aacaa9fffcc6815758a8b0f30b678.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -102755,7 +103781,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_goggles.53c0ed105535c6e35f64fea7767286da807e19c1.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_goggles_large.13afc6e4d111f35fc001831ec5d7fd37ceb0c359.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -102805,7 +103831,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_helmet.568b097bb7db410bc3842e331f6fb87ab5e65004.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_war_helmet_large.5a35a4529b0c41f59bd91295ae8e7395b14ac76c.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -103205,7 +104231,7 @@
 				"max_ilevel": 100,
 				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_helmet.916428df0ab6d31efe181632c3dc1e60252b449b.png",
 				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/sbox2014_medic_wintergarb_helmet_large.44cc9b5d6db9d240ba8b8cb9ce3a896d53e05f9d.png",
-				"drop_type": "none",
+				"drop_type": "drop",
 				"craft_class": "",
 				"craft_material_type": "hat",
 				"capabilities": {
@@ -108733,6 +109759,22 @@
 				"effect_type": "visuals_mvm_boss",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "series number",
+				"defindex": 2031,
+				"attribute_class": "series_number",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "recipe no partial complete",
+				"defindex": 2032,
+				"attribute_class": "recipe_no_partial_complete",
+				"effect_type": "visuals_mvm_boss",
+				"hidden": true,
+				"stored_as_integer": false
 			}
 		]
 		,
@@ -111148,6 +112190,16 @@
 			{
 				"type": 86,
 				"type_name": "Wrangled Sentry Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 87,
+				"type_name": "Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 88,
+				"type_name": "Full Health Kills",
 				"level_data": "KillEaterRank"
 			}
 		]
