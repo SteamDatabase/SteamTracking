@@ -357,6 +357,10 @@ select.hourselect,  select.minuteselect {
 	width: 16em;
 }
 
+.languages>.checkboxGrid {
+	margin-right: 80px;
+}
+
 .checkboxGrid a .fancyCheckboxLabel {
 	margin-right: 7px;
 	margin-left: 2px;
