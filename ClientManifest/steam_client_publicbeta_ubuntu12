@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1397080338"
+	"version"		"1397752572"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -137,18 +137,18 @@
 	}
 	"runtime_part0_ubuntu12"
 	{
-		"file"		"runtime_part0_ubuntu12.zip.ac9c658f51c26037015c46ffa8251f684ed8b6eb"
-		"checksum"		"ac9c658f51c26037015c46ffa8251f684ed8b6eb"
-		"size"		"52441811"
+		"file"		"runtime_part0_ubuntu12.zip.8dbceaa0a4df25382f2b47e4bfefcc04db722275"
+		"checksum"		"8dbceaa0a4df25382f2b47e4bfefcc04db722275"
+		"size"		"52441408"
 	}
 	"runtime_part1_ubuntu12"
 	{
-		"file"		"runtime_part1_ubuntu12.zip.32b52c466e5064af12fe306d862e4c74137b523d"
-		"checksum"		"32b52c466e5064af12fe306d862e4c74137b523d"
-		"size"		"37024112"
+		"file"		"runtime_part1_ubuntu12.zip.e700b4b9fc11337f8c9a16685fe06cd629796fd8"
+		"checksum"		"e700b4b9fc11337f8c9a16685fe06cd629796fd8"
+		"size"		"48170986"
 	}
 }
 "kvsignatures"
 {
-	"ubuntu12"		"6c2d084fc3e5a99e6b675cf1354a89cc064d104da0d67a48508085630c59a8462b23758023c8cc768aa2205110905015b91ba9ef7fe38619ed82e1ebf1cd91a8ee517ee6092ac46fd913c982e53b6aee858394822f4d517675f5d5569f6d05371429b247fc94019a5bfadbcf5948dccc87cc5f1ea10358caa38702d29a99d92b"
+	"ubuntu12"		"2014a31e2d71b5f5db0e318768d106e2be8606d698cc3aac4e607533c73705a1d48cbf5bad083118f428ba76c4ba20e1b4d69fb772b3a2efede66954ab1ddbb6294cd8dda7dfead995269031b88ed9cbc3edc7c0494e601cbc597f8d63173c76d58cc5b3539f94a52228ccc8058e48c9fd59bab42a980251bc1fab476db13ab8"
 }
