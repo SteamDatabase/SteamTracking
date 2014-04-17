@@ -311,22 +311,6 @@ function SetCookie( strCookieName, strValue, expiryInDays, path )
 }
 
 // takes an integer
-function v_numberformat( n )
-{
-	var str = '' + ( n ? n : 0 );
-	var len = str.length;
-	var out = '';
-	for ( var i = 0; i < len; i++ )
-	{
-		out += str.charAt(i);
-		if ( i < len - 1 && (len - i - 1) % 3 == 0 )
-			out += ',';
-	}
-
-	return out;
-}
-
-// takes an integer
 function v_currencyformat( valueInCents, currencyCode, countryCode )
 {
 	var currencyFormat = (valueInCents / 100).toFixed(2);
@@ -348,12 +332,6 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		default:
 			return currencyFormat + ' ' + currencyCode;
 	}
-}
-
-function UpdateFormattedNumber( element, delta )
-{
-	var $Element = $J(element);
-	$Element.text( v_numberformat( parseInt( $Element.text().replace( /,/, '' ) ) + delta ) );
 }
 
 function IsCurrencySymbolBeforeValue( currencyCode )
@@ -2691,67 +2669,6 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 			ShowAlertDialog( 'Share', 'There was a problem sharing the status update.  Please try again later.' );
 		}
 	});
-}
-
-function RateAnnouncement( $groupURL, gid, bVoteUp )
-{
-	if ( bVoteUp && $J('#VoteUpBtn_' + gid).hasClass( "btn_active" ) )
-	{
-		return;
-	}
-	if ( !bVoteUp && $J('#VoteDownBtn_' + gid).hasClass( "btn_active" ) )
-	{
-		return;
-	}
-
-	var rateURL = $groupURL + "/announcements/rate/" + gid;
-	$J.post( rateURL, {
-			'voteup' : bVoteUp,
-			'sessionid' : g_sessionID
-		}
-	).done( function( json ) {
-
-		var votesUpCount = $J('#VotesUpCount_' + gid);
-		if ( votesUpCount )
-		{
-			var increment = 0;
-			if ( bVoteUp )
-			{
-				increment = 1;
-			}
-			else if ( $J('#VoteUpBtn_' + gid).hasClass( 'btn_active' ) )
-			{
-				increment = -1;
-			}
-			UpdateFormattedNumber( votesUpCount, increment );
-
-			if ( parseInt( votesUpCount.html().replace(/,/g, '') ) == 0 )
-			{
-				$J('#VotesUpCountContainer_' + gid).hide();
-			}
-			else
-			{
-				$J('#VotesUpCountContainer_' + gid).show();
-			}
-		}
-
-		if ( bVoteUp )
-		{
-			$J('#VoteUpBtn_' + gid).addClass( "btn_active" );
-			$J('#VoteDownBtn_' + gid).removeClass( "btn_active" );
-		}
-		else
-		{
-			$J('#VoteDownBtn_' + gid).addClass( "btn_active" );
-			$J('#VoteUpBtn_' + gid).removeClass( "btn_active" );
-		}
-
-
-
-	} )
-	.fail( function( jqxhr ) {
-	} );
-	return false;
 }
 
 var CAjaxPagingControls = Class.create( {

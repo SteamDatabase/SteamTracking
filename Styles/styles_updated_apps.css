@@ -154,6 +154,26 @@ a:hover {
 	max-width: 545px;
 }
 
+.updated_app_vote_details
+{
+	position: relative;
+	margin-top: 20px;
+	padding: 6px;
+	background-color: #191919;
+}
+
+.updated_app_vote_details .rateUpCount
+{
+	color: #7CC5FB;
+	padding-right: 10px;
+}
+
+.updated_app_vote_details .rateUpCount img
+{
+	vertical-align: middle;
+	padding-right: 0px;
+}
+
 .no_matching_apps
 {
 	padding-top: 50px;
