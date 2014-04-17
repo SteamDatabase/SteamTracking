@@ -710,12 +710,13 @@ function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, account
 	{
 		elProfileLink.href = elLink.href;
 		elViewPostsLink.href = g_rgForumTopics[ gidTopic ].GetSearchURL( { author: accountIDTarget } );
+		var rgForumData = g_rgForumTopics[ gidTopic ].m_rgForumData;
 
 		if ( elBanUserLink )
 		{
 			if ( bCanBan )
 			{
-				elBanUserLink.href = 'javascript:Forum_BanUser( \'' + gidTopic + '\', \'' + gidComment + '\', ' + accountIDTarget + ', ' + Object.toJSON( strTargetName ) + ');';
+				elBanUserLink.href = 'javascript:Forum_BanUser( ' + rgForumData['owner'] + ', \'' + rgForumData['gidforum'] + '\', \'' + gidTopic + '\', \'' + gidComment + '\', ' + accountIDTarget + ' );'
 				elBanUserLink.show();
 			}
 			else
@@ -730,39 +731,6 @@ function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, account
 	}
 
 	return false;
-}
-
-function Forum_BanUser( gidTopic, gidComment, accountIDTarget, strTargetName )
-{
-	if ( g_rgForumTopics[ gidTopic ] )
-	{
-		var form = $('forum_banuser_form');
-		form.elements['gidtopic'].value = gidTopic;
-		form.elements['gidcomment'].value = gidComment;
-		form.elements['accountidtarget'].value = accountIDTarget;
-		form.elements['targetname'].value = strTargetName;
-		form.elements['ban_reason'].value='';
-		Forum_InitBanLengthOptions( $J(form.elements['ban_length']) );
-		$('forum_banuser_targetname').update( strTargetName );
-		showContentAsModal( 'forum_modal', $('forum_banuser_modal_content') );
-		form.elements['ban_reason'].focus();
-	}
-}
-
-function Forum_OnBanUserSubmit()
-{
-	var form = $('forum_banuser_form');
-	var gidTopic = form.elements['gidtopic'].value;
-	var gidComment = form.elements['gidcomment'].value;
-	var accountIDTarget = form.elements['accountidtarget'].value;
-	var strBanReason = form.elements['ban_reason'].value;
-	var strTargetName = form.elements['targetname'].value;
-	var nBanLengthInDays = form.elements['ban_length'].value;
-
-	if ( g_rgForumTopics[ gidTopic ] )
-	{
-		g_rgForumTopics[gidTopic].BanUser( accountIDTarget, gidComment, strBanReason, strTargetName, nBanLengthInDays );
-	}
 }
 
 function Forum_ShowForumAudits( gidForumTopic, gidObject )
@@ -914,32 +882,6 @@ CForumTopic = Class.create( {
 			onSuccess: fnOnSuccess,
 			onFailure: this.OnModeratorActionFailed.bind(this)
 		});
-	},
-
-	BanUser: function( accountIDTarget, gidComment, strBanReason, strTargetName, nBanLengthInDays )
-	{
-		new Ajax.Request( this.GetActionURL( 'banuser' ), {
-			method: 'post',
-			parameters: this.ParametersWithDefaults( { target: accountIDTarget, banlength: nBanLengthInDays, gidcomment: gidComment, ban_reason: strBanReason } ),
-			onSuccess: this.OnBanUserSuccess.bind( this, strTargetName ),
-			onFailure: this.OnBanUserFailed.bind( this, strTargetName )
-		});
-	},
-
-	OnBanUserSuccess: function( strTargetName, transport )
-	{
-		ShowForumModalSuccess(
-			'"%s" has been banned.'.replace( /%s/, strTargetName ),
-			'The user\'s posting and editing privileges have been revoked.'
-		);
-	},
-
-	OnBanUserFailed: function( strTargetName, transport )
-	{
-		ShowForumModalSuccess(
-			'Failed to ban "%s"'.replace( /%s/, strTargetName ),
-			'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.'
-		);
 	},
 
 	ReportPost: function( author, gidcomment )
@@ -2001,5 +1943,62 @@ function Forum_InitBanLengthOptions( $Select )
 	$Select.on( 'change.ForumRememberChoice', function() {
 		SetValueLocalStorage( 'nForumLastBanLengthChoice', $Select.val() );
 	});
+}
+
+
+function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget )
+{
+	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif">' );
+	var Modal = ShowConfirmDialog( 'Ban User', $WaitElem, 'Ban User' );
+
+	Modal.GetContent().find('.newmodal_buttons').css( 'visibility', 'hidden' );
+
+	$J.get( 'http://steamcommunity.com/gid/' + clanid + '/banuserdialog', {
+		ajax: 1,
+		gidforum: gidForum,
+		gidtopic: gidTopic,
+		gidcomment: gidComment,
+		target: accountIDTarget
+	}).done( function( data ) {
+		Modal.GetContent().find('.newmodal_buttons').css( 'visibility', '' );
+		var $Content = $J(data);
+		$WaitElem.replaceWith( $Content );
+		Modal.AdjustSizing();
+
+		var $Form = $Content.find( 'form#forum_banuser_form' );
+		Forum_InitBanLengthOptions( $Form.find('select[name=ban_length]') );
+
+		var $BanReason = $Form.find('input[name=ban_reason]');
+		var $BanReasonSuggestions = $Form.find('#ban_reason_suggestions');
+		if ( $BanReason.length && $BanReasonSuggestions.length )
+		{
+			var elBanReasonCtn = $BanReason.parent()[0];
+			var elBanReasonSu
+		}
+
+		Modal.done( function() {
+			var bDelete = $Form[0].elements.deletecomments && $Form[0].elements.deletecomments.checked;
+			var bKick = $Form[0].elements.kickmember && $Form[0].elements.kickmember.checked;
+
+			if ( $Form[0].elements.ban_length.value < 0 && !bDelete && !bKick )
+			{
+				ShowAlertDialog( 'Ban User', 'At least one option must be selected.  The user has not been banned.' );
+			}
+			else
+			{
+				$J.post(
+					'http://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
+				).done( function( data ) {
+					ShowAlertDialog( 'Ban User', data.message ? data.message : 'The user\'s posting and editing privileges have been revoked.' );
+				}).fail( function() {
+					ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+				});
+			}
+		});
+
+	}).fail( function() {
+		Modal.Dismiss();
+		ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
+	})
 }
 

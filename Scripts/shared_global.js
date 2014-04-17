@@ -559,9 +559,9 @@ function GetDefaultCommunityAJAXParams( path, method )
 // spped of the miniprofile fading in and out
 var MINIPROFILE_ANIM_SPEED = 150;
 // how long the mouse must remain over an element before we'll make an AJAX call
-var MINIPROFILE_DELAY_BEFORE_AJAX = 150;
+var MINIPROFILE_DELAY_BEFORE_AJAX = 100;
 // the delay before we'll show the hover, must be longer than DELAY_BEFORE_AJAX
-var MINIPROFILE_DELAY_BEFORE_SHOW = 300;
+var MINIPROFILE_DELAY_BEFORE_SHOW = 250;
 
 function CDelayedAJAXData( strURL, msDelayBeforeAJAX )
 {
@@ -977,7 +977,7 @@ function InitEmoticonHovers()
 		fnReadKey: fnReadKey,
 		strSelector: 'img.emoticon',
 		strURLMatch: 'emoticonhover',
-		nDelayBeforeShow: 100
+		nDelayBeforeShow: 50
 	} );
 
 	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
