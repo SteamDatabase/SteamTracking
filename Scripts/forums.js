@@ -1968,14 +1968,6 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 		var $Form = $Content.find( 'form#forum_banuser_form' );
 		Forum_InitBanLengthOptions( $Form.find('select[name=ban_length]') );
 
-		var $BanReason = $Form.find('input[name=ban_reason]');
-		var $BanReasonSuggestions = $Form.find('#ban_reason_suggestions');
-		if ( $BanReason.length && $BanReasonSuggestions.length )
-		{
-			var elBanReasonCtn = $BanReason.parent()[0];
-			var elBanReasonSu
-		}
-
 		Modal.done( function() {
 			var bDelete = $Form[0].elements.deletecomments && $Form[0].elements.deletecomments.checked;
 			var bKick = $Form[0].elements.kickmember && $Form[0].elements.kickmember.checked;
