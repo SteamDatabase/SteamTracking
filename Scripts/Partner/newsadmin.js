@@ -130,7 +130,7 @@ function DisplayAssetOptions( link, assetType, asset, appid )
 	g_strAssetType = assetType;
 	g_rgCurrentAsset = asset;
 	g_rgCurrentAssetAppId = appid;
-	g_strAssetBaseURL = 'http://storefront.steampowered.com/v/gfx/apps/' + appid + '/';
+	g_strAssetBaseURL = 'http://cdn.akamai.steamstatic.com/steam/apps/' + appid + '/';
 
 	if ( assetType == 'screenshots' )
 	{
