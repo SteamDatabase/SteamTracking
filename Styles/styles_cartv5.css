@@ -354,6 +354,7 @@
 }
 
 .review_usercontainer {
+	background-color: #1c1c1c;
 	border-radius: 3px;
 	padding: 8px;
 }
@@ -373,14 +374,6 @@
 	color: #86b5d9;
 	font-size: 14px;
 	margin-top: 3px;
-}
-
-.review_payment_method_label {
-	color: #ffffff;
-}
-
-.review_steam_account_name {
-	color: #ffffff;
 }
 
 /* global checkout */
