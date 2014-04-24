@@ -190,13 +190,14 @@
 			"medic_gloves"		"1"			
 			"soldier_cigar"		"1"
 			"demoman_collar"	"1"
+			"heavy_towel"		"1"			
 		}
 		"shared"
 		{
 			"engineer_wings"	"1"
 			"pyro_head_replacement"	"1"
 			"scout_wings"		"1"
-			"heavy_mullet"		"1"			
+			"heavy_hair"		"1"			
 			"medic_pipe"		"1"
 			"soldier_legs"		"1"
 			"sniper_headband"	"1"
@@ -10920,7 +10921,7 @@
 			"visuals"
 			{
 				"sound_single_shot"	"Weapon_Short_Stop.Single"
-				"sound_burst"	"Weapon_Short_Stop.Single"
+				"sound_burst"	"Weapon_Short_Stop.SingleCrit"
 				"muzzle_flash"	"muzzle_bignasty"
 				"tracer_effect"	"bullet_bignasty_tracer01"
 				"animation_replacement"
@@ -16356,7 +16357,7 @@
 			"item_type_name"	"#TF_Wearable_Hat"
 			"item_name"	"#TF_KF_Pyro_Tie"
 			"item_slot"	"misc"
-			"equip_region"	"shirt"
+			"equip_region"	"necklace"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/pyro/pyro_tripwire_tie"
 			"image_inventory_size_w"		"128"
@@ -21996,6 +21997,9 @@
 			"item_quality"		"unique"
 			"min_ilevel"	"50"
 			"max_ilevel"	"50"
+			"image_inventory"	"backpack/crafting/null"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
 		}
 
 		"473"
@@ -22804,52 +22808,6 @@
 		}
 
 
-		"495"
-		{
-			"name"	"Valve Store Shipment Box"
-			"item_class"	"tf_wearable"
-			"tool"
-			{
-				"type"	"gift"
-				"usage"
-				{
-					"loot_list"		"gift_standard_1_loot_list"
-					"num_items"		"1"
-					"max_recipients"	"1"
-					"target_rule"	"only_self"
-				}
-			}
-			"capabilities"
-			{
-				"usable_gc"				"1"
-				"usable_out_of_game"	"1"
-			}
-			"show_in_armory"	"0"
-			"item_type_name"	"#TF_ShipmentBox_Type"
-			"item_name"	"#TF_ValveStoreShipmentBox"
-			"item_description"	"#TF_ValveStoreShipmentBox_Desc"
-			"item_slot"	"action"
-			"image_inventory"	"backpack/crafting/valvestore_shipmentbox"
-			"image_inventory_size_w"	"128"
-			"image_inventory_size_h"	"82"
-			"item_quality"		"unique"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"used_by_classes"
-			{
-				"scout"	"1"
-				"sniper"	"1"
-				"soldier"	"1"
-				"demoman"	"1"
-				"medic"	"1"
-				"heavy"	"1"
-				"spy" "1"
-				"engineer" "1"
-				"pyro" "1"
-			}
-			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
-			"drop_sound"		"ui/item_cardboard_drop.wav"
-		}
 
 
 		"513"
@@ -31233,7 +31191,7 @@
 				"paintable"		"1"
 				"can_craft_count"	"1"
 			}
-			"equip_region"	"shirt"
+			"equip_region"	"heavy_towel"
 			"item_type_name"	"TF_Wearable_Apparel"
 			"item_name"	"#TF_HeavyBoxingTowel"
 			"item_description"	"#TF_HeavyBoxingTowel_Desc"
@@ -38143,7 +38101,7 @@
 				"can_craft_count"	"1"
 			}
 			"item_slot"	"misc"
-			"equip_region"	"heavy_mullet"
+			"equip_region"	"heavy_hair"
 			"item_name"	"#TF_HeavysHockeyHair"
 			"item_description"	"#TF_HeavysHockeyHair_Desc"
 			"item_type_name"	"#TF_Wearable_Hair"
@@ -38285,6 +38243,7 @@
 			"image_inventory"	"backpack/player/items/heavy/heavy_carl_hair"
 			"model_player"	"models/player/items/heavy/heavy_carl_hair.mdl"
 			"propername"	"1"
+			"equip_region"	"heavy_hair"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -41143,6 +41102,43 @@
 			"image_inventory"	"backpack/weapons/c_models/c_wrangler_xmas"
 			"model_player"		"models/weapons/c_models/c_wrangler_xmas.mdl"
 		}
+		"1087"
+		{
+			"name"	"Der Maschinensoldaten-Helm"
+			"prefab"	"promo hat"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Helmet"
+			"item_name"	"#TF_MaschinensoldatenHelm"
+			"item_description"	"#TF_MaschinensoldatenHelm_Desc"
+			"image_inventory"	"backpack/player/items/heavy/heavy_wolf_helm"
+			"model_player"	"models/player/items/heavy/heavy_wolf_helm.mdl"
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"heavy" "1"
+			}
+		}
+		"1088"
+		{
+			"name"	"Die Regime-Panzerung"
+			"prefab"	"promo misc"
+			"capabilities"
+			{
+				"can_craft_count"	"1"
+			}
+			"item_type_name"	"#TF_Wearable_Armor"
+			"item_name"	"#TF_RegimePanzerung"
+			"item_description"	"#TF_RegimePanzerung_Desc"
+			"image_inventory"	"backpack/player/items/heavy/heavy_wolf_chest"
+			"model_player"	"models/player/items/heavy/heavy_wolf_chest.mdl"
+			"used_by_classes"
+			{
+				"heavy" "1"
+			}
+		}
 		"1089"
 		{
 			"name"	"Mister Bubbles"
@@ -41754,7 +41750,7 @@
 			}
 			"item_name"		"#TF_robo_heavy_boltedscraptowel"
 			"item_description"		"#TF_robo_heavy_boltedscraptowel_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"heavy_towel"
 			"item_type_name"		"TF_Wearable_Apparel"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/robo_heavy_boltedscraptowel/robo_heavy_boltedscraptowel"
@@ -43114,7 +43110,7 @@
 			}
 			"item_name"		"#TF_tw2_demo_hood"
 			"item_description"		"#TF_tw2_demo_hood_Desc"
-			"equip_region"		"whole_head"
+			"equip_region"		"hat"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/tw2_demo_hood/tw2_demo_hood"
 			"model_player"		"models/workshop/player/items/demo/tw2_demo_hood/tw2_demo_hood.mdl"
@@ -49411,7 +49407,7 @@
 			"first_sale_date"		"2013/12/19"
 			"item_name"		"#TF_xms2013_polar_pullover"
 			"item_description"		"#TF_xms2013_polar_pullover_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"head_skin"
 			"propername"		"1"
 			"visuals"
 			{
@@ -49583,7 +49579,7 @@
 			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_xms2013_soldier_marshal_beard"
 			"item_description"		"#TF_xms2013_soldier_marshal_beard_Desc"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/soldier/xms2013_soldier_marshal_beard/xms2013_soldier_marshal_beard"
 			"capabilities"
 			{
@@ -61596,7 +61592,7 @@
 		"5046"
 		{
 			"name"	"Paint Can Team Color"
-			"prefab"	"valve valve paint_can_team_color"
+			"prefab"	"valve paint_can_team_color"
 			"first_sale_date"	"2010/10/29"
 			"item_name"		"#TF_Tool_PaintCan_TeamColor"
 			"attributes"
