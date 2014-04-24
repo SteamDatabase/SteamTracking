@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.e8e667878ab4a288900d7eed004b797506a07366.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.76626ffad6408b55cc6ed4b1f8b461aa6fc2e6f1.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -18590,11 +18590,11 @@
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
-				"image_inventory": null,
+				"image_inventory": "backpack\/crafting\/null",
 				"min_ilevel": 50,
 				"max_ilevel": 50,
-				"image_url": "",
-				"image_url_large": "",
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/null.fa51eceab3a3f8687a546be5a30034605e3316f8.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/null_large.fa51eceab3a3f8687a546be5a30034605e3316f8.png",
 				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -19430,37 +19430,6 @@
 					}
 				]
 				
-			},
-			{
-				"name": "Valve Store Shipment Box",
-				"defindex": 495,
-				"item_class": "tf_wearable",
-				"item_type_name": "Shipment Box",
-				"item_name": "Valve Store Shipment Box",
-				"item_description": "",
-				"proper_name": false,
-				"item_slot": "action",
-				"model_player": null,
-				"item_quality": 6,
-				"image_inventory": "backpack\/crafting\/valvestore_shipmentbox",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "",
-				"image_url_large": "",
-				"capabilities": {
-					"usable_gc": true,
-					"usable_out_of_game": true,
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"can_card_upgrade": true,
-					"can_strangify": true,
-					"can_killstreakify": true,
-					"can_consume": true
-				},
-				"tool": {
-					"type": "gift"
-				}
 			},
 			{
 				"name": "TournamentMedal - GWJ Winners",
@@ -46764,6 +46733,114 @@
 						"name": "kill eater score type",
 						"class": "kill_eater_score_type",
 						"value": 86
+					}
+				]
+				
+			},
+			{
+				"name": "Der Maschinensoldaten-Helm",
+				"defindex": 1087,
+				"item_class": "tf_wearable",
+				"item_type_name": "Helmet",
+				"item_name": "Der Maschinensoldaten-Helm",
+				"item_description": "As the saying goes, \"Those who cannot remember the alternate past are condemned to repeat it.\" Since you have to do it again anyway, why not liven things up with an evil robot costume?",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/heavy\/heavy_wolf_helm.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/heavy_wolf_helm",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_wolf_helm.b2cc033d6fa40ae9400edf401ee64fba60ef5df6.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_wolf_helm_large.ea52768dc28056fff503d682e1ff2b1959888544.png",
+				"drop_type": "drop",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Die Regime-Panzerung",
+				"defindex": 1088,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Armor",
+				"item_name": "Die Regime-Panzerung",
+				"item_description": "As the saying goes, \"Those who cannot remember the alternate past are condemned to repeat it.\" Since you have to do it again anyway, why not liven things up with an evil robot costume?",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/player\/items\/heavy\/heavy_wolf_chest.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/player\/items\/heavy\/heavy_wolf_chest",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_wolf_chest.2d57b26cf078ec8755f273a1c346ac289f7cf79f.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/heavy_wolf_chest_large.8acb316c88543ea0366a282aefda591becca270a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
