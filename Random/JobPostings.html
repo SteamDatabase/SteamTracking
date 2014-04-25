@@ -1311,54 +1311,39 @@
 
 					</div> <!-- end right_col div -->
 
-					
-									<div class='right_col_text' style="margin-top:0px;" >
-						<div id="email_form_link" class="job_position_title" >Have a better idea?</div>
-						<div id="email_form_container" style="display: none; top: 190px;" class="job_position_description">
-							<div class='job_position_title_active'>Have a better idea?</div><div class='close_popup'></div>
-							<div class='job_description_intro' id='better_idea'>
-								<p>These job listings are incomplete.  If you don’t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.</p>
-								<p>We don’t have junior-level positions or internships here, so we are looking for highly skilled folks who’ve been in their industry for a few years who can bring in knowledge and expertise we don’t currently possess.</p>
-								<div class='list_title' >Requirements:</div>
-								<ul>
-									<li>4+ years of professional experience</li>
-									<li>High-level expertise in your discipline</li>
-								</ul>
-							</div>
-							<div id="emailFailed"></div>
-							<div id="fix_errors"></div>
-							<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
-							<form id="email_form" name="email_form" action="email_handler.php" method="post" enctype="multipart/form-data" target="form_iframe">
-								<input type="hidden" name="process" id="process" value=1 />
+						<div class='job_position_container' id='have_a_better_idea'>
+		<div class='job_position_title'>Have a better idea?</div>
+		<div class='job_position_description' id='desc_27' >
+			<div class='job_position_title_active'>Have a better idea?</div><div class='close_popup'></div>
+			<div class='job_description_intro'><p>These job listings are incomplete.  If you don’t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.</p> <p>We don’t have junior-level positions or internships here, so we are looking for highly skilled folks who’ve been in their industry for a few years who can bring in knowledge and expertise we don’t currently possess.</p><div class='list_title' >Requirements:</div><ul><li>4+ years of professional experience</li><li>High-level expertise in your discipline</li></ul></div>			<p><a class='apply_link' onclick="ShowApplication('Have a better idea?', 27 );">Apply for this position</a> ></p>
+		</div>
+	</div>
 
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" class="" />
+									<div class="job_position_description" id="email_form_container" style="display:none;">
+						<div class='close_popup'></div>
+						<div class="job_application_title">Apply To: <div id="application_title" style="display:inline"></div></div>
+						<div id="emailFailed"></div>
+						<div id="fix_errors"></div>
+						<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
+						<form id="email_form" name="email_form" action="email_handler_new.php" method="post" enctype="multipart/form-data" target="form_iframe">
+							<input type="hidden" name="process" id="process" value=1 />
+							<input type="hidden" name="reqid" id="reqid" />
 
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" class="" />
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" class="" />
 
-								<label for="discipline">Discipline</label>
-								<input type="text" name="discipline" id="discipline" class="" />
+							<label for="email">Email Address</label>
+							<input type="text" name="email" id="email" class="" />
 
-								<label for="yearsExperience">Years of experience</label>
-								<input type="text" name="yearsExperience" id="yearsExperience" class="" />
+							<label for="noFill"  tabindex=-2 style="position: absolute; right: 10000px;">Don't fill this out</label>
+							<input type="text" name="noFill" id="noFill" class="" tabindex=-2 style="position: absolute; right: 10000px;"/>
 
-								<label for="experienceDescription">Please describe your professional experience:</label>
-								<textarea id="experienceDescription" name="experienceDescription" rows="10" cols="30"></textarea>
+							<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf and .doc files)</label>
+							<input type="file" name="resume[]" multiple id="resume" class="" />
 
-								<label for="skillset">Please describe how you would apply your skillset to the products and<br/> services we create:</label>
-								<textarea id="skillset" name="skillset" rows="10" cols="30"></textarea>
+							<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;" />
 
-								<label for="noFill"  tabindex=-2 style="position: absolute; right: 10000px;">Don't fill this out</label>
-								<input type="text" name="noFill" id="noFill" class="" tabindex=-2 style="position: absolute; right: 10000px;"/>
-
-								<label for="resume">Attach Resum&eacute; (We like .pdf and .doc files)</label>
-								<input type="file" name="resume" id="resume" class=""></input>
-
-								<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;"></input>
-
-							</form>
-						</div>
+						</form>
 					</div>
 				
 					<div class="job_position_description" id="email_success_message" style="display:none;">
