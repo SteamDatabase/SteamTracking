@@ -519,6 +519,11 @@ a.commentthread_author_officer {
 	overflow: hidden;
 }
 
+.forum_comment_author_banned {
+	font-size: 12px;
+	color: #b33b32;
+}
+
 .forum_comment_actions {
 	float: right;
 

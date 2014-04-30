@@ -1321,17 +1321,6 @@ a.apphub_more_friends_who_play:hover
 	padding-top: 7px;
 }
 
-.UserReviewCardContent_FlaggedByDeveloper
-{
-	padding-top: 60px;
-	width: 75%;
-	margin: 0px auto;
-	font-style: italic;
-	font-size: 12px;
-	text-align: center;
-	color: #666666;
-}
-
 .apphub_CardContentMain .UserReviewCardContent_Footer {
 	position: absolute;
 	width: 100%;

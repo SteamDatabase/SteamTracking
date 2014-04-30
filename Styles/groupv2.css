@@ -551,6 +551,9 @@ a.large_title:hover {
 	color: #686865;
 	font-size: 12px;
 }
+.groupstat.wide_label {
+	padding-left: 170px;
+}
 .groupstat .label {
 	position: absolute;
 	left: 0;
