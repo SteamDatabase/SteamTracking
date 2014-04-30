@@ -16,6 +16,7 @@
 			</Button>
 		</Panel>
 		<CommunityFriendsStrip class="CommunityFriendsStrip" id="CommunityFriendsStrip"/>
+		<Label id="SpoofNotice" text="#Community_SpoofNotice" />
 		<ProfilePanel id="Profile" class="ProfilePanel" />
 		<ProfilePanel id="FriendActivity" class="ProfilePanel" />
 	</CommunityWrapper>

@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+	</styles>
+
+	<SettingSteamGuardWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#ManageSteamGuard_SettingSteamGuard_Title" />
+		<Label class="WizardChildDescription" text="#ManageSteamGuard_SettingSteamGuard_Description" />
+
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+
+	</SettingSteamGuardWizardChild>
+
+</root>

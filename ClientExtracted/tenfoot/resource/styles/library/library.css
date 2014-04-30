@@ -58,7 +58,7 @@
 	transition-property: pre-transform-scale2d, box-shadow, opacity, desaturation;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
-	background-color: black;
+	background-color: dropdown_box_bg;
 }
 
 .LibraryPanel:descendantfocus .RecentApp:hover .AppImage
@@ -840,7 +840,7 @@ ParentalButton.Locked
 	box-shadow: #00000033 -4px -4px 6px 8px;
 	width: 292px;
 	height: 136px;
-	background-color: black;
+	background-color: dropdown_box_bg;
 }
 
 .LinksAndMore,
@@ -3532,10 +3532,23 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	height: 100%;
 }
 
+#ShortcutsGrid
+{
+	width: 100%;
+	height: 100%;
+
+	pre-transform-scale2d: 1.0, 1.0;
+
+	position: 0px 126px 0px;
+	padding-top: 90px;
+	padding-bottom: 300px;
+	margin-top: 00px;
+}
+
 .GamesGrid .AppGridItem .AppImage
 {
 	box-shadow: fill #00000033 -4.5px -4.5px 18px 9px;
-	background-color: black;
+	background-color: dropdown_box_bg;
 }
 
 .AppGridItem:focus .AppImage
@@ -3646,6 +3659,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	height: 40px;
 	width: fill-parent-flow( 1.0 );
 	font-size: 32px;
+	font-family: platformfont;
 	color: applabel;
 	opacity: 0.0;
 	vertical-align: center;
@@ -3660,6 +3674,12 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
+
+#ShortcutsGrid .AppGridItem Label
+{
+	opacity: 1.0;
+}
+
 
 .AppGridItem:focus Label
 {
@@ -3801,6 +3821,31 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	position: 0px 30px 0px;
 }
 
+#AddShortcutStripWrapper .GridUpperRow
+{
+	background-image: url("file://{images}/store/slideshow_glow.png");
+	background-repeat: no-repeat no-repeat;
+	background-position: left 0px top 0px;
+	background-size: 1920px 134px;
+	height: 180px;
+	width: 100%;
+	z-index: 0;
+	margin-top: -40px;
+	padding-top: -4px;
+
+}
+
+#AddShortcutStripWrapper .GridUpperRow Label
+{
+	font-size: 78px;
+	height: 100px;
+	font-family: platformfont;
+	text-transform: none;
+	margin-left: 300px;
+	margin-top: 44px;
+	color: white;
+}
+
 .SectionLabel
 {
 	font-family: platformfont;
@@ -3808,7 +3853,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	font-weight: light;
 	color: carousel_title;
 	font-size: 56px;
-	line-height: 70px;
+	height: 70px;
 	margin-left: -3px;
 	white-space: nowrap;
 
@@ -3934,10 +3979,12 @@ DropDown Label
 	margin-top: 4px;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 
+	background-color: bgcolor;
 	background-image: url( "file://{images}/library/library_grid_bg_wash.png" );
-	background-position: center center;
+	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-size: 1920px 1080px;
+
 }
 
 

@@ -40,6 +40,7 @@ ubuntu/ubuntu12_32/libavutil.so.52
 ubuntu/ubuntu12_32/liboverride.so
 ubuntu/ubuntu12_32/libsteam.so
 ubuntu/ubuntu12_32/libtier0_s.so
+ubuntu/ubuntu12_32/libvideo.so
 ubuntu/ubuntu12_32/libvstdlib_s.so
 ubuntu/ubuntu12_32/libx264.so.138.crypt
 ubuntu/ubuntu12_32/serverbrowser.so

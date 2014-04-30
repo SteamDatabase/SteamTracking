@@ -1032,9 +1032,6 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	margin-top: -2px;
 	color: #C0C0C0FF;
 	
-	transition-property: color;
-	transition-duration: 0.15s;
-	transition-timing-function: ease-in-out;
 }
 
 .Group.SelectionGroup .ItemLabel
@@ -1082,6 +1079,16 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	border-radius: borderradius;
 }
 
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N
+{
+	background-color: #222222ff;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N .ItemLabel
+{
+	color: #b38e1fff;
+}
+
 .DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N
 {
 	box-shadow: #ffffff00 0px 0px 2px 0px;
@@ -1124,9 +1131,20 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 .DaisyInputTypeABXY .Group.SelectionGroup #Item_S
 {
 	background-color: #6b900cff;
+
 	box-shadow: #00000055 0px 0px 8px 0px;
 	border-radius: borderradius;
 
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S
+{
+	background-color: #222222ff;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S .ItemLabel
+{
+	color: #6b900cff;
 }
 
 .DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S
@@ -1177,6 +1195,17 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	border-radius: borderradius;
 }
 
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W
+{
+	background-color: #222222ff;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W .ItemLabel
+{
+	color: #2056a5ff;
+}
+
 .DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W
 {
 	box-shadow: #ffffff00 0px 0px 2px 0px;
@@ -1223,6 +1252,16 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #a51c0cff;
 	box-shadow: #00000055 0px 0px 8px 0px;
 	border-radius: borderradius;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E
+{
+	background-color: #222222ff;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E .ItemLabel
+{
+	color: #a51c0cff;
 }
 
 .DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E

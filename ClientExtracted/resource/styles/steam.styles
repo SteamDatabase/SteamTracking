@@ -3206,8 +3206,17 @@ steam.styles
       font-size=14
       font-weight=400
       textcolor="labelfocus"
-      font-style=uppercase
-      
+      font-style=uppercase   
+    }
+
+    
+    StatusLabelDim
+    {
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      textcolor="TextDisabled"
+      font-style=normal   
     }
 
     StatusLabel:hover

@@ -172,12 +172,13 @@
 		
 		gameImagePanelHighlight
 		{   
-			inset="2 0 0 0"
+			inset="0 0 0 0"
 			bgcolor=none
 			render_bg	
 			{
-			0="image( x0 - 1, y0 - 3, x1 + 0, y1 + 0, graphics/downloads_bg )"
+			0="image( x0 - 4, y0 - 3, x1 + 4, y1 + 0, graphics/downloads_bg )"
 			}		
+			padding "4"
 		}					
 		DetailsLaunchButton
 		{   
@@ -374,7 +375,7 @@
 		region { name="column4" x=700 width=max overflow=allow-horizontal }
 		
 		// left column
-		place { control="gameimage" region="column1" margin-left=0 margin-top=16 width=200 height=85 }
+		place { control="gameimage" region="column1" margin-left=8 margin-top=16 width=200 height=85 }
 		
 		// left-mid column
 		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }

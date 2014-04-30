@@ -75,26 +75,6 @@
 		"zpos"		"2"
 		"style"			"friendlyname"
 	}
-	"SteamGuardProviderCombo"
-	{
-		"ControlName"		"ComboBox"
-		"fieldName"		"SteamGuardProviderCombo"
-		"xpos"		"20"
-		"ypos"		"320"
-		"wide"		"300"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"2"
-		"paintbackground"		"1"
-		"textHidden"		"0"
-		"editable"		"0"
-		"maxchars"		"-1"
-		"NumericInputOnly"		"0"
-		"unicode"		"0"
-	}
 	styles
 	{
 		friendlyname

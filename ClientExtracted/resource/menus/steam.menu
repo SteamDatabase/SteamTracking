@@ -46,6 +46,9 @@
 		Servers							{	text="#steam_menu_servers"				shellcmd="steam://open/servers" }
 		Screenshots						{	text="#steam_screenshots"				command="Screenshots" }
 		Inventory						{	text="#steam_inventory"					shellcmd="steam://open/inventory" }
+		Divider						{}
+		MusicPlayer						{	text="#steam_menu_view_musicplayer"		shellcmd="steam://open/musicplayer" }
+		// Music						{	text="#steam_menu_view_music"			shellcmd="steam://open/music" }
 		Divider				[!$OSX]		{}
 		Settings			[!$OSX]		{	text="#steam_menu_settings"				command="Settings" }
 	}

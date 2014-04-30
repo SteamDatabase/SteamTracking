@@ -679,7 +679,15 @@ ParentalSetInProgressChild .SettingsBottomPanel
 {
 	position: 500px 00px 0px;
 	z-index: 1000;
+	width: 480px;
+
 }
+
+#ParentalChooseAppsChild #GamesFilter:hover
+{
+	pre-transform-scale2d: 1.0;
+}
+
 
 #ParentalChooseAppsChild #SectionLabel
 {
@@ -687,7 +695,7 @@ ParentalSetInProgressChild .SettingsBottomPanel
 	max-width: 900px;
 	vertical-align: top;
 	height: 70px;
-	position: 0px 7px 0px;
+	position: 0px 38px 0px;
 	font-size: 24px;
 	font-weight: light;
 	text-transform: none;

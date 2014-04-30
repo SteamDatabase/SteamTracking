@@ -2838,7 +2838,7 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	border-color: #183649ff;
 }
 
-#SettingsAccount_VerifyEmail
+#SettingsAccount_VerifyEmail,.VerifyEmail #SettingsAccount_ManageSteamGuard
 {
 	visibility: collapse;
 }

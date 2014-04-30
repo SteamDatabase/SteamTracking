@@ -1,0 +1,98 @@
+#EnableSteamGuardInputContainer
+{
+	margin-top: 55px;
+	flow-children: down;
+}
+
+#MachineNameInputContainer
+{
+	margin-top: 40px;
+	flow-children: down;
+}
+
+#ButtonDeauthorizeComputers
+{
+	visibility: collapse;
+}
+
+.ShowDeauthorizeMachine #ButtonDeauthorizeComputers
+{
+	visibility: visible;
+}
+
+#MachineNameInputContainer
+{
+	opacity: 0.0;
+}
+
+.ShowMachineName #MachineNameInputContainer
+{
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+// tickbox to turn togglebuttons into checkboxes
+.CheckBox .TickBox
+{
+	width: 38px;
+	height: 38px;
+	vertical-align: center;
+	background-color: ui_common_control; 
+	
+	transition-property: transform, background-color, border, box-shadow, color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;	
+}
+
+.CheckBox:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: ui_common_control;
+}
+
+.CheckBox:Focus .TickBox
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;
+}
+
+.CheckBox:Selected:Focus .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;
+}
+
+// and make room for the tickbox
+.CheckBox Label
+{
+	padding-left: 52px;
+	padding-top: 6px;
+	color: detailsdatalabel;
+	width: 100%;
+	text-overflow: clip;
+	white-space: nowrap;
+
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+.CheckBox:hover Label
+{
+	color: #ffffffff;
+	transform: translatex(0px);
+}
+
+.CheckBox:focus Label
+{
+	transform: translatex(0px);
+}

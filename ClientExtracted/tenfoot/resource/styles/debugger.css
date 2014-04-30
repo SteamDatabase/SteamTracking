@@ -243,6 +243,12 @@ DebugLayout
 	color: #FF0000;
 }
 
+a.DebugLayoutElementPropValue:hover
+{
+	color: #1111DD;
+	text-decoration: underline;
+}
+
 .DebugLabelPanelRow .StyleLink
 {
 	horizontal-align: right;

@@ -21,7 +21,7 @@
 		"fieldName"		"ContentList"
 		"xpos"		"24"
 		"ypos"		"90"
-		"wide"		"450"
+		"wide"		"512"
 		"tall"		"170"
 		"AutoResize"		"0"
 		"PinCorner"		"0"

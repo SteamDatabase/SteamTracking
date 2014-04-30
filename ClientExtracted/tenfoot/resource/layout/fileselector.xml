@@ -8,29 +8,39 @@
 	<TenfootFileSelector tabindex="auto" selectionpos="auto" onmouseactivate="CloseModalDialog();" >
 		<Panel id="FileSelectorBodyRegion" class="FileSelectorBodyRegion">
 
-			<Label id="FileSelectorHeaderLabel" class="FileSelectorHeaderLabel" text="Header"/>
+			<Panel id="FileSelectorColumn" class="FileSelectorColumn">
+				<Label id="FileSelectorHeaderLabel" class="FileSelectorHeaderLabel" text="Header"/>
+	
+				<Label id="FileSelectorTextLabel" class="FileSelectorBoxText" text="Description"/>			
 
-			<Label id="FileSelectorTextLabel" class="FileSelectorBoxText" text="Description"/>			
-
-			<Panel id="FileSelectorButtonTopRow" class="FileSelectorButtonTopRow">				
+				<Panel id="FileSelectorButtonTopRow" class="FileSelectorButtonTopRow">				
 			
-				<DropDown id="FileSelectorLocationDropDown" class="FileSelectorLocationDropDown"
-					onfocus="FileSelectorChangedFocus();">
-				</DropDown>
+					<DropDown id="FileSelectorLocationDropDown" class="FileSelectorLocationDropDown"
+						onfocus="FileSelectorChangedFocus();">
+					</DropDown>
 				
-				<Button id="GoBackButton" class="GoBackButton MsgBoxButton" 
-					onactivate="GoBackButton();"
-					onfocus="FileSelectorChangedFocus();">
-						<Label id="UpButtonLabel" text="Back"/>
-				</Button>
+					<Button id="GoBackButton" class="GoBackButton MsgBoxButton" 
+						onactivate="GoBackButton();"
+						onfocus="FileSelectorChangedFocus();">
+						<Image src="file://{images}/icon_folder_up.png" class="UpFolder" />
+					</Button>
+			
+				</Panel>
+			
+			
+				<Panel id="FileSelectorFileListArea" class="FileSelectorFileListArea">
+					<Panel class="FileSelectorFileListContainer" id="FileSelectorFileListContainer" childfocusonhover="false" />
+				</Panel>
 			
 			</Panel>
-			
-			
-			<Panel id="FileSelectorFileListArea" class="FileSelectorFileListArea">
-				<Panel class="FileSelectorFileListContainer" id="FileSelectorFileListContainer" childfocusonhover="false" />
-			</Panel>
-			
+				
+			<Panel class="VerticalRule" />
+		
+			<Panel id="FileSelectorPreviewColumn" class="FileSelectorPreviewColumn">
+				<Label id="PreviewLabel" class="PreviewLabel" text="#FileSelector_NoPreview"/>
+				<Image id="PreviewImage" class="PreviewImage" scaling="stretch-to-fit-preserve-aspect"/>
+			</Panel>		
 		</Panel>
+		
 	</TenfootFileSelector>
 </root>
