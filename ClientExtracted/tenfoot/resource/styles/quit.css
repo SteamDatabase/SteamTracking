@@ -74,6 +74,16 @@
 	visibility: visible;
 }
 
+#SwitchToHDMIInput
+{
+	visibility: collapse;
+}
+
+.HasHDMIInput #SwitchToHDMIInput
+{
+	visibility: visible;
+}
+
 #MusicControllerPanel:descendantfocus .SystemButton:hover
 {
 	transition-duration: 0.25s !immediate;

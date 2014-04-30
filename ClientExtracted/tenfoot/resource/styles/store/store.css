@@ -225,6 +225,7 @@ Carousel:descendantfocus .RightMouseScrollRegion
 	height: 100%;
 }
 
+
 .LeftMouseScrollRegion, .RightMouseScrollRegion
 {
 	opacity: 0.0;
@@ -413,6 +414,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 {
 	border-color: #fdfefef0;
 
+
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
@@ -420,31 +422,113 @@ StorePanel:descendantfocus #FeaturedCapsules
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	wash-color: #00000000;
+	
+	background-image: url( "file://{images}/store/shadow.png" );
+	background-size: 400px 125px;
+	background-repeat: no-repeat;
 }
 
-.CapsuleControllerSupport
+#PlatformSupport
 {
-	align: right bottom;
-	width: 72px;
-	height: 72px;
-	margin: 0px 15px 15px 0px;
+	margin: 15px;
+	padding-left: 50px;
+	padding-right: 6px;
+	padding-bottom: 3px;
+	width: fit-children;
+	height: 125px;
 
+	flow-children: right;
+	vertical-align: bottom;
+	horizontal-align: right;
 	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+
+	background-image: url( "file://{images}/store/shadow.png" );
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+StorePanel:descendantfocus .StoreImage.Focused #PlatformSupport
+{
+	opacity: 1.0;
+}
+
+#ImageAndIcons
+{
+	opacity: 1.0;
+}
+
+
+.CapsuleControllerSupport, .MacSupport, .WindowsSupport, .SteamOSSupport
+{
+	width: 50px;
+	height: 50px;
+	horizontal-align: right;
+	vertical-align: bottom;
+
+	visibility: collapse;
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 }
 
-.CapsuleControllerSupportContainer:descendantfocus .CapsuleControllerSupport
+//.CapsuleControllerSupportContainer:descendantfocus .CapsuleControllerSupport .MacSupport .WindowsSupport .SteamOSSupport
+//{
+//	visibility: visible;
+//}
+
+
+.CapsuleControllerSupportContainer.MacAvailable .MacSupport
 {
-	opacity: 1.0;
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.MacAvailable .MacSupport
+{
+	margin: 0px;
+}
+
+.CapsuleControllerSupportContainer.SteamOSAvailable .SteamOSSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.SteamOSAvailable .SteamOSSupport
+{
+	margin: 0px;
+}
+
+.CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
+{
+	margin: 0px;
 }
 
 .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
 {
-	opacity: 1.0;
-	background-image: url( "file://{images}/controller_support_full_storemain.png" );
+	width: 50px;
+	height: 50px;
+
+
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_fullcontroller_storefront.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -456,8 +540,12 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 
 .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
-	opacity: 1.0;
-	background-image: url( "file://{images}/controller_support_partial_storemain.png" );
+	width: 50px;
+	height: 50px;
+
+	visibility: visible;
+
+	background-image: url( "file://{images}/store/icon_partialcontroller_storefront.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -471,7 +559,7 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .C
 .SteamPad .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
 .SteamPad .CapsuleControllerSupportContainer:descendantfocus .CapsuleControllerSupport
 {
-	opacity: 0.0;
+	visibility: collapse;
 }
 
 

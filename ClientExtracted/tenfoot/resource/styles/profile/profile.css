@@ -52,6 +52,8 @@
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: linear;
+	
+	opacity: 0.0;
 }
 
 #CommunityWrapper.ProfileVisible
@@ -60,7 +62,9 @@
 	opacity: 1.0;
 }
 
-#CommunityWrapper.ProfileInvisible
+
+.StackDepth2 #CommunityWrapper.ProfileInvisible,
+.StackDepth3 #CommunityWrapper.ProfileInvisible
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;
@@ -78,7 +82,8 @@
 	opacity: 0.0;
 }
 
-#CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity
+.StackDepth2 #CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity,
+.StackDepth3 #CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity
 {
 	transform: translatey( 202px );
 	opacity: 1.0;
@@ -90,7 +95,14 @@
 	opacity: 0.0;
 }
 
-
+#SpoofNotice
+{
+	font-size: 32px;
+	horizontal-align: right;
+	padding-right: 80px;
+	padding-top: 150px;
+	color: #fe4a0bff;
+}
 
 #CommunityNavBar
 {
@@ -120,6 +132,7 @@
 {
 	font-size: 41px;
 
+	color: tcexitrow;
 	opacity: 0.45;
 
 
@@ -128,6 +141,12 @@
 	transition-delay: 0s;
 	transition-timing-function: ease-in-out;
 
+}
+
+#CommunityNavBar Button:Focus Label
+{
+	color: tcexitrowfocus;
+	opacity: 1.0;
 }
 
 #CommunityNavBar .Selected Label
@@ -163,7 +182,7 @@
 
 #CommunityNavBar Button:focus
 {
-	color: tcexitrowfocus;
+	opacity: 1.0;
 
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
@@ -238,7 +257,7 @@ ProfilePanel #ContentRow
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	transform-origin: 0% 0% parent-relative;
-	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 64px, 600px, 330px );
+	//transform: translatey(1080px);
 
 	transition-property: transform, position, opacity, opacity-mask;
 	transition-duration: mediumduration;

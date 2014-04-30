@@ -1,0 +1,19 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+	</styles>
+
+	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonDone">
+		<Label class="WizardChildTitle" text="#ManageSteamGuard_SuccessOn_Title" />
+		<Label class="WizardChildDescription" text="#ManageSteamGuard_SuccessOn_Description" />
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="ManageSteamGuardDone()">
+				<Label id="Label" text="#WizardButton_Done" />
+			</Button>
+		</Panel>
+
+	</SimpleWizardChild>
+
+</root>

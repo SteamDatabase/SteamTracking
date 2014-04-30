@@ -19,6 +19,10 @@
 			<Panel id="LeftColumn" class="LeftColumn">
 				<Image id="AlbumImageA" class="AlbumImage" scaling="stretch-to-cover-preserve-aspect" />
 				<Image id="AlbumImageB" class="AlbumImage" scaling="stretch-to-cover-preserve-aspect" />
+				<Panel id="BigLabels">
+					<Label id="AlbumCoverLowerLabel" text="" />
+					<Label id="AlbumCoverUpperLabel" text="" />
+				</Panel>			
 			</Panel>
 		
 			<Panel id="RightColumn" class="RightColumn" tabindex="auto" selectionpos="auto" selectionposboundary="vertical">

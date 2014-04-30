@@ -42,18 +42,24 @@
 					<Label id="NewAsyncGamesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGames" />
 				</Panel>
 			</Button>
-			<Button id="NewSupportMessagesButton" tabindex="7" selectionpos="0,7" onactivate="ShowNewSupportMessages();" >
+			<Button id="NewModeratorMessagesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewModeratorMessages();" >
+				<Image src="file://{images}/comments.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="NewModeratorMessagesLabel" class="LongDescSm" text="#MainMenu_NewModeratorMessages" />
+				</Panel>
+			</Button>
+			<Button id="NewSupportMessagesButton" tabindex="8" selectionpos="0,8" onactivate="ShowNewSupportMessages();" >
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
 				</Panel>
 			</Button>
-			<Button id="NewClientUpdateButton" tabindex="8" selectionpos="0,8" onactivate="AllowNewClientUpdate();" >
+			<Button id="NewClientUpdateButton" tabindex="9" selectionpos="0,9" onactivate="AllowNewClientUpdate();" >
 				<Image src="file://{images}/icon_steam_update.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
 				</Panel>
 			</Button>
-			<Button id="NewSteamOSUpdateButton" tabindex="8" selectionpos="0,8" onactivate="AllowSteamOSUpdate();" >
+			<Button id="NewSteamOSUpdateButton" tabindex="9" selectionpos="0,9" onactivate="AllowSteamOSUpdate();" >
 				<Image class="SteamOSUpdate" src="file://{images}/icon_steam_update.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewSteamOSUpdateLabel" class="LongDescSm" text="#MainMenu_NewSteamOSUpdate" />

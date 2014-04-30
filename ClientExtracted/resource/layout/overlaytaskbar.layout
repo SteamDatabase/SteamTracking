@@ -18,7 +18,13 @@
 			labeltext="#Overlay_Taskbar_WebBrowser"
 			style=taskbar
 		}
-
+		MusicPlayerButton
+		{
+			controlname="URLLabel"
+			labeltext="#Overlay_Taskbar_Music"
+			style=taskbar
+		}
+		
 		SteamLogo	
 		{ 
 			controlname="ImagePanel" zpos=1 image="resource/steam_logo_big"
@@ -89,7 +95,8 @@
 		
 		place { control="TaskbarPanel" region="bottom" width=max height=64 margin-bottom=37 }
 		place { control="SteamLogo"  x=0 y=10 width=200 height=120 }
-		place { controls="WebBrowserButton,SettingsButton,ScreenshotsButton" x=225 dir=right height=32 spacing=30 align=bottom margin-bottom=20 }	
+		place { controls="WebBrowserButton,MusicPlayerButton,SettingsButton,ScreenshotsButton" x=225 dir=right height=32 spacing=30 align=bottom margin-bottom=20 }	
+
 
 		place { control="FriendPanel" height=48 width=48 align=right margin-right=6 margin-top=4 }
 		place { control="view_friends" height=12 y=12 align=right dir=right margin-right=60 }

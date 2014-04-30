@@ -8,6 +8,8 @@
 	
 
 	<MusicControlTransport>
+		<DropDown id="RemotePlayerDropDown" />
+
 		<Panel class="QueueControlButtons" id="TransportControls" childfocusonhover="true" >
 			<Button id="QueueRepeat" class="ControlBarButton" tabindex="auto" selectionpos="auto"  
 					onmoveup="ControlButtonMoveUp();"
@@ -66,7 +68,7 @@
 				
 		</Panel>
 
-		<Panel id="EntriesContainer" childfocusonhover="false">			
+		<Panel id="EntriesContainer" childfocusonhover="false">
 			<Panel id="NoMusicQueueEntriesContainer" >			
 				<Button id="BrowseMusic" class="SystemButton PanelVisible" tabindex="auto" selectionpos="auto"
 						onmoveup="SetInputFocus( PlayPause )"
@@ -86,8 +88,15 @@
 			<Panel id="MusicQueueEntriesContainer" childfocusonhover="false">
 				<Panel id="MusicQueueEntriesList" onmoveup="SetInputFocus( PlayPause )"	>
 				</Panel>
-			
 			</Panel>
+			
+			<Panel id="RemotePlayerEntriesContainer" childfocusonhover="false">
+				<Panel id="TrackContainer" >
+					<Label class="TrackCompositeTitle" id="RemotePlayerTrackCompositeTitle" text="Remote Player"/>
+					<Label class="TrackTime" id="RemotePlayerTrackTime" text="0:00:00"/>
+				</Panel>
+			</Panel>
+			
 			<Label id="MusicQueueInfoLabel" text="#Music_Transport_X_Of_Y" />	
 		</Panel>
 			

@@ -78,8 +78,8 @@ countrylist
 		12
 		{
 			territory	"55"
-			purchasecountries "MY SG PH VN ID KH BN TH MM IN"
-			launchcountries "MY SG PH VN ID KH BN TH MM IN"
+			purchasecountries "MY SG PH VN ID KH BN TH MM IN TL LA AE BH KW OM QA SA AU HK"
+			launchcountries "MY SG PH VN ID KH BN TH MM IN TL LA AE BH KW OM QA SA AU HK"
 			applydate "1199145600" // 1/1/08
 		}
 		13

@@ -196,6 +196,8 @@
 	"MainMenu_NewAsyncGamesSingular"	"{d:asyncgamescount} New Turn Waiting"
 	"MainMenu_NewAsyncGameInvites"			"{d:asyncgameinvitescount} New Game Invites"
 	"MainMenu_NewAsyncGameInvitesSingular"	"{d:asyncgameinvitescount} New Game Invite"
+	"MainMenu_NewModeratorMessages"		"{d:moderatormessagecount} Community Moderation Messages"
+	"MainMenu_NewModeratorMessagesSingular"	"{d:moderatormessagecount} Community Moderation Message"
 
 
 	"MainMenu_NewSupportMessages"	"1 message from Steam Support"
@@ -365,8 +367,6 @@
 	"ChangePassword_ReusedPassword"			"You may not reuse an old password. Please choose again."
 	"ChangePassword_IllegalPassword"		"That password did not satisfy additional complexity requirements. Please choose again."
 	"ChangePassword_WrongPassword"			"Please check that you have entered your original password correctly."
-	"ChangePassword_Cancel_Title"			"Change password"
-	"ChangePassword_Cancel_Description"		"Are you sure you'd like to cancel changing your password?"
 
 	"ChangePassword_ForgotPassword_Title"			"Forgot Password"
 	"ChangePassword_ForgotPassword_Description"		"Before changing your password, Steam needs to verify your identity. Please enter your account name."
@@ -413,9 +413,6 @@
 	"ForgotAccountName_Success_Title"		"Check Your Email"
 	"ForgotAccountName_Success_Description"	"An email containing your Steam account name has been sent to you. Once you have your account name, you can go to Login Help again to reset your password."
 
-	"ForgotAccountName_Cancel_Title"			"Forgot Account Name"
-	"ForgotAccountName_Cancel_Description"		"Are you sure you'd like to cancel?"
-
 	"ChangeEmail_NewEmail_Title"			"Change email address"
 	"ChangeEmail_NewEmail_Description"		"Your contact email address is used to confirm purchases and help you manage access to your Steam account. To change it, please enter the info below."
 	"ChangeEmail_NewEmail_Password"			"Your current password"
@@ -436,8 +433,26 @@
 	"ChangeEmail_Fail_TryAgain"				"TRY AGAIN"
 	"ChangeEmail_Success_Title"				"You're all set!"
 	"ChangeEmail_Success_Description"		"Steam successfully changed your contact email address to {s:emailaddress}."
-	"ChangeEmail_Cancel_Title"				"Change email address"
-	"ChangeEmail_Cancel_Description"		"Are you sure you'd like to cancel changing your contact email address?"
+
+	"ManageSteamGuard_SteamGuard_Title"		"Manage Steam Guard"
+	"ManageSteamGuard_SteamGuard_Description" "Steam Guard prevents your account from being accessed on unauthorized computers. New computers are authorized at login time by entering a confirmation code sent to your contact email address. This gives you control of how your account gets used. We recommend enabling Steam Guard."
+	"ManageSteamGuard_SteamGuard_EnableSteamGuard" "Enable Steam Guard"
+	"ManageSteamGuard_SteamGuard_MachineName" "Name used to identify this machine"
+	"ManageSteamGuard_SteamGuard_DeauthorizeComputers" "DEAUTHORIZE COMPUTERS..."
+	"ManageSteamGuard_SettingSteamGuard_Title" "Changing Steam Guard settings..."
+	"ManageSteamGuard_SettingSteamGuard_Description" "We're busily changing your Steam Guard settings."
+	"ManageSteamGuard_SuccessOn_Title"		"Success!"
+	"ManageSteamGuard_SuccessOn_Description" "Your account is now protected by Steam Guard and cannot be accessed on other computers without your approval."
+	"ManageSteamGuard_SuccessOff_Title"		"Steam Guard is now disabled"
+	"ManageSteamGuard_SuccessOff_Description" "Steam Guard protection has been removed from your account. Valve recommends enabling Steam Guard because it provides an important layer of protection for your account. Without Steam Guard, anyone with your account name and password can use your account without your approval."
+	"ManageSteamGuard_Fail_Title"			"Oh no!"
+	"ManageSteamGuard_Fail_Description"		"Steam is unable to change your Steam Guard settings at this time. Please try again later."
+	"ManageSteamGuard_Fail_TryAgain"		"Try Again"
+
+	"ManageSteamGuard_DeauthorizeComputers_Title" "Deauthorize Computers"
+	"ManageSteamGuard_DeauthorizeComputers_Description" "Press Next to deauthorize all other computers from having access to your account."
+	"ManageSteamGuard_DeauthorizeSuccess_Title" "Success!"
+	"ManageSteamGuard_DeauthorizeSuccess_Description" "This computer is now the only one authorized to access your account."
 
 	"Steam_RefreshLogin_InfoTicketExpired"	"Your Steam ticket has expired.\nPlease re-enter your password to continue."
 	"Steam_RefreshLogin_InvalidPassword"	"Your account credentials have expired.\nPlease re-enter your password to continue."
@@ -518,6 +533,7 @@
 	// settings, account screen
 	"SettingsAccount_History"			"View account details"
 	"SettingsAccount_Verify"			"Verify email address"
+	"SettingsAccount_ManageSteamGuard"	"Manage Steam Guard"
 	"SettingsAccount_ChangePassword"	"Change password"
 	"SettingsAccount_ChangeEmail"		"Change contact email address"
 	"SettingsAccount_Beta"				"Beta participation"
@@ -534,10 +550,11 @@
 	"SettingsAccount_EmailStatusVerified"	"Verified"
 	"SettingsAccount_EmailStatusUnverified"	"Not yet verified"
 	"SettingsAccount_SteamGuardStatus"		"Steam Guard status"
-	"SettingsAccount_SteamGuardUnverified" "Email address not yet verified"
-	"SettingsAccount_SteamGuardProtected" "Protected by Steam Guard"
-	"SettingsAccount_SteamGuardDisabled" "Steam Guard disabled"
-	"SettingsAccount_SteamGuardOffline" "Unknown, offline"
+	"SettingsAccount_SteamGuardUnverified"	"Verify email to access Steam Guard features"
+	"SettingsAccount_SteamGuardNotEnabled"	"Not yet protected by Steam Guard"
+	"SettingsAccount_SteamGuardProtected"	"Protected by Steam Guard"
+	"SettingsAccount_SteamGuardDisabled"	"Steam Guard disabled"
+	"SettingsAccount_SteamGuardOffline"		"Unknown, offline"
 
 	"SettingsAccount_BetaParticipation"		"Beta participation"
 	"SettingsAccount_NoBetaAvailable"		"(None currently available)"
@@ -616,7 +633,7 @@
 	"SettingsDownloads_ChangeRegion_Description"	"You must restart Steam for this change to take effect"
 	"SettingsDownloads_No_Throttle"	"No Limit"
 	"SettingsDownloads_AllowDownloadsDuringGameplay"	"Allow downloads during gameplay"
-	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in each game's Properties page"
+	"SettingsDownloads_AllowDownloadsDuringGameplayDetails"	"If this is checked, Steam may initiate or continue downloading updates while you have a game or other Steam application running. You can also override this on a per-game basis in your library."
 
 	// Settings, network screen
 	"SettingsNetwork_Intro"					"Configure your network settings"
@@ -890,8 +907,8 @@
 
 	"Checkout_VerifyEmail_Title"				"Email Verification"
 	"Checkout_VerifyEmail_Instructions"			"Please verify your email address with Steam."
-	"Checkout_VerifyEmail_Description"			"This one-time step helps us maintain the security of your Steam account and is required in order to complete your purchase with Steam.\n\nWe've just sent a message from Steam Support to your address on record at valvesoftware.com."
-	"Checkout_VerifyEmail_CheckEmail"			"Check your email at valvesoftware.com now, and click the link within the message from Steam Support..."
+	"Checkout_VerifyEmail_Description"			"This one-time step helps us maintain the security of your Steam account and is required in order to complete your purchase with Steam.\n\nWe've just sent a message from Steam Support to your address on record at {s:emailaddress}."
+	"Checkout_VerifyEmail_CheckEmail"			"Check your email at {s:emailaddress} now, and click the link within the message from Steam Support..."
 	"Checkout_VerifyEmail_CanCompleteAfter"		"Your purchase can then be completed once you return to this screen."
 	"Checkout_VerifyEmail_Success"				"Success! Your email address has been verified."
 	"Checkout_VerifyEmail_Thanks"				"Thanks for helping us maintain the security of your account! You may now continue with your purchase."
@@ -1089,6 +1106,11 @@
 	"Library_Details_RecommendThisGame"	"Recommend this Game..."
 	"Library_Details_SetCategory"		"Set Category..."
 	"Library_Details_DeleteLocalContent"	"Delete Local Content..."
+	"Library_Details_DeleteShortcut"	"Delete Shortcut..."
+	"Library_Details_ChooseIcon"	"Change Icon..."
+	"Library_Details_ChooseIconHeader"	"Change Shortcut Icon"
+	"Library_Details_ChooseIconText"	"Select a new icon for the shortcut"
+
 	"Library_Details_ValidateLocalContent"	"Validate Content..."
 	"Library_Details_KillApp"		"Exit game..."
 	"Library_Details_NewsByline"	"{s:feed} | {t:l:date}"
@@ -1200,12 +1222,17 @@
 	"Library_GridView"			"GRID VIEW"
 	"Library_AddContent"			"+"
 	"Library_AddContent_Activate"	"Activate a Product on Steam..."
+    "Library_AddShortcut"           "Add a Non-Steam Game to My Library..."
 	"Library_AddContent_Store"		"Browse the Steam Store for Games..."
 	"Library_ActivateProduct_Title"	"Activate a product"
 	"Library_ActivateProduct_Intro"	"To register your product with Steam, enter the product code distributed with a retail CD/DVD or other Steam product key here."
 	"Library_ActivateProduct_CodeLabel" "Product code"
 	"Library_ActivateProduct_AgreementDesc"	"By activating a product you agree to the Steam Subscriber Agreement and Privacy Policy." 
 	"Library_ActivateProduct_Activate"	"I AGREE, ACTIVATE"
+    "Library_AddShortcut_Title"     "Add a Program"
+    "Library_AddShortcut_Select"     "SELECT"
+    "Library_AddShortcut_Details"   "Add this program to your Steam Library"
+    "Library_AddShortcut_Btn"       "Add to Steam Library"
 	"Library_LaunchOptions"			"Launch Options"
 	"Library_LaunchOption_Game"		"Play {s:gamename}"
 	"Library_LaunchOption_Application"	"Launch {s:gamename}"
@@ -1323,6 +1350,7 @@
 	"Tenfoot_InstallServiceCancel" "CANCEL"
 
 	"Profile_Loading" "Loading..."
+	"Profile_Offline" "Sorry, but it looks like we can't talk to Steam Community right now!"
 	"Profile_OpenFriendActivity" "FRIEND ACTIVITY"
 	"Profile_OpenMyProfile"	     "PROFILE"
 	
@@ -1769,6 +1797,7 @@
 	"Quit_Restart"				"Restart"
 	"Quit_Sleep"				"Sleep"
 	"Quit_StopStreaming"		"Stop Streaming"
+	"Quit_SwitchToHDMIInput"	"Switch to HDMI Input"
 
 	"OOBE_WelcomeTitle"				"Welcome to Steam"
 	"OOBE_LanguageSelect"			"What language should we use?"
@@ -1825,7 +1854,7 @@
 	"Settings_Family_Sharing_Title" "Family Library Sharing"
 	"Settings_Family_Sharing_ManageSharing" "Manage other computers..."
 	"Settings_Family_Sharing_StateAuthorized" "This computer is currently authorized by you for Family Library Sharing.\nSelected accounts can use your game library while logged in here."
-	"Settings_Family_Sharing_StateNotAuthorized" "Authorizing this computer for Family Library Sharing will allow selected accounts to use your game libray here while you are not playing."
+	"Settings_Family_Sharing_StateNotAuthorized" "Authorizing this computer for Family Library Sharing will allow selected accounts to use your game library here while you are not playing."
 	"Settings_Family_Sharing_AuthorizeDevice" "Authorize this computer"
 	"Settings_Family_Sharing_DeauthorizeDevice" "Deauthorize this computer"
 	"Settings_Family_Sharing_AuthorizeError" "Failed to authorized computer ({s:reason})"
@@ -1839,7 +1868,7 @@
 	"Settings_Family_Sharing_Borrowers" "Select up to 5 people who may use your game library on your authorized computers. The following users have previously logged into Steam on one or more of your shared computers."
 
 	"Settings_RemoteClients_Title" "In-Home Streaming"		
-	"Settings_RemoteClients_Description" "You can stream gameplay from the following devices detected on your local network. To connect, simply log into this same Steam account on another local device."
+	"Settings_RemoteClients_Description" "Stream gameplay from your Windows PC to other computers detected on your local network. \nTo connect, simply log into this same Steam account on another local device."
 	"Settings_RemoteClients_DeviceName" "DEVICE NAME"
 	"Settings_RemoteClients_Status" "STATUS"
 	"Settings_RemoteClients_EnableStreaming" "Enable Streaming"
@@ -1880,7 +1909,7 @@
 	"Settings_RemoteClients_DifferentUser" "Different user logged in"
 	"Settings_RemoteClients_DifferentVersion" "Different client version"
 	"Settings_RemoteClients_Disabled" "Streaming disabled"
-	"Settings_RemoteClients_Unsupported" "Unsupported platform"
+	"Settings_RemoteClients_Unsupported" "Connected"
 	"Settings_RemoteClients_Disconnected" "Not connected"
 	
 	
@@ -2039,6 +2068,7 @@
 	"FileSelector_NewDirectory" "Create New Folder"
 	"FileSelector_Select"	"Select"
 	"FileSelector_DefaultComputername" "Computer"
+	"FileSelector_NoPreview" "No Preview"
 	
 	"MusicAlbum_Album"		"Album"
 	"MusicAlbum_Artist"	"Artist"
@@ -2070,6 +2100,7 @@
 	"Music_Transport_View_Queue"		"View Queue"
 	"Music_Transport_X_Of_Y"	"{i:CurrentQueueEntry} of {i:QueueCount}"
 	"Music_Transport_X_Tracks" "{i:QueueCount} tracks"
+	"Music_Transport_X_Track" "{i:QueueCount} track"
 	"Music_Transport_No_Tracks"	""
 	"Music_Transport_Footer_Pause" "PAUSE"
 	"Music_Transport_Footer_Play" "PLAY"
@@ -2180,6 +2211,11 @@
 	"Library_CreateCategory_Title"	"Create New Category"
 	"Library_CreateCategory_CodeLabel"	 "Enter a new category for {s:gamename}"
 
+	"Community_SpoofNotice"		"{s:userspoof}"
+
+	"SteamUI_StreamingIntro_Title"		"Welcome to In-Home Streaming"
+	"SteamUI_StreamingIntro"		"You are about to run this game on another computer and play it here using In-Home Streaming."
+	"SteamUI_StreamingIntro2"		"Your experience may vary depending on your hardware and home network. To improve performance, visit In-Home Streaming settings."
 	"SteamUI_StreamClient_Failed_Title"	"Streaming Client Failed"
 	"SteamUI_StreamClient_Failed"		"The streaming client exited unexpectedly ({d:error})"
 	"SteamUI_StreamClient_Failed_Connect"	"Couldn't connect to the remote computer."
@@ -2261,5 +2297,7 @@
 	"Settings_AlienFX"	"Alien FX"
 	"Settings_AlienFXDescription" "Select the effects to be applied to your Alienware case lighting zones."
 	"Settings_AlienFXHeader"	"Alien FX"
+	
+	"Community_PostStatusFailure"	"Sorry, there was an error posting your status."
 
 }

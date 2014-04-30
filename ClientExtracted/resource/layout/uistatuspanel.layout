@@ -3,8 +3,8 @@
 	controls
 	{
 		StatusDownloading { controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" }
-		StatusPaused{ controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" }
-		StatusComplete { controlname=URLLabel style="StatusLabel" labelText="" URLText="steam://open/downloads" }
+		StatusPaused{ controlname=URLLabel style="StatusLabelDim" labelText="" URLText="steam://open/downloads" }
+		StatusComplete { controlname=URLLabel style="StatusLabelDim" labelText="" URLText="steam://open/downloads" }
 		StatusProgressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 } 
 	}
 	
@@ -29,10 +29,13 @@
 	layout
 	{
 	  
-	  region { name="ProgressRegion" y=30 width=max height=28 align=top margin=0 }
-	 	region { name="statusRegion" width=max height=48 align=bottom margin=6 } 
-	  
-	  place { control=StatusProgressbar region="ProgressRegion" width=320 height=2 margin-top=1 align="top-center" }
-		place { control="StatusDownloading, StatusPaused, StatusComplete" region="statusRegion"  align="top-center" margin-top=2 }
+
+	  region { name="TitleRegion" width=max height=28 align=top margin=5 } 
+	  region { name="statusRegion" y=28 width=max height=28 align=bottom margin=6 } 
+	  region { name="ProgressRegion" y=37 width=max height=10 align=top margin=0 }
+	 	
+	  place { control="StatusDownloading" region="TitleRegion" align="top-center" margin-top=2 }
+		place { control="StatusPaused, StatusComplete" region="StatusRegion"  align="top-center" margin-top=3 }
+	 	place { control="StatusProgressbar" region="ProgressRegion" width=300 height=3 margin-top=0 align="top-center" }
 	}
 }

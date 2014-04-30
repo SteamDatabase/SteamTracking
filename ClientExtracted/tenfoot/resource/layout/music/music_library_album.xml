@@ -8,6 +8,7 @@
 	<MusicLibraryAlbumPanel onmoveup="MusicLibraryActivateGridTabs( AlbumButton );"
 			defaultfocus="MusicAlbumGrid" selectionposboundary="vertical" >
 		
+		
 		<Panel hittest="false" id="FastScrollWrapper">
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
@@ -16,9 +17,6 @@
 		<Grid id="MusicAlbumGrid" class="MusicAlbumGrid" 
 			scrolldirection="horizontal" verticalcount="2" horizontalcount="5" scaleoffset="0.78528" selectionpos="0,3" tabindex="auto">
 		</Grid>
-		
-		<Panel id="ThrobberContainer">
-		</Panel>
 		
 	</MusicLibraryAlbumPanel>
 </root>

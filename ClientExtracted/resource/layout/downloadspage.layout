@@ -31,7 +31,6 @@
 		}
 		SectionHeaderStyle
 		{
-			inset = "0 2 0 0"
 			font-style="uppercase"
 			render_bg 
 			{	
@@ -42,6 +41,11 @@
 			{
 				
 			}
+		}
+		SectionHeaderStyleLabel
+		{
+			inset = "0 4 0 0"
+			font-style="uppercase"
 		}
 		DownloadsPageStyle
 		{
@@ -85,6 +89,5 @@
 	{
 		region { name=main x=0 y=0 margin=5 }
 		place { control="downloadsummarypanel,panel_list" dir=down region=main width=max height=max spacing=0 }
-
 	}
 }

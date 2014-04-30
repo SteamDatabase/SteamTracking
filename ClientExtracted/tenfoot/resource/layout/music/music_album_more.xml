@@ -24,9 +24,6 @@
 			<Button id="ShowCurrentAlbumInSystemButton" onactivate="ShowCurrentAlbumInSystem();">
 				<Label text="#MusicAlbum_Show_In_System" />
 			</Button>
-			<Button onactivate="RecrawlAlbum();">
-				<Label text="#MusicAlbum_Refresh_Album" />
-			</Button>
 		</Panel>
 	</MusicAlbumMoreDialog>
 </root>

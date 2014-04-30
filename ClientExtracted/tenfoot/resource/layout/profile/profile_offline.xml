@@ -3,25 +3,19 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/profile/profile.css" />
 	</styles>
-	
+
 	<ProfilePanel>
-		<Panel id="ProfileContent">
+		<Panel id="ProfileContent" class="ProfileLoading" onload="AsyncEvent( 0.0, AddStyle( LoadingVisible ) );" >
 			<Panel id="ProfileBackground" class="ProfileBackground">
-				<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/library/library_app_details_bg_wash.png" />
+				<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/profile/profile_bg_wash.png" />
 				<Panel id="BGScreenshotWrapper">
 					<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
 				</Panel>
 			</Panel>
-			<Panel id="UpperRow" class="UpperRow" >
-				<Label id="GameName" class="GameName" text="" />
-				<Label id="GameStatus" class="GameStatus" text="" />
+			<Panel id="Loading">
+				<Label id="LoadingStatus" text="#Profile_Offline" />
 			</Panel>
-
-			<Carousel id="ContentsRow" class="ContentsRow" tabindex="0" selectionpos="0,0" focus="center" wrap="false" onmoveup="CloseProfile();">
-			</Carousel>
-			
-			<Carousel id="LowerContentsRow" class="LowerContentsRow" tabindex="1" selectionpos="0,1" focus="center" wrap="false">
-			</Carousel>
 		</Panel>
 	</ProfilePanel>
+	
 </root>

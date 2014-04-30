@@ -68,6 +68,77 @@ MusicAlbumPanel
 	vertical-align: center;
 }
 
+#AlbumCoverUpperLabel
+{
+	color: applabel;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+}
+
+#BigLabels
+{
+	flow-children: down;
+	width: 900px;
+	height: 70%;
+	padding-top: 12px;
+	padding-left: 10px;
+}
+
+.NoCover #AlbumCoverUpperLabel
+{
+	opacity: 0.2;
+	font-size: 120px;
+	max-height: 450px;
+	width: 560px;
+	font-weight: thin;
+	text-transform: uppercase;
+	text-overflow: clip;
+	white-space: normal;
+	transform: translateX( 320px ) translateY( 18px );
+	height: fit-children;
+	vertical-align: top;
+	
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+}
+
+#AlbumCoverLowerLabel
+{
+	color: applabel;
+	margin-top: 20px;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+}
+
+.NoCover #AlbumCoverLowerLabel
+{
+	opacity: 0.5;
+	font-size: 120px;
+	max-height: 450px;
+	width: 565px;
+	font-weight: thin;
+	text-transform: uppercase;
+	white-space: normal;
+	text-overflow: clip;
+	height: fit-children;
+	transform: translateX( 320px ) translateY( 35px );
+
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+}
+
 .UpperRow
 {
 	width: 100%;

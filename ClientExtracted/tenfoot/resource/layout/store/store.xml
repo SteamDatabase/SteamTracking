@@ -15,8 +15,13 @@
 						<Panel id="StoreImage1" class="CapsuleControllerSupportContainer StoreImage StoreImage1">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage1, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
-									<Panel id="Discount" class="DiscountPanel">
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
+								<Panel id="Discount" class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 									</Panel>
 							</Panel>
@@ -31,7 +36,12 @@
 						<Panel id="StoreImage2" class="CapsuleControllerSupportContainer StoreImage StoreImage2">
 							<Panel>								
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage2, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -47,7 +57,12 @@
 						<Panel id="StoreImage3" class="CapsuleControllerSupportContainer StoreImage StoreImage3">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage3, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>		
@@ -63,7 +78,12 @@
 						<Panel id="StoreImage4" class="CapsuleControllerSupportContainer StoreImage StoreImage4">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage4, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -79,7 +99,12 @@
 						<Panel id="StoreImage5" class="CapsuleControllerSupportContainer StoreImage StoreImage5" >
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage5, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -95,7 +120,12 @@
 						<Panel id="StoreImage6" class="CapsuleControllerSupportContainer StoreImage StoreImage6">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage6, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -111,7 +141,12 @@
 						<Panel id="StoreImage7" class="CapsuleControllerSupportContainer StoreImage StoreImage7">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage7, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -127,7 +162,12 @@
 						<Panel id="StoreImage8" class="CapsuleControllerSupportContainer StoreImage StoreImage8">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage8, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -143,7 +183,12 @@
 						<Panel id="StoreImage9" class="CapsuleControllerSupportContainer StoreImage StoreImage9">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage9, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -159,7 +204,12 @@
 						<Panel id="StoreImage10" class="CapsuleControllerSupportContainer StoreImage StoreImage10">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage10, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -175,7 +225,12 @@
 						<Panel id="StoreImage11" class="CapsuleControllerSupportContainer StoreImage StoreImage11">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage11, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -191,7 +246,12 @@
 						<Panel id="StoreImage12" class="CapsuleControllerSupportContainer StoreImage StoreImage12">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage12, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -207,7 +267,12 @@
 						<Panel id="StoreImage13" class="CapsuleControllerSupportContainer StoreImage StoreImage13">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage13, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -223,7 +288,12 @@
 						<Panel id="StoreImage14" class="CapsuleControllerSupportContainer StoreImage StoreImage14">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage14, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -239,7 +309,12 @@
 						<Panel id="StoreImage15" class="CapsuleControllerSupportContainer StoreImage StoreImage15">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage15, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>
@@ -255,7 +330,12 @@
 						<Panel id="StoreImage16" class="CapsuleControllerSupportContainer StoreImage StoreImage16">
 							<Panel>
 								<Image id="ActualStoreImage" class="ActualStoreImage" onload="AddStyle( StoreImage16, FeaturedImageLoaded );" mousecanactivate="ifparentfocused(FeaturedCapsules)" />
-								<Panel class="CapsuleControllerSupport" />
+								<Panel id="PlatformSupport">
+									<Panel class="WindowsSupport" />
+									<Panel class="MacSupport" />
+									<Panel class="SteamOSSupport" />
+									<Panel class="CapsuleControllerSupport" />
+								</Panel>
 								<Panel class="DiscountPanel">
 										<Label id="StoreImageDiscount" text="#Store_FeaturedDiscount" />
 								</Panel>

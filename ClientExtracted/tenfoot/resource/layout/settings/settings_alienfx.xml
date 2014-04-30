@@ -21,27 +21,27 @@
 						<Image id="Alien" src="file://{images}/settings/alienfx_alien.png" />
 						<Panel class="colorwrapper">
 							<Panel class="colorregion" childfocusonhover="true">
-								<Button id="#cccccc" onactivate="SetColor();" style="background-color: #ccccccff;" />
-								<Button id="#685e95" onactivate="SetColor();" style="background-color: #685e95ff;" />
-								<Button id="#473255" onactivate="SetColor();" style="background-color: #473255ff;" />
-								<Button id="#622e4f" onactivate="SetColor();" style="background-color: #622e4fff;" />
-								<Button id="#702447" onactivate="SetColor();" style="background-color: #702447ff;" />
-								<Button id="#7e0a38" onactivate="SetColor();" style="background-color: #7e0a38ff;" />
-								<Button id="#78010a" onactivate="SetColor();" style="background-color: #79010aff;" />
-								<Button id="#7b280a" onactivate="SetColor();" style="background-color: #7b280aff;" />
-								<Button id="#7a450c" onactivate="SetColor();" style="background-color: #7a450cff;" />
-								<Button id="#797912" onactivate="SetColor();" style="background-color: #797912ff;" />
-								<Button id="#728015" onactivate="SetColor();" style="background-color: #728015ff;" />
-								<Button id="#59771f" onactivate="SetColor();" style="background-color: #59771fff;" />
-								<Button id="#416f25" onactivate="SetColor();" style="background-color: #416f25ff;" />
-								<Button id="#21682a" onactivate="SetColor();" style="background-color: #21682aff;" />
-								<Button id="#2d6b28" onactivate="SetColor();" style="background-color: #2d6b28ff;" />
-								<Button id="#3c704a" onactivate="SetColor();" style="background-color: #3c704aff;" />
-								<Button id="#35757d" onactivate="SetColor();" style="background-color: #35757dff;" />
-								<Button id="#215a7a" onactivate="SetColor();" style="background-color: #215a7aff;" />
-								<Button id="#2e3c5f" onactivate="SetColor();" style="background-color: #2e3c5fff;" />
-								<Button id="#313257" onactivate="SetColor();" style="background-color: #313257ff;" />
-								<Button id="#030003" onactivate="SetColor();" style="background-color: #030003ff;" />
+								<Button id="#ffffff" onactivate="SetColor();" style="background-color: #b8b8b8ff;" />
+								<Button id="#0000f0" onactivate="SetColor();" style="background-color: #0000adff;" />
+								<Button id="#0060f0" onactivate="SetColor();" style="background-color: #0045adff;" />
+								<Button id="#00a0f0" onactivate="SetColor();" style="background-color: #0074adff;" />
+								<Button id="#00f0f0" onactivate="SetColor();" style="background-color: #00adadff;" />
+								<Button id="#46f091" onactivate="SetColor();" style="background-color: #33ad69ff;" />
+								<Button id="#00f055" onactivate="SetColor();" style="background-color: #00ad3dff;" />
+								<Button id="#00f000" onactivate="SetColor();" style="background-color: #00ad00ff;" />
+								<Button id="#64f523" onactivate="SetColor();" style="background-color: #48b119ff;" />
+								<Button id="#a0f000" onactivate="SetColor();" style="background-color: #74ad00ff;" />
+								<Button id="#d0f000" onactivate="SetColor();" style="background-color: #96ad00ff;" />
+								<Button id="#f0e000" onactivate="SetColor();" style="background-color: #ada200ff;" />
+								<Button id="#f08000" onactivate="SetColor();" style="background-color: #ad5d00ff;" />
+								<Button id="#f05000" onactivate="SetColor();" style="background-color: #ad3a00ff;" />
+								<Button id="#f00000" onactivate="SetColor();" style="background-color: #ad0000ff;" />
+								<Button id="#f00070" onactivate="SetColor();" style="background-color: #ad0051ff;" />
+								<Button id="#f000b0" onactivate="SetColor();" style="background-color: #ad007fff;" />
+								<Button id="#f000f0" onactivate="SetColor();" style="background-color: #ad00adff;" />
+								<Button id="#9000f0" onactivate="SetColor();" style="background-color: #6800adff;" />
+								<Button id="#6400f0" onactivate="SetColor();" style="background-color: #4800adff;" />
+								<Button id="#000000" onactivate="SetColor();" style="background-color: #000000ff;" />
 							</Panel>
 							<Panel class="colorborderwrapper" hittest="false">
 								<Panel class="colorborder" />
@@ -53,27 +53,27 @@
 						<Image id="Steam" src="file://{images}/settings/alienfx_steam.png" />
 						<Panel class="colorwrapper">
 							<Panel class="colorregion" childfocusonhover="true">
-								<Button id="#cccccc" onactivate="SetColor();" style="background-color: #ccccccff;" />
-								<Button id="#685e95" onactivate="SetColor();" style="background-color: #685e95ff;" />
-								<Button id="#473255" onactivate="SetColor();" style="background-color: #473255ff;" />
-								<Button id="#622e4f" onactivate="SetColor();" style="background-color: #622e4fff;" />
-								<Button id="#702447" onactivate="SetColor();" style="background-color: #702447ff;" />
-								<Button id="#7e0a38" onactivate="SetColor();" style="background-color: #7e0a38ff;" />
-								<Button id="#78010a" onactivate="SetColor();" style="background-color: #79010aff;" />
-								<Button id="#7b280a" onactivate="SetColor();" style="background-color: #7b280aff;" />
-								<Button id="#7a450c" onactivate="SetColor();" style="background-color: #7a450cff;" />
-								<Button id="#797912" onactivate="SetColor();" style="background-color: #797912ff;" />
-								<Button id="#728015" onactivate="SetColor();" style="background-color: #728015ff;" />
-								<Button id="#59771f" onactivate="SetColor();" style="background-color: #59771fff;" />
-								<Button id="#416f25" onactivate="SetColor();" style="background-color: #416f25ff;" />
-								<Button id="#21682a" onactivate="SetColor();" style="background-color: #21682aff;" />
-								<Button id="#2d6b28" onactivate="SetColor();" style="background-color: #2d6b28ff;" />
-								<Button id="#3c704a" onactivate="SetColor();" style="background-color: #3c704aff;" />
-								<Button id="#35757d" onactivate="SetColor();" style="background-color: #35757dff;" />
-								<Button id="#215a7a" onactivate="SetColor();" style="background-color: #215a7aff;" />
-								<Button id="#2e3c5f" onactivate="SetColor();" style="background-color: #2e3c5fff;" />
-								<Button id="#313257" onactivate="SetColor();" style="background-color: #313257ff;" />
-								<Button id="#030003" onactivate="SetColor();" style="background-color: #030003ff;" />
+								<Button id="#ffffff" onactivate="SetColor();" style="background-color: #b8b8b8ff;" />
+								<Button id="#0000f0" onactivate="SetColor();" style="background-color: #0000adff;" />
+								<Button id="#0060f0" onactivate="SetColor();" style="background-color: #0045adff;" />
+								<Button id="#00a0f0" onactivate="SetColor();" style="background-color: #0074adff;" />
+								<Button id="#00f0f0" onactivate="SetColor();" style="background-color: #00adadff;" />
+								<Button id="#46f091" onactivate="SetColor();" style="background-color: #33ad69ff;" />
+								<Button id="#00f055" onactivate="SetColor();" style="background-color: #00ad3dff;" />
+								<Button id="#00f000" onactivate="SetColor();" style="background-color: #00ad00ff;" />
+								<Button id="#64f523" onactivate="SetColor();" style="background-color: #48b119ff;" />
+								<Button id="#a0f000" onactivate="SetColor();" style="background-color: #74ad00ff;" />
+								<Button id="#d0f000" onactivate="SetColor();" style="background-color: #96ad00ff;" />
+								<Button id="#f0e000" onactivate="SetColor();" style="background-color: #ada200ff;" />
+								<Button id="#f08000" onactivate="SetColor();" style="background-color: #ad5d00ff;" />
+								<Button id="#f05000" onactivate="SetColor();" style="background-color: #ad3a00ff;" />
+								<Button id="#f00000" onactivate="SetColor();" style="background-color: #ad0000ff;" />
+								<Button id="#f00070" onactivate="SetColor();" style="background-color: #ad0051ff;" />
+								<Button id="#f000b0" onactivate="SetColor();" style="background-color: #ad007fff;" />
+								<Button id="#f000f0" onactivate="SetColor();" style="background-color: #ad00adff;" />
+								<Button id="#9000f0" onactivate="SetColor();" style="background-color: #6800adff;" />
+								<Button id="#6400f0" onactivate="SetColor();" style="background-color: #4800adff;" />
+								<Button id="#000000" onactivate="SetColor();" style="background-color: #000000ff;" />
 							</Panel>
 							<Panel class="colorborderwrapper" hittest="false">
 								<Panel class="colorborder" />

@@ -98,7 +98,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 {
 	width: 800px;
 	height: 770px;
-	padding: 50px 40px 40px 40px;
+	padding: 50px 20px 40px 30px;
 	background-color: message_box_bg;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 	transform: translateX( 0px );
@@ -107,17 +107,98 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 
 	vertical-align: center;
 	horizontal-align: center;
-	flow-children: down;
+	flow-children: right;
 
 	border-width: 5px;
 	border-style: solid;
 	border-color: ui_common_control_border;
 }
 
-.FileSelectorBodyRegionWider
-{ 
-    width: 65%;
+.ShowPreview #FileSelectorBodyRegion, .ShowPreview .FileSelectorBodyRegion
+{
+	width: 1300px;
 }
+
+
+	
+#FileSelectorColumn, .FileSelectorColumn
+{
+	width: 800px;
+	height: 770px;
+	transform: translateX( 0px );
+	flow-children: down;
+}
+
+.VerticalRule
+{
+	visibility: collapse;
+}
+
+.ShowPreview .VerticalRule
+{
+	visibility: visible;
+	width: 4px;
+}
+
+.ShowPreview #FileSelectorColumn  , .ShowPreview .FileSelectorColumn
+{
+	width: 750px;
+	padding-left: 10px;
+	margin-right: 15px;
+	height: 770px;
+	transform: translateX( 0px );
+	flow-children: down;
+}
+
+
+#FileSelectorPreviewColumn, .FileSelectorPreviewColumn
+{
+	width: 420px;
+	height: 770px;
+	margin-left: 30px;
+	visibility: collapse;
+}
+
+.ShowPreview #FileSelectorPreviewColumn, .ShowPreview .FileSelectorPreviewColumn
+{
+	visibility: visible;
+}
+
+
+#PreviewLabel
+{
+	width: 100%;
+	font-size: 28px;
+	font-family: platformfont;
+	max-height: 130px;
+	color: tcstatictext;
+	margin-top: 10px;
+	text-align: center;
+	vertical-align: center;
+	horizontal-align: center;
+	visibility: visible;
+}
+
+.HasImagePreview #PreviewLabel
+{
+	visibility: collapse;
+}
+
+#PreviewImage
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+	vertical-align: center;
+	horizontal-align: center;
+	visibility: visible;
+}
+
+.HasImagePreview #PreviewImage
+{
+	visibility: visible;
+}
+
 
 .DaisyWheelVisible #FileSelectorBodyRegion, .DaisyWheelVisible .FileSelectorBodyRegion
 {
@@ -158,11 +239,11 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 #FileSelectorButtonTopRow Button
 {
 	flow-children: right;
-	margin-right: 10px;
-	padding: 4px 8px 4px 8px;
-	margin-top: 8px;
-	margin-bottom: 14px;
-	width: 10%;
+	margin-right: 8px;
+	margin-left: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90px;
 
 	color: detailsdatalabelfocus;
 
@@ -174,6 +255,20 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	transition-duration: 0.25s !immediate;
 	transition-timing-function: ease-in-out;
 }
+
+.UpFolder
+{
+	width: 46px;
+	height: 35px;
+	transform: translateX( 16px) translateY( 2px );
+	wash-color: none;
+}
+
+#FileSelectorButtonTopRow Button:focus .UpFolder
+{
+	wash-color: blue;	
+}
+
 
 #FileSelectorButtonTopRow Button Label
 {
@@ -240,7 +335,13 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	margin-right: 10px;
 }
 
-#GoBackButton Label, #NewFolderButton Label, #SelectButton Label,
+#FileSelectorButtonTopRow Button #GoBackButton
+{
+	background-image:  url("file://{images}/file_folder_up.png");
+}
+
+
+#NewFolderButton Label, #SelectButton Label,
 {
 	horizontal-align: left;
 	vertical-align: center;
@@ -385,14 +486,14 @@ FileSelectorEntry:Focus Image
 
 DropDownMenu.DropDownMenuVisible
 {
-	width: 700px;
+	width: 620px;
 	max-height: 376px;
 	z-index: msgbox_contextmenu_zindex;
 }
 
 #FileSelectorLocationDropDown
 {
-	width: 700px;
+	width: 620px;
 	z-index: 1000;
 }
 
@@ -435,4 +536,9 @@ DropDownMenu Label
 	transition-timing-function: linear;
 
 	opacity: 0.0;
+}
+
+.ShowPreview #FileSelectorBodyRegion #FileSelectorLocationDropDown
+{
+	width: 620px;
 }

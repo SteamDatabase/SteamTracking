@@ -293,6 +293,89 @@ MusicControlTransport
 	visibility: visible;
 }
 
+
+#RemotePlayerEntriesContainer
+{
+	height: 420px;
+	width: 100%;
+	visibility: collapse;
+	flow-children: down;
+}
+
+#RemotePlayerEntriesContainer.PanelVisible
+{
+	visibility: visible;
+	flow-children: down;
+	padding-top: 10px;
+	
+	background-image: url( "file://{images}/music/empty_player_bg.png" );
+	background-size: 208px 243px;
+	background-position: 200px 130px;
+	background-repeat: no-repeat;
+	
+	overflow: clip scroll;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	margin-bottom: -10px;
+}
+
+#TrackContainer
+{
+	flow-children: right;
+	margin-left: 20px;
+}
+
+#RemotePlayerEntriesContainer .TrackCompositeTitle
+{
+	font-size: deffontsize;
+	line-height: 30px;
+	font-family: platformfont;
+	font-weight: bold;
+	text-overflow: clip;
+	max-height: 40px;
+	padding-right: 14px;
+	height: 32px;
+	width: 500px;
+	color: applabel;
+}
+
+#RemotePlayerEntriesContainer:focus .TrackCompositeTitle
+{
+	height: 32px;
+	color: applabelselected;
+}
+
+
+#RemotePlayerEntriesContainer .TrackTime
+{
+	visibility: visible;
+	horizontal-align: right;
+	
+	font-size: deffontsize;
+	line-height: 30px;
+	font-family: platformfont;
+	font-weight: bold;
+	text-overflow: clip;
+	max-height: 40px;
+	padding-right: 14px;
+	width: 120px;
+}
+
+#RemotePlayerEntriesContainer.IsPlaying .TrackTime
+{
+  horizontal-align: right;
+	visibility: visible;
+	color: messagecolorwash;
+}
+
+#RemotePlayerEntriesContainer.IsPlaying:focus .TrackTime
+{
+  horizontal-align: right;
+	visibility: visible;
+	color: applabelselected;
+}
+
+
 #MusicQueueEntriesList
 {
 	flow-children: down;
@@ -437,6 +520,9 @@ MusicControlQueueEntry.CurrentEntry Label
 }
 
 
+
+
+
 MusicControlQueueEntry.CurrentEntry .TrackTime
 {
 	width: 80px;
@@ -557,4 +643,29 @@ MusicControlQueueEntry.IsPlaying:focus .TrackTime
 {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+
+#RemotePlayerDropDown
+{
+	visibility: collapse;
+	flow-children: right;
+	vertical-align: center;
+	horizontal-align: center;
+	width: 100%;
+	height: 50px;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: -8px;
+}
+
+#RemotePlayerDropDown.RemotePlayerAvailable 
+{
+	visibility: visible;
+}
+
+#MusicQueueEntriesContainer.RemotePlayerAvailable
+{
+	height: 370px;
 }

@@ -434,8 +434,7 @@ Button:hover .ShortDesc
 	transition-duration: 0.3s;
 	opacity: 1.0;
 	visibility: visible;
-	margin-top: 3px;
-	
+
 	transition-property: opacity, max-width;
 
 }

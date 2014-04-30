@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library_recent_addshortcut.css" />
+	</styles>
+
+	<LibraryRecentAddShortcutDialog class="TenfootMsgBox" onmouseactivate="ActivateCancel()" >
+		<Panel id="AddShortcutStripWrapper" tabindex="auto" selectionpos="auto">
+            <AddShortcutPanel/>
+        </Panel>
+	</LibraryRecentAddShortcutDialog>
+</root>

@@ -628,6 +628,12 @@ TradeOffers
 	method	"internal"
 	filter	"trading"
 }
+ModeratorMessages
+{
+	url		"%community%/%mystuff%/moderatormessages"
+	method	"internal"
+	filter	"profile"
+}
 MarketEligibilityCheck
 {
 	url		"%community%/market/eligibilitycheck"
@@ -667,3 +673,22 @@ LinkFilter
 	url		"%communityhttps%/linkfilter/"
 	method	"internal"
 }
+
+SubscriptionExpired
+{
+	url "http://storefront.steampowered.com/v/index.php?gpdata=gift,expire,%p1%,%p2%"
+	method	"internal"
+}
+
+QuitGuestPass
+{
+	url "http://storefront.steampowered.com/v/index.php?gpdata=gift,onquit,%p1%,%p2%"
+	method	"internal"
+}
+
+GrantGuestPass
+{
+	url "http://storefront.steampowered.com/v/index.php?gpdata=gift,new,%p1%"
+	method	"internal"
+}
+

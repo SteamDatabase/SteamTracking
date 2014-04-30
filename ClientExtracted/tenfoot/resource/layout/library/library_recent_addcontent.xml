@@ -11,6 +11,9 @@
 			<Button onactivate="ActivateProduct()" >
 				<Label text="#Library_AddContent_Activate" />
 			</Button>
+            <Button onactivate="AddShortcut()" >
+                <Label text="#Library_AddShortcut" />
+            </Button>
 			<ParentalButton id="BrowseStoreButton" onactivate="BrowseStore()" >
 				<Label text="#Library_AddContent_Store" />
 			</ParentalButton>
