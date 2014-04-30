@@ -783,6 +783,11 @@ select.gray_bevel {
 	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_async_game_invite.png' );
 }
 
+/* re-uses comment icon */
+.header_notification_moderatormessage .notification_icon {
+	background-position: 0 0;
+}
+
 
 #header_parental_area {
 	float: left;

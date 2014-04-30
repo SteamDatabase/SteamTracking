@@ -708,9 +708,15 @@ function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, account
 
 	if ( g_rgForumTopics[ gidTopic ] )
 	{
+		var Topic = g_rgForumTopics[ gidTopic ];
+		var rgForumData = Topic.m_rgForumData;
+
 		elProfileLink.href = elLink.href;
-		elViewPostsLink.href = g_rgForumTopics[ gidTopic ].GetSearchURL( { author: accountIDTarget } );
-		var rgForumData = g_rgForumTopics[ gidTopic ].m_rgForumData;
+
+		if ( rgForumData.is_public )
+			elViewPostsLink.href = elProfileLink.href + '/posthistory/';
+		else
+			elViewPostsLink.href = Topic.GetSearchURL( { author: accountIDTarget } );
 
 		if ( elBanUserLink )
 		{
