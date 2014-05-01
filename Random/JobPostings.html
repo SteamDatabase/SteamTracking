@@ -1,29 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Valve</title>
-<link rel="shortcut icon" href="../images/favicon.ico" />
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/prototype-1.6.0.2.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Valve</title>
+	<link rel="shortcut icon" href="../images/favicon.ico" />
+	<script type="text/javascript" src="http://www.valvesoftware.com/javascript/prototype-1.6.0.2.js"></script>
 <script type="text/javascript" src="http://www.valvesoftware.com/javascript/scriptaculous/scriptaculous.js?load=effects"></script>
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/valvesoftware.js"></script><link rel="stylesheet" type="text/css" href="../main_v2.css" />
+<script type="text/javascript" src="http://www.valvesoftware.com/javascript/valvesoftware.js"></script>	<link rel="stylesheet" type="text/css" href="../main_v2.css" />
 
-<script type="text/javascript">
-	function ShowApplication( reqname, reqid )
-	{
-		// Fade out the job decription and fade in the form
-		$('desc_' + reqid ).fade( {duration: .3, to: 0});
-		$('application_title').innerHTML = reqname;
-		$('error_container').innerHTML = "";
-		$('fix_errors').innerHTML = "";
-		$('name').value = "";
-		$('email').value = "";
-		$('reqid').value = reqid;
-		$('email_form_container').appear( {duration: .3, to: 1});
-	}
-</script>
+	<script type="text/javascript">
+		function ShowApplication( reqname, reqid, postreq )
+		{
+			// Fade out the job decription and fade in the form
+			$('desc_' + reqid ).fade( {duration: .3, to: 0} );
+			$('application_title').innerHTML = reqname;
+			$('error_container').innerHTML = "";
+			$('fix_errors').innerHTML = "";
+			$('name').value = "";
+			$('email').value = "";
+			$('reqid').value = postreq;
+			$('email_form_container').appear( {duration: .3, to: 1} );
+		}
+	</script>
 
-		<script type="text/javascript">
+	
+			<script type="text/javascript">
 			// hide all of the pop up job description divs
 			Event.observe(window, 'load', function() {
 			   $$('div.job_position_description').invoke('hide');
@@ -235,14 +236,11 @@
 	
 	<div class='main_content'>	
 		<div id='job_positions'>
-									
-					<div><h3>Check out a few of our job openings:</h3></div>
+							<div><h3>Check out a few of our job openings:</h3></div>
+								<div class='left_col_text'>
 					
-
-					
-									<div class='left_col_text'>
-					<!-- 3D Character Artist -->
-<div class='job_position_container' id='3d_character_artist'>	
+<!-- 3D Character Artist -->
+<div class='job_position_container' id='3d_character_artist'>
 	<div class='job_position_title'>3D Character Artist</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>3D Character Artist</div><div class='close_popup'></div>
@@ -271,12 +269,9 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:76689@valvesoftware.hrmdirect.com'>Apply for this position</a> ></p>
 	</div>
-</div>	
-					
-				
-			
+</div>
 <!-- Artist -->
-<div class='job_position_container' id='artist'>	
+<div class='job_position_container' id='artist'>
 	<div class='job_position_title'>Artist</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Artist</div><div class='close_popup'></div>
@@ -296,111 +291,11 @@
 			<li>Communication skills that allow you to describe your process maturely and succinctly</li>
 			<li>Ability to change gears quickly when needed</li>
 		</ul>
-		<p><a class='apply_link' href='mailto:65097@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>	
+		<p><a class='apply_link' href='mailto:65097@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
-				
-<!-- Attorney -->
-<!--
-<div class='job_position_container' id='attorney'>	
-					<div class='job_position_title'>Attorney</div>
-					<div class='job_position_description'>
-						<div class='job_position_title_active'>Attorney</div><div class='close_popup'></div>
-						<div class='job_description_intro'>
-							<p>We seek an experienced attorney who can help chart Valve’s course through the international waters of entertainment, technology, and e-commerce.   The successful candidate will be able to license software, review marketing programs, secure rights from actors, handle intellectual property disputes, accommodate regulatory requirements in local jurisdictions, negotiate and draft commercial agreements, and counsel colleagues about product development decisions.  Beyond this core skill set, the lawyer must be versatile enough to solve a wide range of legal and business problems for Valve, its customers, and its business partners, and independent enough to operate without direct supervision.</p>
-						</div>
-						<div class='list_title' >Duties:</div>
-						<ul>
-							<li>Negotiate and document agreements with software, hardware, and telecom suppliers.</li>
-							<li>Participate in product decisions about intellectual property, promotions, and privacy.</li>
-							<li>Manage and resolve disputes over contracts, intellectual property, and regulated activities.</li>
-							<li>Advise on employment, real estate, corporate law, and other legal matters involved in running an international technology business.</li>
-						</ul>
-						<div class='list_title' >Requirements:</div>
-						<ul>
-							<li>J.D. or foreign equivalent</li>
-							<li>At least five years’ experience practicing technology and business law in the United States; in-house experience desired but not required</li>
-							<li>License to practice law in one or more U.S. states, or eligibility for registration as foreign in-house counsel under Washington rules</li>
-						</ul>
-						<p><a class='apply_link' href='mailto:76333-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>	
-					</div>
-</div>	
--->
-
-<!-- Bilingual tech support -->
-<!--
-<div class='job_position_container' id='bilingual_support_representative'>	
-					<div class='job_position_title'>Bilingual Community Ambassador</div>
-					<div class='job_position_description'>
-						<div class='job_position_title_active'>Bilingual Community Ambassador</div><div class='close_popup'></div>
-						<div class='job_description_intro'>
-							<p>Ensuring a smooth experience for our users is a core competency at Valve and we are seeking the best and the brightest to join our team. As a member of Steam Support you will be answering incoming questions from our users regarding a wide range of issues, both technical and non-technical, as well as communicating with other teams to seek resolution for user-facing concerns large and small. You will be able to work independently and prioritize your own workflow while at the same time communicating and contributing to the efforts of your peers. </p>
-						</div>
-						<div class='list_title' >Duties:</div>
-						<ul>
-							<li>Answer customer questions via e-mail and forums</li>
-							<li>Research and report on gaming trends and community feedback </li>
-							<li>Interface with developers to relay information and address common concerns</li>
-							<li>Translate a variety of materials such as game descriptions, support texts, and press releases</li>
-							<li>Collaborate with community translators and localization moderators on the Steam Translation Server</li>
-							<li>Playtest Valve games before release to confirm the quality of the localization</li>
-						</ul>
-						<div class='list_title' >Requirements:</div>
-						<ul>
-							<li>Written and spoken fluency, as well as the ability to touch type quickly, in both English and your native language</li>
-							<li>Previous customer-facing experience, preferably in the video game industry </li>
-							<li>Excellent written communication skills</li>
-							<li>Customer service-oriented, approachable, and professional attitude</li>
-							<li>Strong interest in PC gaming and familiarity with Steam</li>
-							<li>Residency and <a href="http://www.uscis.gov/portal/site/uscis/menuitem.eb1d4c2a3e5b9ac89243c6a7543f6d1a/?vgnextoid=a39e901bf9873210VgnVCM100000082ca60aRCRD&vgnextchannel=a39e901bf9873210VgnVCM100000082ca60aRCRD" target="_blank">authorization to work</a> in the United States</li>
-							<li>A great sense of humor</li>
-						</ul>
-						
-						<p><a class='apply_link' href='mailto:65033-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position></a></p>			
-					</div>
-</div>	
--->
-				
-
-<!-- Customer Support Representative -->
-<!--
-<div class='job_position_container' id='customer_support_representative'>	
-					<div class='job_position_title'>Customer Support Representative</div>
-					<div class='job_position_description'>
-						<div class='job_position_title_active'>Customer Support Representative</div><div class='close_popup'></div>
-						<div class='job_description_intro'>
-							<p>Customer Support is a core competency at Valve and we are seeking the best and the brightest to join our team. Our Customer Support reps answer questions from our users on a wide range of issues, both technical and non-technical. We’re looking for smart, personable people who can work independently and prioritize their own workflow while at the same time communicating and contributing to the whole Support team.</p>
-						</div>
-						<div class='list_title' >Duties:</div>
-						<ul>
-							<li>Answer customer questions via e-mail and in our forums.</li>
-							<li>Research and report on gaming trends and community feedback.</li>
-							<li>Interface with developers to resolve common issues.</li>
-						</ul>
-						<div class='list_title' >Requirements:</div>
-						<ul>
-							<li>Broad range of previous customer-facing experience, preferably in the video gaming or consumer products industry </li>
-							<li>Excellent written communication skills </li>
-							<li>Customer service-oriented personality with approachable, professional attitude</li>
-							<li>Strong interest in PC gaming and a familiarity with Steam</li>
-							<li>A great sense of humor</li>
-						</ul>
-						<div class='list_title' >Preferences:</div>
-						<ul>
-							<li>Previous experience using a trouble ticketing system or CRM application</li>
-							<li>Experience with troubleshooting PC or Mac problems</li>
-							<li>Familiarity with various networking technologies</li>
-							<li>Knowledge of HTML, PHP, C++, or other programming languages</li>
-							<li>Residents of the Puget Sound region</li>
-						</ul>
-						<p><a class='apply_link' href='mailto:69797-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position (US) ></a></p>
-					</div>
-</div>	
--->
-
-				
+</div>
 <!-- Economist -->
-<div class='job_position_container' id='economist'>	
+<div class='job_position_container' id='economist'>
 	<div class='job_position_title'>Economist</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Economist</div><div class='close_popup'></div>
@@ -434,13 +329,12 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:76690@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
-				
+</div>
 
-				
+
 <!-- Hardware Engineer - Electrical Engineer -->
 
-<div class='job_position_container' id='electronic_engineer'>	
+<div class='job_position_container' id='electronic_engineer'>
 	<div class='job_position_title'>Hardware&#151;Electrical Engineer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Hardware&#151;Electrical Engineer</div><div class='close_popup'></div>
@@ -488,12 +382,12 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:86914@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
-				
+
 <!-- Hardware Engineer - Mechanical Engineer -->
 
-<div class='job_position_container' id='mechanical_engineer'>	
+<div class='job_position_container' id='mechanical_engineer'>
 	<div class='job_position_title'>Hardware&#151;Mechanical Engineer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Hardware&#151;Mechanical Engineer</div><div class='close_popup'></div>
@@ -525,15 +419,15 @@
 			<li>User interface and ergonomics testing</li>
 			<li>Failure analysis and longevity testing</li>
 			<li>Industrial design for consumer electronics</li>
-			
+
 		</ul>
 		<p><a class='apply_link' href='mailto:77328@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 
 <!-- Industrial Designer -->
-<div class='job_position_container' id='motion_designer'>	
+<div class='job_position_container' id='industrial_designer'>
 	<div class='job_position_title'>Industrial Designer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Industrial Designer</div><div class='close_popup'></div>
@@ -543,9 +437,9 @@
 			<p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship products, we create and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.</p>
 
 			<p>Valve is traditionally a software company. Open platforms like the PC and Mac are important to us, as they enable us and our partners to have a robust and direct relationship with customers. We’re frustrated by the lack of innovation in the computer hardware space though, so we’re jumping in. Even basic input, the keyboard and mouse, haven’t really changed in any meaningful way over the years. There’s a real void in the marketplace, and opportunities to create compelling user experiences are being overlooked.</p>
-			
+
 			<p>At Valve, our design process really gets going once products are in customers’ hands. Our best work is the result of an ongoing dialog with customers. Through years of shipping software as a service through Steam, our digital distribution platform, this has become fundamental to the way we create great products. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? </p>
-			
+
 			<p>Do you prefer to define the work that you pursue, rather than simply following a vision that’s been set for you? If you’re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can’t wait to see where you’ll take us.</p>
 
 		</div>
@@ -559,17 +453,18 @@
 			<li>Confidence with 2D and 3D design visualization tools</li>
 			<li>Effective, articulate design communication and decision-making skills</li>
 		</ul>
-	
+
 		<div class='job_description_intro'>
 			<p>Please include with your application an online portfolio of work which conveys your capabilities.</p>
 		</div>
 
 		<p><a class='apply_link' href='mailto:93003@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
-<!-- User Experience Designer -->				
-<div class='job_position_container' id='user_experience_designer'>	
+
+<!-- User Experience Designer -->
+<div class='job_position_container' id='user_experience_designer'>
 	<div class='job_position_title'>Interaction Designer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Interaction Designer</div><div class='close_popup'></div>
@@ -584,7 +479,7 @@
 
 
 		</div>
-		
+
 		<div class='list_title' >Requirements:</div>
 		<ul>
 			<li>BS/BA/BFA degree (or equivalent) in graphic, industrial, or interaction design (or equivalent)</li>
@@ -597,16 +492,16 @@
 			<li>An online portfolio of work which conveys your capabilities</li>
 		</ul>
 
-		
+
 		<div class='job_description_intro'>
 			<p>Please include with your application an online portfolio of work which conveys your capabilities.</p>
 		</div>
 		<p><a class='apply_link' href='mailto:65036-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>		
-
+</div>
+	
 <!-- Level Designer -->
-<div class='job_position_container' id='level_designer'>	
+<div class='job_position_container' id='level_designer'>
 	<div class='job_position_title'>Level Designer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Level Designer</div><div class='close_popup'></div>
@@ -632,10 +527,11 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:70718@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>					
+</div>
 				
+
 <!-- Motion Designer -->
-<div class='job_position_container' id='motion_designer'>	
+<div class='job_position_container' id='motion_designer'>
 	<div class='job_position_title'>Motion Designer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Motion Designer</div><div class='close_popup'></div>
@@ -643,11 +539,11 @@
 			<p>As a Motion Designer at Valve, you will join a world-class group of software engineers, artists, writers, animators and designers who are continually creating and shipping world-class social entertainment experiences. We’re hoping to add your expertise in visual communication, animation, user experience, and motion design to our team. </p>
 
 			<p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship products, we define and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.</p>
-			
+
 			<p>At Valve, our design process really gets going once products are in customers’ hands. Our best work is the result of an ongoing dialog with customers. This is fundamental to the way we create great products. Through years of shipping software as a service through Steam, our digital distribution platform, we’ve learned to include our customers in the entirety of the design process. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? </p>
-			
+
 			<p>Do you prefer to define the work that you pursue, rather than simply following a vision that’s been set for you? If you’re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can’t wait to see where you’ll take us.</p>
-			
+
 
 		</div>
 		<div class='list_title' >Requirements:</div>
@@ -661,14 +557,14 @@
 			<li>Effective, articulate design communication and decision-making skills</li>
 			<li>An online portfolio of work which conveys your capabilities</li>
 		</ul>
-	
+
 		<div class='job_description_intro'>
 			<p>Please include with your application an online portfolio of work which conveys your capabilities.</p>
 		</div>
 
 		<p><a class='apply_link' href='mailto:76704@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 <!-- Network/Systems Engineer -->
 <div class='job_position_container' id='network_engineer'>
@@ -724,11 +620,10 @@
 
 		<p><a class='apply_link' href='mailto:87014@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
-				
-				
+</div>
+
 <!-- Psychologist -->
-<div class='job_position_container' id='psychologist'>	
+<div class='job_position_container' id='psychologist'>
 	<div class='job_position_title'>Psychologist (Research/Experimental)</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Research/Experimental Psychologist</div><div class='close_popup'></div>
@@ -749,7 +644,7 @@
 			<li>Graduate degree in Psychology (or equivalent) field</li>
 			<li>Advanced knowledge of statistics</li>
 			<li>Familiarity with one or more of the following pieces of data analysis software: SPSS, Systat, Matlab, R, (or equivalent)</li>
-			<li>Four years experience with: 
+			<li>Four years experience with:
 				<ul class='sub_list'>
 					<li>Experimental design/research methods</li>
 					<li>Relevant research in cognitive, social, human factors, and related disciplines in psychology</li>
@@ -764,9 +659,10 @@
 	</div>
 </div>
 
-		
+
+
 <!-- Programmer - Anti-Cheat Engineer -->
-<div class='job_position_container' id='anti-cheat_engineer'>	
+<div class='job_position_container' id='anti-cheat_engineer'>
 	<div class='job_position_title'>Software Engineer&#151;Anti-Cheat</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Software Engineer&#151;Anti-Cheat</div><div class='close_popup'></div>
@@ -793,14 +689,14 @@
 				</ul>
 			</li>
 		</ul>
-		
+
 		<p><a class='apply_link' href='mailto:65031-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position></a></p>
 	</div>
 </div>
 
-				
+
 <!-- Software Engineer - Payment Systems -->
-<div class='job_position_container' id='software_engineer_payment_systems'>	
+<div class='job_position_container' id='software_engineer_payment_systems'>
 	<div class='job_position_title'>Software Engineer&#151;Payment Systems</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Software Engineer&#151;Payment Systems</div><div class='close_popup'></div>
@@ -826,7 +722,7 @@
 			<li>Five years experience with many or all of these aspects of database implementation in Microsoft SQL Server, MySQL, or both:
 				<ul class='sub_list'>
 					<li>SQL application development in PHP, ASP, C#, or C++</li>
-					<li>Working knowledge of front-end technologies such as HTML, CSS, and Javascript</li>
+<li>Working knowledge of front-end technologies such as HTML, CSS, and Javascript</li>
 					<li>Expert-level debugging and profiling skills, both at the application and systems level</li>
 					<li>Outstanding written and verbal communications skills, with ability to explain technical design, concepts, and risks to both developers and non-developers</li>
 					<li>Track record of delivering high-impact, complex projects on time with extremely low defect rates</li>
@@ -835,66 +731,20 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:70352-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
-
-
-
-
-
-					</div> <!-- end left_col div -->
-					<div class='right_col_text'>
-						
-<!-- Programmer - Firmware developer -->
-<!--
-<div class='job_position_container' id='firmware_developer'>	
-	<div class='job_position_title'>Software Engineer&#151;Firmware</div>
-	<div class='job_position_description'>
-		<div class='job_position_title_active'>Software Engineer&#151;Firmware</div><div class='close_popup'></div>
-		<div class='job_description_intro'>
-			<p>Do you like programming directly to the bare metal? If so, as a Valve firmware engineer you will write the code that brings all kinds of new devices to life. Your expertise in writing firmware that communicates via various protocols will let players interact with their games in ways they’ve never experienced before. By efficiently communicating between PC and hardware, the microcontroller code you write will be the backbone of various input and output devices.</p>
-		</div>
-		<div class='list_title' >Duties:</div>
-		<ul>
-			<li>Research, design and develop specialized software systems for microcontrollers.</li>
-			<li>Implement software that communicates with various hardware peripherals via industry standard communication protocols including SPI, I<sup>2</sup>C, USB and serial.</li>
-			<li>Work directly with the hardware team on designing efficient electronic designs.</li>
-			<li>Write firmware to communicate with the PC using Bluetooth or other wireless protocols.</li>
-		</ul>
-		<div class='list_title' >Requirements:</div>
-		<ul>
-			<li>Four years experience with:
-				<ul class='sub_list'>
-					<li>C programming on embedded systems, C++ experience strongly desired</li>
-					<li>Industry standard communications protocols including SPI, I<sup>2</sup>C, USB.</li>
-					<li>ARM processor programming, including ARM7, ARM9, Cortex-M0 and Cortex-M3.</li>
-				</ul>
-			</li>
-									
-		</ul>
-		<div class='list_title' >Recommended:</div>
-		<ul>
-			<li>Knowledge of wireless protocols like Bluetooth or ZigBee.</li>
-			<li>Familiarity with schematic entry, electronics layout and circuit debugging.</li>
-			<li>Experience developing software systems for use in a micro kernel environment.</li>
-			<li>Familiarity with industry standard firmware development IDEs such as Keil uVision or IAR Workbench.</li>
-			<li>Familiarity with DSP programming concepts and signal processing algorithms.</li>
-		</ul>
-		
-		<p><a class='apply_link' href='mailto:85810@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
-	</div>
-</div>	
--->
-
+</div>
+				</div> <!-- end left_col div -->
+				<div class='right_col_text'>
+					
 <!-- Software Engineer Steam -->
-<div class='job_position_container' id='software_engineer_steam'>	
+<div class='job_position_container' id='software_engineer_steam'>
 	<div class='job_position_title'>Software Engineer&#151;Steam</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Senior Software Engineer&#151;Steam</div><div class='close_popup'></div>
 		<div class='job_description_intro'>
 			<p>As a senior software engineer on the Steam team, you'll be part of an extremely motivated and experienced group of people. You'll help drive Steam architecture and be a key coding contributor. You'll design and deliver new features to enable new game experiences, deliver all kinds of digital content to millions of customers, enhance community features, and drive revenue. Must be experienced in all phases of a project lifecycle and have great customer focus. May mentor other developers.</p>
-			
+
 		</div>
-		
+
 		<ul>
 			<li>Work as part of Valve's core development team, adding features and components to our best-of-breed computer games and pioneering e-commerce platform.</li>
 			<li>Regularly ship a variety of products from small internal tools to large-scale web applications used by millions of people per month.</li>
@@ -915,11 +765,11 @@
 
 		</ul>
 		<p><a class='apply_link' href='mailto:77143@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
-	</div>	
-</div>	
+	</div>
+</div>
 
 <!-- Steam Data Mining Engineer -->
-<div class='job_position_container' id='steam_data_mining_engineer'>	
+<div class='job_position_container' id='steam_data_mining_engineer'>
 	<div class='job_position_title'>Software Engineer&#151;Steam Data Mining</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Software Engineer&#151;Steam Data Mining</div><div class='close_popup'></div>
@@ -951,11 +801,11 @@
 			</li>
 		</ul>
 		<p><a class='apply_link' href='mailto:76708@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
-	</div>	
-</div>	
+	</div>
+</div>
 
 <!-- Steam Database Engineer -->
-<div class='job_position_container' id='steam_database_engineer'>	
+<div class='job_position_container' id='steam_database_engineer'>
 	<div class='job_position_title'>Software Engineer&#151;Steam Database</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Software Engineer&#151;Steam Database</div><div class='close_popup'></div>
@@ -980,29 +830,27 @@
 			<li>Five years experience with many or all of these aspects of database implementation in Microsoft SQL Server, MySQL, or both:
 				<ul class='sub_list'>
 					<li>SQL application development in PHP, ASP, C#, or C++</li>
-					<li>Database administration on high-availability, large-scale systems</li>
+<li>Database administration on high-availability, large-scale systems</li>
 					<li>Design and management of disk storage systems</li>
 					<li>Capacity planning and system integration</li>
 				</ul>
-			</li>			
+			</li>
 		</ul>
 		<p><a class='apply_link' href='mailto:71573@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
-
-
+</div>
 
 
 
 <!-- Software Engineer Web Applications -->
-<div class='job_position_container' id='software_engineer_web_applications'>	
+<div class='job_position_container' id='software_engineer_web_applications'>
 	<div class='job_position_title'>Software Engineer&#151;Web Applications</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Senior Software Engineer&#151;Web Applications</div><div class='close_popup'></div>
 		<div class='job_description_intro'>
 			<p>As a senior engineer in charge of web applications and tools, you'll be part of an extremely motivated and experienced group of people.</p>
 		</div>
-		
+
 		<ul>
 			<li>Work as part of Valve's core development team, adding web applications and components to our best-of-breed computer games and pioneering e-commerce platform.</li>
 			<li>Regularly ship a variety of products from small internal tools to large-scale web applications used by millions of people per month.</li>
@@ -1017,7 +865,7 @@
 			<li>Create measurable success</li>
 			<li>Create open and re-usable web application components</li>
 			<li>Be self-directed and be able to prioritize your own workload</li>
-			
+
 		</ul>
 		<ul>
 			<li>BS/BA degree in Computer Science or related field, or equivalent work experience.</li>
@@ -1035,14 +883,12 @@
 			<li>AJAX or similar</li>
 		</ul>
 		<p><a class='apply_link' href='mailto:133652@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
-	</div>	
-</div>	
-
-
+	</div>
+</div>
 
 
 <!-- Sound Designer -->
-<div class='job_position_container' id='sound_designer'>	
+<div class='job_position_container' id='sound_designer'>
 	<div class='job_position_title'>Sound Designer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Sound Designer</div><div class='close_popup'></div>
@@ -1072,12 +918,12 @@
 		<div style="font-weight:bold;">Please include a reel with your application that includes in-game examples of your audio design and implementation. Please outline the contributions you made to the project and which parts of the reel highlight the value you added to the piece.</div>
 		<p><a class='apply_link' href='mailto:76707@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 
 
 <!-- Statistician -->
-<div class='job_position_container' id="statistician">	
+<div class='job_position_container' id="statistician">
 	<div class='job_position_title'>Statistician</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Statistician</div><div class='close_popup'></div>
@@ -1109,14 +955,14 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:76709@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 
 
 
 
 <!-- Steam Steam Technical Account Manager -->
-<div class='job_position_container' id='steam_technical_account_manager'>	
+<div class='job_position_container' id='steam_technical_account_manager'>
 	<div class=' job_position_title'>Steam Technical Account Manager</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Steam Technical Account Manager</div><div class='close_popup'></div>
@@ -1147,10 +993,10 @@
 
 		<p><a class='apply_link' href='mailto:65039-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 <!-- System Engineer -->
-<div class='job_position_container' id="system_engineer">	
+<div class='job_position_container' id="system_engineer">
 	<div class='job_position_title'>System Engineer</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>System Engineer</div><div class='close_popup'></div>
@@ -1183,11 +1029,11 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:87014@valvesoftware.hrmdirect.com'>Apply for this position (US)></a></p>
 	</div>
-</div>	
+</div>
 
 
 <!-- Technical Artist -->
-<div class='job_position_container' id="technical_artist">	
+<div class='job_position_container' id="technical_artist">
 	<div class='job_position_title'>Technical Artist</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Technical Artist</div><div class='close_popup'></div>
@@ -1210,21 +1056,21 @@
 			<li>Ability to self-manage and make responsible decisions about time and project priorities</li>
 			<li>Strong collaboration skills</li>
 			<li>Bachelor’s or Master’s degree in computer science or engineering equivalent is a plus</li>
-			
-				
+
+
 		</ul>
 		<div class='job_description_intro'>
 			<p>Submit a portfolio or reel with your application as well as a detailed description of work found therein.</p>
 		</div>
-		
+
 		<p><a class='apply_link' href='mailto:71932@valvesoftware.hrmdirect.com'>Apply for this position ></a></p>
 	</div>
-</div>	
+</div>
 
 
 
 <!-- Web Engineer - Backend -->
-<div class='job_position_container' id='web_engineer_back_end'>	
+<div class='job_position_container' id='web_engineer_back_end'>
 	<div class='job_position_title'>Web Engineer&#151;Back End</div>
 	<div class='job_position_description'>
 		<div class='job_position_title_active'>Web Engineer&#151;Back End</div><div class='close_popup'></div>
@@ -1257,16 +1103,16 @@
 					<li>Database development experience with at least one of the following: Microsoft SQL Server, MySQL, or Oracle</li>
 					<li>Web API design experience with JSON and/or XML</li>
 					<li>Experience with presentation technologies like AJAX, or similar</li>
-				</ul>	
-			</li>	
+				</ul>
+			</li>
 		</ul>
 		<p><a class='apply_link' href='mailto:65035-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position></a></p>
 	</div>
-</div>	
+</div>
 
 
 <!-- Web Engineer - Front end -->
-<div class='job_position_container' id='web_engineer_front_end'>	
+<div class='job_position_container' id='web_engineer_front_end'>
 	<div class='job_position_title'>Web Engineer&#151;Front End</div>
 	<div class='job_position_description'>
 	<div class='job_position_title_active'>Web Engineer&#151;Front End</div><div class='close_popup'></div>
@@ -1305,110 +1151,111 @@
 		</ul>
 		<p><a class='apply_link' href='mailto:65035-CJB-0@valvesoftware.hrmdirect.com'>Apply for this position></a></p>
 	</div>
-</div>	
+</div>
+			<div class='job_position_container' id='have_a_better_idea'>
+				<div class='job_position_title'>Have a better idea?</div>
+				<div class='job_position_description' id='desc_27' >
+					<div class='job_position_title_active'>Have a better idea?</div><div class='close_popup'></div>
+					<div class='job_description_intro'><p>These job listings are incomplete.  If you don’t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.</p> <p>We don’t have junior-level positions or internships here, so we are looking for highly skilled folks who’ve been in their industry for a few years who can bring in knowledge and expertise we don’t currently possess.</p><div class='list_title' >Requirements:</div><ul><li>4+ years of professional experience</li><li>High-level expertise in your discipline</li></ul></div>					<p><a class='apply_link' onclick="ShowApplication('Have a better idea?', 27, 27 );">Apply for this position</a> ></p>
+				</div>
+			</div>
+						</div> <!-- end right_col div -->
+			
+			<div class="job_position_description" id="email_form_container" style="display:none;">
+				<div class='close_popup'></div>
+				<div class="job_application_title">Apply To: <div id="application_title" style="display:inline"></div></div>
+				<div id="emailFailed"></div>
+				<div id="fix_errors"></div>
+				<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
+				<form id="email_form" name="email_form" action="email_handler_new.php?posted=1" method="post" enctype="multipart/form-data" target="form_iframe">
+					<input type="hidden" name="process" id="process" value=1 />
+					<input type="hidden" name="reqid" id="reqid" />
 
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" class="" />
 
+					<label for="email">Email Address</label>
+					<input type="text" name="email" id="email" class="" />
 
-					</div> <!-- end right_col div -->
+					<label for="noFill"  tabindex=-2 style="position: absolute; right: 10000px;">Don't fill this out</label>
+					<input type="text" name="noFill" id="noFill" class="" tabindex=-2 style="position: absolute; right: 10000px;"/>
 
-						<div class='job_position_container' id='have_a_better_idea'>
-		<div class='job_position_title'>Have a better idea?</div>
-		<div class='job_position_description' id='desc_27' >
-			<div class='job_position_title_active'>Have a better idea?</div><div class='close_popup'></div>
-			<div class='job_description_intro'><p>These job listings are incomplete.  If you don’t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.</p> <p>We don’t have junior-level positions or internships here, so we are looking for highly skilled folks who’ve been in their industry for a few years who can bring in knowledge and expertise we don’t currently possess.</p><div class='list_title' >Requirements:</div><ul><li>4+ years of professional experience</li><li>High-level expertise in your discipline</li></ul></div>			<p><a class='apply_link' onclick="ShowApplication('Have a better idea?', 27 );">Apply for this position</a> ></p>
-		</div>
-	</div>
+					<label for="intro">Tell us a little about yourself. (You can also attach a cover letter below.)</label>
+					<textarea id="intro" name="intro" rows="10" cols="30"></textarea>
 
-									<div class="job_position_description" id="email_form_container" style="display:none;">
-						<div class='close_popup'></div>
-						<div class="job_application_title">Apply To: <div id="application_title" style="display:inline"></div></div>
-						<div id="emailFailed"></div>
-						<div id="fix_errors"></div>
-						<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
-						<form id="email_form" name="email_form" action="email_handler_new.php?posted=1" method="post" enctype="multipart/form-data" target="form_iframe">
-							<input type="hidden" name="process" id="process" value=1 />
-							<input type="hidden" name="reqid" id="reqid" />
+					<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf and .doc files)</label>
+					<input type="file" name="resume[]" multiple id="resume" class="" />
 
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" class="" />
+					<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;" />
 
-							<label for="email">Email Address</label>
-							<input type="text" name="email" id="email" class="" />
+				</form>
+			</div>
 
-							<label for="noFill"  tabindex=-2 style="position: absolute; right: 10000px;">Don't fill this out</label>
-							<input type="text" name="noFill" id="noFill" class="" tabindex=-2 style="position: absolute; right: 10000px;"/>
-
-							<label for="intro">Tell us a little about yourself. (You can also attach a cover letter below.)</label>
-							<textarea id="intro" name="intro" rows="10" cols="30"></textarea>
-
-							<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf and .doc files)</label>
-							<input type="file" name="resume[]" multiple id="resume" class="" />
-
-							<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;" />
-
-						</form>
-					</div>
-				
-					<div class="job_position_description" id="email_success_message" style="display:none;">
-						<div class="job_description_intro">
-							<div class='job_position_title_active'>We got it!</div><div class='close_popup'></div>
-							<p>Thank you for your interest in working at Valve.  </p>
-						</div>	
-					</div>
+			<div class="job_position_description" id="email_success_message" style="display:none;">
+				<div class="job_description_intro">
+					<div class='job_position_title_active'>We got it!</div><div class='close_popup'></div>
+					<p>Thank you for your interest in working at Valve.  </p>
+				</div>
+			</div>
 					
-					<iframe id="form_iframe" name="form_iframe"  style="display:none; height: 600px; width: 400px; background: green; position: absolute; top: 200px; left: -420px;"></iframe>
-					<script>
-					// js for form submission
-					
-					// check on submit, wait for iframe to load then check contents
-						var iframe = document.getElementById("form_iframe");
-						var submitButton = document.getElementById("submit");
-						Event.observe(submitButton, 'click', function(){
-							Event.observe(iframe, 'load', function() {
-								var result = '';
-								var errors = '';
+			<iframe id="form_iframe" name="form_iframe"  style="display:none; height: 600px; width: 400px; background: green; position: absolute; top: 200px; left: -420px;"></iframe>
 
-								// clear old errors 
-								if( document.getElementById('error_container') != "" ){
-									document.getElementById('error_container').innerHTML = "";
-								}
-								document.getElementById('fix_errors').innerHTML = "";
-								
-								temp = iframe.contentDocument || iframe.contentWindow.document;
-								result = temp.getElementById('response').innerHTML;
-								errors = temp.getElementById('errors').innerHTML;
+			<script>
+				// js for form submission
 
-								
-								if(result ==1){
-									// hide form
-									$('email_form_container').fade( {duration: .3, to: 0});
-									
-									// show success message!
-									$('email_success_message').appear( {duration: .3, to: 1});
-									
-									// clear fields & possible
-									$('email_form').reset();
-								}
-								else if(result==2){
-									// append error message
-									document.getElementById('emailFailed').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailFailed'>*Email failed.  Please try again later.</div>";
-								}
-								else{
-									// append error message
-									document.getElementById('emailFailed').innerHTML = "";
-									document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>*Please make sure all fields are filled out correctly.</div>";
-										
-									if( errors ){
-										document.getElementById('error_container').innerHTML = errors;
-									}
-								}
-								
-							});
-						});						
-						
-					</script>
-					
-								
+				// check on submit, wait for iframe to load then check contents
+				var iframe = document.getElementById("form_iframe");
+				var submitButton = document.getElementById("submit");
+				Event.observe(submitButton, 'click', function(){
+					Event.observe(iframe, 'load', function() {
+						var result = '';
+						var errors = '';
+
+						// clear old errors
+						if ( document.getElementById('error_container') != "" )
+						{
+							document.getElementById('error_container').innerHTML = "";
+						}
+						document.getElementById('fix_errors').innerHTML = "";
+
+						temp = iframe.contentDocument || iframe.contentWindow.document;
+						result = temp.getElementById('response').innerHTML;
+						errors = temp.getElementById('errors').innerHTML;
+
+
+						if ( result == 1 )
+						{
+							// hide form
+							$('email_form_container').fade( {duration: .3, to: 0});
+
+							// show success message!
+							$('email_success_message').appear( {duration: .3, to: 1});
+
+							// clear fields & possible
+							$('email_form').reset();
+						}
+						else if ( result == 2 )
+						{
+							// append error message
+							document.getElementById('emailFailed').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailFailed'>*Email failed.  Please try again later.</div>";
+						}
+						else
+						{
+							// append error message
+							document.getElementById('emailFailed').innerHTML = "";
+							document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>*Please make sure all fields are filled out correctly.</div>";
+
+							if ( errors )
+							{
+								document.getElementById('error_container').innerHTML = errors;
+							}
+						}
+
+					});
+				});
+
+			</script>
+
 			<div style='clear:both;'></div>
 		</div>	<!-- end job positions div -->	
 		<div style='clear:both; margin-top:20px;'></div>
