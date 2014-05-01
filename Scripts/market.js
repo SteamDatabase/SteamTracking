@@ -929,3 +929,116 @@ function HideAdvancedSearchOptions()
 	$J('#market_search_advanced_hide').hide();
 	$J('#market_search_advanced').hide();
 }
+
+var g_rgPreviousPopularData = null;
+
+function CreatePopularItemClosure( data, iLink )
+{
+	return function() {
+		// Don't do anything if none of the data changed
+		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_listings == g_rgPreviousPopularData[iLink].sell_listings && data.data[iLink].sell_price == g_rgPreviousPopularData[iLink].sell_price )
+		{
+			return;
+		}
+
+		var elOldLink = $J('#resultlink_' + iLink)
+		var elNewLink = $J(data.results_html[iLink]);
+		elOldLink.empty();
+		elOldLink.append( elNewLink.children() );
+
+		// The link destination can change
+		if ( elOldLink.attr("href") != elNewLink.attr("href") )
+		{
+			elOldLink.attr("href", elNewLink.attr("href") );
+		}
+
+		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
+		{
+			var elQuantity = elOldLink.find( '.market_listing_num_listings_qty' );
+			elQuantity.css( 'color', '#fff' );
+			elQuantity.animate({
+				color: "#828282"
+			}, 900 );
+		}
+
+		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
+		{
+			var elArrow = null;
+			var elPrice = elOldLink.find( '.market_table_value > span ' );
+
+			if ( data.data[iLink].sell_price > g_rgPreviousPopularData[iLink].sell_price )
+			{
+				elArrow = elOldLink.find( '.market_arrow_up' );
+			}
+			else
+			{
+				elArrow = elOldLink.find( '.market_arrow_down' );
+			}
+
+			var position = elPrice.position();
+			position.top -= elPrice.height();
+			position.left += elPrice.width() + 2;
+			elArrow.css( 'top', position.top );
+			elArrow.css( 'left', position.left );
+			elArrow.stop();
+			elArrow.show();
+			elArrow.fadeOut( 900 );
+		}
+	};
+}
+
+function v_shuffle( rgArray )
+{
+	for ( var i = 0; i < rgArray.length; i++ )
+	{
+		var newIdx = parseInt( Math.random() * ( rgArray.length - i ) + i );
+		if ( newIdx != i )
+		{
+			var tmp = rgArray[newIdx];
+			rgArray[newIdx] = rgArray[i];
+			rgArray[i] = tmp;
+		}
+	}
+
+	return rgArray;
+}
+
+function UpdateFrontPage()
+{
+	$J.ajax( {
+		url: 'http://steamcommunity.com/market/popular',
+		type: 'GET',
+		data: {
+			language: g_strLanguage,
+			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
+			count: g_nResultCount
+		}
+	} ).error( function ( ) {
+		setTimeout( UpdateFrontPage, 1000 );
+	} ).success( function( data ) {
+		var nMilliToWaitForRowUpdate = 0;
+
+		// Build a list of rows to be updated
+		var rgElems = [];
+		for ( var i = 0; i < data.results_html.length; i++ )
+		{
+			rgElems.push( i );
+		}
+
+		// Update those rows randomly
+		rgElems = v_shuffle( rgElems );
+
+		for ( var i = 0; i < rgElems.length; i++ )
+		{
+			setTimeout( CreatePopularItemClosure(data, rgElems[i]), nMilliToWaitForRowUpdate );
+			nMilliToWaitForRowUpdate += ( 1000 / data.results_html.length );
+		}
+
+		setTimeout(
+			function() {
+				g_rgPreviousPopularData = data.data;
+				UpdateFrontPage();
+			}, nMilliToWaitForRowUpdate
+		);
+	} );
+}
