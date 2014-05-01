@@ -930,6 +930,8 @@ function HideAdvancedSearchOptions()
 	$J('#market_search_advanced').hide();
 }
 
+var g_nMillisPopularRefresh = 2000;
+
 function CreatePopularItemClosure( data, iLink )
 {
 	return function() {
@@ -1038,7 +1040,7 @@ function UpdateFrontPage()
 			count: g_nResultCount
 		}
 	} ).error( function ( ) {
-		setTimeout( UpdateFrontPage, 1000 );
+		setTimeout( UpdateFrontPage, g_nMillisPopularRefresh );
 	} ).success( function( data ) {
 		var nMilliToWaitForRowUpdate = 0;
 
@@ -1055,7 +1057,7 @@ function UpdateFrontPage()
 		for ( var i = 0; i < rgElems.length; i++ )
 		{
 			setTimeout( CreatePopularItemClosure(data, rgElems[i]), nMilliToWaitForRowUpdate );
-			nMilliToWaitForRowUpdate += ( 1000 / data.results_html.length );
+			nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / data.results_html.length );
 		}
 
 		setTimeout(
