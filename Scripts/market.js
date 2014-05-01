@@ -930,29 +930,52 @@ function HideAdvancedSearchOptions()
 	$J('#market_search_advanced').hide();
 }
 
-var g_rgPreviousPopularData = null;
-
 function CreatePopularItemClosure( data, iLink )
 {
 	return function() {
+		var elOldLink = $J('#resultlink_' + iLink)
+
 		// Don't do anything if none of the data changed
-		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_listings == g_rgPreviousPopularData[iLink].sell_listings && data.data[iLink].sell_price == g_rgPreviousPopularData[iLink].sell_price )
+		if ( g_rgPreviousPopularData == null ||
+			( data.data[iLink].sell_listings == g_rgPreviousPopularData[iLink].sell_listings && data.data[iLink].sell_price == g_rgPreviousPopularData[iLink].sell_price && data.data[iLink].name == g_rgPreviousPopularData[iLink].name ) )
 		{
 			return;
 		}
 
-		var elOldLink = $J('#resultlink_' + iLink)
 		var elNewLink = $J(data.results_html[iLink]);
-		elOldLink.empty();
-		elOldLink.append( elNewLink.children() );
 
-		// The link destination can change
-		if ( elOldLink.attr("href") != elNewLink.attr("href") )
+		// If the item name changed, replace the whole row
+		if ( data.data[iLink].name != g_rgPreviousPopularData[iLink].name )
 		{
-			elOldLink.attr("href", elNewLink.attr("href") );
+			elOldLink.empty();
+			elOldLink.append( elNewLink.children() );
+
+			// The link destination can change
+			if ( elOldLink.attr("href") != elNewLink.attr("href") )
+			{
+				elOldLink.attr("href", elNewLink.attr("href") );
+			}
+		}
+		else
+		{
+			// Just update the number of listings and price
+			if ( data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
+			{
+				var elQuantity = elOldLink.find( '.market_listing_num_listings_qty' );
+				var elNewQuantity = elNewLink.find( '.market_listing_num_listings_qty' );
+				elQuantity.html( elNewQuantity.html() );
+			}
+
+			if ( data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
+			{
+				var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span ' );
+				var elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span ' );
+				elPrice.html( elNewPrice.html() );
+			}
 		}
 
-		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
+		// Apply some effects for values that changed
+		if ( data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
 		{
 			var elQuantity = elOldLink.find( '.market_listing_num_listings_qty' );
 			elQuantity.css( 'color', '#fff' );
@@ -961,10 +984,10 @@ function CreatePopularItemClosure( data, iLink )
 			}, 900 );
 		}
 
-		if ( g_rgPreviousPopularData != null && data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
+		if ( data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
 		{
 			var elArrow = null;
-			var elPrice = elOldLink.find( '.market_table_value > span ' );
+			var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span ' );
 
 			if ( data.data[iLink].sell_price > g_rgPreviousPopularData[iLink].sell_price )
 			{
