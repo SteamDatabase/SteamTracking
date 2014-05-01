@@ -1009,6 +1009,7 @@ function UpdateFrontPage()
 		url: 'http://steamcommunity.com/market/popular',
 		type: 'GET',
 		data: {
+			country: g_strCountryCode,
 			language: g_strLanguage,
 			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
 			count: g_nResultCount
