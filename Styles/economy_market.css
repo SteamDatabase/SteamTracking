@@ -371,6 +371,7 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_listing_their_price {
+	position: relative;
 	width: 90px;
 }
 
@@ -1005,4 +1006,26 @@ input.filter_search_box:focus {
 
 #market_action_popup {
 	z-index: 1000;
+}
+
+.market_arrow_up {
+	display: inline-block;
+	width: 11px;
+	height: 9px;
+	background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAYAAADkZNYtAAAAU0lEQVQY02P4//8/AxqWA+JFWMQZ0AXYgPjkfwioI6S49z8q8Mal2O8/JvgAxCroikHufPsfO7gKxDwwxcjuxAVWwxT3/icOVKB7EBvAGRp4FQMA8RFXcvhObVIAAAAASUVORK5CYII=);
+}
+
+.market_arrow_down {
+	display: inline-block;
+	width: 11px;
+	height: 9px;
+	background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAYAAADkZNYtAAAAS0lEQVQY02NgQAL/sQAGXICgYiC/4j9xoBemYTUBhSeBmA2mmAeIr+JQ+BaI5dCdowLEH7Ao9sPlQW+s7sQTInUY7iSgYRGGO4EAAD9z3N6SuTl0AAAAAElFTkSuQmCC);
+}
+
+.market_listing_their_price .market_arrow_up, .market_listing_their_price .market_arrow_down {
+	position: absolute;
+	bottom: 0.87em;
+	right: 2px;
 }
