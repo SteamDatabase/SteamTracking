@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.886592dfe238f5ccbfd4224c79df3edc7cdc036c.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.bb224223d68704f824405af05e68ba4457f9889a.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1557,6 +1557,36 @@
 				
 			},
 			{
+				"name": "weapon_knife_tactical",
+				"defindex": 509,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Huntsman Knife",
+				"item_description": "A knife designed for modern tactical uses, the blade is well suited for a range of both combat and utilitarian needs.  The unique Tanto point allows for maximum penetration through even the toughest of surfaces.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapons\/base_weapons\/weapon_knife_tactical",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Five Year Service Coin",
 				"defindex": 874,
 				"item_class": "collectible_item",
@@ -2959,29 +2989,6 @@
 				}
 			},
 			{
-				"name": "unusual_crate_item",
-				"defindex": 1207,
-				"item_class": "tool",
-				"item_type_name": "Tool",
-				"item_name": "★ Rare Special Item ★",
-				"proper_name": false,
-				"item_quality": 4,
-				"image_inventory": "econ\/weapons\/base_weapons\/weapon_smokegrenade",
-				"min_ilevel": 1,
-				"max_ilevel": 1,
-				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapons\/base_weapons\/weapon_smokegrenade.8746d3fec5a1041d61412295aee74c7d873ccacb.png",
-				"image_url_large": "",
-				"craft_class": "tool",
-				"craft_material_type": "tool",
-				"capabilities": {
-					"can_craft_mark": true,
-					"can_be_restored": true,
-					"strange_parts": true,
-					"paintable_unusual": true,
-					"autograph": true
-				}
-			},
-			{
 				"name": "Sticker",
 				"defindex": 1209,
 				"item_class": "tool",
@@ -3214,6 +3221,70 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "community_case_2",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Sticker Capsule 1 Key",
+				"defindex": 1304,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Community Sticker Capsule 1 Key",
+				"item_description": "This key opens the Community Sticker Capsule 1.\n\nA portion of the proceeds from the sale of this key will go to the sticker creators.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/sticker_crate_key_community01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/sticker_crate_key_community01.1301a32528f2f388b93f0d23a6ca23578bf99569.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "sticker_pack_community01_key",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Case Key 3",
+				"defindex": 1305,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "Huntsman Case Key ",
+				"item_description": "This key only opens Huntsman Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/tools\/crate_key_community_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/tools\/crate_key_community_3.37247b8634e99bd7061ed75e9b298cb031b24beb.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_3",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -3752,6 +3823,81 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 3
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_community01",
+				"defindex": 4016,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Community Sticker Capsule 1",
+				"item_description": "This capsule contains a single community-designed sticker. A portion of the proceeds is shared equally among the included creators.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_sticker_pack_community01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_sticker_pack_community01.86463c48a690c9df0853510aeb9f43275baa2d49.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "sticker_pack_community01_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 16
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_3",
+				"defindex": 4017,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Huntsman Weapon Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ\/weapon_cases\/crate_community_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/730\/icons\/econ\/weapon_cases\/crate_community_3.ce832a92f9fc329dc87d7a802374b918b07cdb84.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"paintable_unusual": true,
+					"autograph": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_3",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 17
 					}
 				]
 				
@@ -4970,6 +5116,28 @@
 				
 			},
 			{
+				"item_set": "set_bank",
+				"name": "The Bank Collection",
+				"items": [
+					"weapon_mp7",
+					"weapon_sawedoff",
+					"weapon_tec9",
+					"weapon_negev",
+					"weapon_sg556",
+					"weapon_mac10",
+					"weapon_ump45",
+					"weapon_glock",
+					"weapon_g3sg1",
+					"weapon_nova",
+					"weapon_deagle",
+					"weapon_galilar",
+					"weapon_cz75a",
+					"weapon_ak47",
+					"weapon_p250"
+				]
+				
+			},
+			{
 				"item_set": "set_bravo_i",
 				"name": "The Bravo Collection",
 				"items": [
@@ -5051,6 +5219,28 @@
 					"weapon_nova",
 					"weapon_awp",
 					"weapon_aug"
+				]
+				
+			},
+			{
+				"item_set": "set_community_3",
+				"name": "The Huntsman Collection",
+				"items": [
+					"weapon_tec9",
+					"weapon_ssg08",
+					"weapon_elite",
+					"weapon_galilar",
+					"weapon_p90",
+					"weapon_cz75a",
+					"weapon_aug",
+					"weapon_bizon",
+					"weapon_mac10",
+					"weapon_xm1014",
+					"weapon_m4a1_silencer",
+					"weapon_scar20",
+					"weapon_usp_silencer",
+					"weapon_ak47",
+					"weapon_m4a1"
 				]
 				
 			},
