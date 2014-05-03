@@ -931,6 +931,7 @@ function HideAdvancedSearchOptions()
 }
 
 var g_nMillisPopularRefresh = 2000;
+var g_bMarketWindowHidden = false;
 
 function CreatePopularItemClosure( data, iLink )
 {
@@ -1030,6 +1031,12 @@ function v_shuffle( rgArray )
 
 function UpdateFrontPage()
 {
+	if ( g_bMarketWindowHidden )
+	{
+		setTimeout( UpdateFrontPage, g_nMillisPopularRefresh );
+		return;
+	}
+
 	$J.ajax( {
 		url: 'http://steamcommunity.com/market/popular',
 		type: 'GET',
@@ -1042,29 +1049,40 @@ function UpdateFrontPage()
 	} ).error( function ( ) {
 		setTimeout( UpdateFrontPage, g_nMillisPopularRefresh );
 	} ).success( function( data ) {
-		var nMilliToWaitForRowUpdate = 0;
-
-		// Build a list of rows to be updated
-		var rgElems = [];
-		for ( var i = 0; i < data.results_html.length; i++ )
+		if ( data.stop )
 		{
-			rgElems.push( i );
+			return;
 		}
 
-		// Update those rows randomly
-		rgElems = v_shuffle( rgElems );
-
-		for ( var i = 0; i < rgElems.length; i++ )
+		if ( data.success )
 		{
-			setTimeout( CreatePopularItemClosure(data, rgElems[i]), nMilliToWaitForRowUpdate );
-			nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / data.results_html.length );
-		}
+			var nMilliToWaitForRowUpdate = 0;
 
-		setTimeout(
-			function() {
-				g_rgPreviousPopularData = data.data;
-				UpdateFrontPage();
-			}, nMilliToWaitForRowUpdate
-		);
+			// Build a list of rows to be updated
+			var rgElems = [];
+			for ( var i = 0; i < data.results_html.length; i++ )
+			{
+				rgElems.push( i );
+			}
+
+			// Update those rows randomly
+			rgElems = v_shuffle( rgElems );
+
+			for ( var i = 0; i < rgElems.length; i++ )
+			{
+				setTimeout( CreatePopularItemClosure(data, rgElems[i]), nMilliToWaitForRowUpdate );
+				nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / data.results_html.length );
+			}
+
+			setTimeout(
+				function() {
+					g_rgPreviousPopularData = data.data;
+					UpdateFrontPage();
+				}, nMilliToWaitForRowUpdate
+			);
+		}
 	} );
 }
+
+RegisterSteamOnWebPanelShownHandler( function() { g_bMarketWindowHidden = false; } );
+RegisterSteamOnWebPanelHiddenHandler( function() { g_bMarketWindowHidden = true; } );
