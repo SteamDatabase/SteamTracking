@@ -1,0 +1,137 @@
+
+.dmca_iconHolder
+{
+	background-image: url('http://cdn.steamcommunity.com/public/images//skin_1/iconholder_offline.jpg');
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: 0;
+	padding: 4px;
+	margin: 0;
+}
+
+.dmca_takedownnotice_status_bar
+{
+	background: #d19f3e;
+	height: 32px;
+	width: 627px;
+	font-size: 18px;
+	color: #523e18;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.dmca_takedownnotice_view_section_title
+{
+	font-size: 12px;
+	line-height: 30px;
+	text-transform:uppercase;
+	color: #529CDE;
+}
+
+.dmca_takedownnotice_view_section
+{
+}
+
+.dmca_takedownnotice_view_content_desc
+{
+	padding-top: 10px;
+}
+
+.dmca_takedownnotice_view_plaintiff
+{
+	float: left;
+	width: 300px;
+}
+
+.dmca_takedownnotice_view_defendant
+{
+	float: left;
+	width: 300px;
+}
+
+.dmca_takedownnotice_view_plaintiff_info
+{
+	line-height: 1.5em;
+}
+
+.dmca_takedownnotice_view_user_link a:hover
+{
+	text-decoration: underline;
+}
+
+.dmca_take_action
+{
+	background-color: #2f2f30;
+	padding: 16px;
+	margin-bottom: 15px;
+}
+
+.dmca_take_action_title
+{
+	color: #529CDE;
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+
+textarea.action_description
+{
+	height: 100px;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	width: 590px;
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+}
+
+.dmca_takedownnotice_action
+{
+	padding: 10px;
+	background-color: #2f2f30;
+	margin-bottom: 5px;
+}
+
+.dmca_takedownnotice_action_idx
+{
+	color: #ffffff;
+	float: left;
+	font-size: 1.25em;
+	padding-right: 10px;
+}
+
+.dmca_takedownnotice_action_content
+{
+	float: left;
+}
+
+.dmca_takedownnotice_action_date
+{
+	float: left;
+	font-size: 1.25em;
+	padding-right: 10px;
+}
+
+.dmca_takedownnotice_action_status
+{
+	padding-top: 4px;
+	float: left;
+	color: #d19f3e;
+}
+
+.dmca_takedownnotice_action_creator
+{
+	padding-top: 5px;
+}
+
+.dmca_takedownnotice_action_notes
+{
+	padding-top: 5px;
+	color: #aaaaaa;
+}

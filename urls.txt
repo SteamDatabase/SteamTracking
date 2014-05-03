@@ -24,6 +24,7 @@ Styles/chat.css|http://cdn.steamcommunity.com/public/css/skin_1/chat.css?_=*TIME
 Styles/communityhome.css|http://cdn.steamcommunity.com/public/css/skin_1/communityhome.css?_=*TIMENOW*
 Styles/discussions.css|http://cdn.steamcommunity.com/public/css/skin_1/discussions.css?_=*TIMENOW*
 Styles/dmca.css|http://cdn.steamcommunity.com/public/css/skin_1/dmca.css?_=*TIMENOW*
+Styles/dmca_view.css|http://cdn.steamcommunity.com/public/css/skin_1/dmca_view.css?_=*TIMENOW*
 Styles/economy.css|http://cdn.steamcommunity.com/public/css/skin_1/economy.css?_=*TIMENOW*
 Styles/economy_inventory.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_inventory.css?_=*TIMENOW*
 Styles/economy_market.css|http://cdn.steamcommunity.com/public/css/skin_1/economy_market.css?_=*TIMENOW*
