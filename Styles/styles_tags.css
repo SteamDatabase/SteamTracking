@@ -16,10 +16,6 @@ body.tag_page.in_client {
 	background-position: center top;
 }
 
-body.blue.tag_page {
-	background: url( 'http://store.akamai.steamstatic.com/public/images/v6/blue_body_repeat.png' ) center top repeat-y #000000;
-}
-
 body.tag_page > div#global_header {
 	/*border-bottom-color: #4d6d8c*/
 }

@@ -2686,6 +2686,7 @@ var CAjaxPagingControls = Class.create( {
 
 	m_fnPreRequestHandler: null,
 	m_fnResponseHandler: null,
+	m_fnPageChangingHandler: null,
 	m_fnPageChangedHandler: null,
 
 	initialize: function( rgSearchData, url )
@@ -2726,6 +2727,11 @@ var CAjaxPagingControls = Class.create( {
 		this.m_fnResponseHandler = fnHandler;
 	},
 
+	SetPageChangingHandler: function ( fnHandler )
+	{
+		this.m_fnPageChangingHandler = fnHandler;
+	},
+
 	SetPageChangedHandler: function ( fnHandler )
 	{
 		this.m_fnPageChangedHandler = fnHandler;
@@ -2753,10 +2759,10 @@ var CAjaxPagingControls = Class.create( {
 			this.GoToPage( this.m_iCurrentPage - 1 );
 	},
 
-	GoToPage: function( iPage )
+	GoToPage: function( iPage, bForce )
 	{
-		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || iPage == this.m_iCurrentPage )
-			return;
+		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && ( typeof bForce == 'undefined' || !bForce ) ) )
+			return false;
 
 		var params = {
 			query: this.m_strQuery,
@@ -2778,9 +2784,12 @@ var CAjaxPagingControls = Class.create( {
 			}
 		}
 
+		if ( this.m_fnPageChangingHandler != null )
+			this.m_fnPageChangingHandler( iPage );
+
 		if ( this.m_fnPreRequestHandler != null )
 			this.m_fnPreRequestHandler( params );
-		
+
 		this.m_bLoading = true;
 		new Ajax.Request( this.GetActionURL( 'render' ), {
 			method: 'get',
@@ -2788,6 +2797,8 @@ var CAjaxPagingControls = Class.create( {
 			onSuccess: this.OnResponseRenderResults.bind( this ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		});
+
+		return true;
 	},
 
 	OnResponseRenderResults: function( transport )

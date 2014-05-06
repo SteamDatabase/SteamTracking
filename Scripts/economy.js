@@ -2271,7 +2271,7 @@ function BuildHover( prefix, item, owner )
 	var elActions = $(prefix+'_item_actions');
 	if ( elActions )
 	{
-		PopulateActions( elActions, item.actions, item );
+		PopulateActions( elActions, item.actions, item, owner );
 	}
 
 	var elOwnerDescriptors = $(prefix+'_item_owner_descriptors');
@@ -2283,7 +2283,7 @@ function BuildHover( prefix, item, owner )
 	var elOwnerActions = $(prefix+'_item_owner_actions');
 	if ( elOwnerActions )
 	{
-		PopulateActions( elOwnerActions, item.owner_actions, item );
+		PopulateActions( elOwnerActions, item.owner_actions, item, owner );
 	}
 
 	var elCurrencyInTradeDescriptor = $(prefix+'_currency_in_trade' );
@@ -2370,7 +2370,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 	}
 }
 
-function PopulateActions( elActions, rgActions, item )
+function PopulateActions( elActions, rgActions, item, owner )
 {
 	elActions.update('');
 	if ( !rgActions )
@@ -2383,7 +2383,14 @@ function PopulateActions( elActions, rgActions, item )
 		var action = rgActions[i];
 		if ( !action.link || !action.name )
 			continue;
-		var elAction = new Element( 'a', {'class': 'btn_small btn_grey_white_innerfade', href: action.link.replace("%assetid%", item.id) } );
+		var elAction = new Element(
+			'a',
+			{
+				'class': 'btn_small btn_grey_white_innerfade',
+				href: action.link.replace("%assetid%", item.id)
+					.replace( "%owner_steamid%", owner.GetSteamId() )
+			}
+		);
 		var elSpan = new Element( 'span' );
 		elSpan.update( action.name );
 		elAction.appendChild( elSpan );

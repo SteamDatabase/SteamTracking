@@ -63,12 +63,6 @@ function UserReviewVoteDown( id )
 	);
 }
 
-function ShowDeveloperFlaggedReview( id, context )
-{
-	$J('#ReviewContent'+context+id).show();
-	$J('#ReviewContentWarning'+context+id).hide();
-}
-
 function UserReviewShowMore( id, context )
 {
 	$J('#ReviewContent'+context+id).parent().removeClass('partial');

@@ -790,7 +790,11 @@ function HandleMarketActionMenu( elActionMenuButton, item )
 		var rgAction = item.market_actions[action];
 		var elNewAction = $J( '<a></a>' );
 		elNewAction.addClass( 'popup_menu_item' );
-		elNewAction.attr( 'href', rgAction.link.replace("%assetid%", item.id) );
+		elNewAction.attr(
+			'href',
+			rgAction.link.replace( "%assetid%", item.id )
+					.replace( "%owner_steamid%", item.owner )
+		);
 
 		if ( rgAction.link.substr( 0, 6 ) != "steam:" )
 		{
@@ -928,6 +932,47 @@ function HideAdvancedSearchOptions()
 	$J('#market_search_advanced_show').show();
 	$J('#market_search_advanced_hide').hide();
 	$J('#market_search_advanced').hide();
+}
+
+function WatchForSortableColumnClicks()
+{
+	$J( '.market_sortable_column' ).click( function() {
+		if ( g_oSearchResults.m_bLoading )
+			return;
+
+		var strDesiredSortColumn = $J( this ).data( 'sorttype' );
+		if ( strDesiredSortColumn == g_strSortColumn )
+		{
+			// Change the sort order
+			if ( g_strSortDir == 'asc' )
+			{
+				g_strSortDir = 'desc';
+			}
+			else
+			{
+				g_strSortDir = 'asc';
+			}
+		}
+		else
+		{
+			g_strSortColumn = strDesiredSortColumn;
+			g_strSortDir = 'asc';
+		}
+
+		UpdateSortArrows();
+		g_oSearchResults.GoToPage( 0, true );
+	} );
+}
+
+function UpdateSortArrows()
+{
+	$J('#searchResultsTable').find( '.market_sort_arrow' ).hide();
+	var elArrow = $J("#searchResultsTable [data-sorttype='" + g_strSortColumn + "']").find( '.market_sort_arrow' );
+	elArrow.show();
+	if ( g_strSortDir == 'asc' )
+		elArrow.html( '&#9650' );
+	else
+		elArrow.html( '&#9660' );
 }
 
 var g_nMillisPopularRefresh = 2000;

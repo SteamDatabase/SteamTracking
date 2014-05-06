@@ -294,8 +294,8 @@ span.popup_menu_pulldown_indicator {
 	color: #e5e4dc;
 
 	text-transform: none;
-	font-size: 11px;
-	font-weight: bold;
+	font-size: 13px;
+	font-weight: normal;
 	line-height: normal;
 }
 
@@ -312,6 +312,45 @@ span.popup_menu_pulldown_indicator {
 	background-color: #212d3d;
 }
 
+
+.popup_menu_subheader {
+	color: #9e9995;
+	font-size: 11px;
+	padding: 2px 12px 3px 12px;
+	cursor: default;
+}
+
+.popup_menu_item, .popup_menu_subheader {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.popup_menu_hint {
+	float: right;
+	margin-left: 8px;
+}
+
+.popup_menu_subarea {
+	color: #9e9995;
+	font-size: 11px;
+	background-color: #3b3938;
+	margin: 8px 12px;
+	padding: 8px;
+	text-align: center;
+}
+
+.popup_menu_subarea_inner {
+	margin: 0 auto;
+	width: 138px;
+}
+
+
+.popup_menu .hr {
+	height: 1px;
+	background-color: #82807c;
+	margin: 10px 12px 0 12px;
+}
 
 
 .friendPlayerLevel {
@@ -372,7 +411,7 @@ span.popup_menu_pulldown_indicator {
 	border-color: #997c52;
 }
 
-.friendPlayerLevel.lvl_100, .friendPlayerLevel.lvl_200 {
+.friendPlayerLevel.lvl_100, .friendPlayerLevel.lvl_200, .friendPlayerLevel.lvl_300 {
 	border: none;
 	border-radius: 0;
 	background-repeat: no-repeat;
@@ -391,6 +430,11 @@ span.popup_menu_pulldown_indicator {
 
 .friendPlayerLevel.lvl_200 {
 	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_shields.png' );
+}
+
+.friendPlayerLevel.lvl_300 {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/community/levels_books.png' );
+	text-shadow: 1px 1px #1a1a1a;
 }
 
 .friendPlayerLevel.lvl_plus_10 {
@@ -645,6 +689,264 @@ select.gray_bevel {
 
 	right: 0;
 }
+
+
+
+/*
+ * HEADER
+ */
+
+/* apply 16px padding to the sides of all the page-wide divs to prevent content
+	from touching the sides on small resolutions */
+div#footer, div#global_header, div#store_header, div#main, div.page_area {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+div.page_content {
+	width: 940px;
+	margin: 0px auto;
+}
+
+
+div#global_header {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/globalheader_bg.jpg' );
+	background-color: #000000;
+	border-bottom: 1px solid #4D4B48;
+	background-position: center top;
+	min-width: 940px;
+}
+
+/**/
+div#global_header .content {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/globalheader_bg.jpg' );
+	background-position: center top;
+	position: relative;
+	width: 940px;
+	height: 104px;
+	margin: 0px auto;
+
+	z-index: 402;
+}
+
+div#global_actions {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+
+	height: 21px;
+	line-height: 21px;
+
+	color: #b8b6b4;
+	font-size: 11px;
+
+	z-index: 401;
+}
+
+div#global_actions a.global_action_link {
+	padding: 0px 4px;
+	color: #b8b6b4;
+}
+
+div#global_actions .global_action_link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+div#global_actions #global_action_menu {
+	float: right;
+}
+
+div#global_actions .user_avatar {
+	float: right;
+	margin-left: 3px;
+}
+
+div#global_header div.logo {
+	float: left;
+	padding-top: 30px;
+	margin-right: 40px;
+	width: 176px;
+	height: 44px;
+}
+
+div#global_header .menuitem {
+	display: block;
+	position: relative;
+
+	padding-top: 40px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	line-height: 16px;
+
+	float: left;
+	font-size: 14px;
+	color: #b8b6b4;
+	text-transform: uppercase;
+}
+
+div#global_header .menuitem.active, div#global_header .menuitem:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+div#global_header .menuitem.active {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/globalheader_highlight.png' );
+	background-repeat: repeat-x;
+}
+
+div#global_header .activebg {
+	display: none;
+}
+
+#header_wallet_ctn {
+	text-align: right;
+	padding-right: 12px;
+	line-height: normal;
+}
+
+#language_pulldown, #account_pulldown {
+	display: inline-block;
+	margin: 1px;
+	padding-left: 4px;
+	line-height: 19px;
+}
+
+#language_pulldown.focus, #account_pulldown.focus {
+	margin: 0px;
+	border: 1px solid #82807C;
+	color: #ffffff;
+}
+
+#account_dropdown > .popup_body {
+	width: 150px;
+}
+
+.header_installsteam_btn {
+	float: left;
+	position: relative;
+	height: 21px;
+	margin-right: 3px;
+}
+
+.header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_header_installsteam_green.png' );
+}
+
+.header_installsteam_btn_gray .header_installsteam_btn_leftcap, .header_installsteam_btn_gray .header_installsteam_btn_rightcap, .header_installsteam_btn_gray .header_installsteam_btn_content {
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/btn_header_installsteam_gray.png' );
+}
+
+.header_installsteam_btn_leftcap {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 24px;
+	height: 21px;
+	background-position: 0px 0px;
+}
+
+.header_installsteam_btn_rightcap {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 1px;
+	height: 21px;
+	background-position: -24px right;
+}
+
+.header_installsteam_btn_content {
+	display: inline-block;
+	padding-left: 27px;
+	padding-right: 7px;
+	height: 21px;
+	line-height: 21px;
+	background-position: 0px -21px;
+	background-repeat: repeat-x;
+
+	text-decoration: none;
+	color: #e5e4dc;
+	font-weight: normal;
+}
+
+.header_installsteam_btn_content:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+div#global_header .menuitem_new
+{
+	position: absolute;
+	top: 27px;
+	font-size: 11px;
+	color: #85b0df
+}
+
+div#global_header .submenuitem
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #b8b6b4;
+	padding-right: 10px;
+}
+
+div#global_header .submenuitem.active, div#global_header .submenuitem:hover
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+div#global_header .submenuitem.moderator
+{
+	color: #b80000;
+}
+
+div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.moderator:hover
+{
+	color: #ff0000;
+}
+
+.community_sub_nav
+{
+	position: absolute;
+	left: 7px;
+	top: 65px;
+	width: 650px;
+	font-size: 14px;
+}
+
+.menuitem.username {
+	max-width: 250px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.supernav_content {
+	max-width: 132px;
+	background: #000 url(http://cdn.steamcommunity.com/public/shared/images/dd_web.jpg) top left no-repeat;
+	padding: 5px 15px 10px 15px;
+	box-shadow: 3px 3px 5px -3px #000;
+	text-align: left;
+	z-index: 500;
+}
+
+.supernav_content > a {
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.supernav_content > a:hover {
+	color: #4897cf;
+	text-decoration: none;
+}
+
 
 /* steam inbox */
 
