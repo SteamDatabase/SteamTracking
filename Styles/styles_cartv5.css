@@ -284,11 +284,6 @@
 	vertical-align: middle;
 }
 
-.checkout_review_cart_item_workshop_subtext {
-	color: #909090;
-	font-size: 11px;
-}
-
 .checkout_review_hit_min_provider_amount {
 	color: #626366;
 }
@@ -1110,10 +1105,10 @@ label.send_choice_txt {
 {
 	clear: none;
 	display: block;
-	font-size: 11px;
+	font-size: 12px;
+	width: 100%;
 	padding-left: 12px;
 	margin-left: 12px;
-	width: 180px;
 	line-height: 12px;
 }
 

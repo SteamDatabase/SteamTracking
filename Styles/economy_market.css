@@ -305,8 +305,7 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_sortable_column {
-	/* Not ready yet */
-	/* cursor: pointer; */
+	/*cursor: pointer;*/
 }
 
 .market_listing_left_cell {
@@ -347,6 +346,7 @@ a.market_listing_item_name_link:hover {
 
 .market_sort_arrow {
 	font-size: 80%;
+	margin-left: 4px;
 }
 
 .market_listing_price {

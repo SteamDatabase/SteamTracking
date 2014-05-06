@@ -1512,16 +1512,6 @@ textarea.comment_input
 	font-size: 12px;
 }
 
-.review_box .review_flagged_by_developer {
-	padding: 10px;
-	color: #898a8c;
-	font-size: 12px;
-}
-
-.review_box .review_flagged_by_developer a {
-	color: #8BB9E0;
-}
-
 /* filter */
 .user_reviews_filter_bar
 {
