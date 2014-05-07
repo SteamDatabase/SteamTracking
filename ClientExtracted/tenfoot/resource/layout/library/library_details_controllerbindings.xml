@@ -163,6 +163,7 @@
 								<Label id="4way" text="#Library_Details_ControllerPad_4way" />
 								<Label id="8way" text="#Library_Details_ControllerPad_8way" />
 								<Label id="mouse" text="#Library_Details_ControllerPad_mouse" />
+								<Label id="none" text="#Library_Details_ControllerPad_none" />
 							</DropDown>	
 						</Panel>
 						<Panel id="PadDeadZone" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">

@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/quit.css" />
 	</styles>
 	
-	<QuitEntriesPanel tabindex="auto" defaultfocus="QuitBigPicture" selectionpos="none" childfocusonhover="true">
+	<QuitEntriesPanel tabindex="auto" selectionpos="none" childfocusonhover="true">
 				
 		<Button class="StreamingVisible SystemButton" onactivate="StopStreaming()" selectionpos="10,0">
 			<Label text="#Quit_StopStreaming" />
