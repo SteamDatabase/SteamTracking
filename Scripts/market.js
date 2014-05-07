@@ -956,7 +956,16 @@ function WatchForSortableColumnClicks()
 		else
 		{
 			g_strSortColumn = strDesiredSortColumn;
-			g_strSortDir = 'asc';
+
+			// When switching to sorting by quantity, default to desc
+			if ( strDesiredSortColumn == 'quantity' )
+			{
+				g_strSortDir = 'desc';
+			}
+			else
+			{
+				g_strSortDir = 'asc';
+			}
 		}
 
 		UpdateSortArrows();
