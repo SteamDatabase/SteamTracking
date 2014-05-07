@@ -153,6 +153,12 @@ CUserThem = Class.create( CUser, {
 				g_rgAppContextData[appid] = Object.clone(rgAppInfo);
 			}
 
+			for ( var itemid in transport.responseJSON.rgInventory )
+			{
+				var rgItem = transport.responseJSON.rgInventory[itemid];
+				rgItem.is_their_item = true;
+			}
+
 			// replace the pending inventory object with the real inventory
 			var inventory = new CInventory( this, appid, contextid, transport.responseJSON.rgInventory, transport.responseJSON.rgCurrency );
 
