@@ -1190,6 +1190,7 @@
 	"Library_Details_ControllerPad_mouse"		"Mouse Movement"
 	"Library_Details_ControllerPad_4way"		"4-Way Directional"
 	"Library_Details_ControllerPad_8way"		"8-Way Directional"
+	"Library_Details_ControllerPad_none"		"None"
 	"Library_Details_ControllerPadDeadZone"		"Dead Zone"
 	"Library_Details_ControllerPad_10pct"		"10%"
 	"Library_Details_ControllerPad_20pct"		"20%"

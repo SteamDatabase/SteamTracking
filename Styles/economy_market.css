@@ -305,7 +305,19 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_sortable_column {
-	/*cursor: pointer;*/
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.market_sortable_column:hover {
+	background-color: #4D4C4A;
+}
+
+.market_listing_table_active .market_sortable_column:hover .market_sort_arrow {
+	/* flip the arrow when the user is hovering a sortable column to indicate the sort direction will change */
+	transform: rotate( 180deg );
+	-webkit-transform: rotate( 180deg );
+	-ms-transform: rotate( 180deg );
 }
 
 .market_listing_left_cell {
@@ -334,9 +346,9 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_listing_table_header .market_listing_left_cell, .market_listing_table_header .market_listing_right_cell {
-	margin: 0.25em 0;
-	height: 1.75em;     /* height + margin = 2.25em, the height of .market_listing_table_header */
-	line-height: 1.75em;
+	margin: 0;
+	height: 2.25em;     /* height + margin = 2.25em, the height of .market_listing_table_header */
+	line-height: 2.25em;
 }
 
 .market_listing_table_header .market_listing_right_cell {
@@ -345,7 +357,7 @@ a.market_listing_item_name_link:hover {
 }
 
 .market_sort_arrow {
-	font-size: 80%;
+	display: inline-block;	font-size: 80%;
 	margin-left: 4px;
 }
 
