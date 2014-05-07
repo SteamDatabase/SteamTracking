@@ -2180,6 +2180,7 @@ function GetNameForItem( item )
 	return strName;
 }
 
+/* We allow owner to be a CUser or string ( steamid ) */
 function BuildHover( prefix, item, owner )
 {
 	var imageName = item.icon_url_large ? item.icon_url_large : item.icon_url;
@@ -2383,12 +2384,21 @@ function PopulateActions( elActions, rgActions, item, owner )
 		var action = rgActions[i];
 		if ( !action.link || !action.name )
 			continue;
+
+		var strLink = action.link.replace("%assetid%", item.id);
+		if ( owner )
+		{
+			if ( typeof owner == 'string' )
+				strLink = strLink.replace( "%owner_steamid%", owner );
+			else
+				strLink = strLink.replace( "%owner_steamid%", owner.GetSteamId() );
+		}
+
 		var elAction = new Element(
 			'a',
 			{
 				'class': 'btn_small btn_grey_white_innerfade',
-				href: action.link.replace("%assetid%", item.id)
-					.replace( "%owner_steamid%", owner.GetSteamId() )
+				href: strLink
 			}
 		);
 		var elSpan = new Element( 'span' );
