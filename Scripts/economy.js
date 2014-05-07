@@ -3867,7 +3867,9 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 			var rgAction = item.actions[action];
 			var elNewAction = $J( '<a></a>' );
 			elNewAction.addClass( 'popup_menu_item' );
-			elNewAction.attr( 'href', rgAction.link );
+
+			var strLink = rgAction.link.replace( "%assetid%", item.id ).replace( "%owner_steamid%", user.GetSteamId() );
+			elNewAction.attr( 'href', strLink );
 
 			if ( rgAction.link.substr( 0, 6 ) != "steam:" )
 			{
