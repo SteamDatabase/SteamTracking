@@ -297,6 +297,7 @@ span.popup_menu_pulldown_indicator {
 	font-size: 13px;
 	font-weight: normal;
 	line-height: normal;
+	text-align: left;
 }
 
 .popup_menu a.popup_menu_item {
