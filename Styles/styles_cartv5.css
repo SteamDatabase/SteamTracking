@@ -1356,6 +1356,18 @@ a.trigger, a.activetrigger {
 	line-height: 19px;
 	height: 19px;
 }
+
+.checkout_main .dropcontainer ul li.cachedPaymentMethodOption a {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.checkout_main .dropcontainer ul li.uncachedPaymentMethodOption a {
+	font-weight: bold;
+	color:#b0aeac;
+}
+
+
 .checkout_main .dropcontainer a.highlighted_selection {
 	text-decoration: none;
 }
