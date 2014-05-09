@@ -145,6 +145,10 @@
     right: 0px;
 }
 
+.accountData a {
+	color: #b0aeac;
+}
+
 .accountRow.accountBalance {
     height: 22px;
     line-height: 22px;
@@ -186,7 +190,6 @@
 
 .payment_method_box a {
 	color: #B0AEAC;
-	text-decoration: underline;
 }
 
 .youraccount_tabs {
@@ -653,4 +656,20 @@ div.youraccount_history_home>div.account_wallet {
     margin-bottom: 5px;
     border: 1px solid #a81a28;
     background-color: #4a0b12;
+}
+
+.cached_payment_method_name
+{
+	width: 100%;
+}
+
+.cached_payment_method_exists
+{
+	color: #d6d7d8;
+}
+
+.cached_payment_method_description
+{
+	color: #626366;
+	font-size: 9px;	
 }
