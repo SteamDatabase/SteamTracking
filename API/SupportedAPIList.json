@@ -93,7 +93,7 @@
 								"description": "An optional filter for maximum timestamp"
 							},
 							{
-								"name": "MatchID",
+								"name": "matchid",
 								"type": "uint32",
 								"optional": true,
 								"description": "An optional filter for a specific match"
@@ -383,18 +383,6 @@
 								"type": "uint32",
 								"optional": true,
 								"description": "The average skill range of the match, these can be [1-3] with lower numbers being lower skill. Ignored if an account ID is specified"
-							},
-							{
-								"name": "date_min",
-								"type": "uint32",
-								"optional": true,
-								"description": "The UTC value of the first date to query (rounded to the nearest day)"
-							},
-							{
-								"name": "date_max",
-								"type": "uint32",
-								"optional": true,
-								"description": "The UTC value of the last date to query (rounded to the nearest day)"
 							},
 							{
 								"name": "min_players",
