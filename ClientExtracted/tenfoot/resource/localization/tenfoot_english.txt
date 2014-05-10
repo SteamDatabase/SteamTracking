@@ -1151,6 +1151,7 @@
 	"Library_Details_ControllerCommunityBindingsInfo"	"Looks like {s:gamename} doesn't yet have any shared bindings.  You could create the first!"
 	"Library_Details_ControllerBindingDescription"	"AUTHOR'S NOTES"
 	"Library_Details_ControllerDefaultBinding"	"Defaults"
+	"Library_Details_ControllerGenericBinding"	"Generic"
 	"Library_Details_ControllerDoneEditing"		"SAVE"
 	"Library_Details_SelectYourBindingFor"		"SELECT BINDING FOR"
 	"Library_Details_SaveBindingDescription"	"DONE"

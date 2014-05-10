@@ -1,0 +1,49 @@
+"resource/layout/remotecontrolauthorization.layout"
+{
+	controls
+	{
+		"AuthorizeDeviceText"
+		{
+			ControlName="Label"
+			fieldName="AuthorizeDeviceText"
+			wrap=1
+			labelText="#SteamUI_RemoteControl_AuthorizeDevice_Text"
+		}
+		
+		"AuthorizeUnnamedDeviceText"
+		{
+			ControlName="Label"
+			fieldName="AuthorizeUnnamedDeviceText"
+			wrap=1
+			labelText="#SteamUI_RemoteControl_AuthorizeUnnamedDevice_Text"
+		}
+		
+		AuthorizeButton { ControlName="Button" fieldName="AuthorizeButton" command="Authorize" labelText="#vgui_yes" }
+		DenyButton { ControlName="Button" fieldName="DenyButton" command="Deny" labelText="#vgui_no" }
+	}
+	
+	style
+	{
+	}
+	
+	layout
+	{
+		region { name="buttons" width=max height=36 align="bottom" }
+	
+		place
+		{
+			control="AuthorizeDeviceText,AuthorizeUnnamedDeviceText"
+			dir=down
+			align=top
+			width=max
+			margin-left=20
+			margin-right=20
+			margin-top=40
+			spacing=10
+		}
+		place { control="DenyButton,AuthorizeButton" region="buttons"
+		        width=92 height=25 align=right
+						margin-right=10 margin-top=0
+						margin-bottom=2 spacing=10 }
+	}
+}

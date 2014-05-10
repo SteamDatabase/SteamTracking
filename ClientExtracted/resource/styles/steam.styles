@@ -244,6 +244,7 @@ steam.styles
     Friends.SectionHeader     "Label"
     Friends.NoAvatarOver      "Text"
     Friends.IgnoredColor      "Highlight3"
+    Friends.ListHeaderFadeOut	"56 54 53 0"
   
     ChatDialog.URLColor       "text"
     ChatOwnTextColor        "Label"
@@ -668,7 +669,7 @@ steam.styles
       inset="0 2 0 0"
       render_bg
 		{
-			0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, none )"
+			0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, Friends.ListHeaderFadeOut )"
 		}
     }
             

@@ -57,11 +57,6 @@
 			style="bigtext"
 		}
 		
-		"disk_status_image"
-		{
-			"ControlName"	    "ImagePanel"
-			"image"		"graphics/icon_disk_activity_idle.tga"
-		}
 		"disk_status_label"
 		{
 			"ControlName"	    "Label"
@@ -117,7 +112,7 @@
 	{
 		//panelBackground="16 16 16 255"
 		panelBackground = "12 27 38 255"
-		panelBackgroundTransparent = "0 0 0 0"
+		panelBackgroundTransparent = "12 27 38 0"
 	}
   
 	styles
@@ -381,7 +376,7 @@
 		place { region=left_column  control="download_rate_value,download_rate" spacing=4 }
 		place { region=left_column  control="peak_download_rate_value, peak_download_rate" spacing=4 y=22 align=top }
 		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing= 4	y=44	align=top	}
-		place { region=left_column  control="disk_status_image, disk_status_label" spacing= 4	y=66	align=top	}
+		place { region=left_column  control="disk_status_label" spacing= 4	y=66	align=top	}
 		
 		// throttling info
 		place { region=middle_column controls="blackout_label, blackout_value" spacing=4 }

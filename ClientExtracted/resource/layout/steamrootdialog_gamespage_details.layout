@@ -132,7 +132,7 @@
 			font-style="uppercase"
 			render_bg
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, buttonface2, none  )"
+				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, buttonface2, Friends.ListHeaderFadeOut  )"
 			}    
 		} 
 
