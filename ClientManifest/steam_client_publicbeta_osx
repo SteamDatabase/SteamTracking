@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1399930935"
+	"version"		"1399933727"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.0666fac6179d3fb8a6efecc54a83d3d7a2700d97"
-		"checksum"		"0666fac6179d3fb8a6efecc54a83d3d7a2700d97"
-		"size"		"2282691"
-		"zipvz"		"tenfoot_all.zip.vz.868e4936c7a75c43bb5d27366a72bed8104132f3_832143"
+		"file"		"tenfoot_all.zip.4f92c5187973d3efaf2b745b49d451169d56fdbe"
+		"checksum"		"4f92c5187973d3efaf2b745b49d451169d56fdbe"
+		"size"		"2282694"
+		"zipvz"		"tenfoot_all.zip.vz.7571b94bd4e48e9985ffbe3d0183a13877adccc4_831895"
 	}
 	"resources_misc_all"
 	{
@@ -89,10 +89,10 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.1ecbd933df29125d2d5b9cc346e8e121235d2e6e"
-		"checksum"		"1ecbd933df29125d2d5b9cc346e8e121235d2e6e"
-		"size"		"32019831"
-		"zipvz"		"bins_osx.zip.vz.611b1a388fbb3ad7bb07b57549a9b43b6abab222_17524168"
+		"file"		"bins_osx.zip.c618d3a659569d3684769e9d6916d5ff950f8b4a"
+		"checksum"		"c618d3a659569d3684769e9d6916d5ff950f8b4a"
+		"size"		"32019018"
+		"zipvz"		"bins_osx.zip.vz.cb76f7c67d762a0ecadc4de0ab6b3bfa0c99fb46_17535051"
 	}
 	"bins_codecs_osx"
 	{
@@ -136,14 +136,14 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.2552a7df276f330509e1c8e7e4fa989d1764a835"
-		"checksum"		"2552a7df276f330509e1c8e7e4fa989d1764a835"
-		"size"		"1206899"
-		"zipvz"		"steam_osx.zip.vz.854eb574dc2750d0e776520ceb1241ae676aef15_922029"
+		"file"		"steam_osx.zip.e2ad9efc9a9ec9098a45079d64a7283e2224c287"
+		"checksum"		"e2ad9efc9a9ec9098a45079d64a7283e2224c287"
+		"size"		"1206761"
+		"zipvz"		"steam_osx.zip.vz.233562f7e162867b81f9d29a29e0bb3b5e203d0d_921669"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"92cf97b1b39f627a45b78abcf30882ba142b1a9ac7b216604483a3a3145a36fffd389261c477d7be7eed901466e1856a7cbaf353415f9ba1afcdcc96376e65a59739bfc90dd0b566f5b1638de9bee1d6618fea121b115826a058e5ffceabb76ae20b7b8f70e0ac927b8046581f8509038130df8f1d4bb445a9b6e6b05ddc504a"
+	"osx"		"228b6d360852d073242f813d6c40aa7d10f6fa9ff51385e0a69e4769b13c41d3408a17d204e87fd9785ee9d92cc1d21ee97c8b37d0a9f4600e79cafddce9cda67871b03ff1ea36c488f0e05aa1d48b94cd7654008726efe0a086e35a8a539c15adbe0e02c1ee17028b6cb796fae606e83e17b7bfa8bea061006c4e78499c6b1b"
 }

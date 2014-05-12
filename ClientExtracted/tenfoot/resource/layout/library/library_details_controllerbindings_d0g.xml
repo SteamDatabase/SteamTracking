@@ -64,14 +64,14 @@
 								<Label id="Touch0ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="Touch1ButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( touch_button_1 );">
-								<Label id="Touch1ActionName" class="ActionLabel" />
-								<Label id="Touch1ActionMapping" class="ActionMapping" />
-							</Button>
-
-							<Button id="Touch2ButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( touch_button_2 );">
+							<Button id="Touch2ButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( touch_button_2 );">
 								<Label id="Touch2ActionName" class="ActionLabel" />
 								<Label id="Touch2ActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="Touch1ButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( touch_button_1 );">
+								<Label id="Touch1ActionName" class="ActionLabel" />
+								<Label id="Touch1ActionMapping" class="ActionMapping" />
 							</Button>
 
 							<Button id="Touch3ButtonOuter" class="BindingButton" selectionpos="0,7" onactivate="EditButtonBinding( touch_button_3 );">
@@ -108,25 +108,26 @@
 								</Panel>
 							</Button>
 
-							<Button id="Btn1Button" class="BindingButton BindingButtonRight" selectionpos="1,4" onactivate="EditButtonBinding( button_1 );">
-								<Label id="Btn1ActionName" class="ActionLabel" />
-								<Label id="Btn1ActionMapping" class="ActionMapping" />
-							</Button>
-
-							<Button id="Btn0Button" class="BindingButton BindingButtonRight" selectionpos="1,5" onactivate="EditButtonBinding( button_0 );">
+							<Button id="Btn0Button" class="BindingButton BindingButtonRight" selectionpos="1,4" onactivate="EditButtonBinding( button_0 );">
 								<Label id="Btn0ActionName" class="ActionLabel" />
 								<Label id="Btn0ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="Btn3Button" class="BindingButton BindingButtonRight" selectionpos="1,6" onactivate="EditButtonBinding( button_3 );">
+							<Button id="Btn1Button" class="BindingButton BindingButtonRight" selectionpos="1,5" onactivate="EditButtonBinding( button_1 );">
+								<Label id="Btn1ActionName" class="ActionLabel" />
+								<Label id="Btn1ActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="Btn2Button" class="BindingButton BindingButtonRight" selectionpos="1,6" onactivate="EditButtonBinding( button_2 );">
+								<Label id="Btn2ActionName" class="ActionLabel" />
+								<Label id="Btn2ActionMapping" class="ActionMapping" />
+							</Button>
+							
+							<Button id="Btn3Button" class="BindingButton BindingButtonRight" selectionpos="1,7" onactivate="EditButtonBinding( button_3 );">
 								<Label id="Btn3ActionName" class="ActionLabel" />
 								<Label id="Btn3ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="Btn2Button" class="BindingButton BindingButtonRight" selectionpos="1,7" onactivate="EditButtonBinding( button_2 );">
-								<Label id="Btn2ActionName" class="ActionLabel" />
-								<Label id="Btn2ActionMapping" class="ActionMapping" />
-							</Button>
 
 						</Panel>
 					<Panel id="BindingCallouts" class="BindingCallouts" />
