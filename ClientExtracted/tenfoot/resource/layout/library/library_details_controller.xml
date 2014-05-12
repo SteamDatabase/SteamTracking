@@ -103,6 +103,14 @@
 							<Label id="ControllerLabelDescription8" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
+					<Button id="AddController" class="ControllerDetail" tabindex="9" selectionpos="1,9" onactivate="AddWirelessController();">
+						<Image id="AddControllerDetailImage" class="AddControllerDetailImage" />
+						<Panel id="ControllerAddLabels" class="ControllerLabels">
+							<Label id="ControllerAddLabelTitle" class="ControllerLabelTitle" text="#Library_Details_Controller_Add" />
+							<Label id="ControllerAddLabelHeader" class="ControllerLabelHeader" text="#Library_Details_Controller_AddSub" />
+							<Label id="ControllerAddLabelDescription" class="ControllerLabelDescription" />
+						</Panel>
+					</Button>	
 				</Panel>
 			</Panel>
 		</Panel>
