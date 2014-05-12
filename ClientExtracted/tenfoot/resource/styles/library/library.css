@@ -1609,7 +1609,7 @@ LibraryController:focus .ControllerLargeBody, LibraryController:descendantfocus 
 	transform: translatex( 7px );
 }
 
-LibraryController .ControllerDetailImage
+LibraryController .ControllerDetailImage, LibraryController .AddControllerDetailImage
 {
 	vertical-align: center;
 	width: 75px;
@@ -1627,6 +1627,10 @@ LibraryController .ControllerDetailImage
 
 }
 
+LibraryController .AddControllerDetailImage
+{
+	background-image: url( "file://{images}/library/add_controller_icon.png" );
+}
 
 LibraryController .ControllerLabels 
 {
@@ -1731,12 +1735,12 @@ LibraryController .ControllersRow
 	flow-children: right;
 }
 
-LibraryController #ControllersRowTwo
+LibraryController #ControllersRowTwo, LibraryController #ControllersRowThree
 {
 	margin-top: 24px;
 }
 
-LibraryController .ControllerIcon
+LibraryController .ControllerIcon, LibraryController .AddControllerIcon,
 {
 	width: 80px;
 	height: 80px;
@@ -1747,7 +1751,7 @@ LibraryController .ControllerIcon
 	border-color: #636363e0;
 }
 
-#ControllerWrapper8.ControllerIcon, #ControllerWrapper4.ControllerIcon
+#ControllerWrapper8.ControllerIcon, #ControllerWrapper4.ControllerIcon, #ControllerWrapperAdd.AddControllerIcon
 {
 	margin-right: 0px;
 }
@@ -1761,6 +1765,17 @@ LibraryController .ControllerIcon Image
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+LibraryController .AddControllerIcon Image
+{
+	width: 100%;
+	height: 100%;
+	box-shadow: fill #202020ff 0px 0px 6px 0px;
+	background-image: url( "file://{images}/library/add_controller_icon.png" );
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 
 
 LibraryController .MoreRemainingLabel

@@ -1129,6 +1129,7 @@
 	"Library_Details_Guides_Favorited"	"IN YOUR FAVORITES"
 	"Library_Details_Guides_Popular"	"POPULAR"
 	"Library_Details_ViewControllerDetails"	"CONTROLLER DETAILS"
+	"Library_Details_AddController"		"ADD CONTROLLER"
 	"Library_Details_Controller_Controller1" "Controller One"
 	"Library_Details_Controller_Controller2" "Controller Two"
 	"Library_Details_Controller_Controller3" "Controller Three"
@@ -1139,6 +1140,8 @@
 	"Library_Details_Controller_Controller8" "Controller Eight"
 	"Library_Details_Controller_PlayerAssigned" "{s:controller_player}"
 	"Library_Details_Controller_Hint"        "View/Modify Bindings"
+	"Library_Details_Controller_Add"         "Add Wireless Controller"
+	"Library_Details_Controller_AddSub"      "Pair or Connect"
 	"Library_Details_CancelControllerDetails" "CANCEL"
 	"Library_Details_CloseControllerDetails" "CLOSE"
 	"Library_ControllerBindingsTitle" "{s:gamename} Bindings"
@@ -2302,4 +2305,8 @@
 	
 	"Community_PostStatusFailure"	"Sorry, there was an error posting your status."
 
+	"SteamUI_AddController_Title"	"Pair or Connect a Steam Controller"
+	"SteamUI_AddController_HowToConnect"	"Connect a Steam controller by pressing the Steam button."
+	"SteamUI_AddController_HowToPair1"	"Pair a new Steam Controller by holding the Steam button and tapping the left bumper."
+	"SteamUI_AddController_HowToPair2"	"Connecting a Steam Controller with USB will pair it.  After that it will be able to connect wirelessly."
 }

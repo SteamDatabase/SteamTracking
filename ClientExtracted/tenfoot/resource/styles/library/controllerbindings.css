@@ -1,5 +1,5 @@
 
-ControllerBindings #MsgBoxBodyRegion
+#ControllerBindings #MsgBoxBodyRegion
 {
 	horizontal-align: center;
 	vertical-align: center;
@@ -13,12 +13,17 @@ ControllerBindings #MsgBoxBodyRegion
 	flow-children: none;
 }
 
-ControllerBindings.DaisyWheelVisible #MsgBoxBodyRegion
+#ControllerBindings.D0g #MsgBoxBodyRegion
+{
+	width: 1812px;
+}
+
+#ControllerBindings.DaisyWheelVisible #MsgBoxBodyRegion
 {
 	transform: translateX( 0px );
 }
 
-ControllerBindings#ControllerBindings.BehindAnotherMsgBox
+#ControllerBindings#ControllerBindings.BehindAnotherMsgBox
 {
 	opacity: 1.0;
 	desaturation: 0.4;
@@ -26,7 +31,7 @@ ControllerBindings#ControllerBindings.BehindAnotherMsgBox
 	transform: translatex( 0px );
 }
 
-ControllerBindings #BindingRegion
+#ControllerBindings #BindingRegion
 {
 	padding: 30px 30px;
 	position: 0px 0px 0px;
@@ -39,51 +44,57 @@ ControllerBindings #BindingRegion
 	transition-timing-function: ease-in-out;
 }
 
-ControllerBindings.SelectMode #BindingRegion
+#ControllerBindings.D0g #BindingRegion
+{
+	padding: 30px 6px;
+	width: 1812px;
+}
+
+#ControllerBindings.SelectMode #BindingRegion
 {
 	pre-transform-scale2d: 0.75;
 	transform: translatex( 190px ) translatey( -170px );
 	
 }
 
-ControllerBindings.EditSingleBinding TextInputDaisy
+#ControllerBindings.EditSingleBinding TextInputDaisy
 {
 	pre-transform-scale2d: 0.75;
 	transform: translatex( 160px ) translatey( -50px );
 }
 
-ControllerBindings.EditSingleBinding #BindingRegion,
-ControllerBindings.EditPadBinding #BindingRegion
+#ControllerBindings.EditSingleBinding #BindingRegion,
+#ControllerBindings.EditPadBinding #BindingRegion
 {
 	pre-transform-scale2d: 0.65;
 	transform: translatex( 0px ) translatey( -210px );
 }
 
-ControllerBindings.EditPadBinding.EditPadBindingValue #BindingRegion
+#ControllerBindings.EditPadBinding.EditPadBindingValue #BindingRegion
 {
 	pre-transform-scale2d: 0.65;
 	transform: translatex( 0px ) translatey( -580px );
 }
 
 
-ControllerBindings.EditSingleBinding .MsgBoxHeader,
-ControllerBindings.EditPadBinding .MsgBoxHeader
+#ControllerBindings.EditSingleBinding .MsgBoxHeader,
+#ControllerBindings.EditPadBinding .MsgBoxHeader
 {
 	opacity: 0.0;
 }
 
-ControllerBindings .MsgBoxHeader Label
+#ControllerBindings .MsgBoxHeader Label
 {
 	horizontal-align: center;
 }
 
-ControllerBindings #MsgBoxHeader
+#ControllerBindings #MsgBoxHeader
 {
 	height: 90px;
 	margin-bottom: -25px;
 }
 
-ControllerBindings .MsgBoxSubTitle
+#ControllerBindings .MsgBoxSubTitle
 {
 	margin-top: 0px;
 	font-size: 22px;
@@ -91,12 +102,12 @@ ControllerBindings .MsgBoxSubTitle
 	margin-top: -4px;
 }
 
-ControllerBindings.NativeAPIMode .MsgBoxSubTitle
+#ControllerBindings.NativeAPIMode .MsgBoxSubTitle
 {
 	opacity: 0.0;
 }
 
-ControllerBindings #BindingNativeNotice
+#ControllerBindings #BindingNativeNotice
 {
 	color: detailsdatalabel;
 	horizontal-align: center;
@@ -107,12 +118,12 @@ ControllerBindings #BindingNativeNotice
 	margin-top: 620px;
 }
 
-ControllerBindings.NativeAPIMode #BindingNativeNotice
+#ControllerBindings.NativeAPIMode #BindingNativeNotice
 {
 	opacity: 1.0;
 }
 
-ControllerBindings #LeftColumn
+#ControllerBindings #LeftColumn
 {
 	padding: 26px 22px;
 	opacity: 1.0;
@@ -136,13 +147,13 @@ ControllerBindings #LeftColumn
 	transition-timing-function: ease-in-out;
 }
 
-ControllerBindings.SelectMode #LeftColumn
+#ControllerBindings.SelectMode #LeftColumn
 {
 	opacity: 1.0;
 	transform: translatex( 0px );
 }
 
-ControllerBindings #DescriptionRow, ControllerBindings #CornerCover
+#ControllerBindings #DescriptionRow, #ControllerBindings #CornerCover
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
@@ -165,13 +176,13 @@ ControllerBindings #DescriptionRow, ControllerBindings #CornerCover
 	background-color: #202428ff;
 }
 
-ControllerBindings #CornerCover
+#ControllerBindings #CornerCover
 {
 	width: 372px;
 	margin-left: 0px;
 }
 
-ControllerBindings.SelectMode #DescriptionRow, ControllerBindings.SelectMode #CornerCover
+#ControllerBindings.SelectMode #DescriptionRow, #ControllerBindings.SelectMode #CornerCover
 {
 	transform: translatey( 0px );
 	opacity: 1.0;
@@ -185,8 +196,8 @@ ControllerBindings.SelectMode #DescriptionRow, ControllerBindings.SelectMode #Co
 	transition-timing-function: ease-in-out;
 }
 
-ControllerBindings #BindingSelection,
-ControllerBindings #EditPadBindings
+#ControllerBindings #BindingSelection,
+#ControllerBindings #EditPadBindings
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
@@ -209,60 +220,60 @@ ControllerBindings #EditPadBindings
 	background-color: #202428ff;
 }
 
-ControllerBindings #EditPadBindings
+#ControllerBindings #EditPadBindings
 {
 	flow-children: none;
 	height: 1000px;
 	transform: translatey( 1000px );
 }
 
-ControllerBindings #EditPadBindingsBody
+#ControllerBindings #EditPadBindingsBody
 {
 	margin-top: 60px;
 }
 
-ControllerBindings #EditPadBindings #KeyboardAndMouse
+#ControllerBindings #EditPadBindings #KeyboardAndMouse
 {
 	transform: translatey( 420px );
 	margin-top: 116px;
 }
 
-ControllerBindings.EditSingleBinding #BindingSelection
+#ControllerBindings.EditSingleBinding #BindingSelection
 {
 	transform: translatey( 0px );
 	opacity: 1.0;
 }
 
-ControllerBindings.EditPadBinding #EditPadBindings
+#ControllerBindings.EditPadBinding #EditPadBindings
 {
 	transform: translatey( 380px );
 	opacity: 1.0;
 }
 
-ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindings #KeyboardAndMouse
+#ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindings #KeyboardAndMouse
 {
 	transform: translatey( 370px );
 }
 
-ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindings
+#ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindings
 {
 	transform: translatey( 0px );
 	opacity: 1.0;
 }
 
-ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadHeader
+#ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadHeader
 {
 	transform: translatey( -100px );
 	opacity: 0.0;
 }
 
-ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindingsBody
+#ControllerBindings.EditPadBinding.EditPadBindingValue #EditPadBindingsBody
 {
 	transform: translatey( -40px );
 }
 
 
-ControllerBindings #KeyboardAndMouse
+#ControllerBindings #KeyboardAndMouse
 {
 	padding: 20px 25px;
 	margin-bottom: 0px;
@@ -275,13 +286,13 @@ ControllerBindings #KeyboardAndMouse
 	transition-timing-function: ease-in-out;
 }
 
-ControllerBindings.DaisyWheelVisible #KeyboardAndMouse
+#ControllerBindings.DaisyWheelVisible #KeyboardAndMouse
 {
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.9;
 	opacity: 0.35;
 }
 
-ControllerBindings #KeyboardAndMouse #VirtualMouse
+#ControllerBindings #KeyboardAndMouse #VirtualMouse
 {
 	flow-children: down;
 	height: 100%;
@@ -290,13 +301,13 @@ ControllerBindings #KeyboardAndMouse #VirtualMouse
 	background-repeat: no-repeat;
 }
 
-ControllerBindings #KeyboardAndMouse #VirtualMouse 
+#ControllerBindings #KeyboardAndMouse #VirtualMouse 
 {
 	flow-children: none;
 }
 
 
-ControllerBindings #KeyboardAndMouse Button
+#ControllerBindings #KeyboardAndMouse Button
 {
 	border-style: solid;
 	border-width: 2px;
@@ -313,19 +324,19 @@ ControllerBindings #KeyboardAndMouse Button
 	transition-timing-function: ease-in;
 }
 
-ControllerBindings #KeyboardAndMouse Button:hover
+#ControllerBindings #KeyboardAndMouse Button:hover
 {
 	transition-duration: 0.23s !immediate;
 	box-shadow: #eeeeee60 -3px -3px 6px 6px;
 }
 
-ControllerBindings.DaisyWheelVisible #KeyboardAndMouse Button:hover
+#ControllerBindings.DaisyWheelVisible #KeyboardAndMouse Button:hover
 {
 	box-shadow: none;
 }
 
 
-ControllerBindings #KeyboardAndMouse Button Label
+#ControllerBindings #KeyboardAndMouse Button Label
 {
 	margin: 0px;
 	padding: 0px;
@@ -341,8 +352,8 @@ ControllerBindings #KeyboardAndMouse Button Label
 	transition-timing-function: ease-in;
 }
 
-ControllerBindings #KeyboardAndMouse Button:focus,
-ControllerBindings #KeyboardAndMouse Button.OriginalBinding:focus
+#ControllerBindings #KeyboardAndMouse Button:focus,
+#ControllerBindings #KeyboardAndMouse Button.OriginalBinding:focus
 {
 	animation-name: main-button-glow-movement-small;
 	animation-duration: longduration;
@@ -357,109 +368,109 @@ ControllerBindings #KeyboardAndMouse Button.OriginalBinding:focus
 	border-width: 2px;
 }
 
-ControllerBindings #KeyboardAndMouse Button:focus Label
+#ControllerBindings #KeyboardAndMouse Button:focus Label
 {
 	color: #353535ff;
 }
 
-ControllerBindings #KeyboardAndMouse Button.OriginalBinding
+#ControllerBindings #KeyboardAndMouse Button.OriginalBinding
 {
 	background-color: #6893b570;
 	box-shadow: #6893b570 -1.5px -1.5px 4px 3px;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBRow1,
-ControllerBindings #KeyboardAndMouse #VKBRow2,
-ControllerBindings #KeyboardAndMouse #VKBRow3,
-ControllerBindings #KeyboardAndMouse #VKBRow4,
-ControllerBindings #KeyboardAndMouse #VKBRow5,
-ControllerBindings #KeyboardAndMouse #VKBRow6
+#ControllerBindings #KeyboardAndMouse #VKBRow1,
+#ControllerBindings #KeyboardAndMouse #VKBRow2,
+#ControllerBindings #KeyboardAndMouse #VKBRow3,
+#ControllerBindings #KeyboardAndMouse #VKBRow4,
+#ControllerBindings #KeyboardAndMouse #VKBRow5,
+#ControllerBindings #KeyboardAndMouse #VKBRow6
 {
 	flow-children: right;
 	margin-bottom: 1px;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBRow1
+#ControllerBindings #KeyboardAndMouse #VKBRow1
 {
 	margin-bottom: 8px;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBCol1,
-ControllerBindings #KeyboardAndMouse #VKBCol2,
-ControllerBindings #KeyboardAndMouse #VKBCol3
+#ControllerBindings #KeyboardAndMouse #VKBCol1,
+#ControllerBindings #KeyboardAndMouse #VKBCol2,
+#ControllerBindings #KeyboardAndMouse #VKBCol3
 {
 	flow-children: right;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBCol1
+#ControllerBindings #KeyboardAndMouse #VKBCol1
 {
 	margin-right: 15px;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBCol2
+#ControllerBindings #KeyboardAndMouse #VKBCol2
 {
 	margin-right: 15px;
 }
 
-ControllerBindings #KeyboardAndMouse #VKBCol3
+#ControllerBindings #KeyboardAndMouse #VKBCol3
 {
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_backspace
+#ControllerBindings #KeyboardAndMouse #kb_key_backspace
 {
 	width: 118px;
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_tab,
-ControllerBindings #KeyboardAndMouse #kb_key_backslash
+#ControllerBindings #KeyboardAndMouse #kb_key_tab,
+#ControllerBindings #KeyboardAndMouse #kb_key_backslash
 {
 	width: 88px;
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_capslock,
-ControllerBindings #KeyboardAndMouse #kb_key_enter
+#ControllerBindings #KeyboardAndMouse #kb_key_capslock,
+#ControllerBindings #KeyboardAndMouse #kb_key_enter
 {
 	width: 118px;
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_lshift,
-ControllerBindings #KeyboardAndMouse #kb_key_rshift
+#ControllerBindings #KeyboardAndMouse #kb_key_lshift,
+#ControllerBindings #KeyboardAndMouse #kb_key_rshift
 {
 	width: 148px;
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_lcontrol,
-ControllerBindings #KeyboardAndMouse #kb_key_rcontrol,
-ControllerBindings #KeyboardAndMouse #kb_key_lalt,
-ControllerBindings #KeyboardAndMouse #kb_key_ralt
+#ControllerBindings #KeyboardAndMouse #kb_key_lcontrol,
+#ControllerBindings #KeyboardAndMouse #kb_key_rcontrol,
+#ControllerBindings #KeyboardAndMouse #kb_key_lalt,
+#ControllerBindings #KeyboardAndMouse #kb_key_ralt
 {
 	width: 133px;
 }
 
 
-ControllerBindings #KeyboardAndMouse #kb_key_space
+#ControllerBindings #KeyboardAndMouse #kb_key_space
 {
 	width: 358px;
 }
 
-ControllerBindings #KeyboardAndMouse #kb_key_pad_0
+#ControllerBindings #KeyboardAndMouse #kb_key_pad_0
 {
 	width: 118px;
 }
 
-ControllerBindings #KeyboardAndMouse Button#kb_key_right Label
+#ControllerBindings #KeyboardAndMouse Button#kb_key_right Label
 {
 	transform-origin: 0% 0% parent-relative;
 	transform: rotatez( 90deg ) translatex( 100% );
 }
 
-ControllerBindings #KeyboardAndMouse Button#kb_key_down Label
+#ControllerBindings #KeyboardAndMouse Button#kb_key_down Label
 {
 	transform-origin: 0% 0% parent-relative;
 	transform: rotatez( 180deg ) translatex( 100% ) translatey( 100% );
 }
 
-ControllerBindings #KeyboardAndMouse Button#kb_key_left Label
+#ControllerBindings #KeyboardAndMouse Button#kb_key_left Label
 {
 	transform-origin: 0% 0% parent-relative;
 	transform: rotatez( -90deg ) translatey( 100% ); 
@@ -470,42 +481,42 @@ ControllerBindings #KeyboardAndMouse Button#kb_key_left Label
 	opacity: 0.0;
 }
 
-ControllerBindings #VirtualKeyboard
+#ControllerBindings #VirtualKeyboard
 {
 	height: 100%;
 	width: fill-parent-flow( 1.0 );
 	flow-children: down;
 }
 
-ControllerBindings #VirtualMouse
+#ControllerBindings #VirtualMouse
 {
 	height: 100%;
 	width: 240px;
 	
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_left_button
+#ControllerBindings #KeyboardAndMouse #mouse_left_button
 {
 	width: 44px;
 	height: 44px;
 	position: 48px 94px 0px;
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_right_button
+#ControllerBindings #KeyboardAndMouse #mouse_right_button
 {
 	width: 44px;
 	height: 44px;
 	position: 141px 94px 0px;
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_middle_button
+#ControllerBindings #KeyboardAndMouse #mouse_middle_button
 {
 	width: 31px;
 	height: 46px;
 	position: 100px 94px 0px;
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_scroll_up
+#ControllerBindings #KeyboardAndMouse #mouse_scroll_up
 {
 	width: 31px;
 	height: 45px;
@@ -513,34 +524,34 @@ ControllerBindings #KeyboardAndMouse #mouse_scroll_up
 	margin-left: 1px;
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_scroll_down
+#ControllerBindings #KeyboardAndMouse #mouse_scroll_down
 {
 	width: 31px;
 	height: 32px;
 	position: 100px 139px 0px;
 }
-ControllerBindings #KeyboardAndMouse #mouse_scroll_down Label
+#ControllerBindings #KeyboardAndMouse #mouse_scroll_down Label
 {
 	margin-left: 2px;
 	transform-origin: 0% 0% parent-relative;
 	transform: rotatez( 180deg ) translatex( 100% ) translatey( 100% );
 }
-ControllerBindings #KeyboardAndMouse #mouse_back_button
+#ControllerBindings #KeyboardAndMouse #mouse_back_button
 {
 	width: 33px;
 	height: 44px;
 	position: 37px 191px 0px;
 }
 
-ControllerBindings #KeyboardAndMouse #mouse_forward_button
+#ControllerBindings #KeyboardAndMouse #mouse_forward_button
 {
 	width: 33px;
 	height: 44px;
 	position: 160px 191px 0px;
 }
 
-ControllerBindings .SelectBindingHeader,
-ControllerBindings .EditPadHeader
+#ControllerBindings .SelectBindingHeader,
+#ControllerBindings .EditPadHeader
 {
 	horizontal-align: center;
 	margin: 8px;
@@ -550,7 +561,7 @@ ControllerBindings .EditPadHeader
 	font-size: 32px;
 }
 
-ControllerBindings #BindingDescriptionTextEntry
+#ControllerBindings #BindingDescriptionTextEntry
 {
 	width: 400px;
 	font-size: 36px;
@@ -566,14 +577,14 @@ ControllerBindings #BindingDescriptionTextEntry
 	animation-name: none;
 }
 
-ControllerBindings #RightColumn
+#ControllerBindings #RightColumn
 {
 	width: 100%;
 	height: 100%;
 	position: 0px 0px 0px;
 }
 
-ControllerBindings .BindingHeader
+#ControllerBindings .BindingHeader
 {
 	color: #7fcfffff;
 	font-weight: thin;
@@ -590,7 +601,7 @@ ControllerBindings .BindingHeader
 	margin-top: 26px;
 }
 
-ControllerBindings Button
+#ControllerBindings Button
 {
 	border-width: 5px;
 	border-style: solid;
@@ -606,7 +617,7 @@ ControllerBindings Button
 	padding-bottom: 2px;
 }
 
-ControllerBindings Button Label
+#ControllerBindings Button Label
 {
 	transition-property: transform, color;
 	transition-duration: shortduration;
@@ -615,7 +626,7 @@ ControllerBindings Button Label
 	transform: translatex( -4px );
 }
 
-ControllerBindings Button #Description
+#ControllerBindings Button #Description
 {
 	font-size: 30px;
 	font-weight: thin;
@@ -623,7 +634,7 @@ ControllerBindings Button #Description
 	white-space: nowrap;
 }
 
-ControllerBindings Button.BindingButton:focus
+#ControllerBindings Button.BindingButton:focus
 {
 	transition-property: background-color, border;
 	transition-duration: shortduration;
@@ -637,7 +648,7 @@ ControllerBindings Button.BindingButton:focus
 	animation-direction: normal;
 }
 
-ControllerBindings Button.BindingButton
+#ControllerBindings Button.BindingButton
 {
 	flow-children: down;
 	margin: -6px;
@@ -652,12 +663,12 @@ ControllerBindings Button.BindingButton
 	
 }
 
-ControllerBindings Button.BindingButtonRight
+#ControllerBindings Button.BindingButtonRight
 {
 	padding-right: -2px;
 }
 
-ControllerBindings Button.BindingButtonRight Label
+#ControllerBindings Button.BindingButtonRight Label
 {
 	text-align: right;
 	margin-right: 4px;
@@ -672,7 +683,7 @@ ControllerBindings Button.BindingButtonRight Label
 	color: gradient( linear, 0% 0%, 0% 60%, from( #f1f1f1ff ), to( #a1a1a1dd ) );
 }
 
-ControllerBindings Button #Author
+#ControllerBindings Button #Author
 {
 	font-size: 25px;
 	font-weight: thin;
@@ -680,13 +691,13 @@ ControllerBindings Button #Author
 	white-space: nowrap;
 }
 
-ControllerBindings #BindingLabels:descendantfocus Button:hover
+#ControllerBindings #BindingLabels:descendantfocus Button:hover
 {
 	transition-duration: 0.23s !immediate;
 	box-shadow: #eeeeee60 -3px -3px 6px 6px;
 }
 
-ControllerBindings Button:focus,
+#ControllerBindings Button:focus,
 {
 	transition-duration: shortduration !immediate;
 	transition-property: background-color, border;
@@ -708,22 +719,28 @@ ControllerBindings Button:focus,
 	animation-direction: normal;
 }
 
-ControllerBindings Button:focus #Description,
-ControllerBindings Button:focus #Author
+#ControllerBindings Button:focus #Description,
+#ControllerBindings Button:focus #Author
 {
 	transform: translatex( 3px );
 	color: #353535ff;
 }
 
 
-ControllerBindings #MsgBoxButtonArea
+#ControllerBindings #MsgBoxButtonArea
 {
 	background-image: url( "file://{images}/library/alpha_controller.png" ); 
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
-ControllerBindings .MsgBoxHeader,
+#ControllerBindings.D0g #MsgBoxButtonArea
+{
+	background-position: 0px -33px;
+	background-image: url( "file://{images}/library/alpha_controller_d0g.png" ); 
+}
+
+#ControllerBindings .MsgBoxHeader,
 {
 	horizontal-align: center;
 	flow-children: down;
@@ -733,7 +750,7 @@ ControllerBindings .MsgBoxHeader,
 	transition-timing-function: ease-in-out;
 }
 
-ControllerBindings.SelectMode .MsgBoxHeader
+#ControllerBindings.SelectMode .MsgBoxHeader
 {
 	opacity: 0.0;
 }
@@ -852,7 +869,7 @@ ControllerBindings.SelectMode .MsgBoxHeader
 	color: gradient( linear, 0% 0%, 0% 60%, from( #f1f1f1ff ), to( #a1a1a1dd ) );
 }
 
-ControllerBindings #RepeatRegion
+#ControllerBindings #RepeatRegion
 {
 	horizontal-align: center;
 	width: 994px;
@@ -875,7 +892,14 @@ ControllerBindings #RepeatRegion
 	transition-timing-function: ease-in;
 }
 
-ControllerBindings.NativeAPIMode #BindingLabels
+#ControllerBindings.D0g #BindingLabels
+{
+	background-position: 0px -33px;
+	background-image: url( "file://{images}/library/alpha_controller_lines_d0g.png" );
+} 
+
+
+#ControllerBindings.NativeAPIMode #BindingLabels
 {
 	opacity: 0.0;
 }
@@ -1029,9 +1053,19 @@ Button:focus .PActionMappingWrapper Image
 	position: 20px 0px 0px;
 }
 
+.D0g #L2Button
+{
+	position: 114px 0px 0px;
+}
+
 #L1Button
 {
 	position: 20px 95px 0px;
+}
+
+.D0g #L1Button
+{
+	position: 114px 95px 0px;
 }
 
 #P1Button
@@ -1039,9 +1073,19 @@ Button:focus .PActionMappingWrapper Image
 	position: 20px 190px 0px;
 }
 
+.D0g #P1Button
+{
+	position: 114px 288px 0px;
+}
+
 #Btn0Button
 {
 	position: 20px 288px 0px;
+}
+
+.D0g #Btn0Button
+{
+	position: 1344px 388px 0px;
 }
 
 #Btn2Button
@@ -1049,9 +1093,19 @@ Button:focus .PActionMappingWrapper Image
 	position: 20px 382px 0px;
 }
 
+.D0g #Btn2Button
+{
+	position: 1344px 578px 0px;
+}
+
 #L3Button
 {
 	position: 20px 480px 0px;
+}
+
+.D0g #L3Button
+{
+	position: 114px 190px 0px;
 }
 
 #B1ActionName
@@ -1069,14 +1123,29 @@ Button:focus .PActionMappingWrapper Image
 	position: 1252px 0px 0px;
 }
 
+.D0g #R2Button
+{
+	position: 1344px 0px 0px;
+}
+
 #R1Button
 {
 	position: 1252px 95px 0px;
 }
 
+.D0g #R1Button
+{
+	position: 1344px 95px 0px;
+}
+
 #P2Button
 {
 	position: 1252px 190px 0px;
+}
+
+.D0g #P2Button
+{
+	position: 1344px 288px 0px;
 }
 
 #P2ActionMappingWrapper
@@ -1089,14 +1158,30 @@ Button:focus .PActionMappingWrapper Image
 	position: 1252px 288px 0px;
 }
 
+.D0g #Btn1Button
+{
+	position: 1344px 480px 0px;
+}
+
 #Btn3Button
 {
 	position: 1252px 382px 0px;
 }
 
+.D0g #Btn3Button
+{
+	position: 1344px 673px 0px;
+
+}
+
 #R3Button
 {
 	position: 1252px 480px 0px;
+}
+
+.D0g #R3Button
+{
+	position: 1344px 190px 0px;
 }
 
 #B2ActionName
@@ -1151,7 +1236,7 @@ Button:focus .PActionMappingWrapper Image
 	position: 1272px 104px 0px;
 }
 
-ControllerBindings .TouchButtonOuter.BindingButton
+#ControllerBindings .TouchButtonOuter.BindingButton
 {
 	width: 440px;
 	flow-children: none;
@@ -1162,11 +1247,22 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	position: 370px 582px 0px;
 }
 
+.D0g #Touch0ButtonOuter
+{
+	position: 114px 388px 0px;
+}
+
 #Touch0ActionName
 {
 	position: 14px 0px 0px;
 	width: 335px;
 	text-align: right;
+}
+
+.D0g #Touch0ActionName
+{
+	position: 0px 0px 0px;
+	text-align: left;
 }
 
 #Touch0ActionMapping
@@ -1176,9 +1272,20 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	text-align: right;
 }
 
+.D0g #Touch0ActionMapping
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch1ButtonOuter
 {
 	position: 818px 582px 0px;
+}
+
+.D0g #Touch1ButtonOuter
+{
+	position: 114px 578px 0px;
 }
 
 #Touch1ActionName
@@ -1188,6 +1295,12 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	width: 335px;
 }
 
+.D0g #Touch1ActionName
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch1ActionMapping
 {
 	position: 74px 40px 0px;
@@ -1195,9 +1308,20 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	width: 335px;
 }
 
+.D0g #Touch1ActionMapping
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch2ButtonOuter
 {
 	position: 370px 672px 0px;
+}
+
+.D0g #Touch2ButtonOuter
+{
+	position: 114px 480px 0px;
 }
 
 #Touch2ActionName
@@ -1207,6 +1331,12 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	text-align: right;
 }
 
+.D0g #Touch2ActionName
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch2ActionMapping
 {
 	position: 14px 40px 0px;
@@ -1214,9 +1344,20 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	text-align: right;
 }
 
+.D0g #Touch2ActionMapping
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch3ButtonOuter
 {
 	position: 818px 672px 0px;
+}
+
+.D0g #Touch3ButtonOuter
+{
+	position: 114px 673px 0px;
 }
 
 #Touch3ActionName
@@ -1226,6 +1367,12 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	width: 335px;
 }
 
+.D0g #Touch3ActionName
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
+
 #Touch3ActionMapping
 {
 	position: 74px 40px 0px;
@@ -1233,6 +1380,11 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	width: 335px;
 }
 
+.D0g #Touch3ActionMapping
+{
+	position: 0px 0px 0px;
+	text-align: left;
+}
 
 .TouchButton
 {
@@ -1272,19 +1424,19 @@ ControllerBindings .TouchButtonOuter.BindingButton
 	position: 0px 4px 0px;
 }
 
-ControllerBindings .TouchButtonOuter Label
+#ControllerBindings .TouchButtonOuter Label
 {
 	transform: translatex( 0px );
 }
 
-ControllerBindings .TouchButtonOuter:focus .ActionMapping,
-ControllerBindings .TouchButtonOuter:focus .ActionLabel,
+#ControllerBindings .TouchButtonOuter:focus .ActionMapping,
+#ControllerBindings .TouchButtonOuter:focus .ActionLabel,
 {
 	transform: translatex( 7px );
 }
 
-ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionMapping,
-ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionLabel,
+#ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionMapping,
+#ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionLabel,
 {
 	transform: translatex( -7px );
 }
@@ -1299,20 +1451,20 @@ ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionLabel,
 	transform: translatex( -7px );
 }
 
-SaveBindingsMsgBox #MsgBoxDescriptionArea
+.SaveBindingsMsgBox #MsgBoxDescriptionArea
 {
 	flow-children: down;
 }
 
-SaveBindingsMsgBox .MsgBoxBodyRegion
+.SaveBindingsMsgBox .MsgBoxBodyRegion
 {
 	transition-property: transform;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 }
 
-SaveBindingsMsgBox.DaisyWheelVisible .MsgBoxBodyRegion,
-SaveBindingsMsgBox.DaisyWheelVisible #MsgBoxBodyRegion,
+.SaveBindingsMsgBox.DaisyWheelVisible .MsgBoxBodyRegion,
+.SaveBindingsMsgBox.DaisyWheelVisible #MsgBoxBodyRegion,
 {
 	transform: translatex( 470px );
 }
@@ -1362,7 +1514,7 @@ SaveBindingsMsgBox.DaisyWheelVisible #MsgBoxBodyRegion,
 	opacity: 0.0;
 }
 
-SaveBindingsMsgBox TextEntry
+.SaveBindingsMsgBox TextEntry
 {
 	width: 100%;
 	white-space: normal;
@@ -1892,41 +2044,41 @@ SaveBindingsMsgBox TextEntry
 	color: #353535ff;
 }
 
-#PadNorth
+#ControllerBindings #PadNorth
 {
 	horizontal-align: center;
 	vertical-align: top;
 	margin-top: 64px;
 }
 
-.eightway #PadNorth,
-.eightwayoverlap #PadNorth
+#ControllerBindings .eightway #PadNorth,
+#ControllerBindings .eightwayoverlap #PadNorth
 {
 	transform: translatey( -20px );
 }
 
-#PadNorthWest,
-#PadNorthEast,
-#PadSouthWest,
-#PadSouthEast
+#ControllerBindings #PadNorthWest,
+#ControllerBindings #PadNorthEast,
+#ControllerBindings #PadSouthWest,
+#ControllerBindings #PadSouthEast
 {
 	opacity: 0.0;
 }
 
-.eightway #PadNorthWest,
-.eightwayoverlap #PadNorthWest,
-.eightway #PadNorthEast,
-.eightwayoverlap #PadNorthEast,
-.eightway #PadSouthWest,
-.eightwayoverlap #PadSouthWest,
-.eightway #PadSouthEast,
-.eightwayoverlap #PadSouthEast
+#ControllerBindings .eightway #PadNorthWest,
+#ControllerBindings .eightwayoverlap #PadNorthWest,
+#ControllerBindings .eightway #PadNorthEast,
+#ControllerBindings .eightwayoverlap #PadNorthEast,
+#ControllerBindings .eightway #PadSouthWest,
+#ControllerBindings .eightwayoverlap #PadSouthWest,
+#ControllerBindings .eightway #PadSouthEast,
+#ControllerBindings .eightwayoverlap #PadSouthEast
 {
 	opacity: 1.0;
 }
 	
 
-#PadNorthWest
+#ControllerBindings #PadNorthWest
 {
 	horizontal-align: left;
 	vertical-align: top;
@@ -1934,7 +2086,7 @@ SaveBindingsMsgBox TextEntry
 	margin-left: 84px;
 }
 
-#PadNorthEast
+#ControllerBindings #PadNorthEast
 {
 	horizontal-align: right;
 	vertical-align: top;
@@ -1942,20 +2094,20 @@ SaveBindingsMsgBox TextEntry
 	margin-right: 84px;
 }
 
-#PadSouth
+#ControllerBindings #PadSouth
 {
 	horizontal-align: center;
 	vertical-align: bottom;
 	margin-bottom: 64px;
 }
 
-.eightway #PadSouth,
-.eightwayoverlap #PadSouth
+#ControllerBindings .eightway #PadSouth,
+#ControllerBindings .eightwayoverlap #PadSouth
 {
 	transform: translatey( 20px );
 }
 
-#PadSouthWest
+#ControllerBindings #PadSouthWest
 {
 	horizontal-align: left;
 	vertical-align: bottom;
@@ -1963,7 +2115,7 @@ SaveBindingsMsgBox TextEntry
 	margin-left: 84px;
 }
 
-#PadSouthEast
+#ControllerBindings #PadSouthEast
 {
 	horizontal-align: right;
 	vertical-align: bottom;
@@ -1971,36 +2123,36 @@ SaveBindingsMsgBox TextEntry
 	margin-right: 84px;
 }
 
-#PadWest
+#ControllerBindings #PadWest
 {
 	horizontal-align: left;
 	vertical-align: center;
 	margin-left: 64px;
 }
 
-.eightway #PadWest,
-.eightwayoverlap #PadWest
+#ControllerBindings .eightway #PadWest,
+#ControllerBindings .eightwayoverlap #PadWest
 {
 	transform: translatex( -20px );
 }
 
-#PadEast
+#ControllerBindings #PadEast
 {
 	horizontal-align: right;
 	vertical-align: center;
 	margin-right: 64px;
 }
 
-.eightway #PadEast,
-.eightwayoverlap #PadEast
+#ControllerBindings .eightway #PadEast,
+#ControllerBindings .eightwayoverlap #PadEast
 {
 	transform: translatex( 20px );
 }
 
-.mousemove #PadNorth,
-.mousemove #PadSouth,
-.mousemove #PadEast,
-.mousemove #PadWest
+#ControllerBindings .mousemove #PadNorth,
+#ControllerBindings .mousemove #PadSouth,
+#ControllerBindings .mousemove #PadEast,
+#ControllerBindings .mousemove #PadWest
 {
 	opacity: 0.0;
 }
