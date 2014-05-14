@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1399933727"
+	"version"		"1400025274"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.4f92c5187973d3efaf2b745b49d451169d56fdbe"
-		"checksum"		"4f92c5187973d3efaf2b745b49d451169d56fdbe"
-		"size"		"2282694"
-		"zipvz"		"tenfoot_all.zip.vz.7571b94bd4e48e9985ffbe3d0183a13877adccc4_831895"
+		"file"		"tenfoot_all.zip.d744e21f2e8e018fe4d619b1025ab6a2a41f9346"
+		"checksum"		"d744e21f2e8e018fe4d619b1025ab6a2a41f9346"
+		"size"		"2282913"
+		"zipvz"		"tenfoot_all.zip.vz.be0bf66ce3aab0508847696414916ddbc22946ed_832192"
 	}
 	"resources_misc_all"
 	{
@@ -62,9 +62,9 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.28141e56f30869c9de4f34a8e307b48ee16051e8"
-		"checksum"		"28141e56f30869c9de4f34a8e307b48ee16051e8"
-		"size"		"110174"
+		"file"		"strings_en_all.zip.0e46d0876f14bf57359d272db416cdecb7edc1ae"
+		"checksum"		"0e46d0876f14bf57359d272db416cdecb7edc1ae"
+		"size"		"110184"
 	}
 	"strings_all"
 	{
@@ -117,21 +117,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.8b7a373ca5c6ff4ccc9154d454827ee1d41c7c2c"
-		"checksum"		"8b7a373ca5c6ff4ccc9154d454827ee1d41c7c2c"
-		"size"		"23958783"
-		"zipvz"		"bins_win32.zip.vz.def41428447e166b3d79e21cd2e8c84fe4022a26_12531344"
+		"file"		"bins_win32.zip.4a2aa3867ecf7dae4ada6c80e3526844852f2b61"
+		"checksum"		"4a2aa3867ecf7dae4ada6c80e3526844852f2b61"
+		"size"		"23956962"
+		"zipvz"		"bins_win32.zip.vz.6aa13acbec4091c1c31ebb68dbd3062b17161164_12530228"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.7f518cbcfe570888179ee22a859227788bf2fcc4"
-		"checksum"		"7f518cbcfe570888179ee22a859227788bf2fcc4"
-		"size"		"851488"
-		"zipvz"		"steam_win32.zip.vz.1530eeae44c1f5ecc9319b21a4ec429fd9b497b3_692730"
+		"file"		"steam_win32.zip.cbb543922da67c87371d778f840515fc270bd8f9"
+		"checksum"		"cbb543922da67c87371d778f840515fc270bd8f9"
+		"size"		"850985"
+		"zipvz"		"steam_win32.zip.vz.889b85a3d6987f3401d895b265fb5b08efdafb68_692542"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"26a90b2d66a3ea6dd33b904bdca0cd4ee8b1fa62228ec632598a232fee05ec0eff057bcf72828f6eb72d1285758243503fdcf6ef304e522f00cdfacd3f5828b6c54f59ccdb560d5f16621f9b2f04e713f65ac9e2e5b9da5f36d66c3333cef87ec70409a3fd4cc6857da91fcfb36d68bddae277a314f4846c026c5df65fae4634"
+	"win32"		"0eb7054f529f10996ca428a58adc0ce30840bb5409d9306af4f9c02bb80df1ef500e8fb61e85221671e07db9397aace92bd165790f6c7c500084d1cbefe6f87f9b0a357dcf8c1a250a9b56203b46e3314e2dbda96c1e8380d6362cf45db605f12183efc3772ee904dfd86cc283ad5aae93a4753e7e2d94bdf009ddec04d7ea18"
 }
