@@ -552,7 +552,8 @@ FriendsSelfHeader.InGame Label
 	box-shadow: fill #eeeeee60 -4.5px -4.5px 6px 9px;
 }
 
-.FriendsListItemAvatar
+.FriendsListItemAvatar,
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup #MyAvatar
 {
 	margin-left: 2px;
 	margin-top: 3px;
@@ -603,6 +604,53 @@ FriendsSelfHeader.InGame Label
 	vertical-align: bottom;
 	flow-children: down;
 }
+
+.RollupPendingInvites .LeftMainListItem.PendingInvite
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup
+{
+	visibility: visible;
+	opacity: 1.0;
+}
+
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup #FriendPanelImage,
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup #FriendPanelLabels,
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup #PendingInvitesDesc
+{
+	transition-property: transform, color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	
+	margin-left: 10px;
+	transform: translatex(  0px );
+	
+	font-weight: normal;
+	font-size: 24px;
+	vertical-align: center;
+	color: friendsoffline_darkbg;
+}
+
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup:focus #PendingInvitesDesc
+{
+	transform: translatex( 11px );
+	color: friendsoffline_lightbg;
+}
+
+.RollupPendingInvites .LeftMainListItem.PendingInviteRollup #MyAvatar
+{
+	visibility: collapse;
+	border-color: friendsoffline_solid;
+}
+
 
 .LeftMainListItem AvatarImage, .LeftMainListItem #FriendPanelLabels
 {

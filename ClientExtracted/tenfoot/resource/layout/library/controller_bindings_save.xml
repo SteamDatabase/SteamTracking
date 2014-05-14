@@ -8,7 +8,7 @@
 	</styles>
 
 	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
-		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="BindingSaveCancelled()">
 			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_ControllerSaveBindingTitle" />
 			</Panel>

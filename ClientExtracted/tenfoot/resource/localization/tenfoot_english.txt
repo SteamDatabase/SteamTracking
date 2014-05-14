@@ -1541,6 +1541,7 @@
 	"Friends_Indicator_GameInvite"		"Game Invite"
 	"Friends_Indicator_FriendRequest"	"Friend Request"
 	"Friends_Footer_More"			"MORE"
+	"Friends_Footer_ViewAllInvites"		"VIEW ALL INVITES"
 	"Friends_Footer_SendMessage"	"CHAT"
 	"Friends_Footer_JoinGroupChat"	"JOIN CHAT"
 	"Friends_Footer_LeaveGroupChat"	"LEAVE CHAT"
@@ -2309,4 +2310,6 @@
 	"SteamUI_AddController_HowToConnect"	"Connect a Steam controller by pressing the Steam button."
 	"SteamUI_AddController_HowToPair1"	"Pair a new Steam Controller by holding the Steam button and tapping the left bumper."
 	"SteamUI_AddController_HowToPair2"	"Connecting a Steam Controller with USB will pair it.  After that it will be able to connect wirelessly."
+
+	"BigPicture_YouHaveNPendingInvites"	"View {d:InviteCount} pending friend invitations."
 }

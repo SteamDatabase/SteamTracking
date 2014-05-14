@@ -207,7 +207,8 @@ MoviePanel
 	color: applabel;
 	font-weight: light;
 	width: 100%;
-	margin: 20px 104px 0px 104px;
+	height: 80px;
+	margin: 20px 104px 10px 104px;
 }
 
 
