@@ -4434,17 +4434,6 @@ td.negative {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABAgMAAABmjvwnAAAAAXNSR0IArs4c6QAAAAlQTFRFHB0fKystVlZWMEVQagAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QEKFDQCfqL18gAAAApJREFUCNdjSAAAAGIAYRsWYbAAAAAASUVORK5CYII=);
 }
 
-.jsTooltip {
-	background-color: #c2c2c2;
-	padding: 5px;
-	border-radius: 2px;
-	box-shadow: 0 0 3px #000;
-	max-width: 225px;
-	color: #3d3d3f;
-	font-size: 11px;
-	text-align: left;
-}
-
 a.tooltip {
 	cursor: pointer;
 	color: inherit;
