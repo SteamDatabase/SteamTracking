@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.bb224223d68704f824405af05e68ba4457f9889a.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/730\/scripts\/items\/items_game.e827cd46675604567c7e3c6db5d049c4fe3de2af.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1346,7 +1346,7 @@
 				"item_class": "tool",
 				"item_type_name": "Contract",
 				"item_name": "Trade Up Contract",
-				"item_description": "In exchange for 10 items from the same Collection and of identical quality, you will receive a single item from that Collection of a quality one higher than the items you provided.",
+				"item_description": "In exchange for 10 items of identical quality, you will receive a single item of a quality one higher, from a collection of one of the items you provided.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ\/tools\/crafting_contract",
