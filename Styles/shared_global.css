@@ -1259,3 +1259,28 @@ img.dynamiclink_preview {
 .adult_content_age_gate p {
 	padding: 26px 0;
 }
+
+.jsTooltip {
+	background-color: #c2c2c2;
+	padding: 5px;
+	border-radius: 2px;
+	box-shadow: 0 0 3px #000;
+	max-width: 225px;
+	color: #3d3d3f;
+	font-size: 11px;
+	text-align: left;
+}
+
+/* early access tag on reviews*/
+.early_access_review
+{
+	background-color: #4d6c8b;
+	border: 1px solid #779abc;
+	text-transform: uppercase;
+	font-family: arial;
+	font-size: 11px;
+	color: #9ac7f3;
+	padding: 1px 4px 0px 4px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
