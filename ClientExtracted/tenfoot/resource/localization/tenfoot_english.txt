@@ -1161,6 +1161,7 @@
 	"Library_Details_MoreWaysToPlay"			"MORE WAYS TO PLAY"
 	"Library_Details_StreamFrom"				"STREAM FROM"
 	"Library_Details_ControllerBindingNativeNotice"	"{s:gamename} includes native Steam Controller support in-game.  Please see the in-game UI for details on controller bindings."
+	"Library_Details_ControllerBindingGamepadModeNotice"	"{s:gamename} is configured to use Steam Controller gamepad emulation in-game.  Please see the in-game UI for details on controller bindings. You may also modify now to combine with or switch to keyboard/mouse bindings."
 	"Library_ControllerSaveBindingTitle"		"Save Bindings"
 	"Library_ControllerSetTitle"			"Set Title"
 	"Library_ControllerAddDescription"		"Add Description"

@@ -143,6 +143,7 @@
 						</Panel>
 					<Panel id="BindingCallouts" class="BindingCallouts" />
 					<Label id="BindingNativeNotice" text="#Library_Details_ControllerBindingNativeNotice" />
+					<Label id="BindingGamepadModeNotice" text="#Library_Details_ControllerBindingGamepadModeNotice" />
 					</Panel>
 				</Panel>
 			</Panel>
