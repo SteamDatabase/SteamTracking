@@ -1803,3 +1803,38 @@ body.profile_page #footer {
 	background-color: #333333;
 	border-top: 1px solid #000000;
 }
+
+.profile_fatalerror {
+	padding: 20px 80px 80px 80px;
+}
+
+.profile_fatalerror h1 {
+	margin-left: 8px;
+}
+
+.profile_fatalerror h3 {
+	color: #5491cf;
+	font-size: 17px;
+	font-weight: normal;
+	margin-bottom: 12px;
+	margin-left: 8px;
+}
+
+.profile_fatalerror_message {
+	background-color: #1d1d1d;
+	border-radius: 3px;
+	padding: 16px 24px;
+	color: #d6d6d6;
+	margin-bottom: 32px;
+	line-height: 20px;
+}
+
+.group_breadcrumbs, .group_breadcrumbs a {
+	color: #9b9b9b;
+	text-decoration: none;
+	margin-bottom: 12px;
+}
+
+.group_breadcrumbs a:hover {
+	text-decoration: underline;
+}

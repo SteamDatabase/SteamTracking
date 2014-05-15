@@ -1088,7 +1088,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 
 /* re-uses comment icon */
 .header_notification_moderatormessage .notification_icon {
-	background-position: 0 0;
+	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/header/inbox_moderator_message.png' );
 }
 
 
