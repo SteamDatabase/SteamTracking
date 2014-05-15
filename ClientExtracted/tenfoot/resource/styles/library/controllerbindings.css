@@ -102,12 +102,19 @@
 	margin-top: -4px;
 }
 
-#ControllerBindings.NativeAPIMode .MsgBoxSubTitle
+#ControllerBindings.NativeAPIMode .MsgBoxSubTitle,
+#ControllerBindings.GamepadHostMode .MsgBoxSubTitle
 {
 	opacity: 0.0;
 }
 
-#ControllerBindings #BindingNativeNotice
+#ControllerBindings.GamepadHostMode.EditMode .MsgBoxSubTitle
+{
+	opacity: 1.0;
+}
+
+#ControllerBindings #BindingNativeNotice,
+#ControllerBindings #BindingGamepadModeNotice
 {
 	color: detailsdatalabel;
 	horizontal-align: center;
@@ -118,9 +125,15 @@
 	margin-top: 620px;
 }
 
-#ControllerBindings.NativeAPIMode #BindingNativeNotice
+#ControllerBindings.NativeAPIMode #BindingNativeNotice,
+#ControllerBindings.GamepadHostMode #BindingGamepadModeNotice
 {
 	opacity: 1.0;
+}
+
+#ControllerBindings.EditMode.GamepadHostMode #BindingGamepadModeNotice
+{
+	opacity: 0.0;
 }
 
 #ControllerBindings #LeftColumn
@@ -899,10 +912,24 @@
 } 
 
 
-#ControllerBindings.NativeAPIMode #BindingLabels
+#ControllerBindings.NativeAPIMode #BindingLabels,
+#ControllerBindings.GamepadHostMode #BindingLabels
 {
 	opacity: 0.0;
 }
+
+#ControllerBindings.GamepadHostMode.EditMode #BindingLabels
+{
+	opacity: 1.0;
+}
+
+#ControllerBindings.GamepadHostMode.EditMode.EditPadBinding #BindingLabels,
+
+#ControllerBindings.GamepadHostMode.EditMode.EditSingleBinding #BindingLabels
+{
+	opacity: 0.0;
+}
+
 
 
 .EditSingleBinding #BindingLabels,

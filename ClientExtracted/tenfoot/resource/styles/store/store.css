@@ -702,6 +702,8 @@ StorePanel:descendantfocus #FeaturedPlatform
 	color: white;
 	font-weight: bold;
 	width: fill-parent-flow( 1.0 );
+	white-space: nowrap;
+	margin-right: 8px;
 }
 
 #StorePriceArea

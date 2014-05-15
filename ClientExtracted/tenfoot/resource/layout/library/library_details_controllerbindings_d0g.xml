@@ -27,15 +27,15 @@
 						<Label id="MsgBoxSubTitle" class="MsgBoxSubTitle" text="#Library_ControllerBindingsSubTitle" />
 					</Panel>
 					<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
-						<Panel id="BindingLabels" childfocusonhover="true" tabindex="auto"  defaultfocus="L2Button">
+						<Panel id="BindingLabels" childfocusonhover="true" tabindex="auto"  defaultfocus="L1Button">
 
 
-							<Button id="L2Button" class="BindingButton" selectionpos="0,0" onactivate="EditButtonBinding( left_trigger  );">
+							<Button id="L2Button" class="BindingButton" selectionpos="0,1" onactivate="EditButtonBinding( left_trigger  );">
 								<Label id="L2ActionName" class="ActionLabel" />
 								<Label id="L2ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="L1Button" class="BindingButton" selectionpos="0,1" onactivate="EditButtonBinding( left_bumper );">
+							<Button id="L1Button" class="BindingButton" selectionpos="0,0" onactivate="EditButtonBinding( left_bumper );">
 								<Label id="L1ActionName" class="ActionLabel" />
 								<Label id="L1ActionMapping" class="ActionMapping" />
 							</Button>
@@ -79,12 +79,12 @@
 								<Label id="Touch3ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="R2Button" class="BindingButton BindingButtonRight" selectionpos="1,0" onactivate="EditButtonBinding( right_trigger );">
+							<Button id="R2Button" class="BindingButton BindingButtonRight" selectionpos="1,1" onactivate="EditButtonBinding( right_trigger );">
 								<Label id="R2ActionName" class="ActionLabel" />
 								<Label id="R2ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="R1Button" class="BindingButton BindingButtonRight" selectionpos="1,1" onactivate="EditButtonBinding( right_bumper );">
+							<Button id="R1Button" class="BindingButton BindingButtonRight" selectionpos="1,0" onactivate="EditButtonBinding( right_bumper );">
 								<Label id="R1ActionName" class="ActionLabel" />
 								<Label id="R1ActionMapping" class="ActionMapping" />
 							</Button>
@@ -132,6 +132,7 @@
 						</Panel>
 					<Panel id="BindingCallouts" class="BindingCallouts" />
 					<Label id="BindingNativeNotice" text="#Library_Details_ControllerBindingNativeNotice" />
+					<Label id="BindingGamepadModeNotice" text="#Library_Details_ControllerBindingGamepadModeNotice" />
 					</Panel>
 				</Panel>
 			</Panel>
