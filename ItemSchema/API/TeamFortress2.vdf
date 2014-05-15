@@ -216,6 +216,7 @@
 			"sniper_pocket"		"1"			
 			"engineer_lenses"	"1"			
 			"heavy_hip_pouch"	"1"	
+			"pyro_mask"			"1"			
 		}
 	}
 	"equip_conflicts"
@@ -231,10 +232,6 @@
 			"face"			"1"
 			"glasses"		"1"
 			"ears"			"1"
-		}
-		"heavy_pocket"
-		{
-			"medal"			"1"
 		}
 	}
 	"prefabs"
@@ -15323,7 +15320,7 @@
 			"item_type_name" "#TF_Wearable_Hat"
 			"item_name"	"#TF_PyromancersMask"
 			"item_slot"	"head"
-			"equip_region"	"hat"			
+			"equip_region"	"pyro_mask"			
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/pyro/pyro_pyromancers_mask"
 			"image_inventory_size_w"		"128"
@@ -55649,7 +55646,150 @@
 			"image_inventory"	"backpack/player/items/all_class/etf2l_highlander_participant_2012"
 			"model_player"		"models/player/items/all_class/etf2l_highlander_participant_2012.mdl"
 		}
-
+		"8429"
+		{		
+			"name"				"LBTF2 Elite 1st Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Elite_1st"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl"
+		}
+		"8430"
+		{		
+			"name"				"LBTF2 Elite 2nd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Elite_2nd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl"
+		}
+		"8431"
+		{		
+			"name"				"LBTF2 Elite 3rd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Elite_3rd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl"
+		}
+		"8432"
+		{		
+			"name"				"LBTF2 Elite Participant Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Elite_Participant"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl"
+		}
+		"8433"
+		{		
+			"name"				"LBTF2 Central 1st Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Central_1st"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl"
+		}
+		"8434"
+		{		
+			"name"				"LBTF2 Central 2nd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Central_2nd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl"
+		}
+		"8435"
+		{		
+			"name"				"LBTF2 Central 3rd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Central_3rd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl"
+		}
+		"8436"
+		{		
+			"name"				"LBTF2 Central Participant Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Central_Participant"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl"
+		}
+		"8437"
+		{		
+			"name"				"LBTF2 Access 1st Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Access_1st"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl"
+		}
+		"8438"
+		{		
+			"name"				"LBTF2 Access 2nd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Access_2nd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl"
+		}
+		"8439"
+		{		
+			"name"				"LBTF2 Access 3rd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Access_3rd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl"
+		}
+		"8440"
+		{		
+			"name"				"LBTF2 Access Participant Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Access_Participant"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl"
+		}
+		"8441"
+		{		
+			"name"				"LBTF2 Open 1st Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Open_1st"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl"
+		}
+		"8442"
+		{		
+			"name"				"LBTF2 Open 2nd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Open_2nd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl"
+		}
+		"8443"
+		{		
+			"name"				"LBTF2 Open 3rd Place Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Open_3rd"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl"
+		}
+		"8444"
+		{		
+			"name"				"LBTF2 Open Participant Season 9"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_LBTF2_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_LBTF2_Season9"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant"
+			"model_player"		"models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl"
+		}
 
 
 

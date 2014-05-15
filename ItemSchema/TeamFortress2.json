@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.76626ffad6408b55cc6ed4b1f8b461aa6fc2e6f1.txt",
+		"items_game_url": "http:\/\/media.steampowered.com\/apps\/440\/scripts\/items\/items_game.40ebad4277205887a83c8b41facdc23fcc68f60b.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -85964,6 +85964,758 @@
 				
 			},
 			{
+				"name": "LBTF2 Elite 1st Place Season 9",
+				"defindex": 8429,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Elite 1st Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold.e06a26f0ab980e8163eaa0529b0107c4ab97a95c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold_large.0f892800eb3439476791298b0a3fc8f77fa34b81.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Elite 2nd Place Season 9",
+				"defindex": 8430,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Elite 2nd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver.ccd68e48980346a921265b10a49aa91f483a2a34.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver_large.a558ec6c5709c085814a102925c4212c15073df6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Elite 3rd Place Season 9",
+				"defindex": 8431,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Elite 3rd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze.9c20d3821f13fd612fb3af3cec50a51b04688db3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze_large.b27b6874998d1260793488591668c9f7621f5b7c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Elite Participant Season 9",
+				"defindex": 8432,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Elite Participant",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant.8754ad781c372b383f7877dcd2ed9d133e75068a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant_large.85ef7a3e0bbd9248ffa709e5cf01b77db247d329.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Central 1st Place Season 9",
+				"defindex": 8433,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Central 1st Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold.e06a26f0ab980e8163eaa0529b0107c4ab97a95c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold_large.0f892800eb3439476791298b0a3fc8f77fa34b81.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Central 2nd Place Season 9",
+				"defindex": 8434,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Central 2nd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver.ccd68e48980346a921265b10a49aa91f483a2a34.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver_large.a558ec6c5709c085814a102925c4212c15073df6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Central 3rd Place Season 9",
+				"defindex": 8435,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Central 3rd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze.9c20d3821f13fd612fb3af3cec50a51b04688db3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze_large.b27b6874998d1260793488591668c9f7621f5b7c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Central Participant Season 9",
+				"defindex": 8436,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Central Participant",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant.8754ad781c372b383f7877dcd2ed9d133e75068a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant_large.85ef7a3e0bbd9248ffa709e5cf01b77db247d329.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Access 1st Place Season 9",
+				"defindex": 8437,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Access 1st Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold.e06a26f0ab980e8163eaa0529b0107c4ab97a95c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold_large.0f892800eb3439476791298b0a3fc8f77fa34b81.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Access 2nd Place Season 9",
+				"defindex": 8438,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Access 2nd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver.ccd68e48980346a921265b10a49aa91f483a2a34.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver_large.a558ec6c5709c085814a102925c4212c15073df6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Access 3rd Place Season 9",
+				"defindex": 8439,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Access 3rd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze.9c20d3821f13fd612fb3af3cec50a51b04688db3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze_large.b27b6874998d1260793488591668c9f7621f5b7c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Access Participant Season 9",
+				"defindex": 8440,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Access Participant",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant.8754ad781c372b383f7877dcd2ed9d133e75068a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant_large.85ef7a3e0bbd9248ffa709e5cf01b77db247d329.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Open 1st Place Season 9",
+				"defindex": 8441,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Open 1st Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_gold\/lbtf_medal_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold.e06a26f0ab980e8163eaa0529b0107c4ab97a95c.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_gold_large.0f892800eb3439476791298b0a3fc8f77fa34b81.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Open 2nd Place Season 9",
+				"defindex": 8442,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Open 2nd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_silver\/lbtf_medal_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver.ccd68e48980346a921265b10a49aa91f483a2a34.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_silver_large.a558ec6c5709c085814a102925c4212c15073df6.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Open 3rd Place Season 9",
+				"defindex": 8443,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Open 3rd Place",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_bronze\/lbtf_medal_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze.9c20d3821f13fd612fb3af3cec50a51b04688db3.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_bronze_large.b27b6874998d1260793488591668c9f7621f5b7c.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "LBTF2 Open Participant Season 9",
+				"defindex": 8444,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "LBTF2 Open Participant",
+				"item_description": "LBTF2 Season 9",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack\/workshop\/player\/items\/all_class\/lbtf_medal_participant\/lbtf_medal_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant.8754ad781c372b383f7877dcd2ed9d133e75068a.png",
+				"image_url_large": "http:\/\/media.steampowered.com\/apps\/440\/icons\/lbtf_medal_participant_large.85ef7a3e0bbd9248ffa709e5cf01b77db247d329.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -111315,7 +112067,7 @@
 				"name": "righthand pose parameter",
 				"defindex": 538,
 				"attribute_class": "righthand_pose_parameter",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111323,7 +112075,7 @@
 				"name": "set throwable type",
 				"defindex": 539,
 				"attribute_class": "set_throwable_type",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111331,7 +112083,7 @@
 				"name": "item style override",
 				"defindex": 542,
 				"attribute_class": "item_style_override",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111339,7 +112091,7 @@
 				"name": "paint decal enum",
 				"defindex": 543,
 				"attribute_class": "paint_decal_enum",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111347,7 +112099,7 @@
 				"name": "show paint description",
 				"defindex": 544,
 				"attribute_class": "show_paint_description",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111355,7 +112107,7 @@
 				"name": "bot medic uber health threshold",
 				"defindex": 545,
 				"attribute_class": "bot_medic_uber_health_threshold",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111363,7 +112115,7 @@
 				"name": "bot medic uber deploy delay duration",
 				"defindex": 546,
 				"attribute_class": "bot_medic_uber_deploy_delay_duration",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111539,8 +112291,8 @@
 				"name": "recipe component defined item 1",
 				"defindex": 2000,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111548,8 +112300,8 @@
 				"name": "recipe component defined item 2",
 				"defindex": 2001,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111557,8 +112309,8 @@
 				"name": "recipe component defined item 3",
 				"defindex": 2002,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111566,8 +112318,8 @@
 				"name": "recipe component defined item 4",
 				"defindex": 2003,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111575,8 +112327,8 @@
 				"name": "recipe component defined item 5",
 				"defindex": 2004,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111584,8 +112336,8 @@
 				"name": "recipe component defined item 6",
 				"defindex": 2005,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111593,8 +112345,8 @@
 				"name": "recipe component defined item 7",
 				"defindex": 2006,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111602,8 +112354,8 @@
 				"name": "recipe component defined item 8",
 				"defindex": 2007,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111611,8 +112363,8 @@
 				"name": "recipe component defined item 9",
 				"defindex": 2008,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111620,8 +112372,8 @@
 				"name": "recipe component defined item 10",
 				"defindex": 2009,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "negative",
-				"effect_type": "visuals_mvm_boss",
+				"description_format": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111630,7 +112382,7 @@
 				"defindex": 2010,
 				"attribute_class": "start_drop_date",
 				"description_format": "value_is_date",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111639,7 +112391,7 @@
 				"defindex": 2011,
 				"attribute_class": "end_drop_date",
 				"description_format": "value_is_date",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -111647,7 +112399,7 @@
 				"name": "tool target item",
 				"defindex": 2012,
 				"attribute_class": "tool_target_item",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111675,7 +112427,7 @@
 				"name": "spellbook page attr id",
 				"defindex": 2015,
 				"attribute_class": "spellbook_page_attr_id",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111741,7 +112493,7 @@
 				"name": "loot rarity",
 				"defindex": 2022,
 				"attribute_class": "loot_rarity",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111749,7 +112501,7 @@
 				"name": "quality text override",
 				"defindex": 2023,
 				"attribute_class": "quality_text_override",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111757,7 +112509,7 @@
 				"name": "item name text override",
 				"defindex": 2024,
 				"attribute_class": "item_name_text_override",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111775,7 +112527,7 @@
 				"name": "wide item level",
 				"defindex": 2026,
 				"attribute_class": "wide_item_level",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111783,7 +112535,7 @@
 				"name": "is australium item",
 				"defindex": 2027,
 				"attribute_class": "is_australium_item",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": true
 			},
@@ -111791,7 +112543,7 @@
 				"name": "is marketable",
 				"defindex": 2028,
 				"attribute_class": "is_marketable",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111799,7 +112551,7 @@
 				"name": "allowed in medieval mode",
 				"defindex": 2029,
 				"attribute_class": "allowed_in_medieval_mode",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111807,7 +112559,7 @@
 				"name": "series number",
 				"defindex": 2031,
 				"attribute_class": "series_number",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -111815,7 +112567,7 @@
 				"name": "recipe no partial complete",
 				"defindex": 2032,
 				"attribute_class": "recipe_no_partial_complete",
-				"effect_type": "visuals_mvm_boss",
+				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
 				"stored_as_integer": false
 			}
