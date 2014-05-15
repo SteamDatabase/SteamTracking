@@ -368,6 +368,19 @@ textarea.forumtopic_reply_textarea {
 	background: none;
 }
 
+.commentthread_moderatormessages {
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 3px;
+	background-color: #a55b13;
+	line-height: 22px;
+	margin: 0 4px;
+}
+
+.commentthread_moderatormessages img {
+	vertical-align: middle;
+}
+
 .forum_op .date {
 	font-size: 11px;
 	color: #747474;

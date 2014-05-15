@@ -705,6 +705,7 @@ function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, account
 	var elProfileLink = $('forum_user_menu_viewprofile');
 	var elViewPostsLink = $('forum_user_menu_viewposts');
 	var elBanUserLink = $('forum_user_menu_ban');
+	var elModeratorMessageLink = $('forum_user_menu_viewmoderatormessages');
 
 	if ( g_rgForumTopics[ gidTopic ] )
 	{
@@ -730,6 +731,9 @@ function Forum_AuthorMenu( elLink, event, bCanBan, gidTopic, gidComment, account
 				elBanUserLink.hide();
 			}
 		}
+
+		if ( elModeratorMessageLink )
+			elModeratorMessageLink.href = elProfileLink.href + '/moderatormessages/';
 
 		$('forum_user_menu_inner').style.minWidth = $(elLink).getWidth() + 'px';
 

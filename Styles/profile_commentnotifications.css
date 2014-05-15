@@ -239,3 +239,26 @@
 .notification_paging_pagelink.active:hover {
 	text-decoration: none;
 }
+
+
+.body_content_box {
+	background-color: #1d1d1d;
+	border-radius: 3px;
+	padding: 16px 24px;
+	color: #d6d6d6;
+	margin-bottom: 18px;
+	line-height: 20px;
+}
+
+.body_content_box h2 {
+	color: #5491cf;
+	font-size: 17px;
+	font-weight: normal;
+	margin: 8px 0;
+	padding: 0;
+	line-height: normal;
+}
+
+.body_content_box p {
+	margin: 0 0 16px 0;
+}
