@@ -216,7 +216,6 @@
 			"sniper_pocket"		"1"			
 			"engineer_lenses"	"1"			
 			"heavy_hip_pouch"	"1"	
-			"pyro_mask"			"1"			
 		}
 	}
 	"equip_conflicts"
@@ -15320,7 +15319,7 @@
 			"item_type_name" "#TF_Wearable_Hat"
 			"item_name"	"#TF_PyromancersMask"
 			"item_slot"	"head"
-			"equip_region"	"pyro_mask"			
+			"equip_region"	"beard"			
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/pyro/pyro_pyromancers_mask"
 			"image_inventory_size_w"		"128"
