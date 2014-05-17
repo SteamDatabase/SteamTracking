@@ -31,6 +31,9 @@
 							<Button id="PurchaseViewBaseBtn">
 								<Label text="#Store_AppPurchaseSection_ViewBaseGame" />
 							</Button>
+							<Button id="PurchaseFreeContentBtn">
+								<Label text="#Store_AppPurchaseSection_AddToAccount" />
+							</Button>
 							<Button id="PurchaseDemoBtn" onactivate="InstallDemo()">
 								<Label text="#Store_AppPurchaseSection_Demo" />
 							</Button>

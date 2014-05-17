@@ -11,8 +11,10 @@
 
 		<Panel class="InputContainerDown GapDown">
 			<HTML id="EulaHTML" embedded="true" />
+			<Label id="EulaScrollHintXInput" text="#OOBE_Eula_ScrollHintXInput" />
+			<Label id="EulaScrollHintSteam" text="#OOBE_Eula_ScrollHintSteamPad" />
 		</Panel>
-
+		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#OOBE_Eula_IAgree" />

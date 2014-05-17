@@ -751,6 +751,7 @@
 
 	"Store_Cart"					"CART"
 	"Store_Search"					"SEARCH"
+	"Store_Search_ViewResults"			"VIEW RESULTS"
 	"Store_AppName"					"{s:appname}"
 	"Store_AvailableNow"			"Available Now"
 	"Store_AvailableNowPackage"		"Available Now and includes the following"
@@ -827,6 +828,14 @@
 	"Store_AppPurchaseSection_RequiresBase"		"Requires the base game {s:base_game} on Steam in order to play."
 	"Store_AppPurchaseSection_ViewBaseGame"		"View Base Game"
 	"Store_AppPurchaseSection_ViewInLibrary"	"View in library"
+	"Store_AppPurchaseSection_AddToAccount"		"Add to Account"
+
+	"Steam_Error"					"Error"
+	"Steam_AddToAccount_Error"			"Sorry, there was an error adding the product to your account."
+
+	"Steam_Success"					"Success"
+	"Steam_AddToAccount_Success"			"The package has been added to your account, you should be able to find the games in your library now."
+	"Steam_AddToAccount_ViewAllGames"		"VIEW ALL GAMES"
 
 	"Store_AppPurchaseOptions_Title"			"{i:purchase_option_count} Purchase Options"
 	"Store_AppPurchaseOptions_TitleNoCount"			"Purchase Options"
@@ -1814,6 +1823,8 @@
 	"OOBE_Eula_IAgree"				"I AGREE"
 	"OOBE_DisplaySettings_Title"	"Display"
 	"OOBE_DisplaySettings_Description" "Please adjust image size and brightness to fit your display."
+	"OOBE_Eula_ScrollHintXInput" "To scroll EULA contents use your gamepad's right analog stick."
+	"OOBE_Eula_ScrollHintSteamPad" "To scroll EULA contents use your controller's right touch pad."
 	
 	"DeviceAuth_ChooseDialog_Title" "Want to play this game?"
 	"DeviceAuth_ChooseDialog_Text" "This game belongs to Steam user {s:owner}. Would you like to request access to {s:owner}'s games on this device?"
@@ -2029,6 +2040,8 @@
 
 	"Settings_Interface"	"Interface"
 	"SettingsSteamOS_EnableDesktop" "Enable access to the Linux desktop"
+	"SettingsSteamOS_DesktopWarningTitle" "Warning"
+	"SettingsSteamOS_DesktopWarningBody" "Enabling Desktop Mode lets you take full control of your machine and change system behavior in unsupported ways.\n\nAre you sure you want to proceed?"
 	"SettingsInterface_SteamClientCheckForUpdates" "Check for updates"
 	"SettingsInterface_SteamClientChecking"		"Checking..."
 	"SettingsInterface_SteamClientUpdatePending"	"Restart to update"
@@ -2304,6 +2317,7 @@
 	"Settings_AlienFX"	"Alien FX"
 	"Settings_AlienFXDescription" "Select the effects to be applied to your Alienware case lighting zones."
 	"Settings_AlienFXHeader"	"Alien FX"
+	"Settings_AlienFXBrightness"	"Brightness"
 	
 	"Community_PostStatusFailure"	"Sorry, there was an error posting your status."
 

@@ -21,7 +21,6 @@
 						<Image id="Alien" src="file://{images}/settings/alienfx_alien.png" />
 						<Panel class="colorwrapper">
 							<Panel class="colorregion" childfocusonhover="true">
-								<Button id="#ffffff" onactivate="SetColor();" style="background-color: #b8b8b8ff;" />
 								<Button id="#0000f0" onactivate="SetColor();" style="background-color: #0000adff;" />
 								<Button id="#0060f0" onactivate="SetColor();" style="background-color: #0045adff;" />
 								<Button id="#00a0f0" onactivate="SetColor();" style="background-color: #0074adff;" />
@@ -53,7 +52,6 @@
 						<Image id="Steam" src="file://{images}/settings/alienfx_steam.png" />
 						<Panel class="colorwrapper">
 							<Panel class="colorregion" childfocusonhover="true">
-								<Button id="#ffffff" onactivate="SetColor();" style="background-color: #b8b8b8ff;" />
 								<Button id="#0000f0" onactivate="SetColor();" style="background-color: #0000adff;" />
 								<Button id="#0060f0" onactivate="SetColor();" style="background-color: #0045adff;" />
 								<Button id="#00a0f0" onactivate="SetColor();" style="background-color: #0074adff;" />
@@ -81,6 +79,9 @@
 						</Panel>
 					</Panel>
 				</Panel>
+				
+				<Label class="SettingsLabel" text="#Settings_AlienFXBrightness" />
+				<VUMeter writable="true" id="AlienFXBrightnessLevel" class="VoiceBarContainer SliderContainer" numbars="10" barpaneladdclass="Slider Slider10" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
 				
 				
 		</Panel>
