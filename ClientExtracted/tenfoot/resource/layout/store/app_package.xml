@@ -22,6 +22,9 @@
 		<Button id="AddToCartBtn">
 			<Label id="AddToCartLabel" text="#Store_AppPurchaseOptions_AddToCart" />
 		</Button>
+		<Button id="AddToAccountBtn">
+			<Label id="AddToCartLabel" text="#Store_AppPurchaseSection_AddToAccount" />
+		</Button>
 		<Panel id="ViewPackageSection">
 			<Panel class="HorizontalRule" />
 			<Button id="ViewPackageBtn">

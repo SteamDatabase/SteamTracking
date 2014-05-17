@@ -10,7 +10,10 @@
 			<Panel class="InputRow">
 				<TextEntry id="Input"
 				   	textinputid="CheckoutFormTextEntry"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+					textinputhidesuggestions="1"
+					textinputdoneactionstring="#Store_Search_ViewResults"
+				 />
 				<Panel class="SearchThrobber" />
 			</Panel>
 			<Panel class="SearchDivider" />

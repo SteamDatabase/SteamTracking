@@ -883,6 +883,11 @@ FriendsChatDialog .VoiceBarContainer
 	width: 2%;
 }
 
+.Slider10
+{
+	width: 10%;
+}
+
 .VoiceBarContainer:focus .VoiceBar
 {
 	opacity: 1.0;
