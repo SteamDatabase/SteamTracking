@@ -569,9 +569,7 @@ p {
 		background-color: #1A1A1A;
 	}
 
-		.landingTable td span, .landingTable .td span {
-			color: #939597;
-		}
+
 
 	.landingTable tr.released td, .landingTable .tr.released .td, .td.released, td.released {
 		color: #fbb963;
