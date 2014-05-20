@@ -15,7 +15,7 @@ AvatarImage
 	height: 95px;
 }
 
-FriendsProfileDetails
+FriendsProfileDetails, ProfileOptions
 {
        width: 100%;
        height: 100%;
@@ -31,13 +31,15 @@ FriendsProfileDetails
 }
 
 
-FriendsProfileDetails.ScreenSaverMode 
+FriendsProfileDetails.ScreenSaverMode,
+ProfileOptions.ScreenSaverMode 
 {
        opacity: 0.0;
 }
 
 
-FriendsProfileDetails.Destructing
+FriendsProfileDetails.Destructing,
+ProfileOptions.Destructing
 {
 	opacity: 0.0;
 
@@ -111,7 +113,8 @@ FriendsProfileDetails.Destructing
 // Main friends section overrides
 //
 
-FriendsProfileDetails #FriendsProfileDetailsBodyRegion
+FriendsProfileDetails #FriendsProfileDetailsBodyRegion,
+ProfileOptions #FriendsProfileDetailsBodyRegion
 {
 	horizontal-align: center;
 }
@@ -120,17 +123,20 @@ FriendsProfileDetails #FriendsProfileDetailsBodyRegion
 // Community friends strip overrides
 //
 
-FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip
+FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip,
+ProfileOptions#FriendsProfileDetailsInCommunityFriendsStrip
 {
 	animation-name: friends-profile-details-appear-incommunityfriendsstrip;
 }
 
-FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip.Destructing
+FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip.Destructing,
+ProfileOptions#FriendsProfileDetailsInCommunityFriendsStrip.Destructing
 {
 	animation-name: friends-profile-details-appear-incommunityfriendsstrip;
 }
 
-FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip #FriendsProfileDetailsBodyRegion
+FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip #FriendsProfileDetailsBodyRegion,
+ProfileOptions#FriendsProfileDetailsInCommunityFriendsStrip #FriendsProfileDetailsBodyRegion
 {
 	horizontal-align: center;
 }
@@ -156,17 +162,20 @@ FriendsProfileDetails#FriendsProfileDetailsInCommunityFriendsStrip #FriendsProfi
 // Library friends who play overrides
 //
 
-FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay
+FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay,
+ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay
 {
 	animation-name: friends-profile-details-appear-inlibraryfriendswhoplay;
 }
 
-FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay.Destructing
+FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay.Destructing,
+ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay.Destructing
 {
 	animation-name: friends-profile-details-appear-inlibraryfriendswhoplay;
 }
 
-FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetailsBodyRegion
+FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetailsBodyRegion,
+ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetailsBodyRegion
 {
 	horizontal-align: center;
 }
@@ -193,24 +202,24 @@ FriendsProfileDetails#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfi
 // Actual layout of friends details
 //
 
-FriendsProfileDetailsCompositeHeader
+#FriendsProfileDetailsCompositeHeader
 {
 	width: 100%;
 	flow-children: down;
 	margin-bottom: 10px;
 }
 
-FriendsProfileDetailsCompositeHeader.Offline Label
+#FriendsProfileDetailsCompositeHeader.Offline Label
 {
 	color: friendsoffline_darkbg;
 }
 
-FriendsProfileDetailsCompositeHeader.Online Label
+#FriendsProfileDetailsCompositeHeader.Online Label
 {
 	color: friendsonline_darkbg;
 }
 
-FriendsProfileDetailsCompositeHeader.InGame Label
+#FriendsProfileDetailsCompositeHeader.InGame Label
 {
 	color: friendsingame_darkbg;
 }
@@ -232,7 +241,23 @@ FriendsProfileDetailsCompositeHeader.InGame Label
 	box-shadow: fill #00000060 0px 0px 12px 0px;
 }
 
-FriendsProfileDetailsCompositeHeader Label
+.Online .FriendsProfileDetailsCompositeHeaderAvatar
+{
+	border-color: friendsonline_solid;
+}
+
+.Offline .FriendsProfileDetailsCompositeHeaderAvatar
+{
+	border-color: friendsoffline_solid;
+}
+
+.InGame .FriendsProfileDetailsCompositeHeaderAvatar
+{
+	border-color: friendsingame_solid;
+}
+
+
+#FriendsProfileDetailsCompositeHeader Label
 {
 	margin-left: 36px;
 	margin-right: 25px;
@@ -245,7 +270,7 @@ FriendsProfileDetailsCompositeHeader Label
 	text-overflow: clip;
 }
 
-FriendsProfileDetailsCompositeHeader Label.FriendsProfileDetailsCompositeHeaderName
+#FriendsProfileDetailsCompositeHeader Label.FriendsProfileDetailsCompositeHeaderName
 {
 	color: #d0d0d0ff;
 	font-weight: bold;
@@ -253,7 +278,7 @@ FriendsProfileDetailsCompositeHeader Label.FriendsProfileDetailsCompositeHeaderN
 	font-size: 32px;
 }
 
-FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderState
+#FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderState
 {
 	font-weight: normal;
 	font-size: 24px;
@@ -261,7 +286,7 @@ FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderState
 	font-family: platformfont;
 }
 
-FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderStatusDetail
+#FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderStatusDetail
 {
 	font-weight: normal;
 	font-size: 24px;
@@ -285,7 +310,8 @@ FriendsProfileDetailsCompositeHeader .FriendsProfileDetailsCompositeHeaderStatus
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 
-FriendsProfileDetailsActionButton
+FriendsProfileDetailsActionButton,
+.FriendsProfileDetailsActionButton
 {
 	flow-children: right;
 	margin-left: 16px;
@@ -307,7 +333,8 @@ FriendsProfileDetailsActionButton
 	transition-timing-function: ease-in-out;
 }
 
-FriendsProfileDetailsActionButton Label
+FriendsProfileDetailsActionButton Label,
+.FriendsProfileDetailsActionButton Label
 {
 	horizontal-align: left;
 	width: 100%;
@@ -320,7 +347,8 @@ FriendsProfileDetailsActionButton Label
 	text-overflow: clip;
 	white-space: nowrap;
 }
-FriendsProfileDetailsActionButton:focus Label
+FriendsProfileDetailsActionButton:focus Label,
+.FriendsProfileDetailsActionButton:focus Label
 {
 	horizontal-align: left;
 	color: #161718f5;
@@ -328,7 +356,8 @@ FriendsProfileDetailsActionButton:focus Label
 	padding: 7px;
 }
 
-FriendsProfileDetailsActionButton:hover
+FriendsProfileDetailsActionButton:hover,
+.FriendsProfileDetailsActionButton:hover
 {
 	background-color: #00000020;
 	//pre-transform-scale2d: 1.05;
@@ -338,7 +367,8 @@ FriendsProfileDetailsActionButton:hover
 	padding-right: 12px;
 }
 
-FriendsProfileDetailsActionButton:focus
+FriendsProfileDetailsActionButton:focus,
+.FriendsProfileDetailsActionButton:focus
 {
 	background-color: #00000020;
 
