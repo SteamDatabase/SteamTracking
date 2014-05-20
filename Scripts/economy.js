@@ -2471,6 +2471,56 @@ function PopulateMarketActions( elActions, item )
 
 	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
 	{
+		var strMarketName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
+
+		var elPriceInfo = new Element( 'div' );
+		var elPriceInfoHeader = new Element ( 'div', { 'style': 'height: 24px;' } );
+		var elMarketLink = new Element( 'a', {
+			'href': 'http://steamcommunity.com/market/listings/' + item.appid + '/' + strMarketName
+		} );
+		elMarketLink.update( 'View in Community Market' );
+		elPriceInfoHeader.appendChild( elMarketLink );
+		elPriceInfo.appendChild( elPriceInfoHeader );
+
+		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
+		elPriceInfoContent.update( '<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif" alt="Working...">' );
+		elPriceInfo.appendChild( elPriceInfoContent );
+
+		new Ajax.Request( 'http://steamcommunity.com/market/priceoverview/', {
+				method: 'get',
+				parameters: {
+					appid: item.appid,
+					market_hash_name: strMarketName
+				},
+				onSuccess: function( transport ) {
+					if ( transport.responseJSON && transport.responseJSON.success )
+					{
+						var strInfo = '';
+						if ( transport.responseJSON.lowest_price )
+						{
+							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
+						}
+						else
+						{
+							strInfo += 'There are no listings currently available for this item.' + '<br>';
+						}
+
+						if ( transport.responseJSON.volume )
+						{
+							var strVolume = '%1$s sold in the last 24 hours';
+							strVolume = strVolume.replace( '%1$s', transport.responseJSON.volume );
+							//strInfo += 'Median price: ' + transport.responseJSON.median_price + '<br>';
+							strInfo += 'Volume: ' + strVolume + '<br>';
+						}
+
+						elPriceInfoContent.update( strInfo );
+					}
+				},
+				onFailure: function( transport ) { elPriceInfo.hide(); }
+		} );
+
+		elActions.appendChild( elPriceInfo );
+
 		var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
 		elActions.appendChild( elSellButton );
 

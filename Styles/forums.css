@@ -372,9 +372,12 @@ textarea.forumtopic_reply_textarea {
 	display: inline-block;
 	padding: 0 6px;
 	border-radius: 3px;
-	background-color: #a55b13;
 	line-height: 22px;
 	margin: 0 4px;
+}
+
+.commentthread_moderatormessages.unread {
+	background-color: #a55b13;
 }
 
 .commentthread_moderatormessages img {
@@ -1320,4 +1323,118 @@ select.subforum_select_control {
 
 .manage_actions_otherpage_clearlink:hover {
 	color: #ffffff;
+}
+
+.commenthistory_comment {
+	margin-bottom: 20px;
+}
+.commentsearch_results .commenthistory_comment {
+	margin-bottom: 36px;
+}
+.commenthistory_comment .comment_item_title {
+	font-size: 18px;
+	line-height: 24px;
+}
+.commenthistory_comment .comment_item_title a:hover {
+	text-decoration: underline;
+}
+.commenthistory_comment .comment_item_title img {
+	vertical-align:  middle;
+	margin-right: 6px;
+}
+.commenthistory_comment .comment_item_desc {
+	font-size: 11px;
+	color: #555555;
+}
+.commenthistory_comment .comment_text {
+	padding-left: 20px;
+	word-wrap: break-word;
+	overflow-x: hidden;
+}
+.commenthistory_comment.deleted, .commenthistory_comment.deleted .comment_item_title a {
+	color: #555555;
+}
+.commenthistory_comment.deleted .comment_item_desc {
+	color: #333333;
+}
+
+.commenthistory_author {
+	background: rgba( 27, 27, 27, 0.37 );
+	line-height: 40px;
+
+	box-shadow: inset 2px 2px 3px 0 #535354;
+	border-radius: 3px;
+	padding: 2px;
+}
+
+.commenthistory_author .playerAvatar {
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.commenthistory_author .options {
+	line-height: 20px;
+	display: inline-block;
+	margin-left: 20px;
+	visibility: hidden;
+}
+
+.commenthistory_author:hover .options {
+	visibility: visible;
+}
+
+.rightbox_header, .rightbox_footer {
+	background: no-repeat url( 'http://cdn.steamcommunity.com/public/images/groups/rightcol_box_topbtm.png' );
+	width: 295px;
+	height: 4px;
+}
+.rightbox_header {
+	background-position: top;
+}
+.rightbox_footer {
+	background-position: bottom;
+	height: 5px;
+
+	margin-bottom: 18px;
+}
+.rightbox {
+	background: repeat-y url( 'http://cdn.steamcommunity.com/public/images/groups/rightcol_box_repeat.png' );
+}
+.rightbox .content {
+	padding: 16px 14px;
+}
+.rightbox .rule {
+	height: 1px;
+	background-color: #333333;
+	border-top: 1px solid #000000;
+}
+
+.rightbox_list_header, .rightbox_content_header {
+	color: #676765;
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+.rightbox_content_header {
+	padding: 11px 14px;
+	margin-bottom: 0px;
+}
+
+
+.weblink {
+	line-height: 24px;
+}
+
+.weblink a {
+	color: #e1e1e1;
+}
+
+.weblink a:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.weblink img {
+	vertical-align: middle;
 }

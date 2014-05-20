@@ -1135,6 +1135,13 @@ function InitializeCommentThread( type, name, rgCommentData, url, nQuoteBoxHeigh
 	g_rgCommentThreads[name] = new commentclass( type, name, rgCommentData, url, nQuoteBoxHeight );
 }
 
+function BindCommentThreadSubscribeButtons( type, owner, gidfeature, gidfeature2, btnSubscribe, btnUnsubscribe )
+{
+	var CommentThread = FindCommentThread( type, owner, gidfeature, gidfeature2 );
+	if ( CommentThread )
+		CommentThread.BindSubscribeButtons( btnSubscribe, btnUnsubscribe );
+}
+
 function FindCommentThread( type, owner, gidFeature, gidFeature2 )
 {
 	for ( var key in g_rgCommentThreads )
@@ -1240,6 +1247,13 @@ var CCommentThread = Class.create( {
 			// initialize check state based on preferences
 			elAutosubscribe.checked = this.m_bSubscribed || GetValueLocalStorage( 'forum_autosubscribe', false );
 			elAutosubscribe.observe( 'change', this.OnAutosubscribeToggle.bind( this ) );
+		}
+
+		var elSubscribe = $(strPrefix + '_subscribe')
+		var elUnsubscribe = $(strPrefix + '_unsubscribe' );
+		if ( elSubscribe && elUnsubscribe )
+		{
+			this.BindSubscribeButtons( elSubscribe, elUnsubscribe );
 		}
 
 		this.UpdatePagingDisplay();
@@ -1526,6 +1540,9 @@ var CCommentThread = Class.create( {
 			this.m_elTextArea.value='';
 			this.CheckTextAreaSize();
 			this.OnResponseRenderComments( CCommentThread.RENDER_NEWPOST, transport );	//display the updated comment thread
+
+			if ( $('commentthread_' + this.m_strName + '_subscribeoptions') )
+				$('commentthread_' + this.m_strName + '_subscribeoptions').show();
 		}
 		else
 		{
@@ -1606,6 +1623,9 @@ var CCommentThread = Class.create( {
 			}
 
 			this.DoTransitionToNewPosts( response, eRenderReason );
+
+			if ( typeof BindCommunityTooltip != 'undefined' )
+				BindCommunityTooltip( $J( $('commentthread_' + this.m_strName + '_posts' ) ).find('[data-community-tooltip]' ) );
 
 			// if we're viewing the most recent page of comments, refresh notifications
 			if ( ( !this.m_rgCommentData['oldestfirst'] && this.m_iCurrentPage == 0 ) ||
@@ -1759,6 +1779,47 @@ var CCommentThread = Class.create( {
 		});
 	},
 
+	m_rgSubscriptionUpdateHandlers: null,
+
+	BindSubscribeButtons: function( elBtnSubscribe, elBtnUnsubscribe )
+	{
+		var _this = this;
+
+		if ( !this.m_rgSubscriptionUpdateHandlers )
+			this.m_rgSubscriptionUpdateHandlers = [];
+
+		this.m_rgSubscriptionUpdateHandlers.push( function() {
+			if ( _this.m_bSubscribed )
+			{
+				$J(elBtnSubscribe).hide();
+				$J(elBtnUnsubscribe).show();
+			}
+			else
+			{
+				$J(elBtnSubscribe).show();
+				$J(elBtnUnsubscribe).hide();
+			}
+		} );
+
+		$J(elBtnSubscribe).click( function() {
+			_this.Subscribe( function() {
+				ShowAlertDialog('Subscribe to thread', 'You\'ll receive a comment notification whenever someone replies to this thread.');
+			}, function() {
+				ShowAlertDialog('Subscribe to thread', 'There was a problem updating your subscription.  Please try again later.');
+			});
+		});
+
+		$J(elBtnUnsubscribe).click( function() {
+			_this.Unsubscribe( function() {
+				ShowAlertDialog('Unsubscribe from thread', 'You\'ll no longer receive comment notifications from this thread.');
+			}, function() {
+				ShowAlertDialog('Unsubscribe from thread', 'There was a problem updating your subscription.  Please try again later.');
+			});
+		});
+
+		this.UpdateSubscriptionDisplay();
+	},
+
 	OnSubscriptionChange: function( bSubscribed, fnProxy, transport )
 	{
 		this.m_bSubscribed = bSubscribed;
@@ -1766,11 +1827,22 @@ var CCommentThread = Class.create( {
 		if ( fnProxy )
 			fnProxy( transport );
 
+		this.UpdateSubscriptionDisplay();
+	},
+
+	UpdateSubscriptionDisplay: function()
+	{
+		if ( this.m_rgSubscriptionUpdateHandlers && this.m_rgSubscriptionUpdateHandlers.length )
+		{
+			for ( var i = 0; i < this.m_rgSubscriptionUpdateHandlers.length; i++ )
+				(this.m_rgSubscriptionUpdateHandlers[i])();
+		}
+
 		var elForumSubscribe = $('forum_subscribe_' + this.m_rgCommentData['feature2'] );
 		var elForumUnsubscribe = $('forum_unsubscribe_' + this.m_rgCommentData['feature2'] );
 		if ( elForumSubscribe && elForumUnsubscribe )
 		{
-			if ( bSubscribed )
+			if ( this.m_bSubscribed )
 			{
 				elForumSubscribe.hide();
 				elForumUnsubscribe.show();
