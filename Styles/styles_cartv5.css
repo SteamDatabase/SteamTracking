@@ -533,6 +533,14 @@
 	margin: 0px auto;
 }
 
+.cart_error_details {
+	border: 1px solid #ff9900;
+	background-color: #000000;
+	color: #cdcac1;
+	margin: 15px;
+	padding: 11px 15px 11px 19px;
+}
+
 .cart_row {
 	border-bottom: 1px solid #000000;
 }

@@ -789,6 +789,12 @@ a.apphub_more_friends_who_play:hover
 {
 	float: left;
 	margin-top: 3px;
+	min-width: 61px;
+}
+
+.apphub_CardRating.withRateButtons.starRating
+{
+	min-width: 0px;
 }
 
 .apphub_CardRating.news

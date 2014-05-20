@@ -668,7 +668,7 @@ function GetDefaultScrollSize()
 	if( value == 'all' )
 		return TotalGames;
 	value = parseInt( value );
-	if( value < 10 )
+	if( value < 10 || isNaN(value) )
 		return 10
 	return value;
 
