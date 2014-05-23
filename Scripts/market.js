@@ -930,8 +930,6 @@ AdvancedSearchDialog = {
 	m_fnModalBGClickHandler: null,
 
 	Initialize: function() {
-		//$('market_removelisting_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
-		//$('market_removelisting_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 	},
 
 	Show: function () {
@@ -973,28 +971,9 @@ AdvancedSearchDialog = {
 		$J('#market_advanced_search').append( elHiddenAppInput );
 	},
 
-	OnAccept: function( event ) {
-		event.stop();
-
-		if ( this.m_bOKClicked )
-		{
-			return;
-		}
-
-		this.m_bOKClicked = true;
-
-		// TODO: Do the thing with the thing
-	},
-
 	OnCancel: function( event ) {
 		this.Dismiss();
 		event.stop();
-	},
-
-	OnSuccess: function( transport ) {
-	},
-
-	OnFailure: function( transport ) {
 	},
 
 	OnDocumentKeyPress: function( event ) {
