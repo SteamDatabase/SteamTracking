@@ -380,6 +380,10 @@ textarea.forumtopic_reply_textarea {
 	background-color: #a55b13;
 }
 
+.commentthread_moderatormessages.unread_bans {
+	background-color: #b33b32;
+}
+
 .commentthread_moderatormessages img {
 	vertical-align: middle;
 }
