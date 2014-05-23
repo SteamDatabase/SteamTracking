@@ -755,7 +755,7 @@ function MarketCheckHash()
 	else if ( window.location.hash.length > 5 && window.location.hash.substr(0,5) == "#sell" )
 	{
 		var strAsset = window.location.hash.substr(5);
-		ShowModalContent('http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, false);
+		ShowModalContent('http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
 	}
 }
 
@@ -920,18 +920,279 @@ function SSAPopup()
 	win.focus();
 }
 
-function ShowAdvancedSearchOptions()
-{
-	$J('#market_search_advanced_show').hide();
-	$J('#market_search_advanced_hide').show();
-	$J('#market_search_advanced').show();
+AdvancedSearchDialog = {
+	m_bOKClicked: false,
+	m_bInitialized: false,
+
+	m_oListingOriginalRow: null,
+	m_ulListingId: false,
+	m_fnDocumentKeyHandler: null,
+	m_fnModalBGClickHandler: null,
+
+	Initialize: function() {
+		//$('market_removelisting_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
+		//$('market_removelisting_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
+	},
+
+	Show: function () {
+		if ( !this.m_bInitialized )
+			this.Initialize();
+
+		this.m_bOKClicked = false;
+
+		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
+		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
+
+		this.m_fnModalBGClickHandler = this.OnCancel.bindAsEventListener(this);
+		$('modalBG').observe( 'click', this.m_fnModalBGClickHandler );
+
+		showModal( 'market_advancedsearch_dialog', true );
+		$('market_advancedsearch_dialog').focus();
+		$J("body").css( "overflow", "hidden" );
+	},
+
+	Dismiss: function() {
+		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
+		$('modalBG').stopObserving( 'click', this.m_fnModalBGClickHandler );
+		hideModal( 'market_advancedsearch_dialog' );
+		$J("body").css( "overflow", "auto" );
+	},
+
+	SelectApp: function( unApp ) {
+		this.SelectAppElement( $J('#app_option_' + unApp ) );
+	},
+
+	SelectAppElement: function( elSelected ) {
+		var elActiveAppNew = elSelected.clone();
+		$J('#market_advancedsearch_appselect_activeapp').empty();
+		elActiveAppNew.attr( "id", elActiveAppNew.attr("id") + "_selected" );
+		$J('#market_advancedsearch_appselect_activeapp').append( elActiveAppNew );
+
+		$J('#market_advanced_search_app').remove();
+		var elHiddenAppInput = $J('<input type="hidden" id="market_advanced_search_app" name="appid" value="' + elSelected.data("appid") + '"/>');
+		$J('#market_advanced_search').append( elHiddenAppInput );
+	},
+
+	OnAccept: function( event ) {
+		event.stop();
+
+		if ( this.m_bOKClicked )
+		{
+			return;
+		}
+
+		this.m_bOKClicked = true;
+
+		// TODO: Do the thing with the thing
+	},
+
+	OnCancel: function( event ) {
+		this.Dismiss();
+		event.stop();
+	},
+
+	OnSuccess: function( transport ) {
+	},
+
+	OnFailure: function( transport ) {
+	},
+
+	OnDocumentKeyPress: function( event ) {
+		if ( event.keyCode == Event.KEY_ESC )
+		{
+			this.Dismiss();
+			event.stop();
+		}
+	}
 }
 
-function HideAdvancedSearchOptions()
+function ShowAdvancedSearchOptions()
 {
-	$J('#market_search_advanced_show').show();
-	$J('#market_search_advanced_hide').hide();
-	$J('#market_search_advanced').hide();
+	AdvancedSearchDialog.Show();
+
+	if ( typeof g_rgFilterData != 'undefined' )
+	{
+		$J('#advancedSearchBox').val( g_strQueryText );
+		var data = { facets: g_rgFilterData };
+		ProcessFilterData( data );
+		AdvancedSearchDialog.SelectApp( g_unFilterApp );
+	}
+
+}
+
+function ProcessFilterData( data )
+{
+	var elFilters = $J('#market_advancedsearch_filters');
+	elFilters.empty();
+	elFilters.css( 'text-align', 'inherit' );
+
+	var cCategories = 0
+	$J.each( data.facets, function( sCategory, oCategory ) {
+		cCategories++;
+	} );
+
+	if ( cCategories > 0 )
+	{
+		// Do all dropdowns first
+		var cDropdowns = 0;
+		$J.each( data.facets, function( sCategory, oCategory ) {
+			var cTags = 0;
+			$J.each( oCategory.tags, function( k, oTag ) {
+				cTags++;
+			} );
+
+			if ( cTags > 20 )
+			{
+				var elCategory = $J('<div class="econ_tag_filter_category"><div class="econ_tag_filter_category_label">' + oCategory.localized_name + '</div></div>');
+				var elDropdown = $J('<select name="' + "category_" + sCategory + '[]" class=""></select>' );
+				var elOption = $J('<option value="any"></option>');
+				elOption.text( 'Any' );
+				elDropdown.append( elOption );
+
+				// sort the tags by name
+				var rgTags = [];
+				$J.each( oCategory.tags, function( k, oTag ) {
+					oTag.internal_name = k;
+					rgTags.push( oTag );
+				} );
+
+				if ( typeof Intl != 'undefined' && Intl.Collator )
+				{
+					var oCollator = new Intl.Collator();
+					rgTags.sort( function(a, b) {
+						return oCollator.compare( a.localized_name, b.localized_name );
+					} );
+				}
+				else
+				{
+					rgTags.sort( function(a, b) {
+						if ( a.localized_name < b.localized_name ) return -1;
+						else if ( a.localized_name > b.localized_name ) return 1;
+						else return 0;
+					} );
+				}
+
+				// Put the sorted tags into the dropdown
+				$J.each( rgTags, function( k, oTag ) {
+					var elOption = $J('<option value="tag_'+ oTag.internal_name + '"></option>');
+					elOption.text( oTag.localized_name /* + " (" + oTag.matches + ")" */ );
+
+					if ( oTag.selected )
+					{
+						elOption.attr( "selected", "selected" );
+					}
+
+					elDropdown.append( elOption );
+				} );
+
+				elCategory.append( elDropdown );
+				elFilters.append( elCategory );
+				cDropdowns++;
+			}
+		} );
+
+		if ( cDropdowns > 0 )
+		{
+			elFilters.append( "<br>" );
+		}
+
+		// Followed by checkboxes
+		$J.each( data.facets, function( sCategory, oCategory ) {
+			var cTags = 0;
+			$J.each( oCategory.tags, function( k, oTag ) {
+				cTags++;
+			} );
+
+			if ( cTags <= 20 )
+			{
+				var elCategory = $J('<div class="econ_tag_filter_category"><div class="econ_tag_filter_category_label">' + oCategory.localized_name + '</div></div>');
+				$J.each( oCategory.tags, function( k, oTag ) {
+					var sFilterId = 'tag_' + sCategory + '_' + k;
+					var elFilterContainer = $J('<div class="econ_tag_filter_container"/>');
+					var elCheckbox = $J('<input id="' + sFilterId + '" class="econ_tag_filter_checkbox" type="checkbox" name="category_' + sCategory + '[]" value="tag_' + k + '"></input>');
+
+					if ( oTag.selected )
+					{
+						elCheckbox.prop( "checked", true );
+					}
+
+					elFilterContainer.append( elCheckbox );
+					var elLabel = $J('<label class="econ_tag_filter_label" for="' + sFilterId + '"></label>' );
+					var elLabelText = $J('<span></span>');
+					elLabelText.text( oTag.localized_name );
+					if ( oTag.color )
+					{
+						elLabelText.css( 'color', '#' + oTag.color );
+					}
+
+					elLabel.append( elLabelText );
+					elFilterContainer.append( elLabel );
+					//var elCount = $J('<span class="econ_tag_count"> (' + oTag.matches + ')</span>');
+					//elFilterContainer.append( elCount );
+
+					elCategory.append( elFilterContainer );
+				} );
+				elFilters.append( elCategory );
+			}
+
+		} );
+	}
+	else
+	{
+		elFilters.text( 'There are no filters available for this game. Click the search button to view all listings for this game.' );
+	}
+}
+
+$J(function() {
+	$J( '#market_advancedsearch_appselect_options_apps .popup_item').click( function() {
+		HideMenu( $('market_advancedsearch_appselect'), $('market_advancedsearch_appselect_options') );
+		AdvancedSearchDialog.SelectAppElement( $J(this) );
+
+		var unAppId = $J(this).data('appid');
+		var elFilters = $J('#market_advancedsearch_filters');
+		if ( unAppId )
+		{
+			elFilters.empty();
+
+			var elThrobber = $J('<img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
+			elFilters.append( elThrobber );
+			elFilters.css( 'text-align', 'center' );
+
+			$J.ajax( {
+				url: 'http://steamcommunity.com/market/appfilters/' + unAppId,
+				type: 'GET',
+				data: {}
+			} ).error( function ( ) {
+				elFilters.empty();
+				elFilters.css( 'text-align', 'inherit' );
+				elFilters.text( 'There was a problem loading filters for this game. Refresh the page and try again.' );
+			} ).success( function( data ) {
+				if ( data.success )
+				{
+					ProcessFilterData( data );
+				}
+				else
+				{
+					elFilters.empty();
+					elFilters.css( 'text-align', 'inherit' );
+					elFilters.text( 'There was a problem loading filters for this game. Refresh the page and try again.' );
+				}
+			} );
+		}
+		else
+		{
+			elFilters.empty();
+			elFilters.css( 'text-align', 'inherit' );
+			elFilters.text( 'Pick a game from the drop-down list above to see the available filters.' );
+			$J('#market_advanced_search_app').remove();
+		}
+	});
+});
+
+function ResetSearchFilters()
+{
+	$J('.econ_tag_filter_container input[type="checkbox"]').attr("checked", false);
+	$J('.econ_tag_filter_category select').val( 'any' );
 }
 
 function WatchForSortableColumnClicks()

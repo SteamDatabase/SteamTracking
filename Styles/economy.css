@@ -504,6 +504,7 @@ input.filter_search_box:-moz-placeholder {
 .market_modal_dialog {
 	position: absolute;
 	background: #1D1D1D;
+	box-shadow: 0 0 5px black;
 	width: 774px;
 	z-index: 1000;
 

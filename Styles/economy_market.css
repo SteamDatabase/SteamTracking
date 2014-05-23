@@ -187,7 +187,7 @@ a.market_listing_row_link:hover {
 	text-decoration: none;
 }
 
-a.market_listing_row_link:hover .market_listing_row {
+.market_listing_table_active a.market_listing_row_link:hover .market_listing_row {
 	border: 1px solid #ADADAD;
 }
 
@@ -619,10 +619,12 @@ a.market_tab_well_tab_inactive:hover {
 }
 
 .market_tab_well_tab_active > span {
+	border-bottom: 2px solid #1F1F1F;
 	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_active.png');
 }
 
 .market_tab_well_tab_inactive > span {
+	border-bottom: 2px solid transparent;
 	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_inactive.png');
 }
 
@@ -693,7 +695,27 @@ a.market_tab_well_tab_inactive:hover {
 }
 
 .econ_tag_filter_category {
-	margin-top: 1em;
+	color: #D2D2D2;
+	display: inline-block;
+	margin-bottom: 1em;
+	margin-right: 15px;
+	vertical-align: top;
+}
+
+.econ_tag_filter_category > select {
+	background-color: #5a5a5a;
+	box-shadow: 1px 1px 2px #3a3a3a inset;
+	color: #BFBFBF;
+}
+
+.econ_tag_filter_category_label {
+	margin-bottom: 2px;
+	color: #828282;
+}
+
+.econ_tag_filter_label > span {
+	/* text-shadow: 1px 1px 1px #696969; */
+	text-shadow: 1px 2px 2px #191919;
 }
 
 .marker_search_sidebar_section_tip {
@@ -711,8 +733,8 @@ a.market_tab_well_tab_inactive:hover {
 }
 
 .market_search_sidebar_search_box {
-	width: 241px;
-	padding-right: 20px;
+	margin: 0 1px;
+	width: 232px;
 }
 
 .market_search_filter_search_box {
@@ -733,8 +755,8 @@ input.filter_search_box:focus {
 
 	width: 21px;
 	height: 25px;
-	right: 14px;
-	top: 0;
+	right: 2px;
+	top: 4px;
 
 	cursor: pointer;
 }
@@ -1040,4 +1062,213 @@ input.filter_search_box:focus {
 	position: absolute;
 	bottom: 0.87em;
 	right: 2px;
+}
+
+.market_search_box_container .game_button {
+	margin-top: 5px;
+}
+
+.market_search_box_container .game_button_contents {
+	width: 245px;
+}
+
+#market_search_advanced_show {
+	width: 249px;
+}
+
+#market_search_advanced_show > span {
+	padding: 0 5px;
+	line-height: 30px;
+}
+
+.market_search_results_header {
+	min-height: 60px;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	padding: 5px 15px 0;
+}
+
+.market_search_results_title {
+	display: inline-block;
+	font-size: 28px;
+	color: white;
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+
+.market_searchedForTerm
+{
+	display: inline-block;
+
+	min-height: 28px;
+	line-height: 28px;
+	padding: 2px 5px;
+	background-color: #68932f;
+	border: 2px solid #68932f;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	color: #d2ff96;
+	font-size: 14px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.market_searchedForTerm img {
+	width: 26px;
+	height: 26px;
+	vertical-align: middle;
+	margin: 0 5px 0 -2px;
+}
+
+.market_searchedForTerm .removeIcon {
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+
+	background-image: url( 'http://cdn.steamcommunity.com/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.market_searchedForTerm:hover
+{
+	background-color: #8ac33e;
+	border: 2px solid #8ac33e;
+}
+
+#market_advancedsearch_dialog {
+	width: 900px;
+	}
+
+#market_advancedsearch_dialog > div {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+#market_advancedsearch_dialog form > div {
+	margin: 0 24px;
+	position: relative;
+}
+
+#market_advancedsearch_left {
+	float: left;
+	width: 280px;
+}
+
+#market_advancedsearch_dialog .market_search_sidebar_search_box {
+	width: 258px;
+	height: 19px;
+	font-size: 14px;
+	color: #D2D2D2;
+				border-color: #4D4D4D;
+	background-color: #333;
+	box-shadow: 1px 1px 2px black inset;
+	padding: 10px;
+}
+
+#market_advancedsearch_options {
+	margin-top: 10px;
+}
+
+#market_advancedsearch_dialog .market_search_submit_button {
+	height: 41px;
+	width: 28px;
+	top: 0;
+	right: 0;
+	background: url('http://cdn.steamcommunity.com/public/images/header/ico_search.gif') no-repeat left center;
+	opacity: 0.6;
+}
+
+#market_advancedsearch_dialog .market_search_checkbox {
+	margin-left: 6px;
+	margin-top: 6px;
+}
+
+.market_advancedsearch_bottombuttons {
+	text-align: right;
+	margin-right: 24px;
+}
+
+.market_advancedsearch_bottombuttons > a {
+	vertical-align: middle;
+	margin-left: 30px;
+}
+
+.market_app_selector {
+	margin-bottom: 15px;
+}
+
+#market_advancedsearch_appselect, #market_advancedsearch_appselect_options {
+	width: 100%;}
+
+#market_advancedsearch_appselect {
+		background-color: #333;
+	background-image: url('http://cdn.steamcommunity.com/public/images/economy/filter_dropdown.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+		border: 1px solid #4D4D4D;
+	cursor: pointer;
+}
+
+.market_advancedsearch_appname {
+	line-height: 38px;
+	height: 39px;
+	color: #D2D2D2;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.market_advancedsearch_appname > img {
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.market_advancedsearch_appname > span {
+	margin-left: 10px;
+	margin-right: 15px;
+	vertical-align: top;
+}
+
+#market_advancedsearch_appselect_options {
+	overflow-y: scroll;
+	max-height: 250px;
+}
+
+#market_advancedsearch_appselect .market_advancedsearch_appname {
+	box-shadow: 1px 1px 2px black inset;
+}
+
+#market_advancedsearch_appselect_options .market_advancedsearch_appname {
+	border-bottom: 1px solid #6C6C6C;
+	cursor: default;
+}
+
+#market_advancedsearch_appselect_options_apps {
+	border-bottom: none;
+}
+
+#market_advancedsearch_appselect_options_apps .popup_menu_item {
+	padding: 0;
+	line-height: 38px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#market_advancedsearch_dialog .item_market_action_button_contents {
+	font-size: 14px;
+	padding: 0 12px;
+}
+
+.market_advancedsearch_filters {
+	padding: 10px 10px;
+	height: 310px;
+			border: 1px solid #4D4D4D;
+	background-color: #333;
+	box-shadow: 1px 1px 1px black inset;
+	overflow-y: auto;
+}
+
+.econ_tag_filter_container {
+	margin-bottom: 2px;
 }
