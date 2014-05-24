@@ -294,13 +294,18 @@ function UpdateAccountName( value )
 	CheckAccountNameAvailability();
 }
 
+g_strLastAccountNameCheck = '';
 function CheckAccountNameAvailability()
 {
+	var strName = document.getElementById('accountname').value;
+	if ( strName == g_strLastAccountNameCheck )
+		return;
+	g_strLastAccountNameCheck = strName;
 	++iAjaxCalls;
 	new Ajax.Request('https://store.steampowered.com/join/checkavail/',
 	  {
 	    method:'get',
-	    parameters: { accountname: document.getElementById('accountname').value, count : iAjaxCalls },
+	    parameters: { accountname: strName, count : iAjaxCalls },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
 	        
