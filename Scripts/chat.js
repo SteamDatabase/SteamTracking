@@ -906,7 +906,7 @@ CWebChat.prototype.Initialize = function()
 		this.m_bBrowserSupportsAudio = true;
 	}
 
-	if ( window.webkitNotifications )
+	if ( typeof Notification != 'undefined' && typeof Notification.permission != 'undefined' )
 	{
 		this.m_bBrowserSupportsNotifications = true;
 	}
@@ -1128,22 +1128,17 @@ CWebChat.prototype.PollComplete = function( pollid, data )
 							if ( this.m_bBrowserSupportsAudio && !this.GetPref( 'soundmuted' ) )
 								$J('#message_received_audio')[0].play();
 
-							if ( this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && window.webkitNotifications.checkPermission() == 0 )
+							if ( this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && Notification.permission == 'granted' )
 							{
-								var notification = window.webkitNotifications.createNotification( Friend.GetAvatarURL( 'medium' ), '%s sent a message'.replace( /%s/, Friend.m_strName ), message.text );
+								var notification = new Notification( '%s sent a message'.replace( /%s/, Friend.m_strName ), { body: message.text, icon: Friend.GetAvatarURL( 'medium' ) } );
 								var fnOnClick = Friend.m_fnOnClick;
 								notification.onclick = function() { fnOnClick(); window.focus(); };
-								notification.show();
 
 								// chrome doesn't seem to dismiss these right now, so we'll give it 6 seconds
 								window.setTimeout( function() {
 									if ( notification.close )
 									{
 										notification.close();
-									}
-									else if ( notification.cancel )
-									{
-										notification.cancel();
 									}
 								}, 6000 );
 							}
@@ -1413,15 +1408,15 @@ CWebChat.prototype.SettingsDialog = function()
 	var Modal = ShowAlertDialog( 'Web Chat Settings', $Dialog );
 
 	// notifications are supported but not enabled in the browser, so we set an interval to watch for the browser permissions to change
-	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() != 0 )
+	if ( this.m_bBrowserSupportsNotifications && Notification.permission != 'granted' )
 	{
-		var webkitNotificationsValue = window.webkitNotifications.checkPermission();
+		var webkitNotificationsValue = Notification.permission;
 		var nNotificationCheckInterval = -1;
 		nNotificationCheckInterval = window.setInterval( function() {
-			if ( window.webkitNotifications.checkPermission() != webkitNotificationsValue )
+			if ( Notification.permission != webkitNotificationsValue )
 			{
 				// update the display of the notifications checkbox to reflect the new value
-				webkitNotificationsValue = window.webkitNotifications.checkPermission();
+				webkitNotificationsValue = Notification.permission;
 				var $NotificationsCheckboxNew = _chat.SettingsNotificationCheckbox();
 				$NotificationsCheckbox.replaceWith( $NotificationsCheckboxNew );
 				$NotificationsCheckbox = $NotificationsCheckboxNew;
@@ -1437,20 +1432,20 @@ CWebChat.prototype.SettingsDialog = function()
 CWebChat.prototype.SettingsNotificationCheckbox = function()
 {
 
-	var bNotificationsChecked = this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && window.webkitNotifications.checkPermission() == 0;
-	var bNotificationsEnabled = this.m_bBrowserSupportsNotifications && ( window.webkitNotifications.checkPermission() == 0 || window.webkitNotifications.checkPermission() == 1 );
+	var bNotificationsChecked = this.m_bBrowserSupportsNotifications && this.GetPref( 'notifications' ) && Notification.permission == 'granted';
+	var bNotificationsEnabled = this.m_bBrowserSupportsNotifications && ( Notification.permission == 'granted' || Notification.permission == 'default' );
 	var strNotes = null;
-	if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 2 )
+	if ( this.m_bBrowserSupportsNotifications && Notification.permission == 'denied' )
 	{
 		strNotes = 'You have opted to disable desktop notifications from Steam. You can enable them from your browser’s settings panel.';
 	}
-	else if ( this.m_bBrowserSupportsNotifications && window.webkitNotifications.checkPermission() == 1 )
+	else if ( this.m_bBrowserSupportsNotifications && Notification.permission == 'default' )
 	{
 		strNotes = 'Enabling this setting may display a prompt in your web browser to grant Steam permission to show notifications.';
 	}
 	else if ( !this.m_bBrowserSupportsNotifications )
 	{
-		strNotes = 'Desktop notifications are only available in Chrome and Safari at this time.';
+		strNotes = 'Desktop notifications are not available in your browser.';
 	}
 
 	var _chat = this;
@@ -1459,9 +1454,9 @@ CWebChat.prototype.SettingsNotificationCheckbox = function()
 			return false;
 
 		_chat.SetPref( 'notifications', bEnabled );
-		if ( window.webkitNotifications.checkPermission() == 1 )
+		if ( Notification.permission == 'default' )
 		{
-			window.webkitNotifications.requestPermission();
+			Notification.requestPermission();
 		}
 		return true;
 	}

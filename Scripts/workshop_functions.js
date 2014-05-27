@@ -1,4 +1,26 @@
 
+function DownloadFile( publishFileID )
+{
+    $J.post( "http://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID )
+
+    .done( function(response) {
+        if ( response.success == 1 )
+        {
+            // Need to make sure the filename is set, in case there is no Content-Disposition on the result
+            // So cook up an anchor, set the href and download attributes, and click it.
+            // Apparently the download attribute does not work on IE. . .
+            var f = $J("<a>");
+            f.attr("href", response.url );
+            f[0].download = response.filename;
+            f[0].click();
+        }
+        else
+        {
+            ShowAlertDialog( 'Error', 'Unable to download file: ' + response.success );
+        }
+    });
+}
+
 function SharedFilesSelectApp( workshopAppURL )
 {
 	HideMenu( $('appselect'), $('appselect_options') );
