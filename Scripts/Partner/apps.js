@@ -3652,3 +3652,38 @@ function ShowCreateNewAppProgress( strTitle, strDescription )
 	return Modal;
 }
 
+function UpgradeGreenlightItem( publishedfileid, name )
+{
+	var prompt = ShowPromptDialog( "Import Applicatino", 'You can choose to rename your application if you wish.' );
+	var input = prompt.m_$Content.find( 'input' );
+	input.val( name );
+	input.select();
+
+	prompt.done( function( appName ) {
+		var waitingDialog = ShowBlockingWaitDialog( 'Converting', 'Please wait...' );
+			$J.ajax(
+				{
+					type: "POST",
+					url: 'https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/',
+					data: { 'publishedfileid' : publishedfileid, 'name' : appName },
+					success: function ( response ) {
+						if ( response.success == 1 )
+						{
+							waitingDialog.Dismiss();
+							var dialog = ShowAlertDialog( 'Converted!', 'We have successfully converted your product to a full Steamworks application! The appid is: ' + response.appid );
+							dialog.done(function() {
+								top.location.href = "https://partner.steamgames.com/apps/landing/" + response.appid;
+							});
+						}
+						else
+						{
+							waitingDialog.Dismiss();
+							ShowAlertDialog( 'Error', 'An error was encountered while processing your request:' + response.success );
+						}
+					}
+				}
+			);
+	} );
+
+}
+
