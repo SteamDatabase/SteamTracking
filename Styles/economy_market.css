@@ -1233,6 +1233,7 @@ input.filter_search_box:focus {
 #market_advancedsearch_appselect_options {
 	overflow-y: scroll;
 	max-height: 250px;
+	border: 1px solid #82807C;
 }
 
 #market_advancedsearch_appselect .market_advancedsearch_appname {
@@ -1245,7 +1246,7 @@ input.filter_search_box:focus {
 }
 
 #market_advancedsearch_appselect_options_apps {
-	border-bottom: none;
+	border: none;
 }
 
 #market_advancedsearch_appselect_options_apps .popup_menu_item {
