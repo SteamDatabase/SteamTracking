@@ -6,8 +6,6 @@ countrylist
 		{
 			territory "46"
 			gamecode ""
-			purchasecountries "AZ BY KZ KG MD RU TJ TM UA"
-			denypurchasecountries ""
 			launchcountries "AZ BY KZ KG MD RU TJ TM UA"
 			applydate "1154390400" // 8/1/06
 		}
@@ -15,7 +13,6 @@ countrylist
 		{
 			territory "45"
 			gamecode  "42"
-			purchasecountries "TH"
 			launchcountries "TH"
 			applydate "1199145600" // 1/1/08
 		}
@@ -24,7 +21,6 @@ countrylist
 			gamecode	"26"
 			territory	"61"
 			region		"3"
-			purchasecountries "MY SG PH VN ID KH BN TH"
 			launchcountries "MY SG PH VN ID KH BN TH"
 			applydate "1199145600" // 1/1/08
 		}
@@ -33,7 +29,6 @@ countrylist
 			gamecode	"35"
 			territory	"61"
 			region		"3"
-			purchasecountries "VN ID KH BN"
 			launchcountries "VN ID KH BN"
 			applydate "1199145600" // 1/1/08
 		}
@@ -41,7 +36,6 @@ countrylist
 		{
 			gamecode	"34"
 			territory	"61"
-			purchasecountries "MY SG PH VN ID KH BN TH"
 			launchcountries "MY SG PH VN ID KH BN TH"
 			applydate "1199145600" // 1/1/08
 		}
@@ -49,14 +43,12 @@ countrylist
 		{
 			gamecode	"153"
 			territory	"61"
-			purchasecountries "PH VN ID KH BN TH"
 			launchcountries "PH VN ID KH BN TH"
 			applydate "1199145600" // 1/1/08
 		}
 		9
 		{
 			territory	"43"
-			purchasecountries "JP"
 			launchcountries "JP"
 			applydate "1199145600" // 1/1/08
 		}
@@ -64,42 +56,36 @@ countrylist
 		{
 			gamecode	"9"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08 HL2 Game of the Year Intercontinental
 		}
 		11
 		{
 			territory	"42"
-			purchasecountries "TW"
 			launchcountries "TW"
 			applydate "1199145600" // 1/1/08
 		}
 		12
 		{
 			territory	"55"
-			purchasecountries "MY SG PH VN ID KH BN TH MM IN TL LA AE BH KW OM QA SA AU HK"
 			launchcountries "MY SG PH VN ID KH BN TH MM IN TL LA AE BH KW OM QA SA AU HK"
 			applydate "1199145600" // 1/1/08
 		}
 		13
 		{
 			territory	"61"
-			purchasecountries "PH VN ID KH BN"
 			launchcountries "PH VN ID KH BN"
 			applydate "1199145600" // 1/1/08
 		}
 		14
 		{
 			territory	"53"
-			purchasecountries "EG"
 			launchcountries "EG"
 			applydate "1199145600" // 1/1/08
 		}
 		15
 		{
 			territory	"44"
-			purchasecountries "IN"
 			launchcountries "IN"
 			applydate "1199145600" // 1/1/08
 		}
@@ -107,7 +93,6 @@ countrylist
 		{
 			gamecode	"43"
 			territory	"50"
-			purchasecountries "HK SG PH MO"
 			launchcountries "HK SG PH MO"
 			applydate "1199145600" // 1/1/08
 		}
@@ -115,7 +100,6 @@ countrylist
 		{
 			gamecode	"5"
 			territory	"10"
-			purchasecountries "CN"
 			launchcountries "CN"
 			applydate "1199145600" // 1/1/08
 		}
@@ -123,7 +107,6 @@ countrylist
 		{
 			gamecode	"25"
 			territory	"21"
-			purchasecountries "CN"
 			launchcountries "CN"
 			applydate "1201520400" // 1/28/08 for GTI Racer/EClub
 		}
@@ -131,14 +114,12 @@ countrylist
 		{
 			gamecode	"25"
 			territory	"22"
-			purchasecountries "CN"
 			launchcountries "CN"
 			applydate "1201520400" // 1/28/08 for Xpand Rally/EClub
 		}
 		20
 		{
 			gamecode	"50"
-			purchasecountries "CN"
 			launchcountries "CN"
 			applydate "1201520400" // 1/28/08 for China OB SKUs, and any future game that uses gamecode 50
 		}
@@ -146,7 +127,6 @@ countrylist
 		{
 			gamecode	"52"
 			territory	"2"
-			purchasecountries "KR"
 			launchcountries "KR"
 			applydate "1201520400" // 1/28/08 for Korea OB SKUs
 		}
@@ -154,7 +134,6 @@ countrylist
 		{
 			gamecode	"47"
 			territory	"2"
-			purchasecountries "KR"
 			launchcountries "KR"
 			applydate "1201520400" // 1/28/08 for Korea OB SKUs
 		}
@@ -162,7 +141,6 @@ countrylist
 		{
 			gamecode	"46"
 			territory	"2"
-			purchasecountries "KR"
 			launchcountries "KR"
 			applydate "1201520400" // 1/28/08 for Korea OB SKUs
 		}
@@ -170,7 +148,6 @@ countrylist
 		{
 			gamecode	"1"
 			territory	"26"
-			purchasecountries "CN MO"
 			launchcountries "CN MO"
 			applydate "1206136800" // 3/21/08 for CZ China
 		}
@@ -178,7 +155,6 @@ countrylist
 		{
 			gamecode	"53"
 			territory	"47"
-			purchasecountries "CZ SK"
 			launchcountries "CZ SK"
 			applydate "1209945600" // 5/05/08 for Gumboy Tournament for Czech Republic
 		}
@@ -186,7 +162,6 @@ countrylist
 		{
 			gamecode	"10"
 			territory	"249"
-			purchasecountries "RO CZ HU LV PL SK BG"
 			launchcountries "RO CZ HU LV PL SK BG"
 			applydate "1214870400" // 7/01/08 for ComputerGames RO
 		}
@@ -194,7 +169,6 @@ countrylist
 		{
 			gamecode	"55"
 			territory	"2"
-			purchasecountries "KR"
 			launchcountries "KR"
 			applydate "1201520400" // 1/28/08 for Korea L4D SKUs
 		}
@@ -202,7 +176,6 @@ countrylist
 		{
 			gamecode	"55"
 			territory	"61"
-			purchasecountries "VN ID KH BN TH"
 			launchcountries "VN ID KH BN TH"
 			applydate "1199145600" // 1/1/08 for L4D E-Club In/Cam/Bru/Vietnam/Thailand
 		}
@@ -210,7 +183,6 @@ countrylist
 		{
 			gamecode	"60"
 			territory	"33"
-			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			applydate "1199145600" // 1/1/08 Empire: TW for Russian
 		}
@@ -218,7 +190,6 @@ countrylist
 		{
 			gamecode	"60"
 			territory	"28"
-			purchasecountries "TH"
 			launchcountries "TH"
 			applydate "1199145600" // 1/1/08 Empire: TW for Thailand
 		}
@@ -226,21 +197,13 @@ countrylist
 		{
 			gamecode	"60"
 			territory	"79"
-			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			applydate "1199145600" // 1/1/08 Empire: TW for Russian
-		}
-		32
-		{
-			gamecode "67"
-			denypurchasecountries "JP"
-			applydate "1236542400" // The Last Remnament (US) not available in Japan
 		}
 		33
 		{
 			gamecode	"77"
 			territory	"100"
-			purchasecountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
 			launchcountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
 			applydate "1199145600" // 1/1/08 All Aspect Warfare for Russia
 		}
@@ -248,7 +211,6 @@ countrylist
 		{
 			gamecode	"78"
 			territory	"100"
-			purchasecountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
 			launchcountries "BY RU UA AM AZ GE KZ KG MD UZ LT LV EE"
 			applydate "1199145600" // 1/1/08 Angle of Attack for Russia
 		}
@@ -256,7 +218,6 @@ countrylist
 		{
 			gamecode 	"75"
 			territory	"47"
-			purchasecountries "RU RO PL HU CZ"
 			launchcountries "RU RO PL HU CZ"
 			applydate "1255118400" // Rogue Warrior Cenega/1C countries
 		}
@@ -264,7 +225,6 @@ countrylist
 		{
 			gamecode 	"75"
 			territory	"48"
-			purchasecountries "RU RO PL HU CZ"
 			launchcountries "RU RO PL HU CZ"
 			applydate "1255118400" // Rogue Warrior Cenega/1C countries
 		}
@@ -272,7 +232,6 @@ countrylist
 		{
 			gamecode 	"75"
 			territory	"49"
-			purchasecountries "RU RO PL HU CZ"
 			launchcountries "RU RO PL HU CZ"
 			applydate "1255118400" // Rogue Warrior Cenega/1C countries
 		}
@@ -280,7 +239,6 @@ countrylist
 		{
 			gamecode 	"75"
 			territory	"97"
-			purchasecountries "RU RO PL HU CZ"
 			launchcountries "RU RO PL HU CZ"
 			applydate "1255118400" // Rogue Warrior Cenega/1C countries
 		}
@@ -288,7 +246,6 @@ countrylist
 		{
 			gamecode 	"75"
 			territory	"33"
-			purchasecountries "RU RO PL HU CZ"
 			launchcountries "RU RO PL HU CZ"
 			applydate "1255118400" // Rogue Warrior Cenega/1C countries
 		}
@@ -296,7 +253,6 @@ countrylist
 		{
 			gamecode	"12"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08  CSS Intercontinental
 		}
@@ -304,7 +260,6 @@ countrylist
 		{
 			gamecode	"18"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08  HL2 EP1 Intercontinental
 		}
@@ -312,7 +267,6 @@ countrylist
 		{
 			gamecode	"43"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08  OrangeBox Intercontinental
 		}
@@ -320,7 +274,6 @@ countrylist
 		{
 			gamecode	"55"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08  L4d Intercontinental
 		}
@@ -328,7 +281,6 @@ countrylist
 		{
 			gamecode	"84"
 			territory	"50"
-			purchasecountries "HK MO"
 			launchcountries "HK MO"
 			applydate "1199145600" // 1/1/08  L4d2 Intercontinental
 		}
@@ -336,7 +288,6 @@ countrylist
 		{
 			gamecode	"87"
 			territory	"65"
-			purchasecountries "IN"
 			launchcountries "IN"
 			applydate "1199145600" // 1/1/08  Cricket Rev India
 		}
@@ -344,7 +295,6 @@ countrylist
 		{
 			gamecode	"87"
 			territory	"103"
-			purchasecountries "PK"
 			launchcountries "PK"
 			applydate "1199145600" // 1/1/08  Cricket Rev Pakistan
 		}
@@ -352,7 +302,6 @@ countrylist
 		{
 			gamecode	"1"
 			territory	"249"
-			purchasecountries "RO CZ HU LV PL SK BG"
 			launchcountries "RO CZ HU LV PL SK BG"
 			applydate "1214870400" // 7/01/08 for ComputerGames RO
 		}
@@ -360,7 +309,6 @@ countrylist
 		{
 			gamecode	"14"
 			territory	"249"
-			purchasecountries "RO CZ HU LV PL SK BG"
 			launchcountries "RO CZ HU LV PL SK BG"
 			applydate "1214870400" // 7/01/08 for ComputerGames RO
 		}
@@ -368,7 +316,6 @@ countrylist
 		{
 			gamecode	"12"
 			territory	"249"
-			purchasecountries "RO CZ HU LV PL SK BG"
 			launchcountries "RO CZ HU LV PL SK BG"
 			applydate "1214870400" // 7/01/08 for ComputerGames RO
 		}
@@ -376,7 +323,6 @@ countrylist
 		{
 			gamecode	"42"
 			territory	"249"
-			purchasecountries "RO CZ HU LV PL SK BG"
 			launchcountries "RO CZ HU LV PL SK BG"
 			applydate "1214870400" // 7/01/08 for ComputerGames RO
 		}
@@ -384,7 +330,6 @@ countrylist
 		{
 			gamecode	"94"
 			territory	"33"
-			purchasecountries "AZ BY KZ KG MD RU TJ TM UA"
 			launchcountries "AZ BY KZ KG MD RU TJ TM UA"
 			applydate "1214870400" // 7/01/08 for Just Cause 2 - Russia
 		}
@@ -392,7 +337,6 @@ countrylist
 		{
 			gamecode	"88"
 			territory	"33"
-			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UA UZ"
 			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UA UZ"
 			applydate "1214870400" // 7/01/08 for Serious Sam HD: First Encounter - Russia
 		}
@@ -400,7 +344,6 @@ countrylist
 		{
 			gamecode	"94"
 			territory	"49"
-			purchasecountries "CZ PL SK"
 			launchcountries "CZ PL SK"
 			applydate "1214870400" // 7/01/08 for Just Cause 2 - Poland/Czech/Slovakia
 		}
@@ -408,7 +351,6 @@ countrylist
 		{
 			gamecode	"94"
 			territory	"47"
-			purchasecountries "CZ PL SK"
 			launchcountries "CZ PL SK"
 			applydate "1214870400" // 7/01/08 for Just Cause 2 - Poland/Czech/Slovakia
 		}
@@ -416,7 +358,6 @@ countrylist
 		{
 			gamecode	"105"
 			territory	"33"
-			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
 			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
 			applydate "1214870400" // 7/01/08 Mount and Blade Warband - Russia and surrounding territories
 		}
@@ -424,7 +365,6 @@ countrylist
 		{
 			gamecode	"84"
 			territory	"118"
-			purchasecountries "PH"
 			launchcountries "PH"
 			applydate "1214870400" // 7/01/08 Left 4 Dead 2 - Philippines only
 		}
@@ -432,7 +372,6 @@ countrylist
 		{
 			gamecode	"114"
 			territory	"33"
-			purchasecountries "RU AM AZ BY GE KZ KG TJ MD TM UZ UA"
 			launchcountries "RU AM AZ BY GE KZ KG TJ MD TM UZ UA"
 			applydate "1214870400" // 7/01/08 RUSE - Russian only
 		}
@@ -440,7 +379,6 @@ countrylist
 		{
 			gamecode	"114"
 			territory	"47"
-			purchasecountries "CZ CS SK"
 			launchcountries "CZ CS SK"
 			applydate "1214870400" // 7/01/08 RUSE - Czech only
 		}
@@ -448,7 +386,6 @@ countrylist
 		{
 			gamecode	"115"
 			territory	"18"
-			purchasecountries "BS PA BZ CR SV GT HN NI VE CO GY SR GF BR PE BO PY UY AR CL EC MX"
 			launchcountries "BS PA BZ CR SV GT HN NI VE CO GY SR GF BR PE BO PY UY AR CL EC MX"
 			applydate "1214870400" // 7/01/08 Fallout: New Vegas - Latin America only
 		}
@@ -456,7 +393,6 @@ countrylist
 		{
 			gamecode	"115"
 			territory	"78"
-			purchasecountries "KR HK TW SG"
 			launchcountries "KR HK TW SG"
 			applydate "1214870400" // 7/01/08 Fallout: New Vegas - Select Asian Countries
 		}
@@ -464,7 +400,6 @@ countrylist
 		{
 			gamecode	"118"
 			territory	"33"
-			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
 			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UA UZ"
 			applydate "1214870400" // 7/01/08 The Ball - RU
 		}
@@ -472,7 +407,6 @@ countrylist
 		{
 			gamecode	"124"
 			territory	"33"
-			purchasecountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			launchcountries "RU UA KZ BY AM AZ KG MD TJ TM UZ"
 			applydate "1199145600" // 1/1/08 Shogun 2 for Russian
 		}
@@ -480,7 +414,6 @@ countrylist
 		{
 			gamecode	"178"
 			territory	"78"
-			purchasecountries "KR HK TW SG IN MY"
 			launchcountries "KR HK TW SG IN MY"
 			applydate "1214870400" // 7/01/08 Brink - Select Asian Countries
 		}
@@ -488,7 +421,6 @@ countrylist
 		{
 			gamecode	"178"
 			territory	"33"
-			purchasecountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UZ UA"
 			launchcountries "RU AM AZ BY EE GE KZ KG LV LT MD TJ TM UZ UA"
 			applydate "1214870400" // 7/01/08 Brink- Russian Territory keys
 		}
@@ -496,7 +428,6 @@ countrylist
 		{
 			gamecode	"178"
 			territory	"49"
-			purchasecountries "PL"
 			launchcountries "PL"
 			applydate "1214870400" // 7/01/08 Brink: Polish Keys
 		}
@@ -504,7 +435,6 @@ countrylist
 		{
 			gamecode	"178"
 			territory	"47"
-			purchasecountries "CZ SK"
 			launchcountries "CZ SK"
 			applydate "1214870400" // 7/01/08 Brink: Czech and Slovak Keys
 		}
@@ -512,21 +442,13 @@ countrylist
 		{
 			gamecode	"178"
 			territory	"48"
-			purchasecountries "HU"
 			launchcountries "HU"
 			applydate "1214870400" // 7/01/08 Brink: Hungarian Keys
-		}
-		68
-		{
-			gamecode "65"
-			denypurchasecountries "JP"
-			applydate "1236542400" // The Last Remnament (EU) not available in Japan
 		}
 		69
 		{
 			gamecode "560"
 			territory	"49"
-			purchasecountries "PL"
 			launchcountries "PL"
 			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel Polish keys
 		}
@@ -534,7 +456,6 @@ countrylist
 		{
 			gamecode "560"
 			territory	"47"
-			purchasecountries "CZ SK"
 			launchcountries "CZ SK"
 			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel Czech/Slovakia keys
 		}
@@ -542,7 +463,6 @@ countrylist
 		{
 			gamecode "560"
 			territory	"33"
-			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA"
 			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA"
 			applydate "1214870400" // 7/01/08 Call of Juarez: The Cartel RU/CIS keys
 		}
@@ -550,7 +470,6 @@ countrylist
 		{
 			gamecode "924"
 			territory	"100"
-			purchasecountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA LT LV EE"
 			launchcountries "AM AZ BY GE KZ KG MD RU TJ TM UZ UA LT LV EE"
 			applydate "1214870400" // 7/01/08 SR3 Akella RU/CIS keys
 		}
