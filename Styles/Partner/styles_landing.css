@@ -990,6 +990,11 @@ input {
 	background-color: rgb(51, 51, 51) !important;
 }
 
+.fancyCurrencyInput .priceChangedNew
+{
+	color: #82a6d7 !important;
+}
+
 .priceInputUnlockLink
 {
 	display: inline-block;
@@ -1767,4 +1772,15 @@ a.pagelink:hover {
 	float: right;
 	padding-right: 20px;
 	margin-top: 30px;
+}
+
+.pricingToolLegend li
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.pricingToolIncreasedPrice
+{
+	border: 1px dashed red;
 }
