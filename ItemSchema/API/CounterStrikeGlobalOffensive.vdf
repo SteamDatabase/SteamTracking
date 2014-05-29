@@ -5197,6 +5197,10 @@
 		{
 			"prefab"		"weapon_case_base"
 			"associated_item"		"1203"
+			"capabilities"
+			{
+				"can_delete"		"1"
+			}
 		}
 		"csgo_tool"
 		{
@@ -5217,6 +5221,7 @@
 		{
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_WeaponCase_Key"
+			"item_type_name"		"#CSGO_Tool_WeaponCase_KeyTag"
 			"item_description"		"#CSGO_Tool_WeaponCase_Key_Desc"
 			"image_inventory"		"econ/tools/weapon_case_key"
 			"mouse_pressed_sound"		"doors/door_lock_1.wav"
@@ -5275,10 +5280,6 @@
 		"collectible_untradable"
 		{
 			"prefab"		"collectible"
-			"capabilities"
-			{
-				"can_gift_wrap"		"0"
-			}
 			"attributes"
 			{
 				"cannot trade"		"1"
@@ -5438,7 +5439,6 @@
 		{
 			"prefab"		"collectible"
 			"item_class"		"map_token"
-			"item_type_name"		"#CSGO_Type_MapToken"
 			"show_in_armory"		"1"
 			"armory_desc"		"maptoken"
 		}
@@ -8962,6 +8962,16 @@
 					"UVScale"		"0.506000"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_3"
+					"tag_text"		"#CSGO_set_community_3"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"874"
 		{
@@ -9476,6 +9486,7 @@
 			"first_sale_date"		"2013/08/28"
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_Name_Tag"
+			"item_type_name"		"#CSGO_Tool_Name_TagTag"
 			"item_description"		"#CSGO_Tool_Name_Tag_Desc"
 			"image_inventory"		"econ/tools/tag"
 			"tool"
@@ -9521,6 +9532,7 @@
 			"first_sale_date"		"2014/01/29"
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_Sticker"
+			"item_type_name"		"#CSGO_Tool_Sticker"
 			"item_description"		"#CSGO_Tool_Sticker_Desc"
 			"tool"
 			{
@@ -9542,6 +9554,7 @@
 			"first_sale_date"		"2013/12/17"
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift1Player"
+			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift1Player_Desc"
 			"image_inventory"		"econ/weapon_cases/gift1player"
 			"capabilities"
@@ -9574,6 +9587,7 @@
 			"first_sale_date"		"2013/12/16"
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift9Players"
+			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift9Players_Desc"
 			"image_inventory"		"econ/weapon_cases/gift9players"
 			"capabilities"
@@ -9632,6 +9646,7 @@
 			"first_sale_date"		"2013/12/16"
 			"prefab"		"csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift25Spectators"
+			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift25Spectators_Desc"
 			"image_inventory"		"econ/weapon_cases/gift25spectators"
 			"capabilities"
@@ -9719,6 +9734,16 @@
 					"value"		"1"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_weapons_i"
+					"tag_text"		"#CSGO_set_weapons_i"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"4002"
 		{
@@ -9740,6 +9765,16 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"2"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_esports"
+					"tag_text"		"#CSGO_set_esports"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
 		}
@@ -9765,6 +9800,16 @@
 					"value"		"4"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_weapons_ii"
+					"tag_text"		"#CSGO_set_weapons_ii"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"4003"
 		{
@@ -9788,6 +9833,16 @@
 					"value"		"3"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_bravo_i"
+					"tag_text"		"#CSGO_set_bravo_i"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"4005"
 		{
@@ -9809,6 +9864,16 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_esports_ii"
+					"tag_text"		"#CSGO_set_esports_ii"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
 		}
@@ -9877,6 +9942,16 @@
 					"value"		"7"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_1"
+					"tag_text"		"#CSGO_set_community_1"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"4010"
 		{
@@ -9900,6 +9975,16 @@
 					"value"		"10"
 				}
 			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_weapons_iii"
+					"tag_text"		"#CSGO_set_weapons_iii"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"4011"
 		{
@@ -9921,6 +10006,16 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"11"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_2"
+					"tag_text"		"#CSGO_set_community_2"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
 		}
@@ -10018,7 +10113,7 @@
 			"name"		"crate_sticker_pack_community01"
 			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_community01"
 			"first_sale_date"		"2014/03/20"
-			"prefab"		"weapon_case_base"
+			"prefab"		"weapon_case"
 			"associated_items"
 			{
 				"1304"		"1"
@@ -10056,6 +10151,16 @@
 				{
 					"attribute_class"		"supply_crate_series"
 					"value"		"17"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_3"
+					"tag_text"		"#CSGO_set_community_3"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
 			"loot_list_rare_item_footer"		"#crate_community_3_unusual_lootlist"
