@@ -811,14 +811,6 @@ CForumTopic = Class.create( {
 			this.m_oTextAreaSizer = new CAutoSizingTextArea( this.m_elTextArea, 40 );
 		}
 
-		// render audits out of the comment thread
-		// we'll defer this to make sure the comment thread is initialized before it runs
-		var fn = function( thisClosure ) {
-			if ( g_rgForumTopicCommentThreads[ thisClosure.m_gidForumTopic ] )
-				thisClosure.RenderCommentAudits( g_rgForumTopicCommentThreads[ thisClosure.m_gidForumTopic ].m_rgRawCommentCache );
-		};
-		fn.defer( this );
-
 	},
 
 	CheckTextAreaSize: function()
@@ -1034,34 +1026,6 @@ CForumTopic = Class.create( {
 		});
 	},
 
-	RenderCommentAudits: function( rgCommentRawData )
-	{
-		var rgCommentAudits = this.m_rgForumData.comment_audits;
-		if ( !rgCommentAudits || ( rgCommentAudits instanceof Array && rgCommentAudits.length == 0 ) )
-			return;
-
-		for ( gidComment in rgCommentRawData )
-		{
-			if ( rgCommentAudits[ gidComment ] )
-			{
-				var rgAudit = rgCommentAudits[gidComment];
-				var elComment = $('comment_content_' + gidComment );
-				if ( rgAudit['edit'] )
-				{
-					elComment.insert( {after: rgAudit['edit'] } );
-				}
-				if ( rgAudit['delete'] )
-				{
-					var elDeletedComment = $('deleted_comment_' + gidComment );
-					if ( elDeletedComment )
-					{
-						elDeletedComment.down('span.commentthread_deleted_comment_audit').update( rgAudit['delete'] );
-					}
-				}
-			}
-		}
-	},
-
 	ShowAudits: function ( gidObject )
 	{
 		var strURL = this.GetActionURL( 'auditlog' );
@@ -1171,11 +1135,6 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		elContainer.style.height = elContainer.getHeight() + 'px';
 
 		elPosts.update( strNewHTML );
-
-		if ( topic )
-		{
-			topic.RenderCommentAudits( this.m_rgRawCommentCache );
-		}
 
 		if ( eRenderReason == CCommentThread.RENDER_GOTOPAGE || eRenderReason == CCommentThread.RENDER_NEWPOST )
 		{
