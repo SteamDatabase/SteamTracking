@@ -12692,6 +12692,7 @@
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
 			"anim_slot" "MELEE_ALLCLASS"
+			"xifier_class_remap"	"Frying Pan"
 			"used_by_classes"
 			{
 				"scout"	"1"
@@ -40727,6 +40728,7 @@
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
 			"anim_slot" "MELEE_ALLCLASS"
+			"xifier_class_remap"	"Frying Pan"
 			"used_by_classes"
 			{
 				"scout"	"1"
