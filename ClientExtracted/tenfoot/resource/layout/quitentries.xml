@@ -14,32 +14,39 @@
 			<Label text="#Quit_SwitchToHDMIInput" />
 		</Button>
 		<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden StreamingHidden ExitButtons" onactivate="QuitApp()" selectionpos="10,2">
-			<Label text="#Quit_ExitBigPicture" />
+			<Label id="QuitBigPictureLabel" text="#Quit_ExitBigPicture" />
 		</Button>
 		<Button class="SystemButton StreamingHidden ExitButtons" onactivate="ExitSteam()" selectionpos="10,3">
 			<Label text="#Quit_ExitSteam" />
 		</Button>
-		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()" selectionpos="10,4">
+		
+		<Panel class="HorizontalRule" />
+		
+		<Button class="SystemButton NotLoggedInHidden" onactivate="ShowSettingsFromQuitEntries();" selectionpos="10,4">
+			<Label text="#Quit_Settings" />
+		</Button>
+		
+		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()" selectionpos="10,5">
 			<Label text="#Quit_ChangeUser" />
 		</Button>
-
-		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,5">
+		
+		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,6">
 			<Label text="#Quit_GoOffline" />
 		</Button>
 
-		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,6">
+		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,7">
 			<Label text="#Quit_GoOnline" />
 		</Button>
 
 		<Panel class="HorizontalRule StreamingHidden" />
 
-		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="ShutdownMachine()" selectionpos="10,7">
+		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="ShutdownMachine()" selectionpos="10,8">
 			<Label text="#Quit_Shutdown" />
 		</Button>
-		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="RestartMachine()" selectionpos="10,8">
+		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="RestartMachine()" selectionpos="10,9">
 			<Label text="#Quit_Restart" />
 		</Button>
-		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="SuspendMachine()" selectionpos="10,9">
+		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="SuspendMachine()" selectionpos="10,10">
 			<Label text="#Quit_Sleep" />
 		</Button>
 	</QuitEntriesPanel>

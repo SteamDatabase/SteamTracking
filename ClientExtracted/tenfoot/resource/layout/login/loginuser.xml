@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/login/loginstyles.css" />
 	</styles>
 
-	<LoginUser defaultfocus="AccountNameTextEntry" oncancel="NavigateLoginBack(); NavigateTenfootBack();">
+	<LoginUser defaultfocus="AccountNameTextEntry" oncancel="NavigateLoginBack( true );">
 		<Panel id="TopRow" class="TopRow" selectionpos="0,0">
 			<Image class="Logo" src="file://{images}/steam_logo.tga" />
 			<Panel id="SettingsExitRow" selectionpos="auto">
@@ -60,15 +60,17 @@
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
 					<Label class="TextEntryPrompt SteamGuard" text="#Login_SteamGuardCode" />
 				 </TextEntry>
+				 
+				<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
+					<Label text="#Login_RememberPassword" />
+					<Panel id="SharedBorder" />
+				</ToggleButton>
 	
 				<Button class="Button LoginPromptContainer" id="LoginButton" onactivate="Login()">
 					<Label id="LoginLabel" text="#Login_Login" />
 				</Button>
 
-				<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
-					<Label text="#Login_RememberPassword" />
-					<Panel id="SharedBorder" />
-				</ToggleButton>
+
 			</Panel>
 		</Panel>
 	</LoginUser>

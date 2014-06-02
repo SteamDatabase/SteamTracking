@@ -5,19 +5,24 @@
 		<include src="file://{resources}/styles/oobe/oobe.css" />
 	</styles>
 
-	<OOBELanguageWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#OOBE_WelcomeTitle" />
-		<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
-		
-		<Panel id="SettingsContainer">
-			<SettingsPanel_Language id="SettingsPanel_Language" class="SettingsSection SectionVisible SettingsContained" defaultfocus="Language" />
-		</Panel>
+	<OOBELanguageWizardChild class="OOBEControllerHintImage WizardChild FlowNone" tabindex="auto" selectionpos="auto">
+		<Label class="OOBEControllerHintTitle StdLabelMed SteamPadSpecific" text="#OOBE_WelcomeNavTutorialSteamPadTitle" />
+		<Label class="OOBEControllerHintBody StdLabelMedBlue SteamPadSpecific" text="#OOBE_WelcomeNavTutorialSteamPadBody" />
 
-		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#WizardButton_Next" />
-			</Button>
+		<Panel id="LanguageWizard" class="FlowDown" tabindex="auto" selectionpos="auto">
+			<Label class="WizardChildTitle" text="#OOBE_WelcomeTitle" />
+			<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
+			
+			<Panel id="SettingsContainer">
+				<SettingsPanel_Language id="SettingsPanel_Language" class="SettingsSection SectionVisible SettingsContained" defaultfocus="Language" />
+			</Panel>
+			
+			<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+				<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+					<Label id="Label" text="#WizardButton_Next" />
+				</Button>
+			</Panel>
 		</Panel>
 	</OOBELanguageWizardChild>
-
+	
 </root>

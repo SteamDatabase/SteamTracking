@@ -715,6 +715,11 @@ Button:hover .ShortDesc
 	wash-color: accountwarning;
 }
 
+.SteamUpdated #Inbox
+{
+    background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
 #NewSupportMessagesButton
 {
 	wash-color: accountwarning;
@@ -941,7 +946,7 @@ MainMenu.StackDepth3 #MenuRow:hover
 	opacity: 0.80;
 }
 
-MainMenu #MenuRow.MenuRowHidden
+MainMenu #MenuRow.MenuRowHidden, MainMenu.ScreenshotSlideshowVisible #MenuRow
 {
 	opacity: 0.0;
 }

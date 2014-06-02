@@ -35,7 +35,7 @@
 @define stick_snd_select_dist_1: 500;
 @define stick_snd_select_ang_0: 17;
 
-@define picked_item_transition_time: 0.1s;
+@define picked_item_transition_time: 0.15s;
 
 @define settings_transition_time: 0.2s;
 @define language_transition_time: 0.2s;
@@ -1017,8 +1017,20 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	box-shadow: fill #00000022 0px 0px 6px 0px;
 	transition-property: background-color, transform !immediate;
 	transition-duration: picked_item_transition_time;
-	transition-timing-function: ease-in-out;
-	
+	transition-timing-function: linear;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N.Picked,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S.Picked,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E.Picked,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W.Picked
+{
+	background-color: #00000011;
+	border-radius: borderradius;
+
+	transition-property: background-color, transform !immediate;
+	transition-duration: picked_item_transition_time;
+	transition-timing-function: linear;
 }
 
 .ItemLabel
@@ -1031,7 +1043,6 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	line-height: 40px;
 	margin-top: -2px;
 	color: #C0C0C0FF;
-	
 }
 
 .Group.SelectionGroup .ItemLabel
@@ -1039,12 +1050,33 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	color: #ffffffff;
 }
 
+.DaisyInputTypeABXY .Group #Item_N.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY .Group #Item_S.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY .Group #Item_E.Item.Picked .ItemLabel,
+.DaisyInputTypeABXY .Group #Item_W.Item.Picked .ItemLabel
+{
+	color: #999999FF;
+}
+
+
 .DaisyInputTypeABXY.SteamPad .Group #Item_N.Item.Picked .ItemLabel,
 .DaisyInputTypeABXY.SteamPad .Group #Item_S.Item.Picked .ItemLabel,
 .DaisyInputTypeABXY.SteamPad .Group #Item_E.Item.Picked .ItemLabel,
 .DaisyInputTypeABXY.SteamPad .Group #Item_W.Item.Picked .ItemLabel
 {
 	color: #999999FF;
+}
+
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N.Picked .ItemLabel,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S.Picked .ItemLabel,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E.Picked .ItemLabel,
+.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W.Picked .ItemLabel
+{
+	color: #333333FF;
+	
+	transition-property: color, transform !immediate;
+	transition-duration: picked_item_transition_time;
+	transition-timing-function: linear;
 }
 
 
@@ -1171,7 +1203,6 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY #Item_W
 {
-	background-color: #14356600;
 
 	border: 2px solid #00000000;
 	background-color: #00000000;
@@ -1230,7 +1261,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .DaisyInputTypeABXY #Item_E
 {
-	background-color: #a51c0c00;
+
 
 	border: 2px solid #00000000;
 	background-color: #00000000;

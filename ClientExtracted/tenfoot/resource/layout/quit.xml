@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/quit.css" />
 	</styles>
 	
-	<QuitDialog class="TenfootMsgBox" onmouseactivate="DismissQuitDialog()">
+	<QuitDialog class="TenfootMsgBox" onmouseactivate="CloseModalDialog()">
 		<QuitEntriesPanel id="QuitDialogButtonParent" class="ContextMenuBody">
 		</QuitEntriesPanel>
 	</QuitDialog>

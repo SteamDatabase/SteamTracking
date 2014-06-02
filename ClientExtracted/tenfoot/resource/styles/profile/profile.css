@@ -166,6 +166,8 @@
 
 #CommunityNavBar Button
 {
+	padding-left: 10px;
+	padding-right: 10px;	
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
 	border: 5px solid #0d1c2200;
 	color: carousel_title;
@@ -183,15 +185,17 @@
 #CommunityNavBar Button:focus
 {
 	opacity: 1.0;
-
+	color: black;
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	padding-left: 10px;
+	padding-right: 10px;
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, max-width, transform;
 
 	transform: translatez( 0px );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
+	
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
@@ -358,7 +362,7 @@ ProfilePanel #Loading
 {
 	align: center top;
 	margin-top: 300px;
-	width: 100%;
+	width: 80%;
 	text-align: center;
 
 	color: detailsdatalabel;

@@ -1,3 +1,5 @@
+@define fullscreen_transition_duration: 0.3s;
+
 //
 // Slideshow
 //
@@ -5,15 +7,11 @@ LibraryScreenshotsSlideshow
 {
 	width: 1920px;
 	height: 1080px;
+	transform-origin: 0% 0%;
 
-	transition-property:  opacity;
-	transition-duration: 0.3s !immediate;
+	transition-property: opacity, transform, position;
+	transition-duration: fullscreen_transition_duration;
 	transition-timing-function: linear;
-
-	animation-name: msg-box-appear;
-	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
 
 	z-index: 1000;
 }
@@ -44,6 +42,7 @@ LibraryScreenshotsSlideshow #Contents
 	width: 100%;
 	height: 100%;
 	transform: translatex( 0px );
+	background-color: black;
 
 	transition-property: transform;
 	transition-duration: 0.4s;
@@ -136,7 +135,6 @@ LibraryScreenshotsSlideshow #Contents
 
 #ScreenshotsCaption
 {
-	margin-top: -8px;
 	font-style: italic;
 	visibility: collapse;
 }
@@ -147,8 +145,8 @@ LibraryScreenshotsSlideshow #Contents
 	color: applabel;
 	opacity: 0.8;
 	font-size: 44px;
-	margin-top: 16px;
 	width: 100%;
+	align: left center;
 }
 
 #ScreenshotUploaded

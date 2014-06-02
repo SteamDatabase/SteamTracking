@@ -33,10 +33,7 @@
 			inset="1 0 0 2"
 			bgcolor="none"
 			render
-						{
-							//gradient to obscure content at top of scrolling region 
-							1="gradient( x0+1, y0, x1-1, y0 + 16, dialogbg, none  )"
-							
+						{		
 							//gradient to obscure content at bottom of scrolling region 
 							2="gradient( x0+1, y1 - 16, x1-1, y1-2, none, almostblack )"
 							
@@ -50,7 +47,6 @@
 
 				// background gradient        
 				0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
-				1="gradient( x0+1, y0, x1-1, y0 + 31, BackgroundStartsubtle, none )"
 				
 				// lines around
 				2="fill( x0, y0 + 1, x0 + 1, y1 - 3, ButtonBorderDisabled)"  //left
@@ -97,7 +93,7 @@
 	{
 		place
 		{
-			control = grid					 x=1 y=1 width=max height=max 
+			control = grid					 x=1 y=2 width=max height=max 
 		}
 
 		place	{ control=emptylisttext x=0 y=0 margin=10 margin-top=9 width=max height=max }

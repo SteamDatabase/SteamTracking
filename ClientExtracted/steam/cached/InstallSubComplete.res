@@ -56,10 +56,10 @@
 		"Default"		"0"
 		"selected"		"1"
 	}
-	"CDKeyConversionConfirm"
+	"InstallCompleteLabel"
 	{
 		"ControlName"		"Label"
-		"fieldName"		"CDKeyConversionConfirm"
+		"fieldName"		"InstallCompleteLabel"
 		"xpos"		"24"
 		"ypos"		"30"
 		"wide"		"336"
@@ -70,7 +70,7 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		""
+		"labelText"		"#Steam_InstallComplete_DownloadInfo"
 		"textAlignment"		"north-west"
 		"wrap"		"1"
 	}

@@ -39,7 +39,7 @@
     visibility: visible;
 }
 
-.NotLoggedIn .NotLoggedInHidden
+.NotLoggedIn .NotLoggedInHidden, .SteamOS.SteamOS_EnableDesktop.NotLoggedIn #QuitBigPicture
 {
 	visibility: collapse;
 }

@@ -487,7 +487,7 @@ DropDown:focus
 VerticalScrollBar
 {
 	width: 6px;
-	margin: 3px, 6px, 6px 3px;
+	margin: 3px, 6px, 3px 6px;
 	border-radius: 0px;
 	height: 100%;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c230 ), to( #f2f2f230 ) );
@@ -1408,4 +1408,82 @@ Slider
 	background-color: #3885b5;
 	border-radius: 10px;
 	box-shadow: fill black 1px 1.5px 4px 0px;
+}
+
+//
+// Loading throbber
+//
+@keyframes 'loading-throbber-appear'
+{
+	from
+	{
+		opacity: 0.0;
+	}
+
+	to
+	{
+		opacity: 1.0;
+	}
+}
+
+@keyframes 'loading-throbber-bar'
+{
+	0%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+//		background-color: #5492b8;
+		background-color: #5899c1;
+	}
+	30%
+	{
+		pre-transform-scale2d: 1.0, 1.0;
+//		background-color: #529cde;
+		background-color: #67b3e2;
+	}
+	55%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+		background-color: #5899c1;
+	}
+	100%
+	{
+		pre-transform-scale2d: 1.0, 0.6;
+		background-color: #5899c1;
+	}
+}
+
+LoadingThrobber
+{
+	flow-children: right;
+
+	animation-name: loading-throbber-appear;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+
+LoadingThrobber .Bar
+{
+	margin-right: 6px;
+	width: 12px;
+	height: 90px;
+	background-color: white;
+
+	animation-name: loading-throbber-bar;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+LoadingThrobber .Bar1
+{
+}
+
+LoadingThrobber .Bar2
+{
+	animation-delay: 0.16s;
+}
+
+LoadingThrobber .Bar3
+{
+	animation-delay: 0.32s;
 }

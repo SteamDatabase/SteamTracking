@@ -18,11 +18,22 @@
 			<Button onactivate="PlayCurrentAlbum(false, false);">
 				<Label id="AddLabel" text="#MusicAlbum_Add_To_Queue" />
 			</Button>
+			<Panel class="HorizontalRule" />	
 			<Button id="ViewEntireAlbum" onactivate="ViewEntireAlbum();">
 				<Label text="#MusicAlbum_Show_Entire_Album" />
 			</Button>
 			<Button id="ShowCurrentAlbumInSystemButton" onactivate="ShowCurrentAlbumInSystem();">
 				<Label text="#MusicAlbum_Show_In_System" />
+			</Button>
+			<Panel class="HorizontalRule" id="ArtistSeparator"/>			
+			<Button onactivate="PlayCurrentArtist(true, false);" >
+				<Label id="PlayArtistLabel" text="#MusicArtist_All_Play" />
+			</Button>
+			<Button id="ArtistPlayNextButton" onactivate="PlayCurrentArtist(false, true);" >
+				<Label id="PlayArtistNextLabel" text="#MusicArtist_All_Play_Next" />
+			</Button>
+			<Button onactivate="PlayCurrentArtist(false, false);">
+				<Label id="AddArtistToQueueLabel" text="#MusicArtist_All_Add_To_Queue" />
 			</Button>
 		</Panel>
 	</MusicAlbumMoreDialog>

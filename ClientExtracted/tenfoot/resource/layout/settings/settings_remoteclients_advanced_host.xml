@@ -18,38 +18,11 @@
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsLeftContentWide" >
 					<ToggleButton class="CheckBox" id="EnableHardwareEncoding" onactivate="ToggleHardwareEncoding()" text="#Settings_RemoteClients_EnableHardwareEncoding" />
+					<ToggleButton class="CheckBox" id="EnableDWMCapture" onactivate="ToggleDWMCapture()" text="#Settings_RemoteClients_EnableDWMCapture" />
 					
 					<Panel class="Spacer" />
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_EnableTrafficPriority_Description" />
 					<ToggleButton class="CheckBox" id="EnableTrafficPriority" onactivate="ToggleTrafficPriority()" text="#Settings_RemoteClients_EnableTrafficPriority" />
-					
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<!-- Because this dialog is modal, we can't launch the browser
-					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
-						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
-					</Button>
-					-->
 				</Panel>
 			</Panel>
 		</Panel>

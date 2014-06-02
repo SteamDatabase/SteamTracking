@@ -6,43 +6,49 @@
 	
 	<InboxMenu onmouseactivate="CloseInboxMenu();" oncancel="CloseInboxMenu();">
 		<Panel id="Wrapper" childfocusonhover="true">
-			<Button id="NewCommentsButton" tabindex="0" selectionpos="0,0" onactivate="ShowNewComments();" >
+            <Button id="NewClientUpdateButton" tabindex="0" selectionpos="0,0" onactivate="AllowNewClientUpdate();" >
+                <Image src="file://{images}/icon_steam_update.png" />
+                <Panel class="ButtonLabelWrapper">
+                    <Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
+                </Panel>
+            </Button>
+			<Button id="NewCommentsButton" tabindex="1" selectionpos="0,1" onactivate="ShowNewComments();" >
 				<Image src="file://{images}/comments.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewCommentsLabel" class="LongDescSm" text="#MainMenu_NewComments" />
 				</Panel>
 			</Button>
-			<Button id="NewItemsButton" tabindex="1" selectionpos="0,1" onactivate="ShowNewItems();" >
+			<Button id="NewItemsButton" tabindex="2" selectionpos="0,2" onactivate="ShowNewItems();" >
 				<Image src="file://{images}/items.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewItemsLabel" class="LongDescSm" text="#MainMenu_NewItems" />
 				</Panel>
 			</Button>
-			<Button id="NewInvitesButton" tabindex="2" selectionpos="0,2" onactivate="ShowNewInvites();" >
+			<Button id="NewInvitesButton" tabindex="3" selectionpos="0,3" onactivate="ShowNewInvites();" >
 				<Image src="file://{images}/invites.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewInvitesLabel" class="LongDescSm" text="#MainMenu_NewInvites" />
 				</Panel>
 			</Button>
-			<Button id="NewGiftsButton" tabindex="3" selectionpos="0,3" onactivate="ShowNewGifts();" >
+			<Button id="NewGiftsButton" tabindex="4" selectionpos="0,4" onactivate="ShowNewGifts();" >
 				<Image src="file://{images}/gifts.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewGiftsLabel" class="LongDescSm" text="#MainMenu_NewGifts" />
 				</Panel>
 			</Button>
-			<Button id="NewTradeOffersButton" tabindex="4" selectionpos="0,4" onactivate="ShowNewTradeOffers();" >
+			<Button id="NewTradeOffersButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewTradeOffers();" >
 				<Image src="file://{images}/trade_offer.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewTradeOffersLabel" class="LongDescSm" text="#MainMenu_NewTradeOffers" />
 				</Panel>
 			</Button>
-			<Button id="NewAsyncGamesButton" tabindex="5" selectionpos="0,5" onactivate="ShowNewAsyncGames();" >
+			<Button id="NewAsyncGamesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewAsyncGames();" >
 				<Image src="file://{images}/async_game.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewAsyncGamesLabel" class="LongDescSm" text="#MainMenu_NewAsyncGames" />
 				</Panel>
 			</Button>
-			<Button id="NewModeratorMessagesButton" tabindex="6" selectionpos="0,6" onactivate="ShowNewModeratorMessages();" >
+			<Button id="NewModeratorMessagesButton" tabindex="7" selectionpos="0,7" onactivate="ShowNewModeratorMessages();" >
 				<Image src="file://{images}/comments.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewModeratorMessagesLabel" class="LongDescSm" text="#MainMenu_NewModeratorMessages" />
@@ -51,12 +57,6 @@
 			<Button id="NewSupportMessagesButton" tabindex="8" selectionpos="0,8" onactivate="ShowNewSupportMessages();" >
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewSupportMessagesLabel" class="LongDescSm" text="#MainMenu_NewSupportMessages" />
-				</Panel>
-			</Button>
-			<Button id="NewClientUpdateButton" tabindex="9" selectionpos="0,9" onactivate="AllowNewClientUpdate();" >
-				<Image src="file://{images}/icon_steam_update.png" />
-				<Panel class="ButtonLabelWrapper">
-					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
 				</Panel>
 			</Button>
 			<Button id="NewSteamOSUpdateButton" tabindex="9" selectionpos="0,9" onactivate="AllowSteamOSUpdate();" >
