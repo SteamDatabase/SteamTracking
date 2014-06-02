@@ -274,6 +274,92 @@ LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
+#PlatformSupport
+{
+	margin: 0px;
+	padding-left: 6px;
+	padding-right: 15px;
+	width: fit-children;
+	margin-top: -18px;
+	height: 50px;
+
+	flow-children: right;
+	horizontal-align: right;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.LibraryAllGames #PlatformSupport
+{
+	margin-top: -2px;
+	margin-bottom: -16px;
+	padding-right: 0px;
+}
+
+#LibraryMostRecent:descendantfocus #PlatformSupport
+{
+	opacity: 1.0;
+}
+
+.LibraryAllGames:descendantfocus #PlatformSupport
+{
+	opacity: 1.0;
+}
+
+.CapsuleControllerSupport, .MacSupport, .WindowsSupport, .SteamOSSupport
+{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+	horizontal-align: right;
+	vertical-align: bottom;
+
+	visibility: collapse;
+	opacity: 0.0;
+
+	transition-property: wash-color, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+LibraryRecentApp:focus .CapsuleControllerSupport, LibraryRecentApp:focus .MacSupport, LibraryRecentApp:focus .WindowsSupport, LibraryRecentApp:focus .SteamOSSupport,
+AppGridItem:focus .CapsuleControllerSupport, AppGridItem:focus .MacSupport, AppGridItem:focus .WindowsSupport, AppGridItem:focus .SteamOSSupport
+{
+	opacity: 1.0;
+	wash-color: #333333ff;
+}
+
+.MacAvailable .MacSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.SteamOSAvailable .SteamOSSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.WindowsAvailable .WindowsSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+
 //A recent app's hover state... when not focused on its own carousel
 .LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp:hover
 {
@@ -3218,8 +3304,8 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	width: 46px;
 	height: 39px;
-	margin-top: -18px;
-	
+
+	visibility: collapse;	
 	opacity: 0.0;
 
 	transition-property: opacity;
@@ -3233,6 +3319,8 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: #353535;
+	visibility: visible;
+
 	opacity: 1.0;
 }
 
@@ -3242,17 +3330,9 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: #353535;
+	visibility: visible;
 	opacity: 1.0;
 }
-
-.SteamPad .FullController #ControllerSupport,
-.SteamPad .PartialController #ControllerSupport,
-.SteamPad .FullController:focus #ControllerSupport,
-.SteamPad .PartialController:focus #ControllerSupport,
-{
-	opacity: 0.0;	
-}
-
 
 .LibraryMostRecent:descendantfocus .RecentApp:focus
 {
@@ -3710,6 +3790,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	margin-top: -2px;
 	
 	opacity: 0.0;
+	visibility: collapse;
 
 	transition-property: opacity;
 	transition-duration: shortduration;
@@ -3723,6 +3804,7 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	background-repeat: no-repeat;
 	wash-color: #353535;
 	opacity: 1.0;
+	visibility: visible;
 }
 
 .PartialController:focus #GridControllerSupport
@@ -3732,16 +3814,8 @@ LibraryPanel:descendantfocus .MostRecentCarousel .RecentApp:hover
 	background-repeat: no-repeat;
 	wash-color: #353535;
 	opacity: 1.0;
+	visibility: visible;
 }
-
-.SteamPad .FullController #GridControllerSupport,
-.SteamPad .PartialController #GridControllerSupport,
-.SteamPad .FullController:focus #GridControllerSupport,
-.SteamPad .PartialController:focus #GridControllerSupport,
-{
-	opacity: 0.0;
-}
-
 
 .AppGridItem:hover
 {

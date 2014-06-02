@@ -20,8 +20,7 @@
 		
 		<Panel id="ContentPanel">		
 			<Carousel id="GridTabs" 
-					tabindex="0" selectionpos="0,0" focus="edge" focus-offset="105px" wrap="false" drawframe="false" 
-					selectionposboundary="vertical" >
+					tabindex="0" selectionpos="0,0" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" >
 				<Button id="AlbumButton" 
 						onmoveup="CloseMusicLibrary();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"

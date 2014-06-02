@@ -792,14 +792,31 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_left_bumper.png" );
 }
 
+.D0g #BindingCallouts.left_bumper 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_left_bumper_d0g.png" );
+}
+
+
 #BindingCallouts.left_trigger 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_left_trigger.png" );
 }
 
+.D0g #BindingCallouts.left_trigger 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_left_trigger_d0g.png" );
+}
+
+
 #BindingCallouts.backside_left 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_backside_left.png" );
+}
+
+.D0g #BindingCallouts.backside_left 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_backside_left_d0g.png" );
 }
 
 #BindingCallouts.right_bumper 
@@ -807,9 +824,19 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_right_bumper.png" );
 }
 
+.D0g #BindingCallouts.right_bumper 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_right_bumper_d0g.png" );
+}
+
 #BindingCallouts.right_trigger 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_right_trigger.png" );
+}
+
+.D0g #BindingCallouts.right_trigger 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_right_trigger_d0g.png" );
 }
 
 #BindingCallouts.backside_right 
@@ -817,9 +844,19 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_backside_right.png" );
 }
 
+.D0g #BindingCallouts.backside_right 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_backside_right_d0g.png" );
+}
+
 #BindingCallouts.button_0 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_button_0.png" );
+}
+
+.D0g #BindingCallouts.button_0 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_0_d0g.png" );
 }
 
 #BindingCallouts.button_1 
@@ -827,9 +864,19 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_button_1.png" );
 }
 
+.D0g #BindingCallouts.button_1 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_1_d0g.png" );
+}
+
 #BindingCallouts.button_2 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_button_2.png" );
+}
+
+.D0g #BindingCallouts.button_2 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_2_d0g.png" );
 }
 
 #BindingCallouts.button_3 
@@ -837,9 +884,19 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_button_3.png" );
 }
 
+.D0g #BindingCallouts.button_3 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_button_3_d0g.png" );
+}
+
 #BindingCallouts.touch_button_0 
 {
 	background-image: url( "file://{images}/library/alpha_controller.png" );
+}
+
+.D0g #BindingCallouts.touch_button_0 
+{
+	background-image: url( "file://{images}/library/alpha_controller_d0g.png" );
 }
 
 #BindingCallouts.touch_button_1 
@@ -847,9 +904,19 @@
 	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
+.D0g #BindingCallouts.touch_button_1 
+{
+	background-image: url( "file://{images}/library/alpha_controller_d0g.png" );
+}
+
 #BindingCallouts.touch_button_2 
 {
 	background-image: url( "file://{images}/library/alpha_controller.png" );
+}
+
+.D0g #BindingCallouts.touch_button_2 
+{
+	background-image: url( "file://{images}/library/alpha_controller_d0g.png" );
 }
 
 #BindingCallouts.touch_button_3 
@@ -857,9 +924,19 @@
 	background-image: url( "file://{images}/library/alpha_controller.png" );
 }
 
+.D0g #BindingCallouts.touch_button_3 
+{
+	background-image: url( "file://{images}/library/alpha_controller_d0g.png" );
+}
+
 #BindingCallouts.p1 
 {
 	background-image: url( "file://{images}/library/alpha_controller_callout_p1.png" );
+}
+
+.D0g #BindingCallouts.p1 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_p1_d0g.png" );
 }
 
 #BindingCallouts.p2 
@@ -867,6 +944,10 @@
 	background-image: url( "file://{images}/library/alpha_controller_callout_p2.png" );
 }
 
+.D0g #BindingCallouts.p2 
+{
+	background-image: url( "file://{images}/library/alpha_controller_callout_p2_d0g.png" );
+}
 
 #DescriptionHeader
 {

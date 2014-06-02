@@ -1,0 +1,235 @@
+"resource/layout/musicpage_details_album.layout"
+{
+	controls
+	{
+		AlbumTitleLabel { controlname="Label" style="AlbumTitleStyle" }
+		ArtistLabel { controlname="Label" style="ArtistStyle" }
+		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
+		
+		PlayTracksButton { 
+			controlname="Button" 
+			labeltext="#Music_Album_Details_PlayTracks" 
+			style="ActionButtonStyle"
+			command="AlbumPlayTracksAction"
+		}
+		
+		PlayTracksNextButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_PlayTracksNext" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumPlayTracksNextAction"
+		}
+		
+		AddTracksToQueueButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_AddTracksToQueue" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddTracksToQueueAction"
+		}	
+
+		ShowAlbumButton { 
+			controlname="Button" 
+			labeltext="#Music_Album_Details_ShowAlbum" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumShowAction"
+		}
+		
+		PlayAlbumButton { 
+			controlname="Button" 
+			labeltext="#Music_Album_Details_Play" 
+			style="ActionButtonStyle"
+			command="AlbumPlayAction"
+		}
+		
+		PlayAlbumNextButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_PlayNext" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumPlayNextAction"
+		}
+		
+		AddAlbumToQueueButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_AddToQueue" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddToQueueAction"
+		}	
+		
+		ShowAlbumInSystemButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_ShowAlbumInSystem" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumShowAlbumInSystemAction"
+		}	
+		
+		
+	}
+
+	styles
+	{
+		CMusicPage_Details_Album
+		{
+			bgcolor=none
+
+		}
+		
+		AlbumTitleStyle
+		{
+			padding-bottom=8
+			padding-top=8
+			padding-left=10
+			padding-right=10
+			font-size=30
+			textcolor=Text
+			font-family=basefont
+			font-weight=400 
+			bgcolor=BackgroundStart
+		}
+
+		ArtistStyle
+		{
+			padding-bottom=10
+			padding-top=10
+			padding-left=10
+			padding-right=10
+			font-size=20
+			textcolor=Text
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+		}
+		
+		TrackStyle
+		{
+			padding-bottom=10
+			padding-top=0
+			font-size=15
+			textcolor=Text2
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+		}
+		
+		TrackStyle:hover
+		{
+			textcolor="text"
+		}
+		
+		CoverStyle
+		{
+
+		}
+		
+		AdditionalActionButtonStyle
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="label"
+			padding-right=0
+			padding-left=-6
+			padding-top=4
+			padding-bottom=-4
+			render_bg	{}
+		}
+		
+		AdditionalActionButtonStyle:hover
+		{
+			textcolor="labelfocus"
+		}
+		
+		
+		ActionButtonStyle
+		{   
+			inset="23 0 0 0"
+
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="Text"
+			font-style=uppercase
+			bgcolor=none
+
+			render
+			{
+				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+
+				// lines around
+				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderSubtle)"  // top
+				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderSubtle)"  // bottom
+				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderSubtle)"  // left
+				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderSubtle)"  // right
+				
+				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderSubtle)"
+				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderSubtle)"
+				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderSubtle)"
+				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderSubtle)"
+				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				}	
+			}
+			
+			ActionButtonStyle:hover
+			{
+				textcolor="TextHover"
+				render
+				{
+					0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+				
+				
+				        // lines around
+					1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
+					2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
+					3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
+					4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
+
+				   // single pixel fills in the corners
+				   5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
+				   6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
+				   7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
+				   8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
+        		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
+						10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
+						11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
+						12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
+						13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
+						14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
+						15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
+						16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				}			
+			}
+	}
+
+	layout
+	{
+		region { name=bodyregion x=10 y=10 width=max height=max overflow=scroll-vertical }		
+		region { name=headerregion x=10 y=20 width=max height=max overflow=scroll-vertical }
+		region { name=leftcolumn x=20 width=200 overflow=scroll-vertical }
+		region { name=trackcolumn width=max overflow=scroll-vertical }
+		
+		place { control="CoverImage" align=top width=200 height=200 }
+		
+		place { region=headerregion control=AlbumTitleLabel,ArtistLabel,leftcolumn dir=down }
+		place { region=leftcolumn  dir=down start=ArtistLabel spacing=10
+			control=CoverImage,PlayTracksButton }
+		place { region=leftcolumn	dir=down start=PlayTracksButton 
+			control=PlayTracksNextButton,AddTracksToQueueButton,PlayAlbumButton,PlayAlbumNextButton,AddAlbumToQueueButton,ShowAlbumButton,ShowAlbumInSystemButton}
+		place { region=trackcolumn control=*MusicPageDetailsTrack dir=down start=ArtistLabel x=230 }
+	}
+}

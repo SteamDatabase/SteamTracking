@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+	</styles>
+	
+	<MusicArtistMoreDialog class="TenfootMsgBox" 
+			oncancel="ButtonCancel()"
+			onmouseactivate="CloseModalDialog();" >
+		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
+			<Button onactivate="PlayCurrentArtist(true, false);" >
+				<Label id="PlayArtistLabel" text="#MusicArtist_Play" />
+			</Button>
+			<Button id="ArtistPlayNextButton" onactivate="PlayCurrentArtist(false, true);" >
+				<Label id="PlayArtistNextLabel" text="#MusicArtist_Play_Next" />
+			</Button>
+			<Button onactivate="PlayCurrentArtist(false, false);">
+				<Label id="AddArtistToQueueLabel" text="#MusicArtist_Add_To_Queue" />
+			</Button>
+		</Panel>
+	</MusicArtistMoreDialog>
+</root>

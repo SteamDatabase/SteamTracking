@@ -1,0 +1,248 @@
+/* styles related to screenshots */
+
+@define longduration: 1.7s;
+@define box_shadow_on_color: #52d1ebaa;
+
+ScreenshotBrowser
+{
+	width: 100%;
+	height: 100%;
+}
+
+ScreenshotBrowser #Contents
+{
+	width: 100%;
+	height: 948px;
+	vertical-align: bottom;
+
+	// transitions
+	transform: translate3d( 0px, 1280px, 1000px );
+	opacity: 0.0;
+	desaturation: 1.0;
+
+	transition-property: transform, opacity, desaturation;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+ScreenshotBrowser:descendantfocus #Contents
+{
+	transform: translate3d( 0px, 0px, 0px );
+	opacity: 1.0;
+	desaturation: 0.0;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+
+	background-color: none;
+	background-image: url( "file://{images}/store/store_app_bg.png" );
+//	opacity-mask: url( "file://{images}/bg_gradient_mask.tga" ) 1.0;
+}
+
+ScreenshotBrowser .TitleRow
+{
+	x: 100px;
+	y: 30px;
+	height: 70px;
+	font-size: 56px;
+	white-space: nowrap;
+	color: carousel_title;
+	z-index: 100;
+}
+
+.FilterRow
+{
+	x: 100px;
+	y: 100px;
+	font-size: 30px;
+	flow-children: right;
+	color: carousel_title;
+	z-index: 100;
+}
+
+.FilterRowViewing
+{
+	align: left center;
+}
+
+.FilterRow DropDown
+{
+	width: 400px;
+	height: 50px;
+	margin-left: 12px;
+}
+
+#AppFilterDropDownMenu
+{
+	width: 400px;
+	max-height: 400px;
+}
+
+#SortOrderDropDownMenu
+{
+	width: 400px;
+	height: 400px;
+}
+
+#ContentGrid
+{
+	//	width: 100%;
+	//	height: fill-parent-flow(1.0);
+	x: 0px;
+	y: 108px;
+	width: 1920px;
+	height: 848px;
+	padding-left: 100px;
+	padding-right: 360px;
+	padding-top: 110px;
+	padding-bottom: 160px;
+}
+
+ScreenshotBrowser.NoScreenshots #ContentGrid
+{
+	visibility: collapse;
+}
+
+ScreenshotBrowserItem
+{
+	flow-children: down;
+	pre-transform-scale2d: 0.83;
+	margin: -52px -26px;
+	margin: -140px, -82px;
+
+	padding: 82px;
+	background-size: 110% 110%;
+	background-repeat: no-repeat no-repeat;
+	background-position: 40% 20%;
+
+	transition-property: position, opacity, border, pre-transform-scale2d;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+ScreenshotBrowserItem:descendantfocus
+{
+	z-index: 100;
+	pre-transform-scale2d: 1.0;
+	background-image: url( "file://{images}/library/screenshot_grid_shadow.png");
+}
+
+ScreenshotBrowserItem #Screenshot
+{
+	width: 547px;
+	height: 308px;
+	z-index: 100;
+	margin: 10px;
+	background-color: black;
+	box-shadow: fill #000000aa -2px -2px 4px 4px;
+}
+
+
+ScreenshotBrowserItem:descendantfocus #Screenshot
+{
+	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ScreenshotItemDescRow
+{
+	width: 547px;
+	color: white;
+	font-size: 18px;
+	flow-children: down;
+	margin: 0px 10px;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
+{
+	opacity: 1.0;
+}
+
+.ScreenshotItemDescRow #Caption
+{
+	font-size: 22px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.ScreenshotItemDescInnerRow
+{
+	width: 100%;
+	margin-top: 4px;
+	flow-children: right;
+}
+
+.ImageSize
+{
+	align: right center;
+}
+
+#NoScreenshots
+{
+	width: 60%;
+	color: applabelsolid;
+	font-size: 30px;
+	align: center top;
+	flow-children: down;
+	margin-top: 320px;
+
+	visibility: collapse;
+}
+
+.NoScreenshots #NoScreenshots
+{
+	visibility: visible;
+}
+
+.HotkeyHeader
+{
+	color: tcstatictext;
+	font-size: 26px;
+}
+
+.HotkeySection
+{
+	align: center top;
+	margin-top: 30px;
+}
+
+#KeyboardHotkeySection
+{
+	flow-children: down;
+	visibility: collapse;
+}
+
+.CursorVisible #KeyboardHotkeySection
+{
+	visibility: visible;
+}
+
+#GamepadHotkeySection
+{
+	flow-children: down;
+	visibility: visible;
+}
+
+.CursorVisible #GamepadHotkeySection
+{
+	visibility: collapse;
+}
+
+.GamepadHotkeyRow
+{
+	flow-children: right;
+}
+
+.GamepadHotkeyRow Label, .GamepadHotkeyRow KeyboardShortcut
+{
+	align: left center;
+}

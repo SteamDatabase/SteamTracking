@@ -20,10 +20,20 @@
 					<Label id="ViewAllLabelGames" class="ButtonLabelSmall" text="#Library_ViewAll" />
 					<Label id="ViewAllGamesLabel" class="ButtonLabel" text="#Library_Games" />
 				</Button>
-			 
-			<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="2" selectionpos="1000,0">
-				<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
-			</Button>
+
+			 	<Button id="MusicLibraryButton" class="LibraryButton" onactivate="ShowMusicLibrary();" tabindex="auto" selectionpos="502,0">
+					<Label class="ButtonLabelSmall" text="#Library_ViewAll_Music" />
+					<Label class="ButtonLabel" text="#Library_Music" />
+				</Button>
+				
+			 	<Button id="AllScreenshotsButton" class="LibraryButton" onactivate="ShowScreenshotBrowser( 0 );" tabindex="auto" selectionpos="503,0">
+					<Label class="ButtonLabelSmall" text="#Library_ViewAll_Screenshots" />
+					<Label class="ButtonLabel" text="#Library_Screenshots" />
+				</Button>
+
+				<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="2" selectionpos="1000,0">
+					<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
+				</Button>
 			</Panel>
 
 		</Panel>

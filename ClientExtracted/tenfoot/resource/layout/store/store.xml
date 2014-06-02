@@ -9,7 +9,7 @@
 		<Panel id="FrontPage" hittest="false">
 			<Panel id="StoreBackgroundWrapper" tabindex="0" selectionpos="0,0" hittest="false">
 				<Panel id="StoreBackground" class="StoreBackgroundBaseVisible" hittest="false">
-					<Carousel id="FeaturedCapsules" focus="center" wrap="true" drawframe="false" onmoveup="ShowMainMenu()" selectionposboundary="vertical"
+					<Carousel id="FeaturedCapsules" focus="center" wrap="true" onmoveup="ShowMainMenu()" selectionposboundary="vertical"
 					x-offset="38px" z-offset="0px" focus-x-offset="100px,200px,300px" focus-z-offset="-100px,-200px,-300px" >
 
 						<Panel id="StoreImage1" class="CapsuleControllerSupportContainer StoreImage StoreImage1">
@@ -369,7 +369,7 @@
 					</Panel>
 				</Panel>
 			</Panel>
-			<Carousel id="Categories" hittest="false" tabindex="1" selectionpos="0,1" focus="center" wrap="false" drawframe="false" x-offset="70px" focus-x-offset="0px" focus-z-offset="-90px, -190px" selectionposboundary="vertical" />
+			<Carousel id="Categories" hittest="false" tabindex="1" selectionpos="0,1" focus="center" wrap="false" x-offset="70px" focus-x-offset="0px" focus-z-offset="-90px, -190px" selectionposboundary="vertical" />
 
 			<Label id="LoadingFrontPageError" text="#Store_Unavailable" />
 			<Panel class="Throbber" />

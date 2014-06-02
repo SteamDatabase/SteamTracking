@@ -42,6 +42,14 @@
 			</Panel>
 	
 			<Panel class="SettingsContent SettingsRightContent" >
+				<Label class="SettingsStatic" text="#Music_Settings_Pause_Music_Header" />
+				<ToggleButton class="CheckBox" id="PauseOnStartAnApplicationCheckbox" 
+					text="#Music_Settings_Pause_On_Start_An_Application" 
+					onactivate="TogglePauseOnAppStartedProcess();"/>
+				<ToggleButton class="CheckBox" id="PauseOnVoiceChatCheckbox" 
+					text="#Music_Settings_Pause_On_Voice_Chat" 
+					onactivate="TogglePauseOnVoiceChat();"/>
+
 				<Label class="SettingsStatic" text="#Music_Settings_Logging_Header" />
 				<ToggleButton class="CheckBox" id="LogCrawlingCheckbox" 
 					text="#Music_Settings_Logging_Crawling" onactivate="ToggleLogCrawling();"/>

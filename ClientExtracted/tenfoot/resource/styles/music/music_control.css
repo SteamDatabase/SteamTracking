@@ -67,6 +67,12 @@ MusicControlPanel
 	transition-timing-function: linear;
 }
 
+.ScreenSaverMode MusicControlPanel
+{
+	transition-duration: 0.3s, 0.3s !immediate;
+	opacity: 0.0;
+}
+
 .GamesRunning MusicControlPanel
 {
 	transition-duration: 0.3s, 0.3s !immediate;

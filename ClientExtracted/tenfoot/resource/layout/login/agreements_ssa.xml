@@ -12,6 +12,8 @@
 
 		<Panel class="InputContainerDown GapDown">
 			<HTML id="AgreementsHTML" embedded="true" />
+			<Label id="ScrollHintXInput" text="#Steam_Html_ScrollHintXInput" />
+			<Label id="ScrollHintSteam" text="#Steam_Html_ScrollHintSteamPad" />
 		</Panel>
 
 		<Button class="WizardButton" id="PPAButton" onactivate="WizardButtonBack()">

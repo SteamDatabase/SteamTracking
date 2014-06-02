@@ -11,8 +11,8 @@
 
 		<Panel class="InputContainerDown GapDown">
 			<HTML id="EulaHTML" embedded="true" />
-			<Label id="EulaScrollHintXInput" text="#OOBE_Eula_ScrollHintXInput" />
-			<Label id="EulaScrollHintSteam" text="#OOBE_Eula_ScrollHintSteamPad" />
+			<Label id="EulaScrollHintXInput" text="#Steam_Html_ScrollHintXInput" />
+			<Label id="EulaScrollHintSteam" text="#Steam_Html_ScrollHintSteamPad" />
 		</Panel>
 		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

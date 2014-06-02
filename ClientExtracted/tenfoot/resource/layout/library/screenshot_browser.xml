@@ -1,0 +1,35 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/screenshotbrowser.css" />
+	</styles>
+	
+	<ScreenshotBrowser onmoveup="CloseScreenshotBrowser( true )" oncancel="CloseScreenshotBrowser( false )">
+		<Panel id="Contents">
+			<Panel id="NoScreenshots">
+				<Label text="#Screenshots_NoScreenshots" />
+				<Panel id="KeyboardHotkeySection" class="HotkeySection">
+					<Label class="HotkeyHeader" text="#Screenshots_KeyboardHeader" />
+					<KeyboardShortcut id="KeyboardBtn" disabled="true"/>
+				</Panel>
+				<Panel id="GamepadHotkeySection" class="HotkeySection">
+					<Label class="HotkeyHeader" text="#Screenshots_ControllerHeader" />
+					<Panel class="GamepadHotkeyRow">
+						<Image class="icon" src="file://{images}/settings/icon_middle.tga" />
+						<Label id="InGameControllerScreenshot" text="#SettingsInGame_Home" />
+						<Label text="+" />
+						<KeyboardShortcut id="GamepadBtn" type="gamepad" disabled="true"/>
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel class="TitleRow">
+				<Label text="#Screenshots_Screenshots" />
+			</Panel>
+			<Panel class="FilterRow" selectionpos="0,0">
+				<Label class="FilterRowViewing" text="Viewing:" />
+				<DropDown id="AppFilter" selectionpos="0,0" />
+			</Panel>
+			<Grid id="ContentGrid" scrolldirection="horizontal" verticalcount="2" horizontalcount="3" selectionpos="0,1"/>
+		</Panel>
+	</ScreenshotBrowser>
+</root>

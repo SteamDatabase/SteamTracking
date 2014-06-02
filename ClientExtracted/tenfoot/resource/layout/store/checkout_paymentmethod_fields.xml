@@ -52,6 +52,9 @@
 		<Panel id="ClickandBuySavedFields">
 			<Label text="#Checkout_PaymentMethod_ClickAndBuySaved" />
 		</Panel>
+		<Panel id="PayPalSavedFields">
+			<Label text="#Checkout_PaymentMethod_PayPalSaved" />
+		</Panel>
 		<Panel id="SteamAccountFields">
 			<Label id="WalletLow" text="#Checkout_PaymentMethod_WalletLow" />
 		</Panel>
