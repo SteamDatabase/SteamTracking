@@ -24,11 +24,14 @@ function clearSelect( select_id )
 
 function getBestAvailNavData()
 {
-    var navData = jQuery.data( document, 'x_oldref' );
+    var navData = jQuery.data( document, 'x_oldnav' );
+    if ( navData == undefined )
+    {
+        navData = jQuery.data( document, 'x_oldref' );
+    }
     if ( navData === undefined )
     {
         // try to get what we need from the URL !
-
         var rg = window.location.href.match( /[\?&]snr=([^\?&]*)($|&)/ );
         if ( rg )
         {
