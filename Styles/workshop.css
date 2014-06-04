@@ -4559,3 +4559,86 @@ a.tooltip {
 	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/dota2_spring_workshop_banner.jpg');
 	background-repeat:no-repeat;
 }
+
+a.workshop_announcement_title, h2.workshop_announcement_title
+{
+	color: #529cde;
+	font-size: 24px;
+	font-weight:normal;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+a.workshop_announcement_title:hover
+{
+	text-decoration: underline;
+}
+
+.announcement
+{
+	margin-bottom: 14px;
+}
+
+.announcement_byline
+{
+	font-size: 10px;
+	margin-top: 5px;
+	margin-bottom: 9px;
+	text-transform: uppercase;
+	color: #555555;
+}
+
+.announcement_body
+{
+	line-height: 20px;
+	margin-bottom: 14px;
+	word-wrap: break-word;
+}
+
+.announcement_readmore
+{
+	position: absolute;
+	display: block;
+	right: 8px;
+	bottom: 0px;
+	background: #000;
+	padding-left: 30px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(15%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+
+	text-transform: uppercase;
+	color: #529cde;
+	font-size: 11px;
+}
+
+a.readmore_link
+{
+	color: #529cde;
+	font-size: 11px;
+	padding-top: 4px;
+}
+
+.announcement_content
+{
+	position: relative;
+	height: 150px;
+	overflow: hidden;
+
+	margin-bottom: 8px;
+}
+
+.announcement_content img
+{
+	max-width: 300px;
+	float: left;
+	margin-right: 10px;
+}

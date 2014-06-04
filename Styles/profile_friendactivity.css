@@ -1050,6 +1050,7 @@ img.movie_thumb {
 	position: relative;
 	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/bg_guide_blotter.jpg' );
 	background-color: #2C2C2C;
+	padding-bottom: 8px;
 }
 
 .blotter_workshopitem.artwork

@@ -539,6 +539,15 @@ a.commentthread_allcommentslink:hover {
 	color: #e9d528;
 }
 
+.commentthread_workshop_publishedfilesbadge {
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 3px;
+	line-height: 22px;
+	margin: 0 4px;
+	background-color: #425979;
+}
+
 span.bb_spoiler {
 	color: #000000;
 	background-color: #000000;

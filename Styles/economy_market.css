@@ -844,6 +844,67 @@ input.filter_search_box:focus {
 	text-align: center;
 }
 
+.market_commodity_order_block {
+    height: 400px;
+}
+
+.market_commodity_explanation {
+    padding: 18px;
+}
+
+.market_commodity_orders_buy_block {
+    -webkit-box-shadow: 0 0 14px #030303 inset;
+    -moz-box-shadow: 0 0 14px #030303 inset;
+    box-shadow: 0 0 14px #030303 inset;
+
+    float: left;
+    width: 448px;
+    height: 240px;
+}
+
+.market_commodity_orders_sell_block {
+    -webkit-box-shadow: 0 0 14px #030303 inset;
+    -moz-box-shadow: 0 0 14px #030303 inset;
+    box-shadow: 0 0 14px #030303 inset;
+
+    float: left;
+    width: 448px;
+    height: 240px;
+}
+
+.market_commodity_orders_interior {
+    padding: 10px;
+    padding-left: 30px;
+    height: 100%;
+}
+
+.market_commodity_orders_header {
+    padding: 6px;
+    font-size: 16px;
+}
+
+.market_commodity_orders_header_promote {
+    font-size: 24px;
+    color: whitesmoke;
+    margin: 0px 2px 0px 2px;
+}
+
+.market_commodity_orders_table {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+
+.market_commodity_buy_button {
+    font-size: 24px;
+    color: whitesmoke;
+    padding: 6px 20px 6px 20px;
+    background: -moz-linear-gradient(top, #81b63c 5%, #4a6526 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#81b63c), color-stop(95%,#4a6526));background: -webkit-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: -o-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: -ms-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: linear-gradient(to bottom, #81b63c 5%,#4a6526 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81b63c', endColorstr='#4a6526',GradientType=0 );    width: 100px;
+    border-radius: 8px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
 #largeiteminfo {
 	display: inline-block;
 	max-width: 444px;
