@@ -579,6 +579,10 @@ p {
 		color: #A4D007;
 	}
 
+	.landingTable tr.hidden td, .landingTable .tr.hidden .td, .landingTable .td.hidden, .landingTable td.hidden, .td.hidden,a td.hidden {
+		color: #808285;
+	}
+
 	.landingTable tr.beta td, .landingTable .tr.beta .td, td.beta, .td.beta {
 		color: #82a6d7;
 	}
@@ -1714,6 +1718,13 @@ a.pagelink:hover {
 	font-size: 9px;
 	background-color: transparent;
 	font-weight: normal;
+}
+
+.td .subnote, td.subnote {
+	white-space: normal;
+	word-break: break-all;
+	max-width: 500px;
+	display: block;
 }
 
 .lowkeywarning {
