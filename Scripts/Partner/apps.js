@@ -3320,9 +3320,10 @@ function ReleaseGame(appid, data)
 
 			if( data['success'] != 1 )
 			{
-				$J('#publish_status_log').append( $J('<p>Please refresh and try again. If problems persist, post on the <a href="http://steamcommunity.com/groups/steamworks">Steamworks Developer Discussions</a></p>') );
+				$J('#publish_status_log').append( $J('<p><b>ERROR '+data['success']+'</b><br>Please refresh and try again. If problems persist, post on the <a href="http://steamcommunity.com/groups/steamworks">Steamworks Developer Discussions</a></p>') );
 				$J('#publish_status_log').show();
 				$J('#publish_status').hide();
+				$J('#publish_button').show();
 			} else {
 				$J('#publish_status').hide();
 				$J('#release_details_container').hide();
