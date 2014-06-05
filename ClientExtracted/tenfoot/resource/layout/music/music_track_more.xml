@@ -18,13 +18,9 @@
 			<Button onactivate="PlayCurrentTrack( false, false);" >
 				<Label text="#MusicAlbum_Add_To_Queue" />
 			</Button>
-			<Panel class="HorizontalRule"/>
+			<Panel class="HorizontalRule" id="AlbumSeparator"/>
 			<Button id="ViewEntireAlbum" onactivate="ViewEntireAlbum();">
 				<Label text="#MusicAlbum_Show_Entire_Album" />
-			</Button>
-
-			<Button id="ShowCurrentAlbumInSystemButton" onactivate="ShowCurrentAlbumInSystem();">
-				<Label text="#MusicAlbum_Show_In_System" />
 			</Button>
 		</Panel>
 	</MusicTrackMoreDialog>

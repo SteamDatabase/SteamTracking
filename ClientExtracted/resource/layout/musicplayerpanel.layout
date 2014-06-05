@@ -8,13 +8,13 @@
 		CurrentTrackLabel	{	controlname=Label	style="StatusStyle"	labeltext=""	}
 		CurrentArtistLabel { controlname=Label style="statusStyle" labeltext="" }
 		
-		RepeatButton { controlname=ToggleButton labeltext="" command="ToggleRepeat" style="RepeatButtonStyle" }
-		ShuffleButton { controlname=Button labeltext="" command="ToggleShuffle" style="ShuffleButtonStyle" }
-		PreviousButton { controlname=Button labeltext="" command="PreviousTrack" style="PreviousButtonStyle" }
-		NextButton { controlname=Button labeltext="" command="NextTrack" style="NextButtonStyle" }
-		PlayPauseButton { controlname=Button labeltext="" command="TogglePlayPause" style="PlayButtonStyle" }
-		VolumeButton { controlname=Button labeltext="" command="Volume" style="VolumeButtonStyle" }
-		BrowseButton { controlname=Button labeltext="" command="BrowseMusic" style="BrowseButtonStyle" }
+		RepeatButton { controlname=ToggleButton labeltext="" tooltiptext="#music_tooltip_repeat" command="ToggleRepeat" style="RepeatButtonStyle" }
+		ShuffleButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_shuffle" command="ToggleShuffle" style="ShuffleButtonStyle" }
+		PreviousButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_previous" command="PreviousTrack" style="PreviousButtonStyle" }
+		NextButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_next" command="NextTrack" style="NextButtonStyle" }
+		PlayPauseButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_playpause" command="TogglePlayPause" style="PlayButtonStyle" }
+		VolumeButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_volume" command="Volume" style="VolumeButtonStyle" }
+		BrowseButton { controlname=Button labeltext="" tooltiptext="#music_tooltip_browse" command="BrowseMusic" style="BrowseButtonStyle" }
 		
 		TrackList { controlname=ListPanel style="MusicListPanelInterior" }
 		NoTracksLabel { controlname=Label style="NoTracksLabelStyle" labeltext="" zpos="-1" }

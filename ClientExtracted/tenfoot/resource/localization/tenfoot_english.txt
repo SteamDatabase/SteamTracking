@@ -2224,6 +2224,7 @@
 	"Music_Settings_Header"	"Music"
 	"Music_Settings_Database_Header"	"Database"
 	"Music_Settings_Crawl_At_Startup"	"Crawl at Startup"
+	"Music_Settings_Building_MusicLibrary"	"Building the Music Library..."
 	"Music_Settings_No_Album_Available" "No albums available."
 	"Music_Settings_One_Album_Available" "One album available with {i:TrackCount} tracks."
 	"Music_Settings_X_Albums_With_Y_Tracks"	"{i:AlbumCount} albums available with {i:TrackCount} tracks."
