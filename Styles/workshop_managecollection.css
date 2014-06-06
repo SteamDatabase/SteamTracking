@@ -45,7 +45,7 @@
 	float: left;
 	width: 23px;
 	height: 13px;
-	background-image: url('http://cdn.steamcommunity.com/public/images/sharedfiles/workshop_collection_creationBullet.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_creationBullet.png');
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
@@ -267,7 +267,7 @@
 
 .itemChoice:hover .itemChoiceStatus
 {
-	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -278,7 +278,7 @@
 	height: 30px;
 	width: 16px;
 	padding-left: 5px;
-	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px -60px;
 	background-repeat: no-repeat;
 }
@@ -398,7 +398,7 @@
 	height: 30px;
 	width: 30px;
 	padding: 0px;
-	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/btn_imgMgmt_grid.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_imgMgmt_grid.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -523,7 +523,7 @@
 }
 
 #ig_request_header {
-	background: transparent url(http://cdn.steamcommunity.com/public/images/sharedfiles/ig/greenlight_submit_logo.jpg) no-repeat;
+	background: transparent url(http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_submit_logo.jpg) no-repeat;
 	height: 146px;
 	width: 419px;
 	padding: 30px 30px 0 500px;
