@@ -31,7 +31,7 @@ h2 {
 	width: 98px;
 	height: 98px;
 	background-color: #333333;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
 	float: left;
@@ -139,7 +139,7 @@ a.item_action {
 	background-repeat: repeat-x;
 
 	background-color: #5c5957;
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/item_action_btn.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/item_action_btn.png');
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiyExLZvr//z8G/vcPRP8D0/+A9H8o/e8fMhuhBk0/QIABALdaQAnvsp4ZAAAAAElFTkSuQmCC');
 }
 
@@ -189,7 +189,7 @@ a.item_action:hover {
 	width: 18px;
 	height: 16px;
 
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/economy_welcome_dismiss.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/economy_welcome_dismiss.png');
 
 	cursor: pointer;
 }
@@ -227,7 +227,7 @@ a.item_action:hover {
 	min-height: 192px;
 
 	background-color: #1d1d1d;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/trade_hover_background.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/trade_hover_background.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
 
@@ -455,7 +455,7 @@ input.filter_search_box:-moz-placeholder {
 
 .inventory_iteminfo .item_desc_content {
 	padding: 238px 11px 11px 11px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/inventory_hover_background.png')
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/inventory_hover_background.png')
 }
 
 #iteminfo_clienthover {
@@ -488,7 +488,7 @@ input.filter_search_box:-moz-placeholder {
 	background-repeat: no-repeat;
 	width: 13px;
 	height: 25px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/economy/item_hover_arrow.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/item_hover_arrow.png' );
 }
 
 .hover_arrow_left .hover_arrow_inner {
@@ -737,27 +737,27 @@ a.item_market_action_button {
 }
 
 .item_market_action_button_blue > span {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_blue_small.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_blue_small.png');
 }
 
 .item_market_action_button_blue:hover > span, .item_market_action_button_blue .item_market_action_button_preload {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_blue_small_hover.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_blue_small_hover.png');
 }
 
 .item_market_action_button_green > span {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_green_small.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_green_small.png');
 }
 
 .item_market_action_button_green:hover > span, .item_market_action_button_green .item_market_action_button_preload {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_green_small_hover.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_green_small_hover.png');
 }
 
 .item_market_action_button_edit > span {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/transparentpixel.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/transparentpixel.png');
 }
 
 .item_market_action_button_edit:hover > span, .item_market_action_button_edit .item_market_action_button_preload {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_edit_hover.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_edit_hover.png');
 }
 
 .item_market_action_button_edit {
@@ -832,11 +832,11 @@ a.game_button {
 }
 
 .game_button > span {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_game.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_game.png');
 }
 
 .game_button:hover > span, .game_button .game_button_preload {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/btn_game_hover.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/btn_game_hover.png');
 }
 
 .market_dialog_iteminfo .item_desc_game_info .item_desc_game_icon {
@@ -938,7 +938,7 @@ a.game_button {
 	padding-left: 32px;
 	width: 0;
 	line-height: 30px;
-	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/report_ico_tiled.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 }
@@ -965,7 +965,7 @@ a.game_button {
 	width: 16px;
 	height: 16px;
 	
-	background-image:url('http://cdn.steamcommunity.com/public/images/sharedfiles/icons/icon_warning.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }

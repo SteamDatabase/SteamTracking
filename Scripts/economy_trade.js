@@ -186,7 +186,7 @@ function TradePageSelectNoInventory( user )
 	$('filter_tag_show').hide();
 	$('filter_tag_hide').hide();
 	$('inventories').childElements().invoke( 'hide' );
-	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'http://cdn.steamcommunity.com/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
+	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'http://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
 }
 
 function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
@@ -221,7 +221,7 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
 		}
 
-		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'http://cdn.steamcommunity.com/public/images/economy/blank_gameicon.gif', name: displayName } ) );
+		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'http://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName } ) );
 
 		$('trade_inventory_unavailable').hide();
 		$('trade_inventory_failed').hide();

@@ -511,7 +511,7 @@ a.item_market_action_button:hover .item_market_action_button_contents {
 	width: 605px; /* 639px minus the padding minus the 4px cap */
 	padding: 15px 15px 0;
 
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/bg_largetab.png');
 	position: relative;
 }
 
@@ -525,7 +525,7 @@ a.item_market_action_button:hover .item_market_action_button_contents {
 	top: 0;
 	height: 102px;
 	width: 474px;
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab_gradient.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/bg_largetab_gradient.png');
 	z-index: 1;
 }
 
@@ -535,7 +535,7 @@ a.item_market_action_button:hover .item_market_action_button_contents {
 	right: -4px;
 	height: 102px;
 	width: 4px;
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/market/bg_largetab_right.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/bg_largetab_right.png');
 }
 .market_page_fullwidth .market_large_tab_well .market_section_header_cap, .market_page_fullwidth .market_section_header .market_section_header_cap {
 	display: none;
@@ -620,16 +620,16 @@ a.market_tab_well_tab_inactive:hover {
 
 .market_tab_well_tab_active > span {
 	border-bottom: 2px solid #1F1F1F;
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_active.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/tab_active.png');
 }
 
 .market_tab_well_tab_inactive > span {
 	border-bottom: 2px solid transparent;
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_inactive.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/tab_inactive.png');
 }
 
 .market_tab_well_tab_inactive:hover > span, .market_tab_well_tab .market_tab_well_tab_preload {
-	background-image:url('http://cdn.steamcommunity.com/public/images/economy/market/tab_inactive_hover.png');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/market/tab_inactive_hover.png');
 }
 
 .market_listing_table {
@@ -751,7 +751,7 @@ input.filter_search_box:focus {
 
 	border: none;
 	color: transparent;
-	background: url('http://cdn.steamcommunity.com/public/images/economy/search_icon.gif') no-repeat center;
+	background: url('http://steamcommunity-a.akamaihd.net/public/images/economy/search_icon.gif') no-repeat center;
 
 	width: 21px;
 	height: 25px;
@@ -1082,7 +1082,7 @@ input.filter_search_box:focus {
 	width: 16px;
 	height: 16px;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/skin_1/info_btn.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/info_btn.png' );
 	background-position: left top;
 	background-repeat: no-repeat;
 }
@@ -1186,7 +1186,7 @@ input.filter_search_box:focus {
 	width: 20px;
 	height: 12px;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1236,7 +1236,7 @@ input.filter_search_box:focus {
 	width: 28px;
 	top: 0;
 	right: 0;
-	background: url('http://cdn.steamcommunity.com/public/images/header/ico_search.gif') no-repeat left center;
+	background: url('http://steamcommunity-a.akamaihd.net/public/images/header/ico_search.gif') no-repeat left center;
 	opacity: 0.6;
 }
 
@@ -1264,7 +1264,7 @@ input.filter_search_box:focus {
 
 #market_advancedsearch_appselect {
 		background-color: #333;
-	background-image: url('http://cdn.steamcommunity.com/public/images/economy/filter_dropdown.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/economy/filter_dropdown.png');
 	background-repeat: no-repeat;
 	background-position: right top;
 		border: 1px solid #4D4D4D;
