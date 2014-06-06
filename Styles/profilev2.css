@@ -2,7 +2,7 @@
 div.profile_page {
 	position: relative;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_bg.jpg' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_bg.jpg' );
 	background-repeat: repeat-x;
 	background-color: #262627;
 
@@ -32,7 +32,7 @@ div.profile_page.has_profile_background {
 	height: 240px;
 	margin: 0 auto;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_bg.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_bg.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -42,7 +42,7 @@ div.profile_page.has_profile_background {
 	height: 224px;
 	margin: 0 auto;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_bg_texture.jpg' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_bg_texture.jpg' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -234,7 +234,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .profile_content {
 	position: relative;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg.png' );
 	background-position: center;
 	background-repeat: repeat-y;
 
@@ -248,7 +248,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .private_profile .profile_content {
 
 	padding-bottom: 120px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg_fade.png' ), url( 'http://cdn.steamcommunity.com/public/images/profile/profile_content_bg.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg_fade.png' ), url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg.png' );
 	background-position: center bottom, center;
 	background-repeat: no-repeat, repeat-y;
 }
@@ -289,7 +289,7 @@ background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webk
 .profile_customization {
 	position: relative;
 
-	background-image: url('http://cdn.steamcommunity.com/public/images/profile/showcase_bg.png');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/profile/showcase_bg.png');
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-color: #141414;
@@ -668,7 +668,7 @@ img.workshop_showcase_item_image {
 	height: 38px;
 	padding: 10px;
 	line-height: 38px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_showcase_myworkshop.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_showcase_myworkshop.png' );
 
 	margin-bottom: 14px;
 }
@@ -707,7 +707,7 @@ img.workshop_showcase_item_image {
 	right: 0;
 
 	padding-top: 10px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/showcase_content_fade.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/showcase_content_fade.png' );
 	background-position: center top;
 	background-repeat: repeat-x;
 
@@ -872,7 +872,7 @@ img.workshop_showcase_item_image {
 
 .screenshot_showcase_staticon.favorite {
 	display: inline-block;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/sharedfiles/ico_fav_tiled.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png' );
 	background-repeat: no-repeat;
 	background-position: 0 -65px;
 	width: 17px;
@@ -1115,7 +1115,7 @@ img.workshop_showcase_item_image {
 	height: 19px;
 	display: inline-block;
 	margin-right: 4px;
-	background-image: url('http://cdn.steamcommunity.com/public/images/profile/icons_content.png?v=2');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/profile/icons_content.png?v=2');
 	background-position: center;
 	background-repeat: no-repeat;
 	vertical-align: middle;
@@ -1253,7 +1253,7 @@ img.workshop_showcase_item_image {
 }
 
 .profile_small_header_bg {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg.png' );
 	max-width: 1010px;
 	height: 215px;
 	margin: 0 auto -98px auto;
@@ -1261,7 +1261,7 @@ img.workshop_showcase_item_image {
 }
 
 .profile_small_header_texture {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg_texture.jpg' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_texture.jpg' );
 	max-width: 978px;
 	height: 102px;
 	margin: 0 auto;
@@ -1323,13 +1323,13 @@ body .pagecontent.profile_subpage_column {
 }
 
 .profile_subpage_column .profile_small_header_bg {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg_column.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_column.png' );
 	height: 111px;
 	margin-bottom: 0;
 }
 
 .profile_subpage_general .profile_small_header_bg {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_header_small_bg_none.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_none.png' );
 	height: 111px;
 	margin-bottom: 0;
 }
@@ -1339,7 +1339,7 @@ body .pagecontent.profile_subpage_column {
 }
 
 .profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent {
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column_bottom.png' ), url( 'http://cdn.steamcommunity.com/public/images/profile/profile_subpage_column.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column_bottom.png' ), url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/profile_subpage_column.png' );
 	background-repeat: no-repeat, repeat-y;
 	background-position: bottom center, center;
 	width: 950px;
