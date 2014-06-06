@@ -383,7 +383,7 @@ function GetCurrencyCode( currencyId )
 
 function GetAvatarURLFromHash( hash, size )
 {
-	var strURL = 'http://media.steampowered.com/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
+	var strURL = 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
 
 	if ( size == 'full' )
 		strURL += '_full.jpg';
@@ -524,7 +524,7 @@ CEmoticonPopup.prototype.BuildPopup = function()
 	for( var i = 0; i < this.m_rgEmoticons.length; i++ )
 	{
 		var strEmoticonName = this.m_rgEmoticons[i].replace( /:/g, '' );
-		var strEmoticonURL = 'http://cdn.steamcommunity.com/economy/emoticon/' + strEmoticonName;
+		var strEmoticonURL = 'http://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
 
 		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
 		var $Img = $J('<img/>', {'src': strEmoticonURL } );
@@ -2117,7 +2117,7 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 		{
 			if ( !this.m_bOwnedGamesReady )
 			{
-				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="http://cdn.steamcommunity.com/public/images/login/throbber.gif"></div>' );
+				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 				this.bHaveSuggestions = true;
 				this.ShowSuggestions();
 			}
@@ -2648,7 +2648,7 @@ SearchFieldWithText = Class.create({
 
 function iSwap( imgID, newImg )
 {
-	newImgPath = "http://cdn.steamcommunity.com/public/images/" + newImg;
+	newImgPath = "http://steamcommunity-a.akamaihd.net/public/images/" + newImg;
 	setImage( imgID, newImgPath );
 }
 

@@ -39,7 +39,7 @@ a {
 */
 
 .profileSnippet {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-header-background.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/profile-header-background.png );
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 145px;
@@ -47,7 +47,7 @@ a {
 }
 
 .groupSnippet {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-header-background.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/profile-header-background.png );
 	background-size: cover;
 	background-repeat:no-repeat;
 	height: 105px;
@@ -55,14 +55,14 @@ a {
 }
 
 .profileBadgeSnippet {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-badge-background.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/profile-badge-background.png );
 	background-size: cover;
 	background-repeat:no-repeat;
 	height: 62px;
 }
 
 .profileBadgeSnippetFrameLeft {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/badge-frame-left.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/badge-frame-left.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
 	float: left;
@@ -71,7 +71,7 @@ a {
 }
 
 .profileBadgeSnippetFrameRight {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/badge-frame-right.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/badge-frame-right.png );
 	background-size: 8px 62px;
 	background-repeat: no-repeat;
 	float: right;
@@ -80,7 +80,7 @@ a {
 }
 
 .profileBadgeSnippetFrameMiddleStretch {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/badge-middle-stretch.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/badge-middle-stretch.png );
 	background-size: 2px 62px;
 	background-repeat: repeat-x;
 	height: 62px;
@@ -145,7 +145,7 @@ a {
 }
 
 .friendActions {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-about-background.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/profile-about-background.png );
 	background-repeat: repeat;
 	background-size: 25px 25px;
 }
@@ -286,7 +286,7 @@ a {
 }
 
 .groupInfoContainer {
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/profile-about-background.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/profile-about-background.png );
 	background-repeat: repeat;
 	background-size: 25px 25px;
 	padding-top: 10px;
@@ -448,7 +448,7 @@ span.membersOnline {
 */
 
 .remoteDownloadFrame {
-	background-image: url( http://cdn.steamcommunity.com/public/images/remote/downloads-background-middle.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/remote/downloads-background-middle.png );
 	/* background-size: cover; */
 	height: 88px;
 	width:100%
@@ -501,7 +501,7 @@ span.membersOnline {
 }
 
 .remoteDownloadChevron {
-	background-image: url( http://cdn.steamcommunity.com/public/images/remote/downloads-chevron-down.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/remote/downloads-chevron-down.png );
 	background-repeat: no-repeat;
 	float: right;
 	padding-right: 8px;
@@ -511,7 +511,7 @@ span.membersOnline {
 }
 
 .remoteDownloadChevronHide {
-	background-image: url( http://cdn.steamcommunity.com/public/images/remote/downloads-chevron-up.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/remote/downloads-chevron-up.png );
 	background-repeat: no-repeat;
 	float: right;
 	padding-right: 8px;
@@ -522,7 +522,7 @@ span.membersOnline {
 
 .remoteDownloadGameListFooter {
 	display: block;
-	background-image: url( http://cdn.steamcommunity.com/public/images/remote/downloads-game-list-footer.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/remote/downloads-game-list-footer.png );
 	height: 23px;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -862,7 +862,7 @@ span.statsItem {
 
 .removeIcon {
 	display: inline-block;
-	background-image: url( http://cdn.steamcommunity.com/public/images/mobile/Icon_Delete.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/mobile/Icon_Delete.png );
 	background-size: 40px 32px;
 	float: right;
 	margin: 5px;
@@ -1424,7 +1424,7 @@ a#postLink, a#blotterLink {
 }
 
 .singleInventoryItemDismiss {
-	background-image: url( http://cdn.steamcommunity.com/public/shared/images/mobile/close_icon.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon.png );
 	position: fixed;
 	width: 36px;
 	height: 36px;
@@ -1435,7 +1435,7 @@ a#postLink, a#blotterLink {
 }
 
 .singleInventoryItemDismiss.active {
-	background-image: url( http://cdn.steamcommunity.com/public/shared/images/mobile/close_icon_gray.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon_gray.png );
 }
 
 .singleInventoryItemImage {
