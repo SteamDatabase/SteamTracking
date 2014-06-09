@@ -112,6 +112,20 @@
 							}
 						]
 						
+					},
+					{
+						"name": "GetPlayerOfficialInfo",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "AccountID",
+								"type": "uint32",
+								"optional": false,
+								"description": "The account ID to look up"
+							}
+						]
+						
 					}
 				]
 				
