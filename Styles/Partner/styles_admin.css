@@ -1405,6 +1405,12 @@ html, body { height:100%; }
 
 }
 
+.EarlyAccess .LocTextAreaBar {
+    width: 500px;
+}
+
+
+
 .LocTextAreaLangSelect .HasText, .LocTextAreaLangSelect .HasText:hover, .LocTextAreaLangSelect .HasText:checked
 {
 	color: #7ed210;
@@ -1423,6 +1429,10 @@ html, body { height:100%; }
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+
+.EarlyAccess .LocTextArea textarea {
+    height: 73px;
 }
 
 #app_content_about__area textarea
