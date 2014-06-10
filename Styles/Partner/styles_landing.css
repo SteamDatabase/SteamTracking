@@ -628,6 +628,12 @@ p {
 		padding: 2px 7px;
 	}
 
+.noInfo {
+    color: #e1c48a;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
 .buttonRow {
 	display: block;
 	background-position: 8px 15px;

@@ -3212,6 +3212,20 @@ function DisplayDivOnClick( button, div )
 		new Effect.BlindDown( $(div), {duration: 0.25} );
 }
 
+function DisplayCreateCommunityItemForm( eItemClass, strDisplayName )
+{
+	document.forms['create_item_form'].elements['item[class]'].value = eItemClass;
+	$('create_item_form_submit').update( 'Create ' + strDisplayName );
+	DisplayDivOnClick( 'create_communityitems_actions', 'create_item_form_ctn' );
+}
+
+function DisplayGrantCommunityItemForm( eItemClass, strDisplayName )
+{
+	document.forms['grant_items_form'].elements['item_class'].value = eItemClass;
+	$('grant_items_form_submit').update( 'Grant ' + strDisplayName );
+	DisplayDivOnClick( 'grant_communityitems_actions', 'grant_items_form_ctn' );
+}
+
 //
 // Tags
 //

@@ -11,7 +11,7 @@ span.leaderboard_displayname_hint {
 
 div.leaderboard_displayname {
 	float: right;
-	width: 19em;
+	width: 15em;
 }
 
 div.leaderboard_sortmethod {
@@ -22,6 +22,11 @@ div.leaderboard_sortmethod {
 div.leaderboard_displaytype {
 	float: right;
 	width: 10em;
+}
+
+div.leaderboard_onlytrustedwrites {
+	float: right;
+	width: 5em;
 }
 
 div.leaderboard_count_entries {
