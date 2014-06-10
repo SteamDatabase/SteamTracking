@@ -2193,7 +2193,9 @@ function BuildHover( prefix, item, owner )
 	var strHoverClass = 'item_desc_content';
 	if ( item.appid )
 		strHoverClass = strHoverClass + ' app' + item.appid + ' context' + item.contextid;
-	$(prefix+'_content').className = strHoverClass;
+
+	var elHoverContent = $(prefix+'_content');
+	elHoverContent.className = strHoverClass;
 
 	$(prefix+'_item_icon').src = url;
 	$(prefix+'_item_icon').alt = item.name;
@@ -2316,6 +2318,7 @@ function BuildHover( prefix, item, owner )
 		PopulateMarketActions( elMarketActions, item );
 	}
 
+		
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
 }
@@ -2539,6 +2542,7 @@ function PopulateMarketActions( elActions, item )
 		
 	elActions.show();
 }
+
 
 function SellCurrentSelection()
 {
