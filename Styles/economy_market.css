@@ -349,6 +349,7 @@ a.market_listing_item_name_link:hover {
 	margin: 0;
 	height: 2.25em;     /* height + margin = 2.25em, the height of .market_listing_table_header */
 	line-height: 2.25em;
+	text-transform: uppercase;
 }
 
 .market_listing_table_header .market_listing_right_cell {
@@ -852,6 +853,9 @@ input.filter_search_box:focus {
     padding: 18px;
 }
 
+#market_commodity_order_spread {
+}
+
 .market_commodity_orders_buy_block {
     -webkit-box-shadow: 0 0 14px #030303 inset;
     -moz-box-shadow: 0 0 14px #030303 inset;
@@ -894,6 +898,24 @@ input.filter_search_box:focus {
     margin-top: 6px;
 }
 
+.market_commodity_orders_table th {
+	text-transform: uppercase;
+}
+
+.market_commodity_orders_table tr:nth-child(even) {
+	background-color: #262626;
+}
+
+.market_commodity_orders_table td {
+	min-width: 100px;
+	text-align: center;
+}
+
+.market_commodity_orders_table th {
+	margin: 0px;
+	text-align: center;
+	min-width: 100px;
+}
 
 .market_commodity_buy_button {
     font-size: 24px;
@@ -903,6 +925,59 @@ input.filter_search_box:focus {
     border-radius: 8px;
     margin: 10px;
     margin-left: 30px;
+	text-transform: uppercase;
+    cursor: pointer;
+}
+
+#market_buy_commodity_popup {
+    width: 744px;
+}
+
+#market_buy_commodity_popup input {
+    text-align: right;
+    padding-right: 6px;
+}
+
+.market_buy_commodity_popup_left_block {
+    float: left;
+    width: 300px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.market_buy_commodity_popup_right_block {
+    float: left;
+    width: 200px;
+    line-height: 30px;
+}
+
+#market_buy_commodity_input_price {
+    width: 60px;
+}
+
+#market_buy_commodity_input_quantity {
+    width: 60px;
+}
+
+#market_buy_commodity_order_total {
+	width: 60px;
+	text-align: right;
+	color: whitesmoke;
+}
+
+#market_buynow_dialog_placing_order {
+	min-height: 100px;
+}
+
+#market_buy_commodity_throbber {
+	position: absolute;
+	bottom: 58px;
+	right: 48px;
+}
+
+#market_buy_commodity_status {
+	margin: 30px 34px 0px 20px;
+	color: #dddddd;
 }
 
 #largeiteminfo {

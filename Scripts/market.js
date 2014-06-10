@@ -143,6 +143,289 @@ function RemoveMarketListing( sElementPrefix, listingid, appid, contextid, itemi
 	RemoveListingDialog.Show( sElementPrefix, listingid, g_rgAssets[appid][contextid][itemid] );
 }
 
+
+CancelMarketBuyOrderDialog = {
+	m_bInitialized: false,
+	m_llBuyOrderID: null,
+
+	Initialize: function() {
+	},
+
+	Show: function ( buy_orderid ) {
+		if ( !this.m_bInitialized )
+			this.Initialize();
+		this.m_llBuyOrderID = buy_orderid;
+
+		this.OnAccept();
+	},
+
+	DisplayError: function( error ) {
+		alert( error );
+	},
+
+	Dismiss: function() {
+	},
+
+	OnAccept: function() {
+		new Ajax.Request( 'http://steamcommunity.com/market/cancelbuyorder/', {
+			method: 'post',
+			parameters: {
+				sessionid: g_sessionID,
+				buy_orderid: this.m_llBuyOrderID
+			},
+			onSuccess: function( transport ) { CancelMarketBuyOrderDialog.OnSuccess( transport ); },
+			onFailure: function( transport ) { CancelMarketBuyOrderDialog.OnFailure( transport ); }
+		} );
+	},
+
+	OnCancel: function() {
+		this.Dismiss();
+	},
+
+	OnSuccessEffects: function() {
+		window.location.reload();
+	},
+
+	OnSuccess: function( transport ) {
+		if ( transport.responseJSON )
+		{
+			this.OnSuccessEffects();
+		}
+		else
+		{
+			// this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
+		}
+	},
+
+	OnFailure: function( transport ) {
+		alert( 'failed to cancel buy order' );
+	}
+}
+
+function CancelMarketBuyOrder( buy_orderid )
+{
+	CancelMarketBuyOrderDialog.Show( buy_orderid );
+}
+
+CreateBuyOrderDialog = {
+	m_bInitialized: false,
+	m_divContents: null,
+	m_unAppId: null,
+	m_strMarketHashName: null,
+	m_timeBuyOrderPollingStart: null,
+	m_bPageNeedsRefresh: false,
+	m_nBestBuyPrice: null,
+
+	Initialize: function( unAppId, strMarketHashName, divPopup ) {
+		this.m_bInitialized = true;
+		this.m_divContents = divPopup;
+		this.m_unAppId = unAppId;
+		this.m_strMarketHashName = strMarketHashName;
+	},
+
+	Show: function( unAppId, strMarketHashName, divPopup ) {
+		if ( !this.m_bInitialized )
+			this.Initialize( unAppId, strMarketHashName, divPopup );
+
+		// show the frame in the dialog
+		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketHashName ), this.m_divContents.show() );
+		modal.always( function() { CreateBuyOrderDialog.OnUserClosedDialog() } );
+
+		$J('#market_buynow_dialog_error').hide();
+
+		// show the payment frame
+		$J('#market_buynow_dialog_paymentinfo_frame_container').show();
+		$J('#market_buynow_dialog_placing_order').hide();
+
+		$J('#market_buy_commodity_input_price').prop( 'disabled', false);
+		$J('#market_buy_commodity_input_quantity').prop('disabled', false);
+
+		// set our callbacks
+		$J('#market_buy_commodity_input_price').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
+		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
+		$J('#market_buynow_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
+		$J('#market_buynow_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
+
+
+		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
+		$('market_buynow_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
+
+		// set our default price
+		$('market_buy_commodity_input_price').setValue( this.m_nBestBuyPrice / 100 );
+
+		this.UpdateTotal();
+	},
+
+	UpdateTotal: function() {
+		var currency = $J('#market_buy_commodity_input_price').val();
+		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
+		var price = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
+
+		var div = $J('#market_buy_commodity_order_total');
+		if ( isNaN(price) )
+			div.html( '--' );
+		else
+			div.html( v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+
+		if ( isNaN(price) || g_rgWalletInfo['wallet_balance'] < price )
+		{
+			// show add funds
+			$J('#market_buynow_dialog_purchase').hide();
+			$J('#market_buynow_dialog_addfunds').show();
+			$J('#market_buynow_dialog_accept_ssa_container').hide();
+		}
+		else
+		{
+			// show buy button
+			$J('#market_buynow_dialog_addfunds').hide();
+			$J('#market_buynow_dialog_purchase').show();
+			$J('#market_buynow_dialog_accept_ssa_container').show();
+		}
+	},
+
+	StartPurchase: function() {
+				if ( !$J('#market_buynow_dialog_accept_ssa').prop('checked') )
+		{
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
+			return;
+		}
+
+		new Effect.BlindUp( 'market_buynow_dialog_paymentinfo_frame_container', { duration: 0.25 } );
+		new Effect.BlindDown( 'market_buynow_dialog_placing_order', { duration: 0.25 } );
+
+		$J('#market_buy_commodity_input_price').prop( 'disabled', true);
+		$J('#market_buy_commodity_input_quantity').prop('disabled', true);
+		$J('#market_buynow_dialog_error').hide();
+
+		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
+
+		var currency = $J('#market_buy_commodity_input_price').val();
+		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
+		var price_total = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
+
+		// we'll want to refresh the page behind us when done
+		this.m_bPageNeedsRefresh = true;
+
+		// ajax in the result
+		$J.ajax( {
+			url: 'https://steamcommunity.com/market/createbuyorder/',
+			type: 'POST',
+			data: {
+				sessionid: g_sessionID,
+				currency: g_rgWalletInfo['wallet_currency'],
+				appid: this.m_unAppId,
+				market_hash_name: this.m_strMarketHashName,
+				price_total: price_total,
+				quantity: quantity
+			},
+			crossDomain: true,
+			xhrFields: { withCredentials: true }
+		} ).done( function ( data ) {
+			CreateBuyOrderDialog.OnCreateBuyOrderComplete( { responseJSON: data } );
+		} ).fail( function( jqxhr ) {
+			// jquery doesn't parse json on fail
+			var data = $J.parseJSON( jqxhr.responseText );
+			CreateBuyOrderDialog.OnCreateBuyOrderComplete( { responseJSON: data } );
+		} );
+	},
+
+	OnCreateBuyOrderComplete: function( transport ) {
+		if ( transport.responseJSON && transport.responseJSON.success == 1 )
+		{
+			$J('#market_buynow_dialog_purchase_throbber').show();
+			$J('#market_buy_commodity_status').html( 'Finding matching item listings at your desired price...' );
+
+			var buy_orderid = transport.responseJSON.buy_orderid;
+
+			// poll for buy order result
+			this.m_timeBuyOrderPollingStart = $J.now();
+			this.PollForBuyOrderCompletion( buy_orderid );
+		}
+		else if ( transport.responseJSON && transport.responseJSON.message )
+		{
+			this.DisplayError( transport.responseJSON.message );
+		}
+		else
+		{
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' );
+		}
+	},
+
+	OnAddFunds: function() {
+		window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=' + this.m_ulListingId + '&returnurl=' + window.location;
+	},
+
+	PollForBuyOrderCompletion: function( buy_orderid ) {
+		if ( $J.now() > this.m_timeBuyOrderPollingStart+5000 )
+		{
+			this.BuyOrderPlaced();
+		}
+		else
+		{
+			// keep asking
+			$J.ajax( {
+				url: 'http://steamcommunity.com/market/getbuyorderstatus/',
+				type: 'GET',
+				data: {
+					sessionid: g_sessionID,
+					buy_orderid: buy_orderid
+				}
+			} ).done( function ( data ) {
+				CreateBuyOrderDialog.OnPollForBuyOrderCompletionSuccess( buy_orderid, { responseJSON: data } );
+			} ).fail( function( jqxhr ) {
+				CreateBuyOrderDialog.BuyOrderPlaced();
+			} );
+		}
+	},
+
+	OnPollForBuyOrderCompletionSuccess: function( buy_orderid, response ) {
+		if ( response.responseJSON.success != 1 )
+		{
+			// failed for some reason - show an error
+
+			// for testing, keep polling
+			this.PollForBuyOrderCompletion( buy_orderid );
+		}
+		else if ( response.responseJSON.purchased )
+		{
+			this.BuyOrderPlaced();
+			$J('#market_buy_commodity_status').html( 'Purchase succeeded! Your item is now in your inventory, and you receipt will be emailed to you.' );
+		}
+		else if ( response.responseJSON.active )
+		{
+			this.PollForBuyOrderCompletion( buy_orderid );
+		}
+	},
+
+	BuyOrderPlaced: function() {
+		// too long has passed, give up
+		$J('#market_buy_commodity_status').html( 'Your buy order has been placed, but no item for sale has been found at your desired price. You will be automatically notified by email if this purchase requested is fulfilled.\nYou cancel this buy order from the bottom of this page, or from the market home page.' );
+		$J('#market_buy_commodity_throbber').hide();
+	},
+
+	DisplayError: function( error ) {
+		$J('#market_buynow_dialog_purchase_throbber').hide();
+		$J('#market_buynow_dialog_error').show();
+		$J('#market_buynow_dialog_error_text').html( error );
+		$J('#market_buynow_dialog_error_text').css( 'color', '#ffffff' );
+		// this doesn't work, need jquery-color plugin or a different solution
+		$J('#market_buynow_dialog_error_text').animate( {'color':'#ff0000'}, 250 );
+		$J('#market_buynow_dialog_placing_order').hide();
+	},
+
+	OnUserClosedDialog: function() {
+		if ( this.m_bPageNeedsRefresh )
+		{
+			this.m_bPageNeedsRefresh = false;
+			window.location.reload();
+		}
+	}
+}
+
+function Market_ShowBuyOrderPopup( unAppId, sMarketHashName ) {
+	CreateBuyOrderDialog.Show( unAppId, sMarketHashName, $J('#market_buy_commodity_popup') );
+}
+
 BuyItemDialog = {
 	m_bPurchaseClicked: false,
 	m_bPurchaseSuccess: false,
@@ -1380,3 +1663,32 @@ function UpdateFrontPage()
 
 RegisterSteamOnWebPanelShownHandler( function() { g_bMarketWindowHidden = false; } );
 RegisterSteamOnWebPanelHiddenHandler( function() { g_bMarketWindowHidden = true; } );
+
+// ajax's in the some html describing the current orders
+function Market_LoadOrderSpread( item_nameid )
+{
+	$J.ajax( {
+		url: 'http://steamcommunity.com/market/itemordershistogram',
+		type: 'GET',
+		data: {
+			country: g_strCountryCode,
+			language: g_strLanguage,
+			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
+			item_nameid: item_nameid
+		}
+	} ).error( function ( ) {
+		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
+	} ).success( function( data ) {
+		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
+		if ( data.success == 1 )
+		{
+			$J('#market_commodity_order_spread').html( data.html );
+
+			// set in the purchase dialog the default price to buy things (which should almost always be the price of the cheapest listed item)
+			if ( data.lowest_sell_order && data.lowest_sell_order > 0 )
+				CreateBuyOrderDialog.m_nBestBuyPrice = data.lowest_sell_order;
+			else if ( data.highest_buy_order && data.highest_buy_order > 0 )
+				CreateBuyOrderDialog.m_nBestBuyPrice = data.highest_buy_order;
+		}
+	} );
+}
