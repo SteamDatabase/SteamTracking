@@ -933,6 +933,11 @@ input.filter_search_box:focus {
     width: 744px;
 }
 
+.market_buy_commodity_input_block {
+	width: 400px;
+	float: right;
+}
+
 #market_buy_commodity_popup input {
     text-align: right;
     padding-right: 6px;
@@ -940,14 +945,31 @@ input.filter_search_box:focus {
 
 .market_buy_commodity_popup_left_block {
     float: left;
-    width: 300px;
+    width: 260px;
     line-height: 30px;
     margin-right: 10px;
 }
 
+.market_buy_commodity_input_label {
+	text-align: right;
+}
+
+.market_buy_commodity_item_display {
+	float: left;
+	width: 280px;
+	font-size: 100%;
+}
+
+.market_buy_commodity_item_display .market_listing_game_name {
+	white-space: normal;
+}
+
+.market_buy_commodity_item_display .market_listing_item_name_block {
+	margin-top: 6px;
+}
+
 .market_buy_commodity_popup_right_block {
     float: left;
-    width: 200px;
     line-height: 30px;
 }
 
@@ -975,8 +997,11 @@ input.filter_search_box:focus {
 	right: 48px;
 }
 
+#market_buy_commodity_view_in_inventory {
+	margin-top: 10px;
+}
+
 #market_buy_commodity_status {
-	margin: 30px 34px 0px 20px;
 	color: #dddddd;
 }
 

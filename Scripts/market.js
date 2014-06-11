@@ -236,6 +236,7 @@ CreateBuyOrderDialog = {
 		// show the payment frame
 		$J('#market_buynow_dialog_paymentinfo_frame_container').show();
 		$J('#market_buynow_dialog_placing_order').hide();
+		$J('#market_buy_commodity_view_in_inventory').hide();
 
 		$J('#market_buy_commodity_input_price').prop( 'disabled', false);
 		$J('#market_buy_commodity_input_quantity').prop('disabled', false);
@@ -389,7 +390,25 @@ CreateBuyOrderDialog = {
 		else if ( response.responseJSON.purchased )
 		{
 			this.BuyOrderPlaced();
-			$J('#market_buy_commodity_status').html( 'Purchase succeeded! Your item is now in your inventory, and you receipt will be emailed to you.' );
+			$J('#market_buy_commodity_status').html( 'Purchase succeeded! Your item is now in your inventory, and your receipt has been emailed to you.' );
+
+			if ( response.responseJSON.purchase_amount_text )
+			{
+				$J('#market_buy_commodity_purchase_detail').html( response.responseJSON.purchase_amount_text );
+			}
+
+			for( var i = 0; i < response.responseJSON.purchases.length; i++ )
+			{
+				if ( response.responseJSON.purchases[i].assetid && response.responseJSON.purchases[i].contextid )
+				{
+					$J('#market_buy_commodity_view_in_inventory').show();
+					$J('#market_buy_commodity_view_in_inventory').click( function() {
+						CreateBuyOrderDialog.ViewPurchasedItemInInventory( response.responseJSON.purchases[i].appid, response.responseJSON.purchases[i].contextid, response.responseJSON.purchases[i].assetid );
+						}
+					);
+					break;
+				}
+			}
 		}
 		else if ( response.responseJSON.active )
 		{
@@ -401,6 +420,10 @@ CreateBuyOrderDialog = {
 		// too long has passed, give up
 		$J('#market_buy_commodity_status').html( 'Your buy order has been placed, but no item for sale has been found at your desired price. You will be automatically notified by email if this purchase requested is fulfilled.\nYou cancel this buy order from the bottom of this page, or from the market home page.' );
 		$J('#market_buy_commodity_throbber').hide();
+	},
+
+	ViewPurchasedItemInInventory: function( appid, contextid, assetid ) {
+		window.location = 'http://steamcommunity.com/my/inventory/#' + appid + '_' + contextid + '_' + assetid;
 	},
 
 	DisplayError: function( error ) {
