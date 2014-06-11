@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.d5175911d1f47de71b3f6e67f1edaf53a449b779.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.8f595d798503fc438d4d45b493bcfec86794d6d6.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -5953,8 +5953,8 @@
 				"image_inventory": "backpack/player/items/all_class/taunt_highfive",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_highfive.6fda27846536601985251129e828b838274fa301.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_highfive_large.6bde07a56be263bd6d23e6a0ab36b5ce85e39ebd.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_highfive.e6c647334d9a4503665db370f89805653939bf57.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_highfive_large.62da6a1ed2feb3a4ff24274dab9ce79e9f2de1f5.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -5972,6 +5972,16 @@
 						"name": "taunt is press and hold",
 						"class": "enable_misc2_holdtaunt",
 						"value": 1
+					},
+					{
+						"name": "taunt attack name",
+						"class": "taunt_attack_name",
+						"value": 0
+					},
+					{
+						"name": "taunt attack time",
+						"class": "taunt_attack_time",
+						"value": 1.8999999761581421
 					}
 				]
 				
@@ -17090,14 +17100,14 @@
 				"item_name": "Taunt: The Director's Vision",
 				"item_description": "Equip this item in your Action Slot and press the Action button to tell your victims you are making a Replay of their pathetic demise to share with everyone.",
 				"proper_name": false,
-				"item_slot": "action",
+				"item_slot": "taunt",
 				"model_player": null,
 				"item_quality": 6,
 				"image_inventory": "backpack/player/items/all_class/taunt_replay",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_replay.705073dbb0f67e5c0ed0c95cfb35d257b13741da.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_replay_large.c406cf31fa765e233c4dc63c537d8b31bcbed3b9.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_replay.d5ab6c2e83421c67a51ddf05d11ef91ff42eff00.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_replay_large.8fe3149187d704ccdb67c6922952c230ee8ff01a.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -18270,8 +18280,8 @@
 				"image_inventory": "backpack/player/items/all_class/all_laugh_taunt",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/all_laugh_taunt.e4b410be066882b564663cf68415339cf68dc193.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/all_laugh_taunt_large.f0de4244d40625d4968f8ccc4630e6d3d3a23498.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/all_laugh_taunt.72e7a926cf5d34ca2377872aca7d8aa9b41c4655.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/all_laugh_taunt_large.811cbd332a762119d0eb98421172f066a8b44654.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -18708,8 +18718,8 @@
 				"image_inventory": "backpack/player/items/medic/medic_heroic_taunt",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/medic_heroic_taunt.1d726ec74d3a2877c9427d375cb55a2e95057aee.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/medic_heroic_taunt_large.4d2741a28eed12be989f834a6785d6a03b4d463a.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/medic_heroic_taunt.d040d3030583ba1e189e6f7af9a23d57780ad824.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/medic_heroic_taunt_large.5e84cc758583dc9310c2d0ae3b0b7abcb73d694c.png",
 				"capabilities": {
 					"nameable": true,
 					"usable": true,
@@ -18724,6 +18734,24 @@
 				},
 				"used_by_classes": [
 					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "taunt attack name",
+						"class": "taunt_attack_name",
+						"value": 0
+					},
+					{
+						"name": "taunt attack time",
+						"class": "taunt_attack_time",
+						"value": 0
+					},
+					{
+						"name": "taunt force weapon slot",
+						"class": "taunt_force_weapon_slot",
+						"value": 0
+					}
 				]
 				
 			},
@@ -20930,9 +20958,14 @@
 						"value": 1.1499999761581421
 					},
 					{
-						"name": "sniper fires tracer DISPLAY ONLY",
-						"class": "sniper_fires_tracer_DISPLAY_ONLY",
+						"name": "sniper fires tracer",
+						"class": "sniper_fires_tracer",
 						"value": 1
+					},
+					{
+						"name": "lunchbox adds minicrits",
+						"class": "set_weapon_mode",
+						"value": 2
 					}
 				]
 				
@@ -24004,14 +24037,19 @@
 						"value": 1
 					},
 					{
-						"name": "cannot pick up buildings",
-						"class": "cannot_pick_up_buildings",
-						"value": 1
-					},
-					{
 						"name": "special taunt",
 						"class": "special_taunt",
 						"value": 1
+					},
+					{
+						"name": "Repair rate decreased",
+						"class": "mult_repair_value",
+						"value": 0.5
+					},
+					{
+						"name": "upgrade rate decrease",
+						"class": "upgrade_rate_mod",
+						"value": 0.5
 					}
 				]
 				
@@ -29337,8 +29375,8 @@
 						"value": 64
 					},
 					{
-						"name": "taunt success sound",
-						"class": "taunt_success_sound",
+						"name": "cosmetic taunt sound",
+						"class": "cosmetic_taunt_sound",
 						"value": 0
 					}
 				]
@@ -30899,8 +30937,8 @@
 						"value": 1
 					},
 					{
-						"name": "taunt success sound",
-						"class": "taunt_success_sound",
+						"name": "cosmetic taunt sound",
+						"class": "cosmetic_taunt_sound",
 						"value": 0
 					}
 				]
@@ -43847,8 +43885,8 @@
 				"image_inventory": "backpack/player/items/all_class/all_brutal_taunt",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/all_brutal_taunt.9271b13302c1f164e2723c3f1c34bbe0f44a4959.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/all_brutal_taunt_large.500019211e5ed0fc8d0b1c15ea3c5018e59166d1.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/all_brutal_taunt.c9cdb716fbf6084335bcf85c3c8be3f83815e4f0.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/all_brutal_taunt_large.af0be46cbdccddc444b35fe13f320c420db4a22b.png",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
@@ -43862,7 +43900,20 @@
 					"can_strangify": true,
 					"can_killstreakify": true,
 					"can_consume": true
-				}
+				},
+				"attributes": [
+					{
+						"name": "taunt attack name",
+						"class": "taunt_attack_name",
+						"value": 0
+					},
+					{
+						"name": "taunt attack time",
+						"class": "taunt_attack_time",
+						"value": 0
+					}
+				]
+				
 			},
 			{
 				"name": "Buck Turner All-Stars",
@@ -85969,7 +86020,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Elite 1st Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl",
@@ -86016,7 +86067,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Elite 2nd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl",
@@ -86063,7 +86114,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Elite 3rd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl",
@@ -86110,7 +86161,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Elite Participant",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl",
@@ -86157,7 +86208,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Central 1st Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl",
@@ -86204,7 +86255,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Central 2nd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl",
@@ -86251,7 +86302,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Central 3rd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl",
@@ -86298,7 +86349,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Central Participant",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl",
@@ -86345,7 +86396,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Access 1st Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl",
@@ -86392,7 +86443,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Access 2nd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl",
@@ -86439,7 +86490,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Access 3rd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl",
@@ -86486,7 +86537,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Access Participant",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl",
@@ -86533,7 +86584,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Open 1st Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_gold/lbtf_medal_gold_demo.mdl",
@@ -86580,7 +86631,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Open 2nd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_silver/lbtf_medal_silver_demo.mdl",
@@ -86627,7 +86678,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Open 3rd Place",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_bronze/lbtf_medal_bronze_demo.mdl",
@@ -86674,7 +86725,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Tournament Medal",
 				"item_name": "LBTF2 Open Participant",
-				"item_description": "LBTF2 Season 9",
+				"item_description": "Season 9",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/lbtf_medal_participant/lbtf_medal_participant_demo.mdl",
@@ -86684,6 +86735,570 @@
 				"max_ilevel": 25,
 				"image_url": "http://media.steampowered.com/apps/440/icons/lbtf_medal_participant.8754ad781c372b383f7877dcd2ed9d133e75068a.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/lbtf_medal_participant_large.85ef7a3e0bbd9248ffa709e5cf01b77db247d329.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 1 1st Place Season 7",
+				"defindex": 8445,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 1 1st Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_gold.ed71d6c784d703db4e26cae61d5952972f42329d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_gold_large.6827dbc2bd43b7255dc640a15d1c512382400c41.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 1 2nd Place Season 7",
+				"defindex": 8446,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 1 2nd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_silver.d74d10cae08b4fe6c6051ccc8e8659fdade2c7b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_silver_large.8de1b2036ad45a354c24b15067b2f9a98028e166.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 1 3rd Place Season 7",
+				"defindex": 8447,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 1 3rd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze.c2fe8b4350a534c40996aa313829c39f4a039ccd.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze_large.ff78953291aef87ee673190c5ee07935c4f0b6ca.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 1 Participant Season 7",
+				"defindex": 8448,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 1 Participant",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_participant.9fa6a0446a4a91d4d114ad299b1d5509306fa714.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_participant_large.73420acd5b1fe83ae04c261a095aab91b5d0d54a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 2 1st Place Season 7",
+				"defindex": 8449,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 2 1st Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_gold.ed71d6c784d703db4e26cae61d5952972f42329d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_gold_large.6827dbc2bd43b7255dc640a15d1c512382400c41.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 2 2nd Place Season 7",
+				"defindex": 8450,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 2 2nd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_silver.d74d10cae08b4fe6c6051ccc8e8659fdade2c7b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_silver_large.8de1b2036ad45a354c24b15067b2f9a98028e166.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 2 3rd Place Season 7",
+				"defindex": 8451,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 2 3rd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze.c2fe8b4350a534c40996aa313829c39f4a039ccd.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze_large.ff78953291aef87ee673190c5ee07935c4f0b6ca.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 2 Participant Season 7",
+				"defindex": 8452,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 2 Participant",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_participant.9fa6a0446a4a91d4d114ad299b1d5509306fa714.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_participant_large.73420acd5b1fe83ae04c261a095aab91b5d0d54a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 3 1st Place Season 7",
+				"defindex": 8453,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 3 1st Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_gold.ed71d6c784d703db4e26cae61d5952972f42329d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_gold_large.6827dbc2bd43b7255dc640a15d1c512382400c41.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 3 2nd Place Season 7",
+				"defindex": 8454,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 3 2nd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_silver.d74d10cae08b4fe6c6051ccc8e8659fdade2c7b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_silver_large.8de1b2036ad45a354c24b15067b2f9a98028e166.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 3 3rd Place Season 7",
+				"defindex": 8455,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 3 3rd Place",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze.c2fe8b4350a534c40996aa313829c39f4a039ccd.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_bronze_large.ff78953291aef87ee673190c5ee07935c4f0b6ca.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Asiafortress Cup Division 3 Participant Season 7",
+				"defindex": 8456,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Asiafortress Cup Division 3 Participant",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/asiafortress_participant.9fa6a0446a4a91d4d114ad299b1d5509306fa714.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/asiafortress_participant_large.73420acd5b1fe83ae04c261a095aab91b5d0d54a.png",
 				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "",
@@ -95242,7 +95857,7 @@
 				"name": "The Hornblower",
 				"defindex": 30129,
 				"item_class": "tf_wearable",
-				"item_type_name": "Apparel",
+				"item_type_name": "Coat",
 				"item_name": "Hornblower",
 				"item_description": "\"This uniform was worn by Horatio Nelson during the Napoleonic Wars! If you sunk his ship he would swim at you with a cannon on his back! If he ran out of cannonballs he would fire himself at your hull! That is how bad he wanted to beat the French!\"",
 				"proper_name": true,
@@ -95348,7 +95963,7 @@
 				"name": "The Brawling Buccaneer",
 				"defindex": 30131,
 				"item_class": "tf_wearable",
-				"item_type_name": "Apparel",
+				"item_type_name": "Coat",
 				"item_name": "Brawling Buccaneer",
 				"item_description": "\"We do not plunder in this man's pirate army, maggot! On this ship you will patrol the seas for liberals and Communists, and go to bed at a sensible hour!\"",
 				"proper_name": true,
@@ -105973,7 +106588,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Coat",
 				"item_name": "Heat of Winter",
-				"proper_name": false,
+				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/medic/sbxo2014_medic_wintergarb_coat/sbxo2014_medic_wintergarb_coat.mdl",
 				"item_quality": 6,
@@ -110054,9 +110669,9 @@
 				"stored_as_integer": false
 			},
 			{
-				"name": "sniper fires tracer DISPLAY ONLY",
+				"name": "sniper fires tracer",
 				"defindex": 305,
-				"attribute_class": "sniper_fires_tracer_DISPLAY_ONLY",
+				"attribute_class": "sniper_fires_tracer",
 				"description_string": "Fires tracer rounds",
 				"description_format": "value_is_additive",
 				"effect_type": "negative",
@@ -110485,7 +111100,7 @@
 				"name": "alt fire teleport to spawn",
 				"defindex": 352,
 				"attribute_class": "alt_fire_teleport_to_spawn",
-				"description_string": "On Alt-Fire: Teleport to spawn",
+				"description_string": "Press your reload key to choose to teleport to spawn or your exit teleporter",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
@@ -110668,9 +111283,9 @@
 				"stored_as_integer": false
 			},
 			{
-				"name": "taunt success sound",
+				"name": "cosmetic taunt sound",
 				"defindex": 371,
-				"attribute_class": "taunt_success_sound",
+				"attribute_class": "cosmetic_taunt_sound",
 				"description_string": "Attrib_TauntSoundSuccess",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
@@ -112160,6 +112775,78 @@
 				"stored_as_integer": true
 			},
 			{
+				"name": "taunt attack name",
+				"defindex": 556,
+				"attribute_class": "taunt_attack_name",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt attack time",
+				"defindex": 557,
+				"attribute_class": "taunt_attack_time",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "allow move during taunt",
+				"defindex": 559,
+				"attribute_class": "allow_move_during_taunt",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "taunt force move forward speed",
+				"defindex": 600,
+				"attribute_class": "taunt_force_move_forward_speed",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt mimic",
+				"defindex": 602,
+				"attribute_class": "taunt_mimic",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "taunt success sound",
+				"defindex": 606,
+				"attribute_class": "taunt_success_sound",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt success sound offset",
+				"defindex": 607,
+				"attribute_class": "taunt_success_sound_offset",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt success sound loop",
+				"defindex": 608,
+				"attribute_class": "taunt_success_sound_loop",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt success sound loop offset",
+				"defindex": 609,
+				"attribute_class": "taunt_success_sound_loop_offset",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "minicritboost on kill",
 				"defindex": 613,
 				"attribute_class": "add_onkill_minicritboost_time",
@@ -112178,6 +112865,14 @@
 				"effect_type": "negative",
 				"hidden": false,
 				"stored_as_integer": true
+			},
+			{
+				"name": "taunt force weapon slot",
+				"defindex": 641,
+				"attribute_class": "taunt_force_weapon_slot",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
 			},
 			{
 				"name": "CARD: damage bonus",
@@ -112291,7 +112986,7 @@
 				"name": "recipe component defined item 1",
 				"defindex": 2000,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112300,7 +112995,7 @@
 				"name": "recipe component defined item 2",
 				"defindex": 2001,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112309,7 +113004,7 @@
 				"name": "recipe component defined item 3",
 				"defindex": 2002,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112318,7 +113013,7 @@
 				"name": "recipe component defined item 4",
 				"defindex": 2003,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112327,7 +113022,7 @@
 				"name": "recipe component defined item 5",
 				"defindex": 2004,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112336,7 +113031,7 @@
 				"name": "recipe component defined item 6",
 				"defindex": 2005,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112345,7 +113040,7 @@
 				"name": "recipe component defined item 7",
 				"defindex": 2006,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112354,7 +113049,7 @@
 				"name": "recipe component defined item 8",
 				"defindex": 2007,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112363,7 +113058,7 @@
 				"name": "recipe component defined item 9",
 				"defindex": 2008,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112372,7 +113067,7 @@
 				"name": "recipe component defined item 10",
 				"defindex": 2009,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": "visuals_mvm_boss",
+				"description_format": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -112569,6 +113264,170 @@
 				"attribute_class": "recipe_no_partial_complete",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "on taunt attach particle index",
+				"defindex": 2041,
+				"attribute_class": null,
+				"description_string": "Effect: %s1",
+				"description_format": "value_is_particle_index",
+				"effect_type": "neutral",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "upgrade rate decrease",
+				"defindex": 2043,
+				"attribute_class": "upgrade_rate_mod",
+				"description_string": "%s1% slower upgrade rate",
+				"description_format": "value_is_inverted_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 1",
+				"defindex": 3000,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 1",
+				"defindex": 3001,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 2",
+				"defindex": 3002,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 2",
+				"defindex": 3003,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 3",
+				"defindex": 3004,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 3",
+				"defindex": 3005,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 4",
+				"defindex": 3006,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 4",
+				"defindex": 3007,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 5",
+				"defindex": 3008,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 5",
+				"defindex": 3009,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 6",
+				"defindex": 3010,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 6",
+				"defindex": 3011,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 7",
+				"defindex": 3012,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 7",
+				"defindex": 3013,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item slot criteria 8",
+				"defindex": 3014,
+				"attribute_class": "item_slot_criteria",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "item in slot 8",
+				"defindex": 3015,
+				"attribute_class": "item_in_slot",
+				"description_format": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": false,
 				"stored_as_integer": false
 			}
 		]
