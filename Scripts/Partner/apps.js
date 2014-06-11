@@ -3693,7 +3693,7 @@ function UpgradeGreenlightItem( publishedfileid, name )
 						else
 						{
 							waitingDialog.Dismiss();
-							ShowAlertDialog( 'Error', 'An error was encountered while processing your request:' + response.success );
+							ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
 						}
 					}
 				}
