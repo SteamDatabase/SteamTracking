@@ -906,6 +906,9 @@ function MoreRecentListingsLink( id, type, rows )
 		new Ajax.Request( 'http://steamcommunity.com/market/recent', {
 			method: 'get',
 			parameters: {
+				country: g_strCountryCode,
+				language: g_strLanguage,
+				currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
 				time: g_rgRecents[type]['time'],
 				listing: g_rgRecents[type]['listing']
 			},
