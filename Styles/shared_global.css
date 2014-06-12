@@ -1284,3 +1284,13 @@ img.dynamiclink_preview {
 	margin-bottom: 10px;
 	display: inline-block;
 }
+
+.perf_stats_controller_timings
+{
+	align: left;
+}
+
+.perf_stats_controller_timings td
+{
+	padding: 20px;
+}
