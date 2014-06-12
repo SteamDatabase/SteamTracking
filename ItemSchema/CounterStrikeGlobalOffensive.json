@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.08e109b08adb512726fee806d5333961df7d0a13.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.6eeef6c9759869606c3f29d5f3a54f91e80b23c2.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2157,7 +2157,7 @@
 				"item_class": "tool",
 				"item_type_name": "Pass",
 				"item_name": "Operation Phoenix Pass",
-				"item_description": "Grants access to Operation Phoenix, which consists of access to community maps, exclusive items, and a record of your competitive stats.",
+				"item_description": "The Operation Phoenix event ran from February 20th, 2014 to June 11th, 2014. This pass no longer grants access to an Operation, but may be redeemed for a commemorative Operation Phoenix Coin.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_phoenix_pass",
@@ -2186,7 +2186,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Operation Phoenix Challenge Coin",
-				"item_description": "Participated in Operation Phoenix.\nPlay in Operation Phoenix and win Operation Phoenix Competitive Matches to upgrade this coin.",
+				"item_description": "Participated in Operation Phoenix.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_phoenix_bronze",
@@ -2256,7 +2256,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Silver Operation Phoenix Coin",
-				"item_description": "Participated in Operation Phoenix.\nPlay in Operation Phoenix and win Operation Phoenix Competitive Matches to upgrade this coin.",
+				"item_description": "Participated in Operation Phoenix.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_phoenix_silver",
@@ -2664,7 +2664,7 @@
 				}
 			},
 			{
-				"name": "Community Sticker Capsule 1 Key",
+				"name": "Community Sticker Capsule 1 Key May 2014",
 				"defindex": 1304,
 				"item_class": "tool",
 				"item_type_name": "Key",
@@ -2689,7 +2689,7 @@
 				}
 			},
 			{
-				"name": "Community Case Key 3",
+				"name": "Community Case Key 3 May 2014",
 				"defindex": 1305,
 				"item_class": "tool",
 				"item_type_name": "Key",
@@ -2707,6 +2707,56 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "community_case_3",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Case Key 3 June 2014",
+				"defindex": 1307,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Huntsman Case Key ",
+				"item_description": "This key only opens Huntsman Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_3.37247b8634e99bd7061ed75e9b298cb031b24beb.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_3",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Sticker Capsule 1 Key June 2014",
+				"defindex": 1308,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Community Sticker Capsule 1 Key",
+				"item_description": "This key opens the Community Sticker Capsule 1.\n\nA portion of the proceeds from the sale of this key will go to the sticker creators.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/sticker_crate_key_community01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/sticker_crate_key_community01.1301a32528f2f388b93f0d23a6ca23578bf99569.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "sticker_pack_community01_key",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -4586,12 +4636,17 @@
 					"weapon_galilar",
 					"weapon_p90",
 					"weapon_cz75a",
+					"weapon_cz75a",
+					"weapon_p90",
+					"weapon_hkp2000",
 					"weapon_aug",
 					"weapon_bizon",
 					"weapon_mac10",
 					"weapon_xm1014",
+					"weapon_mac10",
 					"weapon_m4a1_silencer",
 					"weapon_scar20",
+					"weapon_usp_silencer",
 					"weapon_usp_silencer",
 					"weapon_ak47",
 					"weapon_m4a1"

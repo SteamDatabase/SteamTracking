@@ -76,10 +76,10 @@
 		"immortal"
 		{
 			"value"		"7"
-			"loc_key"		"Rarity_Immortal"
-			"loc_key_weapon"		"Rarity_Immortal_Weapon"
+			"loc_key"		"Rarity_Contraband"
+			"loc_key_weapon"		"Rarity_Contraband_Weapon"
 			"color"		"desc_immortal"
-			"drop_sound"		"Chicken.Death"
+			"drop_sound"		"EndMatch.ItemRevealRarityLegendary"
 		}
 		"unusual"
 		{
@@ -787,6 +787,18 @@
 			"118"
 			{
 				"icon_path"		"econ/stickers/community01/winged_defuser"
+			}
+			"119"
+			{
+				"icon_path"		"econ/stickers/community01/pocket_bbq"
+			}
+			"120"
+			{
+				"icon_path"		"econ/stickers/community01/death_comes"
+			}
+			"121"
+			{
+				"icon_path"		"econ/stickers/community01/rekt"
 			}
 		}
 		"weapon_icons"
@@ -2135,6 +2147,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a1_howling_heavy"
 			}
+			"1049920"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_titanstorm_light"
+			}
+			"1049921"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_titanstorm_medium"
+			}
+			"1049922"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_titanstorm_heavy"
+			}
 			"1114124"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_so_red_light"
@@ -2242,6 +2266,18 @@
 			"1115354"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_decay_heavy"
+			}
+			"1115460"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_korupt_light"
+			}
+			"1115461"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_korupt_medium"
+			}
+			"1115462"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_korupt_heavy"
 			}
 			"1245452"
 			{
@@ -2386,6 +2422,18 @@
 			"1246430"
 			{
 				"icon_path"		"econ/default_generated/weapon_p90_cu_p90_scorpius_heavy"
+			}
+			"1246524"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_an_royalbleed_light"
+			}
+			"1246525"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_an_royalbleed_medium"
+			}
+			"1246526"
+			{
+				"icon_path"		"econ/default_generated/weapon_p90_an_royalbleed_heavy"
 			}
 			"1572924"
 			{
@@ -3226,6 +3274,18 @@
 			"2098254"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_poly_camo_heavy"
+			}
+			"2098504"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_pulse_light"
+			}
+			"2098505"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_pulse_medium"
+			}
+			"2098506"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_pulse_heavy"
 			}
 			"2162708"
 			{
@@ -4211,6 +4271,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_spitfire_heavy"
 			}
+			"3999052"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_kaiman_light"
+			}
+			"3999053"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_kaiman_medium"
+			}
+			"3999054"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_kaiman_heavy"
+			}
 			"4128816"
 			{
 				"icon_path"		"econ/default_generated/weapon_cz75a_hy_webs_light"
@@ -4282,6 +4354,18 @@
 			"4130030"
 			{
 				"icon_path"		"econ/default_generated/weapon_cz75a_am_nitrogen_heavy"
+			}
+			"4130104"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_am_gyrate_light"
+			}
+			"4130105"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_am_gyrate_medium"
+			}
+			"4130106"
+			{
+				"icon_path"		"econ/default_generated/weapon_cz75a_am_gyrate_heavy"
 			}
 			"32768020"
 			{
@@ -9688,7 +9772,7 @@
 		}
 		"1304"
 		{
-			"name"		"Community Sticker Capsule 1 Key"
+			"name"		"Community Sticker Capsule 1 Key May 2014"
 			"item_name"		"#CSGO_sticker_crate_key_community01"
 			"item_description"		"#CSGO_sticker_crate_key_community01_desc"
 			"first_sale_date"		"2014/04/30"
@@ -9701,7 +9785,7 @@
 		}
 		"1305"
 		{
-			"name"		"Community Case Key 3"
+			"name"		"Community Case Key 3 May 2014"
 			"item_name"		"#CSGO_community_crate_key_3"
 			"item_description"		"#CSGO_community_crate_key_3_desc"
 			"first_sale_date"		"2014/4/30"
@@ -9710,6 +9794,32 @@
 			"tool"
 			{
 				"restriction"		"community_case_3"
+			}
+		}
+		"1307"
+		{
+			"name"		"Community Case Key 3 June 2014"
+			"item_name"		"#CSGO_community_crate_key_3"
+			"item_description"		"#CSGO_community_crate_key_3_desc"
+			"first_sale_date"		"2014/06/11"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_3"
+			"tool"
+			{
+				"restriction"		"community_case_3"
+			}
+		}
+		"1308"
+		{
+			"name"		"Community Sticker Capsule 1 Key June 2014"
+			"item_name"		"#CSGO_sticker_crate_key_community01"
+			"item_description"		"#CSGO_sticker_crate_key_community01_desc"
+			"first_sale_date"		"2014/06/11"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/sticker_crate_key_community01"
+			"tool"
+			{
+				"restriction"		"sticker_pack_community01_key"
 			}
 		}
 		"4001"
@@ -10112,11 +10222,10 @@
 			"item_description"		"CSGO_crate_sticker_pack_community01_desc"
 			"name"		"crate_sticker_pack_community01"
 			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_community01"
-			"first_sale_date"		"2014/03/20"
 			"prefab"		"weapon_case"
 			"associated_items"
 			{
-				"1304"		"1"
+				"1308"		"1"
 			}
 			"tool"
 			{
@@ -10139,7 +10248,7 @@
 			"prefab"		"weapon_case"
 			"associated_items"
 			{
-				"1305"		"1"
+				"1307"		"1"
 			}
 			"tool"
 			{
@@ -12484,6 +12593,33 @@
 			"sticker_material"		"community01/winged_defuser"
 			"sticker_icon"		"community01/winged_defuser"
 			"item_rarity"		"rare"
+		}
+		"119"
+		{
+			"name"		"comm01_pocket_bbq"
+			"item_name"		"#StickerKit_comm01_pocket_bbq"
+			"description_string"		"#StickerKit_desc_comm01_pocket_bbq"
+			"sticker_material"		"community01/pocket_bbq"
+			"sticker_icon"		"community01/pocket_bbq"
+			"item_rarity"		"rare"
+		}
+		"120"
+		{
+			"name"		"comm01_death_comes"
+			"item_name"		"#StickerKit_comm01_death_comes"
+			"description_string"		"#StickerKit_desc_comm01_death_comes"
+			"sticker_material"		"community01/death_comes"
+			"sticker_icon"		"community01/death_comes"
+			"item_rarity"		"rare"
+		}
+		"121"
+		{
+			"name"		"comm01_rekt_holo"
+			"item_name"		"#StickerKit_comm01_rekt_holo"
+			"description_string"		"#StickerKit_desc_comm01_rekt_holo"
+			"sticker_material"		"community01/rekt"
+			"sticker_icon"		"community01/rekt"
+			"item_rarity"		"mythical"
 		}
 	}
 	"paint_kits"
@@ -17288,6 +17424,136 @@
 			"wear_remap_min"		"0.000000"
 			"wear_remap_max"		"0.700000"
 		}
+		"334"
+		{
+			"name"		"am_gyrate"
+			"description_string"		"#PaintKit_am_gyrate"
+			"description_tag"		"#PaintKit_am_gyrate_tag"
+			"style"		"5"
+			"pattern"		"gyrate_cz75"
+			"color0"		"1 7 16"
+			"color1"		"23 47 77"
+			"color2"		"93 101 107"
+			"color3"		"160 160 160"
+			"pattern_scale"		"1.400000"
+			"phongexponent"		"32"
+			"phongalbedoboost"		"12"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"27.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"69.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"44.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"335"
+		{
+			"name"		"an_royalbleed"
+			"description_string"		"#PaintKit_an_royalbleed"
+			"description_tag"		"#PaintKit_an_royalbleed_tag"
+			"style"		"8"
+			"pattern"		"p90_royalbleed"
+			"pattern_scale"		"2.000000"
+			"phongexponent"		"40"
+			"phongalbedoboost"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.350000"
+		}
+		"336"
+		{
+			"name"		"cu_titanstorm"
+			"description_string"		"#PaintKit_cu_titanstorm"
+			"description_tag"		"#PaintKit_cu_titanstorm_tag"
+			"style"		"7"
+			"pattern"		"m4a4_titanstorm"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"50"
+			"phongintensity"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.700000"
+		}
+		"337"
+		{
+			"name"		"cu_korupt"
+			"description_string"		"#PaintKit_cu_korupt"
+			"description_tag"		"#PaintKit_cu_korupt_tag"
+			"style"		"7"
+			"pattern"		"mac10_korupt"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"60"
+			"phongintensity"		"30"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
+		"338"
+		{
+			"name"		"cu_p2000_pulse"
+			"description_string"		"#PaintKit_cu_famas_pulse"
+			"description_tag"		"#PaintKit_cu_famas_pulse_tag"
+			"style"		"7"
+			"pattern"		"p2000_pulse"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"60"
+			"phongintensity"		"30"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.100000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.100000"
+			"pattern_rotate_start"		"0.500000"
+			"pattern_rotate_end"		"1.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"339"
+		{
+			"name"		"cu_kaiman"
+			"description_string"		"#PaintKit_cu_kaiman"
+			"description_tag"		"#PaintKit_cu_kaiman_tag"
+			"style"		"7"
+			"pattern"		"usp_kaiman"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"90"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.400000"
+		}
 	}
 	"paint_kits_rarity"
 	{
@@ -17518,6 +17784,12 @@
 		"cu_usp_spitfire"		"mythical"
 		"cu_xm1014_heaven_guard"		"mythical"
 		"am_nitrogen"		"rare"
+		"am_gyrate"		"rare"
+		"an_royalbleed"		"rare"
+		"cu_titanstorm"		"legendary"
+		"cu_korupt"		"mythical"
+		"cu_p2000_pulse"		"uncommon"
+		"cu_kaiman"		"mythical"
 	}
 	"item_sets"
 	{
@@ -18026,15 +18298,20 @@
 				"[hy_galil_kami]weapon_galilar"		"1"
 				"[cu_p90_scorpius]weapon_p90"		"1"
 				"[am_nitrogen]weapon_cz75a"		"1"
+				"[am_gyrate]weapon_cz75a"		"1"
+				"[an_royalbleed]weapon_p90"		"1"
+				"[cu_p2000_pulse]weapon_hkp2000"		"1"
 				"[cu_aug_progressiv]weapon_aug"		"1"
 				"[cu_bizon_antique]weapon_bizon"		"1"
 				"[cu_mac10_decay]weapon_mac10"		"1"
 				"[cu_xm1014_heaven_guard]weapon_xm1014"		"1"
+				"[cu_korupt]weapon_mac10"		"1"
 				"[am_m4a1-s_alloy_orange]weapon_m4a1_silencer"		"1"
 				"[cu_scar_cyrex]weapon_scar20"		"1"
 				"[cu_usp_spitfire]weapon_usp_silencer"		"1"
+				"[cu_kaiman]weapon_usp_silencer"		"1"
 				"[cu_ak47_rubber]weapon_ak47"		"1"
-				"[cu_m4a1_howling]weapon_m4a1"		"1"
+				"[cu_titanstorm]weapon_m4a1"		"1"
 			}
 		}
 	}
@@ -18235,28 +18512,28 @@
 		{
 			"[cu_tec9_asiimov]weapon_tec9"		"1"
 			"[cu_ssg08_immortal]weapon_ssg08"		"1"
-			"[cu_retribution]weapon_elite"		"1"
 			"[hy_galil_kami]weapon_galilar"		"1"
-			"[cu_p90_scorpius]weapon_p90"		"1"
-			"[am_nitrogen]weapon_cz75a"		"1"
+			"[am_gyrate]weapon_cz75a"		"1"
+			"[an_royalbleed]weapon_p90"		"1"
+			"[cu_p2000_pulse]weapon_hkp2000"		"1"
 		}
 		"crate_community_3_mythical"
 		{
 			"[cu_aug_progressiv]weapon_aug"		"1"
 			"[cu_bizon_antique]weapon_bizon"		"1"
-			"[cu_mac10_decay]weapon_mac10"		"1"
 			"[cu_xm1014_heaven_guard]weapon_xm1014"		"1"
+			"[cu_korupt]weapon_mac10"		"1"
 		}
 		"crate_community_3_legendary"
 		{
 			"[am_m4a1-s_alloy_orange]weapon_m4a1_silencer"		"1"
 			"[cu_scar_cyrex]weapon_scar20"		"1"
-			"[cu_usp_spitfire]weapon_usp_silencer"		"1"
+			"[cu_kaiman]weapon_usp_silencer"		"1"
 		}
 		"crate_community_3_ancient"
 		{
 			"[cu_ak47_rubber]weapon_ak47"		"1"
-			"[cu_m4a1_howling]weapon_m4a1"		"1"
+			"[cu_titanstorm]weapon_m4a1"		"1"
 		}
 		"crate_valve_1"
 		{
@@ -18450,7 +18727,7 @@
 		"crate_sticker_pack_community01_rare"
 		{
 			"[comm01_backstab]Sticker"		"1"
-			"[comm01_black_king]Sticker"		"1"
+			"[comm01_pocket_bbq]Sticker"		"1"
 			"[comm01_bomb_doge]Sticker"		"1"
 			"[comm01_burn_them_all]Sticker"		"1"
 			"[comm01_llama_cannon]Sticker"		"1"
@@ -18459,13 +18736,12 @@
 			"[comm01_skull]Sticker"		"1"
 			"[comm01_sneaky_beaky]Sticker"		"1"
 			"[comm01_to_b_or_not_to_b]Sticker"		"1"
-			"[comm01_winged_defuser]Sticker"		"1"
-			"[comm01_howling_dawn]Sticker"		"1"
+			"[comm01_death_comes]Sticker"		"1"
 		}
 		"crate_sticker_pack_community01_mythical"
 		{
 			"[comm01_teamwork_holo]Sticker"		"1"
-			"[comm01_harp_of_war]Sticker"		"1"
+			"[comm01_rekt_holo]Sticker"		"1"
 		}
 		"crate_sticker_pack_community01_legendary"
 		{
