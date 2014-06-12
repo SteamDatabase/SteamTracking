@@ -20394,6 +20394,7 @@
 			"item_quality"		"unique"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
+			"item_slot"		"action"
 			"used_by_classes"
 			{
 				"scout"		"1"
@@ -55895,8 +55896,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div1_2nd"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
 		}
 		"8447"
 		{		
@@ -55904,8 +55905,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div1_3rd"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
 		}
 		"8448"
 		{		
@@ -55922,8 +55923,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div2_1st"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
 		}
 		"8450"
 		{		
@@ -55940,8 +55941,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div2_3rd"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
 		}
 		"8452"
 		{		
@@ -55958,8 +55959,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div3_1st"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_gold/asiafortress_gold_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
 		}
 		"8454"
 		{		
@@ -55967,8 +55968,8 @@
 			"prefab"			"tournament_medal"
 			"item_name"			"#TF_TournamentMedal_AFC_Div3_2nd"
 			"item_description"	"#TF_TournamentMedal_Season7"
-			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver"
-			"model_player"		"models/workshop/player/items/all_class/asiafortress_silver/asiafortress_silver_demo.mdl"
+			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze"
+			"model_player"		"models/workshop/player/items/all_class/asiafortress_bronze/asiafortress_bronze_demo.mdl"
 		}
 		"8455"
 		{		
