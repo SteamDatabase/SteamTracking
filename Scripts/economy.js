@@ -2492,6 +2492,8 @@ function PopulateMarketActions( elActions, item )
 		new Ajax.Request( 'http://steamcommunity.com/market/priceoverview/', {
 				method: 'get',
 				parameters: {
+					country: g_strCountryCode,
+					currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
 					appid: item.appid,
 					market_hash_name: strMarketName
 				},
