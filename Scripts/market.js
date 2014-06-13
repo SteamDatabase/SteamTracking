@@ -891,53 +891,59 @@ function MergeWithAppDataArray( newAppData )
 }
 
 var g_bBusyLoadingMore = false;
+function LoadRecentListings( id, type, rows )
+{
+	if ( g_bBusyLoadingMore )
+	{
+		return;
+	}
+
+	var elShowMore = $(id);
+	var elRows = $(rows);
+
+	g_bBusyLoadingMore = true;
+	new Ajax.Request( 'http://steamcommunity.com/market/recent', {
+		method: 'get',
+		parameters: {
+			country: g_strCountryCode,
+			language: g_strLanguage,
+			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1			//time: g_rgRecents[type]['time'],
+			//listing: g_rgRecents[type]['listing']
+		},
+		onSuccess: function( transport ) {
+			if ( transport.responseJSON )
+			{
+				var response = transport.responseJSON;
+
+				if ( response.assets.length != 0 )
+				{
+					g_rgRecents[type]['time'] = response.last_time;
+					g_rgRecents[type]['listing'] = response.last_listing;
+
+					elRows.insert( { 'bottom' : response.results_html } );
+
+					MergeWithAssetArray( response.assets );
+					MergeWithListingInfoArray( response.listinginfo );
+					MergeWithAppDataArray( response.app_data );
+					eval( response.hovers );
+				}
+
+				/*if ( !response.more || response.assets.length == 0 )
+				{
+					elShowMore.hide();
+				}*/
+			}
+		},
+		onComplete: function() { g_bBusyLoadingMore = false; }
+	});
+}
+
 function MoreRecentListingsLink( id, type, rows )
 {
 	var elShowMore = $(id);
-	var elRows = $(rows);
 	elShowMore.observe( 'click', function( event ) {
 		event.stop();
-		if ( g_bBusyLoadingMore )
-		{
-			return;
-		}
-
-		g_bBusyLoadingMore = true;
-		new Ajax.Request( 'http://steamcommunity.com/market/recent', {
-			method: 'get',
-			parameters: {
-				country: g_strCountryCode,
-				language: g_strLanguage,
-				currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
-				time: g_rgRecents[type]['time'],
-				listing: g_rgRecents[type]['listing']
-			},
-			onSuccess: function( transport ) {
-				if ( transport.responseJSON )
-				{
-					var response = transport.responseJSON;
-
-					if ( response.assets.length != 0 )
-					{
-						g_rgRecents[type]['time'] = response.last_time;
-						g_rgRecents[type]['listing'] = response.last_listing;
-
-						elRows.insert( { 'bottom' : response.results_html } );
-						
-						MergeWithAssetArray( response.assets );
-						MergeWithListingInfoArray( response.listinginfo );
-						MergeWithAppDataArray( response.app_data );
-						eval( response.hovers );
-					}
-
-					if ( !response.more || response.assets.length == 0 )
-					{
-						elShowMore.hide();
-					}
-				}
-			},
-			onComplete: function() { g_bBusyLoadingMore = false; }
-		});
+		LoadRecentListings( id, type, rows );
 	});
 }
 
@@ -1200,6 +1206,8 @@ Event.observe( document, 'dom:loaded', function() {
 				oTabRecentSellListings.removeClassName( 'market_tab_well_tab_inactive' );
 				oTabRecentSoldListings.addClassName( 'market_tab_well_tab_inactive' );
 				oTabRecentSoldListings.removeClassName( 'market_tab_well_tab_active' );
+
+				LoadRecentListings( 'sellListingsMore', 'sell_new', 'sellListingRows' );
 			} );
 		}
 
