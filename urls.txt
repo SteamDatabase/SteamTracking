@@ -71,11 +71,11 @@ Styles/styles_recommended.css|https://steamstore-a.akamaihd.net/public/css/style
 Styles/styles_sale.css|https://steamstore-a.akamaihd.net/public/css/styles_sale.css?_=*TIMENOW*
 Styles/styles_steamaccount.css|https://steamstore-a.akamaihd.net/public/css/styles_steamaccount.css?_=*TIMENOW*
 Styles/styles_storev5.css|https://steamstore-a.akamaihd.net/public/css/styles_storev5.css?_=*TIMENOW*
+Styles/styles_tags.css|https://steamstore-a.akamaihd.net/public/css/styles_tags.css?_=*TIMENOW*
+Styles/styles_updated_apps.css|https://steamstore-a.akamaihd.net/public/css/styles_updated_apps.css?_=*TIMENOW*
 Styles/styles_video.css|https://steamstore-a.akamaihd.net/public/css/styles_video.css?_=*TIMENOW*
 Styles/styles_widget.css|https://steamstore-a.akamaihd.net/public/css/styles_widget.css?_=*TIMENOW*
 Styles/styles_youraccountv5.css|https://steamstore-a.akamaihd.net/public/css/styles_youraccountv5.css?_=*TIMENOW*
-Styles/styles_updated_apps.css|https://steamstore-a.akamaihd.net/public/css/styles_updated_apps.css?_=*TIMENOW*
-Styles/styles_tags.css|https://steamstore-a.akamaihd.net/public/css/styles_tags.css?_=*TIMENOW*
 Styles/user_reviews.css|https://steamcommunity-a.akamaihd.net/public/shared/css/user_reviews.css?_=*TIMENOW*
 Styles/workshop.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop.css?_=*TIMENOW*
 Styles/workshop_home.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_home.css?_=*TIMENOW*
@@ -84,9 +84,9 @@ Styles/workshop_managecollection.css|https://steamcommunity-a.akamaihd.net/publi
 Styles/workshop_userfiles.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
 
 # JS
+Scripts/app_tagging.js|https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?_=*TIMENOW*&l=english
 Scripts/apphub.js|https://steamcommunity-a.akamaihd.net/public/shared/javascript/apphub.js?_=*TIMENOW*&l=english
 Scripts/apphub_home.js|https://steamcommunity-a.akamaihd.net/public/javascript/apphub_home.js?_=*TIMENOW*&l=english
-Scripts/app_tagging.js|https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?_=*TIMENOW*&l=english
 Scripts/badges.js|https://steamcommunity-a.akamaihd.net/public/javascript/badges.js?_=*TIMENOW*&l=english
 Scripts/blotter_functions.js|https://steamcommunity-a.akamaihd.net/public/javascript/blotter_functions.js?_=*TIMENOW*&l=english
 Scripts/cart.js|https://steamstore-a.akamaihd.net/public/javascript/cart.js?_=*TIMENOW*&l=english
@@ -117,6 +117,7 @@ Scripts/profile_functions.js|https://steamcommunity-a.akamaihd.net/public/javasc
 Scripts/profile_gameslist_functions.js|https://steamcommunity-a.akamaihd.net/public/javascript/profile_gameslist_functions.js?_=*TIMENOW*&l=english
 Scripts/profile_home_functions.js|https://steamcommunity-a.akamaihd.net/public/javascript/profile_home_functions.js?_=*TIMENOW*&l=english
 Scripts/redeemwalletcode.js|https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?_=*TIMENOW*&l=english
+Scripts/refundpurchase.js|https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions.js|https://steamcommunity-a.akamaihd.net/public/javascript/screenshot_functions.js?_=*TIMENOW*&l=english
 Scripts/screenshot_functions_v2.js|https://steamcommunity-a.akamaihd.net/public/javascript/screenshot_functions_v2.js?_=*TIMENOW*&l=english
 Scripts/shared_global.js|https://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_global.js?_=*TIMENOW*&l=english
@@ -132,24 +133,23 @@ Scripts/video_functions_v2.js|https://steamcommunity-a.akamaihd.net/public/javas
 Scripts/workshop_functions.js|https://steamcommunity-a.akamaihd.net/public/javascript/workshop_functions.js?_=*TIMENOW*&l=english
 Scripts/workshop_previewplayer.js|https://steamcommunity-a.akamaihd.net/public/javascript/workshop_previewplayer.js?_=*TIMENOW*&l=english
 Scripts/youraccount.js|https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?_=*TIMENOW*&l=english
-Scripts/refundpurchase.js|https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?_=*TIMENOW*&l=english
 
 # Steamworks CSS
 Styles/Partner/styles_admin.css|https://partner.steamgames.com/public/css/styles_admin.css?_=*TIMENOW*
 Styles/Partner/styles_apps.css|https://partner.steamgames.com/public/css/styles_apps.css?_=*TIMENOW*
 Styles/Partner/styles_global.css|https://partner.steamgames.com/public/css/styles_global.css?_=*TIMENOW*
 Styles/Partner/styles_global_new.css|https://partner.steamgames.com/public/css/styles_global_new.css?_=*TIMENOW*
+Styles/Partner/styles_landing.css|https://partner.steamgames.com/public/css/styles_landing.css?_=*TIMENOW*
 Styles/Partner/styles_marketing.css|https://partner.steamgames.com/public/css/styles_marketing.css?_=*TIMENOW*
 Styles/Partner/styles_packages.css|https://partner.steamgames.com/public/css/styles_packages.css?_=*TIMENOW*
-Styles/Partner/styles_landing.css|https://partner.steamgames.com/public/css/styles_landing.css?_=*TIMENOW*
 
 # Steamworks JS
 Scripts/Partner/admin.js|https://partner.steamgames.com/public/javascript/admin.js?_=*TIMENOW*&l=english
 Scripts/Partner/apps.js|https://partner.steamgames.com/public/javascript/apps.js?_=*TIMENOW*&l=english
 Scripts/Partner/marketing.js|https://partner.steamgames.com/public/javascript/marketing.js?_=*TIMENOW*&l=english
+Scripts/Partner/newsadmin.js|https://partner.steamgames.com/public/javascript/newsadmin.js?_=*TIMENOW*&l=english
 Scripts/Partner/packages.js|https://partner.steamgames.com/public/javascript/packages.js?_=*TIMENOW*&l=english
 Scripts/Partner/storeadmin.js|https://partner.steamgames.com/public/javascript/storeadmin.js?_=*TIMENOW*&l=english
-Scripts/Partner/newsadmin.js|https://partner.steamgames.com/public/javascript/newsadmin.js?_=*TIMENOW*&l=english
 
 # API
 API/SupportedAPIList.json|https://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
@@ -158,8 +158,8 @@ API/SupportedAPIList.json|https://api.steampowered.com/ISteamWebAPIUtil/GetSuppo
 GetItemSchema/CounterStrikeGlobalOffensive.json|https://api.steampowered.com/IEconItems_730/GetSchema/v2/?key=*APIKEY*&language=english
 GetItemSchema/Dota2.json|https://api.steampowered.com/IEconItems_570/GetSchema/v1/?key=*APIKEY*&language=english
 GetItemSchema/Dota2Test.json|https://api.steampowered.com/IEconItems_205790/GetSchema/v1/?key=*APIKEY*&language=english
-GetItemSchema/TeamFortress2.json|https://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
 GetItemSchema/Portal2.json|https://api.steampowered.com/IEconItems_620/GetSchema/v1/?key=*APIKEY*&language=english
+GetItemSchema/TeamFortress2.json|https://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
 
 # Game Schemas
 GameSchema/AlienSwarm.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=630
