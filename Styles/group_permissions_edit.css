@@ -2,12 +2,12 @@
 	width:958px;
 	margin:0;
 	padding:0;
-	background-image: url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 }
 
 #BG_bottom {
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_bottom.gif');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -15,7 +15,7 @@
 }
 
 #mainContents {
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/bg_top.gif');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:946px;
 	min-width:946px;
@@ -58,7 +58,7 @@
 	width:708px;
 	margin:0;
 	padding:0;
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/permissionsBlockBG.gif');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockBG.gif');
 	background-repeat:repeat-y;
 }
 #permissionsBlockTop {
@@ -66,7 +66,7 @@
 	margin:0;
 	padding:0;
 	height:5px;
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/permissionsBlockHeader.gif');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockHeader.gif');
 	background-repeat:no-repeat;
 }
 #permissionsBlockBottom {
@@ -74,7 +74,7 @@
 	margin:0;
 	padding:0;
 	height:5px;
-	background-image:url('http://cdn.steamcommunity.com/public/images/skin_1/permissionsBlockFooter.gif');
+	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockFooter.gif');
 	background-repeat:no-repeat;
 }
 	
