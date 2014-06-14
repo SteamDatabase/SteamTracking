@@ -1,7 +1,7 @@
 
 body {
 	background-color: #000000;
-	background-image: url('http://cdn.steamcommunity.com/public/images//skin_1/bg_dark.gif');
+	background-image: url('http://steamcommunity-a.akamaihd.net/public/images//skin_1/bg_dark.gif');
 	background-repeat: repeat-x;
 }
 
@@ -56,7 +56,7 @@ body {
 	width: 67px;
 	height: 48px;
 
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/emailauth_icons.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/emailauth_icons.png );
 	background-repeat: no-repeat;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .auth_icon.ipt_icon {
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/ipt_lockout_icon.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/ipt_lockout_icon.png );
 	height: 62px;
 	width: 53px;
 
@@ -102,7 +102,7 @@ body {
 }
 
 .authcode_entry_box {
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/code_box.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/code_box.png );
 	background-repeat: no-repeat;
 	width: 220px;
 	height: 27px;
@@ -110,7 +110,7 @@ body {
 
 .friendly_name_box
 {
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/friendlyname_box.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/friendlyname_box.png );
 	background-repeat: no-repeat;
 	width: 220px;
 	height: 27px;
@@ -159,13 +159,13 @@ input.textField {
 #auth_buttonset_waiting {
 	height: 66px;
 	
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/throbber.gif );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif );
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .auth_button {
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/emailauth_button.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/emailauth_button.png );
 	background-repeat: no-repeat;
 	width: 219px;
 	height: 66px;
@@ -205,7 +205,7 @@ a.auth_button, a.auth_button:hover {
 }
 
 #loginIPTModal .modal_box {
-	background-image: url( http://cdn.steamcommunity.com/public/images/login/ipt_lockout_bg.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/login/ipt_lockout_bg.png );
 	width: 466px;
 	height: 231px;
 }
@@ -237,7 +237,7 @@ a.auth_button, a.auth_button:hover {
 		height: 150px;
 		margin: 10px;
 		float: left;
-		background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/signin_divider.jpg );
+		background-image: url( http://steamcommunity-a.akamaihd.net/public/images/skin_1/signin_divider.jpg );
 	}
 	
 	.mainLoginLeftPanel {
@@ -362,7 +362,7 @@ a.auth_button, a.auth_button:hover {
 	width: 616px;
 	height: 500px;
 	padding-top: 65px;
-	background-image: url( http://cdn.steamcommunity.com/public/images/skin_1/about_steam_preview.png );
+	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/skin_1/about_steam_preview.png );
 	background-repeat: no-repeat;
 	
 }

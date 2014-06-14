@@ -256,7 +256,7 @@ a.badge_row:hover .badge_view_details {
 .salespend_card_drop_info .card_drop_info_subarea {
 	border-color: #ffca00;
 
-	background-image: url( 'http://cdn.steamcommunity.com/public/shared/images/promo/wintersale_snowflakes.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/promo/wintersale_snowflakes.png' );
 	background-repeat: no-repeat;
 	background-position: top left;
 }
@@ -618,7 +618,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .game_card_hover:hover {
-	background: url( 'http://cdn.steamcommunity.com/public/images/community/zoom_hover.png' ) no-repeat;
+	background: url( 'http://steamcommunity-a.akamaihd.net/public/images/community/zoom_hover.png' ) no-repeat;
 	background-position: center;
 }
 
@@ -659,7 +659,7 @@ img.gamecard {
 
 .badge_detail_tasks {
 	margin-top: 7px;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/badge_tasks_bg.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/badge_tasks_bg.png' );
 	background-position: center top;
 	background-repeat: no-repeat;
 	padding-top: 24px;
@@ -730,7 +730,7 @@ img.gamecard {
 .profile_xp_block_level_num {
 	font-size: 20px;
 	color: #c6c6c6;
-	background-image: url( 'http://cdn.steamcommunity.com/public/images/profile/player_level_background.png' );
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/profile/player_level_background.png' );
 	width: 31px;
 	height: 28px;
 	padding-top: 3px;
