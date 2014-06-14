@@ -5,7 +5,7 @@ body.chat_body {
 }
 
 .chat_page {
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/groups/group_content_background.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_background.png');
 	background-position: center 105px;
 	background-color: #262627;
 	background-repeat: no-repeat;
@@ -60,7 +60,7 @@ body.chat_body {
 	top: 0;
 	width: 177px;
 	height: 45px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/chat/steam_logo.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/steam_logo.png');
 }
 
 .chat_page_beta_logo {
@@ -70,7 +70,7 @@ body.chat_body {
 
 	width: 47px;
 	height: 27px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/chat/beta_tag.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/beta_tag.png');
 }
 
 .chat_page_settings_area {
@@ -148,7 +148,7 @@ body.chat_body {
 .friendslist_group_handle {
 	height: 20px;
 	line-height: 20px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/chat/friendgroup_bg.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/friendgroup_bg.png' );
 	background-repeat: repeat-y;
 	background-position: left;
 
@@ -324,7 +324,7 @@ body.chat_body {
 
 	padding: 5px;
 
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/chat/icon_settings.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/icon_settings.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 

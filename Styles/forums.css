@@ -128,7 +128,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic.locked {
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_topic_locked.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_topic_locked.png' );
 }
 
 .forum_topic.locked.sticky {
@@ -223,7 +223,7 @@ textarea.forumtopic_reply_textarea {
 
 .forum_topic_mini {
 	height: auto;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
 	background-repeat: repeat-x;
 	background-position: bottom center;
 	min-height: 30px;
@@ -315,7 +315,7 @@ textarea.forumtopic_reply_textarea {
 	margin-bottom: 8px;
 
 	background-color: #262627;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=2' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=2' );
 	background-repeat: no-repeat;
 	background-position: top left;
 }
@@ -670,7 +670,7 @@ a.forum_comment_action:hover {
 .discussion_searchresults .forum_topic {
 	/*height: auto;*/
 	background-color: #262627;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_gradient.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_gradient.png' );
 	background-repeat: repeat-x;
 	background-position: center top;
 }
@@ -684,7 +684,7 @@ a.forum_comment_action:hover {
 	cursor: pointer;
 	display: block;
 
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg.png' );
 	background-repeat: no-repeat;
 	background-position: left top;
 
@@ -710,7 +710,7 @@ a.forum_comment_action:hover {
 }
 
 .forum_searchresult_reply:hover {
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg_hover.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg_hover.png' );
 }
 
 .forum_searchresult_reply:hover .forum_searchresult_reply_inner {
@@ -727,7 +727,7 @@ a.forum_comment_action:hover {
 
 	width: 1px;
 	height: 15px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg_hover_borderfix.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_searchresult_replybg_hover_borderfix.png' );
 }
 
 .forum_searchresult_reply:hover .forum_searchresult_reply_borderfix {
@@ -735,7 +735,7 @@ a.forum_comment_action:hover {
 }
 
 .forum_button, .forum_button .caps {
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_button.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_button.png');
 }
 
 .forum_button {
@@ -876,7 +876,7 @@ a.forum_comment_action:hover {
 	position:relative;
 	width:296px;
 	height:46px;
-	background-image: url(http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
@@ -950,7 +950,7 @@ input.discussionSearchText:-moz-placeholder {
 	width: 20px;
 	height: 12px;
 
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/deleteSearchTerm.png' );
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1389,7 +1389,7 @@ select.subforum_select_control {
 }
 
 .rightbox_header, .rightbox_footer {
-	background: no-repeat url( 'http://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
 	width: 295px;
 	height: 4px;
 }
@@ -1403,7 +1403,7 @@ select.subforum_select_control {
 	margin-bottom: 18px;
 }
 .rightbox {
-	background: repeat-y url( 'http://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+	background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
 }
 .rightbox .content {
 	padding: 16px 14px;

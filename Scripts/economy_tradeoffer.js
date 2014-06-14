@@ -508,7 +508,7 @@ CTradeOfferStateManager = {
 				}
 
 				if ( data.tradeid )
-					window.location = 'http://steamcommunity.com/trade/' + data.tradeid + '/receipt';
+					window.location = 'https://steamcommunity.com/trade/' + data.tradeid + '/receipt';
 				else
 					EndTradeOffer( UserYou.GetProfileURL() + '/inventory/' );	//?? not sure
 			}).fail( function( jqXHR ) {

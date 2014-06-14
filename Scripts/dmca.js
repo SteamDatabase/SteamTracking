@@ -118,7 +118,7 @@ function SaveTakeDownNotice()
 	var jqxhr = $J.post( frm.attr('action'), frm.serialize() )
 		.done(function(data) {
 			ShowAlertDialog( 'DMCA Takedown Notice Filed', 'Your DMCA takedown notice has been filed.  We will review it as soon as we can.' )
-				.done( function() { top.location.href = 'http://steamcommunity.com' } );
+				.done( function() { top.location.href = 'https://steamcommunity.com' } );
 		} )
 		.fail(function() {
 			var data = V_ParseJSON( jqxhr.responseText );

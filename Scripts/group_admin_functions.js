@@ -817,7 +817,7 @@ var Template_AssociatedGame = new Template (
 	'		<img src="#{icon}">'+
 	'		</div>' +
 	'	#{name}' +
-	'	<img class="group_associated_game_remove" src="http://steamcommunity-a.akamaihd.net/public/images/skin_1/kickIcon.gif" onclick="RemoveAssociatedGame( #{appid} );">' +
+	'	<img class="group_associated_game_remove" src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/kickIcon.gif" onclick="RemoveAssociatedGame( #{appid} );">' +
 	'</div>'
 );
 

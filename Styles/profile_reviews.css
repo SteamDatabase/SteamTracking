@@ -211,7 +211,7 @@
 }
 
 a.trigger, a.activetrigger {
-	background: url(http://steamcommunity-a.akamaihd.net/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
 	border-right: 7px solid #000; /* HAAAAAX! */
 	display:inline-block;
 	vertical-align: middle;

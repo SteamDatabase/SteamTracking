@@ -34,14 +34,14 @@ function OnDiscussionHashChange( hash )
 		if ( strTab == 'games' && !elTabContent.bLoaded )
 		{
 			elTabContent.bLoaded = true;
-			new Ajax.Updater( elTabContent, 'http://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true} );
+			new Ajax.Updater( elTabContent, 'https://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true} );
 		}
 	}
 }
 
 function GameSearchSelect( elSelection, rgJSON )
 {
-	window.location = 'http://steamcommunity.com/app/' + rgJSON['appid'] + '/discussions/';
+	window.location = 'https://steamcommunity.com/app/' + rgJSON['appid'] + '/discussions/';
 }
 function InitGameNameSearch()
 {
@@ -87,10 +87,10 @@ function RenderGameForumList( listType, page, bLoggedIn )
 
 	$( 'quicklistselect_active' ).innerHTML = text;
 
-	$('game_results_area').update( '<div class="discussiontab_loading"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
+	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var params = { results: 1, type: listType };
-	new Ajax.Updater( $('game_results_area'), 'http://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );
+	new Ajax.Updater( $('game_results_area'), 'https://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );
 
 }
 
@@ -98,10 +98,10 @@ g_strSearchInFlight = '';
 function GameForumSearch()
 {
 
-	$('game_results_area').update( '<div class="discussiontab_loading"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
+	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var params = { results: 1, type: 'searchallapps', searchquery: $('associate_game').value };
-	new Ajax.Updater( $('game_results_area'), 'http://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );
+	new Ajax.Updater( $('game_results_area'), 'https://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );
 }
 
 function GameForumSearchKeyDown( event )

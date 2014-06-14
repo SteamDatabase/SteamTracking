@@ -17,7 +17,7 @@ function WorkshopSetAccepted(item_id)
 		}(item_id))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/setaccepted',
+		'https://steamcommunity.com/sharedfiles/setaccepted',
 		options
 	);
 }
@@ -40,7 +40,7 @@ function WorkshopSetPending(item_id)
 		}(item_id))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/setpending',
+		'https://steamcommunity.com/sharedfiles/setpending',
 		options
 	);
 }
@@ -114,7 +114,7 @@ function VoteUp(item_id)
 			}(item_id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/voteup',
+			'https://steamcommunity.com/sharedfiles/voteup',
 			options
 		);
 	}
@@ -166,7 +166,7 @@ function VoteDown(item_id)
 			}(item_id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/votedown',
+			'https://steamcommunity.com/sharedfiles/votedown',
 			options
 		);
 	}
@@ -204,7 +204,7 @@ function VoteLater(item_id)
 			}(item_id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/votelater',
+			'https://steamcommunity.com/sharedfiles/votelater',
 			options
 		);
 	}
@@ -222,7 +222,7 @@ function ReportItem()
 	explanation.html( 'Please enter the reason why you are reporting this item for violating the Steam Terms of Service. This cannot be undone.' );
 
 	var dmcaLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
-	dmcaLink.html( 'If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="http://steamcommunity.com/dmca/create/" target="_blank">here</a>.' );
+	dmcaLink.html( 'If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="https://steamcommunity.com/dmca/create/" target="_blank">here</a>.' );
 	var actualLink = dmcaLink.find( "a" )[0];
 	actualLink.href += publishedfileid;
 
@@ -238,7 +238,7 @@ function ReportItem()
 			alert( 'Please enter a valid reason.')
 			return;
 		}
-		$J.post( 'http://steamcommunity.com/sharedfiles/reportitem', {
+		$J.post( 'https://steamcommunity.com/sharedfiles/reportitem', {
 				'id' : publishedfileid,
 				'description' : data,
 				'sessionid' : g_sessionID
@@ -358,7 +358,7 @@ function FollowItem(item_id, app_id)
 		}(item_id))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/followitem',
+		'https://steamcommunity.com/sharedfiles/followitem',
 		options
 	);
 }
@@ -471,7 +471,7 @@ function ShowAddToCollection( id, appID )
 			}
 		}
 
-		$J.post( 'http://steamcommunity.com/sharedfiles/ajaxaddtocollections',
+		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxaddtocollections',
 			params
 		).done( function( data ) {
 				dialog.Dismiss();
@@ -483,7 +483,7 @@ function ShowAddToCollection( id, appID )
 	);
 
 	// ajax request to get the user's collections
-	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetmycollections', {
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections', {
 		'appid' : appID,
 		'publishedfileid' : id,
 		'sessionid' : g_sessionID
@@ -555,7 +555,7 @@ function RemoveTaggedUser( publishedfileid, accountid )
 {
 	ShowConfirmDialog( 'Are you sure?', 'You are about to remove yourself as being tagged in this screenshot.  Are you sure?', 'Remove', 'Cancel'
 	).done( function() {
-		$J.post( 'http://steamcommunity.com/sharedfiles/removetaggeduser', {
+		$J.post( 'https://steamcommunity.com/sharedfiles/removetaggeduser', {
 			'accountid': accountid,
 			'publishedfileid' : publishedfileid,
 			'sessionid' : g_sessionID

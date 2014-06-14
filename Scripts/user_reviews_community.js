@@ -1,7 +1,7 @@
 
 function RequestCurrentUserRecommendationVotes( recommendationIDs )
 {
-	$J.post( 'http://steamcommunity.com/userreviews/ajaxgetvotes/', {
+	$J.post( 'https://steamcommunity.com/userreviews/ajaxgetvotes/', {
 			'recommendationids' : recommendationIDs
 		}
 	).done( function( response ) {
@@ -26,7 +26,7 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 
 function UserReviewVoteUp( id )
 {
-	UserReview_Rate( id, true, 'http://steamcommunity.com',
+	UserReview_Rate( id, true, 'https://steamcommunity.com',
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).addClass( "btn_active" );
 			$J( "#RecommendationVoteDownBtn" +id ).removeClass( "btn_active" );
@@ -36,7 +36,7 @@ function UserReviewVoteUp( id )
 
 function UserReviewVoteDown( id )
 {
-	UserReview_Rate( id, false, 'http://steamcommunity.com',
+	UserReview_Rate( id, false, 'https://steamcommunity.com',
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).removeClass( "btn_active" );
 			$J( "#RecommendationVoteDownBtn" + id ).addClass( "btn_active" );

@@ -909,7 +909,7 @@ CEmoticonDelayedAJAXData.prototype.constructor = CEmoticonDelayedAJAXData;
 CEmoticonDelayedAJAXData.prototype.GetAJAXParams = function()
 {
 	return {
-		url: 'http://steamcommunity-a.akamaihd.net/' + this.m_strURL,
+		url: 'https://steamcommunity-a.akamaihd.net/' + this.m_strURL,
 		dataType: 'jsonp',
 		jsonpCallback: 'OnLoadEmoticon_' + this.m_strEmoticonName,	//consistent name for cachability
 		cache: true,

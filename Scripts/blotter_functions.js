@@ -341,7 +341,7 @@ function Blotter_GameSelector_Update()
 	else
 	{
 		// get the list
-		new Ajax.Request( 'http://steamcommunity.com/actions/SearchApps/' + encodeURIComponent( text ), {
+		new Ajax.Request( 'https://steamcommunity.com/actions/SearchApps/' + encodeURIComponent( text ), {
 			method: 'get',
 			onSuccess: function(transport) {
 						// update the list, if the text entered is still what we requested
@@ -400,7 +400,7 @@ function VoteUp(item_id)
 			}(item_id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/voteup',
+			'https://steamcommunity.com/sharedfiles/voteup',
 			options
 		);
 		LogUpvote();
@@ -428,7 +428,7 @@ function VoteDown(item_id)
 		}(item_id))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/votedown',
+		'https://steamcommunity.com/sharedfiles/votedown',
 		options
 	);
 
@@ -459,7 +459,7 @@ function LogUpvote()
 	if ( !g_bRecoredUpvote )
 	{
 				g_bRecoredUpvote = true;
-		$J.post( 'http://steamcommunity.com/actions/LogFriendActivityUpvote', {sessionID: g_sessionID} );
+		$J.post( 'https://steamcommunity.com/actions/LogFriendActivityUpvote', {sessionID: g_sessionID} );
 	}
 }
 

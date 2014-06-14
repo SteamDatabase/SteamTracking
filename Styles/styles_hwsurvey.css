@@ -73,7 +73,7 @@ p.blurb2 {
 
 .graph_title {
 	width:298px;
-	background-image: url(http://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_blue.png);
+	background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/rightcol_bg_blue.png);
 	padding:5px 0px 5px 8px;
 	margin-bottom:1px;
 }
@@ -84,7 +84,7 @@ p.blurb2 {
 	padding:5px 0px 5px 15px;
 	margin:2px 0px;
 	margin-top:10px;
-	background-image: url(http://store.akamai.steamstatic.com/public/images/hws_headbar.png);
+	background-image: url(https://steamstore-a.akamaihd.net/public/images/hws_headbar.png);
 	background-repeat:repeat-y;
 	background-color:#68788b;
 }
@@ -222,22 +222,22 @@ p.blurb2 {
 	height:90px;
 }
 #PCVideoCardMfg {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_pcvideocardmfg_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_pcvideocardmfg_bg.gif');
 }
 #DXLevels {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_dxsystems_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_dxsystems_bg.gif');
 }
 #PCCPUMfg {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_pccpumfg_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_pccpumfg_bg.gif');
 }
 #PCCPUs {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_numcpus_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_numcpus_bg.gif');
 }
 #MacHardware {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_machardware_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_machardware_bg.gif');
 }
 #MacSystemRam {
-	background-image:url('http://store.akamai.steamstatic.com/public/images/hws_macram_bg.gif');
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/hws_macram_bg.gif');
 }
 .chartRange {
 	color:#616161;
@@ -295,7 +295,7 @@ p.blurb2 {
 }
 
 .stats_row_details {
-	background-image: url(http://store.akamai.steamstatic.com/public/images/hws_expand.png);
+	background-image: url(https://steamstore-a.akamaihd.net/public/images/hws_expand.png);
 	background-repeat:no-repeat;
 	background-color:#1f1f1f;
 	display:none;
