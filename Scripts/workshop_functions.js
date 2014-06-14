@@ -1,7 +1,7 @@
 
 function DownloadFile( publishFileID )
 {
-    $J.post( "http://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID )
+    $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID )
 
     .done( function(response) {
         if ( response.success == 1 )
@@ -555,7 +555,7 @@ function SharedFileHover( elem, event, id, loggedIn, itemData )
 			window.setTimeout( function() {
 				if ( !elem.ajaxRequest ) {
 					elem.ajaxRequest = new Ajax.Updater( newDiv,
-								'http://steamcommunity.com/sharedfiles/friendswhofavoritedfile?id=' + id + '&appid=' + itemData['appid'],
+								'https://steamcommunity.com/sharedfiles/friendswhofavoritedfile?id=' + id + '&appid=' + itemData['appid'],
 								{ method: 'get', onComplete: function() { UpdateWorkshopItemHover( elem, divHover, targetId ); } } );
 				}
 			}, 0 );
@@ -735,7 +735,7 @@ function ShowContributorDialog( publishedfileid )
 	if ( !bRetrievedFriendsPicker )
 	{
 		bRetrievedFriendsPicker = true;
-		new Ajax.Updater( "friendsPicker", "http://steamcommunity.com/sharedfiles/contributorpicker/" + publishedfileid );
+		new Ajax.Updater( "friendsPicker", "https://steamcommunity.com/sharedfiles/contributorpicker/" + publishedfileid );
 	}
 	showModal( 'friendsPickerModal', true );
 }
@@ -755,7 +755,7 @@ function AddContributor( steamid, profileName, avatarLink )
 		}(publishedfileid))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/addcontributor',
+		'https://steamcommunity.com/sharedfiles/addcontributor',
 		options
 	);
 
@@ -778,7 +778,7 @@ function RemoveContributor( steamid, profileName, avatarLink )
 		}(publishedfileid))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/removecontributor',
+		'https://steamcommunity.com/sharedfiles/removecontributor',
 		options
 	);
 
@@ -797,7 +797,7 @@ function AcceptSplit( publishedfileid )
 		}(publishedfileid))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/acceptsplit',
+		'https://steamcommunity.com/sharedfiles/acceptsplit',
 		options
 	);
 
@@ -821,7 +821,7 @@ function FinalizeContributors( publishedfileid )
 		}(publishedfileid))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/finalizecontributors',
+		'https://steamcommunity.com/sharedfiles/finalizecontributors',
 		options
 	);
 }
@@ -941,7 +941,7 @@ function EditPublishedFileChangeLog( publishedFileID, changeLog )
 	dialog.done( function( data ) {
 		changeLog['change_description'] = data;
 
-		$J.post( 'http://steamcommunity.com/sharedfiles/ajaxsetchangehistoryentry', {
+		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxsetchangehistoryentry', {
 				'id' : publishedFileID,
 				'timestamp' : changeLog['timestamp'],
 				'change_description' : data,
@@ -969,7 +969,7 @@ function PickWorkshopServiceProviders( publishedFileID, appID )
 		splits.push( { 'steamid' : slider.GetSteamID(), 'split' : slider.GetValue() } );
 	}
 
-	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetserviceproviders', {
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetserviceproviders', {
 			'id' : publishedFileID,
 			'appid' : appID,
 			'splits' : splits,
@@ -998,7 +998,7 @@ function PickWorkshopServiceProviders( publishedFileID, appID )
 			}
 
 			// get existing revenue splits, adding new and removing old
-			$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetserviceprovidersplits', {
+			$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetserviceprovidersplits', {
 					'id' : publishedFileID,
 					'sessionid' : g_sessionID,
 					'service_providers' : service_providers,
@@ -1070,7 +1070,7 @@ function SaveWorkshopServiceProviders( publishedFileID )
 	$J( "#SavingServiceProviderRevenueShares" ).show();
 	$J( "#SavedServiceProviderRevenueShares" ).hide();
 
-	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxsetserviceprovidersplits', {
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxsetserviceprovidersplits', {
 			'id' : publishedFileID,
 			'splits' : splits,
 			'sessionid' : g_sessionID

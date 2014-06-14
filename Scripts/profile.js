@@ -6,7 +6,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 	// this deferred will succeed if an invite is succesfully sent, fail if the user dismisses the modal or the invite AJAX fails
 	var deferred = new jQuery.Deferred();
 
-	var Modal = ShowDialog( 'Invite to join your group', '<div class="group_invite_throbber"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Invite to join your group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	var bBulkFriendInvite = false;
@@ -19,7 +19,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 		if ( rgFriendsToInvite.length == 1 )
 		{
 			steamIDInvitee = rgFriendsToInvite[0];
-			strProfileURL = 'http://steamcommunity.com/profiles/' + steamIDInvitee + '/';
+			strProfileURL = 'https://steamcommunity.com/profiles/' + steamIDInvitee + '/';
 		}
 		else
 		{
@@ -71,7 +71,7 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 	else
 		params.invitee = steamIDInvitee;
 
-	return $J.ajax( { url: 'http://steamcommunity.com/actions/GroupInvite',
+	return $J.ajax( { url: 'https://steamcommunity.com/actions/GroupInvite',
 		data: params,
 		type: 'POST'
 	} ).done( function( data ) {
@@ -99,7 +99,7 @@ function RemoveFriend()
 		'Remove friend'
 	).done( function() {
 		$J.post(
-			'http://steamcommunity.com/actions/RemoveFriendAjax',
+			'https://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
 			ShowAlertDialog( 'Remove friend',
@@ -122,7 +122,7 @@ function AddFriend( bRespondingToInvite )
 	var strPersonaName = g_rgProfileData['personaname'];
 
 	$J.post(
-		'http://steamcommunity.com/actions/AddFriendAjax',
+		'https://steamcommunity.com/actions/AddFriendAjax',
 		{sessionID: g_sessionID, steamid: steamid, accept_invite: bRespondingToInvite ? 1 : 0 }
 	).done( function() {
 		if ( !bRespondingToInvite )
@@ -154,7 +154,7 @@ function ConfirmBlock()
 		'Yes, block them'
 	).done( function() {
 			$J.post(
-				'http://steamcommunity.com/actions/BlockUserAjax',
+				'https://steamcommunity.com/actions/BlockUserAjax',
 				{sessionID: g_sessionID, steamid: steamid }
 			).done( function() {
 				ShowAlertDialog( 'Block all communication',
@@ -203,7 +203,7 @@ function ShowFriendsInGroup( unClanIDTarget )
 
 function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 
@@ -217,7 +217,7 @@ function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
 	if ( rgAccountIDs )
 		rgParams['accountids'] = rgAccountIDs.join( ',' );
 
-	$J.get( 'http://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
+	$J.get( 'https://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
 
 		$ListElement.html( html );
 
@@ -336,7 +336,7 @@ function ShowAliasPopup(e)
 	var aliasContainer = $( 'NamePopupAliases' );
 
 	var throbber = document.createElement( 'img' );
-	throbber.src = 'http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif';
+	throbber.src = 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif';
 	aliasContainer.appendChild( throbber );
 
 	new Ajax.Request( g_rgProfileData['url'] + 'ajaxaliases/', {
@@ -373,7 +373,7 @@ function ShowAliasPopup(e)
 
 function ShowFriendSelect( title, fnOnSelect )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', 'Cancel' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', 'Cancel' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 
@@ -381,7 +381,7 @@ function ShowFriendSelect( title, fnOnSelect )
 
 	var rgParams = {type: 'friends'};
 
-	$J.get( 'http://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
+	$J.get( 'https://steamcommunity.com/actions/PlayerList/', rgParams, function( html ) {
 
 		$ListElement.html( html );
 

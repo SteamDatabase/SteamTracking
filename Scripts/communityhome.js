@@ -13,7 +13,7 @@ function InitGameHubSearch()
 function OnSelectGame( GameSelector, rgAppData )
 {
 	$( 'appHubsSearchText' ).value = rgAppData.name;
-	top.location.href = 'http://steamcommunity.com/app/' + rgAppData.appid;
+	top.location.href = 'https://steamcommunity.com/app/' + rgAppData.appid;
 }
 
 function OnLoad()

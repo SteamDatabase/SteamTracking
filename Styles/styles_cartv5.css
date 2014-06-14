@@ -78,7 +78,7 @@
 .btn_checkout_working {
 	width: 121px;
 	height: 28px;
-	background-image: url(http://store.akamai.steamstatic.com/public/images/v5/btn_checkout_working.gif);
+	background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/btn_checkout_working.gif);
 	
 	color: #626466;
 	font-size: 11px;
@@ -405,7 +405,7 @@
 
 .cart_tab_left_on {
 	position: absolute;
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_pipeline_undershadow.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/checkout_pipeline_undershadow.png );
 	height: 9px;
 	top: 30px;
 	left: 1px;
@@ -422,7 +422,7 @@
 	top: 0px;
 	right: 0px;
 	
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_pipeline_rightshadow.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/checkout_pipeline_rightshadow.png );
 }
 
 .cart_tab_on, .cart_tab_off, .cart_tab_inactive {
@@ -447,7 +447,7 @@
 .cart_tab_spacer {
 	width: 4px;
 	height: 8px;
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/checkout_tab_spacer.gif );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/checkout_tab_spacer.gif );
 	background-repeat: no-repeat;
 	margin: 10px 10px;
 }
@@ -492,7 +492,7 @@
 
 .cart_status_message_left, .cart_status_message_right {
 	position: absolute;
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/cart_statusmessage_corners.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/cart_statusmessage_corners.png );
 	height: 29px;
 	width: 2px;
 	top: 0px;
@@ -527,7 +527,7 @@
 }
 
 .cart_status_message_arrow {
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/cart_statusmessage_arrow.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/cart_statusmessage_arrow.png );
 	height: 9px;
 	width: 18px;
 	margin: 0px auto;
@@ -720,7 +720,7 @@
 
 .cart_coupon_selector_top {
 	height: 12px;
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/shadow_topbottom.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/shadow_topbottom.png );
 	background-repeat: repeat-x;
 	background-position: top;
 	margin-top: -12px;
@@ -1186,7 +1186,7 @@ label.send_choice_txt {
 
 .btn_checkout_print {
 	display: block;
-	background-image: url( http://store.akamai.steamstatic.com/public/images/v5/btn_checkout_print.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/btn_checkout_print.png );
 	width: 168px;
 	height: 40px;
 }
@@ -1232,7 +1232,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 }
 
 a.trigger, a.activetrigger {
-	background: url(http://store.akamai.steamstatic.com/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
+	background: url(https://steamstore-a.akamaihd.net/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
 	
 	display:block;
 	float:left;

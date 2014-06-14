@@ -294,7 +294,7 @@ var NotificationPaging = {
 
 function RemoveCommentNotification( elLink, strCommentThreadType, steamidOwner, gidFeature, gidFeature2 )
 {
-	var strURL = 'http://steamcommunity.com/comment/' + strCommentThreadType + '/removenotification/' + steamidOwner + '/' + gidFeature;
+	var strURL = 'https://steamcommunity.com/comment/' + strCommentThreadType + '/removenotification/' + steamidOwner + '/' + gidFeature;
 	if ( gidFeature2 && gidFeature2 != -1 )
 		strURL += '?feature2=' + gidFeature2;
 	$J.post( strURL, {sessionid: g_sessionID} )

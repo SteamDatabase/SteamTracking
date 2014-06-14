@@ -218,7 +218,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			iframe.width = 0;
 			iframe.height = 0;
 			iframe.style.display = 'none';
-			iframe.src = 'steam://openurl_external/https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_SessionID;
+			iframe.src = 'steam://openurl_external/https://store.steampowered.com//login/?redir=' + encodeURIComponent( 'paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl );
 
 			document.body.appendChild(iframe);
 		}
@@ -572,6 +572,36 @@ function InitializeTransaction()
 				g_bInitTransactionCallRunning = true;
 		
 				AnimateSubmitPaymentInfoButton();
+		
+		var sPaymentMethod = method.value;
+		if ( BIsStoredCreditCard() )
+		{
+			sPaymentMethod = $('stored_payment_method').value;
+		}
+		else if ( method.value == 'storedpaypal' && g_bEnableCachedPayPalCredentials )
+		{
+			sPaymentMethod = 'paypal';
+		}
+	 
+	 	var paymentGID = '';
+	 	
+	 	if ( BIsStoredCreditCard() )
+	 	{
+	 		paymentGID = $('stored_card_id').value;
+	 	}
+	 	else if ( method.value == 'storedpaypal' && g_bEnableCachedPayPalCredentials )
+	 	{
+	 		paymentGID = $('stored_paypal_id').value;
+	 	}
+		
+		var bSaveBillingAddress = false;
+		if ( $('save_my_address').checked && !BIsStoredCreditCard() && method.value != 'storedpaypal' )
+		{
+			if ( method.value == 'paypal' )
+				bSaveBillingAddress = g_bEnableCachedPayPalCredentials;
+			else
+				bSaveBillingAddress = true;
+		}
 	 
 		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
 		{
@@ -579,7 +609,7 @@ function InitializeTransaction()
 		    parameters: { 
 				// Info for all carts
 				'gidShoppingCart' : $('shopping_cart_gid').value,
-				'PaymentMethod' : BIsStoredCreditCard() ? $('stored_payment_method').value : method.value,
+				'PaymentMethod' : sPaymentMethod,
 				'abortPendingTransactions' : ( $('cancel_pending').checked ? 1 : 0 ),
 		    	
 				'bHasCardInfo' : ( bHasCardInfo ? 1 : 0 ),
@@ -627,8 +657,8 @@ function InitializeTransaction()
 				'BankAccount' : $('bank_account').value,
 				'BankCode' : $('bank_code').value,
 				
-								'bSaveBillingAddress' : ( $('save_my_address').checked ? 1 : 0 ),
-				'gidPaymentID' : BIsStoredCreditCard() ? $('stored_card_id').value : '',
+								'bSaveBillingAddress' : bSaveBillingAddress ? 1 : 0,
+				'gidPaymentID' : paymentGID,
 				'bUseRemainingSteamAccount' : (g_bUseRemainingSteamAccount ? 1 : 0),
 				'bPreAuthOnly' : (g_bIsUpdateBillingInfoForm ? 1 : 0)
 			},
@@ -675,7 +705,7 @@ function OnInitializeTransactionSuccess( result )
 	{
 				$('transaction_id').value = result.transid;
 		
-				if ( result.paymentmethod == 4 && result.transactionprovider != 5 )
+				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
 		{
 									
 						$('payment_row_one').style.display = 'none';
@@ -686,6 +716,7 @@ function OnInitializeTransactionSuccess( result )
 			$('payment_row_six').style.display = 'none';
 			$('payment_header_title').style.display = 'none';
 			$('payment_row_save_my_address').style.display = 'none';
+			$('payment_row_country_verification').style.display = 'none';
 
 			$('payment_row_eight').style.display = 'block';
 			
@@ -703,7 +734,7 @@ function OnInitializeTransactionSuccess( result )
 			
 			return;
 		}
-		else if ( result.paymentmethod == 4 || result.paymentmethod == 3 
+		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3 
 					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11					|| result.paymentmethod == 12 
 					|| result.paymentmethod == 14 
 					|| result.paymentmethod == 33 
@@ -767,6 +798,9 @@ function OnInitializeTransactionFailure( detail, result )
 					break;
 				case 9:
 					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
+					break;
+				case 57:
+					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'http://store.steampowered.com/account\'>account</a> page.';
 					break;
 				case 31:
 					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
@@ -1036,7 +1070,7 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PaySafeCard website.  After filling in your code you will be automatically re-routed back to the Steam client which will confirm your purchase.  To avoid purchasing failures, please do not hit your back button or close the PaySafe window before the process is complete.';
 					}
 				}
-				else if ( method.value == 'paypal' )
+				else if ( method.value == 'paypal' || method.value == 'storedpaypal' )
 				{
 					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Begin PayPal Purchase';
@@ -1959,6 +1993,8 @@ function UpdatePaymentInfoForm()
 		var bShowBankAccountForm = false;
 		var bShowMobileForm = false;
 		var bShowPaymentSpecificNote = false;
+		var bShowSaveMyAddress = false;
+		var bShowStoredPayPalDetails = false;
 		$('payment_row_one').style.display = 'block';
 		$('payment_row_eight').style.display = 'none';
 		
@@ -1995,12 +2031,21 @@ function UpdatePaymentInfoForm()
 						bShowAddressForm = true;
 			bShowCreditCardNumberExp = true;
 									bShowCVV = method.value != 'jcb' && !card_is_stored; 
+			bShowSaveMyAddress = true;
 		}
 		else if ( method.value == 'paypal' )
 		{
-						bShowAddressForm = true;
+						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
+			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
+		}
+		else if ( method.value == 'storedpaypal' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+			bShowStoredPayPalDetails = true;
 		}
 		else if ( method.value == 'giropay' )
 		{
@@ -2011,8 +2056,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy'  )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2035,6 +2079,13 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowMobileForm = true;
+		}
+		else if ( method.value == 'konbini' || method.value == 'credit_card_japan' || method.value == 'bank_transfer_japan' || method.value == 'payeasy')
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee and local taxes for using this payment method';
 		}
 		else if ( method.value == 'clickandbuy' || method.value == 'savedcbaccount' )
 		{
@@ -2122,7 +2173,12 @@ function UpdatePaymentInfoForm()
 		$('payment_row_five').style.display = strAddressDisplay;
 		$('payment_row_six').style.display = strAddressDisplay;
 		$('payment_header_title').style.display = strAddressDisplay;
-		$('payment_row_save_my_address').style.display = strAddressDisplay;
+
+		var strSaveMyAddressDisplay = bShowSaveMyAddress ? 'block' : 'none';
+		$('payment_row_save_my_address').style.display = strSaveMyAddressDisplay;
+		
+		var strShowStoredPayPalDetails = bShowStoredPayPalDetails ? 'block' : 'none';
+		$('payment_row_stored_paypal_details').style.display = strShowStoredPayPalDetails;
 		
 		var strBankAccountDisplay = bShowBankAccountForm ? 'block' : 'none';
 		$('bank_account_label').style.display = strBankAccountDisplay;
@@ -2435,7 +2491,7 @@ function SubmitPaymentInfoForm()
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy'  )
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2482,7 +2538,7 @@ function SubmitPaymentInfoForm()
 				rgBadFields.verify_country_only_label = true;
 			}
 		}
-		else if ( method.value == 'paypal' || BIsCreditCardMethod( method.value ) )
+		else if ( ( !g_bSkipAddressRequirementForPayPal && method.value == 'paypal' ) || BIsCreditCardMethod( method.value ) )
 		{
 			
 			if ( $( 'first_name' ).value.length < 1 )
@@ -2718,6 +2774,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
 			{
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'storedpaypal' && providerPaymentMethod == 4 )
+			{
+				$('payment_method_review_text').innerHTML = 'My PayPal Account (' + $('stored_paypal_email').value + ')';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'paypal' && providerPaymentMethod == 4 )
@@ -3174,6 +3235,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						case 9:
 						case 7:
 						case 11:
+						case 57:
 							error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 							break;
 						case 1:
@@ -3245,6 +3307,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 					case 9:
 					case 7:
 					case 11:
+					case 57:
 						error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 						break;
 					case 13:
@@ -3262,7 +3325,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						break;
 					case 17:
 					case 2:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the funding source associated with your account. You can either correct this problem through the processor, or select a different payment method.';
+						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the funding source associated with your account. Please <a href=\'javascript:SetTabEnabled("payment_info");\'>select a different payment method</a> or update your funding source with PayPal and try again.';
 						break;
 					case 18:
 						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the address associated with your account. You can either correct this problem through the processor, or select a different payment method.';

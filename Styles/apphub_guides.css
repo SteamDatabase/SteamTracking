@@ -221,7 +221,7 @@
 	margin-top: -2px;
 	width: 17px;
 	height: 18px;
-	background-image: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/workshop_section_arrow.png');
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/workshop_section_arrow.png');
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	margin-right: 0px;
@@ -231,7 +231,7 @@
 {
 	background-position: 0px 0px;
 	margin-top: -2px;
-	background-image: url('http://steamcommunity-a.akamaihd.net/public/images//sharedfiles/workshop_dateselect_arrow.png');
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/workshop_dateselect_arrow.png');
 	background-repeat: no-repeat;
 	background-position: top center;
 	margin-right: 0px;
@@ -314,7 +314,7 @@
 	width: 275px;
 	height: 112px;
 	background-repeat:no-repeat;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Guides_moreinfo.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Guides_moreinfo.png');
 	cursor: pointer;
 }
 

@@ -2,7 +2,7 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
@@ -10,7 +10,7 @@
 	margin: 0px auto;
 }
 #BG_bottom {
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -130,7 +130,7 @@
 	width: 2px;
 	height: 54px;
 
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/economy/game_button_separator.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/economy/game_button_separator.png');
 	background-repeat:no-repeat;
 }
 
@@ -230,7 +230,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover {
 	background-position: -1px -197px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 }
 
@@ -283,7 +283,7 @@ a.games_list_tab:hover {
 
 #contextselect {
 	background-color: #000000;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/context_arrow.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/context_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: right top;
 	border: 1px solid #676767;
@@ -479,7 +479,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	border: 1px solid #4d4d4e;
 	border-radius: 2px;
 	background-color: #373634;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/economy/pendinggift_bg.jpg' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/pendinggift_bg.jpg' );
 	background-repeat: no-repeat;
 	background-position: bottom right;
 
@@ -664,7 +664,7 @@ p.pending_gifts_none {
 }
 
 .alertbox_header, .alertbox_header .leftcap, .alertbox_header .rightcap {
-	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/economy/alertbox_header.png );
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/economy/alertbox_header.png );
 }
 
 .alertbox_header {
@@ -729,7 +729,7 @@ p.pending_gifts_none {
 	text-align: center;
 	color: #b4b4b4;
 
-	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/economy/alertbox_scrollcontrol_shadow.png );
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/economy/alertbox_scrollcontrol_shadow.png );
 	background-repeat: repeat-y;
 }
 

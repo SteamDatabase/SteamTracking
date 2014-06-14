@@ -216,7 +216,7 @@ var HighlightPlayer = Class.create( {
 		{
 			var strRequiredVersion = "9";
 			if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
-			swfobject.embedSWF( "http://store.akamai.steamstatic.com/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
+			swfobject.embedSWF( "https://steamstore-a.akamaihd.net/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
 			if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
 			{
 				//looks like the user doesn't have flash, show this message

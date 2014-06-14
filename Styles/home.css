@@ -11,7 +11,7 @@
 	height:163px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxTopper.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxTopper.gif');
 }
 
 #mainBodyHeader h1 {
@@ -65,7 +65,7 @@
 	margin:0;
 	padding:0;
 	width:958px;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxBG.gif');
 }
 
 #lowerLeftContents {
@@ -153,7 +153,7 @@
 	height:9px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockHeader.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockHeader.gif');
 }
 #rightActionBlockFooter {
 	width:254px;
@@ -161,14 +161,14 @@
 	margin:0;
 	margin-bottom:20px;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockFooter.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockFooter.gif');
 }
 #rightActionBlock {
 	width:254px;
 	margin:0;
 	padding:0;
 	padding-bottom:6px;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightActionBlockBG.gif');
 	background-repeat:repeat-y;
 }
 
@@ -234,7 +234,7 @@
 	height:8px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockHeader.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockHeader.gif');
 }
 #rightSetupBlockFooter {
 	width:254px;
@@ -242,14 +242,14 @@
 	margin:0;
 	margin-bottom:8px;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockFooter.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockFooter.gif');
 }
 #rightSetupBlock {
 	width:254px;
 	height:78px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockBG.gif');
 	background-repeat:repeat-y;
 }
 
@@ -268,7 +268,7 @@
 	height:8px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockHeader.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockHeader.gif');
 }
 .rightLowBlockFooter {
 	width:254px;
@@ -276,13 +276,13 @@
 	margin:0;
 	margin-bottom:12px;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockFooter.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockFooter.gif');
 }
 .rightLowBlock {
 	width:254px;
 	margin:0;
 	padding:0;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/rightStatsBlockBG.gif');
 	background-repeat:repeat-y;
 }
 
@@ -383,7 +383,7 @@ input.subImage {
 	padding:0;
 	padding-left:13px;
 	margin-bottom:7px;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/bulletArrow.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bulletArrow.gif');
 	background-repeat:no-repeat;
 	background-position:0px 5px;
 }
@@ -489,7 +489,7 @@ a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
 
 .OpenID_Subheader
 {
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/header/lowerBarBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/header/lowerBarBG.gif');
 	background-repeat:repeat-x;
 	color:#344C5F;
 	margin:1px 0 0;
@@ -509,7 +509,7 @@ a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
 	padding-bottom: 24px;
 	width: 958px;
 	margin: 0;
-	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxTopper.gif');
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxTopper.gif');
 	text-align: left;
 }
 

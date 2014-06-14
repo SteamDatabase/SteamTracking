@@ -264,7 +264,7 @@ function SelectLanguageFilter( url )
 
 function RequestCurrentUserVotes( publishedFileIDs )
 {
-	$J.post( 'http://steamcommunity.com/sharedfiles/ajaxgetvotes/', {
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetvotes/', {
 			'publishedfileids' : publishedFileIDs
 		}
 	).done( function( response ) {
@@ -333,7 +333,7 @@ function PublishedFileVoteUp( id )
 			}(id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/voteup',
+			'https://steamcommunity.com/sharedfiles/voteup',
 			options
 		);
 	}
@@ -358,7 +358,7 @@ function PublishedFileVoteDown( id )
 			}(id))
 		};
 		new Ajax.Request(
-			'http://steamcommunity.com/sharedfiles/votedown',
+			'https://steamcommunity.com/sharedfiles/votedown',
 			options
 		);
 	}
@@ -377,7 +377,7 @@ function PublishedFileBan( id, appid )
 		}(id))
 	};
 	new Ajax.Request(
-		'http://steamcommunity.com/sharedfiles/ban',
+		'https://steamcommunity.com/sharedfiles/ban',
 		options
 	);
 }

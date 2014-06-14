@@ -33,7 +33,7 @@ function SearchTimeout( value )
 	if ( value )
 	{
 		$J.ajax({
-			url: 'http://store.steampowered.com/search/suggest',
+			url: 'https://store.steampowered.com/search/suggest',
 			success: function( data )
 			{
 				$J( '#searchSuggestionsContents' ).html( data );
@@ -133,7 +133,7 @@ function AddToWishlistMobile( appid, divToHide, divToShowSuccess, navref )
 	if ( navref )
 		MakeNavCookie( navref, url );
 
-	var url = 'http://store.steampowered.com/api/addtowishlist';
+	var url = 'https://store.steampowered.com/api/addtowishlist';
 
 	$J.post(
 		url,

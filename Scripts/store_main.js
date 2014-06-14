@@ -492,6 +492,12 @@ function GameHover( elem, event, divHover, rgHoverData )
 	var hover = $(divHover);
 	
 	if ( !hover )
+	{
+				$(document.body).insert( {bottom: "\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\r\n\t\t\t<div class=\"game_hover_box hover_box\">\r\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\r\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\r\n\t\t<\/div>" });
+		hover = $('global_hover');
+	}
+
+	if ( !hover )
 		return;
 	
 	if ( hover.hiding && hover.visible() && hover.target == elem )
@@ -532,15 +538,19 @@ function GameHover( elem, event, divHover, rgHoverData )
 				// is cc needed?
 				rgAjaxParams = { /*cc: rgHoverData['cc'],*/ l: 'english' };
 			}
+			if ( rgHoverData['v6'] )
+			{
+				rgAjaxParams['pagev6'] = true;
+			}
 			window.setTimeout( function() { 
 				if ( elem.bWantsHover && !elem.ajaxRequest ) {
 					elem.ajaxRequest = new Ajax.Updater( hover.down('.content'),
 								'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'],
-								{ method: 'get', parameters: rgAjaxParams, insertion: 'bottom', onComplete: function() { ShowGameHover( elem, divHover, targetId, params ); } } );
+								{ method: 'get', parameters: rgAjaxParams, insertion: 'bottom', onComplete: function() { ShowGameHover( elem, hover, targetId, params ); elem.ajaxRequest = null; } } );
 				}
 			}, 250 );
 		}
-		elem.timer = window.setTimeout( function() { elem.timer = false; elem.bReadyForHover = true; ShowGameHover( elem, divHover, targetId, params ); }, 500 );
+		elem.timer = window.setTimeout( function() { elem.timer = false; elem.bReadyForHover = true; ShowGameHover( elem, hover, targetId, params ); }, 500 );
 	}
 }
 
@@ -937,14 +947,17 @@ function PrevSpotlight( cMaxSpotlights )
 function UpdateSpotlightControls( cMaxSpotlights )
 {
 	if ( g_iActiveSpotlight < cMaxSpotlights - 1 )
-		$('spotlight_scroll_next').show();
+		$('spotlight_scroll_next').removeClassName( 'disabled' );
 	else
-		$('spotlight_scroll_next').hide();
+		$('spotlight_scroll_next').addClassName( 'disabled' );
 	
 	if ( g_iActiveSpotlight > 0 )
-		$('spotlight_scroll_prev').show();
+		$('spotlight_scroll_prev').removeClassName( 'disabled' );
 	else
-		$('spotlight_scroll_prev').hide();
+		$('spotlight_scroll_prev').addClassName( 'disabled' );
+
+	if ( $('spotlight_scroll_count_cur') )
+		$('spotlight_scroll_count_cur').update( g_iActiveSpotlight + 1 );
 }
 
 function InitDailyDealTimer( elTimer, nServerEndTime )
@@ -1492,7 +1505,7 @@ function AddFreeLicense( subid, strDisplayName )
 
 	window.g_bAddFreeLicenseInFlight = true;
 
-	$J.post( 'http://store.steampowered.com/checkout/addfreelicense/' + subid, { ajax: true, sessionid: g_sessionID }).done( function() {
+	$J.post( 'https://store.steampowered.com/checkout/addfreelicense/' + subid, { ajax: true, sessionid: g_sessionID }).done( function() {
 		ShowAlertDialog(
 			strDisplayName,
 			'%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName )

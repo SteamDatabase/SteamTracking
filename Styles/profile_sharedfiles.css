@@ -1,7 +1,7 @@
 
 body {
 	background-color: #262627;
-	background-image:url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png');
 	background-repeat: repeat-x;
 }
 
@@ -96,7 +96,7 @@ body {
 
 #tabs_baseline {
 	clear:left;
-	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/tab_baseline_blue.png');
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/tab_baseline_blue.png');
 	background-repeat:no-repeat;
 	width:958px;
 	height: 5px;
@@ -105,7 +105,7 @@ body {
 
 #tabs_basebg_workshop {
 	padding: 0px;
-	background-image: url('http://steamcommunity-a.akamaihd.net/public/images/skin_1/profile_shared_workshop_background.jpg?v=1');
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/profile_shared_workshop_background.jpg?v=1');
 	background-repeat:no-repeat;
 	width:958px;
 	min-height: 441px;
@@ -113,7 +113,7 @@ body {
 
 #tabs_basebg {
 	padding: 0px;
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/skin_1/profile_shared_general_background.jpg' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/profile_shared_general_background.jpg' );
 	background-repeat:no-repeat;
 	width:958px;
 	min-height: 441px;
@@ -229,7 +229,7 @@ a.general_btn:hover {
 	left: 8px;
 	height: 16px;
 	width: 16px;
-	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_follow_tiled.png);
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_follow_tiled.png);
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -378,7 +378,7 @@ div.sharedfiles_filterselect_options div.option{
 }
 
 div.sharedfiles_filterselect div.sharedfiles_filterselect_activeoption {
-	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: top right;
 	padding-right: 17px;
@@ -500,7 +500,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementToggle {
-	background-image: url(http://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_downarrow.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_downarrow.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	border-radius: 4px;
@@ -524,7 +524,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementToggle.screenshotManagementToggleUp {
-	background-image: url(http://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_uparrow.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images//skin_1/screenshot_manage_uparrow.png);
 }
 
 
@@ -567,7 +567,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	margin-top: -7px;
 	margin-right: 5px;
 	float: left;
-	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png);
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -713,7 +713,7 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 
 .sectionTabActive .sectionTab_leftcap, .sectionTabActive .sectionTab_rightcap, .sectionTabActive .sectionTab
 {
-	background-image: url( http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/tab_active_blue.png );
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/tab_active_blue.png );
 }
 
 .sectionTab_leftcap

@@ -28,7 +28,7 @@ function UnpackGift( gidGift )
 {
 	var action = 'validateunpack';
 
-	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onSuccess: function( transport ) { OnValidateUnpackResults( gidGift, transport ); },
@@ -41,7 +41,7 @@ function UnpackGiftItemReward( gidGift )
 {
 	var action = 'validateunpack';
 
-	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onSuccess: function( transport ) {
@@ -61,7 +61,7 @@ function UnpackGiftItemReward( gidGift )
 
 					var action = 'unpack';
 
-					new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+					new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 						method: 'post',
 						parameters: { sessionid: g_sessionID },
 						onComplete: function( transport ) {
@@ -108,7 +108,7 @@ function DoUnpackGift( gidGift, packageid, packagename )
 
 	var action = 'unpack';
 
-	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onComplete: function( transport ) { OnUnpackGiftResults( gidGift, packageid, packagename, transport ); }
@@ -123,7 +123,7 @@ function DeleteGift( gidGift )
 			'Delete gift',
 			'Cancel'
 	).done( function() {
-		new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + 'delete', {
+		new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + 'delete', {
 			method: 'post',
 			parameters: { sessionid: g_sessionID },
 			onSuccess: function( transport ) { OnDeleteGiftResults( gidGift, transport ); },
@@ -150,7 +150,7 @@ function DoAcceptGift( gidGift, bUnpack )
 
 	var action = bUnpack ? 'acceptunpack' : 'accept';
 
-	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onComplete: function( transport ) { OnAcceptGiftResults( gidGift, bUnpack, transport ); }
@@ -165,7 +165,7 @@ function DoDeclineGift( gidGift, steamidSender )
 
 	var action = 'decline';
 
-	new Ajax.Request( 'http://steamcommunity.com/gifts/' + gidGift + '/' + action, {
+	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
 		parameters: { sessionid: g_sessionID, steamid_sender: steamidSender },
 		onComplete: function( transport ) { OnDeclineGiftResults( gidGift, transport ); }
@@ -324,7 +324,7 @@ function ShowGiftHistory()
 
 		new Ajax.Updater(
 			'gift_history_content',
-			'http://steamcommunity.com/gifts/0/history/',
+			'https://steamcommunity.com/gifts/0/history/',
 			{ method: 'get' }
 		);
 	}

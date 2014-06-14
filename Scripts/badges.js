@@ -319,7 +319,7 @@ function OpenBooster( appid, itemid )
 
 	$BtnClose.click( function() { Modal.Dismiss(); } );
 
-	//var $ImgBooster = $J('<img/>', {'class': 'booster_unpack_booster', src: 'http://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=' + g_strLanguage } );
+	//var $ImgBooster = $J('<img/>', {'class': 'booster_unpack_booster', src: 'https://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=' + g_strLanguage } );
 	//$CardArea.append( $ImgBooster );
 
 	var $Booster = $J('<div/>', {'class': 'booster_unpack_booster' } );
@@ -328,13 +328,13 @@ function OpenBooster( appid, itemid )
 	{
 		var $CardBack = $J('<div/>', {'class': 'booster_unpack_card card_back card' + (i+1) } );
 		var $ImgFlipGradient = $J('<div/>', {'class': 'booster_unpack_card_image_flip_gradient'});
-		var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: 'http://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=english&single=1' } );
+		var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: 'https://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=english&single=1' } );
 		$CardBack.append( $Img, $ImgFlipGradient );
 		$Booster.append( $CardBack );
 		$rgCardBacks.push( $CardBack );
 	}
 
-	var $ImgRibbon = $J('<img/>', {'class': 'booster_unpack_ribbon', 'src': 'http://steamcommunity-a.akamaihd.net/economy/boosterpackribbon/?l=english' });
+	var $ImgRibbon = $J('<img/>', {'class': 'booster_unpack_ribbon', 'src': 'https://steamcommunity-a.akamaihd.net/economy/boosterpackribbon/?l=english' });
 	$Booster.append( $ImgRibbon );
 	$CardArea.append( $Booster );
 
@@ -441,7 +441,7 @@ function OpenBooster( appid, itemid )
 
 function ShowBoosterEligibility()
 {
-	var $Content = $J('<div class="group_invite_throbber"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
+	var $Content = $J('<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var Modal = ShowAlertDialog( 'Booster Pack Eligibility', $Content );
 
