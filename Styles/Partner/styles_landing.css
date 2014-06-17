@@ -627,6 +627,10 @@ p {
 		background-color: transparent;
 		padding: 2px 7px;
 	}
+.landingInfoTable.dark {
+    background: #151515;
+    padding: 8px;
+}
 
 .noInfo {
     color: #e1c48a;
@@ -1314,6 +1318,10 @@ span.icon_actual_authority { display: inline-block;}
 		color: #e24044;
 		font-weight: normal;
 	}
+
+.success {
+    color: #a3cf06;
+}
 
 .section.bluebox {
 	border: 2px solid #82a6d7;
