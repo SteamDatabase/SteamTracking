@@ -3669,7 +3669,7 @@ function ShowCreateNewAppProgress( strTitle, strDescription )
 
 function UpgradeGreenlightItem( publishedfileid, name )
 {
-	var prompt = ShowPromptDialog( "Import Applicatino", 'You can choose to rename your application if you wish.' );
+	var prompt = ShowPromptDialog( "Import Application", 'You can choose to rename your application if you wish.' );
 	var input = prompt.m_$Content.find( 'input' );
 	input.val( name );
 	input.select();
