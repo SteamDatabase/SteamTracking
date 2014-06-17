@@ -434,6 +434,7 @@ function CreateDateControl( target, id, initValue )
 
 var templ_DiscountDiv = new Template( ''
 		+ '	<div class="boxlist_item" id="#{DiscountId}_discountDiv">'
+		+ '		<input type="hidden" id="#{DiscountId}_group" name="#{DiscountId}[group]" value="#{Group}">'
 		+ '		<div class="boxlist_title">'
 		+ '			<div class="boxlist_controls">'
 		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( \'#{DiscountId}\' ); return false;">'
@@ -563,11 +564,12 @@ function CreateDiscount( target, id, discount )
 	var name = (discount['name'] == null ) ? '' : discount['name'];
 	var description = (discount['description'] == null ) ? '' : discount['description'];
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
-	
+	var group = (discount['group'] == null) ? '' : discount['group'];
+
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, Name: name, Description: description, DiscountPrices: strDiscountPrices } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, Name: name, Description: description, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 	
 	// set up start & end dates
