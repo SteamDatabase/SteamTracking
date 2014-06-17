@@ -59,6 +59,11 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 }
 
+.market_whatsthis {
+	color: #529CDE;
+	font-size: 85.7%;
+}
+
 .user_info_text {
 	display: inline-block;
 	vertical-align: top;
@@ -854,52 +859,46 @@ input.filter_search_box:focus {
 }
 
 #market_commodity_order_spread {
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 }
 
-.market_commodity_orders_buy_block {
-    -webkit-box-shadow: 0 0 14px #030303 inset;
-    -moz-box-shadow: 0 0 14px #030303 inset;
-    box-shadow: 0 0 14px #030303 inset;
-
-    float: left;
-    width: 448px;
-    height: 240px;
-}
-
-.market_commodity_orders_sell_block {
-    -webkit-box-shadow: 0 0 14px #030303 inset;
-    -moz-box-shadow: 0 0 14px #030303 inset;
-    box-shadow: 0 0 14px #030303 inset;
-
-    float: left;
-    width: 448px;
-    height: 240px;
+.market_commodity_orders_block {
+	float: left;
+	width: 428px;
+	min-height: 298px;
+	text-align: center;
+	border: 1px solid #303030;
+	margin: 0 10px;
 }
 
 .market_commodity_orders_interior {
-    padding: 10px;
-    padding-left: 30px;
-    height: 100%;
 }
 
 .market_commodity_orders_header {
-    padding: 6px;
-    font-size: 16px;
+	min-height: 108px;
+	margin-top: 10px;
+	font-size: 16px;
+	border-bottom: 1px solid black;
+}
+
+.market_commodity_order_summary {
+	min-height: 1em;
 }
 
 .market_commodity_orders_header_promote {
-    font-size: 24px;
     color: whitesmoke;
-    margin: 0px 2px 0px 2px;
+    margin: 0 2px 0 2px;
+}
+
+.market_commodity_orders_table_container {
+	border-top: 1px solid #303030;
 }
 
 .market_commodity_orders_table {
-    margin-left: 20px;
-    margin-top: 6px;
+	margin: 10px auto;
 }
 
 .market_commodity_orders_table th {
-	text-transform: uppercase;
 }
 
 .market_commodity_orders_table tr:nth-child(even) {
@@ -912,21 +911,24 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_orders_table th {
-	margin: 0px;
+	margin: 0;
 	text-align: center;
 	min-width: 100px;
+	font-size: 16px;
+	font-weight: normal;
 }
 
 .market_commodity_buy_button {
-    font-size: 24px;
-    color: whitesmoke;
-    padding: 6px 20px 6px 20px;
-    background: -moz-linear-gradient(top, #81b63c 5%, #4a6526 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#81b63c), color-stop(95%,#4a6526));background: -webkit-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: -o-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: -ms-linear-gradient(top, #81b63c 5%,#4a6526 95%);background: linear-gradient(to bottom, #81b63c 5%,#4a6526 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81b63c', endColorstr='#4a6526',GradientType=0 );    width: 100px;
-    border-radius: 8px;
-    margin: 10px;
-    margin-left: 30px;
-	text-transform: uppercase;
-    cursor: pointer;
+	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
+	min-width: 190px;
+	color: whitesmoke;
+	margin: 16px;
+}
+
+.market_commodity_buy_button > span {
+	line-height: 54px;
+	font-size: 36px;
+	text-align: center;
 }
 
 #market_buy_commodity_popup {
@@ -952,6 +954,8 @@ input.filter_search_box:focus {
 
 .market_buy_commodity_input_label {
 	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .market_buy_commodity_item_display {

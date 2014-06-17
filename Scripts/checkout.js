@@ -740,7 +740,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 33 
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
-					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 35 )
+					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1350,6 +1350,66 @@ function OnGetFinalPriceSuccess( result )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pay Easy customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'zong' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Zong transactions are authorized through the PayPal Payments Hub website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PayPal Payments Hub';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Zong customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PayPal Payments Hub website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'culturevoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Culture Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'bookvoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Book Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Book Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'happymoneyvoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Happymoney Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Happymoney Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'convenientstorevoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Convenient Store Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Convenient Store Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'gamevoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Game Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Game Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'eclubpoints' )
@@ -2074,6 +2134,16 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 		}
+		else if ( method.value == 'culturevoucher' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher' || method.value == 'gamevoucher' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+		}
+		else if ( method.value == 'zong' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+		}
 		else if ( method.value == 'qiwi' )
 		{
 			bShowAddressForm = false;
@@ -2491,7 +2561,9 @@ function SubmitPaymentInfoForm()
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal' )
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
+			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
+			|| method.value == 'gamevoucher' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -2939,6 +3011,36 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Pay Easy';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'zong' && providerPaymentMethod == 39 )
+			{
+				$('payment_method_review_text').innerHTML = 'Zong';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'culturevoucher' && providerPaymentMethod == 40 )
+			{
+				$('payment_method_review_text').innerHTML = 'Culture Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'bookvoucher' && providerPaymentMethod == 41 )
+			{
+				$('payment_method_review_text').innerHTML = 'Book Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'happymoneyvoucher' && providerPaymentMethod == 42 )
+			{
+				$('payment_method_review_text').innerHTML = 'Happymoney Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'convenientstorevoucher' && providerPaymentMethod == 43 )
+			{
+				$('payment_method_review_text').innerHTML = 'Convenient Store Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'gamevoucher' && providerPaymentMethod == 44 )
+			{
+				$('payment_method_review_text').innerHTML = 'Game Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 			else if ( method.value == 'eclubpoints' && providerPaymentMethod == 35 )
 			{
 				$('payment_method_review_text').innerHTML = 'EClub Points';
@@ -3296,6 +3398,12 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 36:
 			case 37:
 			case 38:
+			case 39:
+			case 40:
+			case 41:
+			case 42:
+			case 43:
+			case 44:
 			case 35:
 			default:
 			{

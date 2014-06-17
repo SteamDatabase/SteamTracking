@@ -658,6 +658,43 @@ div.youraccount_history_home>div.account_wallet {
     background-color: #4a0b12;
 }
 
+.account_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.account_table th {
+	text-align: left;
+	text-transform: uppercase;
+	background-color: #413f3d;
+	color: #82807c;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+	font-weight: normal;
+}
+
+.account_table tr {
+	border-bottom: 1px solid #000000;
+	line-height: 18px;
+}
+
+.account_table td {
+	padding: 5px 14px;
+}
+
+.account_table tr > *:last-child {
+	text-align: right;
+}
+
+.account_table a:hover {
+	color: #fff;
+}
+
+.account_table tr:nth-child(even) {
+	background-color: #1a1a1a;
+}
+
 .cached_payment_method_name
 {
 	width: 100%;
