@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" href="http://www.teamfortress.com/images/favicon.ico" />
+<title>Team Fortress 2 - Countdown!</title>
+<link rel="stylesheet" type="text/css" href="suspense.css?x=z" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+#pageContainer, #mainbody, body, html {
+	min-height:100%;
+}
+</style>
+<script language="javascript">
+var g_iSecondsUntil = 0;
+var g_iMinutesUntil = 0;
+var g_iHoursUntil = 0;
+var g_iDaysUntil = 0;
+var g_iTotalSecondsUntil = 0;
+var g_countdownTimer = false;
+function InitCountdown()
+{
+		var URL = ( location.protocol == 'https:' ) ? 'https://www.dota2.com/' : 'http://www.dota2.com/';
+		URL = URL + 'jsfeed/timeuntilpdt?time=17 Jun 2014 17:00:00';
+		$.ajax(
+			{
+				type:'GET',
+				cache:false,
+				url: URL,
+				dataType:'jsonp',
+				jsonpCallback:'ReceiveCountdownTime'
+			}
+		);
+}
+function ReceiveCountdownTime( dataJSON )
+{
+	g_iTotalSecondsUntil = dataJSON.totalSeconds;
+	g_iSecondsUntil = dataJSON.seconds;
+	g_iMinutesUntil = dataJSON.minutes;
+	g_iHoursUntil = dataJSON.hours;
+	g_iDaysUntil = dataJSON.days;
+	UpdateCountdownImages();
+	g_countdownTimer = setInterval( 'UpdateCountdown()', 1000 );
+}
+function UpdateCountdown()
+{
+	bCountdownComplete = false;
+	g_iSecondsUntil--;
+	if ( g_iSecondsUntil < 0 )
+	{
+		g_iSecondsUntil = 59;
+		g_iMinutesUntil--;
+		if ( g_iMinutesUntil < 0 )
+		{
+			g_iMinutesUntil = 59;
+			g_iHoursUntil--;
+			if ( g_iHoursUntil < 0 )
+			{
+				g_iHoursUntil = 23;
+				g_iDaysUntil--;
+				if ( g_iDaysUntil < 0 )
+				{
+					bCountdownComplete = true;
+					g_iSecondsUntil = 0;
+					g_iMinutesUntil = 0;
+					g_iHoursUntil = 0;
+					g_iDaysUntil = 0;
+				}
+			}
+		}
+	}
+	UpdateCountdownImages();
+	if ( bCountdownComplete )
+	{
+		clearInterval( g_countdownTimer );
+	}
+}
+function UpdateCountdownImages()
+{
+	imgSrcs = GetNumberImages( g_iDaysUntil, 'day' );
+	if ( $('#days_imgs2').attr('src') != imgSrcs[1] )
+		$('#days_imgs2').attr('src', imgSrcs[1] );
+	if ( $('#days_imgs1').attr('src') != imgSrcs[0] )
+		$('#days_imgs1').attr('src', imgSrcs[0] );
+		
+	imgSrcs = GetNumberImages( g_iHoursUntil, 'hour' );
+	if ( $('#hours_imgs2').attr('src') != imgSrcs[1] )
+		$('#hours_imgs2').attr('src', imgSrcs[1] );
+	if ( $('#hours_imgs1').attr('src') != imgSrcs[0] )
+		$('#hours_imgs1').attr('src', imgSrcs[0] );
+		
+	imgSrcs = GetNumberImages( g_iMinutesUntil, 'min' );
+	if ( $('#minutes_imgs2').attr('src') != imgSrcs[1] )
+		$('#minutes_imgs2').attr('src', imgSrcs[1] );
+	if ( $('#minutes_imgs1').attr('src') != imgSrcs[0] )
+		$('#minutes_imgs1').attr('src', imgSrcs[0] );
+		
+	imgSrcs = GetNumberImages( g_iSecondsUntil, 'sec' );
+	if ( $('#seconds_imgs2').attr('src') != imgSrcs[1] )
+		$('#seconds_imgs2').attr('src', imgSrcs[1] );
+	if ( $('#seconds_imgs1').attr('src') != imgSrcs[0] )
+		$('#seconds_imgs1').attr('src', imgSrcs[0] );
+}
+function GetNumberImages( iNum, pref )
+{
+	var imgSrcs = [];
+	var imgBase = 'http://media.steampowered.com/apps/tf2/countdown/images/counter/'+pref+'_';
+	var imgEnd = '.jpg';
+	if ( iNum < 10 )
+	{
+		num1 = 0;
+		num2 = iNum;
+	}
+	else
+	{
+		num1 = Math.floor( iNum / 10 );
+		num2 = iNum % 10;
+	}
+	imgSrc1 = imgBase + num1 + imgEnd;
+	imgSrc2 = imgBase + num2 + imgEnd;
+	imgSrcs.push( imgSrc1 );
+	imgSrcs.push( imgSrc2 );
+	return imgSrcs;
+}
+$(
+	function()
+	{
+		InitCountdown();
+	}
+);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33822635-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="bg_01">
+    <div id="container_01">
+    	<a id="homeLink" href="http://www.teamfortress.com/"><img src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif" width="230" height="60" border="0" /></a>
+    	<div class="num" id="day1"><img id="days_imgs1" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="day2"><img id="days_imgs2" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="hour1"><img id="hours_imgs1" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="hour2"><img id="hours_imgs2" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="min1"><img id="minutes_imgs1" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="min2"><img id="minutes_imgs2" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="sec1"><img id="seconds_imgs1" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+    	<div class="num" id="sec2"><img id="seconds_imgs2" src="http://media.steampowered.com/apps/tf2/countdown/images/trans.gif"></div>
+		<div id="consoleMonitors"><img src="http://media.steampowered.com/apps/tf2/countdown/images/day0_monitors.gif" width="956" height="97" border="0" /></div>
+		<img id="testCard" src="http://media.steampowered.com/apps/tf2/countdown/images/day0_testcard.gif" width="854" height="512" border="0" />
+    </div>
+</div>
+</body>
+</html>
