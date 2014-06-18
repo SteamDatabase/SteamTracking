@@ -883,6 +883,7 @@ input.filter_search_box:focus {
 
 .market_commodity_order_summary {
 	min-height: 1em;
+	font-size: 18px;
 }
 
 .market_commodity_orders_header_promote {
@@ -987,6 +988,7 @@ input.filter_search_box:focus {
 
 #market_buy_commodity_order_total {
 	width: 60px;
+	font-size: 16px;
 	text-align: right;
 	color: whitesmoke;
 }
