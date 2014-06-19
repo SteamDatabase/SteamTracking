@@ -126,7 +126,7 @@ CUserThem = Class.create( CUser, {
 		else
 		{
 			RequestFullInventory(
-					'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/',
+					'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/foreigninventory/',
 					{
 						sessionid:	g_sessionID,
 						steamid: 	steamid,
@@ -186,7 +186,7 @@ function TradePageSelectNoInventory( user )
 	$('filter_tag_show').hide();
 	$('filter_tag_hide').hide();
 	$('inventories').childElements().invoke( 'hide' );
-	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'http://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
+	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
 }
 
 function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
@@ -221,7 +221,7 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
 		}
 
-		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'http://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName } ) );
+		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName } ) );
 
 		$('trade_inventory_unavailable').hide();
 		$('trade_inventory_failed').hide();
@@ -562,7 +562,7 @@ CTradeStateManager = {
 	RemoveItemFromTrade: function( item )
 	{
 		CancelTradeStatusPoll();
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/removeitem/', {
+		new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/removeitem/', {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
@@ -577,7 +577,7 @@ CTradeStateManager = {
 	SetCurrencyInTrade: function( currency, xferAmount )
 	{
 		CancelTradeStatusPoll();
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/setcurrency/', {
+		new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/setcurrency/', {
 				method: 'post',
 				parameters: {
 					sessionid: g_sessionID,
@@ -606,7 +606,7 @@ CTradeStateManager = {
 		if ( xferAmount )
 			params.amount = xferAmount;
 
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/additem/', {
+		new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/additem/', {
 				method: 'post',
 				parameters: params,
 				onComplete: function( transport ) { HandleDropFailure( transport ); }
@@ -616,7 +616,7 @@ CTradeStateManager = {
 	ToggleReady: function( bReady )
 	{
 		CancelTradeStatusPoll();
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/toggleready/', {
+		new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/toggleready/', {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
@@ -911,7 +911,7 @@ function GetTradeStatus()
 
 	CancelTradeStatusPoll();
 	g_bPollInFlight = true;
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/tradestatus/', {
+	new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/tradestatus/', {
 			method: 'post',
 			parameters: { sessionid: g_sessionID, logpos: g_iNextLogPos, version: g_rgCurrentTradeStatus.version },
 			onSuccess: OnPeriodicTradeStatusUpdate,
@@ -949,12 +949,12 @@ function OnTradeStatusUpdate( transport )
 				// we're done here
 				Tutorial.OnCompletedTutorial();
 				StopWatchingForUnload();
-				window.location = 'http://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/receipt/';
+				window.location = 'https://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/receipt/';
 				return;
 			}
 			else if ( rgNewTradeStatus.trade_status == 3 )
 			{
-				var url = 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancelled/';
+				var url = 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancelled/';
 				if ( g_bRequestedCancel )
 					url += '?requestedCancel=1';
 				StopWatchingForUnload();
@@ -963,7 +963,7 @@ function OnTradeStatusUpdate( transport )
 			}
 			else if ( rgNewTradeStatus.trade_status == 4 )
 			{
-				var url = 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/';
+				var url = 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/';
 				if ( $('trade_theirs_timeout').visible() )
 					url += '?partnerTimeout=1';
 				StopWatchingForUnload();
@@ -972,7 +972,7 @@ function OnTradeStatusUpdate( transport )
 			}
 			else if ( rgNewTradeStatus.trade_status == 5 )
 			{
-				var url = 'http://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/failed/';
+				var url = 'https://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/failed/';
 				StopWatchingForUnload();
 				window.location = url;
 				return;
@@ -1657,7 +1657,7 @@ function ConfirmTrade()
 	{
 		CancelTradeStatusPoll();
 		g_bConfirmInFlight = true;
-		new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/confirm/', {
+		new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/confirm/', {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
@@ -1768,7 +1768,7 @@ function CancelTrade()
 
 	g_bTradeCancelled = true;
 	g_bRequestedCancel = true;
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancel/', {
+	new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancel/', {
 		method: 'post',
 		parameters: {
 			sessionid: g_sessionID
@@ -2607,7 +2607,7 @@ function SendChatMsg( strMessage )
 {
 	// send chat message will respond with the latest trade status (which should include the new message in the chat log)
 	CancelTradeStatusPoll();
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/chat/', {
+	new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/chat/', {
 		method: 'post',
 		parameters: {
 			sessionid: g_sessionID,
@@ -2796,7 +2796,7 @@ function TradingUnloaded( e )
 
 	g_bTradeCancelled = true;
 	var waiting = true;
-	new Ajax.Request( 'http://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancel/', {
+	new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/cancel/', {
 		method: 'post',
 		parameters: {
 			sessionid: g_sessionID

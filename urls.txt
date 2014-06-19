@@ -186,5 +186,3 @@ Random/JobPostings.html|http://www.valvesoftware.com/jobs/job_postings.html
 Random/ValvePeople.html|http://valvesoftware.com/company/people.html
 Random/ValveGroup.json|http://steamcommunity.com/groups/valve/memberslistxml
 Random/ChristenGroups.json|https://api.steampowered.com/ISteamUser/GetUserGroupList/v1/?key=*APIKEY*&steamid=76561198024402255
-Random/Hype.htm|http://www.teamfortress.com/countdown/suspense.htm
-Random/BigPictureEvent.xml|https://store.steampowered.com/api/bpeventbackground/?l=english&cc=US&_=*TIMENOW*

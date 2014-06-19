@@ -493,7 +493,6 @@ var CInventory = Class.create( {
 
 		this.BuildInventoryTagFilters();
 
-		this.pageCurrent = 0;
 		this.bNeedsRepagination = true;
 
 		this.initialized = true;
@@ -834,7 +833,7 @@ var CInventory = Class.create( {
 		var elLink = new Element( 'a', { href: url, 'class': 'inventory_item_link' } );
 		if ( Prototype.Browser.IE )
 		{
-			elLink.appendChild( new Element( 'img', {src: 'http://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
+			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
 		if ( g_bIsInventoryPage )
@@ -855,7 +854,7 @@ var CInventory = Class.create( {
 	{
 		var elItem = new Element( 'div', {'class': 'item unknownItem' } );
 		elItem.identify();
-		elItem.update( '<img src="http://steamcommunity-a.akamaihd.net/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '">' );
+		elItem.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '">' );
 		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
 
 		if ( g_bIsTrading )
@@ -868,7 +867,7 @@ var CInventory = Class.create( {
 		var elLink = new Element( 'a', { href: url, 'class': 'inventory_item_link' } );
 		if ( Prototype.Browser.IE )
 		{
-			elLink.appendChild( new Element( 'img', {src: 'http://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
+			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
 		if ( g_bIsInventoryPage )
@@ -1019,12 +1018,20 @@ var CInventory = Class.create( {
 
 	SetActivePage: function( iPage )
 	{
+		if ( this.BIsPendingInventory() )
+		{
+			// just hold on to the value
+			this.pageCurrent = iPage;
+			return;
+		}
+
 		if ( iPage >= this.pageTotal )
 			return;
 		this.pageList[this.pageCurrent].hide();
 		this.pageList[iPage].show();
 		this.pageCurrent = iPage;
 		this.UpdatePageCounts();
+
 
 		this.PreloadPageImages( this.pageCurrent );
 	},
@@ -1096,7 +1103,7 @@ var CInventory = Class.create( {
 		if ( g_ActiveInventory && g_ActiveInventory != this && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
 			g_ActiveInventory.selectedItem = rgItem;
 
-		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'http://steamcommunity-a.akamaihd.net/public/images/trans.gif'; }, 200 );
+		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif'; }, 200 );
 
 		iActiveSelectView = iNewSelect;
 
@@ -1144,7 +1151,6 @@ var CAppwideInventory = Class.create( CInventory, {
 
 	Initialize: function()
 	{
-		this.pageCurrent = 0;
 		this.bNeedsRepagination = true;
 
 		this.initialized = true;
@@ -1429,7 +1435,12 @@ var CUser = Class.create( {
 
 	addInventory: function( inventory ) {
 		var rgContext = this.GetContext( inventory.appid, inventory.contextid );
+
+		var oldInventory = rgContext.inventory;
 		rgContext.inventory = inventory;
+
+		if ( oldInventory && oldInventory.pageCurrent )
+			inventory.SetActivePage( oldInventory.pageCurrent );
 
 		if ( ( this == UserYou || g_bTradeOffer ) && !inventory.BIsPendingInventory() && !this.BIsSingleContextApp( inventory.appid ) )
 		{
@@ -1846,6 +1857,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	}
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
 	var lastContextID = g_ActiveInventory ? g_ActiveInventory.contextid : null;
+	var lastPageCurrent = g_ActiveInventory ? g_ActiveInventory.pageCurrent: 0;
 	if ( lastAppId != appid || contextid != lastContextID )
 	{
 		Filter.ClearFilter();
@@ -1882,7 +1894,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 				if ( !bAlreadyInitialized )
 				{
 					// explicitly blank logo to prevent it from showing as the old logo until load is complete
-					$('inventory_applogo').src = 'http://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+					$('inventory_applogo').src = 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
 					var fnUpdate= function() {$('inventory_applogo').src = oEconomyDisplay.inventory_logo };
 					fnUpdate.defer();
 				}
@@ -1933,7 +1945,6 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			}
 
 		}
-
 
 		$('active_inventory_page').hide();
 		$('empty_inventory_page').hide();
@@ -1995,8 +2006,15 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	if ( !rgItem || rgItem.element.parentNode.filtered )
 	{
 		// ... or the first (non-filtered) item listed
+
+		// jump to the page they were last on, if we're reloading
+		if ( g_ActiveInventory.appid == lastAppId && g_ActiveInventory.contextid == lastContextID && lastPageCurrent )
+		{
+			g_ActiveInventory.SetActivePage( lastPageCurrent );
+		}
+
 		bSellNow = false;
-		for ( var iPage = 0; iPage < g_ActiveInventory.pageList.length; iPage++ )
+		for ( var iPage = g_ActiveInventory.pageCurrent; iPage < g_ActiveInventory.pageList.length; iPage++ )
 		{
 			var rgItemHolders = g_ActiveInventory.pageList[iPage].childElements();
 			for ( var i = 0; i < rgItemHolders.length; i++ )
@@ -2055,7 +2073,7 @@ function SelectInventory( appid, contextid, bForceSelect )
 }
 
 /* special display rules for economy apps, logos, special messages, etc */
-var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"http:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"http:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"}};
+var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"}};
 function GetEconomyDisplay( appid, contextid )
 {
 	var oDisplay = {};
@@ -2084,10 +2102,10 @@ function ImageURL( imageName, x, y )
 		var strSize = '';
 		if ( x != 0 || y != 0 )
 			strSize = '/' + x + 'x' + y;
-		return 'http://steamcommunity-a.akamaihd.net/economy/image/' + v_trim(imageName) + strSize;
+		return 'https://steamcommunity-a.akamaihd.net/economy/image/' + v_trim(imageName) + strSize;
 	}
 	else
-		return 'http://steamcommunity-a.akamaihd.net/public/images/trans.gif';
+		return 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif';
 }
 
 
@@ -2232,7 +2250,7 @@ function BuildHover( prefix, item, owner )
 				for ( var i=0; i < item.fraudwarnings.length; i++ )
 				{
 					var warning = new Element( 'div', { 'class': 'fraud_warning_box' } );
-					var warningImage = new Element( 'img', { 'class': 'fraud_warning_image', src: 'http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png' } );
+					var warningImage = new Element( 'img', { 'class': 'fraud_warning_image', src: 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png' } );
 					warning.appendChild( warningImage );
 					var warningText = new Element( 'span' );
 					warningText.update( item.fraudwarnings[i] );
@@ -2318,6 +2336,10 @@ function BuildHover( prefix, item, owner )
 		PopulateMarketActions( elMarketActions, item );
 	}
 
+			if ( typeof g_rgItemRewardEventData != 'undefined' )
+		{
+			PopulateItemRewardEventData( prefix, elHoverContent, item );
+		}
 		
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
@@ -2479,17 +2501,17 @@ function PopulateMarketActions( elActions, item )
 		var elPriceInfo = new Element( 'div' );
 		var elPriceInfoHeader = new Element ( 'div', { 'style': 'height: 24px;' } );
 		var elMarketLink = new Element( 'a', {
-			'href': 'http://steamcommunity.com/market/listings/' + item.appid + '/' + strMarketName
+			'href': 'https://steamcommunity.com/market/listings/' + item.appid + '/' + strMarketName
 		} );
 		elMarketLink.update( 'View in Community Market' );
 		elPriceInfoHeader.appendChild( elMarketLink );
 		elPriceInfo.appendChild( elPriceInfoHeader );
 
 		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
-		elPriceInfoContent.update( '<img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Working...">' );
+		elPriceInfoContent.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Working...">' );
 		elPriceInfo.appendChild( elPriceInfoContent );
 
-		new Ajax.Request( 'http://steamcommunity.com/market/priceoverview/', {
+		new Ajax.Request( 'https://steamcommunity.com/market/priceoverview/', {
 				method: 'get',
 				parameters: {
 					country: g_strCountryCode,
@@ -2545,6 +2567,43 @@ function PopulateMarketActions( elActions, item )
 	elActions.show();
 }
 
+function PopulateItemRewardEventData( prefix, elHoverContent, item )
+{
+	var $ItemRewardCtn = $J('#'+prefix+'_itemrewardevent');
+	var rgRewardData = g_rgItemRewardEventData && g_rgItemRewardEventData[item.appid] && g_rgItemRewardEventData[item.appid][item.market_hash_name];
+
+	if ( !rgRewardData )
+	{
+		$ItemRewardCtn.hide();
+		elHoverContent.removeClassName('has_itemrewardinfo');
+		return;
+	}
+
+	elHoverContent.addClassName( 'has_itemrewardinfo');
+	if ( !$ItemRewardCtn.length )
+	{
+		$ItemRewardCtn = $J('<div id="' + prefix + '_itemrewardevent" class="faq_reward_hover_callout"></div>');
+		$J(elHoverContent).after( $ItemRewardCtn );
+	}
+
+	if ( !$ItemRewardCtn.children().length )
+	{
+		$ItemRewardCtn.html(
+			'<div class="faq_reward_hover_flourish">' +
+				'<div class="ellipsis">Summer Adventure 2014</div>' +
+			'</div>' +
+			'<div class="reward_rarity"></div>' +
+			'<div class="craftcount"></div>'
+		);
+	}
+	$ItemRewardCtn.show();
+	var $Rarity = $ItemRewardCtn.children( '.reward_rarity' );
+	var $CraftCount = $ItemRewardCtn.children( '.craftcount' );
+
+	$Rarity.attr( 'class', 'reward_rarity rarity' + rgRewardData.item_reward_event_rarity );
+	$Rarity.text( rgRewardData.item_reward_event_rarity_desc );
+	$CraftCount.text( rgRewardData.item_reward_event_craftcount_desc );
+}
 
 function SellCurrentSelection()
 {
@@ -2765,7 +2824,7 @@ SellItemDialog = {
 		$J('#pricehistory').hide();
 		$J('#pricehistory_throbber').show();
 		$J('#pricehistory_notavailable').hide();
-		new Ajax.Request( 'http://steamcommunity.com/market/pricehistory/', {
+		new Ajax.Request( 'https://steamcommunity.com/market/pricehistory/', {
 				method: 'get',
 				parameters: {
 					appid: this.m_item.appid,
@@ -3896,7 +3955,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 	if ( item.marketable )
 	{
 		var sMarketHashName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
-		$J('#trade_action_viewinmarket').attr( 'href', strLinkPrefix + 'http://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
+		$J('#trade_action_viewinmarket').attr( 'href', strLinkPrefix + 'https://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
 		$J('#trade_action_viewinmarket').show();
 	}
 	else
@@ -4095,7 +4154,7 @@ function ReportTradeScam( steamIDTarget, strPersonaName )
 			abuseDescription: $TextArea.val()
 		};
 
-		$J.post( 'http://steamcommunity.com/actions/ReportAbuse/', rgParams).done( function() {
+		$J.post( 'https://steamcommunity.com/actions/ReportAbuse/', rgParams).done( function() {
 			ShowAlertDialog( 'Thank You!', 'Your report has been submitted and will be reviewed by Steam Support.' );
 		}).fail( function() {
 			ShowAlertDialog( 'Report Scam', 'There was a problem saving your report.  Please try again later.' );

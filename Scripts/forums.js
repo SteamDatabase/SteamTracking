@@ -19,7 +19,7 @@ function Forum_Unsubscribe( pageid )
 
 function Forum_SetTopicsPerPage( cTopicsPerPage )
 {
-	new Ajax.Request( 'http://steamcommunity.com/forum/0/0/setpreference', {
+	new Ajax.Request( 'https://steamcommunity.com/forum/0/0/setpreference', {
 		parameters: {preference: 'topicsperpage', value: cTopicsPerPage, sessionid: g_sessionID },
 		onComplete: function() { window.location.reload() }
 	} );
@@ -27,7 +27,7 @@ function Forum_SetTopicsPerPage( cTopicsPerPage )
 
 function Forum_SetTopicRepliesPerPage( cTopicRepliesPerPage )
 {
-	new Ajax.Request( 'http://steamcommunity.com/forum/0/0/setpreference', {
+	new Ajax.Request( 'https://steamcommunity.com/forum/0/0/setpreference', {
 		parameters: {preference: 'topicrepliesperpage', value: cTopicRepliesPerPage, sessionid: g_sessionID },
 		onComplete: function() { window.location.reload() }
 	} );
@@ -183,7 +183,7 @@ var CForum = Class.create( {
 				strMessage = '<b>Your inventory privacy is <u>not</u> Public</b>.  This means community members will not be able to send you trade offers from this topic.  If your inventory privacy was Public, community members would be able to send you trade offers from this topic.';
 
 			strMessage += '<div class="forum_newtopic_info_rule"></div>';
-			strMessage += '<img class="forum_newtopic_info_trade_closebuttondemo" src="http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_img_closetopic.png">';
+			strMessage += '<img class="forum_newtopic_info_trade_closebuttondemo" src="https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_img_closetopic.png">';
 			strMessage += 'When you are done receiving trade offers or have completed the trade, you can close this topic and disallow trade offers from here.';
 			strMessage += '<div style="clear: both;"></div>';
 
@@ -1441,7 +1441,7 @@ function Forum_SetMoveTopicClan( clanidowner, appidowner )
 		$('forum_movetopic_destination_unavailable').hide();
 		rgReloadParams['sessionid'] = g_sessionID;
 
-		new Ajax.Request( 'http://steamcommunity.com/forum/0/General/gettopicdestinations/', {
+		new Ajax.Request( 'https://steamcommunity.com/forum/0/General/gettopicdestinations/', {
 			method: 'get',
 			parameters: rgReloadParams,
 			onSuccess: Forum_OnMoveTopicDestinations.bind( null, clanidowner, appidowner ),
@@ -1917,12 +1917,12 @@ function Forum_InitBanLengthOptions( $Select )
 
 function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget )
 {
-	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">' );
+	var $WaitElem = $J('<div/>', {'class': 'forum_banuser_modal_wait'}).append( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">' );
 	var Modal = ShowConfirmDialog( 'Ban User', $WaitElem, 'Ban User' );
 
 	Modal.GetContent().find('.newmodal_buttons').css( 'visibility', 'hidden' );
 
-	$J.get( 'http://steamcommunity.com/gid/' + clanid + '/banuserdialog', {
+	$J.get( 'https://steamcommunity.com/gid/' + clanid + '/banuserdialog', {
 		ajax: 1,
 		gidforum: gidForum,
 		gidtopic: gidTopic,
@@ -1948,7 +1948,7 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 			else
 			{
 				$J.post(
-					'http://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
+					'https://steamcommunity.com/gid/' + clanid + '/banuser/?ajax=1', $Form.serialize()
 				).done( function( data ) {
 					ShowAlertDialog( 'Ban User', data.message ? data.message : 'The user\'s posting and editing privileges have been revoked.' );
 				}).fail( function() {

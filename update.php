@@ -100,7 +100,7 @@
 				
 				$this->URLsToFetch = Array( );
 				
-				$this->Fetch( $URLs );
+				$this->Fetch( $URLs, $Tries );
 			}
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			
@@ -253,7 +253,7 @@
 			return true;
 		}
 		
-		private function Fetch( $URLs )
+		private function Fetch( $URLs, $Tries )
 		{
 			$this->Requests = Array( );
 			
@@ -329,11 +329,12 @@
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 						
 						// TODO: Workarounds... It's not sending Content-Length
-						if( $LengthExpected == -1 )
+						if( $LengthExpected == -1 && $Tries < 2 )
 						{
 							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
 							||  SubStr( $Request, 0, 15 ) === 'Styles/Partner/'
-							||  SubStr( $Request, 0, 7 ) === 'Random/' )
+							||  SubStr( $Request, 0, 7 ) === 'Random/'
+							||  StrPos( $URL, 'akamaihd.net' ) !== false ) // A bunch of resources fail to send content-length for whatever reason
 							{
 								$LengthExpected = $LengthDownload;
 							}
