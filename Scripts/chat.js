@@ -104,7 +104,7 @@ CChatFriend.prototype.Refresh = function()
 {
 	var _friend = this;
 	$J.ajax( {
-		url: 'http://steamcommunity.com/chat/friendstate/' + this.m_unAccountID,
+		url: 'https://steamcommunity.com/chat/friendstate/' + this.m_unAccountID,
 		type: 'GET'
 	}).done( function( data ) { _friend.OnRefreshedData( data ); } );
 }
@@ -224,10 +224,10 @@ CChatFriend.prototype.RenderChatDialog = function()
 	var elHeader = $J('<div/>', {'class': 'chatdialog_header', 'data-miniprofile': this.m_unAccountID } );
 
 	// create an avatar element
-	var elChatDialogAvatar = $J('<div/>').append( '<a href="http://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"><img src="' + this.GetAvatarURL( 'medium' ) + '"></a>' );
+	var elChatDialogAvatar = $J('<div/>').append( '<a href="https://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"><img src="' + this.GetAvatarURL( 'medium' ) + '"></a>' );
 
 	// create a name element (this has both status-based class and receives name updates)
-	var elChatDialogName = $J('<a href="http://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"/>');
+	var elChatDialogName = $J('<a href="https://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"/>');
 
 	this.RegisterPersonaElement( elHeader, 'PersonaStatusElements', { 'class': 'playerAvatar medium', element: elChatDialogAvatar } );
 	this.RegisterPersonaElement( elHeader, 'PersonaStatusElements', { 'class': 'persona', element: elChatDialogName } );
@@ -783,7 +783,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
 		regexEmoticons = CWebChatDialog.s_regexMyEmoticons;
 
-	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="http://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' )
+	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' )
 
 	elText.html( strHTML );
 	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );
@@ -1243,7 +1243,7 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 		var elContentWrapper = $J('<div/>', {'class': 'chat_dialog_content'} );
 		var elScrollWrapper = $J('<div/>', {'class': 'chat_dialog_scroll' } );
 		var elContent = $J('<div/>', {'class': 'chat_dialog_content_inner'} );
-		elContent.html('<img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+		elContent.html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
 
 		elDialog.append( elHeader, elContentWrapper.append( elScrollWrapper.append( elContent ) ) );
 		this.m_rgChatDialogs[ Friend.m_unAccountID ] = new CWebChatDialog( this, elDialog, elContent );
@@ -1258,7 +1258,7 @@ CWebChat.prototype.LoadChatHistory = function( Friend, ChatDialog )
 	{
 		var _chat = this;
 		$J.ajax( {
-			url: 'http://steamcommunity.com/chat/chatlog/' + Friend.m_unAccountID,
+			url: 'https://steamcommunity.com/chat/chatlog/' + Friend.m_unAccountID,
 			data: { sessionid: g_sessionID },
 			type: 'POST'
 		}).done( function( data ) {

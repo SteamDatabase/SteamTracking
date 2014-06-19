@@ -38,7 +38,7 @@ function RefreshNotificationArea()
 		if ( $J('#header_notification_area' ) )
 		{
 			$J.ajax({
-				url: 'http://steamcommunity.com/actions/RefreshNotificationArea',
+				url: 'https://steamcommunity.com/actions/RefreshNotificationArea',
 				success: function ( data ) { $J('#header_notification_area').html( data ); }
 			});
 		}
@@ -47,7 +47,7 @@ function RefreshNotificationArea()
 	{
 		if ( $('header_notification_area' ) )
 		{
-			new Ajax.Updater( 'header_notification_area', 'http://steamcommunity.com/actions/RefreshNotificationArea' );
+			new Ajax.Updater( 'header_notification_area', 'https://steamcommunity.com/actions/RefreshNotificationArea' );
 		}
 	}
 }
@@ -70,7 +70,7 @@ function checkAbuseSub( elForm )
 	var params = $J(elForm).serializeArray();
 	params.push( {name: 'json', value: 1} );
 
-	$J.post( 'http://steamcommunity.com/actions/ReportAbuse/', params).done( function() {
+	$J.post( 'https://steamcommunity.com/actions/ReportAbuse/', params).done( function() {
 		ShowAlertDialog( 'Thank You!', 'Thank you for reporting offensive content and helping to keep the Steam Community clean and friendly.' );
 	}).fail( function() {
 		ShowAlertDialog( 'Report Violation', 'There was a problem saving your report.  Please try again later.' );
@@ -276,7 +276,7 @@ function RecordAJAXPageView( url )
 {
 	if ( typeof _gaq != "undefined" && _gaq )
 	{
-		var baseURL = 'http://steamcommunity.com';
+		var baseURL = 'https://steamcommunity.com';
 		var idx = url.indexOf( baseURL );
 		if ( idx != -1 )
 		{
@@ -383,7 +383,7 @@ function GetCurrencyCode( currencyId )
 
 function GetAvatarURLFromHash( hash, size )
 {
-	var strURL = 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
+	var strURL = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
 
 	if ( size == 'full' )
 		strURL += '_full.jpg';
@@ -411,7 +411,7 @@ function LaunchWebChat( params )
 		if ( params )
 			SetValueLocalStorage( 'rgChatStartupParam', V_ToJSON( params ) );
 
-		winChat.location = 'http://steamcommunity.com/chat/';
+		winChat.location = 'https://steamcommunity.com/chat/';
 	}
 	else
 	{
@@ -448,7 +448,7 @@ function StandardCommunityBan( steamid, elemLink )
 		if ( !note )
 			return;
 
-		$J.post( 'http://steamcommunity.com/actions/StandardCommunityBan', {
+		$J.post( 'https://steamcommunity.com/actions/StandardCommunityBan', {
 			'sessionID' : g_sessionID,
 			'steamid' : steamid,
 			'note' : note
@@ -524,7 +524,7 @@ CEmoticonPopup.prototype.BuildPopup = function()
 	for( var i = 0; i < this.m_rgEmoticons.length; i++ )
 	{
 		var strEmoticonName = this.m_rgEmoticons[i].replace( /:/g, '' );
-		var strEmoticonURL = 'http://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
+		var strEmoticonURL = 'https://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
 
 		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
 		var $Img = $J('<img/>', {'src': strEmoticonURL } );
@@ -714,7 +714,7 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 			winHeight = window.screen.availHeight - nClientChromePX;
 	}
 
-	var winOffer = window.open( 'http://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
+	var winOffer = window.open( 'https://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
 
 	winOffer.focus();
 }
@@ -1900,11 +1900,11 @@ CCommentThread.FormattingHelpPopup = function( strCommentThreadType )
 {
 	if ( strCommentThreadType == 'Guide' )
 	{
-		window.open( 'http://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=975,width=640,resize=yes,scrollbars=yes');
+		window.open( 'https://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=975,width=640,resize=yes,scrollbars=yes');
 	}
 	else
 	{
-		window.open( 'http://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=640,width=640,resize=yes,scrollbars=yes');
+		window.open( 'https://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=640,width=640,resize=yes,scrollbars=yes');
 	}
 };
 CCommentThread.ShowDeletedComment = function( id, gidcomment )
@@ -1971,7 +1971,7 @@ CGameSelector = Class.create( {
 	{
 		if ( value )
 		{
-			new Ajax.Request( 'http://steamcommunity.com/actions/SearchApps/' + encodeURIComponent( value ), {
+			new Ajax.Request( 'https://steamcommunity.com/actions/SearchApps/' + encodeURIComponent( value ), {
 				method: 'get',
 				onSuccess: this.ReceiveGameSelectResponse.bind( this, value )
 			} );
@@ -2082,7 +2082,7 @@ CGameSelectorWorkshopGames = Class.create( CGameSelector, {
 	{
 		if ( value )
 		{
-			new Ajax.Request( 'http://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=' + encodeURIComponent( value ), {
+			new Ajax.Request( 'https://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=' + encodeURIComponent( value ), {
 				method: 'get',
 				onSuccess: this.ReceiveGameSelectResponse.bind( this, value )
 			} );
@@ -2117,7 +2117,7 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 		{
 			if ( !this.m_bOwnedGamesReady )
 			{
-				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+				this.elSuggestions.update( '<div style="text-align: center; width: 200px; padding: 5px 0;"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 				this.bHaveSuggestions = true;
 				this.ShowSuggestions();
 			}
@@ -2190,7 +2190,7 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 
 		CGameSelectorOwnedGames.s_bLoadInFlight = true;
 
-		new Ajax.Request( 'http://steamcommunity.com/actions/GetOwnedApps/', {
+		new Ajax.Request( 'https://steamcommunity.com/actions/GetOwnedApps/', {
 			method: 'get',
 			parameters: {sessionid: g_sessionID },
 			onSuccess: function( transport )
@@ -2648,7 +2648,7 @@ SearchFieldWithText = Class.create({
 
 function iSwap( imgID, newImg )
 {
-	newImgPath = "http://steamcommunity-a.akamaihd.net/public/images/" + newImg;
+	newImgPath = "https://steamcommunity-a.akamaihd.net/public/images/" + newImg;
 	setImage( imgID, newImgPath );
 }
 
@@ -2667,28 +2667,28 @@ var gSharePopup = null;
 var gShareRequestURL = null;
 function ShowSharePublishedFilePopup( publishedFileID, appID )
 {
-	gShareRequestURL = "http://steamcommunity.com/sharedfiles/shareonsteam/?id=" + publishedFileID + '&appid=' + appID;
+	gShareRequestURL = "https://steamcommunity.com/sharedfiles/shareonsteam/?id=" + publishedFileID + '&appid=' + appID;
 
-	var shareURL = "http://steamcommunity.com/sharedfiles/filedetails/?id=" + publishedFileID;
-	var baseSocialShareURL = "http://steamcommunity.com/sharedfiles/share/?id=" + publishedFileID;
+	var shareURL = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + publishedFileID;
+	var baseSocialShareURL = "https://steamcommunity.com/sharedfiles/share/?id=" + publishedFileID;
 	ShowSharePopup( shareURL, baseSocialShareURL );
 }
 
 function ShowShareNewsPostPopup( gid, appid )
 {
-	gShareRequestURL = "http://steamcommunity.com/news/shareonsteam/" + gid + "?appid=" + appid;
+	gShareRequestURL = "https://steamcommunity.com/news/shareonsteam/" + gid + "?appid=" + appid;
 
-	var baseSocialShareURL = "http://steamcommunity.com/news/sharepost/" + gid;
-	var shareURL = "http://steamcommunity.com/news/post/" + gid;
+	var baseSocialShareURL = "https://steamcommunity.com/news/sharepost/" + gid;
+	var shareURL = "https://steamcommunity.com/news/post/" + gid;
 	ShowSharePopup( shareURL, baseSocialShareURL );
 }
 
 function ShowShareClanAnnouncementPopup( groupId, gid )
 {
-	gShareRequestURL = "http://steamcommunity.com/gid/" + groupId + "/announcements/shareonsteam/" + gid;
+	gShareRequestURL = "https://steamcommunity.com/gid/" + groupId + "/announcements/shareonsteam/" + gid;
 
-	var baseSocialShareURL = "http://steamcommunity.com/gid/" + groupId + "/announcements/share/" + gid;
-	var shareURL = "http://steamcommunity.com/gid/" + groupId + "/announcements/detail/" + gid;
+	var baseSocialShareURL = "https://steamcommunity.com/gid/" + groupId + "/announcements/share/" + gid;
+	var shareURL = "https://steamcommunity.com/gid/" + groupId + "/announcements/detail/" + gid;
 	ShowSharePopup( shareURL, baseSocialShareURL );
 }
 

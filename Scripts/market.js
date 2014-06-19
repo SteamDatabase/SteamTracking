@@ -64,7 +64,7 @@ RemoveListingDialog = {
 		$('market_removelisting_dialog_accept_throbber').fade({ duration: 0.25, from: 0, to: 1 });
 		
 		var listingid = this.m_ulListingId;
-		new Ajax.Request( 'http://steamcommunity.com/market/removelisting/' + listingid, {
+		new Ajax.Request( 'https://steamcommunity.com/market/removelisting/' + listingid, {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID
@@ -167,7 +167,7 @@ CancelMarketBuyOrderDialog = {
 	},
 
 	OnAccept: function() {
-		new Ajax.Request( 'http://steamcommunity.com/market/cancelbuyorder/', {
+		new Ajax.Request( 'https://steamcommunity.com/market/cancelbuyorder/', {
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
@@ -212,23 +212,31 @@ CreateBuyOrderDialog = {
 	m_divContents: null,
 	m_unAppId: null,
 	m_strMarketHashName: null,
+	m_strMarketItemName: null,
 	m_timeBuyOrderPollingStart: null,
 	m_bPageNeedsRefresh: false,
 	m_nBestBuyPrice: null,
 
-	Initialize: function( unAppId, strMarketHashName, divPopup ) {
+	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
 		this.m_divContents = divPopup;
 		this.m_unAppId = unAppId;
 		this.m_strMarketHashName = strMarketHashName;
+		this.m_strMarketItemName = strMarketItemName;
 	},
 
-	Show: function( unAppId, strMarketHashName, divPopup ) {
+	Show: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		if ( !this.m_bInitialized )
-			this.Initialize( unAppId, strMarketHashName, divPopup );
+			this.Initialize( unAppId, strMarketHashName, strMarketItemName, divPopup );
+
+		if ( !g_bLoggedIn )
+		{
+			showModal( 'NotLoggedInWarning', true );
+			return;
+		}
 
 		// show the frame in the dialog
-		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketHashName ), this.m_divContents.show() );
+		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketItemName ), this.m_divContents.show() );
 		modal.always( function() { CreateBuyOrderDialog.OnUserClosedDialog() } );
 
 		$J('#market_buynow_dialog_error').hide();
@@ -248,8 +256,15 @@ CreateBuyOrderDialog = {
 		$J('#market_buynow_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
 
 
-		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
-		$('market_buynow_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
+		if ( window.g_rgWalletInfo )
+		{
+			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
+			$('market_buynow_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
+		}
+		else
+		{
+			$('market_buynow_dialog_walletbalance_amount').update( 'no funds' );
+		}
 
 		// set our default price
 		$('market_buy_commodity_input_price').setValue( this.m_nBestBuyPrice / 100 );
@@ -260,15 +275,17 @@ CreateBuyOrderDialog = {
 	UpdateTotal: function() {
 		var currency = $J('#market_buy_commodity_input_price').val();
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
+
+		currency = currency.replace(',', '.');
 		var price = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
 
 		var div = $J('#market_buy_commodity_order_total');
-		if ( isNaN(price) )
+		if ( isNaN(price) || !window.g_rgWalletInfo )
 			div.html( '--' );
 		else
 			div.html( v_currencyformat( price, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 
-		if ( isNaN(price) || g_rgWalletInfo['wallet_balance'] < price )
+		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] < price )
 		{
 			// show add funds
 			$J('#market_buynow_dialog_purchase').hide();
@@ -340,11 +357,15 @@ CreateBuyOrderDialog = {
 
 			// poll for buy order result
 			this.m_timeBuyOrderPollingStart = $J.now();
-			this.PollForBuyOrderCompletion( buy_orderid );
+			setTimeout( function() { CreateBuyOrderDialog.PollForBuyOrderCompletion( buy_orderid ); }, 1000 );
 		}
 		else if ( transport.responseJSON && transport.responseJSON.message )
 		{
 			this.DisplayError( transport.responseJSON.message );
+		}
+		else if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' + ' (' + transport.responseJSON.success + ')' );
 		}
 		else
 		{
@@ -357,7 +378,7 @@ CreateBuyOrderDialog = {
 	},
 
 	PollForBuyOrderCompletion: function( buy_orderid ) {
-		if ( $J.now() > this.m_timeBuyOrderPollingStart+5000 )
+		if ( $J.now() > (this.m_timeBuyOrderPollingStart+5000) )
 		{
 			this.BuyOrderPlaced();
 		}
@@ -365,7 +386,7 @@ CreateBuyOrderDialog = {
 		{
 			// keep asking
 			$J.ajax( {
-				url: 'http://steamcommunity.com/market/getbuyorderstatus/',
+				url: 'https://steamcommunity.com/market/getbuyorderstatus/',
 				type: 'GET',
 				data: {
 					sessionid: g_sessionID,
@@ -382,10 +403,8 @@ CreateBuyOrderDialog = {
 	OnPollForBuyOrderCompletionSuccess: function( buy_orderid, response ) {
 		if ( response.responseJSON.success != 1 )
 		{
-			// failed for some reason - show an error
-
-			// for testing, keep polling
-			this.PollForBuyOrderCompletion( buy_orderid );
+			// failed for some reason - just keep polling until we either timeout or get a status
+			setTimeout( function() { CreateBuyOrderDialog.PollForBuyOrderCompletion( buy_orderid ); }, 1000 );
 		}
 		else if ( response.responseJSON.purchased )
 		{
@@ -412,18 +431,18 @@ CreateBuyOrderDialog = {
 		}
 		else if ( response.responseJSON.active )
 		{
-			this.PollForBuyOrderCompletion( buy_orderid );
+			setTimeout( function() { CreateBuyOrderDialog.PollForBuyOrderCompletion( buy_orderid ); }, 1000 );
 		}
 	},
 
 	BuyOrderPlaced: function() {
 		// too long has passed, give up
-		$J('#market_buy_commodity_status').html( 'Your buy order has been placed, but no item for sale has been found at your desired price. You will be automatically notified by email if this purchase requested is fulfilled.\nYou cancel this buy order from the bottom of this page, or from the market home page.' );
+		$J('#market_buy_commodity_status').html( 'Success! Your buy order has been placed.<br><br>You will be automatically notified by email when the purchase is completed. You can cancel this buy order from the bottom of this page, or from the market home page.' );
 		$J('#market_buy_commodity_throbber').hide();
 	},
 
 	ViewPurchasedItemInInventory: function( appid, contextid, assetid ) {
-		window.location = 'http://steamcommunity.com/my/inventory/#' + appid + '_' + contextid + '_' + assetid;
+		window.location = 'https://steamcommunity.com/my/inventory/#' + appid + '_' + contextid + '_' + assetid;
 	},
 
 	DisplayError: function( error ) {
@@ -445,8 +464,22 @@ CreateBuyOrderDialog = {
 	}
 }
 
-function Market_ShowBuyOrderPopup( unAppId, sMarketHashName ) {
-	CreateBuyOrderDialog.Show( unAppId, sMarketHashName, $J('#market_buy_commodity_popup') );
+function Market_ShowBuyOrderPopup( unAppId, sMarketHashName, strMarketItemName ) {
+	if ( typeof g_rgWalletInfo != 'undefined' && g_rgWalletInfo['wallet_currency'] == 0 )
+	{
+		ShowConfirmDialog(
+				'Cannot place order',
+				'You cannot buy items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+				'Add wallet funds',
+				'Cancel'
+		).done( function() {
+			location.href = 'http://store.steampowered.com/steamaccount/addfunds';
+		} );
+	}
+	else
+	{
+		CreateBuyOrderDialog.Show( unAppId, sMarketHashName, strMarketItemName, $J('#market_buy_commodity_popup') );
+	}
 }
 
 BuyItemDialog = {
@@ -722,7 +755,7 @@ BuyItemDialog = {
 				'You purchased this <%1$s></%2$s>. View it in your <%3$s>inventory</%4$s>.'
 					.replace( '%1$s', 'span id="' + sItemNameSpanId + '"' )
 					.replace( '%2$s', 'span' )
-					.replace( '%3$s', 'a href="http://steamcommunity.com/my/inventory/"' )
+					.replace( '%3$s', 'a href="https://steamcommunity.com/my/inventory/"' )
 					.replace( '%4$s', 'a' ) );
 
 		this.m_oListingOriginalRow.appendChild( elMessage );
@@ -902,7 +935,7 @@ function LoadRecentListings( id, type, rows )
 	var elRows = $(rows);
 
 	g_bBusyLoadingMore = true;
-	new Ajax.Request( 'http://steamcommunity.com/market/recent', {
+	new Ajax.Request( 'https://steamcommunity.com/market/recent', {
 		method: 'get',
 		parameters: {
 			country: g_strCountryCode,
@@ -958,7 +991,7 @@ function LoadRecentCompletedListings( )
 	}
 
 	g_bBusyLoadingRecentCompleted = true;
-	new Ajax.Request( 'http://steamcommunity.com/market/recentcompleted', {
+	new Ajax.Request( 'https://steamcommunity.com/market/recentcompleted', {
 		method: 'get',
 		parameters: { },
 		onSuccess: function( transport ) {
@@ -995,7 +1028,7 @@ function RefreshMyMarketListings()
 
 	g_bBusyLoadingMyMarketListings = true;
 	var elMyMarketListings = $('tabContentsMyListings');
-	new Ajax.Request( 'http://steamcommunity.com/market/mylistings', {
+	new Ajax.Request( 'https://steamcommunity.com/market/mylistings', {
 		method: 'get',
 		parameters: {
 		},
@@ -1026,7 +1059,7 @@ function LoadMarketHistory()
 
 	g_bBusyLoadingMarketHistory = true;
 	var elMyHistoryContents = $('tabContentsMyMarketHistory');
-	new Ajax.Request( 'http://steamcommunity.com/market/myhistory', {
+	new Ajax.Request( 'https://steamcommunity.com/market/myhistory', {
 		method: 'get',
 		parameters: {
 		},
@@ -1047,7 +1080,7 @@ function LoadMarketHistory()
 							pagesize: response.pagesize,
 							prefix: 'tabContentsMyMarketHistory',
 							class_prefix: 'market'
-						}, 'http://steamcommunity.com/market/myhistory/'
+						}, 'https://steamcommunity.com/market/myhistory/'
 				);
 
 				g_oMyHistory.SetResponseHandler( function( response ) {
@@ -1070,7 +1103,7 @@ function MarketCheckHash()
 	else if ( window.location.hash.length > 5 && window.location.hash.substr(0,5) == "#sell" )
 	{
 		var strAsset = window.location.hash.substr(5);
-		ShowModalContent('http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'http://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
+		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
 	}
 }
 
@@ -1450,12 +1483,12 @@ $J(function() {
 		{
 			elFilters.empty();
 
-			var elThrobber = $J('<img src="http://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
+			var elThrobber = $J('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
 			elFilters.append( elThrobber );
 			elFilters.css( 'text-align', 'center' );
 
 			$J.ajax( {
-				url: 'http://steamcommunity.com/market/appfilters/' + unAppId,
+				url: 'https://steamcommunity.com/market/appfilters/' + unAppId,
 				type: 'GET',
 				data: {}
 			} ).error( function ( ) {
@@ -1649,7 +1682,7 @@ function UpdateFrontPage()
 	}
 
 	$J.ajax( {
-		url: 'http://steamcommunity.com/market/popular',
+		url: 'https://steamcommunity.com/market/popular',
 		type: 'GET',
 		data: {
 			country: g_strCountryCode,
@@ -1702,12 +1735,12 @@ RegisterSteamOnWebPanelHiddenHandler( function() { g_bMarketWindowHidden = true;
 function Market_LoadOrderSpread( item_nameid )
 {
 	$J.ajax( {
-		url: 'http://steamcommunity.com/market/itemordershistogram',
+		url: 'https://steamcommunity.com/market/itemordershistogram',
 		type: 'GET',
 		data: {
 			country: g_strCountryCode,
 			language: g_strLanguage,
-			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
+			currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
 			item_nameid: item_nameid
 		}
 	} ).error( function ( ) {
@@ -1716,7 +1749,10 @@ function Market_LoadOrderSpread( item_nameid )
 		setTimeout( function() { Market_LoadOrderSpread( item_nameid ); }, 5000 );
 		if ( data.success == 1 )
 		{
-			$J('#market_commodity_order_spread').html( data.html );
+			$J('#market_commodity_forsale').html( data.sell_order_summary );
+			$J('#market_commodity_forsale_table').html( data.sell_order_table );
+			$J('#market_commodity_buyrequests').html( data.buy_order_summary );
+			$J('#market_commodity_buyreqeusts_table').html( data.buy_order_table );
 
 			// set in the purchase dialog the default price to buy things (which should almost always be the price of the cheapest listed item)
 			if ( data.lowest_sell_order && data.lowest_sell_order > 0 )
