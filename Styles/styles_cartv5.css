@@ -1330,6 +1330,11 @@ a.trigger, a.activetrigger {
 	overflow: hidden;
 }
 
+#payment_method_trigger
+{
+	width: 250px;
+}
+
 .checkout_main .dropcontainer ul {
 	list-style-type:none;
 	margin:0;
@@ -1341,7 +1346,7 @@ a.trigger, a.activetrigger {
 
 #payment_method_droplist
 {
-	width: 204px;
+	width: 254px;
 }
 
 .checkout_main .dropdownhidden{
