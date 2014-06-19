@@ -1,7 +1,3 @@
-http://api-beta.steampowered.com
-https://api-beta.steampowered.com
-http://api.steampowered.com
-https://api.steampowered.com
 %s/api/messages/?cc=%s&l=%s&%s
 %s/api/bpeventbackground/?l=%s&cc=%s
 %s/api/addtocart/?cc=%s&l=%s
