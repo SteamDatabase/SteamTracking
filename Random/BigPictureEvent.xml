@@ -1,8 +1,9 @@
 <root>
 <styles>
 	<include src="file://{resources}/styles/steamstyles.css" />
-			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_empty.css?v=1382788702" />
+			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_active.css?v=3582773238" />
 	</styles>
 <EventBackground>
+			<Panel class="BackgroundImage" />
 	</EventBackground>
 </root>
