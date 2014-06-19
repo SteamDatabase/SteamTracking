@@ -9729,6 +9729,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	""
+			"attach_to_hands" "1"
 			"used_by_classes"
 			{
 				"heavy"	"1"
@@ -86936,6 +86937,80 @@
 				}
 			}
 			"category"	"special"
+		}
+		"129"
+		{
+			"name"	"#RT_F_A"
+			"n_A"	"#TF_Weapon_BackScatter"
+			"desc_inputs"	"#RDI_ABC2"
+			"desc_outputs"	"#RDO_AB"
+			"di_A"	"#CI_Bar_B"
+			"di_B"	"#TF_TheShortstop"
+			"di_C"	"#TF_Unique_EnergyDrink_CritCola"
+			"do_A"	"1"
+			"do_B"	"#TF_Weapon_BackScatter"
+			"always_known"	"1"
+			"premium_only"	"0"
+			"disabled"	"0"
+			"input_items"
+			{
+				"1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"	"name"
+							"operator"	"string=="
+							"value"	"Craft Bar Level 2"
+							"required"	"1"
+						}
+					}
+				}
+				"1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"	"name"
+							"operator"	"string=="
+							"value"	"The Shortstop"
+							"required"	"1"
+						}
+					}
+				}
+				"1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"	"name"
+							"operator"	"string=="
+							"value"	"Crit-a-Cola"
+							"required"	"1"
+						}
+					}
+				}
+			}
+			"output_items"
+			{
+				"item1"
+				{
+					"conditions"
+					{
+						"0"
+						{
+							"field"	"name"
+							"operator"	"string=="
+							"value"	"The Back Scatter"
+							"required"	"1"
+						}
+					}
+				}
+			}
+			"category"	"commonitem"
 		}
 
 
