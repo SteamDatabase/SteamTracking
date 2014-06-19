@@ -1,7 +1,7 @@
 {
 	"game": {
 		"gameName": "Team Fortress 2",
-		"gameVersion": "333",
+		"gameVersion": "335",
 		"availableGameStats": {
 			"stats": [
 				{
@@ -3663,6 +3663,56 @@
 					"name": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND_STAT",
 					"defaultvalue": 0,
 					"displayName": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND_STAT"
+				},
+				{
+					"name": "TF_PARACHUTE_KILL_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_PARACHUTE_KILL_GRIND_STAT"
+				},
+				{
+					"name": "TF_MELEE_KILL_CLASSIC_RIFLE_SNIPER_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_MELEE_KILL_CLASSIC_RIFLE_SNIPER_STAT"
+				},
+				{
+					"name": "TF_SOLDIER_PARACHUTE_DISTANCE_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_SOLDIER_PARACHUTE_DISTANCE_STAT"
+				},
+				{
+					"name": "TF_DEMOMAN_PARACHUTE_DISTANCE_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_DEMOMAN_PARACHUTE_DISTANCE_STAT"
+				},
+				{
+					"name": "TF_SCOUT_BACKSCATTER_KILL_FRIENDS_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_SCOUT_BACKSCATTER_KILL_FRIENDS_GRIND_STAT"
+				},
+				{
+					"name": "TF_SCOUT_BACKSCATTER_KILL_SPY_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_SCOUT_BACKSCATTER_KILL_SPY_GRIND_STAT"
+				},
+				{
+					"name": "TF_SNIPER_CLASSIC_RIFLE_NOSCOPE_HEADSHOT_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_SNIPER_CLASSIC_RIFLE_NOSCOPE_HEADSHOT_STAT"
+				},
+				{
+					"name": "TF_SNIPER_PARACHUTE_GRIND_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_SNIPER_PARACHUTE_GRIND_STAT"
+				},
+				{
+					"name": "TF_TAUNT_DOSIDO_MELLE_KILL_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_TAUNT_DOSIDO_MELLE_KILL_STAT"
+				},
+				{
+					"name": "TF_TAUNT_WHILE_CAPPING_STAT",
+					"defaultvalue": 0,
+					"displayName": "TF_TAUNT_WHILE_CAPPING_STAT"
 				}
 			]
 			,
@@ -7959,6 +8009,267 @@
 					"description": "Stun 50 robots while upgraded with rocket specialist.",
 					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/bddc6133ffdd3ba36c009d8ab643af7740256bfa.jpg",
 					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/c2a4908d840d9eb5ed0e3a8bbe1042b303e9f1e8.jpg"
+				},
+				{
+					"name": "TF_PARACHUTE_KILL_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Nose Dive",
+					"hidden": 0,
+					"description": "Kill 10 parachuting players.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_parachute_kill_grind.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_parachute_kill_grind_bw.jpg"
+				},
+				{
+					"name": "TF_MELEE_KILL_CLASSIC_RIFLE_SNIPER",
+					"defaultvalue": 0,
+					"displayName": "Punching Bag",
+					"hidden": 0,
+					"description": "Melee kill 10 Snipers using The Classic.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_melee_kill_classic_rifle_sniper.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_melee_kill_classic_rifle_sniper_bw.jpg"
+				},
+				{
+					"name": "TF_KILL_CHARGING_DEMO",
+					"defaultvalue": 0,
+					"displayName": "Emergency Brake",
+					"hidden": 0,
+					"description": "Kill a charging Demoman.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_kill_charging_demo.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_kill_charging_demo_bw.jpg"
+				},
+				{
+					"name": "TF_SCOUT_BACKSCATTER_KILL_SPY_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Back in Business",
+					"hidden": 0,
+					"description": "While using the Back Scatter, kill 20 spies from behind.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_spy_grind.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_spy_grind_bw.jpg"
+				},
+				{
+					"name": "TF_SCOUT_BACKSCATTER_KILL_HEAVY_MEDIC_PAIR",
+					"defaultvalue": 0,
+					"displayName": "Back 2 Back",
+					"hidden": 0,
+					"description": "While using the Back Scatter, kill a Heavy/Medic pair within 20 seconds of each other.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_heavy_medic_pair.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_heavy_medic_pair_bw.jpg"
+				},
+				{
+					"name": "TF_SCOUT_BACKSCATTER_KILL_FRIENDS_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Severed Ties",
+					"hidden": 0,
+					"description": "While using the Back Scatter, kill 20 friends from behind.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_friends_grind.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_scout_backscatter_kill_friends_grind_bw.jpg"
+				},
+				{
+					"name": "TF_SNIPER_CLASSIC_RIFLE_NOSCOPE_HEADSHOT",
+					"defaultvalue": 0,
+					"displayName": "Hipshot",
+					"hidden": 0,
+					"description": "While using The Classic, kill 10 enemies with a full charge, no-scope, headshot.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_noscope_headshot.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_noscope_headshot_bw.jpg"
+				},
+				{
+					"name": "TF_SNIPER_CLASSIC_RIFLE_HEADSHOT_JUMPER",
+					"defaultvalue": 0,
+					"displayName": "Eagle Eye",
+					"hidden": 0,
+					"description": "While using The Classic, kill a rocket/grenade jumping enemy in midair with a full charge, no-scope, headshot.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_headshot_jumper.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_headshot_jumper_bw.jpg"
+				},
+				{
+					"name": "TF_SNIPER_CLASSIC_RIFLE_GIB_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Prime Cuts",
+					"hidden": 0,
+					"description": "While using The Classic, gib all 9 classes during a single round.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_gib_grind.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_classic_rifle_gib_grind_bw.jpg"
+				},
+				{
+					"name": "TF_SOLDIER_PARACHUTE_KILL_GROUP",
+					"defaultvalue": 0,
+					"displayName": "Upper Hand",
+					"hidden": 0,
+					"description": "Kill 3 players during the same parachute deploy.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_kill_group.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_kill_group_bw.jpg"
+				},
+				{
+					"name": "TF_SOLDIER_PARACHUTE_DISTANCE",
+					"defaultvalue": 0,
+					"displayName": "Project Excelsior",
+					"hidden": 0,
+					"description": "Parachute 19.47 miles.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_distance.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_distance_bw.jpg"
+				},
+				{
+					"name": "TF_SOLDIER_PARACHUTE_KILL_PARACHUTE",
+					"defaultvalue": 0,
+					"displayName": "Dogfight",
+					"hidden": 0,
+					"description": "Kill a parachuting player while parachuting.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_kill_parachute.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_parachute_kill_parachute_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_PARACHUTE_KILL_GROUP",
+					"defaultvalue": 0,
+					"displayName": "Air Raid",
+					"hidden": 0,
+					"description": "Kill 3 players during the same parachute deploy.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_kill_group.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_kill_group_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_PARACHUTE_DISTANCE",
+					"defaultvalue": 0,
+					"displayName": "Operation High Dive",
+					"hidden": 0,
+					"description": "Parachute 19.47 miles.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_distance.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_distance_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_PARACHUTE_KILL_PARACHUTE",
+					"defaultvalue": 0,
+					"displayName": "Flight Control",
+					"hidden": 0,
+					"description": "Kill a parachuting player while parachuting.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_kill_parachute.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_parachute_kill_parachute_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_KILL_PLAYER_YOU_DIDNT_SEE",
+					"defaultvalue": 0,
+					"displayName": "U-Turn",
+					"hidden": 0,
+					"description": "Kill an enemy that you couldn't see at the beginning of your charge.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_kill_player_you_didnt_see.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_kill_player_you_didnt_see_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_QUICK_KILLS",
+					"defaultvalue": 0,
+					"displayName": "Chain Reaction",
+					"hidden": 0,
+					"description": "Get 3 kills within 6 seconds using the Demoman charge.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_quick_kills.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_quick_kills_bw.jpg"
+				},
+				{
+					"name": "TF_DEMOMAN_CHARGE_KILL_CHARGING_DEMO",
+					"defaultvalue": 0,
+					"displayName": "Head-On Collision",
+					"hidden": 0,
+					"description": "Kill a charging Demoman while charging.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_charge_kill_charging_demo.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_demoman_charge_kill_charging_demo_bw.jpg"
+				},
+				{
+					"name": "TF_SPY_KILL_BACKSCATTER_SCOUT",
+					"defaultvalue": 0,
+					"displayName": "Fast Fingers",
+					"hidden": 0,
+					"description": "Backstab a Scout that is using the Back Scatter.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_spy_kill_backscatter_scout.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_spy_kill_backscatter_scout_bw.jpg"
+				},
+				{
+					"name": "TF_SOLDIER_AIRSTRIKE_MAX_CLIP",
+					"defaultvalue": 0,
+					"displayName": "Maximum Potential",
+					"hidden": 0,
+					"description": "Collect enough casualties to get the max clip for the Air Strike.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_airstrike_max_clip.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_airstrike_max_clip_bw.jpg"
+				},
+				{
+					"name": "TF_SOLDIER_AIRSTRIKE_GROUP_KILL",
+					"defaultvalue": 0,
+					"displayName": "Bombs Away!",
+					"hidden": 0,
+					"description": "Kill 3 people with the Air Strike during a single rocket jump.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_airstrike_group_kill.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_soldier_airstrike_group_kill_bw.jpg"
+				},
+				{
+					"name": "TF_SNIPER_PARACHUTE_GRIND",
+					"defaultvalue": 0,
+					"displayName": "Flight Cancelled",
+					"hidden": 0,
+					"description": "Kill 25 parachuting players with a critical headshot.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_parachute_grind.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_sniper_parachute_grind_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_CONGA_KILL",
+					"defaultvalue": 0,
+					"displayName": "Party Crasher",
+					"hidden": 0,
+					"description": "Kill 3 players who are doing the Conga within 5 seconds.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_conga_kill.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_conga_kill_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_CONGA_LINE",
+					"defaultvalue": 0,
+					"displayName": "Conga Line",
+					"hidden": 0,
+					"description": "Do the Conga with 10 or more players at the same time.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_conga_line.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_conga_line_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_RPS_ROCK",
+					"defaultvalue": 0,
+					"displayName": "On The Rocks",
+					"hidden": 0,
+					"description": "Lose at Rock, Paper, Scissors 3 times in a row with Rock.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_rps_rock.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_rps_rock_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_RPS_SCISSORS",
+					"defaultvalue": 0,
+					"displayName": "Running With Scissors",
+					"hidden": 0,
+					"description": "Win at Rock, Paper, Scissors 3 times in a row with Scissors.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_rps_scissors.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_rps_scissors_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_DOSIDO_MELLE_KILL",
+					"defaultvalue": 0,
+					"displayName": "May I Cut In, Too?",
+					"hidden": 0,
+					"description": "Melee kill 10 players while they are doing the Square Dance taunt.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_dosido_melle_kill.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_dosido_melle_kill_bw.jpg"
+				},
+				{
+					"name": "TF_TAUNT_WHILE_CAPPING",
+					"defaultvalue": 0,
+					"displayName": "Showboat",
+					"hidden": 0,
+					"description": "Do 10 partner taunts with a teammate while capturing a control point.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_while_capping.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_taunt_while_capping_bw.jpg"
+				},
+				{
+					"name": "TF_PYRO_IGNITE_PLAYER_BEING_FLIPPED",
+					"defaultvalue": 0,
+					"displayName": "Flip-Kabob",
+					"hidden": 0,
+					"description": "Ignite a player that is being flipped by someone using the Flippin' Awesome taunt.",
+					"icon": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_pyro_ignite_player_being_flipped.jpg",
+					"icongray": "http://media.steampowered.com/steamcommunity/public/images/apps/440/tf_pyro_ignite_player_being_flipped_bw.jpg"
 				}
 			]
 			
