@@ -41657,6 +41657,8 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"act_as_wearable" "1"
+			"model_player"	"models/weapons/c_models/c_bugle/c_bugle.mdl" 
+			"model_world"	""
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"0"
 			"extra_wearable" "models/workshop/weapons/c_models/c_paratooper_pack/c_paratrooper_pack.mdl"
