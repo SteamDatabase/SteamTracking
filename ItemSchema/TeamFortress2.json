@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.66b62e21a2a054e902a12ddbd933809560f7ef94.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.25f28b8c3136e1a989e79013cdd064d1860086d4.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -47576,7 +47576,7 @@
 				"item_description": "Press 'JUMP' key in the air to deploy.\nDeployed Parachutes slow your descent.",
 				"proper_name": true,
 				"item_slot": "secondary",
-				"model_player": null,
+				"model_player": "models/weapons/c_models/c_bugle/c_bugle.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack/workshop/weapons/c_models/c_paratrooper_pack/c_paratrooper_pack",
 				"min_ilevel": 1,
