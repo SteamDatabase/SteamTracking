@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_RemoteClients_AdvancedClient class="SettingsModal" defaultfocus="EnableHardwareDecoding" tabindex="auto" selectionpos="auto">
+	<SettingsPanel_RemoteClients_AdvancedClient class="SettingsModal" defaultfocus="BandwidthLimitKBit" tabindex="auto" selectionpos="auto">
 
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
