@@ -317,7 +317,7 @@ CreateBuyOrderDialog = {
 
 		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
 
-		var currency = $J('#market_buy_commodity_input_price').val();
+		var currency = $J('#market_buy_commodity_input_price').val().replace(',', '.');
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price_total = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
 
