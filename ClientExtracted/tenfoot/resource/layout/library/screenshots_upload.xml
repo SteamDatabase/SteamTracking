@@ -6,7 +6,7 @@
 		<include src="file://{resources}/styles/library/library_screenshots_slideshow.css" />
 	</styles>
 
-	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
+	<TenfootMsgBox defaultfocus="ScreenshotCommentTextEntry" tabindex="auto" selectionpos="auto" >
 		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
 			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_UploadScreenshotTitle" />
