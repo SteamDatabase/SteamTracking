@@ -1019,7 +1019,7 @@ var CCountdownManager = {
 		if ( !this.bTriggeredRefresh )
 		{
 			this.bTriggeredRefresh = true;
-			window.location = window.location;
+			window.location.reload();
 		}
 	}
 };
