@@ -150,6 +150,7 @@ Scripts/Partner/marketing.js|https://partner.steamgames.com/public/javascript/ma
 Scripts/Partner/newsadmin.js|https://partner.steamgames.com/public/javascript/newsadmin.js?_=*TIMENOW*&l=english
 Scripts/Partner/packages.js|https://partner.steamgames.com/public/javascript/packages.js?_=*TIMENOW*&l=english
 Scripts/Partner/storeadmin.js|https://partner.steamgames.com/public/javascript/storeadmin.js?_=*TIMENOW*&l=english
+Scripts/Partner/newpartner.js|https://partner.steamgames.com/public/javascript/newpartner.js?_=*TIMENOW*&l=english
 
 # API
 API/SupportedAPIList.json|https://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?key=*APIKEY*
