@@ -3674,13 +3674,21 @@ function UpgradeGreenlightItem( publishedfileid, name )
 	input.val( name );
 	input.select();
 
+	input.after(
+		'<div>Product Type:</div><div><select name="appTypeGreenlight" id="appTypeGreenlight" style="width: 100px;"><option value="Game">Game</option><option value="Application">Application</option></select></div>'
+	);
+
+	var content = prompt.m_$Content;
+	var appTypeElem = prompt.m_$Content.find( "#appTypeGreenlight");
+
 	prompt.done( function( appName ) {
+		var appType = appTypeElem.val();
 		var waitingDialog = ShowBlockingWaitDialog( 'Converting', 'Please wait...' );
 			$J.ajax(
 				{
 					type: "POST",
 					url: 'https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/',
-					data: { 'publishedfileid' : publishedfileid, 'name' : appName },
+					data: { 'publishedfileid' : publishedfileid, 'name' : appName, 'type' : appType },
 					success: function ( response ) {
 						if ( response.success == 1 )
 						{
