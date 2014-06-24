@@ -1732,6 +1732,8 @@ RegisterSteamOnWebPanelShownHandler( function() { g_bMarketWindowHidden = false;
 RegisterSteamOnWebPanelHiddenHandler( function() { g_bMarketWindowHidden = true; } );
 
 // ajax's in the some html describing the current orders
+var Market_OrderSpreadPlot = null;
+var Market_OrderSpreadPlotLastRefresh = 0;
 function Market_LoadOrderSpread( item_nameid )
 {
 	$J.ajax( {
@@ -1759,6 +1761,73 @@ function Market_LoadOrderSpread( item_nameid )
 				CreateBuyOrderDialog.m_nBestBuyPrice = data.lowest_sell_order;
 			else if ( data.highest_buy_order && data.highest_buy_order > 0 )
 				CreateBuyOrderDialog.m_nBestBuyPrice = data.highest_buy_order;
+
+			// update the jplot graph
+			// we do this infrequently, since it's really expensive, and makes the page feel sluggish
+			if ( Market_OrderSpreadPlotLastRefresh
+			&& Market_OrderSpreadPlotLastRefresh + (60*60*1000) < $J.now() )
+			{
+				$J('#orders_histogram').html('');
+				Market_OrderSpreadPlot = null;
+			}
+
+			if ( Market_OrderSpreadPlot == null )
+			{
+				Market_OrderSpreadPlotLastRefresh = $J.now();
+
+				$J('#orders_histogram').show();
+				var line1 = data.sell_order_graph;
+				var line2 = data.buy_order_graph;
+				var numYAxisTicks = 11;
+				var strFormatPrefix = data.price_prefix;
+				var strFormatSuffix = data.price_suffix;
+				var lines = [ line1, line2 ];
+
+				Market_OrderSpreadPlot = $J.jqplot('orders_histogram', lines, {
+					renderer: $J.jqplot.BarRenderer,
+			        rendererOptions: {fillToZero: true},
+					title:{text: 'Buy and Sell Orders (cumulative)', textAlign: 'left' },
+					gridPadding:{left: 45, right:45, top:30},
+					axesDefaults:{ showTickMarks:false },
+					axes:{
+						xaxis:{
+							tickOptions:{formatString:strFormatPrefix + '%0.2f' + strFormatSuffix, labelPosition:'start', showMark: false},
+							min: data.graph_min_x,
+							max: data.graph_max_x
+						},
+						yaxis: {
+							pad: 1,
+							tickOptions:{formatString:'%d'},
+							numberTicks: numYAxisTicks,
+							min: 0,
+							max: data.graph_max_y
+						}
+					},
+					grid: {
+						gridLineColor: '#414141',
+						borderColor: '#414141',
+						background: '#262626'
+					},
+					cursor: {
+						show: true,
+						zoom: true,
+						showTooltip: false
+					},
+					highlighter: {
+						show: true,
+						lineWidthAdjust: 2.5,
+						sizeAdjust: 5,
+						showTooltip: true,
+						tooltipLocation: 'n',
+						tooltipOffset: 20,
+						fadeTooltip: true,
+						yvalues: 2,
+						formatString: "<span style=\"display: none\">%s%s</span>%s"
+					},
+					series: [{lineWidth:3, fill: true, fillAndStroke:true, fillAlpha: 0.3, markerOptions:{show: false, style:'circle'}}, {lineWidth:3, fill: true, fillAndStroke:true, fillAlpha: 0.3, color:'#6b8fc3', markerOptions:{show: false, style:'circle'}}],
+					seriesColors: [ "#688F3E" ]
+				});
+			}
 		}
 	} );
 }
