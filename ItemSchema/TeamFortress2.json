@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.25f28b8c3136e1a989e79013cdd064d1860086d4.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fd33ecbfdfd2acac24c54d766d66af2dd17d0152.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -5957,8 +5957,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_highfive_large.62da6a1ed2feb3a4ff24274dab9ce79e9f2de1f5.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -17115,7 +17117,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_replay_large.8fe3149187d704ccdb67c6922952c230ee8ff01a.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -18289,8 +18294,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/all_laugh_taunt_large.811cbd332a762119d0eb98421172f066a8b44654.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -18727,8 +18734,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/medic_heroic_taunt_large.5e84cc758583dc9310c2d0ae3b0b7abcb73d694c.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -47875,8 +47884,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_dosido_large.fe1ab9ecfca698ba1ad773cf1145230343e9704b.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -47922,8 +47933,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_flip_large.4dd00ff7c96b41e8416c2212fd6206090ac0df6f.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -47968,7 +47981,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_buy_a_life.dd1370d2bc2ac119b6c46a9a2fe0bc0df937729a.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_buy_a_life_large.dc0b059add78860f4d508e866c4a9d9ab21fb1a7.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -47999,7 +48016,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_results_are_in.62f11d4e3c19b579cf67c30de5eef1aef82620a0.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_results_are_in_large.77685ed8f46beba136202d9ed94880de898dc402.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48031,8 +48052,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_rps_large.9c52a0f3f85f87b7ea6b0d3e0ce933285a380966.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48078,8 +48101,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_skullcracker_large.9e18d44044b09c56ef32d377bec4b669f7900514.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48114,7 +48139,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_party_trick.346604354d5b2207834b3df1fd939179fda35a94.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_party_trick_large.0b159b5384748ee1ed01d76f926e390b6f50f84f.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48145,7 +48174,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_fresh_brewed.ed2f11b0e16ef5b9cb48a6e7387228e6eed8dac3.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_fresh_brewed_large.01a414669204742b77e27d56813c324afb56ff13.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48176,7 +48209,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_spent_well.0365e8af7104f8140f7412405e33e8c47bbd9a14.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_spent_well_large.7700ffce1689ddff44a94fd12839d381c98a9614.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48213,7 +48250,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_rancho_relaxo.9315161cfb677ec8b7e45174d1841e9b707a4665.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_rancho_relaxo_large.d324e224397f321c1eeae7a68941810d753401fb.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48252,7 +48293,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_i_see_you.1d0d8a10e64d697b5c6389712683b338cd96a37b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_i_see_you_large.94efe890d0c0a78bed043791b902c601fc3be75c.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48283,7 +48328,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_battin_thousand.4738ad387ed4a07d040939918ab2a88a44545afa.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_battin_thousand_large.3b4fddba5d5f6cbea8a2aae3e91b3df6d1086e45.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48323,8 +48372,10 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_conga_large.81a120ca2cf63a8d32159ade3bc87a966acfc3f0.png",
 				"capabilities": {
 					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
 					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48379,7 +48430,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_deep_fried.34786e644564535479d75b74a1268d99b66f6f62.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_deep_fried_large.c6fdd597e3dcce7e12b42dad514728bfd5ecd07c.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48410,7 +48465,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/taunt_oblooterated.f558c7530498ac02c00e41b8eb1cd2cf6810ad45.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/taunt_oblooterated_large.7acdb23dab6d7777f163f530ccb20609bb1b3bc1.png",
 				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
 					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -48522,6 +48581,11 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					},
+					{
+						"name": "is marketable",
+						"class": "is_marketable",
+						"value": 1
 					}
 				]
 				
@@ -117608,7 +117672,7 @@
 				"name": "closerange backattack minicrits",
 				"defindex": 619,
 				"attribute_class": "closerange_backattack_minicrits",
-				"description_string": "Mini-crits targets when fired at their back and at close range",
+				"description_string": "Mini-crits targets when fired at their back from close range",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,

@@ -362,6 +362,14 @@
 			{
 				"is_taunt_item"	"1"
 			}
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+				"usable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
 			"show_in_armory"	"1"
 			"armory_desc"		"action tauntenabler"
 			"item_class"		"no_entity"
@@ -8592,12 +8600,6 @@
 			"name"	"High Five Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"	"2011/10/13"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntEnabler_HighFive"
 			"item_description"	"#TF_TauntEnabler_HighFive_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_highfive"
@@ -20409,11 +20411,6 @@
 		{
 			"name"	"Replay Taunt"
 			"prefab"	"taunt"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntEnabler_Replay"
 			"item_description"	"#TF_TauntEnabler_Replay_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_replay"
@@ -21643,12 +21640,6 @@
 			"name"	"Laugh Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"	"2011/05/24"
-			"capabilities"
-			{
-				"nameable"			"1"
-				"usable"			"1"
-				"can_gift_wrap" 	"1"
-			}
 			"item_name"		"#TF_TauntEnabler_Laugh"
 			"item_description"	"#TF_TauntEnabler_Laugh_Desc"
 			"image_inventory"	"backpack/player/items/all_class/all_laugh_taunt"
@@ -22173,12 +22164,6 @@
 			"name"	"Meet the Medic Heroic Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"	"2011/06/22"
-			"capabilities"
-			{
-				"nameable"			"1"
-				"usable"			"1"
-				"can_gift_wrap" 	"1"
-			}
 			"item_name"		"#TF_TauntEnabler_MedicHeroicPose"
 			"item_description"	"#TF_TauntEnabler_MedicHeroicPose_Desc"
 			"image_inventory"	"backpack/player/items/medic/medic_heroic_taunt"
@@ -39251,14 +39236,6 @@
 			"name"	"The Shred Alert"
 			"prefab"	"taunt"
 			"first_sale_date"	"2013/02/13"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_gift_wrap" 	"1"
-				"usable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
 			"item_name"		"#TF_ShredAlert"
 			"item_description"	"#TF_ShredAlert_Desc"
 			"propername"	"1"
@@ -41925,12 +41902,6 @@
 			"name"	"Square Dance Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntAllClassSquareDance"
 			"item_description"	"#TF_TauntAllClassSquareDance_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_dosido"
@@ -42042,12 +42013,6 @@
 			"name"	"Flippin' Awesome Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntAllClassFlip"
 			"item_description"	"#TF_TauntAllClassFlip_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_flip"
@@ -42157,10 +42122,6 @@
 			"name"	"Buy A Life Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntSpyBuyALife"
 			"item_description"	"#TF_TauntSpyBuyALife_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_buy_a_life"
@@ -42190,10 +42151,6 @@
 			"name"	"Results Are In Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntMedicXRay"
 			"item_description"	"#TF_TauntMedicXRay_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_results_are_in"
@@ -42223,12 +42180,6 @@
 			"name"	"RPS Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntAllClassRPS"
 			"item_description"	"#TF_TauntAllClassRPS_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_rps"
@@ -42435,12 +42386,6 @@
 			"name"	"Skullcracker Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntAllClassSkullcracker"
 			"item_description"	"#TF_TauntAllClassSkullcracker_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_skullcracker"
@@ -42504,10 +42449,6 @@
 			"name"	"Party Trick Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntPyroPartyTrick"
 			"item_description"	"#TF_TauntPyroPartyTrick_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_party_trick"
@@ -42537,10 +42478,6 @@
 			"name"	"Fresh Brewed Victory Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntSoldierCoffee"
 			"item_description"	"#TF_TauntSoldierCoffee_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_fresh_brewed"
@@ -42570,10 +42507,6 @@
 			"name"	"Spent Well Spirits Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"			"#TF_TauntDemomanNuke"
 			"item_description"	"#TF_TauntDemomanNuke_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_spent_well"
@@ -42614,10 +42547,6 @@
 			"name"	"Rancho Relaxo Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"			"#TF_TauntEngineerRancho"
 			"item_description"	"#TF_TauntEngineerRancho_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_rancho_relaxo"
@@ -42669,10 +42598,6 @@
 			"name"	"I See You Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"		"#TF_TauntSniperISeeYou"
 			"item_description"	"#TF_TauntSniperISeeYou_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_i_see_you"
@@ -42698,10 +42623,6 @@
 			"name"	"Battin' a Thousand Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"			"#TF_TauntScoutBatMan"
 			"item_description"	"#TF_TauntScoutBatMan_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_battin_thousand"
@@ -42735,12 +42656,6 @@
 			"name"	"Conga Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"usable"		"1"
-				"can_gift_wrap" "1"
-			}
 			"item_name"	"#TF_TauntAllClassConga"
 			"item_description"	"#TF_TauntAllClassConga_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_conga"
@@ -42815,10 +42730,6 @@
 			"name"	"Deep Fried Desire Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"			"#TF_TauntScoutChickenBucket"
 			"item_description"	"#TF_TauntScoutChickenBucket_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_deep_fried"
@@ -42848,10 +42759,6 @@
 			"name"	"Oblooterated Taunt"
 			"prefab"	"valve taunt"
 			"first_sale_date"		"2014/06/17"
-			"capabilities"
-			{
-				"usable"		"1"
-			}
 			"item_name"			"#TF_TauntDemomanWoohoo"
 			"item_description"			"#TF_TauntDemomanWoohoo_Desc"
 			"image_inventory"	"backpack/player/items/all_class/taunt_oblooterated"
@@ -42952,6 +42859,14 @@
 				"spy"		"1"
 				"engineer"	"1"
 				"pyro"		"1"
+			}
+			"attributes"
+			{
+				"is marketable"
+				{
+					"attribute_class"	"is_marketable"
+					"value"	"1"
+				}
 			}
 			"static_attrs"
 			{
