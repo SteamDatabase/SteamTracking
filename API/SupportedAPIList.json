@@ -119,7 +119,7 @@
 						"httpmethod": "GET",
 						"parameters": [
 							{
-								"name": "AccountID",
+								"name": "accountid",
 								"type": "uint32",
 								"optional": false,
 								"description": "The account ID to look up"
@@ -357,7 +357,18 @@
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
-
+							{
+								"name": "league_id",
+								"type": "uint32",
+								"optional": true,
+								"description": "Only show matches of the specified league id"
+							},
+							{
+								"name": "match_id",
+								"type": "uint64",
+								"optional": true,
+								"description": "Only show matches of the specified match id"
+							}
 						]
 						
 					},
@@ -595,6 +606,26 @@
 			{
 				"name": "IEconDOTA2_570",
 				"methods": [
+					{
+						"name": "GetEventStatsForAccount",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "eventid",
+								"type": "uint32",
+								"optional": false,
+								"description": "The League ID of the compendium you're looking for."
+							},
+							{
+								"name": "accountid",
+								"type": "uint32",
+								"optional": false,
+								"description": "The account ID to look up."
+							}
+						]
+						
+					},
 					{
 						"name": "GetGameItems",
 						"version": 1,
