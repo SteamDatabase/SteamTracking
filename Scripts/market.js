@@ -216,6 +216,7 @@ CreateBuyOrderDialog = {
 	m_timeBuyOrderPollingStart: null,
 	m_bPageNeedsRefresh: false,
 	m_nBestBuyPrice: null,
+	m_bActive: false,
 
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
@@ -234,6 +235,8 @@ CreateBuyOrderDialog = {
 			showModal( 'NotLoggedInWarning', true );
 			return;
 		}
+
+		this.m_bActive = true;
 
 		// show the frame in the dialog
 		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketItemName ), this.m_divContents.show() );
@@ -461,6 +464,7 @@ CreateBuyOrderDialog = {
 			this.m_bPageNeedsRefresh = false;
 			window.location.reload();
 		}
+		this.m_bActive = false;
 	}
 }
 
@@ -1830,4 +1834,97 @@ function Market_LoadOrderSpread( item_nameid )
 			}
 		}
 	} );
+}
+
+// keeps track of the state we have showing ticks
+ItemActivityTicker = {
+	m_llItemNameID: null,
+	m_rgActivity: [],
+	m_nActivityIndexNext: 0,
+	m_bStartedUpdate: false,
+	m_nTickerAdvanceRate: 0,
+	m_rgActivityShown: [],
+
+	Start: function( item_nameid ) {
+		this.m_llItemNameID = item_nameid;
+		this.Load();
+	},
+
+	Load: function() {
+		$J.ajax( {
+			url: 'https://steamcommunity.com/market/itemordersactivity',
+			type: 'GET',
+			data: {
+				country: g_strCountryCode,
+				language: g_strLanguage,
+				currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
+				item_nameid: this.m_llItemNameID
+			}
+		} ).fail( function( jqxhr ) {
+			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );
+		} ).done( function( data ) {
+			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );
+			if ( data.success == 1 )
+			{
+				ItemActivityTicker.Update( data.activity );
+			}
+		} );
+	},
+
+	Update: function( rgActivity ) {
+		if ( rgActivity.length == 0 )
+			return;
+
+		// set the new list
+		this.m_nActivityIndexNext = 0;
+		this.m_rgActivity = rgActivity;
+
+		// spread the updates out over 10 seconds
+		this.m_nTickerAdvanceRate = 10000 / Math.max(rgActivity.length-2,1);
+
+		// but no more than one every 1.5 seconds
+		this.m_nTickerAdvanceRate = Math.max( this.m_nTickerAdvanceRate, 1500 );
+
+		if ( !this.m_bStartedUpdate )
+		{
+			this.m_bStartedUpdate = true;
+			this.AdvanceTicker();
+			$J('#market_activity_waiting_text').hide();
+		}
+	},
+
+	AdvanceTicker: function() {
+		// don't update if the dialog is open
+		if ( CreateBuyOrderDialog.m_bActive )
+		{
+			setTimeout( function() { ItemActivityTicker.AdvanceTicker(); }, this.m_nTickerAdvanceRate );
+			return;
+		}
+
+		if ( this.m_nActivityIndexNext >= this.m_rgActivity.length )
+		{
+			this.m_bStartedUpdate = false;
+			return;
+		}
+
+		// hide the old item
+		if ( this.m_rgActivityShown.length > 0 )
+		{
+			var line_item = this.m_rgActivityShown.shift();
+
+			// animate thie item up
+			$J(line_item).animate( {'margin-top':'-40px','opacity':'0'}, 300, 'swing', function() { $J(line_item).remove(); } );
+		}
+
+		// add back items
+		while ( this.m_rgActivityShown.length < 3 && this.m_nActivityIndexNext < this.m_rgActivity.length )
+		{
+			var newObj = jQuery.parseHTML( this.m_rgActivity[this.m_nActivityIndexNext] );
+			this.m_nActivityIndexNext += 1;
+			this.m_rgActivityShown.push( newObj );
+			$J('#market_activity_block').append( newObj ).fadeIn( 300 );
+		}
+
+		setTimeout( function() { ItemActivityTicker.AdvanceTicker(); }, this.m_nTickerAdvanceRate );
+	}
 }
