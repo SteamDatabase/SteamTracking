@@ -338,6 +338,8 @@ message CInputKeyUpMsg {
 
 message CInputGamepadAttachedMsg {
 	required int32 controller_id = 1;
+	optional uint32 controller_type = 2;
+	optional uint32 controller_subtype = 3;
 }
 
 message CInputGamepadEventMsg {
