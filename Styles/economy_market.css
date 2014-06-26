@@ -850,8 +850,48 @@ input.filter_search_box:focus {
 	text-align: center;
 }
 
+#market_activity_section {
+	padding: 12px;
+}
+
+.market_activity_header {
+	font-size: 16px;
+	color: white;
+	margin: 6px 0px 6px 0px;
+}
+
+#market_activity_block {
+	padding: 2px;
+	height: 132px;
+	overflow: hidden;
+}
+
+.market_activity_line_item {
+	height: 32px;
+	padding: 6px;
+}
+
+.market_ticker_avatar img {
+	padding: 3px;
+	border-radius: 3px;
+	background-color: #545454;
+	background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#706c6b), color-stop(95%,#4e4d4d));background: -webkit-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -o-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -ms-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: linear-gradient(to bottom, #706c6b 5%,#4e4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+#market_activity_waiting_text {
+	margin: 20px;
+}
+
+.market_ticker_name {
+	font-weight: bold;
+}
+
 .market_commodity_order_block {
-    height: 400px;
+    height: 360px;
 }
 
 .market_commodity_explanation {
