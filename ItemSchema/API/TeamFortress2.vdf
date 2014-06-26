@@ -41634,8 +41634,6 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"act_as_wearable" "1"
-			"model_player"	"models/weapons/c_models/c_bugle/c_bugle.mdl" 
-			"model_world"	""
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"0"
 			"extra_wearable" "models/workshop/weapons/c_models/c_paratooper_pack/c_paratrooper_pack.mdl"
@@ -52190,7 +52188,7 @@
 		}
 		"30391"
 		{
-			"name"		"The Senguko Scorcher"
+			"name"		"The Sengoku Scorcher"
 			"prefab"		"misc"
 			"first_sale_date"		"2014/06/16"
 			"propername"		"1"
@@ -63855,7 +63853,7 @@
 				"The Classified Coif"			"1"		
 				"The Rogue's Robe"				"1"		
 				"The Spook Specs"				"1"
-				"The Senguko Scorcher"			"1"		
+				"The Sengoku Scorcher"			"1"		
 				"The Man in Slacks"				"1"		
 				"The Razor Cut"					"1"
 				"The Frickin' Sweet Ninja Hood"	"1"
@@ -65909,6 +65907,14 @@
 				"usable_gc"				"1"
 				"usable_out_of_game"	"1"
 			}
+			"attributes"
+			{
+				"is marketable"
+				{
+					"attribute_class"	"is_marketable"
+					"value"	"1"
+				}
+			}
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Summer2014_Level0"
 			"item_description"	"#TF_Summer2014_Level0_Desc"
@@ -65938,6 +65944,14 @@
 			{
 				"usable_gc"				"1"
 				"usable_out_of_game"	"1"
+			}
+			"attributes"
+			{
+				"is marketable"
+				{
+					"attribute_class"	"is_marketable"
+					"value"	"1"
+				}
 			}
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Summer2014_Level1"
@@ -77384,7 +77398,7 @@
 			"items"
 			{
 				"The Combustible Kabuto"		"1"
-				"The Senguko Scorcher"			"1"
+				"The Sengoku Scorcher"			"1"
 			}
 		}
 		"short2014_pyro_pack2"
@@ -78240,6 +78254,7 @@
 		}
 		"jul_2013_crate_list_early"
 		{
+			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Series_3"
 			"The Brotherhood of Arms"		"1"
 			"The Well-Rounded Rifleman"		"1"
 			"The Breakneck Baggies"		"1"
@@ -78335,10 +78350,12 @@
 		}
 		"fall_2013_crate_list_acorns"
 		{
+			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Series_3"
 			"fall_2013_crate_contents_acorns"		"1"
 		}
 		"fall_2013_crate_list_gourd"
 		{
+			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Series_3"
 			"fall_2013_crate_contents_gourd"		"1"
 		}
 		"supply_crate_loot_list_82"

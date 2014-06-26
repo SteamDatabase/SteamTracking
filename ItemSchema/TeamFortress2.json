@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fd33ecbfdfd2acac24c54d766d66af2dd17d0152.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.589fe69c340052ece9389f41f916009f9f469b90.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -47585,7 +47585,7 @@
 				"item_description": "Press 'JUMP' key in the air to deploy.\nDeployed Parachutes slow your descent.",
 				"proper_name": true,
 				"item_slot": "secondary",
-				"model_player": "models/weapons/c_models/c_bugle/c_bugle.mdl",
+				"model_player": null,
 				"item_quality": 6,
 				"image_inventory": "backpack/workshop/weapons/c_models/c_paratrooper_pack/c_paratrooper_pack",
 				"min_ilevel": 1,
@@ -56709,6 +56709,14 @@
 				"used_by_classes": [
 
 				]
+				,
+				"attributes": [
+					{
+						"name": "is marketable",
+						"class": "is_marketable",
+						"value": 1
+					}
+				]
 				
 			},
 			{
@@ -56743,6 +56751,14 @@
 				},
 				"used_by_classes": [
 
+				]
+				,
+				"attributes": [
+					{
+						"name": "is marketable",
+						"class": "is_marketable",
+						"value": 1
+					}
 				]
 				
 			},
@@ -58440,7 +58456,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Red Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58530,7 +58546,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Orange Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58620,7 +58636,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Yellow Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58710,7 +58726,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Green Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58800,7 +58816,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Aqua Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58890,7 +58906,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Blue Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58980,7 +58996,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Brown Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -59070,7 +59086,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Black Summer 2013 Cooler",
-				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.",
+				"item_description": "This crate is special.\nIt contains a unique selection of\nGold Star approved Community Items\nfrom the Summer 2013 event.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -60016,7 +60032,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Mann Co. Strongbox",
-				"item_description": "This crate is special.\nIts contents are unknown and requires a\nMann Co. Strongbox Key to unlock.\n\nThe Strongbox will become a rare drop after February 24, 2014.",
+				"item_description": "This crate is special.\nIts contents are unknown and requires a\nMann Co. Strongbox Key to unlock.\n\nThis crate contains a chance for an Exceedingly Rare Series #3 Unusual Hat!",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -110374,11 +110390,11 @@
 				
 			},
 			{
-				"name": "The Senguko Scorcher",
+				"name": "The Sengoku Scorcher",
 				"defindex": 30391,
 				"item_class": "tf_wearable",
 				"item_type_name": "Apparel",
-				"item_name": "Senguko Scorcher",
+				"item_name": "Sengoku Scorcher",
 				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/pyro/short2014_sengoku_scorcher/short2014_sengoku_scorcher.mdl",
@@ -119009,7 +119025,7 @@
 				"name": "The Ronin Roaster Pack",
 				"items": [
 					"The Combustible Kabuto",
-					"The Senguko Scorcher"
+					"The Sengoku Scorcher"
 				]
 				
 			},
