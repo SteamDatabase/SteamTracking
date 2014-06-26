@@ -1202,6 +1202,13 @@ textarea.comment_input
 	margin-bottom: 15px;
 }
 
+#review_create p {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #b0aeac;
+}
+
 #review_create .avatar {
 	width: 92px;
 	height: 92px;
