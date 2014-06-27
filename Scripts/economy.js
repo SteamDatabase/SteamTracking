@@ -2501,7 +2501,7 @@ function PopulateMarketActions( elActions, item )
 		var elPriceInfo = new Element( 'div' );
 		var elPriceInfoHeader = new Element ( 'div', { 'style': 'height: 24px;' } );
 		var elMarketLink = new Element( 'a', {
-			'href': 'https://steamcommunity.com/market/listings/' + item.appid + '/' + strMarketName
+			'href': 'https://steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( strMarketName )
 		} );
 		elMarketLink.update( 'View in Community Market' );
 		elPriceInfoHeader.appendChild( elMarketLink );
