@@ -257,11 +257,16 @@ CreateBuyOrderDialog = {
 		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
 		$J('#market_buynow_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
 		$J('#market_buynow_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
+		$J('#market_buy_commodity_input_price').blur( function() {
+			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
+			var currency = CreateBuyOrderDialog.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+			$('market_buy_commodity_input_price').setValue( v_currencyformat( currency, sWalletCurrencyCode ) );
+		});
 
 
+		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 		if ( window.g_rgWalletInfo )
 		{
-			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			$('market_buynow_dialog_walletbalance_amount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
 		}
 		else
@@ -270,17 +275,15 @@ CreateBuyOrderDialog = {
 		}
 
 		// set our default price
-		$('market_buy_commodity_input_price').setValue( this.m_nBestBuyPrice / 100 );
+		$('market_buy_commodity_input_price').setValue( v_currencyformat( this.m_nBestBuyPrice, sWalletCurrencyCode ) );
 
 		this.UpdateTotal();
 	},
 
 	UpdateTotal: function() {
-		var currency = $J('#market_buy_commodity_input_price').val();
+		var currency = this.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
-
-		currency = currency.replace(',', '.');
-		var price = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
+		var price = Math.round( currency * quantity );
 
 		var div = $J('#market_buy_commodity_order_total');
 		if ( isNaN(price) || !window.g_rgWalletInfo )
@@ -320,9 +323,9 @@ CreateBuyOrderDialog = {
 
 		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
 
-		var currency = $J('#market_buy_commodity_input_price').val().replace(',', '.');
+		var currency = this.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
-		var price_total = Math.round( Number(currency.replace(/[^0-9\.]+/g,"")) * 100 * quantity );
+		var price_total = Math.round( currency * quantity );
 
 		// we'll want to refresh the page behind us when done
 		this.m_bPageNeedsRefresh = true;
@@ -456,6 +459,23 @@ CreateBuyOrderDialog = {
 		// this doesn't work, need jquery-color plugin or a different solution
 		$J('#market_buynow_dialog_error_text').animate( {'color':'#ff0000'}, 250 );
 		$J('#market_buynow_dialog_placing_order').hide();
+	},
+
+	GetPriceValueAsInt: function( strAmount ) {
+		var nAmount;
+		if ( !strAmount )
+		{
+			return 0;
+		}
+
+		// strip the currency symbol, set commas to periods, set .-- to .00
+		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
+
+		var flAmount = parseFloat( strAmount ) * 100;
+		nAmount = Math.floor( isNaN(flAmount) ? 0 : flAmount ); // round down
+
+		nAmount = Math.max( nAmount, 0 );
+		return nAmount;
 	},
 
 	OnUserClosedDialog: function() {
@@ -1844,6 +1864,7 @@ ItemActivityTicker = {
 	m_bStartedUpdate: false,
 	m_nTickerAdvanceRate: 0,
 	m_rgActivityShown: [],
+	m_nTimeLastLoaded: 0,
 
 	Start: function( item_nameid ) {
 		this.m_llItemNameID = item_nameid;
@@ -1866,7 +1887,11 @@ ItemActivityTicker = {
 			setTimeout( function() { ItemActivityTicker.Load(); }, 10000 );
 			if ( data.success == 1 )
 			{
-				ItemActivityTicker.Update( data.activity );
+				if ( data.timestamp > ItemActivityTicker.m_nTimeLastLoaded )
+				{
+					ItemActivityTicker.m_nTimeLastLoaded = data.timestamp;
+					ItemActivityTicker.Update( data.activity );
+				}
 			}
 		} );
 	},
