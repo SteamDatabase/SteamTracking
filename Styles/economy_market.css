@@ -833,6 +833,14 @@ input.filter_search_box:focus {
 	margin-right: 15px;
 }
 
+.market_listing_iteminfo hr {
+	background-color: #333;
+	border-style: solid none none;
+	border-color: black;
+	border-width: 1px 0 0;
+	height: 2px;
+}
+
 .market_listing_largeimage {
 	background: #111111;
 
@@ -891,7 +899,6 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_order_block {
-    height: 360px;
 }
 
 .market_commodity_explanation {
@@ -922,7 +929,7 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_order_summary {
-	min-height: 1em;
+	min-height: 2.5em;
 	font-size: 18px;
 }
 
