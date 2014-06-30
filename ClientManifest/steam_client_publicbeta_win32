@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1403819815"
+	"version"		"1404163764"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -62,9 +62,9 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.0d6075aa6afb65b6b27972b3175d0b76b84ce690"
-		"checksum"		"0d6075aa6afb65b6b27972b3175d0b76b84ce690"
-		"size"		"111037"
+		"file"		"strings_en_all.zip.df164767483b87938ae0ff9b6732a5f5be280f46"
+		"checksum"		"df164767483b87938ae0ff9b6732a5f5be280f46"
+		"size"		"111183"
 	}
 	"strings_all"
 	{
@@ -117,21 +117,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.7cb87d8d1415d65b9d4a5328dc07163e89f5f460"
-		"checksum"		"7cb87d8d1415d65b9d4a5328dc07163e89f5f460"
-		"size"		"23498284"
-		"zipvz"		"bins_win32.zip.vz.998fc4244cf1872b532273fa8fca9389290aee0f_12438146"
+		"file"		"bins_win32.zip.e887d6b3a4680c55ebb1671f3926d6860ed2b445"
+		"checksum"		"e887d6b3a4680c55ebb1671f3926d6860ed2b445"
+		"size"		"23497195"
+		"zipvz"		"bins_win32.zip.vz.796e5ea24bb84e549afbab3f164d7dd2f46f4127_12441948"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.616b6c6341b2b2e2b1e8112d39c9a0f2dcf0b1a3"
-		"checksum"		"616b6c6341b2b2e2b1e8112d39c9a0f2dcf0b1a3"
-		"size"		"835988"
-		"zipvz"		"steam_win32.zip.vz.97b4d1373b5c079e431e338afe540e6f37b49689_691464"
+		"file"		"steam_win32.zip.ace1ca664b7272165556e9907b5ba0079f8cb3e9"
+		"checksum"		"ace1ca664b7272165556e9907b5ba0079f8cb3e9"
+		"size"		"835744"
+		"zipvz"		"steam_win32.zip.vz.d04f24268c579704db41b89d0f5f61edc8d19961_691666"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"a27a47e82702c05804f69f63d59ac25eafe8ddbb9381ff46b13323276c31be8821baa8d4ddf0cd029e2d97d1e36359b7851f2e1ad8237b5c69b6bd37608a914c5b1a48ea94f9088d31e1dcf857ff82293ae0440538bec6e59acdee27b45374bd97043d20b1ebe58efa1c9b143b021468ea56001ab73b26171ad6851d25d8c689"
+	"win32"		"7674e4b1bdabfc7a8dbda18935e602727d258baa950f702c2ad75e77fa463e39d967a9b07879db0ff99cad2493ac449e457564ea4b095ebcfc91456c221feb1f9c1a44099db3bae05d7e110580eaa82dfc6c31209642e4379af4129994a82dcc5b68aeb53264734dae92b65d076db5720df549d021281d1478b3d7fd787d39e3"
 }
