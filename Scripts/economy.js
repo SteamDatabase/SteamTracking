@@ -2336,10 +2336,6 @@ function BuildHover( prefix, item, owner )
 		PopulateMarketActions( elMarketActions, item );
 	}
 
-			if ( typeof g_rgItemRewardEventData != 'undefined' )
-		{
-			PopulateItemRewardEventData( prefix, elHoverContent, item );
-		}
 		
 	$(prefix).builtFor = item;
 	$(prefix).builtForAmount = item.amount;
@@ -2567,43 +2563,6 @@ function PopulateMarketActions( elActions, item )
 	elActions.show();
 }
 
-function PopulateItemRewardEventData( prefix, elHoverContent, item )
-{
-	var $ItemRewardCtn = $J('#'+prefix+'_itemrewardevent');
-	var rgRewardData = g_rgItemRewardEventData && g_rgItemRewardEventData[item.appid] && g_rgItemRewardEventData[item.appid][item.market_hash_name];
-
-	if ( !rgRewardData )
-	{
-		$ItemRewardCtn.hide();
-		elHoverContent.removeClassName('has_itemrewardinfo');
-		return;
-	}
-
-	elHoverContent.addClassName( 'has_itemrewardinfo');
-	if ( !$ItemRewardCtn.length )
-	{
-		$ItemRewardCtn = $J('<div id="' + prefix + '_itemrewardevent" class="faq_reward_hover_callout"></div>');
-		$J(elHoverContent).after( $ItemRewardCtn );
-	}
-
-	if ( !$ItemRewardCtn.children().length )
-	{
-		$ItemRewardCtn.html(
-			'<div class="faq_reward_hover_flourish">' +
-				'<div class="ellipsis">Summer Adventure 2014</div>' +
-			'</div>' +
-			'<div class="reward_rarity"></div>' +
-			'<div class="craftcount"></div>'
-		);
-	}
-	$ItemRewardCtn.show();
-	var $Rarity = $ItemRewardCtn.children( '.reward_rarity' );
-	var $CraftCount = $ItemRewardCtn.children( '.craftcount' );
-
-	$Rarity.attr( 'class', 'reward_rarity rarity' + rgRewardData.item_reward_event_rarity );
-	$Rarity.text( rgRewardData.item_reward_event_rarity_desc );
-	$CraftCount.text( rgRewardData.item_reward_event_craftcount_desc );
-}
 
 function SellCurrentSelection()
 {
