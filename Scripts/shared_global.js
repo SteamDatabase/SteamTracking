@@ -1279,16 +1279,31 @@ WebStorage = {
 };
 
 // takes an integer
-function v_numberformat( n )
+function v_numberformat( n, decimals )
 {
 	var str = '' + ( n ? n : 0 );
-	var len = str.length;
+	var len = str.indexOf( '.' );
+	if ( len == -1 )
+		len = str.length;
 	var out = '';
 	for ( var i = 0; i < len; i++ )
 	{
-		out += str.charAt(i);
-		if ( i < len - 1 && (len - i - 1) % 3 == 0 )
+		var c = str.charAt(i);
+		out += c;
+		if ( i < len - 1 && (len - i - 1) % 3 == 0 && c != '-' )
 			out += ',';
+	}
+	if ( len < str.length || decimals )
+	{
+		len++;
+		out += '.';
+		for ( var i = 0; i < ( decimals ? decimals : str.length - len ); i++ )
+		{
+			if ( len + i < str.length )
+				out += str.charAt( len + i );
+			else
+				out += '0';
+		}
 	}
 
 	return out;

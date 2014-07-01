@@ -1938,14 +1938,7 @@ ItemActivityTicker = {
 			var line_item = this.m_rgActivityShown.shift();
 
 			// animate thie item up
-			try
-			{
-				$J(line_item).animate( {'margin-top':'-40px','opacity':'0'}, 300, 'swing', function() { $J(line_item).remove(); } );
-			}
-			catch( err )
-			{
-				// TODO: Update jQuery
-			}
+			$J(line_item).animate( {'margin-top':'-40px','opacity':'0'}, 300, 'swing', function() { $J(line_item).remove(); } );
 		}
 
 		// add back items

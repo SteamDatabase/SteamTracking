@@ -1313,7 +1313,7 @@ a.instructionsBtn:hover {
 	border-radius: 2px;
 }
 
-.workshop_paymentinf_english_only
+.workshop_paymentinfo_english_only
 {
 	color: #ff9900;
 	font-size: 17px;
@@ -1378,6 +1378,22 @@ a.instructionsBtn:hover {
 	float:right;
 	width:630px;
 	text-align:left;
+	font-size: 14px;
+}
+
+.formRowFields.text
+{
+	padding: 9px 5px 4px 8px;
+}
+
+.formRowFields.completed
+{
+	color: #97c0e3;
+}
+
+.formRowFields.incomplete
+{
+	color: #CA7900;
 }
 
 .formRowFields .darkGrey
@@ -1388,6 +1404,21 @@ a.instructionsBtn:hover {
 .taxinfo
 {
 	padding-right: 50px;
+}
+
+.workshop_payment_info_done
+{
+	margin-top: 20px;
+	padding: 20px;
+	font-size: 18px;
+	background-color: #68932f;
+	color: #d2ff96;
+}
+
+.workshop_taxinfo_overwrite_warning
+{
+	padding-top: 5px;
+	color: #CA7900;
 }
 
 .formHR
@@ -2171,8 +2202,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .searchedForText
 {
-	background-color: #68932f;
-	color: #d2ff96;
 	background-color: #68932f;
 	color: #d2ff96;
 }

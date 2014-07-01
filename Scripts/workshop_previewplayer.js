@@ -102,15 +102,21 @@ var HighlightPlayer = Class.create( {
 		this.m_rgDefaultMovieFlashvars = $H( args.rgDefaultMovieFlashvars || {} );
 		this.m_bVideoOnlyMode = args.bVideoOnlyMode;
 
+		if ( !this.m_elemStrip )
+		{
+			return;
+		}
+
 		//make all the strip items clickable
 		var thisClosure = this;
+
 		this.m_elemStrip.select( '.highlight_strip_item' ).each(
 				function(elemThumb) {
 					Event.observe( elemThumb, 'click', thisClosure.HighlightItem.bind( thisClosure, elemThumb ) );
 				}
 		);
 
-		this.m_elemSelector = this.m_elemStrip.down('.highlight_selector');
+		this.m_elemSelector = this.m_elemStrip ? this.m_elemStrip.down('.highlight_selector') : null;
 
 		var elemSlider = $(args.elemSlider);
 		var nSliderWidth = this.m_elemStripScroll.getWidth() - this.m_elemStrip.getWidth();
