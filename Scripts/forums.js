@@ -46,7 +46,7 @@ function Forum_CancelEvent( event )
 
 function Forum_InitTooltips()
 {
-	$J('.forum_topic[data-tooltip-content], .forum_topic_link[data-tooltip-content]').tooltip( {
+	$J('.forum_topic[data-tooltip-content], .forum_topic_link[data-tooltip-content]').v_tooltip( {
 		'location':'bottom',
 		trackMouse: true,
 		'tooltipClass': 'forum_topic_tooltip',

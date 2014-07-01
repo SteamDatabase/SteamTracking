@@ -195,13 +195,18 @@ var rgUSATaxTreaties = {
 
 function UpdateTaxRequirement()
 {
+	if ( $J("#tax_usa").length == 0 )
+	{
+		return;
+	}
+
 	try
 	{
 				$('tax_usa').style.display = 'none';
 		$('tax_usa_treaty').style.display = 'none';
 		$('tax_usa_no_treaty').style.display = 'none';
 
-		if ( $('country').value == 'US' || $('uscitizen').checked )
+		if ( $('country').value == 'US' || $J('#uscitizen').prop('checked') )
 		{
 			$('tax_usa').style.display = 'block';
 			return;
@@ -229,14 +234,14 @@ function OnIsCompanyChange()
 	if ( $('iscompany').checked )
 	{
 		$('lastnameblock').style.display = 'none';
-		$('uscitizenblock').style.display = 'none';
-		$('uscitizen').checked = false;
+		$J('#uscitizenblock').hide();
+		$J('#uscitizen').prop( 'checked', false );
 		$('firstnamelabel').innerHTML = 'Company Name';
 	}
 	else
 	{
 		$('lastnameblock').style.display = 'block';
-		$('uscitizenblock').style.display = 'block';
+		$J('uscitizenblock').show();
 		$('firstnamelabel').innerHTML = 'First Name';
 	}
 }
@@ -278,6 +283,11 @@ function UpdateStateSelectState()
 
 function UpdateBankInfo()
 {
+	if ( $J( "#bankaccountnumberrow").length == 0 )
+	{
+		return;
+	}
+
 	try
 	{
 				$('bankaccountnumberrow').style.display = 'block';
@@ -317,7 +327,103 @@ function UpdateBankInfo()
 	}
 	catch( e )
 	{
-		ReportJSError( 'Failed in UpdateStateSelectState()', e );
+		ReportJSError( 'Failed in UpdateBankInfo()', e );
+	}
+}
+
+function ValidateUserPaymentInfo()
+{
+		var errorString = '';
+
+	bOk = true;
+
+		try
+	{
+		if ( $('country').value == 'US' )
+		{
+			$('state').value = $('state_select').value;
+		}
+		else
+		{
+			$('state').value = $('state_input').value;
+		}
+
+				if ( $J( "#firstname").length != 0 )
+		{
+			if ( $( 'iscompany' ).checked )
+			{
+				if ( $( 'firstname' ).value.length < 1 )
+				{
+					errorString += 'Please enter a company name.<br/>';
+				}
+				$( 'lastname' ).value = '';
+			}
+			else
+			{
+				if ( $( 'firstname' ).value.length < 1 )
+				{
+					errorString += 'Please enter a first name.<br/>';
+				}
+				if ( $( 'lastname' ).value.length < 1 )
+				{
+					errorString += 'Please enter a last name.<br/>';
+				}
+			}
+		}
+
+				if ( $( 'address1' ).value.length < 1 )
+		{
+			errorString += 'Please enter your address.<br/>';
+		}
+		if ( $( 'city' ).value.length < 1 )
+		{
+			errorString += 'Please enter your city.<br/>';
+		}
+		if ( $('country').value == 'US' )
+		{
+			if ( $( 'zip' ).value.length < 1 )
+			{
+				errorString += 'Please enter your zip or postal code.<br/>';
+			}
+		}
+
+		if ( $( 'phone' ).value.length < 1 )
+		{
+			errorString += 'Please enter your phone number, including area code.<br/>';
+		}
+	}
+	catch(e)
+	{
+		ReportJSError( 'Failed validating payment info form', e );
+	}
+
+	try
+	{
+				if ( errorString != '' )
+		{
+			var rgErrors = errorString.split( '<br/>' );
+			DisplayErrorMessage( errorString );
+		}
+		else
+		{
+			// submit the form
+			$J.ajax( {
+				url: 'https://steamcommunity.com/my/ajaxsaveuserpaymentinfo/',
+				type: "GET",
+				data: $J( "#WorkshopPaymentInfoForm" ).serialize(),
+				success : function( response ) {
+					var dialog = ShowAlertDialog( 'Saved!', 'Your contact and address information have been saved. If you haven\'t already, please fill in your bank account and tax information.');
+					dialog.done( function() { top.location.reload(); } );
+				},
+				error: function( jqXHR ) {
+					alert( jqXHR.responseText );
+				}
+			} );
+		}
+	}
+	catch(e)
+	{
+		ReportJSError( 'Failed showing error or submitting payment info form', e );
 	}
 }
 

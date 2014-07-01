@@ -470,87 +470,6 @@ function AddApplicationCallback( parameters, transport )
 	}
 }
 
-function GenerateAppIDsCallback( parameters, transport )
-{
-	var results = transport.responseJSON;
-	var messages;
-	var warnings;
-	var errors;
-
-	for(i=0; i<results.length; i++)
-	{
-		if ( results[i] )
-		{
-			// Successful JSON parsing
-			$( 'resultErrors' ).innerHTML += BuildText( results[i].Errors );
-			$( 'resultWarnings' ).innerHTML += BuildText( results[i].Warnings );
-			$( 'resultMessages' ).innerHTML += BuildText( results[i].Messages );
-
-			var $resultMessVar = $( 'resultMessages' );
-
-			if ( results[i].bMessagesOnly )
-				continue;
-
-			if ( results[i].Added == true )
-			{
-				g_ApplicationAdded = true;			// So if there is an exception at some point, we will restore the correct buttons
-				var appId = results[i].AppId;			// We get the AppId from the result as the AppId has probably been auto-generated...
-
-
-				// Now that we are done creating the application in Steamworks, let's see if we have to do it in the store
-				// We don't want to that in parallel in case of the Steamworks application creation returned an error
-				if ( parameters[ 'createInStore' ] == 'true' )
-				{
-					var createInStoreParameters =	{
-														'app[appid]':						appId,
-														'app[name]':						parameters[ 'appName' ],
-														'app[type]':						parameters[ 'appType' ],
-														'app[publisherid]':					partnerId,						// This is used for the admin overview drop down
-														'app_generate_id':					false,
-														'parentId':							$( 'parentId_target' ).value
-													};
-
-					// Look for all the app[administrative] tags. They will be added as is to the parameters
-					// During the application creation in the store, we will update the corresponding fields.
-					createInStoreParameters = MergeArrays( createInStoreParameters, parameters, 'app[administrative]' );
-
-					if ( partnerId != undefined )
-					{
-						// By default we set the publisher name from the back-end. This is probably not the official name but better than no name.
-						// This will also help the search all app.
-						createInStoreParameters[ 'app[game][publishers][0]' ] = result.PublisherName;
-					}
-
-					$( 'workingMessage' ).innerHTML = 'Working... Adding application to store...'
-
-					// We are already in an Ajax request, do another one recursively
-					new Ajax.Request( g_szBaseURL + "/admin/game/createajax",
-						{
-							parameters:		createInStoreParameters,
-							method:			'post',
-							requestHeaders:	{ 'Accept': 'application/json' },
-							evalJSON:		'force',
-							onSuccess: function ( transport ) { AddApplicationToStoreCallback( parameters, transport ) },
-							onFailure: function ( transport ) { alert( 'Ajax call failed for AddApplicationToStoreCallback().' ); RestoreActionButtons( parameters ); },
-							onException: function ( request, e ) { alert( 'Exception during Ajax call for AddApplicationToStoreCallback().' ); RestoreActionButtons( parameters ); throw e; }
-					} );
-				}
-			}
-			else
-			{
-				// We failed adding the application, restore the buttons so we can commit again
-				 RestoreActionButtons( parameters );
-			}
-		}
-		else
-		{
-			// Parsing failed, let's display something to the user.
-			$( 'resultErrors' ).innerHTML += 'AddApplicationCallback(): Could not parse result as JSON:' + transport.responseText;
-			RestoreActionButtons( parameters );
-		}
-	}
-}
-
 function RestoreActionButtons( parameters )
 {
 	if ( g_ApplicationAdded )
@@ -689,74 +608,6 @@ function AddApplication( )
 				onFailure: function ( transport ) { alert( 'Ajax call failed for Exception during Ajax call for AddApplicationCallback().' ); RestoreActionButtons( parameters ); },
 				onException: function ( request, e ) { alert( 'Exception during Ajax call for AddApplicationCallback().' ); RestoreActionButtons( parameters ); throw e; }
 			} );
-}
-
-function ShowAddAppIDsProgress( strTitle, strDescription )
-{
-	var deferred = new jQuery.Deferred();
-	var fnOK = function() { deferred.resolve(); };
-
-	var throbber_container = $J('<div/>', {'class': 'waiting_dialog_container'} );
-	var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
-	throbber_container.append( throbber );
-	throbber_container.append( strDescription );
-
-	var Modal = _BuildDialog( strTitle, throbber_container, [], fnOK );
-	deferred.always( function() { Modal.Dismiss(); } );
-	Modal.Show();
-
-	// attach the deferred's events to the modal
-	deferred.promise( Modal );
-
-	return Modal;
-}
-
-function GenerateAppIDs( dialog, idx, numAppIds, appName, bForSelfPublishing )
-{
-	if ( idx >= numAppIds )
-	{
-		dialog.Dismiss();
-		return;
-	}
-
-	// add initial one to create the range
-	$J.post( 'https://partner.steamgames.com/admin/generateappidscript',
-		{
-			'appIdCount' : 1,
-			'appName' : appName,
-			'forSelfPublishing' : bForSelfPublishing ? 1 : 0
-		}
-	).done(
-		function( response ) {
-
-			for ( var i = 0; i < response.length; ++i )
-			{
-				if ( response[i] )
-				{
-					// Successful JSON parsing
-					$( 'resultErrors' ).innerHTML += BuildText( response[i].Errors );
-					$( 'resultWarnings' ).innerHTML += BuildText( response[i].Warnings );
-					$( 'resultMessages' ).innerHTML += BuildText( response[i].Messages );
-				}
-			}
-
-			GenerateAppIDs( dialog, idx + 1, numAppIds, appName, bForSelfPublishing );
-		}
-	).fail( function( jqxhr ) {
-		dialog.Dismiss();
-		ShowAlertDialog( 'Failed to Add AppID', jqxhr.responseText );
-	});
-}
-
-function GenerateAppIDScript( )
-{
-	var numAppIds = $J( "#appIdCount" ).val();
-	var bForSelfPublishing = $J( "#forSelfPublishing" ).prop( "checked" );
-	var appName = $J( "#appName" ).val();
-
-	var dialog = ShowAddAppIDsProgress( 'Generating ' + numAppIds + ' App IDs', 'Please wait while the app ids are being generated...' );
-
-	GenerateAppIDs( dialog, 0, numAppIds, appName, bForSelfPublishing );
 }
 
 function EscapeHTML( text )
@@ -1377,6 +1228,11 @@ function MapTypeToText( type )
 		case 1073741824: return "Shortcut";
 		case 2147483648: return "Depot";
 		case 256: return "Config";
+		case 512: return "Movie";
+		case 1024: return "TV Series";
+		case 2048: return "Video";
+		case 4096: return "Plugin";
+		case 8192: return "Music";
 		default: return 'UNKNOWN: ' + type;
 	}
 }

@@ -1761,7 +1761,7 @@ div.early_access_announcements {
 	}
 
 		div.early_access_announcements .post.wide {
-			width: auto;
+			width: 100%;
 		}
 
 		div.early_access_announcements .post h1 {

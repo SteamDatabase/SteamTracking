@@ -16,15 +16,20 @@ div.leaderboard_displayname {
 
 div.leaderboard_sortmethod {
 	float: right;
-	width: 10em;
+	width: 8em;
 }
 
 div.leaderboard_displaytype {
 	float: right;
-	width: 10em;
+	width: 8em;
 }
 
 div.leaderboard_onlytrustedwrites {
+	float: right;
+	width: 5em;
+}
+
+div.leaderboard_onlyfriendsreads {
 	float: right;
 	width: 5em;
 }

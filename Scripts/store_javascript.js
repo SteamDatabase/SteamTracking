@@ -136,6 +136,101 @@ function addToCart( subid, dedupe )
 
 }
 
+// Function to add a bundle to a cart, assumes form setup on the page
+function addBundleToCart( bundleid, dedupe )
+{
+	try
+	{
+		// Find all of the add to cart buttons displayed on the page
+		var filterAllButtons='a.btn_addtocart_content';
+		// the filterString can be used to find the element that invoked us, since the subid appears within it
+		// note that href*= specifies that href contains the string
+		var filterString = 'a[href*=' + bundleid + ']';
+		// within the set of all buttons, get the index of the one that we are dealing with!
+		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+		var allButtons = jQuery( filterAllButtons );
+		// do we have anything to examine?
+		if ( allButtons.length > 0 )
+		{
+
+			var navData = getBestAvailNavData();
+			var button;
+			var buttonOffset = { top : 0, left : 0 };
+			var buttonIndex = allButtons.index( jQuery( filterString ) );
+			//
+			//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
+			//
+			if ( buttonIndex === -1 )
+			{
+				if ( dedupe !== undefined )
+				{
+					buttonIndex = dedupe;
+				}
+				else
+				{
+					//  There is a chance this we're mistaken if the .php generation of the page
+					//  didn't generate the addToCart() calls as we expect !
+					buttonIndex = 0;
+				}
+			}
+						button = allButtons.eq(buttonIndex);
+
+			//
+			//  If we are certain we know what button was clicked, then we'll provide info on the form!
+			//
+			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			{
+				buttonOffset = button.offset();
+				var height = jQuery(window).height();
+				var width = jQuery(window).width();
+				//
+				//  We have all the components we want the standard button to submit to the server!
+				//  we will now add input fields to the form we intend to submit.
+				//
+				var filterStringForm = 'form[name=add_to_cart_'+bundleid+']';
+				var formSelector = jQuery( filterStringForm );
+				var begintime = jQuery.data(document, 'x_readytime');
+				var selecttime = 0.0;
+				if ( begintime !== undefined )
+				{
+					selecttime = new Date().getTime() - begintime;
+				}
+				if ( formSelector.length === 1 )
+				{
+					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					if ( navData )
+					{
+						var pipeSplit = new RegExp( /\|/ );
+						var resultString = navData.split( pipeSplit )[0];
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+					}
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+		//console.log( e );
+			}
+	// Regardless of instrumentation failures, try to submit the form for the user.
+	try
+	{
+		document.forms['add_bundle_to_cart_'+bundleid].submit();
+	}
+	catch( e )
+	{
+		// swallow exceptions !
+	}
+
+}
+
 function addAllDlcToCart()
 {
     try

@@ -276,59 +276,6 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 	}
 }
 
-function PerformClickAndBuyAuthorization()
-{
-	try 
-	{
-		var bVIPStatus = $('cb_vip_status').value;
-		var strCurrencyCode = $('currency_code').value;
-		
-		var strVIPURL = 'http%3A%2F%2Fpremium-55ub4d37o7o389.us.clickandbuy.com%2F';
-		var strNonVIPURL = 'http%3A%2F%2Fpremium-6ri4d8ow2chg1h.us.clickandbuy.com%2F';
-		
-		if ( bVIPStatus == 1 )
-		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strVIPURL + '&s=' + g_SessionID );
-		}
-		else
-		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/clickandbuy/launchauth/?webbasedpurchasing=1&authurl='+strNonVIPURL + '&s=' + g_SessionID );
-		}
-		
-		$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the ClickandBuy web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
-	} 
-	catch( e ) 
-	{
-		ReportCheckoutJSError( 'Failed launcing new window for ClickAndBuy auth', e );
-	}
-}
-
-
- 
-function OnClickAndBuySuccess( State, AccountNum, CountryCode, MD5 )
-{
-	try 
-	{ 
-	 	$('saved_cb_accountnum').value = AccountNum;
-		$('saved_cb_state').value = State;
-		$('saved_cb_countrycode').value = CountryCode;
-	
-		SubmitPaymentInfoForm();
-	} 
-	catch ( e ) 
-	{
-		ReportCheckoutJSError( 'Failed handling ClickAndBuy success return', e );
-	}
-	return true;
-}
-
-
-function OnClickAndBuyCancel()
-{
-	HandleFinalizeTransactionFailure( 32, 0, false );
-	return true;
-}
-
 function PopupCVV2Explanation()
 {
 	try 
@@ -563,12 +510,6 @@ function InitializeTransaction()
 			bHasCardInfo = true;
 		}
 		
-		var bHasCBAccountInfo = false;
-		if ( $('saved_cb_accountnum').value != '' && ( method.value == 'savedcbaccount' || method.value == 'clickandbuy' ) )
-		{
-			bHasCBAccountInfo = true;
-		}
-			 
 				g_bInitTransactionCallRunning = true;
 		
 				AnimateSubmitPaymentInfoButton();
@@ -617,12 +558,6 @@ function InitializeTransaction()
 				'CardExpirationYear' : $('expiration_year').value,
 				'CardExpirationMonth' : $('expiration_month').value,
 				
-				'bHasCBAccountInfo' : ( bHasCBAccountInfo ? 1 : 0 ),
-				'cbaccountnum' : $('saved_cb_accountnum').value,
-				'cbstate' : $('saved_cb_state').value,
-				'cbcountrycode' : $('saved_cb_countrycode').value,
-				'cbpaymentid' : $('saved_cb_paymentid').value,
-		    	
 				// address info, which may go unused be there depending on payment method
 				'FirstName' : $('first_name').value,
 				'LastName' : $('last_name').value,
@@ -1479,7 +1414,7 @@ function OnGetFinalPriceFailure( eErrorDetail )
 	try 
 	{
 		SetTabEnabled( 'payment_info' );
-		var error_text = '';
+		var error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 		switch ( eErrorDetail )
 		{
 			default:
@@ -1514,6 +1449,13 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				break;
 			case 56:
 				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
+				break;
+			case 17:
+				var method = $('payment_method');
+				if ( method.value == 'giropay' )
+				{
+					error_text = 'This purchase cannot be completed because your bank is not supported by the GiroPay network.  Please select another payment method for your purchase and try again.';
+				}
 				break;
 		}	
 		
@@ -2156,26 +2098,6 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee and local taxes for using this payment method';
-		}
-		else if ( method.value == 'clickandbuy' || method.value == 'savedcbaccount' )
-		{
-						bShowAddressForm = false;
-			$('payment_row_eight').style.display = 'block';
-			
-									if ( method.value == 'clickandbuy' )
-			{
-				$('external_payment_processor_notice').innerHTML = 'ClickandBuy transactions are authorized through the ClickandBuy web site. Click the button below to open a new web browser window to initiate the transaction.';
-				$('submit_payment_info_btn').href = "javascript:PerformClickAndBuyAuthorization();";
-				$( 'payment_info_form' ).onsubmit = function() { PerformClickAndBuyAuthorization(); return false; };
-				SetButtonInnerHtml('submit_payment_info_btn', 'Begin ClickandBuy Purchase' );
-			}
-			else if ( method.value == 'savedcbaccount' )
-			{
-				$('external_payment_processor_notice').innerHTML = 'Your ClickandBuy account information was previously saved and will be used again for this purchase.';
-				$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
-				$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
-				SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
-			}
 		}
 		else if ( method.value == 'steamaccount' )
 		{
@@ -2858,11 +2780,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'PayPal';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
-			else if ( (method.value == 'clickandbuy' || method.value == 'savedcbaccount') && providerPaymentMethod == 32 )
-			{
-				$('payment_method_review_text').innerHTML = 'ClickandBuy';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
 			else if ( method.value == 'giropay' && providerPaymentMethod == 3 )
 			{
 				$('payment_method_review_text').innerHTML = 'GiroPay';
@@ -3372,7 +3289,6 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 4:
 			case 5:
 			case 6:
-			case 32:
 			case 7:
 			case 9:
 			case 10:
