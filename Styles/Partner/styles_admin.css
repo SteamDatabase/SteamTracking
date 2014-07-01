@@ -2240,4 +2240,83 @@ html, body { height:100%; }
 }
 
 .search_results {
-	margin-b
+	margin-bottom: 15px;
+}
+
+.search_result>.copyIndent>em {
+	background-color: #68932f;
+	color: #d2ff96;
+}
+.search_result>h2>a>em {
+	background-color: #68932f;
+	color: #d2ff96;
+}
+
+#AdminLoadingBG
+{
+	z-index: 900;
+	background-color: #000000;
+	filter: alpha(opacity=60);
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
+	min-width: 800px;
+	position: absolute;
+}
+
+#AdminLoading
+{
+	background-color: #333333;
+	padding: 20px;
+	color: #b2b2b2;
+	position: absolute;
+	z-index: 1000;
+	border-radius: 3px;
+	font-size: 20px;
+	color: white;
+	left: 40%;
+	top: 200px;
+}
+
+#AdminLoading div
+{
+	margin-top: 4px;
+	margin-right: 20px;
+}
+
+.launchOptionArea {
+	background-color: #2f2f2f;
+	padding: 12px;
+}
+
+.optionTextDark {
+	color: #666666;
+	font-size: 12px;
+}
+
+.tradingcardstate0 { color: #808285; }
+.tradingcardstate1 { color: #E7E8E9; }
+.tradingcardstate2 { color: #A4D007; }
+.tradingcardstate3 { color: #808285; }
+.tradingcardstate4 { color: #e24044; }
+.tradingcardstate5 { color: #A4D007; }
+.tradingcard_thumbnail {
+	max-width: 64px;
+	max-height: 64px;
+}
+
+.priceChangedNew
+{
+	color: #82a6d7;
+}
+
+.priceChangedHigher
+{
+	color: #ca5029;
+}
+
+.priceChangedLower
+{
+	color: #8BB006;
+}
