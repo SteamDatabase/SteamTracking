@@ -622,6 +622,12 @@
 								"type": "uint32",
 								"optional": false,
 								"description": "The account ID to look up."
+							},
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
 							}
 						]
 						
