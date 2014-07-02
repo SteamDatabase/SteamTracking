@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.6eeef6c9759869606c3f29d5f3a54f91e80b23c2.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.34efcd260aedb9abf68403272ac75ee2ce70e86f.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -19,7 +19,7 @@
 		},
 		"qualityNames": {
 			"normal": "Normal",
-			"genuine": "genuine",
+			"genuine": "Genuine",
 			"vintage": "Vintage",
 			"unusual": "★",
 			"unique": "Unique",
@@ -124,6 +124,10 @@
 			{
 				"origin": 22,
 				"name": "Stock Item"
+			},
+			{
+				"origin": 23,
+				"name": "Quest Reward"
 			}
 		]
 		,
@@ -1326,6 +1330,31 @@
 				
 			},
 			{
+				"name": "weapon_knife_butterfly",
+				"defindex": 515,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Butterfly Knife",
+				"item_description": "This is a custom-designed balisong, commonly known as a butterfly knife. The defining characteristic of this weapon is the fan-like opening of a freely pivoting blade, allowing rapid deployment or concealment. As a result, butterfly knives are outlawed in many countries.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapons/base_weapons/weapon_knife_butterfly",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapons/base_weapons/weapon_knife_butterfly.794147e84a4e9426202d45145910cbb007797ce5.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Five Year Service Coin",
 				"defindex": 874,
 				"item_class": "collectible_item",
@@ -1630,8 +1659,8 @@
 				"image_inventory": "econ/status_icons/maptoken_museum",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_museum.b2b75a67210ded6cde19082c4c6eb149cef5922b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_museum_large.927ecacddfcb0b2ea12fa452d2e4a1a08c411722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_museum.19b18ee64caec03d8b6e24989b3cf4c456c78cc3.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_museum_large.7e979cc2871851550a473bd37a46d7b6c200b7ad.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1651,8 +1680,8 @@
 				"image_inventory": "econ/status_icons/maptoken_downtown",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_downtown.d8687e6476c41df371d826f575054afdc6f47865.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_downtown_large.7013188b051aa35987d762b6f34079f3f51d933b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_downtown.af8f4d7a6335ddcc4ecf1ff362e9932e9e348a66.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_downtown_large.50a8ae9bd92cce414e04a250292111db671fa00d.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1672,8 +1701,8 @@
 				"image_inventory": "econ/status_icons/maptoken_thunder",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_thunder.f704e281b8e31e1e3bb1b40e25c0f413ab89ed47.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_thunder_large.d32eda115f342af7ab2a3fb2d36575deb1763a92.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_thunder.df4841912515e3ea5cdb5c5aa3574a713e1cdc1f.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_thunder_large.9a2001c80a3fbf6d46f153c0563047002bd1f2fd.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1693,8 +1722,8 @@
 				"image_inventory": "econ/status_icons/maptoken_favela",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_favela.9429b20130cf0bcdc1719ce9d120741f45439dd4.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_favela_large.4ef326fb2ae0c32fb92d35d0d8f926e7a1c3f9eb.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_favela.87c12ee09f70a181e8a1af3df1e0ff6d8febfdbe.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_favela_large.338a662380c3ecfbb1382a395a3bb08a383225ae.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1714,8 +1743,8 @@
 				"image_inventory": "econ/status_icons/maptoken_motel",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_motel.427cddf26e15703088755cd9020300a8fa09b957.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_motel_large.f84e8f1c0a457482ae627acbbcc033b48a05a5af.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_motel.6ddc95f4d4246e3538ea66ab1afbebdef51db86b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_motel_large.0e9f82978876c2c69d3164f5e7db1aeaac85dd04.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1735,8 +1764,8 @@
 				"image_inventory": "econ/status_icons/maptoken_seaside",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_seaside.bb1f89571a245e297eb9b1798732e16e39c9b2e5.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_seaside_large.b8d2de3da0eca6f2b714415daef8ea0a88a604f2.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_seaside.6e33fcee9c611dad2b119c16cfa9cfd52854c4e5.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_seaside_large.43eca57040d443e997d3f7260c20f2613a70c6a6.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -1756,8 +1785,8 @@
 				"image_inventory": "econ/status_icons/maptoken_library",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_library.7f91012255b3033d93bdb40c5f68a85a3a2f057f.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_library_large.c72829b7feea051efabd48a1735b95e2e1823c20.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_library.c27bb561fe98926e3f879389daf62aa84967fbc8.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_library_large.a1158f9a819a7c3a3466670c95cfacd3dc92ce61.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2016,8 +2045,8 @@
 				"image_inventory": "econ/status_icons/maptoken_agency",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_agency.fd297ed74525c296aae3e50c2b8bcfe4dfaef701.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_agency_large.99f034a2997ef21879882fd24a66e9afd944af3b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_agency.0d6b5e9d05ffb0f8e450eb82d7a78d8a47c1064f.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_agency_large.1759793368db27d5c0230c4b3b185aa6d2f4a2b6.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2037,8 +2066,8 @@
 				"image_inventory": "econ/status_icons/maptoken_ali",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ali.c10760ffa211a5dc49be0ba9d2956a6a61210f8c.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ali_large.3044d2ccaecf50c807b544cd855dac9c1b0269d9.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ali.b851b1a64874bbc20bedcd6bd13746f2c61a0d2f.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ali_large.7fc60a735cc50aad8744f15ee8e5d262deb4206a.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2058,8 +2087,8 @@
 				"image_inventory": "econ/status_icons/maptoken_cache",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_cache.936f25c8a7f21038f907de54d5cd4d3272c0f1f3.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_cache_large.10ce15c0a4fe116f794d130f5d778882843f615a.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_cache.11640014eb64dec8f5ee580add610fb195f8ac72.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_cache_large.96803d4f8de5436ec54679d83a90032bee4cf481.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2079,8 +2108,8 @@
 				"image_inventory": "econ/status_icons/maptoken_chinatown",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_chinatown.c6e49ac4d6feb4b6eb854ea70ee746e3172e6352.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_chinatown_large.a360e969f3d0adc61797cf3eaad1a0b74baecaba.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_chinatown.f5f7a7f0834016df6ef5a1cc603e746fbfecfa20.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_chinatown_large.9a03b6f7a60fed7e2bc7277cbf5930a07d2e6ffa.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2100,8 +2129,8 @@
 				"image_inventory": "econ/status_icons/maptoken_gwalior",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_gwalior.a0288014375eec53dd96636ccea8359d91d63055.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_gwalior_large.b0db88ba20c496527e7a500d14f9d931e1ea94a9.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_gwalior.c595fe8abca95bd1866a91d9f339353f1f0eb490.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_gwalior_large.cc5d1f9ef72272f366c2ea487b423c9fa8f87582.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2121,8 +2150,8 @@
 				"image_inventory": "econ/status_icons/maptoken_ruins",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ruins.2795ed0ccf7fcc4c59cd0dbce0a7a1e8e8111805.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ruins_large.a54b8de967b4abcb307602bb7e6da6024df2a8ff.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ruins.56bd126e6e4e3ff15fd12fab6df459339adcb774.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_ruins_large.3b619b3214cec42345e3fc86775eaf9590968307.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2142,8 +2171,8 @@
 				"image_inventory": "econ/status_icons/maptoken_siege",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_siege.3d7b75ec8b7dd44da65a412d7c1452bd9a18778c.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_siege_large.551f4f2eeb5894b96da1c2faa97caf2b9b1a72f6.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_siege.dd1bd3688b5caa4ec580cc6a2080e135b3ee8dd8.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_siege_large.d5febba68d951a56955e6b2a4ba785077abb2dd5.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -2387,6 +2416,491 @@
 						"class": "competitive_mvps",
 						"value": 0
 					}
+				]
+				
+			},
+			{
+				"name": "Community Season Four Summer 2014",
+				"defindex": 1027,
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Breakout All Access Pass",
+				"item_description": "Grants all access to Operation Breakout, which consists of an upgradeable Challenge Coin, mission drops that reward new weapon finishes, Operation Breakout Case drops, and a journal that contains an Active Duty Scorecard, an Operation Scorecard, and Friends leaderboard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_breakout_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_pass.2c84f278eec59611affd866a64e255d6f64b8a44.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Community Season Four Summer 2014 Coin 1",
+				"defindex": 1028,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Breakout Challenge Coin",
+				"item_description": "Participated in Operation Breakout.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_breakout_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_bronze.785329d1348a6291c6235bd21920782945484c35.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_bronze_large.e829dba96adb71e711ed2d8f4628a67f31cfe56d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Four Summer 2014 Coin 2",
+				"defindex": 1029,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Breakout Coin",
+				"item_description": "Participated in Operation Breakout.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_breakout_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_silver.097fa8ff795b71ca6e57fcb79129412e81760933.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_silver_large.8e1574f62b67d6994ca2a2be962b274d72c24e72.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Four Summer 2014 Coin 3",
+				"defindex": 1030,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Breakout Coin",
+				"item_description": "Participated in Operation Breakout.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_breakout_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_gold.d932cc657e797e3e0e0ba0ac4d5932aaf54d4e48.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_breakout_gold_large.3344fe7583c6b875072c240d98857c0aff2c3ea7.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Map Token Castle",
+				"defindex": 1031,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Castle Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_castle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_castle.c6d0534f38e0cd500d148e845447a0619a4e5116.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_castle_large.2d8fc69105f2cf565fe0d6bdef69c258669f0592.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Black Gold",
+				"defindex": 1032,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Black Gold Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_blackgold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_blackgold.4c8202949af55ffd2a2bb778d169d156d28c141b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_blackgold_large.439811071418e7d3d51564ba305e262dcb86ed76.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Rush",
+				"defindex": 1033,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Rush Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_rush",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_rush.9752e9d51926e5138af27934fb425952a3222d86.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_rush_large.835ed1760d3a5f81f5e4e531a905f44192e306f6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Mist",
+				"defindex": 1034,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Mist Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_mist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_mist.71e33321e68064ac2d40c4e76da562c85621c281.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_mist_large.d3bb68c34cb66c88de90e6c944c9c6e16beeaac7.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Insertion",
+				"defindex": 1035,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Insertion Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_insertion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_insertion.fb48c5e43d10ccdaa98dc2439defe3e9dae50017.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_insertion_large.a5344a201a9536d376807899c84c5a0ff36bd2ad.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Overgrown",
+				"defindex": 1036,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Overgrown Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_overgrown",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_overgrown.fe6527c10619dc1b126a7492bce549eec3494c8b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_overgrown_large.78dd43f0b9eac0fc3ba566ea53981edc26d81c33.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
 				]
 				
 			},
@@ -2714,6 +3228,25 @@
 				}
 			},
 			{
+				"name": "quest",
+				"defindex": 1306,
+				"item_class": "collectible_item",
+				"item_type_name": "Mission",
+				"item_name": "Mission",
+				"item_description": "Fulfill missions on official matchmaking servers to earn the stated reward. You must complete the match to register any mission progress.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/mission",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/mission.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
+				"image_url_large": "",
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Community Case Key 3 June 2014",
 				"defindex": 1307,
 				"item_class": "tool",
@@ -2757,6 +3290,31 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "sticker_pack_community01_key",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Case Key 4",
+				"defindex": 1309,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Operation Breakout Case Key",
+				"item_description": "This key only opens Operation Breakout Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_4.9767c63233d8985cd090230ab2bfa29ae05ecdc0.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_4",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -3305,6 +3863,270 @@
 					}
 				]
 				
+			},
+			{
+				"name": "crate_community_4",
+				"defindex": 4018,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Operation Breakout Weapon Case",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_community_4.f0d23848527b7be0f1fc9556b1f3ecfb1193ee40.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_4",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 18
+					}
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Dust II",
+				"defindex": 6001,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Dust II Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Dust II",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Guardian Elite",
+				"defindex": 6002,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Guardian Elite Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Guardian Elite",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_guardianelite",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Mirage",
+				"defindex": 6003,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Mirage Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Mirage",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Inferno",
+				"defindex": 6004,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Inferno Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Inferno",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Italy",
+				"defindex": 6005,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Italy Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Italy",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_italy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Victory",
+				"defindex": 6006,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Victory Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Victory",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_victory",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Militia",
+				"defindex": 6007,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Militia Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Militia",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_militia",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Nuke",
+				"defindex": 6008,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Nuke Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Nuke",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Train",
+				"defindex": 6009,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Train Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Train",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Guardian",
+				"defindex": 6010,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Guardian Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Guardian",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_guardian",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Collectible Pin - Tactics",
+				"defindex": 6011,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Tactics Pin",
+				"item_description": "CS:GO event attendance collection pin - Series 1 - Tactics",
+				"proper_name": false,
+				"item_quality": 1,
+				"image_inventory": "econ/status_icons/collectible_pin_tactics",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
 			}
 		]
 		,
@@ -3337,14 +4159,6 @@
 				"name": "referenced item id high",
 				"defindex": 4,
 				"attribute_class": "referenced_item_id_high",
-				"effect_type": "neutral",
-				"hidden": true,
-				"stored_as_integer": true
-			},
-			{
-				"name": "referenced item def",
-				"defindex": 5,
-				"attribute_class": "referenced_item_def",
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": true
@@ -3831,7 +4645,7 @@
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
 				"hidden": false,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "minutes played",
@@ -3863,14 +4677,6 @@
 				"name": "disallow recycling",
 				"defindex": 72,
 				"attribute_class": "disallow_recycling",
-				"effect_type": "positive",
-				"hidden": true,
-				"stored_as_integer": true
-			},
-			{
-				"name": "upgrade threshold",
-				"defindex": 73,
-				"attribute_class": "upgrade_threshold",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": true
@@ -4112,14 +4918,6 @@
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
-			},
-			{
-				"name": "upgrade threshold wins",
-				"defindex": 108,
-				"attribute_class": "upgrade_threshold_wins",
-				"effect_type": "positive",
-				"hidden": true,
-				"stored_as_integer": true
 			},
 			{
 				"name": "custom name attr",
@@ -4488,6 +5286,90 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "quests complete",
+				"defindex": 171,
+				"attribute_class": "quests_complete",
+				"description_string": "Operation Missions Fulfilled: %s1",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation kills",
+				"defindex": 172,
+				"attribute_class": "operation_kills",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation 3k",
+				"defindex": 173,
+				"attribute_class": "operation_3k",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation 4k",
+				"defindex": 174,
+				"attribute_class": "operation_4k",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation 5k",
+				"defindex": 175,
+				"attribute_class": "operation_5k",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation hsp",
+				"defindex": 176,
+				"attribute_class": "operation_hsp",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "operation mvps",
+				"defindex": 177,
+				"attribute_class": "operation_mvps",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation minutes played",
+				"defindex": 178,
+				"attribute_class": "operation_minutes_played",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "operation wins",
+				"defindex": 179,
+				"attribute_class": "operation_wins",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "deployment date",
+				"defindex": 180,
+				"attribute_class": "deployment_date",
+				"description_string": "Deployment Date: %s1",
+				"description_format": "value_is_date",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -4516,6 +5398,28 @@
 					"weapon_m4a1",
 					"weapon_ak47",
 					"weapon_tec9"
+				]
+				
+			},
+			{
+				"item_set": "set_baggage",
+				"name": "The Baggage Collection",
+				"items": [
+					"weapon_g3sg1",
+					"weapon_ssg08",
+					"weapon_mp7",
+					"weapon_mp9",
+					"weapon_cz75a",
+					"weapon_p90",
+					"weapon_mac10",
+					"weapon_hkp2000",
+					"weapon_sg556",
+					"weapon_sawedoff",
+					"weapon_xm1014",
+					"weapon_usp_silencer",
+					"weapon_ak47",
+					"weapon_deagle",
+					"weapon_ak47"
 				]
 				
 			},
@@ -4587,6 +5491,28 @@
 				
 			},
 			{
+				"item_set": "set_cobblestone",
+				"name": "The Cobblestone Collection",
+				"items": [
+					"weapon_p90",
+					"weapon_scar20",
+					"weapon_elite",
+					"weapon_mac10",
+					"weapon_ump45",
+					"weapon_mag7",
+					"weapon_nova",
+					"weapon_sawedoff",
+					"weapon_usp_silencer",
+					"weapon_hkp2000",
+					"weapon_mp9",
+					"weapon_cz75a",
+					"weapon_deagle",
+					"weapon_m4a1_silencer",
+					"weapon_awp"
+				]
+				
+			},
+			{
 				"item_set": "set_community_1",
 				"name": "The Winter Offensive Collection",
 				"items": [
@@ -4650,6 +5576,27 @@
 					"weapon_usp_silencer",
 					"weapon_ak47",
 					"weapon_m4a1"
+				]
+				
+			},
+			{
+				"item_set": "set_community_4",
+				"name": "The Breakout Collection",
+				"items": [
+					"weapon_mp7",
+					"weapon_negev",
+					"weapon_hkp2000",
+					"weapon_ssg08",
+					"weapon_ump45",
+					"weapon_bizon",
+					"weapon_cz75a",
+					"weapon_nova",
+					"weapon_p250",
+					"weapon_deagle",
+					"weapon_fiveseven",
+					"weapon_glock",
+					"weapon_p90",
+					"weapon_m4a1_silencer"
 				]
 				
 			},
@@ -4849,6 +5796,28 @@
 					"weapon_galilar",
 					"weapon_hkp2000",
 					"weapon_mp7"
+				]
+				
+			},
+			{
+				"item_set": "set_overpass",
+				"name": "The Overpass Collection",
+				"items": [
+					"weapon_m249",
+					"weapon_mag7",
+					"weapon_mp9",
+					"weapon_sawedoff",
+					"weapon_ump45",
+					"weapon_mp7",
+					"weapon_deagle",
+					"weapon_glock",
+					"weapon_hkp2000",
+					"weapon_xm1014",
+					"weapon_ssg08",
+					"weapon_cz75a",
+					"weapon_awp",
+					"weapon_usp_silencer",
+					"weapon_m4a1_silencer"
 				]
 				
 			},
