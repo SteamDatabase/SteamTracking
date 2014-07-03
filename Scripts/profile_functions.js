@@ -56,7 +56,7 @@ function ajaxFriendResponse(transport)
 	$H( transport.responseJSON['invited'] ).each( function( pair ) {
 		if( pair.value == invitee )
 		{
-			showNotification('notificationPositive', 'Friend invite sent.');
+			showNotification('notificationPositive', 'Friend invite sent. They will appear as a friend once they have accepted your invite.');
 			bFound = true;
 		}
 	});
