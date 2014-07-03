@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1393879618"
+	"version"		"1404344449"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.6a31f5e41f6d0cbae3bf66be77e5b94c0666d7ac"
-		"checksum"		"6a31f5e41f6d0cbae3bf66be77e5b94c0666d7ac"
-		"size"		"57627"
+		"file"		"steamcmd_public_all.zip.02e9d67a3d08c7883804948a6ef796a904271055"
+		"checksum"		"02e9d67a3d08c7883804948a6ef796a904271055"
+		"size"		"57629"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.70c3cc69d0c90aba2bb017730ecbdac6b1f49e70"
-		"checksum"		"70c3cc69d0c90aba2bb017730ecbdac6b1f49e70"
-		"size"		"14891802"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.a7147647bd7baa02536729c217c91cd19901cffc_9172881"
+		"file"		"steamcmd_bins_osx.zip.b64262fef44c09751071c5c42b36534609546571"
+		"checksum"		"b64262fef44c09751071c5c42b36534609546571"
+		"size"		"14959422"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.56e8aa63c70a24d9bbcdcef0738b5b675524bb1f_9234515"
 	}
 	"breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.cdf5fb8483cf41a177a6672c138a449c750ac134"
-		"checksum"		"cdf5fb8483cf41a177a6672c138a449c750ac134"
-		"size"		"956701"
-		"zipvz"		"steamcmd_osx.zip.vz.254184a5aa1a9125e20342510b24797cbc0ca22b_676030"
+		"file"		"steamcmd_osx.zip.fb62ef50634233d11633f7141d0f0e86453088c6"
+		"checksum"		"fb62ef50634233d11633f7141d0f0e86453088c6"
+		"size"		"960166"
+		"zipvz"		"steamcmd_osx.zip.vz.f33268ff5daf3fa3ed689e6659108bca7027abf3_679454"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"ac5663df849985234da7a066fafc3c9e42b4c2a9429b4faec074f32ae2ca1c9156aa967b80214aaa816b36cd49fc07346facf87738b0a6d8bcd592dd20c1e5cfd5149cf4a049ba6f1883634d517f9c948eb8ef36afaf3756fadf402b5d09be2885f782ca5727d5f89ace352653479599da54741447ff4ec617d75cdbe7852607"
+	"osx"		"500eeb7a26e4f1e3551ebbc35cd0f31445894e4920e54598784ce02fedc52c6ec9b9ad428e14b1514252ab9a68958d8e4a5dde8b0881b1da77f62fe8365dbee28ac04bfce146ba35ec7a53d80e0e3739fbd040dca681cd01992a502d4cab1a34597bfcfd14863b065fb08aba1f3e2aaa820b187fd91bc4732c6ab63943ffab9d"
 }
