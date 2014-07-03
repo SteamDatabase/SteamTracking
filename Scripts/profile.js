@@ -116,10 +116,10 @@ function RemoveFriend()
 	} );
 }
 
-function AddFriend( bRespondingToInvite )
+function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 {
-	var steamid = g_rgProfileData['steamid'];
-	var strPersonaName = g_rgProfileData['personaname'];
+	var steamid = steamid_friend ? steamid_friend : g_rgProfileData['steamid'];
+	var strPersonaName = strPersonaName_friend ? strPersonaName_friend : g_rgProfileData['personaname'];
 
 	$J.post(
 		'https://steamcommunity.com/actions/AddFriendAjax',
@@ -127,8 +127,8 @@ function AddFriend( bRespondingToInvite )
 	).done( function() {
 		if ( !bRespondingToInvite )
 		{
-			ShowAlertDialog( 'Add Friend',
-				'Friend invite sent.'
+			ShowAlertDialog( 'Add Friend' + ' - ' + strPersonaName,
+				'Friend invite sent. They will appear as a friend once they have accepted your invite.'
 			);
 		}
 		else
