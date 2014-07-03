@@ -106,7 +106,10 @@ var CommunitySearch = {
 			this.m_nPage = hash_params.page;
 
 		if ( hash_params.text || reset )
-			$J('#search_text_box').val( hash_params.text );
+		{
+			if ( hash_params.text !== $J('#search_text_box').val().trim() )
+				$J('#search_text_box').val( hash_params.text );
+		}
 
 		if ( this.m_bUpdatingHash )
 			this.m_nTransitionSpeed = 500;	// we updated it, do it slow
@@ -125,8 +128,7 @@ var CommunitySearch = {
 		var hash_params = {};
 		if ( this.m_nPage > 1 )
 			hash_params.page = this.m_nPage;
-		if ( this.m_sFilter && this.m_sFilter != 'none' )
-			hash_params.filter = this.m_sFilter;
+		hash_params.filter = this.m_sFilter;
 		hash_params.text = $J('#search_text_box').val().trim();
 
 		var new_hash = $J.param( hash_params );
@@ -173,7 +175,7 @@ var CommunitySearch = {
 			}
 		} ).fail( function( jqxhr ) {
 			$J('#search_results').stop( true, false );
-			$J('#search_results').html( '<h2>could not load any results</h2>' );
+			$J('#search_results').html( 'Could not retrieve any results from the Steam search servers. The servers may be experiencing heavy load or other difficulty. Please try again later.' );
 			$J('#search_results').fadeTo( 500, 1.0 );
 		} ).done( function( data ) {
 			if ( data.success == 1 )
@@ -192,7 +194,7 @@ var CommunitySearch = {
 			else
 			{
 				$J('#search_results').stop( true, true );
-				$J('#search_results').html( '<h2>could not load any results (' + data.success + ')</h2>' );
+				$J('#search_results').html( data.html );
 				$J('#search_results').fadeTo( 500, 1.0 );
 			}
 		} ).always( function() {
