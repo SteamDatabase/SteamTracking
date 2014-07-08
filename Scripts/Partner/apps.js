@@ -759,7 +759,7 @@ function AchievementSpan( achievement, field, fallback, language )
 
 	if ( data[ 'bPresent' ] )
 	{
-		newSpan.innerHTML = data[ 'string' ];
+		$J(newSpan).text( data[ 'string' ] );
 	}
 	else
 	{
@@ -767,7 +767,7 @@ function AchievementSpan( achievement, field, fallback, language )
 		if ( language != "token" )
 		{
 			var firstSpan = document.createElement( "span" );
-			firstSpan.innerHTML = data[ 'string' ];
+			$J(firstSpan).text( data['string'] );
 			newSpan.appendChild( firstSpan );
 		}
 		
