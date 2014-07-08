@@ -174,7 +174,7 @@ input.searchAppsInput
 	cursor: default;
 }
 
-.mworkshop_apps_paging_pagelink.active:hover {
+.workshop_apps_paging_pagelink.active:hover {
 	text-decoration: none;
 }
 
