@@ -1,31 +1,4 @@
 
-
-function switchTarget( newTarget )
-{
-	url = 'https://steamcommunity.com/actions/Search?T=' + newTarget;
-	curTerm = document.getElementById( 'searchFieldInput' ).value;
-	url += '&K=' + escape( curTerm );
-	location.href = url;
-}
-
-function doSearch( pnum )
-{
-	$('searchResults').innerHTML = $('searchLoading').innerHTML;
-	new Ajax.Updater( 'searchResults', 'https://steamcommunity.com/actions/SearchFriends',
-		{
-			parameters:
-				{
-					K: $F('friendSearchFieldInput'),
-					p:pnum,
-					action: 'doSearch'
-				},
-			method: 'post',
-			asynchronous: true
-		}
-	);
-}
-
-
 // this object manages running community search
 var CommunitySearch = {
 	m_bSearchRunning: false,

@@ -211,7 +211,7 @@ function BuildGameRow( gameInfo )
 	gameInfo['name_encoded'] = escape( gameInfo['name'] );
 	gameInfo['persona_name'] = personaName;
 	gameInfo['profile_link'] = profileLink;
-	gameInfo['link'] = ( "http://steamcommunity.com/app/" + gameInfo['appid'] );
+	gameInfo['link'] = ( "https://steamcommunity.comapp/" + gameInfo['appid'] );
 
 	// Achievement block, if present.
 	if( gameInfo['ach_completion'] && gameInfo['ach_completion']['closed'] > 0 )
@@ -295,8 +295,8 @@ function BuildGameRow( gameInfo )
 
 function BuildChangingGameRow( gameInfo )
 {
-	gameInfo['link'] = ( "http://steamcommunity.com/app/" + gameInfo['appid'] );
-	gameInfo['communityLink'] = "http://steamcommunity.com/app/" + gameInfo['appid'];
+	gameInfo['link'] = ( "https://steamcommunity.comapp/" + gameInfo['appid'] );
+	gameInfo['communityLink'] = "https://steamcommunity.comapp/" + gameInfo['appid'];
     gameInfo['hours_message'] = gameHoursForeverTemplate.evaluate( gameInfo );
 
     var html = changingGameTemplate.evaluate( gameInfo );

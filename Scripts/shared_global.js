@@ -543,12 +543,12 @@ CModal.PopActiveModal = function( Modal )
 // this will set the right headers for a cross-domain request to community
 function GetDefaultCommunityAJAXParams( path, method )
 {
-	var rgParams = { url: 'http://steamcommunity.com/' + path };
+	var rgParams = { url: 'https://steamcommunity.com/' + path };
 	if ( method )
 		rgParams.type = method;
 
 	// if this js file was hosted off the store, add CORS request headers
-	if ( window.location.href.indexOf( 'http://steamcommunity.com/' ) != 0 )
+	if ( window.location.href.indexOf( 'http://steamcommunity.com/' ) != 0 && window.location.href.indexOf( 'https://steamcommunity.com/' ) != 0 )
 	{
 		rgParams.crossDomain = true;
 		rgParams.xhrFields = { withCredentials: true };
@@ -1376,6 +1376,272 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 	} );
 	return false;
 }
+
+
+
+/* Scroll to an element if it's not already in view.  If it's at the bottom of the viewport, then it will be
+ scrolled to the top if less than nRequiredPixelsToShow are visible (defaults to the height of the element)
+ */
+function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
+{
+	elem = $(elem);
+
+	var elemTop = elem.viewportOffset().top;
+	var bNeedToScroll = false;
+	if ( elemTop < 0 )
+	{
+		bNeedToScroll = true;
+	}
+	else
+	{
+		if ( !nRequiredPixelsToShow )
+			nRequiredPixelsToShow = elem.getHeight();
+
+		var elemBottom = elemTop + nRequiredPixelsToShow;
+
+		if ( elemBottom > $(document).viewport.getHeight() )
+			bNeedToScroll = true;
+	}
+
+	if ( bNeedToScroll )
+	{
+		if ( nSpacingBefore )
+			window.scrollBy( 0, elemTop - nSpacingBefore );
+		else
+			elem.scrollTo();
+	}
+}
+
+var CAjaxPagingControls = Class.create( {
+	m_strActionURL: null,
+	m_cPageSize: null,
+	m_strElementPrefix: "",
+	m_strClassPrefix: "",
+	m_rgStaticParams: null,
+
+	m_strQuery: null,
+	m_cTotalCount: 0,
+	m_iCurrentPage: 0,
+	m_cMaxPages: 0,
+	m_bLoading: false,
+
+	m_fnPreRequestHandler: null,
+	m_fnResponseHandler: null,
+	m_fnPageChangingHandler: null,
+	m_fnPageChangedHandler: null,
+
+	initialize: function( rgSearchData, url )
+	{
+		this.m_strActionURL = url;
+
+		this.m_strQuery = rgSearchData['query'];
+		this.m_cTotalCount = rgSearchData['total_count'];
+		this.m_iCurrentPage = 0;
+		this.m_cPageSize = rgSearchData['pagesize'];
+		this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
+
+		if ( rgSearchData['prefix'] )
+			this.m_strElementPrefix = rgSearchData['prefix'];
+
+		if ( rgSearchData['class_prefix'] )
+			this.m_strClassPrefix = rgSearchData['class_prefix'];
+
+		$(this.m_strElementPrefix + '_btn_prev').observe( 'click', this.PrevPage.bind( this ) );
+		$(this.m_strElementPrefix + '_btn_next').observe( 'click', this.NextPage.bind( this ) );
+
+		this.UpdatePagingDisplay();
+	},
+
+	GetActionURL: function( action )
+	{
+		var url = this.m_strActionURL + action + '/';
+		return url;
+	},
+
+	SetPreRequestHandler: function( fnHandler )
+	{
+		this.m_fnPreRequestHandler = fnHandler;
+	},
+
+	SetResponseHandler: function( fnHandler )
+	{
+		this.m_fnResponseHandler = fnHandler;
+	},
+
+	SetPageChangingHandler: function ( fnHandler )
+	{
+		this.m_fnPageChangingHandler = fnHandler;
+	},
+
+	SetPageChangedHandler: function ( fnHandler )
+	{
+		this.m_fnPageChangedHandler = fnHandler;
+	},
+
+	SetStaticParameters: function ( rgParams )
+	{
+		this.m_rgStaticParams = rgParams;
+	},
+
+	OnAJAXComplete: function()
+	{
+		this.m_bLoading = false;
+	},
+
+	NextPage: function()
+	{
+		if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+			this.GoToPage( this.m_iCurrentPage + 1 );
+	},
+
+	PrevPage: function()
+	{
+		if ( this.m_iCurrentPage > 0 )
+			this.GoToPage( this.m_iCurrentPage - 1 );
+	},
+
+	GoToPage: function( iPage, bForce )
+	{
+		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && ( typeof bForce == 'undefined' || !bForce ) ) )
+			return false;
+
+		var params = {
+			query: this.m_strQuery,
+			start: this.m_cPageSize * iPage,
+			count: this.m_cPageSize
+		};
+
+		if ( this.m_rgStaticParams != null )
+		{
+			for ( var sParamName in this.m_rgStaticParams )
+			{
+				if ( typeof sParamName != "string" )
+					continue;
+
+				if ( typeof this.m_rgStaticParams[sParamName] != "string" )
+					continue;
+
+				params[sParamName] = this.m_rgStaticParams[sParamName];
+			}
+		}
+
+		if ( this.m_fnPageChangingHandler != null )
+			this.m_fnPageChangingHandler( iPage );
+
+		if ( this.m_fnPreRequestHandler != null )
+			this.m_fnPreRequestHandler( params );
+
+		this.m_bLoading = true;
+		new Ajax.Request( this.GetActionURL( 'render' ), {
+			method: 'get',
+			parameters: params,
+			onSuccess: this.OnResponseRenderResults.bind( this ),
+			onComplete: this.OnAJAXComplete.bind( this )
+		});
+
+		return true;
+	},
+
+	OnResponseRenderResults: function( transport )
+	{
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			if ( typeof RecordAJAXPageView !== "undefined" )
+			{
+				RecordAJAXPageView( transport.request.url );
+			}
+
+			var response = transport.responseJSON;
+			this.m_cTotalCount = response.total_count;
+			this.m_cMaxPages = Math.ceil( response.total_count / this.m_cPageSize );
+			this.m_iCurrentPage = Math.floor( response.start / this.m_cPageSize );
+
+			if ( this.m_cTotalCount <= response.start )
+			{
+				// this page is no longer valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
+				this.GoToPage.bind( this, this.m_iCurrentPage - 1 ).defer();
+				return;
+			}
+
+			var elResults = $(this.m_strElementPrefix + 'Rows');
+
+			elResults.update( response.results_html );
+
+			if ( this.m_fnResponseHandler != null )
+				this.m_fnResponseHandler( response );
+
+			ScrollToIfNotInView( $(this.m_strElementPrefix + 'Table'), 40 );
+
+			this.UpdatePagingDisplay();
+		}
+	},
+
+	UpdatePagingDisplay: function()
+	{
+		$(this.m_strElementPrefix + '_total').update( v_numberformat( this.m_cTotalCount ) );
+		$(this.m_strElementPrefix + '_start').update( v_numberformat( this.m_iCurrentPage * this.m_cPageSize + 1 ) );
+		$(this.m_strElementPrefix + '_end').update( Math.min( ( this.m_iCurrentPage + 1 ) * this.m_cPageSize, this.m_cTotalCount ) );
+
+
+		if ( this.m_cMaxPages <= 1 )
+		{
+			$(this.m_strElementPrefix + '_controls').hide();
+		}
+		else
+		{
+			$(this.m_strElementPrefix + '_controls').show();
+			if ( this.m_iCurrentPage > 0 )
+				$(this.m_strElementPrefix + '_btn_prev').removeClassName('disabled');
+			else
+				$(this.m_strElementPrefix + '_btn_prev').addClassName('disabled');
+
+			if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+				$(this.m_strElementPrefix + '_btn_next').removeClassName('disabled');
+			else
+				$(this.m_strElementPrefix + '_btn_next').addClassName('disabled');
+
+			var elPageLinks = $(this.m_strElementPrefix + '_links');
+			elPageLinks.update('');
+			// we always show first, last, + 3 page links closest to current page
+			var cPageLinksAheadBehind = 2;
+			var firstPageLink = Math.max( this.m_iCurrentPage - cPageLinksAheadBehind, 1 );
+			var lastPageLink = Math.min( this.m_iCurrentPage + (cPageLinksAheadBehind*2) + ( firstPageLink - this.m_iCurrentPage ), this.m_cMaxPages - 2 );
+
+			if ( lastPageLink - this.m_iCurrentPage < cPageLinksAheadBehind )
+				firstPageLink = Math.max( this.m_iCurrentPage - (cPageLinksAheadBehind*2) + ( lastPageLink - this.m_iCurrentPage ), 1 );
+
+			this.AddPageLink( elPageLinks, 0 );
+			if ( firstPageLink != 1 )
+				elPageLinks.insert( ' ... ' );
+
+			for ( var iPage = firstPageLink; iPage <= lastPageLink; iPage++ )
+			{
+				this.AddPageLink( elPageLinks, iPage );
+			}
+
+			if ( lastPageLink != this.m_cMaxPages - 2 )
+				elPageLinks.insert( ' ... ' );
+			this.AddPageLink( elPageLinks, this.m_cMaxPages - 1 );
+		}
+
+		if ( this.m_fnPageChangedHandler != null )
+			this.m_fnPageChangedHandler( this.m_iCurrentPage );
+	},
+
+	AddPageLink: function( elPageLinks, iPage )
+	{
+		var el = new Element( 'span', {'class': ( this.m_strClassPrefix != "" ? this.m_strClassPrefix : this.m_strElementPrefix ) + '_paging_pagelink' } );
+		el.update( (iPage + 1) + ' ' );
+
+		if ( iPage == this.m_iCurrentPage )
+			el.addClassName( 'active' );
+		else
+			el.observe( 'click', this.GoToPage.bind( this, iPage ) );
+
+		elPageLinks.insert( el );
+	}
+} );
+
 
 function IsValidEmailAddress( email )
 {
