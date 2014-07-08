@@ -135,7 +135,7 @@
 		"feet"				"1"			
 		"necklace"			"1"
 		"grenades"			"1"
-		"arm_tatoos"		"1"				
+		"arm_tatoos"		"1"
 		
 		"flair"				"1"
 		"head_skin"			"1"			
@@ -150,6 +150,8 @@
 
 		"disconnected_floating_item"	"1"
 		"zombie_body"		"1"
+
+		"hat_misc"			"1"			
 
 		"shared"
 		{
@@ -208,7 +210,6 @@
 			"heavy_bullets"		"1"
 			"engineer_hair"		"1"			
 			"sniper_vest"		"1"			
-			"soldier_stash"		"1"			
 		}
 		"shared"
 		{
@@ -5176,7 +5177,7 @@
 			"item_name"	"#TF_Soldier_Hat_1"
 			"item_description"	"#TF_Soldier_Hat_1_Desc"
 			"item_slot"	"head"
-			"equip_region"	"soldier_stash"
+			"equip_region"	"hat_misc"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/soldier/soldier_hat"
 			"image_inventory_size_w"		"128"
@@ -8640,7 +8641,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_hi5_start.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_hi5_start.vcd"
@@ -8652,29 +8653,53 @@
 					"engineer"	"scenes\player\engineer\low\taunt_hi5_start.vcd"
 					"pyro"		"scenes\player\pyro\low\taunt_hi5_start.vcd"
 				}
-				"custom_partner_taunt_per_class_1"
+				"custom_partner_taunt_per_class"
 				{
-					"scout"		"scenes\player\scout\low\taunt_hi5_a.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_hi5_a.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_hi5_a.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_hi5_a.vcd"
-					"medic"		"scenes\player\medic\low\taunt_hi5_a.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_hi5_a.vcd"
-					"spy"		"scenes\player\spy\low\taunt_hi5_a.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_hi5_a.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_hi5_a.vcd"
-				}
-				"custom_partner_taunt_per_class_2"
-				{
-					"scout"		"scenes\player\scout\low\taunt_hi5_b.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_hi5_b.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_hi5_b.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_hi5_b.vcd"
-					"medic"		"scenes\player\medic\low\taunt_hi5_b.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_hi5_b.vcd"
-					"spy"		"scenes\player\spy\low\taunt_hi5_b.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_hi5_b.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_hi5_b.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\scout\low\taunt_hi5_b.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\sniper\low\taunt_hi5_b.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\soldier\low\taunt_hi5_b.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\demoman\low\taunt_hi5_b.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\medic\low\taunt_hi5_b.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\heavy\low\taunt_hi5_b.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\spy\low\taunt_hi5_b.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\engineer\low\taunt_hi5_b.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\taunt_hi5_a.vcd"
+						"2"		"scenes\player\pyro\low\taunt_hi5_b.vcd"
+					}
 				}
 				"taunt_separation_forward_distance"	"60"
 				"is_partner_taunt" "1"
@@ -20433,7 +20458,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_replay.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_replay.vcd"
@@ -20443,11 +20468,11 @@
 					"heavy"		"scenes\player\heavy\low\taunt_replay.vcd"
 					"spy"		"scenes\player\spy\low\taunt_replay.vcd"
 					"engineer"	"scenes\player\engineer\low\taunt_replay.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_replay.vcd"
-				}
-				"custom_taunt_scene_per_class_2"
-				{
-					"pyro"		"scenes\player\pyro\low\taunt_replay2.vcd"
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\taunt_replay.vcd"
+						"2"		"scenes\player\pyro\low\taunt_replay2.vcd"
+					}
 				}
 			}
 			"visuals"
@@ -21662,7 +21687,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_laugh.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_laugh.vcd"
@@ -22196,7 +22221,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"medic"		"scenes\player\medic\low\taunt09.vcd"
 				}
@@ -26773,6 +26798,7 @@
 			}
 			"item_name"	"#TF_EngineerHat1"
 			"item_description"	"#TF_EngineerHat1_Desc"
+			"equip_region"	"hat_misc"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"propername"	"1"
@@ -39272,7 +39298,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_brutalLegend.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_brutalLegend.vcd"
@@ -41172,7 +41198,7 @@
 		"1087"
 		{
 			"name"	"Der Maschinensoldaten-Helm"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41191,7 +41217,7 @@
 		"1088"
 		{
 			"name"	"Die Regime-Panzerung"
-			"prefab"	"promo misc"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41209,7 +41235,7 @@
 		"1089"
 		{
 			"name"	"Mister Bubbles"
-			"prefab"	"promo misc"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41228,7 +41254,7 @@
 		"1090"
 		{
 			"name"	"The Big Daddy"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41248,7 +41274,7 @@
 		"1091"
 		{
 			"name"	"The First American"
-			"prefab"	"promo hat"
+			"prefab"	"hat"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -41532,11 +41558,6 @@
 				{
 					"attribute_class"	"kill_refills_meter"
 					"value"			"1"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
@@ -41940,7 +41961,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_dosido_intro01.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_dosido_intro01.vcd"
@@ -41952,50 +41973,59 @@
 					"engineer"	"scenes\player\engineer\low\taunt_dosido_intro01.vcd"
 					"pyro"		"scenes\player\pyro\low\taunt_dosido_intro01.vcd"
 				}
-				"custom_partner_taunt_per_class_1"
+				"custom_partner_taunt_per_class"
 				{
-					"scout"		"scenes\player\scout\low\taunt_dosido_dance00.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_dosido_dance00.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_dosido_dance00.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_dosido_dance00.vcd"
-					"medic"		"scenes\player\medic\low\taunt_dosido_dance00.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance00.vcd"
-					"spy"		"scenes\player\spy\low\taunt_dosido_dance00.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_dosido_dance00.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_dosido_dance00.vcd"
-				}
-				"custom_partner_taunt_per_class_2"
-				{
-					"scout"		"scenes\player\scout\low\taunt_dosido_dance01.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_dosido_dance01.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_dosido_dance01.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_dosido_dance01.vcd"
-					"medic"		"scenes\player\medic\low\taunt_dosido_dance01.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance01.vcd"
-					"spy"		"scenes\player\spy\low\taunt_dosido_dance01.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_dosido_dance01.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_dosido_dance01.vcd"
-				}
-				"custom_partner_taunt_per_class_3"
-				{
-					"sniper"	"scenes\player\sniper\low\taunt_dosido_dance02.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance02.vcd"
-				}
-				"custom_partner_taunt_per_class_4"
-				{
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance03.vcd"
-				}
-				"custom_partner_taunt_per_class_5"
-				{
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance04.vcd"
-				}
-				"custom_partner_taunt_per_class_6"
-				{
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance05.vcd"
-				}
-				"custom_partner_taunt_per_class_7"
-				{
-					"heavy"		"scenes\player\heavy\low\taunt_dosido_dance06.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\scout\low\taunt_dosido_dance01.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\sniper\low\taunt_dosido_dance01.vcd"
+						"3"		"scenes\player\sniper\low\taunt_dosido_dance02.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\soldier\low\taunt_dosido_dance01.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\demoman\low\taunt_dosido_dance01.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\medic\low\taunt_dosido_dance01.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\heavy\low\taunt_dosido_dance01.vcd"
+						"3"		"scenes\player\heavy\low\taunt_dosido_dance02.vcd"
+						"4"		"scenes\player\heavy\low\taunt_dosido_dance03.vcd"
+						"5"		"scenes\player\heavy\low\taunt_dosido_dance04.vcd"
+						"6"		"scenes\player\heavy\low\taunt_dosido_dance05.vcd"
+						"7"		"scenes\player\heavy\low\taunt_dosido_dance06.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\spy\low\taunt_dosido_dance01.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\engineer\low\taunt_dosido_dance01.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\taunt_dosido_dance00.vcd"
+						"2"		"scenes\player\pyro\low\taunt_dosido_dance01.vcd"
+					}
 				}
 				"taunt_separation_forward_distance"	"60"
 				"is_partner_taunt" "1"
@@ -42051,7 +42081,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\flip_start.vcd"
 					"sniper"	"scenes\player\sniper\low\flip_start.vcd"
@@ -42063,53 +42093,101 @@
 					"engineer"	"scenes\player\engineer\low\flip_start.vcd"
 					"pyro"		"scenes\player\pyro\low\flip_start.vcd"
 				}
-				"custom_partner_taunt_initiator_per_class_1"
+				"custom_partner_taunt_initiator_per_class"
 				{
-					"scout"		"scenes\player\scout\low\flip_success_initiator0.vcd"
-					"sniper"	"scenes\player\sniper\low\flip_success_initiator0.vcd"
-					"soldier"	"scenes\player\soldier\low\flip_success_initiator0.vcd"
-					"demoman"	"scenes\player\demoman\low\flip_success_initiator0.vcd"
-					"medic"		"scenes\player\medic\low\flip_success_initiator0.vcd"
-					"heavy"		"scenes\player\heavy\low\flip_success_initiator0.vcd"
-					"spy"		"scenes\player\spy\low\flip_success_initiator0.vcd"
-					"engineer"	"scenes\player\engineer\low\flip_success_initiator0.vcd"
-					"pyro"		"scenes\player\pyro\low\flip_success_initiator0.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\scout\low\flip_success_initiator1.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\sniper\low\flip_success_initiator1.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\soldier\low\flip_success_initiator1.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\demoman\low\flip_success_initiator1.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\medic\low\flip_success_initiator1.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\heavy\low\flip_success_initiator1.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\spy\low\flip_success_initiator1.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\engineer\low\flip_success_initiator1.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\flip_success_initiator0.vcd"
+						"2"		"scenes\player\pyro\low\flip_success_initiator1.vcd"
+					}
 				}
-				"custom_partner_taunt_initiator_per_class_2"
+				"custom_partner_taunt_receiver_per_class"
 				{
-					"scout"		"scenes\player\scout\low\flip_success_initiator1.vcd"
-					"sniper"	"scenes\player\sniper\low\flip_success_initiator1.vcd"
-					"soldier"	"scenes\player\soldier\low\flip_success_initiator1.vcd"
-					"demoman"	"scenes\player\demoman\low\flip_success_initiator1.vcd"
-					"medic"		"scenes\player\medic\low\flip_success_initiator1.vcd"
-					"heavy"		"scenes\player\heavy\low\flip_success_initiator1.vcd"
-					"spy"		"scenes\player\spy\low\flip_success_initiator1.vcd"
-					"engineer"	"scenes\player\engineer\low\flip_success_initiator1.vcd"
-					"pyro"		"scenes\player\pyro\low\flip_success_initiator1.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_1"
-				{
-					"scout"		"scenes\player\scout\low\flip_success_receiver0.vcd"
-					"sniper"	"scenes\player\sniper\low\flip_success_receiver0.vcd"
-					"soldier"	"scenes\player\soldier\low\flip_success_receiver0.vcd"
-					"demoman"	"scenes\player\demoman\low\flip_success_receiver0.vcd"
-					"medic"		"scenes\player\medic\low\flip_success_receiver0.vcd"
-					"heavy"		"scenes\player\heavy\low\flip_success_receiver0.vcd"
-					"spy"		"scenes\player\spy\low\flip_success_receiver0.vcd"
-					"engineer"	"scenes\player\engineer\low\flip_success_receiver0.vcd"
-					"pyro"		"scenes\player\pyro\low\flip_success_receiver0.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_2"
-				{
-					"scout"		"scenes\player\scout\low\flip_success_receiver1.vcd"
-					"sniper"	"scenes\player\sniper\low\flip_success_receiver1.vcd"
-					"soldier"	"scenes\player\soldier\low\flip_success_receiver1.vcd"
-					"demoman"	"scenes\player\demoman\low\flip_success_receiver1.vcd"
-					"medic"		"scenes\player\medic\low\flip_success_receiver1.vcd"
-					"heavy"		"scenes\player\heavy\low\flip_success_receiver1.vcd"
-					"spy"		"scenes\player\spy\low\flip_success_receiver1.vcd"
-					"engineer"	"scenes\player\engineer\low\flip_success_receiver1.vcd"
-					"pyro"		"scenes\player\pyro\low\flip_success_receiver1.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\scout\low\flip_success_receiver1.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\sniper\low\flip_success_receiver1.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\soldier\low\flip_success_receiver1.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\demoman\low\flip_success_receiver1.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\medic\low\flip_success_receiver1.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\heavy\low\flip_success_receiver1.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\spy\low\flip_success_receiver1.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\engineer\low\flip_success_receiver1.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\flip_success_receiver0.vcd"
+						"2"		"scenes\player\pyro\low\flip_success_receiver1.vcd"
+					}
 				}
 				"taunt_separation_forward_distance"	"80"
 				"is_partner_taunt" "1"
@@ -42134,7 +42212,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"spy"	"scenes/player/spy/low/taunt_buy_a_life.vcd"
 				}
@@ -42163,7 +42241,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"medic"	"scenes/player/medic/low/taunt_xray.vcd"
 				}
@@ -42218,7 +42296,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_rps_start.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_rps_start.vcd"
@@ -42230,149 +42308,173 @@
 					"engineer"	"scenes\player\engineer\low\taunt_rps_start.vcd"
 					"pyro"		"scenes\player\pyro\low\taunt_rps_start.vcd"
 				}
-				"custom_partner_taunt_initiator_per_class_1"
+				"custom_partner_taunt_initiator_per_class"
 				{
-					"scout"		"scenes\player\scout\low\taunt_rps_rock_win.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_rock_win.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_rock_win.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_rock_win.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_rock_win.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_rock_win.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_rock_win.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_rock_win.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_rock_win.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\scout\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\scout\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\scout\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\scout\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\scout\low\taunt_rps_scissors_lose.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\sniper\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\sniper\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\sniper\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\sniper\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\sniper\low\taunt_rps_scissors_lose.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\soldier\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\soldier\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\soldier\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\soldier\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\soldier\low\taunt_rps_scissors_lose.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\demoman\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\demoman\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\demoman\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\demoman\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\demoman\low\taunt_rps_scissors_lose.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\medic\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\medic\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\medic\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\medic\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\medic\low\taunt_rps_scissors_lose.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\heavy\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\heavy\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\heavy\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\heavy\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\heavy\low\taunt_rps_scissors_lose.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\spy\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\spy\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\spy\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\spy\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\spy\low\taunt_rps_scissors_lose.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\engineer\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\engineer\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\engineer\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\engineer\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\engineer\low\taunt_rps_scissors_lose.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\taunt_rps_rock_win.vcd"
+						"2"		"scenes\player\pyro\low\taunt_rps_paper_win.vcd"
+						"3"		"scenes\player\pyro\low\taunt_rps_scissors_win.vcd"
+						"4"		"scenes\player\pyro\low\taunt_rps_rock_lose.vcd"
+						"5"		"scenes\player\pyro\low\taunt_rps_paper_lose.vcd"
+						"6"		"scenes\player\pyro\low\taunt_rps_scissors_lose.vcd"
+					}
 				}
-				"custom_partner_taunt_initiator_per_class_2"
+				"custom_partner_taunt_receiver_per_class"
 				{
-					"scout"		"scenes\player\scout\low\taunt_rps_paper_win.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_paper_win.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_paper_win.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_paper_win.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_paper_win.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_paper_win.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_paper_win.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_paper_win.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_paper_win.vcd"
-				}
-				"custom_partner_taunt_initiator_per_class_3"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_scissors_win.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_scissors_win.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_scissors_win.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_scissors_win.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_scissors_win.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_scissors_win.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_scissors_win.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_scissors_win.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_scissors_win.vcd"
-				}
-				"custom_partner_taunt_initiator_per_class_4"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_rock_lose.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_rock_lose.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_rock_lose.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_rock_lose.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_rock_lose.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_rock_lose.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_rock_lose.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_rock_lose.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_rock_lose.vcd"
-				}
-				"custom_partner_taunt_initiator_per_class_5"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_paper_lose.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_paper_lose.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_paper_lose.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_paper_lose.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_paper_lose.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_paper_lose.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_paper_lose.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_paper_lose.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_paper_lose.vcd"
-				}
-				"custom_partner_taunt_initiator_per_class_6"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_scissors_lose.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_scissors_lose.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_scissors_lose.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_scissors_lose.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_scissors_lose.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_scissors_lose.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_scissors_lose.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_scissors_lose.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_scissors_lose.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_1"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_rock_win_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_rock_win_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_rock_win_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_rock_win_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_rock_win_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_rock_win_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_rock_win_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_rock_win_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_rock_win_noinit.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_2"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_paper_win_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_paper_win_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_paper_win_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_paper_win_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_paper_win_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_paper_win_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_paper_win_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_paper_win_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_paper_win_noinit.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_3"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_scissors_win_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_scissors_win_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_scissors_win_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_scissors_win_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_scissors_win_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_scissors_win_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_scissors_win_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_scissors_win_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_scissors_win_noinit.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_4"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_rock_lose_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_rock_lose_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_rock_lose_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_rock_lose_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_rock_lose_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_rock_lose_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_rock_lose_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_rock_lose_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_rock_lose_noinit.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_5"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_paper_lose_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_paper_lose_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_paper_lose_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_paper_lose_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_paper_lose_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_paper_lose_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_paper_lose_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_paper_lose_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_paper_lose_noinit.vcd"
-				}
-				"custom_partner_taunt_receiver_per_class_6"
-				{
-					"scout"		"scenes\player\scout\low\taunt_rps_scissors_lose_noinit.vcd"
-					"sniper"	"scenes\player\sniper\low\taunt_rps_scissors_lose_noinit.vcd"
-					"soldier"	"scenes\player\soldier\low\taunt_rps_scissors_lose_noinit.vcd"
-					"demoman"	"scenes\player\demoman\low\taunt_rps_scissors_lose_noinit.vcd"
-					"medic"		"scenes\player\medic\low\taunt_rps_scissors_lose_noinit.vcd"
-					"heavy"		"scenes\player\heavy\low\taunt_rps_scissors_lose_noinit.vcd"
-					"spy"		"scenes\player\spy\low\taunt_rps_scissors_lose_noinit.vcd"
-					"engineer"	"scenes\player\engineer\low\taunt_rps_scissors_lose_noinit.vcd"
-					"pyro"		"scenes\player\pyro\low\taunt_rps_scissors_lose_noinit.vcd"
+					"scout"
+					{
+						"1"		"scenes\player\scout\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\scout\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\scout\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\scout\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\scout\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\scout\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"sniper"
+					{
+						"1"		"scenes\player\sniper\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\sniper\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\sniper\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\sniper\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\sniper\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\sniper\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"soldier"
+					{
+						"1"		"scenes\player\soldier\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\soldier\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\soldier\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\soldier\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\soldier\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\soldier\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"demoman"
+					{
+						"1"		"scenes\player\demoman\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\demoman\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\demoman\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\demoman\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\demoman\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\demoman\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"medic"
+					{
+						"1"		"scenes\player\medic\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\medic\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\medic\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\medic\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\medic\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\medic\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"heavy"
+					{
+						"1"		"scenes\player\heavy\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\heavy\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\heavy\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\heavy\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\heavy\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\heavy\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"spy"
+					{
+						"1"		"scenes\player\spy\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\spy\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\spy\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\spy\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\spy\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\spy\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"engineer"
+					{
+						"1"		"scenes\player\engineer\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\engineer\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\engineer\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\engineer\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\engineer\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\engineer\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
+					"pyro"
+					{
+						"1"		"scenes\player\pyro\low\taunt_rps_rock_win_noinit.vcd"
+						"2"		"scenes\player\pyro\low\taunt_rps_paper_win_noinit.vcd"
+						"3"		"scenes\player\pyro\low\taunt_rps_scissors_win_noinit.vcd"
+						"4"		"scenes\player\pyro\low\taunt_rps_rock_lose_noinit.vcd"
+						"5"		"scenes\player\pyro\low\taunt_rps_paper_lose_noinit.vcd"
+						"6"		"scenes\player\pyro\low\taunt_rps_scissors_lose_noinit.vcd"
+					}
 				}
 				"taunt_separation_forward_distance"	"80"
 				"taunt_separation_right_distance"	"5"
@@ -42414,7 +42516,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_headbutt_start.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_headbutt_start.vcd"
@@ -42426,7 +42528,7 @@
 					"engineer"	"scenes\player\engineer\low\taunt_headbutt_start.vcd"
 					"pyro"		"scenes\player\pyro\low\taunt_headbutt_start.vcd"
 				}
-				"custom_partner_taunt_per_class_1"
+				"custom_partner_taunt_per_class"
 				{
 					"scout"		"scenes\player\scout\low\taunt_headbutt_success.vcd"
 					"sniper"	"scenes\player\sniper\low\taunt_headbutt_success.vcd"
@@ -42461,13 +42563,13 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"pyro"	"scenes/player/pyro/low/taunt_party_trick.vcd"
 				}
 				"custom_taunt_prop_per_class"
 				{
-					"pyro"	"models/player/items/taunts/ballloon_animal_pyro/balloon_animal_pyro.mdl"
+					"pyro"	"models/player/items/taunts/balloon_animal_pyro/balloon_animal_pyro.mdl"
 				}
 			}
 		}
@@ -42490,7 +42592,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"soldier"	"scenes/player/soldier/low/taunt_coffee.vcd"
 				}
@@ -42530,7 +42632,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"demoman"	"scenes/player/demoman/low/taunt_nuke.vcd"
 				}
@@ -42567,11 +42669,11 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"engineer"	"scenes/player/engineer/low/taunt_killer_time_intro.vcd"
 				}
-				"custom_taunt_outro_scene_per_class_1"
+				"custom_taunt_outro_scene_per_class"
 				{
 					"engineer"	"scenes/player/engineer/low/taunt_killer_time_outro.vcd"
 				}
@@ -42610,7 +42712,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"sniper"	"scenes\player\sniper\low\taunt_i_see_you_primary.vcd"
 				}
@@ -42643,7 +42745,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"	"scenes/player/scout/low/taunt_bat_man.vcd"
 				}
@@ -42704,7 +42806,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"		"scenes\player\scout\low\conga.vcd"
 					"sniper"	"scenes\player\sniper\low\conga.vcd"
@@ -42742,7 +42844,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"scout"	"scenes/player/scout/low/taunt_chicken_bucket.vcd"
 				}
@@ -42771,7 +42873,7 @@
 			}
 			"taunt"
 			{
-				"custom_taunt_scene_per_class_1"
+				"custom_taunt_scene_per_class"
 				{
 					"demoman"	"scenes/player/demoman/low/woohoo.vcd"
 				}
@@ -42825,6 +42927,7 @@
 				}
 				"skin"	"1"
 			}
+			"set_item_remap"	"Mad Milk"
 		}
 		"1122"
 		{
@@ -42857,6 +42960,10 @@
 				"spy"		"1"
 				"engineer"	"1"
 				"pyro"		"1"
+			}
+			"capabilities"
+			{
+				"paintable"		"1"
 			}
 			"attributes"
 			{
@@ -47036,7 +47143,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_fall2013_kyoto_rider"
 			"item_description"		"#TF_fall2013_kyoto_rider_Desc"
-			"equip_region"		"shirt"
+			"equip_region"		"sniper_vest"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/sniper/fall2013_kyoto_rider/fall2013_kyoto_rider"
 			"capabilities"
@@ -51662,7 +51769,7 @@
 		}
 		"30360"
 		{
-			"name"		"The Napolean Complex"
+			"name"		"The Napoleon Complex"
 			"propername"		"1"
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_sbox2014_napolean_complex"
@@ -52305,11 +52412,7 @@
 			"item_name"		"#TF_short2014_ninja_vest"
 			"item_description"		"#TF_short2014_ninja_vest_Desc"
 			"item_type_name"		"#TF_Wearable_Shirt"
-			"equip_regions"
-			{
-				"shirt"	"1"
-				"arm_tatoos" "1"
-			}
+			"equip_region"	"shirt"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -58735,8 +58838,359 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
 			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
 		}
-
-
+		"8477"
+		{
+			"name"				"Tumblr Vs Reddit Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_TumblrVsReddit"
+			"item_description"	"#TF_TournamentMedal_TumblrVsReddit_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tvr_medal_season2/tvr_medal_season2"
+			"model_player"		"models/workshop/player/items/all_class/tvr_medal_season2/tvr_medal_season2_demo.mdl"
+		}
+		"8478"
+		{
+			"name"				"UGC Highlander 1st Place Platinum Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_first.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8479"
+		{
+			"name"				"UGC Highlander 2nd Place Platinum Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_second.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8480"
+		{
+			"name"				"UGC Highlander 3rd Place Platinum Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_third.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8481"
+		{
+			"name"				"UGC Highlander Platinum Participant Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_participant.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8482"
+		{
+			"name"				"UGC Highlander 1st Place Gold Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_gold_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_first.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8483"
+		{
+			"name"				"UGC Highlander 2nd Place Gold Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_gold_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_second.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8484"
+		{
+			"name"				"UGC Highlander 3rd Place Gold Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_gold_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_third.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8485"
+		{
+			"name"				"UGC Highlander Gold Participant Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_gold_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8486"
+		{
+			"name"				"UGC Highlander 1st Place Silver Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_1st"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_first.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8487"
+		{
+			"name"				"UGC Highlander 2nd Place Silver Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_2nd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_second.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8488"
+		{
+			"name"				"UGC Highlander 3rd Place Silver Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_3rd"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_third.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8489"
+		{
+			"name"				"UGC Highlander Silver Participant Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8490"
+		{
+			"name"				"UGC Highlander Steel Participant Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8491"
+		{
+			"name"				"UGC Highlander Iron Participant Season 12"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGCHL_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_UGCHL_Season12"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_iron_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8492"
+		{
+			"name"				"UGC 6vs6 1st Place Platinum Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_1st"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_first"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_first.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8493"
+		{
+			"name"				"UGC 6vs6 2nd Place Platinum Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_2nd"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_second"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_second.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8494"
+		{
+			"name"				"UGC 6vs6 3rd Place Platinum Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_3rd"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_third"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_third.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8495"
+		{		
+			"name"				"UGC 6vs6 Platinum Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Platinum_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_platinum_participant.mdl"
+			"visuals_red"
+			{
+				"skin"	"0"
+			}
+			"visuals_blu"
+			{
+				"skin"	"1"
+			}
+		}
+		"8496"
+		{		
+			"name"				"UGC 6vs6 Gold Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Gold_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_gold_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"0"
+			}
+		}
+		"8497"
+		{		
+			"name"				"UGC 6vs6 Silver Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8498"
+		{		
+			"name"				"UGC 6vs6 Steel Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
+		"8499"
+		{		
+			"name"				"UGC 6vs6 Iron Participant Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC6v6_Iron_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC6v6_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_iron_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"3"
+			}
+		}
+		"8500"
+		{		
+			"name"				"UGC 4vs4 Silver Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Silver_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC4v4_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_silver_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"1"
+			}
+		}
+		"8501"
+		{		
+			"name"				"UGC 4vs4 Steel Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UGC4v4_Steel_Participant"
+			"item_description"	"#TF_TournamentMedal_UGC4v4_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ugc_season12/ugc_season12_steel_participant"
+			"model_player"		"models/workshop/player/items/all_class/ugc_season12/ugc_season12_participant.mdl"
+			"visuals"
+			{
+				"skin"	"2"
+			}
+		}
 
 
 
@@ -89386,6 +89840,15 @@
 				"name"					"pl_barnblitz"
 				"localizedname"			"#TF_Map_pl_barnblitz"
 			}
+			"7"
+			{
+				"name"					"pl_cactuscanyon"
+				"localizedname"			"TF_Map_pl_cactuscanyon"
+				"tags"
+				{
+					"beta"				"1"
+				}
+			}
 		}
 		"payload_race"
 		{
@@ -89541,6 +90004,19 @@
 				"name"					"koth_lakeside_event"
 				"localizedname"			"#TF_Map_koth_lakeside_event"
 				"quickplay_type"		"all_users"
+			}
+		}
+
+		"robot_destruction"
+		{
+			"0"
+			{
+				"name"					"rd_asteroid"
+				"localizedname"			"#TF_Map_rd_asteroid"
+				"tags"
+				{
+					"beta"				"1"
+				}
 			}
 		}
 	}
