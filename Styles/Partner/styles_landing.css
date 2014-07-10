@@ -627,15 +627,32 @@ p {
 		background-color: transparent;
 		padding: 2px 7px;
 	}
+    .landingInfoTable p {
+        color: #888888;
+    }
 .landingInfoTable.dark {
     background: #151515;
     padding: 8px;
 }
 
+.tax_button_ctn {
+    margin-top: 15px;
+}
+    .tax_button_ctn hr {
+        margin-bottom: 15px;
+        border-top: 1px solid #343434;
+        height: 1px;
+        border-bottom: none;
+        border-left: none;
+        border-rigth: none;
+    }
+
 .noInfo {
     color: #e1c48a;
-    margin-top: 20px;
     margin-bottom: 0px;
+}
+.noInfo.large {
+    font-size: 18px;
 }
 
 .buttonRow {
