@@ -670,7 +670,7 @@ FamilySharing
 }
 LinkFilter
 {
-	url		"%communityhttps%/linkfilter/"
+	url		"%communityhttps%/linkfilter/?url="
 	method	"internal"
 }
 
