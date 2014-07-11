@@ -2375,6 +2375,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4_asimov_heavy"
 			}
+			"1049812"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a1_howling_light"
+			}
+			"1049813"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a1_howling_medium"
+			}
+			"1049814"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a1_howling_heavy"
+			}
 			"1049920"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_cu_titanstorm_light"
@@ -3311,6 +3323,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_heavy"
 			}
+			"1835128"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_light"
+			}
+			"1835129"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_medium"
+			}
+			"1835130"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_heavy"
+			}
 			"1835812"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_sp_palm_bravo_light"
@@ -3718,6 +3742,18 @@
 			"2097438"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_am_scorpion_p2000_heavy"
+			}
+			"2097476"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_light"
+			}
+			"2097477"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_medium"
+			}
+			"2097478"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_heavy"
 			}
 			"2097532"
 			{
@@ -4319,6 +4355,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_sp_tape_heavy"
 			}
+			"2359420"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_an_gold_light"
+			}
+			"2359421"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_an_gold_medium"
+			}
+			"2359422"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_an_gold_heavy"
+			}
 			"2359432"
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_am_urban_light"
@@ -4630,6 +4678,18 @@
 			"2556450"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_dots_waves_heavy"
+			}
+			"2556472"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_light"
+			}
+			"2556473"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_medium"
+			}
+			"2556474"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_heavy"
 			}
 			"2556648"
 			{
@@ -11724,7 +11784,7 @@
 			{
 				"ItemSet"
 				{
-					"tag_value"		"set_esports_2014_summer"
+					"tag_value"		"set_esports_iii"
 					"tag_text"		"#CSGO_set_esports_2014_summer"
 					"tag_group"		"ItemSet"
 					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
