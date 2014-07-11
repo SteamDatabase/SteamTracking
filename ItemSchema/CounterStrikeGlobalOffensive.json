@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.34efcd260aedb9abf68403272ac75ee2ce70e86f.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.7787fd06839a4b974cb8cc571fe933611f007dd6.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3241,6 +3241,9 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/mission.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
 				"image_url_large": "",
+				"capabilities": {
+					"can_delete": true
+				},
 				"attributes": [
 
 				]
@@ -3359,7 +3362,8 @@
 				"defindex": 4002,
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
-				"item_name": "eSports Case",
+				"item_name": "eSports 2013 Case",
+				"item_description": "A portion of the proceeds from the key used to unlock this will help support CS:GO professional tournament prize pools.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/weapon_cases/crate_esports_2013",
@@ -3458,7 +3462,8 @@
 				"defindex": 4005,
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
-				"item_name": "eSports Winter Case",
+				"item_name": "eSports 2013 Winter Case",
+				"item_description": "A portion of the proceeds from the key used to unlock this will help support CS:GO professional tournament prize pools.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/weapon_cases/crate_esports_2013_14",
@@ -3893,6 +3898,40 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 18
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esports_2014_summer",
+				"defindex": 4019,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "eSports 2014 Summer Case",
+				"item_description": "A portion of the proceeds from the key used to unlock this will help support CS:GO professional tournament prize pools.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esports_2014_summer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esports_2014_summer.e579e3f7ca004fd9b51aa0f597590c936bb9f67c.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "esports_crate_key",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 19
 					}
 				]
 				
@@ -5656,7 +5695,7 @@
 			},
 			{
 				"item_set": "set_esports_ii",
-				"name": "The eSports Winter Collection",
+				"name": "The eSports 2013 Winter Collection",
 				"items": [
 					"weapon_galilar",
 					"weapon_fiveseven",
@@ -5670,6 +5709,30 @@
 					"weapon_awp",
 					"weapon_deagle",
 					"weapon_m4a1"
+				]
+				
+			},
+			{
+				"item_set": "set_esports_iii",
+				"name": "The eSports 2014 Summer Collection",
+				"items": [
+					"weapon_ssg08",
+					"weapon_mac10",
+					"weapon_usp_silencer",
+					"weapon_cz75a",
+					"weapon_negev",
+					"weapon_xm1014",
+					"weapon_bizon",
+					"weapon_p90",
+					"weapon_mp7",
+					"weapon_glock",
+					"weapon_deagle",
+					"weapon_aug",
+					"weapon_nova",
+					"weapon_awp",
+					"weapon_hkp2000",
+					"weapon_m4a1",
+					"weapon_ak47"
 				]
 				
 			},
