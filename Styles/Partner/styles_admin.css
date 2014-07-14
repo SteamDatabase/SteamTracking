@@ -1818,6 +1818,13 @@ html, body { height:100%; }
 	width: 250px;
 }
 
+.recent_app_type
+{
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
 .recent_app_links
 {
 	float: right;
