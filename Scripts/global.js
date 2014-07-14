@@ -176,7 +176,7 @@ function AlertNonSteamSite( elem )
 		{
 			var index = hostname.lastIndexOf( g_whiteListedDomains[i] );
 			if ( index != -1 && index == ( hostname.length - g_whiteListedDomains[i].length )
-			     && ( index == 0 || hostname.charAt( index - 1 ) == '.' ) )
+				 && ( index == 0 || hostname.charAt( index - 1 ) == '.' ) )
 			{
 				return true;
 			}
@@ -629,19 +629,29 @@ function PositionEmoticonHover( $Hover, $Target )
 }
 
 
-function InitEconomyHovers( strEconomyCSS, strEconomyJS )
+function InitEconomyHovers( strEconomyCSSURL, strEconomyJSURL )
 {
 	var $Hover = $J('<div/>', {'class': 'economyitem_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'economyitem_hover_content'} );
 	$Hover.append( $HoverContent );
 	$Hover.hide();
 
-
 	var fnOneTimeEconomySetup = function() {
 		$J(document.body).append( $Hover );
 
 		if ( typeof UserYou == 'undefined' )
-			$J('head').append( strEconomyCSS, strEconomyJS );
+		{
+						var css = document.createElement( "link" );
+			css.setAttribute( "rel", "stylesheet" );
+			css.setAttribute( "type", "text/css" );
+			css.setAttribute( "href", strEconomyCSSURL );
+			var js = document.createElement( "script" );
+			js.setAttribute( "type", "text/javascript" );
+			js.setAttribute( "src", strEconomyJSURL );
+			var head = $J('head')[0];
+			head.appendChild( css );
+			head.appendChild( js );
+		}
 	};
 
 	var fnDataFactory = function( key ) {
