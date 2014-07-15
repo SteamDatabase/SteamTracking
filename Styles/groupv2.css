@@ -1222,3 +1222,95 @@ a.headlineLink:hover {
 
 .announcement_TagWorkshopText {
 }
+
+
+.curation_details_info {
+	line-height: 18px;
+}
+
+.curation_app_form {
+	width: auto;
+}
+
+.curation_app_form textarea {
+	width: 100%;
+	background-color: #555557;
+	padding: 4px;
+}
+
+
+.curation_app_form input {
+	width: 100%;
+	background-color: #555557;
+	padding: 4px 0px 4px 4px;
+}
+
+.curation_app_form div {
+	padding: 14px 0px 4px 0px;
+}
+
+#curationAppInput {
+	height: 20px;
+}
+
+#curationBlurbInput {
+	height: 100px;
+}
+
+#curationURLInput {
+	height: 24px;
+}
+
+
+.curation_app_form_buttons {
+	float: right;
+	padding-top: 30px;
+}
+
+.curation_app_form_buttons div {
+	margin-left: 10px;
+}
+
+.curation_app_block {
+	background-color: #2d2d2e;
+	min-height: 120px;
+	margin-bottom: 20px;
+	margin-left: 4px;
+}
+
+.curation_app_block_header_bar {
+	background-color: #1a1a1b;
+	text-transform: uppercase;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.curation_app_block_body {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.curation_app_block_body img {
+	float: left;
+}
+
+.curation_app_block_content {
+	padding-left: 200px;
+}
+
+.curation_app_block_name {
+	font-size: 20px;
+	color: white;
+}
+
+.curation_app_block_blurb {
+	font-style: italic;
+	padding-top: 4px;
+}
+
+.curation_app_block_link {
+	padding-top: 10px;
+	color: whitesmoke;
+}

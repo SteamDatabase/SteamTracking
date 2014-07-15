@@ -374,3 +374,40 @@ function ConfirmLeaveGroup( groupName )
 	}
 }
 
+
+function Curator_OnCreateRecommendation( groupid, create_only )
+{
+	// create the recommendation
+	$J.ajax({
+		url: 'https://steamcommunity.com/groups/' + groupid + '/createrecommendation/',
+		data: {
+			sessionID: g_sessionID,
+			appid: $J('#curationAppIDInput').val(),
+			blurb: $J('#curationBlurbInput').val(),
+			link_url: $J('#curationURLInput').val(),
+			create_only: create_only
+		},
+		success: function( data, textStatus, jqXHR ) {
+			if ( data.success == 1 )
+			{
+				// great, go back to the front page
+				window.location = '#curation/';
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Could not create recommendation', data.error );
+			}
+			else
+			{
+				ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
+			}
+		},
+		error: function( jqXHR, textStatus, errorThrown ) {
+			// uh oh
+			ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
+		}
+	});
+}
+
+
+

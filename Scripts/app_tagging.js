@@ -57,17 +57,17 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			$ReportFlag.data('store-tooltip', 'Click to enter a report for this tag.' );
 	};
 
-	var fnCheckboxClick = function( checkbox, tag, bPopular )
+	var fnCheckboxClick = function( checkbox, tag, bPopular, tagid )
 	{
 		var bWithdraw = $J(checkbox).hasClass('checked');
-		fnApplyTag( tag, bWithdraw, bPopular );
+		fnApplyTag( tag, bWithdraw, bPopular, 0, tagid );
 	};
 
 	var fnMakeTag = function( tagid, tag, checked, bPopular, bReported )
 	{
 		var $Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': tagid } );
 
-		var $Checkbox = $J('<div/>', {'data-store-tooltip': '', 'class': 'app_tag_checkbox' + ( checked && !bReported ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular ); });
+		var $Checkbox = $J('<div/>', {'data-store-tooltip': '', 'class': 'app_tag_checkbox' + ( checked && !bReported ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular, tagid ); });
 		BindStoreTooltip( $Checkbox );
 		fnSetCheckboxTooltip( $Checkbox );
 
@@ -245,13 +245,16 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		}
 	}
 
-	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType )
+	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID )
 	{
 		var rgParams = {
 			appid: appid,
 			sessionid: g_sessionID,
 			tag: tag
 		};
+		if ( unTagID )
+			rgParams['tagid'] = unTagID;
+
 		if ( withdraw )
 			rgParams['withdraw'] = 1;
 		else if ( eReportType )
@@ -318,6 +321,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			{
 				fnFlashTag( $AppTag );
 			}
+
+			if ( !data.withdraw && $YourTag.length )
+				fnFlashTag( $YourTag );
 
 			// roll "mytag_version" variable which will force a reload of user's frequent tags
 			WebStorage.SetLocal( 'mytag_version', parseInt( WebStorage.GetLocal( 'mytag_version', true ) || 0 ) + 1, true );
