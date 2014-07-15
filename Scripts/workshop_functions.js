@@ -229,6 +229,8 @@ function UpdateTaxRequirement()
 	}
 }
 
+var gValidFieldAlphaNumericRegex = /^[A-Za-z0-9 &.,#'\/\-]+$/
+
 function OnIsCompanyChange()
 {
 	if ( $('iscompany').checked )
@@ -331,6 +333,25 @@ function UpdateBankInfo()
 	}
 }
 
+function IsValidRequiredField( fieldName, regex )
+{
+	var field = $J( fieldName );
+	var value = field.val();
+	value = v_trim( value );
+	if ( value.length == 0 )
+	{
+		return false;
+	}
+
+	if ( !regex.test( value ) )
+	{
+		return false;
+	}
+
+	field.val( value );
+	return true;
+}
+
 function ValidateUserPaymentInfo()
 {
 		var errorString = '';
@@ -352,7 +373,7 @@ function ValidateUserPaymentInfo()
 		{
 			if ( $( 'iscompany' ).checked )
 			{
-				if ( $( 'firstname' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 				{
 					errorString += 'Please enter a company name.<br/>';
 				}
@@ -360,33 +381,32 @@ function ValidateUserPaymentInfo()
 			}
 			else
 			{
-				if ( $( 'firstname' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 				{
-					errorString += 'Please enter a first name.<br/>';
+					errorString += 'Please enter a valid first name.<br/>';
 				}
-				if ( $( 'lastname' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#lastname", gValidFieldAlphaNumericRegex ) )
 				{
-					errorString += 'Please enter a last name.<br/>';
+					errorString += 'Please enter a valid last name.<br/>';
 				}
 			}
 		}
 
-				if ( $( 'address1' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#address1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your address.<br/>';
+			errorString += 'Please enter a valid address.<br/>';
 		}
-		if ( $( 'city' ).value.length < 1 )
+		if ( !IsValidRequiredField( "#city", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your city.<br/>';
+			errorString += 'Please enter a valid city.<br/>';
 		}
 		if ( $('country').value == 'US' )
 		{
-			if ( $( 'zip' ).value.length < 1 )
+			if ( !IsValidRequiredField( "#zip", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += 'Please enter your zip or postal code.<br/>';
+				errorString += 'Please enter a valid zip or postal code.<br/>';
 			}
 		}
-
 		if ( $( 'phone' ).value.length < 1 )
 		{
 			errorString += 'Please enter your phone number, including area code.<br/>';
@@ -460,7 +480,7 @@ function validateFields()
 
 				if ( $( 'iscompany' ).checked )
 		{
-			if ( $( 'firstname' ).value.length < 1 )
+			if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 			{
 				errorString += 'Please enter a company name.<br/>';
 			}
@@ -468,33 +488,34 @@ function validateFields()
 		}
 		else
 		{
-			if ( $( 'firstname' ).value.length < 1 )
+			if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += 'Please enter a first name.<br/>';
+				errorString += 'Please enter a valid first name.<br/>';
 			}
-			if ( $( 'lastname' ).value.length < 1 )
+			if ( !IsValidRequiredField( "#lastname", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += 'Please enter a last name.<br/>';
+				errorString += 'Please enter a valid last name.<br/>';
 			}
 		}
-		if ( $( 'email' ).value.length < 1 )
+		if ( !IsValidEmailAddress( $( 'email' ).value ) )
 		{
-			errorString += 'Please enter your email address.<br/>';
+			errorString += 'Please enter a valid email address.<br/>';
 		}
 
-				if ( $( 'address1' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#address1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your address.<br/>';
+			errorString += 'Please enter a valid address.<br/>';
 		}
-		if ( $( 'city' ).value.length < 1 )
+		if ( !IsValidRequiredField( "#city", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your city.<br/>';
+			errorString += 'Please enter a valid city.<br/>';
 		}
+
 		if ( $('country').value == 'US' )
 		{
 			if ( $( 'zip' ).value.length < 1 )
 			{
-				errorString += 'Please enter your zip or postal code.<br/>';
+				errorString += 'Please enter a valid zip or postal code.<br/>';
 			}
 		}
 
@@ -503,28 +524,28 @@ function validateFields()
 			errorString += 'Please enter your phone number, including area code.<br/>';
 		}
 
-				if ( $( 'bankname' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#bankname", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your bank\'s name.<br/>';
+			errorString += 'Please enter a valid bank name.<br/>';
 		}
-		if ( $( 'bankaccountholdername' ).value.length < 1 )
+		if ( !IsValidRequiredField( "#bankaccountholdername", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your bank account holder name (must match bank records).<br/>';
+			errorString += 'Please enter a valid bank account holder name (must match bank records).<br/>';
 		}
 
-				if ( $( 'bankaddress1' ).value.length < 1 )
+				if ( !IsValidRequiredField( "#bankaddress1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your bank\'s address.<br/>';
+			errorString += 'Please enter a valid address for your bank.<br/>';
 		}
-		if ( $( 'bankcity' ).value.length < 1 )
+		if ( !IsValidRequiredField( "#bankcity", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += 'Please enter your bank\'s city.<br/>';
+			errorString += 'Please enter a valid city for your bank.<br/>';
 		}
 		if ( $('bankcountry').value == 'US' )
 		{
 			if ( $( 'bankzip' ).value.length < 1 )
 			{
-				errorString += 'Please enter your bank\'s zip or postal code.<br/>';
+				errorString += 'Please enter a valid zip or postal code for your bank.<br/>';
 			}
 		}
 

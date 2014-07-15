@@ -496,6 +496,11 @@ a.item_market_action_button:hover .item_market_action_button_contents {
 	color: white;
 }
 
+a.item_market_action_button_disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
 .market_page_left {
 	padding-top: 2em;
 	width: 639px;

@@ -2475,6 +2475,20 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	bottom: 12px;
 }
 
+.game_area_purchase_game .commerce_container {
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+}
+
+.commerce_price
+{
+	font-size: 17px;
+	color: white;
+	font-weight: normal;
+	margin-right: 5px;
+}
+
 .official_content_text_area
 {
 	position: relative;

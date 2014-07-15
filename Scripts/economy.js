@@ -531,6 +531,8 @@ var CInventory = Class.create( {
 		if( !this.elTagContainer )
 			return;
 
+		$J('#' + this.elTagContainer.id).empty();
+
 		for( var sCategoryName in this.tags )
 		{
 			if( typeof sCategoryName != "string" )
@@ -1703,6 +1705,7 @@ CUserYou = Class.create( CUser, {
 
 	oDefaultInventoryId: null,
 	rgActiveContextIdByApp: null,
+	rgReapplyFilterTags: null,
 
 
 	initialize: function( $super )
@@ -1717,12 +1720,14 @@ CUserYou = Class.create( CUser, {
 		var context = this.GetContext( appid, contextid );
 		if ( context && context.inventory )
 		{
+			this.rgReapplyFilterTags = Filter.rgCurrentTags;
 			this.loadInventory( appid, contextid );
 			if ( !this.BIsSingleContextApp( appid ) )
 			{
 				var appwideContext = this.GetContext( appid, APPWIDE_CONTEXT );
 				appwideContext.inventory.OnInventoryReload( contextid );
 			}
+
 			if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
 			{
 				ShowItemInventory( appid, g_ActiveInventory.contextid );
@@ -1765,6 +1770,20 @@ CUserYou = Class.create( CUser, {
 
 	SetDefaultInventoryId: function( oDefaultInventoryId ) {
 		this.oDefaultInventoryId = oDefaultInventoryId;
+	},
+
+	OnLoadInventoryComplete: function( transport, appid, contextid ) {
+		CUser.prototype.OnLoadInventoryComplete.call( this, transport, appid, contextid );
+
+		if ( this.rgReapplyFilterTags != null )
+		{
+			// Reapply filters
+			Filter.rgLastTags = Filter.rgCurrentTags;
+			Filter.rgCurrentTags = this.rgReapplyFilterTags;
+			Filter.OnFilterChange();
+
+			this.rgReapplyFilterTags = null;
+		}
 	}
 
 });
@@ -3837,6 +3856,18 @@ function SelectItemDialogOnSelect()
 	{
 		alert( 'There was a problem saving your selection, please try again later.' );
 	}
+}
+
+function DisableMarketButtons()
+{
+	$J('a.item_market_action_button, a.market_commodity_buy_button').each( function() {
+		if ( !$J(this).hasClass( 'nodisable' ) && !$J(this).hasClass( 'item_market_action_button_disabled' ) )
+		{
+			$J(this).attr( 'onclick', '' );
+			$J(this).click( function( event ) { event.stopPropagation(); return false; } );
+			$J(this).addClass( 'item_market_action_button_disabled' );
+		}
+	} );
 }
 
 function InstallHoverTooltip( elem, tooltip )
