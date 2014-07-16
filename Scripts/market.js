@@ -1809,7 +1809,7 @@ function Market_LoadOrderSpread( item_nameid )
 
 				Market_OrderSpreadPlot = $J.jqplot('orders_histogram', lines, {
 					renderer: $J.jqplot.BarRenderer,
-			        rendererOptions: {fillToZero: true},
+					rendererOptions: {fillToZero: true},
 					title:{text: 'Buy and Sell Orders (cumulative)', textAlign: 'left' },
 					gridPadding:{left: 45, right:45, top:30},
 					axesDefaults:{ showTickMarks:false },
