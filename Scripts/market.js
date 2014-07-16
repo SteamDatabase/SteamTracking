@@ -472,7 +472,7 @@ CreateBuyOrderDialog = {
 		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
 
 		var flAmount = parseFloat( strAmount ) * 100;
-		nAmount = Math.floor( isNaN(flAmount) ? 0 : flAmount ); // round down
+		nAmount = Math.floor( isNaN(flAmount) ? 0 : flAmount + 0.000001 ); // round down
 
 		nAmount = Math.max( nAmount, 0 );
 		return nAmount;
