@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1405123404"
+	"version"		"1405474565"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.b2edde04f992497dc6866f65bb881b84cce49c89"
@@ -41,10 +41,10 @@
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.be35f7ca11710b80b9b505fdfe9a01a123b6bba1"
-		"checksum"		"be35f7ca11710b80b9b505fdfe9a01a123b6bba1"
-		"size"		"2390695"
-		"zipvz"		"tenfoot_all.zip.vz.fab4301186053fe83059dce4f38bdf55b551805e_868983"
+		"file"		"tenfoot_all.zip.cfe820924ca0958e2b253247370fb65880079d90"
+		"checksum"		"cfe820924ca0958e2b253247370fb65880079d90"
+		"size"		"2391920"
+		"zipvz"		"tenfoot_all.zip.vz.3503d06b929535b90227c5d84523eb2880f79c77_869264"
 	}
 	"resources_misc_all"
 	{
@@ -68,10 +68,10 @@
 	}
 	"strings_all"
 	{
-		"file"		"strings_all.zip.876490c51867e3bedcf6bdd230061411c75872c5"
-		"checksum"		"876490c51867e3bedcf6bdd230061411c75872c5"
-		"size"		"5589935"
-		"zipvz"		"strings_all.zip.vz.508575a7b291f946850f6ce3bb5749503ce89c03_1747285"
+		"file"		"strings_all.zip.d75e0ebcdb95de7dbba3d928c61770653ef92cfc"
+		"checksum"		"d75e0ebcdb95de7dbba3d928c61770653ef92cfc"
+		"size"		"5590767"
+		"zipvz"		"strings_all.zip.vz.4866af41984ee999629d4b745e267f94418866b6_1747171"
 	}
 	"remoteui_all"
 	{
@@ -117,21 +117,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.1ebf65386b5cc8e48c1ecdd18409232cab7ac8f5"
-		"checksum"		"1ebf65386b5cc8e48c1ecdd18409232cab7ac8f5"
-		"size"		"23506024"
-		"zipvz"		"bins_win32.zip.vz.ec65fe9947b8a188c4c252df31a4faadcbb29018_12446123"
+		"file"		"bins_win32.zip.7ee21596851408a4a1dc6c8f3c99c7270ca934ec"
+		"checksum"		"7ee21596851408a4a1dc6c8f3c99c7270ca934ec"
+		"size"		"23505057"
+		"zipvz"		"bins_win32.zip.vz.e89eaae595d120ae016bcaa3d417e27f65af1b25_12441874"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.e5e2efbd86ab9e4ca2e36717753b4605c421ef40"
-		"checksum"		"e5e2efbd86ab9e4ca2e36717753b4605c421ef40"
-		"size"		"835302"
-		"zipvz"		"steam_win32.zip.vz.aca11541c2b61d4a8550d3a74348bac4aa7ad247_691666"
+		"file"		"steam_win32.zip.16653bd38294b00a6ca1a1d52ed21af5b76885c8"
+		"checksum"		"16653bd38294b00a6ca1a1d52ed21af5b76885c8"
+		"size"		"835293"
+		"zipvz"		"steam_win32.zip.vz.c3935adbef1818b33625ce955123e18cddf4f79c_691630"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"56d195eb422562800db4cc35dc87293e76a3c285c6690173395e11a36c5f68e37c46735a6e3196a775c90ae8c1710acc0e46718ea3bbe4373b7be07149979bf2c9f4be9fba9e3484ac2986b97621e1ff09b8bd9c61fba1fd640ac425bbfdae023d9fd44628bfcbd505fba0c8f9489c3400cdfa3b7155d6db556332592f78070b"
+	"win32"		"b31146c6fc34794490ffe8ccfc5285666b5eee4f746ad0293a20f36ca0813471ca0ced7218db4beb52d8030631c86a68767a01027a9abe971930bf7e65e81e9a7a8193eb9a0495fb7762d07bc4e829134d2e8b6605ee02753f6cd792eb02af276ab915abd7ae33e3ff576108a3814631000c9c979de7c1f9bcf318688c67cff5"
 }
