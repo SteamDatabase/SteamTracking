@@ -3938,7 +3938,7 @@ function SendGift()
 
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('http://store.steampowered.com/checkout/sendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/checkout/sendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {
@@ -4023,7 +4023,7 @@ function UnsendGift()
 	{
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('http://store.steampowered.com/checkout/unsendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/checkout/unsendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {
