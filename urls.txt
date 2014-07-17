@@ -183,7 +183,8 @@ GameSchema/TeamFortress2.json|https://api.steampowered.com/ISteamUserStats/GetSc
 # Other
 Random/ControllerFirmware.vdf|https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf
 Random/Alchemist.txt|http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages
-Random/JobPostings.html|http://www.valvesoftware.com/jobs/job_postings.html
+Random/JobPostings.html|http://valvesoftware.com/jobs/job_postings.html
 Random/ValvePeople.html|http://valvesoftware.com/company/people.html
+Random/Security.html|http://valvesoftware.com/security/
 Random/ValveGroup.json|http://steamcommunity.com/groups/valve/memberslistxml
 Random/ChristenGroups.json|https://api.steampowered.com/ISteamUser/GetUserGroupList/v1/?key=*APIKEY*&steamid=76561198024402255
