@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.886bcdafc725495342c4835ea2adfbc2883d06a5.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.0d4a10af1e4c3f137dee2695f761b7ebb734ee61.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2925,11 +2925,7 @@
 					"usage_capabilities": {
 						"nameable": true
 					}
-				},
-				"attributes": [
-
-				]
-				
+				}
 			},
 			{
 				"name": "Weapon Case Key",
@@ -3003,11 +2999,7 @@
 						"usable_out_of_game": true,
 						"can_sticker": true
 					}
-				},
-				"attributes": [
-
-				]
-				
+				}
 			},
 			{
 				"name": "Gift - 1 Player",
@@ -5408,6 +5400,14 @@
 				"description_format": "value_is_date",
 				"effect_type": "positive",
 				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "use after date",
+				"defindex": 182,
+				"attribute_class": "use_after_date",
+				"effect_type": "negative",
+				"hidden": true,
 				"stored_as_integer": true
 			}
 		]
