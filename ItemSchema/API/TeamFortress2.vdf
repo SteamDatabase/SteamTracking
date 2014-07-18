@@ -45144,10 +45144,21 @@
 			"equip_region"		"hat"
 			"visuals"
 			{
-				"player_bodygroups"
+				"styles"
 				{
-					"hat"		"1"
-					"headphones"		"1"
+					"0"
+					{
+						"name"	"#TF_jul13_greased_lightning_Style0"
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+							"headphones"	"1"
+						}
+					}
+					"1"
+					{
+						"name"	"#TF_jul13_greased_lightning_Style1"
+					}
 				}
 			}
 			"image_inventory"		"backpack/workshop/player/items/scout/jul13_greased_lightning/jul13_greased_lightning"
@@ -58842,6 +58853,10 @@
 		{
 			"name"				"Tumblr Vs Reddit Participant Season 2"
 			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
 			"item_name"			"#TF_TournamentMedal_TumblrVsReddit"
 			"item_description"	"#TF_TournamentMedal_TumblrVsReddit_Season2"
 			"image_inventory"	"backpack/workshop/player/items/all_class/tvr_medal_season2/tvr_medal_season2"
