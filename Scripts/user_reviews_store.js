@@ -22,11 +22,6 @@ function OnRecommendationVotedDown( recommendationid )
 
 function RequestCurrentUserRecommendationVotes( recommendationIDs )
 {
-	if ( recommendationIDs.length == 0 )
-	{
-		return;
-	}
-
 	$J.post( 'http://store.steampowered.com//userreviews/ajaxgetvotes/', {
 			'recommendationids' : recommendationIDs
 		}
@@ -96,37 +91,9 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 				if ( transport.responseJSON.success == 1 )
 				{
 					$J( "#LoadingMoreReviews" + context ).remove();
-
-					// remove duplicates
-					var recommendationIDs = [];
-					var temp = $J('<div></div>');
-					temp.append( transport.responseJSON.html );
-					for ( var i = 0; i < transport.responseJSON.recommendationids.length; ++i )
-					{
-						var recommendationid = transport.responseJSON.recommendationids[i];
-						var elemID = "#ReviewContent" + context + recommendationid;
-						if ( $J( elemID ).length != 0 )
-						{
-							temp.find( elemID ).parent().remove();
-						}
-						else
-						{
-							recommendationIDs.push( recommendationid );
-						}
-					}
-
-					container.append( temp.children() );
-
-					// all dupes, request more
-					if ( transport.responseJSON.recommendationids.length != 0 && recommendationIDs.length == 0 )
-					{
-						LoadMoreReviews(appid, startOffset + transport.responseJSON.recommendationids.length, transport.responseJSON.dayrange, context, language );
-					}
-					else
-					{
-						CollapseLongReviews();
-						RequestCurrentUserRecommendationVotes( recommendationIDs );
-					}
+					container.append( transport.responseJSON.html );
+					CollapseLongReviews();
+					RequestCurrentUserRecommendationVotes( transport.responseJSON.recommendationids );
 				}
 			}
 		} );
