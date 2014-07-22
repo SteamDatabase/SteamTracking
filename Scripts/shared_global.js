@@ -1309,6 +1309,24 @@ function v_numberformat( n, decimals )
 	return out;
 }
 
+
+function v_shuffle( rgArray )
+{
+	for ( var i = 0; i < rgArray.length; i++ )
+	{
+		var iSwap = Math.floor( Math.random() * ( rgArray.length - i ) + i );
+		if ( iSwap != i )
+		{
+			var temp = rgArray[iSwap];
+			rgArray[iSwap] = rgArray[i];
+			rgArray[i] = temp;
+		}
+	}
+
+	return rgArray;
+}
+
+
 function UpdateFormattedNumber( element, delta )
 {
 	var $Element = $J(element);
