@@ -247,6 +247,72 @@
 	.btn_black:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
 		background: transparent;			}
 
+.btnv6_blue_hoverfade {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #67c1f5 !important;
+
+	background: rgba( 103, 193, 245, 0.2 );	}
+
+	.btnv6_blue_hoverfade > span {
+		border-radius: 2px;
+		display: block;
+
+
+		background: transparent;			}
+
+.btnv6_blue_hoverfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	text-decoration: none !important;
+	color: #fff !important;
+
+				background: #67c1f5;
+			background: -moz-linear-gradient(deg, #67c1f5 -60, #417a9b 95%);background: -webkit-gradient(linear, left top, right top, color-stop(-60,#67c1f5), color-stop(95%,#417a9b));background: -webkit-linear-gradient(deg, #67c1f5 -60,#417a9b 95%);background: -o-linear-gradient(deg, #67c1f5 -60,#417a9b 95%);background: -ms-linear-gradient(deg, #67c1f5 -60,#417a9b 95%);background: linear-gradient(0deg, #67c1f5 -60,#417a9b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 );	}
+
+	.btnv6_blue_hoverfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+		background: transparent;			}
+
+	.btnv6_blue_hoverfade.btn_active, btnv6_blue_hoverfade.active {
+	text-decoration: none !important;
+	color: #fff !important;
+
+		background: rgba( 103, 193, 245, 0.6 );;			}
+
+	.btnv6_blue_hoverfade.btn_active > span, btnv6_blue_hoverfade.active > span {
+		background: transparent;			}
+
+	.btnv6_lightblue_blue {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #3a6e8b !important;
+
+				background: rgba(193,228,249,1);
+			background: -moz-linear-gradient(top, rgba(193,228,249,1) 5%, rgba(148,183,202,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(193,228,249,1)), color-stop(95%,rgba(148,183,202,1)));background: -webkit-linear-gradient(top, rgba(193,228,249,1) 5%,rgba(148,183,202,1) 95%);background: -o-linear-gradient(top, rgba(193,228,249,1) 5%,rgba(148,183,202,1) 95%);background: -ms-linear-gradient(top, rgba(193,228,249,1) 5%,rgba(148,183,202,1) 95%);background: linear-gradient(to bottom, rgba(193,228,249,1) 5%,rgba(148,183,202,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(193,228,249,1)', endColorstr='rgba(148,183,202,1)',GradientType=0 );	}
+
+	.btnv6_lightblue_blue > span {
+		border-radius: 2px;
+		display: block;
+
+
+		background: transparent;		text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1 );	}
+
+.btnv6_lightblue_blue:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	text-decoration: none !important;
+	color: #3a6e8b !important;
+
+				background: #bbd8ff ;
+			background: -moz-linear-gradient(top, #bbd8ff  5%, #4873a7 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#bbd8ff ), color-stop(95%,#4873a7));background: -webkit-linear-gradient(top, #bbd8ff  5%,#4873a7 95%);background: -o-linear-gradient(top, #bbd8ff  5%,#4873a7 95%);background: -ms-linear-gradient(top, #bbd8ff  5%,#4873a7 95%);background: linear-gradient(to bottom, #bbd8ff  5%,#4873a7 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbd8ff ', endColorstr='#4873a7',GradientType=0 );	}
+
+	.btnv6_lightblue_blue:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+		background: transparent;			}
+
 
 /* This class must be applied to anything you want to use buttons in to enable hover states. */
 .btn_hover {}
@@ -274,6 +340,15 @@ btn_border_2px > span {
 	border-radius: 3px;
 }
 
+.btnv6_border_2px {
+	border-radius: 4px;
+	border: 2px solid #000;
+}
+
+btnv6_border_2px > span {
+	border-radius: 3px;
+}
+
 /* Sizing */
 .btn_large > span, input.btn_large {
 	padding: 0 15px;
@@ -291,6 +366,11 @@ btn_border_2px > span {
 	padding: 0 15px;
 	font-size: 15px;
 	line-height: 30px;
+}
+
+.btn_medium .ico16 {
+	margin: 7px 0;
+	vertical-align: top;
 }
 
 .btn_medium_thin > span, input.btn_medium_thin {
@@ -405,6 +485,31 @@ btn_border_2px > span {
 	
 			.btn_active .ico16.report, .active .ico16.report {
 			background-position: -160px 0px;		}
+		
+	.ico16.arrow_next {
+		background-position: -176px 0px;	}
+
+	
+		
+	.ico16.checkbox {
+		background-position: -192px 0px;	}
+
+	
+		
+	.ico16.bucketnew {
+		background-position: -208px 0px;	}
+
+	
+		
+	.ico16.bucketqueue {
+		background-position: -224px 0px;	}
+
+	
+		
+	.ico16.bucketrefresh {
+		background-position: -240px 0px;	}
+
+	
 		
 /* Arrows are the only icons I've not fully replaced yet. If you need to use them, please convert to the new icon code */
 

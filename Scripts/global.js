@@ -187,7 +187,7 @@ function AlertNonSteamSite( elem )
 						+ 'Are you sure you want to visit this page? Click OK to continue at your own risk.\n' );
 	}
 
-	ShowAlertDialog( '', "The URL is badly formed.");
+	ShowAlertDialog( '', 'The URL is badly formed.');
 	return false;
 }
 
