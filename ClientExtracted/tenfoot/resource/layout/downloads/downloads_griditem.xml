@@ -22,13 +22,15 @@
 		<Panel class ="DownloadLabels" >
 			<Panel class="DownloadLabelRow" >
 				<Label text="#Downloads_Amount" />
-				<Label text="#Downloads_TimeRemain" />
 				<Label text="#Downloads_CurrentRate2" />
+				<Label text="#Downloads_PeakRate" />
+				<Label text="#Downloads_TimeRemain" />
 			</Panel>
 			<Panel class="DownloadValuesRow" >
 				<Label text="#Downloads_AmountValue" />
-				<Label text="#Downloads_TimeRemainValue" />
 				<Label text="#Downloads_CurrentRateValue" />
+				<Label text="#Downloads_PeakRateValue" />
+				<Label text="#Downloads_TimeRemainValue" />
 			</Panel>			
 		</Panel>		
 		<Panel class ="DownloadQueuedLabels" >

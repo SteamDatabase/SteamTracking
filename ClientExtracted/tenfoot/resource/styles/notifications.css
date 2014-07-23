@@ -25,11 +25,27 @@
 	font-size: 20px;
 	color: #DDDDDDFF;
 	font-weight: normal;
-
-	transition-property: opacity, transform;
+	
+	transition-property: opacity, transform, pre-transform-scale2d;
 	transition-duration: fade_in_out_time;
 	transition-timing-function: ease-in-out;
+	
 }
+
+.NotificationRoot
+{
+	pre-transform-scale2d: 1.0;
+	
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}	
+
+.NotificationRoot:hover
+{
+		pre-transform-scale2d: 1.03;
+}
+
 
 .NotificationVisible
 {
@@ -49,13 +65,12 @@
 	width: 100%;
 	height: 100%;
 	margin-left: 13px;
-	margin-right: 100px;
+	margin-right: 90px;
 	margin-bottom: frame_margin_bottom;
 	margin-top: frame_margin_top;
 	z-index: notification1_zindex;
 	
-	border: 4px solid ui_common_control_border;
-	background-color: #2B2B2BFF;
+	background-color: notification_bg;
 	box-shadow: #00000044 -4px -4px 6px 8px;
 }
 
@@ -64,13 +79,13 @@
 	width: 100%;
 	height: 100%;
 	margin-left: 13px;
-	margin-right: 100px;
+	margin-right: 90px;
 	margin-bottom: frame_margin_bottom;
 	margin-top: frame_margin_top;
 	z-index: notification1_zindex;
 	
-	border: 4px solid ui_common_control_border;
-	background-color: #2B2B2BFF;
+
+	background-color: notification_bg;
 	box-shadow: #00000044 -4px -4px 6px 8px;
 	background-image: url( "{images}/settings/stream_connected.png" );
 	background-repeat: no-repeat no-repeat;
@@ -82,13 +97,13 @@
 	width: 100%;
 	height: 100%;
 	margin-left: 13px;
-	margin-right: 100px;
+	margin-right: 90px;
 	margin-bottom: frame_margin_bottom;
 	margin-top: frame_margin_top;
 	z-index: notification1_zindex;
 	
-	border: 4px solid ui_common_control_border;
-	background-color: #2B2B2BFF;
+
+	background-color: notification_bg;
 	box-shadow: #00000044 -4px -4px 6px 8px;
 	background-image: url( "{images}/settings/stream_disconnected.png" );
 	background-repeat: no-repeat no-repeat;
@@ -231,6 +246,19 @@
 	margin-left: 152px;
 	margin-top: 42px;
 }
+
+
+
+.NotificationAvatarText
+{
+	font-size: 30px;
+	vertical-align: center;
+	horizontal-align: center;
+	margin: 0px;
+	
+	z-index: notification2_zindex;
+}
+
 
 .HintButton
 {

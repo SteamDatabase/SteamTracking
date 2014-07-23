@@ -194,7 +194,7 @@ MusicLibraryCrawlingPanel
 	
 	background-image: url( "file://{images}/store/filterbg.png" );
 	background-size: 100% 100%;
-	background-position: left -12px top 0px;
+	background-position: left -12px top 2px;
 	background-repeat: no-repeat;
 }
 
@@ -453,14 +453,13 @@ AlbumGridItem:focus:hover
 
 AlbumGridItem #AlbumImage
 {
-	width: 320px;
-	height: 320px;
+	width: 326px;
+	height: 326px;
 	vertical-align: top;
-	margin: 10px;
-	desaturation: 0.1;
+	margin: 6px;
+	desaturation: 0.2;
 	opacity: 0.85;
-	box-shadow: fill #00000033 -4.5px -4.5px 18px 9px;
-	border-radius: 4px;
+	box-shadow: fill #00000033 -4px -4px 12px 8px;
 }
 
 
@@ -468,9 +467,6 @@ AlbumGridItem:focus #FocusBorderPanel
 {
 	width: 326px;
 	height: 326px;
-	border-width: 8px;
-	border-style: solid;
-	border-color: #f2f2f2ff;
 	z-index: 6;
 
 	background-image: url( "file://{images}/music/shadow.png" );
@@ -497,7 +493,7 @@ AlbumGridItem:focus #AlbumImage
 	z-index: 6;
 	pre-transform-scale2d: 1.05;
 
-	box-shadow: inset #00000044 4px 4px 16px 8px;
+	box-shadow: inset #00000000 4px 4px 16px 8px;
 }
 
 AlbumGridItem Label
@@ -675,13 +671,24 @@ AlbumGridItem:focus Label
 		background-color: mouse_active_bg_right;
 }
 
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_left;
+}
+
+
+.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
+{
+	background-color: mouse_hover_bg_right;
+
+}
+
+.MusicAlbumGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_left;
 }
 
-
-.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, .MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+.MusicAlbumGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_right;
 
@@ -782,7 +789,7 @@ AlbumGridItem:focus Label
 #OverlayBasePanel .MusicAlbumGrid
 {
 	padding-bottom: 110px;
-	padding-top: 0px;
+	margin-top: 10px;
 }
 
 #OverlayBasePanel #MusicArtistPanel .MusicAlbumGrid
@@ -923,16 +930,13 @@ ArtistGridItem:focus #FocusBorderPanel
 
 	z-index: 6;
 
-	transition-duration: shortduration;
-	transition-property: background-color;
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-	color: #161718f5;
+
 	box-shadow: none;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #ffffffff ), to( #bdbfbfff ) );
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;

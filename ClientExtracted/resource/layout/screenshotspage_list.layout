@@ -1,0 +1,8 @@
+"resource/layout/screenshotspage_list.layout"
+{
+	layout
+	{
+	  region { name="body" width=max overflow=scroll-vertical }
+	  place { region=body control=*SectionPanel dir=down width=max }
+	}
+}

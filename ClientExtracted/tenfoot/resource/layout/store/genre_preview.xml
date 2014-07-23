@@ -4,10 +4,9 @@
 		<include src="file://{resources}/styles/store/store.css" />
 	</styles>
 	
-	<StoreGenres defaultfocus="GenreGrid">
+	 <StoreGenrePreview>
 		<Panel id="Screenshots" />
 		<Panel id="Gradient" />
 		<Label id="GenreName" />
-		<Panel id="Border" />
-	</StoreGenres>
+	</StoreGenrePreview>
 </root>

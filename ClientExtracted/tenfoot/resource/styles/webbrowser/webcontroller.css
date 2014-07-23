@@ -2,8 +2,8 @@
 WebController
 {
 	transition-property: opacity, transform !immediate;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in;
 
 	opacity: 1.0;
 	transform: translateX( 0px );
@@ -23,7 +23,9 @@ WebController.SlideAwayToRight
 	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
 }
 
-.ScreenSaverMode WebController
+.ScreenSaverMode WebController,
+BackgroundVideoPanel.ScreenSaverMode WebController, 
+BackgroundVideoPanel.GamesRunning WebController
 {
 	opacity: 0.0;
 

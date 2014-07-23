@@ -10,7 +10,7 @@
 MusicControlOverlay
 {
 	margin: 8px;
-	background-color: #161718b0;
+	background-color: transparent_module;
 	flow-children: down;
 	height: 296px;
 	width: 435px;
@@ -19,7 +19,7 @@ MusicControlOverlay
 	border-style: solid;
 	border-color: #00000000;
 	
-  transform: translatey( 236px );
+  	transform: translatey( 236px );
 
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
 	transition-duration: shortduration !immediate;

@@ -109,9 +109,6 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	horizontal-align: center;
 	flow-children: right;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 }
 
 .ShowPreview #FileSelectorBodyRegion, .ShowPreview .FileSelectorBodyRegion
@@ -123,10 +120,11 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	
 #FileSelectorColumn, .FileSelectorColumn
 {
-	width: 800px;
+	width: 780px;
 	height: 770px;
 	transform: translateX( 0px );
 	flow-children: down;
+	padding: 10px;
 }
 
 .VerticalRule
@@ -222,7 +220,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	font-size: 28px;
 	font-family: platformfont;
 	max-height: 130px;
-	color: tcstatictext;
+	color: #ffffff99;
 	margin-top: 10px;
 }
 
@@ -245,11 +243,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	margin-bottom: 10px;
 	width: 90px;
 
-	color: detailsdatalabelfocus;
-
-	border-style: solid;
-	border-width: 5px;
-	border-color: #00000000;
+	background-color: #283959;
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s !immediate;
@@ -260,7 +254,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 {
 	width: 46px;
 	height: 35px;
-	transform: translateX( 16px) translateY( 2px );
+	transform: translateX(24px) translateY( 8px );
 	wash-color: none;
 }
 
@@ -285,7 +279,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 
 #FileSelectorButtonTopRow Button:hover
 {
-	background-color: simplebutton;
+	background-color: simplebuttonsolid_vertical;
 }
 
 #FileSelectorButtonTopRow Button:hover Label
@@ -298,10 +292,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	background-color: #00000020;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 
 	animation-name: msgbox-button-focus; 
 	animation-duration: 1.7s;
@@ -309,13 +300,13 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-	
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
-	
+
 }
 
 #FileSelectorButtonTopRow Button:disabled
@@ -329,9 +320,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 #GoBackButton, #NewFolderButton, #SelectButton
 {
 	height: 50px;
-	border-radius: 2px;
-	background-color: simplebutton;
-	border: 3px solid #ffffffff;
+	background-color: simplebuttonsolid_vertical;
 	margin-right: 10px;
 }
 
@@ -385,11 +374,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	padding-right: 0px;
 	margin-left: 0px;
 	margin-right: 10px;
-	background-color: simplebutton;
-	border-radius: 3px;
-	border-width: 5px;
-	border-color: ui_common_control_border;
-	border-style: solid;
+	background-color: simplebuttonsolid;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
@@ -403,7 +388,6 @@ FileSelectorEntry
 	width: 100%;
 	height: 56px;
 	padding-right: 5px;
-	border-radius: 2px;
 	margin-left: 10px;
 	margin-right: 10px;
 	border-width: 5px;
@@ -411,7 +395,7 @@ FileSelectorEntry
 
 FileSelectorEntry:hover
 {
-	background-color: simplebutton;
+	background-color: simplebuttonsolid;
 }
 
 FileSelectorEntry:focus
@@ -486,15 +470,16 @@ FileSelectorEntry:Focus Image
 
 DropDownMenu.DropDownMenuVisible
 {
-	width: 620px;
+	width: 610px;
 	max-height: 376px;
 	z-index: msgbox_contextmenu_zindex;
 }
 
 #FileSelectorLocationDropDown
 {
-	width: 620px;
+	width: 610px;
 	z-index: 1000;
+	background-color: simplebuttonsolid;
 }
 
 #FileSelectorLocationDropDown Label
@@ -503,7 +488,7 @@ DropDownMenu.DropDownMenuVisible
 	font-weight: bold;
 	transform: translateX( 0px );
 	color: applabel;
-	
+	transform: translateX( 7px );
 	transition-property: transform;
 	transition-duration: 0.23s;
 	transition-timing-function: ease-in-out;
@@ -511,7 +496,22 @@ DropDownMenu.DropDownMenuVisible
 
 #FileSelectorLocationDropDown:hover Label
 {
-	transform: translateX( 7px );
+	transform: translateX( 12px );
+}
+
+#FileSelectorLocationDropDown:focus
+{
+	background-color: blue;
+}
+
+#FileSelectorLocationDropDown:focus
+{
+	background-color: #ffffff;
+}
+
+#FileSelectorLocationDropDown.DropDownMenuVisible
+{
+	background-color: simplebuttonsolid;
 }
 
 #FileSelectorLocationDropDown:focus Label

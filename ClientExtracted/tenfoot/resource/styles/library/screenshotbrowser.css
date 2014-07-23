@@ -21,7 +21,7 @@ ScreenshotBrowser #Contents
 	desaturation: 1.0;
 
 	transition-property: transform, opacity, desaturation;
-	transition-duration: 0.3s;
+	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
@@ -44,6 +44,8 @@ ScreenshotBrowser .TitleRow
 	y: 30px;
 	height: 70px;
 	font-size: 56px;
+	margin-top: 11px;
+	font-weight: light;
 	white-space: nowrap;
 	color: carousel_title;
 	z-index: 100;
@@ -51,10 +53,10 @@ ScreenshotBrowser .TitleRow
 
 .FilterRow
 {
-	x: 100px;
-	y: 100px;
 	font-size: 30px;
+	margin-top: 62px;
 	flow-children: right;
+	horizontal-align: center;
 	color: carousel_title;
 	z-index: 100;
 }
@@ -68,13 +70,13 @@ ScreenshotBrowser .TitleRow
 {
 	width: 400px;
 	height: 50px;
-	margin-left: 12px;
+	box-shadow: #00000066 0px 0px 10px 0px;
 }
 
 #AppFilterDropDownMenu
 {
 	width: 400px;
-	max-height: 400px;
+	max-height: 780px;
 }
 
 #SortOrderDropDownMenu
@@ -93,8 +95,8 @@ ScreenshotBrowser .TitleRow
 	height: 848px;
 	padding-left: 100px;
 	padding-right: 360px;
-	padding-top: 110px;
-	padding-bottom: 160px;
+	padding-top: 81px;
+	padding-bottom: 189px;
 }
 
 ScreenshotBrowser.NoScreenshots #ContentGrid
@@ -114,7 +116,7 @@ ScreenshotBrowserItem
 	background-repeat: no-repeat no-repeat;
 	background-position: 40% 20%;
 
-	transition-property: position, opacity, border, pre-transform-scale2d;
+	transition-property: position, opacity, desaturation, border, pre-transform-scale2d;
 	transition-duration: 0.25s;
 	transition-timing-function: ease-in-out;
 }
@@ -129,6 +131,8 @@ ScreenshotBrowserItem:descendantfocus
 ScreenshotBrowserItem #Screenshot
 {
 	width: 547px;
+	opacity: 0.85;
+	desaturation: 0.2;
 	height: 308px;
 	z-index: 100;
 	margin: 10px;
@@ -140,6 +144,8 @@ ScreenshotBrowserItem #Screenshot
 ScreenshotBrowserItem:descendantfocus #Screenshot
 {
 	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+	opacity: 1.0;
+	desaturation: 0.0;
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-timing-function: ease-in-out;
@@ -151,7 +157,7 @@ ScreenshotBrowserItem:descendantfocus #Screenshot
 {
 	width: 547px;
 	color: white;
-	font-size: 18px;
+	font-size: 20px;
 	flow-children: down;
 	margin: 0px 10px;
 
@@ -184,12 +190,14 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 .ImageSize
 {
 	align: right center;
+	opacity: 0.0;
 }
 
 #NoScreenshots
 {
 	width: 60%;
-	color: applabelsolid;
+	color: detailsdatalabel;
+	horizontal-align: center;
 	font-size: 30px;
 	align: center top;
 	flow-children: down;
@@ -206,13 +214,14 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 .HotkeyHeader
 {
 	color: tcstatictext;
-	font-size: 26px;
+	font-size: 30px;
+	horizontal-align: center;
 }
 
 .HotkeySection
 {
 	align: center top;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 #KeyboardHotkeySection
@@ -240,9 +249,95 @@ ScreenshotBrowserItem:descendantfocus .ScreenshotItemDescRow
 .GamepadHotkeyRow
 {
 	flow-children: right;
+	horizontal-align: center;
 }
 
 .GamepadHotkeyRow Label, .GamepadHotkeyRow KeyboardShortcut
 {
-	align: left center;
+	horizontal-align: center;
+	vertical-align: center;
+	margin-left: 4px;
+}
+
+#KeyboardBtn 
+{
+	horizontal-align: center;	
+	vertical-align: center;
+}
+	
+.LeftMouseScrollRegion, .RightMouseScrollRegion
+{
+	opacity: 0.0;
+	transition-property: opacity, background-color;
+	transition-duration: 0.4s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+	transform: translateY( -80px );
+}
+
+
+#ContentGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	width: 80px;
+	height: 100%;
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	background-color: mouse_hover_bg_left;
+}
+
+
+#ContentGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+{
+	width: 80px;
+	height: 100%;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	transition-duration: 0.2s;
+	background-color: mouse_hover_bg_right;
+}
+
+#ContentGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
+{
+		background-color: mouse_active_bg_right;
+}
+
+#ContentGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, 
+#ContentGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+
+#ContentGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, 
+#ContentGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+
+}
+
+.LeftMouseScrollRegion
+{
+	position: 0px -10px 0px;
+	background-color: mouse_hover_bg_left;
+
+
+	z-index: 100;
+}
+
+.RightMouseScrollRegion
+{
+	position: 0px -10px 0px;
+	background-color: mouse_hover_bg_right;
+	z-index: 100;
 }

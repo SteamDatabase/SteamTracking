@@ -8,7 +8,6 @@
 		<Panel id="DlcImageWrapper">
 			<Image id="DlcHeaderImage" />
 			<StorePrice id="DlcPrice" />
-			<Panel id="DlcImageBorder" />
 		</Panel>
 		<Label id="DlcTitle" />
 	</StoreAppDLCItem>

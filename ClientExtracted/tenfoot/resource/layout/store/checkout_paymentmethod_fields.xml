@@ -14,10 +14,13 @@
 			<TextEntry id="CreditCardNumber" maxchars="16" 
 				textinputid="CheckoutFormTextEntry"
 				textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+				textmode="numeric"
+				textinputdoneactionstring="#UI_Next"
+				oninputsubmit="NavigateToNextField();"
 			/>
 			<Label class="PaymentMethodHeader" text="#Checkout_PaymentMethod_ExpirationDate" />
 			<Panel class="CreditCardExpirationRow">
-				<DropDown id="CreditCardMonth">
+				<DropDown id="CreditCardMonth" oninputsubmit="NavigateToNextField();">
 					<Label id="CreditCardMonthNotSet" text="--" />
 					<Label id="CreditCardMonth1" text="01" />
 					<Label id="CreditCardMonth2" text="02" />
@@ -32,7 +35,7 @@
 					<Label id="CreditCardMonth11" text="11" />
 					<Label id="CreditCardMonth12" text="12" />
 				</DropDown>
-				<DropDown id="CreditCardYear">
+				<DropDown id="CreditCardYear" oninputsubmit="NavigateToNextField();">
 					<Label id="CreditCardYearNotSet" text="--" />
 				</DropDown>
 			</Panel>
@@ -40,17 +43,14 @@
 			<TextEntry id="CreditCardSecurityCode" maxchars="4"
 				textinputid="CheckoutFormTextEntry"
 				textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+				textmode="numeric"
+				textinputdoneactionstring="#UI_Next"
+				oninputsubmit="NavigateToNextField();"
 			/>
 		</Panel>	
 			
 		<Panel id="PayPalFields">
 			<Label text="#Checkout_PaymentMethod_PayPalInstructions" />
-		</Panel>
-		<Panel id="ClickandBuyFields">
-			<Label text="#Checkout_PaymentMethod_ClickAndBuyInstructions" />
-		</Panel>
-		<Panel id="ClickandBuySavedFields">
-			<Label text="#Checkout_PaymentMethod_ClickAndBuySaved" />
 		</Panel>
 		<Panel id="PayPalSavedFields">
 			<Label text="#Checkout_PaymentMethod_PayPalSaved" />

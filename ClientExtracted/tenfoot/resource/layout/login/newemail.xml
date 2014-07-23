@@ -27,14 +27,6 @@
 					textinputhidesuggestions="1"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
 		</Panel>
-		<Panel class="InputContainerDown">
-			<Label class="WizardLabel" id="EmailAddressAgainLabel" text="#ChangeEmail_NewEmail_EmailAddressAgain" />
-			<TextEntry class="WizardTextEntry" id="EmailAddressAgainTextEntry"
-					textinputid="InnerNewPasswordTextEntry"
-					textinputdoneactionstring="#ChangeEmail_NextField"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
-		</Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

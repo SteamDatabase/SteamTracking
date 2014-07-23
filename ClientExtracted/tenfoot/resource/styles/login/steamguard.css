@@ -37,8 +37,8 @@
 // tickbox to turn togglebuttons into checkboxes
 .CheckBox .TickBox
 {
-	width: 38px;
-	height: 38px;
+	width: 48px;
+	height: 48px;
 	vertical-align: center;
 	background-color: ui_common_control; 
 	
@@ -73,8 +73,8 @@
 // and make room for the tickbox
 .CheckBox Label
 {
-	padding-left: 52px;
-	padding-top: 6px;
+	padding-left: 60px;
+	padding-top: 10px;
 	color: detailsdatalabel;
 	width: 100%;
 	text-overflow: clip;

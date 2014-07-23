@@ -46,7 +46,7 @@
 						textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					/>
 					<Panel class="HorizontalRule" />
-					<Button onactivate="RecipientSelected( email )">
+					<Button class="AdvanceCheckout" onactivate="RecipientSelected( email )">
 						<Label text="#Checkout_Continue" />
 					</Button>
 					<Panel class="HorizontalRule" />

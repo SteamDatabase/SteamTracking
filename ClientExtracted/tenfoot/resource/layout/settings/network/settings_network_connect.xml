@@ -1,0 +1,36 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanelNetwork_Connect class="WizardChild" tabindex="auto" selectionpos="auto">
+		<!-- top header panel -->
+		<Label class="WizardChildTitle" text="#Settings_Network" />
+
+		<Panel class="CenteredContainer">
+			<Label id="ConnectToNetworkThrobber" class="NetworkThrobber NetworkThrobberHide" />
+			<Label id="ConnectionStatus" class="LongDesc" />
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+
+			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>
+
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+
+			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonDone()">
+				<Label id="Label" text="#SettingsNetwork_Finished" />
+			</Button>
+
+		</Panel>
+
+	</SettingsPanelNetwork_Connect>
+
+</root>
+

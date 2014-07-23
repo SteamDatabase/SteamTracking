@@ -390,9 +390,9 @@
 		place { control="timeremaininglabel,timeremainingfield" region="column3" x=0 align=top margin-top=83 spacing=6 }
 				
 		// right column
-		place { control="updatetypelabel" region="column4" dir=down spacing=10 margin-top=22 align=right	region=top margin-right=16 }
-		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=50 align=right	region=top margin-right=16 }
-		place { control="newslink" region="column4" dir=down spacing=10 margin-top=80 align=right	region=top margin-right=16 }
+		place { control="updatetypelabel" region="column4" spacing=10 margin-top=22 align=right margin-right=16 }
+		place { control="topofqueuebutton,removefromqueuebutton" region="column4" height=22 width=26 dir=right spacing=10 margin-top=50 align=right margin-right=16 }
+		place { control="newslink" region="column4" spacing=10 margin-top=80 align=right	margin-right=16 }
 
 		// put the buttons along the bottom
 		

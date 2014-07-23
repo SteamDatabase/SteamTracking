@@ -6,8 +6,10 @@
 	</styles>
 	
 	<LibraryScreenshotsSlideshow>
+
 		<SlideShow id="Contents" tabindex="auto"/>
 		<Panel id="SlideShowGlow" />
+		<Panel class="SlideShowOverlay" />
 		<Panel id="SlideShowDescription" hittest="false">
 			<Panel id="SlideShowTitle">
 				<Label id="ScreenshotsTitle" text="#Library_ScreenshotsSlideshowTitle" />

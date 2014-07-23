@@ -5,7 +5,7 @@
 		
 	</styles>
 
-	<SettingsPanel_Language class="SettingsSection" defaultfocus="Language">
+	<SettingsPanel_Language class="SettingsSection">
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_Language" />
@@ -19,8 +19,11 @@
 				</Panel>
 
 				<Panel class="HorzContainer">
-					<DropDown id="Language" class="Filter" />
+					<Panel id="LanguageList" class="VertContainer" childfocusonhover="false">
+						<!-- label instances added here -->
+					</Panel>
 				</Panel>
+
 		</Panel>
 	</SettingsPanel_Language>
 

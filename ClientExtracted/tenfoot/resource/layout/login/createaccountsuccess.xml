@@ -17,7 +17,7 @@
 			<Label class="WizardLabel" text="#CreateAccount_Credentials_Password" />
 			<Panel class="InputContainerRight GapDown">
 				<TextEntry class="WizardTextEntry" id="PasswordTextEntry" />
-				<Button class="WizardButton" id="ShowPasswordButton" onactivate="ShowPassword()">
+				<Button class="WizardButton" id="ShowPasswordButton" onactivate="CreateAccount_ShowPassword()">
 					<Label id="ShowPasswordLabel" text="#CreateAccount_Success_Show" />
 				</Button>
 			</Panel>

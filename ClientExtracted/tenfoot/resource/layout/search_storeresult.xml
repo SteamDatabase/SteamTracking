@@ -11,5 +11,11 @@
 			<Label id="StoreResultName" />
 			<Label id="StoreResultPrice" />
 		</Panel>
+		<Panel class="DetailsIconRow">
+			<Image id="PlatformWindows" src="file://{images}/store/icon_platform_win.png" />
+			<Image id="PlatformMac" src="file://{images}/store/icon_platform_mac.png" />
+			<Image id="PlatformLinux" src="file://{images}/store/icon_platform_linux.png" />
+			<Panel id="IconController" />
+		</Panel>
 	</SearchStoreResult>
 </root>

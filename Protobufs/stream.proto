@@ -102,6 +102,8 @@ enum EStreamMouseButton {
 enum EStreamMouseWheelDirection {
 	k_EStreamMouseWheelUp = 120;
 	k_EStreamMouseWheelDown = -120;
+	k_EStreamMouseWheelLeft = 3;
+	k_EStreamMouseWheelRight = 4;
 }
 
 enum EStreamGamepadInputType {

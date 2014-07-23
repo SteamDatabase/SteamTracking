@@ -8,6 +8,6 @@
 		<Panel id="Images" />
 		<Panel id="Gradient" />
 		<Label id="CategoryName" />
-		<Panel id="Border" />
+
 	</StoreFeaturedCategory>
 </root>

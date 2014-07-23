@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/login/changeemail.css" />
 	</styles>
 
-	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
+	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonDone">
 		<Label class="WizardChildTitle" text="#ChangeEmail_Success_Title" />
 		<Label class="WizardChildDescription" text="#ChangeEmail_Success_Description" />
 

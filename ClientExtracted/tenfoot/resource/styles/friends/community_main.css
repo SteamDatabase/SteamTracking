@@ -445,7 +445,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 .CommunityVisible:descendantfocus .CommunityFriendStripItem.RightOfFocus6,
 .CommunityVisible:descendantfocus .CommunityFriendStripItem.RightOfFocus7,
 {
-	opacity: 0.9;
+	opacity: 1.0;
 	desaturation: 0.1;
 
 }

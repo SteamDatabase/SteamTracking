@@ -106,10 +106,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	vertical-align: center;
 	horizontal-align: center;
 	flow-children: down;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
+	border-radius: 0px;
 }
 
 .DaisyWheelVisible .MsgBoxBodyRegion
@@ -154,7 +151,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 {
 	font-size: 32px;
 	font-family: platformfont;
-	color: tcstatictext;
+	color: #ffffff99;
 	margin-top: 10px;
 }
 
@@ -165,14 +162,14 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 
 #MsgBoxButtons
 {
-	horizontal-align: right;
+	horizontal-align: left;
 	vertical-align: bottom;
-	margin-bottom: 0px;
+	margin-left: -10px;
 	font-size: 42px;
 	font-family: platformfont;
 	color: #ffffffff;
 	margin-top: 20px;
-	padding-left: 15px;
+	padding-left: 0px;
 
 	flow-children: right;
 }
@@ -192,13 +189,13 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtons Button, #MsgBoxButtonsVertical Button
 {
 	flow-children: right;
-	margin-left: 20px;
-	margin-right: 0px;
-	padding: 4px 8px 4px 8px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 8px 8px 8px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 	min-width: 100px;
-	background-color: simplebutton;
+	background-color: simplebuttonsolid_vertical;
 	color: detailsdatalabelfocus;
 
 	border-style: solid;
@@ -213,6 +210,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtonsVertical Button
 {
 	margin-left: 0px;
+	width: 100%;
 }
 
 #MsgBoxButtons Button Label, #MsgBoxButtonsVertical Button Label
@@ -226,14 +224,18 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	transition-property: color;
 	transition-duration: 0.25s !immediate;
 	transition-timing-function: ease-in-out;
+}
 
+#MsgBoxButtonsVertical Button Label
+{
+	horizontal-align: left;
 }
 
 #MsgBoxButtons Button:hover, #MsgBoxButtonsVertical Button:hover
 {
-	background-color: #00000020;
+
 	pre-transform-scale2d: 1.03;
-	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+
 }
 
 #MsgBoxButtons Button:focus, #MsgBoxButtonsVertical Button:focus
@@ -264,7 +266,6 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtons Button:disabled
 {
 	opacity: 0.6;
-	background-color: simplebutton;
 	pre-transform-scale2d: 1.0;
 	box-shadow: #00000000 -5px -5px 6px 10px;
 	animation-name: none;

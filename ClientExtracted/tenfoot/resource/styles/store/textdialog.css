@@ -21,7 +21,6 @@ StoreTextDialog
 	align: center center;
 	padding: 24px 4px 24px 24px;
 	background-color: message_box_bg;
-	border: 5px solid #424c50;
 	flow-children: down;
 }
 
@@ -39,7 +38,7 @@ StoreTextDialog.Destructing
 #Header
 {
 	font-size: 48px;
-	color: #7d7c7b;
+	color: #ffffff66;
 	margin-bottom: 12px;
 	padding-left: 30px;
 }

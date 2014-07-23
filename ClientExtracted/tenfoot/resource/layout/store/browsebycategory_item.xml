@@ -8,7 +8,7 @@
 	<StoreBrowseByCategoryItem tabindex="auto" selectionpos="auto" class="CapsuleControllerSupportContainer">
 		<Panel class="HeaderImageWrapper">
 			<Image id="HeaderImage" scaling="stretch" />
-			<Panel class="CapsuleControllerSupport" />
+
 			<Label id="DiscountDescription" />
 			<Panel class="ImageBorder" />
 		</Panel>
@@ -23,7 +23,9 @@
 				<Image id="PlatformWindows" src="file://{images}/store/icon_platform_win.png" />
 				<Image id="PlatformMac" src="file://{images}/store/icon_platform_mac.png" />
 				<Image id="PlatformLinux" src="file://{images}/store/icon_platform_linux.png" />
+				<Panel class="CapsuleControllerSupport" />
 			</Panel>
+
 		</Panel>
 		<Panel class="ReleaseDateRow OnlyVisibleOnCarouselFocus">
 			<Label class="SecondaryLabel" id="ReleaseDate" text="" />

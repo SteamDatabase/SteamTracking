@@ -2,15 +2,29 @@
 // CreateAccount panel
 //
 
-CreateAccountWizard .ScreenSaverMode, CreateAccountWizard .ShowingLoginProgress
+CreateAccountWizard .ScreenSaverMode
 {
 	opacity: 0.0;
 	transition-duration: 0.4s;
 }
 
+// The login progress panel's transition animation is opacity 0 from 0s-.2s,
+// then scales from opacity 0-1 from .2s-.4s. This should transition to 0
+// opacity before the progress panel becomes visible.
+CreateAccountWizard .ShowingLoginProgress
+{
+	opacity: 0.0;
+	transition-duration: 0.2s;
+}
+
 //
 // Credentials Child
 //
+
+#CredentialsContainer
+{
+	width: buttonwidth;
+}
 
 #RecommendedAccountNames
 {
@@ -24,16 +38,11 @@ CreateAccountWizard .ScreenSaverMode, CreateAccountWizard .ShowingLoginProgress
 
 #RecommendedList
 {
-	height: 286px;
-	width: 490px;
+	height: 255px;
+	width: buttonwidth;
 	padding: 5px;
 	flow-children: down;
-	background-color: #173a4c;
-	box-shadow: inset #00000040 2px 2px 8px 2px;
-	border-color: ui_common_control_border;
-	border-width: 5px;
-	border-style: solid;
-
+	background-color: ui_common_control;
 }
 
 #MessageLabel
@@ -128,8 +137,8 @@ CreatingAccountWizardChild #ThrobberContainer
 .Throbber
 {
 	opacity: 1.0;
-	width: 130px;
-	height: 130px;
+	width: 100px;
+	height: 100px;
 	horizontal-align: center;
 	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
 	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
@@ -223,4 +232,66 @@ RadioButton.Wide
 	visibility: visible;
 }
 
+// tickbox to turn togglebuttons into checkboxes
+.CheckBox .TickBox
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: center;
+	background-color: ui_common_control;
 
+	transition-property: transform, background-color, border, box-shadow, color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+}
+
+.CheckBox:Selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: ui_common_control;
+	
+}
+
+.CheckBox:Focus .TickBox
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;
+}
+
+.CheckBox:Selected:Focus .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+	border-color: #ffffff;
+}
+
+// and make room for the tickbox
+.CheckBox Label
+{
+	padding-left: 67px;
+	padding-top: 6px;
+	color: detailsdatalabel;
+	width: 100%;
+	text-overflow: clip;
+	white-space: nowrap;
+
+	transform: translatex(-7px);
+	transition-property: color, transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in;
+}
+
+.CheckBox:hover Label
+{
+	color: #ffffffff;
+	transform: translatex(0px);
+}
+
+.CheckBox:focus Label
+{
+	transform: translatex(0px);
+}

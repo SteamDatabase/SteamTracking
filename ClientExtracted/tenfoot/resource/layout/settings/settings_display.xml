@@ -45,9 +45,7 @@
 			</Panel>
 			<Panel id="SteamOSSettingsArea" class="FlowDown" tabindex="auto" selectionpos="auto">
 				<Label class="SettingsLabel" text="#SettingsDisplay_Underscan" />
-				<VUMeter onselect="UnderscanSelected()" ondeselect="UnderscanDeselected()" writable="true" id="UnderscanAmount" class="VoiceBarContainer SliderContainer" numbars="25" barpaneladdclass="Slider" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
-				<Label class="SettingsLabel" text="#SettingsDisplay_Brightness" />
-				<VUMeter writable="true" id="BrightnessLevel" class="VoiceBarContainer SliderContainer" numbars="50" barpaneladdclass="Slider SliderHalf" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
+				<UnderscanMeter onselect="UnderscanSelected()" ondeselect="UnderscanDeselected()"  writable="true" id="UnderscanAmount" class="VoiceBarContainer SliderContainer" numbars="25" barpaneladdclass="Slider" barpanelactiveclass="VoiceBarActive" selectionpos="auto" />
 			</Panel>
 		</Panel>
 	</SettingsPanel_Display>

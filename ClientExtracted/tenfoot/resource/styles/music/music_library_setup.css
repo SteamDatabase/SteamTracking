@@ -85,15 +85,12 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 {
 	width: 52px;
 	height: 52px;
-	background-color: ui_common_control;
+	background-color: blue;
 	margin-left: 20px;
 	margin-top: 4px;
 }
 
-#Entry:descendantfocus #ActionButton, #AddDirectory:descendantfocus #ActionButton
-{
-	background-color: blue;
-}
+
 
 
 #ActionButtonLabel

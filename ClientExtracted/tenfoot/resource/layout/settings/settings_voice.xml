@@ -10,17 +10,17 @@
 			<Label class="SettingsHeaderLegend" text="#Settings_Voice" />
 		</Panel>
 		
-		<Panel class="SettingsBottomPanel">
+		<Panel class="SettingsBottomPanel" selectionpos="auto">
 			<!-- main panel -->
-			<Panel class="SettingsContent SettingsLeftContent" tabindex="0.0" selectionpos="auto">
-				<Label class="SettingsLegend" text="#SettingsVoice_WhenActive" />
-				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_AutoXmit" tabindex="0.0" text="#SettingsVoice_AutoXmit" selectionpos="auto" onactivate="PushToTalk( false )"/>
-				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_PTT" tabindex="1.0" text="#SettingsVoice_PTT" selectionpos="auto" onactivate="PushToTalk( true )"/>
+			<Panel class="SettingsContent SettingsLeftContent" tabindex="0.0" >
+				<Label class="SettingsLabel" text="#SettingsVoice_WhenActive" />
+				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_AutoXmit" tabindex="0.0" text="#SettingsVoice_AutoXmit" onactivate="PushToTalk( false )"/>
+				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_PTT" tabindex="1.0" text="#SettingsVoice_PTT" onactivate="PushToTalk( true )"/>
 				<Label class="SettingsLegend" text="#SettingsVoice_Keyboard" />
-				<KeyboardShortcut id="SettingsVoice_KbdXmit" tabindex="2.0" selectionpos="auto"/>
+				<KeyboardShortcut id="SettingsVoice_KbdXmit" tabindex="2.0" />
 
-				<Panel class="SettingsGroup" tabindex="3.0" selectionpos="auto">
-					<Button id="DetectAudioButton" class="Button" onactivate="DetectAudioDevices()">
+				<Panel class="SettingsGroup" tabindex="3.0" >
+					<Button id="DetectAudioButton" class="Button" onactivate="DetectAudioDevices()" >
 						<Label class="LongDesc" text="#SettingsVoice_DetectDevices" />
 					</Button>
 					<Panel id="InputDeviceGroupOther" >
@@ -38,27 +38,27 @@
 					</Panel>
 				</Panel>
 			</Panel>
-			<Panel class="SettingsContent SettingsRightContent" tabindex="1.0" selectionpos="1.0, 10.0">
-				<Panel class="SettingsGroup" tabindex="0.0" selectionpos="auto">
-					<ToggleButton id="TestMicrophone" tabindex="0.0" class="Button LongDesc" onactivate="ToggleTestMicrophone()">
+			<Panel class="SettingsContent SettingsRightContent" tabindex="1.0" selectionpos="560,0">
+				<Panel class="SettingsGroup" tabindex="0.0"  selectionpos="0,1" >
+					<ToggleButton id="TestMicrophone" tabindex="0.0" class="Button LongDesc" onactivate="ToggleTestMicrophone()" selectionpos="1,1">
 						<Label text="#SettingsVoice_TestMicrophone" />
 						<Label class="AltLabel" text="#SettingsVoice_EndTestMicrophone" />
 					</ToggleButton>
-					<Panel id="MicSub" class="HorzSub" disabled="1">
+					<Panel id="MicSub" class="HorzSub" disabled="1"  >
 						<Image src="file://{images}/friends/friends_voicechat_voicelevels.tga" />
 						<VUMeter id="TestMicLevels" class="DisplayOnlyVoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
-						<ToggleButton tabindex="1.0" class="CheckBox" id="SettingsVoice_Boost" text="#SettingsVoice_Boost"/>
+						<ToggleButton tabindex="1.0" class="CheckBox" id="SettingsVoice_Boost" text="#SettingsVoice_Boost" />
 					</Panel>
 				</Panel>
-				<Panel class="SettingsGroup" tabindex="1.0" selectionpos="auto">
+				<Panel class="SettingsGroup" tabindex="1.0" selectionpos="0,4" >
 					<Label class="SettingsLegend" text="#SettingsVoice_MicVolume" />
 					<Panel class="HorzSub">
 						<Image src="file://{images}/friends/friends_voicechat_voicelevels.tga" />
-						<VUMeter writable="true" id="MicLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive" />
+						<VUMeter writable="true" id="MicLevel" class="VoiceBarContainer" numbars="10" barpaneladdclass="VoiceBar" barpanelactiveclass="VoiceBarActive"  />
 					</Panel>
 				</Panel>
 			
-				<Panel class="SettingsGroup" tabindex="2.0" selectionpos="auto">
+				<Panel class="SettingsGroup" tabindex="2.0" selectionpos="0,5" >
 					<Label class="SettingsLegend" text="#SettingsVoice_RecvVolume" />
 					<Panel class="HorzSub">
 						<Image src="file://{images}/settings/icon_speaker.png" />

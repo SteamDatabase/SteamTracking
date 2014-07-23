@@ -21,20 +21,56 @@
 				<Panel id="ControlBar" selectionpos="2,0">
 					<Panel id="ControlBar_Buttons">
 						<Panel id="Spinner" />
-						<Button id="BackButton" class="ControlBarButton" onactivate="BrowserBack()" selectionpos="2,0" 	>
-							<Image src="file://{images}/browser/browser_back.png" />
-						</Button>
-						<ParentalButton class="ControlBarButton" onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >
-							<Image src="file://{images}/browser/browser_home.png" />
-						</ParentalButton>
-						<ParentalButton class="ControlBarButton" onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
-							<Image src="file://{images}/browser/browser_favorite.png" />
-						</ParentalButton>
-						<Button id="ForwardButton" class="ControlBarButton" onactivate="BrowserForward()" selectionpos="5,0"	>
-							<Image src="file://{images}/browser/browser_forward.png" />
-						</Button>px
+						<Panel id="ControllerNavButtons">
+							<Button id="BackButton" class="ControlBarButton" onactivate="BrowserBack()" selectionpos="2,0" 	>
+								<Image src="file://{images}/browser/browser_back.png" />
+							</Button>
+							<ParentalButton class="ControlBarButton" onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >
+								<Image src="file://{images}/browser/browser_home.png" />
+							</ParentalButton>
+							<ParentalButton class="ControlBarButton" onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
+								<Image src="file://{images}/browser/browser_favorite.png" />
+							</ParentalButton>
+							<Button id="ForwardButton" class="ControlBarButton" onactivate="BrowserForward()" selectionpos="5,0"	>
+								<Image src="file://{images}/browser/browser_forward.png" />
+							</Button>
+						</Panel>
+						<Panel id="MouseNavButtons">
+							<Button class="ControlBarButtonMouse" onactivate="BrowserBack()" selectionpos="2,0" 	>
+								<Image src="file://{images}/browser/browser_back_mouse.png" />
+							</Button>
+							<ParentalButton class="ControlBarButtonMouse" onactivate="BrowserGoToFavorites()"	selectionpos="3,0" >
+								<Image src="file://{images}/browser/browser_home_mouse.png" />
+							</ParentalButton>
+							<ParentalButton class="ControlBarButtonMouse" onactivate="BrowserAddBrowserFavorite()" selectionpos="4,0" >
+								<Image src="file://{images}/browser/browser_favorite_mouse.png" />
+							</ParentalButton>
+							<Button class="ControlBarButtonMouse" onactivate="BrowserForward()" selectionpos="5,0"	>
+								<Image src="file://{images}/browser/browser_forward_mouse.png" />
+							</Button>
+						</Panel>
 					</Panel>
 				</Panel>
+				<Panel id="TabBar"  >
+					<Panel id="LBInnerWrapper">
+						<Button id="LT_btn" class="LegendText TriggerButtonText"  onactivate="BrowserMoveTabLeft()">
+							<Label id="LT_txt" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftTrigger_Short" />
+						</Button>
+						<Button id="MouseTabLt" class="ControlBarButton" onactivate="BrowserMoveTabLeft()" >
+							<Image src="file://{images}/browser/browser_ltab.png" />
+						</Button>
+					</Panel>
+					<Label id="TabPosition" text="#Web_TabPosition" />
+					<Panel id="RBInnerWrapper">
+						<Button id="RT_btn" class="LegendText" onactivate="BrowserMoveTabRight()" >
+							<Label id="RT_txt" class="LegendButtonBox TriggerButtonBox" text="#UI_RightTrigger_Short" />
+						</Button>
+						<Button id="MouseTabRt" class="ControlBarButton" onactivate="BrowserMoveTabRight()" >
+							<Image src="file://{images}/browser/browser_rtab.png" />
+						</Button>
+					</Panel>
+				</Panel>
+
 			</Panel>
 			<Panel id="HtmlContainer" selectionpos="0,10">
 			 	<SlideShow id="Html"  selectionpos="0,0" />

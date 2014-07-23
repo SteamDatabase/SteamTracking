@@ -191,9 +191,9 @@
 	transform: translateY( 310px );
 
 	flow-children: right;
-	opacity: 0.80;
-	desaturation: 0.0;
-	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.5;
+	opacity: 0.90;
+	desaturation: 0.1;
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.4;
 
 
 	transition-property: transform, opacity-mask, opacity, desaturation;

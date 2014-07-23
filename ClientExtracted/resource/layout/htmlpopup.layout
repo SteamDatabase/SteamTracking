@@ -110,7 +110,6 @@
 		inset="0 0 0 0"
 		render_bg={}
 		image="graphics/html_lock_disabled"
-		scaling=fit
 		}
 
 		URLBarSecure

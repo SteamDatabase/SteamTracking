@@ -1,0 +1,19 @@
+"resource/layout/screenshotspage_full.layout"
+{
+	controls
+	{
+		NavNextLabel { controlname="Button" labeltext="#Steam_Screenshots_ImageNext" command="NextScreenshot" }
+		NavPrevLabel { controlname="Button" labeltext="#Steam_Screenshots_ImagePrev" command="PrevScreenshot" }
+		
+		ScreenShotImage { controlname="ImagePanel" }
+		ScreenshotListPanel { controlname="ScreenshotListPanel" }
+	}
+	
+	layout
+	{
+		place	{ control=NavNextLabel region=main align=right y=24 }
+		place	{ control=NavPrevLabel region=main align=left y=24 }
+		place	{ control=ScreenShotImage region=main align=left y=48 width=max height=max }
+		place	{ control=ScreenshotListPanel region=main align=left y=48 width=max height=max }
+	}
+}

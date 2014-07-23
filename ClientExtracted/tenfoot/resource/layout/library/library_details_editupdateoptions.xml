@@ -10,10 +10,10 @@
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
     		<Label class="StdTitle" text="#Library_EditUpdateOptions_Title" />
 
-    		<Label class="StdLabelMedBlue" text="#Library_AutoUpdate_CodeLabel" />
+    		<Label class="StdLabelMed" text="#Library_AutoUpdate_CodeLabel" />
 	    	<DropDown id="AutoUpdatesDropDown" class="OptionsDropDown"/>
 	    	<Panel class="Spacer" />
-	    	<Label class="StdLabelMedBlue" text="#Library_BackgroundUpdates_Label" />
+	    	<Label class="StdLabelMed" text="#Library_BackgroundUpdates_Label" />
 	    	<DropDown id="BackgroundUpdatesDropDown" class="OptionsDropDown" />
         <Panel id="MsgBoxButtons">
             <Button onactivate="ButtonCancel()">

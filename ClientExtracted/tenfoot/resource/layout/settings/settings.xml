@@ -13,7 +13,7 @@
 		
 		<!-- main settings panel, a big container of buttons -->
 		<Panel id="SettingsContent" class="SettingsMainContent" tabindex="auto" selectionpos="auto" >
-			<Panel class="SettingsContent SettingsLeftContent" childfocusonhover="true">
+			<Panel class="SettingsContent SettingsLeftContent">
 				<Button id="AccountSettingsButton" class="Button" onactivate="ShowSettings( Account );">
 					<Label class="LongDesc" text="#Settings_Account" />
 				</Button>
@@ -52,7 +52,7 @@
 
 
 			</Panel>	
-			<Panel class="SettingsContent SettingsMainRightContent" childfocusonhover="true">
+			<Panel class="SettingsContent SettingsMainRightContent">
 				<Button id="DisplaySettingsButton" class="Button" onactivate="ShowSettings( Display );">
 					<Label class="LongDesc" text="#Settings_Display" />
 				</Button>

@@ -115,9 +115,16 @@ Debugger
 
 .DebugBody
 {
-	flow-children: right;
+	flow-children: down;
 	height: fill-parent-flow( 1.0 );
 	//background-color: white;
+}
+
+.DebugBodyTop
+{
+	height: fill-parent-flow( 0.8 );
+	flow-children: right;
+	width: 100%;
 }
 
 VerticalSplitter
@@ -125,6 +132,60 @@ VerticalSplitter
 	width: 5px;
 	min-height: 100%;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #d7d7d7), to( #a0a0a0 ), color-stop( 0.9, #b4b4b4 ) );
+}
+
+HorizontalSplitter
+{
+	height: 5px;
+	min-width: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #d7d7d7), to( #a0a0a0 ), color-stop( 0.9, #b4b4b4 ) );
+}
+
+.DebugJSConsole
+{
+	height: fill-parent-flow( 0.2 );
+	min-height: 10px;
+	background-color: white;
+
+	flow-children: down;
+}
+
+#JSConsoleText
+{
+	height: fill-parent-flow( 1.0 );
+	background-color: white;
+	color: #000000ff;
+	font-size: 12px;
+	font-family: Courier New;
+	width: 100%;
+
+	overflow: clip scroll;
+}
+
+#JSConsoleText
+{
+	margin: 0px 3px;
+}
+
+#JSConsoleText Label
+{
+	width: 100%;
+	min-height: 100%;
+}
+
+
+#JSConsoleInput
+{
+	width: 100%;
+	height: 28px;
+	font-family: Courier New;
+	font-size: 16px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #aaaaaaff ), to( #dededeff ) );
+	color: #000000ff;
+
+	padding: 3px 5px;
+
+	white-space: nowrap;
 }
 
 //

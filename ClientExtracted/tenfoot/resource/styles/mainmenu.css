@@ -1,5 +1,4 @@
 /*	main menu screen css style */
-
 @define topmostzindex: 1000;
 
 MainMenu
@@ -10,15 +9,12 @@ MainMenu
 	width: 1920px;
 	height: 1080px;
 	visibility: visible;
-	
 	font-family: platformfont;
-
 	opacity: 0.0;
 
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: 0.3s !immediate;
-	transition-timing-function: linear;
-
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in;
 	transform: translateX( 0px );
 }
 
@@ -26,7 +22,7 @@ MainMenu
 {
 	opacity: 1.0;
 
-	animation-name: fade-in; 
+	animation-name: fade-in;
 	animation-duration: 1.0s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: 1;
@@ -46,6 +42,7 @@ MainMenu
 MainMenu.SlideAwayToLeft
 {
 	opacity: 0.0;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
 }
@@ -53,33 +50,33 @@ MainMenu.SlideAwayToLeft
 MainMenu.SlideAwayToRight
 {
 	opacity: 0.0;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
 }
 
 .BehindMessageBox #BodyWrapper
 {
-	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-
-	desaturation: 0.4;
+	desaturation: 0.2;
 	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
 
+	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
 
 .BehindMessageBox SettingsPanel
 {
-	transition-property: blur, desaturation, opacity, wash-color, transform;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-
 	desaturation: 0.4;
 	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
+
+	transition-property: blur, desaturation, opacity, wash-color, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
 
 .BehindDaisyWheel #BodyWrapper
@@ -88,7 +85,7 @@ MainMenu.SlideAwayToRight
 	opacity: 1.0;
 	blur: none;
 	wash-color: #ffffffff;
-}	
+}
 
 .FriendsInputTextEntry.BehindMessageBox #BodyWrapper
 {
@@ -100,7 +97,6 @@ MainMenu.SlideAwayToRight
 
 .FriendsInputTextEntry.BehindMessageBox #FriendsMainBodyColumnLeft
 {
-	
 	desaturation: 0.4;
 	opacity: 0.85;
 	blur: gaussian( 1.5 );
@@ -113,8 +109,8 @@ MainMenu.SlideAwayToRight
 	opacity: 1.0;
 	blur: none;
 	wash-color: #ffffffff;
-}	
-
+}
+	
 MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails,
 MainMenu.BehindMessageBox.CheckoutFormTextEntry,
 MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
@@ -124,25 +120,21 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	blur: none;
 }
 
-
 #BodyWrapper
 {
 	width: 100%;
 	height: 100%;
-
 	opacity-mask: none;
-
 	z-index: 100;
-
 }
 
 .PlayActionModal #BodyWrapper
 {
+	opacity-mask: url( "file://{images}/library/play_action_modal_mask.png" );
+
 	transition-property: opacity-mask !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
-
-	opacity-mask: url( "file://{images}/library/play_action_modal_mask.png" );
 }
 
 #BodyHittestBlocker
@@ -155,11 +147,10 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 
  .HomeGlow
 {
-	opacity: 0.6;
+	opacity: 0.8;
 	width: 100%;
 	height: 600px;
-	z-index: -500;
-
+	z-index: -1000;
 	margin-bottom: 100px;
 	horizontal-align: center;
 	vertical-align: center;
@@ -218,6 +209,7 @@ MainMenu.StackDepth3 .HomeGlow
 		pre-transform-scale2d: 1.0;
 		blur: none;
 	}
+
 }
 
 #TopRow
@@ -227,18 +219,14 @@ MainMenu.StackDepth3 .HomeGlow
 	padding: 65px 66px;
 	vertical-align: top;
 	height: 263px;
-
 	width: 100%;
 	z-index: 2000;
 
 	transition-property: blur, desaturation, opacity, transform !immediate;
-
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
-
 }
-
 
 MainMenu.StackDepth2 #TopRow,
 MainMenu.StackDepth3 #TopRow
@@ -265,27 +253,28 @@ MainMenu.StackDepth3 #TopRow
 
 .TopRowFocused Label
 {
-	color: tclegendlabel;
+	color: messagecolorwash;
 }
 
 .TopRowBase .ShortDesc
 {
+	opacity: 1.0;
+
 	transition-property: opacity, max-width;
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
-	opacity: 1.0;
 }
 
 .TopRowBase .LongDesc
 {
-	transition-property: max-width, opacity;
+	max-width: 0px;
+	opacity: 0.0;
+
+	transition-property: max-width, color, opacity;
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
 	transition-timing-function: linear, ease-out;
-
-	max-width: 0px;
-	opacity: 0.0;
 }
 
 .CursorVisible .LongDesc
@@ -302,30 +291,31 @@ MainMenu.StackDepth3 #TopRow
 	opacity: 1.0;
 }
 
-
 .TopRowFocused .LongDesc
 {
 	max-width: 310px;
 	opacity: 1.0;
 	text-overflow: ellipsis;
-	transition-property: opacity, max-width;
 
+	transition-property: opacity, max-width;
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
 }
 
 .TopRowBase .SmDesc, .TopRowBase .SmDesc2
 {
-
 	opacity: 0.0;
+
 	transition-property: opacity, transform, max-width;
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
 	transition-timing-function: ease-out;
 }
+
 .TopRowFocused .SmDesc, .TopRowBase .SmDesc2
 {
 	opacity: 1.0;
+
 	transition-property: opacity;
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
@@ -334,23 +324,25 @@ MainMenu.StackDepth3 #TopRow
 
 #BetaButton Image
 {
+	wash-color: ui_primary_color;
+
 	transition-duration: 0.3s;
 	transition-property: wash-color;
 	transition-timing-function: ease-out;
-
-	wash-color: ui_primary_color;
 }
 
 #BetaButton:hover Image
 {
-	transition-duration: 0.3s !immediate;
 	wash-color: ui_common_control_hover; 
+
+	transition-duration: 0.3s !immediate;
 }
 
 #BetaButton:Focus Image
 {
-	transition-duration: 0.3s !immediate;
 	wash-color: #c4c4c4ff; 
+
+	transition-duration: 0.3s !immediate;
 
 	animation-name: beta-image-wash-pulse; 
 	animation-duration: 1.7s;
@@ -362,15 +354,12 @@ MainMenu.StackDepth3 #TopRow
 
 #ParentalLockButton .SmDesc, #ParentalLockButton .SmDesc2, #GoOnlineButton .SmDesc
 {
-
 	height: 20px;
 	opacity: 0.0;
-
 	text-overflow: clip;
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: medium;
-
 }
 
 .TopRowFocused  #ParentalLockButton .SmDesc,
@@ -388,9 +377,10 @@ MainMenu.StackDepth3 #TopRow
 #ParentalLockImageOverlay
 {
 	width: 64px;
-	height: 64px;	
+	height: 64px;
 	margin-bottom: 2px;
 	vertical-align: center;
+	opacity: 1.0;
 }
 
 #Clock,#ClockSuffix
@@ -414,35 +404,36 @@ MainMenu.StackDepth3 #TopRow
 
 Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels, #GoOnlineButton:hover .GoOnlineButtonLabels
 {
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
-	transition-property: opacity, max-width;
 	max-width: 310px;
 	opacity: 1.0;
 	visibility: visible;
+
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-property: opacity, max-width;
 }
 
 Button:hover .ShortDesc
 {
-	transition-delay: 0.08s;
 	opacity: 0.0;
+
+	transition-delay: 0.08s;
 }
 
 .TopRowBase:descendantfocus .LongDesc,
 {
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
 	opacity: 1.0;
 	visibility: visible;
 
 	transition-property: opacity, max-width;
-
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
 }
 
 .LongDescSm
 {
 	font-size: 28px;
-	}
+}
 
 .TopRowBase Button, InboxMenu Button, ParentalButton
 {
@@ -451,44 +442,37 @@ Button:hover .ShortDesc
 	color: tcexitrow;
 	background-color: #0d192100;
 
-	transition-property: border, blur, background-color, color, transform, max-width, box-shadow;
-	transition-duration: 0.3s;
+	transition-property: border, blur, background-color, color, transform, max-width, opacity, box-shadow;
+	transition-duration: 0.23s;
 	transition-timing-function: ease-out;
-
 }
-
 
 .TopRowBase Button, InboxMenu Button
 {
 	padding: 6px 6px;
 }
 
-
-
 .TopRowBase Button:hover, InboxMenu Button:hover, ParentalButton:hover
 {
-
 	color: tcexitrowhover;
-	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+	box-shadow: box_shadow_mid_color -5px -5px 6px 10px;
 }
 
 .TopRowBase Button:focus, InboxMenu Button:focus, ParentalButton:focus
 {
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
 	padding: 6px 6px;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
 	transition-property: blur, background-color, color, max-width, transform;
-
 	transform: translatez( 0px );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -503,26 +487,26 @@ Button:hover .ShortDesc
 	color: applabelselectedsolid;	
 }
 
-
 .TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
 {
+	wash-color: ui_primary_color;
+
 	transition-duration: 0.3s;
 	transition-property: wash-color;
 	transition-timing-function: ease-in-out;
-
-	wash-color: ui_primary_color;
 }
 
 .TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
 {
+	wash-color: ui_common_control_hover; 
+
 	transition-duration: 0.3s;
 	transition-delay: 0.08s;
-	wash-color: ui_common_control_hover; 
 }
 
 .TopRowBase Button:Focus Image, InboxMenu Button:Focus Image, ParentalButton:Focus Image
 {
-	wash-color: #274855ff;
+	wash-color: #1c2c5cff;
 
 	animation-name: image-wash-pulse;
 	animation-duration: 1.7s;
@@ -538,15 +522,11 @@ Button:hover .ShortDesc
 	border-style: solid;
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	box-shadow: box_shadow_on_color -1px -1px 8px 2px;
 
 	transform: translatez( 0px );
-	box-shadow: box_shadow_on_color -1px -1px 8px 2px;
 }
-
-
-
 
 .TopRowBlurry Button:Focus Image
 {
@@ -587,6 +567,7 @@ Button:hover .ShortDesc
 	{
 		opacity: 1.0;
 	}
+
 }
 
 @keyframes 'image-wash-pulse'
@@ -599,13 +580,13 @@ Button:hover .ShortDesc
 	
 	48%
 	{
-		wash-color: #2c2c2cff;
+		wash-color: #142766ff;
 		blur: none;
 	}
 	
 	52%
 	{
-		wash-color: #2c2c2cff;
+		wash-color: #142766ff;
 		blur: none;
 	}
 	
@@ -623,24 +604,28 @@ Button:hover .ShortDesc
 		wash-color: red;
 		blur: gaussian( 0.5 );
 	}
+
 	
 	48%
 	{
 		wash-color: darkred;
 		blur: none;
 	}
+
 	
 	52%
 	{
 		wash-color: darkred;
 		blur: none;
 	}
+
 	
 	100%
 	{
 		wash-color: red;
 		blur: gaussian( 0.5 );
 	}
+
 }
 
 @keyframes 'beta-image-wash-pulse'
@@ -668,6 +653,7 @@ Button:hover .ShortDesc
 		wash-color: animated_icon_wash_color;
 		blur: gaussian( 0.5 );
 	}
+
 }
 
 #AvatarInfoRow
@@ -717,7 +703,7 @@ Button:hover .ShortDesc
 
 .SteamUpdated #Inbox
 {
-    background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+    background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
 #NewSupportMessagesButton
@@ -736,7 +722,7 @@ Button:hover .ShortDesc
 
 #Clock
 {
-margin-right: 8px;	
+	margin-right: 8px;	
 }
 
 #DownloadsButton Image, #SystemIMs Image, #Inbox Image
@@ -749,19 +735,16 @@ margin-right: 8px;
 	font-size: 30px;
 	margin-left: 6px;
 	margin-right: 6px;
-
 	vertical-align: center;
 }
 
 #BetaButton
 {
+	width: 110px;
+	height: 100px;
 	flow-children: right;
 	opacity: 0.0;
 	visibility: collapse;
-	
-	flow-children: right;
-	width: 110px;
-	height: 100px;
 }
 
 .SteamOS #BetaButton
@@ -781,25 +764,28 @@ margin-right: 8px;
 	margin-right: 15px;
 	margin-left: 32px;
 }
+
 	
 #SelfAvatar
 {
 	border-style: solid;
-	border-width: 3px;
+	border-width: 4px;
 	border-radius: 4px;
-
 	height: 91px;
 	width: 91px;
-
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
-	transition-property: box-shadow;
-	transition-duration: 0.3s;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.2s;
 	transition-timing-function: ease-out;
 }
 
 #SelfAvatar:hover
 {
-	box-shadow: fill #eeeeee60 -4.5px -4.5px 6px 9px;
+	pre-transform-scale2d: 1.05;
+
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
 
 #SettingsExitRow
@@ -849,6 +835,7 @@ margin-right: 8px;
 	padding-left: 4px;
 	margin-top: 0px;
 }
+
 	
 .SteamLogo
 {
@@ -873,7 +860,6 @@ margin-right: 8px;
 	transition-property: blur, desaturation, opacity, transform, opacity;
 	transition-duration: 0.35s;
 	transition-timing-function: ease-in-out;
-
 }
 
 #TopRowContents:descendantfocus
@@ -886,7 +872,6 @@ margin-right: 8px;
 	z-index: topmostzindex;
 }
 
-
 #MenuRowButtons
 {	
 	flow-children: right;
@@ -896,7 +881,7 @@ margin-right: 8px;
 
 MainMenu.StackDepth2 #MenuRow
 {
-	blur: gaussian( 1.5 );
+	blur: gaussian( 1.0 );
 	desaturation: 0.15;
 	opacity: 0.8;
 	wash-color: bgcolorwashlight;
@@ -907,43 +892,44 @@ MainMenu.StackDepth2 #MenuRow
 
 MainMenu.StackDepth2 .HomeGlow
 {
+	opacity: 0.4;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
-	opacity: 0.4;
 }
-
 
 MainMenu.StackDepth2 #MenuRow:hover
 {
-	blur: gaussian( 0.5 );
+	blur: gaussian( 0.2 );
 	desaturation: 0.02;
-	opacity: 0.9;
-	//pre-transform-scale2d: 1.04;
+	opacity: 0.85;
 }
 
 MainMenu.StackDepth3 #MenuRow
 {
-	blur: gaussian( 3.0 );
+	blur: gaussian( 2.0 );
 	desaturation: 0.15;
 	opacity: 0.60;
 	wash-color: bgcolorwashmedium;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
 }
+
 
 MainMenu.StackDepth3 .HomeGlow
 {
 	opacity: 0.1;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
 }
 
-
 MainMenu.StackDepth3 #MenuRow:hover
 {
-	blur: gaussian( 2.0 );
-	desaturation: 0.05;
-	opacity: 0.80;
+	blur: gaussian( 1.15 );
+	desaturation: 0.1;
+	opacity: 0.75;
 }
 
 MainMenu #MenuRow.MenuRowHidden, MainMenu.ScreenshotSlideshowVisible #MenuRow
@@ -953,32 +939,28 @@ MainMenu #MenuRow.MenuRowHidden, MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 {
+	opacity: 0.0;
+
 	transform-origin: 0% 0% parent-relative;
 	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( 220px );
-	opacity: 0.0;
 }
 
 .Button
 {
 	horizontal-align: center;
 	vertical-align: center;
-
 	width: 468px;
 	height: 106px;
-
-	margin: 10px 8px ;
-
+	margin: 10px 8px;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414230;
-
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
 
 	transform: translatez( -150px );
-
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
+	transition-duration: 0.23s;
 }
 
 .Button:active
@@ -989,8 +971,9 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 .Button:hover
 {
 	transition-duration: 0.3s;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	background-color: all_games_hover;
+	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
+
 	transform: translatez( -100px );
 }
 
@@ -1006,33 +989,31 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .Button:parentdisabled:hover
 {
-	transform: translatez( -150px );
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 	box-shadow: none;
-}
 
+	transform: translatez( -150px );
+}
 
 .Button:focus
 {
 	transition-duration: 0.3s;
-
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
-
-	transform: translatez( 0px );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
-	animation-name: main-button-glow-movement, quick-blur; 
+	transform: translatez( 0px );
+	transition-duration: 0.3s;
+
+	animation-name: main-button-glow-movement, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0.4s, 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
-	
-	transition-duration: 0.3s;
+
 }
 
 .Button:descendantfocus:hover
@@ -1043,6 +1024,10 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 #ProfileLabel
 {
 	text-transform: uppercase;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-overflow: clip;
+	color: applabel;
 }
 
 .InsideLibrary #LibraryButton, .InsideStore #StoreButton, .InsideCommunity #CommunityButton, .InsideProfile #ProfileButton,
@@ -1052,8 +1037,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
 .ButtonLeft:focus
@@ -1080,9 +1064,13 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 {
 	horizontal-align: center;
 	vertical-align: center;
-	color: tcmainbutton;
+	color: applabel;
 	font-size: 56;
-	font-weight:light;
+	font-weight: light;
+	height: 66px;
+	width: 460px;
+	text-align: center;
+	text-overflow: clip;
 
 	transition-property: color;
 }
@@ -1096,7 +1084,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 .StackDepth2 #LibraryButton:active .ButtonLabel, .StackDepth2 #StoreButton:active .ButtonLabel, .StackDepth2 #CommunityButton:active .ButtonLabel,
 .StackDepth3 #LibraryButton:active .ButtonLabel, .StackDepth3 #StoreButton:active .ButtonLabel, .StackDepth3 #CommunityButton:active .ButtonLabel
 {
-	color: black;
+	color: applabelselected;
 }
 
 .ScreenSaverMode MainMenu, .GamesRunning MainMenu
@@ -1119,7 +1107,7 @@ InboxMenu
 	height: 100%;
 
 	transition-property: opacity;
-	transition-duration: 0.3s;
+	transition-duration: 0.2s;
 }
 
 InboxMenu #Wrapper
@@ -1134,7 +1122,6 @@ InboxMenu Button
 {
 	margin: 0px;
 	flow-children: right;
-
 	min-width: 420px;
 }
 
@@ -1162,11 +1149,6 @@ InboxMenu.Destructing
 {
 	opacity: 0.0;
 }
-
-
-
-
-
 
 #ParentalLockButton, #GoOnlineButton
 {
@@ -1209,8 +1191,6 @@ InboxMenu.Destructing
 	transition-timing-function: ease-out;
 }
 
-
-
 #ParentalLockButton #ParentalLockImageLocked
 {
 	opacity: 0.0;
@@ -1225,9 +1205,10 @@ InboxMenu.Destructing
 #ParentalLockButton:focus #ParentalLockImageUnlocked
 {
 	wash-color: red;
+
 	transition-duration: 0.3s;
 
-	animation-name: unlocked-image-wash-pulse; 
+	animation-name: unlocked-image-wash-pulse;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
 	animation-timing-function: ease-in-out;
@@ -1237,11 +1218,11 @@ InboxMenu.Destructing
 
 #ParentalLockButton.Locked #ParentalLockImageLocked
 {
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
 	wash-color: ui_primary_color;
 	opacity: 1.0;
 
+	transition-duration: 0.3s;
+	transition-delay: 0.08s;
 }
 
 #ParentalLockButton.Locked #ParentalLockImageUnlocked
@@ -1255,15 +1236,15 @@ InboxMenu.Destructing
 	margin-top: -4px;
 	margin-right: -3px;
 	margin-left: 3px;
+	width: 64px;
+	height: 64px;
 }
-
-
 
 ParentalButton.Locked
 {
 	wash-color: parental_locked_wash;
+	
 	transition-property: wash-color, border, blur, background-color, color, transform, box-shadow;
-
 }
 
 #ParentalLockButton.Locked
@@ -1271,14 +1252,14 @@ ParentalButton.Locked
 	wash-color: #ffffffff;
 }
 
-
 #ParentalLockButton:focus .ParentalLockButtonLabels, 
 #GoOnlineButton:focus .GoOnlineButtonLabels
 {
-	transition-property: opacity, max-width;
 	visibility: visible;
 	opacity: 1.0;
 	max-width: 300px;
+
+	transition-property: opacity, max-width;
 }
 
 .ParentalLockButtonLabels,
@@ -1294,7 +1275,6 @@ ParentalButton.Locked
 // Using visibility: collapse here instead of opacity results
 // in poor transition animations, so don't do that.
 */
-
 #ParentalLockButton #ParentalLockButtonLabelsLocked
 {
 	opacity: 0.0;
@@ -1322,12 +1302,12 @@ ParentalButton.Locked
 // will be improperly sized when the button is expanded due to top
 // row focus but the button itself is not focused.
 */
-
 #ParentalLockButton #LockedSuffix,
 #ParentalLockButton #UnlockedSuffix
 {
 	visibility: collapse;
 	opacity: 0.0;
+
 	transition-duration: 0.1s;
 	transition-delay: 0.08s;
 	transition-timing-function: ease-out;
@@ -1350,11 +1330,11 @@ ParentalButton.Locked
 	opacity: 0.0;
 }
 
-
 #GoOnlineButton #SmDesc1, #GoOnlineButton #SmDesc2
 {
 	visibility: collapse;
 	opacity: 0.0;
+
 	transition-delay: 0.08s;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
@@ -1366,50 +1346,50 @@ ParentalButton.Locked
 	margin-bottom: 1px;
 }
 
-
 .GoOnlineButtonLabels
 {
-	transform: translateY( 21px );
 	color: tcexitrow;
+
+	transform: translateY( 21px );
 }
 
 #GoOnlineButton:focus .GoOnlineButtonLabels
 {
-	transform: translateY( 0px );
 	color: tcexitrowfocus;
 	visibility: visible;
 	opacity: 1.0;
+
+	transform: translateY( 0px );
 }
 
 #GoOnlineButton:hover .GoOnlineButtonLabels
 {
-	transform: translateY( 0px );	
 	color: tcexitrowhover;
+
+	transform: translateY( 0px );	
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 	transition-delay: 0.08s;
 }
 
-
 #GoOnlineButton:hover #SmDesc1, #GoOnlineButton:hover #SmDesc2
 {
-	transform: translateY( 0px );	
 	visibility: visible;
 	opacity: 1.0;
+
+	transform: translateY( 0px );	
 }
 
 #GoOnlineButton:focus .GoOnlineButtonLabels, #GoOnlineButton:focus #SmDesc1, #GoOnlineButton:focus #SmDesc2
 {
-	color: tcexitrowfocus;
+	color: applabelselectedsolid;
 	visibility: visible;
 	opacity: 1.0;
 }
-
 
 #ParentalLockButton:hover .SmDesc, #GoOnlineButton:hover .SmDesc
 {
 	visibility: visible;
 	opacity: 1.0;
 }
-
 
