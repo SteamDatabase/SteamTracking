@@ -16,16 +16,19 @@ Join
 	font-family: platformfont;
 
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
-	transition-duration: shortduration;
+	transition-duration: 0.20s;
 	transition-timing-function: linear;
 	transform: translateX(0px);
-
-
 }
 
 Join:descendantfocus
 {
 	opacity: 1.0;
+}
+
+.ShowingLoginProgress Join
+{
+	opacity: 0.0;
 }
 
 #BodyWrapper
@@ -126,7 +129,6 @@ JoinItem .JoinItemContainer
 	vertical-align: top;
 	padding-top: 40px;
 	padding-bottom: 10px;
-	border-color: #00000000;
 	background-color: #00000000;
 	box-shadow: #00000000 -3px -3px 6px 6px;
 
@@ -140,14 +142,11 @@ JoinItem:focus .JoinItemContainer
 {
 	background-color: message_box_bg;
 	pre-transform-scale2d: 1.0;
-	border-color: #3d5666;
-	border-style: solid;
-	border-width: 5px;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
 	transform: translateY( 35px );
 	opacity: 1.0;
 
-	transition-duration: 0.23s !immediate;
+	transition-duration: 0.23s;
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
@@ -161,10 +160,8 @@ JoinItem .JoinItemImageFrame
 	horizontal-align: center;
 	width: 267px;
 	height: 267px;
-	border-style: solid;
-	border-width: 4px;
-	border-color: #3d414230;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
+	border-radius: 3px;
+	background-color: transparent_module;
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: shortmedduration;
@@ -172,10 +169,17 @@ JoinItem .JoinItemImageFrame
 	transition-delay: 0s;
 }
 
-JoinItem .JoinItemImageFrame:hover
+JoinItem:hover
+{
+	transition-duration: 0.23s;
+
+	pre-transform-scale2d: .86;
+}
+
+JoinItem:descendantfocus:hover
 {
 	transition-duration: 0.25s !immediate;
-	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+
 	pre-transform-scale2d: 1.05;
 }
 
@@ -190,7 +194,7 @@ JoinItem:focus .JoinItemImageFrame
 JoinItem:focus .JoinItemImageBezel
 {
 	pre-transform-scale2d: 1.0;
-	border-radius: 8px;
+	border-radius: 18px;
 }
 
 JoinItem .JoinItemImageBezelOn
@@ -216,8 +220,8 @@ JoinItem .JoinItemImageBezel
 {
 	border-width: 0px;
 
-	width: 251px;
-	height: 251px;
+	width: 253px;
+	height: 253px;
 
 	horizontal-align: center;
 	vertical-align: center;
@@ -242,14 +246,14 @@ JoinItem:disabled
 
 JoinItem .BezelOutside
 {
-	border-radius: 10px;
+	border-radius: 18px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 }
 
 JoinItem .BezelInside
 {
 	background-color: #000000;
-	border-radius: 5px;
+	border-radius: 14px;
 }
 
 JoinItem:focus .JoinItemImage
@@ -305,7 +309,7 @@ JoinItem Label
 	transition-property: transform, opacity;
 	transition-timing-function: ease-in;
 	transition-duration: 0.25s;
-	opacity: 0.6;
+	opacity: 0.7;
 	color: applabel;
 }
 

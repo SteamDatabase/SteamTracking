@@ -113,8 +113,8 @@ WebFavorites.Hidden
 
 .FavoriteRow .WebImage, .GridItemImage
 {
-	width : 550px;
-	height : 400px;
+	width: 550px;
+	height: 390px;
 	visibility: visible;
 }
 
@@ -152,7 +152,7 @@ FavoriteGridItem:hover #AltTitle
 
 .FavoriteRow Button:hover .WebImage, FavoriteGridItem:hover .GridItemImage
 {
-	box-shadow: box_shadow_on_color -2.5px -2.5px 10px 5px;
+	box-shadow: box_shadow_off_color -2.5px -2.5px 10px 5px;
 	pre-transform-scale2d : 1.04;
 	opacity: 0.9;
 }
@@ -167,12 +167,10 @@ FavoriteGridItem:descendantfocus #AltTitle
 .FavoriteRow Button:focus .WebImage, FavoriteGridItem:descendantfocus .GridItemImage
 {
 	box-shadow: box_shadow_on_color -3.5px -3.5px 13px 7px;
-	border-style: solid;
-	pre-transform-scale2d : 1.1;
-	border-color: #bdbfbfff;
+	pre-transform-scale2d: 1.1;
 	opacity: 1.0;
 
-	animation-name: main-button-glow-movement-no-fill; 
+	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.30s;
 	animation-timing-function: ease-in-out;
@@ -188,7 +186,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 
 .FavoriteRow Button:focus:hover .WebImage, FavoriteGridItem:descendantfocus:hover .GridItemImage
 {
-	box-shadow: box_shadow_on_color -3.5px -3.5px 13px 7px;
+	box-shadow: box_shadow_off_color -3.5px -3.5px 13px 7px;
 	border-style: solid;
 	pre-transform-scale2d : 1.14;
 	border-color: #bdbfbfff;
@@ -216,9 +214,6 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #212121 ) );
 
 	opacity: 0.85;
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 	padding: -44px;
 
 	transition-property: pre-transform-scale2d, border, opacity;
@@ -325,7 +320,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 		
 	color: #f2f2f2ff;
 	background-color: friendstabcurrentselection;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 }
 
 .TopBar Button Label
@@ -343,7 +338,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
 	background-color: webtabcurrenthover;
-	box-shadow: box_shadow_on_color -5.5px -5px 6px 10px;
+	box-shadow: box_shadow_off_color -5.5px -5px 6px 10px;
 }
 
 .TopBar Button:active
@@ -456,11 +451,12 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	height: 42%;
 }
 
 .WebHistory .SecondRow
 {
-	background-color: web_bg_color2;
+	background-color: web_bg_color;
 }
 
 .LeftMouseScrollRegion, .RightMouseScrollRegion

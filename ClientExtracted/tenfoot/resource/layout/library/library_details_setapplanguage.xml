@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<SetAppLanguage class="TenfootMsgBox" defaultfocus="Language">
+		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
+			<Label class="StdTitle" text="#Library_SetAppLanguage_Title" />
+
+			<Label class="StdLabelMed" text="#Library_SetAppLanguage_Label" />
+			<DropDown id="Language" />
+
+			<Panel id="MsgBoxButtons">
+				<Button onactivate="ButtonSetAppLanguage()">
+					<Label text="#UI_OK" />
+				</Button>
+				<Button onactivate="ButtonCancel()">
+					<Label text="#UI_Cancel" />
+				</Button>
+			</Panel>
+		</Panel>
+	</SetAppLanguage>
+</root>
+

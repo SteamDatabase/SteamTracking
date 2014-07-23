@@ -364,6 +364,14 @@ BackgroundVideoPanel.SteamOS.GamesRunning.HideThrobber #BackgroundThrobber
 	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
 }
 
+BackgroundVideoPanel.SteamOS.Windows.GamesRunning #BackgroundThrobber,
+BackgroundVideoPanel.SteamOS.OSX.GamesRunning #BackgroundThrobber
+{
+	// we might run -steamos on other actual platforms, don't show the throbber since it uses lots of cpu time
+	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
+	opacity: 0.0;
+}
+
 @keyframes 'gamesrunning-throbber-anim'
 {
 	0%

@@ -10,6 +10,7 @@ message CMsgRemoteClientAppStatus {
 		optional uint64 bytes_processed = 5;
 		optional int32 estimated_seconds_remaining = 6 [default = -1];
 		optional int32 update_result = 7;
+		optional uint32 update_state = 8;
 	}
 
 	message ShortcutInfo {

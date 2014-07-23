@@ -46,7 +46,7 @@
 	}
 }
 
-#CommunityWrapper
+#ProfileWrapper
 {
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
@@ -56,40 +56,40 @@
 	opacity: 0.0;
 }
 
-#CommunityWrapper.ProfileVisible
+#ProfileWrapper.ProfileVisible
 {
 	transform: translatey( 0px );
 	opacity: 1.0;
 }
 
 
-.StackDepth2 #CommunityWrapper.ProfileInvisible,
-.StackDepth3 #CommunityWrapper.ProfileInvisible
+.StackDepth2 #ProfileWrapper.ProfileInvisible,
+.StackDepth3 #ProfileWrapper.ProfileInvisible
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;
 }
 
-#CommunityWrapper ProfilePanel
+#ProfileWrapper ProfilePanel
 {
 	transform: translatey( 202px );
 	opacity: 1.0;
 }
 
-#CommunityWrapper ProfilePanel#FriendActivity
+#ProfileWrapper ProfilePanel#FriendActivity
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;
 }
 
-.StackDepth2 #CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity,
-.StackDepth3 #CommunityWrapper.ActivityFocused ProfilePanel#FriendActivity
+.StackDepth2 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity,
+.StackDepth3 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity
 {
 	transform: translatey( 202px );
 	opacity: 1.0;
 }
 
-#CommunityWrapper.ActivityFocused ProfilePanel#Profile
+#ProfileWrapper.ActivityFocused ProfilePanel#Profile
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;
@@ -104,12 +104,12 @@
 	color: #fe4a0bff;
 }
 
-#CommunityNavBar
+#ProfileNavBar
 {
 	width: 100%;
 	height: 80px;
-	margin-top: 126px;
-	padding-left: 92px;
+	margin-top: 115px;
+	padding-left: 95px;
 	padding-right: 100px;
 	opacity: 0.0;
 
@@ -117,24 +117,25 @@
 
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
-	transition-delay: 0s;
+	transition-delay: 1.5s;
 	transition-timing-function: linear;
 
 }
 
-.StackDepth2 .ProfileVisible #CommunityNavBar,
-.StackDepth3 .ProfileVisible #CommunityNavBar,
+.StackDepth2 .ProfileVisible #ProfileNavBar,
+.StackDepth3 .ProfileVisible #ProfileNavBar,
 {
 	opacity: 1.0;
+	transition-duration: 0.0s;
 }
 
-#CommunityNavBar Label
+#ProfileNavBar Label
 {
-	font-size: 41px;
+	font-size: 36px;
+	font-weight: light;
 
 	color: tcexitrow;
-	opacity: 0.45;
-
+	opacity: 0.7;
 
 	transition-property: opacity, color;
 	transition-duration: 0.3s;
@@ -143,33 +144,51 @@
 
 }
 
-#CommunityNavBar Button:Focus Label
+#ProfileNavBar Button Label
 {
-	color: tcexitrowfocus;
+	pre-transform-scale2d: 1.0;
+	
+	transition-property: opacity, color, pre-transform-scale2d;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+#ProfileNavBar Button:Focus Label
+{
+	color: applabelselectedsolid;
 	opacity: 1.0;
 }
 
-#CommunityNavBar .Selected Label
+#ProfileNavBar .Selected Label
 {
 	opacity: 1.0;
+	color: applabelsolid;
+	pre-transform-scale2d: 1.0;
+	
+	transition-property: opacity, color, pre-transform-scale2d;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
 }
 
-#CommunityNavBar Button:hover Label
-{
-	opacity: 0.7;
-}
-
-#CommunityNavBar Button.Selected:hover Label
+#ProfileNavBar Button:hover Label
 {
 	opacity: 1.0;
+	pre-transform-scale2d: 1.04;
 }
 
-#CommunityNavBar Button
+#ProfileNavBar Button.Selected:hover Label
 {
-	padding-left: 10px;
-	padding-right: 10px;	
+	opacity: 1.0;
+	pre-transform-scale2d: 1.04;
+}
+
+#ProfileNavBar Button
+{
+
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
-	border: 5px solid #0d1c2200;
+	border: 5px solid #fdfefe00;
 	color: carousel_title;
 	background-color: #0d192100;
 
@@ -177,25 +196,29 @@
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 
 	margin: 5px;
 	margin-right: 30px;
 }	
 
-#CommunityNavBar Button:focus
+#ProfileNavBar Button:focus
 {
 	opacity: 1.0;
 	color: black;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	padding-left: 10px;
-	padding-right: 10px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+
+	border: 5px solid #fdfefef0;
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, max-width, transform;
 
 	transform: translatez( 0px );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-	
+
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
@@ -306,8 +329,8 @@ ProfilePanel #ContentRow
 }
 
 
-.StackDepth2 CommunityWrapper.ProfileVisible ProfilePanel,
-.StackDepth3 CommunityWrapper.ProfileVisible ProfilePanel
+.StackDepth2 ProfileWrapper.ProfileVisible ProfilePanel,
+.StackDepth3 ProfileWrapper.ProfileVisible ProfilePanel
 {
 	transform: translate3d( 0px, 202px, 0px );
 }

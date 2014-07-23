@@ -145,7 +145,7 @@ OverlayBasePanel #CommunityFriendsStrip
 	transition-duration: 0.4s;
 }
 
-CommunityWrapper #CommunityFriendsStrip
+ProfileWrapper #CommunityFriendsStrip
 {
 	transition-property: opacity;
 	transition-duration: 0.4s;

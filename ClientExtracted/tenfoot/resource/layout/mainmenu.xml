@@ -103,7 +103,7 @@
 
 				<StorePanel id="Store" />
 				<LibraryPanel id="Library" class="LibraryPanel"/>
-				<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
+				<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
 
 				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->
 			</Panel>

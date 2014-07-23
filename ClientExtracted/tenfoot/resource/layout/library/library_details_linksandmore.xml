@@ -74,6 +74,9 @@
 					<Button id="LaunchOptionsButton" class="LaunchOptionsButton LinksAndMoreButton">
 						<Label id="LaunchOptionsLabel" text="#Library_Details_EditLaunchCommandLine" />
 					</Button>
+					<Button id="SetLanguageButton" class="SetLanguageButton LinksAndMoreButton">
+						<Label id="SetLanguageLabel" text="#Library_Details_SetLanguage" />
+					</Button>
 					<Button id="AppKillButton" class="AppKillButton LinksAndMoreButton">
 						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
 					</Button>

@@ -637,6 +637,7 @@
 	transition-timing-function: ease-in;
 	
 	transform: translatex( -4px );
+	transform: translatey( 20px);
 }
 
 #ControllerBindings Button #Description
@@ -684,7 +685,7 @@
 #ControllerBindings Button.BindingButtonRight Label
 {
 	text-align: right;
-	margin-right: 4px;
+	margin-right: 10px;
 }
 
 
@@ -1064,10 +1065,10 @@ Button.BindingButtonRight:focus .PActionMappingWrapper
 	text-transform: uppercase;
 	color: gradient( linear, 0% 0%, 0% 60%, from( #f1f1f1ff ), to( #a1a1a1dd ) );
 	white-space: nowrap;
-
 	transition-property: transform, color;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in;
+	visibility: collapse;
 }
 
 Button:focus .ActionMapping
@@ -1113,6 +1114,7 @@ Button:focus .PActionMappingWrapper Image
 {
 	margin-right: 3px;
 	margin-top: 5px;
+	visibility: collapse;
 }
 
 #P2ActionMappingWrapper Label
@@ -1127,6 +1129,7 @@ Button:focus .PActionMappingWrapper Image
 {
 	margin-left: 5px;
 	margin-top: 5px;
+	visibility: collapse;
 }
 
 
@@ -1193,7 +1196,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Btn0Button
 {
-	position: 1344px 388px 0px;
+	position: 1344px 383px 0px;
 }
 
 #Btn2Button
@@ -1203,7 +1206,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Btn2Button
 {
-	position: 1344px 578px 0px;
+	position: 1344px 575px 0px;
 }
 
 #L3Button
@@ -1268,7 +1271,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Btn1Button
 {
-	position: 1344px 480px 0px;
+	position: 1344px 479px 0px;
 }
 
 #Btn3Button
@@ -1369,7 +1372,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Touch0ActionName
 {
-	position: 0px 0px 0px;
+	position: 0px -6px 0px;
 	text-align: left;
 }
 
@@ -1405,7 +1408,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Touch1ActionName
 {
-	position: 0px 0px 0px;
+	position: 0px -4px 0px;
 	text-align: left;
 }
 
@@ -1441,7 +1444,7 @@ Button:focus .PActionMappingWrapper Image
 
 .D0g #Touch2ActionName
 {
-	position: 0px 0px 0px;
+	position: 0px -2px 0px;
 	text-align: left;
 }
 
@@ -1543,7 +1546,7 @@ Button:focus .PActionMappingWrapper Image
 	transform: translatex( 7px );
 }
 
-#ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionMapping,
+#ControllerBindings .TouchButtonOuter .BindingButtonRight:focus .ActionMapping,
 #ControllerBindings .TouchButtonOuter.BindingButtonRight:focus .ActionLabel,
 {
 	transform: translatex( -7px );

@@ -23,10 +23,10 @@ RequestDeviceAuthorizationPanel.DaisyWheelVisible .MsgBoxBodyRegion
 {
 	margin-bottom: 40px;
 	margin-top: 10px;
-	width: 748px;
+	width: 765px;
 }
 
-TextEntry, Label
+TextEntry
 {
 
 	font-size: 27px;
@@ -37,11 +37,12 @@ TextEntry, Label
 
 #MsgBoxButtons Button
 {
-	margin-right: 26px;
+	margin-right: 16px;
 	padding: 4px 8px 4px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 	width: 50%;
+	margin-left: 10px;
 }
 
 #MsgBoxButtons Button Label

@@ -6,12 +6,13 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
-	<SelectAppCategory class="TenfootMsgBox" defaultfocus="CategoryDropDown">
+	<SelectAppCategory class="TenfootMsgBox">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_SelectCategory_Title" />
 
-			<Label class="StdLabelMedBlue" text="#Library_SelectCategory_CodeLabel" />
-			<DropDown id="CategoryDropDown" />
+			<Label class="StdLabelMed" text="#Library_SelectCategory_CodeLabel" />
+
+			<Panel id="CategoryStack" />
 
 			<Panel id="MsgBoxButtons">
 				<Button onactivate="ButtonCreateCategory()">

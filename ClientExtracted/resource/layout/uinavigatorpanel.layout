@@ -940,11 +940,12 @@
 
 		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
 		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
-		place { control=GamesPage_List 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
-		place { control=GamesPage_Details 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
+		place { control=ScreenshotsPage 	width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
+		place { control=GamesPage_List		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
+		place { control=GamesPage_Details 	width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
 		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=20 start=emailreminderbar dir=down }
-		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
-		place { control=ConsolePage 			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
+		place { control=WebPanel 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
+		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=emailreminderbar dir=down }
 
 		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
 		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }

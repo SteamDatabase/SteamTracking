@@ -10,7 +10,7 @@
   <MusicLibrarySetupPanel class="TenfootMsgBox" tabindex="auto" selectionpos="auto" onmouseactivate="CloseModalDialog();">
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Music_Library_Setup_Title" />
-			<Label class="StdLabelMedBlue" text="#Music_Library_Setup_Text" />
+			<Label class="StdLabelMed" text="#Music_Library_Setup_Text" />
 	
 			<Panel class="EntryContainer" id="EntryContainer" tabindex="auto" selectionpos="auto" childfocusonhover="true" />
 			

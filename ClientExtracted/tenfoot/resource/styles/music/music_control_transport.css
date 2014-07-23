@@ -31,7 +31,7 @@ MusicControlTransport
 
 .ControlBarButton:focus, .PlayPauseControlBarButton:focus
 {
-	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
 	pre-transform-scale2d: 1.05;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	border-color: #fdfefef0;
@@ -55,14 +55,14 @@ MusicControlTransport
 	wash-color: #000000ff;
 }
 
-#QueueRepeat:selected Image, #QueueRepeat:selected:focus Image
+#QueueRepeat:selected Image, #QueueShuffle:selected Image
 {
-	wash-color: linkbright;
+	wash-color: ui_primary_color;
 }
 
-#QueueShuffle:selected Image, #QueueShuffle:selected:focus Image
+#QueueRepeat:selected:descendantfocus Image, #QueueShuffle:selected:descendantfocus Image
 {
-	wash-color: linkbright;
+	wash-color: ui_primary_dark_color;
 }
 
 
@@ -109,17 +109,18 @@ MusicControlTransport
 
 #Volume
 {
-	width: 160px;
+	width: 170px;
 	height: 60px;
 	border-radius: 0px;
 	margin-left: 10px;
-	margin-right: 8px;
+	margin-right: 10px;
 	horizontal-align: right;
 	vertical-align: center;
 	margin-bottom: 15px;
 	margin-top: 15px;
 	padding: 6px;
 	padding-top: 0px;
+	padding-left: 10px;
 	padding-bottom: 10px;
 	padding-right: 0px;
 	background-color: none;
@@ -228,7 +229,7 @@ MusicControlTransport
 	margin-bottom: 0px;
 	background-image: url("file://{images}/music/control_bg.png");
 	background-position: left 5px top 23px;
-	background-size: 600px 70px;
+	background-size: 610px 70px;
 	background-repeat: no-repeat;
 }
 
@@ -409,7 +410,7 @@ MusicControlTransport
 
 MusicControlQueueEntry
 {
-	width: 590px;
+	width: 600px;
 	padding: 6px 8px;
 	box-shadow: #eeeeee00 0px 0px 16px 0px;
 	border: 5px solid;
@@ -454,9 +455,9 @@ MusicControlQueueEntry Label
 	horizontal-align: left;
 	transform: translatex( 5px );
 	padding-left: 0px;
-	padding-right: 14px;
+	padding-right: 7px;
 	transition-duration: 0.23s;
-	color: gradient( linear, 0% 95%, 95% 100%, from( #5492b8ff ), color-stop( 0.92, #5492b8ff ), to( #5492b800 ) );
+	color: applabelselected;
 }
 
 
@@ -470,6 +471,7 @@ MusicControlQueueEntry.CurrentEntry Label
 	transform: translateX( 5px );
 	padding-right: 14px;
 	transition-duration: 0.23s;
+	width: 510px;
 }
 
 #MusicControllerPanel:descendantfocus MusicControlQueueEntry:hover,
@@ -494,7 +496,7 @@ MusicControlQueueEntry.CurrentEntry Label
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, transform;
@@ -514,9 +516,13 @@ MusicControlQueueEntry.CurrentEntry Label
 
 
 #MusicControllerPanel:descendantfocus MusicControlQueueEntry.CurrentEntry Label,
-#MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry Label
+#MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry Label,
+#MusicControllerPanel:descendantfocus MusicControlQueueEntry.CurrentEntry:hover Label,
+#MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry:hover Label,
+#MusicControllerPanel:descendantfocus MusicControlQueueEntry.CurrentEntry:hover:focus Label,
+#MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry:hover:focus Label
 {
-	color: gradient( linear, 0% 85%, 85% 100%, from( #5492b8ff ), color-stop( 0.88, #5492b8ff ), to( #5492b800 ) );
+	color: messagecolorwashfade;
 }
 
 
@@ -556,7 +562,8 @@ MusicControlQueueEntry:focus .TrackCompositeTitle
 
 #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry Label, #MusicControlOverlay:descendantfocus MusicControlQueueEntry.CurrentEntry:focus Label
 {
-	color: gradient( linear, 0% 80%, 80% 100%, from( #5492b8ff ), color-stop( 0.75, #5492b8ff ), to( #5492b800 ) );
+	color: messagecolorwashfade;
+	max-width: 365px;
 	text-overflow: clip;
 	transform: translateX( 5px );
 	width: 450px;
@@ -606,7 +613,7 @@ MusicControlQueueEntry.IsPlaying:focus .TrackTime
 	opacity: 1.0;
 	width: 80px;
 	padding-left: 0px;
-	color: messagecolorwash;
+	color: messagecolorwashfade;
 }
 
 #MusicControlOverlay:descendantfocus .PlayPauseControlBarButton

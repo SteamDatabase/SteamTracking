@@ -60,7 +60,15 @@
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
 					<Label class="TextEntryPrompt SteamGuard" text="#Login_SteamGuardCode" />
 				 </TextEntry>
-				 
+
+				 <TextEntry class="LoginPromptContainer" id="TwoFactorTextEntry"
+						textinputid="InnerTwoFactorTextEntry"
+						textinputdoneactionstring="#Login_NextField"
+						textinputhidesuggestions="1"
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+					<Label class="TextEntryPrompt TwoFactor" text="#Login_TwoFactorCode" />
+				 </TextEntry>
+
 				<ToggleButton class="CheckBox" id="RememberPassword" onactivate="RememberPassword()">
 					<Label text="#Login_RememberPassword" />
 					<Panel id="SharedBorder" />

@@ -5,31 +5,15 @@
 
 @define paddinghorz: 200px;
 @define buttonwidth: 480px;
-@define buttonheight: 60px;
+@define buttonheight: 50px;
 @define controlgaphorz: 25px;
 @define controlgapvert: 18px;
 
-@keyframes 'fade-in'
-{
-	0%
-	{
-		opacity: 0.0;
-	}
-
-	100%
-	{
-		opacity: 1.0;
-	}
-}
 
 .WizardPanel
 {
 	opacity: 0.0;
-	animation-name: fade-in;
-	animation-duration: shortduration;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	animation-direction: normal;
+	background-color: settingsbackgroundgradient;
 
 	transition-property: opacity;
 	transition-duration: shortduration;
@@ -70,10 +54,11 @@
 	wash-color: #00000000;
 }
 
-.WizardPanel.ScreenSaverMode, .WizardPanel.ShowingProgress
+.ScreenSaverMode .WizardPanel, .WizardPanel.ShowingProgress
 {
 	opacity: 0.0;
 	transition-duration: 0.4s;
+	transition-property: opacity;
 }
 
 #MainBackground
@@ -130,8 +115,9 @@
 .WizardChildDescription
 {
 	padding-top: 50px;
+	width: 1300px;
 	padding-bottom: 20px;
-	font-size: 40px;
+	font-size: 36px;
 	font-family: platformfont;
 	font-weight: light;
 	color: #b0b4b7;
@@ -173,9 +159,10 @@
 
 	background-color: simplebutton;
 
-	transition-property: background-color;
+	transition-property: background-color, box-shadow;
 	pre-transform-scale2d: 1.0;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+	transition-duration: 0.23s;
 }
 
 .WizardButton.GapRight
@@ -218,7 +205,7 @@
 	margin-bottom: 4px;
 	padding-top: 5px;
 	color: white;
-	font-size: 27px;
+	font-size: 24px;
 	font-family: platformfont;
 	border-width: 0px;
 	vertical-align: center;
@@ -229,11 +216,26 @@
 	color: black;
 }
 
+#RecommendedList .WizardButton
+{
+	background-color: none;	
+}
+
+#RecommendedList .WizardButton:hover
+{
+	box-shadow: none;
+}
+
+#RecommendedList .WizardButton:descendantfocus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );	
+}
+
 
 #ButtonCheckboxNext .TickBox
 {
-	height: 38px;
-	width: 38px;
+	height: 60px;
+	width: 60px;
 	background-color: #001218;
 	vertical-align: center;
 }
@@ -254,11 +256,11 @@
 {
 	font-size: 24px;
 	font-family: platformfont;
-	color: secondary_label;
+	color: tcstatictext;
 	margin-bottom: 2px;
 }
 
-.RadioButton Label
+.Radiobutton Label
 {
 	vertical-align: center;
 }
@@ -275,7 +277,6 @@
 
 	border-style: solid;
 	border-width: 5px;
-	border-radius: 2px;
 	border-color: #3d414200;
 
 	pre-transform-scale2d: 1.0;
@@ -337,6 +338,7 @@
 	text-overflow: clip;
 	white-space: nowrap;
 
+	margin-top: 3px;
 	transform: translatex(-7px);
 	transition-property: color, transform;
 	transition-duration: 0.23s;
@@ -345,7 +347,7 @@
 
 .RadioButton:hover Label
 {
-	color: #ffffffff;
+	color: applabelsolid;
 	transform: translatex(0px);
 }
 
@@ -365,29 +367,27 @@
 
 	// Linux/Mac bug: border-radius != 0 results in no border - will fix
 	//border-radius: 2px;
-	border-radius: 0px;
-	
+
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 
-	border-color: ui_common_control_border;
-	background-color: #173a4c;
-	
+	border-color: none;
+	background-color: ui_common_control;
 	transition-property: box-shadow, transform, border, background-color;
 	transition-duration: 0.23s;
 
 
-	font-size: 32px;
+	font-size: 24px;
+	padding-top: 6px;
 	font-family: platformfont;
 	color: white;
 
 	pre-transform-scale2d: 1.0;
-	box-shadow: inset #00000040 2px 2px 8px 2px;
 }
 .WizardTextEntry.ErrorState
 {
 	background-color: error_bgcolor;
 	color: black;
-	border-color: ui_common_control_border;
+	border-color: none;
 }
 
 .WizardTextEntry.GapRight
@@ -415,12 +415,12 @@
 
 .WizardTextEntry.ErrorState:descendantfocus
 {
-	background-color: error_bgcolor;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
 }
 
 .WizardTextEntry:hover
 {
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
 .WizardTextEntry:disabled:hover
@@ -430,7 +430,7 @@
 
 .WizardErrorLabel
 {
-	font-size: 26px;
+	font-size: 24px;
 	font-family: platformfont;
 	color: error_color;
 }
@@ -439,7 +439,7 @@
 {
 	desaturation: 0.0;
 	blur: gaussian( 0.7 );
-	opacity: 0.45;
+	opacity: 0.55;
 	border-color: none;
 	box-shadow: none;
 	animation-name: none;
@@ -468,11 +468,6 @@
 	padding-right: paddinghorz;
 
 	opacity: 0.0;
-	animation-name: fade-in;
-	animation-duration: shortduration;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	animation-direction: normal;
 
 	transition-property: opacity;
 	transition-duration: shortduration;

@@ -15,6 +15,7 @@
 	font-family: platformfont;
 	color: #ffffffff;
 	margin-top: 40px;
+	margin-left: -5px;
 
 	flow-children: right;
 }
@@ -52,10 +53,15 @@
 
 }
 
+.MsgBoxButtons Button:disabled Label
+{
+	color: #ffffff66;
+}
+
 .MsgBoxButtons Button:hover
 {
 	background-color: #00000020;
-	pre-transform-scale2d: 1.03;
+	pre-transform-scale2d: 1.01;
 	box-shadow: #eeeeee60 -5px -5px 6px 10px;
 }
 

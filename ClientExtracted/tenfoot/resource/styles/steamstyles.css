@@ -4,7 +4,7 @@
 @define red: #ad4543;
 @define darkred: #712d2c;
 @define green: #00ff00;
-@define blue: #294566;
+@define blue: #2f6682;
 @define black: #000000;
 @define yellow: #ffff00;
 @define purple: #800080;
@@ -41,41 +41,40 @@
 /* Text colors */
 @define tclegendbutton: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
 @define tclegendlabel: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
-@define tcstatictext: gradient( linear, 0% 0%, 0% 100%, from( #8aa5baff ), to( #5382a6ff ) );
+@define tcstatictext: gradient( linear, 0% 0%, 100% 100%, from( #36b3d9ff ), to( #3a7ba6ff ) );
 @define legendbuttonborder: #878c8eff;
-@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
-@define detailsdatalabelfocus: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2ff ), to( #cbcbcb00 ) );
+@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #f2f2f2ef ), to( #f2f2f288 ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #f2f2f2aa ) );
 @define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
 
 /* Main menu colors */
-@define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #7f8c91ff ), to( #9cacb2ff ) );
-@define tcexitrowhover: gradient( linear, 0% 0%, 0% 100%, from( #b8cbd2ff ), to( #c1d4dcff ) );
-@define tcexitrowfocus: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2cff ), to( #303030ff ) );
+@define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #808d91ff ), to( #9dadb3ff ) );
+@define tcexitrowhover: gradient( linear, 0% 0%, 0% 100%, from( #b8cbd1ff ), to( #c1d5dbff ) );
+@define tcexitrowfocus: gradient( linear, 0% 0%, 0% 100%, from( #1c5566ff ), to( #1e3461ff ) );
 @define tcmainbutton: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #abababff ) );
-@define tcmainbuttonselected: gradient( linear, 0% 0%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cf0 ) );
+@define tcmainbuttonselected: gradient( linear, 0% 0%, 0% 100%, from( #1b1b1bff ), to( #1b1b1bf0 ) );
 @define tcselflabel: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b7c2460 ), color-stop( 1.0, #0b7c24cf ) );
-@define bgcolor: #0d1921ff;
-@define bgcolorwash: #4ea7dea0;
-@define bgcolorwashmedium: #3a9fde60;
-@define bgcolorwashlight: #3a9fde25;
-@define ui_common_control_hover: #99d8ffff;
+@define bgcolor: #0d1421ff;
+@define bgcolorwash: #4eaedea0;
+@define bgcolorwashmedium: #3ab8de60;
+@define bgcolorwashlight: #3ab8de25;
+@define ui_common_control_hover: #14c6fcff;
 
 /* Friends Label Colors */
-@define friendsoffline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #818181ff ), color-stop( 0.85, #818181ff ), to( #818181e0 ) );
+@define friendsoffline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #ffffff77 ), color-stop( 0.85, #ffffff77 ), to( #ffffff00 ) );
 @define friendsoffline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #252525ff ), color-stop( 0.85, #252525ff ), to( #252525e0 ) );
-@define friendsoffline_solid: #666666ff;
+@define friendsoffline_solid: #808080ff;
+@define friendsonline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #14c6fcff ), color-stop( 0.85, #3a8da6ff ), to( #3a8da600 ) );
+@define friendsonline_lightbg_to: #0e88ade0;
+@define friendsonline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #11a4d1ff ), color-stop( 0.85, #0e7999ff ), to( friendsonline_lightbg_to ) );
+@define friendsonline_solid: #14c6fcff; 
 
-@define friendsonline_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #6caad9ff ), color-stop( 0.85, #6caad9ff ), to( #5382a600 ) );
-@define friendsonline_lightbg_to: #356285e0;
-@define friendsonline_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #3d7199ff ), color-stop( 0.85, #3d7199ff ), to( friendsonline_lightbg_to ) );
-@define friendsonline_solid: #5994c2ff; 
-
-@define friendsingame_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #99cc56ff ), color-stop( 0.85, #99cc56ff ), to( #7aa646e0 ) );
-@define friendsingame_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #628c2aff ), color-stop( 0.85, #628c2aff ), to( #548020e0 ) );
-@define friendsingame_solid: #73a632ff;
+@define friendsingame_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #b3d92bff ), color-stop( 0.85, #b3d92bff ), to( #b3d92be0 ) );
+@define friendsingame_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #729100ff ), color-stop( 0.85, #729100ff ), to( #729100e0 ) );
+@define friendsingame_solid: #9cbd26ff;
 
 /* color used for account warnings - tint of A94847 value from 2' UI */
-@define accountwarning: #D15958FF;
+@define accountwarning: #bf4343FF;
 
 //
 // Blue UI colors for Bigfoot, all in one place to easily find and update them...
@@ -83,131 +82,145 @@
 
 
 /* Fancy bg color with faded top right corner */
-@define bgwithgradient: #000000ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #002440ff ), color-stop( 0.46, #072d4a55 ), color-stop( 0.86, #072d4a00 ) );
-@define bgwithgradientlogin: #000000ff, gradient( radial, 100% 100%, 1200px -500px, 100% 100%, from( #465e70ff ), color-stop( 0.16, #26598000 ) );
+@define bgwithgradient: #000000ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #003540ff ), color-stop( 0.46, #072d4a55 ), color-stop( 0.86, #072d4a00 ) );
+@define bgwithgradientlogin: #000000ff, gradient( radial, 100% 100%, 1200px -500px, 100% 100%, from( #337380ff ), color-stop( 0.16, #26598000 ) );
 
 /* Same deal, only the top left corner gets the fade */
 /* radial, centerx centery, offsetx offsety, radiusx radiusy, color stops */
 @define bgwithgradienttopleft: #000000ff, gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b00 ) );					
 
 //settings
-@define simplebutton: gradient( linear, 0% 0%, 100% 100%, from( #4c7a994c  ), to( #4c7a9914 ) );
-@define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #00101cff  ), to( #000d16ff ) );
+@define simplebutton: gradient( linear, 0% 0%, 100% 100%, from( #30708c77 ), to( #28395922 ) );
+@define simplebutton_vertical: gradient( linear, 0% 0%, 100% 100%, from( #30708c44 ), to( #28395934 ) );
+@define simplebuttonsolid: gradient( linear, 0% 0%, 100% 100%, from( #30748c ), to( #283959 ) );
+@define simplebuttonsolid_vertical: gradient( linear, 0% 0%, 100% 100%, from( #2f6682 ), to( #144066 ) );
+@define settingsbackgroundgradient: gradient( linear, 100% 0%, 100% 100%, from( #042337ff  ), color-stop( 0.65, #001226ff  ), to( #000b17ff ) );
 
 //system wide
-@define messagecolorwash: #5492b8ff;
-@define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #5492b8ff ), color-stop( 0.90, #5492b8ff ), to( #5492b800 ) );
+@define messagecolorwash: #14c6fcff;
+@define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #1c93b8ff ), color-stop( 0.90, #1c84b8ff ), to( #1c84b800 ) );
+@define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #2f7c8c ), to( #243f73 ) );
 
-@define dialog_bg_color: #335980ff, gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #335980 ), color-stop( 0.26, #242424ff ) );
-@define overlay_bg_color: #174b73aa;
-@define message_box_bg: gradient( linear, 0% 140%, 0% 10%, from( #2d5680ff ), to( #242424ff ) );
-@define dropdown_box_bg: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), color-stop( 0.5, #224561ff ), to( #2c2c2cff ) );
-//@define box_shadow_on_color: #ffffff88;
-@define box_shadow_on_color: #7ebee599;
-@define box_shadow_off_color: #66a5cc00;
-@define dark_box_shadow_color: #17262e88;
-@define dark_box_shadow_color_opaque: #17262eff;
-@define light_box_shadow_color: #66a5cc55;
-@define mouse_off_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f5300 ), to( #0d1b2400 ) );
-@define mouse_hover_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f3f53ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #3a789eff ), to( #0d1b2400 ) );
-@define mouse_off_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f3f5300 ), to( #0d1b2400 ) );
-@define mouse_hover_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f3f53ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #3a789eff ), to( #0d1b2400 ) );
-@define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
-@define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
-@define mainmenu_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #14273300 ), color-stop( 0.5, #2e57733c ), to( #14273300 ) );
-@define animated_icon_wash_color: #0d4e80ff;
-@define button_hover_color: #1d4052ff;
+//@define horizontal_focus: gradient( linear, -10% 0%, 110% 0%, from( #398999cc ), to( #395280ff ) );
+@define dialog_bg_color: gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #327794 ), color-stop( 0.26, #17304dff ) );
+@define overlay_bg_color: #174873aa;
+@define message_box_bg: gradient( radial, 0% -0%, 120px -40px, 120% 150%, from( #285c73 ), to( #12203d ) );
+@define message_box_bg_dark: #0c233dff;
+@define notification_bg: gradient( linear, 0% 0%, 100% 100%, from( #265b75 ), to( #1a3353 ) );
+@define dropdown_box_bg: gradient( linear, 0% 0%, 100% 100%, from( #30708c ), to( #12213d ) );
+
+@define box_shadow_on_color: #52c7ebcc;
+@define box_shadow_mid_color: #40d2ff33;
+@define box_shadow_off_color: #52d1eb00;
+@define dark_box_shadow_color: #122b5988;
+@define dark_box_shadow_color_opaque: #172a2eff;
+@define light_box_shadow_color: #66bbcc55;
+@define mouse_off_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f445400 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_left: gradient( radial, 0% 50%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
+@define mouse_off_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f445400 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
+@define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
+@define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
+@define mainmenu_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
+@define animated_icon_wash_color: #13a5d1ff;
+@define button_hover_color: #1d2f52ff;
 
 //checkout
-@define rule_color: gradient( linear, 0% 0%, 100% 0%, from( #213f5700 ), color-stop( 0.35, #455f73d0 ), color-stop( 0.85, #455f73d0 ), to( #213f5700 ) );
-@define checkout_title_bg: #213f57ff;
-@define checkout_body_bg: gradient( linear, 0% 0%, 0% 100%, from( #274b66ff ), to( #1d384dff ) );
-@define checkout_body_descendantfocus_bg: gradient( linear, 0% 0%, 0% 100%, from( #3c5e78ff ), to( #213f5700 ) );
-@define secondary_label: #628aa3ff;
-@define breadcrumb_label: #73a8c9ff;
-@define error_color: #cfb53fff;
-@define error_color_focused: #907e2cff;
-@define error_bgcolor: gradient( linear, 0% 40%, 0% 80%, from( #f2e39dff ), to( #d1be69ff ) );
+@define rule_color: gradient( linear, 0% 0%, 100% 0%, from( #ffffff00 ), color-stop( 0.35, #ffffff33 ), color-stop( 0.85, #ffffff33 ), to( #ffffff00 ) );
+@define checkout_title_bg: #1b3852ff;
+@define checkout_body_bg: gradient( linear, 0% 0%, 0% 100%, from( #1f415eff ), to( #283959ff ) );
+@define checkout_body_descendantfocus_bg: gradient( linear, 0% 0%, 0% 60%, from( #ffffff12 ), to( #ffffff00 ) );
+@define secondary_label: #418ca3ff;
+@define breadcrumb_label: #418ca3ff;
+@define error_color: #e6e09aff;
+@define error_color_focused: #ccc689ff;
+@define error_bgcolor: gradient( linear, 0% 0%, 100% 100%, from( #e6e09aff ), to( #b3ac66ff ) );
 
 //library
-@define action_button: gradient( linear, 0% 0%, 0% 100%, from( #458ab566 ), to( #111112ff ) );
-@define link: #2a628cff;
-@define linkbright: #5297ccff;
-@define carousel_title: gradient( linear, 0% 0%, 0% 100%, from( #77b2d9ff ), to( #508ab3ff ) );
-@define ui_primary_color: #5492b8;
-@define ui_common_control: gradient( linear, 0% 0%, 0% 100%, from( #365b78ff ), to( #4b7696ff ) );
-@define ui_common_control2: gradient( linear, 0% 0%, 0% 100%, from( #365b7866 ), to( #4b7696ff ) );
-@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696ff ), to( #365b7866 ) );
-@define ui_dark_common_control: gradient( linear, 0% 0%, 0% 100%, from( #1a3140ff ), to( #13242eff ) );
-@define ui_common_control_border: #365b78dd;
-@define ui_common_control_border_off: #36668300;
-@define button_box_shadow_on_color: #7ebee566;
-@define slideshow_bg_library: gradient( linear, 0% 0%, 0% 110%, from( #000000dd ), to( #00000080 ) );
-@define all_games_hover: gradient( linear, 0% 0%, 0% 100%, from( #1c1f21ff ), to( #1f3b4dff ) );
-@define action_module: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #162938 ) );
+@define action_button: gradient( linear, 0% 0%, 100% 100%, from( #1c6b8c ), to( #0c1d3d ) );
+@define link: #2a6f8cff;
+@define linkbright: #52a7ccff;
+@define carousel_title: gradient( linear, 0% 0%, 100% 100%, from( #15d4feff ), to( #197eb0ff ) );
+@define ui_primary_color: #14c6fcff;
+@define ui_primary_dark_color: #158eb3ff;
+@define ui_common_control: gradient( linear, -10% 0%, 110% 0%, from( #2d6780ff ), to( #142d52ff ) );
+@define ui_common_control2: gradient( linear, 0% 0%, 0% 100%, from( #36647866 ), to( #4b6996ff ) );
+@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b8096ff ), to( #36507866 ) );
+@define ui_dark_common_control: gradient( linear, 0% 0%, 0% 100%, from( #1a3440ff ), to( #131e2eff ) );
+@define ui_common_control_border: #2d819699;
+@define ui_common_control_border_off: #2d819600;
+@define button_box_shadow_on_color: #7ed1e566;
+@define slideshow_bg_library: gradient( linear, 0% 0%, 0% 100%, from( #000000ff ), color-stop( 0.8, #000000dd ), to( #00000080 ) );
+@define slideshow_bg2: gradient( linear, 0% 0%, 0% 100%, from( #00000066 ), color-stop( 0.7, #00000066 ), to( #000000ff ) );
+@define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
+@define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #1e5a78 ), to( #091b3d ) );
+@define transparent_module: #030a1ab1;
+@define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );
 
 //friends
-@define friendstab: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff ), to( #33506670 ) );
-@define friendstabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a1b5ff ), to( #456c8aff ) );
-@define friendstabcurrenthover: gradient( linear, 0% 0%, 0% 100%, from( #91c8f285 ), to( #456c8a85 ) );
-@define friendstabdivider: #456c8aff; 
-@define friendschatinputbkgnd: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff  ), to( #20324070 ) );
-@define friendschatinputbkgnd_text: gradient( linear, 0% 0%, 0% 100%, from( #5685a850 ), to( #20324070 ) );
-@define chat_window_bg: gradient( linear, -2% 0%, -4% 100%, from( #0b2538ff ), color-stop( 0.5, #0b253800 ), color-stop( 0.6, #0e222e00 ), to( #182d3dcc ) );
+@define friendstab: #1b4059ff;
+@define friendstabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
+@define friendstabcurrenthover: #1f5369ff;
+@define friendstabdivider: #1a5e80ff; 
+@define friendschatinputbkgnd: gradient( linear, 0% 0%, 100% 100%, from( #456c8aff  ), to( #20324070 ) );
+@define friendschatinputbkgnd_text: gradient( linear, 0% 0%, 100% 100%, from( #5685a850 ), to( #20324070 ) );
+@define chat_window_bg: gradient( linear, -2% 0%, -4% 100%, from( #0b2538ff ), color-stop( 0.5, #0b253800 ), color-stop( 0.6, #0e202e00 ), to( #182d3dcc ) );
 
 
 //store
-@define store_dark_wash: #0e578f77;
-@define store_colorful_focus: gradient( linear, 0% 0%, 0% 100%, from( #ffffff11 ), color-stop(0.35, #00000055 ), to( #000000ee  ) );
-@define ui_common_control_bright: #3885b5;
+@define store_bubble: #2a5e78ff;
+@define store_dark_wash: #0e688f77;
+@define store_colorful_focus: gradient( linear, 0% 0%, 0% 100%, from( #00000033 ), color-stop(0.65, #00000088 ), to( #52d1eb99 ) );
+@define ui_common_control_bright: #3890b5;
 @define slideshow_bg: gradient( linear, 0% 0%, 0% 100%, from( #000000aa ), to( #00000055 ) );
-@define image_wash: #4284ad55;
-@define storetab: gradient( linear, 0% 100%, 0% 0%, from( #456f8aff ), to( #33526670 ) );
-@define storetabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a3b5ff ), to( #456f8aff ) );
-@define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a3b585 ), to( #456f8a85 ) );
+@define image_wash: #428dad55;
+@define storetab: gradient( linear, 0% 100%, 0% 0%, from( #45758aff ), to( #334b6670 ) );
+@define storetabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #86a7b5ff ), to( #45658aff ) );
+@define storetabcurrenthover: gradient( linear, 0% 100%, 0% 0%, from( #86a7b585 ), to( #45658a85 ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #979898 ) );
 @define applabel: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f2ff ), color-stop( 0.90, #f2f2f2ff ), to( #97989800 ) );
 @define applabelwide: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f2ff ), color-stop( 0.45, #f2f2f2ff ), to( #97989800 ) );
 @define musicapplabel: gradient( linear, 0% 86%, 86% 900%, from( #f2f2f2ff ), color-stop( 0.80, #f2f2f2ff ), to( #97989800 ) );
 @define applabelnofade: gradient( linear, 0% 0%, 96% 100%, from( #f2f2f2ff ), to( #abababff ) );
 @define applabelsolid: #f2f2f2ff;
-@define applabelselected: gradient( linear, 0% 96%, 96% 100%, from( #3c3c3cff ), color-stop( 0.90, #3c3c3cff ), to( #3c3c3c00 ) );
-@define musicapplabelselected: gradient( linear, 0% 0%, 86% 90%, from( #3c3c3cff ), color-stop( 0.75, #3c3c3cff ), to( #3c3c3c00 ) );
-@define applabelselectedsolid: #3c3c3cff;
-@define applabelselectedfade: gradient( linear, 80% 0%, 96% 0%, from( #3c3c3cff ), to( #3c3c3c00 ) );
-@define applabelselectednofade: gradient( linear, 0% 96%, 0% 100%, from( #3c3c3cff ), to( #3c3c3cff ) );
+@define applabelselected: gradient( linear, 0% 96%, 96% 100%, from( #1b1b1bff ), color-stop( 0.90, #1b1b1bff ), to( #1b1b1b00 ) );
+@define musicapplabelselected: gradient( linear, 0% 0%, 86% 90%, from( #1b1b1bff ), color-stop( 0.75, #1b1b1bff ), to( #1b1b1b00 ) );
+@define applabelselectedsolid: #1b1b1bff;
+@define applabelselectedfade: gradient( linear, 80% 0%, 96% 0%, from( #1b1b1bff ), to( #1b1b1b00 ) );
+@define applabelselectednofade: gradient( linear, 0% 96%, 0% 100%, from( #1b1b1bff ), to( #1b1b1bff ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #979898ff ) );
 @define storelabel: gradient( linear, 0% 0%, 0% 100%, from( #d6d7d966 ), to( #d6d7d9aa ) );
 @define storelabelfade: gradient( linear, 80% 0%, 100% 0%, from( #d6d7d9ff ), to( #d6d7d900 ) );
-@define store_genre_wash: #0e6a8f77;
+@define store_genre_wash: #00366699;
 @define store_genre_wash_focus: #4284ad00;
-@define store_details_wash: #113b57dd;
-@define store_main_wash: #427fad55;
-@define store_module: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #1f1f1f ) );
+@define store_details_wash: #163057aa;
+@define store_main_wash: #4eaedea0;
+@define store_module: gradient( linear, 0% 0%, 0% 100%, from( #30778c ), to( #12213d ) );
 
 //browser
-@define topbarbuttonbackground:  gradient( linear, 0% 0%, 0% 100%, from( #1b2329ff ), to( #13171aff ) );
-@define topbarbackground:  gradient( linear, 0% 0%, 0% 100%, from( #001e33 ), to( #13171a ) );
-@define webtab: gradient( linear, 0% 0%, 0% 100%, from( #456c8aff ), to( #33506670 ) );
-@define webtabcurrentselection: gradient( linear, 0% 0%, 0% 80%, from( #91c8f2ff ), to( #2e5573ff ) );
-@define webtabcurrenthover: gradient( linear, 0% 0%, 0% 100%, from( #91c8f285 ), to( #456c8a85 ) );
-@define button_wash: #80bbe8ff;
-@define web_bg_color: gradient( linear, 0% 0%, 0% 20%, from( friendstabdivider ), to( #456c8a00 ) );
-@define web_bg_color2: gradient( linear, 0% 0%, 0% 20%, from( #456c8a66 ), to( #456c8a00 ) );
-@define reticule_color: #6ab0e5ff;
+@define topbarbuttonbackground:  gradient( linear, 0% 0%, 0% 100%, from( #1b2629ff ), to( #13161aff ) );
+@define topbarbackground:  gradient( linear, 0% 0%, 0% 100%, from( #002733 ), to( #13161a ) );
+@define webtab: #1b4459ff;
+@define webtabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #0b6480ff ) );
+@define webtabcurrenthover: #1f5369ff;
+@define button_wash: #52b8ccff;
+@define web_bg_color: gradient( radial, 50% 0%, 120px 0px, 200% 50%, from( friendstabdivider ), to( #45658a00 ) );
+@define web_bg_color2:  gradient( linear, 0% 0%, 0% 20%, from( friendstabdivider ), to( #45658a00 ) );
+@define reticule_color: #52b8ccff;
 @define reticule_color_dim: #aaaaaaff;
-@define history_ribbon: gradient( linear, 0% 30%, 100% 50%, from( #162938ff ), to( #4c8ebfcc ) );
-@define url_bar_bg: gradient( linear, 0% 0%, 0% 100%, from( #5685a950 ), to( #20314070 ) );
-@define url_bar_border: #2e4659e0;
+@define history_ribbon: gradient( linear, 0% 30%, 100% 50%, from( #1f3969ff ), to( #38a0bacc ) );
+@define url_bar_bg: gradient( linear, 0% 0%, 0% 100%, from( #5685a850 ), to( #202b4070 ) );
+@define url_bar_border: #2e4759e0;
 
 //daisywheel
-@define daisy_bg_color: #182d3dff;
-@define daisy_petal_color: #1d3547ff;
-@define daisy_bg_wash_color: gradient( linear, 0% 0%, 0% 100%, from( #182d3d00 ), color-stop( 0.30, #182d3dcc ), to( #182d3dff ) );
-@define daisy_petal_selection_color: #021726ff;
-@define daisy_petal_action_color: #2d5370ff;
+@define daisy_bg_color: #0f283dff;
+@define daisy_petal_color: #193e57ff;
+@define daisy_bg_wash_color: gradient( linear, 0% 0%, 0% 100%, from( #18263d00 ), color-stop( 0.30, #0b1f36cc ), to( #0b1f36ff ) );
+@define daisy_petal_selection_color: #256180ff;
+@define daisy_petal_action_color: #256180ff;
 
 // ContextMenu - used in code -- dont rename
 @define ContextMenuFadoutTime: 0.2s; 
@@ -273,17 +286,14 @@ DropDownMenu
 {
 	width: 500px;
 	flow-children: down;
-	background-color: dropdown_box_bg;
+	background-color: simplebuttonsolid_vertical;
 	padding: 4px 8px;
 	color: #e1e1e1;
 	font-size: 28px;
 	overflow: squish scroll;
 
-	border-width: 5px;
-	border-style: solid;
 	border-radius: 2px;
-	border-color: ui_common_control_border;
-	box-shadow: inset #00000080 2px 2px 8px 2px;
+	box-shadow: #00000080 2px 2px 8px 2px;
 
 	opacity: 0.0;
 
@@ -297,45 +307,40 @@ DropDownMenu Label
 	width: 100%;
 	padding: 4px 3px 4px 3px;
 	margin: 2px 0px;
+	margin-right: 8px;
 
-	color: detailsdatalabel;
+	color: #ffffff99;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
-	box-shadow: fill box_shadow_off_color -4.5px -4.5px 18px 9px;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
 
 	font-family: platformfont;
 	font-size: 24px;
 	font-weight: normal;
 	transform: translatex(-7px);
-	color: detailsdatalabel;
 
 	transition-property: border, background-color, color, box-shadow, transform;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
 }
 
-DropDownMenu Label:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
-	transform: translatex(0px);
-}
+DropDownMenu Label:hover,
 
 DropDownMenu Label:focus
 {
 	color: applabelselected;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
 	transform: translatex(0px);
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
-	animation-delay: 0.0s;
+	animation-delay: 0.2s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -346,8 +351,29 @@ DropDownMenu.DropDownMenuVisible
 	opacity: 1.0;
 	box-shadow: fill #00000066 0px 0px 10px 0px;
 
-	max-height: 320px;
+	max-height: 414px;
 	transition-property: box-shadow;
+}
+
+DropDownMenu.DropDownMenuVisible.ScreenSaverMode
+{
+	animation-name: dropdownmenu-fade;
+	animation-duration: 0.4s;
+	transition-property: opacity;
+	opacity: 0.0;
+}
+
+@keyframes 'dropdownmenu-fade'
+{
+	0%
+	{
+		opacity: 1.0;
+	}
+
+	100%
+	{
+		opacity: 0.0;
+	}
 }
 
 DropDown.DropDownMenuVisible:hover
@@ -358,7 +384,7 @@ DropDown.DropDownMenuVisible:hover
 
 DropDown.DropDownMenuVisible:focus
 {
-	background-color: ui_common_control;
+	background-color: simplebuttonsolid_vertical;
 	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
 	border-color: ui_common_control_border;
 	box-shadow: box_shadow_off_color -4px -4px 8px 8px;
@@ -367,24 +393,11 @@ DropDown.DropDownMenuVisible:focus
 	animation-name: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .Filter:hover
 {
 	horizontal-align: center;
 	box-shadow: fill box_shadow_on_color -4px -4px 5px 8px;
-
 }
-
 
 .Filter, DropDownMenu.DropDownMenuVisible .Filter:hover
 {
@@ -401,17 +414,13 @@ DropDown.DropDownMenuVisible:focus
 
 TextEntry,
 DropDown,
+ToggleButton .TickBox
 {
 	padding: 4px 8px;
 	color: #e1e1e1;
-	box-shadow: inset #00000080 2px 2px 8px 2px;
-
-	height: 50px;
-	background-color: ui_common_control;
-	border-width: 5px;
-	border-style: solid;
-	border-radius: 2px;
-	border-color: ui_common_control_border;
+	height: 48px;
+	background-color: simplebuttonsolid_vertical;
+	border-color: none;
 
 	transition-property: background-color, border, box-shadow;
 	transition-duration: 0.4s;
@@ -440,10 +449,9 @@ DropDown,
 ToggleButton .TickBox
 {
 
-	padding: 4px 8px;
+	padding: 8px 8px;
 	color: applabelsolid;
-	box-shadow: inset #00000080 2px 2px 8px 2px;
-
+	border-radius: 0px;
 
 	transition-property: background-color, border, box-shadow, color;
 	transition-duration: 0.25s;
@@ -454,8 +462,7 @@ TextEntry:focus,
 DropDown:focus,
 ToggleButton:descendantfocus .TickBox
 {
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
-	border-color: #ffffff;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 	color: applabelselectedsolid;
 	text-overflow: clip;
 	white-space: nowrap;
@@ -463,7 +470,6 @@ ToggleButton:descendantfocus .TickBox
 
 ToggleButton:descendantfocus .TickBox
 {
-	border-color: #ffffffff;
 	transition-property: border;
 	transition-duration: 0.23s;
 	transition-timing-function: ease-out;
@@ -473,13 +479,14 @@ ToggleButton:descendantfocus .TickBox
 DropDown Label
 {
 	width: 100%;
-	margin-right: 30px;
+	margin-right: 29px;
+	margin-top: 2px;
 }
 
 
 DropDown:focus
 {
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	border-color: #ffffff;
 	color: #333333;
 }
@@ -561,7 +568,7 @@ Tooltip
 	width: 100%;
 	margin: 1px 22px;
 
-	background-color: gradient( linear, -10% 0%, 110% 0%, from( #11111100 ), color-stop( 0.35, #999999d0 ), color-stop( 0.65, #999999d0 ), to( #11111100 ) );
+	background-color: rule_color;
 }
 
 .VerticalRule
@@ -577,27 +584,22 @@ Tooltip
 {
 	0%
 	{
-		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
+		box-shadow: fill box_shadow_on_color -5.5px -5.5px 18px 9px;
 	}
-
-	8%
-	{
-		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
-	}
-
-	48%
+	
+	40%
 	{
 		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
 	}
 
-	52%
+	60%
 	{
 		box-shadow: fill box_shadow_on_color -1.5px -1.5px 6px 3px;
 	}
 
 	100%
 	{
-		box-shadow: fill box_shadow_on_color -4.5px -4.5px 18px 9px;
+		box-shadow: fill box_shadow_on_color -5.5px -5.5px 18px 9px;
 	}
 }
 
@@ -608,17 +610,13 @@ Tooltip
 		box-shadow: fill box_shadow_on_color -3px -3px 15px 6px;
 	}
 
-	8%
-	{
-		box-shadow: fill box_shadow_on_color -3px -3px 15px 6px;
-	}
 
-	48%
+	40%
 	{
 		box-shadow: fill box_shadow_on_color -0.8px -0.8px 6px 1.6px;
 	}
 
-	52%
+	60%
 	{
 		box-shadow: fill box_shadow_on_color -0.8px -0.8px 6px 1.6px;
 	}
@@ -787,7 +785,6 @@ h2
 	padding-bottom: 5px;
 	padding-top: 5px;
 	margin: 14px;
-	margin-left: 0px;
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: 0.20s;
 	border-color: none;
@@ -915,10 +912,12 @@ FriendsChatDialog .VoiceBarContainer
 // read-write VUs can take focus / be edited
 .VoiceBarContainer:focus
 {
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfd66 ), to( #bdbfbf66 ) );
 	pre-transform-scale2d: 1.0;
 	border-color: white;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+
+
 }
 
 
@@ -926,7 +925,14 @@ FriendsChatDialog .VoiceBarContainer
 .VoiceBarContainer:selected
 {
 	pre-transform-scale2d: 1.06;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 
@@ -937,14 +943,14 @@ FriendsChatDialog .VoiceBarContainer
 #HomeButton
 {
 	opacity: 0.0;
-	
+
 	background-image: url( "file://{images}/steam_home_os.png" );
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
-	
+
 	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
 	z-index: 1000;
-	
+
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
@@ -953,7 +959,7 @@ FriendsChatDialog .VoiceBarContainer
 	box-shadow: fill #00000055 -4px -4px 6px 8px;
 	width: 67px;
 	height: 67px;
-	margin-left: 1752px;
+	margin-left: 1767px;
 	margin-top: 41px;
 
 	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
@@ -1028,17 +1034,17 @@ FriendsChatDialog .VoiceBarContainer
 {
 	from
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
 	}
 
 	50%
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
 	}
 
 	to
 	{
-		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
 	}
 }
 
@@ -1070,7 +1076,7 @@ FriendsChatDialog .VoiceBarContainer
 
 .ContextMenuBody
 {
-	padding: 10px 5px 10px 5px;
+	padding: 20px 5px 20px 5px;
 
 	flow-children: down;
 	max-width: 350px;
@@ -1080,9 +1086,7 @@ FriendsChatDialog .VoiceBarContainer
 	position: 42% 42% 0px;
 
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
+
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	color: #000000ff;
@@ -1092,18 +1096,15 @@ FriendsChatDialog .VoiceBarContainer
 
 .ContextMenuBodyCentered
 {
-	padding: 10px 5px 10px 5px;
+	padding: 20px 5px 20px 5px;
 
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
 	max-width: 650px;
-
+	border-radius: 3px;
 	opacity: 1.0;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	color: #000000ff;
@@ -1183,7 +1184,7 @@ FriendsChatDialog .VoiceBarContainer
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, transform;
@@ -1256,7 +1257,7 @@ FriendsChatDialog .VoiceBarContainer
 	font-size: medfontsize;
 	margin-top: 10px;
 	font-family: platformfont;
-	color: applabelsolid;
+	color: #ffffff99;
 }
 
 .StdLabelMedBlue
@@ -1264,14 +1265,14 @@ FriendsChatDialog .VoiceBarContainer
 	font-size: medfontsize;
 	margin-top: 10px;
 	font-family: platformfont;
-	color: tcstatictext;
+	color: applabelsolid;
 }
 
 .StdLabelLarge
 {
 	font-size: largefontsize;
 	font-family: platformfont;
-	color: tcstatictext;
+	color: #ffffff88;
 }
 
 
@@ -1344,7 +1345,7 @@ FriendsChatDialog .VoiceBarContainer
 	border-color: #fdfefef0;
 	color: tcexitrowfocus;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	// Remove border, so we dont transition border out on focus lost, that looks weird.
 	transition-property: blur, background-color, color, transform;

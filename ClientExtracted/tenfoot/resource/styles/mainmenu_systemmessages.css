@@ -10,6 +10,7 @@
 #SystemIMBackground
 {
 	perspective: 1000;
+	opacity-mask: url( "file://{images}/background_alpha_mask.png") 0.0;
 	perspective-origin: 10% 40% invert;
 	width: 1920px;
 	height: 1080px;
@@ -17,7 +18,7 @@
 	overflow: clip clip;
 	transform-origin: 0% 0% parent-relative;
 	transition-duration: 0.4s;
-	transition-property: transform, opacity, position;
+	transition-property: transform, opacity, opacity-mask, position;
 	transition-timing-function: ease-in-out;
 }
 
@@ -34,7 +35,7 @@
 	transition-duration: 0.4s !immediate;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
-
+	position: -37.0px 0.0px -500.0px;
 	font-family: platformfont;
 	font-weight: light;
 	color: carousel_title;
@@ -140,7 +141,7 @@
 
 #SystemIMBackground.SystemIMBackgroundTransitionDownAndOn
 {
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
@@ -207,31 +208,33 @@
 	}
 }
 
+#SystemIMBackground:descendantfocus .SystemIMImage.DismissedMessage:descendantfocus,#SystemIMBackground:descendantfocus .SystemIMImage.DismissedMessage
+{
+	opacity: 0.0;
+}
+
 .SystemIMImage
 {
 	horizontal-align: left;
 	vertical-align: center;
-	opacity: 0.85;
+	opacity: 0.9;
 	desaturation: 0.85;
 	box-shadow: dark_box_shadow_color fill 2px 2px 12px -4px;
-	border-radius: 4px;
-	border: 5px solid #ffffff00;
 	position: 2000px 0px 0px;
 	max-width: 600px;
 
 	flow-children: down;
 
-	wash-color: messagecolorwash;
+	wash-color: store_main_wash;
 
 	// Trick to add transpaency around images which will get composition layers and then
 	// interpolate edges alpha, stops texture crawl as they transform as the effect is like
 	// antialiased edges even on a transform of the parent due to the fuzzy edges.
-	padding: 4px 8px;
 	margin: -4px -8px;
 
-//	transform-origin: 0% 0% parent-relative;
-	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation !immediate;
-	transition-duration: 0.4s !immediate;
+	//	transform-origin: 0% 0% parent-relative;
+	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation, opacity-mask !immediate;
+	transition-duration: 0.4s;
 	transition-delay: 0.1s;
 	transition-timing-function: ease-in-out;
 
@@ -246,15 +249,47 @@
 	transition-duration: 0.25s !immediate;
 }
 
+#SystemIMBackground:descendantfocus .SystemIMImage:descendantfocus
+{
+	blur: none;
+	opacity: 1.0;
+	desaturation: 0.0;
+}
+
+#SystemIMBackground:descendantfocus .SystemIMImage.PreviouslyRight
+{
+	opacity-mask: url( "file://{images}/focus_shadow_right.png" ) 0.0;
+}
+
+#SystemIMBackground:descendantfocus .SystemIMImage.PreviouslyLeft
+{
+	opacity-mask: url( "file://{images}/focus_shadow_left.png" ) 0.0;
+}
+
+
+#SystemIMBackground:descendantfocus .SystemIMImage.RightOfFocus1
+{
+	opacity-mask: url( "file://{images}/focus_shadow_right.png" ) 1.0;
+}
+
+#SystemIMBackground:descendantfocus .SystemIMImage.LeftOfFocus1
+{
+	opacity-mask: url( "file://{images}/focus_shadow_left.png" ) 1.0;
+}
+
 .SystemIMImage Button, .SystemIMImage Label
 {
 	opacity: 0.0;
 }
 
-.SystemIMImage:focus
+#SystemIMBackground:descendantfocus .SystemIMImage:focus
 {
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	color: tcexitrowfocus;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 
 .SystemIMImage:focus Label
@@ -273,19 +308,19 @@
 .SystemIMImage:focus #SystemIMDisclaimer
 {
 	margin-left: 4px;
-	margin-top: 4px;
+	margin-top: 8px;
 	margin-bottom: 4px;
-	font-family: Arial;
+	font-family: platformfont;
 	font-size: 11px;
-	color: tcexitrowfocus;
+	color: applabelsolid;
 	opacity: 1.0;
 }
 
 
 .SystemIMCountThree .SystemIMImage1
 {
-	desaturation: 0.3;
-	transform: translate3d( 300px, -130px, -240px );
+	desaturation: 0.4;
+	transform: translate3d( 300px, -80px, -240px );
 	blur: gaussian( 0.2 );
 	position: 0px 0px 0px;
 }
@@ -294,6 +329,7 @@
 {
 	transform: translate3d( -200px, 210px, -646px );
 	blur: gaussian( 1.8 );
+	opacity: 0.5;
 	position: 0px 0px 0px;
 }
 
@@ -301,6 +337,7 @@
 {
 	transform: translate3d( 600px, 180px, -600px );
 	blur: gaussian( 2.0 );
+	opacity: 0.6;
 	position: 0px 0px 0px;
 }
 
@@ -555,7 +592,7 @@
 #SystemIMBackground:descendantfocus .SystemIMImage
 {
 	blur: gaussian( 0.8 );
-	desaturation: 0.1;
+	desaturation: 0.25;
 	opacity: 0.8;
 
 	transform: none;
@@ -564,28 +601,21 @@
 	box-shadow: none;
 	animation-name: none;
 
-	border: 5px solid #ffffff00;
-	padding: 0px;
-	border-radius: 0px;
-
 	transition-duration: 0.25s;
 	transition-delay: 0.0s !immediate;
+	transition-property: opacity, position, box-shadow, z-index, wash-color, desaturation, blur;
 }
 
 
-#SystemIMBackground:descendantfocus .SystemIMImage:focus 
+#SystemIMBackground:descendantfocus 
 {
 	opacity: 1.0;
 	blur: none;
-	border: 5px solid #ffffffff;	
-//	transform-origin: 0% 0% parent-relative;
-//	transform: scalex( 1.5 ) scaley( 1.5 );
+	desaturation: 0.0;
+	//	transform-origin: 0% 0% parent-relative;
+	//	transform: scalex( 1.5 ) scaley( 1.5 );
+	wash-color: none;
 
-	animation-name: main-button-glow-movement; 
-	animation-duration: 1.7s;
-	animation-delay: 0.1s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
 
 #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage1, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage2, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage3

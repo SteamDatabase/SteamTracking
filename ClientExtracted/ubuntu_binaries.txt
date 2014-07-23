@@ -47,6 +47,7 @@ ubuntu/ubuntu12_32/serverbrowser.so
 ubuntu/ubuntu12_32/steamclient.so
 ubuntu/ubuntu12_32/steamservice.so
 ubuntu/ubuntu12_32/steamui.so
+ubuntu/ubuntu12_32/steamwebhelper
 ubuntu/ubuntu12_32/streaming_client
 ubuntu/ubuntu12_32/vgui2_s.so
 ubuntu/ubuntu12_64

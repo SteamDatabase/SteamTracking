@@ -55,8 +55,44 @@
 	transition-property: desaturation, opacity, position, blur, transform, wash-color, pre-transform-scale2d, opacity-mask;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+}
+
+#LibraryMostRecent #CarouselGlow
+{
+	perspective: 1000;
+	width: 3500px;
+	height: 1080px;
+	overflow: noclip clip;
+	transform: translatex( -150px ) translatey( 0px ) translatez( -100px );
+	opacity: 0.0;
+
+	background-image: url( "file://{images}/carousel_bg.png") ;
+	background-size: 1920px 400px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	transition-property: desaturation, opacity, position, blur, transform, wash-color, pre-transform-scale2d, opacity-mask;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+#LibraryMostRecent:descendantfocus #CarouselGlow
+{
+	position: -790px -10px -220px;
+	animation-name: none;
+	perspective-origin: 50% 50%;
+	pre-transform-scale2d: 1.00;
+
+	transform: translatez( -600px ) translatey( -250px );
+}
+
+#LibraryMostRecent #CarouselGlow.Visible
+{
+	position: -790px -120px -220px;
+	transform: translatez( 0px );
+	opacity: 1.0;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel
@@ -69,6 +105,12 @@
 	opacity: 0.9;
 	wash-color: bgcolorwashlight;
 
+}
+
+#LibraryMostRecent.NoRecentGames .MostRecentCarousel,
+#LibraryMostRecent.NoRecentGames:descendantfocus .MostRecentCarousel
+{
+	opacity: 0.0;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel .RecentApp,
@@ -86,15 +128,23 @@
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel .RecentApp #AppImage
 {
-	opacity: 0.9;
-	desaturation: 0.1;
-	margin: 20px;
+	opacity: 1.0;
+	desaturation: 0.2;
+	wash-color: #00000011;
 }
 
-#LibraryMostRecent:descendantfocus .MostRecentCarousel .RecentApp:focus #AppImage
+#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:focus #AppImage,
 {
 	opacity: 1.0;
 	desaturation: 0.0;
+	wash-color: #00000000;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 
@@ -117,10 +167,6 @@
 	wash-color: none;
 	height: 1080px;
 
-	background-image: url( "file://{images}/carousel_bg.png") ;
-	background-size: 1920px 400px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 #LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp,
@@ -246,7 +292,8 @@
 	desaturation: 0.0;
 	wash-color: white;
 	pre-transform-scale2d: 1.0;
-//	transition-duration: 0.3s;
+	//	transition-duration: 0.3s;
+	transition-property: transform, pre-transform-scale2d, background-color, position, border, opacity, blur, pre-transform-scale2d, opacity-mask;
 }
 
 .RecentApp0

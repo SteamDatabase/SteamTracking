@@ -343,12 +343,12 @@ TenfootFooterPanel
 }
 
 #LegendRow .STARTButtonBox,
-#LegendRow .BACKButtonBox,
+#LegendRow .BACKButtonBox
 {
-	border-radius: 90%;
+	border-radius: 44%;
 	border: 2px solid #00000000;
-	width: 36px;
-	height: 36px;
+	width: 50px;
+	height: 32px;
 	text-align: center;
 	wash-color: #878c8eff;
 	margin: 6px;
@@ -359,13 +359,13 @@ TenfootFooterPanel
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	padding: 0px;
-	background-position: 9px 50%;
+	background-position: 16px 50%;
 	background-image: url( "file://{images}/footer/start.png" );
 }
 
 #LegendRow .BACKButtonBox
 {
-	transform: scaleX( -1 );
+	background-image: url( "file://{images}/footer/back_xinput.png" );
 }
 
 .OSX #LegendRow .STARTButtonBox,

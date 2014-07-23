@@ -25,6 +25,8 @@
 				<TextEntry id="RecipientName"
 					textinputid="CheckoutFormTextEntry"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+					textinputdoneactionstring="#UI_Next"
+					oninputsubmit="NavigateToNextField();"
 				/>
 
 				<Panel class="GiftMessageHeaderRow">
@@ -34,10 +36,12 @@
 				<TextEntry id="GiftMessage" maxchars="160"
 					textinputid="CheckoutFormTextEntry"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+					textinputdoneactionstring="#UI_Next"
+					oninputsubmit="NavigateToNextField();"
 				/>
 
 				<Label class="GiftNoteHeader" text="#Checkout_GiftNote_Sentiment" />
-				<DropDown id="Sentiment">
+				<DropDown id="Sentiment" oninputsubmit="NavigateToNextField();">
 					<Label id="BestWishes" text="#Checkout_Sentiment_BestWishes" />
 					<Label id="BuckleUp" text="#Checkout_Sentiment_BuckleUp" />
 					<Label id="Enjoy" text="#Checkout_Sentiment_Enjoy" />
@@ -54,12 +58,14 @@
 				<TextEntry id="Signature"
 					textinputid="CheckoutFormTextEntry"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+					textinputdoneactionstring="#UI_Next"
+					oninputsubmit="NavigateToNextField();"
 				/>
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn">
 				<Panel class="HorizontalRule" />
-				<Button onactivate="GiftNoteComplete()">
+				<Button class="AdvanceCheckout" onactivate="GiftNoteComplete()">
 					<Label text="#Checkout_Continue" />
 				</Button>
 				<Panel class="HorizontalRule" />

@@ -59,9 +59,9 @@ MusicAlbumPanel
 	font-family: platformfont;
 	font-weight: normal;
 	color: carousel_title;
-	font-size: 36px;
+	font-size: 24px;
 	height: 50px;
-	margin-top: -4px;
+	margin-top: -6px;
 	white-space: nowrap;
 
 	margin-left: 100px;
@@ -213,7 +213,7 @@ MusicAlbumPanel
 {
 	width: 700px;
 	height: 5px;
-	background-color: #ffffff44;
+	background-color: rule_color;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -351,7 +351,7 @@ MusicAlbumPanel
 
 .TrackCurrentlyPlaying #TrackLabel
 {
-	color: gradient( linear, 0% 85%, 85% 100%, from( #5492b8ff ), color-stop( 0.82, #5492b8ff ), to( #5492b800 ) );
+	color: messagecolorwashfade;
 }
 
 .TrackButton:focus .TrackCurrentlyPlaying #TrackLabel

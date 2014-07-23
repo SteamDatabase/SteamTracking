@@ -13,6 +13,7 @@
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					textinputhidesuggestions="1"
 					textinputdoneactionstring="#Store_Search_ViewResults"
+					textmode="normal"
 				 />
 				<Panel class="SearchThrobber" />
 			</Panel>

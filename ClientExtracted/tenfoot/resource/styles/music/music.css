@@ -86,7 +86,7 @@ MusicPanel
 	margin-top: 4px;
 	box-shadow: #000000aa -2px -2px 4px 4px;
 	background-color: black;
-	background-image: url( "file://{images}/music/music_grid_bg_wash.png" );
+	background-image: url( "file://{images}/store/store_app_bg.png" );
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 1920px 1080px;

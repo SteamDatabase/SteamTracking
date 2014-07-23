@@ -144,7 +144,7 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible
 
 
 	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 }
 
 .StoreImage.FeaturedImageLoaded
@@ -259,7 +259,7 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible
 
 .StoreImage13
 {
-	transform: translate3d( 270px, -200px, -270px );
+	transform: translate3d( 120px, -240px, -500px );
 	desaturation: 0.6;
 	wash-color: bgcolorwashmedium;
 	blur: gaussian( 1.2 );
@@ -267,7 +267,7 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible
 
 .StoreImage13.FeaturedImageLoaded
 {
-	opacity: 0.4;
+	opacity: 0.5;
 }
 
 .StoreImage14

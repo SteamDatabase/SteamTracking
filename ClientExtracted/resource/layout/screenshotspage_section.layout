@@ -1,0 +1,15 @@
+"resource/layout/screenshotspage_section.layout"
+{
+	controls
+	{
+		Sectionlabel { controlname="Label" labeltext="Screenshots Section Label"  } 
+	}
+	
+	layout
+	{
+	  region { name="body" width=max overflow=grow-vertical }
+	  
+	  place { region=body control=Sectionlabel }
+	  place { region=body y=18 control=*Screenshot dir=right-wrap }
+	}
+}

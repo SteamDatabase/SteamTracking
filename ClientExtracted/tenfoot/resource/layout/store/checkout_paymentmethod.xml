@@ -21,7 +21,7 @@
 			<Panel class="VerticalRule" />
 			<Panel class="CheckoutBodyRightColumn">
 				<Panel class="HorizontalRule" />
-				<Button onactivate="PaymentMethodSelected()">
+				<Button class="AdvanceCheckout" onactivate="PaymentMethodSelected()">
 					<Label text="#Checkout_Continue" />
 				</Button>
 				<Panel class="HorizontalRule" />

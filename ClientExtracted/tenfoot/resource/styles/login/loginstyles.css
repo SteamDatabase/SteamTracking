@@ -167,7 +167,7 @@ Join.BehindMessageBox:descendantfocus, LoginUser.BehindMessageBox:descendantfocu
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 
-	desaturation: 0.4;
+	desaturation: 0.1;
 	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;

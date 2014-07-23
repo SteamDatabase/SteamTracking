@@ -17,14 +17,6 @@
 					textinputhidesuggestions="1"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
 		</Panel>
-		<Panel class="InputContainerDown">
-			<Label class="WizardLabel" id="EmailAddressAgainLabel" text="#CreateAccount_Email_EmailAddressAgain" />
-			<TextEntry class="WizardTextEntry" id="EmailAddressAgainTextEntry"
-					textinputid="InnerAccountNameTextEntry"
-					textinputdoneactionstring="#CreateAccount_NextField"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
-		</Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

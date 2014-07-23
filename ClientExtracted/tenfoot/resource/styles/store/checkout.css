@@ -32,8 +32,8 @@ CartLineItem, CheckoutGiftRecipientFriend, CheckoutAddFundsButton, Button
 {
 	width: 100%;
 	padding: 8px 7px 8px 7px;
-	margin: 4px 0px; 
-
+	margin: 4px 0px;
+	box-shadow: none;
 	color: detailsdatalabelfocus;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
 	border-style: solid;
@@ -52,7 +52,7 @@ CheckoutAddFundsButton Label, Button Label
 	font-family: platformfont;
 	font-size: 28px;
 	font-weight: bold;
-	transform: translatex(-7px);
+	transform: translatex(-5px);
 	color: detailsdatalabelfocus;
 	transition-property: transform;
 	transition-duration: 0.2s;
@@ -67,13 +67,13 @@ CheckoutAddFundsButton:focus Label, Button:focus Label
 
 Button:disabled Label
 {
-	color: #646a73;
+	color: #777777ff;
 }
 
 CartLineItem:hover, CheckoutAddFundsButton:hover, Button:hover
 {
 	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+	box-shadow: #eeeeee00 -3px -3px 6px 6px;
 }
 
 CheckoutAddFundsButton:hover Label, Button:hover Label
@@ -83,10 +83,10 @@ CheckoutAddFundsButton:hover Label, Button:hover Label
 
 CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:focus, Button:focus
 {
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.23s ;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
@@ -99,6 +99,17 @@ CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:fo
 	animation-direction: normal;
 }
 
+.AdvanceCheckout
+{
+	background-color: tcstatictext;
+	opacity: 0.5;
+}
+
+.FieldsValidated .AdvanceCheckout
+{
+	opacity: 1.0;
+}
+
 CartLineItem:descendantfocus #FinalPrice
 {
 	color: applabelselectedsolid;
@@ -108,10 +119,10 @@ CartLineItem:descendantfocus #FinalPrice
 {
 	width: 100%;
 	padding: 8px 7px 8px 7px;
-	margin: 4px 0px; 
+	margin: 4px 0px;
 
 	color: #6c9771ff;
-	background-color: #6c977100;
+	background-color: tcstatictext;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
@@ -129,15 +140,16 @@ CartLineItem:descendantfocus #FinalPrice
 	font-size: 28px;
 	font-weight: bold;
 	transform: translatex(-7px);
-	color: #86be3e;
+	color: detailsdatalabelfocus;
 	transition-property: transform;
+	transform: translateX( 5px );
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
 }
 
 .ProminentButton:focus Label
 {
-	color: #648e2e;
+	color: #7a9908;
 	transform: translatex(0px);
 }	
 
@@ -194,9 +206,9 @@ ToggleButton .TickBox
 	margin-right: 8px;
 	border-style: solid;
 	border-width: 5px;
-	border-radius: 2px;
-	background-color: ui_common_control;
-	border-color: ui_common_control_border;
+	border-radius: 0px;
+	background-color: blue;
+	border-color: none;
 }
 
 ToggleButton:selected .TickBox
@@ -294,7 +306,8 @@ ToggleButton Label
 #AgreeTerms .TickBox
 {
 	padding: 0px;
-	transform: translatex(-7px);
+	transform: translatex(-13px);
+	background-color: blue;
 
 	transition-property: transform;
 	transition-duration: 0.23s;
@@ -304,7 +317,8 @@ ToggleButton Label
 #AgreeTerms:focus .TickBox,
 #AgreeTerms:hover .TickBox
 {
-	transform: translatex(0px);
+	transform: translatex(-5px);
+	background-color: #bdbfbf;
 }
 
 
@@ -317,6 +331,17 @@ ToggleButton.FailedValidation .TickBox
 {
 	background-color: error_bgcolor;
 	color: #3c3c3cff;
+}
+
+TextEntry.FailedValidation:focus,
+DropDown.FailedValidation:focus,
+ToggleButton.FailedValidation:focus .TickBox
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+}
+ToggleButton.FailedValidation .TickBox:selected
+{
+	background-color: #ccccccff;
 }
 
 DropDown.FailedValidation
@@ -375,8 +400,8 @@ CheckoutController.Visible
 
 #Status.Waiting .CartThrobber
 {
-	width: 180px;
-	height: 180px;
+	width: 120px;
+	height: 120px;
 	horizontal-align: center;
 	background-image: url( "file://{images}/browser/reticle.webm" );
 	background-repeat: no-repeat no-repeat;
@@ -424,7 +449,7 @@ CheckoutController.Visible
 .CheckoutTitleRow
 {
 	width: 100%;
-	padding: 10px 210px 10px 105px;
+	padding: 10px 140px 10px 105px;
 	flow-children: right;
 	background-color: checkout_title_bg;
 }
@@ -577,7 +602,7 @@ CheckoutController.Visible
 
 .SecondaryLabel
 {
-	color: secondary_label;
+	color: #e4e4e466;
 	font-size: 22px;
 }	
 
@@ -775,7 +800,7 @@ CartLineItem:descendantfocus .CartLineItemContents
 {
 	width: 100%;
 	padding: 16px;
-	background-color: ui_dark_common_control;
+	background-color: #00000033;
 	flow-children: down;
 	vertical-align: bottom;
 	margin: 12px 0px 0px 0px;
@@ -825,7 +850,6 @@ CartLineItem:descendantfocus .CartLineItemContents
 {
 	color: #e4e4e4;
 	font-size: 26px;
-	padding-left: 6px;
 	margin-bottom: 20px;
 }
 
@@ -903,6 +927,7 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 {
 	height: 100%;
 	flow-children: down;
+	margin-left: 8px;
 
 	opacity: 0.0;
 
@@ -923,7 +948,7 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .SendToInventory #SendToInventoryBtn
 {
 	border-color: none;
-	background-color: ui_common_control;
+	background-color: #00000033;
 	padding-left: 10px;
 
 }
@@ -944,7 +969,6 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .InlineLabelInset
 {
 	margin-top: 26px;
-	margin-left: 8px;
 }
 
 .InlineTextEntry
@@ -955,7 +979,6 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .InlineTextEntryInset
 {
 	margin-bottom: 20px;
-	margin-left: 8px;
 }	
 	
 CheckoutGiftRecipient TextEntry
@@ -1170,7 +1193,7 @@ CheckoutPaymentMethodFields
 #PaymentMethodDropDownMenu
 {
 	width: 400px;
-	height: 276px;
+	height: 324px;
 	overflow: squish scroll;
 }
 
@@ -1452,7 +1475,7 @@ CheckoutReviewLineItem
 {
 	width: 100%;
 	padding: 20px;
-	background-color: ui_dark_common_control;
+	background-color: #00000033;
 	flow-children: down;
 	vertical-align: bottom;
 	margin-bottom: -34px;
@@ -1526,7 +1549,7 @@ CheckoutReviewLineItem
 	text-align: right;
 	font-size: 22px;
 	margin-right: 24px;
-	color: secondary_label;
+	color: tcstatictext;
 }
 
 #ReviewPaymentMethod, #ReviewGiftOption, #ReviewAddress, #ReviewPhone
@@ -1544,8 +1567,9 @@ CheckoutReviewLineItem
 
 #ReviewCreditCardSecurityCode
 {
-	width: 100px;
+	width: 120px;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 
@@ -1646,7 +1670,7 @@ CheckoutAddFundsButton Label
 .CheckoutOtherStep
 {
 	font-size: 22px;
-	color: breadcrumb_label;
+	color: tcstatictext;
 }
 
 .CheckoutArrow

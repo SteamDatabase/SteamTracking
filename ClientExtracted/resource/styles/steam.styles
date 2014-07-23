@@ -730,7 +730,17 @@ steam.styles
       //!! bug - this needs to look disabled
       image="graphics/chkSelDis"
     }
-    
+
+	IndeterminateCheckButton
+	{
+		font-family=basefont
+		font-size=14
+		font-weight=400
+		textcolor="Label"
+		bgcolor=none
+		image="graphics/chkIndeterminate"
+	}
+
     CheckButtonList
     {
         inset="1 1 1 1"

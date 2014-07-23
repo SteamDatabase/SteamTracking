@@ -85,19 +85,16 @@ ProfileOptions.Destructing
 
 #FriendsProfileDetailsBodyRegion
 {
-	width: 381px;
+	width: 380px;
 
 	vertical-align: bottom;
 	horizontal-align: left;
 
-	margin-bottom: 130px;
+	margin-bottom: 140px;
 
 	flow-children: down;
 
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
 	background-color: dialog_bg_color;
@@ -236,7 +233,7 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 	horizontal-align: center;
 	border-width: 6px;
 	border-style: solid;
-	border-radius: 6px;
+	border-radius: 10px;
 	transform: translatez( 50px );
 	box-shadow: fill #00000060 0px 0px 12px 0px;
 }
@@ -297,7 +294,7 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 #FriendsProfileDetailsActionsList
 {
 	width: 370px;
-	height: 320px;
+	height: 380px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
@@ -321,7 +318,7 @@ FriendsProfileDetailsActionButton,
 	white-space: nowrap;
 
 	border-style: solid;
-	border-width: 3px;
+	border-width: 5px;
 	border-color: #00000000;
 
 	font-size: 22px;
@@ -338,7 +335,7 @@ FriendsProfileDetailsActionButton Label,
 {
 	horizontal-align: left;
 	width: 100%;
-	color: #d0d0d0ff;
+	color: applabel;
 	transform: translatex(0px);
 	padding: 7px;
 	transition-property: color, position, transform;
@@ -351,7 +348,7 @@ FriendsProfileDetailsActionButton:focus Label,
 .FriendsProfileDetailsActionButton:focus Label
 {
 	horizontal-align: left;
-	color: #161718f5;
+	color: applabelselected;
 	transform: translatex(7px);
 	padding: 7px;
 }
@@ -373,7 +370,7 @@ FriendsProfileDetailsActionButton:focus,
 	background-color: #00000020;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-color: #fdfefef0;
 	margin-left: 16px;
 	margin-right: 16px;

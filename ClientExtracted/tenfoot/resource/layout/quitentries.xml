@@ -40,13 +40,13 @@
 
 		<Panel class="HorizontalRule StreamingHidden" />
 
-		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="ShutdownMachine()" selectionpos="10,8">
+		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="CloseModalDialog(); ShutdownMachine()" selectionpos="10,8">
 			<Label text="#Quit_Shutdown" />
 		</Button>
-		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="RestartMachine()" selectionpos="10,9">
+		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="CloseModalDialog(); RestartMachine()" selectionpos="10,9">
 			<Label text="#Quit_Restart" />
 		</Button>
-		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="SuspendMachine()" selectionpos="10,10">
+		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="CloseModalDialog(); SuspendMachine()" selectionpos="10,10">
 			<Label text="#Quit_Sleep" />
 		</Button>
 	</QuitEntriesPanel>

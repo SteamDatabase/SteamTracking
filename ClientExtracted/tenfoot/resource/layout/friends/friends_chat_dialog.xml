@@ -30,6 +30,8 @@
 				textinputid="FriendsInputTextEntry"
 				textinputdoneactionstring="#UI_SendMessage"
 				textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+				textinputautocaps="true"
+				textinputdoublespace="true"
 			/>
 			<Button id="FriendsMainBodyInputSendButton" onactivate="FriendsSendChatMessage();">
 				<Label id="FriendsChatSendButtonLabel" text="#Friends_Chat_Send" />

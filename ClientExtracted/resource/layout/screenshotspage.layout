@@ -1,0 +1,58 @@
+"resource/layout/screenshotspage.layout"
+{
+	controls
+	{
+		GamesList
+		{
+			tabposition=1 
+		}
+		
+		// the container
+		"ScreenshotsPage"
+		{
+			"ControlName"		"CScreenshotsPage"
+			Style=DownloadsPageStyle
+		}
+		
+		"panel_list"
+		{
+			"ControlName"	"SectionedListPanel"
+			Style=ListPanelStyle
+		}
+		
+		NavTopLabel { controlname="Button" labeltext="#Steam_Screenshots_All" }
+		NavHelperLabel1 { controlname="Label" labeltext=" > " }
+		NavHelperLabel2 { controlname="Label" labeltext=" > " }
+		NavGameNameLabel { controlname="Button" labeltext="#Steam_Screenshots_GameName" }
+		NavIndexLabel { controlname="Label" labeltext="#Steam_Screenshots_ImageIndex" }
+				
+		// FullScreenshotPanel { controlname="FullScreenshotPanel" }
+	}
+	
+	styles
+	{
+		DownloadsPageStyle
+		{
+			bgcolor=dialogbg
+			render
+			{
+				// lines around
+				0="fill( x0 + 1, y0, x1 - 1, y0+1, ButtonBorderDisabled )"  // top
+				0="fill( x0, y0 + 1, x0+1, y1 - 1, ButtonBorderDisabled )"  // left
+				0="fill( x1 - 1, y0 + 1, x1, y1 - 1, ButtonBorderDisabled )"  // right
+				0="fill( x0 + 1, y1-1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
+			}			
+		}
+	}
+
+	layout
+	{
+		region	{ name="list" y=2 x=1 width=275 height=max margin-bottom=0 }
+		region	{ name="main" y=1 x=275 width=max height=max margin-left=1 margin-top=1 margin-bottom=1 margin-right=-1}
+		
+		place	{ control=GamesList region=list width=275 height=max margin=0 }
+		place	{ control=NavTopLabel,NavHelperLabel1,NavGameNameLabel,NavHelperLabel2,NavIndexLabel region=main dir=right align=left }
+		// place	{ control=FullScreenshotPanel region=main align=left y=48 width=max height=max }
+		place	{ control=ScreenshotListPanel region=main align=left y=48 width=max height=max }
+	}
+}

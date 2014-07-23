@@ -13,13 +13,13 @@ LoginUser
 {
 	opacity: 0.0;
 	animation-name: fade-in;
-	animation-duration: shortduration;
+	animation-duration: 0.20s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
 	transition-property: opacity;
-	transition-duration: shortduration;
+	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 	width: 100%;
 	height: 100%;
@@ -43,6 +43,11 @@ LoginUser:descendantfocus
 	opacity: 1.0;
 }
 
+LoginUser:descendantfocus .LoginHidden
+{
+	opacity: 0.0;
+}
+
 .Card
 {
 	flow-children: down;
@@ -56,12 +61,9 @@ LoginUser:descendantfocus
 	margin-top: 60px;
 
 	transform: translatex(698px);
+	box-shadow: #00000044 -4.5px -4.5px 18px 9px;
 
 	background-color: message_box_bg;
-	border-radius: 0px;
-	border-color: ui_common_control_border;
-	border-style: solid;
-	border-width: 6px;
 
 	pre-transform-scale2d: 1.0;
 
@@ -89,7 +91,7 @@ LoginUser:descendantfocus
 .Bezel
 {
 	border-width: 0px;
-	border-radius: 10px;
+	border-radius: 24px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 
 	height: 371px;
@@ -106,11 +108,10 @@ LoginUser:descendantfocus
 	horizontal-align: center;
 	vertical-align: center;
 	opacity: 1.0;
-	desaturation: 0.2;
-	box-shadow: fill #00000022 -4px -4px 4px 8px;
+	box-shadow: inset #00000044 0px 0px 18px 0px;
 	background-color: #000000;
 	border-width: 0px;
-	border-radius: 6px;
+	border-radius: 16px;
 }
 
 #TestPanelTextEntry
@@ -183,7 +184,7 @@ LoginUser:descendantfocus
 {
 	height: 105px;
 	width: 105px;
-	border-radius: 4px;
+	border-radius: 6px;
 	box-shadow: #00000044 0px 0px 04px 0px;
 }
 
@@ -191,7 +192,7 @@ LoginUser:descendantfocus
 {
 	height: 115px;
 	width: 115px;
-	border-radius: 6px;
+	border-radius: 10px;
 	horizontal-align: left;
 	vertical-align: center;
 }
@@ -241,7 +242,8 @@ LoginUser:descendantfocus
 }
 
 // default to invisible
-#SteamGuardTextEntry
+#SteamGuardTextEntry,
+#TwoFactorTextEntry
 {
 	visibility: collapse;
 }
@@ -256,12 +258,22 @@ LoginUser:descendantfocus
 	visibility: visible;
 }
 
+.TwoFactor #TwoFactorTextEntry
+{
+	visibility: visible;
+}
+
 .SteamGuard #AccountNameTextEntry,.SteamGuard #PasswordTextEntry,.SteamGuard #RememberPassword
 {
 	visibility: collapse;
 }
 
 .AccountSuspended #AccountNameTextEntry,.AccountSuspended #PasswordTextEntry,.AccountSuspended #LoginButton,.AccountSuspended #RememberPassword
+{
+	visibility: collapse;
+}
+
+.TwoFactor #AccountNameTextEntry, .TwoFactor #PasswordTextEntry, .TwoFactor #RememberPassword
 {
 	visibility: collapse;
 }
@@ -310,7 +322,7 @@ TextEntry
 	height: 70px;
 	horizontal-align: center;
 	background-color: ui_common_control;
-	border-color: ui_common_control_border;
+	border-color: none;
 	border-width: 5px;
 	border-style: solid;
 
@@ -418,9 +430,17 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	transition-duration: steamguard_message_transition_time;
 }
 
+#TwoFactorTextEntry
+{
+	visibility: collapse;
+	transition-property: height;
+	transition-duration: steamguard_message_transition_time;
+}
+
 #PasswordTextEntry
 {
 	font-size: 34px;
+	padding-top: 6px;
 }
 
 
@@ -435,13 +455,13 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 .CheckBox
 {
 	background-color: ui_common_control;
-	border-color: ui_common_control_border;
+	border-color: none;
 	border-width: 5px;
 	border-style: solid;
 
 	height: 70px;
 	width: 100%;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	margin-top: 4px;
 
 	transition-property: border, background-color, color, box-shadow;
@@ -520,6 +540,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 .CheckBox:descendantfocus .TickBox
 {
 	border-color: #ffffffff;
+	box-shadow: inset #00000044 0px 0px 6px 0px;
 }
 
 #SharedBorderContainer
@@ -615,7 +636,7 @@ TextEntry.CapsLock:focus .Password, .PasswordCapsLock
 	opacity: 1.0;
 }
 
-.HasInput .Password, TextEntry.HasInput:focus .PasswordCapsLock, .HasInput .AccountName, .HasInput .SteamGuard
+.HasInput .Password, TextEntry.HasInput:focus .PasswordCapsLock, .HasInput .AccountName, .HasInput .SteamGuard, .HasInput .TwoFactor
 {
 	opacity: 0.0;
 }

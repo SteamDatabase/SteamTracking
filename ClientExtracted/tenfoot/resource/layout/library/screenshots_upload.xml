@@ -19,6 +19,8 @@
 							textinputid="FriendsInputTextEntry"
 							textinputdoneactionstring="#Friends_AddFriend_OK"
 							textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							textinputautocaps="true"
+							textinputdoublespace="true"
 						/>
 					</Panel>
 

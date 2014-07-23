@@ -1,0 +1,25 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/friends/friends.css" />
+	</styles>
+
+	<InviteToLobbyDialog defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto" oncancel="CloseInviteDialog();">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Friends_InviteToLobby" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Panel id="FriendsList">
+
+					</Panel>
+				</Panel>
+				<Panel id="MsgBoxButtons">	
+				</Panel>
+			</Panel>
+		</Panel>
+	</InviteToLobbyDialog>
+</root>

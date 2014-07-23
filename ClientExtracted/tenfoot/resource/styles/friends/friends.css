@@ -1,10 +1,10 @@
 /*	friends screen css style */
 
 @define friendsitemmainlistbkgnd_from: #f2f2f2ff;
-@define friendsitemmainlistbkgnd: gradient( linear, 0% 0%, 100% 10%, from( friendsitemmainlistbkgnd_from ), to( #cbcbcbde ) );
+@define friendsitemmainlistbkgnd: gradient( linear, 0% 0%, 100% 100%, from( friendsitemmainlistbkgnd_from ), to( #cbcbcbde ) );
 @define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
 @define friendsverticalscrollpad: 18px;
-@define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 0%, from( #caccccff  ), to( #aaacacce ) );
+@define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
 @define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
 
 Friends
@@ -19,12 +19,12 @@ Friends
 	font-family: platformfont;
 
 	animation-duration: 1.6s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
 	transition-property: opacity, transform !immediate;
-	transition-duration: 0.3s;
+	transition-duration: 0.4s;
 	transition-timing-function: linear;
 
 	opacity: 1.0;
@@ -75,7 +75,7 @@ Friends.FriendsProfileDetailsVisible #BodyWrapper
 #FriendsMainBodyColumnLeft
 {
 	width: 865px;
-	margin-right: 5px;
+	margin-right: 0px;
 	margin-left: 13px;
 	height: 899px;
 	flow-children: down;
@@ -92,7 +92,6 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 #FriendsChatDialogContainer
 {
 	width: 829px;
-	margin-left: 10px;
 	height: fit-children;
 	flow-children: none;
 }
@@ -100,6 +99,7 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 FriendsChatDialog
 {
 	width: 829px;
+	margin-left: 5px;
 	height: fit-children;
 	flow-children: down;
 }
@@ -213,7 +213,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 
 #FriendsMainBodyLeftHeader
 {
-	height: 112px;
+	height: 118px;
 	width: 100%;
 	flow-children: right;
 	margin-right: friendsverticalscrollpad;
@@ -222,7 +222,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 #FriendsMainBodyRightHeader
 {
 	height: 94px;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 	margin-top: 12px;
 	width: 92%;
 	flow-children: right;
@@ -291,13 +291,13 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 #FriendsMainBodyChatContainer
 {
 	width: 100%;
-	height: 670px;
+	height: 674px;
 	flow-children: down;
 	margin-bottom: 9px;
-	border-radius: 4px;
+	border-radius: 0px;
 	padding-bottom: 0px;
 
-	background-color: #1f4c6c1a;
+	background-color: #1a578023;
 
 }
 
@@ -374,6 +374,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	height: 106px;
 	overflow: clip scroll;
 	white-space: normal;
+	opacity: 0.85;
 
 	padding-left: 8px;
 	padding-right: 10px;
@@ -386,18 +387,18 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	background-color: friendschatinputbkgnd_text;
 
 	border-width: 5px;
-	border-color: ui_common_control_border;
+	border-color: friendstab;
 	border-style: solid;
-	border-radius: 4px;
+	border-radius: 0px;
 
-	transition-property: background-color;
+	transition-property: opacity;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
 }
 
 #FriendsMainBodyInputTextArea:hover
 {
-	background-color: friendstabcurrenthover;
+	opacity: 1.0;
 }
 
 #FriendsMainBodyInputTextArea:descendantfocus
@@ -434,20 +435,18 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	vertical-align: center;
 	horizontal-align: right;
 	height: 106px;
+	min-width: 106px;
 	font-weight: light;
 	font-size: 24px;
 	color: tclegendlabel;
 	white-space: nowrap;
 	padding: 8px;
 	margin-left: 8px;
-	background-color: friendschatinputbkgnd;
+	background-color: friendstab;
 	// friendsonline_lightbg;
 	color: friendsitemmainlistbkgnd_from;
 
-	border-width: 5px;
-	border-color: ui_common_control_border;
-	border-style: solid;
-	border-radius: 4px;
+	border-radius: 0px;
 
 	transition-property: background-color;
 	transition-duration: 0.2s;
@@ -457,7 +456,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 
 #FriendsMainBodyInputSendButton:hover
 {
-	background-color: friendstabcurrenthover;
+	background-color: friendstabcurrentselection;
 }
 
 .FriendChatDisabled #FriendsMainBodyInputSendButton:hover
@@ -504,8 +503,8 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 
 #FriendsMainBodyInputSendButton Label
 {
-	margin: 10px;
 	vertical-align: center;
+	horizontal-align: center;
 }
 
 FriendsSelfHeader
@@ -532,14 +531,14 @@ FriendsSelfHeader.InGame Label
 
 .FriendsMyAvatar
 {
-	margin-left: 10px;
+	margin-left: 20px;
 	margin-bottom: 6px;
 	margin-top: 6px;
 	height: 90px;
 	width: 90px;
-	border-width: 3px;
+	border-width: 4px;
 	border-style: solid;
-	border-radius: 4px;
+	border-radius: 6px;
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
 
 	transition-property: box-shadow;
@@ -547,9 +546,17 @@ FriendsSelfHeader.InGame Label
 	transition-timing-function: ease-in-out;
 }
 
-.FriendsMyAvatar:hover
+#FriendsMyItem
 {
-	box-shadow: fill #eeeeee60 -4.5px -4.5px 6px 9px;
+	transform: translateX( 0px );
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+#FriendsMyItem:hover
+{
+	transform: translateX( 10px );
 }
 
 .FriendsListItemAvatar,
@@ -559,22 +566,22 @@ FriendsSelfHeader.InGame Label
 	margin-top: 3px;
 	height: 90px;
 	width: 90px;
-	border-width: 3px;
+	border-width: 4px;
 	border-style: solid;
-	border-radius: 4px;
+	border-radius: 6px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
 .ChatItemAvatar
 {
-	margin-left: 9px;
+	margin-left: 5px;
 	margin-top: 0px;
 	margin-bottom: 2px;
 	height: 90px;
 	width: 90px;
-	border-width: 3px;
+	border-width: 4px;
 	border-style: solid;
-	border-radius: 4px;
+	border-radius: 6px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
@@ -629,10 +636,11 @@ FriendsSelfHeader.InGame Label
 	transition-property: transform, color;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
-	
+
 	margin-left: 10px;
 	transform: translatex(  0px );
-	
+
+	width: 500px;
 	font-weight: normal;
 	font-size: 24px;
 	vertical-align: center;
@@ -747,7 +755,7 @@ FriendsSelfHeader.InGame Label
 	border-width: 5px;
 	padding-left: 0px;
 	margin-left: 10px;
-	transform: translateX( 0px );
+	transform: translateX( 10px );
 	height: 114px;
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform;
@@ -758,13 +766,14 @@ FriendsSelfHeader.InGame Label
 .LeftMainListItem:hover
 {
  	pre-transform-scale2d: 1.0;	
- 	transform: translatex( 7px );
+ 	transform: translatex( 17px );
 }
 
 .LeftMainListItem:focus
 {
 	background-color: friendsitemmainlistbkgnd;
 	border-color: #ffffffff;
+	transform: translateX( 0px );
 }
 
 .LeftMainListItem:focus:hover 
@@ -776,7 +785,7 @@ FriendsSelfHeader.InGame Label
 .LeftMainListItem.CurrentSelection:hover 
 {
  	pre-transform-scale2d: 1.0;	
- 	transform: translatex( 0px );
+ 	transform: translatex( 10px );
 }
 
 
@@ -803,6 +812,7 @@ FriendsSelfHeader.InGame Label
 
 	border-color: #cececeff;
 	background-color: friendsitemmainlistbkgnd;
+	transform: translateX( 0px );
 
 	animation-name: main-button-glow-movement-no-fill;
 	//animation-name: links-and-more-button-focus;
@@ -811,7 +821,7 @@ FriendsSelfHeader.InGame Label
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
-	transition-property: background-color, border;
+	transition-property: background-color, transform, border;
 	transition-duration: 0.3s !immediate;
 	transition-timing-function: ease-in-out;
 }
@@ -824,12 +834,12 @@ FriendsSelfHeader.InGame Label
 //secondary focus in the list
 .LeftMainListItem.CurrentSelection
 {
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.2s;
 
-	background-color: ui_common_control3;
+	background-color: simplebutton;
 	border-color: #ffffff00;
-
-	transition-property: background-color, border;
+	transform: translateX( 0px );
+	transition-property: background-color, transform, border;
 	transition-duration: 0.3s !immediate;
 	transition-timing-function: ease-in-out;
 }
@@ -931,7 +941,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffffff ), to( #bdbfbfff ) ); 
 	
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 	
 	transition-duration: 0.23s;
 	transition-timing-function: linear;
@@ -986,16 +996,11 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 {
 	color: #f2f2f2ff;
 	background-color: friendstabcurrentselection;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 	
 	transition-duration: 0.23s;
 	transition-timing-function: linear;
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+
 }
 
 .FriendsMainBodyHeaderButton:hover
@@ -1003,7 +1008,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
 	background-color: friendstabcurrenthover;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
+	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 	
 }
 
@@ -1174,7 +1179,7 @@ FriendsIndicatorContainer
 
 .LeftMainListItem FriendsIndicatorContainer Label.FriendIndicatorContainedText
 {
-	color: #A0A0A0ff;
+	color: friendsoffline_solid;
 	vertical-align: bottom;
 	margin-right: 10px;
 	
@@ -1335,7 +1340,7 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 .LeftMainListItem.CurrentSelection:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
 {
 	background-color: #303030ff;
-	color: #a0a0a0ff;
+	color: friendsoffline_solid;
 }
 
 .LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
@@ -1352,8 +1357,16 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 {
 	width: 100%;
 	margin-top: 30px;
-	padding-top: 0px;
+	padding-top: 10px;
+	height: 60px;
+}
 
+.AddFriendMsgBox TextEntry:focus,
+.DaisyWheelVisible TextEntry
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+
+	color: applabelselectedsolid;
 }
 
 .AddFriendMsgBox #MsgBoxButtons
@@ -1436,21 +1449,21 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendReque
 
 .FriendsOptionWrapper .FriendsOptionLabel
 {
-	width: 272px;
-	margin-top: 6px;
+	width: 262px;
+	font-size: 28px;
+	margin-top: 8px;
+	margin-left: 20px;
 }
 
 #MsgBoxButtonArea DropDown Label
 {
 	margin-left: 0px;
 	margin-right: 30px;
-	margin-top: 4px;
+	margin-top: 0px;
 }
 
-#MsgBoxButtonArea DropDown:focus Label
-{
-	color: #333333;
-}
+
+
 
 DropDownMenu.DropDownMenuVisible
 {
@@ -1468,8 +1481,7 @@ DropDownMenu.DropDownMenuVisible
 
 .FriendsActionsMsgBox #MsgBoxButtons Button
 {
-	margin-left: 0px;
-	padding-left: 0px;
+	padding-left: 10px;
 	text-align: left;
 }
 
@@ -1478,7 +1490,8 @@ DropDownMenu.DropDownMenuVisible
 {
 	margin-top: 6px;
 	margin-bottom: 0px;
-	horizontal-align: right;
+	horizontal-align: left;
+	min-width: 100px;
 }
 
 .FriendsActionsMsgBox .MsgBoxDescriptionArea
@@ -1547,3 +1560,140 @@ DropDownMenu
 {
 	opacity: 1.0;
 }
+
+.InviteFriendsDialog #FriendsList
+{
+	height: 560px;
+	width: 600px;
+	flow-children: down;
+	overflow: clip scroll;
+	
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+.InviteFriendsDialog #FriendsList AvatarImage
+{
+	width: 90px;
+	height: 90px;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 6px;
+	box-shadow: inset #00000099 0px 0px 12px 0px;
+}
+
+.InviteFriendsDialog FriendInvitePanel
+{
+	margin-top: 8px;
+	margin-bottom: 4px;
+	margin-right: 26px;
+	flow-children: right;
+	padding-top: 8px;
+	padding-left: 4px;
+	border-width: 0px;
+	height: 106px;
+}
+
+.InviteFriendsDialog FriendInvitePanel #Avatar
+{
+	margin-left: 10px;
+}
+
+FriendInvitePanel #FriendPanelLabels
+{
+	flow-children: down;
+	height: 100%;
+}
+
+FriendInvitePanel:descendantfocus,
+FriendInvitePanel:descendantfocus:hover,
+.LeftMainListItem:descendantfocus:hover
+{
+	transform: translateX( 0px );
+	background-color: action_module;
+
+	animation-name: main-button-glow-movement-no-fill;
+	//animation-name: links-and-more-button-focus;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	transition-property: background-color, border;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+FriendInvitePanel Button
+{
+	border-style: solid;
+	border-width: 4px;
+	border-color: #00000000;
+	font-size: 28px;
+	margin: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+	background-color: simplebuttonsolid_vertical;
+}
+
+FriendInvitePanel Button:hover
+{
+	pre-transform-scale2d: 1.03;
+}
+
+FriendInvitePanel Button:focus
+{
+	border-style: solid;
+	border-width: 4px;
+	border-color: #cececeff;
+	background-color: friendsitemmainlistbkgnd;
+
+	transition-property: background-color, border;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+FriendInvitePanel.Disabled Button
+{
+	opacity: 0.0;
+}
+
+FriendInvitePanel #InviteSent
+{
+	opacity: 0.0;
+	font-size: 28px;
+}
+
+FriendInvitePanel.Disabled #InviteSent
+{
+	opacity: 1.0;
+}
+
+FriendInvitePanel #FriendPanelLabels Button #InviteLabel
+{
+	color: applabelsolid;
+}
+
+FriendInvitePanel #FriendPanelLabels #InviteSent
+{
+	color: friendsoffline_solid;
+	margin-left: 4px;
+}
+
+FriendInvitePanel #FriendPanelLabels Button:focus #InviteLabel
+{
+	color: friendsoffline_lightbg;
+}
+
+FriendInvitePanel #FriendPanelLabels #FriendPersonaName
+{
+	margin-left: 4px;
+	width: 100%;
+}
+
+

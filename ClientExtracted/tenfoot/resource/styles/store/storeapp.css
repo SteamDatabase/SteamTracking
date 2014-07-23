@@ -3,7 +3,7 @@
 // this style is pretty close to the main menu button color.. combine?
 //@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #cfd0d0 ), to( #979898 ) );
 @define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
-@define storeoverviewcolor: #8c8989;
+@define storeoverviewcolor: #ffffff66;
 @define AppSectionTransitionDuration: 0.25s;
 @define SlideshowFocusTransitionDuration: 0.3s;
 
@@ -11,9 +11,7 @@
 @define PreviewImageBorder: 5px;
 @define PreviewImagePadding: -5px;
 
-// from library.css
-@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
-@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
+
 
 @keyframes 'links-and-more-button-focus'
 {
@@ -269,9 +267,8 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 #AppAvailability
 {
 	font-size: 24px;
-	line-height: 28px;
-	color: storetitlecolor;
-	opacity: 0.7;
+	color: tcstatictext;
+	opacity: 1.0;
 }
 
 //
@@ -280,7 +277,8 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 #HighlightedRecommendationSection
 {
 	margin: 14px;
-	margin-top: 8px;
+	margin-top: 0px;
+	vertical-align: top;
 
 	flow-children: right;
 	horizontal-align: right;
@@ -294,8 +292,6 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 #FriendRecommendAvatar
 {
-	border-style: solid;
-	border-width: 4px;
 	border-radius: 8px;
 	box-shadow: fill #00000044 0px 0px 18px 0px;
 
@@ -304,27 +300,28 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	height: 86px;
 	width: 86px;
 	margin: 12px;
+	margin-top: 0px;
 	margin-right: 0px;
 }
 
 #FriendRecommendationText
 {
-	color: #ffffffc0;
+	color: #ffffff99;
 	font-size: 24px;
 	font-style: italic;
 	width: 660px;
 	height: 86px;
 
-	padding-top: 10px;
+	padding-top: 12px;
 	margin: 12px;
 	margin-left: 0px;
-	padding-left: 6px;
+	margin-top: 0px;
+	padding-left: 12px;
+	padding-right: 8px;
 
-	border-style: solid;
-	box-shadow: fill #00000033 0px 0px 18px 0px;
+	background-color: store_bubble;
+	box-shadow: #00000033 -2px -2px 4px 4px;
 
-	border-color: #ffffff33;
-	border-width: 3px;
 	border-radius: 5px;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
@@ -336,7 +333,8 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 #FriendRecommendBubble
 {
 	background-image: url( "file://{images}/store/recommend_bubble.png" );
-	opacity: 0.3;
+	opacity: 1.0;
+	wash-color: store_bubble;
 	width: 24px;
 	height: 24px;
 	margin-left: 4px;
@@ -358,11 +356,12 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	flow-children: right;
 
 	pre-transform-scale2d: 1.0;
-	wash-color: bgcolorwashlight;
+	wash-color: #00000022;
 	desaturation: 0.2;
-	opacity: 0.85;
+	opacity: 0.9;
+	//opacity-mask: url( "file://{images}/focus_shadow_top.png" ) 1.0;
 
-	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity;
+	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity, opacity-mask;
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
@@ -383,7 +382,8 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	wash-color: white;
 	desaturation: 0.0;
 	opacity: 1.0;
-	position: 0px 118px 0px;
+	position: 0px 125px 0px;
+	//opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
 }
 
 #ImageCarousel:descendantfocus:hover
@@ -402,13 +402,9 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	vertical-align: center;
 	background-color: black;
 
-	border-color: #00000000;
-	border-width: PreviewImageBorder;
-	border-style: solid;
-
-	wash-color: #214d5766;
+	wash-color: #00000033;
 	blur: gaussian(0.5);
-	desaturation: 0.5;
+	desaturation: 0.4;
 	pre-transform-scale2d: 0.57, 0.57;
 	transform: translate3d( -172px, -76px, 0px );
 
@@ -429,16 +425,16 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	transform: translatey( -0px );
 
 	box-shadow: #00000044 -4px -4px 8px 8px;
-	wash-color: none;
+	wash-color: #00000022;
 	blur: gaussian (0.0);
-	desaturation: 0.0;
+	desaturation: 0.2;
 }
 
 #ImageCarousel:descendantfocus .PreviewImage:descendantfocus
 {
 	pre-transform-scale2d: 1.0, 1.0;
-
-	border-color: #fdfefef0;
+	desaturation: 0.0;
+	wash-color: #00000000;
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
@@ -450,17 +446,12 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 #ImageCarousel:descendantfocus .PreviewImage:hover
 {
 	pre-transform-scale2d: 0.74, 0.74;
-	box-shadow: box_shadow_on_color -6px -6px 8px 12px;
+
 }
 
 #ImageCarousel:descendantfocus .PreviewImage:descendantfocus:hover
 {
-	pre-transform-scale2d: 1.03, 1.03;
-}
-
-#ImageCarousel .PreviewImage
-{
-	padding: PreviewImagePadding;
+	pre-transform-scale2d: 1.0, 1.0;
 }
 
 
@@ -537,7 +528,7 @@ Button Label
 
 Button:focus Label
 {
-	color: #161718f5;
+	color: applabelselectedsolid;
 	transform: translatex(0px);
 }	
 
@@ -557,7 +548,7 @@ Button:focus
 	transition-duration: 0.4s !immediate;
 
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
@@ -573,9 +564,10 @@ Button:focus
 .AgeButton
 {
 	height: 50px;
-	border-radius: 2px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-width: 0px;
 }
 
 //
@@ -590,11 +582,7 @@ Button:focus
 	overflow: clip clip;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 
-	background-color: #161718b0;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
+	background-color: transparent_module;
 
 	pre-transform-scale2d: 1.0, 1.0;
 
@@ -606,12 +594,8 @@ Button:focus
 
 .AppSection:descendantfocus, .AppSection:focus
 {
-	background-color: store_module;
+	background-color: action_module;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
 
 	pre-transform-scale2d: 1.0, 1.0;
 
@@ -631,7 +615,7 @@ Button:focus
 .AppSection .HeaderLabel
 {
 	font-family: platformfont;
-	font-size: 40px;
+	font-size: 38px;
 	color: detailsdatalabel;
 	margin: 20px 20px 8px 20px;
 	font-weight: light;
@@ -760,7 +744,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 {
 	width: 460px;
 	height: 215px;
-	margin: 12px 12px 8px 12px;
+	margin: 16px 16px 8px 16px;
 	opacity: 0.85;
 	desaturation: 0.1;
 
@@ -842,13 +826,14 @@ StorePackagePurchaseSection #PurchasePriceOverview
 
 .DLCLabel
 {
-	color: #872b84;
-	font-size: 28px;
+	color: #a455b0;
+	font-size: 24px;
+	margin: 4px 0px;
 }
 
 .DLCRequiresBase
 {
-	color: applabel;
+	color: applabelsolid;
 	width: 100%;
 	font-size: 20px;
 }
@@ -899,14 +884,14 @@ StorePackagePurchaseSection #PurchasePriceOverview
 
 #ComingSoon
 {
-	font-size: 28px;
-	color: #73a632;
-	margin: 0px 12px;
+	font-size: 24px;
+	color: #a9bd26;
+	margin: 4px 12px;
 }
 
 #AppSections .StoreAppPurchaseSection Button
 {
-	margin: 0px 12px;
+	margin: 0px 16px;
 }
 
 // Price related
@@ -1248,9 +1233,10 @@ h1, h2
 #DetailsCategoryOverview
 {
 	flow-children: right;
+	vertical-align: center;
 
 	// show exactly 5 images max
-	width: 200px;
+	width: 205px;
 }
 
 #DetailsCategoryOverview Image
@@ -1336,13 +1322,13 @@ h1, h2
 .PartialController #IconController
 {
 	visibility: visible;
-
 	background-image: url( "file://{images}/controller_support_partial.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-	wash-color: #686667;
+	wash-color: white;
 	width: 40px;
-	height: 40px;
+	height: 33px;
+	vertical-align: center;
 }
 
 .FullController #CategoryControllerImage
@@ -1372,7 +1358,7 @@ h1, h2
 .SteamPad .FullController #CategoryControllerImage,
 .SteamPad .PartialController #CategoryControllerImage
 {
-	visibility: collapse;
+	visibility: visible;
 }
 
 //
@@ -1496,8 +1482,8 @@ h1, h2
 #FriendsWhoPlayFeatured, #FriendsWhoWantFeatured
 {
 	border-style: solid;
-	border-width: 3px;
-	border-radius: 4px;
+	border-width: 4px;
+	border-radius: 6px;
 	box-shadow: fill #00000040 0px 0px 18px 0px;
 
 	width: 86px;
@@ -1513,8 +1499,8 @@ h1, h2
 #FriendsWhoPlayList AvatarImage, #FriendsWhoWantList AvatarImage
 {
 	border-style: solid;
-	border-width: 2px;
-	border-radius: 3px;
+	border-width: 2.5px;
+	border-radius: 4px;
 
 	width: 42px;
 	height: 42px;
@@ -1703,16 +1689,13 @@ StoreAppPackage, StoreAppPackageGroup
 	height: 692px;
 	padding: 12px 0px;
 	margin-right: -30px;
-	background-color: dialog_bg_color;
+	background-color: transparent_module;
 	pre-transform-scale2d: 0.9;
 	flow-children: down;
 
 	box-shadow: #00000044 -2px -2px 4px 4px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #27394400;
 
-	opacity: 0.9;
+	opacity: 1.0;
 
 	transition-property: position, transform, border, opacity, background-color, pre-transform-scale2d;
 	transition-duration: 0.4s;
@@ -1722,12 +1705,11 @@ StoreAppPackage, StoreAppPackageGroup
 
 StoreAppPackage:descendantfocus, StoreAppPackageGroup:descendantfocus
 {
-	border-color: ui_common_control_border;
-	border-width: 5px;
 	wash-color: #429aae00;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 	pre-transform-scale2d: 1.0;
 	margin: 0px;
+	background-color: action_module;
 
 	opacity: 1.0;
 
@@ -1753,11 +1735,11 @@ StoreAppPackage #HeaderImage, StoreAppPackageGroup #HeaderImage
 {
 	width: 460px;
 	height: 215px;
-	margin: 0px 12px 8px 12px;
-	wash-color: bgcolorwashmedium;
-	opacity: 0.85;
-	desaturation: 0.1;
-	
+	margin: 8px 16px 12px 16px;
+	wash-color: #00000033;
+	opacity: 0.9;
+	desaturation: 0.15;
+
 	transition-property: opacity;
 }
 
@@ -1803,7 +1785,7 @@ StoreAppPackageGroup #ViewPackageSection
 {
 	width: 100%;
 	flow-children: right;
-	margin: 0px 12px 8px 12px;
+	margin: 0px 10px 10px 10px;
 }
 
 .PackagePriceSystemRow StorePrice
@@ -1837,13 +1819,13 @@ StoreAppPackage Button, StoreAppPackageGroup Button
 {
 	margin: 8px 12px 0px 12px;
 	font-size: 24px;
-	color: #a2a2a4;
+	color: #ffffffa4;
 }
 
 #AppNamesInPackage
 {
 	font-size: 24px;
-	color: #a2a2a4;
+	color: #ffffff66;
 	margin: 0px 12px;
 	font-family: platformfont;
 }
@@ -1959,10 +1941,10 @@ StoreAppDLCItem #DlcHeaderImage
 	width: 546px;
 	height: 255px;
 	box-shadow: #00000044 -4px -4px 8px 8px;
-	desaturation: 0.1;
-	opacity: 0.85;
+	desaturation: 0.15;
+	wash-color: #00000044;
 
-	transition-property: desaturation, opacity;
+	transition-property: desaturation, wash-color;
 }
 
 StoreAppDLCItem:hover #DlcHeaderImage
@@ -1974,7 +1956,7 @@ StoreAppDLCItem:hover #DlcHeaderImage
 StoreAppDLCItem:descendantfocus #DlcHeaderImage
 {
 	desaturation: 0.0;
-	opacity: 1.0;
+	wash-color: #00000000;
 }
 
 
@@ -2001,22 +1983,6 @@ StoreAppDLCItem:descendantfocus #DlcImageWrapper
 	animation-direction: normal;
 }
 
-#DlcImageBorder
-{
-	width: 546px;
-	height: 255px;
-
-	border: 5px solid transparent;
-
-	transition-property: border;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
-}
-
-StoreAppDLCItem:descendantfocus #DlcImageBorder
-{
-	border-color: #fdfefef0;
-}
 
 
 //
@@ -2025,19 +1991,12 @@ StoreAppDLCItem:descendantfocus #DlcImageBorder
 StoreSlideshow
 {
 	background-color: black;
-	pre-transform-scale2d: 0.41666666667, 0.41666666667;
-	transform: translate3d( -455px, -48px, 0px );
+	transform-origin: 0% 0%;
 
-	transition-property: transform, pre-transform-scale2d;
-	transition-duration: SlideshowFocusTransitionDuration, SlideshowFocusTransitionDuration;
+	transition-property: transform, position;
+	transition-duration: SlideshowFocusTransitionDuration;
 	transition-delay: 0s, 0s;
 	transition-timing-function: ease-out;
-}
-
-StoreSlideshow:descendantfocus
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: none;
 }
 
 
@@ -2170,7 +2129,7 @@ StorePackageAppOverview.Focused:descendantfocus #ItemName
 
 #AppCarousel:descendantfocus .HeaderImageWrapper:hover
 {
-	box-shadow: fill box_shadow_on_color -4.5px -4.5px 6px 9px;
+
 	pre-transform-scale2d: 1.03;
 }
 
@@ -2178,17 +2137,6 @@ StorePackageAppOverview:descendantfocus:hover .HeaderImageWrapper:hover
 {
 	pre-transform-scale2d: 1.0;
 }
-
-#AppCarousel:descendantfocus .HeaderImageWrapper:hover
-{
-	box-shadow: fill box_shadow_off_color -4.5px -4.5px 6px 9px;
-}
-
-#AppCarousel:descendantfocus .HeaderImageWrapper:hover
-{
-	box-shadow: fill box_shadow_on_color -4.5px -4.5px 6px 9px;
-}
-
 
 #AppCarousel:descendantfocus StorePackageAppOverview:descendantfocus .HeaderImageWrapper
 {
@@ -2208,7 +2156,7 @@ StorePackageAppOverview:descendantfocus:hover .HeaderImageWrapper:hover
 	width: 100%;
 	height: 100%;
 
-	border: 5px solid transparent;
+	border: 0px solid transparent;
 
 	transition-property: border;
 	transition-duration: 0.4s;
@@ -2303,7 +2251,7 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 
 .PriceRowHeader
 {
-	color: #4e4e4e;
+	color: #ffffff66;
 	font-size: 22px;
 	width: 300px;
 	text-align: right;
@@ -2386,41 +2334,48 @@ DropDown#Day
 {
 	width: 130px;
 	margin-right: 16px;
+	background-color: transparent_module2;
 }
 
 #DayDropDownMenu
 {
 	width: 130px;
-	height: 400px;
+	height: 414px;
+	background-color: transparent_module2;
 }
 
 DropDown#Month
 {
 	width: 250px;
 	margin-right: 16px;
+	background-color: transparent_module2;
 }
 
 #MonthDropDownMenu
 {
 	width: 250px;
-	height: 400px;
+	height: 414px;
+	background-color: transparent_module2;
 }
 
 DropDown#Year
 {
 	width: 200px;
-	margin-right: 16px;
+	margin-right: 0px;
+	background-color: transparent_module2;
 }
 
 #YearDropDownMenu
 {
 	width: 200px;
-	height: 400px;
+	height: 414px;
+	background-color: transparent_module2;
 }
 
 StoreAgeGate Button
 {
 	width: fit-children;
+	background-color: transparent_module2;
 }
 
 StoreAgeGate Button Label
@@ -2447,20 +2402,24 @@ DropDownMenu
 	
 #ContinueBtn
 {
-	background-color: ui_common_control;	
-
+	background-color: transparent_module2;
 	transition-property: background-color, color, border, box-shadow;
-
+	border-width: 5px;
+	border-color: none;
 }	
+
+#ContinueBtn:hover
+{
+	box-shadow: none;
+}
 
 #ContinueBtn:focus
 {
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
-
 	border-width: 5px;
-	border-style: solid;
-	border-color: #ffffffff;
+	border-color: #fdfefef0;
+
 	animation-name: main-button-glow-movement-no-fill, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0s;
@@ -2468,10 +2427,82 @@ DropDownMenu
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
+
+DropDown#Day:focus,
+DropDown#Month:focus,
+DropDown#Year:focus,
+DropDown#Day:selected,
+DropDown#Month:selected,
+DropDown#Year:selected
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
+
+
+	animation-name: main-button-glow-movement-no-fill, quick-blur;
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite, 1;
+	animation-direction: normal;
+}
+
+
+DropDown.DropDownMenuVisible:focus Label
+{
+	color: applabelselectedsolid;
+}
+
 	
 #ContinueBtn Label
 {
 	font-size: 24px;
 	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
 	transform: translateX( 0px );
+}
+
+#ImageCarousel:descendantfocus .LeftMouseScrollRegion
+{
+	position: 0px 60px 0px;
+	width: 80px;
+	height: 350px;
+
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: mouse_off_bg_left;
+	opacity: 0.0;
+	
+	transition-property: opacity, background-color;
+	transition-duration: 0.23s;
+}
+
+#ImageCarousel:descendantfocus .RightMouseScrollRegion
+{
+	position: -680px 60px 0px;
+	width: 80px;
+	height: 350px;
+	horizontal-align: right;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: mouse_off_bg_right;
+	opacity: 0.0;
+	
+	transition-property: opacity, background-color;
+	transition-duration: 0.23s;
+}
+
+#ImageCarousel:descendantfocus:hover .RightMouseScrollRegion
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_right;
+}
+
+#ImageCarousel:descendantfocus:hover .LeftMouseScrollRegion
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
 }

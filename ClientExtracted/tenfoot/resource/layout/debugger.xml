@@ -22,9 +22,16 @@
 		</Panel>
 		<DebugPanelParents id="DebugPanelParents" />
 		<Panel class="DebugBody">
-			<DebugLayout id="DebugLayout" />
-			<VerticalSplitter />
-			<DebugPanel id="DebugPanel" />
+			<Panel class="DebugBodyTop">
+				<DebugLayout id="DebugLayout" />
+				<VerticalSplitter />
+				<DebugPanel id="DebugPanel" />
+			</Panel>
+			<HorizontalSplitter />
+			<Panel class="DebugJSConsole">
+				<Label id="JSConsoleText" />
+				<TextEntry id="JSConsoleInput" onmoveup="UpdateJSConsolePriorHistory()" onmovedown="UpdateJSConsoleNextHistory()" />
+			</Panel>
 		</Panel>
 	</Debugger>	
 </root>

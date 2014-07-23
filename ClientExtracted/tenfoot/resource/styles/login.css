@@ -241,7 +241,7 @@ Label
 	horizontal-align: center;
 
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-	border-radius: 2px;
+	border-radius: 0px;
 
 	background-color: ui_common_control2;
 
@@ -270,7 +270,8 @@ RefreshLogin .Button
 	color: black;
 }
 
-.SteamGuard Label,.SteamGuard TextEntry
+.SteamGuard Label,.SteamGuard TextEntry,
+.TwoFactor Label,.TwoFactor TextEntry
 {
 	vertical-align: center;
 }
@@ -399,6 +400,43 @@ LoginProgress,RefreshLogin
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
+}
+
+LoginProgress
+{
+	opacity: 0.0;
+	animation-name: progress-fade-in;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.ShowingLoginProgress LoginProgress
+{
+	opacity: 1.0;
+}
+
+@keyframes 'progress-fade-in'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+
+	50%
+	{
+		opacity: 0.0;
+	}
+
+	100%
+	{
+		opacity: 1.0;
+	}
 }
 
 RefreshLogin
@@ -656,8 +694,6 @@ HTML
 	padding-right: 0px;
 	margin: 5px;
 	padding-left: 0px;
-	border-width: 5px;
-	border-color: ui_common_control_border;
 	// room for scroll bar
 }
 
