@@ -1,6 +1,7 @@
 etags.txt
 apikey.txt
 update.lock
+extract_client.sh
 
 ProtobufDumper/
 
@@ -9,7 +10,6 @@ ProtobufDumper/
 *.webm
 *.zip
 
-ClientExtracted/extract.sh
 ClientExtracted/tenfoot/resource/keyboards/
 ClientExtracted/tenfoot/resource/wordlists/
 ClientExtracted/steam/drivercheck/
