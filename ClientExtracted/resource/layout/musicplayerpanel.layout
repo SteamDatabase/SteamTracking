@@ -19,6 +19,15 @@
 		TrackList { controlname=ListPanel style="MusicListPanelInterior" }
 		NoTracksLabel { controlname=Label style="NoTracksLabelStyle" labeltext="" zpos="-1" }
 		InfoLabel { controlname=Label style="InfoLabelStyle" labeltext="1 OF 10"  zpos="-1" textalignment=center }
+		
+		frame_title
+		{
+			ControlName=Label
+	
+			style="ClientTitle"
+			"textAlignment"   "west"
+			"textAlignment"   "center" [$OSX]
+		}
 	}
 
 	colors
@@ -75,6 +84,30 @@
 			{}
     	} 
     
+    ClientTitle [!$OSX]
+		{
+			textcolor=none		
+		}
+
+		ClientTitle [$OSX]
+		{
+			font-family=basefont
+			font-size=15
+      		font-weight=400
+      		textcolor="textdisabled"
+      		bgcolor="none"
+      		inset="0 6 0 0"
+		}
+
+		ClientTitle:FrameFocus [$OSX]
+		{
+			font-family=basefont
+   			font-size=15
+   			font-weight=400
+   			textcolor="texthover"
+   			bgcolor="none"
+   			inset="0 6 0 0"
+		}
 
 		CurrentAlbumImageStyle	{	}
 		RepeatButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_repeat_default	inset="0" padding="0" }
