@@ -111,7 +111,7 @@
 				$this->Log( '{lightcyan}Extracting archives and fixing encodings' );
 				
 				// Let's break all kinds of things! :(
-				System( 'sh ' . __DIR__ . '/ClientExtracted/extract.sh' );
+				System( 'sh ' . __DIR__ . '/extract_client.sh' );
 				
 				$this->Log( '{lightcyan}Dumping protobufs' );
 				
