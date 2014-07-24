@@ -720,7 +720,7 @@ function togglePOTW( steamId, memberName )
 	var bAnswer = confirm( 'You are about to ' + pText + '\n\nAre you sure?' );
 	if ( bAnswer )
 	{
-		createQuery2( g_strProcessURL, receivePOTWToggle, { "xml": 1, "action": "potw", "memberId": steamId } );
+		createQuery2( g_strProcessURL, receivePOTWToggle, { "xml": 1, "action": "potw", "memberId": steamId, sessionid: g_sessionID } );
 	}
 }
 function receivePOTWToggle()
