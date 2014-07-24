@@ -26,20 +26,13 @@
 	color: #DDDDDDFF;
 	font-weight: normal;
 	
+	pre-transform-scale2d: 1.0;
+
 	transition-property: opacity, transform, pre-transform-scale2d;
-	transition-duration: fade_in_out_time;
-	transition-timing-function: ease-in-out;
+	transition-duration: fade_in_out_time, fade_in_out_time, 0.23s;
+	transition-timing-function: ease-in-out, ease-in-out, ease-in;
 	
 }
-
-.NotificationRoot
-{
-	pre-transform-scale2d: 1.0;
-	
-	transition-property: pre-transform-scale2d;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-in;
-}	
 
 .NotificationRoot:hover
 {
