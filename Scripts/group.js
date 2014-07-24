@@ -175,7 +175,10 @@ function deleteEvent( deleteURL )
 {
 	if ( confirm( 'You are about to delete this event. Are you sure?' ) )
 	{
-		location.href = deleteURL;
+		var $Form = $J('<form/>', {action: deleteURL, method: 'POST'});
+		$Form.append( $J('<input/>', {type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+		$J('body').append( $Form );
+		$Form.submit();
 	}
 }
 
