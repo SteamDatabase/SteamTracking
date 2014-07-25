@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.018ee8282ca8da9b81b6d37fa3414f0e03aaa2d9.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fa794efdb7c56496098f53672b826f60e4c51c58.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -13156,7 +13156,7 @@
 				"name": "Exquisite Rack",
 				"defindex": 339,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Exquisite Rack",
 				"proper_name": false,
 				"item_slot": "misc",
@@ -112674,13 +112674,13 @@
 				"item_name": "Merc's Mohawk",
 				"proper_name": true,
 				"item_slot": "misc",
-				"model_player": "models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_heavy.mdl",
+				"model_player": "models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_scout.mdl",
 				"item_quality": 6,
 				"image_inventory": "backpack/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe",
 				"min_ilevel": 1,
 				"max_ilevel": 100,
-				"image_url": "http://media.steampowered.com/apps/440/icons/short2014_lil_moe.d65623e2b3ea8d901ab17e6b7ec4a8d386fa6972.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/short2014_lil_moe_large.57f0f80643ae4b093c1c2f1ce21fe75e2fc1d2a4.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/short2014_lil_moe.806a5c4f37bc4b9bffb58d589e303e13dcdfb905.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/short2014_lil_moe_large.64cb487464afbbcd2021c38aac9ce53161eab28f.png",
 				"drop_type": "none",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
@@ -112698,11 +112698,6 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
-				"used_by_classes": [
-					"Heavy",
-					"Engineer"
-				]
-				,
 				"attributes": [
 					{
 						"name": "kill eater score type",

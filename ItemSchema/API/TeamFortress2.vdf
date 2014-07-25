@@ -16494,7 +16494,9 @@
 			{
 				"paintable"		"1"
 			}
+			"item_type_name" "#TF_Wearable_CosmeticItem"
 			"item_name"	"#TF_ExquisiteRack"
+			"equip_region"	"hat_misc"
 			"image_inventory"	"backpack/player/items/soldier/soldier_holiday_antlers"
 			"model_player"	"models/player/items/soldier/soldier_holiday_antlers.mdl"
 			"used_by_classes"
@@ -45148,16 +45150,16 @@
 				{
 					"0"
 					{
-						"name"	"#TF_jul13_greased_lightning_Style0"
+						"name"		"#TF_jul13_greased_lightning_Style0"
 						"additional_hidden_bodygroups"
 						{
-							"hat"			"1"
-							"headphones"	"1"
+							"hat"		"1"
+							"headphones"		"1"
 						}
 					}
 					"1"
 					{
-						"name"	"#TF_jul13_greased_lightning_Style1"
+						"name"		"#TF_jul13_greased_lightning_Style1"
 					}
 				}
 			}
@@ -52315,8 +52317,8 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"equip_regions"
 			{
-				"shirt"	"1"
-				"grenades" "1"
+				"shirt"		"1"
+				"grenades"		"1"
 			}
 			"visuals"
 			{
@@ -52390,8 +52392,9 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"equip_regions"
 			{
-				"hat"	"1"
-				"beard" "1"
+				"hat"		"1"
+				"beard"		"1"
+				"head_skin"		"1"
 			}
 			"visuals"
 			{
@@ -52423,7 +52426,7 @@
 			"item_name"		"#TF_short2014_ninja_vest"
 			"item_description"		"#TF_short2014_ninja_vest_Desc"
 			"item_type_name"		"#TF_Wearable_Shirt"
-			"equip_region"	"shirt"
+			"equip_region"		"shirt"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -52521,7 +52524,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_the_gas_guzzler"
 			"item_description"		"#TF_short2014_the_gas_guzzler_Desc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"equip_region"		"back"
 			"visuals"
 			{
@@ -52574,8 +52577,8 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"equip_regions"
 			{
-				"shirt"	"1"
-				"grenades" "1"
+				"shirt"		"1"
+				"grenades"		"1"
 			}
 			"visuals"
 			{
@@ -52646,7 +52649,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_poopyj_backpack"
 			"item_description"		"#TF_short2014_poopyj_backpack_Desc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"equip_region"		"back"
 			"image_inventory"		"backpack/workshop/player/items/engineer/short2014_poopyj_backpack/short2014_poopyj_backpack"
 			"capabilities"
@@ -52736,8 +52739,8 @@
 			"item_type_name"		"#TF_Wearable_Chin"
 			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/engineer/short2014_engineer_nerd_chin/short2014_engineer_nerd_chin"
-			"min_ilevel"	"3"
-			"max_ilevel"	"3"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
 			"capabilities"
 			{
 				"can_craft_count"		"1"
@@ -52777,7 +52780,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_engineer_nerd_feet"
 			"item_description"		"#TF_short2014_engineer_nerd_feet_Desc"
-			"item_type_name"		"TF_Wearable_Shoes"	
+			"item_type_name"		"TF_Wearable_Shoes"
 			"equip_region"		"feet"
 			"image_inventory"		"backpack/workshop/player/items/engineer/short2014_engineer_nerd_feet/short2014_engineer_nerd_feet"
 			"capabilities"
@@ -52864,6 +52867,13 @@
 			"item_name"		"#TF_short2014_lil_moe"
 			"item_description"		"#TF_short2014_lil_moe_Desc"
 			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe"
 			"capabilities"
 			{
@@ -52872,12 +52882,26 @@
 			}
 			"model_player_per_class"
 			{
+				"scout"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_medic.mdl"
 				"heavy"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_spy.mdl"
 				"engineer"		"models/workshop/player/items/all_class/short2014_lil_moe/short2014_lil_moe_engineer.mdl"
 			}
 			"used_by_classes"
 			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
 				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
 				"engineer"		"1"
 			}
 		}
@@ -52930,7 +52954,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_medic_messenger_bag"
 			"item_description"		"#TF_short2014_medic_messenger_bag_Desc"
-			"item_type_name"	"#TF_Wearable_Satchel"
+			"item_type_name"		"#TF_Wearable_Satchel"
 			"equip_region"		"medic_hip"
 			"image_inventory"		"backpack/workshop/player/items/medic/short2014_medic_messenger_bag/short2014_medic_messenger_bag"
 			"capabilities"
@@ -52972,7 +52996,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_fowl_fryer"
 			"item_description"		"#TF_short2014_fowl_fryer_Desc"
-			"item_type_name"	"#TF_Wearable_Backpack"
+			"item_type_name"		"#TF_Wearable_Backpack"
 			"equip_region"		"back"
 			"visuals"
 			{
@@ -53021,7 +53045,7 @@
 			"propername"		"1"
 			"item_name"		"#TF_short2014_chronoscarf"
 			"item_description"		"#TF_short2014_chronoscarf_Desc"
-			"item_type_name"	"#TF_Wearable_Scarf"
+			"item_type_name"		"#TF_Wearable_Scarf"
 			"equip_region"		"necklace"
 			"image_inventory"		"backpack/workshop/player/items/medic/short2014_chronoscarf/short2014_chronoscarf"
 			"capabilities"
@@ -53045,8 +53069,8 @@
 			"item_type_name"		"TF_Wearable_Apparel"
 			"equip_regions"
 			{
-				"hat"	"1"
-				"glasses"	"1"
+				"hat"		"1"
+				"glasses"		"1"
 			}
 			"image_inventory"		"backpack/workshop/player/items/engineer/short2014_chemists_pride/short2014_chemists_pride"
 			"capabilities"
@@ -53220,117 +53244,117 @@
 		}
 		"30426"
 		{
-			"name"	"The Paisley Pro"
-			"prefab"	"valve misc"
+			"name"		"The Paisley Pro"
+			"prefab"		"valve misc"
 			"first_sale_date"		"2014/06/16"
 			"equip_regions"
 			{
-				"shirt"	"1"
-				"arm_tatoos" "1"
+				"shirt"		"1"
+				"arm_tatoos"		"1"
 			}
-			"item_type_name"	"#TF_Wearable_Shirt"
-			"item_name"	"#TF_ScoutFancyShirt"
-			"item_description"	"#TF_ScoutFancyShirt_Desc"
-			"image_inventory"	"backpack/player/items/scout/scout_fancy_shirt"
-			"model_player"	"models/player/items/scout/scout_fancy_shirt.mdl"
-			"propername"	"1"
+			"item_type_name"		"#TF_Wearable_Shirt"
+			"item_name"		"#TF_ScoutFancyShirt"
+			"item_description"		"#TF_ScoutFancyShirt_Desc"
+			"image_inventory"		"backpack/player/items/scout/scout_fancy_shirt"
+			"model_player"		"models/player/items/scout/scout_fancy_shirt.mdl"
+			"propername"		"1"
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
 			}
 		}
 		"30427"
 		{
-			"name"	"The Argyle Ace"
-			"prefab"	"valve misc"
+			"name"		"The Argyle Ace"
+			"prefab"		"valve misc"
 			"first_sale_date"		"2014/06/16"
-			"equip_region"	"feet"
-			"item_type_name"	"#TF_Wearable_Shoes"
-			"item_name"	"#TF_ScoutFancyShoes"
-			"item_description"	"#TF_ScoutFancyShoes_Desc"
-			"image_inventory"	"backpack/player/items/scout/scout_brogues"
-			"model_player"	"models/player/items/scout/scout_brogues.mdl"
-			"propername"	"1"
+			"equip_region"		"feet"
+			"item_type_name"		"#TF_Wearable_Shoes"
+			"item_name"		"#TF_ScoutFancyShoes"
+			"item_description"		"#TF_ScoutFancyShoes_Desc"
+			"image_inventory"		"backpack/player/items/scout/scout_brogues"
+			"model_player"		"models/player/items/scout/scout_brogues.mdl"
+			"propername"		"1"
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
 			}
 			"visuals"
 			{
 				"player_bodygroups"
 				{
-					"shoes_socks"			"1"
+					"shoes_socks"		"1"
 				}
 			}
 		}
 		"30428"
 		{
-			"name"	"The Pomade Prince"
-			"prefab"	"valve hat"
+			"name"		"The Pomade Prince"
+			"prefab"		"valve hat"
 			"first_sale_date"		"2014/06/16"
-			"item_type_name"	"#TF_Wearable_Hair"
-			"item_name"	"#TF_ScoutFancyHair"
-			"item_description"	"#TF_ScoutFancyHair_Desc"
-			"image_inventory"	"backpack/player/items/scout/scout_pompadour"
-			"model_player"	"models/player/items/scout/scout_pompadour.mdl"
-			"propername"	"1"
+			"item_type_name"		"#TF_Wearable_Hair"
+			"item_name"		"#TF_ScoutFancyHair"
+			"item_description"		"#TF_ScoutFancyHair_Desc"
+			"image_inventory"		"backpack/player/items/scout/scout_pompadour"
+			"model_player"		"models/player/items/scout/scout_pompadour.mdl"
+			"propername"		"1"
 			"used_by_classes"
 			{
-				"scout"	"1"
+				"scout"		"1"
 			}
 			"visuals"
 			{
 				"player_bodygroups"
 				{
-					"hat"			"1"
-					"headphones"	"1"
+					"hat"		"1"
+					"headphones"		"1"
 				}
 			}
 		}
 		"30429"
 		{
-			"name"	"The Allbrero"
-			"prefab"	"valve hat"
+			"name"		"The Allbrero"
+			"prefab"		"valve hat"
 			"first_sale_date"		"2014/06/16"
-			"item_name"	"#TF_DemoSombrero"
-			"item_description"	"#TF_DemoSombrero_Desc"
-			"image_inventory"	"backpack/player/items/demo/demo_fiesta_sombrero"
-			"model_player"	"models/player/items/demo/demo_fiesta_sombrero.mdl"
-			"propername"	"1"
+			"item_name"		"#TF_DemoSombrero"
+			"item_description"		"#TF_DemoSombrero_Desc"
+			"image_inventory"		"backpack/player/items/demo/demo_fiesta_sombrero"
+			"model_player"		"models/player/items/demo/demo_fiesta_sombrero.mdl"
+			"propername"		"1"
 			"used_by_classes"
 			{
-				"demoman"	"1"
+				"demoman"		"1"
 			}
 		}
 		"30430"
 		{
-			"name"	"Seeing Double"
-			"prefab"	"valve misc"
+			"name"		"Seeing Double"
+			"prefab"		"valve misc"
 			"first_sale_date"		"2014/06/16"
-			"equip_region"	"glasses"
-			"item_type_name"	"#TF_Wearable_Glasses"
-			"item_name"	"#TF_DemomanMargaritaShades"
-			"item_description"	"#TF_DemomanMargaritaShades_Desc"
-			"image_inventory"	"backpack/player/items/demo/demo_fiesta_shades"
-			"model_player"	"models/player/items/demo/demo_fiesta_shades.mdl"
+			"equip_region"		"glasses"
+			"item_type_name"		"#TF_Wearable_Glasses"
+			"item_name"		"#TF_DemomanMargaritaShades"
+			"item_description"		"#TF_DemomanMargaritaShades_Desc"
+			"image_inventory"		"backpack/player/items/demo/demo_fiesta_shades"
+			"model_player"		"models/player/items/demo/demo_fiesta_shades.mdl"
 			"used_by_classes"
 			{
-				"demoman"	"1"
+				"demoman"		"1"
 			}
 		}
 		"30431"
 		{
-			"name"	"Six Pack Abs"
-			"prefab"	"valve grenades"
+			"name"		"Six Pack Abs"
+			"prefab"		"valve grenades"
 			"first_sale_date"		"2014/06/16"
-			"item_type_name"	"#TF_Wearable_Bottles"
-			"item_name"	"#TF_DemomanBeerGrenades"
-			"item_description"	"#TF_DemomanBeerGrenades_Desc"
-			"image_inventory"	"backpack/player/items/demo/demo_fiesta_bottles"
-			"model_player"	"models/player/items/demo/demo_fiesta_bottles.mdl"
+			"item_type_name"		"#TF_Wearable_Bottles"
+			"item_name"		"#TF_DemomanBeerGrenades"
+			"item_description"		"#TF_DemomanBeerGrenades_Desc"
+			"image_inventory"		"backpack/player/items/demo/demo_fiesta_bottles"
+			"model_player"		"models/player/items/demo/demo_fiesta_bottles.mdl"
 			"used_by_classes"
 			{
-				"demoman"	"1"
+				"demoman"		"1"
 			}
 		}
 
