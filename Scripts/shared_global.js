@@ -1520,8 +1520,11 @@ var CAjaxPagingControls = Class.create( {
 
 	GoToPage: function( iPage, bForce )
 	{
-		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || ( iPage == this.m_iCurrentPage && ( typeof bForce == 'undefined' || !bForce ) ) )
-			return false;
+		if ( typeof( bForce )== 'undefined' || !bForce )
+		{
+			if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 || iPage == this.m_iCurrentPage )
+				return false;
+		}
 
 		var params = {
 			query: this.m_strQuery,
@@ -1574,7 +1577,7 @@ var CAjaxPagingControls = Class.create( {
 			this.m_cMaxPages = Math.ceil( response.total_count / this.m_cPageSize );
 			this.m_iCurrentPage = Math.floor( response.start / this.m_cPageSize );
 
-			if ( this.m_cTotalCount <= response.start )
+			if ( this.m_iCurrentPage != 0 && this.m_cTotalCount <= response.start )
 			{
 				// this page is no longer valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
 				this.GoToPage.bind( this, this.m_iCurrentPage - 1 ).defer();
@@ -1596,10 +1599,23 @@ var CAjaxPagingControls = Class.create( {
 
 	UpdatePagingDisplay: function()
 	{
-		$(this.m_strElementPrefix + '_total').update( v_numberformat( this.m_cTotalCount ) );
-		$(this.m_strElementPrefix + '_start').update( v_numberformat( this.m_iCurrentPage * this.m_cPageSize + 1 ) );
-		$(this.m_strElementPrefix + '_end').update( Math.min( ( this.m_iCurrentPage + 1 ) * this.m_cPageSize, this.m_cTotalCount ) );
+		var elemNoResults = $(this.m_strElementPrefix + '_no_results');
+		if ( this.m_cTotalCount == 0 )
+		{
+			$(this.m_strElementPrefix + '_ctn').hide();
+			if ( elemNoResults )
+				elemNoResults.show();
+		}
+		else
+		{
+			$(this.m_strElementPrefix + '_ctn').show();
+			if ( elemNoResults )
+				elemNoResults.hide();
 
+			$(this.m_strElementPrefix + '_total').update( v_numberformat( this.m_cTotalCount ) );
+			$(this.m_strElementPrefix + '_start').update( v_numberformat( this.m_iCurrentPage * this.m_cPageSize + 1 ) );
+			$(this.m_strElementPrefix + '_end').update( Math.min( ( this.m_iCurrentPage + 1 ) * this.m_cPageSize, this.m_cTotalCount ) );
+		}
 
 		if ( this.m_cMaxPages <= 1 )
 		{

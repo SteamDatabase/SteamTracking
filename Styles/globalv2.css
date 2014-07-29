@@ -557,96 +557,6 @@ a.commentthread_allcommentslink:hover {
 	background-color: #AC966A;
 }
 
-span.bb_spoiler {
-	color: #000000;
-	background-color: #000000;
-
-	padding: 0px 8px;
-}
-
-span.bb_spoiler:hover {
-	color: #ffffff;
-}
-
-span.bb_spoiler > span {
-	visibility: hidden;
-}
-
-span.bb_spoiler:hover > span {
-	visibility: visible;
-}
-
-blockquote.bb_blockquote {
-	border: 1px solid #535354;
-	border-radius: 3px;
-	padding: 12px;
-	margin: 8px;
-
-	font-size: 12px;
-}
-
-blockquote.bb_blockquote.with_author {
-}
-
-div.bb_quoteauthor {
-	font-size: 12px;
-	font-style: italic;
-}
-
-div.bb_h1 {
-	font-size: 15px;
-	color: #c6c6c6;
-}
-
-span.bb_strike {
-	text-decoration: line-through;
-}
-
-div.bb_code {
-	border: 1px solid #535354;
-	border-radius: 3px;
-	padding: 12px;
-	margin: 8px;
-
-	font-size: 11px;
-	font-family: Consolas,monospace;
-	white-space: pre;
-	white-space: pre-wrap;
-	overflow-x: auto;
-}
-
-table.bb_table
-{
-	border-spacing: 0px;
-	font-size: 12px;
-}
-
-table.bb_table th
-{
-	border: 1px solid #4d4d4d;
-	padding: 4px;
-}
-
-table.bb_table th img.sharedFilePreviewImage
-{
-	margin: 0px;
-}
-
-table.bb_table tr
-{
-}
-
-table.bb_table td
-{
-	border: 1px solid #4d4d4d;
-	padding: 4px;
-}
-
-table.bb_table td img.sharedFilePreviewImage
-{
-	margin: 0px;
-}
-
 /** Styles for modal popup */
 
 .modal_top_band {
@@ -1108,11 +1018,4 @@ img.emoticon {
 	max-width: 225px;
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
-}
-
-span.bb_link_host {
-	font-size: 10px;
-	color: #888;
-	padding: 4px;
-	top: -1px;
 }

@@ -1264,7 +1264,7 @@ a.headlineLink:hover {
 
 .curation_app_form_buttons {
 	float: right;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 .curation_app_form_buttons div {
@@ -1274,8 +1274,7 @@ a.headlineLink:hover {
 .curation_app_block {
 	background-color: #2d2d2e;
 	min-height: 120px;
-	margin-bottom: 20px;
-	margin-left: 4px;
+	margin: 10px 0px 20px 0px;
 }
 
 .curation_app_block_header_bar {
@@ -1313,4 +1312,68 @@ a.headlineLink:hover {
 .curation_app_block_link {
 	padding-top: 10px;
 	color: whitesmoke;
+}
+
+.curation_breadcrumb {
+	color: #828282
+}
+
+.curation_app_details_date {
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.curation_app_details_body {
+	margin-left: 200px;
+}
+
+.curation_app_details_img {
+	float: left;
+}
+
+.curation_app_details_body {
+}
+
+.curation_app_commentthread .commentthread_entry {
+	background-color: transparent;
+}
+
+.curation_app_commentthread .commentthread_entry textarea {
+	background-color: transparent;
+}
+
+.curation_warning_box {
+	width: 100%;
+	background-color: #918c6c;
+	border: solid 2px #ddd598;
+	color: #f0e8aa;
+	padding: 8px;
+	margin-bottom: 16px;
+}
+
+.curation_tagline {
+	padding: 8px;
+}
+
+#curationTaglineInput {
+	width: 100%;
+	background-color: #545456;
+}
+
+.curation_tagline_edit_description {
+	padding: 10px 0px 10px 0px;
+}
+
+.curation_tagline_edit_title{
+	color: #787875;
+	margin-bottom: 8px;
+}
+
+.curation_tagline_edit {
+	margin-bottom: 40px;
+}
+
+.curation_tagline {
+	margin-bottom: 20px;
 }

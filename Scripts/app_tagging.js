@@ -917,7 +917,7 @@ function InitTagBrowsePage( strTagLanguage, strCC )
 				var option = rgHashComponents[0];
 				var tagid;
 				if ( rgHashComponents.length >= 2 )
-					tagid = rgHashComponents[1];
+					tagid = parseInt( rgHashComponents[1] );
 				if ( rgActiveTagByOption[option] || rgActiveTagByOption[option] === null )
 				{
 					fnSelectOption( option, tagid );
