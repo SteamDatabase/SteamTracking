@@ -690,7 +690,7 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 	
 	new Ajax.Request( url, {
 		method: 'post',
-		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language},
+		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, sessionid: g_sessionID},
 		onSuccess: function( transport ) {
 			if ( transport.responseJSON.success )
 			{
@@ -718,7 +718,7 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 //hide a game from being recommended
 function HideRecommendation( type, itemid, divBtn, elemContainer )
 {
-	var parameters = {};
+	var parameters = { sessionid: g_sessionID };
 	
 	if ( type == 'app' )
 		parameters.appid = itemid;

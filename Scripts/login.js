@@ -54,9 +54,13 @@ function UpdateCaptcha( gid )
 
 var g_bLoginInFlight = false;
 var g_bInEmailAuthProcess = false;
+var g_bInTwoFactorAuthProcess = false;
 var g_bEmailAuthSuccessful = false;
 var g_bLoginTransferInProgress = false;
 var g_bEmailAuthSuccessfulWantToLeave = false;
+var g_bTwoFactorAuthSuccessful = false;
+var g_bTwoFactorAuthSuccessfulWantToLeave = false;
+var g_sAuthCode = "";
 
 function DoLogin()
 {
@@ -87,6 +91,14 @@ function DoLogin()
 }
 
 
+function getAuthCode( results )
+{
+	var authCode = g_sAuthCode;
+	g_sAuthCode = '';
+	return authCode;
+}
+
+
 function OnRSAKeyResponse( transport )
 {
 	var results = transport.responseJSON;
@@ -106,6 +118,7 @@ function OnRSAKeyResponse( transport )
 			parameters: {
 				username: username,
 				password: encryptedPassword,
+				twofactorcode: getAuthCode( results ),
 				emailauth: form.elements['emailauth'].value,
 				loginfriendlyname: form.elements['loginfriendlyname'].value,
 				captchagid: form.elements['captchagid'].value,
@@ -153,6 +166,11 @@ function OnLoginResponse( transport )
 			g_bEmailAuthSuccessful = true;
 			SetEmailAuthModalState( 'success' );
 		}
+		else if ( g_bInTwoFactorAuthProcess )
+		{
+			g_bTwoFactorAuthSuccessful = true;
+			SetTwoFactorAuthModalState( 'success' );
+		}
 		else
 		{
 			bRetry = false;
@@ -162,7 +180,16 @@ function OnLoginResponse( transport )
 	}
 	else
 	{
-		if ( results.captcha_needed && results.captcha_gid )
+		if ( results.requires_twofactor )
+		{
+			$('captcha_entry').hide();
+
+			if ( !g_bInTwoFactorAuthProcess )
+				StartTwoFactorAuthProcess();
+			else
+				SetTwoFactorAuthModalState( 'incorrectcode' );
+		}
+		else if ( results.captcha_needed && results.captcha_gid )
 		{
 			UpdateCaptcha( results.captcha_gid );
 		}
@@ -266,9 +293,9 @@ function OnTransferComplete()
 	if ( !g_bLoginTransferInProgress )
 		return;
 	g_bLoginTransferInProgress = false;
-	if ( !g_bInEmailAuthProcess )
+	if ( !g_bInEmailAuthProcess && !g_bInTwoFactorAuthProcess )
 		LoginComplete();
-	else if ( g_bEmailAuthSuccessfulWantToLeave )
+	else if ( g_bEmailAuthSuccessfulWantToLeave || g_bTwoFactorAuthSuccessfulWantToLeave)
 		LoginComplete();
 }
 
@@ -403,5 +430,115 @@ function OnFriendlyNameBlur( defaultText )
 		$('friendlyname').value = defaultText;
 		$('friendlyname').addClassName( 'defaulttext' );
 	}
+}
+
+
+function StartTwoFactorAuthProcess()
+{
+	g_bInTwoFactorAuthProcess = true;
+	SetTwoFactorAuthModalState( 'entercode' );
+	$('loginTwoFactorCodeModal').OnModalDismissal = CancelTwoFactorAuthProcess;
+}
+
+
+function CancelTwoFactorAuthProcess()
+{
+	g_bInTwoFactorAuthProcess = false;
+
+	if ( g_bEmailAuthSuccessful )
+		LoginComplete();
+	else
+		ClearLoginForm();
+}
+
+
+function OnTwoFactorAuthSuccessContinue()
+{
+	if ( g_bLoginTransferInProgress )
+	{
+		$('login_twofactorauth_buttonsets').childElements().invoke('hide');
+		if ( $('login_twofactorauth_buttonset_waiting') )
+			$('login_twofactorauth_buttonset_waiting').show();
+
+		g_bTwoFactorAuthSuccessfulWantToLeave = true;
+	}
+	else
+		LoginComplete();
+}
+
+function SetTwoFactorAuthModalState( step )
+{
+	if ( step == 'success' )
+	{
+		g_bInTwoFactorAuthProcess = false;
+	}
+
+	$('login_twofactorauth_messages').childElements().invoke('hide');
+	if ( $('login_twofactorauth_message_' + step ) )
+		$('login_twofactorauth_message_' + step ).show();
+
+	$('login_twofactorauth_details_messages').childElements().invoke('hide');
+	if ( $('login_twofactorauth_details_' + step ) )
+		$('login_twofactorauth_details_' + step ).show();
+
+	$('login_twofactorauth_buttonsets').childElements().invoke('hide');
+	if ( $('login_twofactorauth_buttonset_' + step ) )
+		$('login_twofactorauth_buttonset_' + step ).show();
+
+	$('login_twofactor_authcode_help_supportlink').hide();
+
+	var icon = 'key';
+	if ( step == 'entercode' )
+	{
+		showModal( 'loginTwoFactorCodeModal', true );
+		$('twofactorcode_entry').focus();
+	}
+	else if ( step == 'incorrectcode' )
+	{
+		icon = 'lock';
+		$('twofactorcode_entry').focus();
+	}
+	else if ( step == 'help' )
+	{
+		icon = 'steam';
+		$('twofactorcode_entry').hide();
+		$('login_twofactor_authcode_help_supportlink').show();
+	}
+
+	if ( ! g_bInTwoFactorAuthProcess )
+	{
+		$('loginTwoFactorCodeModal').hide();
+	}
+
+	$('login_twofactorauth_icon').className = 'auth_icon auth_icon_' + icon;
+}
+
+function SubmitTwoFactorCode( )
+{
+	g_sAuthCode = $('twofactorcode_entry').value;
+
+	$('login_twofactorauth_messages').childElements().invoke('hide');
+	$('login_twofactorauth_details_messages').childElements().invoke('hide');
+
+	$('login_twofactorauth_buttonsets').childElements().invoke('hide');
+	if ( $('login_twofactorauth_buttonset_waiting') )
+	{
+		$('login_twofactorauth_buttonset_waiting').show();
+	}
+	
+	DoLogin();
+}
+
+function OnTwoFactorCodeFocus( defaultText )
+{
+	if ( $('twofactorcode_entry').value == defaultText )
+	{
+		$('twofactorcode_entry').value = '';
+		$('twofactorcode_entry').removeClassName( 'defaulttext' );
+	}
+}
+
+function OnTwoFactorCodeBlur( defaultText )
+{
 }
 

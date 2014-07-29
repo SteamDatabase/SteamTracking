@@ -378,7 +378,7 @@ function ConfirmLeaveGroup( groupName )
 }
 
 
-function Curator_OnCreateRecommendation( groupid, create_only )
+function Curator_CreateOrEditRecommendation( groupid, create_only )
 {
 	// create the recommendation
 	$J.ajax({
@@ -386,9 +386,10 @@ function Curator_OnCreateRecommendation( groupid, create_only )
 		data: {
 			sessionID: g_sessionID,
 			appid: $J('#curationAppIDInput').val(),
+			appname: $J('#curationAppInput').val(),
 			blurb: $J('#curationBlurbInput').val(),
 			link_url: $J('#curationURLInput').val(),
-			create_only: create_only
+			create_only: create_only?1:0
 		},
 		success: function( data, textStatus, jqXHR ) {
 			if ( data.success == 1 )
@@ -408,6 +409,114 @@ function Curator_OnCreateRecommendation( groupid, create_only )
 		error: function( jqXHR, textStatus, errorThrown ) {
 			// uh oh
 			ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
+		}
+	});
+}
+
+function Curator_Follow( groupid, bFollow )
+{
+	$J.ajax({
+		url: 'https://steamcommunity.com/groups/' + groupid + '/followcurator/',
+		data: {
+			sessionID: g_sessionID,
+			follow: bFollow
+		},
+		success: function( data, textStatus, jqXHR ) {
+			if ( data.success == 1 )
+			{
+				if ( data.following )
+				{
+					$J('#group_curation_follow_button').html( 'Stop following' );
+				}
+				else
+				{
+					$J('#group_curation_follow_button').html( 'Follow this curator' );
+				}
+
+				$J('#group_curation_follow_link').attr( 'onclick', "Curator_Follow('" + groupid + "', " + (data.following?'0':'1') + "); return false;" );
+
+				if ( data.total_followers )
+				{
+					$J('#curator_follower_count').html( data.total_followers );
+				}
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Could not change follow state', data.error );
+			}
+			else
+			{
+				ShowAlertDialog( 'Could not change follow state', 'Sorry! There was an error with the servers and you\'ll have to try to do this again later.' );
+			}
+		},
+		error: function( jqXHR, textStatus, errorThrown ) {
+			// uh oh
+			ShowAlertDialog( 'Could not change follow state', 'Sorry! There was an error with the servers and you\'ll have to try to do this again later.' );
+		}
+	});
+}
+
+function Curator_DeleteRecommendation( groupid, appid, appname )
+{
+	var prompt_text = 'Do you want to delete your recommendation of %s?';
+	prompt_text = prompt_text.replace( '%s', appname );
+	var dialog = ShowConfirmDialog( 'Delete recommendation', prompt_text, 'Delete recommendation' );
+	dialog.done( function( reason ) {
+		$J.ajax({
+			url: 'https://steamcommunity.com/groups/' + groupid + '/deleterecommendation/',
+			data: {
+				sessionID: g_sessionID,
+				appid: appid
+			},
+			success: function( data, textStatus, jqXHR ) {
+				dialog = null;
+				if ( data.success == 1 )
+					dialog = ShowAlertDialog( 'Recommendation deleted', data.message );
+				else if ( data.error )
+					dialog = ShowAlertDialog( 'Could not deleted recommendation', data.error );
+				else
+					dialog = ShowAlertDialog( 'Could not deleted recommendation', 'Sorry! There was an issue with the Steam servers and the recommendation could not be deleted. Please try again later.' );
+
+				// reload
+				dialog.done( function( reason ) {
+					window.location = '#curation/';
+				});
+			},
+			error: function( jqXHR, textStatus, errorThrown ) {
+				// uh oh
+				ShowAlertDialog( 'Could not deleted recommendation', 'Sorry! There was an issue with the Steam servers and the recommendation could not be deleted. Please try again later.' );
+			}
+		});
+	});
+}
+
+
+function Curator_SetTagline( groupid, tagline )
+{
+	$J.ajax({
+		url: 'https://steamcommunity.com/groups/' + groupid + '/settagline/',
+		data: {
+			sessionID: g_sessionID,
+			tagline: tagline
+		},
+		success: function( data, textStatus, jqXHR ) {
+			if ( data.success == 1 )
+			{
+				// just reload, this page shows the result
+				window.location = 'https://steamcommunity.com/groups/' + groupid + '/#curation';
+			}
+			else if ( data.error )
+			{
+				ShowAlertDialog( 'Could not set tagline', data.error );
+			}
+			else
+			{
+				ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
+			}
+		},
+		error: function( jqXHR, textStatus, errorThrown ) {
+			// uh oh
+			ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
 		}
 	});
 }

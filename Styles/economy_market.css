@@ -915,6 +915,7 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_orders_block {
+	position: relative;
 	float: left;
 	width: 428px;
 	min-height: 298px;

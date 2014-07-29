@@ -31,7 +31,7 @@ var CommunitySearch = {
 	},
 
 	SetFilter: function( filter ) {
-		if ( !filter )
+		if ( !filter || ['users','groups','games'].lastIndexOf( filter ) == -1 )
 			filter = 'none';
 
 		this.m_sFilter = filter;
