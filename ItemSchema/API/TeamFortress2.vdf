@@ -653,7 +653,7 @@
 			"visuals_mvm_boss"
 			{
 				"sound_single_shot"	"MVM.GiantSoldierRocketShoot"
-				"sound_burst"		"MVM.GiantSoldierRocketShoot"
+				"sound_burst"		"MVM.GiantSoldierRocketShootCrit"
 				"sound_special1"	"MVM.GiantSoldierRocketExplode"
 			} 
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
@@ -21241,7 +21241,7 @@
 			"item_name"	"#TF_BonkBoy"
 			"item_description"	"#TF_BonkBoy_Desc"
 			"item_slot"	"misc"
-			"equip_region"	"head_skin"
+			"equip_region"	"glasses"
 			"item_quality"	"unique"
 			"propername" "0"
 			"image_inventory"	"backpack/player/items/scout/bonk_mask"
@@ -21255,7 +21255,6 @@
 			}
 			"visuals"
 			{
-
 				"styles"
 				{
 					"0"
@@ -43800,17 +43799,9 @@
 			}
 			"item_name"		"#TF_robo_scout_bolt_boy"
 			"item_description"		"#TF_robo_scout_bolt_boy_Desc"
-			"equip_region"		"head_skin"
+			"equip_region"		"glasses"
 			"item_type_name"		"#TF_Wearable_Hat"
 			"propername"		"1"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/scout/robo_scout_bolt_boy/robo_scout_bolt_boy"
 			"capabilities"
 			{
@@ -43820,6 +43811,25 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"	"#TF_robo_scout_bolt_boy_style0"
+						"additional_hidden_bodygroups"
+						{
+							"hat"			"1"
+							"headphones"	"1"
+						}
+					}
+					"1"
+					{
+						"name"	"#TF_robo_scout_bolt_boy_style1"
+					}
+				}
 			}
 		}
 		"30028"
