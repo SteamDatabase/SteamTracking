@@ -258,6 +258,8 @@ steam.styles
     AchievementPopup.DescriptionColor "180 180 180 255"
     
     GiftOnlyInfo.ImagePanelColor  "GrayBG"    
+
+	dd_texture_bottom "16 16 16 255"
  }
   
   styles
@@ -4455,6 +4457,7 @@ steam.styles
 		render_bg
 		{
 			// top area and graphic
+			0="gradient( x0, y0, x1, y1, dd_texture_bottom, black )"
 			0="image_tiled( x0, y0, x1, y0+275, graphics/dd_texture)"
 			1="fill( x0, y0+0, x0+1, y1, black )"
 			2="fill( x1-1, y0+0, x1, y1, black )"
