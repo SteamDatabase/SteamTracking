@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fa794efdb7c56496098f53672b826f60e4c51c58.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.f63e10d331d1fb91fc81fee238c7a2226e76158b.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -39428,8 +39428,8 @@
 				"image_inventory": "backpack/player/items/all_class/hwn_pet_balloon",
 				"min_ilevel": 20,
 				"max_ilevel": 20,
-				"image_url": "http://media.steampowered.com/apps/440/icons/hwn_pet_balloon.c1e7a0d119ebb58360a0a4e8fc4e3f4ed79af6f4.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/hwn_pet_balloon_large.d758509b3b57f67d2339c5fd24a80c35099d0851.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/hwn_pet_balloon.6d2808e780addcf48abe6d70338dc846ac579204.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/hwn_pet_balloon_large.d9f828976f1ccbe17d95a63e4ff5dd2677cd7885.png",
 				"drop_type": "none",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"craft_class": "",
@@ -94497,6 +94497,19 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				},
+				"styles": [
+					{
+						"name": "No Hat",
+						"additional_hidden_bodygroups": {
+							"hat": 1,
+							"headphones": 1
+						}
+					},
+					{
+						"name": "Hat"
+					}
+				]
+				,
 				"used_by_classes": [
 					"Scout"
 				]
