@@ -243,6 +243,13 @@ StoreRecommendationsPage
 	filter		"store"
 }
 
+StoreExplorePage
+{
+	url			"%store%/explore/"
+	method		"internal"
+	filter		"store"
+}
+
 StorePublisherPage
 {
 	url		"%store%/publisher/%p1%/"
