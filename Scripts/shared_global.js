@@ -185,7 +185,7 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 
 	var $Body = $J('<form/>');
 	var $TextArea = $J('<textarea/>', { 'class': 'newmodal_prompt_textarea' } );
-	$TextArea.html( strDescription );
+	$TextArea.text( strDescription );
 	if ( textAreaMaxLength )
 	{
 		$TextArea.attr( 'maxlength', textAreaMaxLength );
