@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.0d4a10af1e4c3f137dee2695f761b7ebb734ee61.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.a58a461686414af8b2f60db9c39f9d92d6989170.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2978,7 +2978,7 @@
 				}
 			},
 			{
-				"name": "Sticker",
+				"name": "sticker",
 				"defindex": 1209,
 				"item_class": "tool",
 				"item_type_name": "Sticker",
@@ -3292,8 +3292,33 @@
 				}
 			},
 			{
-				"name": "Community Case Key 4",
+				"name": "Community Case Key 4 July 2014",
 				"defindex": 1309,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Operation Breakout Case Key",
+				"item_description": "This key only opens Operation Breakout Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_4.9767c63233d8985cd090230ab2bfa29ae05ecdc0.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_4",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Case Key 4",
+				"defindex": 1310,
 				"item_class": "tool",
 				"item_type_name": "Key",
 				"item_name": "Operation Breakout Case Key",
