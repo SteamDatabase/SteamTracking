@@ -1076,7 +1076,7 @@ function EditPublishedFileChangeLog( publishedFileID, changeLog )
 			}
 		).done( function( json ) {
 			var $changeEntry = $J( "#" + changeLog['timestamp'] );
-			$changeEntry.html( json['formatted_change_description'] );
+			$changeEntry.text( json['formatted_change_description'] );
 		} );
 	} );
 }
