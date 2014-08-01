@@ -114,7 +114,7 @@
 					<ParentalButton id="StoreButton" class="Button ButtonLeft" tabindex="0" selectionpos="1,5" onfocus="StoreButtonFocused();" onactivate="StoreShow();"> 
 						<Label id="StoreLabel" class="ButtonLabel" text="#MainMenu_Store" />
 					</ParentalButton>
-					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="ShowLibrary();"> 
+					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="$.DispatchEvent( 'ShowLibrary' );"> 
 						<Label id="LibraryLabel" class="ButtonLabel" text="#MainMenu_Library" />
 					</Button>
 					<!-- <ParentalButton id="CommunityButton" class="Button ButtonRight" tabindex="2" selectionpos="1.2,5" onfocus="CommunityButtonFocused();" onactivate="CommunityShow();"> 

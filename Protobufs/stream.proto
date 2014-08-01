@@ -149,6 +149,7 @@ enum EStreamFramerateLimiter {
 	k_EStreamFramerateSlowNetwork = 8;
 	k_EStreamFramerateSlowDecode = 16;
 	k_EStreamFramerateSlowGame = 32;
+	k_EStreamFramerateSlowDisplay = 64;
 }
 
 enum EStreamDataMessage {
