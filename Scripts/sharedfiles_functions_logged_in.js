@@ -534,7 +534,7 @@ function ShowAddToCollection( id, appID )
 					$input.prop( 'checked', true );
 				}
 				$container.append( $input );
-				var $title = ( $J('<label/>', {'class': 'add_to_collection_dialog_title', 'for' : publishedFileID } ).append( details['title'] ) );
+				var $title = ( $J('<label/>', {'class': 'add_to_collection_dialog_title', 'for' : publishedFileID } ).text( details['title'] ) );
 				$container.append( $title );
 				$dialogContents.append( $container );
 				numAdded++;
