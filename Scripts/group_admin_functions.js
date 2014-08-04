@@ -765,7 +765,8 @@ function ManageBans_Unban( steamId, name )
 		var postData = {
 			"xml": 1,
 			"action": "unban",
-			"steamId": steamId
+			"steamId": steamId,
+			"sessionID": g_sessionID
 		};
 		createQuery2( g_strProcessURL, ManageBans_ReceiveUnban, postData );
 	}
