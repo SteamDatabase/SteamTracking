@@ -523,7 +523,7 @@
 	"SettingsAbout_Built"				"Steam client built"
 	"SettingsAbout_BuildDateTime"		"{s:build_date}, at {s:build_time}"
 	"SettingsAbout_SteamPackage"		"Steam versions"
-	"SettingsAbout_SteamPackageVersion"	"{s:bootstrapper_version} / {s:package_version}"
+	"SettingsAbout_SteamPackageVersion"	"{s:package_version}"
 	"SettingsAbout_SteamAPI"			"Steam API"
 	"SettingsAbout_SteamAPIVersion"		"v{s:build_interface}"
 	"SettingsAbout_SystemInfo"			"System Info"

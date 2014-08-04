@@ -488,6 +488,11 @@
 		
 		NavLabel2:hover
 		{
+			textcolor="texthover"
+			font-style="outerglow,uppercase"
+			font-outerglow-color="TextGlowHover"
+			font-outerglow-offset=1
+			font-outerglow-filtersize=3
 		}	
 		
 		NavLabel2:selected
