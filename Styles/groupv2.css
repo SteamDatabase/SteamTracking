@@ -1223,6 +1223,9 @@ a.headlineLink:hover {
 .announcement_TagWorkshopText {
 }
 
+#group_tab_content_curation.grouppage_content_area h2 {
+    font-size: 17px;
+}
 
 .curation_details_info {
 	line-height: 18px;
@@ -1279,20 +1282,20 @@ a.headlineLink:hover {
 
 .curation_app_block_header_bar {
 	background-color: #1a1a1b;
-	text-transform: uppercase;
+    color: #62696E;
 	height: 24px;
 	line-height: 24px;
 	padding-left: 10px;
-	font-size: 12px;
+	font-size: 11px;
 }
 
 .curation_app_block_body {
-	margin-top: 10px;
-	margin-left: 10px;
+	padding: 12px;
 }
 
-.curation_app_block_body img {
+.leftcol.hasContentBoxes .curation_app_block_body img {
 	float: left;
+    max-width: 184px;
 }
 
 .curation_app_block_content {
@@ -1300,7 +1303,7 @@ a.headlineLink:hover {
 }
 
 .curation_app_block_name {
-	font-size: 20px;
+	font-size: 14px;
 	color: white;
 }
 
@@ -1344,9 +1347,9 @@ a.headlineLink:hover {
 }
 
 .curation_warning_box {
-	width: 100%;
+	width: 930px;
 	background-color: #918c6c;
-	border: solid 2px #ddd598;
+	border: solid 1px #ddd598;
 	color: #f0e8aa;
 	padding: 8px;
 	margin-bottom: 16px;
@@ -1354,6 +1357,9 @@ a.headlineLink:hover {
 
 .curation_tagline {
 	padding: 8px;
+    margin-bottom: 20px;
+    color: #cccccc;
+    font-style: italic;
 }
 
 #curationTaglineInput {
@@ -1374,6 +1380,76 @@ a.headlineLink:hover {
 	margin-bottom: 40px;
 }
 
-.curation_tagline {
-	margin-bottom: 20px;
+#curationAppCharacterCounter {
+	float: right;
+	font-size: 10px;
+	padding-top: 18px;
+}
+
+#curationAppRecommendLabel {
+	float: left;
+}
+.curator_link_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    display: inline-block;
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/discussions_links_icons.png' );
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.curator_link_icon.info {
+    background-position: 0px 0px;
+}
+.highlighted_recommendation_link {
+    font-size: 12px;
+    color: #e1e1e1;
+}
+.highlighted_recommendation_link a:hover {
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+/* paging for recommended apps */
+
+.RecommendedApps_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+}
+
+.RecommendedApps_paging_summary
+{
+	color: #3b6e8c;
+	float: left;
+}
+
+.RecommendedApps_paging_controls
+{
+	float: right;
+}
+
+.RecommendedApps_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.RecommendedApps_paging_pagelink, .RecommendedApps_paging_controls .commentthread_pagelink {
+	color: #3b6e8c;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.RecommendedApps_paging_pagelink:hover, .RecommendedApps_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.RecommendedApps_paging_pagelink.active, .RecommendedApps_paging_controls .commentthread_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.RecommendedApps_paging_pagelink.active:hover {
+	text-decoration: none;
 }

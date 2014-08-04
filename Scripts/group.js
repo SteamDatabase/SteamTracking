@@ -7,6 +7,7 @@ var g_strActiveTab;
 var g_strActiveURL;
 var g_strGroupURL;
 var g_rgPageContentCache = {};
+var g_oRecommendedApps = null;
 function InitGroupPage( strGroupBaseURL, strActiveTab )
 {
 	g_strGroupURL = strGroupBaseURL;
@@ -411,6 +412,13 @@ function Curator_CreateOrEditRecommendation( groupid, create_only )
 			ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
 		}
 	});
+}
+
+function Curator_UpdateCharacterCount( textareaid, counterid, maxchars )
+{
+	var len = $J(textareaid).val().length;
+	var text = '%s characters remaining';
+	$J( counterid ).html( text.replace( '%s', maxchars-len ) );
 }
 
 function Curator_Follow( groupid, bFollow )
