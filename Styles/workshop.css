@@ -1396,6 +1396,18 @@ a.instructionsBtn:hover {
 	color: #CA7900;
 }
 
+.formRow.payment_info_notice
+{
+}
+.formRowTitle.payment_info_notice.approved
+{
+	color: #68932f;
+}
+.formRowTitle.payment_info_notice.unapproved
+{
+	color: #FF0000;
+}
+
 .formRowFields .darkGrey
 {
 	padding: 10px 0px;
