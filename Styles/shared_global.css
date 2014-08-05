@@ -1425,3 +1425,18 @@ table.bb_table td img.sharedFilePreviewImage
 {
 	margin: 0px;
 }
+
+/* V6 */
+
+body.v6 .popup_block_new .popup_body {
+    border: none;
+    position: relative;
+    background: #417A9B;
+}
+
+body.v6 .popup_menu_subheader {
+    color: #13242e;
+}
+body.v6 .popup_menu .hr {
+    background-color: #13242e;
+}

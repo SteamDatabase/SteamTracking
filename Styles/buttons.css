@@ -397,6 +397,12 @@ btnv6_border_2px > span {
 	line-height: 20px;
 }
 
+.btn_small_tall > span, input.btn_small_tall {
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 24px;
+}
+
 .btn_small_wide > span, input.btn_small_wide {
 	padding: 0 24px;
 	font-size: 12px;
@@ -461,6 +467,15 @@ btnv6_border_2px > span {
 			.btn_active .ico16.thumb_down, .active .ico16.thumb_down {
 			background-position: -64px 0px;		}
 		
+	.ico16.thumb_down {
+		background-position: -32px 0px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_down {
+			background-position: -48px 0px;		}
+	
+			.btn_active .ico16.thumb_down, .active .ico16.thumb_down {
+			background-position: -64px 0px;		}
+		
 	.ico16.thumb_up {
 		background-position: -80px 0px;	}
 
@@ -485,6 +500,15 @@ btnv6_border_2px > span {
 	
 			.btn_active .ico16.report, .active .ico16.report {
 			background-position: -160px 0px;		}
+		
+	.ico16.reportv6 {
+		background-position: -256px 0px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.reportv6 {
+			background-position: -272px 0px;		}
+	
+			.btn_active .ico16.reportv6, .active .ico16.reportv6 {
+			background-position: -288px 0px;		}
 		
 	.ico16.arrow_next {
 		background-position: -176px 0px;	}
