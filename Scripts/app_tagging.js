@@ -387,24 +387,24 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 	var fnRemoveYourTagsFromGlobalTags = function()
 	{
-					if ( rgYourPopularTags && rgYourPopularTags.length && rgGlobalPopularTags && rgGlobalPopularTags.length )
+		if ( rgYourPopularTags && rgYourPopularTags.length && rgGlobalPopularTags && rgGlobalPopularTags.length )
+		{
+			var rgYourTagHash = {};
+			for ( var i = 0; i < rgYourPopularTags.length; i++ )
 			{
-				var rgYourTagHash = {};
-				for ( var i = 0; i < rgYourPopularTags.length; i++ )
-				{
-					rgYourTagHash[ rgYourPopularTags[i].tagid ] = true;
-				}
-
-				var i = 0;
-				while ( i < rgGlobalPopularTags.length )
-				{
-					if ( rgYourTagHash[ rgGlobalPopularTags[i].tagid ] )
-						rgGlobalPopularTags.splice( i, 1 );
-					else
-						i++;
-				}
+				rgYourTagHash[ rgYourPopularTags[i].tagid ] = true;
 			}
-			};
+
+			var i = 0;
+			while ( i < rgGlobalPopularTags.length )
+			{
+				if ( rgYourTagHash[ rgGlobalPopularTags[i].tagid ] )
+					rgGlobalPopularTags.splice( i, 1 );
+				else
+					i++;
+			}
+		}
+	};
 
 	var fnMatchTags = function( rgRegex, rgTags, rgSuggestions )
 	{
@@ -451,9 +451,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				rgRegex.push( new RegExp( term ) );
 			}
 
-						fnMatchTags( rgRegex, rgYourPopularTags, rgSuggestions );
+			fnMatchTags( rgRegex, rgYourPopularTags, rgSuggestions );
 			if ( rgSuggestions.length < 10 )
-							fnMatchTags( rgRegex, rgGlobalPopularTags, rgSuggestions );
+				fnMatchTags( rgRegex, rgGlobalPopularTags, rgSuggestions );
 
 			rgSuggestions.sort();
 		}
@@ -967,41 +967,5 @@ function InitTagBrowsePage( strTagLanguage, strCC )
 			}
 		});
 	}
-}
-
-function InitBannedTagModal( appid, $BanModal )
-{
-	var bBansChanged = false;
-	window.ShowAppTagBanModal = function() {
-		$BanModal.show();
-		ShowAlertDialog( 'Banned Tags', $BanModal).always( function() {
-			if ( bBansChanged )
-				window.location.reload();
-		} );
-
-		$BanModal.find( '.app_tag_report').click( function() {
-			var $Flag = $J(this);
-			var $Row = $Flag.parent( '.app_tag_control' );
-			var tag = $Row.data('tag');
-			ShowConfirmDialog( 'Unban Tag',
-				'Are you sure you want to unban the "%s" tag?'.replace( /%s/, tag ),
-				'Unban Tag')
-				.done( function() {
-					var rgParams = {
-						appid: appid,
-						sessionid: g_sessionID,
-						tag: tag,
-						reporttype: -1,
-						unban: 1
-					};
-					$J.post( 'http://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
-						$Row.hide( 'fast' );
-					}).fail( function () {
-						ShowAlertDialog( 'Unban Tag', 'There was a problem banning or unbanning this tag.  Please try again later.' );
-					});
-					bBansChanged = true;
-				});
-		});
-	};
 }
 
