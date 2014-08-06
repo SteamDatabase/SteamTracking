@@ -3261,3 +3261,13 @@ SettingsPanel_AlienFX .SettingsCenterContent
 {
 	transform: translateX( 5px );
 }
+
+#InterfaceSettingsButton
+{
+	visibility: visible;
+}
+
+.SteamOS.Windows #InterfaceSettingsButton
+{
+	visibility: collapse;
+}

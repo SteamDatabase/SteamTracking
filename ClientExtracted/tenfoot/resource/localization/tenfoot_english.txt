@@ -2459,4 +2459,16 @@
 	"Screenshots_ViewFullscreen" "VIEW FULLSCREEN"
 
 	"Store_LoadingError"		"Steam was unable to load the requested store section. Please try again."
+	
+	"SteamUI_UpdateControllerFirmware_Cancel"	"Not Now"
+	"SteamUI_UpdateControllerFirmware_Continue"	"Next"
+	"SteamUI_UpdateControllerFirmware_Done"		"OK"
+	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
+	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller.  We'll run you through the update steps now."
+	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller."
+	"SteamUI_UpdateControllerFirmware_Finished"	"Your Steam Controller firmware has been updated."
+	"SteamUI_UpdateControllerFirmware_Fallback"	"Steam needs to use recovery mode to install firmware on your controller:\n\n 1) Unplug the USB cable connecting the controller\n 2) Hold down the RIGHT TRIGGER and plug the controller back in\n 3) Wait a while (up to 30-60 seconds) for the OS to detect and mount the controller's firmware update volume.\n\nOnce you've completed those steps the controller will reconnect in firmware update mode and we'll move on to the next step."
+	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, please do the following:\n\n 1) Unplug the USB cable connecting the controller\n 2) Plug the USB cable back in without touching any buttons\n 3) Choose OK below to complete this wizard"
+	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
+
 }
