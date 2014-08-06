@@ -69,10 +69,23 @@
 	visibility: collapse;
 }
 
+.SteamOS.Windows .ExitButtons
+{
+	visibility: visible;
+}
+
+
 .SteamOS.SteamOS_EnableDesktop #QuitBigPicture
 {
 	visibility: visible;
 }
+
+.SteamOS.Windows #QuitBigPicture
+{
+	visibility: collapse;
+}
+
+
 
 #SwitchToHDMIInput
 {
