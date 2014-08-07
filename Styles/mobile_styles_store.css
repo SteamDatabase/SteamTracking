@@ -2018,12 +2018,6 @@ a.trigger, a.activetrigger {
 	margin-bottom: 5px;
 }
 
-.gameDetailsArea img {
-	margin-top: 10px;
-	max-width: 100%;
-	height: auto;
-}
-
 .platform_img.steamplay {
 	background-size: 91px 19px;
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/mobile/platform_steamplay.png' );
@@ -2094,7 +2088,7 @@ div.statsItemName {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 6px;
-	padding-bottom: 6px
+	padding-bottom: 6px;
 }
 
 div.statsItem {
@@ -2103,13 +2097,42 @@ div.statsItem {
 	max-width: 55%;
 	display: inline-block;
 	padding-top: 6px;
-	padding-bottom: 6px
+	padding-bottom: 6px;
 }
 
 div.divider {
 	width: 100%;
 	height: 1px;
 	background-color: #363636;
+}
+
+.gameRatingArea {
+	width: 100%;
+	display: table;
+}
+
+.gameRatingImageArea {
+	margin-left: 12px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.gameRatingDescriptorText {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	font-size: 15px;
+	color: #939393;
+	max-width: 55%;
+	display: inline-block;
+}
+
+.gameRatingNotice {
+	margin: 4px 12px;
+	font-size: 12px;
+	color: #939393;
 }
 
 a#genreLink {
